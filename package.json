@@ -1,16 +1,16 @@
 {
-  "name": "about-us",
-  "version": "1.0.0",
+  "name": "design-system-rebrand",
+  "version": "0.2.0",
   "author": "The University of Melbourne",
   "description": "UI Kit for 2017 Melbourne University rebrand",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcom-unimelb/about-us-alpha.git"
+    "url": "git+https://github.com/unimelb/design-system-rebrand.git"
   },
   "engines": {
-    "node": "^6.9.3",
-    "npm": "^3.10.10"
+    "node": "^8.0.0",
+    "npm": "^5.3.0"
   },
   "scripts": {
     "start": "bundle exec middleman",
@@ -29,23 +29,26 @@
   },
   "dependencies": {
     "classlist-polyfill": "unimelb/classlist-polyfill#1.1.20170228",
-    "normalize.css": "^6.0.0"
+    "normalize.css": "^7.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.18.0",
+    "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
-    "browserify": "^13.1.1",
+    "browserify": "^14.4.0",
     "concurrently": "^3.1.0",
-    "eslint": "^3.8.1",
+    "eslint": "^4.5.0",
     "minifyify": "^7.3.3",
-    "postcss": "^5.2.5",
-    "postcss-cli": "^2.6.0",
-    "postcss-cssnext": "^2.8.0",
-    "postcss-import": "^8.1.2",
-    "postcss-nested": "^1.0.0",
-    "stylelint": "^7.5.0",
-    "stylelint-config-standard": "^14.0.0",
+    "postcss": "^6.0.10",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "postcss-nested": "^2.1.2",
+    "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
     "watchify": "^3.7.0"
+  },
+  "babel": {
+    "presets": ["es2015"]
   }
 }
