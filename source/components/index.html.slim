@@ -1,0 +1,117 @@
+---
+header:
+  level: 1
+  title: Style Guide
+  image: "/images/SouthLawn_4pax_mix2_JVittorio_May2015-Cropped.jpg"
+---
+main
+  section.section.section--intro
+    .section__inner.max
+      h2 Melbourne University UI Kit 
+      p Everything you need to make a great website @unimelb
+  section.section.bg-alt
+    .section__inner--short.max
+      h3.text-center Base Styles
+      erb:
+        <%=
+          partial '/partials/pathfinder', :locals => {
+            records: [
+              {
+                href:    '/components/typography',
+                title:   'Typography',
+              },
+              {
+                href:    '/components/buttons',
+                title:   'Buttons',
+              },
+              {
+                href:    '/components/list',
+                title:   'Lists',
+              },
+              {
+                href:    '/components/tables',
+                title:   'Tables',
+              }
+            ],
+            opts: { ulclass: 'pathfinder--four', liclass: 'pathfinder__item--inverse' }
+          }
+        %>
+  section.section
+    .section__inner--short.max
+      h3.text-center Components
+
+      erb:
+        <%=
+          partial '/partials/pathfinder', :locals => {
+            records: [
+              {
+                href:    '/components/banners',
+                title:   'Header / Banner',
+              },
+              {
+                href:    '/components/section',
+                title:   'Sections',
+              },
+              {
+                href:    '/components/footer',
+                title:   'Footer',
+              },
+              {
+                href:    '/components/pathfinder',
+                title:   'Pathfinder',
+              },
+              {
+                href:    '/components/menu',
+                title:   'Inner Menu',
+              },
+              {
+                href:    '/components/card',
+                title:   'Card',
+              },
+              {
+                href:    '/components/map',
+                title:   'Map',
+              },
+              {
+                href:    '/components/focus-box',
+                title:   'Focus box',
+              },
+              {
+                href:    '/components/article',
+                title:   'Article',
+              },
+              {
+                href:    '/components/biography',
+                title:   'Biography',
+              }
+            ],
+            opts: { ulclass: 'pathfinder--four', liclass: 'pathfinder__item--inverse' }
+          }
+        %>
+  section.section.bg-alt
+    .section__inner--short.max
+      h3.text-center Templates
+      erb:
+        <%=
+          partial '/partials/pathfinder', :locals => {
+            records: [
+              {
+                href:    '/templates/article',
+                title:   'Article',
+              },
+              {
+                href:    '/templates/biography',
+                title:   'Biography',
+              },
+              {
+                href:    '',
+                title:   'Level 1',
+              },
+              {
+                href:    '',
+                title:   'Level 2',
+              }
+            ],
+            opts: { ulclass: 'pathfinder--four', liclass: 'pathfinder__item--inverse' }
+          }
+        %>        

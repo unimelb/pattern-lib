@@ -1,0 +1,51 @@
+{
+  "name": "about-us",
+  "version": "1.0.0",
+  "author": "The University of Melbourne",
+  "description": "UI Kit for 2017 Melbourne University rebrand",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcom-unimelb/about-us-alpha.git"
+  },
+  "engines": {
+    "node": "^6.9.3",
+    "npm": "^3.10.10"
+  },
+  "scripts": {
+    "start": "bundle exec middleman",
+    "lint:css": "stylelint assets/**/*.css",
+    "lint:js": "eslint assets/**/*.js",
+    "lint": "concurrently \"npm run lint:js\" \"npm run lint:css\"",
+    "prebuild:css": "mkdir -p .tmp/build/stylesheets",
+    "prebuild:js": "mkdir -p .tmp/build/javascripts",
+    "build:css": "postcss -c postcss.json",
+    "build:js": "browserify -t babelify -p [ minifyify --no-map ] -o .tmp/build/javascripts/main.js assets/scripts/index.js",
+    "build": "concurrently \"npm run build:js\" \"npm run build:css\"",
+    "prewatch:js": "mkdir -p .tmp/build/javascripts",
+    "watch:css": "npm run build:css -- --watch",
+    "watch:js": "watchify -t babelify -o .tmp/build/javascripts/main.js assets/scripts/index.js",
+    "watch": "concurrently \"npm run watch:js\" \"npm run watch:css\""
+  },
+  "dependencies": {
+    "classlist-polyfill": "unimelb/classlist-polyfill#1.1.20170228",
+    "normalize.css": "^6.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "concurrently": "^3.1.0",
+    "eslint": "^3.8.1",
+    "minifyify": "^7.3.3",
+    "postcss": "^5.2.5",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-import": "^8.1.2",
+    "postcss-nested": "^1.0.0",
+    "stylelint": "^7.5.0",
+    "stylelint-config-standard": "^14.0.0",
+    "watchify": "^3.7.0"
+  }
+}

@@ -1,0 +1,15 @@
+- if breadcrumbs.length > 1
+  nav
+    ol.breadcrumbs.max itemscope=true itemtype="http://schema.org/BreadcrumbList"
+      - breadcrumbs.each_with_index do |item, index|
+        li.breadcrumbs__item itemprop="itemListElement" itemscope=true itemtype="http://schema.org/ListItem"
+          meta itemprop="position" content="1"
+          a.breadcrumbs__link itemprop="item" href="/#{item[:href]}"
+            - if index == 0
+              svg.breadcrumbs__home role="presentation" focusable="false" width="21" height="21"
+                use xlink:href="#icon-home"
+            span.breadcrumbs__name itemprop="name" 
+              = item[:title]
+          - if index < breadcrumbs.length - 1
+            svg.breadcrumbs__chevron role="presentation" focusable="false" width="12" height="12"
+              use xlink:href="#icon-chevron-right"

@@ -1,0 +1,72 @@
+/**
+ * Focus box with corner shapes
+ */
+.focus-box {
+  position: relative;
+  padding: 1.75rem;
+  background-color: #fff;
+  color: var(--col-brand);
+
+  &__corner {
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    opacity: 0.6;
+    color: var(--col-emerald-mid);
+
+    &--top-left {
+      top: 0;
+      left: 0;
+    }
+
+    &--bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+
+    &--inverse {
+      color: var(--col-white);
+      opacity: 0.3;
+    }
+
+    &--brand {
+      color: var(--col-brand);
+      opacity: 0.6;
+    }
+  }
+
+  @media (--bp-desktop) {
+    padding: 3.5rem;
+
+    &__corner {
+      width: 6em;
+      height: 6em;
+    }
+  }
+
+  &--image{  
+    padding: 0;
+    line-height: 0;
+    margin-right: auto;
+    margin-left: auto;
+    img {
+      width: 100%;
+    }
+  }
+
+  &--bioimage{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 15rem;
+    img {
+      height: 15rem;
+      width: initial;
+    }
+  }
+
+  &__inner{
+    padding: 1rem;
+  }
+
+}

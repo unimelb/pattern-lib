@@ -1,0 +1,74 @@
+/**
+ * Demo styles
+ */
+.ab-docs {
+  min-height: 3rem;
+
+  &::after {
+    content: '';
+    display: block;
+    max-width: var(--w-mid);
+    margin: 3rem auto;
+    border-bottom: 1rem dotted #eee;
+  }
+
+
+  li {
+    padding-bottom: .25rem;
+  }
+
+  &__buttons {
+    text-align: center;
+
+    .btn {
+      margin: 0 .75rem 1.5rem;
+    }
+
+    /* test inverted buttons on dark background */
+    &__inverted {
+      display: inline-block;
+      padding: 1.5rem 5.25rem 0;
+      background-color: var(--col-bg);
+    }
+  }
+
+  &__button-owners {
+    text-align: center;
+
+    .btn-owner {
+      display: inline-block;
+      padding: 1.5rem 6rem;
+
+      &:nth-child(1) { background-color: var(--col-bg-grey); }
+      &:nth-child(2) { background-color: var(--col-bg); }
+    }
+  }
+
+  &__spotlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > .spotlight {
+      margin: 0 1rem;
+      padding: 3rem 1.5rem;
+
+      &:nth-child(2) {
+        background-color: var(--col-brand);
+        color: #fff;
+      }
+    }
+  }
+
+  &__focus-box {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+
+  @media (--bp-wide) {
+    &__spotlight {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+}

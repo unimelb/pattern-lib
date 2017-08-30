@@ -1,0 +1,128 @@
+
+
+h1, .h1 {
+  font-family: var(--ff-lead);
+  margin-bottom: calc(2 * var(--vr));
+  font-size: 2.812rem; /* 45px - Level 1 Page Headline */
+
+  &--campaign {
+    font-size: 4.375rem; /* 70 px - Campaign Page Headline */
+  }
+
+  @media (--bp-max-mobile) {
+    font-size: 2.18rem;
+  }
+
+}
+
+/* Level 2 Page Headline */
+
+h2,
+.h2 {
+  margin-bottom: calc(2 * var(--vr));
+  font-family: var(--ff-lead);
+  font-size: 2.18rem; /* 35px */
+
+  @media (--bp-max-mobile) {
+    font-size: 2rem;
+  }
+}
+
+/* Section Subhead */
+h3,
+.h3 {
+  font-family: var(--ff-lead);
+  font-size: 1.75rem; /* 28 px */
+  margin-bottom: 2.625rem; /* 42px */
+
+}
+
+/* Campaign Subhead */
+h4, .h4 {
+  font-family: var(--ff-normal);
+  font-size: 2.5rem; /* 40px */
+  
+}
+/* Footer Sections Head */
+h5, .h5 {
+  font-family: var(--ff-normal);
+  font-size: 1.25rem; /* 20px */
+}
+
+
+h6, .h6 {
+  font-family: var(--ff-normal);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+p {
+  font-family: var(--ff-normal);
+  font-weight: normal;
+}
+
+a {
+  color: var(--col-blue);
+}
+
+hr {
+  margin: calc(var(--vr) * 2) 0;
+}
+
+ul {
+  padding-left: var(--vr);
+
+  li {
+    list-style: disc;
+    margin-top: calc(var(--vr) / 2);
+    margin-bottom: calc(var(--vr) / 2);
+  }
+  
+} 
+
+/* Intro Body Text */
+.lead {
+  font-size: 1.375rem;
+  
+  @media (--bp-max-mobile) {
+    font-size: 1rem;
+  }
+
+  line-height: 1.875rem;
+  font-weight: var(--fw-semibold);
+
+  &--serif {
+    font-family: var(--ff-lead); 
+  }
+}
+
+
+.desc {
+  font-size: 0.875rem;
+}
+
+/* Utilities */
+
+.font-bold {
+  font-weight: var(--fw-semibold);
+}
+
+.font-serif{
+  font-family: var(--ff-lead); 
+}
+
+/*
+* Text Align
+*/
+
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-center{
+  text-align: center;
+}

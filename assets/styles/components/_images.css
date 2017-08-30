@@ -1,0 +1,13 @@
+.image {
+  display: block;
+  max-width: 25.7rem;
+  margin-right: auto;
+  margin-left: auto;
+  img{
+    width: 100%;
+  }
+
+  figcaption{
+    text-align: center;
+  }
+}

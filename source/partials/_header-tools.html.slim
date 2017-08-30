@@ -1,0 +1,24 @@
+.header-tools
+  .header-tools__search
+    a.icon-link--vertical.link href="#search"
+      svg.icon-link__icon.svg width="24" height="24" role="presentation" focusable="false"
+        use xlink:href="#icon-search"
+      span.icon-link__text Search
+  .header-tools__menu
+    a.icon-link--vertical.link href="#sitemap"
+      svg.icon-link__icon.svg width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"
+        path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"
+      span.icon-link__text Menu
+
+  .page-header-search
+    form action="https://search.unimelb.edu.au" method="get"
+      fieldset.page-header-search__inline
+        input.page-header-search__input name="q" type="search" placeholder="Search the University" aria-label="Search the University"
+        button.page-header-search__submit type="submit"
+          svg width="21" height="21" role="presentation" focusable="false"
+            use xlink:href="#icon-search"
+          span.screenreaders-only Go
+      a.page-header-icon.icon-link--close href="#"
+        svg.page-header-search__icon width="24" height="24" role="presentation" focusable="false"
+          use xlink:href="#icon-close"
+        | Close

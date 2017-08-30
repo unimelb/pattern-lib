@@ -1,0 +1,17 @@
+.section__inner--short.max
+    ul.pathfinder.pathfinder--three
+      - for item in list
+        li.pathfinder__item.pathfinder__item--division.pathfinder__item--bdr
+          a.btn-owner href="#{item[:btn_link]}"
+            h3.pathfinder__item--division__header #{item[:division]}
+            .pathfinder__inner
+              .pathfinder__item--division__title
+                h3 #{item[:division_head]} 
+                h4 #{item[:division_head_title]}
+              p #{item[:description]}
+              .btn.btn--appendicon.btn--fullwidth
+                .btn--appendicon__inner
+                  svg.icon role="presentation" focusable="false" width="16" height="16"
+                    use xlink:href="#icon-chevron-right"
+                  span
+                    ' Contacts and bio

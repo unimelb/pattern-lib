@@ -1,0 +1,225 @@
+---
+header:
+  level: 3
+  title: Inner Menu
+breadcrumbs: [
+  {
+    title: "About us",
+    href: "/"
+  },
+  {
+    title: "Components",
+    href: "/components"
+  },
+  {
+    title: "Menu",
+    href: "/components/menu"
+  }
+]
+---
+main
+  section.section--intro
+    .section__inner.max
+      h2 Menu
+      p Inner "quick links" menu used for internal page navigation
+  .ab-docs
+  section.section
+    .max.section__inner.section__inner--short
+        h2 Australia&rsquo;s leading university
+        .grid 
+          .cell.cell--desk-2of3 style="padding-right: 3rem;"
+            p.lead Used on the home page
+            p.lead Our research helps solve social, economic and environmental challenges the world is facing today and into the future. And we’re tightly connected with our communities, at home and around the globe, a connection that enriches our learning, teaching and research.
+            a.btn.btn--lead href="/leadership/office-of-the-vice-chancellor"
+              span.push-icon
+                ' Welcome from the Vice-Chancellor
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+          .cell.cell--desk-1of3
+            erb:
+              <%=
+                partial '/partials/menu', :locals => {
+                  menu: [
+                    {
+                      title: 'Strategy and governance',
+                      href:  '/strategy'
+                    },
+                    {
+                      title: 'Leadership',
+                      href:  '/leadership'
+                    },
+                    {
+                      title: 'Working with us',
+                      href:  '/working-with-us'
+                    },
+                    {
+                      title: 'News and Resources',
+                      href:  ''
+                    },
+                    {
+                      title: 'Campus and Maps',
+                      href:  ''
+                    }
+                  ],
+                  opts: { class: 'menu--alt-a' }
+                }
+              %>
+  .ab-docs
+  section.section
+    .max.section__inner
+      .grid.internal-menu
+        .cell.cell--desk-2of3
+          .internal-menu__inner
+            h2 Internal sections
+            p.lead 
+              | We have an enduring commitment to public contribution and actively seek to create social, economic, cultural and intellectual value with and for the communities we serve. We’re committed to research excellence with impact, preparing graduates for lives of professional contribution and active citizenship, investing in industry and international partnerships, and creating public value through strong cultural and community partnerships and leadership of public policy conversations. 
+
+        .cell.cell--desk-1of3
+          erb:
+            <%=
+              partial '/partials/menu', :locals => {
+                title: "Explore Growing Esteem",
+                menu: [
+                  {
+                    title: "Learning and Teaching",
+                    href:  "/strategy/growing-esteem/learning-and-teaching"
+                  },
+                  {
+                    title: "Research",
+                    href:  "/strategy/growing-esteem/research"
+                  },
+                  {
+                    title: "Sustainability",
+                    href:  "/strategy/growing-esteem/sustainability"
+                  },
+                  {
+                    title: "Reconciliation",
+                    href:  "http://about.unimelb.edu.au/strategy-and-leadership/reconciliation"
+                  }
+                ],
+                opts: { class: 'menu--alt-b' }
+              }
+            %>      
+  .ab-docs
+  section.section
+    .section__inner.max
+      h2#menu Menu Variants
+      p Add variant class <code>menu--right</code> to align the menu to the right, for instance insisde the right-hand side of a split section.
+      div style="display: flex;"
+        div style="margin-right: 1rem;"
+          h3 default
+          nav.menu
+            a.menu__link href=""
+              span.push-icon
+                ' How we work
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Our leadership
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Doing business with us
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' News and resources
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Campus and maps
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+
+        div style="margin-right: 1rem;"
+          h3 --alt-b
+          nav.menu.menu--alt-b
+            a.menu__link href=""
+              span.push-icon
+                ' How we work
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Our leadership
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Doing business with us
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' News and resources
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Campus and maps
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+
+        div style="margin-right: 1rem;"
+          h3 --alt-c
+          nav.menu.menu--alt-c
+            a.menu__link href=""
+              span.push-icon
+                ' How we work
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Our leadership
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Doing business with us
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' News and resources
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Campus and maps
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+
+        div style="margin-right: 1rem;"
+          h3 --alt-d
+          nav.menu.menu--alt-d
+            a.menu__link href=""
+              span.push-icon
+                ' How we work
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Our leadership
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Doing business with us
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' News and resources
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+            a.menu__link href=""
+              span.push-icon
+                ' Campus and maps
+                svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+                  use xlink:href="#icon-chevron-right"
+
+      .clearfix

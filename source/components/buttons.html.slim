@@ -1,0 +1,61 @@
+---
+header:
+  level: 3
+  title: Components
+breadcrumbs: [
+  {
+    title: "About us",
+    href: "/"
+  },
+  {
+    title: "Components",
+    href: "/components"
+  },
+  {
+    title: "Buttons",
+    href: "/components/buttons"
+  }
+]
+---
+main
+  section.section--intro
+    .section__inner.max
+      h2 Button
+      p All sorts of buttons! By default, buttons are sized to fit their content. This behaviour may be overriden on a case-by-case basis by parent components, with <code>width</code> and <code>max-width</code>. For convenience, the <code>.ab-button--fit</code> variant is available to allow for a button to expand to fit its parent.
+  section.section.bg-alt
+    .section__inner--short.max
+
+    .ab-docs__buttons
+      div
+        a.btn href="" This is an anchor element
+        button.btn.button-ui href="" This is a button element
+        a.btn.btn--lead href="" Lead button
+
+      div
+        a.btn href=""
+          span.push-icon
+            ' Button with icon
+            svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+              use xlink:href="#icon-chevron-right"
+        a.btn href="" style="min-width: 18rem;"
+          span.push-icon
+            ' Hard-coded min-width
+            svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+              use xlink:href="#icon-chevron-right"
+        a.btn href="" style="max-width: 20rem;"
+          span.push-icon
+            ' Hard-coded max-width to test wrapping and alignement
+            svg.push-icon__icon role="presentation" focusable="false" width="16" height="16"
+              use xlink:href="#icon-chevron-right"
+      div 
+        a.spotlight__btn.btn.btn--appendicon href="" style="min-width: 20rem;"
+          .btn--appendicon__inner
+            svg.icon role="presentation" focusable="false" width="16" height="16"
+              use xlink:href="#icon-chevron-right"
+            span
+              ' Centered text with icon
+
+      .ab-docs__buttons__inverted
+        a.btn.btn--inverted href="" This is an inverted button
+  section.section
+    .section__inner--short

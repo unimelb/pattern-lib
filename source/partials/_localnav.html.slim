@@ -1,0 +1,38 @@
+#sitemap role="navigation"
+  h2 About us
+  ul
+    - data.urls.nodes.each do |n|
+      li
+        a href="/#{n.href}"
+          =n.title
+
+        - if n.nodes
+          .inner: ul
+            - n.nodes.each do |n2|
+              li
+                a href="/#{n.href}/#{n2.href}"
+                  =n2.title
+
+                - if n2.nodes
+                  .inner: ul
+                    - n2.nodes.each do |n3|
+                      li
+                        a href="/#{n.href}/#{n2.href}/#{n3.href}"
+                          =n3.title
+
+                        - if n3.nodes
+                          .inner: ul
+                            - n3.nodes.each do |n4|
+                              li
+                                a href="/#{n.href}/#{n2.href}/#{n3.href}/#{n4.href}"
+                                  =n4.title
+
+                                - if n4.nodes
+                                  .inner: ul
+                                    - n4.nodes.each do |n5|
+                                      li
+                                        a href="/#{n.href}/#{n2.href}/#{n3.href}/#{n4.href}/#{n5.href}"
+                                          =n5.title
+
+  ul.localnav__meta
+    li: a href="https://search.unimelb.edu.au" Search

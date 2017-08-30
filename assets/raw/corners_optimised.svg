@@ -1,0 +1,4 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 112 112">
+  <path d="m0 0v112l32-32v-48h48l32-32h-112z"/>
+  <path d="m112 0-32 32v48h-48l-32 32h112v-112z"/>
+</svg>

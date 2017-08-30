@@ -1,0 +1,25 @@
+doctype html
+html.no-js lang="en"
+  head
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    title = current_page.data.title || "About us"
+
+    link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Source+Sans+Pro:300,300i,400,400i,600,700"
+    == stylesheet_link_tag "main"
+
+  body
+    = partial 'partials/tealium'
+    = partial 'partials/svg'
+
+    = partial 'partials/header-tools'
+
+    = partial '/partials/header'
+    = partial '/partials/breadcrumbs'
+
+    == yield
+
+    = partial 'components/footer';
+    = partial 'partials/localnav'
+
+    = javascript_include_tag :main

@@ -1,0 +1,21 @@
+- if current_page.data.header.level == 1 && current_page.data.header.image
+  header.banner.banner--l1
+    .banner__inner.max
+      a.logo href="https://www.unimelb.edu.au"
+        img.banner__logo src="/images/logo-unhoused.svg" width="117" height="117" alt="The University of Melbourne homepage"
+      h1.banner__heading = current_page.data.header.title || "About us"
+    .banner__img.banner__aperture style="background-image: url(#{current_page.data.header.image});"
+- elsif current_page.data.header.level == 2 && current_page.data.header.image
+  header.banner.banner--l2
+    .banner__inner.max
+      a.logo href="https://www.unimelb.edu.au"
+        img.banner__logo src="/images/logo-unhoused.svg" width="117" height="117" alt="The University of Melbourne homepage"
+      h1.banner__heading = current_page.data.header.title || "About us"
+    .banner__img.banner__aperture style="background-image: url(#{current_page.data.header.image}); background-position: left;"
+- else
+  header.banner.banner--l3
+    .banner__shape
+    .banner__inner.max
+      a.logo href="https://www.unimelb.edu.au"
+        img.banner__logo src="/images/logo-unhoused.svg" width="117" height="117" alt="The University of Melbourne homepage"
+

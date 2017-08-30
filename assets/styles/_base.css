@@ -1,0 +1,79 @@
+/**
+ * Base styles
+ */
+html {
+  box-sizing: border-box;
+  color: var(--col-brand);
+  font-family: var(--ff-normal);
+  font-size: 1em; /* dropped to 16px */
+
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, hr, pre,
+table, blockquote, figure, fieldset, address {
+  margin: 0 0 var(--vr);
+}
+
+form {
+  margin: 0;
+}
+
+th, td, button, legend,
+fieldset, blockquote {
+  padding: 0;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+  line-height: 1.4;
+}
+
+a, input, button{
+  outline-color: var(--col-brand-light);
+}
+
+
+button, input, optgroup,
+select, textarea {
+  font: inherit;
+  line-height: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+/* revert to dotted bottom border for abbreviations */
+/* https://github.com/necolas/normalize.css/pull/468#issuecomment-174107494 */
+abbr[title] {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+/* hide outline on elements focused programmatically */
+[tabindex="-1"] {
+  outline-width: 0;
+}
