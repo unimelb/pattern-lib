@@ -1,1 +1,0 @@
-console.error("\n/Users/dylankelly/Sites/design-system-rebrand/assets/scripts/index.js:1\nimport 'classlist-polyfill';\n^\nParseError: 'import' and 'export' may appear only with 'sourceType: module'");
