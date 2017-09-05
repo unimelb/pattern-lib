@@ -5,15 +5,13 @@
  */
 require('dotenv').config();
 
-if (process.env.NODE_ENV !== 'production') {
-  console.error('🔥  This webpack config is for production builds only.');
-  process.exit(1)
-}
-
 var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+var isDev = process.env.NODE_ENV != 'production';
 
 module.exports = {
   context: path.resolve(__dirname, 'components'),
@@ -22,7 +20,7 @@ module.exports = {
     './index.css'
   ],
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '.out/lib'),
     filename: '[name].js',
     publicPath: `${process.env.CDNURL}/${process.env.VERSION}/`
   },
@@ -38,23 +36,30 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
+          fallback: {
+            loader: 'style-loader',
+            options: { sourceMap: isDev }
+          },
           use: [
             {
               loader: 'css-loader',
               options: {
                 autoprefixer: false, // handled by postcss-cssnext
                 importLoaders: 1, // one more loader in the chain
-                minimize: true
+                minimize: !isDev,
+                sourceMap: isDev
               }
             },
-            'postcss-loader'
+            {
+              loader: 'postcss-loader',
+              options: { sourceMap: isDev }
+            }
           ]
         })
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules)/,
         loader: 'babel-loader'
       }
     ]
@@ -66,7 +71,8 @@ module.exports = {
     ]),
     new ExtractTextPlugin({
       allChunks: true,
-      filename: '[name].css'
+      filename: '[name].css',
+      disable: isDev
     }),
     new webpack.optimize.UglifyJsPlugin()
   ]

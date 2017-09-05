@@ -10,9 +10,11 @@
     "yarn": "*"
   },
   "scripts": {
-    "prebuild": "rm -Rf build/*",
-    "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "storybook": "start-storybook -p 7002 -c .storybook"
+    "build:docs": "build-storybook -c .storybook -o .out/docs",
+    "build:lib": "NODE_ENV=production webpack -c webpack.config.js",
+    "start": "start-storybook -p 7002 -c .storybook",
+    "prebuild:docs": "rm -Rf .out/docs",
+    "prebuild:lib": "rm -Rf .out/lib"
   },
   "dependencies": {},
   "devDependencies": {
@@ -32,6 +34,7 @@
     "postcss-url": "^6.0.4",
     "style-loader": "^0.17.0",
     "vue": "^2.4.2",
+    "vue-loader": "^13.0.4",
     "webpack": "^2.5.1"
   },
   "cacheDirectories": [
