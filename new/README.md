@@ -20,7 +20,7 @@ yarn
 ## Development
 
 1. Run `yarn start`
-2. Visit [http://localhost:7001/](http://localhost:7001/)
+2. Visit [http://localhost:7002/](http://localhost:7002/)
 
 To build the assets for production (e.g. for debugging purposes), run `yarn run build`. The compiled targets can be found in the `/build` directory.
 

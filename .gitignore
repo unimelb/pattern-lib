@@ -17,7 +17,7 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+/.tmp
 /.byebug_history
 
 # Ignore node fluff
