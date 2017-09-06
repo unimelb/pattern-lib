@@ -1,7 +1,0 @@
-<!--
-=== Chevron list marker ===
-Change fill colour as required and convert to Base 64 before copying to CSS
--->
-<svg xmlns="http://www.w3.org/2000/svg" width="4" height="8">
-  <path d="M0 0v2.25L1.75 4 0 5.75V8l4-4z" fill="#fff" />
-</svg>
