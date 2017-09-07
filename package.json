@@ -16,8 +16,9 @@
     "prebuild:docs": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@storybook/addon-knobs": "^3.2.8",
+    "@storybook/addon-notes": "^3.2.7",
     "@storybook/vue": "^3.2.8",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
