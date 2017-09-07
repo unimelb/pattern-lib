@@ -20,7 +20,10 @@ storiesOf('Section', module)
     const Story = story();
     return {
       components: { Story },
-      template: '<main><Story/></main>',
+      template: `
+        <main>
+          <Story/>
+        </main>`,
     };
   })
   .addDecorator(withKnobs)
@@ -29,6 +32,7 @@ storiesOf('Section', module)
     withNotes(
       `
         <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
           <h2>Content section</h2>
           <p>This section is intended to be used only in the WYSIWYG editor</p>
           <pre>
@@ -60,6 +64,7 @@ storiesOf('Section', module)
     withNotes(
       `
         <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
           <h2>Section (container template)</h2>
           This section is intended to be used as a content container
           it has to have a inner div with a class of <code>.section__inner</code>
