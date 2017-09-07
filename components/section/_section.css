@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
     
   &--content {
-    
+    /* This is intended for Matrix CMS WYSIWYG editor only */
     padding-top: calc(2 * var(--vr));
     padding-bottom: calc(2 * var(--vr));
 
@@ -75,10 +75,6 @@
         min-height: 21.9rem;
       }
     }
-  }
-
-  h2, h3 {
-    font-family: var(--ff-lead);
   }
 
 }
