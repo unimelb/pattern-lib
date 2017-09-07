@@ -73,7 +73,8 @@ module.exports = {
       allChunks: true,
       filename: '[name].css',
       disable: isDev
-    }),
+    })
+  ].concat(isDev ? [] : [
     new webpack.optimize.UglifyJsPlugin()
-  ]
+  ])
 };
