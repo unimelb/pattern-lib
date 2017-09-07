@@ -1,13 +1,18 @@
 <template>
   <section class="split-section">
-    <div class="split-section__side" :class="{'split-section__side--with-image': imageLeft}" :style="{backgroundImage: `src(${bgImage})`}">
-      <div class="split-section__inner">
-        <slot name="content-side-1"></slot>
+
+    <div class="split-section__side" :class="{'split-section__side--with-image': imageLeft}" :style="{backgroundImage: imageLeft ? `url('${bgImage}')` : '' }">
+      <div class="split-section__inner" v-if="imageRight">
+        <slot>
+          default left text
+        </slot>
       </div>
     </div>
-    <div class="split-section__side" :class="{'split-section__side--with-image': imageRight}" :style="{backgroundImage: `src(${bgImage})`}">
-      <div class="split-section__inner">
-        <slot name="content-side-2"></slot>
+    <div class="split-section__side" :class="{'split-section__side--with-image': imageRight}" :style="{backgroundImage: imageRight ? `url('${bgImage}')` : '' }">
+      <div class="split-section__inner" v-if="imageLeft">
+        <slot>
+          default right text
+        </slot>
       </div>
     </div>
   </section>
@@ -16,10 +21,6 @@
 <script>
   export default {
     name: 'SplitSection',
-    data: {
-      imageLeft: false,
-      imageRight: false,
-      bgImage: 'http://lorempixel.com/800/400/',
-    }
+    props: ['imageLeft', 'imageRight', 'bgImage']
   } 
 </script>

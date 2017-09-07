@@ -12,10 +12,6 @@
 
 <script>
   export default {
-    name: 'Section',
-    data: {
-      alt: false,
-      inverted: false,
-    }
+    name: 'Section'
   } 
 </script>
