@@ -1,0 +1,33 @@
+/**
+ * Margin and padding
+ */
+.shim-mt0 { margin-top: 0 !important; }
+.shim-mb0 { margin-bottom: 0 !important; }
+.shim-ml0 { margin-left: 0 !important; }
+.shim-mr0 { margin-right: 0 !important; }
+.shim-pt0 { padding-top: 0 !important; }
+.shim-pb0 { padding-bottom: 0 !important; }
+.shim-pl0 { padding-left: 0 !important; }
+.shim-pr0 { padding-right: 0 !important; }
+
+.shim-mt05 { margin-top: calc(var(--vr) / 2) !important; }
+.shim-mb05 { margin-bottom: calc(var(--vr) / 2) !important; }
+.shim-pt05 { padding-top: calc(var(--vr) / 2) !important; }
+.shim-pb05 { padding-bottom: calc(var(--vr) / 2) !important; }
+
+.shim-mt1 { margin-top: var(--vr) !important; }
+.shim-mb1 { margin-bottom: var(--vr) !important; }
+.shim-pt1 { padding-top: var(--vr) !important; }
+.shim-pb1 { padding-bottom: var(--vr) !important; }
+
+.shim-mt2 { margin-top: calc(2 * var(--vr)) !important; }
+.shim-mb2 { margin-bottom: calc(2 * var(--vr)) !important; }
+.shim-pt2 { padding-top: calc(2 * var(--vr)) !important; }
+.shim-pb2 { padding-bottom: calc(2 * var(--vr)) !important; }
+
+/**
+ * Prevent wrapping - e.g. for URLs, emails, etc.
+ */
+ .shim-nowrap {
+  white-space: nowrap !important;
+}
