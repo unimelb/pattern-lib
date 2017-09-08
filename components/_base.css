@@ -39,6 +39,24 @@ fieldset, blockquote {
   padding: 0;
 }
 
+hr {
+  margin: calc(var(--vr) * 2) 0;
+}
+
+ul {
+  padding-left: var(--vr);
+
+  li {
+    list-style: disc;
+    margin-top: calc(var(--vr) / 2);
+    margin-bottom: calc(var(--vr) / 2);
+  }
+}
+
+a {
+  color: var(--col-blue);
+}
+
 button, input, optgroup,
 select, textarea {
   font: inherit;
@@ -70,4 +88,14 @@ abbr[title] {
 /* hide outline on elements focused programmatically */
 [tabindex="-1"] {
   outline-width: 0;
+}
+
+/**
+ * Hide elements
+ * Prefer the `hidden` attribute where possible. For `svg` elements,
+ * use the `hidden` class instead, as the attribute is not allowed.
+ */
+[hidden],
+.hidden {
+  display: none !important;
 }

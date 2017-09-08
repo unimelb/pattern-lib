@@ -1,0 +1,33 @@
+/**
+ * Margin and padding fixes
+ */
+/* zero */
+.mt0 { margin-top: 0 !important; }
+.mb0 { margin-bottom: 0 !important; }
+.ml0 { margin-left: 0 !important; }
+.mr0 { margin-right: 0 !important; }
+.pt0 { padding-top: 0 !important; }
+.pb0 { padding-bottom: 0 !important; }
+.pl0 { padding-left: 0 !important; }
+.pr0 { padding-right: 0 !important; }
+
+/* vertical rhythm */
+.mt-vr-05 { margin-top: calc(var(--vr) / 2) !important; }
+.mb-vr-05 { margin-bottom: calc(var(--vr) / 2) !important; }
+.mt-vr { margin-top: var(--vr) !important; }
+.mb-vr { margin-bottom: var(--vr) !important; }
+.mt-vr-2 { margin-top: calc(2 * var(--vr)) !important; }
+.mb-vr-2 { margin-bottom: calc(2 * var(--vr)) !important; }
+.pt-vr-05 { padding-top: calc(var(--vr) / 2) !important; }
+.pb-vr-05 { padding-bottom: calc(var(--vr) / 2) !important; }
+.pt-vr { padding-top: var(--vr) !important; }
+.pb-vr { padding-bottom: var(--vr) !important; }
+.pt-vr-2 { padding-top: calc(2 * var(--vr)) !important; }
+.pb-vr-2 { padding-bottom: calc(2 * var(--vr)) !important; }
+
+/**
+ * Prevent wrapping - e.g. for URLs, emails, etc.
+ */
+ .nowrap {
+  white-space: nowrap !important;
+}
