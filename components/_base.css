@@ -39,10 +39,6 @@ fieldset, blockquote {
   padding: 0;
 }
 
-h1, h2, h3, .h1, .h2, .h3 {
-  line-height: 1.4;
-}
-
 button, input, optgroup,
 select, textarea {
   font: inherit;
