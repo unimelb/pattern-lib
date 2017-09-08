@@ -45,7 +45,7 @@ storiesOf('Page Header', module)
         template: `
           <header class="banner banner--l1">
             <div class="banner__inner max">
-              <a class="logo" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" class="banner__logo" height="117" src="http://about-us-unimelb.netlify.com/images/logo-unhoused.svg" width="117"></a>
+              <a class="logo" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" class="banner__logo" height="117" src="https://d2h9b02ioca40d.cloudfront.net/v7.0/assets/logo-4d389.svg" width="117"></a>
               <h1 class="banner__heading">
                 ${title}
               </h1>
