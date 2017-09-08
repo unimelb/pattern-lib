@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/vue';
 import HeadingElements from './HeadingElements.vue';
 import HeadingClasses from './HeadingClasses.vue';
 import LongHeadings from './LongHeadings.vue';
+import Links from './Links.vue';
 
 storiesOf('Typography', module)
   .add('Heading elements', () => ({
@@ -17,4 +18,8 @@ storiesOf('Typography', module)
   .add('Long headings', () => ({
     components: { LongHeadings },
     template: `<long-headings :classes="['heading-page-sub', 'heading-section', 'heading-card']" />`
+  }))
+  .add('Links', () => ({
+    components: { Links },
+    template: '<links />'
   }));
