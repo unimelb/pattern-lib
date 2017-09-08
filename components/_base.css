@@ -39,6 +39,24 @@ fieldset, blockquote {
   padding: 0;
 }
 
+hr {
+  margin: calc(var(--vr) * 2) 0;
+}
+
+ul {
+  padding-left: var(--vr);
+
+  li {
+    list-style: disc;
+    margin-top: calc(var(--vr) / 2);
+    margin-bottom: calc(var(--vr) / 2);
+  }
+}
+
+a {
+  color: var(--col-blue);
+}
+
 button, input, optgroup,
 select, textarea {
   font: inherit;
