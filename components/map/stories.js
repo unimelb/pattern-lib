@@ -12,7 +12,6 @@ maps_loaded_go = function() {
 const data = {
   obj: GMaps,
   content: [`
-        <dl id="contact" class="contact-card__col1_3">
           <dt class="contact-card__title">Address</dt>
           <dd class="contact-card__detail">
             9th Floor, Raymond Priestley Building
@@ -30,9 +29,7 @@ const data = {
           <br>
           <dt class="contact-card__detail--inline">Fax:</dt>
           <dd class="contact-card__detail--inline"><a href="tel:61393477253">+61 3 9347 7253</a></dd>
-        </dl>
 `, `
-        <dl id="executive-liaison" class="contact-card__col1_3">
           <dt class="contact-card__title">Executive Liaison</dt>
           <dd class="contact-card__detail">Ms Sally Hayes</dd>
 
@@ -41,9 +38,7 @@ const data = {
           <br>
           <dt class="contact-card__detail--inline">Phone:</dt>
           <dd class="contact-card__detail--inline"><a href="tel:61383446134">+61 3 8344 6134</a></dd>
-        </dl>
 `, `
-        <dl id="executive-support-officer" class="contact-card__col1_3">
           <dt class="contact-card__title">Executive Support Officer</dt>
           <dd class="contact-card__detail">Ms Amelia Phipps</dd>
           
@@ -52,7 +47,6 @@ const data = {
           <br>
           <dt class="contact-card__detail--inline">Phone:</dt>
           <dd class="contact-card__detail--inline"><a href="tel:61383443741">+61 3 8344 3741</a></dd>
-        </dl>
 `]
 };
 
@@ -65,7 +59,9 @@ Vue.component('contact-card', {
       data-width="1140"
       data-height="360"
       data-zoom="17"></div>
-    <div class="contact-card__lower" v-html="renderColumns(cols)"></div>
+    <div class="contact-card__lower">
+      <dl class="contact-card__col1_3" v-for="n in cols-0" v-html="content[n-1]"></dl>
+    </div>
   </div>
 `,
   props: [ 'cols', 'map' ],
