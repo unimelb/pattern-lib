@@ -89,3 +89,13 @@ abbr[title] {
 [tabindex="-1"] {
   outline-width: 0;
 }
+
+/**
+ * Hide elements
+ * Prefer the `hidden` attribute where possible. For `svg` elements,
+ * use the `hidden` class instead, as the attribute is not allowed.
+ */
+[hidden],
+.hidden {
+  display: none !important;
+}
