@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-card">
+  <div class="contact-card" @beforeUpdate="console.log(1)">
     <div v-if="map" class="contact-card__map"
       data-latlng="-37.797377,144.961591"
       data-pin="-37.797484, 144.961638"
@@ -18,6 +18,7 @@
       map: Boolean,
       columns: Number
     },
+
     data: () => {
       return {
         content: [`

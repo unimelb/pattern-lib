@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/vue';
 
 import ContactCard from './ContactCard.vue';
 
+const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
+
 storiesOf('Contact card', module)
   .add('One column', () =>   ({
     components: { ContactCard },
@@ -18,5 +20,6 @@ storiesOf('Contact card', module)
   }))
   .add('With map', () =>     ({
     components: { ContactCard },
+    mounted: () => { maps_loaded_go() },
     template: `<contact-card :columns="3" :map="true" />`
   }));
