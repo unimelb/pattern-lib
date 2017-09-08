@@ -54,7 +54,15 @@ ul {
 }
 
 a {
-  color: var(--col-blue);
+  color: var(--col-teal-dark);
+
+  &:visited { color: var(--col-purple-dark); }
+  &:active { color: var(--col-brand); }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
 
 button, input, optgroup,
