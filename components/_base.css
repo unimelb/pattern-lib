@@ -1,0 +1,109 @@
+/**
+ * Base styles
+ */
+html {
+  height: 100%;
+  box-sizing: border-box;
+  color: var(--col-brand);
+  font-family: var(--ff-normal);
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+
+  @media (--bp-wide) {
+    font-size: 18px;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, hr, pre,
+table, blockquote, figure, fieldset, address {
+  margin: 0 0 var(--vr);
+}
+
+form {
+  margin: 0;
+}
+
+th, td, button, legend,
+fieldset, blockquote {
+  padding: 0;
+}
+
+hr {
+  margin: calc(var(--vr) * 2) 0;
+}
+
+ul {
+  padding-left: var(--vr);
+
+  li {
+    list-style: disc;
+    margin-top: calc(var(--vr) / 2);
+    margin-bottom: calc(var(--vr) / 2);
+  }
+}
+
+a {
+  color: var(--col-teal-dark);
+
+  &:visited { color: var(--col-purple-dark); }
+  &:active { color: var(--col-brand); }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+button, input, optgroup,
+select, textarea {
+  font: inherit;
+  line-height: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+button:not([disabled]) {
+  cursor: pointer;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+/* revert to dotted bottom border for abbreviations */
+/* https://github.com/necolas/normalize.css/pull/468#issuecomment-174107494 */
+abbr[title] {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+/* hide outline on elements focused programmatically */
+[tabindex="-1"] {
+  outline-width: 0;
+}
+
+/**
+ * Hide elements
+ * Prefer the `hidden` attribute where possible. For `svg` elements,
+ * use the `hidden` class instead, as the attribute is not allowed.
+ */
+[hidden],
+.hidden {
+  display: none !important;
+}

@@ -1,7 +1,0 @@
-<!--
-=== Saw tooth background pattern ===
-Convert to Base 64 before copying to CSS
--->
-<svg xmlns="http://www.w3.org/2000/svg" height="14" width="20">
-  <path d="M9.293 2L0 11.293V12h.707L10 2.707 19.293 12H20v-.707L10.707 2H9.293z" opacity=".2" fill="#fefefe"/>
-</svg>

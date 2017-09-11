@@ -1,11 +1,11 @@
-<!-- Please keep feature proposals as small and simple as possible, complex ones
-might be edited to make them small and simple.
+# Contribution guidelines
 
-You are encouraged to use the template below for feature proposals.
- -->
+- Merge features and bug fixes into the `dev` branch.
+- Merge `dev` into `master` only when releasing a new version.
 
-## Description including problem, use cases, benefits, and/or goals
+- Inject as little markup as possible with JS -- only inject to work around CMS limitations.
+- Don't make markup or content restrictive (e.g. number of items, length of heading, etc.) -- instead, deal with edge cases as best as possible.
+- Don't document usage recommendations -- instead, use stories to demonstrate both ideal and edge cases.
 
-## Proposal
-
-## Links / references
+- Use BEM, [selector nesting](https://github.com/postcss/postcss-nested) and [CSS Next features](http://cssnext.io/features/).
+- Use ES6 and favour functional programming over imperative programming (e.g. use `map`, `reduce`, etc. rather than `for` loops).
