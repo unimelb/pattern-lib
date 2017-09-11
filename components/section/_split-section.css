@@ -1,0 +1,63 @@
+/**
+ * Split section
+ */
+ 
+.split-section {
+
+  &--fullheight{
+    min-height: 47.1rem;
+  }
+
+  /* left and right-hand sides are interchangeable */
+  &__side {
+    background-position: center;
+    background-size: cover;
+
+    &--with-image {
+      padding-top: 56.25%;
+    }
+  }
+
+  &__inner {
+    padding: calc(2 * var(--vr));
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (--bp-desktop) {
+    display: table;
+    width: 100%;
+
+    &__side {
+      display: table-cell;
+      vertical-align: middle;
+      width: 50%;
+
+      &--with-image {
+        padding-top: 0;
+      }
+    }
+
+    &__inner {
+      max-width: calc(var(--w-mid) / 2 + var(--vr)); /* account for either left or right padding */
+      padding-top: calc(4 * var(--vr));
+      padding-bottom: calc(4 * var(--vr));
+    }
+
+    &__side:first-child > .split-section__inner { margin-left: auto; }
+    &__side:last-child > .split-section__inner { margin-right: auto; }
+
+    &--top .split-section__side {
+      vertical-align: top;
+    }
+  }
+
+  @media (--bp-max-tablet) {
+    /* remove spacing between two subsequent sections on mobile */
+    &__side {
+      &:not(&--with-image) + &:not(&--with-image) > .split-section__inner {
+        padding-top: 0;
+      }
+    }
+  }
+}
