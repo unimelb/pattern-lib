@@ -12,7 +12,7 @@ import {
   date,
 } from '@storybook/addon-knobs';
 
-import ListImage from './listitem-image.vue';
+import ListItem from './listitem.vue';
 
 
 storiesOf('Listing', module)
@@ -50,19 +50,20 @@ storiesOf('Listing', module)
     (() => {
       const title = text('Title', 'About Us');
       return {
-        components: { ListImage},
+        components: { ListItem},
         template: `
           <div class="listing listing--three">
-            <ListImage />
-            <ListImage />
-            <ListImage />
-            <ListImage />
-            <ListImage />
-            <ListImage />
-            <ListImage />
-            <ListImage />
-            <ListImage />
-            <ListImage />
+            <ListItem>
+              
+            </ListItem>
+            <ListItem />
+            <ListItem />
+            <ListItem />
+            <ListItem />
+            <ListItem />
+            <ListItem />
+            <ListItem />
+            <ListItem />
 
           </div>
         `

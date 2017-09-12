@@ -1,0 +1,42 @@
+<template>
+  <a :href="href" class="btn-owner card card--news card--bdr">
+    <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
+    <div class="card__inner ">
+      <h4 class="card__meta">{{meta}}</h4>
+      <h3 class="card__header">{{title}}</h3>
+      <p>{{excerpt}}</p>
+    </div>
+    <div class="card__footer">
+      <button class="btn btn--fullwidth">Read more</button>
+    </div>
+  </a>
+</template>
+
+<script>
+  export default {
+    name: 'CardNews',
+    props: {
+      thumb: {
+        type: String,
+        default: "http://via.placeholder.com/400x200"
+      },
+      title: {
+        type: String,
+        default: "Test title"
+      },
+      meta: {
+        type: String,
+        default: "03 Apr 2017 | SPEECH"
+      },
+      href: {
+        type: String,
+        default: "#"
+      },
+      excerpt: {
+        type: String,
+        default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.'
+      }
+    }
+  }
+
+</script>
