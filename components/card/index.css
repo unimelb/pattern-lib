@@ -74,7 +74,35 @@
   */
 
   &--division {
+    text-align: left;
+    .card__title{
+      min-height: 6.5rem;
+      font-family: var(--ff-lead);
+      font-weight: var(--fw-semibold);
+      font-size: 1.125em;
+      margin: 0;
+      padding: var(--vr);
+      @supports (display: flex) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+    }
 
+    .card__footer {
+      padding: 0 var(--vr) var(--vr) var(--vr);
+    }
+
+    .card__subheader {
+      min-height: 5.5rem;
+    }
+
+    hr {
+      margin: var(--vr) 0;
+      border: 0;
+      border-bottom: 2px solid var(--col-brand-mid1);
+    }
 
   }
 

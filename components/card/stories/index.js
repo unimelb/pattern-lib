@@ -20,6 +20,7 @@ import CardLink from './card-link.vue';
 import CardImageListing from './card-imagelisting.vue';
 import CardFocusBox from './card-focus-box.vue';
 import CardFact from './card-fact.vue';
+import CardDivision from './card-division.vue';
 
 
 storiesOf('Cards', module)
@@ -375,25 +376,21 @@ storiesOf('Cards', module)
           title: "No. 1",
           meta: "Research facility",
           class: "list-item--desk-1of4",
-          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "No. 1",
           meta: "Research facility",
           class: "list-item--desk-1of4",
-          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "No. 1",
           meta: "Research facility",
           class: "list-item--desk-1of4",
-          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "No. 1",
           meta: "Research facility",
           class: "list-item--desk-1of4",
-          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
       ]);
       const inverted = boolean('Inverted', true);
@@ -404,11 +401,63 @@ storiesOf('Cards', module)
             <h3 style="text-align: center;" class="heading-section">Fact cards</h3>
             <p>Stats</p>
             <div class="listing">
-              ${items.map(item => `<ListItem class="${item.class}"><CardFact class="bg-white" meta="${item.meta}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+              ${items.map(item => `<ListItem class="${item.class}"><CardFact class="bg-white" meta="${item.meta}" title="${item.title}" excerpt="${typeof item.excerpt !== 'undefined' ? item.excerpt : ''}" /></ListItem>`).join('')}
             </div>
           </div>
         `
       }
     }
   ))
+  .add(
+    'Card - Division',
+    withNotes(
+      `
+        <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
+          <h2>Listing</h2>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+
+        </div>
+      `
+    )
+    (() => {
+      const items = object('Items', [
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Research Infrastructure and Systems",
+          subtitle: "Professor John Doggeton",
+          meta: "Pro Vice-Chancellor (Research Infrastructure & Systems)",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet",
+        },
+      ]);
+      const inverted = boolean('Inverted', true);
+      return {
+        components: { ListItem, CardDivision },
+        template: `
+          <div style="text-align: center;">
+            <h3 style="text-align: center;" class="heading-section">Division card</h3>
+            <div class="listing listing--three">
+              ${items.map(item => `<ListItem><CardDivision class="bg-white" meta="${item.meta}" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+            </div>
+          </div>
+        `
+      }
+    }
+  ))
+
 
