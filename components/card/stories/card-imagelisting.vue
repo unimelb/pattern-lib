@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="btn-owner card card--imagelisting" :class="{'bg-inverted': inverted, 'bg-white' : !inverted}">
+  <a :href="href" class="btn-owner card card--imagelisting">
     <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
       <h3 class="card__header">{{title}}</h3>
@@ -31,10 +31,6 @@
       excerpt: {
         type: String,
         default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.'
-      },
-      inverted: {
-        type: Boolean,
-        default: false
       }
     }
   }

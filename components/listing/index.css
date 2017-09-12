@@ -6,6 +6,10 @@
   @supports (display: flex) {
     display: flex;
     flex-wrap: wrap;
+    
+    &--center {
+      justify-content: center;
+    }
   }
 
   @media (--bp-desktop) {
@@ -59,4 +63,29 @@
   list-style: none;
   min-width: 100%;
   max-width: 100%;
+
+  &--desk-1of2 {
+    min-width: calc(100% / 2);
+    max-width: calc(100% / 2);
+  }
+
+  &--desk-1of3 {
+    min-width: calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+
+  &--desk-2of3 {
+    min-width: calc((100% / 3) * 2);
+    max-width: calc((100% / 3) * 2);
+  }
+
+  &--desk-1of4 {
+    min-width: calc(100% / 4);
+    max-width: calc(100% / 4);
+  }
+
+  &--desk-3of4 {
+    min-width: calc((100% / 4) * 3);
+    max-width: calc((100% / 4) * 3);
+  }
 }
