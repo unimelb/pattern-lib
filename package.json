@@ -34,9 +34,13 @@
     "postcss-nested": "^1.0.1",
     "postcss-url": "^6.0.4",
     "style-loader": "^0.17.0",
+    "svg-fill-loader": "^0.0.8",
+    "svg-sprite-loader": "^3.2.5",
+    "svg-url-loader": "^2.1.1",
     "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
-    "webpack": "^2.5.1"
+    "webpack": "^2.5.1",
+    "webpack-merge": "^4.1.0"
   },
   "cacheDirectories": [
     "node_modules"

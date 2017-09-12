@@ -1,20 +1,17 @@
 const path = require('path');
+const merge = require('webpack-merge');
 
 const genDefaultConfig = require('@storybook/vue/dist/server/config/defaults/webpack.config.js');
-const customConfig = require(path.resolve(__dirname, '../webpack.config.js'));
+const baseConfig = require('../webpack.config.base.js');
 
-module.exports = (baseConfig, env) => {
-  const config = genDefaultConfig(baseConfig, env);
+module.exports = (storybookConfig, env) => {
+  const config = genDefaultConfig(storybookConfig, env);
 
-  config.module.rules = config.module.rules.map((rule) => {
-    if (!rule.test.test('foo.css')) return rule;
-
-    const cssRule = customConfig.module.rules[1];
-    cssRule.include = path.resolve(__dirname, '../');
-    return cssRule;
+  // Keep only storybook's JS and Vue loaders
+  config.module.rules = config.module.rules.filter((rule) => {
+    return rule.test.test('foo.js') || rule.test.test('foo.vue');
   });
 
-  config.plugins.push(...customConfig.plugins);
-
-  return config;
+  const mergedConfig = merge(config, baseConfig);
+  return mergedConfig;
 };
