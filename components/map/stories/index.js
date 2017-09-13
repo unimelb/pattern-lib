@@ -31,7 +31,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Fax:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61393477253"&gt;+61 3 9347 7253&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -66,7 +66,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Fax:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61393477253"&gt;+61 3 9347 7253&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
       &lt;div class="contact-card__col1_3"&gt;
         &lt;div class="contact-card__title"&gt;Executive Liaison&lt;/div&gt;
         &lt;div class="contact-card__detail"&gt;Ms Sally Hayes&lt;/div&gt;
@@ -75,7 +75,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Phone:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61383446134"&gt;+61 3 8344 6134&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -110,7 +110,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Fax:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61393477253"&gt;+61 3 9347 7253&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
       &lt;div class="contact-card__col1_3"&gt;
         &lt;div class="contact-card__title"&gt;Executive Liaison&lt;/div&gt;
         &lt;div class="contact-card__detail"&gt;Ms Sally Hayes&lt;/div&gt;
@@ -119,7 +119,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Phone:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61383446134"&gt;+61 3 8344 6134&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
       &lt;div class="contact-card__col1_3"&gt;
         &lt;div class="contact-card__title"&gt;Executive Support Officer&lt;/div&gt;
         &lt;div class="contact-card__detail"&gt;Ms Amelia Phipps&lt;/div&gt;
@@ -128,7 +128,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Phone:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61383443741"&gt;+61 3 8344 3741&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
@@ -170,7 +170,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Fax:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61393477253"&gt;+61 3 9347 7253&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
       &lt;div class="contact-card__col1_3"&gt;
         &lt;div class="contact-card__title"&gt;Executive Liaison&lt;/div&gt;
         &lt;div class="contact-card__detail"&gt;Ms Sally Hayes&lt;/div&gt;
@@ -179,7 +179,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Phone:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61383446134"&gt;+61 3 8344 6134&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
       &lt;div class="contact-card__col1_3"&gt;
         &lt;div class="contact-card__title"&gt;Executive Support Officer&lt;/div&gt;
         &lt;div class="contact-card__detail"&gt;Ms Amelia Phipps&lt;/div&gt;
@@ -188,7 +188,7 @@ storiesOf('Contact card', module)
         &lt;br&gt;
         &lt;span class="contact-card__detail--inline"&gt;Phone:&lt;/span&gt;
         &lt;span class="contact-card__detail--inline"&gt;&lt;a href="tel:61383443741"&gt;+61 3 8344 3741&lt;/a&gt;&lt;/span&gt;
-      &lt;/dl&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 
