@@ -1,15 +1,17 @@
 import GMaps from './map/gmaps';
+import HeaderTools from './top-nav/header-tools';
 
 const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
 
-document.addEventListener('DOMContentLoaded', initPage);
-
-function initPage() {
+const initPage = () => {
   document.documentElement.classList.remove('no-js');
   loadGMaps();
-}
+  loadHeaderTools();
+};
 
-window.loadGMaps = function() {
+document.addEventListener('DOMContentLoaded', initPage);
+
+window.loadGMaps = () => {
   if (document.querySelector('[data-latlng],[data-address]')) {
     if (typeof(google) === 'undefined') {
       let script = document.createElement("script");
@@ -23,8 +25,11 @@ window.loadGMaps = function() {
   }
 };
 
-// GMaps callback
-window.maps_loaded_go = function() {
+window.maps_loaded_go = () => {
   for (let recs = document.querySelectorAll('[data-latlng],[data-address]'), i=recs.length - 1; i >= 0; i--)
     new GMaps(recs[i], {counter: i});
+};
+
+window.loadHeaderTools = () => {
+  new HeaderTools();
 };
