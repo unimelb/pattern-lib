@@ -87,13 +87,16 @@
   }
 
   &__input {
+    -webkit-appearance: textfield;
     border-color: rgba(0, 0, 0, .1);
     border-radius: 3px 0 0 3px;
     border-style: solid;
     border-width: 1px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .1) inset;
     height: 2.25rem;
+    margin: 0;
     outline: 0; /* sorry */
+    outline-offset: -2px;
     padding: .25rem .75rem;
     vertical-align: top;
   }
@@ -106,6 +109,7 @@
     border-width: 1px;
     color: white;
     height: 2.25rem;
+    margin: 0;
     padding: .25rem .75rem;
     vertical-align: top;
 
