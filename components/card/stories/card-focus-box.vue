@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="btn-owner card card--focus-box ">
+  <div class="btn-owner card card--focus-box ">
     <svg class="card--focus-box__cnr card--focus-box__cnr--top-left" role="presentation" focusable="false" width="54" height="54">
       <use xlink:href="#focus-top-left"></use>
     </svg>
@@ -13,7 +13,7 @@
       <h3>{{title}}</h3>
       <p>{{excerpt}}</p>
     </div>
-  </a>
+  </div>
 </template>
 
 <script>
