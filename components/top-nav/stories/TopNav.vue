@@ -1,49 +1,4 @@
 <template>
-<div>
-  <svg class="hidden" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="icon-search" viewBox="0 0 21 26">
-      <path d="M14.7658269,18.9909231 L13.8280962,18.9909231 L13.503,18.6674423 C14.6543654,17.3250577 15.3542308,15.5836731 15.3542308,13.6763077 C15.3542308,9.43673077 11.9170962,6 7.67711538,6 C3.43713462,6 0,9.43673077 0,13.6763077 C0,17.9162885 3.43713462,21.3530192 7.67711538,21.3530192 C9.58407692,21.3530192 11.3246538,20.6535577 12.6674423,19.5025962 L12.9929423,19.8272885 L12.9929423,20.7625962 L18.8963654,26.6571346 L20.6575385,24.8963654 L14.7658269,18.9909231 L14.7658269,18.9909231 Z M7.67711538,18.9909231 C4.74155769,18.9909231 2.3625,16.6118654 2.3625,13.6763077 C2.3625,10.7411538 4.74155769,8.36169231 7.67711538,8.36169231 C10.6126731,8.36169231 12.9921346,10.7411538 12.9921346,13.6763077 C12.9921346,16.6118654 10.6126731,18.9909231 7.67711538,18.9909231 L7.67711538,18.9909231 Z" />
-    </symbol>
-    <symbol id="icon-close" viewBox="0 0 48 48">
-      <path d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24 38 12.83z" />
-    </symbol>
-  </svg>
-  <div class="header-tools">
-    <div class="header-tools__search">
-      <a class="icon-link--vertical link" href="#search">
-        <svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false">
-          <use xlink:href="#icon-search" />
-        </svg>
-        <span class="icon-link__text">Search</span>
-      </a>
-    </div>
-    <div class="header-tools__menu">
-      <a class="icon-link--vertical link" href="#sitemap">
-        <svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48">
-          <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
-        </svg>
-        <span class="icon-link__text">Menu</span>
-      </a>
-    </div>
-    <div class="page-header-search">
-      <form action="https://search.unimelb.edu.au" method="get">
-        <fieldset class="page-header-search__inline">
-          <input class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University" /><button class="page-header-search__submit" type="submit">
-            <svg width="21" height="21" role="presentation" focusable="false">
-              <use xlink:href="#icon-search" />
-            </svg>
-            <span class="screenreaders-only">Go</span>
-          </button>
-        </fieldset>
-        <a class="page-header-icon icon-link--close" href="#">
-          <svg class="page-header-search__icon" width="24" height="24" role="presentation" focusable="false">
-            <use xlink:href="#icon-close" />
-          </svg>
-          Close
-        </a>
-      </form>
-    </div>
-  </div>
   <div id="sitemap" role="navigation">
     <h2>
       About us
@@ -51,7 +6,7 @@
     <ul>
       <li>
         <a href="/leadership">Leadership</a>
-        <div class="inner">
+        <div class="inner" v-if="complex">
           <ul>
             <li>
               <a href="/leadership/chancellor">Chancellor</a>
@@ -175,13 +130,13 @@
       <li>
         <a href="/our-vision">Our vision</a>
       </li>
-      <li>
+      <li v-if="complex">
         <a href="/alumni-and-staff">Alumni and staff</a>
       </li>
-      <li>
+      <li v-if="complex">
         <a href="/ranking-and-stats">Rankings and statistics</a>
       </li>
-      <li>
+      <li v-if="complex">
         <a href="/strategy">Strategy and governance</a>
         <div class="inner">
           <ul>
@@ -219,7 +174,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li v-if="complex">
         <a href="/working-with-us">Working with us</a>
         <div class="inner">
           <ul>
@@ -235,7 +190,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li v-if="complex">
         <a href="/news-and-resources">News and resources</a>
       </li>
     </ul>
@@ -245,17 +200,13 @@
       </li>
     </ul>
   </div>
-</div>
 </template>
 
 <script>
   export default {
-    data: () => {
-      return {
-        content: [`
-
-        `]
-      };
-    }
+    name: 'TopNav',
+    props: {
+      complex: Boolean
+    },
   }
 </script>

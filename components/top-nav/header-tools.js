@@ -10,21 +10,27 @@ export default class HeaderTools {
 
       // Search
       this.searchTrigger = document.querySelector('.header-tools__search > a');
-      if (this.searchTrigger && this.searchTrigger.getAttribute('href') === '#search') {
-        this.headerSearch = document.querySelector('.page-header-search');
-        if (this.headerSearch)
-          this.searchTrigger.addEventListener('click', this.activateSearch.bind(this));
+      if (!this.searchTrigger.getAttribute('data-bound')) {
+        if (this.searchTrigger && this.searchTrigger.getAttribute('href') === '#search') {
+          this.headerSearch = document.querySelector('.page-header-search');
+          if (this.headerSearch)
+            this.searchTrigger.addEventListener('click', this.activateSearch.bind(this));
+        }
+        this.searchTrigger.setAttribute('data-bound', true);
       }
 
       // Menu
       this.menuTrigger = document.querySelector('.header-tools__menu > a');
       if (this.menuTrigger) {
-        this.menuTrigger.addEventListener('click', this.activateMenu.bind(this));
-        this.menuTarget = document.getElementById('sitemap');
-        this.menu = new LocalNav(this.menuTarget, {
-          root: document.body,
-          closeLocalNav: this.dismissMenu.bind(this)
-        });
+        if (!this.menuTrigger.getAttribute('data-bound')) {
+          this.menuTrigger.addEventListener('click', this.activateMenu.bind(this));
+          this.menuTarget = document.getElementById('sitemap');
+          this.menu = new LocalNav(this.menuTarget, {
+            root: document.body,
+            closeLocalNav: this.dismissMenu.bind(this)
+          });
+          this.menuTrigger.setAttribute('data-bound', true);
+        }
       }
     }
   }
