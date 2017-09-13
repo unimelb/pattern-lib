@@ -200,6 +200,7 @@
     
 
   }
+
   
   /*
   * Focus box as used in About us - Growing esteem pages
@@ -237,6 +238,28 @@
       .card--focus-box__cnr {
         color: var(--col-white);
       }
+    }
+
+  }
+
+  &--pathfinder {
+    .card__header {
+      margin-top: var(--vr);
+      text-align: center;
+    }
+
+    .card__footer {
+      padding-top: 0;
+    }
+
+    .card--focus-box__cnr {
+      color: #fff;
+      opacity: 0.2;
+      transition: opacity .3s;
+    }
+
+    &:hover .card--focus-box__cnr {
+      opacity: 0.3;
     }
 
   }
