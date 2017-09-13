@@ -51,7 +51,7 @@ module.exports = {
             loader: 'svg-url-loader', // https://github.com/bhovhannes/svg-url-loader
             options: {
               limit: 1024,
-              name: 'assets/[name]-[sha1:hash:5].[ext]',
+              name: 'assets/[name].[ext]',
               stripdeclarations: true
             }
           },
