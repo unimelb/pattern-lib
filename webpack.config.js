@@ -1,18 +1,19 @@
 require('dotenv').config();
 
 const path = require('path');
+const merge = require('webpack-merge');
 const baseConfig = require('./webpack.config.base.js');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV != 'production';
 
-module.exports = Object.assign(baseConfig, {
+module.exports = merge(baseConfig, {
   context: path.resolve(__dirname, 'components'),
   devtool: isDev && 'eval-cheap-module-source-map',
   entry: [
     './index.js',
     './index.css',
-    './components/icons/sprite.js'
+    './icons/sprite.js'
   ],
   output: {
     path: path.resolve(__dirname, '.out/lib'),
@@ -29,4 +30,4 @@ module.exports = Object.assign(baseConfig, {
       }
     ]
   }
-};
+});

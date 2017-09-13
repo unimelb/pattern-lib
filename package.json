@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build:docs": "build-storybook -c .storybook -o .out/docs",
-    "build:lib": "NODE_ENV=production webpack -c webpack.config.js",
+    "build:lib": "NODE_ENV=production webpack --config webpack.config.js",
     "start": "start-storybook -p 7002 -c .storybook",
     "prebuild:docs": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib"
@@ -35,7 +35,6 @@
     "postcss-url": "^6.0.4",
     "style-loader": "^0.17.0",
     "svg-fill-loader": "^0.0.8",
-    "svg-sprite-loader": "^3.2.5",
     "svg-url-loader": "^2.1.1",
     "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
