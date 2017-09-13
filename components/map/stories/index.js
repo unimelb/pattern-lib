@@ -145,7 +145,7 @@ storiesOf('Contact card', module)
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Contact card, Three column</h2><pre><code>
 
   &lt;div class="contact-card"&gt;
-    &lt;div v-if="map" class="contact-card__map"
+    &lt;div class="contact-card__map"
       data-latlng="-37.797377,144.961591"
       data-pin="-37.797484, 144.961638"
       data-width="1140"
