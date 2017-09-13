@@ -69,7 +69,7 @@ module.exports = {
       {
         // Static assets
         test: /\.(jpe?g|png|gif|svg|woff2?|ttf|otf|eot|ico)$/,
-        exclude: /sprite\.svg$/,
+        exclude: path.resolve(__dirname, 'components/icons/'),
         loader: 'file-loader',
         options: {
           name: 'assets/[name].[ext]'
