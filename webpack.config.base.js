@@ -72,7 +72,7 @@ module.exports = {
         exclude: /sprite\.svg$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/[name]-[sha1:hash:5].[ext]'
+          name: 'assets/[name].[ext]'
         }
       }
     ]
