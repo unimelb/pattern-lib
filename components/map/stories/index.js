@@ -20,6 +20,6 @@ storiesOf('Contact card', module)
   }))
   .add('With map', () =>     ({
     components: { ContactCard },
-    mounted: () => { maps_loaded_go() },
+    mounted: () => { loadGMaps() },
     template: `<contact-card :columns="3" :map="true" />`
   }));

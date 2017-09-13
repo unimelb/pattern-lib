@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-card" @beforeUpdate="console.log(1)">
+  <div class="contact-card">
     <div v-if="map" class="contact-card__map"
       data-latlng="-37.797377,144.961591"
       data-pin="-37.797484, 144.961638"

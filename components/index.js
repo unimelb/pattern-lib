@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', initPage);
 
 function initPage() {
   document.documentElement.classList.remove('no-js');
+  loadGMaps();
+}
 
+window.loadGMaps = function() {
   if (document.querySelector('[data-latlng],[data-address]')) {
     if (typeof(google) === 'undefined') {
       let script = document.createElement("script");
@@ -18,7 +21,7 @@ function initPage() {
       maps_loaded_go();
     }
   }
-}
+};
 
 // GMaps callback
 window.maps_loaded_go = function() {
