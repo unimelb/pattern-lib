@@ -1,4 +1,10 @@
 .article {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   
   &__header {
     padding: calc(var(--vr) * 2) 0 0 0;

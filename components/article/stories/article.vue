@@ -21,7 +21,6 @@
     </div>
     <div class="article__main" v-html="content">
     </div>
-    <div class="clearfix"></div>
   </article>
 </template>
 
