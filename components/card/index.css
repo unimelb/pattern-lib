@@ -74,6 +74,12 @@
   */
 
   &--link {
+    text-align: center;
+    position: relative;
+
+    @media (--bp-desktop) {
+      max-width: 14.3rem;
+    }
 
     .card__thumb {
       background-position: center;
@@ -83,6 +89,8 @@
       height: 200px;
       overflow: hidden;
       position: relative;
+      margin-top: 0;
+      margin-bottom: auto;
 
       &:before {
         background: inherit;
@@ -97,27 +105,27 @@
       }
     }
 
-    text-align: center;
 
-    @media (--bp-desktop) {
-      max-width: 14.3rem;
+    @supports (display: flex) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    .card__inner {
-      padding: var(--vr) calc(var(--vr) / 2);
+    svg {
+      color: white;
+      position: absolute;
+      top: calc((50% + 100px) - 7px);
+      right: 10px;
     }
 
     .card__header {
       color: var(--col-white);
-      padding-right: var(--vr);
-      padding-left: var(--vr);
-    }
-
-    .card__header-icon {
-      color: var(--col-white);
-      float: right;
-      width: 1rem;
-      height: 1rem;
+      padding: var(--vr);
+      position: relative;
+      margin-bottom: auto;
+      margin-right: 15px;
     }
 
   }
