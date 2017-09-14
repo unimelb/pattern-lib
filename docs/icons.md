@@ -44,7 +44,7 @@ The webpack configuration includes the following loaders:
 - [svg-url-loader](https://github.com/bhovhannes/svg-url-loader) converts the icons to data URIs and encodes them for cross-browser support,
 - [svg-fill-loader](https://github.com/kisenka/svg-fill-loader) allows specifying a fill colour as a query parameter.
 
-If an icon exceeds 1 kB, it is loaded as an external file like other assets (`background-image: url('<localhost-or-cdn>/assets/chevron-right.svg')`. The set-up only applies to SVG icons in the `components/icons/` folder (aliased to `icons/` for convenience) that are referenced from a CSS file with `url(...)`.
+If an icon exceeds 1 kB, it is loaded as an external file like other assets (`background-image: url('<localhost-or-cdn>/chevron-right.svg')`. The set-up only applies to SVG icons in the `components/icons/` folder (aliased to `icons/` for convenience) that are referenced from a CSS file with `url(...)`.
 
 
 ### In Vue components
@@ -57,12 +57,12 @@ Components that are meant to become container templates in the CMS don't have ma
 
 <!-- OUTPUT (IN DEV) -->
 <svg role="presentation" focusable="false">
-  <use xlink:href="/assets/sprite.svg#chevron-right" />
+  <use xlink:href="/sprite.svg#chevron-right" />
 </svg>
 
 <!-- OUTPUT (IN PROD) -->
 <svg role="presentation" focusable="false">
-  <use xlink:href="<cdn-url>/sprite.svg#chevron-right" />
+  <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/sprite.svg#chevron-right" />
 </svg>
 
 <!-- WITH PROPS -->
@@ -93,6 +93,6 @@ Webpack loads the sprite file like a normal asset. In production, `file-loader` 
 - Icons used in container templates are to be inlined in the markup just as they appear in the documentation -- i.e.
     ```html
     <svg ...>
-      <use xlink:href="https://<cdn-url>/sprite.js#<icon-name>" />
+      <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/sprite.js#<icon-name>" />
     </svg>
     ```
