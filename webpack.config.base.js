@@ -51,7 +51,7 @@ module.exports = {
             loader: 'svg-url-loader', // https://github.com/bhovhannes/svg-url-loader
             options: {
               limit: 1024,
-              name: 'assets/[name].[ext]',
+              name: '[name].[ext]',
               stripdeclarations: true
             }
           },
@@ -63,7 +63,7 @@ module.exports = {
         test: /sprite\.svg$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/[name].[ext]'
+          name: '[name].[ext]'
         }
       },
       {
@@ -72,7 +72,7 @@ module.exports = {
         exclude: path.resolve(__dirname, 'components/icons/'),
         loader: 'file-loader',
         options: {
-          name: 'assets/[name].[ext]'
+          name: '[name].[ext]'
         }
       }
     ]
@@ -80,7 +80,7 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin([
       'NODE_ENV',
-      'CDNURL'
+      'CDN_URL'
     ]),
     new ExtractTextPlugin({
       allChunks: true,
