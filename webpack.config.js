@@ -16,9 +16,9 @@ module.exports = merge(baseConfig, {
     './index.css'
   ],
   output: {
-    path: path.resolve(__dirname, `.out/lib/${pkg.version}/`),
+    path: path.resolve(__dirname, `.out/lib/v${pkg.version}/`),
     filename: '[name].js',
-    publicPath: `${process.env.CDN_URL}/${pkg.version}/`
+    publicPath: `${process.env.CDN_URL}/v${pkg.version}/`
   },
   module: {
     rules: [
