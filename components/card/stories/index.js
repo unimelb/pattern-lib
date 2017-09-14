@@ -19,6 +19,7 @@ import CardNews from './card-news.vue';
 import CardLink from './card-link.vue';
 import CardImageListing from './card-imagelisting.vue';
 import CardFocusBox from './card-focus-box.vue';
+import CardFocusImages from './card-focusimages.vue';
 import CardFact from './card-fact.vue';
 import CardDivision from './card-division.vue';
 
@@ -313,6 +314,53 @@ storiesOf('Cards', module)
     }
   ))
   .add(
+    'Card - Focus box ( image listing )',
+    withNotes(
+      `
+        <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
+          <h2>Listing</h2>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+
+        </div>
+      `
+    )
+    (() => {
+      const items = object('Items', [
+        {
+          title: "Learning and teaching",
+          thumb: "http://via.placeholder.com/300x400",
+        },
+        {
+          title: "Option 2",
+          thumb: "http://via.placeholder.com/300x400"
+        },
+        {
+          title: "Something else",
+          thumb: "http://via.placeholder.com/300x400",
+        },
+
+      ]);
+      const inverted = boolean('Inverted', true);
+      return {
+        components: { ListItem, CardFocusImages },
+        template: `
+          <div style="text-align: center;">
+            <h3 style="text-align: center;" class="heading-section">Focus boxes</h3>
+
+            <div class="listing listing--three">
+              ${items.map(item => `<ListItem><CardFocusImages class="bg-white" thumb="${item.thumb}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+            </div>
+          </div>
+        `
+      }
+    }
+  ))
+  .add(
     'Card - Fact',
     withNotes(
       `
@@ -458,7 +506,4 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
-
-
-
+  ));

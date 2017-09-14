@@ -201,6 +201,12 @@
 
   }
 
+  &--image-focus {
+    padding: 0 !important;
+    .card__thumb {
+    }
+  }
+
   
   /*
   * Focus box as used in About us - Growing esteem pages
@@ -242,11 +248,29 @@
 
   }
 
+  /*
+  * Pathfinder cards - highlight focus on hover
+  */
+
   &--pathfinder {
+
     .card__header {
       margin-top: var(--vr);
       text-align: center;
+      min-height: calc(var(--vr) * 3.5);
+      padding-left: var(--vr);
+      padding-right: var(--vr);
+
     }
+
+    &--sml {
+      text-align: center;
+
+      .btn {
+        margin-bottom: var(--vr);
+      }
+    }
+
 
     .card__footer {
       padding-top: 0;

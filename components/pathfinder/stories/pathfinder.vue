@@ -2,14 +2,8 @@
   <section class="section bg-inverted-dark" :style="`background-image: url(${image});`">
     <div class="section__inner">
       <div class="listing listing--three listing--center">
-        <ListItem>
-          <CardPathfinder title="Engagement outcomes" />
-        </ListItem>
-        <ListItem>
-          <CardPathfinder title="Study health at Melbourne" />
-        </ListItem>
-        <ListItem>
-          <CardPathfinder title="World class research" />
+        <ListItem v-for="box in boxes.split(',')">
+          <CardPathfinder :title="box" />
         </ListItem>
       </div>
     </div>
@@ -29,10 +23,7 @@
         default: "http://via.placeholder.com/400x200"
       },
       boxes: {
-        type: Object,
-        default: [{
-          title: "test"
-        }]
+        type: Array,
       }
     }
   }
