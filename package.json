@@ -14,7 +14,7 @@
     "build:lib": "NODE_ENV=production webpack --config webpack.config.js",
     "start": "start-storybook -p 7002 -c .storybook",
     "prebuild:docs": "rm -Rf .out/docs",
-    "prebuild:lib": "rm -Rf .out/lib"
+    "prebuild:lib": "rm -Rf .out/lib && mkdir .out/lib"
   },
   "devDependencies": {
     "@storybook/addon-knobs": "^3.2.8",

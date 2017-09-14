@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const path = require('path');
 const merge = require('webpack-merge');
+const pkg = require('./package.json');
 const baseConfig = require('./webpack.config.base.js');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -12,13 +13,12 @@ module.exports = merge(baseConfig, {
   devtool: isDev && 'eval-cheap-module-source-map',
   entry: [
     './index.js',
-    './index.css',
-    './icons/sprite.js'
+    './index.css'
   ],
   output: {
-    path: path.resolve(__dirname, '.out/lib'),
+    path: path.resolve(__dirname, `.out/lib/${pkg.version}/`),
     filename: '[name].js',
-    publicPath: `${process.env.CDNURL}/${process.env.VERSION}/`
+    publicPath: `${process.env.CDN_URL}/${pkg.version}/`
   },
   module: {
     rules: [
