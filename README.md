@@ -33,7 +33,8 @@ yarn
 To deploy to production:
 
 - Check `version` is correct in `package.json`.
-- Merge `dev` branch to `master`.
+- Create a pull request to merge the `dev` branch to `master`.
+- Wait for the mandatory checks to pass and merge.
 
 Semaphore then automatically builds the library and syncs the output files to S3. If the version you're deploying had been previously deployed, you'll need to invalidate the files on the CDN (AWS Cloudfront) or wait a day or so for it to happen automatically.
 
