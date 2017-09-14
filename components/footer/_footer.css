@@ -13,10 +13,6 @@ main {
   background-color: var(--col-bg);
   color: #fff;
 
-  a:visited {
-    color: #fff;
-  }
-
   /* top half with logo, search, popular links, etc. */
   &__top {
     padding: 3rem 0 2.25rem
@@ -72,6 +68,10 @@ main {
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:visited {
+      color: #fff;
     }
   }
 
