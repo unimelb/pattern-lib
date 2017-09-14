@@ -4,6 +4,10 @@ import Icon from '../components/icons/stories/Icon.vue';
 
 // Import lib styles
 import '../components/index.css';
+import './index.css';
+
+// Import lib scripts
+import '../components/index.js';
 
 // Register shared documentation components
 Vue.component('icon', Icon);
