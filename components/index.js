@@ -1,6 +1,7 @@
 import svg4everbody from 'svg4everybody';
 import GMaps from './map/gmaps';
 import HeaderTools from './top-nav/header-tools';
+import './icons/sprite.svg';
 
 svg4everbody();
 
