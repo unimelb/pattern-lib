@@ -1,24 +1,24 @@
 <template>
-  <div class="btn-owner card card--focus-box ">
+  <a :href="{href}" class="btn-owner card card--focus-box bg-inverted card--pathfinder">
     <svg class="card--focus-box__cnr card--focus-box__cnr--top-left" role="presentation" focusable="false" width="54" height="54">
       <use xlink:href="#focus-top-left"></use>
     </svg>
     <svg class="card--focus-box__cnr card--focus-box__cnr--btm-right" role="presentation" focusable="false" width="54" height="54">
       <use xlink:href="#focus-bottom-right"></use>
     </svg>
-    <div class="card__inner ">
-      <svg class="icon--large" focusable="false" height="170" role="presentation" width="170">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="icon"></use>
-      </svg>
-      <h3>{{title}}</h3>
+    <h3 class="card__header heading-section">{{title}}</h3>
+    <div class="card__inner">
       <p>{{excerpt}}</p>
     </div>
-  </div>
+    <div class="card__footer">
+      <button class="btn btn--inverted btn--fullwidth">Find out more</button>
+    </div>
+  </a>
 </template>
 
 <script>
   export default {
-    name: 'CardFocusBox',
+    name: 'CardPathfinder',
     props: {
       thumb: {
         type: String,
