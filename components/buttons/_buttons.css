@@ -1,0 +1,111 @@
+/**
+ * Button + Button owner
+ */
+ .btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: calc(var(--vr) * 0.8);
+  border: 2px solid color(var(--col-brand) alpha(70%));
+  border-radius: var(--br);
+  color: var(--col-brand);
+  font-weight: var(--fw-semibold);
+
+  text-align: center;
+  text-decoration: none;
+  outline-offset: 1px;
+  outline-color: var(--col-brand-light);
+  transition: border-color .2s;
+  
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &-owner:focus .btn,
+  &-owner:hover .btn {
+    border-color: var(--col-brand);
+    color: var(--col-brand);
+  }
+
+  &:active,
+  &-owner:active .btn {
+    background-color: var(--col-brand);
+    color: #fff;
+  }
+
+  &--inverted {
+    background-color: transparent;
+    border-color: color(#fff alpha(30%));
+    color: #fff;
+  }
+
+  &--cta {
+    background-color: var(--col-brand);
+    color: white;
+    border-color: var(--col-brand);
+  }
+
+  &--inverted:focus,
+  &--inverted:hover,
+  &-owner:focus .btn--inverted,
+  &-owner:hover .btn--inverted {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &--inverted:active,
+  &-owner:active .btn--inverted {
+    background-color: #fff;
+    color: var(--col-brand);
+  }
+
+  &--sml {
+    padding: calc(var(--vr) / 2) 1.25em;
+  }
+
+  &--xsml {
+    padding: calc(var(--vr) / 3) 1.25em;
+  }
+
+  &--wide {
+    min-width: calc(var(--vr) * 10);
+    max-width: 100%;
+    @media (--bp-max-mobile) {
+      min-width: 100%;
+    }
+  }
+
+  &--xwide {
+    min-width: calc(var(--vr) * 20);
+    max-width: 100%;
+    @media (--bp-max-mobile) {
+      min-width: 100%;
+    }
+  }
+  
+  &--fullwidth{
+    min-width: 100%;
+  }
+
+  &--center{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--icon{
+    position: relative;
+    
+/*    @supports (display: flex) {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    
+    .icon{
+     margin-left: calc(var(--vr) / 2);
+     float: right; 
+    }*/
+
+  }
+
+}
+
