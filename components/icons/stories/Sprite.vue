@@ -8,7 +8,24 @@
   export default {
     data: () => ({
       names: [
-        'chevron-right'
+        'chevron-right',
+        'chevron-left',
+        'chevron-down',
+        'play',
+        'home',
+        'search',
+        'close',
+        'focus-top-left',
+        'focus-bottom-right',
+        'facebook',
+        'twitter',
+        'linkedin',
+        'faculty',
+        'library',
+        'phone',
+        'location',
+        'campaign',
+        'jobs'
       ]
     })
   }
@@ -16,7 +33,9 @@
 
 <style scoped>
   svg {
+    display: inline-block;
     width: 5rem;
     height: 5rem;
+    margin: .5rem;
   }
 </style>
