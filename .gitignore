@@ -1,4 +1,5 @@
 .env
+.out/
 build/
 node_modules/
 

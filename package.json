@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build:docs": "build-storybook -c .storybook -o .out/docs",
-    "build:lib": "NODE_ENV=production webpack -c webpack.config.js",
+    "build:lib": "NODE_ENV=production webpack --config webpack.config.js",
     "start": "start-storybook -p 7002 -c .storybook",
     "prebuild:docs": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib"
@@ -34,9 +34,12 @@
     "postcss-nested": "^1.0.1",
     "postcss-url": "^6.0.4",
     "style-loader": "^0.17.0",
+    "svg-fill-loader": "^0.0.8",
+    "svg-url-loader": "^2.1.1",
     "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
-    "webpack": "^2.5.1"
+    "webpack": "^2.5.1",
+    "webpack-merge": "^4.1.0"
   },
   "cacheDirectories": [
     "node_modules"
@@ -61,5 +64,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "svg4everybody": "^2.1.9"
   }
 }

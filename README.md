@@ -4,6 +4,8 @@
 
 The contents of this repository have been produced by The University of Melbourne for internal use and must not be distributed without the express permission of The University of Melbourne.
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/web-templates-2017)
+
 
 ## Set-up
 
@@ -22,7 +24,19 @@ yarn
 1. Run `yarn start`
 2. Visit [http://localhost:7002/](http://localhost:7002/)
 
-To build the assets for production (e.g. for debugging purposes), run `yarn run build`. The compiled targets can be found in the `/build` directory.
+- To build the documentation site to `/.out/docs`, run `yarn run build:docs`.
+- To build the library for production (e.g. for debugging purposes) to `.out/lib/<version>`, run `yarn run build:lib`.
+
+
+## Deployment
+
+To deploy to production:
+
+- Check `version` is correct in `package.json`.
+- Create a pull request to merge the `dev` branch to `master`.
+- Wait for the mandatory checks to pass and merge.
+
+Semaphore then automatically builds the library and syncs the output files to S3. If the version you're deploying had been previously deployed, you'll need to invalidate the files on the CDN (AWS Cloudfront) or wait a day or so for it to happen automatically.
 
 
 ## Testing
