@@ -173,9 +173,6 @@
   */
 
   &--news {
-    background-color: var(--col-white);
-    color: var(--col-brand);
-
     .card__inner {
     }
 
