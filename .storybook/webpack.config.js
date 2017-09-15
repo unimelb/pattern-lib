@@ -9,7 +9,7 @@ module.exports = (storybookConfig, env) => {
 
   // Keep only storybook's JS and Vue loaders
   config.module.rules = config.module.rules.filter((rule) => {
-    return rule.test.test('foo.js') || rule.test.test('foo.vue');
+    return rule.test.test('foo.js');
   });
 
   const mergedConfig = merge(config, baseConfig);
