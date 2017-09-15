@@ -6,7 +6,8 @@
           {{title}}
         </h2>
         <p>{{content}}</p>
-        <a class="btn btn--lead" href="#"><span class="push-icon">Read More<svg class="push-icon__icon" focusable="false" height="16" role="presentation" width="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use></svg></span></a>
+        <button-icon icon="chevron-right" class="btn--xwide" btnText="test" />
+     <!--    <a class="btn btn--lead" href="#"><span class="push-icon">Read More<svg class="push-icon__icon" focusable="false" height="16" role="presentation" width="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use></svg></span></a> -->
       </div>
       <div class="cell cell--desk-1of3">
         <nav class="menu menu--right">
@@ -26,8 +27,11 @@
 
 
 <script>
+  import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
+
   export default {
     name: 'QuickLinksMenu',
+    components: { ButtonIcon },
     props: {
       title: {
         type: String,

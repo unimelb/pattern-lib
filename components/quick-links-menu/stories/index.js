@@ -11,7 +11,7 @@ import {
   color,
   date,
 } from '@storybook/addon-knobs';
-
+import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 
 storiesOf('Quick Link Menu', module)
   .addDecorator(withKnobs)
@@ -58,6 +58,7 @@ storiesOf('Quick Link Menu', module)
       const menuLinks = array('Menu Links', ['Strategy and governance', 'Leadership', 'Working with us', 'News and resources', 'Campus and maps']);
       const versions = select('Versions', ['ql-menu--l1', 'ql-menu--l2', 'ql-menu--l3', 'ql-menu--l4'], 'ql-menu--l1');
       return {
+        components: {ButtonIcon},
         template: `
           <section class="section">
             <div class="max section__inner section__inner--short ql-menu ${versions}">
@@ -68,7 +69,7 @@ storiesOf('Quick Link Menu', module)
                       ${title}
                     </h2>
                     <p class="lead">${content}</p>
-                    <a class="btn btn--lead" href="#"><span class="push-icon">Read More<svg class="push-icon__icon" focusable="false" height="16" role="presentation" width="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use></svg></span></a>
+                    <button-icon icon="chevron-right" class="btn--xwide" btnText="Welcome from the Vice-Chancellor" />
                   </div>
                 </div>
                 <div class="cell cell--desk-1of3">
@@ -137,7 +138,6 @@ storiesOf('Quick Link Menu', module)
                     ${title}
                   </h2>
                   <p>${content}</p>
-                  <a class="btn btn--lead" href="#"><span class="push-icon">Read More<svg class="push-icon__icon" focusable="false" height="16" role="presentation" width="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-chevron-right"></use></svg></span></a>
                 </div>
               </div>
               <div class="cell cell--desk-1of3">
