@@ -1,41 +1,39 @@
 <template>
-  <a class="btn link--disabled" :class="{'btn--sml': small,'btn--xsml': xsmall, 'btn--wide': wide}" href="">
+  <a v-if="element === 'a'" class="btn" :href="href">
     <span class="push-icon">
-      {{btnText}}
+      <slot />
       <icon class="push-icon__icon" width="15px" height="15px" :name="icon" />
     </span>
   </a>
+  <button v-else-if="element === 'button'" class="btn">
+    <span class="push-icon">
+      <slot />
+      <icon class="push-icon__icon" width="15px" height="15px" :name="icon" />
+    </span>
+  </button>
 </template>
 
 <script>
 import icon from './../../icons/stories/Icon.vue';
 
 export default {
+  name: 'button-icon',
   components: {
     icon
   },
   props: {
-    btnText: {
+    href: {
       type: String,
-      default: "Button with icon"
+      default: ""
     },
     icon: {
       type: String,
       default: "chevron-right"
     },
-    small: {
-      type: Boolean,
-      default: false
-    },
-    xsmall: {
-      type: Boolean,
-      default: false
-    },
-    wide: {
-      type: Boolean,
-      default: false
+    element: {
+      type: String,
+      default: "a"
     }
-
   }
 }
 </script>
