@@ -104,18 +104,6 @@
 
   &--icon{
     position: relative;
-    
-/*    @supports (display: flex) {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-    
-    .icon{
-     margin-left: calc(var(--vr) / 2);
-     float: right; 
-    }*/
-
   }
 
 }
