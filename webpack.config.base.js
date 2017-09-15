@@ -42,6 +42,11 @@ module.exports = {
         })
       },
       {
+        // Vue components
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      {
         // Icons in CSS - e.g. url('icons/chevron-right.svg?fill=#fff')
         test: /\.svg$/,
         include: path.resolve(__dirname, 'components/icons/'),
