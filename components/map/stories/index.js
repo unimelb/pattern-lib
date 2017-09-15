@@ -1,14 +1,14 @@
 import Vue from 'vue';
-import { storiesOf, addDecorator } from '@storybook/vue';
+import { storiesOf } from '@storybook/vue';
 import { withNotes } from '@storybook/addon-notes';
 
-import Checkerboard from 'decorators/Checkerboard.vue';
+import { pad } from 'decorators';
 import ContactCard from './ContactCard.vue';
 
 const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
 
 storiesOf('Contact card', module)
-  .addDecorator()
+  .addDecorator(pad)
   .add(
     'One column',
     withNotes(
