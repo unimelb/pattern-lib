@@ -243,15 +243,14 @@
 </template>
 
 <script>
-  import localAsset from "../images/logo-unhoused.svg";
+  import logoAsset from "../images/logo-unhoused.svg";
 
   export default {
     name: 'BoilerplateFooter',
-    props: {
-      logo: {
-        type: String,
-        default: (process.env.NODE_ENV === "development" ? localAsset : "cdnurl")
-      }      
+    data: () => {
+      return {
+        logo: logoAsset
+      }
     }
   }
 </script>
