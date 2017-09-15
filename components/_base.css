@@ -23,7 +23,14 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   margin: 0;
+  background-color: var(--col-bg-secondary); /* same as banner/footer for scroll overflow */
 }
+
+nav,
+main {
+  background-color: white; /* override scroll overflow background */
+}
+
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, dl, hr, pre,
 table, blockquote, figure, fieldset, address {

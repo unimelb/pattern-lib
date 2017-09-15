@@ -1,13 +1,3 @@
-/* Set overflow colour to match footer */
-body {
-  background-color: var(--col-bg-secondary);
-}
-
-nav,
-main {
-  background-color: white;
-}
-
 .footer {
   padding: 0;
   background-color: var(--col-bg);
