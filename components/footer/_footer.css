@@ -45,6 +45,10 @@ main {
   &__popular {
     font-weight: 300;
 
+    & li {
+      list-style: none;      
+    }
+
     & > li:not(:last-child) {
       margin-bottom: .25rem;
     }
