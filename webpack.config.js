@@ -11,10 +11,12 @@ const isDev = process.env.NODE_ENV != 'production';
 module.exports = merge(baseConfig, {
   context: path.resolve(__dirname, 'components'),
   devtool: isDev && 'eval-cheap-module-source-map',
-  entry: [
-    './index.js',
-    './index.css'
-  ],
+  entry: {
+    ui: [
+      './index.js',
+      './index.css'
+    ]
+  },
   output: {
     path: path.resolve(__dirname, `.out/lib/v${pkg.version}/`),
     filename: '[name].js',
