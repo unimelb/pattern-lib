@@ -1,17 +1,19 @@
 import Vue from 'vue';
-import { storiesOf } from '@storybook/vue';
+import { storiesOf, addDecorator } from '@storybook/vue';
 import { withNotes } from '@storybook/addon-notes';
 
+import Checkerboard from 'decorators/Checkerboard.vue';
 import ContactCard from './ContactCard.vue';
 
 const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
 
 storiesOf('Contact card', module)
+  .addDecorator()
   .add(
-    'One column', 
+    'One column',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Contact card, One column</h2><pre><code>
-  
+
   &lt;div class="contact-card"&gt;
     &lt;div class="contact-card__lower"&gt;
       &lt;div class="contact-card__col1_3"&gt;
@@ -43,10 +45,10 @@ storiesOf('Contact card', module)
   )
 
   .add(
-    'Two column', 
+    'Two column',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Contact card, Two column</h2><pre><code>
-  
+
   &lt;div class="contact-card"&gt;
     &lt;div class="contact-card__lower"&gt;
       &lt;div class="contact-card__col1_3"&gt;
@@ -90,7 +92,7 @@ storiesOf('Contact card', module)
     'Three column',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Contact card, Three column</h2><pre><code>
-  
+
   &lt;div class="contact-card"&gt;
     &lt;div class="contact-card__lower"&gt;
       &lt;div class="contact-card__col1_3"&gt;
