@@ -35,6 +35,10 @@
   &__popular {
     font-weight: 300;
 
+    & li {
+      list-style: none;      
+    }
+
     & > li:not(:last-child) {
       margin-bottom: .25rem;
     }
@@ -95,6 +99,11 @@
       &:hover {
         transform: scale(1.2);
       }
+    }
+
+    &__icon {
+      height: 1.3125rem;
+      width: 1.3125rem;
     }
   }
 
@@ -265,11 +274,14 @@
   }
 
   &__icon {
+    height: 1.3125rem;
     position: absolute;
     left: 0;
 
     /* vertical centring */
     top: 50%;
+
+    width: 1.3125rem;
   }
 
   &__submit {
