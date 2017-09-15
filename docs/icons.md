@@ -62,7 +62,7 @@ Components that are meant to become container templates in the CMS don't have ma
 
 <!-- OUTPUT (IN PROD) -->
 <svg role="presentation" focusable="false">
-  <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/sprite.svg#chevron-right" />
+  <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/<version>/sprite.svg#chevron-right" />
 </svg>
 
 <!-- WITH PROPS -->
@@ -93,6 +93,6 @@ Webpack loads the sprite file like a normal asset. In production, `file-loader` 
 - Icons used in container templates are to be inlined in the markup just as they appear in the documentation -- i.e.
     ```html
     <svg ...>
-      <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/sprite.js#<icon-name>" />
+      <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/<version>/sprite.js#<icon-name>" />
     </svg>
     ```

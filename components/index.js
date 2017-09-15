@@ -2,6 +2,9 @@ import svg4everbody from 'svg4everybody';
 import GMaps from './map/gmaps';
 import HeaderTools from './top-nav/header-tools';
 
+import './icons';
+import './footer';
+
 svg4everbody();
 
 const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';

@@ -22,7 +22,7 @@ yarn
 ## Development
 
 1. Run `yarn start`
-2. Visit [http://localhost:7002/](http://localhost:7002/)
+1. Visit [http://localhost:7002/](http://localhost:7002/)
 
 - To build the documentation site to `/.out/docs`, run `yarn run build:docs`.
 - To build the library for production (e.g. for debugging purposes) to `.out/lib/<version>`, run `yarn run build:lib`.
@@ -32,11 +32,14 @@ yarn
 
 To deploy to production:
 
-- Check `version` is correct in `package.json`.
-- Create a pull request to merge the `dev` branch to `master`.
-- Wait for the mandatory checks to pass and merge.
+1. Bump the `version` number in `package.json` (cf. note below).
+1. Commit the version change to the `dev` branch.
+1. Create a pull request to merge the `dev` branch to `master` - e.g. "Deploy v1.0.1".
+1. Wait for the mandatory checks to pass then merge the PR.
 
-Semaphore then automatically builds the library and syncs the output files to S3. If the version you're deploying had been previously deployed, you'll need to invalidate the files on the CDN (AWS Cloudfront) or wait a day or so for it to happen automatically.
+Semaphore then automatically builds the library and syncs the output files to S3. If the version you're deploying had been previously deployed, you'll need to invalidate the files on the CDN (AWS Cloudfront) or wait a day or so for this to happen automatically.
+
+> **Note on versioning**: the version number follows the [semver](http://semver.org/) convention `MAJOR.MINOR.PATCH`, where: `MAJOR` corresponds to a breaking change (e.g. a change in a component's markup), `MINOR` to a new feature (e.g. a new component, a new feature for an existing component, etc.), and `PATCH` to a bug fix or under-the-hood change (e.g. code clean-up, performance improvement, etc.)
 
 
 ## Testing
