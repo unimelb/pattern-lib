@@ -66,6 +66,7 @@
     ]
   },
   "dependencies": {
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "vue-google-maps": "^0.1.21"
   }
 }

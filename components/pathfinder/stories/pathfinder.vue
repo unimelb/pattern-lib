@@ -2,7 +2,7 @@
   <section class="section bg-inverted-dark" :style="`background-image: url(${image});`">
     <div class="section__inner">
       <div class="listing listing--three listing--center">
-        <ListItem v-for="box in boxes.split(',')">
+        <ListItem v-for="box in boxes.split(',')" :key="box.id">
           <CardPathfinder :title="box" />
         </ListItem>
       </div>
@@ -23,7 +23,7 @@
         default: "http://via.placeholder.com/400x200"
       },
       boxes: {
-        type: Array,
+        type: String
       }
     }
   }

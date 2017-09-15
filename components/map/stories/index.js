@@ -6,6 +6,9 @@ import ContactCard from './ContactCard.vue';
 
 const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
 
+import {load, Map, Marker} from 'vue-google-maps';
+load({key: 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI'});
+
 storiesOf('Contact card', module)
   .add(
     'One column', 
@@ -194,8 +197,8 @@ storiesOf('Contact card', module)
 
 </code></pre></div>`)
     (() =>     ({
-      components: { ContactCard },
-      mounted: () => { loadGMaps() },
-      template: `<contact-card :columns="3" :map="true" />`
+      components: { ContactCard, Map },
+      // mounted: () => { loadGMaps() },
+      template: `<contact-card :columns="3" />`
     }))
   );

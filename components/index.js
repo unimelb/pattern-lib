@@ -11,7 +11,7 @@ const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
 
 const initPage = () => {
   document.documentElement.classList.remove('no-js');
-  loadGMaps();
+  // loadGMaps();
   loadHeaderTools();
 };
 
