@@ -4,17 +4,12 @@ import { withNotes } from '@storybook/addon-notes';
 
 import ContactCard from './ContactCard.vue';
 
-const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
-
-import {load, Map, Marker} from 'vue-google-maps';
-load({key: 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI'});
-
 storiesOf('Contact card', module)
   .add(
-    'One column', 
+    'One column',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Contact card, One column</h2><pre><code>
-  
+
   &lt;div class="contact-card"&gt;
     &lt;div class="contact-card__lower"&gt;
       &lt;div class="contact-card__col1_3"&gt;
@@ -46,10 +41,10 @@ storiesOf('Contact card', module)
   )
 
   .add(
-    'Two column', 
+    'Two column',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Contact card, Two column</h2><pre><code>
-  
+
   &lt;div class="contact-card"&gt;
     &lt;div class="contact-card__lower"&gt;
       &lt;div class="contact-card__col1_3"&gt;
@@ -93,7 +88,7 @@ storiesOf('Contact card', module)
     'Three column',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Contact card, Three column</h2><pre><code>
-  
+
   &lt;div class="contact-card"&gt;
     &lt;div class="contact-card__lower"&gt;
       &lt;div class="contact-card__col1_3"&gt;
@@ -197,8 +192,7 @@ storiesOf('Contact card', module)
 
 </code></pre></div>`)
     (() =>     ({
-      components: { ContactCard, Map },
-      // mounted: () => { loadGMaps() },
+      components: { ContactCard },
       template: `<contact-card :columns="3" />`
     }))
   );
