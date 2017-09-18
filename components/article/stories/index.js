@@ -12,7 +12,7 @@ import {
   date,
 } from '@storybook/addon-knobs';
 
-import Article from './article.vue';
+import ArticleStory from './ArticleStory.vue';
 
 
 storiesOf('Article', module)
@@ -106,16 +106,15 @@ storiesOf('Article', module)
               </div>
             `);
       return {
-        components: { Article },
+        components: { ArticleStory },
         template: `
           <div>
-            <Article 
-              title="${title}" 
-              content="${content}" 
+            <article-story
+              title="${title}"
+              content="${content}"
             />
           </div>
         `
       }
     }
   ))
- 
