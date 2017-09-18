@@ -39,7 +39,7 @@ storiesOf('Section', module)
               &lt;/section&gt;
             </code>
           </pre>
-          <p>Add the class <code> .section--content--sml</code> for the smaller width content container</p>
+          <p>Add the class <code> .section-content--sml</code> for the smaller width content container</p>
         </div>
       `
     )
@@ -48,10 +48,10 @@ storiesOf('Section', module)
       const titleH3 = text('Title H3', 'Example Title H3');
       const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
       const small = boolean('Smaller width', false);
-      const intro = boolean('Intro class', false);
+
       return {
         template: `
-          <section class="section--content ${intro ? 'section--content--intro' : ''} ${small ? 'section--content--sml' : ''}">
+          <section class="section-content ${small ? 'section-content--sml' : ''}">
             <h2>${titleH2}</h2>
             <h3>${titleH3}</h3>
             <p>${paragraph}</p>
@@ -73,21 +73,20 @@ storiesOf('Section', module)
               &lt;/section&gt;
             </code>
           </pre>
-          <p>Add the class <code> .section--content--sml</code> for the smaller width content container</p>
+          <p>Add the class <code> .section-content--sml</code> for the smaller width content container</p>
         </div>
       `
     )
     (() => {
-      const titleH1 = text('Title H1', 'Heading short H1');
-      const titleH2 = text('Title H2', 'As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.');
-      const titleH3 = text('Title H3', '<em>Growing Esteem 2015-2020</em> is the most recent articulation of our plans to achieve our strategic goals.');
-      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
+      const titleH1 = text('Title H1', 'Heading Section .heading-section');
+      const titleH2 = text('Title H2', 'H2 element. As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.');
+      const titleH3 = text('Title H3', 'H3 element <em>Growing Esteem 2015-2020</em> is the most recent articulation of our plans to achieve our strategic goals.');
+      const paragraph = text('Paragraph text', 'P Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
       const small = boolean('Smaller width', true);
-      const intro = boolean('Intro class', true);
       return {
         template: `
-          <section class="section--content ${intro ? 'section--content--intro' : ''} ${small ? 'section--content--sml' : ''}">
-            <h1>${titleH1}</h1>
+          <section class="section-content ${small ? 'section-content--sml' : ''}">
+            <h3 class="heading-section">${titleH1}</h3>
             <h2>${titleH2}</h2>
             <h3>${titleH3}</h3>
             <p>${paragraph}</p>
@@ -175,7 +174,43 @@ storiesOf('Section', module)
         </SplitSection>
       `
     }
-  });
+  })
+  .add(
+    'Section - Divider',
+    withNotes(
+      `
+        <div>
+          <h2>Section (container template)</h2>
+          This section is intended to be used as a content container
+          it has to have a inner div with a class of <code>.section__inner</code>
+          <pre>
+            <code>
+              &lt;section class=&quot;section&quot;&gt;
+                &lt;div class=&quot;section__inner max&quot;&gt;
+                    &lt;!-- Content goes here --&gt;
+                &lt;/div&gt;
+              &lt;/section&gt;
+            </code>
+          </pre>
+        </div>
+      `
+    )
+    (() => {
+      const title = text('Title', 'Example Title');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
+      // const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
+      return {
+        template: `
+          <section class="section section--divider bg-inverted" style="background-image: url(http://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png);">
+            <div class="section__inner--short">
+              <h3 class="heading-section">${title}</h3>
+              <p>testin a sub heading </p>
+            </div>
+          </section>
+        `
+      }
+    }
+  ))
 
 
 
