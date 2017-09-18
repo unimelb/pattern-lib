@@ -173,6 +173,9 @@
   */
 
   &--news {
+    background-color: var(--col-white);
+    color: var(--col-brand);
+
     .card__inner {
     }
 
@@ -266,6 +269,10 @@
       padding-left: var(--vr);
       padding-right: var(--vr);
 
+    }
+
+    .card__inner {
+      text-align: center;
     }
 
     &--sml {

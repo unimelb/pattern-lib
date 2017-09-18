@@ -29,10 +29,12 @@
     bottom: -1px;
     right: 0;
     width: 50%;
+    
     @media (--bp-max-mobile) {
       top: 6rem;
       width: 90%;
     }
+
     max-width: 55rem;
     background-color: inherit;
     background-position: center bottom;
@@ -53,10 +55,6 @@
       background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI0NzBweCIgaGVpZ2h0PSI2MDBweCIgdmlld0JveD0iMCAwIDQ3MCA2MDAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+YXBlcnR1cmU8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTUyNi4wMDAwMDAsIDAuMDAwMDAwKSI+ICAgICAgICAgICAgPGcgaWQ9ImFwZXJ0dXJlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg1MjYuMDAwMDAwLCAwLjAwMDAwMCkiPiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDY5LjE1ODg3NSwwIEwwLDAgTDAsMjcwLjg2OTAwMyBMNDY5LjE1ODg3NSwtNC4yNjMyNTY0MWUtMTQgWiBNMCwyNzEuNDY1ODcgTDAsNjAwIEwxODkuNjc5MjY5LDYwMCBMLTMuMzcyMzAyNDRlLTE1LDI3MS40NjU4NyBaIiBpZD0iQ29tYmluZWQtU2hhcGUiIGZpbGw9IiMwOTQxODMiPjwvcGF0aD4gICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IkFwZXJ0dXJlIiBmaWxsPSIjRkZGRkZGIiBvcGFjaXR5PSIwLjM1IiBwb2ludHM9IjAgMjcxLjMxMTExMiAxNDUuOTQ1MDUyIDE4NyAxNDYgMTg3LjA5Mjc3OCAxMjguMzkyNjMzIDI1Mi40NTMxMzMgNjUuMzk4MzAxNyAyODguODQ2MTQ3IDEwMS42NjA0OCAzNTEuNjg3NzUyIDg0LjA2Njg1MDEgNDE3Ij48L3BvbHlnb24+ICAgICAgICAgICAgPC9nPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+);
       background-repeat: no-repeat;
       background-position: 0 -4rem;
-
-      @media (--bp-desktop) {
-        background-position: 0 -9rem;
-      }
       left: -1px; /* position bug fix*/
     }
 
@@ -119,25 +117,32 @@
   }
 
   &--l1 {
-    min-height: 22.5rem;
+    .banner__heading {
+      margin-bottom: 2.5rem;
+    }
 
-    @media (--bp-max-tablet) {
-      min-height: 16rem;
+    .banner__aperture {
+      @media (--bp-x-tablet) {
+        &::before {
+        background-position: 0 -9rem;
+        }
+      }
     }
   }
 
   &--l2 {
-    min-height: 19.5rem;
 
     .banner__heading {
       margin-top: 3rem;
-      margin-bottom: 1.25rem;
-      font-size: 2em;
+      margin-bottom: 1rem;
+      font-size: 1.9rem;
     }
 
-    .banner__shape {
+    .banner__aperture {
       &::before {
-        background-position: 0 -7rem;
+        @media (--bp-tablet) {
+          background-position: 0 -11rem;
+        }
       }
     }
 
