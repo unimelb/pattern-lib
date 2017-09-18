@@ -1,0 +1,14 @@
+.lazy-bgimg {
+	background-size: cover;
+
+	&--loading {
+
+	}
+
+	&--loaded {
+		filter: blur(0px);
+	}
+
+
+
+}
