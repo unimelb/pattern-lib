@@ -10,7 +10,7 @@
         <span>{{date}}</span> | <span style="text-transform: uppercase;">{{postType}}</span>
       </section>
       <section class="article__contact">
-        <dl v-for="(value, key) in contact">
+        <dl v-for="(value, key) in contact" :key="key">
           <dt>{{ key }}:</dt><dd> {{ value }}</dd>
         </dl>
       </section>
@@ -26,7 +26,6 @@
 
 <script>
   export default {
-    name: 'Article',
     props: {
       title: {
         type: String,
@@ -38,11 +37,10 @@
       },
       contact: {
         type: Object,
-        default: 
-          {
-            Contact: "John Smith",
-            Phone: "+613 4234 2344"
-          }
+        default: () => ({
+          Contact: "John Smith",
+          Phone: "+613 4234 2344"
+        })
       },
       date: {
         type: String,
@@ -57,7 +55,6 @@
         default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.'
       }
     }
-  }
-
+  };
 </script>
 
