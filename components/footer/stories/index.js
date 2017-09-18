@@ -26,16 +26,8 @@ storiesOf('Footer', module)
 
   .add(
     'Boilerplate code insert', 
-    withNotes(
-      `<div><style>pre{background-color:#444;color:#eee}</style><h2>Footer code</h2><pre><code>
-  
-  &lt;footer&gt;
-
-  &lt;/footer&gt;
-
-</code></pre></div>`)
-    (() =>   ({
+    () =>   ({
       components: { BoilerplateFooter },
       template: `<boilerplate-footer />`
-    }))
+    })
   );

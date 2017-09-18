@@ -2,9 +2,11 @@ import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import { withNotes } from '@storybook/addon-notes';
 
+import { pad } from 'decorators';
 import ContactCard from './ContactCard.vue';
 
 storiesOf('Contact card', module)
+  .addDecorator(pad)
   .add(
     'One column',
     withNotes(

@@ -5,37 +5,6 @@
 .section {
   background-position: center;
   background-repeat: no-repeat;
-    
-  &--content {
-    /* This is intended for Matrix CMS WYSIWYG editor only */
-    padding-top: calc(2 * var(--vr));
-    padding-bottom: calc(2 * var(--vr));
-
-    &--short {
-      padding-top: var(--vr);
-      padding-bottom: var(--vr);
-    }
-
-    * {
-      max-width: var(--w-mid);
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-
-    &--sml { 
-      * {
-        max-width: var(--w-sml); 
-      }
-    }
-
-    &--lge { 
-      * {
-        max-width: var(--w-lge); 
-      }
-    }
-
-  }
 
   &__inner {
     max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
@@ -74,6 +43,29 @@
       &__inner {
         min-height: 21.9rem;
       }
+    }
+  }
+
+  &--divider {
+    background-image: ;
+
+    @supports (display: flex) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .section__inner--short {
+      margin-top: auto;
+      margin-bottom: auto;
+      text-align: center;
+      * {
+        margin-bottom: 0;
+      }
+
+    }
+
+    .heading-section {
+
     }
   }
 

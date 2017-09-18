@@ -26,8 +26,10 @@
     .icon-link__icon {
       display: inline;
       position: static;
-      height: 24px;
-      width: 24px;
+      height: 1.5rem;
+      margin-bottom: -.125rem;
+      margin-top: .125rem;
+      width: 1.5rem;
     }
 
     .icon-link__text {
@@ -108,6 +110,18 @@
 
     &:hover {
       background-color: var(--col-brand);
+    }
+  }
+
+  &__icon {
+    height: 1.3125rem;
+    width: 1.3125rem;
+
+    &--close {
+      height: 1.5rem;
+      margin: auto; 
+      padding-bottom: .4em;
+      width: 1.5rem;
     }
   }
 }

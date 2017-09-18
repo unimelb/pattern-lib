@@ -1,13 +1,3 @@
-/* Set overflow colour to match footer */
-body {
-  background-color: var(--col-bg-secondary);
-}
-
-nav,
-main {
-  background-color: white;
-}
-
 .footer {
   padding: 0;
   background-color: var(--col-bg);
@@ -44,6 +34,10 @@ main {
   /* list of popular links */
   &__popular {
     font-weight: 300;
+
+    & li {
+      list-style: none;      
+    }
 
     & > li:not(:last-child) {
       margin-bottom: .25rem;
@@ -105,6 +99,11 @@ main {
       &:hover {
         transform: scale(1.2);
       }
+    }
+
+    &__icon {
+      height: 1.3125rem;
+      width: 1.3125rem;
     }
   }
 
@@ -275,11 +274,14 @@ main {
   }
 
   &__icon {
+    height: 1.3125rem;
     position: absolute;
     left: 0;
 
     /* vertical centring */
     top: 50%;
+
+    width: 1.3125rem;
   }
 
   &__submit {

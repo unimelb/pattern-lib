@@ -10,6 +10,7 @@ const isDev = process.env.NODE_ENV != 'production';
 module.exports = {
   resolve: {
     alias: {
+      decorators: path.resolve(__dirname, '.storybook/decorators/'),
       icons: path.resolve(__dirname, 'components/icons/')
     }
   },
