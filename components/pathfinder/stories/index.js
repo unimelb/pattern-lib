@@ -97,7 +97,7 @@ storiesOf('Pathfinder', module)
                         <use xlink:href="#focus-bottom-right"></use>
                       </svg>
                       <div class="card__inner">
-                        <button class="card__btn btn btn--inverted btn--fullwidth">Find out more</button>
+                        <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Find out more</button>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. debitis sint odio asperiores accusamus recusandae autem omnis accusantium delectus necessitatibus.</p>
                       </div>
                     </a>
@@ -111,7 +111,7 @@ storiesOf('Pathfinder', module)
                         <use xlink:href="#focus-bottom-right"></use>
                       </svg>
                       <div class="card__inner">
-                        <button class="card__btn btn btn--inverted btn--fullwidth">Find out more</button>
+                        <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Find out more</button>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                       </div>
                     </a>
@@ -125,7 +125,7 @@ storiesOf('Pathfinder', module)
                         <use xlink:href="#focus-bottom-right"></use>
                       </svg>
                       <div class="card__inner">
-                        <button class="card__btn btn btn--inverted btn--fullwidth">Find out more</button>
+                        <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Find out more</button>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  sint odio asperiores accusamus recusandae autem omnis accusantium delectus necessitatibus.</p>
                       </div>
                     </a>

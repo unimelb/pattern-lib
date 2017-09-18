@@ -85,3 +85,29 @@ storiesOf('Buttons', module)
       template: `<button-icon icon="${icons}" class="btn--fullwidth">${btnText}</button-icon>`
     }
   })
+  .add('Button using btn--icon class', () => {
+    const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
+    const icons = select('Icon', ['chevron-right', 'twitter', 'search'], 'chevron-right' );
+    return {
+      template: `
+        <section class="section bg-alt">
+          <div class="section__inner">
+            <button class="btn btn--fullwidth btn--icon btn--icon--${icons}">${btnText}</button>
+          </div>
+        </section>
+        `
+    }
+  })
+  .add('Button using btn--icon class (inverted)', () => {
+    const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
+    const icons = select('Icon', ['chevron-right', 'twitter', 'search'], 'chevron-right' );
+    return {
+      template: `
+        <section class="section bg-inverted">
+          <div class="section__inner">
+            <button class="btn btn--inverted btn--fullwidth btn--icon btn--icon--${icons}-inverted">${btnText}</button>
+          </div>
+        </section>
+        `
+    }
+  })

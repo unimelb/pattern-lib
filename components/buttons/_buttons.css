@@ -104,6 +104,56 @@
 
   &--icon{
     position: relative;
+    padding-right: 1.75em;
+    
+    &::after {
+      content: '';
+      display: inline-block;
+      width: .75em; 
+      height: .75em; 
+      background-size: cover; 
+      margin-top: .05rem;
+      right: 1rem;
+      top: calc(50% - (.75em / 2));
+      position: absolute;
+    }
+
+    
+    &--chevron-right {
+      &-inverted {
+        &::after {
+          background-image: url('./../icons/chevron-right.svg?fill=#fff');
+        }
+      }
+      &::after {
+        background-image: url('./../icons/chevron-right.svg?fill=#074482');
+      }
+    }
+
+    &--search {
+      &-inverted {
+        &::after {
+          background-image: url('./../icons/search.svg?fill=#fff');
+        }
+      }
+
+      &::after {
+        background-image: url('./../icons/search.svg?fill=#074482');
+      }
+    }
+
+    &--twitter {
+      &-inverted {
+        &::after {
+          background-image: url('./../icons/twitter.svg?fill=#fff');
+        }
+      }
+      
+      &::after {
+        background-image: url('./../icons/twitter.svg?fill=#074482');
+      }
+    }
+  
   }
 
 }
