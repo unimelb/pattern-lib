@@ -16,6 +16,32 @@
       padding-bottom: var(--vr);
     }
 
+    &--intro {
+
+      h1, .h1 {
+        font-size: calc(2.2rem * 0.9); /* scaled everything down a little as it looked too big on screen */
+      }
+
+      h2, .h2 {
+        font-family: var(--ff-lead);
+        font-size: calc(1.77rem * 0.9); /* scaled everything down a little as it looked too big on screen */
+        margin-bottom: calc(var(--vr) * 2);
+      }
+      
+      h3, .h3 {
+        font-family: var(--ff-lead);
+        font-size: calc(1.55rem * 0.9); /* scaled everything down a little as it looked too big on screen */
+        margin-bottom: 1.7rem;
+      }
+
+      h4, .h4 {
+        font-family: var(--ff-lead);
+        font-size: calc(1.11rem * 0.9); /* scaled everything down a little as it looked too big on screen */
+        margin-bottom: 1.7rem;
+      }
+
+    }
+
     * {
       max-width: var(--w-mid);
       margin-left: auto;

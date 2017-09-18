@@ -61,6 +61,42 @@ storiesOf('Section', module)
     }
   ))
   .add(
+    'Content section - Intro class',
+    withNotes(
+      `
+        <div>
+          <h2>Content section</h2>
+          <p>This section is intended to be used only in the WYSIWYG editor</p>
+          <pre>
+            <code>
+              &lt;section class=&quot;section--content&quot;&gt; 
+              &lt;/section&gt;
+            </code>
+          </pre>
+          <p>Add the class <code> .section--content--sml</code> for the smaller width content container</p>
+        </div>
+      `
+    )
+    (() => {
+      const titleH1 = text('Title H1', 'Heading short H1');
+      const titleH2 = text('Title H2', 'As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.');
+      const titleH3 = text('Title H3', '<em>Growing Esteem 2015-2020</em> is the most recent articulation of our plans to achieve our strategic goals.');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
+      const small = boolean('Smaller width', true);
+      const intro = boolean('Intro class', true);
+      return {
+        template: `
+          <section class="section--content ${intro ? 'section--content--intro' : ''} ${small ? 'section--content--sml' : ''}">
+            <h1>${titleH1}</h1>
+            <h2>${titleH2}</h2>
+            <h3>${titleH3}</h3>
+            <p>${paragraph}</p>
+          </section>
+        `
+      }
+    }
+  ))
+  .add(
     'Section',
     withNotes(
       `
