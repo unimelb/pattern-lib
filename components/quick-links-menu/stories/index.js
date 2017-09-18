@@ -21,7 +21,7 @@ storiesOf('Quick Link Menu', module)
       `
         <div>
           <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Page header Level 1</h2>
+          <h2>Banner Level 1</h2>
           <pre>
             <code>
               &lt;section class=&quot;section&quot;&gt;
@@ -90,7 +90,7 @@ storiesOf('Quick Link Menu', module)
     `
       <div>
         <style>pre {  background-color: #444;  color: #eee; } </style>
-        <h2>Page header Level 1</h2>
+        <h2>Banner Level 1</h2>
         <pre>
           <code>
             &lt;section class=&quot;section&quot;&gt;
