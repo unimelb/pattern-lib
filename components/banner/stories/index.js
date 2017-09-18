@@ -13,7 +13,7 @@ import {
 } from '@storybook/addon-knobs';
 
 
-storiesOf('Page Header', module)
+storiesOf('Banner', module)
   .addDecorator(withKnobs)
   .add(
     'Level 1',
@@ -21,7 +21,7 @@ storiesOf('Page Header', module)
       `
         <div>
           <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Page header Level 1</h2>
+          <h2>Banner Level 1</h2>
           <pre>
             <code>
               &lt;header class=&quot;banner banner--l1&quot;&gt;
@@ -62,7 +62,7 @@ storiesOf('Page Header', module)
       `
         <div>
           <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Page header Level 2</h2>
+          <h2>Banner Level 2</h2>
           <pre>
             <code>
               &lt;header class=&quot;banner banner--l2&quot;&gt;
@@ -103,7 +103,7 @@ storiesOf('Page Header', module)
       `
         <div>
           <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Page header Level 3</h2>
+          <h2>Banner Level 3</h2>
           <pre>
             <code>
               &lt;header class=&quot;banner banner--l3&quot;&gt;
