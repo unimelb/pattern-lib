@@ -15,22 +15,22 @@
   @media (--bp-desktop) {
     &--two {
       .list-item {
-        min-width: calc(100% / 2);
-        max-width: calc(100% / 2);
+        flex: 0 0 calc(100% / 2);
+        max-width: calc(100% / 2); 
       }
     }
 
     &--three {
       .list-item {
-        min-width: calc(100% / 3);
-        max-width: calc(100% / 3);
+        flex: 0 0 calc(100% / 3);
+        max-width: calc(100% / 3);     
       }
 
     }
 
     &--four {
       .list-item {
-        min-width: calc(100% / 4);
+        flex: 0 0 calc(100% / 4);
         max-width: calc(100% / 4);
       }
     }
@@ -38,6 +38,7 @@
   @media (--bp-only-tablet) {
     &--four, &--three {
       .list-item {
+        flex: 0 0 50%;
         min-width: 50%;
         max-width: 50%;
       }
@@ -53,7 +54,6 @@
   @supports (display: flex) {
     display: flex;
     flex-direction: column;
-    float: none;
   }
 
   margin-top: calc(var(--vr) / 2);
@@ -61,31 +61,25 @@
   padding-left: calc(var(--vr) / 2);
   padding-right: calc(var(--vr) / 2);
   list-style: none;
-  min-width: 100%;
-  max-width: 100%;
+  width: 100%;
 
   &--desk-1of2 {
-    min-width: calc(100% / 2);
-    max-width: calc(100% / 2);
+    width: calc(100% / 2);
   }
 
   &--desk-1of3 {
-    min-width: calc(100% / 3);
-    max-width: calc(100% / 3);
+    width: calc(100% / 3);
   }
 
   &--desk-2of3 {
-    min-width: calc((100% / 3) * 2);
-    max-width: calc((100% / 3) * 2);
+    width: calc((100% / 3) * 2);
   }
 
   &--desk-1of4 {
-    min-width: calc(100% / 4);
-    max-width: calc(100% / 4);
+    width: calc(100% / 4);
   }
 
   &--desk-3of4 {
-    min-width: calc((100% / 4) * 3);
-    max-width: calc((100% / 4) * 3);
+    width: calc((100% / 4) * 3);
   }
 }
