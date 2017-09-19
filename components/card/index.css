@@ -1,6 +1,6 @@
 
 .card {
-
+  width: 100%;
   @supports (display: flex) {
     display: flex;
     flex-direction: column;
@@ -25,13 +25,6 @@
     padding: var(--vr);
   }
 
-  &:hover {
-    .card__thumb {
-      &:before {
-        transform: scale(1.1);
-      }
-    }
-  }
 
   &__thumb {
     background-position: center;
@@ -75,6 +68,14 @@
 
   &--image {
 
+    &:hover {
+      .card__thumb {
+        &:before {
+          transform: scale(1.1);
+        }
+      }
+    }
+
     .card__inner {
       text-align: center;
 
@@ -92,6 +93,7 @@
   &--link {
     text-align: center;
     position: relative;
+
 
     @media (--bp-desktop) {
       max-width: 14.3rem;
@@ -227,7 +229,89 @@
 
   &--image-focus {
     padding: 0 !important;
+    width: 100%;
+    text-align: left;
+    
+
     .card__thumb {
+      position: relative;
+      height: 240px;
+      img {
+        height: 240px;
+        width: 100%;
+       
+        @supports(object-fit: cover){
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      
+      &:before, &:after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        width: 5rem; 
+        height: 5rem; 
+        background-size: cover; 
+        margin-top: .05rem;
+        opacity: 0.6;
+      }
+
+      &:before {
+        top: 0;
+        left: 0;
+        background-image: url('./../icons/focus-top-left.svg?fill=#9AD6C3');
+      }
+
+      &:after {
+        bottom: 0;
+        right: 0;
+        background-image: url('./../icons/focus-bottom-right.svg?fill=#9AD6C3');
+      }
+
+    }
+
+    &--col-brand {
+      .card__thumb {
+        &:before {
+          background-image: url('./../icons/focus-top-left.svg?fill=#074482');
+        }
+
+        &:after {
+          background-image: url('./../icons/focus-bottom-right.svg?fill=#074482');
+        }
+      }
+    }
+
+    &--col-white {
+      .card__thumb {
+        &:before {
+          background-image: url('./../icons/focus-top-left.svg?fill=#FFF');
+        }
+
+        &:after {
+          background-image: url('./../icons/focus-bottom-right.svg?fill=#FFF');
+        }
+      }
+    }
+
+    &.btn-owner:hover {
+      .card__thumb {
+        &:before, &:after {
+          opacity: 0.7;
+        }
+      }
+      .card__inner {
+        h2,h3,h4 {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &.bg-alt {
+      .card__inner {
+        padding-left: 0;
+      }
     }
   }
 
