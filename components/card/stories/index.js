@@ -332,19 +332,25 @@ storiesOf('Cards', module)
       const items = object('Items', [
         {
           title: "Learning and teaching",
-          thumb: "http://via.placeholder.com/300x400",
+          thumb: "http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg",
+          excerpt: "Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat."
         },
         {
           title: "Option 2",
-          thumb: "http://via.placeholder.com/300x400"
+          thumb: "http://about-us-unimelb.netlify.com/images/working-with-us/careers/SouthbankGrounds3.jpg",
+          excerpt: "Lorem ipsum dolor sit amet Obcaecati vel delectus necessitatibus et, quasi."
         },
         {
           title: "Something else",
-          thumb: "http://via.placeholder.com/300x400",
+          thumb: "http://via.placeholder.com/200x300",
+          excerpt: "Lorem ipsum dolor sit amet aliquid laboriosam ducimus, quam blanditiis."
         },
 
       ]);
-      const inverted = boolean('Inverted', true);
+      const colors = select('Focus colors', ['','card--image-focus--col-brand', 'card--image-focus--col-white'], '');
+      const bgColors = select('Card BG', ['','bg-white', 'bg-alt', 'bg-inverted'], '');
+      const element = select('Element', ['a', 'div'], 'div');
+
       return {
         components: { ListItem, CardFocusImages },
         template: `
@@ -352,7 +358,7 @@ storiesOf('Cards', module)
             <h3 style="text-align: center;" class="heading-section">Focus boxes</h3>
 
             <div class="listing listing--three">
-              ${items.map(item => `<ListItem><CardFocusImages class="bg-white" thumb="${item.thumb}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+              ${items.map(item => `<ListItem><CardFocusImages element="${element}" class="${colors} ${bgColors}" thumb="${item.thumb}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
           </div>
         `

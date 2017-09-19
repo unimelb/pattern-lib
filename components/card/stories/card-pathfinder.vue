@@ -11,7 +11,7 @@
       <p>{{excerpt}}</p>
     </div>
     <div class="card__footer">
-      <button class="btn btn--inverted btn--fullwidth">Find out more</button>
+      <button class="btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Find out more</button>
     </div>
   </a>
 </template>

@@ -197,14 +197,13 @@ storiesOf('Section', module)
     )
     (() => {
       const title = text('Title', 'Example Title');
-      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
-      // const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
       return {
         template: `
           <section class="section section--divider bg-inverted" style="background-image: url(http://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png);">
             <div class="section__inner--short">
               <h3 class="heading-section">${title}</h3>
-              <p>testin a sub heading </p>
+              <p>${paragraph}</p>
             </div>
           </section>
         `
