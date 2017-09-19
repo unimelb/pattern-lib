@@ -13,6 +13,7 @@ import {
 } from '@storybook/addon-knobs';
 
 import DownloadBlock from './download-block.vue';
+import arImage from './2016-annual-report.jpg';
 
 storiesOf('Document List', module)
   .addDecorator(withKnobs)
@@ -24,7 +25,7 @@ storiesOf('Document List', module)
         <section class="section">
           <div class="section__inner section__inner--sml">
             <download-block 
-              imgSrc="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg"
+              imgSrc="${arImage}"
               header="Download the latest Annual Report"
               btnText="${btnText}"
              />
@@ -60,7 +61,7 @@ storiesOf('Document List', module)
               <li class="list-item">
                 <a href="annualreport.pdf">
                   <figure>
-                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                    <img src="${arImage}" />
                   </figure>
                   <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
                 </a>
@@ -68,7 +69,7 @@ storiesOf('Document List', module)
               <li class="list-item">
                 <a href="annualreport.pdf">
                   <figure>
-                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                    <img src="${arImage}" />
                   </figure>
                   <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
                 </a>
@@ -76,7 +77,7 @@ storiesOf('Document List', module)
               <li class="list-item">
                 <a href="annualreport.pdf">
                   <figure>
-                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                    <img src="${arImage}" />
                   </figure>
                   <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
                 </a>
@@ -97,7 +98,7 @@ storiesOf('Document List', module)
               <li class="list-item">
                 <a href="annualreport.pdf">
                   <figure>
-                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                    <img src="${arImage}" />
                   </figure>
                   <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
                 </a>
@@ -105,7 +106,7 @@ storiesOf('Document List', module)
               <li class="list-item">
                 <a href="annualreport.pdf">
                   <figure>
-                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                    <img src="${arImage}" />
                   </figure>
                   <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
                 </a>
@@ -113,7 +114,7 @@ storiesOf('Document List', module)
               <li class="list-item">
                 <a href="annualreport.pdf">
                   <figure>
-                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                    <img src="${arImage}" />
                   </figure>
                   <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
                 </a>
@@ -121,7 +122,7 @@ storiesOf('Document List', module)
               <li class="list-item">
                 <a href="annualreport.pdf">
                   <figure>
-                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                    <img src="${arImage}" />
                   </figure>
                   <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
                 </a>
