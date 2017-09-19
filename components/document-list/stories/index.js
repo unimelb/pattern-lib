@@ -33,3 +33,102 @@ storiesOf('Document List', module)
       `
     }
   })
+  .add('Document List', () => {
+    return {
+      template: `
+        <section class="section">
+          <div class="section__inner section__inner--sml">
+            <ul class="document-list">
+              <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
+              <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
+              <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
+              <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
+              <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
+              <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
+            </ul>
+          </div>
+        </section>
+      `
+    }
+  })
+  .add('Document Thumb List two', () => {
+    return {
+      template: `
+        <section class="section">
+          <div class="section__inner section__inner--sml">
+            <ul class="listing listing--two document-list document-list--thumbs">
+              <li class="list-item">
+                <a href="annualreport.pdf">
+                  <figure>
+                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                  </figure>
+                  <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="annualreport.pdf">
+                  <figure>
+                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                  </figure>
+                  <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="annualreport.pdf">
+                  <figure>
+                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                  </figure>
+                  <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+      `
+    }
+  })
+  .add('Document Thumb List four', () => {
+    return {
+      template: `
+        <section class="section">
+          <div class="section__inner">
+            <ul class="listing listing--four document-list document-list--thumbs">
+              <li class="list-item">
+                <a href="annualreport.pdf">
+                  <figure>
+                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                  </figure>
+                  <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="annualreport.pdf">
+                  <figure>
+                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                  </figure>
+                  <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="annualreport.pdf">
+                  <figure>
+                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                  </figure>
+                  <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+                </a>
+              </li>
+              <li class="list-item">
+                <a href="annualreport.pdf">
+                  <figure>
+                    <img src="https://resources.web.unimelb.edu.au/controlled-environment/content-templates/document-list/cover-images/2016-annual-report.jpg" />
+                  </figure>
+                  <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      `
+    }
+  })

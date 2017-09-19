@@ -1,0 +1,36 @@
+.document-list {
+
+  a[href$=".pdf"],a[href$=".docx"],a[href$=".doc"] {
+    &:after, figcaption:after {
+      content: '';
+      display: inline-block;
+      width: 1em; 
+      height: 1em;
+      margin-left: calc(var(--vr) / 2); 
+      background-size: cover; 
+      vertical-align: -.15em;
+      background-image: url('./../icons/chevron-down.svg?fill=#074482');   
+    }
+  }
+
+
+
+  &--thumbs {
+    a:after {
+      content: "";
+      position: relative;
+      background-image: none !important;
+    }
+
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      text-align: center;
+    }
+  }
+}
