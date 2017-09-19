@@ -1,5 +1,4 @@
 .breadcrumbs {
-  background-color: white;
   margin-bottom: 0; /* Override default margin */
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -9,7 +8,7 @@
   &__item {
     display: none;
     vertical-align: middle;
-    
+
     &:nth-child(1) {
       margin-left: -2.3rem;
       display: inline-block;

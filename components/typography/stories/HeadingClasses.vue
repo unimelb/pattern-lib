@@ -7,8 +7,8 @@
       <h4 :class="c">"{{ c }}" on &lt;h4&gt;</h4>
       <h5 :class="c">"{{ c }}" on &lt;h5&gt;</h5>
       <h6 :class="c">"{{ c }}" on &lt;h6&gt;</h6>
-      <h6 :class="c">"{{ c }}" on &lt;h6&gt;</h6>
       <p :class="c">"{{ c }}" on &lt;p&gt;</p>
+      <div :class="c">"{{ c }}" on &lt;div&gt;</div>
       <strong :class="c">"{{ c }}" on &lt;strong&gt;</strong>
       <span :class="c">"{{ c }}" on &lt;span&gt;</span>
     </div>
@@ -17,8 +17,8 @@
 
 <script>
   export default {
-    props: {
-      classes: Array
-    }
+    data: () => ({
+      classes: ['heading-page', 'heading-page-sub', 'heading-section', 'heading-card']
+    })
   }
 </script>
