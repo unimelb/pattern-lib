@@ -50,14 +50,27 @@ hr {
   margin: calc(var(--vr) * 2) 0;
 }
 
-ul {
+ol, ul {
   padding-left: var(--vr);
 
-  li {
-    list-style: disc;
+  ol, ul {
     margin-top: calc(var(--vr) / 2);
-    margin-bottom: calc(var(--vr) / 2);
+    margin-bottom: 0;
   }
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+  ol { list-style-type: lower-roman; }
+}
+
+ul ul {
+  list-style-type: circle;
+  ul { list-style-type: square; }
+}
+
+li {
+  margin-bottom: calc(var(--vr) / 2);
 }
 
 a {
