@@ -164,13 +164,11 @@ storiesOf('Section', module)
           imageRight="${selectedSide === 'right' ? 'true' : ''}"
           bgImage="${imgUrl}"
         >
-          <div class="split-section__inner">
             <h3 class="h3 heading-section">${titleText}</h3>
             <p>This is a paragraph of text</p>
             <a href="#" class="btn">
               ${btnText}
             </a>
-          </div>
         </SplitSection>
       `
     }
@@ -204,6 +202,35 @@ storiesOf('Section', module)
             <div class="section__inner--short">
               <h3 class="heading-section">${title}</h3>
               <p>${paragraph}</p>
+            </div>
+          </section>
+        `
+      }
+    }
+  ))
+  .add(
+    'Section - Focus Box',
+    withNotes(
+      `
+        <div>
+          <h2>Section (Focus Box)</h2>
+          This section is intended to be used as a content container
+          it has to have a inner div with a class of <code>.section__inner</code>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+        </div>
+      `
+    )
+    (() => {
+      const title = text('Title', 'Example Title');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
+      return {
+        template: `
+          <section class="section section--divider bg-inverted" style="background-image: url(http://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png);">
+            <div class="section__inner--short">
             </div>
           </section>
         `
