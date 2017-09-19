@@ -1,0 +1,22 @@
+[href$=".pdf" i],
+[href$=".docx" i],
+[href$=".xlsx" i],
+[href$=".pptx" i],
+[href$=".ppsx" i],
+[href$=".key" i],
+[href$=".csv" i],
+.link-download {
+  &::after {
+    content: '';
+    display: inline-block;
+    vertical-align: -0.175em;
+    width: .875em;
+    height: .875em;
+    margin-right: .125em;
+    background-image: url('~icons/download.svg?fill=#094183');
+  }
+}
+
+.link-download-off::after {
+  content: none;
+}

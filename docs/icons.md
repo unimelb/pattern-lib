@@ -17,7 +17,7 @@ Because CMS editors can't add SVG code inside WYSIWYG blocks, some icons should 
 
 ```css
 /* USAGE */
-background-image: url('icons/chevron-right.svg?fill=#fff');
+background-image: url('~icons/chevron-right.svg?fill=#fff');
 
 /* OUTPUT */
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='7 3 14 14'%3E %3Cpath d='m8,7.42l4.58,4.58l-4.58,4.59l1.41,1.41l6,-6l-6,-6l-1.41,1.42z' fill='%23f00' /%3E %3C/svg%3E")
@@ -32,7 +32,7 @@ Sizing and positioning `background-image` icons is a bit complex but manageable.
   vertical-align: -.05em; /* magic number for vertical centring (relative to `baseline`) */
   width: .75em; /* relative to font-size */
   height: .75em; /* square like the icon */
-  background-image: url('icons/chevron-right.svg?fill=#000');
+  background-image: url('~icons/chevron-right.svg?fill=#000');
   background-size: cover; /* scale icon to fit */
 }
 ```
@@ -44,7 +44,7 @@ The webpack configuration includes the following loaders:
 - [svg-url-loader](https://github.com/bhovhannes/svg-url-loader) converts the icons to data URIs and encodes them for cross-browser support,
 - [svg-fill-loader](https://github.com/kisenka/svg-fill-loader) allows specifying a fill colour as a query parameter.
 
-If an icon exceeds 1 kB, it is loaded as an external file like other assets (`background-image: url('<localhost-or-cdn>/chevron-right.svg')`. The set-up only applies to SVG icons in the `components/icons/` folder (aliased to `icons/` for convenience) that are referenced from a CSS file with `url(...)`.
+If an icon exceeds 1 kB, it is loaded as an external file like other assets (`background-image: url('<localhost-or-cdn>/chevron-right.svg')`. The set-up only applies to SVG icons in the `components/icons/` folder (aliased to `icons/` for convenience) that are referenced from a CSS file with `url('~icons/...')`.
 
 
 ### In Vue components

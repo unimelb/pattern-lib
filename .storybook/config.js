@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import { configure } from '@storybook/vue';
-import Icon from '../components/icons/stories/Icon.vue';
+import Icon from 'icons/stories/Icon.vue';
 
 // Import lib and documentation styles
 import '../components/index.css';
