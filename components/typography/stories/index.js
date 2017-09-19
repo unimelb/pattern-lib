@@ -5,6 +5,7 @@ import HeadingElements from './HeadingElements.vue';
 import HeadingClasses from './HeadingClasses.vue';
 import LongHeadings from './LongHeadings.vue';
 import Links from './Links.vue';
+import DownloadLinks from './DownloadLinks.vue';
 import ListsOrdered from './ListsOrdered.vue';
 import ListsUnordered from './ListsUnordered.vue';
 import ListsMixed from './ListsMixed.vue';
@@ -25,6 +26,10 @@ storiesOf('Typography', module)
   .add('Links', () => ({
     components: { Links },
     template: '<links />'
+  }))
+  .add('Download links', () => ({
+    components: { DownloadLinks },
+    template: '<download-links />'
   }))
   .add('Lists - ordered', () => ({
     components: { ListsOrdered },

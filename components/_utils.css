@@ -157,6 +157,12 @@
   }
 }
 
+/* tight spacing */
+.list-tight {
+  li { margin-bottom: calc(var(--vr) / 4); }
+  ol, ul { margin-top: calc(var(--vr) / 4); }
+}
+
 /**
  * Link with text and icon
  */
