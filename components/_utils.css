@@ -281,6 +281,16 @@
   height: 1px !important;
 }
 
+/*
+* Download metadata
+*/
+.metadata {
+  color: var(--col-grey);
+  margin-top: calc(var(--vr) / 2);
+  margin-bottom: calc(var(--vr) / 2);
+  font-size: 0.9em;
+}
+
 
 /**
  * Animations
