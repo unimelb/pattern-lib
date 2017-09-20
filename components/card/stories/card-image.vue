@@ -2,15 +2,19 @@
   <a :href="href" class="btn-owner card card--image card--bdr bg-inverted">
     <div class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
-      <button class="btn btn--inverted btn--fullwidth">{{title}}</button>
+      <button-icon class="btn--inverted btn--fullwidth" element="button">{{title}}</button-icon>
       <p>{{excerpt}}</p>
     </div>
   </a>
 </template>
 
 <script>
+import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
   export default {
     name: 'CardImage',
+    components: {
+      ButtonIcon
+    },
     props: {
       thumb: {
         type: String,

@@ -47,25 +47,26 @@
   }
 
   &--divider {
-    background-image: ;
 
-    @supports (display: flex) {
-      display: flex;
-      justify-content: center;
-    }
+
+
 
     .section__inner--short {
       margin-top: auto;
       margin-bottom: auto;
       text-align: center;
-      * {
-        margin-bottom: 0;
+
+      @supports (display: flex) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
     }
 
     .heading-section {
-
+      margin-top: auto;
+      margin-bottom: auto; 
     }
   }
 
