@@ -30,14 +30,14 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;    
+    width: 100%;
     height: 200px;
 
     &--zoom {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      width: 100%;    
+      width: 100%;
       height: 200px;
       overflow: hidden;
       position: relative;
@@ -103,7 +103,7 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      width: 100%;    
+      width: 100%;
       height: 200px;
       overflow: hidden;
       position: relative;
@@ -207,7 +207,7 @@
   */
 
   &--imagelisting {
-    
+
     .card__inner {
       padding-left: calc(var(--vr) / 2);
       padding-right: calc(var(--vr) / 2);
@@ -223,7 +223,7 @@
       margin-bottom: 0;
       color: var(--col-brand);
     }
-    
+
 
   }
 
@@ -231,7 +231,7 @@
     padding: 0 !important;
     width: 100%;
     text-align: left;
-    
+
 
     .card__thumb {
       position: relative;
@@ -239,20 +239,20 @@
       img {
         height: 240px;
         width: 100%;
-       
+
         @supports(object-fit: cover){
           object-fit: cover;
           object-position: center;
         }
       }
-      
+
       &:before, &:after {
         position: absolute;
         content: '';
         display: inline-block;
-        width: 5rem; 
-        height: 5rem; 
-        background-size: cover; 
+        width: 5rem;
+        height: 5rem;
+        background-size: cover;
         margin-top: .05rem;
         opacity: 0.6;
       }
@@ -260,13 +260,13 @@
       &:before {
         top: 0;
         left: 0;
-        background-image: url('./../icons/focus-top-left.svg?fill=#9AD6C3');
+        background-image: url('~icons/focus-top-left.svg?fill=#9AD6C3');
       }
 
       &:after {
         bottom: 0;
         right: 0;
-        background-image: url('./../icons/focus-bottom-right.svg?fill=#9AD6C3');
+        background-image: url('~icons/focus-bottom-right.svg?fill=#9AD6C3');
       }
 
     }
@@ -274,11 +274,11 @@
     &--col-brand {
       .card__thumb {
         &:before {
-          background-image: url('./../icons/focus-top-left.svg?fill=#074482');
+          background-image: url('~icons/focus-top-left.svg?fill=#074482');
         }
 
         &:after {
-          background-image: url('./../icons/focus-bottom-right.svg?fill=#074482');
+          background-image: url('~icons/focus-bottom-right.svg?fill=#074482');
         }
       }
     }
@@ -286,11 +286,11 @@
     &--col-white {
       .card__thumb {
         &:before {
-          background-image: url('./../icons/focus-top-left.svg?fill=#FFF');
+          background-image: url('~icons/focus-top-left.svg?fill=#FFF');
         }
 
         &:after {
-          background-image: url('./../icons/focus-bottom-right.svg?fill=#FFF');
+          background-image: url('~icons/focus-bottom-right.svg?fill=#FFF');
         }
       }
     }
@@ -315,7 +315,7 @@
     }
   }
 
-  
+
   /*
   * Focus box as used in About us - Growing esteem pages
   */
@@ -334,7 +334,7 @@
       height: 6em;
       opacity: 0.5;
       color: var(--col-emerald);
-    
+
       &--top-left {
         top: 0;
         left: 0;
