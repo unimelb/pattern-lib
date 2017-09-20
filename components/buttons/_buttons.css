@@ -84,18 +84,7 @@
 
   &--fullwidth{
     min-width: 100%;
-    .push-icon {
-      justify-content: center;
-      padding-right: calc(var(--vr) + 7px); /* account for icon width */
-      position: relative;
-      text-align: center;
 
-      &__icon {
-        position: absolute;
-        top: calc(50% - 7px); /* account for icon height */
-        right: 0;
-      }
-    }
   }
 
   &--center{
