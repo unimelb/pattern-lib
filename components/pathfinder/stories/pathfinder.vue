@@ -23,7 +23,7 @@
         default: "http://via.placeholder.com/400x200"
       },
       boxes: {
-        type: Array,
+        type: String
       }
     }
   }

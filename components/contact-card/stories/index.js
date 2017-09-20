@@ -5,8 +5,6 @@ import { withNotes } from '@storybook/addon-notes';
 import { pad } from 'decorators';
 import ContactCard from './ContactCard.vue';
 
-const GMAPSJSAPIKEY = 'AIzaSyCN3Soebworjm6dilkDjyRapS0m4i-kfCI';
-
 storiesOf('Contact card', module)
   .addDecorator(pad)
   .add(
@@ -197,7 +195,6 @@ storiesOf('Contact card', module)
 </code></pre></div>`)
     (() =>     ({
       components: { ContactCard },
-      mounted: () => { loadGMaps() },
-      template: `<contact-card :columns="3" :map="true" />`
+      template: `<contact-card :columns="3" :withMap="true" />`
     }))
   );

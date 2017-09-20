@@ -16,6 +16,10 @@
     "prebuild:docs": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib"
   },
+  "dependencies": {
+    "svg4everybody": "^2.1.9",
+    "vue": "^2.4.2"
+  },
   "devDependencies": {
     "@storybook/addon-knobs": "^3.2.8",
     "@storybook/addon-notes": "^3.2.7",
@@ -36,7 +40,6 @@
     "style-loader": "^0.17.0",
     "svg-fill-loader": "^0.0.8",
     "svg-url-loader": "^2.1.1",
-    "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
     "webpack": "^2.5.1",
     "webpack-merge": "^4.1.0"
@@ -64,8 +67,5 @@
         }
       ]
     ]
-  },
-  "dependencies": {
-    "svg4everybody": "^2.1.9"
   }
 }
