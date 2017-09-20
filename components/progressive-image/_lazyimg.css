@@ -1,0 +1,14 @@
+.lazy-img {
+  background-size: cover;
+
+  &--loading {
+
+  }
+
+  &--loaded {
+
+  }
+
+
+
+}

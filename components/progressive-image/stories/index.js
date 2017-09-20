@@ -17,12 +17,12 @@ import bgLoader from './../index.js';
 
 storiesOf('Progressive Images', module)
   .addDecorator(withKnobs)
-  .add('Using a component', () => {
+  .add('Background images - component', () => {
 
     return {
       components: { LazyBgImg },
       template: `
-      <LazyBgImg class="section section--image bg-inverted" imgSrc="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg">
+      <LazyBgImg class="section section--image bg-inverted lazy-bgimg" imgSrc="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg">
         <div class="section__inner section__inner--sml">
           <h3 class="heading-section">Lazy background image</h3>
           <p>
@@ -33,11 +33,11 @@ storiesOf('Progressive Images', module)
       </LazyBgImg>`
     }
   })
-  .add('Using directive', () => {
+  .add('Background images - directive', () => {
 
     return {
       template: `
-        <div class="section section--image bg-inverted " v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
+        <div class="section section--image bg-inverted lazy-bgimg" v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
           <div class="section__inner section__inner--sml">
             <h3 class="heading-section">Lazy background image</h3>
             <p>

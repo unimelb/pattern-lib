@@ -1,14 +1,2 @@
-.lazy-bgimg {
-	background-size: cover;
-
-	&--loading {
-
-	}
-
-	&--loaded {
-
-	}
-
-
-
-}
+@import '_lazybgimg.css';
+@import '_lazyimg.css';
