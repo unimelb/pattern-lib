@@ -47,7 +47,7 @@ storiesOf('Buttons', module)
   })
   .add('Button small', () => {
     const btnText = text('Button Text', 'I am a small button');
-    const icons = select('Icon', ['chevron-right', 'close'], 'chevron-right' );
+    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right' );
     return {
       components: { ButtonIcon },
       template: `<button-icon icon="${icons}" class="btn--sml">${btnText}</button-icon>`
@@ -55,7 +55,7 @@ storiesOf('Buttons', module)
   })
   .add('Button extra small', () => {
     const btnText = text('Button Text', 'I am a really small button');
-    const icons = select('Icon', ['chevron-right', 'close'], 'chevron-right' );
+    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right' );
     return {
       components: { ButtonIcon },
       template: `<button-icon icon="${icons}" class="btn--xsml">${btnText}</button-icon>`
@@ -63,7 +63,7 @@ storiesOf('Buttons', module)
   })
   .add('Button wide', () => {
     const btnText = text('Button Text', 'I am a wide button');
-    const icons = select('Icon', ['chevron-right', 'close'], 'chevron-right' );
+    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right' );
     return {
       components: { ButtonIcon },
       template: `<button-icon icon="${icons}" class="btn--wide">${btnText}</button-icon>>`
@@ -71,7 +71,7 @@ storiesOf('Buttons', module)
   })
   .add('Button extra wide', () => {
     const btnText = text('Button Text', 'I am a really wide button');
-    const icons = select('Icon', ['chevron-right', 'close'], 'chevron-right' );
+    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right' );
     return {
       components: { ButtonIcon },
       template: `<button-icon icon="${icons}" class="btn--xwide">${btnText}</button-icon>`
@@ -79,7 +79,7 @@ storiesOf('Buttons', module)
   })
   .add('Button full width', () => {
     const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
-    const icons = select('Icon', ['chevron-right', 'close'], 'chevron-right' );
+    const icons = select('Icon', ['chevron-right', 'close','download'], 'chevron-right' );
     return {
       components: { ButtonIcon },
       template: `<button-icon icon="${icons}" class="btn--fullwidth">${btnText}</button-icon>`
@@ -87,7 +87,7 @@ storiesOf('Buttons', module)
   })
   .add('Button using btn--icon class', () => {
     const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
-    const icons = select('Icon', ['chevron-right', 'twitter', 'search'], 'chevron-right' );
+    const icons = select('Icon', ['chevron-right', 'twitter', 'search','download'], 'chevron-right' );
     return {
       template: `
         <section class="section bg-alt">
@@ -100,7 +100,7 @@ storiesOf('Buttons', module)
   })
   .add('Button using btn--icon class (inverted)', () => {
     const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
-    const icons = select('Icon', ['chevron-right', 'twitter', 'search'], 'chevron-right' );
+    const icons = select('Icon', ['chevron-right', 'twitter', 'search', 'download'], 'chevron-right' );
     return {
       template: `
         <section class="section bg-inverted">

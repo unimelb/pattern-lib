@@ -14,7 +14,10 @@
 </template>
 
 <script>
+import icon from './../../icons/stories/Icon.vue';
+
 export default {
+  components: { icon },
   props: {
     href: {
       type: String,
