@@ -13,11 +13,11 @@ import {
 } from '@storybook/addon-knobs';
 
 import LazyBgImg from './../lazy-bgimg.vue';
-import bgimg from './../index.js';
+import bgLoader from './../index.js';
 
 storiesOf('Progressive Images', module)
   .addDecorator(withKnobs)
-  .add('Progressive background images', () => {
+  .add('Using a component', () => {
 
     return {
       components: { LazyBgImg },
@@ -33,22 +33,19 @@ storiesOf('Progressive Images', module)
       </LazyBgImg>`
     }
   })
-  .add('directive test', () => {
+  .add('Using directive', () => {
 
     return {
       template: `
-        <form>
-          <label>test</label>
-          <div class="section section--image bg-inverted" v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
-            <div class="section__inner section__inner--sml">
-              <h3 class="heading-section">Lazy background image</h3>
-              <p>
-                testset 
-              </p>
-              <br><a class="btn btn--inverted btn--center" href="#">btn text</a>
-            </div>
+        <div class="section section--image bg-inverted " v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
+          <div class="section__inner section__inner--sml">
+            <h3 class="heading-section">Lazy background image</h3>
+            <p>
+              testset 
+            </p>
+            <br><a class="btn btn--inverted btn--center" href="#">btn text</a>
           </div>
-        </form>
+        </div>
       `
     }
   });
