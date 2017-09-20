@@ -1,12 +1,12 @@
 /**
  * Background
  */
-/* Saw-tooth pattern */
+/* saw-tooth pattern */
 .bg-saw-tooth {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHdpZHRoPSIyMCI+CiAgPHBhdGggZD0iTTkuMjkzIDJMMCAxMS4yOTNWMTJoLjcwN0wxMCAyLjcwNyAxOS4yOTMgMTJIMjB2LS43MDdMMTAuNzA3IDJIOS4yOTN6IiBvcGFjaXR5PSIuMiIgZmlsbD0iI2ZlZmVmZSIvPgo8L3N2Zz4=");
 }
 
-/* Inverted background */
+/* inverted background */
 .bg-inverted {
   background-color: var(--col-bg);
   color: #fff;
@@ -17,13 +17,12 @@
   color: #fff;
 }
 
-/* Light-gray background */
+/* light-gray background */
 .bg-alt {
   background-color: var(--col-bg-grey);
 }
 
-/* White bg */
-
+/* white bg */
 .bg-white {
   background-color: var(--col-white);
   color: var(--col-brand);
@@ -130,11 +129,10 @@
   &:hover { text-decoration: underline; }
 }
 
-
 /**
- * Clean list with:
- * - variant with white chevron markers
+ * List
  */
+/* reset + variant with white chevron markers */
 .list {
   margin-bottom: 0;
   padding-left: 0;

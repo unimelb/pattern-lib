@@ -9,13 +9,7 @@
 </template>
 
 <script>
-  import icon from './../../icons/stories/Icon.vue';
-
   export default {
-    name: 'CardLink',
-    components: {
-      icon,
-    },
     props: {
       thumb: {
         type: String,
