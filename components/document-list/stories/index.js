@@ -18,7 +18,8 @@ import arImage from './2016-annual-report.jpg';
 storiesOf('Document List', module)
   .addDecorator(withKnobs)
   .add('Download block', () => {
-    const btnText = text('Button Text', 'Button with icon');
+    const btnText = text('Button Text', 'Download the 2017 Annual Report');
+    const header = text('Header Text', 'Download the latest Annual Report');
     return {
       components: { DownloadBlock },
       template: `
@@ -26,7 +27,7 @@ storiesOf('Document List', module)
           <div class="section__inner section__inner--sml">
             <download-block 
               imgSrc="${arImage}"
-              header="Download the latest Annual Report"
+              header="${header}"
               btnText="${btnText}"
              />
           </div>
@@ -43,7 +44,7 @@ storiesOf('Document List', module)
               <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
               <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
               <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
-              <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
+              <li><a class="link-download-off" href="annualreport.pdf">2016 Annual Report (Download icon turned off) </a></li>
               <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
               <li><a href="annualreport.pdf">2016 Annual Report (PDF File 6.8 MB)</a></li>
             </ul>

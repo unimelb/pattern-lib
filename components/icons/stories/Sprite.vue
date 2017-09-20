@@ -11,6 +11,7 @@
         'chevron-right',
         'chevron-left',
         'chevron-down',
+        'download',
         'play',
         'home',
         'search',

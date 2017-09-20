@@ -5,7 +5,7 @@
     </div>
     <div class="download-block__inner">
       <h3>{{header}}</h3>
-      <button-icon>{{btnText}}</button-icon>
+      <button-icon icon="download">{{btnText}}</button-icon>
       <p class="metadata">File Name | 2.2mb | Fileformat</p>
     </div>
   </a>
