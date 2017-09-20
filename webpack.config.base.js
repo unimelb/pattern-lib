@@ -86,7 +86,8 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin([
       'NODE_ENV',
-      'CDN_URL'
+      'CDN_URL',
+      'GMAPS_KEY'
     ]),
     new ExtractTextPlugin({
       allChunks: true,
