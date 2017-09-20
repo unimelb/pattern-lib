@@ -282,17 +282,17 @@ storiesOf('Cards', module)
       const items = object('Items', [
         {
           title: "Learning and teaching",
-          icon: "#icon-learning-1",
+          icon: "twitter",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "Option 2",
-          icon: "#icon-learning-2",
+          icon: "facebook",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "Something else",
-          icon: "#icon-learning-3",
+          icon: "download",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
 
@@ -303,7 +303,6 @@ storiesOf('Cards', module)
         template: `
           <div style="text-align: center;">
             <h3 style="text-align: center;" class="heading-section">Focus boxes</h3>
-            <p>Used in growing esteem. WIP - Dependant on icons</p>
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardFocusBox class="bg-white" icon="${item.icon}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
@@ -348,7 +347,7 @@ storiesOf('Cards', module)
 
       ]);
       const colors = select('Focus colors', ['','card--image-focus--col-brand', 'card--image-focus--col-white'], '');
-      const bgColors = select('Card BG', ['','bg-white', 'bg-alt', 'bg-inverted'], '');
+      const bgColors = select('Card BG', ['bg-white', 'bg-alt', 'bg-inverted'], 'bg-alt');
       const element = select('Element', ['a', 'div'], 'div');
 
       return {
