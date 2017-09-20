@@ -48,7 +48,7 @@ Semaphore then automatically builds the library and syncs the output files to S3
 
 Supported browsers:
 - last two versions of Chrome, Firefox and Edge
-- IE 9, 10 and 11
+- IE 11
 - Safari 8+
 - iOS 8.4+
 - Android 4.4+
