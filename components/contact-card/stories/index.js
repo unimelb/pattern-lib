@@ -195,6 +195,6 @@ storiesOf('Contact card', module)
 </code></pre></div>`)
     (() =>     ({
       components: { ContactCard },
-      template: `<contact-card :columns="3" />`
+      template: `<contact-card :columns="3" :withMap="true" />`
     }))
   );

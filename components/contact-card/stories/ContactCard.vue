@@ -1,6 +1,7 @@
 <template>
   <div class="contact-card">
     <iframe
+      v-if="withMap"
       class="contact-card__map"
       width="1140"
       height="450"
@@ -19,7 +20,8 @@
 
   export default {
     props: {
-      columns: Number
+      columns: Number,
+      withMap: Boolean
     },
     data: () => {
       return {
