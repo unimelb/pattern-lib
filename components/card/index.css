@@ -18,6 +18,7 @@
     }
 
     &.bg-inverted{
+      color: white;
       &:visited {
         color: white;
       }
