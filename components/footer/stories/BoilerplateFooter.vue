@@ -16,7 +16,7 @@
         </div>
         <div class="footer__main grid clearfix">
           <div class="footer__main__users cell cell--wide-1of4">
-            <ul class="footer__users list list--chevron-white">
+            <ul class="footer__users list-reset list-chevrons">
               <li>
                 <a class="link-reset" href="">Current students</a>
               </li>
@@ -29,7 +29,7 @@
             </ul>
           </div>
           <div class="footer__main__popular cell cell--wide-1of2">
-            <ul class="footer__popular list clearfix">
+            <ul class="footer__popular list-reset clearfix">
               <li>
                 <a class="icon-link link-reset" href="http://about.unimelb.edu.au/governance-and-leadership/faculties"><icon class="icon-link__icon svg" name="faculty" /><span class="icon-link__text">Faculties &amp; graduate schools</span></a>
               </li>
@@ -65,7 +65,7 @@
             <div class="grid clearfix">
               <div class="cell cell--tab-1of2 cell--desk-1of3">
                 <a class="footer__sitemap-heading" href="https://coursesearch.unimelb.edu.au/">Study at Melbourne</a>
-                <ul class="footer__sitemap-pages list list--chevron-white">
+                <ul class="footer__sitemap-pages list-reset list-chevrons">
                   <li>
                     <a class="link-reset" href="https://coursesearch.unimelb.edu.au/undergrad">Undergraduate study</a>
                   </li>
@@ -88,7 +88,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3">
                 <a class="footer__sitemap-heading" href="http://about.unimelb.edu.au/">About us</a>
-                <ul class="footer__sitemap-pages list list--chevron-white">
+                <ul class="footer__sitemap-pages list-reset list-chevrons">
                   <li>
                     <a class="link-reset" href="http://about.unimelb.edu.au/strategy-and-leadership">Strategy and leadership</a>
                   </li>
@@ -114,7 +114,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3 cell--tab-clear">
                 <a class="footer__sitemap-heading" href="http://www.unimelb.edu.au/contact">Contact &amp; Maps</a>
-                <ul class="footer__sitemap-pages list list--chevron-white">
+                <ul class="footer__sitemap-pages list-reset list-chevrons">
                   <li>
                     <a class="link-reset" href="https://ask.unimelb.edu.au/app/ask">Contact us</a>
                   </li>
@@ -140,7 +140,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3 cell--desk-clear cell--wide-clear">
                 <a class="footer__sitemap-heading" href="https://www.alumni.unimelb.edu.au/">Alumni &amp; friends</a>
-                <ul class="footer__sitemap-pages list list--chevron-white">
+                <ul class="footer__sitemap-pages list-reset list-chevrons">
                   <li>
                     <a class="link-reset" href="https://www.alumni.unimelb.edu.au/alumni/alumni-benefits">Benefits &amp; services</a>
                   </li>
@@ -157,7 +157,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3 cell--tab-clear">
                 <a class="footer__sitemap-heading" href="http://research.unimelb.edu.au/">Research</a>
-                <ul class="footer__sitemap-pages list list--chevron-white">
+                <ul class="footer__sitemap-pages list-reset list-chevrons">
                   <li>
                     <a class="link-reset" href="http://research.unimelb.edu.au/melbourne-research-institutes">Research institutes</a>
                   </li>
@@ -174,7 +174,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3">
                 <a class="footer__sitemap-heading" href="http://engagement.unimelb.edu.au/">Engagement</a>
-                <ul class="footer__sitemap-pages list list--chevron-white">
+                <ul class="footer__sitemap-pages list-reset list-chevrons">
                   <li>
                     <a class="link-reset" href="https://events.unimelb.edu.au/">Events</a>
                   </li>
@@ -195,7 +195,7 @@
             <p class="screenreaders-only">
               Follow us on:
             </p>
-            <ul class="footer__social list">
+            <ul class="footer__social list-reset">
               <li>
                 <a class="footer__social__link" href="https://www.facebook.com/unimelb"><icon aria-label="Facebook" class="footer__social__icon svg" name="facebook" /></a>
               </li>

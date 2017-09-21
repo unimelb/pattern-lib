@@ -133,28 +133,29 @@
 /**
  * List
  */
-/* reset + variant with white chevron markers */
-.list {
+/* reset */
+.list-reset {
   margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
+}
 
-  &--chevron-white > li {
-    &::before {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      width: 4px;
-      height: 8px;
-      margin-right: .5em;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjgiPgogIDxwYXRoIGQ9Ik0wIDB2Mi4yNUwxLjc1IDQgMCA1Ljc1VjhsNC00eiIgZmlsbD0iI2ZmZiIgLz4KPC9zdmc+");
-    }
+/* with white chevron markers */
+.list-chevrons > li {
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 8px;
+    margin-right: .5em;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjgiPgogIDxwYXRoIGQ9Ik0wIDB2Mi4yNUwxLjc1IDQgMCA1Ljc1VjhsNC00eiIgZmlsbD0iI2ZmZiIgLz4KPC9zdmc+");
+  }
 
-    /* fix vertical alignment of chevron */
-    @supports (display: flex) {
-      display: flex;
-      align-items: center;
-    }
+  /* fix vertical alignment of chevron */
+  @supports (display: flex) {
+    display: flex;
+    align-items: center;
   }
 }
 
