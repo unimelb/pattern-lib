@@ -1,13 +1,13 @@
 <template>
   <a :href="href" class="btn-owner card card--news card--bdr">
-    <div class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
+    <div v-if="cols !== 1" class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
       <h4 class="card__meta">{{meta}}</h4>
       <h3 class="card__header">{{title}}</h3>
       <p>{{excerpt}}</p>
     </div>
-    <div class="card__footer">
-      <button-icon class="btn--fullwidth" icon="chevron-right">Read more</button-icon>
+    <div class="card__footer" v-if="cols !== 1">
+      <button-icon class="btn--fullwidth">Read More</button-icon>
     </div>
   </a>
 </template>
@@ -29,6 +29,10 @@
       meta: {
         type: String,
         default: "03 Apr 2017 | SPEECH"
+      },
+      cols: {
+        type: Number,
+        default: 3
       },
       href: {
         type: String,
