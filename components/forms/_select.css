@@ -1,0 +1,10 @@
+.form {
+  select {
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @media screen and (--bp-desktop) {
+      width: 44rem;
+    }
+  }
+}

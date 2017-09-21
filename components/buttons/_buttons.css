@@ -1,7 +1,7 @@
 /**
  * Button + Button owner
  */
- .btn {
+.btn {
   display: inline-block;
   vertical-align: middle;
   padding: calc(var(--vr) * 0.8);

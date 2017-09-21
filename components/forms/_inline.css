@@ -1,0 +1,51 @@
+.form--inline {
+  &__row {
+    display: table;
+    width: 100%;
+
+    @media screen and (--bp-desktop) {
+      margin: 0;
+      max-width: 44rem;
+    }
+  }
+
+  &__input {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="url"] {
+      border-radius: var(--br) 0 0 var(--br);
+      max-width: none;
+    }
+  }
+
+  button&__button {
+    // background-color: var(--col-brand);
+    border-radius: 0 var(--br) var(--br) 0;
+    color: white;
+    display: table-cell;
+    font-weight: var(--fw-semibold);
+    height: 3rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    margin-top: .3125rem;
+    min-width: 3rem;
+    padding: .667rem;
+
+    &--text {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__svg {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
