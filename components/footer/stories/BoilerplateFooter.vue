@@ -9,7 +9,7 @@
           <div class="footer__header__search">
             <form action="https://search.unimelb.edu.au" class="footer-search" id="search">
               <div class="footer-search__field">
-                <label><span class="footer-search__label">Search</span><a class="footer-search__submit link--disabled" href="#"><icon class="footer-search__icon" name="search" /></a><input aria-label="Search the University" class="footer-search__input" name="q" placeholder="Type to search" type="search"></label>
+                <label><span class="footer-search__label">Search</span><a class="footer-search__submit" href="#"><icon class="footer-search__icon" name="search" /></a><input aria-label="Search the University" class="footer-search__input" name="q" placeholder="Type to search" type="search"></label>
               </div>
             </form>
           </div>
@@ -18,13 +18,13 @@
           <div class="footer__main__users cell cell--wide-1of4">
             <ul class="footer__users list list--chevron-white">
               <li>
-                <a class="link link--disabled" href="">Current students</a>
+                <a class="link" href="">Current students</a>
               </li>
               <li>
-                <a class="link link--disabled" href="">Staff</a>
+                <a class="link" href="">Staff</a>
               </li>
               <li>
-                <a class="link link--disabled" href="">Alumni</a>
+                <a class="link" href="">Alumni</a>
               </li>
             </ul>
           </div>
@@ -235,7 +235,7 @@
           </div>
         </div>
         <div class="footer__legal">
-          <a href="http://safety.unimelb.edu.au/emergency">Emergency Information</a> <span class="footer__legal__sep">|</span> <a href="http://www.unimelb.edu.au/governance/disclaimer">Disclaimer &amp; Copyright</a> <span class="footer__legal__sep">|</span> <a href="http://www.unimelb.edu.au/accessibility">Accessibility</a> <span class="footer__legal__sep">|</span> <a href="http://www.unimelb.edu.au/governance/compliance/privacy">Privacy</a> 
+          <a href="http://safety.unimelb.edu.au/emergency">Emergency Information</a> <span class="footer__legal__sep">|</span> <a href="http://www.unimelb.edu.au/governance/disclaimer">Disclaimer &amp; Copyright</a> <span class="footer__legal__sep">|</span> <a href="http://www.unimelb.edu.au/accessibility">Accessibility</a> <span class="footer__legal__sep">|</span> <a href="http://www.unimelb.edu.au/governance/compliance/privacy">Privacy</a>
         </div>
       </div>
     </div>
