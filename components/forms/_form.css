@@ -18,47 +18,4 @@
     list-style-type: none;
     padding-left: 0;
   }
-
-  input[type="submit"] {
-    display: inline-block;
-    vertical-align: middle;
-    padding: calc(var(--vr) * 0.8) 3rem;
-    border: 2px solid var(--col-brand);
-    border-radius: var(--br);
-    background-color: var(--col-brand);
-    color: white;
-    font-weight: var(--fw-semibold);
-    cursor: pointer;
-
-    text-align: center;
-    text-decoration: none;
-    outline-offset: 1px;
-    outline-color: var(--col-brand-light);
-    transition: border-color .2s;
-
-    &:focus,
-    &:hover {
-      border-color: color(#fff alpha(60%));
-    }
-
-    &:active {
-      background-color: rgba(9, 65, 131, .7);
-      transition: background-color .2s;
-    }
-  }
-
-  .sq-form-question-datetime .sq-form-question-answer {
-    padding-top: 1rem;
-    position: relative;
-
-    label {
-      position: absolute;
-      top: -.25rem;
-    }
-
-    select {
-      margin-right: .5rem;
-      width: 6rem;
-    }
-  }
 }
