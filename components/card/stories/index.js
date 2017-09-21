@@ -446,15 +446,17 @@ storiesOf('Cards', module)
           excerpt: "Lorem ipsum dolor sit amet.",
         },
         {
-          title: "No. 1",
+          title: "Longer, detailed stat",
           meta: "Research facility",
           class: "list-item--desk-2of3",
+          smlHeader: true,
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
-          title: "No. 1",
+          title: "Longer, detailed",
           meta: "Research facility",
           class: "list-item--desk-1of3",
+          smlHeader: true,
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
@@ -498,7 +500,7 @@ storiesOf('Cards', module)
             <h3 style="text-align: center;" class="heading-section">Fact cards</h3>
             <p>Stats</p>
             <div class="listing">
-              ${items.map(item => `<ListItem class="${item.class}"><CardFact class="bg-white" meta="${item.meta}" title="${item.title}" excerpt="${typeof item.excerpt !== 'undefined' ? item.excerpt : ''}" /></ListItem>`).join('')}
+              ${items.map(item => `<ListItem class="${item.class}"><CardFact class="bg-white" ${item.smlHeader ? 'smlHeader="true"' : ''} meta="${item.meta}" title="${item.title}" excerpt="${typeof item.excerpt !== 'undefined' ? item.excerpt : ''}" /></ListItem>`).join('')}
             </div>
           </div>
         `
