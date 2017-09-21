@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import HeadingElements from './HeadingElements.vue';
 import HeadingClasses from './HeadingClasses.vue';
@@ -8,8 +9,10 @@ import Links from './Links.vue';
 import ListsOrdered from './ListsOrdered.vue';
 import ListsUnordered from './ListsUnordered.vue';
 import ListsMixed from './ListsMixed.vue';
+import Quote from './Quote.vue';
 
 storiesOf('Typography', module)
+  .addDecorator(withKnobs)
   .add('Heading elements', () => ({
     components: { HeadingElements },
     template: '<heading-elements />'
@@ -37,4 +40,36 @@ storiesOf('Typography', module)
   .add('Lists - mixed', () => ({
     components: { ListsMixed },
     template: '<lists-mixed />'
-  }));
+  }))
+  .add('Quote', () => {
+    const quoteText = text('Quote', 'Some girls are just born with glitter in their veins');
+    const author = text('Author', 'Donald J. Trump');
+    const bdrTop = boolean('Border Top', false);
+    const bdrBtm = boolean('Border Bottom', false);
+    return {
+      components: { Quote },
+      template: `
+        <section class="section">
+          <div class="section__inner section__inner--sml">
+            <quote ${bdrTop ? 'bdrTop' : ''} ${bdrBtm ? 'bdrBtm' : ''} author="${author}">${quoteText}</quote>
+          </div>
+        </section>
+      `
+    }
+  })
+  .add('Quote - Inverse', () => {
+    const quoteText = text('Quote', 'Some girls are just born with glitter in their veins');
+    const author = text('Author', 'Donald J. Trump');
+    const bdrTop = boolean('Border Top', false);
+    const bdrBtm = boolean('Border Bottom', false);
+    return {
+      components: { Quote },
+      template: `
+        <section class="section bg-inverted">
+          <div class="section__inner section__inner--sml">
+            <quote ${bdrTop ? 'bdrTop' : ''} ${bdrBtm ? 'bdrBtm' : ''} author="${author}">${quoteText}</quote>
+          </div>
+        </section>
+      `
+    }
+  })
