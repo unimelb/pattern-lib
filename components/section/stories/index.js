@@ -13,6 +13,8 @@ import {
 } from '@storybook/addon-knobs';
 
 import SplitSection from './split-section.vue';
+import icon from './../../icons/stories/Icon.vue';
+import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 
 storiesOf('Section', module)
   .addDecorator(story => {
@@ -164,13 +166,11 @@ storiesOf('Section', module)
           imageRight="${selectedSide === 'right' ? 'true' : ''}"
           bgImage="${imgUrl}"
         >
-          <div class="split-section__inner">
             <h3 class="h3 heading-section">${titleText}</h3>
             <p>This is a paragraph of text</p>
             <a href="#" class="btn">
               ${btnText}
             </a>
-          </div>
         </SplitSection>
       `
     }
@@ -204,6 +204,88 @@ storiesOf('Section', module)
             <div class="section__inner--short">
               <h3 class="heading-section">${title}</h3>
               <p>${paragraph}</p>
+            </div>
+          </section>
+        `
+      }
+    }
+  ))
+  .add(
+    'Section - Focus Box',
+    withNotes(
+      `
+        <div>
+          <h2>Section (Focus Box)</h2>
+          This section is intended to be used as a content container
+          it has to have a inner div with a class of <code>.section__inner</code>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+        </div>
+      `
+    )
+    (() => {
+      const title = text('Title', 'Example Title');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
+      const btnText = text('Button Text', 'Example Title');
+      
+      return {
+        components: { icon, ButtonIcon },
+        template: `
+          <section class="section section--image bg-inverted" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg');">
+            <div class="section__inner section__inner--sml">
+              <div class="card card--focus-box card--focus-box--loose bg-white">
+                <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+                <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+                <div class="card__inner ">
+                  <h3 class="heading-section">${title}</h3>
+                  <p>${paragraph}</p>
+                  <button-icon>${btnText}</button-icon>
+                </div>
+              </div>
+            </div>
+          </section>
+        `
+      }
+    }
+  ))
+  .add(
+    'Section - Focus Box (progressive image)',
+    withNotes(
+      `
+        <div>
+          <h2>Section (Focus Box)</h2>
+          This section is intended to be used as a content container
+          it has to have a inner div with a class of <code>.section__inner</code>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+        </div>
+      `
+    )
+    (() => {
+      const title = text('Title', 'Example Title');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
+      const btnText = text('Button Text', 'Example Title');
+      
+      return {
+        components: { icon, ButtonIcon },
+        template: `
+          <section class="section section--image bg-inverted " v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
+            <div class="section__inner section__inner--sml">
+              <div class="card card--focus-box card--focus-box--loose bg-white">
+                <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+                <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+                <div class="card__inner ">
+                  <h3 class="heading-section">${title}</h3>
+                  <p>${paragraph}</p>
+                  <button-icon>${btnText}</button-icon>
+                </div>
+              </div>
             </div>
           </section>
         `

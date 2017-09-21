@@ -50,10 +50,11 @@
     }
   }
 
+  &--image {
+    background-size: cover;
+  }
+
   &--divider {
-
-
-
 
     .section__inner--short {
       margin-top: auto;

@@ -415,6 +415,10 @@
     position: relative;
     padding: var(--vr);
 
+    &--loose {
+      padding: calc(var(--vr) * 2);
+    }
+
     &__cnr {
       position: absolute;
       width: 6em;
