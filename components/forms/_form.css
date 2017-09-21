@@ -1,0 +1,21 @@
+.form {
+  fieldset {
+    border: 0;
+    margin-bottom: 0;
+  }
+
+  label {
+    font-size: .95em;
+    font-weight: var(--fw-bold);
+  }
+
+  legend {
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+
+  fieldset ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
