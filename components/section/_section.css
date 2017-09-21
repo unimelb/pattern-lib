@@ -16,11 +16,9 @@
     &--sml {
       max-width: calc(var(--w-sml) + 2 * var(--vr));
     }
+    
   }
 
-  &__inner--short{
-    padding: calc(2 * var(--vr)) var(--vr);
-  }
 
   &--centred {
     text-align: center;
@@ -48,6 +46,11 @@
         min-height: 21.9rem;
       }
     }
+  }
+
+  &__inner--short{
+    padding: calc(2 * var(--vr)) var(--vr);
+    min-height: initial;
   }
 
   &--divider {

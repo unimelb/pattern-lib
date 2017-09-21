@@ -16,7 +16,7 @@ storiesOf('Embed', module)
   .add('Video - in section', () => ({
     components: { VideoEmbed },
     template: `
-      <section-inverted>
+      <section-wrap bgColor="bg-inverted">
         <h3 class="heading-section">Section with video embed</h3>
         <video-embed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
       </section-inverted>

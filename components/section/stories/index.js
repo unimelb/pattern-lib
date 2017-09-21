@@ -120,14 +120,14 @@ storiesOf('Section', module)
       const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
       const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
       const small = boolean('Smaller width', false);
+      const short = boolean('Shorter height', false);
+
       return {
         template: `
-          <section class="section ${bgClass}">
-            <div class="section__inner ${small ? 'section__inner--sml' : ''}">
-              <h3 class="heading-section">${title}</h3>
-              <p>${paragraph}</p>
-            </div>
-          </section>
+          <section-wrap class="${bgClass}" ${small ? 'small' : ''} ${short ? 'short' : ''}>
+            <h3 class="heading-section">${title}</h3>
+            <p>${paragraph}</p>
+          </section-wrap>
         `
       }
     }
@@ -164,13 +164,11 @@ storiesOf('Section', module)
           imageRight="${selectedSide === 'right' ? 'true' : ''}"
           bgImage="${imgUrl}"
         >
-          <div class="split-section__inner">
-            <h3 class="h3 heading-section">${titleText}</h3>
-            <p>This is a paragraph of text</p>
-            <a href="#" class="btn">
-              ${btnText}
-            </a>
-          </div>
+          <h3 class="h3 heading-section">${titleText}</h3>
+          <p>This is a paragraph of text</p>
+          <a href="#" class="btn">
+            ${btnText}
+          </a>
         </SplitSection>
       `
     }
