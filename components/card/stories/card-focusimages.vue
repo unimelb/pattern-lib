@@ -3,25 +3,28 @@
     <div class="card__thumb">
       <img :src="thumb" />
     </div>
-    <span class="card__inner">
+    <div class="card__inner">
       <h3>{{title}}</h3>
       <p>{{excerpt}}</p>
-    </span>
+    </div>
   </div>
   <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus">
     <div class="card__thumb">
       <img :src="thumb" />
     </div>
-    <span class="card__inner">
+    <div class="card__inner">
       <h3>{{title}}</h3>
       <p>{{excerpt}}</p>
-    </span>
+      <button-icon class="btn--fullwidth">{{title}}</button-icon>
+    </div>
   </a>
 </template>
 
 <script>
+  import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
   export default {
     name: 'CardFocusImages',
+    components: {ButtonIcon},
     props: {
       thumb: {
         type: String,

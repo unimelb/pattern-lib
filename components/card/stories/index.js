@@ -23,6 +23,7 @@ import CardFocusBox from './card-focus-box.vue';
 import CardFocusImages from './card-focusimages.vue';
 import CardFact from './card-fact.vue';
 import CardDivision from './card-division.vue';
+import CardDivisionHead from './card-divisionhead.vue';
 
 
 storiesOf('Cards', module)
@@ -88,7 +89,7 @@ storiesOf('Cards', module)
     }
   ))
   .add(
-    'Card - news listing',
+    'Card - news listing (3 column)',
     withNotes(
       `
         <div>
@@ -125,6 +126,51 @@ storiesOf('Cards', module)
               </ListItem>
               <ListItem>
                 <CardNews thumb="http://via.placeholder.com/400x200" title="Annual reports" excerpt="See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management."/>
+              </ListItem>
+            </div>
+          </div>
+        `
+      }
+    }
+  ))
+  .add(
+    'Card - news listing (1 column)',
+    withNotes(
+      `
+        <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
+          <h2>Listing</h2>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+
+        </div>
+      `
+    )
+    (() => {
+      const title = text('Title', 'About Us');
+      return {
+        components: { ListItem, CardNews },
+        template: `
+          <div >
+            <h3 style="text-align: center;" class="heading-section">News listing</h3>
+            <div class="listing listing--one">
+              <ListItem>
+                <CardNews :cols="1" thumb="http://via.placeholder.com/200x400" title="Growing esteem" excerpt="Find out about our strategic journey and where we're headed."/>
+              </ListItem>
+              <ListItem>
+                <CardNews :cols="1" thumb="http://via.placeholder.com/400x200" title="Melbourne model" excerpt="Check out how our degrees are structured to give our students flexibility and focus."/>
+              </ListItem>
+              <ListItem>
+                <CardNews :cols="1" thumb="http://via.placeholder.com/300x200" title="Our structure" excerpt="this is a test of the content"/>
+              </ListItem>
+              <ListItem>
+                <CardNews :cols="1" thumb="http://via.placeholder.com/400x200" title="Governance" excerpt="this is a test of the content"/>
+              </ListItem>
+              <ListItem>
+                <CardNews :cols="1" thumb="http://via.placeholder.com/400x200" title="Annual reports" excerpt="See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management."/>
               </ListItem>
             </div>
           </div>
@@ -282,28 +328,26 @@ storiesOf('Cards', module)
       const items = object('Items', [
         {
           title: "Learning and teaching",
-          icon: "#icon-learning-1",
+          icon: "twitter",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "Option 2",
-          icon: "#icon-learning-2",
+          icon: "facebook",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "Something else",
-          icon: "#icon-learning-3",
+          icon: "download",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
 
       ]);
-      const inverted = boolean('Inverted', true);
       return {
         components: { ListItem, CardFocusBox },
         template: `
           <div style="text-align: center;">
             <h3 style="text-align: center;" class="heading-section">Focus boxes</h3>
-            <p>Used in growing esteem. WIP - Dependant on icons</p>
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardFocusBox class="bg-white" icon="${item.icon}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
@@ -348,14 +392,14 @@ storiesOf('Cards', module)
 
       ]);
       const colors = select('Focus colors', ['','card--image-focus--col-brand', 'card--image-focus--col-white'], '');
-      const bgColors = select('Card BG', ['','bg-white', 'bg-alt', 'bg-inverted'], '');
+      const bgColors = select('Card BG', ['bg-white', 'bg-alt', 'bg-inverted'], 'bg-alt');
       const element = select('Element', ['a', 'div'], 'div');
 
       return {
         components: { ListItem, CardFocusImages },
         template: `
           <div style="text-align: center;">
-            <h3 style="text-align: center;" class="heading-section">Focus boxes</h3>
+            <h3 style="text-align: center;" class="heading-section">Images with focus marks</h3>
 
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardFocusImages element="${element}" class="${colors} ${bgColors}" thumb="${item.thumb}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
@@ -506,6 +550,114 @@ storiesOf('Cards', module)
             <h3 style="text-align: center;" class="heading-section">Division card</h3>
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardDivision class="bg-white" meta="${item.meta}" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+            </div>
+          </div>
+        `
+      }
+    }
+  ))
+  .add(
+    'Card - Division Head - 3 col',
+    withNotes(
+      `
+        <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
+          <h2>Listing</h2>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+
+        </div>
+      `
+    )
+    (() => {
+      const items = object('Items', [
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Research Infrastructure and Systems",
+          subtitle: "Professor John Doggeton",
+          meta: "Pro Vice-Chancellor (Research Infrastructure & Systems)",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet",
+        },
+      ]);
+      const inverted = boolean('Inverted', true);
+      return {
+        components: { ListItem, CardDivisionHead },
+        template: `
+          <div style="text-align: center;">
+            <h3 style="text-align: center;" class="heading-section">Division card</h3>
+            <div class="listing listing--three">
+              ${items.map(item => `
+                <ListItem>
+                  <CardDivisionHead class="bg-white" meta="${item.meta}" :cols="3" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" />
+                </ListItem>`).join('')}
+            </div>
+          </div>
+        `
+      }
+    }
+  ))
+  .add(
+    'Card - Division Head - 1 col',
+    withNotes(
+      `
+        <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
+          <h2>Card - Division Head 1 Column</h2>
+          <p> When using a 
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+
+        </div>
+      `
+    )
+    (() => {
+      const items = object('Items', [
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Research Infrastructure and Systems",
+          subtitle: "Professor John Doggeton",
+          meta: "Pro Vice-Chancellor (Research Infrastructure & Systems)",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet",
+        },
+      ]);
+      const inverted = boolean('Inverted', true);
+      return {
+        components: { ListItem, CardDivisionHead },
+        template: `
+          <div style="text-align: center;">
+            <div class="listing listing--one">
+              ${items.map(item => `
+                <ListItem>
+                  <CardDivisionHead class="bg-alt" meta="${item.meta}" :cols="1" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" />
+                </ListItem>`).join('')}
             </div>
           </div>
         `

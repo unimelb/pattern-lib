@@ -12,14 +12,16 @@
       <p>{{excerpt}}</p>
     </div>
     <div class="card__footer">
-      <button class="btn btn--fullwidth">Contacts and bio</button>
+      <button-icon class="btn--fullwidth">Contacts and bio</button-icon>
     </div>
   </a>
 </template>
 
 <script>
+  import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
+  
   export default {
-    name: 'CardNews',
+    components: { ButtonIcon }, 
     props: {
       thumb: {
         type: String,
