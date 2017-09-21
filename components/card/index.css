@@ -12,7 +12,7 @@
 
   &.btn-owner {
     color: var(--col-brand);
-    
+
     &:visited {
       color: var(--col-brand);
     }
@@ -63,6 +63,22 @@
     margin-top: auto;
     margin-bottom: 0;
     padding: var(--vr);
+  }
+  
+  /* One column */
+  .listing--one .list-item & {
+    @supports(display: flex){
+      flex-direction: column;
+      @media (--bp-x-tablet) {
+        flex-direction: row-reverse;
+      }
+    }
+    .card__inner {
+      margin-right: auto;
+
+    }
+
+
   }
 
   /*
@@ -224,11 +240,18 @@
       }
 
       .listing--one .list-item & {
-        @supports(display: flex){
-          flex-direction: column;
-          @media (--bp-x-tablet) {
-            flex-direction: row-reverse;
-            border-bottom: 0;
+        @media (--bp-x-tablet) {
+          border-bottom: 0;
+        }
+
+        .card__inner {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          @media (--bp-desktop) {
+            padding-right: calc(var(--vr) * 2);
+            width: 60%;  
+            float: left;
           }
         }
 
@@ -240,22 +263,14 @@
         .card__thumb {
           @media (--bp-desktop) {
             width: 30%;  
+            float: right;
           }
-          float: right;
           margin-top: auto;
           margin-bottom: auto;
         }
-        .card__inner {
-          width: 100%;
-          @media (--bp-desktop) {
-            margin-left: auto;
-            margin-right: auto;
-            width: 60%;  
-          }
-          float: left;
-          padding-right: calc(var(--vr) * 2);
-        }
+        
       }
+
     }
 
   }
@@ -263,7 +278,6 @@
 
   /*
   * News listings
-  * TODO: add fullwidth variant
   */
 
   &--news {
