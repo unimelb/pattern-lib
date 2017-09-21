@@ -7,7 +7,7 @@ html {
   color: var(--col-brand);
   font-family: var(--ff-normal);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: var(--lh);
   text-rendering: optimizeLegibility;
 
   @media (--bp-xx-wide) {
@@ -74,10 +74,11 @@ li {
 }
 
 a {
-  color: var(--col-teal-dark);
+  font-weight: var(--fw-semibold);
+  color: var(--col-link);
 
-  &:visited { color: var(--col-purple-dark); }
-  &:active { color: var(--col-brand); }
+  &:visited { color: var(--col-link-visited); }
+  &:active { color: var(--col-link-active); }
 
   &:hover,
   &:focus {
