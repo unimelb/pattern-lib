@@ -1,6 +1,6 @@
 <template>
   <div class="header-tools__search">
-    <a class="icon-link--vertical link" href="#search">
+    <a class="icon-link--vertical link-reset" href="#search">
       <icon class="icon-link__icon svg" name="search" />
       <span class="icon-link__text">Search</span>
     </a>

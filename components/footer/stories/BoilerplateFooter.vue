@@ -18,35 +18,35 @@
           <div class="footer__main__users cell cell--wide-1of4">
             <ul class="footer__users list list--chevron-white">
               <li>
-                <a class="link" href="">Current students</a>
+                <a class="link-reset" href="">Current students</a>
               </li>
               <li>
-                <a class="link" href="">Staff</a>
+                <a class="link-reset" href="">Staff</a>
               </li>
               <li>
-                <a class="link" href="">Alumni</a>
+                <a class="link-reset" href="">Alumni</a>
               </li>
             </ul>
           </div>
           <div class="footer__main__popular cell cell--wide-1of2">
             <ul class="footer__popular list clearfix">
               <li>
-                <a class="icon-link link" href="http://about.unimelb.edu.au/governance-and-leadership/faculties"><icon class="icon-link__icon svg" name="faculty" /><span class="icon-link__text">Faculties &amp; graduate schools</span></a>
+                <a class="icon-link link-reset" href="http://about.unimelb.edu.au/governance-and-leadership/faculties"><icon class="icon-link__icon svg" name="faculty" /><span class="icon-link__text">Faculties &amp; graduate schools</span></a>
               </li>
               <li>
-                <a class="icon-link link" href="https://maps.unimelb.edu.au/"><icon class="icon-link__icon svg" name="location" /><span class="icon-link__text">Maps</span></a>
+                <a class="icon-link link-reset" href="https://maps.unimelb.edu.au/"><icon class="icon-link__icon svg" name="location" /><span class="icon-link__text">Maps</span></a>
               </li>
               <li>
-                <a class="icon-link link" href="http://library.unimelb.edu.au/"><icon class="icon-link__icon svg" name="library" /><span class="icon-link__text">Library</span></a>
+                <a class="icon-link link-reset" href="http://library.unimelb.edu.au/"><icon class="icon-link__icon svg" name="library" /><span class="icon-link__text">Library</span></a>
               </li>
               <li>
-                <a class="icon-link link" href="http://www.campaign.unimelb.edu.au/"><icon class="icon-link__icon svg" name="campaign" /><span class="icon-link__text">Support the campaign</span></a>
+                <a class="icon-link link-reset" href="http://www.campaign.unimelb.edu.au/"><icon class="icon-link__icon svg" name="campaign" /><span class="icon-link__text">Support the campaign</span></a>
               </li>
               <li>
-                <a class="icon-link link" href="http://www.unimelb.edu.au/contact/"><icon class="icon-link__icon svg" name="phone" /><span class="icon-link__text">Contact us</span></a>
+                <a class="icon-link link-reset" href="http://www.unimelb.edu.au/contact/"><icon class="icon-link__icon svg" name="phone" /><span class="icon-link__text">Contact us</span></a>
               </li>
               <li>
-                <a class="icon-link link" href="http://about.unimelb.edu.au/careers"><icon class="icon-link__icon svg" name="jobs" /><span class="icon-link__text">Jobs</span></a>
+                <a class="icon-link link-reset" href="http://about.unimelb.edu.au/careers"><icon class="icon-link__icon svg" name="jobs" /><span class="icon-link__text">Jobs</span></a>
               </li>
             </ul>
           </div>
@@ -67,22 +67,22 @@
                 <a class="footer__sitemap-heading" href="https://coursesearch.unimelb.edu.au/">Study at Melbourne</a>
                 <ul class="footer__sitemap-pages list list--chevron-white">
                   <li>
-                    <a class="link" href="https://coursesearch.unimelb.edu.au/undergrad">Undergraduate study</a>
+                    <a class="link-reset" href="https://coursesearch.unimelb.edu.au/undergrad">Undergraduate study</a>
                   </li>
                   <li>
-                    <a class="link" href="https://coursesearch.unimelb.edu.au/grad">Graduate study</a>
+                    <a class="link-reset" href="https://coursesearch.unimelb.edu.au/grad">Graduate study</a>
                   </li>
                   <li>
-                    <a class="link" href="https://futurestudents.unimelb.edu.au/">Future students</a>
+                    <a class="link-reset" href="https://futurestudents.unimelb.edu.au/">Future students</a>
                   </li>
                   <li>
-                    <a class="link" href="https://futurestudents.unimelb.edu.au/admissions">Admissions, fees &amp; applications</a>
+                    <a class="link-reset" href="https://futurestudents.unimelb.edu.au/admissions">Admissions, fees &amp; applications</a>
                   </li>
                   <li>
-                    <a class="link" href="https://futurestudents.unimelb.edu.au/info/international">International students</a>
+                    <a class="link-reset" href="https://futurestudents.unimelb.edu.au/info/international">International students</a>
                   </li>
                   <li>
-                    <a class="link" href="http://www.unimelb.edu.au/campustour">Campus tour</a>
+                    <a class="link-reset" href="http://www.unimelb.edu.au/campustour">Campus tour</a>
                   </li>
                 </ul>
               </div>
@@ -90,25 +90,25 @@
                 <a class="footer__sitemap-heading" href="http://about.unimelb.edu.au/">About us</a>
                 <ul class="footer__sitemap-pages list list--chevron-white">
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/strategy-and-leadership">Strategy and leadership</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/strategy-and-leadership">Strategy and leadership</a>
                   </li>
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/tradition-of-excellence">Tradition of excellence</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/tradition-of-excellence">Tradition of excellence</a>
                   </li>
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/international-connections">International connections</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/international-connections">International connections</a>
                   </li>
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/campuses-and-facilities">Campuses and facilities</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/campuses-and-facilities">Campuses and facilities</a>
                   </li>
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/governance-and-leadership">Structure and governance</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/governance-and-leadership">Structure and governance</a>
                   </li>
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/policy-and-publications">Policy and publications</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/policy-and-publications">Policy and publications</a>
                   </li>
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/careers">Careers at Melbourne</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/careers">Careers at Melbourne</a>
                   </li>
                 </ul>
               </div>
@@ -116,25 +116,25 @@
                 <a class="footer__sitemap-heading" href="http://www.unimelb.edu.au/contact">Contact &amp; Maps</a>
                 <ul class="footer__sitemap-pages list list--chevron-white">
                   <li>
-                    <a class="link" href="https://ask.unimelb.edu.au/app/ask">Contact us</a>
+                    <a class="link-reset" href="https://ask.unimelb.edu.au/app/ask">Contact us</a>
                   </li>
                   <li>
-                    <a class="link" href="https://ask.unimelb.edu.au/">Enquiries</a>
+                    <a class="link-reset" href="https://ask.unimelb.edu.au/">Enquiries</a>
                   </li>
                   <li>
-                    <a class="link" href="http://newsroom.melbourne.edu/">Media</a>
+                    <a class="link-reset" href="http://newsroom.melbourne.edu/">Media</a>
                   </li>
                   <li>
-                    <a class="link" href="http://findanexpert.unimelb.edu.au/">Find an expert</a>
+                    <a class="link-reset" href="http://findanexpert.unimelb.edu.au/">Find an expert</a>
                   </li>
                   <li>
-                    <a class="link" href="https://maps.unimelb.edu.au/">Campus maps</a>
+                    <a class="link-reset" href="https://maps.unimelb.edu.au/">Campus maps</a>
                   </li>
                   <li>
-                    <a class="link" href="http://about.unimelb.edu.au/campuses-and-facilities/transport-and-parking">Traffic, parking &amp; bicycles</a>
+                    <a class="link-reset" href="http://about.unimelb.edu.au/campuses-and-facilities/transport-and-parking">Traffic, parking &amp; bicycles</a>
                   </li>
                   <li>
-                    <a class="link" href="http://directory.unimelb.edu.au/">Find a staff member</a>
+                    <a class="link-reset" href="http://directory.unimelb.edu.au/">Find a staff member</a>
                   </li>
                 </ul>
               </div>
@@ -142,16 +142,16 @@
                 <a class="footer__sitemap-heading" href="https://www.alumni.unimelb.edu.au/">Alumni &amp; friends</a>
                 <ul class="footer__sitemap-pages list list--chevron-white">
                   <li>
-                    <a class="link" href="https://www.alumni.unimelb.edu.au/alumni/alumni-benefits">Benefits &amp; services</a>
+                    <a class="link-reset" href="https://www.alumni.unimelb.edu.au/alumni/alumni-benefits">Benefits &amp; services</a>
                   </li>
                   <li>
-                    <a class="link" href="https://www.alumni.unimelb.edu.au/give/">Give</a>
+                    <a class="link-reset" href="https://www.alumni.unimelb.edu.au/give/">Give</a>
                   </li>
                   <li>
-                    <a class="link" href="https://www.alumni.unimelb.edu.au/volunteer">Volunteer</a>
+                    <a class="link-reset" href="https://www.alumni.unimelb.edu.au/volunteer">Volunteer</a>
                   </li>
                   <li>
-                    <a class="link" href="http://mag.alumni.unimelb.edu.au/?sl=1">3010: alumni magazine</a>
+                    <a class="link-reset" href="http://mag.alumni.unimelb.edu.au/?sl=1">3010: alumni magazine</a>
                   </li>
                 </ul>
               </div>
@@ -159,16 +159,16 @@
                 <a class="footer__sitemap-heading" href="http://research.unimelb.edu.au/">Research</a>
                 <ul class="footer__sitemap-pages list list--chevron-white">
                   <li>
-                    <a class="link" href="http://research.unimelb.edu.au/melbourne-research-institutes">Research institutes</a>
+                    <a class="link-reset" href="http://research.unimelb.edu.au/melbourne-research-institutes">Research institutes</a>
                   </li>
                   <li>
-                    <a class="link" href="http://findanexpert.unimelb.edu.au/">Find an expert or supervisor</a>
+                    <a class="link-reset" href="http://findanexpert.unimelb.edu.au/">Find an expert or supervisor</a>
                   </li>
                   <li>
-                    <a class="link" href="http://gradresearch.unimelb.edu.au/">Graduate researchers</a>
+                    <a class="link-reset" href="http://gradresearch.unimelb.edu.au/">Graduate researchers</a>
                   </li>
                   <li>
-                    <a class="link" href="https://pursuit.unimelb.edu.au/">Pursuit: our research showcase</a>
+                    <a class="link-reset" href="https://pursuit.unimelb.edu.au/">Pursuit: our research showcase</a>
                   </li>
                 </ul>
               </div>
@@ -176,16 +176,16 @@
                 <a class="footer__sitemap-heading" href="http://engagement.unimelb.edu.au/">Engagement</a>
                 <ul class="footer__sitemap-pages list list--chevron-white">
                   <li>
-                    <a class="link" href="https://events.unimelb.edu.au/">Events</a>
+                    <a class="link-reset" href="https://events.unimelb.edu.au/">Events</a>
                   </li>
                   <li>
-                    <a class="link" href="http://businessconnect.unimelb.edu.au/">Business &amp; Industry</a>
+                    <a class="link-reset" href="http://businessconnect.unimelb.edu.au/">Business &amp; Industry</a>
                   </li>
                   <li>
-                    <a class="link" href="http://www.sport.unimelb.edu.au/fitnesscentres">Sports facilities</a>
+                    <a class="link-reset" href="http://www.sport.unimelb.edu.au/fitnesscentres">Sports facilities</a>
                   </li>
                   <li>
-                    <a class="link" href="https://shop.unimelb.edu.au/">Shop</a>
+                    <a class="link-reset" href="https://shop.unimelb.edu.au/">Shop</a>
                   </li>
                 </ul>
               </div>

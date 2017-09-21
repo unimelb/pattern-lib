@@ -27,12 +27,12 @@ storiesOf('Top nav', module)
   })
 
   .add(
-    'Search only', 
+    'Search only',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Search only</h2><pre><code>
-  
+
   &lt;div class="header-tools__search"&gt;
-    &lt;a class="icon-link--vertical link" href="#search"&gt;
+    &lt;a class="icon-link--vertical link-reset" href="#search"&gt;
       &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
         &lt;use xlink:href="#icon-search" /&gt;
       &lt;/svg&gt;
@@ -70,12 +70,12 @@ storiesOf('Top nav', module)
   )
 
   .add(
-    'Basic navigation', 
+    'Basic navigation',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Basic navigation</h2><h3>Header tools</h3><pre><code>
-  
+
   &lt;div class="header-tools__search"&gt;
-    &lt;a class="icon-link--vertical link" href="#search"&gt;
+    &lt;a class="icon-link--vertical link-reset" href="#search"&gt;
       &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
         &lt;use xlink:href="#icon-search" /&gt;
       &lt;/svg&gt;
@@ -100,7 +100,7 @@ storiesOf('Top nav', module)
       &lt;/form&gt;
     &lt;/div&gt;
     &lt;div class="header-tools__menu"&gt;
-      &lt;a class="icon-link--vertical link" href="#sitemap"&gt;
+      &lt;a class="icon-link--vertical link-reset" href="#sitemap"&gt;
         &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
           &lt;path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" /&gt;
         &lt;/svg&gt;
@@ -149,12 +149,12 @@ storiesOf('Top nav', module)
   )
 
   .add(
-    'Nested navigation', 
+    'Nested navigation',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Nested navigation</h2><h3>Header tools</h3><pre><code>
-  
+
   &lt;div class="header-tools__search"&gt;
-    &lt;a class="icon-link--vertical link" href="#search"&gt;
+    &lt;a class="icon-link--vertical link-reset" href="#search"&gt;
       &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
         &lt;use xlink:href="#icon-search" /&gt;
       &lt;/svg&gt;
@@ -179,7 +179,7 @@ storiesOf('Top nav', module)
       &lt;/form&gt;
     &lt;/div&gt;
     &lt;div class="header-tools__menu"&gt;
-      &lt;a class="icon-link--vertical link" href="#sitemap"&gt;
+      &lt;a class="icon-link--vertical link-reset" href="#sitemap"&gt;
         &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
           &lt;path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" /&gt;
         &lt;/svg&gt;
