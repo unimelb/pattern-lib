@@ -219,6 +219,10 @@
     clear:both;
     display: table;
   }
+
+  &--flex {
+    display: flex;
+  }
 }
 
 /**
