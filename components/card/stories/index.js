@@ -23,6 +23,7 @@ import CardFocusBox from './card-focus-box.vue';
 import CardFocusImages from './card-focusimages.vue';
 import CardFact from './card-fact.vue';
 import CardDivision from './card-division.vue';
+import CardDivisionHead from './card-divisionhead.vue';
 
 
 storiesOf('Cards', module)
@@ -297,7 +298,6 @@ storiesOf('Cards', module)
         },
 
       ]);
-      const inverted = boolean('Inverted', true);
       return {
         components: { ListItem, CardFocusBox },
         template: `
@@ -505,6 +505,114 @@ storiesOf('Cards', module)
             <h3 style="text-align: center;" class="heading-section">Division card</h3>
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardDivision class="bg-white" meta="${item.meta}" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+            </div>
+          </div>
+        `
+      }
+    }
+  ))
+  .add(
+    'Card - Division Head - 3 col',
+    withNotes(
+      `
+        <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
+          <h2>Listing</h2>
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+
+        </div>
+      `
+    )
+    (() => {
+      const items = object('Items', [
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Research Infrastructure and Systems",
+          subtitle: "Professor John Doggeton",
+          meta: "Pro Vice-Chancellor (Research Infrastructure & Systems)",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet",
+        },
+      ]);
+      const inverted = boolean('Inverted', true);
+      return {
+        components: { ListItem, CardDivisionHead },
+        template: `
+          <div style="text-align: center;">
+            <h3 style="text-align: center;" class="heading-section">Division card</h3>
+            <div class="listing listing--three">
+              ${items.map(item => `
+                <ListItem>
+                  <CardDivisionHead class="bg-white" meta="${item.meta}" :cols="3" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" />
+                </ListItem>`).join('')}
+            </div>
+          </div>
+        `
+      }
+    }
+  ))
+  .add(
+    'Card - Division Head - 1 col',
+    withNotes(
+      `
+        <div>
+          <style>pre {  background-color: #444;  color: #eee; } </style>
+          <h2>Card - Division Head 1 Column</h2>
+          <p> When using a 
+          <pre>
+            <code>
+
+            </code>
+          </pre>
+
+        </div>
+      `
+    )
+    (() => {
+      const items = object('Items', [
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Research Infrastructure and Systems",
+          subtitle: "Professor John Doggeton",
+          meta: "Pro Vice-Chancellor (Research Infrastructure & Systems)",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.",
+        },
+        {
+          title: "Enterprise",
+          subtitle: "Doron Ben-Meir",
+          meta: "Vice-Principal Enterprise",
+          excerpt: "Lorem ipsum dolor sit amet",
+        },
+      ]);
+      const inverted = boolean('Inverted', true);
+      return {
+        components: { ListItem, CardDivisionHead },
+        template: `
+          <div style="text-align: center;">
+            <div class="listing listing--one">
+              ${items.map(item => `
+                <ListItem>
+                  <CardDivisionHead class="bg-alt" meta="${item.meta}" :cols="1" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" />
+                </ListItem>`).join('')}
             </div>
           </div>
         `

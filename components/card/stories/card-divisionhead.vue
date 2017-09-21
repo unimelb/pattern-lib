@@ -1,7 +1,7 @@
 <template>
-  <a :href="href" class="btn-owner card card--division card--bdr">
-    <div class="card__title bg-inverted">
-      {{title}}
+  <a :href="href" class="btn-owner card card--division card--division--head card--bdr">
+    <div class="card__thumb" >
+      <img :src="thumb" alt="">
     </div>
     <div class="card__inner ">
       <div class="card__subheader">
@@ -10,22 +10,27 @@
       </div>
       <hr>
       <p>{{excerpt}}</p>
+      <button-icon v-if="cols === 1" class="btn--wide">Contacts and bio</button-icon>
     </div>
-    <div class="card__footer">
+    <div class="card__footer" v-if="cols !== 1">
       <button-icon class="btn--fullwidth">Contacts and bio</button-icon>
     </div>
+    
   </a>
 </template>
 
 <script>
   import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
-  
   export default {
     components: { ButtonIcon }, 
     props: {
       thumb: {
         type: String,
-        default: "http://via.placeholder.com/400x200"
+        default: "http://via.placeholder.com/360x360"
+      },
+      cols: {
+        type: Number,
+        default: 3
       },
       title: {
         type: String,
