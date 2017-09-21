@@ -1,8 +1,8 @@
 <template>
   <div class="header-tools__search">
-    <a class="icon-link--vertical link-reset" href="#search">
-      <icon class="icon-link__icon svg" name="search" />
-      <span class="icon-link__text">Search</span>
+    <a class="link-icon--vertical link-reset" href="#search">
+      <icon class="link-icon__icon svg" name="search" />
+      <span class="link-icon__text">Search</span>
     </a>
     <div class="page-header-search">
       <form action="https://search.unimelb.edu.au" method="get">
@@ -12,7 +12,7 @@
             <span class="screenreaders-only">Go</span>
           </button>
         </fieldset>
-        <a class="page-header-icon icon-link--close" href="#">
+        <a class="page-header-icon link-icon--close" href="#">
           <icon class="page-header-search__icon--close" name="close" />
           Close
         </a>

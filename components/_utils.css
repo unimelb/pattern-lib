@@ -22,9 +22,9 @@
   background-color: var(--col-bg-grey);
 }
 
-/* white bg */
+/* white background */
 .bg-white {
-  background-color: var(--col-white);
+  background-color: #fff;
   color: var(--col-brand);
 }
 
@@ -45,14 +45,52 @@
 }
 
 /**
- * Link reset
+ * Link
  */
-.link-reset {
+ /* reset */
+.link-reset,
+.links-reset a {
   font-weight: inherit;
   text-decoration: none;
 
   &:any-link { color: inherit; }
   &:hover { text-decoration: underline; }
+}
+
+/* wrapping an image (typically a logo) */
+.link-img {
+  display: inline-block;
+  vertical-align: bottom; /* fix unwanted inline-block space */
+  color: inherit; /* fix outline colour */
+  outline-offset: .25rem;
+
+  & > img {
+    display: block;
+  }
+}
+
+/* with text and icon (e.g. `popular` list in footer) */
+.link-icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: center;
+  line-height: 1.3;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(1.3 * 1em);
+    height: calc(1.3 * 1em);
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: top; /* fix unwanted inline-block space */
+    text-decoration: inherit;
+    padding-left: calc(1.3 * 1em + .5em); /* icon width .5em */
+    padding-right: .125rem; /* for focus outline */
+  }
 }
 
 /**
@@ -81,38 +119,6 @@
   @supports (display: flex) {
     display: flex;
     align-items: center;
-  }
-}
-
-/**
- * Link with text and icon
- */
-.icon-link {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  color: inherit;
-  text-decoration: none;
-  line-height: 1.3;
-
-  &__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(1.3 * 1em);
-    height: calc(1.3 * 1em);
-  }
-
-  &__text {
-    display: inline-block;
-    vertical-align: middle;
-    text-decoration: inherit;
-    padding-left: calc(1.3 * 1em + .5em); /* icon width .5em */
-    padding-right: .125rem;
-  }
-
-  &:hover {
-    text-decoration: underline;
   }
 }
 
@@ -162,21 +168,6 @@
   & > *:first-child {
     margin-top: 0;
     padding-top: 0;
-  }
-}
-
-/**
- * Image wrapped in a link, typically a logo, where the link
- * needs to adapt to the size of the image.
- */
-.img-link {
-  display: inline-block;
-  vertical-align: bottom; /* fix unwanted inline-block space */
-  color: inherit; /* fix outline colour */
-  outline-offset: .25rem;
-
-  &__img {
-    display: block;
   }
 }
 

@@ -7,7 +7,7 @@ html {
   color: var(--col-brand);
   font-family: var(--ff-normal);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: var(--lh);
   text-rendering: optimizeLegibility;
 
   @media (--bp-xx-wide) {

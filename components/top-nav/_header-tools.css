@@ -15,7 +15,7 @@
   }
 }
 
-.icon-link {
+.link-icon {
   &--vertical {
     background-color: var(--col-brand);
     display: block;
@@ -23,7 +23,7 @@
     text-align: center;
     transition: all linear .1s;
 
-    .icon-link__icon {
+    .link-icon__icon {
       display: inline;
       position: static;
       height: 1.5rem;
@@ -32,7 +32,7 @@
       width: 1.5rem;
     }
 
-    .icon-link__text {
+    .link-icon__text {
       display: block;
       font-size: .7rem;
       padding: 0;
@@ -119,14 +119,14 @@
 
     &--close {
       height: 1.5rem;
-      margin: auto; 
+      margin: auto;
       padding-bottom: .4em;
       width: 1.5rem;
     }
   }
 }
 
-.icon-link--close {
+.link-icon--close {
   color: var(--col-brand-mid2);
   display: inline-block;
   font-size: .6rem;

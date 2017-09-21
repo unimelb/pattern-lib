@@ -32,11 +32,11 @@ storiesOf('Top nav', module)
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Search only</h2><pre><code>
 
   &lt;div class="header-tools__search"&gt;
-    &lt;a class="icon-link--vertical link-reset" href="#search"&gt;
-      &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
+    &lt;a class="link-icon--vertical link-reset" href="#search"&gt;
+      &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
         &lt;use xlink:href="#icon-search" /&gt;
       &lt;/svg&gt;
-      &lt;span class="icon-link__text"&gt;Search&lt;/span&gt;
+      &lt;span class="link-icon__text"&gt;Search&lt;/span&gt;
     &lt;/a&gt;
     &lt;div class="page-header-search"&gt;
       &lt;form action="https://search.unimelb.edu.au" method="get"&gt;
@@ -48,7 +48,7 @@ storiesOf('Top nav', module)
             &lt;span class="screenreaders-only"&gt;Go&lt;/span&gt;
           &lt;/button&gt;
         &lt;/fieldset&gt;
-        &lt;a class="page-header-icon icon-link--close" href="#"&gt;
+        &lt;a class="page-header-icon link-icon--close" href="#"&gt;
           &lt;svg class="page-header-search__icon" width="24" height="24" role="presentation" focusable="false"&gt;
             &lt;use xlink:href="#icon-close" /&gt;
           &lt;/svg&gt;
@@ -75,11 +75,11 @@ storiesOf('Top nav', module)
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Basic navigation</h2><h3>Header tools</h3><pre><code>
 
   &lt;div class="header-tools__search"&gt;
-    &lt;a class="icon-link--vertical link-reset" href="#search"&gt;
-      &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
+    &lt;a class="link-icon--vertical link-reset" href="#search"&gt;
+      &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
         &lt;use xlink:href="#icon-search" /&gt;
       &lt;/svg&gt;
-      &lt;span class="icon-link__text"&gt;Search&lt;/span&gt;
+      &lt;span class="link-icon__text"&gt;Search&lt;/span&gt;
     &lt;/a&gt;
     &lt;div class="page-header-search"&gt;
       &lt;form action="https://search.unimelb.edu.au" method="get"&gt;
@@ -91,7 +91,7 @@ storiesOf('Top nav', module)
             &lt;span class="screenreaders-only"&gt;Go&lt;/span&gt;
           &lt;/button&gt;
         &lt;/fieldset&gt;
-        &lt;a class="page-header-icon icon-link--close" href="#"&gt;
+        &lt;a class="page-header-icon link-icon--close" href="#"&gt;
           &lt;svg class="page-header-search__icon" width="24" height="24" role="presentation" focusable="false"&gt;
             &lt;use xlink:href="#icon-close" /&gt;
           &lt;/svg&gt;
@@ -100,11 +100,11 @@ storiesOf('Top nav', module)
       &lt;/form&gt;
     &lt;/div&gt;
     &lt;div class="header-tools__menu"&gt;
-      &lt;a class="icon-link--vertical link-reset" href="#sitemap"&gt;
-        &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
+      &lt;a class="link-icon--vertical link-reset" href="#sitemap"&gt;
+        &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
           &lt;path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" /&gt;
         &lt;/svg&gt;
-        &lt;span class="icon-link__text"&gt;Menu&lt;/span&gt;
+        &lt;span class="link-icon__text"&gt;Menu&lt;/span&gt;
       &lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -154,11 +154,11 @@ storiesOf('Top nav', module)
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Nested navigation</h2><h3>Header tools</h3><pre><code>
 
   &lt;div class="header-tools__search"&gt;
-    &lt;a class="icon-link--vertical link-reset" href="#search"&gt;
-      &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
+    &lt;a class="link-icon--vertical link-reset" href="#search"&gt;
+      &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
         &lt;use xlink:href="#icon-search" /&gt;
       &lt;/svg&gt;
-      &lt;span class="icon-link__text"&gt;Search&lt;/span&gt;
+      &lt;span class="link-icon__text"&gt;Search&lt;/span&gt;
     &lt;/a&gt;
     &lt;div class="page-header-search"&gt;
       &lt;form action="https://search.unimelb.edu.au" method="get"&gt;
@@ -170,7 +170,7 @@ storiesOf('Top nav', module)
             &lt;span class="screenreaders-only"&gt;Go&lt;/span&gt;
           &lt;/button&gt;
         &lt;/fieldset&gt;
-        &lt;a class="page-header-icon icon-link--close" href="#"&gt;
+        &lt;a class="page-header-icon link-icon--close" href="#"&gt;
           &lt;svg class="page-header-search__icon" width="24" height="24" role="presentation" focusable="false"&gt;
             &lt;use xlink:href="#icon-close" /&gt;
           &lt;/svg&gt;
@@ -179,11 +179,11 @@ storiesOf('Top nav', module)
       &lt;/form&gt;
     &lt;/div&gt;
     &lt;div class="header-tools__menu"&gt;
-      &lt;a class="icon-link--vertical link-reset" href="#sitemap"&gt;
-        &lt;svg class="icon-link__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
+      &lt;a class="link-icon--vertical link-reset" href="#sitemap"&gt;
+        &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
           &lt;path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" /&gt;
         &lt;/svg&gt;
-        &lt;span class="icon-link__text"&gt;Menu&lt;/span&gt;
+        &lt;span class="link-icon__text"&gt;Menu&lt;/span&gt;
       &lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;

@@ -40,7 +40,7 @@ export default class HeaderTools {
     this.root.classList.add('search-active');
 
     this.headerSearch.classList.add('active');
-    this.headerSearch.querySelector('.icon-link--close').addEventListener('click', this.handleSearchClose.bind(this));
+    this.headerSearch.querySelector('.link-icon--close').addEventListener('click', this.handleSearchClose.bind(this));
 
     this.blanket.el.classList.add('white');
     this.blanket.el.addEventListener('click', this.handleSearchClose.bind(this));
