@@ -1,0 +1,8 @@
+.card--news {
+  background-color: var(--col-white);
+  color: var(--col-brand);
+
+  .card__header {
+    margin-top: var(--vr);
+  }
+}

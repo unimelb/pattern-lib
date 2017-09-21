@@ -10,11 +10,13 @@
 h1, .heading-page {
   margin-bottom: calc(2 * var(--vr));
   font-family: var(--ff-lead);
-  font-size: 3rem; /* https://github.com/unimelb/atomisk/issues/56#issuecomment-327679214 */
+  font-size: 2.25rem;
   line-height: 1.3;
 
-  @media (--bp-max-mobile) {
-    font-size: 2.5rem;
+  @media (--bp-tablet) {
+    /* https://github.com/unimelb/atomisk/issues/56#issuecomment-327679214 */
+    /* https://github.com/unimelb/web-templates-2017/issues/181 */
+    font-size: 2.75rem;
   }
 }
 

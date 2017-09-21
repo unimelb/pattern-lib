@@ -1,0 +1,23 @@
+/*
+* Image thumbnail variant
+*/
+
+.card--image {
+
+  &:hover {
+    .card__thumb {
+      &:before {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .card__inner {
+    text-align: center;
+
+    p {
+      font-size: 0.9rem;
+      margin-top: var(--vr);
+    }
+  }
+}
