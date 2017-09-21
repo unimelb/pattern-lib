@@ -123,6 +123,7 @@
  * Link reset
  */
 .link {
+  font-weight: inherit;
   text-decoration: none;
 
   &:any-link { color: inherit; }
