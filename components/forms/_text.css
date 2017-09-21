@@ -1,4 +1,8 @@
 .form {
+  input[type="search"] {
+    appearance: textfield;
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="number"],
@@ -44,11 +48,40 @@
     }
 
     @media screen and (--bp-desktop) {
-      width: 44rem;
+      max-width: 44rem;
     }
   }
 
   textarea {
     height: 14rem;
+  }
+
+  /* Grid override */
+  .grid {
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="url"],
+    textarea {
+      max-width: 100%;
+    }
+
+    & div:first-child {
+      padding-right: .5rem;
+
+      div {
+        padding: 0;
+      }
+    }
+
+    & div:last-child {
+      padding-left: .5rem;
+
+      div {
+        padding: 0;
+      }
+    }
   }
 }

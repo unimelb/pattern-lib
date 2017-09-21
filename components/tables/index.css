@@ -7,7 +7,7 @@
   font-weight: 0.88rem;
   
   a, a:visited, a:hover {
-    color: var(--var-brand);
+    color: var(--col-brand);
     text-decoration: underline;
   }
 

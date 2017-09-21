@@ -4,6 +4,7 @@
     margin-right: .5em;
   }
 
+  button,
   input[type="submit"] {
     display: inline-block;
     vertical-align: middle;
