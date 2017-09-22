@@ -10,8 +10,7 @@
     max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
     margin-left: auto;
     margin-right: auto;
-    padding-right: var(--vr);
-    padding-left: var(--vr);
+    padding: calc(2 * var(--vr)) var(--vr);
 
     &--sml {
       max-width: calc(var(--w-sml) + 2 * var(--vr));
