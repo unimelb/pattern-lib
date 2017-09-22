@@ -17,6 +17,7 @@
     "prebuild:lib": "rm -Rf .out/lib"
   },
   "dependencies": {
+    "fr-dialogmodal": "^1.0.4",
     "svg4everybody": "^2.1.9",
     "vue": "^2.4.2"
   },

@@ -1,11 +1,15 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
+import {
+  withKnobs
+} from '@storybook/addon-knobs';
 
 import TopNav from './TopNav.vue';
 import NavTrigger from './NavTrigger.vue';
 import Search from './Search.vue';
 
 storiesOf('Top nav', module)
+  .addDecorator(withKnobs)
   .addDecorator(story => {
     const Story = story();
     return {
