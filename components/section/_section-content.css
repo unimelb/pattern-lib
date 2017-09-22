@@ -1,7 +1,6 @@
 .section-content {
   /* This is intended for Matrix CMS WYSIWYG editor only */
-  padding-top: calc(2 * var(--vr));
-  padding-bottom: calc(2 * var(--vr));
+  padding: calc(2 * var(--vr)) var(--vr);
 
   &--short {
     padding-top: var(--vr);

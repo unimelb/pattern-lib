@@ -1,6 +1,7 @@
 .card {
   width: 100%;
   min-height: 100%;
+  font-weight: var(--fw-normal);
   
   @supports (display: flex) {
     display: flex;
