@@ -37,14 +37,15 @@
       margin-left: initial;
     }
 
-    &:last-child {
+    &:last-child a {
       font-weight: var(--fw-semibold);
     }
   }
 
-  &__link {
+  a&__link {
     margin-right: .25rem;
-    color: inherit;
+    color: var(--col-brand);
+    font-weight: var(--fw-normal);
     text-decoration: none;
 
     &:hover {
