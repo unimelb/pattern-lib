@@ -1,22 +1,34 @@
 <template>
-  <a :href="href" class="btn-owner card card--image-focus card--focus-box">
-    <svg class="card--focus-box__cnr card--focus-box__cnr--top-left" role="presentation" focusable="false" width="54" height="54">
-      <use xlink:href="#focus-top-left"></use>
-    </svg>
-    <svg class="card--focus-box__cnr card--focus-box__cnr--btm-right" role="presentation" focusable="false" width="54" height="54">
-      <use xlink:href="#focus-bottom-right"></use>
-    </svg>
-    <img :src="thumb" />
+  <div v-if="element === 'div'" class="card card--image-focus">
+    <div class="card__thumb">
+      <img :src="thumb" />
+    </div>
+    <div class="card__inner">
+      <h3>{{title}}</h3>
+      <p>{{excerpt}}</p>
+    </div>
+  </div>
+  <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus">
+    <div class="card__thumb">
+      <img :src="thumb" />
+    </div>
+    <div class="card__inner">
+      <h3>{{title}}</h3>
+      <p>{{excerpt}}</p>
+      <button-icon class="btn--fullwidth">{{title}}</button-icon>
+    </div>
   </a>
 </template>
 
 <script>
+  import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
   export default {
     name: 'CardFocusImages',
+    components: {ButtonIcon},
     props: {
       thumb: {
         type: String,
-        default: "http://via.placeholder.com/400x200"
+        default: "http://via.placeholder.com/200x400"
       },
       title: {
         type: String,
@@ -29,6 +41,10 @@
       href: {
         type: String,
         default: "#"
+      },
+      element: {
+        type: String,
+        default: "a"
       },
       excerpt: {
         type: String,

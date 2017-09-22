@@ -1,7 +1,7 @@
 /**
  * Button + Button owner
  */
- .btn {
+.btn {
   display: inline-block;
   vertical-align: middle;
   padding: calc(var(--vr) * 0.8);
@@ -15,7 +15,7 @@
   outline-offset: 1px;
   outline-color: var(--col-brand-light);
   transition: border-color .2s;
-  
+
 
   &:focus,
   &:hover,
@@ -81,20 +81,10 @@
       min-width: 100%;
     }
   }
-  
+
   &--fullwidth{
     min-width: 100%;
-    .push-icon {
-      justify-content: center;
-      padding-right: calc(var(--vr) + 7px); /* account for icon width */
-      position: relative;
 
-      &__icon {
-        position: absolute;
-        top: calc(50% - 7px); /* account for icon height */
-        right: calc(var(--vr) / 2);
-      }
-    }
   }
 
   &--center{
@@ -104,6 +94,56 @@
 
   &--icon{
     position: relative;
+    padding-right: 1.75em;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: .75em;
+      height: .75em;
+      background-size: cover;
+      margin-top: .05rem;
+      right: 1rem;
+      top: calc(50% - (.75em / 2));
+      position: absolute;
+    }
+
+
+    &--chevron-right {
+      &-inverted {
+        &::after {
+          background-image: url('~icons/chevron-right.svg?fill=#fff');
+        }
+      }
+      &::after {
+        background-image: url('~icons/chevron-right.svg?fill=#074482');
+      }
+    }
+
+    &--search {
+      &-inverted {
+        &::after {
+          background-image: url('~icons/search.svg?fill=#fff');
+        }
+      }
+
+      &::after {
+        background-image: url('~icons/search.svg?fill=#074482');
+      }
+    }
+
+    &--twitter {
+      &-inverted {
+        &::after {
+          background-image: url('~icons/twitter.svg?fill=#fff');
+        }
+      }
+
+      &::after {
+        background-image: url('~icons/twitter.svg?fill=#074482');
+      }
+    }
+
   }
 
 }

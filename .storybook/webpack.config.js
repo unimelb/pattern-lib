@@ -12,6 +12,12 @@ module.exports = (storybookConfig, env) => {
     return rule.test.test('foo.js');
   });
 
+  /* Markdown loader */
+  config.module.rules.push({
+    test: /\.md$/,
+    use: "raw-loader"
+  });
+
   const mergedConfig = merge(config, baseConfig);
   return mergedConfig;
 };

@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 import {
   withKnobs,
   text,
@@ -12,7 +11,7 @@ import {
   date,
 } from '@storybook/addon-knobs';
 
-import Article from './article.vue';
+import ArticleStory from './ArticleStory.vue';
 
 
 storiesOf('Article', module)
@@ -31,20 +30,6 @@ storiesOf('Article', module)
   .addDecorator(withKnobs)
   .add(
     'Article',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
     (() => {
       const title = text('Title', 'MGSE Professoriate Planning Day');
       const content = text('Content', `<div>
@@ -106,16 +91,15 @@ storiesOf('Article', module)
               </div>
             `);
       return {
-        components: { Article },
+        components: { ArticleStory },
         template: `
           <div>
-            <Article 
-              title="${title}" 
-              content="${content}" 
+            <article-story
+              title="${title}"
+              content="${content}"
             />
           </div>
         `
       }
     }
   ))
- 

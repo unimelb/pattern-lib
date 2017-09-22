@@ -1,0 +1,18 @@
+.form .sq-form-question-datetime .sq-form-question-answer {
+  @media screen and (min-width: 230px) {
+    padding-top: 1rem;
+    position: relative;
+
+    label {
+      position: absolute;
+      top: -.25rem;
+    }
+
+    select {
+      margin-right: .5rem;
+      max-width: 5rem;
+      width: calc(33% - .585rem);
+
+    }
+  }
+}

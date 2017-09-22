@@ -17,10 +17,7 @@
 import icon from './../../icons/stories/Icon.vue';
 
 export default {
-  name: 'button-icon',
-  components: {
-    icon
-  },
+  components: { icon },
   props: {
     href: {
       type: String,

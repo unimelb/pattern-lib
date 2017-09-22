@@ -1,0 +1,23 @@
+/*
+* Lists of images as used in senior leadership pages
+*/
+
+.card--imagelisting {
+
+  .card__inner {
+    padding-left: calc(var(--vr) / 2);
+    padding-right: calc(var(--vr) / 2);
+  }
+
+  .card__thumb {
+    height: 260px;
+  }
+
+  .card__header {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: var(--col-brand);
+  }
+
+}

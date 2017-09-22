@@ -194,7 +194,7 @@
         <a href="/news-and-resources">News and resources</a>
       </li>
     </ul>
-    <ul class="localnav__meta">
+    <ul class="sitenav__meta">
       <li>
         <a href="https://search.unimelb.edu.au">Search</a>
       </li>

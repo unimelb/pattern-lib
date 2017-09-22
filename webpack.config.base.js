@@ -48,7 +48,7 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        // Icons in CSS - e.g. url('icons/chevron-right.svg?fill=#fff')
+        // Icons in CSS - e.g. url('~icons/chevron-right.svg?fill=#fff')
         test: /\.svg$/,
         include: path.resolve(__dirname, 'components/icons/'),
         issuer: /\.css$/,
@@ -86,7 +86,8 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin([
       'NODE_ENV',
-      'CDN_URL'
+      'CDN_URL',
+      'GMAPS_KEY'
     ]),
     new ExtractTextPlugin({
       allChunks: true,

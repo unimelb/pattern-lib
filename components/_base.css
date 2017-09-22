@@ -7,10 +7,10 @@ html {
   color: var(--col-brand);
   font-family: var(--ff-normal);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: var(--lh);
   text-rendering: optimizeLegibility;
 
-  @media (--bp-wide) {
+  @media (--bp-xx-wide) {
     font-size: 18px;
   }
 }
@@ -50,21 +50,35 @@ hr {
   margin: calc(var(--vr) * 2) 0;
 }
 
-ul {
+ol, ul {
   padding-left: var(--vr);
 
-  li {
-    list-style: disc;
+  ol, ul {
     margin-top: calc(var(--vr) / 2);
-    margin-bottom: calc(var(--vr) / 2);
+    margin-bottom: 0;
   }
 }
 
-a {
-  color: var(--col-teal-dark);
+ol ol {
+  list-style-type: lower-alpha;
+  ol { list-style-type: lower-roman; }
+}
 
-  &:visited { color: var(--col-purple-dark); }
-  &:active { color: var(--col-brand); }
+ul ul {
+  list-style-type: circle;
+  ul { list-style-type: square; }
+}
+
+li {
+  margin-bottom: calc(var(--vr) / 2);
+}
+
+a {
+  font-weight: var(--fw-semibold);
+  color: var(--col-link);
+
+  &:visited { color: var(--col-link-visited); }
+  &:active { color: var(--col-link-active); }
 
   &:hover,
   &:focus {

@@ -1,0 +1,86 @@
+.form {
+  input[type="search"] {
+    appearance: textfield;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="url"],
+  textarea {
+    background-color: var(--col-bg-grey);
+    border: 1px solid color(var(--col-grey-light) lightness(-5%));
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px color(#000 alpha(10%));
+    font-size: 1.25rem;
+    font-weight: var(--fw-light);
+    margin-bottom: 1rem;
+    margin-top: .3125rem;
+    padding: .5rem .625rem;
+    width: 100%;
+
+    &:hover:not([disabled]) {
+      border-color: var(--col-grey);
+    }
+
+    &:focus {
+      background-color: #fff;
+      border-color: var(--col-blue-mid);
+      color: #000;
+      outline: 0;
+
+      &.invalid {
+        color: #000;
+      }
+    }
+
+    &[disabled] {
+      opacity: .5;
+    }
+    
+    &.invalid {
+      background-color: #fff;
+      border-color: color(var(--col-pink-mid) lightness(+25%));
+      color: color(var(--col-pink-mid) lightness(+25%));
+    }
+
+    @media screen and (--bp-desktop) {
+      max-width: 44rem;
+    }
+  }
+
+  textarea {
+    height: 14rem;
+  }
+
+  /* Grid override */
+  .grid {
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="url"],
+    textarea {
+      max-width: 100%;
+    }
+
+    & div:first-child {
+      padding-right: .5rem;
+
+      div {
+        padding: 0;
+      }
+    }
+
+    & div:last-child {
+      padding-left: .5rem;
+
+      div {
+        padding: 0;
+      }
+    }
+  }
+}

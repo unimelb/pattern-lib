@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 import {
   withKnobs,
   text,
@@ -27,31 +26,15 @@ storiesOf('Section', module)
   })
   .addDecorator(withKnobs)
   .add(
-    'Content section',
-    withNotes(
-      `
-        <div>
-          <h2>Content section</h2>
-          <p>This section is intended to be used only in the WYSIWYG editor</p>
-          <pre>
-            <code>
-              &lt;section class=&quot;section--content&quot;&gt; 
-              &lt;/section&gt;
-            </code>
-          </pre>
-          <p>Add the class <code> .section--content--sml</code> for the smaller width content container</p>
-        </div>
-      `
-    )
-    (() => {
+    'Content section', () => {
       const titleH2 = text('Title H2', 'Example Title H2');
       const titleH3 = text('Title H3', 'Example Title H3');
       const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
       const small = boolean('Smaller width', false);
-      const intro = boolean('Intro class', false);
+
       return {
         template: `
-          <section class="section--content ${intro ? 'section--content--intro' : ''} ${small ? 'section--content--sml' : ''}">
+          <section class="section-content ${small ? 'section-content--sml' : ''}">
             <h2>${titleH2}</h2>
             <h3>${titleH3}</h3>
             <p>${paragraph}</p>
@@ -59,44 +42,44 @@ storiesOf('Section', module)
         `
       }
     }
-  ))
+  )
   .add(
-    'Section',
-    withNotes(
-      `
-        <div>
-          <h2>Section (container template)</h2>
-          This section is intended to be used as a content container
-          it has to have a inner div with a class of <code>.section__inner</code>
-          <pre>
-            <code>
-              &lt;section class=&quot;section&quot;&gt;
-                &lt;div class=&quot;section__inner max&quot;&gt;
-                    &lt;!-- Content goes here --&gt;
-                &lt;/div&gt;
-              &lt;/section&gt;
-            </code>
-          </pre>
-        </div>
-      `
-    )
-    (() => {
-      const title = text('Title', 'Example Title');
-      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
-      const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
-      const small = boolean('Smaller width', false);
+    'Content section - Intro class', () => {
+      const titleH1 = text('Title H1', 'Heading Section .heading-section');
+      const titleH2 = text('Title H2', 'H2 element. As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.');
+      const titleH3 = text('Title H3', 'H3 element <em>Growing Esteem 2015-2020</em> is the most recent articulation of our plans to achieve our strategic goals.');
+      const paragraph = text('Paragraph text', 'P Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
+      const small = boolean('Smaller width', true);
       return {
         template: `
-          <section class="section ${bgClass}">
-            <div class="section__inner ${small ? 'section__inner--sml' : ''}">
-              <h3 class="heading-section">${title}</h3>
-              <p>${paragraph}</p>
-            </div>
+          <section class="section-content ${small ? 'section-content--sml' : ''}">
+            <h3 class="heading-section">${titleH1}</h3>
+            <h2>${titleH2}</h2>
+            <h3>${titleH3}</h3>
+            <p>${paragraph}</p>
           </section>
         `
       }
     }
-  ))
+  )
+  .add(
+    'Section', () => {
+      const title = text('Title', 'Example Title');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
+      const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
+      const small = boolean('Smaller width', false);
+      const short = boolean('Shorter height', false);
+
+      return {
+        template: `
+          <section-wrap class="${bgClass}" ${small ? 'small' : ''} ${short ? 'short' : ''}>
+            <h3 class="heading-section">${title}</h3>
+            <p>${paragraph}</p>
+          </section-wrap>
+        `
+      }
+    }
+  )
   .add('With background image', () => {
     const btnText = text('Button Text', 'Read More');
     const titleText = text('Title', 'Our Vision');
@@ -129,17 +112,31 @@ storiesOf('Section', module)
           imageRight="${selectedSide === 'right' ? 'true' : ''}"
           bgImage="${imgUrl}"
         >
-          <div class="split-section__inner">
-            <h3 class="h3 heading-section">${titleText}</h3>
-            <p>This is a paragraph of text</p>
-            <a href="#" class="btn">
-              ${btnText}
-            </a>
-          </div>
+          <h3 class="h3 heading-section">${titleText}</h3>
+          <p>This is a paragraph of text</p>
+          <a href="#" class="btn">
+            ${btnText}
+          </a>
         </SplitSection>
       `
     }
-  });
+  })
+  .add(
+    'Section - Divider', () => {
+      const title = text('Title', 'Example Title');
+      const subtitle = text('Sub title', '');
+      return {
+        template: `
+          <section class="section section--divider bg-inverted" style="background-image: url(http://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png);">
+            <div class="section__inner--short section--divider__inner">
+              <h3 class="heading-section">${title}</h3>
+              ${subtitle.length > 0 ? `<p>${subtitle}</p>` : '' }
+            </div>
+          </section>
+        `
+      }
+    }
+  )
 
 
 

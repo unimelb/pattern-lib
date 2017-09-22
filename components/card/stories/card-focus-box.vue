@@ -1,15 +1,10 @@
 <template>
   <div class="btn-owner card card--focus-box ">
-    <svg class="card--focus-box__cnr card--focus-box__cnr--top-left" role="presentation" focusable="false" width="54" height="54">
-      <use xlink:href="#focus-top-left"></use>
-    </svg>
-    <svg class="card--focus-box__cnr card--focus-box__cnr--btm-right" role="presentation" focusable="false" width="54" height="54">
-      <use xlink:href="#focus-bottom-right"></use>
-    </svg>
+    <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
+    <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
+
     <div class="card__inner ">
-      <svg class="icon--large" focusable="false" height="170" role="presentation" width="170">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" :xlink:href="icon"></use>
-      </svg>
+      <icon class="card--focus-box__icon" :name="icon" width="170" height="170" />
       <h3>{{title}}</h3>
       <p>{{excerpt}}</p>
     </div>
@@ -17,8 +12,10 @@
 </template>
 
 <script>
+  import icon from './../../icons/stories/Icon.vue';
   export default {
     name: 'CardFocusBox',
+    components: { icon },
     props: {
       thumb: {
         type: String,

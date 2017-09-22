@@ -1,5 +1,5 @@
 import Blanket from './blanket';
-import LocalNav from './local-nav';
+import SiteNav from './site-nav';
 
 export default class HeaderTools {
   constructor() {
@@ -25,9 +25,9 @@ export default class HeaderTools {
         if (!this.menuTrigger.getAttribute('data-bound')) {
           this.menuTrigger.addEventListener('click', this.activateMenu.bind(this));
           this.menuTarget = document.getElementById('sitemap');
-          this.menu = new LocalNav(this.menuTarget, {
+          this.menu = new SiteNav(this.menuTarget, {
             root: document.body,
-            closeLocalNav: this.dismissMenu.bind(this)
+            closeSiteNav: this.dismissMenu.bind(this)
           });
           this.menuTrigger.setAttribute('data-bound', true);
         }
@@ -40,7 +40,7 @@ export default class HeaderTools {
     this.root.classList.add('search-active');
 
     this.headerSearch.classList.add('active');
-    this.headerSearch.querySelector('.icon-link--close').addEventListener('click', this.handleSearchClose.bind(this));
+    this.headerSearch.querySelector('.link-icon--close').addEventListener('click', this.handleSearchClose.bind(this));
 
     this.blanket.el.classList.add('white');
     this.blanket.el.addEventListener('click', this.handleSearchClose.bind(this));

@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 import {
   withKnobs,
   text,
@@ -32,22 +31,7 @@ storiesOf('Listing', module)
   })
   .addDecorator(withKnobs)
   .add(
-    'List - 3',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    'List - 3', () => {
       return {
         components: { ListItem},
         template: `
@@ -77,24 +61,9 @@ storiesOf('Listing', module)
         `
       }
     }
-  ))
+  )
   .add(
-    'List - 4',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    'List - 4', () => {
       return {
         components: { ListItem},
         template: `
@@ -124,24 +93,9 @@ storiesOf('Listing', module)
         `
       }
     }
-  ))
+  )
   .add(
-    'List - variable cell witdth',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    'List - variable cell witdth', () => {
       return {
         components: { ListItem},
         template: `
@@ -180,4 +134,4 @@ storiesOf('Listing', module)
         `
       }
     }
-  ));
+  );
