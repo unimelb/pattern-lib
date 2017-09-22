@@ -1,3 +1,4 @@
+.section-content .form--inline,
 .form--inline {
   &__row {
     display: table;
@@ -26,7 +27,6 @@
   }
 
   button&__button {
-    // background-color: var(--col-brand);
     border-radius: 0 var(--br) var(--br) 0;
     color: white;
     display: table-cell;
