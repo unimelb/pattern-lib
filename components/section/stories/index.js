@@ -124,13 +124,13 @@ storiesOf('Section', module)
   .add(
     'Section - Divider', () => {
       const title = text('Title', 'Example Title');
-      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
+      const subtitle = text('Sub title', '');
       return {
         template: `
           <section class="section section--divider bg-inverted" style="background-image: url(http://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png);">
-            <div class="section__inner--short">
+            <div class="section__inner--short section--divider__inner">
               <h3 class="heading-section">${title}</h3>
-              <p>${paragraph}</p>
+              ${subtitle.length > 0 ? `<p>${subtitle}</p>` : '' }
             </div>
           </section>
         `

@@ -55,10 +55,7 @@
 
   &--divider {
 
-
-
-
-    .section__inner--short {
+    &__inner {
       margin-top: auto;
       margin-bottom: auto;
       text-align: center;
@@ -68,12 +65,11 @@
         flex-direction: column;
         justify-content: space-between;
       }
-
     }
 
     .heading-section {
-      margin-top: auto;
-      margin-bottom: auto;
+      margin-top: var(--vr);
+      margin-bottom: var(--vr);
     }
   }
 
