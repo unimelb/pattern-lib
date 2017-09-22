@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 
 import TopNav from './TopNav.vue';
 import NavTrigger from './NavTrigger.vue';
@@ -27,114 +26,18 @@ storiesOf('Top nav', module)
   })
 
   .add(
-    'Search only',
-    withNotes(
-      `<div><style>pre{background-color:#444;color:#eee}</style><h2>Search only</h2><pre><code>
-
-  &lt;div class="header-tools__search"&gt;
-    &lt;a class="link-icon--vertical link-reset" href="#search"&gt;
-      &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
-        &lt;use xlink:href="#icon-search" /&gt;
-      &lt;/svg&gt;
-      &lt;span class="link-icon__text"&gt;Search&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;div class="page-header-search"&gt;
-      &lt;form action="https://search.unimelb.edu.au" method="get"&gt;
-        &lt;fieldset class="page-header-search__inline"&gt;
-          &lt;input class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University" /&gt;&lt;button class="page-header-search__submit" type="submit"&gt;
-            &lt;svg width="21" height="21" role="presentation" focusable="false"&gt;
-              &lt;use xlink:href="#icon-search" /&gt;
-            &lt;/svg&gt;
-            &lt;span class="screenreaders-only"&gt;Go&lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/fieldset&gt;
-        &lt;a class="page-header-icon link-icon--close" href="#"&gt;
-          &lt;svg class="page-header-search__icon" width="24" height="24" role="presentation" focusable="false"&gt;
-            &lt;use xlink:href="#icon-close" /&gt;
-          &lt;/svg&gt;
-          Close
-        &lt;/a&gt;
-      &lt;/form&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</code></pre></div>`)
-    (() =>   ({
+    'Search only', () => ({
       components: { TopNav, Search },
       mounted: () => { loadHeaderTools() },
       template: `
         <div class="header-tools">
           <search />
         </div>`
-    }))
+    })
   )
 
   .add(
-    'Basic navigation',
-    withNotes(
-      `<div><style>pre{background-color:#444;color:#eee}</style><h2>Basic navigation</h2><h3>Header tools</h3><pre><code>
-
-  &lt;div class="header-tools__search"&gt;
-    &lt;a class="link-icon--vertical link-reset" href="#search"&gt;
-      &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
-        &lt;use xlink:href="#icon-search" /&gt;
-      &lt;/svg&gt;
-      &lt;span class="link-icon__text"&gt;Search&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;div class="page-header-search"&gt;
-      &lt;form action="https://search.unimelb.edu.au" method="get"&gt;
-        &lt;fieldset class="page-header-search__inline"&gt;
-          &lt;input class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University" /&gt;&lt;button class="page-header-search__submit" type="submit"&gt;
-            &lt;svg width="21" height="21" role="presentation" focusable="false"&gt;
-              &lt;use xlink:href="#icon-search" /&gt;
-            &lt;/svg&gt;
-            &lt;span class="screenreaders-only"&gt;Go&lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/fieldset&gt;
-        &lt;a class="page-header-icon link-icon--close" href="#"&gt;
-          &lt;svg class="page-header-search__icon" width="24" height="24" role="presentation" focusable="false"&gt;
-            &lt;use xlink:href="#icon-close" /&gt;
-          &lt;/svg&gt;
-          Close
-        &lt;/a&gt;
-      &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;div class="header-tools__menu"&gt;
-      &lt;a class="link-icon--vertical link-reset" href="#sitemap"&gt;
-        &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
-          &lt;path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" /&gt;
-        &lt;/svg&gt;
-        &lt;span class="link-icon__text"&gt;Menu&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</code></pre><h3>Nav list</h3><pre><code>
-
-  &lt;div id="sitemap" role="navigation"&gt;
-    &lt;h2&gt;
-      About us
-    &lt;/h2&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;a href="/leadership"&gt;Leadership&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/our-history"&gt;Our history&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/our-vision"&gt;Our vision&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul class="localnav__meta"&gt;
-      &lt;li&gt;
-        &lt;a href="https://search.unimelb.edu.au"&gt;Search&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-
-</code></pre></div>`)
-    (() =>   ({
+    'Basic navigation', () => ({
       components: { TopNav, NavTrigger, Search },
       mounted: () => { loadHeaderTools() },
       template: `
@@ -145,255 +48,10 @@ storiesOf('Top nav', module)
         </div>
         <top-nav />
       </div>`
-    }))
+    })
   )
-
   .add(
-    'Nested navigation',
-    withNotes(
-      `<div><style>pre{background-color:#444;color:#eee}</style><h2>Nested navigation</h2><h3>Header tools</h3><pre><code>
-
-  &lt;div class="header-tools__search"&gt;
-    &lt;a class="link-icon--vertical link-reset" href="#search"&gt;
-      &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false"&gt;
-        &lt;use xlink:href="#icon-search" /&gt;
-      &lt;/svg&gt;
-      &lt;span class="link-icon__text"&gt;Search&lt;/span&gt;
-    &lt;/a&gt;
-    &lt;div class="page-header-search"&gt;
-      &lt;form action="https://search.unimelb.edu.au" method="get"&gt;
-        &lt;fieldset class="page-header-search__inline"&gt;
-          &lt;input class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University" /&gt;&lt;button class="page-header-search__submit" type="submit"&gt;
-            &lt;svg width="21" height="21" role="presentation" focusable="false"&gt;
-              &lt;use xlink:href="#icon-search" /&gt;
-            &lt;/svg&gt;
-            &lt;span class="screenreaders-only"&gt;Go&lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/fieldset&gt;
-        &lt;a class="page-header-icon link-icon--close" href="#"&gt;
-          &lt;svg class="page-header-search__icon" width="24" height="24" role="presentation" focusable="false"&gt;
-            &lt;use xlink:href="#icon-close" /&gt;
-          &lt;/svg&gt;
-          Close
-        &lt;/a&gt;
-      &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;div class="header-tools__menu"&gt;
-      &lt;a class="link-icon--vertical link-reset" href="#sitemap"&gt;
-        &lt;svg class="link-icon__icon svg" width="24" height="24" role="presentation" focusable="false" viewBox="0 0 49 48"&gt;
-          &lt;path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" /&gt;
-        &lt;/svg&gt;
-        &lt;span class="link-icon__text"&gt;Menu&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-</code></pre><h3>Nav list</h3><pre><code>
-
-  &lt;div id="sitemap" role="navigation"&gt;
-    &lt;h2&gt;
-      About us
-    &lt;/h2&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;a href="/leadership"&gt;Leadership&lt;/a&gt;
-        &lt;div class="inner"&gt;
-          &lt;ul&gt;
-            &lt;li&gt;
-              &lt;a href="/leadership/chancellor"&gt;Chancellor&lt;/a&gt;
-              &lt;div class="inner"&gt;
-                &lt;ul&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/chancellor/university-council"&gt;University Council&lt;/a&gt;
-                    &lt;div class="inner"&gt;
-                      &lt;ul&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/barry-hughes"&gt;Professor Barry Hughes&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/frederik-vervaet"&gt;Associate Professor Frederik Vervaet&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/jane-hansen"&gt;Ms Jane Hansen&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/john-middleton"&gt;The Honorable Justice John Middleton&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/kara-hadgraft"&gt;Ms Kara Hadgraft&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/marilys-guillemin"&gt;Professor Marilys Guillemin&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/mark-leibler"&gt;Mr Mark Leibler AC&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/martyn-myer"&gt;Mr Martyn Myer AO&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/nilss-olekalns"&gt;Professor Nilss Olekalns&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/robin-batterham"&gt;Professor Robin John Batterham AO&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/ross-mcpherson"&gt;Mr Ross McPherson&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/tony-peake"&gt;Mr Tony Peake&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/tyson-holloway-clarke"&gt;Mr Tyson Holloway-Clarke&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/chancellor/university-council/wendy-stops"&gt;Ms Wendy Stops&lt;/a&gt;
-                        &lt;/li&gt;
-                      &lt;/ul&gt;
-                    &lt;/div&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="/leadership/office-of-the-vice-chancellor"&gt;Office of the Vice-Chancellor&lt;/a&gt;
-              &lt;div class="inner"&gt;
-                &lt;ul&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/office-of-the-vice-chancellor/news-and-speeches"&gt;News and speeches&lt;/a&gt;
-                    &lt;div class="inner"&gt;
-                      &lt;ul&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/launch-of-educating-australia"&gt;Launch of Educating Australia&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/mgse-professoriate-planning-day"&gt;MGSE Professoriate Planning Day&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                          &lt;a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/university-wominjeka-welcome"&gt;University Wominjeka (Welcome)&lt;/a&gt;
-                        &lt;/li&gt;
-                      &lt;/ul&gt;
-                    &lt;/div&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/office-of-the-vice-chancellor/past-vice-chancellors"&gt;Past Vice-Chancellors&lt;/a&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="/leadership/senior-leadership"&gt;Senior leadership&lt;/a&gt;
-              &lt;div class="inner"&gt;
-                &lt;ul&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/deputy-vice-chancellor-research"&gt;Deputy Vice-Chancellor (Research)&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/head-of-university-services"&gt;Head of University Services&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/provost"&gt;Provost&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/vice-principal-administration-and-cfo"&gt;Vice-Principal (Administration and Finance) and Chief Financial Officer&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/vice-principal-advancement"&gt;Vice-Principal (Advancement)&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/vice-principal-engagement"&gt;Vice-Principal (Engagement)&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/vice-principal-policy-and-projects"&gt;Vice-Principal (Policy and Projects)&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/leadership/senior-leadership/vice-chancellor"&gt;Vice-Chancellor&lt;/a&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/div&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/our-history"&gt;Our history&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/our-vision"&gt;Our vision&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/alumni-and-staff"&gt;Alumni and staff&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/ranking-and-stats"&gt;Rankings and statistics&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/strategy"&gt;Strategy and governance&lt;/a&gt;
-        &lt;div class="inner"&gt;
-          &lt;ul&gt;
-            &lt;li&gt;
-              &lt;a href="/strategy/growing-esteem"&gt;Growing Esteem&lt;/a&gt;
-              &lt;div class="inner"&gt;
-                &lt;ul&gt;
-                  &lt;li&gt;
-                    &lt;a href="/strategy/growing-esteem/engagement"&gt;Engagement&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/strategy/growing-esteem/learning-and-teaching"&gt;Learning and teaching&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/strategy/growing-esteem/reconciliation"&gt;Reconciliation&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/strategy/growing-esteem/research"&gt;Research&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/strategy/growing-esteem/strategic-plans"&gt;Strategic plans&lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;a href="/strategy/growing-esteem/sustainability"&gt;Sustainability&lt;/a&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/div&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="/strategy/melbourne-model"&gt;Melbourne Model&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="/strategy/our-structure"&gt;Our structure&lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/working-with-us"&gt;Working with us&lt;/a&gt;
-        &lt;div class="inner"&gt;
-          &lt;ul&gt;
-            &lt;li&gt;
-              &lt;a href="/working-with-us/careers"&gt;Careers&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="/working-with-us/diversity-and-inclusion"&gt;Diversity and inclusion&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li&gt;
-              &lt;a href="/working-with-us/staff-benefits"&gt;Staff benefits&lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;a href="/news-and-resources"&gt;News and resources&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul class="localnav__meta"&gt;
-      &lt;li&gt;
-        &lt;a href="https://search.unimelb.edu.au"&gt;Search&lt;/a&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-
-</code></pre></div>`)
-    (() =>   ({
+    'Nested navigation', () => ({
       components: { TopNav, Search, NavTrigger },
       mounted: () => { loadHeaderTools() },
       template: `
@@ -404,5 +62,5 @@ storiesOf('Top nav', module)
         </div>
         <top-nav :complex="true" />
       </div>`
-    }))
+    })
   );

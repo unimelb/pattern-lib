@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 import {
   withKnobs,
   text,
@@ -27,23 +26,7 @@ storiesOf('Section', module)
   })
   .addDecorator(withKnobs)
   .add(
-    'Content section',
-    withNotes(
-      `
-        <div>
-          <h2>Content section</h2>
-          <p>This section is intended to be used only in the WYSIWYG editor</p>
-          <pre>
-            <code>
-              &lt;section class=&quot;section--content&quot;&gt; 
-              &lt;/section&gt;
-            </code>
-          </pre>
-          <p>Add the class <code> .section-content--sml</code> for the smaller width content container</p>
-        </div>
-      `
-    )
-    (() => {
+    'Content section', () => {
       const titleH2 = text('Title H2', 'Example Title H2');
       const titleH3 = text('Title H3', 'Example Title H3');
       const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
@@ -59,25 +42,9 @@ storiesOf('Section', module)
         `
       }
     }
-  ))
+  )
   .add(
-    'Content section - Intro class',
-    withNotes(
-      `
-        <div>
-          <h2>Content section</h2>
-          <p>This section is intended to be used only in the WYSIWYG editor</p>
-          <pre>
-            <code>
-              &lt;section class=&quot;section--content&quot;&gt; 
-              &lt;/section&gt;
-            </code>
-          </pre>
-          <p>Add the class <code> .section-content--sml</code> for the smaller width content container</p>
-        </div>
-      `
-    )
-    (() => {
+    'Content section - Intro class', () => {
       const titleH1 = text('Title H1', 'Heading Section .heading-section');
       const titleH2 = text('Title H2', 'H2 element. As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.');
       const titleH3 = text('Title H3', 'H3 element <em>Growing Esteem 2015-2020</em> is the most recent articulation of our plans to achieve our strategic goals.');
@@ -94,28 +61,9 @@ storiesOf('Section', module)
         `
       }
     }
-  ))
+  )
   .add(
-    'Section',
-    withNotes(
-      `
-        <div>
-          <h2>Section (container template)</h2>
-          This section is intended to be used as a content container
-          it has to have a inner div with a class of <code>.section__inner</code>
-          <pre>
-            <code>
-              &lt;section class=&quot;section&quot;&gt;
-                &lt;div class=&quot;section__inner max&quot;&gt;
-                    &lt;!-- Content goes here --&gt;
-                &lt;/div&gt;
-              &lt;/section&gt;
-            </code>
-          </pre>
-        </div>
-      `
-    )
-    (() => {
+    'Section', () => {
       const title = text('Title', 'Example Title');
       const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
       const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
@@ -131,7 +79,7 @@ storiesOf('Section', module)
         `
       }
     }
-  ))
+  )
   .add('With background image', () => {
     const btnText = text('Button Text', 'Read More');
     const titleText = text('Title', 'Our Vision');
@@ -174,26 +122,7 @@ storiesOf('Section', module)
     }
   })
   .add(
-    'Section - Divider',
-    withNotes(
-      `
-        <div>
-          <h2>Section (container template)</h2>
-          This section is intended to be used as a content container
-          it has to have a inner div with a class of <code>.section__inner</code>
-          <pre>
-            <code>
-              &lt;section class=&quot;section&quot;&gt;
-                &lt;div class=&quot;section__inner max&quot;&gt;
-                    &lt;!-- Content goes here --&gt;
-                &lt;/div&gt;
-              &lt;/section&gt;
-            </code>
-          </pre>
-        </div>
-      `
-    )
-    (() => {
+    'Section - Divider', () => {
       const title = text('Title', 'Example Title');
       const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
       return {
@@ -207,7 +136,7 @@ storiesOf('Section', module)
         `
       }
     }
-  ))
+  )
 
 
 

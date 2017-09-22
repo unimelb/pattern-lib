@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 import {
   withKnobs,
   text,
@@ -31,20 +30,6 @@ storiesOf('Article', module)
   .addDecorator(withKnobs)
   .add(
     'Article',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
     (() => {
       const title = text('Title', 'MGSE Professoriate Planning Day');
       const content = text('Content', `<div>

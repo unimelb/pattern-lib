@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 import {
   withKnobs,
   text,
@@ -44,21 +43,7 @@ storiesOf('Cards', module)
   .addDecorator(withKnobs)
   .add(
     'Card - with image',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const title = text('Title', 'About Us');
       return {
         components: { ListItem, CardImage },
@@ -87,24 +72,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - news listing (3 column)',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const title = text('Title', 'About Us');
       return {
         components: { ListItem, CardNews },
@@ -132,24 +103,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - news listing (1 column)',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const title = text('Title', 'About Us');
       return {
         components: { ListItem, CardNews },
@@ -177,24 +134,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - small link box',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Links', [
         {
           title: 'Research',
@@ -226,24 +169,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - Image listing (bio images)',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Links', [
         {
           title: 'Mr John Smith',
@@ -307,24 +236,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - Focus box (eg: growing esteem)',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Items', [
         {
           title: "Learning and teaching",
@@ -355,24 +270,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - Focus box ( image listing )',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Items', [
         {
           title: "Learning and teaching",
@@ -408,24 +309,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - Fact',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Items', [
         {
           title: "666",
@@ -506,24 +393,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - Division',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Items', [
         {
           title: "Enterprise",
@@ -557,24 +430,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - Division Head - 3 col',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Listing</h2>
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Items', [
         {
           title: "Enterprise",
@@ -611,25 +470,10 @@ storiesOf('Cards', module)
         `
       }
     }
-  ))
+  )
   .add(
     'Card - Division Head - 1 col',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Card - Division Head 1 Column</h2>
-          <p> When using a 
-          <pre>
-            <code>
-
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    () => {
       const items = object('Items', [
         {
           title: "Enterprise",
@@ -665,4 +509,4 @@ storiesOf('Cards', module)
         `
       }
     }
-  ));
+  );
