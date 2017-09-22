@@ -23,7 +23,6 @@
   /* list of user groups */
   &__users {
     font-size: 1.125rem;
-    font-weight: 400;
 
     a:before {
       vertical-align: 6%; /* MAGIC NUMBER*/
@@ -33,7 +32,6 @@
 
   /* list of popular links */
   &__popular {
-    font-weight: 300;
     line-height: calc(1.125 * var(--lh)); /* match size of `users` list items */
   }
 
@@ -49,7 +47,6 @@
     display: inline-block;
     margin-bottom: .75rem;
     color: inherit;
-    font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
 
@@ -64,7 +61,10 @@
 
   /* list of pages in sitemap */
   &__sitemap-pages {
-    font-weight: 300;
+    &--minor {
+      font-size: .875rem;
+      line-height: 1.667;
+    }
 
     & > li:not(:last-child) {
       margin-bottom: .125rem;
@@ -109,13 +109,11 @@
       clear: left;
       float: left;
       margin-right: .375rem;
-      font-weight: 400;
-    }
+      }
 
     & > dd {
       float: left;
-      font-weight: 300;
-      margin-left: 0;
+        margin-left: 0;
 
       a {
         font-weight: inherit;
@@ -127,7 +125,6 @@
   /* legal links (disclaimer, privacy, etc.) */
   &__legal {
     color: var(--col-blue-mid);
-    font-weight: 300;
 
     &__sep {
       margin: 0 .375rem;
@@ -291,15 +288,15 @@
     border: none;
     border-bottom: 2px solid var(--col-blue-mid);
     color: inherit;
-    font-weight: 300;
     transition: border-bottom-color .3s;
 
     &:focus {
       border-bottom-color: #fff;
     }
 
-    &::placeholder{
-      color: white;
+    &::placeholder {
+      color: var(--col-blue-mid);
+      font-weight: var(--fw-light);
     }
   }
 

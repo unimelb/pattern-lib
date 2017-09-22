@@ -57,7 +57,7 @@
             <div class="grid clearfix">
               <div class="cell cell--tab-1of2 cell--desk-1of3">
                 <a class="footer__sitemap-heading" href="https://coursesearch.unimelb.edu.au/">Study at Melbourne</a>
-                <ul class="footer__sitemap-pages list-reset list-chevrons">
+                <ul class="footer__sitemap-pages footer__sitemap-pages--minor list-reset list-chevrons">
                   <li><a class="link-reset" href="https://coursesearch.unimelb.edu.au/undergrad">Undergraduate study</a></li>
                   <li><a class="link-reset" href="https://coursesearch.unimelb.edu.au/grad">Graduate study</a></li>
                   <li><a class="link-reset" href="https://futurestudents.unimelb.edu.au/">Future students</a></li>
@@ -68,7 +68,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3">
                 <a class="footer__sitemap-heading" href="http://about.unimelb.edu.au/">About us</a>
-                <ul class="footer__sitemap-pages list-reset list-chevrons">
+                <ul class="footer__sitemap-pages footer__sitemap-pages--minor list-reset list-chevrons">
                   <li><a class="link-reset" href="http://about.unimelb.edu.au/strategy-and-leadership">Strategy and leadership</a></li>
                   <li><a class="link-reset" href="http://about.unimelb.edu.au/tradition-of-excellence">Tradition of excellence</a></li>
                   <li><a class="link-reset" href="http://about.unimelb.edu.au/international-connections">International connections</a></li>
@@ -80,7 +80,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3 cell--tab-clear">
                 <a class="footer__sitemap-heading" href="http://www.unimelb.edu.au/contact">Contact &amp; Maps</a>
-                <ul class="footer__sitemap-pages list-reset list-chevrons">
+                <ul class="footer__sitemap-pages footer__sitemap-pages--minor list-reset list-chevrons">
                   <li><a class="link-reset" href="https://ask.unimelb.edu.au/app/ask">Contact us</a></li>
                   <li><a class="link-reset" href="https://ask.unimelb.edu.au/">Enquiries</a></li>
                   <li><a class="link-reset" href="http://newsroom.melbourne.edu/">Media</a></li>
@@ -92,7 +92,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3 cell--desk-clear cell--wide-clear">
                 <a class="footer__sitemap-heading" href="https://www.alumni.unimelb.edu.au/">Alumni &amp; friends</a>
-                <ul class="footer__sitemap-pages list-reset list-chevrons">
+                <ul class="footer__sitemap-pages footer__sitemap-pages--minor list-reset list-chevrons">
                   <li><a class="link-reset" href="https://www.alumni.unimelb.edu.au/alumni/alumni-benefits">Benefits &amp; services</a></li>
                   <li><a class="link-reset" href="https://www.alumni.unimelb.edu.au/give/">Give</a></li>
                   <li><a class="link-reset" href="https://www.alumni.unimelb.edu.au/volunteer">Volunteer</a></li>
@@ -101,7 +101,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3 cell--tab-clear">
                 <a class="footer__sitemap-heading" href="http://research.unimelb.edu.au/">Research</a>
-                <ul class="footer__sitemap-pages list-reset list-chevrons">
+                <ul class="footer__sitemap-pages footer__sitemap-pages--minor list-reset list-chevrons">
                   <li><a class="link-reset" href="http://research.unimelb.edu.au/melbourne-research-institutes">Research institutes</a></li>
                   <li><a class="link-reset" href="http://findanexpert.unimelb.edu.au/">Find an expert or supervisor</a></li>
                   <li><a class="link-reset" href="http://gradresearch.unimelb.edu.au/">Graduate researchers</a></li>
@@ -110,7 +110,7 @@
               </div>
               <div class="cell cell--tab-1of2 cell--desk-1of3">
                 <a class="footer__sitemap-heading" href="http://engagement.unimelb.edu.au/">Engagement</a>
-                <ul class="footer__sitemap-pages list-reset list-chevrons">
+                <ul class="footer__sitemap-pages footer__sitemap-pages--minor list-reset list-chevrons">
                   <li><a class="link-reset" href="https://events.unimelb.edu.au/">Events</a></li>
                   <li><a class="link-reset" href="http://businessconnect.unimelb.edu.au/">Business &amp; Industry</a></li>
                   <li><a class="link-reset" href="http://www.sport.unimelb.edu.au/fitnesscentres">Sports facilities</a></li>

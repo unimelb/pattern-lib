@@ -1,23 +1,23 @@
 /**
- * Local navigation
+ * Site navigation
  * @param  {Element} el
  * @param  {Object} props
  *         {Element} root - the root element of the page with class `uomcontent`
- *         {Function} closeLocalNav
+ *         {Function} closeSiteNav
  *         {Function} openGlobalNav
  */
-export default class LocalNav {
+export default class SiteNav {
   constructor(el, props) {
     this.el = el;
     this.props = props;
 
     this.state = { open: [this.el] }; // store nested panels that are currently open (include root)
 
-    // Don't initialise local nav twice
+    // Don't initialise site nav twice
     if (this.el.hasAttribute('data-bound')) return;
     this.el.setAttribute('data-bound', true);
 
-    this.initLocalNav();
+    this.initSiteNav();
     this.initInternalLinks();
 
     // Loop through all list items (including nested items) to initialise nested panels
@@ -26,9 +26,9 @@ export default class LocalNav {
   }
 
   /**
-  * Initialise local nav and move it to the root container of the page.
+  * Initialise site nav and move it to the root container of the page.
   */
-  initLocalNav() {
+  initSiteNav() {
     // Retrieve root list (create it if it doesn't exist)
     this.props.rootList = this.el.querySelector('ul'); // first `ul`
     if (!this.props.rootList) {
@@ -37,8 +37,8 @@ export default class LocalNav {
     }
 
     // Add custom classes to root element and list
-    this.el.classList.add('localnav', 'localnav__panel');
-    this.props.rootList.classList.add('localnav__list');
+    this.el.classList.add('sitenav', 'sitenav__panel');
+    this.props.rootList.classList.add('sitenav__list');
 
     // Retrieve nav title and remove it from the DOM
     var title = this.el.querySelector('h2');
@@ -53,24 +53,24 @@ export default class LocalNav {
 
     // Inject close button
     var closeBtn = document.createElement('button');
-    closeBtn.className = 'localnav__back-btn button-ui';
+    closeBtn.className = 'sitenav__back-btn button-ui';
     closeBtn.textContent = 'Close';
     closeBtn.setAttribute('type', 'button');
-    closeBtn.addEventListener('click', this.props.closeLocalNav);
+    closeBtn.addEventListener('click', this.props.closeSiteNav);
     // Don't use `this.el.insertBefore()` in case the root list is wrapped in an extra container
     this.props.rootList.parentNode.insertBefore(closeBtn, this.props.rootList);
 
-    // Move local nav to root container
+    // Move site nav to root container
     this.props.root.appendChild(this.el);
   };
 
   /**
-  * Close local nav when an internal link is clicked.
+  * Close site nav when an internal link is clicked.
   */
   initInternalLinks() {
     var internalLinks = [].slice.call(this.el.querySelectorAll('a[href^="#"]'));
     internalLinks.forEach(function (link) {
-      link.addEventListener('click', this.props.closeLocalNav);
+      link.addEventListener('click', this.props.closeSiteNav);
     }, this);
   };
 
@@ -95,17 +95,17 @@ export default class LocalNav {
     }
 
     // Add custom classes to `inner` wrapper and list
-    panel.classList.add('localnav__panel', 'localnav__panel--nested');
-    list.classList.add('localnav__list');
+    panel.classList.add('sitenav__panel', 'sitenav__panel--nested');
+    list.classList.add('sitenav__list');
 
     // Look for the item's link and use it as the trigger for opening the nested panel
     let trigger = item.querySelector('a');
-    trigger.classList.add('localnav__nested-trigger');
+    trigger.classList.add('sitenav__nested-trigger');
     trigger.addEventListener('click', this.openNestedPanel.bind(this, panel, true));
 
     // Inject button to close nested panel
     let backBtn = document.createElement('button');
-    backBtn.className = 'localnav__back-btn button-ui';
+    backBtn.className = 'sitenav__back-btn button-ui';
     backBtn.textContent = 'Back';
     backBtn.setAttribute('type', 'button');
     backBtn.addEventListener('click', this.closeNestedPanel.bind(this, panel, false));
@@ -114,7 +114,7 @@ export default class LocalNav {
     // Inject link to parent in child
     let insertParent = document.createElement('li');
     let insertParentLink = document.createElement('a');
-    insertParentLink.classList.add('localnav__nested-parent');
+    insertParentLink.classList.add('sitenav__nested-parent');
     insertParentLink.textContent = trigger.textContent;
     insertParentLink.setAttribute('href', trigger.getAttribute('href'));
     insertParent.appendChild(insertParentLink);
@@ -134,11 +134,11 @@ export default class LocalNav {
     var parent = this.state.open[this.state.open.length - 1];
 
     // Hide parent sidebar (and scroll back to top to work around nested absolute positioning)
-    parent.classList.add('localnav__panel--nested-open');
+    parent.classList.add('sitenav__panel--nested-open');
     parent.scrollTop = 0;
 
     // Open panel and push to state
-    panel.classList.add('localnav__panel--open');
+    panel.classList.add('sitenav__panel--open');
     this.state.open.push(panel);
   };
 
@@ -152,7 +152,7 @@ export default class LocalNav {
     evt.preventDefault();
 
     // Close panel and remove from state
-    panel.classList.remove('localnav__panel--open');
+    panel.classList.remove('sitenav__panel--open');
     this.state.open.pop();
 
     // Scroll to top to avoid confusion when re-opening the panel
@@ -160,6 +160,6 @@ export default class LocalNav {
 
     // Show parent sidebar (i.e. vertical overflow)
     var parent = this.state.open[this.state.open.length - 1];
-    parent.classList.remove('localnav__panel--nested-open');
+    parent.classList.remove('sitenav__panel--nested-open');
   };
 }

@@ -1,21 +1,23 @@
 /* Variables */
 :root {
-  --width-localnav: 18.75rem;
+  --width-sitenav: 18.75rem;
   --width-sitemap-trigger: 2.8125rem;
-  --offset-localnav: -calc(var(--width-localnav) + 0);
+  --offset-sitenav: -calc(var(--width-sitenav) + 0);
 
-  --ff-sans: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   --tr-transform: transform .3s ease;
 }
 
 /**
- * Local navigation
+ * Site navigation
  */
-.localnav {
-  font-family: var(--ff-sans);
+.sitenav {
   color: #fff;
   position: fixed;
   z-index: 101;
+
+  li {
+    margin-bottom: 0;
+  }
 
   &__panel {
     background-color: var(--col-bg);
@@ -45,7 +47,7 @@
 
   /* close and back buttons */
   /* HACK increase specificity to override `.button-ui`, which was part of the Buttons component until v6.0 */
-  &__back-btn.localnav__back-btn {
+  &__back-btn.sitenav__back-btn {
     font-size: .75rem;
     padding: 1.25rem;
     background-color: var(--col-bg-tertiary);
@@ -53,7 +55,6 @@
     display: block;
     font-weight: normal;
     line-height: 1.96;
-    letter-spacing: .07em;
     text-align: left;
     text-transform: uppercase;
     width: 100%;
@@ -69,8 +70,6 @@
 
     &:hover,
     &:focus {
-      color: inherit;
-
       &::before {
         animation: chevron-left 1s infinite ease-in-out;
       }
@@ -96,12 +95,10 @@
   /* overrides for all lists */
   &__list,
   &__meta {
-    color: inherit;
     margin: 0;
     max-width: none;
 
     & > li {
-      color: inherit;
       display: block;
       list-style-type: none;
       margin: 0;
@@ -111,16 +108,10 @@
     }
 
     a {
-      letter-spacing: .0625rem;
       color: inherit;
       display: block;
       outline-offset: -1px;
       text-decoration: none;
-
-      &:hover,
-      &:focus {
-        color: #fff;
-      }
 
       &:hover {
         text-decoration: underline;
@@ -130,11 +121,11 @@
 
   /* root and nested nav lists */
   &__list {
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
     padding: 0;
 
     & > li {
-      border-top: 1px solid rgba(255, 255, 255, .1);
+      border-top: 1px solid rgba(255, 255, 255, .05);
     }
 
     .home > a {
@@ -142,10 +133,9 @@
     }
 
     a {
-      font-size: .875rem;
-      padding: 1.25rem 1.25rem 1.25rem 2.25rem;
+      padding: .75rem 1rem .75rem 2rem;
 
-      &.localnav__nested-parent {
+      &.sitenav__nested-parent {
         padding-left: 1.25rem;
       }
 
@@ -168,22 +158,22 @@
     }
   }
 
-  /* show local nav */
+  /* show site nav */
   &.active {
     transform: translateX(-100%);
   }
 
   @media (--bp-tablet) {
     /* switch to fixed width */
-    right: var(--offset-localnav);
-    width: var(--width-localnav);
+    right: var(--offset-sitenav);
+    width: var(--width-sitenav);
 
     /* now that width is fixed, switch to margin so that sitemap link doesn't hide panel scrollbars */
     &__panel { padding-right: 0; }
 
     &.active {
       box-shadow: 1px 0 12px 3px rgba(0, 0, 0, .6);
-      transform: translateX(var(--offset-localnav));
+      transform: translateX(var(--offset-sitenav));
     }
   }
 }
