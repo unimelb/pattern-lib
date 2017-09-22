@@ -62,7 +62,7 @@
   /* list of pages in sitemap */
   &__sitemap-pages {
     &--minor {
-      font-size: .9375rem;
+      font-size: .875rem;
       line-height: 1.667;
     }
 
@@ -294,8 +294,9 @@
       border-bottom-color: #fff;
     }
 
-    &::placeholder{
-      color: white;
+    &::placeholder {
+      color: var(--col-blue-mid);
+      font-weight: var(--fw-light);
     }
   }
 
