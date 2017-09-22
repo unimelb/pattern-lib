@@ -37,7 +37,7 @@ storiesOf('Top nav', module)
   )
 
   .add(
-    'Basic navigation', () => ({
+    'Basic site navigation', () => ({
       components: { TopNav, NavTrigger, Search },
       mounted: () => { loadHeaderTools() },
       template: `
@@ -51,7 +51,7 @@ storiesOf('Top nav', module)
     })
   )
   .add(
-    'Nested navigation', () => ({
+    'Nested site navigation', () => ({
       components: { TopNav, Search, NavTrigger },
       mounted: () => { loadHeaderTools() },
       template: `
