@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withNotes } from '@storybook/addon-notes';
 import {
   withKnobs,
   text,
@@ -35,30 +34,7 @@ storiesOf('Banner', module)
     }
   ))
   .add(
-    'Level 2',
-    withNotes(
-      `
-        <div>
-          <style>pre {  background-color: #444;  color: #eee; } </style>
-          <h2>Banner Level 2</h2>
-          <pre>
-            <code>
-              &lt;header class=&quot;banner banner--l2&quot;&gt;
-                &lt;div class=&quot;banner__inner max&quot;&gt;
-                  &lt;a class=&quot;logo&quot; href=&quot;https://www.unimelb.edu.au&quot;&gt;&lt;img alt=&quot;The University of Melbourne homepage&quot; class=&quot;banner__logo&quot; height=&quot;117&quot; src=&quot;http://about-us-unimelb.netlify.com/images/logo-unhoused.svg&quot; width=&quot;117&quot;&gt;&lt;/a&gt;
-                  &lt;h1 class=&quot;banner__heading&quot;&gt;
-                    &lt;!-- Header Title --&gt;
-                  &lt;/h1&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;banner__img banner__aperture&quot; style=&quot;background-image: url(https://placeimg.com/990/530/arch);&quot;&gt;&lt;/div&gt;
-              &lt;/header&gt;
-            </code>
-          </pre>
-
-        </div>
-      `
-    )
-    (() => {
+    'Level 2', () => {
       const title = text('Title', 'About Us');
       return {
         template: `
@@ -74,10 +50,9 @@ storiesOf('Banner', module)
         `
       }
     }
-  ))
+  )
   .add(
-    'Level 3',
-    (() => {
+    'Level 3', () => {
       const title = text('Title', 'About Us');
       return {
         template: `
@@ -90,4 +65,4 @@ storiesOf('Banner', module)
         `
       }
     }
-  ));
+  );
