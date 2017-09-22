@@ -40,17 +40,6 @@
   dependencies:
     "@storybook/addons" "^3.2.6"
 
-"@storybook/addon-notes@^3.2.7":
-  version "3.2.7"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-3.2.7.tgz#b334394f137b1c95d72a164d73b35dc832fecac8"
-  dependencies:
-    "@storybook/addons" "^3.2.6"
-    babel-runtime "^6.23.0"
-    prop-types "^15.5.10"
-    util-deprecate "^1.0.2"
-  optionalDependencies:
-    "@types/react" "^15.0.24"
-
 "@storybook/addons@^3.2.6":
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.2.6.tgz#c7974db36bd1b969d8ca3776f57fd955447dc7ed"
@@ -173,10 +162,6 @@
 "@types/react@>=15":
   version "16.0.5"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.5.tgz#d713cf67cc211dea20463d2a0b66005c22070c4b"
-
-"@types/react@^15.0.24":
-  version "15.6.2"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.6.2.tgz#2c8495aa853cb37591d0046e9afe544fb837c612"
 
 abbrev@1:
   version "1.1.0"
