@@ -1,16 +1,16 @@
 /* Variables */
 :root {
-  --width-localnav: 18.75rem;
+  --width-sitenav: 18.75rem;
   --width-sitemap-trigger: 2.8125rem;
-  --offset-localnav: -calc(var(--width-localnav) + 0);
+  --offset-sitenav: -calc(var(--width-sitenav) + 0);
 
   --tr-transform: transform .3s ease;
 }
 
 /**
- * Local navigation
+ * Site navigation
  */
-.localnav {
+.sitenav {
   color: #fff;
   position: fixed;
   z-index: 101;
@@ -47,7 +47,7 @@
 
   /* close and back buttons */
   /* HACK increase specificity to override `.button-ui`, which was part of the Buttons component until v6.0 */
-  &__back-btn.localnav__back-btn {
+  &__back-btn.sitenav__back-btn {
     font-size: .75rem;
     padding: 1.25rem;
     background-color: var(--col-bg-tertiary);
@@ -135,7 +135,7 @@
     a {
       padding: .75rem 1rem .75rem 2rem;
 
-      &.localnav__nested-parent {
+      &.sitenav__nested-parent {
         padding-left: 1.25rem;
       }
 
@@ -158,22 +158,22 @@
     }
   }
 
-  /* show local nav */
+  /* show site nav */
   &.active {
     transform: translateX(-100%);
   }
 
   @media (--bp-tablet) {
     /* switch to fixed width */
-    right: var(--offset-localnav);
-    width: var(--width-localnav);
+    right: var(--offset-sitenav);
+    width: var(--width-sitenav);
 
     /* now that width is fixed, switch to margin so that sitemap link doesn't hide panel scrollbars */
     &__panel { padding-right: 0; }
 
     &.active {
       box-shadow: 1px 0 12px 3px rgba(0, 0, 0, .6);
-      transform: translateX(var(--offset-localnav));
+      transform: translateX(var(--offset-sitenav));
     }
   }
 }
