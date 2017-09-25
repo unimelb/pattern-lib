@@ -4,7 +4,8 @@
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
 
     <div class="card__inner ">
-      <icon class="card--focus-box__icon" :name="icon" width="170" height="170" />
+      <!-- <icon class="card--focus-box__icon" :name="icon" width="170" height="170" /> -->
+      <img class="card--focus-box__icon" :src="exampleIcon" alt="">
       <h3>{{title}}</h3>
       <p>{{excerpt}}</p>
     </div>
@@ -12,10 +13,13 @@
 </template>
 
 <script>
+  import exampleIcon from './learning-and-teaching1.svg';
+
   import icon from './../../icons/stories/Icon.vue';
   export default {
     name: 'CardFocusBox',
     components: { icon },
+    data: () => ({ exampleIcon }),
     props: {
       thumb: {
         type: String,
@@ -28,10 +32,6 @@
       href: {
         type: String,
         default: "#"
-      },
-      icon: {
-        type: String,
-        default: "#icon-learning-1"
       },
       excerpt: {
         type: String,

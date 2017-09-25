@@ -243,17 +243,14 @@ storiesOf('Cards', module)
       const items = object('Items', [
         {
           title: "Learning and teaching",
-          icon: "twitter",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "Option 2",
-          icon: "facebook",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
         {
           title: "Something else",
-          icon: "download",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
 
@@ -264,7 +261,7 @@ storiesOf('Cards', module)
           <div style="text-align: center;">
             <h3 style="text-align: center;" class="heading-section">Focus boxes</h3>
             <div class="listing listing--three">
-              ${items.map(item => `<ListItem><CardFocusBox class="bg-white" icon="${item.icon}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+              ${items.map(item => `<ListItem><CardFocusBox class="bg-white" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
           </div>
         `
