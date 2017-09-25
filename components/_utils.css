@@ -122,6 +122,30 @@
   }
 }
 
+.list-social {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  
+  li {
+    float: left;
+    margin-right: 0.9em;
+  }
+
+  &--twitter a,
+  &--twitter svg {
+    color: var(--col-twitter);
+  }
+  &--facebook a,
+  &--facebook svg{
+    color: var(--col-facebook);
+  }
+  &--linkedin a,
+  &--linkedin svg {
+    color: var(--col-linkedin);
+  }
+}
+
 /**
  * Push icon to the right of a block of text.
  * Used in buttons, menus, etc.

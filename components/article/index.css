@@ -1,83 +1,94 @@
 .article {
+  display: flex;
+  flex-flow: row wrap;
 
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
   &__header {
-    padding: calc(var(--vr) * 2) 0 0 0;
-
-  }
-
-
-  &__aside{
-    float: left;
-    width: 100%;
-    
-    @media (--bp-desktop) {
-      padding-right: var(--vr);
-      width: 30%;
-    }
-
-
-    section{
-      border-bottom: 1px solid var(--col-brand);
-      padding: calc(var(--vr) / 2) 0;
-    
-      @media (--bp-desktop) {
-        padding: var(--vr) 0;
-      }  
-
-      &:last-child {
-        border-bottom: 0;
-      }    
-    }
-       
-  }
-
-  &__contact{
-
-    dl {
-      &:after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-      margin-bottom: 0;
-    }
-
-    dt {
-      clear: left;
-      float: left;
-      font-weight: var(--fw-semibold);
-      margin-right: .5rem;
-      margin-bottom: 0.2rem;
-    }
-
-    dd {
-      float: left;
-      margin-left: 0;
-    }
-    
-    b {
-      display: inline-block;
-      padding-right: 0.5em;
-    }
-    
+    margin: calc(var(--vr) * 2) 0 4rem 0;
+    flex: 0 0 100%;
   }
 
   &__main {
-    float: right;
     width: 100%;
-    padding: var(--vr) 0;
     
     @media (--bp-desktop) {
+      order: 2;
       width: 70%;
-      padding: var(--vr);
+      flex: 0 0 70%;
+      padding: 0 var(--vr);
     }
   }
-  
-}
 
+  &__aside {
+    padding-top: 0;
+    width: 100%;
+
+    @media (--bp-desktop) {
+      order: 1;
+      padding-right: var(--vr);
+      width: 30%;
+      flex: 0 0 30%;
+    }
+  }
+
+  &__meta,
+  &__contact,
+  &__social, {
+    border-bottom: 1px solid var(--col-brand);
+    padding: var(--vr) 0;
+    
+    &:first-child {
+      padding-top: 0;
+    }  
+
+    &:last-child {
+      border-bottom: 0;
+    }  
+  }
+
+  &__type {
+    text-transform: uppercase;
+    font-weight: var(--fw-semibold);
+    font-size: 1.125em;
+  }
+
+  &__contact {
+
+    dl {
+      margin-bottom: 0;
+    }
+
+    dt, dd {
+      float: left;
+      margin-bottom: calc(var(--vr) / 6);
+    }
+
+    dt {
+      font-weight: var(--fw-semibold);
+      clear: both;
+    }
+
+    dd{
+      text-align: left;
+      margin-left: 1ch;
+      max-width: 100%;
+    }
+
+    a[href^="mailto"] {
+      max-width: 99%;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__social {
+    &-heading {
+      margin-bottom: calc(var(--vr) / 2);
+      font-weight: var(--fw-semibold);
+      font-size: 1.125em;
+    }
+  }
+
+
+}

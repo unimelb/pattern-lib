@@ -40,6 +40,8 @@
     padding: 0 var(--vr);
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: var(--vr);
+    width: 100%;
   }
 
   .list-item:nth-child(7n+1) & {
