@@ -29,9 +29,25 @@ storiesOf('Article', module)
   })
   .addDecorator(withKnobs)
   .add(
+    'Basic Article',
+    (() => {
+      return {
+        components: { ArticleStory },
+        template: `
+          <div>
+            <article-story />
+          </div>
+        `
+      }
+    }
+  ))
+  .add(
     'Article',
     (() => {
       const title = text('Title', 'MGSE Professoriate Planning Day');
+      const author = text('Contact', 'John Smith');
+      const phone = text('Phone', '+613 4234 2344');
+      const email = text('Email', 'john.smith@unimelb.edu.au');
       const content = text('Content', `<div>
               <h3>Test this is a subtitle that has been added from the WYSIWYG editor</h3>
               <p>
@@ -96,6 +112,9 @@ storiesOf('Article', module)
           <div>
             <article-story
               title="${title}"
+              author="${author}"
+              phone="${phone}"
+              email="${email}"
               content="${content}"
             />
           </div>

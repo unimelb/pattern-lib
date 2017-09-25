@@ -1,26 +1,33 @@
 <template>
   <article class="article">
-    <header class="article__header">
-      <h1>
-        {{title}}
-      </h1>
-    </header>
-    <div class="article__aside">
-      <section class="article__bio">
-        <span>{{date}}</span> | <span style="text-transform: uppercase;">{{postType}}</span>
-      </section>
-      <section class="article__contact">
-        <dl v-for="(value, key) in contact" :key="key">
-          <dt>{{ key }}:</dt><dd> {{ value }}</dd>
-        </dl>
-      </section>
-      <section class="article__social">
-        <h4>share</h4>
-        <!-- social icons to go here once ready -->
-      </section>
-    </div>
+    <h1 class="article__header">
+      {{title}}
+    </h1>
     <div class="article__main" v-html="content">
     </div>
+    <footer role="contentinfo" class="article__aside">
+      <div class="article__meta">
+        <time :datetime="date">{{date}}</time> | <span class="article__type">{{postType}}</span>
+      </div>
+      <div class="article__contact">
+        <dl class="clearfix">
+          <dt>Contact :</dt>
+          <dd>{{contact}}</dd>
+          <dt>Phone :</dt>
+          <dd><a :href="`tel: ${phone}`">{{ phone }}</a></dd>
+          <dt>Email :</dt>
+          <dd><a :href="`mailto: ${email}`">{{ email }}</a></dd>
+        </dl>
+      </div>
+      <div class="article__social">
+        <p class="article__social-heading">SHARE</p>
+        <ul class="list-social">
+          <li class="list-social--twitter"><a href="https://twitter.com/unimelb"><icon name="twitter" width="25" height="25" /></a></li>
+          <li class="list-social--facebook"><a href="https://facebook.com/unimelb"><icon name="facebook" width="25" height="25" /></a></li>
+          <li class="list-social--linkedin"><a href="https://www.linkedin.com/in/the-university-of-melbourne-21543061"><icon name="linkedin" width="25" height="25" /></a></li>
+        </ul>
+      </div>
+    </footer>
   </article>
 </template>
 
@@ -36,11 +43,16 @@
         default: "John Smith"
       },
       contact: {
-        type: Object,
-        default: () => ({
-          Contact: "John Smith",
-          Phone: "+613 4234 2344"
-        })
+        type: String,
+        default: "John Smith"
+      },
+      phone: {
+        type: String,
+        default: "+613 4234 2344"
+      },
+      email: {
+        type: String,
+        default: "john.smith@unimelb.edu.au"
       },
       date: {
         type: String,
