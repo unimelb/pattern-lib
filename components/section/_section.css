@@ -47,9 +47,14 @@
     }
   }
 
+
   &__inner--short{
     padding: calc(2 * var(--vr)) var(--vr);
     min-height: initial;
+  }
+  
+  &--image {
+    background-size: cover;
   }
 
   &--divider {
