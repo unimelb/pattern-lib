@@ -1,5 +1,4 @@
 .document-list {
-  
   [href$=".pdf" i],
   [href$=".docx" i],
   [href$=".xlsx" i],
