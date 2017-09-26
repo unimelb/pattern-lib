@@ -17,10 +17,23 @@
     position: relative;
     max-width: calc(64rem * 0.4);
     padding-right: 1.5rem;
-    font-family: 'Noto Serif', 'Georgia', 'Times New Roman', serif;
-    margin-bottom: 3rem;
-    font-size: 2.812rem;
     color: white;
+  }
+
+  &__sub-heading{
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--ff-normal);
+    margin-bottom: 0;
+    margin-top: calc(var(--vr) * 2);
+    position: relative;
+    z-index: 9;
+    
+    &:before {
+      content: "\2014";
+      position: absolute;
+      margin-top: -1.5em;
+    }
   }
 
   &__img {
@@ -203,6 +216,16 @@
       font-size: 1.3em;
       line-height: 1.5;
       text-align: center;
+    }
+  }
+
+  &--subheading {
+    .banner__aperture {
+      &::before {
+        @media (--bp-tablet) {
+          background-position: 0 -7rem;
+        }
+      }
     }
   }
 }
