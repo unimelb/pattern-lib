@@ -10,11 +10,13 @@
 @import 'buttons/index.css';
 @import 'card/index.css';
 @import 'contact-card/index.css';
+@import 'content-block/index.css';
 @import 'document-list/index.css';
 @import 'embed/index.css';
 @import 'footer/index.css';
 @import 'forms/index.css';
 @import 'listing/index.css';
+@import 'progressive-image/index.css';
 @import 'quick-links-menu/index.css';
 @import 'section/index.css';
 @import 'stats/index.css';

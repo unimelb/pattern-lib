@@ -12,8 +12,10 @@ import {
 } from '@storybook/addon-knobs';
 
 import SplitSection from './split-section.vue';
+import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 
 storiesOf('Section', module)
+  .addDecorator(withKnobs)
   .addDecorator(story => {
     const Story = story();
     return {
@@ -24,44 +26,6 @@ storiesOf('Section', module)
         </main>`,
     };
   })
-  .addDecorator(withKnobs)
-  .add(
-    'Content section', () => {
-      const titleH2 = text('Title H2', 'Example Title H2');
-      const titleH3 = text('Title H3', 'Example Title H3');
-      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
-      const small = boolean('Smaller width', false);
-
-      return {
-        template: `
-          <section class="section-content ${small ? 'section-content--sml' : ''}">
-            <h2>${titleH2}</h2>
-            <h3>${titleH3}</h3>
-            <p>${paragraph}</p>
-          </section>
-        `
-      }
-    }
-  )
-  .add(
-    'Content section - Intro class', () => {
-      const titleH1 = text('Title H1', 'Heading Section .heading-section');
-      const titleH2 = text('Title H2', 'H2 element. As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.');
-      const titleH3 = text('Title H3', 'H3 element <em>Growing Esteem 2015-2020</em> is the most recent articulation of our plans to achieve our strategic goals.');
-      const paragraph = text('Paragraph text', 'P Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
-      const small = boolean('Smaller width', true);
-      return {
-        template: `
-          <section class="section-content ${small ? 'section-content--sml' : ''}">
-            <h3 class="heading-section">${titleH1}</h3>
-            <h2>${titleH2}</h2>
-            <h3>${titleH3}</h3>
-            <p>${paragraph}</p>
-          </section>
-        `
-      }
-    }
-  )
   .add(
     'Section', () => {
       const title = text('Title', 'Example Title');
@@ -86,16 +50,19 @@ storiesOf('Section', module)
     const contentText = text('Title', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque commodi error molestiae et animi libero asperiores vero ipsa recusandae ratione, eius adipisci mollitia! Aliquid nemo ullam exercitationem, eius eaque, debitis.');
     const imgUrl = text('Image URL', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
     return {
+      components: { ButtonIcon },
       template: `
-      <section class="section section--image bg-inverted" style="text-align: center; background-image: url(${imgUrl})">
-        <div class="section__inner section__inner--sml">
-          <h3 class="heading-section">${titleText}</h3>
-          <p>
-            ${contentText}
-          </p>
-          <br><a class="btn btn--inverted btn--center" href="#">${btnText}</a>
+      <section-wrap class="section--image bg-inverted" style="text-align: center; background-image: url(${imgUrl})">
+        <h3 class="heading-section">${titleText}</h3>
+        <p>
+          ${contentText}
+        </p>
+        <div>
+          <a class="btn btn--wide btn--inverted btn--icon btn--icon--chevron-right-inverted" href="#">
+            ${btnText}
+          </a>
         </div>
-      </section>
+      </section-wrap>
       `
     }
   })
@@ -105,7 +72,7 @@ storiesOf('Section', module)
     const titleText = text('Title', 'This is the title on the right');
     const imgUrl = text('Image URL', 'https://placeimg.com/640/480/people');
     return {
-      components: { SplitSection },
+      components: { SplitSection, ButtonIcon },
       template: `
         <SplitSection 
           imageLeft="${selectedSide === 'left' ? 'true' : ''}"
@@ -114,9 +81,32 @@ storiesOf('Section', module)
         >
           <h3 class="h3 heading-section">${titleText}</h3>
           <p>This is a paragraph of text</p>
-          <a href="#" class="btn">
+          <button-icon href="#" element="a" class="btn--wide" icon="chevron-right">
             ${btnText}
-          </a>
+          </button-icon>
+        </SplitSection>
+      `
+    }
+  })
+  .add('Split section - Inverted', () => {
+    const selectedSide = select('Select Side', ['left', 'right'], 'left');
+    const btnText = text('Button Text', 'Read More');
+    const titleText = text('Title', 'This is the title on the right');
+    const imgUrl = text('Image URL', 'https://placeimg.com/640/480/people');
+    return {
+      components: { SplitSection, ButtonIcon },
+      template: `
+        <SplitSection 
+          imageLeft="${selectedSide === 'left' ? 'true' : ''}"
+          imageRight="${selectedSide === 'right' ? 'true' : ''}"
+          bgImage="${imgUrl}"
+          class="bg-inverted"
+        >
+          <h3 class="h3 heading-section">${titleText}</h3>
+          <p>This is a paragraph of text</p>
+          <button-icon href="#" element="a" class="btn--inverted btn--wide" icon="chevron-right">
+            ${btnText}
+          </button-icon>
         </SplitSection>
       `
     }
@@ -137,6 +127,56 @@ storiesOf('Section', module)
       }
     }
   )
+  .add('Section - Focus Box', () => {
+    const title = text('Title', 'Example Title');
+    const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
+    const btnText = text('Button Text', 'Example Title');
+    
+    return {
+      components: { ButtonIcon },
+      template: `
+        <section class="section section--image bg-inverted" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg');">
+          <div class="section__inner section__inner--sml">
+            <div class="card card--focus-box card--focus-box--loose bg-white">
+              <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+              <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+              <div class="card__inner ">
+                <h3 class="heading-section">${title}</h3>
+                <p>${paragraph}</p>
+                <button-icon>${btnText}</button-icon>
+              </div>
+            </div>
+          </div>
+        </section>
+      `
+    }
+  }
+  )
+  .add('Section - Focus Box (progressive image)', () => {
+      const title = text('Title', 'Example Title');
+      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
+      const btnText = text('Button Text', 'Example Title');
+      
+      return {
+        components: { ButtonIcon },
+        template: `
+          <section class="section section--image bg-inverted " v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
+            <div class="section__inner section__inner--sml">
+              <div class="card card--focus-box card--focus-box--loose bg-white">
+                <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+                <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+                <div class="card__inner ">
+                  <h3 class="heading-section">${title}</h3>
+                  <p>${paragraph}</p>
+                  <button-icon>${btnText}</button-icon>
+                </div>
+              </div>
+            </div>
+          </section>
+        `
+      }
+    }
+  );
 
 
 
