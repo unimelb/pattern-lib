@@ -88,6 +88,29 @@ storiesOf('Section', module)
       `
     }
   })
+  .add('Split section - Inverted', () => {
+    const selectedSide = select('Select Side', ['left', 'right'], 'left');
+    const btnText = text('Button Text', 'Read More');
+    const titleText = text('Title', 'This is the title on the right');
+    const imgUrl = text('Image URL', 'https://placeimg.com/640/480/people');
+    return {
+      components: { SplitSection, ButtonIcon },
+      template: `
+        <SplitSection 
+          imageLeft="${selectedSide === 'left' ? 'true' : ''}"
+          imageRight="${selectedSide === 'right' ? 'true' : ''}"
+          bgImage="${imgUrl}"
+          class="bg-inverted"
+        >
+          <h3 class="h3 heading-section">${titleText}</h3>
+          <p>This is a paragraph of text</p>
+          <button-icon href="#" element="a" class="btn--inverted btn--wide" icon="chevron-right">
+            ${btnText}
+          </button-icon>
+        </SplitSection>
+      `
+    }
+  })
   .add(
     'Section - Divider', () => {
       const title = text('Title', 'Example Title');
