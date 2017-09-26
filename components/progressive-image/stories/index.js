@@ -42,21 +42,7 @@ storiesOf('Progressive Images', module)
       </LazyBgImg>`
     }
   })
-  .add(
-    'Background images - directive',
-    withNotes(
-      `
-        <div>
-          <h2>Background images - directive</h2>
-          <pre>
-            <code>
-              v-bgimg="{imgSrc: 'largeimage.jpg', placeholder: 'smallplaceholder.jpg'}
-            </code>
-          </pre>
-        </div>
-      `
-    )
-    (() => {
+  .add('Background images - directive', () => {
       const title = text('Title', 'Using directive');
       const btnText = text('Button Text', 'Example Title');
       
@@ -78,5 +64,4 @@ storiesOf('Progressive Images', module)
           </section>
         `
       }
-    }
-  ))
+    })
