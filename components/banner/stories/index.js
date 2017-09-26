@@ -11,6 +11,7 @@ import {
   date,
 } from '@storybook/addon-knobs';
 
+import Banner from './Banner.vue';
 
 storiesOf('Banner', module)
   .addDecorator(withKnobs)
@@ -19,16 +20,9 @@ storiesOf('Banner', module)
     (() => {
       const title = text('Title', 'About Us');
       return {
+        components: {Banner},
         template: `
-          <header class="banner banner--l1">
-            <div class="banner__inner max">
-              <a class="link-img" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" class="banner__logo" height="117" src="https://d2h9b02ioca40d.cloudfront.net/v7.0/assets/logo-4d389.svg" width="117"></a>
-              <h1 class="banner__heading">
-                ${title}
-              </h1>
-            </div>
-            <div class="banner__img banner__aperture" style="background-image: url(https://placeimg.com/990/530/arch);"></div>
-          </header>
+          <banner :level="1" title="${title}"></banner>
         `
       }
     }
@@ -37,16 +31,20 @@ storiesOf('Banner', module)
     'Level 2', () => {
       const title = text('Title', 'About Us');
       return {
+        components: {Banner},
         template: `
-          <header class="banner banner--l2">
-            <div class="banner__inner max">
-              <a class="link-img" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" class="banner__logo" height="117" src="http://about-us-unimelb.netlify.com/images/logo-unhoused.svg" width="117"></a>
-              <h1 class="banner__heading">
-                ${title}
-              </h1>
-            </div>
-            <div class="banner__img banner__aperture" style="background-image: url(https://placeimg.com/990/530/arch);"></div>
-          </header>
+          <banner :level="2" title="${title}" />
+        `
+      }
+    }
+  )
+  .add(
+    'Level 2 - With Department', () => {
+      const title = text('Title', 'About Us');
+      return {
+        components: {Banner},
+        template: `
+          <banner :level="2" title="${title}" subheading="Faculty of Medicine, Dentistry and Health Sciences" />
         `
       }
     }
@@ -55,13 +53,9 @@ storiesOf('Banner', module)
     'Level 3', () => {
       const title = text('Title', 'About Us');
       return {
+        components: {Banner},
         template: `
-        <header class="banner banner--l3">
-          <div class="banner__shape"></div>
-          <div class="banner__inner max">
-            <a class="link-img" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" class="banner__logo" height="117" src="http://about-us-unimelb.netlify.com/images/logo-unhoused.svg" width="117"></a>
-          </div>
-        </header>
+          <banner :level="3" title="${title}" />
         `
       }
     }
