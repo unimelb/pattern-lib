@@ -1,6 +1,6 @@
 <template>
   <svg :width="width" :height="height" focusable="false" role="presentation">
-    <use :xlink:href="sprite + '#' + name" />
+    <use :xlink:href="'#' + name" />
   </svg>
 </template>
 
