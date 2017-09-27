@@ -40,6 +40,6 @@ export default class WithMarkup {
   }
 
   CDNifySrc() {
-    this.markup = this.markup.replace('src="/logo-unhoused.svg"', 'src="https://d2glwx35mhbfwf.cloudfront.net/v0.0.3/logo-unhoused.svg"');
+    this.markup = this.markup.replace(/src=\"(\/)?logo\-unhoused\.svg\"/, 'src="https://d2glwx35mhbfwf.cloudfront.net/v0.0.3/logo-unhoused.svg"');
   }
 }
