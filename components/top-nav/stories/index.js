@@ -5,6 +5,9 @@ import TopNav from './TopNav.vue';
 import NavTrigger from './NavTrigger.vue';
 import Search from './Search.vue';
 
+import TopNavMarkup from './TopNavMarkup.vue';
+import WithMarkup from '../../WithMarkup';
+
 storiesOf('Top nav', module)
   .addDecorator(story => {
     const Story = story();
@@ -16,6 +19,8 @@ storiesOf('Top nav', module)
         </div>`,
     };
   })
+
+  .addDecorator(new WithMarkup(TopNavMarkup, {render: "prettified"}))
 
   .add(
     'Search only', () => ({

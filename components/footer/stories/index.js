@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/vue';
 
 import BoilerplateFooter from './BoilerplateFooter.vue';
 
+import WithMarkup from '../../WithMarkup';
+
 storiesOf('Footer', module)
   .addDecorator(story => {
     const Story = story();
@@ -14,6 +16,8 @@ storiesOf('Footer', module)
         </div>`,
     };
   })
+
+  .addDecorator(new WithMarkup(BoilerplateFooter))
 
   .add(
     'Boilerplate code insert', 
