@@ -82,17 +82,14 @@ Many browsers have issues dealing with responsive SVGs (e.g. `width: 100%;`). Fo
 }
 ```
 
-#### Under the hood
-
-Webpack loads the sprite file like a normal asset. In production, `file-loader` automatically prefixes its path with the URL of the CDN (cf. `output.publicPath`).
-
-
 ## How to use icons in the CMS
 
-- Some icons, like button chevrons, just work and don't require any extra classes or markup.
-- Icons used in container templates are to be inlined in the markup just as they appear in the documentation -- i.e.
-    ```html
+- Buttons with icon classes will work without adding anything further, ie: btn--icon.
+- Icons used in container templates are to be inlined in the markup just as they appear in the documentation -- i.e. 
+  ```html
     <svg ...>
-      <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/<version>/sprite.js#<icon-name>" />
+      <use xlink:href="#<icon-name>" />
     </svg>
-    ```
+  ```
+- The icon sprite needs to be included in the body of the page for the icons to display, recommended placement is just after the opening body tag.
+
