@@ -28,6 +28,18 @@ storiesOf('Banner', module)
     }
   ))
   .add(
+    'Level 1 - With Department', () => {
+      const title = text('Heading', 'About Us');
+      const subheading = text('Sub heading', 'Faculty of Medicine, Dentistry and Health Science');
+      return {
+        components: {Banner},
+        template: `
+          <banner :level="1" title="${title}" subheading="${subheading}" />
+        `
+      }
+    }
+  )
+  .add(
     'Level 2', () => {
       const title = text('Title', 'About Us');
       return {
@@ -40,11 +52,12 @@ storiesOf('Banner', module)
   )
   .add(
     'Level 2 - With Department', () => {
-      const title = text('Title', 'About Us');
+      const title = text('Heading', 'About Us');
+      const subheading = text('Sub heading', 'Faculty of Medicine, Dentistry and Health Science');
       return {
         components: {Banner},
         template: `
-          <banner :level="2" title="${title}" subheading="Faculty of Medicine, Dentistry and Health Sciences" />
+          <banner :level="2" title="${title}" subheading="${subheading}" />
         `
       }
     }
