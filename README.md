@@ -33,6 +33,7 @@ yarn
 To deploy to production:
 
 1. Bump the `version` number in `package.json` (cf. note below).
+1. Update CHANGELOG.md with version notes.
 1. Commit the version change to the `dev` branch.
 1. Create a pull request to merge the `dev` branch into `master` - e.g. "Deploy v1.0.1".
 1. Wait for the mandatory checks to pass then select "Rebase and merge" (cf. note below).
