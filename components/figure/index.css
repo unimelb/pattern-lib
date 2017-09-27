@@ -1,0 +1,87 @@
+.figure {
+  padding: var(--vr);
+
+  img {
+    width: 100%;
+  }
+
+  figcaption {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    font-size: 0.9em;
+    caption-side: bottom;
+    margin-top: 1.5em;
+  }
+  
+  &--inset {
+
+    figcaption {
+      
+      @media (--bp-desktop) {
+        margin-top: inherit;
+        display: table-caption;
+   
+        &:before {
+          content: "\2014";
+          position: absolute;
+          margin-top: -1.5em;
+        } 
+      }
+
+    }
+
+    @media (--bp-desktop) {
+      position: relative;
+      display: table;
+      
+      width: 50%;
+      
+      &-right {
+        margin-right: -5rem;
+        float: right;
+
+        .figure--inset-lge & {
+          margin-right: -10rem;
+        }
+        
+        figcaption {
+          text-align: right;
+          padding-right: var(--vr);
+
+          &:before {
+            right: var(--vr);
+          } 
+        }
+      }
+
+      &-left {
+        float: left;
+        margin-left: -5rem;
+
+        .figure--inset-lge & {
+          margin-left: -10rem;
+        }
+
+        figcaption {
+          text-align: left;
+          padding-left: var(--vr);
+          &:before {
+            text-align: right;
+          } 
+        }
+      }
+
+      &-lge {
+        width: 75%;
+      }
+
+      &-sml {
+        width: 35%;
+        margin-left: -5rem;
+      }
+    }
+  }
+  
+}

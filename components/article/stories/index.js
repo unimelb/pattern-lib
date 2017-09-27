@@ -12,6 +12,7 @@ import {
 } from '@storybook/addon-knobs';
 
 import ArticleStory from './ArticleStory.vue';
+import ArticleInset from './ArticleInset.vue';
 
 
 storiesOf('Article', module)
@@ -122,3 +123,13 @@ storiesOf('Article', module)
       }
     }
   ))
+  .add('Article With Inset Figure', () => {
+    return {
+      components: { ArticleInset },
+      template: `
+        <section-wrap small>
+          <article-inset />
+        </section-wrap>
+      `
+    }
+  })
