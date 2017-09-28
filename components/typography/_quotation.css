@@ -2,7 +2,7 @@ blockquote, .blockquote {
   
   position: relative;
 
-  span {
+  span, p {
     font-family: var(--ff-lead);
     font-size: 2.2rem;
     font-style: italic;

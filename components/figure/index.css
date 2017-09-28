@@ -72,6 +72,8 @@
             text-align: right;
           } 
         }
+      
+
       }
 
       &-lge {
@@ -80,7 +82,6 @@
 
       &-sml {
         width: 35%;
-        margin-left: -5rem;
       }
     }
   }

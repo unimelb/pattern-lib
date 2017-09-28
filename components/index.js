@@ -3,6 +3,7 @@ import HeaderTools from './top-nav/header-tools';
 
 import './icons';
 import './footer';
+import './progressive-image';
 
 svg4everbody();
 

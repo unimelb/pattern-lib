@@ -5,8 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-
+### Added
+#### Major
 - Modal component
+- Figure component
+
+#### Minor
+- adds `.text-center` helper class
+- adds story for two column listing with focus image
+
+### Changed
+-  Updated icons readme to reflect change to icon usage
+- `.btn--icon` now works the same as buttons with included svg
+
 
 ## [0.0.3] - 2017-9-27
 ### Added

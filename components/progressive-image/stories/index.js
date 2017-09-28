@@ -11,11 +11,12 @@ import {
   color,
   date,
 } from '@storybook/addon-knobs';
+import VueProgressiveImage from 'vue-progressive-image';
 
 import icon from './../../icons/stories/Icon.vue';
 import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 import LazyBgImg from './../lazy-bgimg.vue';
-import bgLoader from './../index.js';
+
 
 storiesOf('Progressive Images', module)
   .addDecorator(withKnobs)
@@ -65,3 +66,13 @@ storiesOf('Progressive Images', module)
         `
       }
     })
+  .add('Progressive image component', () => {
+      return {
+        components: { VueProgressiveImage },
+        template: `
+          <section-wrap small>
+            <progressive-img src="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" />
+          </section-wrap>
+        `
+      }
+  });

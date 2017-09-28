@@ -1,6 +1,6 @@
 export default function(el, binding) {
   el.style.backgroundImage = `url(${binding.value.placeholder})`;
-  el.className += 'lazy-bgimg--loading';
+  el.classList.add('lazy-bgimg--loading');
 
   const newImage = new Image();
 
@@ -13,12 +13,12 @@ export default function(el, binding) {
   const imageOnLoad = (success) => {
     el.style.backgroundImage = `url(${newImage.src})`;  
     el.classList.remove("lazy-bgimg--loading");
-    el.className += ' lazy-bgimg--loaded';
+    el.classList.add('lazy-bgimg--loaded');
   }
 
   const imageOnError = (error) => {
     el.classList.remove("lazy-bgimg--loading");
-    el.className += ' lazy-bgimg--error';
+    el.classList.add('lazy-bgimg--error');
   }
 
   if (!el.classList.contains('lazy-bgimg--loaded')) {
