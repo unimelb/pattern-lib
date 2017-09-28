@@ -17,7 +17,7 @@ const markupTopNav = "## Minified top nav\n```html\n<div class=\"header-tools\">
 import TopNav from './TopNav.vue';
 let renderedSiteNav = new RenderMarkup(TopNav);
 const markupBasicNav = "## Sample nav markup\n```html\n" + renderedSiteNav.max + "\n```\n";
-renderedSiteNav = new RenderMarkup(TopNav, { props: { complex: "true" }});
+renderedSiteNav = new RenderMarkup(TopNav, { props: { complex: true }});
 const markupNestedNav = "## Sample nav markup\n```html\n" + renderedSiteNav.max + "\n```\n";
 
 storiesOf('Top nav', module)

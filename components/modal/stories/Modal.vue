@@ -9,20 +9,20 @@
           <label>
             E-mail
             <div>
-              <input type="email" name="f[email]" placeholder="jane@example.com" />
+              <input tabindex="1" type="email" name="f[email]" placeholder="jane@example.com" />
             </div>
           </label>
 
           <fieldset>
             <p>
               <label>
-                <input type="checkbox" name="f[acceptance]" value="y" /> 
+                <input tabindex="2" type="checkbox" name="f[acceptance]" value="y" /> 
                 I agree with the <a href="/tandc">terms &amp; conditions.</a>
               </label>
             </p>
           </fieldset>
 
-          <input type="submit" />
+          <input tabindex="3" type="submit" />
         </form>
 
         <br>
@@ -32,14 +32,3 @@
     </div>
   </div>
 </template>
-
-<script>
-  import Frdialogmodal from 'fr-dialogmodal';
-
-  export default {
-    name: 'Modal',
-    mounted: () => {
-      var myModal = Frdialogmodal();
-    }
-  }
-</script>
