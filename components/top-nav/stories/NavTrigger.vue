@@ -8,9 +8,3 @@
     </a>
   </div>
 </template>
-
-<script>
-  export default {
-    name: 'NavTrigger'
-  };
-</script>
