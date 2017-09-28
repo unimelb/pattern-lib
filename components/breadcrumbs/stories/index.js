@@ -1,10 +1,13 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
+import withReadme from 'storybook-readme/with-readme';
+import RenderMarkup from '../../RenderMarkup';
 
 import BreadCrumbs from './BreadCrumbs.vue';
 
-import BreadCrumbsMarkup from './BreadCrumbsMarkup.vue';
-import WithMarkup from '../../WithMarkup';
+const markupL1 = new RenderMarkup(BreadCrumbs);
+const markupL2 = new RenderMarkup(BreadCrumbs, { props: { level: 2}});
+const markupL3 = new RenderMarkup(BreadCrumbs, { props: { level: 3}});
 
 storiesOf('Breadcrumbs', module)
   .addDecorator(story => {
@@ -18,25 +21,32 @@ storiesOf('Breadcrumbs', module)
     };
   })
 
-  .addDecorator(new WithMarkup(BreadCrumbsMarkup, {render: 'prettified'}))
-
   .add(
-    'Level 1', () =>   ({
-      components: { BreadCrumbs },
-      template: `<bread-crumbs :level="1" />`
+    'Level 1',
+    withReadme(markupL1.prettifiedMarkup, () => {
+      return {
+        components: { BreadCrumbs },
+        template: `<bread-crumbs :level="1" />`
+      }
     })
   )
 
   .add(
-    'Level 2',() =>   ({
-      components: { BreadCrumbs },
-      template: `<bread-crumbs :level="2" />`
+    'Level 2',
+    withReadme(markupL2.prettifiedMarkup, () => {
+      return {
+        components: { BreadCrumbs },
+        template: `<bread-crumbs :level="2" />`
+      }
     })
   )
 
   .add(
-    'Level 3', () =>   ({
-      components: { BreadCrumbs },
-      template: `<bread-crumbs :level="3" />`
+    'Level 3',
+    withReadme(markupL3.prettifiedMarkup, () => {
+      return {
+        components: { BreadCrumbs },
+        template: `<bread-crumbs :level="3" />`
+      }
     })
   );
