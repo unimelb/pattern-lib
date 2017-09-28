@@ -1,6 +1,6 @@
 import svg4everbody from 'svg4everybody';
 import HeaderTools from './top-nav/header-tools';
-import Frdialogmodal from 'fr-dialogmodal';
+import Frdialogmodal from './modal/dialogmodal.js';
 
 import './icons';
 import './footer';
