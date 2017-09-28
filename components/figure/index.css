@@ -1,7 +1,7 @@
 .figure {
   padding: var(--vr);
 
-  img {
+  img, .embed {
     width: 100%;
   }
 
@@ -41,6 +41,7 @@
       &-right {
         margin-right: -5rem;
         float: right;
+        margin-left: auto;
 
         .figure--inset-lge & {
           margin-right: -10rem;

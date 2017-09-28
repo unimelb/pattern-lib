@@ -123,7 +123,7 @@ storiesOf('Article', module)
       }
     }
   ))
-  .add('Article With Inset Figure', () => {
+  .add('Article Without Sidebar', () => {
     return {
       components: { ArticleInset },
       template: `
