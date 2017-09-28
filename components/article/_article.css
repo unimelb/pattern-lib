@@ -1,0 +1,107 @@
+.article {
+  display: flex;
+  flex-flow: row wrap;
+  
+  &--nosidebar {
+    display: block;
+  }
+
+
+  &__header {
+    margin: calc(var(--vr) * 2) 0 4rem 0;
+    flex: 0 0 100%;
+  }
+
+  &__main {
+    width: 100%;
+    
+    @media (--bp-desktop) {
+      order: 2;
+      width: 70%;
+      flex: 0 0 70%;
+      padding: 0 var(--vr);
+
+      .article--nosidebar & {
+        width: 100%;
+        flex: none;
+        padding: 0;
+      }
+    }
+
+
+  }
+
+  &__aside {
+    padding-top: 0;
+    width: 100%;
+
+    @media (--bp-desktop) {
+      order: 1;
+      padding-right: var(--vr);
+      width: 30%;
+      flex: 0 0 30%;
+    }
+  }
+
+  &__meta,
+  &__contact,
+  &__social, {
+    border-bottom: 1px solid var(--col-brand);
+    padding: var(--vr) 0;
+    
+    &:first-child {
+      padding-top: 0;
+    }  
+
+    &:last-child {
+      border-bottom: 0;
+    }  
+  }
+
+  &__type {
+    text-transform: uppercase;
+    font-weight: var(--fw-semibold);
+    font-size: 1.125em;
+  }
+
+  &__contact {
+
+    dl {
+      margin-bottom: 0;
+    }
+
+    dt, dd {
+      float: left;
+      margin-bottom: calc(var(--vr) / 6);
+    }
+
+    dt {
+      font-weight: var(--fw-semibold);
+      clear: both;
+    }
+
+    dd{
+      text-align: left;
+      margin-left: 1ch;
+      max-width: 100%;
+    }
+
+    a[href^="mailto"] {
+      max-width: 99%;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__social {
+    &-heading {
+      margin-bottom: calc(var(--vr) / 2);
+      font-weight: var(--fw-semibold);
+      font-size: 1.125em;
+    }
+  }
+
+
+}

@@ -32,7 +32,9 @@
     color: #fff;
   }
 
-  &--inverted {
+  &--inverted, 
+  &--inverted:visited,
+  &--inverted:focus {
     background-color: transparent;
     border-color: color(#fff alpha(30%));
     color: #fff;
@@ -84,7 +86,7 @@
 
   &--fullwidth{
     min-width: 100%;
-
+    text-align: center;
   }
 
   &--center{
@@ -94,8 +96,8 @@
 
   &--icon{
     position: relative;
-    padding-right: 1.75em;
-
+    padding-right: calc(var(--vr) * 2);
+    text-align: left;
     &::after {
       content: '';
       display: inline-block;
@@ -103,11 +105,16 @@
       height: .75em;
       background-size: cover;
       margin-top: .05rem;
-      right: 1rem;
+      right: 1.25rem;
       top: calc(50% - (.75em / 2));
       position: absolute;
     }
 
+    &--center {
+      text-align: center;
+      padding-right: calc(var(--vr) * 2);
+
+    }
 
     &--chevron-right {
       &-inverted {
@@ -117,6 +124,18 @@
       }
       &::after {
         background-image: url('~icons/chevron-right.svg?fill=#074482');
+      }
+    }
+
+    &--download {
+      &-inverted {
+        &::after {
+          background-image: url('~icons/download.svg?fill=#fff');
+        }
+      }
+
+      &::after {
+        background-image: url('~icons/download.svg?fill=#074482');
       }
     }
 

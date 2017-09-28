@@ -308,6 +308,66 @@ storiesOf('Cards', module)
     }
   )
   .add(
+    'Card - Focus box ( 2 col )',
+    () => {
+      const items = object('Items', [
+        {
+          title: "Learning and teaching",
+          thumb: "http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg",
+          excerpt: `<p>Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat. </p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ducimus aperiam qui, numquam deleniti repudiandae quos, mollitia.</p>
+                  <ul>
+                    <li>
+                      Improve the retention and promotion of women and gender minorities in&nbsp;Science, Technology, Engineering, Maths and Medicine (STEMM)&nbsp;
+                    </li>
+                    <li>
+                      Advancing gender equality in academia&nbsp;
+                    </li>
+                    <li>
+                      Addressing the loss of women across the career pipeline&nbsp;
+                    </li>
+                    <li>
+                      Tackling gender pay gaps&nbsp;
+                    </li>
+                    <li>
+                      Removing obstacles faced by women&nbsp;
+                    </li>
+                    <li>
+                      Making sustainable structural and cultural changes to advance gender equality&nbsp;
+                    </li>
+                  </ul>
+                  <p>laudantium autem cupiditate quisquam magnam nobis corporis vitae ipsa aut eligendi iste facilis.</p>`
+        },
+        {
+          title: "Option 2",
+          thumb: "http://about-us-unimelb.netlify.com/images/working-with-us/careers/SouthbankGrounds3.jpg",
+          excerpt: "Lorem ipsum dolor sit amet Obcaecati vel delectus necessitatibus et, quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam accusantium, in eos eum ipsum et quia aliquam. A excepturi dolore alias dolor soluta modi. Hic laborum animi accusantium quos est?"
+        },
+
+      ]);
+      const colors = select('Focus colors', ['','card--image-focus--col-brand', 'card--image-focus--col-white'], '');
+      const bgColors = select('Card BG', ['bg-white', 'bg-alt', 'bg-inverted'], 'bg-alt');
+      const element = select('Element', ['a', 'div'], 'div');
+
+      return {
+        components: { ListItem, CardFocusImages },
+        template: `
+          <div>
+            <h3 class="heading-section text-center">Two column listing</h3>
+
+            <div class="listing listing--two">
+              ${items.map(item => `
+                <ListItem>
+                  <CardFocusImages fullImg element="${element}" class="${colors} ${bgColors}" thumb="${item.thumb}" title="${item.title}" titleabove excerpt="${item.excerpt}" />
+                </ListItem>
+              `).join('')}
+            </div>
+          </div>
+        `
+      }
+    }
+  )
+  .add(
     'Card - Fact',
     () => {
       const items = object('Items', [

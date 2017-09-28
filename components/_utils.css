@@ -210,6 +210,12 @@
   }
 }
 
+/* Center text - useful for CMS */
+
+.text-center {
+  text-align: center;
+}
+
 /**
  * Hide visually but not from screenreaders
  */
