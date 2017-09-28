@@ -20,7 +20,8 @@
     "fr-dialogmodal": "^1.0.4",
     "pretty": "^2.0.0",
     "svg4everybody": "^2.1.9",
-    "vue": "^2.4.2"
+    "vue": "^2.4.2",
+    "vue-progressive-image": "^2.2.1"
   },
   "devDependencies": {
     "@storybook/addon-knobs": "^3.2.8",

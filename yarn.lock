@@ -5696,6 +5696,10 @@ vue-loader@^13.0.4:
     vue-style-loader "^3.0.0"
     vue-template-es2015-compiler "^1.5.3"
 
+vue-progressive-image@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/vue-progressive-image/-/vue-progressive-image-2.2.1.tgz#3a2cdc1c83a91b97874a29f313d26fc8a8eee791"
+
 vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-3.0.1.tgz#c8b639bb2f24baf9d78274dc17e4f264c1deda08"

@@ -4,6 +4,7 @@ import Frdialogmodal from './modal/dialogmodal.js';
 
 import './icons';
 import './footer';
+import './progressive-image';
 
 svg4everbody();
 
