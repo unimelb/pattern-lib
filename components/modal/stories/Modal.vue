@@ -32,3 +32,12 @@
     </div>
   </div>
 </template>
+
+<script>
+  import Frdialogmodal from '../dialogmodal.js';
+
+  export default {
+    name: 'Modal',
+    mounted: Frdialogmodal
+  }
+</script>
