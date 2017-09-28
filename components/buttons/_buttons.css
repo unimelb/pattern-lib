@@ -32,7 +32,9 @@
     color: #fff;
   }
 
-  &--inverted {
+  &--inverted, 
+  &--inverted:visited,
+  &--inverted:focus {
     background-color: transparent;
     border-color: color(#fff alpha(30%));
     color: #fff;
@@ -108,6 +110,11 @@
       position: absolute;
     }
 
+    &--center {
+      text-align: center;
+      padding-right: calc(var(--vr) * 2);
+
+    }
 
     &--chevron-right {
       &-inverted {
