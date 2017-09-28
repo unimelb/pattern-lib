@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 #### Major
 - Modal component
 - Figure component
+- Progressive image loader component.
 
 #### Minor
 - adds `.text-center` helper class
