@@ -1,11 +1,12 @@
 <template>
   <div v-if="element === 'div'" class="card card--image-focus">
-    <div class="card__thumb">
+    <h3 v-if="titleabove === true">{{title}}</h3>
+    <div class="card__thumb" :class="{'card__thumb--full': fullImg}">
       <img :src="thumb" />
     </div>
     <div class="card__inner">
-      <h3>{{title}}</h3>
-      <p>{{excerpt}}</p>
+      <h3 v-if="titleabove === false">{{title}}</h3>
+      <div v-html="excerpt"></div>
     </div>
   </div>
   <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus">
@@ -14,7 +15,7 @@
     </div>
     <div class="card__inner">
       <h3>{{title}}</h3>
-      <p>{{excerpt}}</p>
+      <div v-html="excerpt"></div>
       <button-icon class="btn--fullwidth">{{title}}</button-icon>
     </div>
   </a>
@@ -30,9 +31,16 @@
         type: String,
         default: "http://via.placeholder.com/200x400"
       },
+      fullImg: {
+        type: Boolean,
+        default: false
+      },
       title: {
         type: String,
         default: "Test title"
+      },
+      titleabove: {
+        type: Boolean
       },
       meta: {
         type: String,
