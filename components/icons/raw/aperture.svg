@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="470px" height="600px" viewBox="0 0 470 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>aperture</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-526.000000, 0.000000)">
+            <g id="aperture" transform="translate(526.000000, 0.000000)">
+                <path d="M469.158875,0 L0,0 L0,270.869003 L469.158875,-4.26325641e-14 Z M0,271.46587 L0,600 L189.679269,600 L-3.37230244e-15,271.46587 Z" id="Combined-Shape" fill="#094183"></path>
+                <polygon id="Aperture" fill="#FFFFFF" opacity="0.35" points="0 271.311112 145.945052 187 146 187.092778 128.392633 252.453133 65.3983017 288.846147 101.66048 351.687752 84.0668501 417"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
