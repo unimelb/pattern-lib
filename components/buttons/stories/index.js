@@ -92,28 +92,33 @@ storiesOf('Buttons', module)
     }
   })
   .add('Button using btn--icon class', withReadme(buttonWithIconClass, () => {
-    const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
+    const btnText = text('Button Text', 'Button with icon');
     const icons = select('Icon', ['chevron-right', 'twitter', 'search','download'], 'chevron-right' );
     return {
+      template: `<button class="btn btn--icon btn--icon--${icons}">${btnText}</button>`
+    }
+  }))
+  .add('Button using btn--icon class (wide)', withReadme(buttonWithIconClass, () => {
+    const btnText = text('Button Text', 'Button with icon');
+    const icons = select('Icon', ['chevron-right', 'twitter', 'search','download'], 'chevron-right' );
+    const width = select('Width', ['','btn--wide', 'btn--xwide', 'btn--fullwidth'], 'btn--wide' );
+    const height = select('Height', ['','btn--sml', 'btn--xsml'], '' );
+    return {
+      template: `<button class="btn btn--icon ${width} ${height} btn--icon--${icons}">${btnText}</button>`
+    }
+  }))
+  .add('Button using btn--icon class (inverted)', withReadme(buttonWithIconClass, () => {
+    const btnText = text('Button Text', 'Button with icon');
+    const icons = select('Icon', ['chevron-right', 'twitter', 'search','download'], 'chevron-right' );
+    const width = select('Width', ['','btn--wide', 'btn--xwide', 'btn--fullwidth'], 'btn--wide' );
+    const height = select('Height', ['','btn--sml', 'btn--xsml'], '' );
+    return {
       template: `
-        <section class="section bg-alt">
-          <div class="section__inner">
-            <button class="btn btn--fullwidth btn--icon btn--icon--${icons}">${btnText}</button>
+        <div class="bg-inverted">
+          <div class="max" style="padding: 3rem">
+            <button class="btn btn--inverted btn--icon ${width} ${height} btn--icon--${icons}-inverted">${btnText}</button>
           </div>
-        </section>
+        </div>
         `
     }
   }))
-  .add('Button using btn--icon class (inverted)', () => {
-    const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
-    const icons = select('Icon', ['chevron-right', 'twitter', 'search', 'download'], 'chevron-right' );
-    return {
-      template: `
-        <section class="section bg-inverted">
-          <div class="section__inner">
-            <button class="btn btn--inverted btn--fullwidth btn--icon btn--icon--${icons}-inverted">${btnText}</button>
-          </div>
-        </section>
-        `
-    }
-  })
