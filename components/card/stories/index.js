@@ -290,7 +290,7 @@ storiesOf('Cards', module)
 
       ]);
       const colors = select('Focus colors', ['','card--image-focus--col-brand', 'card--image-focus--col-white'], '');
-      const bgColors = select('Card BG', ['bg-white', 'bg-alt', 'bg-inverted'], 'bg-alt');
+      const bgColors = select('Card BG', ['','bg-white', 'bg-alt', 'bg-inverted'], '');
       const element = select('Element', ['a', 'div'], 'div');
 
       return {
