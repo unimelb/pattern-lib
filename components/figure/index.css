@@ -13,6 +13,7 @@
     font-size: 0.9em;
     caption-side: bottom;
     margin-top: 1.5em;
+    color: color(var(--col-grey) shade(30%));
   }
   
   &--inset {
@@ -24,9 +25,11 @@
         display: table-caption;
    
         &:before {
-          content: "\2014";
+          content: "";
+          border-top: 2px solid var(--col-brand);
+          width: 2rem;
           position: absolute;
-          margin-top: -1.5em;
+          margin-top: -calc(var(--vr) / 2);
         } 
       }
 
