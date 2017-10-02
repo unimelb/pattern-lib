@@ -12,23 +12,27 @@ import {
   date,
 } from '@storybook/addon-knobs';
 import VueProgressiveImage from 'vue-progressive-image';
+import withReadme from 'storybook-readme/with-readme';
 
 import icon from './../../icons/stories/Icon.vue';
 import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
-import LazyBgImg from './../lazy-bgimg.vue';
+import prgimgReadme from './progressive-image.md';
+import prgbgReadme from './progressive-background.md';
+import lazybgReadme from './lazybg-directive.md';
+
 
 
 storiesOf('Progressive Images', module)
   .addDecorator(withKnobs)
-  .add('Background images - component', () => {
+  .add('Background images - component', withReadme(prgimgReadme, () => {
     const title = text('Title', 'Using component');
     const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
     const btnText = text('Button Text', 'Example Title');
 
     return {
-      components: { LazyBgImg, icon, ButtonIcon },
+      components: { icon, ButtonIcon },
       template: `
-      <LazyBgImg class="section section--image bg-inverted lazy-bgimg" imgSrc="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg">
+      <progressive-background no-ratio class="section section--image bg-inverted" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg">
         <div class="section__inner section__inner--sml">
           <div class="card card--focus-box card--focus-box--loose bg-white">
             <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
@@ -40,10 +44,10 @@ storiesOf('Progressive Images', module)
             </div>
           </div>
         </div>
-      </LazyBgImg>`
+      </progressive-background>`
     }
-  })
-  .add('Background images - directive', () => {
+  }))
+  .add('Background images - directive', withReadme(lazybgReadme, () => {
       const title = text('Title', 'Using directive');
       const btnText = text('Button Text', 'Example Title');
       
@@ -65,8 +69,8 @@ storiesOf('Progressive Images', module)
           </section>
         `
       }
-    })
-  .add('Progressive image component', () => {
+    }))
+  .add('Progressive image component', withReadme(prgbgReadme, () => {
       return {
         components: { VueProgressiveImage },
         template: `
@@ -75,4 +79,4 @@ storiesOf('Progressive Images', module)
           </section-wrap>
         `
       }
-  });
+  }));
