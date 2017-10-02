@@ -3,7 +3,8 @@
     <h1 class="article__header">
       {{title}}
     </h1>
-    <div class="article__main" v-html="content">
+    <div class="article__main">
+      <slot />
     </div>
     <footer role="contentinfo" class="article__aside">
       <div class="article__meta">
@@ -61,10 +62,6 @@
       postType: {
         type: String,
         default: "speech"
-      },
-      content: {
-        type: String,
-        default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.'
       }
     }
   };
