@@ -83,10 +83,15 @@
     }
   }
 
-  &.bg-alt {
+  .card__inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.bg-white, &.bg-inverted {
     .card__inner {
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: var(--vr);
+      padding-right: var(--vr);
     }
   }
 }
