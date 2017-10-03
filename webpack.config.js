@@ -20,7 +20,7 @@ module.exports = merge(baseConfig, {
   output: {
     path: path.resolve(__dirname, `.out/lib/v${pkg.version}/`),
     filename: '[name].js',
-    publicPath: `${process.env.CDN_URL}/v${pkg.version}/`
+    publicPath: isDev ? '' : `${process.env.CDN_URL}/v${pkg.version}/`
   },
   module: {
     rules: [

@@ -3,15 +3,21 @@ require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const pkg = require('./package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV != 'production';
+
+// Public path for static assets and icon sprite
+const customPublicPath = isDev ? '' : `${process.env.CDN_URL}/v${pkg.version}/`;
 
 module.exports = {
   resolve: {
     alias: {
       decorators: path.resolve(__dirname, '.storybook/decorators/'),
-      icons: path.resolve(__dirname, 'components/icons/')
+      docs: path.resolve(__dirname, 'docs/'),
+      icons: path.resolve(__dirname, 'components/icons/'),
+      shared: path.resolve(__dirname, 'components/shared/')
     }
   },
   module: {
@@ -67,10 +73,25 @@ module.exports = {
       {
         // Icon sprite
         test: /sprite\.svg$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]'
-        }
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              publicPath: customPublicPath
+            }
+          }
+        ].concat(isDev ? [] : [
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                { removeDoctype: false },
+                { removeUselessDefs: false }
+              ]
+            }
+          }
+        ])
       },
       {
         // Static assets
@@ -78,7 +99,8 @@ module.exports = {
         exclude: path.resolve(__dirname, 'components/icons/'),
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          publicPath: customPublicPath
         }
       }
     ]

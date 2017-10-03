@@ -5,19 +5,24 @@ const genDefaultConfig = require('@storybook/vue/dist/server/config/defaults/web
 const baseConfig = require('../webpack.config.base.js');
 
 module.exports = (storybookConfig, env) => {
-  const config = genDefaultConfig(storybookConfig, env);
+  const defaultConfig = genDefaultConfig(storybookConfig, env);
 
   // Keep only storybook's JS and Vue loaders
-  config.module.rules = config.module.rules.filter((rule) => {
+  defaultConfig.module.rules = defaultConfig.module.rules.filter((rule) => {
     return rule.test.test('foo.js');
   });
 
-  /* Markdown loader */
-  config.module.rules.push({
-    test: /\.md$/,
-    use: "raw-loader"
+  const mergedConfig = merge(defaultConfig, baseConfig, {
+    module: {
+      rules: [
+        {
+          // Markdown loader
+          test: /\.md$/,
+          use: 'raw-loader'
+        }
+      ]
+    }
   });
 
-  const mergedConfig = merge(config, baseConfig);
   return mergedConfig;
 };

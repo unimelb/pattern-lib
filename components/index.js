@@ -1,12 +1,20 @@
-import svg4everbody from 'svg4everybody';
+import Ike from 'ike.js';
+
+import { version } from '../package.json';
+import sprite from './icons/sprite.svg';
 import HeaderTools from './top-nav/header-tools';
 import Frdialogmodal from './modal/dialogmodal.js';
 
-import './icons';
-import './footer';
+import * as shared from './shared';
 import './progressive-image';
 
-svg4everbody();
+// Expose JS utilities
+window.ui = {
+  utils: shared.utils
+};
+
+// Inject SVG sprite
+const Sprite = new Ike(sprite, version);
 
 const initPage = () => {
   document.documentElement.classList.remove('no-js');

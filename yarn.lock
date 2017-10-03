@@ -2855,6 +2855,10 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
+ike.js@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ike.js/-/ike.js-0.0.2.tgz#8fe7aa7e85da3eb4a5ef29b65cedb777ac1f153e"
+
 immutable@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
@@ -3249,7 +3253,7 @@ loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
 
-loader-utils@1.1.0, loader-utils@^1.0.2, loader-utils@^1.1.0:
+loader-utils@1.1.0, loader-utils@^1.0.2, loader-utils@^1.0.3, loader-utils@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
   dependencies:
@@ -5404,9 +5408,11 @@ svg-url-loader@^2.1.1:
     file-loader "0.11.2"
     loader-utils "1.1.0"
 
-svg4everybody@^2.1.9:
-  version "2.1.9"
-  resolved "https://registry.yarnpkg.com/svg4everybody/-/svg4everybody-2.1.9.tgz#5bd9f6defc133859a044646d4743fabc28db7e2d"
+svgo-loader@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-1.2.1.tgz#e255cdebf56753ff83bd28d1d7a20762c0df5130"
+  dependencies:
+    loader-utils "^1.0.3"
 
 svgo@^0.7.0:
   version "0.7.2"

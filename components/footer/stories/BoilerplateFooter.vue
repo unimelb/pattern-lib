@@ -153,10 +153,9 @@
 </template>
 
 <script>
-  import logo from "../images/logo-unhoused.svg";
+  import { logo } from 'shared';
 
   export default {
-    name: 'BoilerplateFooter',
     data: () => ({ logo })
   };
 </script>
