@@ -67,10 +67,24 @@ module.exports = {
       {
         // Icon sprite
         test: /sprite\.svg$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]'
-        }
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+        ].concat(isDev ? [] : [
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                { removeDoctype: false },
+                { removeUselessDefs: false }
+              ]
+            }
+          }
+        ])
       },
       {
         // Static assets
