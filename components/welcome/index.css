@@ -1,0 +1,108 @@
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+
+  &__inner {
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+    
+    .section__inner--sml & {
+      margin-top: calc(var(--vr) * 3);
+    }
+
+    @media (--bp-x-tablet) {
+      width: 50%;
+      flex: 0 0 50%;
+      padding-right: var(--vr);
+      .section__inner--sml & {
+        margin-top: 0;
+      }
+    }
+
+    @media (--bp-x-desktop) {
+      width: 66.66%;
+      flex: 0 0 66.66%;
+      padding-right: var(--vr);
+  
+      .section__inner--sml & {
+        width: calc(50% - (var(--vr) * 2));
+        flex: 0 0 calc(50% - (var(--vr) * 2));
+      }
+    }
+  }
+  
+  &__thumb {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    margin: calc(var(--vr) * 2) 0;
+    
+    @media (--bp-tablet) {    
+      margin: calc(var(--vr) * 2);
+    }
+
+    @media (--bp-x-tablet) {
+      margin-left: var(--vr);
+      margin-right: var(--vr);
+      width: calc(50% - (var(--vr) * 2));
+      flex: 0 0 calc(50% - (var(--vr) * 2));
+    }
+    
+    @media (--bp-x-desktop) {
+      margin-left: calc(var(--vr) * 2);
+      margin-right: calc(var(--vr) * 2);
+      width: calc(33.3% - 6rem);
+      flex: 0 0 calc(33.3% - 6rem);
+
+      .section__inner--sml & {
+        margin-left: var(--vr);
+        margin-right: var(--vr);
+        width: calc(50% - (var(--vr) * 2));
+        flex: 0 0 calc(50% - (var(--vr) * 2));
+      }
+    }
+
+
+    img{
+      height: 300px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      width: 5rem;
+      height: 5rem;
+      background-size: cover;
+      opacity: 0.6;
+    }
+
+    &:before {
+      left: 0;
+      top:0;
+      background-image: url('~icons/focus-top-left.svg?fill=#074482');
+    }
+
+    &:after {
+      right: 0;
+      bottom: 0;
+      background-image: url('~icons/focus-bottom-right.svg?fill=#074482');
+    }
+
+    .btn {
+      display: block;
+      margin: var(--vr) 0;
+      clear: both;
+    }
+  }
+  
+  &__signature {
+    margin-top: var(--vr);
+    margin-bottom: var(--vr);
+  }
+
+}
