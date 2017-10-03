@@ -32,11 +32,7 @@ storiesOf('Cards', module)
       components: { Story },
       template: `
         <main>
-          <section class="section bg-alt">
-            <div class="section__inner">
-              <Story/>
-            </div>
-          </section>
+          <Story/>
         </main>`,
     };
   })
@@ -48,7 +44,7 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardImage },
         template: `
-          <div>
+          <section-wrap class="bg-alt">
             <h3 style="text-align: center;" class="heading-section">Image box</h3>
             <p style="text-align: center;">Can somebody come up with a name for this version?</p>
             <div class="listing listing--three">
@@ -68,7 +64,7 @@ storiesOf('Cards', module)
                 <CardImage thumb="http://via.placeholder.com/400x200" title="Annual reports" excerpt="See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management."/>
               </ListItem>
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -80,7 +76,7 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardNews },
         template: `
-          <div >
+          <section-wrap class="bg-alt">
             <h3 style="text-align: center;" class="heading-section">News listing</h3>
             <div class="listing listing--three">
               <ListItem>
@@ -99,7 +95,7 @@ storiesOf('Cards', module)
                 <CardNews thumb="http://via.placeholder.com/400x200" title="Annual reports" excerpt="See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management."/>
               </ListItem>
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -111,7 +107,7 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardNews },
         template: `
-          <div >
+          <section-wrap class="bg-alt">
             <h3 style="text-align: center;" class="heading-section">News listing</h3>
             <div class="listing listing--one">
               <ListItem>
@@ -130,7 +126,7 @@ storiesOf('Cards', module)
                 <CardNews :cols="1" thumb="http://via.placeholder.com/400x200" title="Annual reports" excerpt="See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management."/>
               </ListItem>
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -160,12 +156,12 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardLink },
         template: `
-          <div style="text-align: center;">
+          <section-wrap class="bg-alt text-center">
             <h3 style="text-align: center;" class="heading-section">Small link boxes</h3>
             <div class="listing listing--four listing--center">
               ${items.map(item => `<ListItem><CardLink thumb="${item.thumb}" ${inverted ? "inverted" : ''} title="${item.title}" /></ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -227,12 +223,12 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardImageListing },
         template: `
-          <div style="text-align: center;">
+          <section-wrap class="bg-alt text-center">
             <h3 class="heading-section">Bio images</h3>
             <div class="listing listing--four">
               ${items.map(item => `<ListItem><CardImageListing thumb="${item.thumb}" meta="${item.meta}" title="${item.title}" /></ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -258,12 +254,12 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardFocusBox },
         template: `
-          <div style="text-align: center;">
-            <h3 style="text-align: center;" class="heading-section">Focus boxes</h3>
+          <section-wrap class="bg-alt text-center">
+            <h3 class="heading-section">Focus boxes</h3>
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardFocusBox class="bg-white" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -296,13 +292,13 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardFocusImages },
         template: `
-          <div style="text-align: center;">
+          <section-wrap class="bg-alt text-center">
             <h3 style="text-align: center;" class="heading-section">Images with focus marks</h3>
 
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardFocusImages element="${element}" class="${colors} ${bgColors}" thumb="${item.thumb}" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -352,7 +348,7 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardFocusImages },
         template: `
-          <div>
+          <section-wrap class="bg-alt text-center">
             <h3 class="heading-section text-center">Two column listing</h3>
 
             <div class="listing listing--two">
@@ -362,7 +358,7 @@ storiesOf('Cards', module)
                 </ListItem>
               `).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -440,13 +436,13 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardFact },
         template: `
-          <div style="text-align: center;">
+          <section-wrap class="bg-alt text-center">
             <h3 style="text-align: center;" class="heading-section">Fact cards</h3>
             <p>Stats</p>
             <div class="listing">
               ${items.map(item => `<ListItem class="${item.class}"><CardFact class="bg-white" ${item.smlHeader ? 'smlHeader="true"' : ''} meta="${item.meta}" title="${item.title}" excerpt="${typeof item.excerpt !== 'undefined' ? item.excerpt : ''}" /></ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -478,12 +474,12 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardDivision },
         template: `
-          <div style="text-align: center;">
+          <section-wrap class="bg-alt text-center">
             <h3 style="text-align: center;" class="heading-section">Division card</h3>
             <div class="listing listing--three">
               ${items.map(item => `<ListItem><CardDivision class="bg-white" meta="${item.meta}" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -515,7 +511,7 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardDivisionHead },
         template: `
-          <div style="text-align: center;">
+          <section-wrap class="bg-alt text-center">
             <h3 style="text-align: center;" class="heading-section">Division card</h3>
             <div class="listing listing--three">
               ${items.map(item => `
@@ -523,7 +519,7 @@ storiesOf('Cards', module)
                   <CardDivisionHead class="bg-white" meta="${item.meta}" :cols="3" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" />
                 </ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
@@ -555,15 +551,54 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardDivisionHead },
         template: `
-          <div style="text-align: center;">
+          <section-wrap class="bg-alt text-center">
             <div class="listing listing--one">
               ${items.map(item => `
                 <ListItem>
                   <CardDivisionHead class="bg-alt" meta="${item.meta}" :cols="1" title="${item.title}" subtitle="${item.subtitle}" excerpt="${item.excerpt}" />
                 </ListItem>`).join('')}
             </div>
-          </div>
+          </section-wrap>
         `
       }
     }
-  );
+  )
+  .add(
+  'Card - Bio Header',  () => {
+    const items = object('Items', [
+      {
+        title: "Enterprise",
+        subtitle: "Professor Glyn Davis AC",
+        meta: "Vice-Principal Enterprise",
+        thumb: "http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg",
+        excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
+      },
+    ]);
+    const inverted = boolean('Inverted', true);
+    return {
+      components: { ListItem, CardDivisionHead },
+      template: `
+        <section-wrap small class="bg-alt text-center">
+          <div class="listing listing--one">
+            ${items.map(item => `
+              <ListItem>
+                <div href="#" class="btn-owner card card--division card--division--head card--bdr">
+                  <div class="card__thumb" >
+                    <img src="${item.thumb}" alt="">
+                  </div>
+                  <div class="card__inner ">
+                    <div class="card__subheader">
+                      <h3 class="card__header">${item.subtitle}</h3>
+                      <p class="card__meta">${item.meta}</p>
+                    </div>
+                    <hr>
+                    <p>${item.excerpt}</p>
+                  </div>                
+                </div>
+              </ListItem>`).join('')}
+          </div>
+        </section-wrap>
+      `
+    }
+  }
+)

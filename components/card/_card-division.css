@@ -92,6 +92,13 @@
         @media (--bp-desktop) {
           width: 30%;  
           float: right;
+          .section__inner--sml & {
+            height: 300px;
+            width: 40%;
+            img { 
+              height: 300px; 
+            }
+          }
         }
         margin-top: auto;
         margin-bottom: auto;
