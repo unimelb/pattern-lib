@@ -17,6 +17,7 @@
 @import 'footer/index.css';
 @import 'forms/index.css';
 @import 'listing/index.css';
+@import 'modal/index.css';
 @import 'progressive-image/index.css';
 @import 'quick-links-menu/index.css';
 @import 'section/index.css';
@@ -24,4 +25,4 @@
 @import 'tables/index.css';
 @import 'top-nav/index.css';
 @import 'typography/index.css';
-@import 'modal/index.css';
+@import 'welcome/index.css';
