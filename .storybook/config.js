@@ -8,7 +8,7 @@ import Icon from 'icons/stories/Icon.vue';
 import SectionWrap from '../components/section/stories/SectionWrap.vue';
 
 // Import lib
-if (process.env.NODE_ENV === 'production') {
+if (process.env.LOAD_EXTERNAL_ASSETS === 'true') {
   // Load from CDN in prod
   const url = `${process.env.CDN_URL}/v${version}`;
   utils.loadStylesheet(`${url}/ui.css`);

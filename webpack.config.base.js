@@ -9,7 +9,8 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV != 'production';
 
 // Public path for static assets and icon sprite
-const customPublicPath = isDev ? '' : `${process.env.CDN_URL}/v${pkg.version}/`;
+const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
+const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.version}/` : '';
 
 module.exports = {
   resolve: {
@@ -108,7 +109,8 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin([
       'NODE_ENV',
-      'CDN_URL'
+      'CDN_URL',
+      'LOAD_EXTERNAL_ASSETS'
     ]),
     new ExtractTextPlugin({
       allChunks: true,
