@@ -5,7 +5,7 @@ import sprite from './icons/sprite.svg';
 import HeaderTools from './top-nav/header-tools';
 import Frdialogmodal from './modal/dialogmodal.js';
 
-import * as shared './shared';
+import * as shared from './shared';
 import './progressive-image';
 
 // Expose JS utilities

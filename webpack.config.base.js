@@ -3,9 +3,13 @@ require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const pkg = require('./package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV != 'production';
+
+// Public path for static assets and icon sprite
+const customPublicPath = isDev ? '' : `${process.env.CDN_URL}/v${pkg.version}/`;
 
 module.exports = {
   resolve: {
@@ -73,7 +77,8 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]'
+              name: '[name].[ext]',
+              publicPath: customPublicPath
             }
           }
         ].concat(isDev ? [] : [
@@ -94,7 +99,8 @@ module.exports = {
         exclude: path.resolve(__dirname, 'components/icons/'),
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+          publicPath: customPublicPath
         }
       }
     ]

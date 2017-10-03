@@ -1,0 +1,3 @@
+# Compile storybook for production (i.e. load lib CSS/JS from CDN)
+[context.production]
+  NODE_ENV = "production"
