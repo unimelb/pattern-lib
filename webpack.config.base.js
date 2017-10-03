@@ -11,7 +11,8 @@ module.exports = {
   resolve: {
     alias: {
       decorators: path.resolve(__dirname, '.storybook/decorators/'),
-      icons: path.resolve(__dirname, 'components/icons/')
+      icons: path.resolve(__dirname, 'components/icons/'),
+      shared: path.resolve(__dirname, 'components/shared/')
     }
   },
   module: {

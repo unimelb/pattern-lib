@@ -5,10 +5,7 @@
 </template>
 
 <script>
-  import sprite from '../sprite.svg';
-
   export default {
-    props: ['name', 'width', 'height'],
-    data: () => ({ sprite })
+    props: ['name', 'width', 'height']
   };
 </script>

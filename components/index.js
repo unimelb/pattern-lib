@@ -5,7 +5,7 @@ import sprite from './icons/sprite.svg';
 import HeaderTools from './top-nav/header-tools';
 import Frdialogmodal from './modal/dialogmodal.js';
 
-import './footer';
+import './shared';
 import './progressive-image';
 
 // Inject SVG sprite
