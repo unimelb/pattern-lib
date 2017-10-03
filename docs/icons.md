@@ -1,17 +1,15 @@
 # Icons
 
-## How to add an icon to the repo
+## How to add an icon
 
-1.  Make sure that the icon's SVG document is square and that the icon itself is centred within that document. The icon should meet the edges of the document in at least one direction (i.e. horizontally or vertically). The dimensions of the document don't really matter, but small numbers can lead to a smaller file size.
+1. Make sure that the icon's SVG document is square and that the icon itself is centred within that document. The icon should meet the edges of the document in at least one direction (i.e. horizontally or vertically). The dimensions of the document don't really matter, but small numbers can lead to a smaller file size.
 2. Export the icon as "optimised SVG" (the term used in Inkscape), making sure to enable viewboxing (i.e. it should end up with a`viewBox` attribute).
 3. Optimise the icon further with SVGO: https://jakearchibald.github.io/svgomg/ and remove any `fill` attribute.
 4. Place the icon at the root of the `components/icons` folder and give it a meaningful, hyphenated name - e.g. `chevron-right`.
 5. If needed, add the icon to the sprite as a `symbol`.
 
 
-## How to use icons in the codebase
-
-### In CSS
+## How to use icons in CSS
 
 Because CMS editors can't add SVG code inside WYSIWYG blocks, some icons should be declared as CSS background images (e.g. chevron icon in buttons).
 
@@ -37,7 +35,7 @@ Sizing and positioning `background-image` icons is a bit complex but manageable.
 }
 ```
 
-#### Under the hood
+### Under the hood
 
 The webpack configuration includes the following loaders:
 
@@ -47,7 +45,7 @@ The webpack configuration includes the following loaders:
 If an icon exceeds 1 kB, it is loaded as an external file like other assets (`background-image: url('<localhost-or-cdn>/chevron-right.svg')`. The set-up only applies to SVG icons in the `components/icons/` folder (aliased to `icons/` for convenience) that are referenced from a CSS file with `url('~icons/...')`.
 
 
-### In Vue components
+## How to use icons in Vue components
 
 Components that are meant to become container templates in the CMS don't have markup restrictions and can therefore include inline SVG. To add an icon to such a component, use the `Icon` component (registered globally for convenience). The icon must be present in the sprite file, `components/icons/sprite.svg`.
 
@@ -81,17 +79,6 @@ Many browsers have issues dealing with responsive SVGs (e.g. `width: 100%;`). Fo
 }
 ```
 
-#### Under the hood
+### Under the hood
 
 A small library called [Ike.js](https://github.com/dwest-teo/ike.js) loads the SVG sprite asynchronously and inlines it into the page on the fly. It caches the sprite in local storage for faster access on subsequent page views.
-
-
-## How to use icons in the CMS
-
-- Some classes, like `btn--icon`, come with icons out of the box.
-- Icons used in container templates are to be inlined in the markup just as they appear in the documentation -- i.e.
-  ```html
-  <svg ...>
-    <use xlink:href="#<icon-name>" />
-  </svg>
-  ```
