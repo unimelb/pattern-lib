@@ -1,4 +1,4 @@
-export logo from './logo.svg';
+export { default as logo } from './logo.svg';
 
 import loadScript from './load-script';
 import loadStylesheet from './load-stylesheet';
