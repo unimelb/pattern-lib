@@ -1,5 +1,5 @@
 <template>
-  <form class="form" id="form_email_1698962" enctype="multipart/form-data" action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form" method="post"  >
+  <form id="form_email_1698962" enctype="multipart/form-data" action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form" method="post"  >
     <input type="hidden" name="SQ_FORM_1698962_PAGE" value="1"  class="sq-form-field" id="SQ_FORM_1698962_PAGE" />
     <input type="hidden" name="form_email_1698962_referral_url" value="" />
 
@@ -106,3 +106,8 @@
     </p>
   </form>
 </template>
+
+<script>
+  let body = document.body || document.querySelector('body');
+  body.classList.add('mce');
+</script>

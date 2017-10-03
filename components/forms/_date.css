@@ -1,4 +1,4 @@
-.form .sq-form-question-datetime .sq-form-question-answer {
+.mce form[id^="form_"] .sq-form-question-datetime .sq-form-question-answer {
   @media screen and (min-width: 230px) {
     padding-top: 1rem;
     position: relative;
