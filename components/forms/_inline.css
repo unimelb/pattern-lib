@@ -1,4 +1,4 @@
-.section-content .form--inline,
+.section .form--inline,
 .form--inline {
   &__row {
     display: table;
@@ -34,6 +34,7 @@
     height: 3rem;
     line-height: 1;
     margin-bottom: 1rem;
+    margin-left: 0;
     margin-top: .3125rem;
     min-width: 3rem;
     padding: .667rem;
