@@ -1,3 +1,4 @@
+.mce form[id^="form_"],
 .form {
   fieldset {
     border: 0;

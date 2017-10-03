@@ -1,5 +1,5 @@
 <template>
-  <form class="form" id="form_email_1698962" enctype="multipart/form-data" onsubmit="return false" action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form" method="post"  >
+  <form id="form_email_1698962" enctype="multipart/form-data" onsubmit="return false" action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form" method="post"  >
     <fieldset class="sq-form-section">
       <legend class="sq-form-section-title">Date only</legend>
       <div class="sq-form-question sq-form-question-datetime ">
@@ -272,3 +272,8 @@
     <input type="submit" name="form_email_1698962_submit" value="Submit" class="sq-form-submit" id="form_email_1698962_submit" />
   </form>
 </template>
+
+<script>
+  let body = document.body || document.querySelector('body');
+  body.classList.add('mce');
+</script>

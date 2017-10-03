@@ -13,8 +13,10 @@ storiesOf('Forms', module)
       components: { Story },
       template: `
         <main>
-          <section class="section-content">
-            <Story/>
+          <section class="section">
+            <div class="section__inner">
+              <Story/>
+            </div>
           </section>
         </main>`,
     };
