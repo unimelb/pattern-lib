@@ -7,7 +7,6 @@ export default [`
     <br>
     Victoria 3010 Australia
   </div>
-
   <span class="contact-card__detail--inline">Email:</span>
   <span class="contact-card__detail--inline"><a href="mailto:vc@unimelb.edu.au">vc@unimelb.edu.au</a></span>
   <br>
@@ -19,7 +18,6 @@ export default [`
 `, `
   <div class="contact-card__title">Executive Liaison</div>
   <div class="contact-card__detail">Ms Sally Hayes</div>
-
   <span class="contact-card__detail--inline">Email:</span>
   <span class="contact-card__detail--inline"><a href="mailto:sally.hayes@unimelb.edu.au">sally.hayes@unimelb.edu.au</a></span>
   <br>
@@ -28,7 +26,6 @@ export default [`
 `, `
   <div class="contact-card__title">Executive Support Officer</div>
   <div class="contact-card__detail">Ms Amelia Phipps</div>
-  
   <span class="contact-card__detail--inline">Email:</span>
   <span class="contact-card__detail--inline"><a href="mailto:phipps.a@unimelb.edu.au">phipps.a@unimelb.edu.au</a></span>
   <br>
