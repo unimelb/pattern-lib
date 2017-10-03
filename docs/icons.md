@@ -55,44 +55,43 @@ Components that are meant to become container templates in the CMS don't have ma
 <!-- USAGE -->
 <icon name="chevron-right" />
 
-<!-- OUTPUT (IN DEV) -->
+<!-- OUTPUT -->
 <svg role="presentation" focusable="false">
-  <use xlink:href="/sprite.svg#chevron-right" />
+  <use xlink:href="#chevron-right" />
 </svg>
 
-<!-- OUTPUT (IN PROD) -->
-<svg role="presentation" focusable="false">
-  <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/<version>/sprite.svg#chevron-right" />
-</svg>
-
-<!-- WITH PROPS -->
+<!-- WITH CLASS & WIDTH/HEIGHT -->
 <icon class="my-component__icon" name="chevron-right" width="24" height="24" />
 ```
 
 Many browsers have issues dealing with responsive SVGs (e.g. `width: 100%;`). For icons especially, it is better for the `svg` element to have a fixed width and height. You can do this by passing a `width` and `height` to the `Icon` component, but CSS is more practical as you can use relative units and resize the icon at different breakpoints.
 
 ```html
-<icon class="my-component__icon" name="chevron-right"  />
+<icon class="my-component__icon" name="chevron-right" />
 ```
 
 ```css
+/**
+ * (1) match height of nearby text (line-height included)
+ * (2) keep icon square to match viewbox
+ */
 .my-component__icon {
-  width: 1.5em;
-  height: 1.5em;
+  width: calc(var(--lh) * 1em); /* (2) */
+  height: calc(var(--lh) * 1em); /* (1) */
 }
 ```
 
 #### Under the hood
 
-Webpack loads the sprite file like a normal asset. In production, `file-loader` automatically prefixes its path with the URL of the CDN (cf. `output.publicPath`).
+A small library called [Ike.js](https://github.com/dwest-teo/ike.js) loads the SVG sprite asynchronously and inlines it into the page on the fly. It caches the sprite in local storage for faster access on subsequent page views.
 
 
 ## How to use icons in the CMS
 
-- Some icons, like button chevrons, just work and don't require any extra classes or markup.
+- Some classes, like `btn--icon`, come with icons out of the box.
 - Icons used in container templates are to be inlined in the markup just as they appear in the documentation -- i.e.
-    ```html
-    <svg ...>
-      <use xlink:href="https://d2glwx35mhbfwf.cloudfront.net/<version>/sprite.js#<icon-name>" />
-    </svg>
-    ```
+  ```html
+  <svg ...>
+    <use xlink:href="#<icon-name>" />
+  </svg>
+  ```
