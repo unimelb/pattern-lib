@@ -33,16 +33,23 @@ yarn
 To deploy to production:
 
 1. Bump the `version` number in `package.json` (cf. note below).
-1. Update CHANGELOG.md with version notes.
 1. Commit the version change to the `dev` branch.
 1. Create a pull request to merge the `dev` branch into `master` - e.g. "Deploy v1.0.1".
 1. Wait for the mandatory checks to pass then select "Rebase and merge" (cf. note below).
 
-Semaphore then automatically builds the library and syncs the output files to S3. If the version you're deploying had been previously deployed, you'll need to invalidate the files on the CDN (AWS Cloudfront) or wait a day or so for this to happen automatically.
+Semaphore then automatically builds the library and syncs the output files to S3. If the version you're deploying had been previously deployed, you'll need to invalidate the files on the CDN (AWS Cloudfront) or wait a day or so for this to happen automatically. Once the library is deployed, follow the release process below.
 
 > **Note on versioning**: the version number follows the [semver](http://semver.org/) convention `MAJOR.MINOR.PATCH`, where: `MAJOR` corresponds to a breaking change (e.g. a change in a component's markup), `MINOR` to a new feature (e.g. a new component, a new feature for an existing component, etc.), and `PATCH` to a bug fix or under-the-hood change (e.g. code clean-up, performance improvement, etc.)
 
 > **Note on rebase**: rebasing `dev` onto `master` avoids creating a merge commit that would require merging `master` back into `dev`.
+
+### Release
+
+Once the library is deployed:
+
+1. Finalise the release notes, making sure that the title and tag name are correct (`vX.Y.Z`), then publish them.
+1. Create a new release notes draft based on the following template: `.github/RELEASE_NOTES_TEMPLATE.md`.
+1. Update the draft every time you merge a PR.
 
 
 ## Testing
