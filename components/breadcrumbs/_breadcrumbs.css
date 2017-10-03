@@ -62,8 +62,4 @@
     padding: 0 .25rem;
     text-decoration: inherit;
   }
-
-  &__chevron {
-    vertical-align: text-bottom;
-  }
 }
