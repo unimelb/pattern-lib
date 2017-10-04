@@ -24,9 +24,6 @@ export default class RenderMarkup {
 
     this.markup = this.raw;
 
-    // Insert cdn url, until this renders from storybook prod
-    this.CDNifySrc();
-
     // Strip comments
     this.DeComment();
 
@@ -38,10 +35,6 @@ export default class RenderMarkup {
 
     // Vue allows expansion outside the DOM but it's tidier to allow the entire lifecycle
     mark.parentNode.removeChild(mark);
-  }
-
-  CDNifySrc() {
-    this.markup = this.markup.replace(/src=\"(\/)?logo\-unhoused\.svg\"/, 'src="https://d2glwx35mhbfwf.cloudfront.net/v0.0.3/logo-unhoused.svg"');
   }
 
   DeComment() {
