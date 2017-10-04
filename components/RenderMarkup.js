@@ -3,8 +3,17 @@ import pretty from 'pretty';
 
 export default class RenderMarkup {
   constructor(Component, props = {}) {
+    let tmpl = document.createElement('div');
+    tmpl.id = 'template-component-instance'; // container consumed by vue expansion
+
+    let mark = document.createElement('div');
+    mark.id = 'mark-for-deletion'; // container to target for later deletion
+
+    mark.appendChild(tmpl);
+    document.body.appendChild(mark);
+
     const template = new Vue({
-      el: '#instance-outside-dom',
+      el: '#template-component-instance',
       render: (createElement) => {
         return createElement(Component, props);
       }
@@ -26,6 +35,9 @@ export default class RenderMarkup {
 
     this.prettifiedMarkup = "## Sample Markup\n```html\n" + this.max + "\n```\n";
     this.minifiedMarkup = "## Minified\n```html\n" + this.min + "\n```\n";
+
+    // Vue allows expansion outside the DOM but it's tidier to allow the entire lifecycle
+    mark.parentNode.removeChild(mark);
   }
 
   CDNifySrc() {
