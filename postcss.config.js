@@ -1,6 +1,17 @@
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+const isDev = process.env.NODE_ENV != 'production';
+
 module.exports = {
   plugins: {
-    'postcss-import': {},
+    'postcss-import': {
+      plugins: [
+        require('stylelint')({
+          configOverrides: {
+            defaultSeverity: isDev ? 'warning' : 'error'
+          }
+        })
+      ]
+    },
     'postcss-url': {},
     'postcss-nested': {},
     'postcss-cssnext': {
@@ -13,6 +24,7 @@ module.exports = {
         'Safari >= 8',
         'Android >= 4.4'
       ]
-    }
+    },
+    'postcss-reporter': {}
   }
 };

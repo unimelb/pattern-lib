@@ -1,7 +1,6 @@
 /**
  * Section
  */
-
 .section {
   background-position: center;
   background-repeat: no-repeat;
@@ -15,9 +14,7 @@
     &--sml {
       max-width: calc(var(--w-sml) + 2 * var(--vr));
     }
-    
   }
-
 
   &--centred {
     text-align: center;
@@ -47,18 +44,16 @@
     }
   }
 
-
-  &__inner--short{
+  &__inner--short {
     padding: calc(2 * var(--vr)) var(--vr);
     min-height: initial;
   }
-  
+
   &--image {
     background-size: cover;
   }
 
   &--divider {
-
     &__inner {
       margin-top: auto;
       margin-bottom: auto;
@@ -76,5 +71,4 @@
       margin-bottom: var(--vr);
     }
   }
-
 }

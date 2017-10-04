@@ -6,14 +6,12 @@
   .card__thumb {
     position: relative;
     height: 100%;
+
     img {
       height: 240px;
       width: 100%;
-
-      @supports(object-fit: cover){
-        object-fit: cover;
-        object-position: center;
-      }
+      object-fit: cover;
+      object-position: center;
     }
 
     &--full {
@@ -22,62 +20,54 @@
       }
     }
 
-    &:before, &:after {
+    &::before,
+    &::after {
       position: absolute;
       content: '';
       display: inline-block;
       width: 5rem;
       height: 5rem;
       background-size: cover;
-      opacity: 0.6;
+      opacity: .6;
     }
 
-    &:before {
+    &::before {
       top: 0;
       left: 0;
       background-image: url('~icons/focus-top-left.svg?fill=#9AD6C3');
     }
 
-    &:after {
+    &::after {
       bottom: 7px; /* positioning bug */
       right: 0;
       background-image: url('~icons/focus-bottom-right.svg?fill=#9AD6C3');
     }
-
   }
 
   &--col-brand {
     .card__thumb {
-      &:before {
-        background-image: url('~icons/focus-top-left.svg?fill=#074482');
-      }
-
-      &:after {
-        background-image: url('~icons/focus-bottom-right.svg?fill=#074482');
-      }
+      &::before { background-image: url('~icons/focus-top-left.svg?fill=#074482'); }
+      &::after { background-image: url('~icons/focus-bottom-right.svg?fill=#074482'); }
     }
   }
 
   &--col-white {
     .card__thumb {
-      &:before {
-        background-image: url('~icons/focus-top-left.svg?fill=#FFF');
-      }
-
-      &:after {
-        background-image: url('~icons/focus-bottom-right.svg?fill=#FFF');
-      }
+      &::before { background-image: url('~icons/focus-top-left.svg?fill=#FFF'); }
+      &::after { background-image: url('~icons/focus-bottom-right.svg?fill=#FFF'); }
     }
   }
 
   &.btn-owner:hover {
     .card__thumb {
-      &:before, &:after {
-        opacity: 0.7;
+      &::before,
+      &::after {
+        opacity: .7;
       }
     }
+
     .card__inner {
-      h2,h3,h4 {
+      h2, h3, h4 { /* stylelint-disable-line */
         text-decoration: underline;
       }
     }

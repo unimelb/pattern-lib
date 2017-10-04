@@ -1,10 +1,7 @@
 /**
  * Variables
  */
- :root {
-  --col-black: #000; /* just use #000 */
-  --col-white: #fff; /* just use #fff */
-
+:root {
   /* Brand palette */
   --col-brand: rgb(9, 65, 131);
   --col-brand-mid2: rgb(93, 130, 173);
@@ -12,7 +9,7 @@
   --col-brand-light: rgb(242, 245, 249);
 
   /* Supporting palette */
-  --col-grey-dark: var(--col-black); /* just use #000 */
+  --col-grey-dark: #000; /* just use #000 */
   --col-grey: rgb(153, 162, 170);
   --col-grey-mid: rgb(198, 200, 202);
   --col-grey-light: rgb(235, 236, 236);
@@ -51,7 +48,7 @@
   /* Background colours */
   --col-bg: var(--col-brand);
   --col-bg-grey: #f7f7f7;
-  --col-bg-white: var(--col-white); /* just use #fff */
+  --col-bg-white: #fff; /* just use #fff */
   --col-bg-secondary: rgb(3, 58, 123); /* only for bottom half of footer */
   --col-bg-secondary-grey: #e4e4e4;
   --col-bg-tertiary: rgb(1, 42, 88); /* only for site-nav back button */
@@ -79,9 +76,6 @@
   --vr: 1.5rem;
   --lh: 1.5;
 
-  /* Border Radius */
-  --br: 3px;
-
   /* Layout widths */
   /* Beware of `border-box` sizing when combining these widths with left/right padding */
   --w-xxsml: 20rem;
@@ -93,11 +87,11 @@
   /* Typography */
   --ff-normal: 'Source Sans Pro', 'Gill Sans', 'Trebuchet MS', 'Arial', sans-serif;
   --ff-lead: 'Noto Serif', 'Georgia', 'Times New Roman', serif;
-
-  --fw-bold: 700;
   --fw-semibold: 600;
-  --fw-normal: 400;
   --fw-light: 300;
+
+  /* Border radius */
+  --br: 3px;
 }
 
 /**

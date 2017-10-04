@@ -1,7 +1,6 @@
-/*
-* Focus box as used in About us - Growing esteem pages
-*/
-
+/**
+ * Focus box as used in About us - Growing esteem pages
+ */
 .card--focus-box {
   position: relative;
   padding: var(--vr);
@@ -10,7 +9,7 @@
     position: absolute;
     width: 6em;
     height: 6em;
-    opacity: 0.5;
+    opacity: .5;
     color: var(--col-emerald);
 
     &--top-left {
@@ -32,7 +31,7 @@
 
   &--white {
     .card--focus-box__cnr {
-      color: var(--col-white);
+      color: #fff;
     }
   }
 
@@ -44,40 +43,11 @@
     width: 100%;
   }
 
-  .list-item:nth-child(7n+1) & {
-    &__icon{
-      color: var(--col-2);
-    }
-  }
-  .list-item:nth-child(7n+2) & {
-    &__icon{
-      color: var(--col-3);
-    }
-  }
-  .list-item:nth-child(7n+3) & {
-    &__icon{
-      color: var(--col-4);
-    }
-  }
-  .list-item:nth-child(7n+4) & {
-    &__icon{
-      color: var(--col-5);
-    }
-  }
-  .list-item:nth-child(7n+5) & {
-    &__icon{
-      color: var(--col-6);
-    }
-  }
-  .list-item:nth-child(7n+6) & {
-    &__icon{
-      color: var(--col-7);
-    }
-  }
-  .list-item:nth-child(7n+7) & {
-    &__icon{
-      color: var(--col-1);
-    }
-  }
-
+  .list-item:nth-child(7n+1) &__icon { color: var(--col-1); }
+  .list-item:nth-child(7n+2) &__icon { color: var(--col-2); }
+  .list-item:nth-child(7n+3) &__icon { color: var(--col-3); }
+  .list-item:nth-child(7n+4) &__icon { color: var(--col-4); }
+  .list-item:nth-child(7n+5) &__icon { color: var(--col-5); }
+  .list-item:nth-child(7n+6) &__icon { color: var(--col-6); }
+  .list-item:nth-child(7n) &__icon { color: var(--col-7); }
 }
