@@ -15,12 +15,12 @@
     vertical-align: top;
     width: 100%;
 
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
-    input[type="search"],
-    input[type="url"] {
+    input[type='text'],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='url'] {
       border-radius: var(--br) 0 0 var(--br);
       max-width: none;
     }

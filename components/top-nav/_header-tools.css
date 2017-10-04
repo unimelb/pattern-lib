@@ -78,11 +78,11 @@
   }
 
   &__inline {
-    display: inline-block
+    display: inline-block;
   }
 
   &__input {
-    -webkit-appearance: textfield;
+    appearance: textfield;
     border-color: rgba(0, 0, 0, .1);
     border-radius: 3px 0 0 3px;
     border-style: solid;

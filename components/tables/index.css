@@ -52,17 +52,8 @@
     }
   }
 
-  &--compact {
-    td {
-      padding: .9em;
-    }
-  }
-
-  &--padded {
-    td {
-      padding: 2.3rem 1.6rem;
-    }
-  }
+  &--compact td { padding: .9em; }
+  &--padded td { padding: 2.3rem 1.6rem; }
 
   th[colspan='3'] {
     text-align: left;

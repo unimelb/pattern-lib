@@ -6,7 +6,6 @@
     display: block;
   }
 
-
   &__header {
     margin: calc(var(--vr) * 2) 0 4rem 0;
     flex: 0 0 100%;
@@ -27,8 +26,6 @@
         padding: 0;
       }
     }
-
-
   }
 
   &__aside {
@@ -65,12 +62,12 @@
   }
 
   &__contact {
-
     dl {
       margin-bottom: 0;
     }
 
-    dt, dd {
+    dt,
+    dd {
       float: left;
       margin-bottom: calc(var(--vr) / 6);
     }
@@ -80,13 +77,13 @@
       clear: both;
     }
 
-    dd{
+    dd {
       text-align: left;
       margin-left: 1ch;
       max-width: 100%;
     }
 
-    a[href^="mailto"] {
+    a[href^='mailto'] {
       max-width: 99%;
       display: block;
       overflow: hidden;
@@ -102,6 +99,4 @@
       font-size: 1.125em;
     }
   }
-
-
 }

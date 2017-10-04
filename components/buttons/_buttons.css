@@ -4,18 +4,16 @@
 .btn {
   display: inline-block;
   vertical-align: middle;
-  padding: calc(var(--vr) * 0.8);
+  padding: calc(var(--vr) * .8);
   border: 2px solid color(var(--col-brand) alpha(70%));
   border-radius: var(--br);
   color: var(--col-brand);
   font-weight: var(--fw-semibold);
-
   text-align: center;
   text-decoration: none;
   outline-offset: 1px;
   outline-color: var(--col-brand-light);
   transition: border-color .2s;
-
 
   &:focus,
   &:hover,
@@ -71,6 +69,7 @@
   &--wide {
     min-width: calc(var(--vr) * 10);
     max-width: 100%;
+
     @media (--bp-max-mobile) {
       min-width: 100%;
     }
@@ -79,25 +78,27 @@
   &--xwide {
     min-width: calc(var(--vr) * 20);
     max-width: 100%;
+
     @media (--bp-max-mobile) {
       min-width: 100%;
     }
   }
 
-  &--fullwidth{
+  &--fullwidth {
     min-width: 100%;
     text-align: center;
   }
 
-  &--center{
+  &--center {
     margin-left: auto;
     margin-right: auto;
   }
 
-  &--icon{
+  &--icon {
     position: relative;
     padding-right: calc(var(--vr) * 2);
     text-align: left;
+
     &::after {
       content: '';
       display: inline-block;
@@ -113,57 +114,26 @@
     &--center {
       text-align: center;
       padding-right: calc(var(--vr) * 2);
-
     }
 
     &--chevron-right {
-      &-inverted {
-        &::after {
-          background-image: url('~icons/chevron-right.svg?fill=#fff');
-        }
-      }
-      &::after {
-        background-image: url('~icons/chevron-right.svg?fill=#074482');
-      }
+      &::after { background-image: url('~icons/chevron-right.svg?fill=#074482'); }
+      &-inverted::after { background-image: url('~icons/chevron-right.svg?fill=#fff'); }
     }
 
     &--download {
-      &-inverted {
-        &::after {
-          background-image: url('~icons/download.svg?fill=#fff');
-        }
-      }
-
-      &::after {
-        background-image: url('~icons/download.svg?fill=#074482');
-      }
+      &::after { background-image: url('~icons/download.svg?fill=#074482'); }
+      &-inverted::after { background-image: url('~icons/download.svg?fill=#fff'); }
     }
 
     &--search {
-      &-inverted {
-        &::after {
-          background-image: url('~icons/search.svg?fill=#fff');
-        }
-      }
-
-      &::after {
-        background-image: url('~icons/search.svg?fill=#074482');
-      }
+      &::after { background-image: url('~icons/search.svg?fill=#074482'); }
+      &-inverted::after { background-image: url('~icons/search.svg?fill=#fff'); }
     }
 
     &--twitter {
-      &-inverted {
-        &::after {
-          background-image: url('~icons/twitter.svg?fill=#fff');
-        }
-      }
-
-      &::after {
-        background-image: url('~icons/twitter.svg?fill=#074482');
-      }
+      &::after { background-image: url('~icons/twitter.svg?fill=#074482'); }
+      &-inverted::after { background-image: url('~icons/twitter.svg?fill=#fff'); }
     }
-
   }
-
 }
-

@@ -1,7 +1,6 @@
 .welcome {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+  flex-flow: row-reverse wrap;
 
   &__inner {
     width: 100%;
@@ -16,6 +15,7 @@
       width: 50%;
       flex: 0 0 50%;
       padding-right: var(--vr);
+
       .section__inner--sml & {
         margin-top: 0;
       }
@@ -64,30 +64,30 @@
       }
     }
 
-
-    img{
+    img {
       height: 300px;
       object-fit: cover;
       width: 100%;
     }
 
-    &:before, &:after {
+    &::before,
+    &::after {
       position: absolute;
       content: '';
       display: inline-block;
       width: 5rem;
       height: 5rem;
       background-size: cover;
-      opacity: 0.6;
+      opacity: .6;
     }
 
-    &:before {
+    &::before {
       left: 0;
-      top:0;
+      top: 0;
       background-image: url('~icons/focus-top-left.svg?fill=#074482');
     }
 
-    &:after {
+    &::after {
       right: 0;
       bottom: 0;
       background-image: url('~icons/focus-bottom-right.svg?fill=#074482');
@@ -104,5 +104,4 @@
     margin-top: var(--vr);
     margin-bottom: var(--vr);
   }
-
 }

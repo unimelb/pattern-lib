@@ -1,4 +1,4 @@
-.mce form[id^="form_"],
+.mce form[id^='form_'],
 .form {
   select {
     margin-bottom: 1rem;
