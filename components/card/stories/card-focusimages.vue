@@ -16,7 +16,7 @@
     <div class="card__inner">
       <h3>{{title}}</h3>
       <div v-html="excerpt"></div>
-      <button-icon class="btn--fullwidth">{{title}}</button-icon>
+      <button-icon element="button" class="btn--fullwidth">{{title}}</button-icon>
     </div>
   </a>
 </template>
