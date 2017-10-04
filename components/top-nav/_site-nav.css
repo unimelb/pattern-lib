@@ -86,7 +86,7 @@
       font-size: 1.5rem;
       content: '\203a';
       float: right;
-      font-weight: 400;
+      font-weight: normal;
       line-height: .85;
       z-index: 9;
     }

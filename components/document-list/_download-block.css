@@ -2,10 +2,10 @@
   border: 1px solid var(--col-brand);
   border-radius: 4px;
   padding: var(--vr);
-  
+
   @supports(display: flex) {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -31,7 +31,7 @@
 
     @supports(display: flex) {
       display: flex;
-      flex-direction: column; 
+      flex-direction: column;
       justify-content: center;
     }
 
@@ -43,7 +43,7 @@
     @media (--bp-tablet) {
       display: block;
     }
-    
+
     float: left;
     width: 30%;
   }

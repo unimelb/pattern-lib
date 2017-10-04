@@ -51,7 +51,7 @@
     bottom: 0;
     right: 0;
     width: 50%;
-    
+
     @media (--bp-max-mobile) {
       top: 7rem;
       width: 85%;
@@ -65,9 +65,9 @@
 
 
   /* Aperture mark */
-  
+
   &__aperture {
-    
+
     &::before {
       height: 100%;
       content: '';
@@ -168,7 +168,7 @@
     }
 
     &__shape{
-      
+
 
 
     }

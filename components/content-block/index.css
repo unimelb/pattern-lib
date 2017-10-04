@@ -2,7 +2,7 @@
   /* This is intended for Matrix CMS WYSIWYG editor only */
   padding: calc(2 * var(--vr)) var(--vr) ;
   padding-bottom: 1.75rem;
-  
+
   &--short {
     padding-top: var(--vr);
     padding-bottom: var(--vr);
@@ -14,15 +14,15 @@
     margin-right: auto;
   }
 
-  &--sml { 
+  &--sml {
    > * {
-      max-width: var(--w-sml); 
+      max-width: var(--w-sml);
     }
   }
 
-  &--lge { 
+  &--lge {
    > * {
-      max-width: var(--w-lge); 
+      max-width: var(--w-lge);
     }
   }
 

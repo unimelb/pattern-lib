@@ -40,7 +40,7 @@
     &[disabled] {
       opacity: .5;
     }
-    
+
     &.invalid {
       background-color: #fff;
       border-color: color(var(--col-pink-mid) lightness(+25%));

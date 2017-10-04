@@ -1,7 +1,7 @@
 .article {
   display: flex;
   flex-flow: row wrap;
-  
+
   &--nosidebar {
     display: block;
   }
@@ -14,7 +14,7 @@
 
   &__main {
     width: 100%;
-    
+
     @media (--bp-desktop) {
       order: 2;
       width: 70%;
@@ -48,14 +48,14 @@
   &__social, {
     border-bottom: 1px solid var(--col-brand);
     padding: var(--vr) 0;
-    
+
     &:first-child {
       padding-top: 0;
-    }  
+    }
 
     &:last-child {
       border-bottom: 0;
-    }  
+    }
   }
 
   &__type {

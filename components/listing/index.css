@@ -6,7 +6,7 @@
   @supports (display: flex) {
     display: flex;
     flex-wrap: wrap;
-    
+
     &--center {
       justify-content: center;
     }
@@ -16,14 +16,14 @@
     &--two {
       .list-item {
         flex: 0 0 calc(100% / 2);
-        max-width: calc(100% / 2); 
+        max-width: calc(100% / 2);
       }
     }
 
     &--three {
       .list-item {
         flex: 0 0 calc(100% / 3);
-        max-width: calc(100% / 3);     
+        max-width: calc(100% / 3);
       }
 
     }
@@ -56,7 +56,7 @@
 
 .list-item {
   float: left;
-  
+
   @supports (display: flex) {
     display: flex;
     flex-direction: column;

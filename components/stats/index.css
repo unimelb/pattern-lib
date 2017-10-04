@@ -43,7 +43,7 @@
   &__icon {
     margin-left: auto;
     margin-right: auto;
-    
+
     &--white{
       color: var(--col-white) !important;
     }
@@ -56,7 +56,7 @@
     font-weight: bold;
     line-height: 1;
     margin-top: 2rem;
-    
+
     &__hash {
       font-size: 65%;
       vertical-align: 35%;

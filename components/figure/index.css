@@ -15,22 +15,22 @@
     margin-top: 1.5em;
     color: color(var(--col-grey) shade(30%));
   }
-  
+
   &--inset {
 
     figcaption {
-      
+
       @media (--bp-desktop) {
         margin-top: inherit;
         display: table-caption;
-   
+
         &:before {
           content: "";
           border-top: 2px solid var(--col-brand);
           width: 2rem;
           position: absolute;
           margin-top: -calc(var(--vr) / 2);
-        } 
+        }
       }
 
     }
@@ -38,9 +38,9 @@
     @media (--bp-desktop) {
       position: relative;
       display: table;
-      
+
       width: 50%;
-      
+
       &-right {
         margin-right: -5rem;
         float: right;
@@ -49,14 +49,14 @@
         .figure--inset-lge & {
           margin-right: -10rem;
         }
-        
+
         figcaption {
           text-align: right;
           padding-right: var(--vr);
 
           &:before {
             right: var(--vr);
-          } 
+          }
         }
       }
 
@@ -73,9 +73,9 @@
           padding-left: var(--vr);
           &:before {
             text-align: right;
-          } 
+          }
         }
-      
+
 
       }
 
@@ -88,5 +88,5 @@
       }
     }
   }
-  
+
 }

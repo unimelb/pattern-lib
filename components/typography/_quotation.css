@@ -1,5 +1,5 @@
 blockquote, .blockquote {
-  
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ blockquote, .blockquote {
 
     &:before, &:after {
       color: var(--col-grey);
-      font-size: 3rem;      
+      font-size: 3rem;
       font-style: normal;
       position: absolute;
     }

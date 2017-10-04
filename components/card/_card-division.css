@@ -1,6 +1,6 @@
 .card--division {
   text-align: left;
-  
+
   hr {
     margin: var(--vr) 0;
     border: 0;
@@ -87,10 +87,10 @@
         margin-left: 0;
         margin-right: auto;
         padding-left: 0;
-        
+
         @media (--bp-desktop) {
           padding-right: calc(var(--vr) * 2);
-          width: 60%;  
+          width: 60%;
           float: left;
         }
       }
@@ -102,20 +102,20 @@
 
       .card__thumb {
         @media (--bp-desktop) {
-          width: 30%;  
+          width: 30%;
           float: right;
           .section__inner--sml & {
             height: 300px;
             width: 40%;
-            img { 
-              height: 300px; 
+            img {
+              height: 300px;
             }
           }
         }
         margin-top: auto;
         margin-bottom: auto;
       }
-      
+
     }
 
   }
