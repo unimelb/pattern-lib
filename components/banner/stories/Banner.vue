@@ -34,7 +34,7 @@
     <div class="banner__shape"></div>
     <div class="banner__inner max">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au">
-        <img alt="The University of Melbourne homepage" class="banner__logo" height="117" :src="logo" width="117">
+        <img alt="The University of Melbourne homepage" class="banner__logo" height="117" :src="logoResponsive" width="117">
       </a>
     </div>
   </header>
@@ -42,10 +42,10 @@
 </template>
 
 <script>
-  import { logo } from 'shared';
+  import { logo, logoResponsive } from 'shared';
 
   export default {
-    data: () => ({ logo }),
+    data: () => ({ logo, logoResponsive }),
     props: {
       level: {
         type: Number,
