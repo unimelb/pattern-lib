@@ -88,7 +88,8 @@ module.exports = {
             options: {
               plugins: [
                 { removeDoctype: false },
-                { removeUselessDefs: false }
+                { removeUselessDefs: false },
+                { cleanupIDs: false }
               ]
             }
           }

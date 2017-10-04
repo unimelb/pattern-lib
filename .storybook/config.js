@@ -7,6 +7,9 @@ import { utils } from 'shared';
 import Icon from 'icons/stories/Icon.vue';
 import SectionWrap from '../components/section/stories/SectionWrap.vue';
 
+// Import documentation styles
+import './index.css';
+
 // Import lib
 if (process.env.LOAD_EXTERNAL_ASSETS === 'true') {
   // Load from CDN in prod
@@ -18,9 +21,6 @@ if (process.env.LOAD_EXTERNAL_ASSETS === 'true') {
   require('../components/index.css');
   require('../components/index.js');
 }
-
-// Import documentation styles
-import './index.css';
 
 // Register shared documentation components
 Vue.component('icon', Icon);
