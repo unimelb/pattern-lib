@@ -67,3 +67,8 @@ Recommended mobile devices for testing:
 - iPhone 6
 - iPad 2
 - Galaxy s5
+
+
+## Developer documentation
+
+- [Icons](docs/icons.md) - how to add new icons, and how to use icons in CSS and Vue components
