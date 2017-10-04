@@ -453,7 +453,7 @@ storiesOf('Cards', module)
       const items = object('Items', [
         {
           title: "Enterprise",
-          subtitle: "Doron Ben-Meir",
+          subtitle: "John Citizen",
           meta: "Vice-Principal Enterprise",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
@@ -465,7 +465,7 @@ storiesOf('Cards', module)
         },
         {
           title: "Enterprise",
-          subtitle: "Doron Ben-Meir",
+          subtitle: "John Citizen",
           meta: "Vice-Principal Enterprise",
           excerpt: "Lorem ipsum dolor sit amet",
         },
@@ -490,7 +490,7 @@ storiesOf('Cards', module)
       const items = object('Items', [
         {
           title: "Enterprise",
-          subtitle: "Doron Ben-Meir",
+          subtitle: "John Citizen",
           meta: "Vice-Principal Enterprise",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
@@ -502,7 +502,7 @@ storiesOf('Cards', module)
         },
         {
           title: "Enterprise",
-          subtitle: "Doron Ben-Meir",
+          subtitle: "John Citizen",
           meta: "Vice-Principal Enterprise",
           excerpt: "Lorem ipsum dolor sit amet",
         },
@@ -525,12 +525,12 @@ storiesOf('Cards', module)
     }
   )
   .add(
-    'Card - Division Head - 1 col',
+    'Card - Division Head - Compact',
     () => {
       const items = object('Items', [
         {
           title: "Enterprise",
-          subtitle: "Doron Ben-Meir",
+          subtitle: "John Citizen",
           meta: "Vice-Principal Enterprise",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
@@ -539,13 +539,41 @@ storiesOf('Cards', module)
           subtitle: "Professor John Doggeton",
           meta: "Pro Vice-Chancellor (Research Infrastructure & Systems)",
           excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.",
-        },
+        }
+      ]);
+      const inverted = boolean('Inverted', true);
+      return {
+        components: { ListItem, CardDivisionHead },
+        template: `
+          <section-wrap class="bg-alt text-center">
+            <h3 style="text-align: center;" class="heading-section">Division card</h3>
+            <div class="listing listing--three listing--center">
+              ${items.map(item => `
+                <ListItem>
+                  <CardDivisionHead class="bg-white" meta="${item.meta}" :cols="3" title="${item.title}" subtitle="${item.subtitle}" compact excerpt="" />
+                </ListItem>`).join('')}
+            </div>
+          </section-wrap>
+        `
+      }
+    }
+  )
+  .add(
+    'Card - Division Head - 1 col',
+    () => {
+      const items = object('Items', [
         {
           title: "Enterprise",
-          subtitle: "Doron Ben-Meir",
+          subtitle: "John Citizen",
           meta: "Vice-Principal Enterprise",
-          excerpt: "Lorem ipsum dolor sit amet",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
         },
+        {
+          title: "Research Infrastructure and Systems",
+          subtitle: "Professor John Doggeton",
+          meta: "Pro Vice-Chancellor (Research Infrastructure & Systems)",
+          excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.",
+        }
       ]);
       const inverted = boolean('Inverted', true);
       return {

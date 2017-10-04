@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="btn-owner card card--division card--division--head card--bdr">
+  <a :href="href" class="btn-owner card card--division card--division--head card--bdr" :class="{'card--division--head-compact': compact}">
     <div class="card__thumb" >
       <img :src="thumb" alt="">
     </div>
@@ -8,11 +8,11 @@
         <h3 class="card__header">{{subtitle}}</h3>
         <p class="card__meta">{{meta}}</p>
       </div>
-      <hr>
-      <p>{{excerpt}}</p>
+      <hr v-if="!compact">
+      <p v-if="excerpt.length > 0">{{excerpt}}</p>
       <button-icon v-if="cols === 1" class="btn--wide">Contacts and bio</button-icon>
     </div>
-    <div class="card__footer" v-if="cols !== 1">
+    <div class="card__footer" v-if="cols !== 1 && compact === false">
       <button-icon element="button" class="btn--fullwidth">Contacts and bio</button-icon>
     </div>
     
@@ -47,6 +47,10 @@
       href: {
         type: String,
         default: "#"
+      },
+      compact: {
+        type: Boolean,
+        default: false,
       },
       excerpt: {
         type: String,

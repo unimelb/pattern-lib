@@ -65,6 +65,16 @@
         right: 0;
         background-image: url('~icons/focus-bottom-right.svg?fill=#074482');
       }
+
+    }
+
+    &-compact {
+      .card__subheader {
+        min-height: inherit;
+      }
+      .card__meta {
+        margin-bottom: 0;
+      }
     }
 
     .listing--one .list-item & {
