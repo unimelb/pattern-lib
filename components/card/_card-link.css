@@ -17,10 +17,10 @@
     margin-top: 0;
     margin-bottom: auto;
 
-    &:before {
+    &::before {
       background: inherit;
       bottom: 0;
-      content: "";
+      content: '';
       display: block;
       left: 0;
       position: absolute;
@@ -29,7 +29,6 @@
       transition: transform .3s;
     }
   }
-
 
   @supports (display: flex) {
     display: flex;
@@ -46,11 +45,10 @@
   }
 
   .card__header {
-    color: var(--col-white);
+    color: #fff;
     padding: var(--vr);
     position: relative;
     margin-bottom: auto;
     margin-right: 15px;
   }
-
 }

@@ -1,11 +1,10 @@
 .article {
   display: flex;
   flex-flow: row wrap;
-  
+
   &--nosidebar {
     display: block;
   }
-
 
   &__header {
     margin: calc(var(--vr) * 2) 0 4rem 0;
@@ -14,7 +13,7 @@
 
   &__main {
     width: 100%;
-    
+
     @media (--bp-desktop) {
       order: 2;
       width: 70%;
@@ -27,8 +26,6 @@
         padding: 0;
       }
     }
-
-
   }
 
   &__aside {
@@ -48,14 +45,14 @@
   &__social, {
     border-bottom: 1px solid var(--col-brand);
     padding: var(--vr) 0;
-    
+
     &:first-child {
       padding-top: 0;
-    }  
+    }
 
     &:last-child {
       border-bottom: 0;
-    }  
+    }
   }
 
   &__type {
@@ -65,12 +62,12 @@
   }
 
   &__contact {
-
     dl {
       margin-bottom: 0;
     }
 
-    dt, dd {
+    dt,
+    dd {
       float: left;
       margin-bottom: calc(var(--vr) / 6);
     }
@@ -80,13 +77,13 @@
       clear: both;
     }
 
-    dd{
+    dd {
       text-align: left;
       margin-left: 1ch;
       max-width: 100%;
     }
 
-    a[href^="mailto"] {
+    a[href^='mailto'] {
       max-width: 99%;
       display: block;
       overflow: hidden;
@@ -102,6 +99,4 @@
       font-size: 1.125em;
     }
   }
-
-
 }

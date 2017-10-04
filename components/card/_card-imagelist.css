@@ -1,9 +1,7 @@
-/*
-* Lists of images as used in senior leadership pages
-*/
-
+/**
+ * Lists of images as used in senior leadership pages
+ */
 .card--imagelisting {
-
   .card__inner {
     padding-left: calc(var(--vr) / 2);
     padding-right: calc(var(--vr) / 2);
@@ -19,5 +17,4 @@
     margin-bottom: 0;
     color: var(--col-brand);
   }
-
 }

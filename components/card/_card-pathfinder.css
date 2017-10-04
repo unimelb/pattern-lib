@@ -1,7 +1,6 @@
-/*
-* Pathfinder cards - highlight focus on hover
-*/
-
+/**
+ * Pathfinder cards - highlight focus on hover
+ */
 .card--pathfinder {
   .card__header {
     margin-top: var(--vr);
@@ -9,7 +8,6 @@
     min-height: calc(var(--vr) * 3.5);
     padding-left: var(--vr);
     padding-right: var(--vr);
-
   }
 
   .card__inner {
@@ -30,11 +28,11 @@
 
   .card--focus-box__cnr {
     color: #fff;
-    opacity: 0.2;
+    opacity: .2;
     transition: opacity .3s;
   }
 
   &:hover .card--focus-box__cnr {
-    opacity: 0.3;
+    opacity: .3;
   }
 }

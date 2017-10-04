@@ -3,7 +3,7 @@
  */
 /* saw-tooth pattern */
 .bg-saw-tooth {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHdpZHRoPSIyMCI+CiAgPHBhdGggZD0iTTkuMjkzIDJMMCAxMS4yOTNWMTJoLjcwN0wxMCAyLjcwNyAxOS4yOTMgMTJIMjB2LS43MDdMMTAuNzA3IDJIOS4yOTN6IiBvcGFjaXR5PSIuMiIgZmlsbD0iI2ZlZmVmZSIvPgo8L3N2Zz4=");
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHdpZHRoPSIyMCI+CiAgPHBhdGggZD0iTTkuMjkzIDJMMCAxMS4yOTNWMTJoLjcwN0wxMCAyLjcwNyAxOS4yOTMgMTJIMjB2LS43MDdMMTAuNzA3IDJIOS4yOTN6IiBvcGFjaXR5PSIuMiIgZmlsbD0iI2ZlZmVmZSIvPgo8L3N2Zz4=');
 }
 
 /* inverted background */
@@ -47,7 +47,7 @@
 /**
  * Link
  */
- /* reset */
+/* reset */
 .link-reset,
 .links-reset a {
   font-weight: inherit;
@@ -112,7 +112,7 @@
     width: 4px;
     height: 8px;
     margin-right: .5em;
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjgiPgogIDxwYXRoIGQ9Ik0wIDB2Mi4yNUwxLjc1IDQgMCA1Ljc1VjhsNC00eiIgZmlsbD0iI2ZmZiIgLz4KPC9zdmc+");
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjgiPgogIDxwYXRoIGQ9Ik0wIDB2Mi4yNUwxLjc1IDQgMCA1Ljc1VjhsNC00eiIgZmlsbD0iI2ZmZiIgLz4KPC9zdmc+');
   }
 
   /* fix vertical alignment of chevron */
@@ -126,20 +126,22 @@
   list-style: none;
   margin-left: 0;
   padding-left: 0;
-  
+
   li {
     float: left;
-    margin-right: 0.9em;
+    margin-right: .9em;
   }
 
   &--twitter a,
   &--twitter svg {
     color: var(--col-twitter);
   }
+
   &--facebook a,
-  &--facebook svg{
+  &--facebook svg {
     color: var(--col-facebook);
   }
+
   &--linkedin a,
   &--linkedin svg {
     color: var(--col-linkedin);
@@ -234,7 +236,7 @@
   color: var(--col-grey);
   margin-top: calc(var(--vr) / 2);
   margin-bottom: calc(var(--vr) / 2);
-  font-size: 0.9em;
+  font-size: .9em;
 }
 
 /**
@@ -245,8 +247,8 @@
   margin-right: -.5rem;
 
   &::after {
-    content: "";
-    clear:both;
+    content: '';
+    clear: both;
     display: table;
   }
 

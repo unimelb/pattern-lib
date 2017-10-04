@@ -2,6 +2,7 @@
   .card__header {
     font-family: var(--ff-lead);
     font-size: 2.6rem;
+
     &--sml {
       font-size: 1.7rem;
     }
@@ -12,6 +13,6 @@
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: .9rem;
   }
 }

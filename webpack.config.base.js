@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -13,6 +11,7 @@ const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
 const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.version}/` : '';
 
 module.exports = {
+  stats: 'none',
   resolve: {
     alias: {
       decorators: path.resolve(__dirname, '.storybook/decorators/'),

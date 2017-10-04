@@ -3,7 +3,6 @@
   --width-sitenav: 18.75rem;
   --width-sitemap-trigger: 2.8125rem;
   --offset-sitenav: -calc(var(--width-sitenav) + 0);
-
   --tr-transform: transform .3s ease;
 }
 
@@ -86,7 +85,7 @@
       font-size: 1.5rem;
       content: '\203a';
       float: right;
-      font-weight: 400;
+      font-weight: normal;
       line-height: .85;
       z-index: 9;
     }

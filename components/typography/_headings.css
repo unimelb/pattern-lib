@@ -7,7 +7,8 @@
   font-weight: bold;
 }
 
-h1, .heading-page {
+h1,
+.heading-page {
   margin-bottom: calc(2 * var(--vr));
   font-family: var(--ff-lead);
   font-size: 2.25rem;
@@ -27,13 +28,15 @@ h1, .heading-page {
   line-height: 1.4;
 }
 
-h2, .heading-section {
+h2,
+.heading-section {
   margin-bottom: var(--vr);
   font-family: var(--ff-lead);
   font-size: 1.75rem;
 }
 
-h3, .heading-card {
+h3,
+.heading-card {
   margin-bottom: calc(var(--vr) / 2);
   font-size: 1.25rem; /* https://github.com/unimelb/atomisk/issues/56#issuecomment-327679214 */
 }
