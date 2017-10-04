@@ -5,7 +5,7 @@
     "at-rule-semicolon-space-before": "never",
     "declaration-block-no-duplicate-properties": true,
     "font-family-name-quotes": "always-unless-keyword",
-    "font-weight-notation": "named",
+    "font-weight-notation": "named-where-possible",
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "media-feature-name-no-vendor-prefix": true,

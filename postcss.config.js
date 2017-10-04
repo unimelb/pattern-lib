@@ -1,7 +1,17 @@
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+const isDev = process.env.NODE_ENV != 'production';
+
 module.exports = {
   plugins: {
-    'stylelint': {},
-    'postcss-import': {},
+    'postcss-import': {
+      plugins: [
+        require('stylelint')({
+          configOverrides: {
+            defaultSeverity: isDev ? 'warning' : 'error'
+          }
+        })
+      ]
+    },
     'postcss-url': {},
     'postcss-nested': {},
     'postcss-cssnext': {
