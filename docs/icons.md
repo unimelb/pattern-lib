@@ -81,4 +81,4 @@ Many browsers have issues dealing with responsive SVGs (e.g. `width: 100%;`). Fo
 
 ### Under the hood
 
-A small library called [Ike.js](https://github.com/dwest-teo/ike.js) loads the SVG sprite asynchronously and inlines it into the page on the fly. It caches the sprite in local storage for faster access on subsequent page views.
+A small library called [Ike.js](https://github.com/dwest-teo/ike.js) loads the SVG sprite asynchronously and inlines it into the page on the fly. It caches the sprite in local storage for faster access on subsequent page views, so remember to clear your local storage after updating the sprite.
