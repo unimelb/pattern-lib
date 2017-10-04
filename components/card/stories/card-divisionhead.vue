@@ -13,7 +13,7 @@
       <button-icon v-if="cols === 1" class="btn--wide">Contacts and bio</button-icon>
     </div>
     <div class="card__footer" v-if="cols !== 1">
-      <button-icon class="btn--fullwidth">Contacts and bio</button-icon>
+      <button-icon element="button" class="btn--fullwidth">Contacts and bio</button-icon>
     </div>
     
   </a>

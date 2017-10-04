@@ -574,11 +574,12 @@ storiesOf('Cards', module)
         excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.",
       },
     ]);
-    const inverted = boolean('Inverted', true);
+    const small = boolean('Small Section', true);
     return {
       components: { ListItem, CardDivisionHead },
       template: `
-        <section-wrap small class="bg-alt text-center">
+        <div>
+        <section-wrap ${small ? 'small' : ''} class="bg-alt text-center">
           <div class="listing listing--one">
             ${items.map(item => `
               <ListItem>
@@ -598,6 +599,10 @@ storiesOf('Cards', module)
               </ListItem>`).join('')}
           </div>
         </section-wrap>
+        <section-wrap ${small ? 'small' : ''}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A esse veniam, adipisci sed cumque. Commodi nulla necessitatibus maxime, reprehenderit eaque delectus repellat repellendus, ullam, dolor quod unde, facilis accusamus ex.
+        </section-wrap>
+        </div>
       `
     }
   }
