@@ -4,6 +4,7 @@ import { version } from '../package.json';
 import sprite from './icons/sprite.svg';
 import HeaderTools from './top-nav/header-tools';
 import Frdialogmodal from './modal/dialogmodal.js';
+import Fraccordion from './accordion/accordion.js';
 
 import * as shared from './shared';
 import './progressive-image';
@@ -20,6 +21,7 @@ const initPage = () => {
   document.documentElement.classList.remove('no-js');
   loadHeaderTools();
   Frdialogmodal();
+  Fraccordion();
 };
 
 document.addEventListener('DOMContentLoaded', initPage);

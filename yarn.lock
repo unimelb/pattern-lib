@@ -2546,6 +2546,10 @@ forwarded@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.0.tgz#19ef9874c4ae1c297bcf078fde63a09b66a84363"
 
+fr-accordion@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/fr-accordion/-/fr-accordion-1.0.6.tgz#2968901ccc461e2843640391dfa994af00073ed4"
+
 fr-dialogmodal@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/fr-dialogmodal/-/fr-dialogmodal-1.0.4.tgz#ba72a7adbd3bcb3f9149a8799cbfc9af9d7705c0"
