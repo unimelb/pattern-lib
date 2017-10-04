@@ -8,7 +8,7 @@ This uses an svg icon to display
   <span class="push-icon">
     <!-- Button Label -->
     <svg width="width" height="height" focusable="false" role="presentation">
-      <use xlink:href="sprite + '#' + name" />
+      <use xlink:href="'#' + name" />
     </svg>
   </span>
 </a>
