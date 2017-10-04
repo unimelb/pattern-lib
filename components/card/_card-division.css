@@ -74,8 +74,10 @@
 
       .card__inner {
         width: 100%;
-        margin-left: auto;
+        margin-left: 0;
         margin-right: auto;
+        padding-left: 0;
+        
         @media (--bp-desktop) {
           padding-right: calc(var(--vr) * 2);
           width: 60%;  
