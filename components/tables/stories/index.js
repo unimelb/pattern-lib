@@ -11,23 +11,31 @@ storiesOf('Tables', module)
       components: { Story },
       template: `
         <main>
-          <section class="section">
-            <div class="section__inner">
-              <Story/>
-            </div>
-          </section>
+          <Story/>
         </main>`,
     };
   })
   .add('Table - basic', () => ({
     components: {TableSimple},
     template: `
-      <table-simple />
+      <section-wrap>
+        <table-simple />
+      </section-wrap>
     `
   }))
   .add('Table - stats', () => ({
     components: {TableStats},
     template: `
-      <table-stats />
+      <section-wrap>
+        <table-stats />
+      </section-wrap>
+    `
+  }))
+  .add('Table - stats (with content block)', () => ({
+    components: {TableSimple},
+    template: `
+      <div class="content-block">
+        <table-simple />
+      </div>
     `
   }))
