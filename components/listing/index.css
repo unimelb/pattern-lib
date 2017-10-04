@@ -1,7 +1,7 @@
 .listing {
   padding: 0;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+  margin-left: -.75rem;
+  margin-right: -.75rem;
 
   @supports (display: flex) {
     display: flex;
@@ -25,7 +25,6 @@
         flex: 0 0 calc(100% / 3);
         max-width: calc(100% / 3);
       }
-
     }
 
     &--four {
@@ -35,8 +34,10 @@
       }
     }
   }
+
   @media (--bp-only-tablet) {
-    &--four, &--three {
+    &--four,
+    &--three {
       .list-item {
         flex: 0 0 50%;
         min-width: 50%;
@@ -51,8 +52,6 @@
     }
   }
 }
-
-
 
 .list-item {
   float: left;

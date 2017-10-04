@@ -1,8 +1,16 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
+    "at-rule-empty-line-before": ["always", {
+      except: ["first-nested"],
+      ignore: ["blockless-after-same-name-blockless", "after-comment"]
+    }],
     "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-space-before": "never",
+    "comment-empty-line-before": ["always", {
+      except: ["first-nested"],
+      ignore: ["after-comment", "stylelint-commands"]
+    }],
     "declaration-block-no-duplicate-properties": true,
     "font-family-name-quotes": "always-unless-keyword",
     "font-weight-notation": "named-where-possible",
@@ -14,6 +22,7 @@
     "number-max-precision": 3,
     "property-no-vendor-prefix": true,
     "selector-attribute-quotes": "always",
+    "selector-list-comma-newline-before": "never-multi-line",
     "selector-no-vendor-prefix": true,
     "string-quotes": "single",
     "value-keyword-case": "lower",
