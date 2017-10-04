@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+    'stylelint': {},
     'postcss-import': {},
     'postcss-url': {},
     'postcss-nested': {},
@@ -13,6 +14,7 @@ module.exports = {
         'Safari >= 8',
         'Android >= 4.4'
       ]
-    }
+    },
+    'postcss-reporter': {}
   }
 };
