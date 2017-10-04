@@ -4,6 +4,7 @@ import withReadme from 'storybook-readme/with-readme';
 import RenderMarkup from '../../RenderMarkup';
 
 import BreadCrumbs from './BreadCrumbs.vue';
+import MceMockup from './MceMockup.vue';
 
 const markupL1 = new RenderMarkup(BreadCrumbs);
 const markupL2 = new RenderMarkup(BreadCrumbs, { props: { level: 2}});
@@ -48,5 +49,12 @@ storiesOf('Breadcrumbs', module)
         components: { BreadCrumbs },
         template: `<bread-crumbs :level="3" />`
       }
+    })
+  )
+  
+  .add(
+    'Full mockup', () => ({
+      components: { MceMockup },
+      template: `<mce-mockup />`
     })
   );
