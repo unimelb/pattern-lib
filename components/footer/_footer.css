@@ -96,8 +96,8 @@
     }
 
     &__icon {
-      height: 1.3125rem;
-      width: 1.3125rem;
+      height: 1.375rem;
+      width: 1.375rem;
     }
   }
 
@@ -268,8 +268,8 @@
     position: absolute;
     left: 0;
     top: 50%; /* vertical centring */
-    height: 1.3125rem;
-    width: 1.3125rem;
+    height: 1.375rem;
+    width: 1.375rem;
   }
 
   &__submit {
