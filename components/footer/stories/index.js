@@ -8,23 +8,7 @@ import BoilerplateFooter from './BoilerplateFooter.vue';
 const markup = new RenderMarkup(BoilerplateFooter);
 
 storiesOf('Footer', module)
-  .addDecorator(story => {
-    const Story = story();
-    return {
-      components: { Story },
-      template: `
-        <div>
-          <Story/>
-        </div>`,
-    };
-  })
-
   .add(
-    'Boilerplate code insert', 
-    withReadme(markup.minifiedMarkup + markup.prettifiedMarkup, () => {
-      return {
-        components: { BoilerplateFooter },
-        template: `<boilerplate-footer />`
-      }
-    })
+    'Boilerplate code insert',
+    withReadme(markup.minifiedMarkup + markup.prettifiedMarkup, () => BoilerplateFooter)
   );

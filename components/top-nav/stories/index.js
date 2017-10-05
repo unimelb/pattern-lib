@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import { withKnobs } from '@storybook/addon-knobs';
 import withReadme from 'storybook-readme/with-readme';
 import RenderMarkup from '../../RenderMarkup';
 
@@ -20,19 +19,7 @@ const markupBasicNav = "## Sample nav markup\n```html\n" + renderedSiteNav.max +
 renderedSiteNav = new RenderMarkup(TopNav, { props: { complex: true }});
 const markupNestedNav = "## Sample nav markup\n```html\n" + renderedSiteNav.max + "\n```\n";
 
-storiesOf('Top nav', module)
-  .addDecorator(withKnobs)
-  .addDecorator(story => {
-    const Story = story();
-    return {
-      components: { Story },
-      template: `
-        <div>
-          <Story/>
-        </div>`,
-    };
-  })
-
+storiesOf('Top nav/Search', module)
   .add(
     'Search only',
     withReadme(markupSearch, () => {
@@ -45,10 +32,11 @@ storiesOf('Top nav', module)
           </div>`
       }
     })
-  )
+  );
 
+storiesOf('Top nav/Site navigation', module)
   .add(
-    'Basic site navigation',
+    'Basic',
     withReadme(markupTopNav + markupBasicNav, () => {
       return {
         components: { TopNav, NavTrigger, Search },
@@ -64,8 +52,9 @@ storiesOf('Top nav', module)
       }
     })
   )
+
   .add(
-    'Nested site navigation',
+    'Nested',
     withReadme(markupTopNav + markupNestedNav, () => {
       return {
         components: { TopNav, Search, NavTrigger },

@@ -12,7 +12,7 @@ const markup = "## Trigger markup\nMust be a button element.\n```html\n" + rende
 
 storiesOf('Modal', module)
   .add(
-    'Button trigger',
+    'Default',
     withReadme(markup, () => {
       return {
         components: { Trigger, Modal },
