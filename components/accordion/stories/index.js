@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 
-import Accordion from './Accordion.vue';
-import AccordionBlock from './AccordionBlock.vue';
+import Story1 from './story1.js';
+import Story2 from './story2.js';
+import Story3 from './story3.js';
+import Story4 from './story4.js';
 
 storiesOf('Accordion', module)
   .addDecorator(story => {
@@ -20,86 +22,7 @@ storiesOf('Accordion', module)
     };
   })
 
-  .add(
-    'Default', () => {
-      return {
-        components: { Accordion, AccordionBlock },
-        template: `
-      <accordion>
-        <accordion-block title="Arts">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-        <accordion-block title="Science">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-      </accordion>
-`
-      };
-    }
-  )
-
-  .add(
-    'First open', () => {
-      return {
-        components: { Accordion, AccordionBlock },
-        template: `
-      <accordion :open="true">
-        <accordion-block title="Arts">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-        <accordion-block title="Science">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-      </accordion>
-`
-      };
-    }
-  )
-
-  .add(
-    'Solo select', () => {
-      return {
-        components: { Accordion, AccordionBlock },
-        template: `
-      <accordion :multiselect="false">
-        <accordion-block title="Arts">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-        <accordion-block title="Science">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-        <accordion-block title="Politics">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-      </accordion>
-`
-      };
-    }
-  )
-
-  .add(
-    'No js', () => {
-      return {
-        components: { Accordion, AccordionBlock },
-        template: `
-      <accordion :disabled="true">
-        <accordion-block title="Arts">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-        <accordion-block title="Science">
-          <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-        </accordion-block>
-      </accordion>
-`
-      };
-    }
-  );
+  .add('Default', Story1)
+  .add('First open', Story2)
+  .add('Solo select', Story3)
+  .add('No js', Story4);

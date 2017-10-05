@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Fraccordion from '../accordion.js';
+  import Fraccordion from './accordion.js';
 
   export default {
     mounted: function() {
