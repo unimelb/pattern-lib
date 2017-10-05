@@ -7,8 +7,8 @@ export default function loadStylesheet(url) {
   const urls = Array.isArray(url) ? url : [url];
 
   // For each URL, inject a stylesheet tag into the head
-  urls.forEach(url => {
-    var style = document.createElement('link');
+  urls.forEach((url) => {
+    const style = document.createElement('link');
     style.rel = 'stylesheet';
     style.href = url;
     document.head.appendChild(style);

@@ -21,7 +21,7 @@ export default class SiteNav {
     this.initInternalLinks();
 
     // Loop through all list items (including nested items) to initialise nested panels
-    var items = [].slice.call(this.props.rootList.querySelectorAll('li'));
+    const items = [].slice.call(this.props.rootList.querySelectorAll('li'));
     items.forEach(this.initNestedPanel.bind(this));
   }
 
@@ -41,18 +41,18 @@ export default class SiteNav {
     this.props.rootList.classList.add('sitenav__list');
 
     // Retrieve nav title and remove it from the DOM
-    var title = this.el.querySelector('h2');
+    const title = this.el.querySelector('h2');
     title.parentNode.removeChild(title);
 
     // Inject item with link to homepage
-    var absRootPath = this.el.getAttribute('data-absolute-root') || '/';
-    var homeItem = document.createElement('li');
+    const absRootPath = this.el.getAttribute('data-absolute-root') || '/';
+    const homeItem = document.createElement('li');
     homeItem.className = 'home';
     homeItem.innerHTML = `<a href="${absRootPath}">${(title.textContent)}</a>`;
     this.props.rootList.insertBefore(homeItem, this.props.rootList.firstChild);
 
     // Inject close button
-    var closeBtn = document.createElement('button');
+    const closeBtn = document.createElement('button');
     closeBtn.className = 'sitenav__back-btn button-ui';
     closeBtn.textContent = 'Close';
     closeBtn.setAttribute('type', 'button');
@@ -62,17 +62,17 @@ export default class SiteNav {
 
     // Move site nav to root container
     this.props.root.appendChild(this.el);
-  };
+  }
 
   /**
   * Close site nav when an internal link is clicked.
   */
   initInternalLinks() {
-    var internalLinks = [].slice.call(this.el.querySelectorAll('a[href^="#"]'));
+    const internalLinks = [].slice.call(this.el.querySelectorAll('a[href^="#"]'));
     internalLinks.forEach(function (link) {
       link.addEventListener('click', this.props.closeSiteNav);
     }, this);
-  };
+  }
 
   /**
   * Initialise a nested panel (`<div class="inner"><ul>...</ul></div>`) inside a list item, if one exists.
@@ -81,8 +81,8 @@ export default class SiteNav {
   */
   initNestedPanel(item) {
     // Look for nested panel and list
-    var panel = item.querySelector('.inner');
-    var list = item.querySelector('ul');
+    let panel = item.querySelector('.inner');
+    const list = item.querySelector('ul');
     if (!list) return; // no nested list found
 
     // If `inner` container is omitted, inject it (i.e. wrap nested list in panel)
@@ -99,12 +99,12 @@ export default class SiteNav {
     list.classList.add('sitenav__list');
 
     // Look for the item's link and use it as the trigger for opening the nested panel
-    let trigger = item.querySelector('a');
+    const trigger = item.querySelector('a');
     trigger.classList.add('sitenav__nested-trigger');
     trigger.addEventListener('click', this.openNestedPanel.bind(this, panel, true));
 
     // Inject button to close nested panel
-    let backBtn = document.createElement('button');
+    const backBtn = document.createElement('button');
     backBtn.className = 'sitenav__back-btn button-ui';
     backBtn.textContent = 'Back';
     backBtn.setAttribute('type', 'button');
@@ -112,14 +112,14 @@ export default class SiteNav {
     panel.insertBefore(backBtn, list);
 
     // Inject link to parent in child
-    let insertParent = document.createElement('li');
-    let insertParentLink = document.createElement('a');
+    const insertParent = document.createElement('li');
+    const insertParentLink = document.createElement('a');
     insertParentLink.classList.add('sitenav__nested-parent');
     insertParentLink.textContent = trigger.textContent;
     insertParentLink.setAttribute('href', trigger.getAttribute('href'));
     insertParent.appendChild(insertParentLink);
     panel.insertBefore(insertParent, list);
-  };
+  }
 
   /**
   * Open a nested panel.
@@ -131,7 +131,7 @@ export default class SiteNav {
     evt.preventDefault();
 
     // Retrieve parent panel (i.e. the panel that was last opened)
-    var parent = this.state.open[this.state.open.length - 1];
+    const parent = this.state.open[this.state.open.length - 1];
 
     // Hide parent sidebar (and scroll back to top to work around nested absolute positioning)
     parent.classList.add('sitenav__panel--nested-open');
@@ -140,7 +140,7 @@ export default class SiteNav {
     // Open panel and push to state
     panel.classList.add('sitenav__panel--open');
     this.state.open.push(panel);
-  };
+  }
 
   /**
   * Close a nested panel.
@@ -159,7 +159,7 @@ export default class SiteNav {
     panel.scrollTop = 0;
 
     // Show parent sidebar (i.e. vertical overflow)
-    var parent = this.state.open[this.state.open.length - 1];
+    const parent = this.state.open[this.state.open.length - 1];
     parent.classList.remove('sitenav__panel--nested-open');
-  };
+  }
 }

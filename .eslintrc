@@ -5,7 +5,6 @@
   ],
   "rules": {
     "vue/attribute-hyphenation": "error",
-    "vue/html-end-tags": "error",
     "vue/html-quotes": "error",
     "vue/html-self-closing": "error",
     "vue/mustache-interpolation-spacing": "error",

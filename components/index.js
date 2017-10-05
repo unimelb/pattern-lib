@@ -10,7 +10,7 @@ import './progressive-image';
 
 // Expose JS utilities
 window.ui = {
-  utils: shared.utils
+  utils: shared.utils,
 };
 
 // Inject SVG sprite

@@ -203,10 +203,10 @@
 </template>
 
 <script>
-  export default {
-    name: 'TopNav',
-    props: {
-      complex: Boolean
-    },
-  }
+export default {
+  name: 'TopNav',
+  props: {
+    complex: Boolean,
+  },
+};
 </script>

@@ -13,7 +13,7 @@ import {
 
 
 storiesOf('Content Block', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -38,9 +38,9 @@ storiesOf('Content Block', module)
             <h3>${titleH3}</h3>
             <p>${paragraph}</p>
           </div>
-        `
-      }
-    }
+        `,
+      };
+    },
   )
   .add(
     'Content Block - Small width', () => {
@@ -55,7 +55,7 @@ storiesOf('Content Block', module)
             <h3>${titleH3}</h3>
             <p>${paragraph}</p>
           </div>
-        `
-      }
-    }
+        `,
+      };
+    },
   );

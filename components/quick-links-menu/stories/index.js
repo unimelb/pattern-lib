@@ -38,9 +38,9 @@ storiesOf('Quick Link Menu', module)
               ${menuLinks.map(item => `<quick-links-menu-item>${item}</quick-links-menu-item>`).join('')}
             </quick-links>
           </section-wrap>
-        `
-      }
-    }
+        `,
+      };
+    },
   )
   .add(
     'Menu - Alt B', () => {
@@ -65,9 +65,8 @@ storiesOf('Quick Link Menu', module)
               ${menuLinks.map(item => `<quick-links-menu-item>${item}</quick-links-menu-item>`).join('')}
             </quick-links>
           </section-wrap>
-        `
-      }
-    }
-  )    
-
+        `,
+      };
+    },
+  );    
 

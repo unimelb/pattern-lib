@@ -3,10 +3,10 @@ import pretty from 'pretty';
 
 export default class RenderMarkup {
   constructor(Component, props = {}) {
-    let tmpl = document.createElement('div');
+    const tmpl = document.createElement('div');
     tmpl.id = 'template-component-instance'; // container consumed by vue expansion
 
-    let mark = document.createElement('div');
+    const mark = document.createElement('div');
     mark.id = 'mark-for-deletion'; // container to target for later deletion
 
     mark.appendChild(tmpl);
@@ -14,9 +14,7 @@ export default class RenderMarkup {
 
     const template = new Vue({
       el: '#template-component-instance',
-      render: (createElement) => {
-        return createElement(Component, props);
-      }
+      render: createElement => createElement(Component, props),
     });
 
     // There must be a more elegant/legit way to do this
@@ -30,8 +28,8 @@ export default class RenderMarkup {
     this.max = pretty(this.markup);
     this.min = this.markup.replace(/\n/g, '');
 
-    this.prettifiedMarkup = "## Sample Markup\n```html\n" + this.max + "\n```\n";
-    this.minifiedMarkup = "## Minified\n```html\n" + this.min + "\n```\n";
+    this.prettifiedMarkup = `## Sample Markup\n\`\`\`html\n${this.max}\n\`\`\`\n`;
+    this.minifiedMarkup = `## Minified\n\`\`\`html\n${this.min}\n\`\`\`\n`;
 
     // Vue allows expansion outside the DOM but it's tidier to allow the entire lifecycle
     mark.parentNode.removeChild(mark);

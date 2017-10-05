@@ -5,31 +5,31 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      names: [
-        'chevron-right',
-        'chevron-left',
-        'chevron-down',
-        'download',
-        'play',
-        'home',
-        'search',
-        'close',
-        'focus-top-left',
-        'focus-bottom-right',
-        'facebook',
-        'twitter',
-        'linkedin',
-        'faculty',
-        'library',
-        'phone',
-        'location',
-        'campaign',
-        'jobs'
-      ]
-    })
-  }
+export default {
+  data: () => ({
+    names: [
+      'chevron-right',
+      'chevron-left',
+      'chevron-down',
+      'download',
+      'play',
+      'home',
+      'search',
+      'close',
+      'focus-top-left',
+      'focus-bottom-right',
+      'facebook',
+      'twitter',
+      'linkedin',
+      'faculty',
+      'library',
+      'phone',
+      'location',
+      'campaign',
+      'jobs',
+    ],
+  }),
+};
 </script>
 
 <style scoped>

@@ -6,7 +6,7 @@ import loadStylesheet from './load-stylesheet';
 
 export const utils = {
   loadScript,
-  loadStylesheet
+  loadStylesheet,
 };
 
 export const logoResponsive = logoResponsiveSvg;

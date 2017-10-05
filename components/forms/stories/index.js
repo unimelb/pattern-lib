@@ -7,7 +7,7 @@ import TextFields from './TextFields.vue';
 import InlineForm from './InlineForm.vue';
 
 storiesOf('Forms', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -26,30 +26,30 @@ storiesOf('Forms', module)
     'Text fields',
     () => ({
       components: { TextFields },
-      template: `<text-fields />`
-    })
+      template: '<text-fields />'
+    }),
   )
 
   .add(
     'Inline form',
     () => ({
       components: { InlineForm },
-      template: `<inline-form />`
-    })
+      template: '<inline-form />'
+    }),
   )
 
   .add(
-    'MCE Form', 
+    'MCE Form',
     () => ({
       components: { MceForm },
-      template: `<mce-form />`
-    })
+      template: '<mce-form />'
+    }),
   )
 
   .add(
-    'MCE Date selector', 
+    'MCE Date selector',
     () => ({
       components: { MceDate },
-      template: `<mce-date />`
-    })
+      template: '<mce-date />'
+    }),
   );

@@ -7,7 +7,7 @@ function createDecorator(Decorator) {
     const Story = story();
     return {
       components: { Decorator, Story },
-      template: `<decorator><story /></decorator>`
+      template: '<decorator><story /></decorator>',
     };
-  }
+  };
 }

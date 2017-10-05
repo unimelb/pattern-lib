@@ -4,6 +4,7 @@ import withReadme from 'storybook-readme/with-readme';
 import pretty from 'pretty';
 
 import { version } from '../../../package.json';
+
 const assetsUrl = `${process.env.CDN_URL}/v${version}`;
 
 // Base layout markup
@@ -32,5 +33,5 @@ const markup = '```html\n' + `
 
 storiesOf('Layout', module)
   .add('Layout', withReadme(pretty(markup), () => ({
-    template: '<p>See README panel.</p>'
+    template: '<p>See README panel.</p>',
   })));

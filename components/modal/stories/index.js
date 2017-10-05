@@ -5,16 +5,16 @@ import RenderMarkup from '../../RenderMarkup';
 
 import Trigger from './Trigger.vue';
 import Modal from './Modal.vue';
+
 const renderedTrigger = new RenderMarkup(Trigger);
 const renderedModal = new RenderMarkup(Modal);
-const markup = "## Trigger markup\nMust be a button element.\n```html\n" + renderedTrigger.max +
-  "\n```\n## Sample modal markup\n```html\n" + renderedModal.max + "\n```\n";
+const markup = '## Trigger markup\nMust be a button element.\n```html\n' + renderedTrigger.max +
+  '\n```\n## Sample modal markup\n```html\n' + renderedModal.max + '\n```\n';
 
 storiesOf('Modal', module)
   .add(
     'Button trigger',
-    withReadme(markup, () => {
-      return {
+    withReadme(markup, () => ({
         components: { Trigger, Modal },
         template: `
 <main>
@@ -26,6 +26,5 @@ storiesOf('Modal', module)
   </section>
 </main>
 `
-      }
-    })
+      })),
   );

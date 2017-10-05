@@ -32,12 +32,11 @@ storiesOf('Document List', module)
              />
           </div>
         </section>
-      `
-    }
+      `,
+    };
   })
-  .add('Document List', () => {
-    return {
-      template: `
+  .add('Document List', () => ({
+    template: `
         <section class="section">
           <div class="section__inner section__inner--sml">
             <ul class="document-list">
@@ -50,12 +49,10 @@ storiesOf('Document List', module)
             </ul>
           </div>
         </section>
-      `
-    }
-  })
-  .add('Document Thumb List two', () => {
-    return {
-      template: `
+      `,
+  }))
+  .add('Document Thumb List two', () => ({
+    template: `
         <section class="section">
           <div class="section__inner section__inner--sml">
             <ul class="listing listing--two document-list document-list--thumbs">
@@ -87,12 +84,10 @@ storiesOf('Document List', module)
             </ul>
           </div>
         </section>
-      `
-    }
-  })
-  .add('Document Thumb List four', () => {
-    return {
-      template: `
+      `,
+  }))
+  .add('Document Thumb List four', () => ({
+    template: `
         <section class="section">
           <div class="section__inner">
             <ul class="listing listing--four document-list document-list--thumbs">
@@ -131,6 +126,5 @@ storiesOf('Document List', module)
             </ul>
           </div>
         </section>
-      `
-    }
-  })
+      `,
+  }));

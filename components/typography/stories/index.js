@@ -16,31 +16,31 @@ storiesOf('Typography', module)
   .addDecorator(withKnobs)
   .add('Heading elements', () => ({
     components: { HeadingElements },
-    template: '<heading-elements />'
+    template: '<heading-elements />',
   }))
   .add('Heading classes', () => ({
     components: { HeadingClasses },
-    template: `<heading-classes />`
+    template: '<heading-classes />',
   }))
   .add('Long headings', () => ({
     components: { LongHeadings },
-    template: `<long-headings />`
+    template: '<long-headings />',
   }))
   .add('Links', () => ({
     components: { Links },
-    template: '<links />'
+    template: '<links />',
   }))
   .add('Lists - ordered', () => ({
     components: { ListsOrdered },
-    template: '<lists-ordered />'
+    template: '<lists-ordered />',
   }))
   .add('Lists - unordered', () => ({
     components: { ListsUnordered },
-    template: '<lists-unordered />'
+    template: '<lists-unordered />',
   }))
   .add('Lists - mixed', () => ({
     components: { ListsMixed },
-    template: '<lists-mixed />'
+    template: '<lists-mixed />',
   }))
   .add('Quote', () => {
     const quoteText = text('Quote', 'Some girls are just born with glitter in their veins');
@@ -55,8 +55,8 @@ storiesOf('Typography', module)
             <quote ${bdrTop ? 'bdrTop' : ''} ${bdrBtm ? 'bdrBtm' : ''} author="${author}">${quoteText}</quote>
           </div>
         </section>
-      `
-    }
+      `,
+    };
   })
   .add('Quote - Inverse', () => {
     const quoteText = text('Quote', 'Some girls are just born with glitter in their veins');
@@ -71,6 +71,6 @@ storiesOf('Typography', module)
             <quote ${bdrTop ? 'bdrTop' : ''} ${bdrBtm ? 'bdrBtm' : ''} author="${author}">${quoteText}</quote>
           </div>
         </section>
-      `
-    }
-  })
+      `,
+    };
+  });

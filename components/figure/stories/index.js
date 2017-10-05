@@ -14,7 +14,7 @@ import FigureWrap from './FigureWrap.vue';
 
 storiesOf('Figure', module)
   .addDecorator(withKnobs)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -24,16 +24,14 @@ storiesOf('Figure', module)
         </main>`,
     };
   })
-  .add('Article With Inset Figure', () => {
-    return {
-      components: { ArticleInset },
-      template: `
+  .add('Article With Inset Figure', () => ({
+    components: { ArticleInset },
+    template: `
         <section-wrap small>
           <article-inset />
         </section-wrap>
-      `
-    }
-  })
+      `,
+  }))
   .add('Section With Inset Figure', () => {
     const small = boolean('Small', true);
     return {
@@ -42,8 +40,8 @@ storiesOf('Figure', module)
         <section-wrap ${small ? 'small' : ''}>
           <figure-section />
         </section-wrap>
-      `
-    }
+      `,
+    };
   })
   .add('Figure with embed', () => {
     const small = boolean('Small', true);
@@ -67,8 +65,8 @@ storiesOf('Figure', module)
           <p>Praesentium, quaerat! Odit numquam magnam, recusandae totam sint blanditiis autem quos. </p>
           </div>
         </section-wrap>
-      `
-    }
+      `,
+    };
   })
   .add('Figure with progressive images', () => {
     const small = boolean('Small', true);
@@ -90,6 +88,6 @@ storiesOf('Figure', module)
             <p>Praesentium, quaerat! Odit numquam magnam, recusandae totam sint blanditiis autem quos. </p>
           </div>
         </section-wrap>
-      `
-    }
-  })
+      `,
+    };
+  });

@@ -5,7 +5,7 @@ import { withNotes } from '@storybook/addon-notes';
 import BreadCrumbs from './BreadCrumbs.vue';
 
 storiesOf('Breadcrumbs', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -21,7 +21,7 @@ storiesOf('Breadcrumbs', module)
   })
 
   .add(
-    'Level 1', 
+    'Level 1',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Breadcrumbs: level 1</h2><pre><code>
   
@@ -34,15 +34,14 @@ storiesOf('Breadcrumbs', module)
     &lt;/ol&gt;
   &lt;/nav&gt;
   
-</code></pre></div>`)
-    (() =>   ({
+</code></pre></div>`)(() => ({
       components: { BreadCrumbs },
-      template: `<bread-crumbs :level="1" />`
-    }))
+      template: '<bread-crumbs :level="1" />'
+    })),
   )
 
   .add(
-    'Level 2', 
+    'Level 2',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Breadcrumbs: level 2</h2><pre><code>
   
@@ -59,15 +58,14 @@ storiesOf('Breadcrumbs', module)
     &lt;/ol&gt;
   &lt;/nav&gt;
 
-</code></pre></div>`)
-    (() =>   ({
+</code></pre></div>`)(() => ({
       components: { BreadCrumbs },
-      template: `<bread-crumbs :level="2" />`
-    }))
+      template: '<bread-crumbs :level="2" />'
+    })),
   )
 
   .add(
-    'Level 3', 
+    'Level 3',
     withNotes(
       `<div><style>pre{background-color:#444;color:#eee}</style><h2>Breadcrumbs: level 3</h2><pre><code>
   
@@ -88,9 +86,8 @@ storiesOf('Breadcrumbs', module)
     &lt;/ol&gt;
   &lt;/nav&gt;
 
-</code></pre></div>`)
-    (() =>   ({
+</code></pre></div>`)(() => ({
       components: { BreadCrumbs },
-      template: `<bread-crumbs :level="3" />`
-    }))
+      template: '<bread-crumbs :level="3" />'
+    })),
   );

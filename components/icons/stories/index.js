@@ -9,5 +9,5 @@ storiesOf('Icons', module)
   .addDecorator(withReadme(docs))
   .add('Sprite', () => ({
     components: { Sprite },
-    template: `<sprite />`
+    template: '<sprite />',
   }));

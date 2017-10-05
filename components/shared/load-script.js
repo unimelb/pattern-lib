@@ -8,20 +8,18 @@ export default function loadScript(url) {
   const urls = Array.isArray(url) ? url : [url];
 
   // For each URL, create a promise that injects a script tag into the DOM and resolves when the script has loaded
-  const promises = urls.map(url => {
-    return new Promise((resolve, reject) => {
-      // Create script element
-      const script = document.createElement('script');
-      script.src = url;
+  const promises = urls.map(url => new Promise((resolve, reject) => {
+    // Create script element
+    const script = document.createElement('script');
+    script.src = url;
 
-      // Resolve or reject
-      script.addEventListener('load', resolve);
-      script.addEventListener('error', reject);
+    // Resolve or reject
+    script.addEventListener('load', resolve);
+    script.addEventListener('error', reject);
 
-      // Inject script
-      document.body.appendChild(script);
-    });
-  });
+    // Inject script
+    document.body.appendChild(script);
+  }));
 
   // Return a promise that resolves when all of the scripts have loaded
   return Promise.all(promises);

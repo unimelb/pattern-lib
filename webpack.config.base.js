@@ -16,8 +16,8 @@ module.exports = {
       decorators: path.resolve(__dirname, '.storybook/decorators/'),
       docs: path.resolve(__dirname, 'docs/'),
       icons: path.resolve(__dirname, 'components/icons/'),
-      shared: path.resolve(__dirname, 'components/shared/')
-    }
+      shared: path.resolve(__dirname, 'components/shared/'),
+    },
   },
   module: {
     rules: [
@@ -29,8 +29,8 @@ module.exports = {
         loader: 'eslint-loader',
         options: {
           emitError: !isDev,
-          emitWarning: isDev
-        }
+          emitWarning: isDev,
+        },
       },
       {
         // CSS (PostCSS)
@@ -38,7 +38,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: {
             loader: 'style-loader',
-            options: { sourceMap: isDev }
+            options: { sourceMap: isDev },
           },
           use: [
             {
@@ -47,21 +47,21 @@ module.exports = {
                 autoprefixer: false, // handled by postcss-cssnext
                 importLoaders: 2, // two more loaders in the chain
                 minimize: !isDev,
-                sourceMap: isDev
-              }
+                sourceMap: isDev,
+              },
             },
             'svg-fill-loader/encodeSharp', // https://github.com/kisenka/svg-fill-loader#using-with-css-loader
             {
               loader: 'postcss-loader',
-              options: { sourceMap: isDev }
-            }
-          ]
-        })
+              options: { sourceMap: isDev },
+            },
+          ],
+        }),
       },
       {
         // Vue components
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
       },
       {
         // Icons in CSS - e.g. url('~icons/chevron-right.svg?fill=#fff')
@@ -74,11 +74,11 @@ module.exports = {
             options: {
               limit: 1024,
               name: '[name].[ext]',
-              stripdeclarations: true
-            }
+              stripdeclarations: true,
+            },
           },
-          'svg-fill-loader' // https://github.com/kisenka/svg-fill-loader
-        ]
+          'svg-fill-loader', // https://github.com/kisenka/svg-fill-loader
+        ],
       },
       {
         // Icon sprite
@@ -88,9 +88,9 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              publicPath: customPublicPath
-            }
-          }
+              publicPath: customPublicPath,
+            },
+          },
         ].concat(isDev ? [] : [
           {
             loader: 'svgo-loader',
@@ -98,11 +98,11 @@ module.exports = {
               plugins: [
                 { removeDoctype: false },
                 { removeUselessDefs: false },
-                { cleanupIDs: false }
-              ]
-            }
-          }
-        ])
+                { cleanupIDs: false },
+              ],
+            },
+          },
+        ]),
       },
       {
         // Static assets
@@ -111,23 +111,23 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          publicPath: customPublicPath
-        }
-      }
-    ]
+          publicPath: customPublicPath,
+        },
+      },
+    ],
   },
   plugins: [
     new webpack.EnvironmentPlugin([
       'NODE_ENV',
       'CDN_URL',
-      'LOAD_EXTERNAL_ASSETS'
+      'LOAD_EXTERNAL_ASSETS',
     ]),
     new ExtractTextPlugin({
       allChunks: true,
       filename: '[name].css',
-      disable: isDev
-    })
+      disable: isDev,
+    }),
   ].concat(isDev ? [] : [
-    new webpack.optimize.UglifyJsPlugin()
-  ])
+    new webpack.optimize.UglifyJsPlugin(),
+  ]),
 };

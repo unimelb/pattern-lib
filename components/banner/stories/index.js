@@ -20,56 +20,56 @@ storiesOf('Banner', module)
     (() => {
       const title = text('Title', 'About Us');
       return {
-        components: {Banner},
+        components: { Banner },
         template: `
           <banner :level="1" title="${title}"></banner>
-        `
-      }
+        `,
+      };
     }
-  ))
+    ))
   .add(
     'Level 1 - With Department', () => {
       const title = text('Heading', 'About Us');
       const subheading = text('Sub heading', 'Faculty of Medicine, Dentistry and Health Science');
       return {
-        components: {Banner},
+        components: { Banner },
         template: `
           <banner :level="1" title="${title}" subheading="${subheading}" />
-        `
-      }
-    }
+        `,
+      };
+    },
   )
   .add(
     'Level 2', () => {
       const title = text('Title', 'About Us');
       return {
-        components: {Banner},
+        components: { Banner },
         template: `
           <banner :level="2" title="${title}" />
-        `
-      }
-    }
+        `,
+      };
+    },
   )
   .add(
     'Level 2 - With Department', () => {
       const title = text('Heading', 'About Us');
       const subheading = text('Sub heading', 'Faculty of Medicine, Dentistry and Health Science');
       return {
-        components: {Banner},
+        components: { Banner },
         template: `
           <banner :level="2" title="${title}" subheading="${subheading}" />
-        `
-      }
-    }
+        `,
+      };
+    },
   )
   .add(
     'Level 3', () => {
       const title = text('Title', 'About Us');
       return {
-        components: {Banner},
+        components: { Banner },
         template: `
           <banner :level="3" title="${title}" />
-        `
-      }
-    }
+        `,
+      };
+    },
   );

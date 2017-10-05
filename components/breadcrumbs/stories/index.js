@@ -7,11 +7,11 @@ import BreadCrumbs from './BreadCrumbs.vue';
 import MceMockup from './MceMockup.vue';
 
 const markupL1 = new RenderMarkup(BreadCrumbs);
-const markupL2 = new RenderMarkup(BreadCrumbs, { props: { level: 2}});
-const markupL3 = new RenderMarkup(BreadCrumbs, { props: { level: 3}});
+const markupL2 = new RenderMarkup(BreadCrumbs, { props: { level: 2 } });
+const markupL3 = new RenderMarkup(BreadCrumbs, { props: { level: 3 } });
 
 storiesOf('Breadcrumbs', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -24,37 +24,31 @@ storiesOf('Breadcrumbs', module)
 
   .add(
     'Level 1',
-    withReadme(markupL1.prettifiedMarkup, () => {
-      return {
+    withReadme(markupL1.prettifiedMarkup, () => ({
         components: { BreadCrumbs },
         template: `<bread-crumbs :level="1" />`
-      }
-    })
+      })),
   )
 
   .add(
     'Level 2',
-    withReadme(markupL2.prettifiedMarkup, () => {
-      return {
+    withReadme(markupL2.prettifiedMarkup, () => ({
         components: { BreadCrumbs },
         template: `<bread-crumbs :level="2" />`
-      }
-    })
+      })),
   )
 
   .add(
     'Level 3',
-    withReadme(markupL3.prettifiedMarkup, () => {
-      return {
+    withReadme(markupL3.prettifiedMarkup, () => ({
         components: { BreadCrumbs },
         template: `<bread-crumbs :level="3" />`
-      }
-    })
+      })),
   )
-  
+
   .add(
     'Full mockup', () => ({
       components: { MceMockup },
-      template: `<mce-mockup />`
-    })
+      template: '<mce-mockup />'
+    }),
   );

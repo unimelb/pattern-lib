@@ -13,8 +13,7 @@ export default class HeaderTools {
       if (!this.searchTrigger.getAttribute('data-bound')) {
         if (this.searchTrigger && this.searchTrigger.getAttribute('href') === '#search') {
           this.headerSearch = document.querySelector('.page-header-search');
-          if (this.headerSearch)
-            this.searchTrigger.addEventListener('click', this.activateSearch.bind(this));
+          if (this.headerSearch) { this.searchTrigger.addEventListener('click', this.activateSearch.bind(this)); }
         }
         this.searchTrigger.setAttribute('data-bound', true);
       }
@@ -27,7 +26,7 @@ export default class HeaderTools {
           this.menuTarget = document.getElementById('sitemap');
           this.menu = new SiteNav(this.menuTarget, {
             root: document.body,
-            closeSiteNav: this.dismissMenu.bind(this)
+            closeSiteNav: this.dismissMenu.bind(this),
           });
           this.menuTrigger.setAttribute('data-bound', true);
         }
@@ -53,7 +52,7 @@ export default class HeaderTools {
     this.blanket.el.classList.remove('white');
     this.headerSearch.classList.remove('active');
     this.root.classList.remove('search-active');
-  };
+  }
 
   activateMenu(e) {
     e.preventDefault();
@@ -65,4 +64,4 @@ export default class HeaderTools {
     this.blanket.hide();
     this.menuTarget.classList.remove('active');
   }
-};
+}
