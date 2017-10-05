@@ -4,8 +4,8 @@
  * Base styles
  */
 html {
-  height: 100%;
   box-sizing: border-box;
+  height: 100%;
   color: var(--col-brand);
   font-family: var(--ff-normal);
   font-size: 16px;
@@ -23,8 +23,8 @@ html {
 
 body {
   min-height: 100%;
-  overflow-x: hidden;
   margin: 0;
+  overflow-x: hidden;
   background-color: var(--col-bg-secondary); /* same as banner/footer for scroll overflow */
 }
 
@@ -75,8 +75,8 @@ li {
 }
 
 a {
-  font-weight: var(--fw-semibold);
   color: var(--col-link);
+  font-weight: var(--fw-semibold);
 
   &:visited { color: var(--col-link-visited); }
   &:active { color: var(--col-link-active); }
@@ -94,8 +94,8 @@ select, textarea {
 }
 
 button {
-  background: none;
   border: none;
+  background: none;
   color: inherit;
 }
 

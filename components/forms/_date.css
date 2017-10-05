@@ -1,7 +1,7 @@
 .mce form[id^='form_'] .sq-form-question-datetime .sq-form-question-answer {
   @media screen and (min-width: 230px) {
-    padding-top: 1rem;
     position: relative;
+    padding-top: 1rem;
 
     label {
       position: absolute;
@@ -9,9 +9,9 @@
     }
 
     select {
-      margin-right: .5rem;
-      max-width: 5rem;
       width: calc(33% - .585rem);
+      max-width: 5rem;
+      margin-right: .5rem;
     }
   }
 }

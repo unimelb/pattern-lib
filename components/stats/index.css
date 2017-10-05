@@ -2,18 +2,18 @@
  * Stats list
  */
 .stats {
-  margin-bottom: 0;
   max-width: var(--w-mid);
+  margin-bottom: 0;
   padding: 0;
   text-align: center;
 
   &__item {
     display: inline-block;
-    vertical-align: top;
+    width: 8rem;
     margin: 0 1rem var(--vr);
     padding: 0;
-    width: 8rem;
     list-style-type: none;
+    vertical-align: top;
 
     &:nth-child(1) .stats__icon { color: var(--col-1); }
     &:nth-child(2) .stats__icon { color: var(--col-2); }
@@ -27,8 +27,8 @@
   }
 
   &__icon {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 
     &--white {
       color: #fff !important;
@@ -37,17 +37,17 @@
 
   &__value {
     display: block;
+    margin-top: 2rem;
     font-family: var(--ff-lead);
     font-size: 3rem;
     font-weight: bold;
     line-height: 1;
-    margin-top: 2rem;
 
     &__hash {
-      font-size: 65%;
-      vertical-align: 35%;
-      line-height: inherit;
       margin-left: -.5ch; /* offset hash so number is a little more centred */
+      font-size: 65%;
+      line-height: inherit;
+      vertical-align: 35%;
     }
   }
 

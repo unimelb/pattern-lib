@@ -1,15 +1,11 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-const isDev = process.env.NODE_ENV != 'production';
+const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   plugins: {
     'postcss-import': {
       plugins: [
-        require('stylelint')({
-          configOverrides: {
-            defaultSeverity: isDev ? 'warning' : 'error'
-          }
-        })
+        require('stylelint')()
       ]
     },
     'postcss-url': {},
@@ -25,6 +21,8 @@ module.exports = {
         'Android >= 4.4'
       ]
     },
-    'postcss-reporter': {}
+    'postcss-reporter': {
+      throwError: !isDev
+    }
   }
 };

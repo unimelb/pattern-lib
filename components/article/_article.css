@@ -7,44 +7,44 @@
   }
 
   &__header {
-    margin: calc(var(--vr) * 2) 0 4rem 0;
     flex: 0 0 100%;
+    margin: calc(var(--vr) * 2) 0 4rem 0;
   }
 
   &__main {
     width: 100%;
 
     @media (--bp-desktop) {
+      flex: 0 0 70%;
       order: 2;
       width: 70%;
-      flex: 0 0 70%;
       padding: 0 var(--vr);
 
       .article--nosidebar & {
-        width: 100%;
         flex: none;
+        width: 100%;
         padding: 0;
       }
     }
   }
 
   &__aside {
-    padding-top: 0;
     width: 100%;
+    padding-top: 0;
 
     @media (--bp-desktop) {
-      order: 1;
-      padding-right: var(--vr);
-      width: 30%;
       flex: 0 0 30%;
+      order: 1;
+      width: 30%;
+      padding-right: var(--vr);
     }
   }
 
   &__meta,
   &__contact,
   &__social, {
-    border-bottom: 1px solid var(--col-brand);
     padding: var(--vr) 0;
+    border-bottom: 1px solid var(--col-brand);
 
     &:first-child {
       padding-top: 0;
@@ -56,9 +56,9 @@
   }
 
   &__type {
-    text-transform: uppercase;
-    font-weight: var(--fw-semibold);
     font-size: 1.125em;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
   }
 
   &__contact {
@@ -68,24 +68,24 @@
 
     dt,
     dd {
-      float: left;
       margin-bottom: calc(var(--vr) / 6);
+      float: left;
     }
 
     dt {
-      font-weight: var(--fw-semibold);
       clear: both;
+      font-weight: var(--fw-semibold);
     }
 
     dd {
-      text-align: left;
-      margin-left: 1ch;
       max-width: 100%;
+      margin-left: 1ch;
+      text-align: left;
     }
 
     a[href^='mailto'] {
-      max-width: 99%;
       display: block;
+      max-width: 99%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -95,8 +95,8 @@
   &__social {
     &-heading {
       margin-bottom: calc(var(--vr) / 2);
-      font-weight: var(--fw-semibold);
       font-size: 1.125em;
+      font-weight: var(--fw-semibold);
     }
   }
 }

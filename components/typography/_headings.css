@@ -3,8 +3,8 @@
 .heading-section,
 .heading-card {
   display: block;
-  text-transform: none;
   font-weight: bold;
+  text-transform: none;
 }
 
 h1,

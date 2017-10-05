@@ -18,8 +18,8 @@
     }
 
     &--btm-right {
-      bottom: 0;
       right: 0;
+      bottom: 0;
     }
   }
 
@@ -36,11 +36,11 @@
   }
 
   &__icon {
-    padding: 0 var(--vr);
-    margin-left: auto;
+    width: 100%;
     margin-right: auto;
     margin-bottom: var(--vr);
-    width: 100%;
+    margin-left: auto;
+    padding: 0 var(--vr);
   }
 
   .list-item:nth-child(7n+1) &__icon { color: var(--col-1); }

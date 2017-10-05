@@ -3,11 +3,11 @@
  */
 .card--pathfinder {
   .card__header {
-    margin-top: var(--vr);
-    text-align: center;
     min-height: calc(var(--vr) * 3.5);
-    padding-left: var(--vr);
+    margin-top: var(--vr);
     padding-right: var(--vr);
+    padding-left: var(--vr);
+    text-align: center;
   }
 
   .card__inner {
@@ -27,9 +27,9 @@
   }
 
   .card--focus-box__cnr {
-    color: #fff;
-    opacity: .2;
     transition: opacity .3s;
+    opacity: .2;
+    color: #fff;
   }
 
   &:hover .card--focus-box__cnr {

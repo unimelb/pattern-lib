@@ -1,8 +1,8 @@
 .mce form[id^='form_'],
 .form {
   fieldset {
-    border: 0;
     margin-bottom: 0;
+    border: 0;
   }
 
   label {
@@ -16,7 +16,7 @@
   }
 
   fieldset ul {
-    list-style-type: none;
     padding-left: 0;
+    list-style-type: none;
   }
 }

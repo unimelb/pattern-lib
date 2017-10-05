@@ -1,7 +1,13 @@
 .listing {
-  padding: 0;
-  margin-left: -.75rem;
   margin-right: -.75rem;
+  margin-left: -.75rem;
+  padding: 0;
+
+  &--one {
+    .list-item {
+      width: 100%;
+    }
+  }
 
   @supports (display: flex) {
     display: flex;
@@ -45,28 +51,16 @@
       }
     }
   }
-
-  &--one {
-    .list-item {
-      width: 100%;
-    }
-  }
 }
 
 .list-item {
-  float: left;
-
-  @supports (display: flex) {
-    display: flex;
-    flex-direction: column;
-  }
-
+  width: 100%;
   margin-top: calc(var(--vr) / 2);
   margin-bottom: calc(var(--vr) / 2);
-  padding-left: calc(var(--vr) / 2);
   padding-right: calc(var(--vr) / 2);
+  padding-left: calc(var(--vr) / 2);
+  float: left;
   list-style: none;
-  width: 100%;
 
   &--desk-1of2 {
     width: calc(100% / 2);
@@ -86,5 +80,10 @@
 
   &--desk-3of4 {
     width: calc((100% / 4) * 3);
+  }
+
+  @supports (display: flex) {
+    display: flex;
+    flex-direction: column;
   }
 }
