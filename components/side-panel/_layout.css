@@ -2,18 +2,22 @@
   width: 100%;
   display: table;
   height: 100%;
-  
-  &__pre, &__post {
+
+  &__pre,
+  &__post {
     width: 100%;
-    @media (--bp-desktop) {
-      width: 20rem; 
-    }
-    display: table-cell;
     height: 100%;
+    display: table-cell;
+    vertical-align: top;
+
+    @media (--bp-desktop) {
+      width: var(--panel-width);
+    }
   }
 
   &__pre {
     float: left;
+
     @media (--bp-desktop) {
       float: none;
     }
@@ -26,12 +30,17 @@
 
     @media (--bp-desktop) {
       float: none;
-      width: calc(100% - 20rem);
+      width: calc(100% - var(--panel-width));
     }
   }
 
-  &__post{
-
+  &--right {
+    .layout__main {
+      float: left;
+    }
   }
 
+  &__post {
+    float: right;
+  }
 }

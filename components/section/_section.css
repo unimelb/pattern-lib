@@ -7,6 +7,15 @@
 
   &__inner {
     max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
+
+    .layout--left .layout__main & {
+      max-width: calc((var(--w-mid) + 2 * var(--vr)) + 10rem); /* account for side nav */
+    }
+
+    .layout--right .layout__main & {
+      max-width: calc((var(--w-mid) + 2 * var(--vr)) - 10rem); /* account for side nav */
+    }
+
     margin-left: auto;
     margin-right: auto;
     padding: calc(2 * var(--vr)) var(--vr);

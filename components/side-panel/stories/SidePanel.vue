@@ -1,6 +1,6 @@
 <template>
-  <div class="side-nav">
-    <div class="side-nav__inner">
+  <div class="side-panel">
+    <div class="side-panel__inner">
       <ul>
         <li>test</li>
         <li>test</li>

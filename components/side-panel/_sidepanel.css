@@ -1,9 +1,9 @@
-.side-nav {
+.side-panel {
+  padding-top: calc(var(--vr) * 5);
   
   &__inner {
     margin-left: auto;
     margin-right: 0;
     max-width: 10rem;
   }
-
 }
