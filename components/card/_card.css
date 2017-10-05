@@ -27,6 +27,10 @@
 
   &__inner {
     padding: var(--vr);
+
+    &--tight {
+      padding: var(--vr) 0;
+    }
   }
 
 

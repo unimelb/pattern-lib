@@ -216,6 +216,10 @@
   text-align: center;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 /**
  * Hide visually but not from screenreaders
  */
