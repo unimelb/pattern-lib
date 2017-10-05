@@ -3,8 +3,8 @@
  */
 .card--imagelisting {
   .card__inner {
-    padding-left: calc(var(--vr) / 2);
     padding-right: calc(var(--vr) / 2);
+    padding-left: calc(var(--vr) / 2);
   }
 
   .card__thumb {
@@ -12,9 +12,9 @@
   }
 
   .card__header {
-    text-decoration: underline;
-    font-weight: bold;
     margin-bottom: 0;
     color: var(--col-brand);
+    font-weight: bold;
+    text-decoration: underline;
   }
 }

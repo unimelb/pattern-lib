@@ -27,6 +27,12 @@ yarn
 - To build the documentation site to `/.out/docs`, run `yarn run build:docs`.
 - To build the library for production (e.g. for debugging purposes) to `.out/lib/<version>`, run `yarn run build:lib`.
 
+### Linting
+
+CSS is linted on the fly with stylelint. The configuration file, `.stylelintrc` extends two shared configuration: [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) and [`stylelint-config-property-sort-order-smacss`](https://github.com/cahamilton/css-property-sort-order-smacss/blob/master/index.js).
+
+For your own sanity, make sure to install your code editor's stylelint extension. If you can't be bothered re-ordering properties and blocks manually, use: `yarn run fix:stylelint`.
+
 
 ## Deployment
 

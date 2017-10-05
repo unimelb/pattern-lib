@@ -1,32 +1,32 @@
 /* functional */
 
 .fr-dialogmodal--is-ready {
-  height: 100%;
-  left: 0;
   position: fixed;
-  top: 0;
-  width: 100%;
   z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
 
   /* decorative styles */
   transform: translateZ(0);
   transition: background-color .15s ease-out, visibility .15s ease-out;
-  max-width: none;
 
   .fr-dialogmodal-modal {
-    left: 50%;
     position: absolute;
     top: 50%;
+    left: 50%;
+    width: calc(100vw - 3.75em);
+    max-height: calc(100vh - 3.75em);
+    padding: 4em 1.25em 0;
+    overflow: auto;
     transform: translateX(-50%) translateY(-50%);
+    transition: opacity .15s ease-out;
+    opacity: 0;
 
     /* decorative styles */
     background-color: white;
-    max-height: calc(100vh - 3.75em);
-    opacity: 0;
-    overflow: auto;
-    padding: 4em 1.25em 0;
-    transition: opacity .15s ease-out;
-    width: calc(100vw - 3.75em);
   }
 
   &[aria-hidden='true'] {
@@ -35,11 +35,11 @@
 
   &[aria-hidden='false'] {
     visibility: visible;
+    transition: background-color .15s ease-out;
 
     /* decorative styles */
     background-color: rgba(34, 34, 34, .8);
     box-shadow: 0 3.75em 0 0 rgba(34, 34, 34, .8);
-    transition: background-color .15s ease-out;
 
     .fr-dialogmodal-modal {
       opacity: 1;
@@ -49,8 +49,8 @@
 
 @media all and (min-width: 31.25em) {
   .fr-dialogmodal--is-ready .fr-dialogmodal-modal {
-    max-width: 37.5em;
     min-width: 25em;
+    max-width: 37.5em;
   }
 }
 
@@ -59,13 +59,13 @@
 }
 
 .fr-dialogmodal-close {
+  position: absolute;
+  top: .25em;
+  right: .25em;
+  padding: .25em;
   font-size: 2em;
   line-height: 1.25;
-  padding: .25em;
-  position: absolute;
-  right: .25em;
   text-transform: uppercase;
-  top: .25em;
 
   &:hover {
     color: var(--col-pink-dark);

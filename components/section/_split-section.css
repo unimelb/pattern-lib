@@ -17,9 +17,9 @@
   }
 
   &__inner {
-    padding: calc(2 * var(--vr));
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
+    padding: calc(2 * var(--vr));
   }
 
   @media (--bp-desktop) {
@@ -28,8 +28,8 @@
 
     &__side {
       display: table-cell;
-      vertical-align: middle;
       width: 50%;
+      vertical-align: middle;
 
       &--with-image {
         padding-top: 0;

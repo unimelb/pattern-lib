@@ -3,17 +3,17 @@
  */
 .btn {
   display: inline-block;
-  vertical-align: middle;
   padding: calc(var(--vr) * .8);
+  transition: border-color .2s;
   border: 2px solid color(var(--col-brand) alpha(70%));
   border-radius: var(--br);
+  outline-color: var(--col-brand-light);
+  outline-offset: 1px;
   color: var(--col-brand);
   font-weight: var(--fw-semibold);
   text-align: center;
   text-decoration: none;
-  outline-offset: 1px;
-  outline-color: var(--col-brand-light);
-  transition: border-color .2s;
+  vertical-align: middle;
 
   &:focus,
   &:hover,
@@ -33,15 +33,15 @@
   &--inverted,
   &--inverted:visited,
   &--inverted:focus {
-    background-color: transparent;
     border-color: color(#fff alpha(30%));
+    background-color: transparent;
     color: #fff;
   }
 
   &--cta {
+    border-color: var(--col-brand);
     background-color: var(--col-brand);
     color: white;
-    border-color: var(--col-brand);
   }
 
   &--inverted:focus,
@@ -90,8 +90,8 @@
   }
 
   &--center {
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   &--icon {
@@ -102,18 +102,18 @@
     &::after {
       content: '';
       display: inline-block;
+      position: absolute;
+      top: calc(50% - (.75em / 2));
+      right: 1.25rem;
       width: .75em;
       height: .75em;
-      background-size: cover;
       margin-top: .05rem;
-      right: 1.25rem;
-      top: calc(50% - (.75em / 2));
-      position: absolute;
+      background-size: cover;
     }
 
     &--center {
-      text-align: center;
       padding-right: calc(var(--vr) * 2);
+      text-align: center;
     }
 
     &--chevron-right {

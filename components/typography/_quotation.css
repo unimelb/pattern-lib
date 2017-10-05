@@ -1,15 +1,10 @@
 blockquote,
 .blockquote {
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
-  padding-left: var(--vr);
   padding-right: var(--vr);
-
-  @media (--bp-desktop) {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  padding-left: var(--vr);
 
   p,
   span {
@@ -19,17 +14,17 @@ blockquote,
 
     &::before,
     &::after {
+      position: absolute;
       color: var(--col-grey);
       font-size: 3rem;
       font-style: normal;
-      position: absolute;
     }
 
     &::before {
       content: '“';
-      float: left;
       top: .5em;
       left: 0;
+      float: left;
 
       @media (--bp-desktop) {
         left: -2rem;
@@ -38,9 +33,9 @@ blockquote,
 
     &::after {
       content: '”';
-      float: right;
-      bottom: .75em;
       right: 0;
+      bottom: .75em;
+      float: right;
 
       @media (--bp-desktop) {
         right: -2rem;
@@ -67,16 +62,21 @@ blockquote,
 
   &__author,
   cite {
-    color: var(--col-grey);
+    width: 100%;
     margin-top: calc(var(--vr) / 2);
+    float: left;
+    color: var(--col-grey);
     font-size: 1.1em;
     font-style: normal;
-    float: left;
     text-align: left;
-    width: 100%;
 
     &::before {
       content: '—';
     }
+  }
+
+  @media (--bp-desktop) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
