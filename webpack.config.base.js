@@ -11,7 +11,6 @@ const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
 const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.version}/` : '';
 
 module.exports = {
-  stats: 'none',
   resolve: {
     alias: {
       decorators: path.resolve(__dirname, '.storybook/decorators/'),
@@ -22,6 +21,17 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        // Lint JS and Vue files
+        test: /\.(js|vue)$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        loader: 'eslint-loader',
+        options: {
+          emitError: !isDev,
+          emitWarning: isDev
+        }
+      },
       {
         // CSS (PostCSS)
         test: /\.css$/,
