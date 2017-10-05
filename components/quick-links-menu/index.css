@@ -10,6 +10,7 @@
     h2 {
       margin-bottom: calc(var(--vr) * 2);
     }
+
     @media (--bp-desktop) {
       padding-right: 3rem;
     }

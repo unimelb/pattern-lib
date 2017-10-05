@@ -110,6 +110,7 @@
           }
         }
       }
+
       @media (--bp-x-tablet) {
         border-bottom: 0;
       }
