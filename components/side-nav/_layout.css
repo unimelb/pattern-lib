@@ -1,0 +1,37 @@
+.layout {
+  width: 100%;
+  display: table;
+  height: 100%;
+  
+  &__pre, &__post {
+    width: 100%;
+    @media (--bp-desktop) {
+      width: 20rem; 
+    }
+    display: table-cell;
+    height: 100%;
+  }
+
+  &__pre {
+    float: left;
+    @media (--bp-desktop) {
+      float: none;
+    }
+  }
+
+  &__main {
+    float: left;
+    width: 100%;
+    display: table-cell;
+
+    @media (--bp-desktop) {
+      float: none;
+      width: calc(100% - 20rem);
+    }
+  }
+
+  &__post{
+
+  }
+
+}
