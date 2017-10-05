@@ -2,10 +2,10 @@
   border: 1px solid var(--col-brand);
   border-radius: 4px;
   padding: var(--vr);
-  
-  @supports(display: flex) {
+
+  @supports (display: flex) {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
   }
 
@@ -15,6 +15,7 @@
 
     &:hover {
       border-color: var(--col-brand-mid2);
+
       .download-block__inner h3 {
         text-decoration: underline;
       }
@@ -22,30 +23,26 @@
   }
 
   &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+
     @media (--bp-tablet) {
       width: 70%;
       float: right;
       padding: var(--vr);
     }
-    text-align: left;
-
-    @supports(display: flex) {
-      display: flex;
-      flex-direction: column; 
-      justify-content: center;
-    }
-
   }
 
   &__thumb {
+    float: left;
     display: none;
+    width: 30%;
 
     @media (--bp-tablet) {
       display: block;
     }
-    
-    float: left;
-    width: 30%;
   }
 
   &__img {

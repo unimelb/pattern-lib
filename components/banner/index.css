@@ -12,9 +12,9 @@
   &__heading {
     width: 50%;
     position: relative;
-    max-width: calc(64rem * 0.4);
+    max-width: calc(64rem * .4);
     padding-right: 3rem;
-    color: white;
+    color: #fff;
     z-index: 1;
     margin-top: var(--vr);
 
@@ -24,7 +24,7 @@
     }
   }
 
-  &__sub-heading{
+  &__sub-heading {
     font-size: 1rem;
     font-weight: 500;
     font-family: var(--ff-normal);
@@ -38,8 +38,8 @@
     }
 
     /* Dash above department name */
-    &:before {
-      content: "\2014";
+    &::before {
+      content: '\2014';
       position: absolute;
       margin-top: -1.5em;
     }
@@ -51,31 +51,27 @@
     bottom: 0;
     right: 0;
     width: 50%;
-    
-    @media (--bp-max-mobile) {
-      top: 7rem;
-      width: 85%;
-    }
-
     max-width: 55rem;
     background-color: inherit;
     background-position: center bottom;
     background-size: cover;
+
+    @media (--bp-max-mobile) {
+      top: 7rem;
+      width: 85%;
+    }
   }
 
-
   /* Aperture mark */
-  
   &__aperture {
-    
     &::before {
-      height: 100%;
       content: '';
+      position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-      position: absolute;
+      height: 100%;
       background-size: cover;
       background-image: url('~icons/aperture.svg');
       background-repeat: no-repeat;
@@ -84,9 +80,7 @@
       @media (--bp-desktop) {
         background-position: -1px center;
       }
-
     }
-
   }
 
   &__logo {
@@ -99,7 +93,6 @@
       width: 117px;
     }
   }
-
 
   &--l1 {
     .banner__heading {
@@ -122,7 +115,6 @@
     }
   }
 
-
   &--l3 {
     z-index: 0;
     padding: 0;
@@ -141,13 +133,14 @@
       /* rotate slightly */
       transform: rotate(.25deg);
 
-      &::before, &::after {
-         content: '';
-         position: absolute;
-         left: 0;
-         right: 0;
-         display: block;
-         background-color: inherit; /* inherit from header */
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: block;
+        background-color: inherit; /* inherit from header */
       }
 
       /* triangle in top left-hand corner */
@@ -165,12 +158,6 @@
         transform: skewY(60deg);
         transform-origin: bottom left;
       }
-    }
-
-    &__shape{
-      
-
-
     }
 
     .banner__inner {
@@ -193,7 +180,6 @@
       @media (--bp-tablet) {
         height: 71px;
         width: 85px;
-
         margin-top: -calc(71px / 2); /* half of logo height */
       }
     }
@@ -208,5 +194,4 @@
       text-align: center;
     }
   }
-
 }

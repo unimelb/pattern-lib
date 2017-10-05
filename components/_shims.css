@@ -28,6 +28,6 @@
 /**
  * Prevent wrapping - e.g. for URLs, emails, etc.
  */
- .shim-nowrap {
+.shim-nowrap {
   white-space: nowrap !important;
 }

@@ -1,17 +1,17 @@
 .document-list {
-  [href$=".pdf" i],
-  [href$=".docx" i],
-  [href$=".xlsx" i],
-  [href$=".pptx" i],
-  [href$=".ppsx" i],
-  [href$=".key" i],
-  [href$=".csv" i],
+  [href$='.pdf' i],
+  [href$='.docx' i],
+  [href$='.xlsx' i],
+  [href$='.pptx' i],
+  [href$='.ppsx' i],
+  [href$='.key' i],
+  [href$='.csv' i],
   .link-download,
   figcaption {
     &::after {
       content: '';
       display: inline-block;
-      vertical-align: -0.175em;
+      vertical-align: -.175em;
       width: .875em;
       height: .875em;
       margin-left: .25em;
@@ -24,8 +24,8 @@
   }
 
   &--thumbs {
-    a:after {
-      content: "";
+    a::after {
+      content: '';
       position: relative;
       background-image: none !important;
     }
@@ -37,7 +37,7 @@
     }
 
     figcaption {
-      font-size: 0.8em;
+      font-size: .8em;
       text-align: center;
     }
   }

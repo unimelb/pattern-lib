@@ -1,15 +1,15 @@
-.mce form[id^="form_"],
+.mce form[id^='form_'],
 .form {
-  input[type="search"] {
+  input[type='search'] {
     appearance: textfield;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="url"],
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='password'],
+  input[type='search'],
+  input[type='url'],
   textarea {
     background-color: var(--col-bg-grey);
     border: 1px solid color(var(--col-grey-light) lightness(-5%));
@@ -40,7 +40,7 @@
     &[disabled] {
       opacity: .5;
     }
-    
+
     &.invalid {
       background-color: #fff;
       border-color: color(var(--col-pink-mid) lightness(+25%));
@@ -58,12 +58,12 @@
 
   /* Grid override */
   .grid {
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="password"],
-    input[type="search"],
-    input[type="url"],
+    input[type='text'],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='url'],
     textarea {
       max-width: 100%;
     }

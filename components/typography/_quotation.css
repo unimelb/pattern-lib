@@ -1,5 +1,5 @@
-blockquote, .blockquote {
-  
+blockquote,
+.blockquote {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,39 +11,42 @@ blockquote, .blockquote {
     padding-right: 0;
   }
 
-  span, p {
+  p,
+  span {
     font-family: var(--ff-lead);
     font-size: 2.2rem;
     font-style: italic;
 
-
-    &:before, &:after {
+    &::before,
+    &::after {
       color: var(--col-grey);
-      font-size: 3rem;      
+      font-size: 3rem;
       font-style: normal;
       position: absolute;
     }
-    &:before {
-      content: "“";
+
+    &::before {
+      content: '“';
       float: left;
-      top: 0.5em;
+      top: .5em;
       left: 0;
+
       @media (--bp-desktop) {
         left: -2rem;
       }
     }
-    &:after {
-      content: "”";
+
+    &::after {
+      content: '”';
       float: right;
-      bottom: 0.75em;
+      bottom: .75em;
       right: 0;
+
       @media (--bp-desktop) {
         right: -2rem;
       }
-
     }
   }
-
 
   &--bdr-top {
     padding-top: 2.2em;
@@ -58,15 +61,12 @@ blockquote, .blockquote {
   }
 
   .bg-inverted & {
-    &--bdr-top {
-      border-color: var(--col-white);
-    }
-    &--bdr-btm {
-      border-color: var(--col-white);
-    }
+    &--bdr-top { border-color: #fff; }
+    &--bdr-btm { border-color: #fff; }
   }
 
-  &__author, cite {
+  &__author,
+  cite {
     color: var(--col-grey);
     margin-top: calc(var(--vr) / 2);
     font-size: 1.1em;
@@ -75,9 +75,8 @@ blockquote, .blockquote {
     text-align: left;
     width: 100%;
 
-    &:before {
-      content: "—";
+    &::before {
+      content: '—';
     }
-
   }
 }

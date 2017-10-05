@@ -1,8 +1,8 @@
 .card {
   width: 100%;
   min-height: 100%;
-  font-weight: var(--fw-normal);
-  
+  font-weight: normal;
+
   @supports (display: flex) {
     display: flex;
     flex-direction: column;
@@ -17,11 +17,9 @@
       color: var(--col-brand);
     }
 
-    &.bg-inverted{
+    &.bg-inverted {
       color: white;
-      &:visited {
-        color: white;
-      }
+      &:visited { color: white; }
     }
   }
 
@@ -32,7 +30,6 @@
       padding: var(--vr) 0;
     }
   }
-
 
   &__thumb {
     background-position: center;
@@ -50,10 +47,10 @@
       overflow: hidden;
       position: relative;
 
-      &:before {
+      &::before {
+        content: '';
         background: inherit;
         bottom: 0;
-        content: "";
         display: block;
         left: 0;
         position: absolute;
@@ -69,80 +66,35 @@
     margin-bottom: 0;
     padding: var(--vr);
   }
-  
+
   /* One column */
   .listing--one .list-item & {
-    @supports(display: flex){
-      flex-direction: column;
-      @media (--bp-x-tablet) {
-        flex-direction: row-reverse;
-      }
+    flex-direction: column;
+
+    @media (--bp-x-tablet) {
+      flex-direction: row-reverse;
     }
+
     .card__inner {
       margin-right: auto;
-
     }
   }
-
-  &--bdr {
-    border-bottom: 0.4rem solid;
-
-    /*
-    * Border color sequence
-    */
-
-    .list-item:nth-child(7n+1) & {
-      border-color: var(--col-1);
-    }
-    .list-item:nth-child(7n+2) & {
-      border-color: var(--col-2);
-    }
-    .list-item:nth-child(7n+3) & {
-      border-color: var(--col-3);
-    }
-    .list-item:nth-child(7n+4) & {
-      border-color: var(--col-4);
-    }
-    .list-item:nth-child(7n+5) & {
-      border-color: var(--col-5);
-    }
-    .list-item:nth-child(7n+6) & {
-      border-color: var(--col-6);
-    }
-    .list-item:nth-child(7n+7) & {
-      border-color: var(--col-7);
-    }
-  }
-
-  /*
-  * Border colors on hover
-  */
 
   &--bdr-hover {
-    border-bottom: 0.4rem solid #eee;
-    &:hover {
-      .list-item:nth-child(7n+1) & {
-        border-color: var(--col-1);
-      }
-      .list-item:nth-child(7n+2) & {
-        border-color: var(--col-2);
-      }
-      .list-item:nth-child(7n+3) & {
-        border-color: var(--col-3);
-      }
-      .list-item:nth-child(7n+4) & {
-        border-color: var(--col-4);
-      }
-      .list-item:nth-child(7n+5) & {
-        border-color: var(--col-5);
-      }
-      .list-item:nth-child(7n+6) & {
-        border-color: var(--col-6);
-      }
-      .list-item:nth-child(7n+7) & {
-        border-color: var(--col-7);
-      }
-    }
+    border-bottom: .4rem solid #eee;
   }
 
+  &--bdr,
+  &--bdr-hover:hover {
+    border-bottom: .4rem solid;
+
+    /* Border color sequence */
+    .list-item:nth-child(7n+1) & { border-color: var(--col-1); }
+    .list-item:nth-child(7n+2) & { border-color: var(--col-2); }
+    .list-item:nth-child(7n+3) & { border-color: var(--col-3); }
+    .list-item:nth-child(7n+4) & { border-color: var(--col-4); }
+    .list-item:nth-child(7n+5) & { border-color: var(--col-5); }
+    .list-item:nth-child(7n+6) & { border-color: var(--col-6); }
+    .list-item:nth-child(7n) & { border-color: var(--col-7); }
+  }
 }

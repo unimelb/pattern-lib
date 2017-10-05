@@ -14,7 +14,7 @@
       }
     }
 
-    @media(--bp-tablet) {
+    @media (--bp-tablet) {
       display: inline-block;
 
       &:first-child {
