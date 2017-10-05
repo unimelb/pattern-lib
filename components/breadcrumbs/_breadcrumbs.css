@@ -14,6 +14,15 @@
       }
     }
 
+    &:first-child,
+    &:last-child {
+      display: inline-block;
+    }
+
+    &:last-child {
+      font-weight: var(--fw-semibold);
+    }
+
     @media (--bp-tablet) {
       display: inline-block;
 
@@ -23,15 +32,6 @@
         }
       }
     }
-
-    &:first-child,
-    &:last-child {
-      display: inline-block;
-    }
-
-    &:last-child {
-      font-weight: var(--fw-semibold);
-    }
   }
 
   &__link {
@@ -40,12 +40,12 @@
 
   &__home {
     display: inline-block;
-    vertical-align: -.5em;
     width: 1.125em;
     height: 1.125em;
     margin-right: .25em;
-    margin-left: .25em;
     margin-bottom: .25em;
+    margin-left: .25em;
+    vertical-align: -.5em;
   }
 
   &__name,

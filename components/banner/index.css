@@ -10,13 +10,13 @@
   color: #fff;
 
   &__heading {
-    width: 50%;
     position: relative;
+    z-index: 1;
+    width: 50%;
     max-width: calc(64rem * .4);
+    margin-top: var(--vr);
     padding-right: 3rem;
     color: #fff;
-    z-index: 1;
-    margin-top: var(--vr);
 
     @media (--bp-max-mobile) {
       width: 100%;
@@ -25,17 +25,13 @@
   }
 
   &__sub-heading {
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: var(--ff-normal);
-    margin-top: calc(var(--vr) * 2);
     position: relative;
     z-index: 1;
     width: 50%;
-
-    @media (--bp-max-mobile) {
-      width: 90%;
-    }
+    margin-top: calc(var(--vr) * 2);
+    font-family: var(--ff-normal);
+    font-size: 1rem;
+    font-weight: 500;
 
     /* Dash above department name */
     &::before {
@@ -43,13 +39,17 @@
       position: absolute;
       margin-top: -1.5em;
     }
+
+    @media (--bp-max-mobile) {
+      width: 90%;
+    }
   }
 
   &__img {
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     width: 50%;
     max-width: 55rem;
     background-color: inherit;
@@ -68,14 +68,14 @@
       content: '';
       position: absolute;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
       height: 100%;
-      background-size: cover;
       background-image: url('~icons/aperture.svg');
       background-repeat: no-repeat;
       background-position: -1px top;
+      background-size: cover;
 
       @media (--bp-desktop) {
         background-position: -1px center;
@@ -85,12 +85,12 @@
 
   &__logo {
     display: block;
-    height: 48px;
     width: 48px;
+    height: 48px;
 
     @media (--bp-tablet) {
-      height: 117px;
       width: 117px;
+      height: 117px;
     }
   }
 
@@ -106,8 +106,8 @@
 
   &--l2 {
     .banner__heading {
-      font-size: 1.75rem;
       margin-top: calc(var(--vr) * 2);
+      font-size: 1.75rem;
 
       @media (--bp-desktop) {
         margin-bottom: calc(var(--vr) * 2);
@@ -122,24 +122,24 @@
     .banner__shape {
       position: absolute;
       top: -35%; /* MAGIC NUMBER account for slight rotation */
+      right: 0;
       bottom: 0;
       left: 27%;
-      right: 0;
+
+      /* rotate slightly */
+      transform: rotate(.25deg);
 
       /* saw tooth background pattern */
       background-color: inherit;
       background-image: url('~icons/bg-saw-tooth.svg');
 
-      /* rotate slightly */
-      transform: rotate(.25deg);
-
       &::before,
       &::after {
         content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
         display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
         background-color: inherit; /* inherit from header */
       }
 
@@ -161,8 +161,8 @@
     }
 
     .banner__inner {
-      position: relative;
       display: flex;
+      position: relative;
       align-items: center;
       min-height: 6.5rem;
       padding-top: 1rem;
@@ -171,15 +171,15 @@
 
     .banner__logo {
       position: absolute;
-      left: 1.5rem; /* same as `.max` left padding */
 
       /* centre logo vertically */
       top: 50%;
+      left: 1.5rem; /* same as `.max` left padding */
       margin-top: -calc(48px / 2); /* half of logo height */
 
       @media (--bp-tablet) {
-        height: 71px;
         width: 85px;
+        height: 71px;
         margin-top: -calc(71px / 2); /* half of logo height */
       }
     }

@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require('./package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-const isDev = process.env.NODE_ENV != 'production';
+const isDev = process.env.NODE_ENV !== 'production';
 
 // Public path for static assets and icon sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';

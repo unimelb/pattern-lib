@@ -7,49 +7,49 @@
   }
 
   figcaption {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-style: italic;
-    font-size: .9em;
-    caption-side: bottom;
     margin-top: 1.5em;
+    margin-right: auto;
+    margin-left: auto;
+    caption-side: bottom;
     color: color(var(--col-grey) shade(30%));
+    font-size: .9em;
+    font-style: italic;
+    text-align: center;
   }
 
   &--inset {
     figcaption {
       @media (--bp-desktop) {
-        margin-top: inherit;
         display: table-caption;
+        margin-top: inherit;
 
         &::before {
           content: '';
-          border-top: 2px solid var(--col-brand);
-          width: 2rem;
           position: absolute;
+          width: 2rem;
           margin-top: -calc(var(--vr) / 2);
+          border-top: 2px solid var(--col-brand);
         }
       }
     }
 
     @media (--bp-desktop) {
-      position: relative;
       display: table;
+      position: relative;
       width: 50%;
 
       &-right {
         margin-right: -5rem;
-        float: right;
         margin-left: auto;
+        float: right;
 
         .figure--inset-lge & {
           margin-right: -10rem;
         }
 
         figcaption {
-          text-align: right;
           padding-right: var(--vr);
+          text-align: right;
 
           &::before {
             right: var(--vr);
@@ -58,16 +58,16 @@
       }
 
       &-left {
-        float: left;
         margin-left: -5rem;
+        float: left;
 
         .figure--inset-lge & {
           margin-left: -10rem;
         }
 
         figcaption {
-          text-align: left;
           padding-left: var(--vr);
+          text-align: left;
 
           &::before {
             text-align: right;

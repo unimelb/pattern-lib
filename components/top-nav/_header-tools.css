@@ -1,80 +1,76 @@
 .header-tools {
-  margin: 1em;
   position: absolute;
-  right: 0;
-  top: .4em;
   z-index: 1;
+  top: .4em;
+  right: 0;
+  margin: 1em;
 
   &__search,
   &__menu {
-    color: white;
     display: inline-block;
-    margin-left: .25rem;
-    margin-right: .25rem;
     width: 4rem;
+    margin-right: .25rem;
+    margin-left: .25rem;
+    color: white;
   }
 }
 
 .link-icon {
   &--vertical {
-    background-color: var(--col-brand);
     display: block;
     padding: .5rem;
-    text-align: center;
     transition: all linear .1s;
+    background-color: var(--col-brand);
+    text-align: center;
 
     .link-icon__icon {
       display: inline;
       position: static;
-      height: 1.5rem;
-      margin-bottom: -.125rem;
-      margin-top: .125rem;
       width: 1.5rem;
+      height: 1.5rem;
+      margin-top: .125rem;
+      margin-bottom: -.125rem;
     }
 
     .link-icon__text {
       display: block;
-      font-size: .7rem;
       padding: 0;
+      font-size: .7rem;
     }
 
     &:hover {
+      transition: all linear .1s;
       background-color: rgba(255, 255, 255, .8);
       color: black;
       text-decoration: none;
-      transition: all linear .1s;
     }
   }
 }
 
 .page-header-search {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 3.75rem;
   animation: fadeIn .2s backwards;
   background: rgba(255, 255, 255, .95);
-  display: none;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3;
 
   &.active {
     display: block;
   }
 
-  @media (--bp-desktop) {
-    height: 5.625rem;
-  }
-
   form {
-    animation: slideFromTop .2s backwards;
-    float: right;
     padding: 1.5rem 0 1.5rem 1.5rem;
+    float: right;
+    animation: slideFromTop .2s backwards;
   }
 
   fieldset {
-    border: 0;
     margin: 0;
+    border: 0;
   }
 
   &__inline {
@@ -82,30 +78,30 @@
   }
 
   &__input {
-    appearance: textfield;
-    border-color: rgba(0, 0, 0, .1);
-    border-radius: 3px 0 0 3px;
-    border-style: solid;
-    border-width: 1px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, .1) inset;
     height: 2.25rem;
     margin: 0;
+    padding: .25rem .75rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px 0 0 3px;
+    border-color: rgba(0, 0, 0, .1);
     outline: 0; /* sorry */
     outline-offset: -2px;
-    padding: .25rem .75rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .1) inset;
     vertical-align: top;
+    appearance: textfield;
   }
 
   &__submit {
-    background-color: var(--col-brand-mid2);
-    border-color: rgba(0, 0, 0, .1);
-    border-radius: 0 3px 3px 0;
-    border-style: solid;
-    border-width: 1px;
-    color: white;
     height: 2.25rem;
     margin: 0;
     padding: .25rem .75rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0 3px 3px 0;
+    border-color: rgba(0, 0, 0, .1);
+    background-color: var(--col-brand-mid2);
+    color: white;
     vertical-align: top;
 
     &:hover {
@@ -114,35 +110,39 @@
   }
 
   &__icon {
-    height: 1.3125rem;
-    width: 1.3125rem;
+    width: 1.375rem;
+    height: 1.375rem;
 
     &--close {
+      width: 1.5rem;
       height: 1.5rem;
       margin: auto;
       padding-bottom: .4em;
-      width: 1.5rem;
     }
+  }
+
+  @media (--bp-desktop) {
+    height: 5.625rem;
   }
 }
 
 .link-icon--close {
-  color: var(--col-brand-mid2);
   display: inline-block;
+  margin-top: -1rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+  padding: 1rem;
+  color: var(--col-brand-mid2);
   font-size: .6rem;
   line-height: 1;
-  margin-left: .5rem;
-  margin-right: .5rem;
-  margin-top: -1rem;
-  padding: 1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   vertical-align: top;
 
   svg {
-    height: 1.5rem;
     width: 1.5rem;
+    height: 1.5rem;
   }
 
   &:hover {

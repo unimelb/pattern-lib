@@ -1,15 +1,21 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-property-sort-order-smacss"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
   "rules": {
     "at-rule-empty-line-before": ["always", {
-      except: ["first-nested"],
-      ignore: ["blockless-after-same-name-blockless", "after-comment"]
+      "except": ["first-nested"],
+      "ignore": ["blockless-after-same-name-blockless", "after-comment"]
     }],
     "at-rule-no-vendor-prefix": true,
     "at-rule-semicolon-space-before": "never",
     "comment-empty-line-before": ["always", {
-      except: ["first-nested"],
-      ignore: ["after-comment", "stylelint-commands"]
+      "except": ["first-nested"],
+      "ignore": ["after-comment", "stylelint-commands"]
     }],
     "declaration-block-no-duplicate-properties": true,
     "font-family-name-quotes": "always-unless-keyword",
@@ -19,7 +25,8 @@
     "media-feature-name-no-vendor-prefix": true,
     "no-duplicate-selectors": true,
     "number-leading-zero": "never",
-    "number-max-precision": 4,
+    "number-max-precision": 3,
+    "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
     "property-no-vendor-prefix": true,
     "selector-attribute-quotes": "always",
     "selector-list-comma-newline-before": "never-multi-line",

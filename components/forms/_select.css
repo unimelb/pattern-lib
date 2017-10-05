@@ -1,8 +1,8 @@
 .mce form[id^='form_'],
 .form {
   select {
-    margin-bottom: 1rem;
     width: 100%;
+    margin-bottom: 1rem;
 
     @media screen and (--bp-desktop) {
       width: 44rem;
