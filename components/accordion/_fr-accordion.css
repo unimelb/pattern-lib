@@ -1,62 +1,61 @@
-.fr-accordion--is-ready .fr-accordion__panel {
-	overflow: hidden;
-}
+.fr-accordion {
+  &__panel {
+    &[aria-hidden='true'] {
+      height: 0;
+      visibility: hidden;
+    }
 
-.fr-accordion__panel {
-	&[aria-hidden="true"] {
-		height: 0;
-		visibility: hidden;
-	}
+    &[aria-hidden='false'] {
+      visibility: visible;
+    }
+  }
 
-	&[aria-hidden="false"] {
-		visibility: visible;
-	}
-}
+  &--is-ready {
+    .fr-accordion__header {
+      border-bottom: 1px solid var(--col-grey-light);
+      cursor: pointer;
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      margin-bottom: 0;
+      padding: 1rem 1.25rem;
+      position: relative;
+      text-decoration: none;
+      transition: background-color .15s ease-out, color .15s ease-out;
 
-.fr-accordion--is-ready {
-	.fr-accordion__header {
-		border-bottom: 1px solid var(--col-grey-light);
-		cursor: pointer;
-		display: block;
-		font-size: 1em;
-		line-height: 1.25;
-		margin-bottom: 0;
-		padding: 1em 1.25em;
-		position: relative;
-		text-decoration: none;
-		transition: background-color .15s ease-out, color .15s ease-out;
+      &::after {
+        border-left: .313rem solid transparent;
+        border-right: .313rem solid transparent;
+        border-top: .313rem solid currentColor;
+        content: '';
+        height: 0;
+        margin-top: -.25rem;
+        position: absolute;
+        right: 1.25rem;
+        top: 50%;
+        width: 0;
+      }
 
-		&:after {
-			border-left: .313rem solid transparent;
-			border-right: .313rem solid transparent;
-			border-top: .313rem solid currentColor;
-			content: '';
-			height: 0;
-			margin-top: -.25rem;
-			position: absolute;
-			right: 1.25rem;
-			top: 50%;
-			width: 0;
-		}
+      &[aria-selected='true']::after {
+        border-bottom: .313rem solid currentColor;
+        border-top: 0;
+      }
 
-		&[aria-selected=true]:after {
-			border-bottom: .313rem solid currentColor;
-			border-top: 0;
-		}
+      &[aria-selected='true'],
+      &[aria-selected='false']:focus,
+      &[aria-selected='false']:hover {
+        background-color: var(--col-bg-grey);
+      }
+    }
 
-		&[aria-selected=true],
-		&[aria-selected=false]:focus,
-		&[aria-selected=false]:hover {
-			background-color: var(--col-bg-grey);
-		}
+    .fr-accordion__panel {
+      background-color: var(--col-bg-grey);
+      overflow: hidden;
+      transition: height .25s ease-out, visibility .25s;
 
-		&[aria-selected=true]:after {
-			border-top: 0;
-		}
-	}
-
-	.fr-accordion__panel {
-		background-color: var(--col-bg-grey);
-		transition: height .25s ease-out, visibility .25s;
-	}
+      &__inner {
+        padding: 1.25rem;
+      }
+    }
+  }
 }
