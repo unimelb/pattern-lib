@@ -1,8 +1,8 @@
 .fr-accordion {
   &__panel {
     &[aria-hidden='true'] {
-      height: 0;
       visibility: hidden;
+      height: 0;
     }
 
     &[aria-hidden='false'] {
@@ -12,33 +12,33 @@
 
   &--is-ready {
     .fr-accordion__header {
-      border-bottom: 1px solid var(--col-grey-light);
-      cursor: pointer;
       display: block;
-      font-size: 1.25rem;
-      line-height: 1.25;
+      position: relative;
       margin-bottom: 0;
       padding: 1rem 1.25rem;
-      position: relative;
-      text-decoration: none;
       transition: background-color .15s ease-out, color .15s ease-out;
+      border-bottom: 1px solid var(--col-grey-light);
+      font-size: 1.25rem;
+      line-height: 1.25;
+      text-decoration: none;
+      cursor: pointer;
 
       &::after {
-        border-left: .313rem solid transparent;
-        border-right: .313rem solid transparent;
-        border-top: .313rem solid currentColor;
         content: '';
+        position: absolute;
+        top: 50%;
+        right: 1.25rem;
+        width: 0;
         height: 0;
         margin-top: -.25rem;
-        position: absolute;
-        right: 1.25rem;
-        top: 50%;
-        width: 0;
+        border-top: .313rem solid currentColor;
+        border-right: .313rem solid transparent;
+        border-left: .313rem solid transparent;
       }
 
       &[aria-selected='true']::after {
-        border-bottom: .313rem solid currentColor;
         border-top: 0;
+        border-bottom: .313rem solid currentColor;
       }
 
       &[aria-selected='true'],
@@ -49,9 +49,9 @@
     }
 
     .fr-accordion__panel {
-      background-color: var(--col-bg-grey);
       overflow: hidden;
       transition: height .25s ease-out, visibility .25s;
+      background-color: var(--col-bg-grey);
 
       &__inner {
         padding: 1.25rem;
