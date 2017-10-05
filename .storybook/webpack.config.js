@@ -9,7 +9,7 @@ const baseConfig = require('../webpack.config.base.js');
 module.exports = (storybookConfig, env) => {
   const defaultConfig = genDefaultConfig(storybookConfig, env);
 
-  // Keep only storybook's JS and Vue loaders
+  // Keep only storybook's JS rule
   defaultConfig.module.rules = defaultConfig.module.rules.filter((rule) => {
     return rule.test.test('foo.js');
   });
