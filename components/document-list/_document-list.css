@@ -11,11 +11,11 @@
     &::after {
       content: '';
       display: inline-block;
-      vertical-align: -.175em;
       width: .875em;
       height: .875em;
       margin-left: .25em;
       background-image: url('~icons/download.svg?fill=#09707E');
+      vertical-align: -.175em;
     }
   }
 

@@ -1,5 +1,11 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-property-sort-order-smacss"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
   "rules": {
     "at-rule-empty-line-before": ["always", {
       "except": ["first-nested"],
@@ -20,6 +26,7 @@
     "no-duplicate-selectors": true,
     "number-leading-zero": "never",
     "number-max-precision": 3,
+    "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
     "property-no-vendor-prefix": true,
     "selector-attribute-quotes": "always",
     "selector-list-comma-newline-before": "never-multi-line",

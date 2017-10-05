@@ -10,8 +10,8 @@
     text-align: center;
 
     p {
-      font-size: .9rem;
       margin-top: var(--vr);
+      font-size: .9rem;
     }
   }
 }

@@ -9,24 +9,24 @@
  * Site navigation
  */
 .sitenav {
-  color: #fff;
   position: fixed;
   z-index: 101;
+  color: #fff;
 
   li {
     margin-bottom: 0;
   }
 
   &__panel {
-    background-color: var(--col-bg);
+    top: 0;
+    right: -100%;
+    width: 100%;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-    right: -100%;
-    top: 0;
     transform: translateX(0);
     transition: var(--tr-transform);
-    width: 100%;
+    background-color: var(--col-bg);
 
     &--nested {
       position: absolute;
@@ -46,22 +46,22 @@
   /* close and back buttons */
   /* HACK increase specificity to override `.button-ui`, which was part of the Buttons component until v6.0 */
   &__back-btn.sitenav__back-btn {
-    font-size: .75rem;
+    display: block;
+    width: 100%;
     padding: 1.25rem;
     background-color: var(--col-bg-tertiary);
     color: var(--col-brand-mid1);
-    display: block;
+    font-size: .75rem;
     font-weight: normal;
     line-height: 1.96;
     text-align: left;
     text-transform: uppercase;
-    width: 100%;
 
     &::before {
-      font-size: 1.25rem;
-      padding-right: .625rem;
       content: '\2039';
+      padding-right: .625rem;
       float: left;
+      font-size: 1.25rem;
       font-weight: normal;
       line-height: 1;
     }
@@ -81,34 +81,34 @@
   /* add chevron to nested panel triggers */
   &__nested-trigger {
     &::after {
-      font-size: 1.5rem;
       content: '\203a';
+      z-index: 9;
       float: right;
+      font-size: 1.5rem;
       font-weight: normal;
       line-height: .85;
-      z-index: 9;
     }
   }
 
   /* overrides for all lists */
   &__list,
   &__meta {
-    margin: 0;
     max-width: none;
+    margin: 0;
 
     & > li {
       display: block;
-      list-style-type: none;
-      margin: 0;
-      max-width: none;
-      padding: 0;
       width: auto;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
     }
 
     a {
-      color: inherit;
       display: block;
       outline-offset: -1px;
+      color: inherit;
       text-decoration: none;
 
       &:hover {
@@ -119,8 +119,8 @@
 
   /* root and nested nav lists */
   &__list {
-    border-bottom: 1px solid rgba(255, 255, 255, .05);
     padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
 
     & > li {
       border-top: 1px solid rgba(255, 255, 255, .05);
@@ -151,8 +151,8 @@
     color: rgba(255, 255, 255, .7);
 
     a {
-      font-size: .875rem;
       padding: .25rem 1.25rem;
+      font-size: .875rem;
     }
   }
 
@@ -170,8 +170,8 @@
     &__panel { padding-right: 0; }
 
     &.active {
-      box-shadow: 1px 0 12px 3px rgba(0, 0, 0, .6);
       transform: translateX(var(--offset-sitenav));
+      box-shadow: 1px 0 12px 3px rgba(0, 0, 0, .6);
     }
   }
 }

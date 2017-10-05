@@ -14,7 +14,8 @@
     "build:lib": "NODE_ENV=production webpack --config webpack.config.js",
     "start": "start-storybook -p 7002 -c .storybook",
     "prebuild:docs": "rm -Rf .out/docs",
-    "prebuild:lib": "rm -Rf .out/lib"
+    "prebuild:lib": "rm -Rf .out/lib",
+    "fix:stylelint": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" --fix"
   },
   "dependencies": {
     "fr-dialogmodal": "^1.0.4",
@@ -44,7 +45,9 @@
     "storybook-readme": "^3.0.6",
     "style-loader": "^0.17.0",
     "stylelint": "^8.1.1",
+    "stylelint-config-property-sort-order-smacss": "^2.0.0",
     "stylelint-config-standard": "^17.0.0",
+    "stylelint-order": "^0.7.0",
     "svg-fill-loader": "^0.0.8",
     "svg-url-loader": "^2.1.1",
     "svgo-loader": "^1.2.1",
