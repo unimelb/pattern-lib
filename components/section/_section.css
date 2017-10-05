@@ -7,22 +7,17 @@
 
   &__inner {
     max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
-<<<<<<< HEAD
-
-    .layout--left .layout__main & {
-      max-width: calc((var(--w-mid) + 2 * var(--vr)) + 10rem); /* account for side nav */
-    }
-
-    .layout--right .layout__main & {
-      max-width: calc((var(--w-mid) + 2 * var(--vr)) - 10rem); /* account for side nav */
-    }
-
-    margin-left: auto;
-=======
->>>>>>> dev
     margin-right: auto;
     margin-left: auto;
     padding: calc(2 * var(--vr)) var(--vr);
+
+    .layout--left .layout__main & {
+      max-width: calc(var(--w-mid) - var(--panel-width)); /* account for side nav */
+    }
+
+    .layout--right .layout__main & {
+      max-width: calc(var(--w-mid) - var(--panel-width)); /* account for side nav */
+    }
 
     &--sml {
       max-width: calc(var(--w-sml) + 2 * var(--vr));
