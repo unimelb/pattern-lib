@@ -1,10 +1,10 @@
 <template>
   <div v-if="element === 'div'" class="card card--image-focus">
-    <h3 v-if="titleabove === true">{{title}}</h3>
+    <h3 v-if="titleabove === true" :class="{'text-italic': hero, 'heading-section': hero}">{{title}}</h3>
     <div class="card__thumb" :class="{'card__thumb--full': fullImg}">
       <img :src="thumb" />
     </div>
-    <div class="card__inner">
+    <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3 v-if="titleabove === false">{{title}}</h3>
       <div v-html="excerpt"></div>
     </div>
@@ -13,7 +13,7 @@
     <div class="card__thumb">
       <img :src="thumb" />
     </div>
-    <div class="card__inner">
+    <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3>{{title}}</h3>
       <div v-html="excerpt"></div>
       <button-icon element="button" class="btn--fullwidth">{{title}}</button-icon>
@@ -41,6 +41,9 @@
       },
       titleabove: {
         type: Boolean
+      },
+      hero: {
+        type: Boolean,
       },
       meta: {
         type: String,

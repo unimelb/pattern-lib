@@ -303,6 +303,31 @@ storiesOf('Cards', module)
       }
     }
   )
+    .add(
+    'Card - Hero Image',
+    () => {
+      const items = object('Items', [
+        {
+          title: "Learning and teaching",
+          thumb: "http://about-us-unimelb.netlify.com/images/history.jpg",
+          excerpt: "Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat."
+        }
+
+      ]);
+      const colors = select('Focus colors', ['','card--image-focus--col-brand', 'card--image-focus--col-white'], 'card--image-focus--col-white');
+      const bgColors = select('BG', ['bg-white', 'bg-alt', 'bg-inverted'], 'bg-inverted');
+      const element = select('Element', ['a', 'div'], 'div');
+
+      return {
+        components: { ListItem, CardFocusImages },
+        template: `
+          <section-wrap style="background-image: url('http://about-us-unimelb.netlify.com/images/UoM-soft-3.png')" small class="${bgColors} text-center ">
+            ${items.map(item => `<CardFocusImages element="${element}" fullImg hero titleabove class="${colors}" thumb="${item.thumb}" title="Postera crescam laude" />`).join('')}
+          </section-wrap>
+        `
+      }
+    }
+  )
   .add(
     'Card - Focus box ( 2 col )',
     () => {

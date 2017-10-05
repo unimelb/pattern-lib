@@ -4,7 +4,6 @@
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
 
     <div class="card__inner ">
-      <!-- <icon class="card--focus-box__icon" :name="icon" width="170" height="170" /> -->
       <img class="card--focus-box__icon" :src="exampleIcon" alt="">
       <h3>{{title}}</h3>
       <p>{{excerpt}}</p>
