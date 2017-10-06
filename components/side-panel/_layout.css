@@ -2,7 +2,6 @@
   display: table;
   position: relative;
   width: 100%;
-  
 
   &__pre,
   &__post {
@@ -18,10 +17,10 @@
 
   &__pre {
     float: left;
+
     @media (--bp-desktop) {
       float: none;
     }
-
   }
 
   &__main {
@@ -37,6 +36,10 @@
 
   &--left {
     padding-left: calc((100% - var(--w-mid)) / 2);
+
+    @media (--bp-xx-wide) {
+      padding-left: calc(((100% - var(--w-mid)) / 2) - calc(var(--panel-width) / 2));
+    }
   }
 
   &--right {

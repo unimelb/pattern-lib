@@ -14,7 +14,7 @@ import BoilerplateFooter from './../../footer/stories/BoilerplateFooter.vue';
 
 const SidePanelMarkup = new RenderMarkup(SidePanel);
 
-storiesOf('Side Nav', module)
+storiesOf('Side Panel', module)
   .addDecorator(story => {
     const Story = story();
     return {
@@ -36,13 +36,14 @@ storiesOf('Side Nav', module)
       template: `
         <main class="layout layout--left bg-light-blue"> 
           <side-panel class="layout__pre bg-light-blue"></side-panel>
-          <section-wrap class="bg-white">
+          <section-wrap id="section1" class="bg-white">
             <h2>test content</h2>
+            <p></p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus cupiditate illo vel similique ea, quos, soluta doloremque suscipit molestiae. Praesentium consectetur enim asperiores laborum assumenda explicabo, et odio, provident sit?
           </section-wrap>
-          <section-wrap class="bg-alt">
+          <section-wrap id="section2" class="bg-alt">
             test content
           </section-wrap>
-          <section-wrap class="bg-white">
+          <section-wrap id="section3" class="bg-white">
             test content
           </section-wrap>
         </main>
@@ -54,15 +55,15 @@ storiesOf('Side Nav', module)
       components: { SidePanel },
       template: `
         <main class="layout layout--right clearfix bg-light-blue">
-          <side-panel class="layout__post"></side-panel>
+          <side-panel right class="layout__post bg-light-blue"></side-panel>
           <div class="layout__main">
-            <section-wrap class="bg-white">
+            <section-wrap id="section1" class="bg-white">
               <h2>test content</h2>
             </section-wrap>
-            <section-wrap class="bg-alt">
+            <section-wrap id="section2" class="bg-alt">
               test content
             </section-wrap>
-            <section-wrap class="bg-white">
+            <section-wrap id="section3" class="bg-white">
               test content
             </section-wrap>
           </div>
@@ -74,20 +75,18 @@ storiesOf('Side Nav', module)
     return {
       components: { SidePanel },
       template: `
-        <main class="layout layout--left clearfix bg-light-blue">
-          <side-panel class="layout__pre"></side-panel>
-          <div class="layout__main">
-            <div class="content-block bg-white">
-              <h2>test content</h2>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio similique dolor, quasi cupiditate dolore! Doloremque omnis corporis, libero, delectus adipisci ipsum nemo non ducimus necessitatibus eius? Repellendus et soluta, commodi!
-            </div>
-            <section-wrap class="bg-alt">
-              test content
-            </section-wrap>
-            <section-wrap class="bg-white">
-              test content
-            </section-wrap>
+        <main class="layout layout--left bg-light-blue"> 
+          <side-panel class="layout__pre bg-light-blue"></side-panel>
+          <div class="content-block bg-white">
+            <h2>test content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio similique dolor, quasi cupiditate dolore! Doloremque omnis corporis, libero, delectus adipisci ipsum nemo non ducimus necessitatibus eius? Repellendus et soluta, commodi!</p>
           </div>
+          <section-wrap id="section2" class="bg-alt">
+            test content
+          </section-wrap>
+          <section-wrap id="section3" class="bg-white">
+            test content
+          </section-wrap>
         </main>
       `
     }
@@ -96,14 +95,41 @@ storiesOf('Side Nav', module)
     return {
       components: { SidePanel },
       template: `
-      <div class="layout layout--right">
-        <side-panel class="layout__post bg-light-blue clearfix"></side-panel>
-        <main class="layout__main clearfix">
-          <div class="bg-white content-block">
-            <h2>test content</h2>
+        <main class="layout layout--right clearfix bg-light-blue">
+          <side-panel right class="layout__post bg-light-blue"></side-panel>
+          <div class="layout__main">
+            <div class="content-block bg-white">
+              <h2>test content</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio similique dolor, quasi cupiditate dolore! Doloremque omnis corporis, libero, delectus adipisci ipsum nemo non ducimus necessitatibus eius? Repellendus et soluta, commodi!</p>
+            </div>
+            <section-wrap id="section2" class="bg-alt">
+              test content
+            </section-wrap>
+            <section-wrap id="section3" class="bg-white">
+              test content
+            </section-wrap>
           </div>
         </main>
-      </div>
+      `
+    }
+  }))
+  .add('Side Panel - content blocks small width', withReadme(SidePanelMarkup.prettifiedMarkup, () => {
+    return {
+      components: { SidePanel },
+      template: `
+        <main class="layout layout--left bg-light-blue"> 
+          <side-panel class="layout__pre bg-light-blue"></side-panel>
+          <div class="content-block content-block--sml bg-white">
+            <h2>test content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio similique dolor, quasi cupiditate dolore! Doloremque omnis corporis, libero, delectus adipisci ipsum nemo non ducimus necessitatibus eius? Repellendus et soluta, commodi!</p>
+          </div>
+          <section-wrap small id="section2" class="bg-alt">
+            test content
+          </section-wrap>
+          <section-wrap small id="section3" class="bg-white">
+            test content
+          </section-wrap>
+        </main>
       `
     }
   }))

@@ -7,6 +7,7 @@ import Frdialogmodal from './modal/dialogmodal.js';
 
 import * as shared from './shared';
 import './progressive-image';
+import './side-panel';
 
 // Expose JS utilities
 window.ui = {
