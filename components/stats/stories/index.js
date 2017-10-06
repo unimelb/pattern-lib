@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 
@@ -7,7 +6,7 @@ import Stats from './Stats.vue';
 import Stat from './Stat.vue';
 
 storiesOf('Stats', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -23,10 +22,9 @@ storiesOf('Stats', module)
     };
   })
   .addDecorator(withReadme(statsReadme))
-  .add('Stats', () => {
-    return {
-      components: { Stats, Stat },
-      template: `
+  .add('Stats', () => ({
+    components: { Stats, Stat },
+    template: `
         <section-wrap small class="bg-white">
           <stats>
             <stat icon="#icon-australia" number="1" meta="in Australia" />
@@ -34,13 +32,11 @@ storiesOf('Stats', module)
             <stat icon="#icon-employment" number="11" meta="Graduate employability worldwide" />
           </stats>
         </section-wrap>
-      `
-    }
-  })
-  .add('Stats (inverted)', () => {
-    return {
-      components: { Stats, Stat },
-      template: `
+      `,
+  }))
+  .add('Stats (inverted)', () => ({
+    components: { Stats, Stat },
+    template: `
         <section-wrap class="bg-inverted">
           <stats>
             <stat icon="#icon-australia" number="1" meta="in Australia" />
@@ -48,6 +44,5 @@ storiesOf('Stats', module)
             <stat icon="#icon-employment" number="11" meta="Graduate employability worldwide" />
           </stats>
         </section-wrap>
-      `
-    }
-  })
+      `,
+  }));

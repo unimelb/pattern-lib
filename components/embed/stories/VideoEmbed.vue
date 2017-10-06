@@ -11,19 +11,19 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      src: String,
-      ratio: String
+export default {
+  props: {
+    src: String,
+    ratio: String,
+  },
+  computed: {
+    classObj() {
+      return {
+        embed: true,
+        [`embed--${this.ratio}`]: !!this.ratio,
+      };
     },
-    computed: {
-      classObj: function () {
-        return {
-          embed: true,
-          [`embed--${this.ratio}`]: !!this.ratio
-        };
-      }
-    }
-  }
+  },
+};
 </script>
 

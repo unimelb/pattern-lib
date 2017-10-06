@@ -5,8 +5,8 @@ module.exports = {
   plugins: {
     'postcss-import': {
       plugins: [
-        require('stylelint')()
-      ]
+        require('stylelint')(),
+      ],
     },
     'postcss-url': {},
     'postcss-nested': {},
@@ -18,11 +18,11 @@ module.exports = {
         'ie >= 9',
         'iOS >= 8.4',
         'Safari >= 8',
-        'Android >= 4.4'
-      ]
+        'Android >= 4.4',
+      ],
     },
     'postcss-reporter': {
-      throwError: !isDev
-    }
-  }
+      throwError: !isDev,
+    },
+  },
 };

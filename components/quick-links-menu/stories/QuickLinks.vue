@@ -1,11 +1,11 @@
 <template>
   <div class="grid ql-menu" :class="level">
     <div class="cell cell--desk-2of3 ql-menu__content">
-      <slot name="content"/>
+      <slot name="content"></slot>
     </div>
     <div class="cell cell--desk-1of3">
       <nav class="ql-menu__nav">
-        <slot/>
+        <slot></slot>
       </nav>
     </div>
   </div>
@@ -13,16 +13,16 @@
 
 
 <script>
-  export default {
-    name: 'QuickLinksMenu',
-    props: {
-      menuLinks: {
-        type: Object,
-      },
-      level: {
-        type: String,
-        default: 'ql-menu--l1'
-      }
-    }
-  }
+export default {
+  name: 'QuickLinksMenu',
+  props: {
+    menuLinks: {
+      type: Object,
+    },
+    level: {
+      type: String,
+      default: 'ql-menu--l1',
+    },
+  },
+};
 </script>

@@ -30,9 +30,9 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      classes: Array
-    }
-  }
+export default {
+  props: {
+    classes: Array,
+  },
+};
 </script>
