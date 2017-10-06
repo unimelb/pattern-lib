@@ -1,7 +1,5 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import withReadme from 'storybook-readme/with-readme';
 
 import HeadingElements from './HeadingElements.vue';
 import HeadingClasses from './HeadingClasses.vue';

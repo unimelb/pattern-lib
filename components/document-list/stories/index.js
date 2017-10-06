@@ -1,15 +1,7 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import {
   withKnobs,
   text,
-  number,
-  boolean,
-  array,
-  object,
-  select,
-  color,
-  date,
 } from '@storybook/addon-knobs';
 
 import DownloadBlock from './download-block.vue';
@@ -25,7 +17,7 @@ storiesOf('Document List', module)
       template: `
         <section class="section">
           <div class="section__inner section__inner--sml">
-            <download-block 
+            <download-block
               imgSrc="${arImage}"
               header="${header}"
               btnText="${btnText}"

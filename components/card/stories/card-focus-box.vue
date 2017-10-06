@@ -19,7 +19,6 @@ import icon from './../../icons/stories/Icon.vue';
 export default {
   name: 'CardFocusBox',
   components: { icon },
-  data: () => ({ exampleIcon }),
   props: {
     thumb: {
       type: String,
@@ -38,6 +37,7 @@ export default {
       default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
   },
+  data: () => ({ exampleIcon }),
 };
 
 </script>

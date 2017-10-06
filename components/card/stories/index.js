@@ -1,17 +1,5 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  object,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
-
+import { withKnobs, boolean, object, select } from '@storybook/addon-knobs';
 
 import ListItem from '../../listing/stories/listitem.vue';
 import CardImage from './card-image.vue';
@@ -23,7 +11,6 @@ import CardFocusImages from './card-focusimages.vue';
 import CardFact from './card-fact.vue';
 import CardDivision from './card-division.vue';
 import CardDivisionHead from './card-divisionhead.vue';
-
 
 storiesOf('Cards', module)
   .addDecorator((story) => {
@@ -39,11 +26,9 @@ storiesOf('Cards', module)
   .addDecorator(withKnobs)
   .add(
     'Card - with image',
-    () => {
-      const title = text('Title', 'About Us');
-      return {
-        components: { ListItem, CardImage },
-        template: `
+    () => ({
+      components: { ListItem, CardImage },
+      template: `
           <section-wrap class="bg-alt">
             <h3 style="text-align: center;" class="heading-section">Image box</h3>
             <p style="text-align: center;">Can somebody come up with a name for this version?</p>
@@ -66,16 +51,13 @@ storiesOf('Cards', module)
             </div>
           </section-wrap>
         `,
-      };
-    },
+    })
   )
   .add(
     'Card - news listing (3 column)',
-    () => {
-      const title = text('Title', 'About Us');
-      return {
-        components: { ListItem, CardNews },
-        template: `
+    () => ({
+      components: { ListItem, CardNews },
+      template: `
           <section-wrap class="bg-alt">
             <h3 style="text-align: center;" class="heading-section">News listing</h3>
             <div class="listing listing--three">
@@ -97,16 +79,13 @@ storiesOf('Cards', module)
             </div>
           </section-wrap>
         `,
-      };
-    },
+    })
   )
   .add(
     'Card - news listing (1 column)',
-    () => {
-      const title = text('Title', 'About Us');
-      return {
-        components: { ListItem, CardNews },
-        template: `
+    () => ({
+      components: { ListItem, CardNews },
+      template: `
           <section-wrap class="bg-alt">
             <h3 style="text-align: center;" class="heading-section">News listing</h3>
             <div class="listing listing--one">
@@ -128,8 +107,7 @@ storiesOf('Cards', module)
             </div>
           </section-wrap>
         `,
-      };
-    },
+    })
   )
   .add(
     'Card - small link box',
@@ -138,17 +116,17 @@ storiesOf('Cards', module)
         {
           title: 'Research',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/growing_esteem/learning-teaching/study.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/growing_esteem/learning-teaching/study.jpg',
         },
         {
           title: 'Learning and teaching',
           href: '#',
-          thumb: 'http://via.placeholder.com/300x400'
+          thumb: 'http://via.placeholder.com/300x400',
         },
         {
           title: 'Working with us',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/growing_esteem/learning-teaching/statisticsandrankings.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/growing_esteem/learning-teaching/statisticsandrankings.jpg',
         },
       ]);
 
@@ -164,7 +142,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Image listing (bio images)',
@@ -174,49 +152,49 @@ storiesOf('Cards', module)
           title: 'Mr John Smith',
           meta: 'Provost',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Professor-Jim-McCluskey.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Professor-Jim-McCluskey.jpg',
         },
         {
           title: 'Professor John Doggeton',
           meta: 'Provost',
           href: '#',
-          thumb: 'http://via.placeholder.com/300x400'
+          thumb: 'http://via.placeholder.com/300x400',
         },
         {
           title: 'Mr Allan Tait',
           meta: 'Vice-Principal (Advancement)',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Allan-Tait.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Allan-Tait.jpg',
         },
         {
           title: 'Chancellor',
           meta: 'Chancellor',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Nick-Blinco.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Nick-Blinco.jpg',
         },
         {
           title: 'Mr John Smith',
           meta: 'Provost',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Professor-Jim-McCluskey.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Professor-Jim-McCluskey.jpg',
         },
         {
           title: 'Professor John Doggeton',
           meta: 'Provost',
           href: '#',
-          thumb: 'http://via.placeholder.com/300x400'
+          thumb: 'http://via.placeholder.com/300x400',
         },
         {
           title: 'Mr Allan Tait',
           meta: 'Vice-Principal (Advancement)',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Allan-Tait.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Allan-Tait.jpg',
         },
         {
           title: 'Chancellor',
           meta: 'Chancellor',
           href: '#',
-          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Nick-Blinco.jpg'
+          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Nick-Blinco.jpg',
         },
       ]);
 
@@ -231,7 +209,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Focus box (eg: growing esteem)',
@@ -262,7 +240,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Focus box ( image listing )',
@@ -271,17 +249,17 @@ storiesOf('Cards', module)
         {
           title: 'Learning and teaching',
           thumb: 'http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg',
-          excerpt: 'Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat.'
+          excerpt: 'Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat.',
         },
         {
           title: 'Option 2',
           thumb: 'http://about-us-unimelb.netlify.com/images/working-with-us/careers/SouthbankGrounds3.jpg',
-          excerpt: 'Lorem ipsum dolor sit amet Obcaecati vel delectus necessitatibus et, quasi.'
+          excerpt: 'Lorem ipsum dolor sit amet Obcaecati vel delectus necessitatibus et, quasi.',
         },
         {
           title: 'Something else',
           thumb: 'http://via.placeholder.com/200x300',
-          excerpt: 'Lorem ipsum dolor sit amet aliquid laboriosam ducimus, quam blanditiis.'
+          excerpt: 'Lorem ipsum dolor sit amet aliquid laboriosam ducimus, quam blanditiis.',
         },
 
       ]);
@@ -301,7 +279,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Hero Image',
@@ -310,7 +288,7 @@ storiesOf('Cards', module)
         {
           title: 'Learning and teaching',
           thumb: 'http://about-us-unimelb.netlify.com/images/history.jpg',
-          excerpt: 'Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat.'
+          excerpt: 'Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat.',
         },
 
       ]);
@@ -326,7 +304,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Focus box ( 2 col )',
@@ -362,7 +340,7 @@ storiesOf('Cards', module)
         {
           title: 'Option 2',
           thumb: 'http://about-us-unimelb.netlify.com/images/working-with-us/careers/SouthbankGrounds3.jpg',
-          excerpt: 'Lorem ipsum dolor sit amet Obcaecati vel delectus necessitatibus et, quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam accusantium, in eos eum ipsum et quia aliquam. A excepturi dolore alias dolor soluta modi. Hic laborum animi accusantium quos est?'
+          excerpt: 'Lorem ipsum dolor sit amet Obcaecati vel delectus necessitatibus et, quasi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam accusantium, in eos eum ipsum et quia aliquam. A excepturi dolore alias dolor soluta modi. Hic laborum animi accusantium quos est?',
         },
 
       ]);
@@ -386,7 +364,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Fact',
@@ -457,7 +435,6 @@ storiesOf('Cards', module)
           class: 'list-item--desk-1of4',
         },
       ]);
-      const inverted = boolean('Inverted', true);
       return {
         components: { ListItem, CardFact },
         template: `
@@ -470,7 +447,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Division',
@@ -495,7 +472,6 @@ storiesOf('Cards', module)
           excerpt: 'Lorem ipsum dolor sit amet',
         },
       ]);
-      const inverted = boolean('Inverted', true);
       return {
         components: { ListItem, CardDivision },
         template: `
@@ -507,7 +483,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Division Head - 3 col',
@@ -532,7 +508,6 @@ storiesOf('Cards', module)
           excerpt: 'Lorem ipsum dolor sit amet',
         },
       ]);
-      const inverted = boolean('Inverted', true);
       return {
         components: { ListItem, CardDivisionHead },
         template: `
@@ -547,7 +522,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Division Head - Compact',
@@ -566,7 +541,6 @@ storiesOf('Cards', module)
           excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.',
         },
       ]);
-      const inverted = boolean('Inverted', true);
       return {
         components: { ListItem, CardDivisionHead },
         template: `
@@ -581,7 +555,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Division Head - 1 col',
@@ -600,7 +574,6 @@ storiesOf('Cards', module)
           excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident iure fugit, veritatis, delectus numquam.',
         },
       ]);
-      const inverted = boolean('Inverted', true);
       return {
         components: { ListItem, CardDivisionHead },
         template: `
@@ -614,7 +587,7 @@ storiesOf('Cards', module)
           </section-wrap>
         `,
       };
-    },
+    }
   )
   .add(
     'Card - Bio Header', () => {
@@ -647,7 +620,7 @@ storiesOf('Cards', module)
                     </div>
                     <hr>
                     <p>${item.excerpt}</p>
-                  </div>                
+                  </div>
                 </div>
               </ListItem>`).join('')}
           </div>
@@ -658,5 +631,5 @@ storiesOf('Cards', module)
         </div>
       `,
       };
-    },
-  )
+    }
+  );

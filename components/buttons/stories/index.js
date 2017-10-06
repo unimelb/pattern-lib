@@ -1,16 +1,5 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  object,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 import withReadme from 'storybook-readme/with-readme';
 
 import ButtonReadme from './Buttons.md';

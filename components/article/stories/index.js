@@ -1,15 +1,5 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ArticleStory from './ArticleStory.vue';
 import ArticleInset from './ArticleInset.vue';
@@ -31,7 +21,7 @@ storiesOf('Article', module)
   .addDecorator(withKnobs)
   .add(
     'Basic Article',
-    (() => ({
+    () => ({
       components: { ArticleStory },
       template: `
           <div>
@@ -42,7 +32,7 @@ storiesOf('Article', module)
           </div>
         `,
     })
-    ))
+  )
   .add(
     'Article',
     (() => {
@@ -152,7 +142,7 @@ storiesOf('Article', module)
               <div>
 
               <quote bdrTop bdrBtm author="Donald J. Trump">Some girls are just born with glitter in their veins</quote>
-              
+
               </div>
               <p>
                 More recently, through courses including the Master of Clinical Teaching, the clinical teaching model has begun reaching a generation of practising teaching professionals and leaders, as well as helping shape new teachers who are just beginning their classroom careers.

@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import Frdialogmodal from '../dialogmodal.js';
+import Frdialogmodal from '../dialogmodal';
 
 export default {
   name: 'Modal',

@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 
 /**
  * @param {object} options Object containing configuration overrides

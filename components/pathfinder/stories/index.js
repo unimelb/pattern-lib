@@ -1,20 +1,8 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  object,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
+import { withKnobs, text, array } from '@storybook/addon-knobs';
 
 import ListItem from '../../listing/stories/listitem.vue';
 import Pathfinder from './pathfinder.vue';
-
 
 storiesOf('Pathfinder', module)
   .addDecorator((story) => {
@@ -41,12 +29,11 @@ storiesOf('Pathfinder', module)
           </div>
         `,
       };
-    },
+    }
   )
   .add(
     'Pathfinder - Buttons', () => {
       const bgImage = text('Background Image', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
-      const boxes = array('Boxes data', ['Engagement outcomes', 'Study Health at Melbourne', 'World class research']);
       return {
         components: { ListItem, Pathfinder },
         template: `
@@ -103,5 +90,5 @@ storiesOf('Pathfinder', module)
           </div>
         `,
       };
-    },
+    }
   );

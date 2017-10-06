@@ -1,15 +1,5 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import Banner from './Banner.vue';
 
@@ -37,7 +27,7 @@ storiesOf('Banner', module)
           <banner :level="1" title="${title}" subheading="${subheading}" />
         `,
       };
-    },
+    }
   )
   .add(
     'Level 2', () => {
@@ -48,7 +38,7 @@ storiesOf('Banner', module)
           <banner :level="2" title="${title}" />
         `,
       };
-    },
+    }
   )
   .add(
     'Level 2 - With Department', () => {
@@ -60,7 +50,7 @@ storiesOf('Banner', module)
           <banner :level="2" title="${title}" subheading="${subheading}" />
         `,
       };
-    },
+    }
   )
   .add(
     'Level 3', () => {
@@ -71,5 +61,5 @@ storiesOf('Banner', module)
           <banner :level="3" title="${title}" />
         `,
       };
-    },
+    }
   );

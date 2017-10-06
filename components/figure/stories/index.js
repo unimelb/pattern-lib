@@ -1,16 +1,11 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  boolean,
-} from '@storybook/addon-knobs';
+import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 import ArticleInset from './../../article/stories/ArticleInset.vue';
 import VideoEmbed from './../../embed/stories/VideoEmbed.vue';
 import FigureSection from './FigureSection.vue';
 import FigureProgressive from './FigureProgressive.vue';
 import FigureWrap from './FigureWrap.vue';
-
 
 storiesOf('Figure', module)
   .addDecorator(withKnobs)
@@ -43,11 +38,9 @@ storiesOf('Figure', module)
       `,
     };
   })
-  .add('Figure with embed', () => {
-    const small = boolean('Small', true);
-    return {
-      components: { VideoEmbed, FigureWrap },
-      template: `
+  .add('Figure with embed', () => ({
+    components: { VideoEmbed, FigureWrap },
+    template: `
         <section-wrap small>
           <div>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
@@ -61,18 +54,15 @@ storiesOf('Figure', module)
             <video-embed src="https://www.youtube.com/embed/nlF7qp5GNPI"></video-embed>
           </figure-wrap>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem eos nihil odit, non commodi necessitatibus praesentium culpa totam debitis provident excepturi beatae doloribus, odio sit quaerat eveniet voluptatum maiores optio.</p>
-          
+
           <p>Praesentium, quaerat! Odit numquam magnam, recusandae totam sint blanditiis autem quos. </p>
           </div>
         </section-wrap>
       `,
-    };
-  })
-  .add('Figure with progressive images', () => {
-    const small = boolean('Small', true);
-    return {
-      components: { FigureProgressive },
-      template: `
+  }))
+  .add('Figure with progressive images', () => ({
+    components: { FigureProgressive },
+    template: `
         <section-wrap small>
           <div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
@@ -84,10 +74,9 @@ storiesOf('Figure', module)
             <figure-progressive inset right large caption="embed test" img="https://images.unsplash.com/photo-1447933601403-0c6688de566e?dpr=1&auto=compress,format&fit=crop&w=1556&h=&q=80&cs=tinysrgb&crop=" placeholder="https://images.unsplash.com/photo-1447933601403-0c6688de566e?dpr=1&auto=compress,format&fit=crop&w=155&h=&q=8&cs=tinysrgb&crop=">
             </figure-progressive>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem eos nihil odit, non commodi necessitatibus praesentium culpa totam debitis provident excepturi beatae doloribus, odio sit quaerat eveniet voluptatum maiores optio.</p>
-            
+
             <p>Praesentium, quaerat! Odit numquam magnam, recusandae totam sint blanditiis autem quos. </p>
           </div>
         </section-wrap>
       `,
-    };
-  });
+  }));

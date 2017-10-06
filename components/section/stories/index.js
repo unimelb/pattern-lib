@@ -1,15 +1,5 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
 import SplitSection from './split-section.vue';
 import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
@@ -26,24 +16,22 @@ storiesOf('Section', module)
         </main>`,
     };
   })
-  .add(
-    'Section', () => {
-      const title = text('Title', 'Example Title');
-      const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
-      const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
-      const small = boolean('Smaller width', false);
-      const short = boolean('Shorter height', false);
+  .add('Section', () => {
+    const title = text('Title', 'Example Title');
+    const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.');
+    const bgClass = select('Background class', ['', 'bg-alt', 'bg-inverted'], '');
+    const small = boolean('Smaller width', false);
+    const short = boolean('Shorter height', false);
 
-      return {
-        template: `
-          <section-wrap class="${bgClass}" ${small ? 'small' : ''} ${short ? 'short' : ''}>
-            <h3 class="heading-section">${title}</h3>
-            <p>${paragraph}</p>
-          </section-wrap>
-        `,
-      };
-    },
-  )
+    return {
+      template: `
+        <section-wrap class="${bgClass}" ${small ? 'small' : ''} ${short ? 'short' : ''}>
+          <h3 class="heading-section">${title}</h3>
+          <p>${paragraph}</p>
+        </section-wrap>
+      `,
+    };
+  })
   .add('With background image', () => {
     const btnText = text('Button Text', 'Read More');
     const titleText = text('Title', 'Our Vision');
@@ -74,7 +62,7 @@ storiesOf('Section', module)
     return {
       components: { SplitSection, ButtonIcon },
       template: `
-        <SplitSection 
+        <SplitSection
           imageLeft="${selectedSide === 'left' ? 'true' : ''}"
           imageRight="${selectedSide === 'right' ? 'true' : ''}"
           bgImage="${imgUrl}"
@@ -96,7 +84,7 @@ storiesOf('Section', module)
     return {
       components: { SplitSection, ButtonIcon },
       template: `
-        <SplitSection 
+        <SplitSection
           imageLeft="${selectedSide === 'left' ? 'true' : ''}"
           imageRight="${selectedSide === 'right' ? 'true' : ''}"
           bgImage="${imgUrl}"
@@ -125,7 +113,7 @@ storiesOf('Section', module)
           </section>
         `,
       };
-    },
+    }
   )
   .add('Section - Focus Box', () => {
     const title = text('Title', 'Example Title');
@@ -150,8 +138,7 @@ storiesOf('Section', module)
         </section>
       `,
     };
-  },
-  )
+  })
   .add('Section - Focus Box (progressive image)', () => {
     const title = text('Title', 'Example Title');
     const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
@@ -175,6 +162,5 @@ storiesOf('Section', module)
           </section>
         `,
     };
-  },
-  );
+  });
 

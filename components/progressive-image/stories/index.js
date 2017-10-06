@@ -1,15 +1,7 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import {
   withKnobs,
   text,
-  number,
-  boolean,
-  array,
-  object,
-  select,
-  color,
-  date,
 } from '@storybook/addon-knobs';
 import VueProgressiveImage from 'vue-progressive-image';
 import withReadme from 'storybook-readme/with-readme';
@@ -20,12 +12,10 @@ import prgimgReadme from './progressive-image.md';
 import prgbgReadme from './progressive-background.md';
 import lazybgReadme from './lazybg-directive.md';
 
-
 storiesOf('Progressive Images', module)
   .addDecorator(withKnobs)
   .add('Background images - component', withReadme(prgimgReadme, () => {
     const title = text('Title', 'Using component');
-    const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
     const btnText = text('Button Text', 'Example Title');
 
     return {

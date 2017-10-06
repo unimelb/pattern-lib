@@ -1,6 +1,4 @@
 require('dotenv').config();
-
-const path = require('path');
 const merge = require('webpack-merge');
 
 const genDefaultConfig = require('@storybook/vue/dist/server/config/defaults/webpack.config.js');

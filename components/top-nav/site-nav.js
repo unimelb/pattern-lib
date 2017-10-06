@@ -69,7 +69,7 @@ export default class SiteNav {
   */
   initInternalLinks() {
     const internalLinks = [].slice.call(this.el.querySelectorAll('a[href^="#"]'));
-    internalLinks.forEach(function (link) {
+    internalLinks.forEach((link) => {
       link.addEventListener('click', this.props.closeSiteNav);
     }, this);
   }

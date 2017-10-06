@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import Welcome from './Welcome.vue';
 

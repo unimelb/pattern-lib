@@ -18,7 +18,7 @@ export default class RenderMarkup {
     });
 
     // There must be a more elegant/legit way to do this
-    this.raw = template._vnode.elm.outerHTML;
+    this.raw = template._vnode.elm.outerHTML; // eslint-disable-line no-underscore-dangle
 
     this.markup = this.raw;
 
@@ -36,6 +36,6 @@ export default class RenderMarkup {
   }
 
   DeComment() {
-    this.markup = this.markup.replace(/\<\!(-)*\>/g, '');
+    this.markup = this.markup.replace(/<!(-)*>/g, '');
   }
 }

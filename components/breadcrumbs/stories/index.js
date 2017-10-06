@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 import RenderMarkup from '../../RenderMarkup';
@@ -25,30 +24,30 @@ storiesOf('Breadcrumbs', module)
   .add(
     'Level 1',
     withReadme(markupL1.prettifiedMarkup, () => ({
-        components: { BreadCrumbs },
-        template: `<bread-crumbs :level="1" />`
-      })),
+      components: { BreadCrumbs },
+      template: '<bread-crumbs :level="1" />',
+    }))
   )
 
   .add(
     'Level 2',
     withReadme(markupL2.prettifiedMarkup, () => ({
-        components: { BreadCrumbs },
-        template: `<bread-crumbs :level="2" />`
-      })),
+      components: { BreadCrumbs },
+      template: '<bread-crumbs :level="2" />',
+    }))
   )
 
   .add(
     'Level 3',
     withReadme(markupL3.prettifiedMarkup, () => ({
-        components: { BreadCrumbs },
-        template: `<bread-crumbs :level="3" />`
-      })),
+      components: { BreadCrumbs },
+      template: '<bread-crumbs :level="3" />',
+    }))
   )
 
   .add(
     'Full mockup', () => ({
       components: { MceMockup },
-      template: '<mce-mockup />'
-    }),
+      template: '<mce-mockup />',
+    })
   );

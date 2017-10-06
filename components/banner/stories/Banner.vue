@@ -1,5 +1,4 @@
 <template>
-
   <header class="banner banner--l1" v-if="level === 1">
     <div class="banner__inner max">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au">
@@ -37,14 +36,12 @@
       </a>
     </div>
   </header>
-
 </template>
 
 <script>
 import { logo, logoResponsive } from 'shared';
 
 export default {
-  data: () => ({ logo, logoResponsive }),
   props: {
     level: {
       type: Number,
@@ -63,5 +60,6 @@ export default {
       default: 'https://placeimg.com/990/530/arch/1',
     },
   },
+  data: () => ({ logo, logoResponsive }),
 };
 </script>

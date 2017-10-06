@@ -4,6 +4,24 @@
     "plugin:vue/recommended"
   ],
   "rules": {
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "global-require": "off",
+    "import/extensions": "off",
+    "import/first": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "max-len": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
     "vue/attribute-hyphenation": "error",
     "vue/html-quotes": "error",
     "vue/html-self-closing": "error",
@@ -15,7 +33,7 @@
     "vue/no-shared-component-data": "error",
     "vue/no-template-key": "error",
     "vue/order-in-components": "error",
-    "vue/require-prop-types": "error",
+    "vue/require-prop-types": "off",
     "vue/require-render-return": "error",
     "vue/require-valid-default-prop": "error",
     "vue/return-in-computed-property": "error",
