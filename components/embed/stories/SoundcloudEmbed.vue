@@ -11,29 +11,29 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      src: String,
-      mode: {
-        type: String,
-        default: 'classic'
-      }
+export default {
+  props: {
+    src: String,
+    mode: {
+      type: String,
+      default: 'classic',
     },
-    computed: {
-      classObj: function () {
-        return [
-          'embed',
-          `embed--soundcloud-${this.mode}`
-        ];
-      },
-      size: function () {
-        return (
-          this.mode === 'classic'
+  },
+  computed: {
+    classObj() {
+      return [
+        'embed',
+        `embed--soundcloud-${this.mode}`,
+      ];
+    },
+    size() {
+      return (
+        this.mode === 'classic'
           ? ['100%', '266']
           : ['450', '450']
-        );
-      }
-    }
-  }
+      );
+    },
+  },
+};
 </script>
 

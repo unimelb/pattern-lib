@@ -14,13 +14,13 @@ module.exports = merge(baseConfig, {
   entry: {
     ui: [
       './index.js',
-      './index.css'
-    ]
+      './index.css',
+    ],
   },
   output: {
     path: path.resolve(__dirname, `.out/lib/v${pkg.version}/`),
     filename: '[name].js',
-    publicPath: isDev ? '' : `${process.env.CDN_URL}/v${pkg.version}/`
+    publicPath: isDev ? '' : `${process.env.CDN_URL}/v${pkg.version}/`,
   },
   module: {
     rules: [
@@ -28,8 +28,8 @@ module.exports = merge(baseConfig, {
         // JavaScript (ES6)
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
-      }
-    ]
-  }
+        loader: 'babel-loader',
+      },
+    ],
+  },
 });

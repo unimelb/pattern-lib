@@ -1,19 +1,8 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
-
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 storiesOf('Content Block', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -38,8 +27,8 @@ storiesOf('Content Block', module)
             <h3>${titleH3}</h3>
             <p>${paragraph}</p>
           </div>
-        `
-      }
+        `,
+      };
     }
   )
   .add(
@@ -55,7 +44,7 @@ storiesOf('Content Block', module)
             <h3>${titleH3}</h3>
             <p>${paragraph}</p>
           </div>
-        `
-      }
+        `,
+      };
     }
   );

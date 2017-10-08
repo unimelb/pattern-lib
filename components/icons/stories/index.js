@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 
@@ -9,5 +8,5 @@ storiesOf('Icons', module)
   .addDecorator(withReadme(docs))
   .add('Sprite', () => ({
     components: { Sprite },
-    template: `<sprite />`
+    template: '<sprite />',
   }));

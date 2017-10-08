@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 import RenderMarkup from '../../RenderMarkup';
@@ -8,7 +7,7 @@ import BoilerplateFooter from './BoilerplateFooter.vue';
 const markup = new RenderMarkup(BoilerplateFooter);
 
 storiesOf('Footer', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -20,11 +19,9 @@ storiesOf('Footer', module)
   })
 
   .add(
-    'Boilerplate code insert', 
-    withReadme(markup.minifiedMarkup + markup.prettifiedMarkup, () => {
-      return {
-        components: { BoilerplateFooter },
-        template: `<boilerplate-footer />`
-      }
-    })
+    'Boilerplate code insert',
+    withReadme(markup.minifiedMarkup + markup.prettifiedMarkup, () => ({
+      components: { BoilerplateFooter },
+      template: '<boilerplate-footer />',
+    }))
   );

@@ -16,9 +16,9 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      classes: ['heading-page', 'heading-page-sub', 'heading-section', 'heading-card']
-    })
-  }
+export default {
+  data: () => ({
+    classes: ['heading-page', 'heading-page-sub', 'heading-section', 'heading-card'],
+  }),
+};
 </script>
