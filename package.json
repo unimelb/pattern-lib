@@ -30,7 +30,6 @@
     "@storybook/addon-notes": "^3.2.12",
     "@storybook/vue": "^3.2.8",
     "babel-core": "^6.24.1",
-    "babel-eslint": "^8.0.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-stage-3": "^6.24.1",
