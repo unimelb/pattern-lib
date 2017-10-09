@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = function (plop) {
   // Component Generator
-  plop.setGenerator('controller', {
+  plop.setGenerator('component', {
       description: 'New Component',
       prompts: [{
         type: 'input',
