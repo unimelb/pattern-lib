@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <div class="section__inner section__inner--sml">
-      <quote>Some girls are just born with glitter in their veins.</quote>
+      <quote>Java is, in many ways, C++–.</quote>
     </div>
   </section>
 </template>

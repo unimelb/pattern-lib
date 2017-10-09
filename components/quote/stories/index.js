@@ -13,7 +13,7 @@ storiesOf('Quote', module)
   .add('Default', createStory(QuoteDefault))
   .add('With borders', createStory(QuoteWithBorders))
   .add('Without author', createStory(QuoteNoAuthor))
-  .add('On light background', createStory(QuoteAltBg))
+  .add('Light background', createStory(QuoteAltBg))
   .add('Inverted', createStory(QuoteInverted))
   .add('Inverted with borders', createStory(QuoteInvertedWithBorders))
   .add('Raw (no classes)', createStory(QuoteRaw));

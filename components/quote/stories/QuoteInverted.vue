@@ -1,7 +1,7 @@
 <template>
   <section class="section bg-inverted">
     <div class="section__inner section__inner--sml">
-      <quote author="Donald J. Trump">Some girls are just born with glitter in their veins.</quote>
+      <quote author="Steve Wozniak">Never trust a computer you can’t throw out a window.</quote>
     </div>
   </section>
 </template>
