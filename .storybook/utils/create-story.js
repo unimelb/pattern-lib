@@ -2,7 +2,7 @@ import withReadme from 'storybook-readme/with-readme';
 import { renderMarkup } from '.storybook/utils';
 
 function htmlBlock(markup) {
-  return '```html\n' + markup + '\n```';
+  return '```html\n' + markup + '\n```'; // eslint-disable-line prefer-template
 }
 
 export default function createStory(StoryComponent, showMinifiedMarkup = false) {

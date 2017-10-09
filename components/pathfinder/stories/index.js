@@ -16,27 +16,24 @@ storiesOf('Pathfinder', module)
     };
   })
   .addDecorator(withKnobs)
-  .add(
-    'Pathfinder - Title', () => {
-      const bgImage = text('Background Image', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
-      const boxes = array('Boxes data', ['Engagement outcomes', 'Study Health at Melbourne', 'World class research']);
-      return {
-        components: { ListItem, Pathfinder },
-        template: `
+  .add('Pathfinder - Title', () => {
+    const bgImage = text('Background Image', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
+    const boxes = array('Boxes data', ['Engagement outcomes', 'Study Health at Melbourne', 'World class research']);
+    return {
+      components: { ListItem, Pathfinder },
+      template: `
           <div>
             <h3 style="text-align: center;" class="heading-section">Pathfinder</h3>
             <Pathfinder image="${bgImage}" boxes="${boxes}" />
           </div>
         `,
-      };
-    }
-  )
-  .add(
-    'Pathfinder - Buttons', () => {
-      const bgImage = text('Background Image', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
-      return {
-        components: { ListItem, Pathfinder },
-        template: `
+    };
+  })
+  .add('Pathfinder - Buttons', () => {
+    const bgImage = text('Background Image', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
+    return {
+      components: { ListItem, Pathfinder },
+      template: `
           <div>
             <h3 style="text-align: center;" class="heading-section">Pathfinder small</h3>
             <section class="section bg-inverted-dark" style="background-image: url(${bgImage});">
@@ -89,6 +86,5 @@ storiesOf('Pathfinder', module)
             </section>
           </div>
         `,
-      };
-    }
-  );
+    };
+  });

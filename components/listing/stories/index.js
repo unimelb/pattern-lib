@@ -20,10 +20,9 @@ storiesOf('Listing', module)
     };
   })
   .addDecorator(withKnobs)
-  .add(
-    'List - 3', () => ({
-      components: { ListItem },
-      template: `
+  .add('List - 3', () => ({
+    components: { ListItem },
+    template: `
           <div>
           <h3 class="heading-section" style="text-align: center;">Listing 3 items per row</h3>
           <div class="listing listing--three">
@@ -48,12 +47,10 @@ storiesOf('Listing', module)
           </div>
           </div>
         `,
-    })
-  )
-  .add(
-    'List - 4', () => ({
-      components: { ListItem },
-      template: `
+  }))
+  .add('List - 4', () => ({
+    components: { ListItem },
+    template: `
           <div>
           <h3 class="heading-section" style="text-align: center;">Listing 4 items per row</h3>
           <div class="listing listing--four">
@@ -78,12 +75,10 @@ storiesOf('Listing', module)
           </div>
           </div>
         `,
-    })
-  )
-  .add(
-    'List - variable cell witdth', () => ({
-      components: { ListItem },
-      template: `
+  }))
+  .add('List - variable cell witdth', () => ({
+    components: { ListItem },
+    template: `
           <div>
           <h3 class="heading-section" style="text-align: center;">Listing - cells define width</h3>
           <div class="listing">
@@ -117,5 +112,4 @@ storiesOf('Listing', module)
           </div>
           </div>
         `,
-    })
-  );
+  }));
