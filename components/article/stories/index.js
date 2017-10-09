@@ -3,7 +3,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ArticleStory from './ArticleStory.vue';
 import ArticleInset from './ArticleInset.vue';
-import Quote from './../../typography/stories/Quote.vue';
+import Quote from '../../quote/Quote.vue';
 
 storiesOf('Article', module)
   .addDecorator((story) => {
@@ -142,7 +142,7 @@ storiesOf('Article', module)
               </p>
               <div>
 
-              <quote bdrTop bdrBtm author="Donald J. Trump">Some girls are just born with glitter in their veins</quote>
+              <quote borderTop borderBottom author="Donald J. Trump">Some girls are just born with glitter in their veins</quote>
 
               </div>
               <p>
