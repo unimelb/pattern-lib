@@ -589,21 +589,20 @@ storiesOf('Cards', module)
       };
     }
   )
-  .add(
-    'Card - Bio Header', () => {
-      const items = object('Items', [
-        {
-          title: 'Enterprise',
-          subtitle: 'Professor Glyn Davis AC',
-          meta: 'Vice-Principal Enterprise',
-          thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg',
-          excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.',
-        },
-      ]);
-      const small = boolean('Small Section', true);
-      return {
-        components: { ListItem, CardDivisionHead },
-        template: `
+  .add('Card - Bio Header', () => {
+    const items = object('Items', [
+      {
+        title: 'Enterprise',
+        subtitle: 'Professor Glyn Davis AC',
+        meta: 'Vice-Principal Enterprise',
+        thumb: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.',
+      },
+    ]);
+    const small = boolean('Small Section', true);
+    return {
+      components: { ListItem, CardDivisionHead },
+      template: `
         <div>
         <section-wrap ${small ? 'small' : ''} class="bg-alt text-center">
           <div class="listing listing--one">
@@ -630,6 +629,5 @@ storiesOf('Cards', module)
         </section-wrap>
         </div>
       `,
-      };
-    }
-  );
+    };
+  });

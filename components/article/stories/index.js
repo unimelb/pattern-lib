@@ -114,7 +114,8 @@ storiesOf('Article', module)
         `,
       };
     }
-    ))
+    )
+  )
   .add('Article Without Sidebar', () => ({
     components: { ArticleInset },
     template: `
@@ -168,4 +169,5 @@ storiesOf('Article', module)
             </article-story>
         `,
     })
-    ));
+    )
+  );

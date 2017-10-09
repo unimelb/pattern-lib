@@ -45,9 +45,7 @@ storiesOf('Breadcrumbs', module)
     }))
   )
 
-  .add(
-    'Full mockup', () => ({
-      components: { MceMockup },
-      template: '<mce-mockup />',
-    })
-  );
+  .add('Full mockup', () => ({
+    components: { MceMockup },
+    template: '<mce-mockup />',
+  }));
