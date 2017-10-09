@@ -201,7 +201,7 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardImageListing },
         template: `
-          <section-wrap class="bg-alt text-center">
+          <section-wrap class="bg-alt">
             <h3 class="heading-section">Bio images</h3>
             <div class="listing listing--four">
               ${items.map(item => `<ListItem><CardImageListing thumb="${item.thumb}" meta="${item.meta}" title="${item.title}" /></ListItem>`).join('')}
