@@ -3,7 +3,7 @@
 @import '_shims.css';
 @import '_utils.css';
 
-/* Components - Alphabetically ordered */
+/* Components */
 @import 'article/index.css';
 @import 'banner/index.css';
 @import 'breadcrumbs/index.css';
@@ -27,4 +27,4 @@
 @import 'top-nav/index.css';
 @import 'typography/index.css';
 @import 'welcome/index.css';
-
+/*** Add new component below */
