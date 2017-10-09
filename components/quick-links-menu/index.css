@@ -18,7 +18,12 @@
 
   &__nav {
     a {
+      color: var(--col-brand);
       font-weight: normal;
+
+      &:visited {
+        color: var(--col-brand);
+      }
     }
 
     @media (--bp-desktop) {

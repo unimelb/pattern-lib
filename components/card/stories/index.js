@@ -201,7 +201,7 @@ storiesOf('Cards', module)
       return {
         components: { ListItem, CardImageListing },
         template: `
-          <section-wrap class="bg-alt text-center">
+          <section-wrap class="bg-alt">
             <h3 class="heading-section">Bio images</h3>
             <div class="listing listing--four">
               ${items.map(item => `<ListItem><CardImageListing thumb="${item.thumb}" meta="${item.meta}" title="${item.title}" /></ListItem>`).join('')}
@@ -235,6 +235,37 @@ storiesOf('Cards', module)
           <section-wrap class="bg-alt text-center">
             <h3 class="heading-section">Focus boxes</h3>
             <div class="listing listing--three">
+              ${items.map(item => `<ListItem><CardFocusBox class="bg-white" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
+            </div>
+          </section-wrap>
+        `,
+      };
+    }
+  )
+  .add(
+    'Card - Focus box (eg: two column)',
+    () => {
+      const items = object('Items', [
+        {
+          title: 'Learning and teaching',
+          excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.',
+        },
+        {
+          title: 'Option 2',
+          excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.',
+        },
+        {
+          title: 'Something else',
+          excerpt: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam dolores aut eligendi vero. Provident repudiandae cupiditate at rerum eos, adipisci expedita dolore accusantium labore unde iure fugit, veritatis, delectus numquam.',
+        },
+
+      ]);
+      return {
+        components: { ListItem, CardFocusBox },
+        template: `
+          <section-wrap class="bg-alt text-center">
+            <h3 class="heading-section">Focus boxes</h3>
+            <div class="listing listing--two">
               ${items.map(item => `<ListItem><CardFocusBox class="bg-white" title="${item.title}" excerpt="${item.excerpt}" /></ListItem>`).join('')}
             </div>
           </section-wrap>

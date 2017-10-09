@@ -3,7 +3,11 @@
  */
 .card--focus-box {
   position: relative;
-  padding: var(--vr);
+  padding: calc(var(--vr) * 2);
+
+  &-vert {
+    padding: var(--vr);
+  }
 
   &__cnr {
     position: absolute;
@@ -37,6 +41,7 @@
 
   &__icon {
     width: 100%;
+    max-width: 200px;
     margin-right: auto;
     margin-bottom: var(--vr);
     margin-left: auto;

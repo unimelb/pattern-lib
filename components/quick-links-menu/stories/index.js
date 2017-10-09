@@ -23,7 +23,7 @@ storiesOf('Quick Link Menu', module)
               <p>${content}</p>
               <button-icon icon="chevron-right" class="btn--xwide">${btnText}</button-icon>
             </div>
-            ${menuLinks.map(item => `<quick-links-menu-item>${item}</quick-links-menu-item>`).join('')}
+            ${menuLinks.map(item => `<quick-links-menu-item href="#">${item}</quick-links-menu-item>`).join('')}
           </quick-links>
         </section-wrap>
       `,
@@ -47,7 +47,7 @@ storiesOf('Quick Link Menu', module)
               <p>${content}</p>
             </div>
             ${subTitle.length > 0 ? `<h3>${subTitle}</h3>` : ''}
-            ${menuLinks.map(item => `<quick-links-menu-item>${item}</quick-links-menu-item>`).join('')}
+            ${menuLinks.map(item => `<quick-links-menu-item href="#">${item}</quick-links-menu-item>`).join('')}
           </quick-links>
         </section-wrap>
       `,

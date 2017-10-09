@@ -3,7 +3,7 @@
     <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
       <h3 class="card__header">{{ title }}</h3>
-      <small class="card__meta">{{ meta }}</small>
+      <p class="card__meta">{{ meta }}</p>
     </div>
   </a>
 </template>
