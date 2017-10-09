@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-owner card card--focus-box ">
+  <div class="btn-owner card card--focus-box card--focus-box-vert">
     <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
 
