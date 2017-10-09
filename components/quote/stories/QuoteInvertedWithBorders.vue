@@ -6,7 +6,7 @@
         border-top
         border-bottom
       >
-        Some girls are just born with glitter in their veins
+        Some girls are just born with glitter in their veins.
       </quote>
     </div>
   </section>

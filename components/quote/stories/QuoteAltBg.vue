@@ -1,13 +1,7 @@
 <template>
-  <section class="section">
+  <section class="section bg-alt">
     <div class="section__inner section__inner--sml">
-      <quote
-        author="Donald J. Trump"
-        border-top
-        border-bottom
-      >
-        Some girls are just born with glitter in their veins
-      </quote>
+      <quote author="Donald J. Trump">Some girls are just born with glitter in their veins.</quote>
     </div>
   </section>
 </template>
