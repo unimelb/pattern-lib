@@ -1,23 +1,11 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  object,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
+import { withKnobs, text, array } from '@storybook/addon-knobs';
 
 import ListItem from '../../listing/stories/listitem.vue';
 import Pathfinder from './pathfinder.vue';
 
-
 storiesOf('Pathfinder', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -29,9 +17,9 @@ storiesOf('Pathfinder', module)
   })
   .addDecorator(withKnobs)
   .add(
-    'Pathfinder - Title',() => {
+    'Pathfinder - Title', () => {
       const bgImage = text('Background Image', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
-      const boxes = array('Boxes data', ['Engagement outcomes','Study Health at Melbourne','World class research']);
+      const boxes = array('Boxes data', ['Engagement outcomes', 'Study Health at Melbourne', 'World class research']);
       return {
         components: { ListItem, Pathfinder },
         template: `
@@ -39,14 +27,13 @@ storiesOf('Pathfinder', module)
             <h3 style="text-align: center;" class="heading-section">Pathfinder</h3>
             <Pathfinder image="${bgImage}" boxes="${boxes}" />
           </div>
-        `
-      }
+        `,
+      };
     }
   )
   .add(
     'Pathfinder - Buttons', () => {
       const bgImage = text('Background Image', 'http://about-us-unimelb.netlify.com/images/UoM-soft-3.png');
-      const boxes = array('Boxes data', ['Engagement outcomes','Study Health at Melbourne','World class research']);
       return {
         components: { ListItem, Pathfinder },
         template: `
@@ -101,7 +88,7 @@ storiesOf('Pathfinder', module)
               </div>
             </section>
           </div>
-        `
-      }
+        `,
+      };
     }
-  )
+  );
