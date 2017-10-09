@@ -15,7 +15,9 @@
     "start": "start-storybook -p 7002 -c .storybook",
     "prebuild:docs": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
-    "fix:stylelint": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" --fix"
+    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\"",
+    "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\""
   },
   "dependencies": {
     "fr-dialogmodal": "^1.0.4",
@@ -24,14 +26,23 @@
     "vue-progressive-image": "^2.2.1"
   },
   "devDependencies": {
-    "@storybook/addon-knobs": "^3.2.12",
-    "@storybook/vue": "^3.2.12",
+    "@storybook/addon-knobs": "^3.2.8",
+    "@storybook/addon-notes": "^3.2.12",
+    "@storybook/vue": "^3.2.8",
     "babel-core": "^6.24.1",
+    "babel-eslint": "^8.0.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.1",
     "dotenv": "^4.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-vue": "^3.13.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "postcss-cssnext": "^2.10.0",
