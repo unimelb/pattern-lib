@@ -79,10 +79,10 @@
   /* Layout widths */
   /* Beware of `border-box` sizing when combining these widths with left/right padding */
   --w-xxsml: 20rem;
-  --w-xsml: 31rem;
-  --w-sml: 42rem;
-  --w-mid: 64rem;
-  --w-lge: 86rem;
+  --w-xsml: 30rem;
+  --w-sml: 40rem;
+  --w-mid: 60rem;
+  --w-lge: 80rem;
 
   /* Typography */
   --ff-normal: 'Source Sans Pro', 'Gill Sans', 'Trebuchet MS', 'Arial', sans-serif;
