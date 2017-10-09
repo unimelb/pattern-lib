@@ -3,31 +3,31 @@
     <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <icon width="15px" height="15px" name="chevron-right" />
     <h5 class="card__header">
-      {{title}}
+      {{ title }}
     </h5>
   </a>
 </template>
 
 <script>
-  export default {
-    props: {
-      thumb: {
-        type: String,
-        default: "http://via.placeholder.com/400x200"
-      },
-      title: {
-        type: String,
-        default: "Test title"
-      },
-      href: {
-        type: String,
-        default: "#"
-      },
-      inverted: {
-        type: Boolean,
-        default: false
-      }
-    }
-  }
+export default {
+  props: {
+    thumb: {
+      type: String,
+      default: 'http://via.placeholder.com/400x200',
+    },
+    title: {
+      type: String,
+      default: 'Test title',
+    },
+    href: {
+      type: String,
+      default: '#',
+    },
+    inverted: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
 
 </script>

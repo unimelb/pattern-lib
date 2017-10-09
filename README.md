@@ -29,9 +29,18 @@ yarn
 
 ### Linting
 
-CSS is linted on the fly with stylelint. The configuration file, `.stylelintrc` extends two shared configuration: [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) and [`stylelint-config-property-sort-order-smacss`](https://github.com/cahamilton/css-property-sort-order-smacss/blob/master/index.js).
+CSS files are linted on the fly with stylelint. The configuration file, `.stylelintrc`, extends two shared configuration: [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) and [`stylelint-config-property-sort-order-smacss`](https://github.com/cahamilton/css-property-sort-order-smacss/blob/master/index.js).
 
-For your own sanity, make sure to install your code editor's stylelint extension. If you can't be bothered re-ordering properties and blocks manually, use: `yarn run fix:stylelint`.
+JS files and single-file Vue components are linted on the fly with ESLint. The configuration file, `.eslintrc`, extends two shared configurations: [`eslint-config-airbnb`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) and [`plugin:vue/recommended`](https://github.com/vuejs/eslint-plugin-vue)
+
+For your own sanity, make sure to install your code editor's ESLint and stylelint extensions. The following commands are available for on-demand linting and fixing:
+
+- `yarn run lint`
+- `yarn run lint:fix`
+- `yarn run lint:css`
+- `yarn run lint:css --fix`
+- `yarn run lint:js`
+- `yarn run lint:js --fix`
 
 
 ## Deployment

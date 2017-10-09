@@ -1,19 +1,19 @@
 <template>
   <article class="article">
     <h1 class="article__header">
-      {{title}}
+      {{ title }}
     </h1>
     <div class="article__main">
-      <slot />
+      <slot></slot>
     </div>
     <footer role="contentinfo" class="article__aside">
       <div class="article__meta">
-        <time :datetime="date">{{date}}</time> | <span class="article__type">{{postType}}</span>
+        <time :datetime="date">{{ date }}</time> | <span class="article__type">{{ postType }}</span>
       </div>
       <div class="article__contact">
         <dl class="clearfix">
           <dt>Contact :</dt>
-          <dd>{{contact}}</dd>
+          <dd>{{ contact }}</dd>
           <dt>Phone :</dt>
           <dd><a :href="`tel: ${phone}`">{{ phone }}</a></dd>
           <dt>Email :</dt>
@@ -33,37 +33,37 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      title: {
-        type: String,
-        default: "Test title"
-      },
-      author: {
-        type: String,
-        default: "John Smith"
-      },
-      contact: {
-        type: String,
-        default: "John Smith"
-      },
-      phone: {
-        type: String,
-        default: "+613 4234 2344"
-      },
-      email: {
-        type: String,
-        default: "john.smith@unimelb.edu.au"
-      },
-      date: {
-        type: String,
-        default: "03 Apr 2017"
-      },
-      postType: {
-        type: String,
-        default: "speech"
-      }
-    }
-  };
+export default {
+  props: {
+    title: {
+      type: String,
+      default: 'Test title',
+    },
+    author: {
+      type: String,
+      default: 'John Smith',
+    },
+    contact: {
+      type: String,
+      default: 'John Smith',
+    },
+    phone: {
+      type: String,
+      default: '+613 4234 2344',
+    },
+    email: {
+      type: String,
+      default: 'john.smith@unimelb.edu.au',
+    },
+    date: {
+      type: String,
+      default: '03 Apr 2017',
+    },
+    postType: {
+      type: String,
+      default: 'speech',
+    },
+  },
+};
 </script>
 

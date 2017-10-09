@@ -5,38 +5,39 @@
 
     <div class="card__inner ">
       <img class="card--focus-box__icon" :src="exampleIcon" alt="">
-      <h3>{{title}}</h3>
-      <p>{{excerpt}}</p>
+      <h3>{{ title }}</h3>
+      <p>{{ excerpt }}</p>
     </div>
   </div>
 </template>
 
 <script>
-  import exampleIcon from './learning-and-teaching1.svg';
+import exampleIcon from './learning-and-teaching1.svg';
 
-  import icon from './../../icons/stories/Icon.vue';
-  export default {
-    name: 'CardFocusBox',
-    components: { icon },
-    data: () => ({ exampleIcon }),
-    props: {
-      thumb: {
-        type: String,
-        default: "http://via.placeholder.com/400x200"
-      },
-      title: {
-        type: String,
-        default: "Test title"
-      },
-      href: {
-        type: String,
-        default: "#"
-      },
-      excerpt: {
-        type: String,
-        default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.'
-      }
-    }
-  }
+import icon from './../../icons/stories/Icon.vue';
+
+export default {
+  name: 'CardFocusBox',
+  components: { icon },
+  props: {
+    thumb: {
+      type: String,
+      default: 'http://via.placeholder.com/400x200',
+    },
+    title: {
+      type: String,
+      default: 'Test title',
+    },
+    href: {
+      type: String,
+      default: '#',
+    },
+    excerpt: {
+      type: String,
+      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+    },
+  },
+  data: () => ({ exampleIcon }),
+};
 
 </script>

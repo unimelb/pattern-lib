@@ -17,17 +17,15 @@
 </template>
 
 <script>
-  import content from './content';
+import content from './content';
 
-  export default {
-    props: {
-      columns: Number,
-      withMap: Boolean
-    },
-    data: () => {
-      return {
-        content: content
-      };
-    }
-  }
+export default {
+  props: {
+    columns: Number,
+    withMap: Boolean,
+  },
+  data: () => ({
+    content,
+  }),
+};
 </script>
