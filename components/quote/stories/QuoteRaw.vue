@@ -2,8 +2,8 @@
   <section class="section">
     <div class="section__inner section__inner--sml">
       <blockquote>
-        <p>Some girls are just born with glitter in their veins.</p>
-        <cite>Donald J. Trump</cite>
+        <p>The question of whether computers can think is like the question of whether submarines can swim.</p>
+        <cite>Edsger W. Dijkstra</cite>
       </blockquote>
     </div>
   </section>

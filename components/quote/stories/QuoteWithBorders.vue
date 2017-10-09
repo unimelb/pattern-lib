@@ -2,11 +2,11 @@
   <section class="section">
     <div class="section__inner section__inner--sml">
       <quote
-        author="Donald J. Trump"
+        author="Homer Simpson"
         border-top
         border-bottom
       >
-        Some girls are just born with glitter in their veins.
+        The Internet? Is that thing still around?
       </quote>
     </div>
   </section>
