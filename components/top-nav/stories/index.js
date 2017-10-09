@@ -33,7 +33,7 @@ storiesOf('Top nav', module)
     'Search only',
     withReadme(markupSearch, () => ({
       components: { Search },
-      mounted: () => { window.loadHeaderTools(); },
+      mounted: () => { window.ui.loadHeaderTools(); },
       template: `
         <div class="header-tools">
           <search />
@@ -45,7 +45,7 @@ storiesOf('Top nav', module)
     'Basic site navigation',
     withReadme(markupTopNav + markupBasicNav, () => ({
       components: { TopNav, NavTrigger, Search },
-      mounted: () => { window.loadHeaderTools(); },
+      mounted: () => { window.ui.loadHeaderTools(); },
       template: `
       <div>
         <div class="header-tools">
@@ -60,7 +60,7 @@ storiesOf('Top nav', module)
     'Nested site navigation',
     withReadme(markupTopNav + markupNestedNav, () => ({
       components: { TopNav, Search, NavTrigger },
-      mounted: () => { window.loadHeaderTools(); },
+      mounted: () => { window.ui.loadHeaderTools(); },
       template: `
       <div>
         <div class="header-tools">

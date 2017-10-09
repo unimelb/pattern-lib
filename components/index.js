@@ -22,6 +22,6 @@ new Ike(sprite, version); // eslint-disable-line no-new
 // Initialise page on DOM loaded
 document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.remove('no-js');
-  window.loadHeaderTools();
+  window.ui.loadHeaderTools();
   Frdialogmodal();
 });

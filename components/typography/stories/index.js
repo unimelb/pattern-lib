@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { createStory } from '.storybook/utils';
 
 import HeadingElements from './HeadingElements.vue';
 import HeadingClasses from './HeadingClasses.vue';
@@ -12,10 +13,7 @@ import Quote from './Quote.vue';
 
 storiesOf('Typography', module)
   .addDecorator(withKnobs)
-  .add('Heading elements', () => ({
-    components: { HeadingElements },
-    template: '<heading-elements />',
-  }))
+  .add('Heading elements', createStory(HeadingElements))
   .add('Heading classes', () => ({
     components: { HeadingClasses },
     template: '<heading-classes />',
