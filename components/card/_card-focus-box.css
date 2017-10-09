@@ -41,6 +41,7 @@
 
   &__icon {
     width: 100%;
+    max-width: 200px;
     margin-right: auto;
     margin-bottom: var(--vr);
     margin-left: auto;
