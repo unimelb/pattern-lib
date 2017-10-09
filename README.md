@@ -42,6 +42,13 @@ For your own sanity, make sure to install your code editor's ESLint and stylelin
 - `yarn run lint:js`
 - `yarn run lint:js --fix`
 
+### Generating new components
+
+New components can be scaffolded by running :
+
+- `yarn generate`
+
+You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story.
 
 ## Deployment
 
