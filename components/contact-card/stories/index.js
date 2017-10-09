@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
-import { pad } from 'decorators';
+import { pad } from '.storybook/decorators';
 
 import RenderMarkup from '../../RenderMarkup';
 import ContactCard from './ContactCard.vue';
