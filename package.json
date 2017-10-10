@@ -1,7 +1,7 @@
 {
   "name": "design-system-rebrand",
   "description": "A complete design system for the University of Melbourne.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": "unimelb/unimelb-design-system",
   "author": "The University of Melbourne",
   "license": "UNLICENSED",
@@ -15,7 +15,9 @@
     "start": "start-storybook -p 7002 -c .storybook",
     "prebuild:docs": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
-    "fix:stylelint": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" --fix"
+    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\"",
+    "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\""
   },
   "dependencies": {
     "ike.js": "^0.0.2",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@storybook/addon-knobs": "^3.2.8",
+    "@storybook/addon-notes": "^3.2.12",
     "@storybook/vue": "^3.2.8",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -31,6 +34,13 @@
     "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.1",
     "dotenv": "^4.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-vue": "^3.13.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
     "fr-accordion": "^1.0.6",

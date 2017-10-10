@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  export default {
-    props: ['name', 'width', 'height']
-  };
+export default {
+  props: ['name', 'width', 'height'],
+};
 </script>

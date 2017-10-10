@@ -6,6 +6,7 @@
 
   &__item {
     display: none;
+    margin-bottom: 0;
     vertical-align: middle;
 
     &:first-child {

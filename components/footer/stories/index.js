@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 import RenderMarkup from '../../RenderMarkup';

@@ -1,18 +1,18 @@
 <template>
   <div>
     <ul class="stats">
-      <slot />
+      <slot></slot>
     </ul>
-    <p v-if="attribution !== ''">{{attribution}}</p>
+    <p v-if="attribution !== ''">{{ attribution }}</p>
   </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      attribution: {
-        type: String
-      }
-    }
-  }
+export default {
+  props: {
+    attribution: {
+      type: String,
+    },
+  },
+};
 </script>

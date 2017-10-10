@@ -1,6 +1,6 @@
 <template>
-  <a v-if="element === 'a'" class="btn" :href="href"><slot/></a>
-  <button v-else-if="element === 'button'" class="btn"><slot/></button>
+  <a v-if="element === 'a'" class="btn" :href="href"><slot></slot></a>
+  <button v-else-if="element === 'button'" class="btn"><slot></slot></button>
 </template>
 
 <script>
@@ -9,12 +9,12 @@ export default {
   props: {
     href: {
       type: String,
-      default: ""
+      default: '',
     },
     element: {
       type: String,
-      default: "a"
-    }
-  }
-}
+      default: 'a',
+    },
+  },
+};
 </script>

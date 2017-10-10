@@ -19,8 +19,8 @@
 </template>
 
 <script>
-  export default {
-    name: 'SplitSection',
-    props: ['imageLeft', 'imageRight', 'bgImage']
-  } 
+export default {
+  name: 'SplitSection',
+  props: ['imageLeft', 'imageRight', 'bgImage'],
+};
 </script>

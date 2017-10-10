@@ -1,10 +1,10 @@
 <template>
 <div>
   <div class="header-tools">
-    <div class="header-tools__search"> 
+    <div class="header-tools__search">
       <a href="#search" class="link-icon--vertical link-reset" data-bound="true">
         <svg focusable="false" role="presentation" class="link-icon__icon svg">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"/>
         </svg>
         <span class="link-icon__text">Search</span>
       </a>
@@ -14,13 +14,13 @@
             <input name="q" type="search" placeholder="Search the University" aria-label="Search the University" class="page-header-search__input">
             <button type="submit" class="page-header-search__submit">
             <svg focusable="false" role="presentation" class="page-header-search__icon">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"/>
             </svg>
             <span class="screenreaders-only">Go</span></button>
           </fieldset>
           <a href="#" class="page-header-icon link-icon--close">
             <svg focusable="false" role="presentation" class="page-header-search__icon--close">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"/>
             </svg>
             Close
           </a>
@@ -30,13 +30,13 @@
     <div class="header-tools__menu">
       <a href="#sitemap" class="link-icon--vertical link-reset" data-bound="true">
         <svg role="presentation" focusable="false" viewBox="10 10 26 28" class="link-icon__icon svg">
-          <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+          <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/>
         </svg>
         <span class="link-icon__text">Menu</span>
       </a>
     </div>
-  </div>       
-      
+  </div>
+
   <header class="banner banner--l3">
     <div class="banner__shape"></div>
     <div class="banner__inner max">
@@ -49,16 +49,16 @@
       <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
         <meta content="1" itemprop="position">
         <a class="breadcrumbs__link" href="https://matrix-cms.unimelb.edu.au/about" title="Home" itemprop="item">
-        <svg focusable="false" height="18" role="presentation" width="18" class="breadcrumbs__home"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#home"></use></svg><span class="breadcrumbs__name" itemprop="name">About us</span></a> 
+        <svg focusable="false" height="18" role="presentation" width="18" class="breadcrumbs__home"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#home"/></svg><span class="breadcrumbs__name" itemprop="name">About us</span></a>
       </li>
       <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
         <meta content="1" itemprop="position">
-        <svg focusable="false" height="12" role="presentation" width="12" class="breadcrumbs__chevron"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-right"></use></svg>
+        <svg focusable="false" height="12" role="presentation" width="12" class="breadcrumbs__chevron"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-right"/></svg>
         <a class="breadcrumbs__link" href="https://matrix-cms.unimelb.edu.au/about/strategy" itemprop="item" title="Strategy and governance"><span class="breadcrumbs__name" itemprop="name">Strategy and governance</span></a>
       </li>
       <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem" class="breadcrumbs__item">
         <meta content="1" itemprop="position">
-        <svg focusable="false" height="12" role="presentation" width="12" class="breadcrumbs__chevron"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-right"></use></svg>
+        <svg focusable="false" height="12" role="presentation" width="12" class="breadcrumbs__chevron"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#chevron-right"/></svg>
         <a class="breadcrumbs__link" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem" itemprop="item" title="Growing Esteem"><span class="breadcrumbs__name" itemprop="name">Growing Esteem</span></a>
       </li>
     </ol>
@@ -74,69 +74,64 @@
       <section class="section ct-pathfinder-largeimage  bg-alt ">
     <div class="section__inner">
       <div>
-        
+
           <div class="listing listing--three">
-          
-            
+
+
           <div class="list-item">
               <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/learning-and-teaching">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/learning-teaching.jpg)"></div>
                   <div class="card__inner">
                       <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Learning and teaching</button>
-                      
+
                       <p>Our learning and teaching strategy is driven by our commitment to providing excellent and innovative learning that stimulates and challenges students – leading to personal development, meaningful careers and profound contributions to society.</p>
                   </div>
               </a>
           </div>
-          
-            
+
+
           <div class="list-item">
               <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/research">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/research.jpg)"></div>
                   <div class="card__inner">
                       <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Research</button>
-                      
+
                       <p>Excellence in research is core to our University’s mission. We are a globally-engaged, comprehensive, research-intensive university with the capacity to make significant contributions to global social, economic and environmental challenges.</p>
                   </div>
               </a>
           </div>
-          
-          
-            
+
+
           <div class="list-item">
-              <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/engagement"> 
+              <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/engagement">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/engagement.jpg)"></div>
                   <div class="card__inner">
                       <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Engagement</button>
-                      
+
                       <p>Our engagement strategy guides our contributions to intellectual, cultural, social and economic life, fuels our interactions with our alumni and supporters locally, nationally and internationally, and deepens the relevance and impact of our academic mission.</p>
                   </div>
               </a>
           </div>
-            
-          
-          
-            
+
+
           <div class="list-item">
-              <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/sustainability"> 
+              <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/sustainability">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/sustainability.jpg)"></div>
                   <div class="card__inner">
                       <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Sustainability</button>
-                      
+
                       <p>Sustainability embraces, and goes beyond, a commitment to carefully consider our physical environment. It serves as an organising principle for decisions about the future of our University.</p>
                   </div>
               </a>
           </div>
-            
-          
-          
-            
+
+
           <div class="list-item">
-              <a class="btn-owner card card--image card--bdr bg-inverted" href="http://about.unimelb.edu.au/strategy-and-leadership/reconciliation"> 
+              <a class="btn-owner card card--image card--bdr bg-inverted" href="http://about.unimelb.edu.au/strategy-and-leadership/reconciliation">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/reconciliation.jpg)"></div>
                   <div class="card__inner">
                       <button class="card__btn btn btn--inverted btn--fullwidth btn--icon btn--icon--chevron-right-inverted">Reconciliation</button>
-                      
+
                       <p>We’re committed to closing the gap in education and health outcomes for Indigenous Australians, developing Indigenous initiatives and programs at institutional and faculty level.</p>
                   </div>
               </a>
@@ -157,7 +152,7 @@
               <div class="footer-search__field">
                 <label><span class="footer-search__label">Search</span><a href="#" class="footer-search__submit">
                   <svg focusable="false" role="presentation" class="footer-search__icon">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"></use>
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#search"/>
                   </svg>
                   </a>
                   <input aria-label="Search the University" name="q" placeholder="Type to search" type="search" class="footer-search__input">
@@ -178,32 +173,32 @@
             <ul class="footer__popular list-reset links-reset clearfix">
               <li><a href="//about.unimelb.edu.au/governance-and-leadership/faculties" class="link-icon">
                 <svg focusable="false" role="presentation" class="link-icon__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#faculty"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#faculty"/>
                 </svg>
                 <span class="link-icon__text">Faculties &amp; graduate schools</span></a></li>
               <li><a href="//maps.unimelb.edu.au/" class="link-icon">
                 <svg focusable="false" role="presentation" class="link-icon__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#location"/>
                 </svg>
                 <span class="link-icon__text">Maps</span></a></li>
               <li><a href="//library.unimelb.edu.au/" class="link-icon">
                 <svg focusable="false" role="presentation" class="link-icon__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#library"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#library"/>
                 </svg>
                 <span class="link-icon__text">Library</span></a></li>
               <li><a href="//www.campaign.unimelb.edu.au/" class="link-icon">
                 <svg focusable="false" role="presentation" class="link-icon__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#campaign"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#campaign"/>
                 </svg>
                 <span class="link-icon__text">Support the campaign</span></a></li>
               <li><a href="//www.unimelb.edu.au/contact/" class="link-icon">
                 <svg focusable="false" role="presentation" class="link-icon__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone"/>
                 </svg>
                 <span class="link-icon__text">Contact us</span></a></li>
               <li><a href="//about.unimelb.edu.au/careers" class="link-icon">
                 <svg focusable="false" role="presentation" class="link-icon__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#jobs"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#jobs"/>
                 </svg>
                 <span class="link-icon__text">Jobs</span></a></li>
             </ul>
@@ -282,17 +277,17 @@
             <ul class="footer__social list-reset links-reset">
               <li><a href="//www.facebook.com/unimelb" class="footer__social__link">
                 <svg focusable="false" role="presentation" aria-label="Facebook" class="footer__social__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"/>
                 </svg>
                 </a></li>
               <li><a href="//www.twitter.com/unimelb" class="footer__social__link">
                 <svg focusable="false" role="presentation" aria-label="Twitter" class="footer__social__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"/>
                 </svg>
                 </a></li>
               <li><a href="//www.linkedin.com/company/university-of-melbourne" class="footer__social__link">
                 <svg focusable="false" role="presentation" aria-label="LinkedIn" class="footer__social__icon svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"/>
                 </svg>
                 </a></li>
             </ul>

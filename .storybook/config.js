@@ -31,5 +31,5 @@ const stories = require.context('../components', true, /stories\/index\.js$/);
 configure(loadStories, module);
 
 function loadStories() {
-  stories.keys().forEach((filename) => stories(filename))
+  stories.keys().forEach(filename => stories(filename));
 }

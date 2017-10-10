@@ -20,23 +20,23 @@
 </template>
 
 <script>
-  import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
+import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 
-  export default {
-    components: { ButtonIcon },
-    props: {
-      img:{
-        type: String,
-        default: "http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg"
-      },
-      signature: {
-        type: String,
-        default: "http://about-us-unimelb.netlify.com/images/leadership/office-of-the-vice-chancellor/signature.png"
-      },
-      small: {
-        type: Boolean,
-        default: false,
-      }
-    }
-  }
+export default {
+  components: { ButtonIcon },
+  props: {
+    img: {
+      type: String,
+      default: 'http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg',
+    },
+    signature: {
+      type: String,
+      default: 'http://about-us-unimelb.netlify.com/images/leadership/office-of-the-vice-chancellor/signature.png',
+    },
+    small: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
 </script>

@@ -153,9 +153,9 @@
 </template>
 
 <script>
-  import { logo } from 'shared';
+import { logo } from 'shared';
 
-  export default {
-    data: () => ({ logo })
-  };
+export default {
+  data: () => ({ logo }),
+};
 </script>

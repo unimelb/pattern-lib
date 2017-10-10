@@ -1,22 +1,27 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 import RenderMarkup from '../../RenderMarkup';
 
 import Trigger from './Trigger.vue';
 import Modal from './Modal.vue';
+
 const renderedTrigger = new RenderMarkup(Trigger);
 const renderedModal = new RenderMarkup(Modal);
-const markup = "## Trigger markup\nMust be a button element.\n```html\n" + renderedTrigger.max +
-  "\n```\n## Sample modal markup\n```html\n" + renderedModal.max + "\n```\n";
+
+const docs = `
+## Trigger markup
+Must be a button element.
+\`\`\`html${renderedTrigger.max}\`\`\`
+## Sample modal markup
+\`\`\`html${renderedModal.max}\`\`\`
+`;
 
 storiesOf('Modal', module)
   .add(
     'Default',
-    withReadme(markup, () => {
-      return {
-        components: { Trigger, Modal },
-        template: `
+    withReadme(docs, () => ({
+      components: { Trigger, Modal },
+      template: `
 <main>
   <section class="section">
     <div class="section__inner">
@@ -25,7 +30,6 @@ storiesOf('Modal', module)
     </div>
   </section>
 </main>
-`
-      }
-    })
+`,
+    }))
   );

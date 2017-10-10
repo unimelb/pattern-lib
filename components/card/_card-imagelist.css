@@ -3,8 +3,8 @@
  */
 .card--imagelisting {
   .card__inner {
-    padding-right: calc(var(--vr) / 2);
-    padding-left: calc(var(--vr) / 2);
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .card__thumb {
@@ -12,7 +12,6 @@
   }
 
   .card__header {
-    margin-bottom: 0;
     color: var(--col-brand);
     font-weight: bold;
     text-decoration: underline;

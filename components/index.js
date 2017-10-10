@@ -3,7 +3,7 @@ import Ike from 'ike.js';
 import { version } from '../package.json';
 import sprite from './icons/sprite.svg';
 import HeaderTools from './top-nav/header-tools';
-import Frdialogmodal from './modal/dialogmodal.js';
+import Frdialogmodal from './modal/dialogmodal';
 
 import * as shared from './shared';
 import './progressive-image';
@@ -11,20 +11,18 @@ import './accordion';
 
 // Expose JS utilities
 window.ui = {
-  utils: shared.utils
+  utils: shared.utils,
+  loadHeaderTools: () => {
+    new HeaderTools(); // eslint-disable-line no-new
+  },
 };
 
 // Inject SVG sprite
-const Sprite = new Ike(sprite, version);
+new Ike(sprite, version); // eslint-disable-line no-new
 
-const initPage = () => {
+// Initialise page on DOM loaded
+document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.remove('no-js');
-  loadHeaderTools();
+  window.ui.loadHeaderTools();
   Frdialogmodal();
-};
-
-document.addEventListener('DOMContentLoaded', initPage);
-
-window.loadHeaderTools = () => {
-  new HeaderTools();
-};
+});
