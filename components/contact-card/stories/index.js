@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
-import { pad } from '.storybook/decorators';
+import { PadDecorator } from '.storybook/decorators';
 
 import RenderMarkup from '../../RenderMarkup';
 import ContactCard from './ContactCard.vue';
@@ -11,7 +11,7 @@ const markup3 = new RenderMarkup(ContactCard, { props: { columns: 3 } });
 const markupMap = new RenderMarkup(ContactCard, { props: { columns: 3, withMap: true } });
 
 storiesOf('Contact card', module)
-  .addDecorator(pad)
+  .addDecorator(PadDecorator)
 
   .add(
     'One column',

@@ -1,6 +1,7 @@
 import Vue from 'vue';
-import { configure } from '@storybook/vue';
+import { configure, addDecorator } from '@storybook/vue';
 
+import { storyDecorator } from './utils';
 import { version } from '../package.json';
 import { utils } from 'shared';
 
@@ -25,6 +26,9 @@ if (process.env.LOAD_EXTERNAL_ASSETS === 'true') {
 // Register shared documentation components
 Vue.component('icon', Icon);
 Vue.component('section-wrap', SectionWrap);
+
+// Add polymorphic decorator
+addDecorator(storyDecorator);
 
 // Load stories
 const stories = require.context('../components', true, /stories\/index\.js$/);
