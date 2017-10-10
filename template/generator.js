@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const promptDirectory = require('inquirer-directory');
+
 
 module.exports = function (plop) {
   // Component Generator
@@ -36,5 +38,39 @@ module.exports = function (plop) {
         pattern: /\/\*\*.*\*\//g,
         templateFile: './index.css.hbs'
       }]
+  });
+  plop.setPrompt('directory', promptDirectory);
+  // Story Generator
+  plop.setGenerator('story', {
+      description: 'Adds new story',
+      prompts: [{
+        type: 'directory',
+        name: 'component',
+        basePath: './components',
+        message: 'Select Component'
+      },
+      {
+        type: 'input',
+        name: 'story',
+        message: 'Story name'
+      }],
+      actions: [{
+        type: 'add',
+        path: './../components/{{dashCase component}}/stories/{{properCase story}}.vue',
+        templateFile: './story/storycomponent.vue.hbs'
+      },
+      {
+        type: 'modify',
+        path: './../components/{{dashCase component}}/stories/index.js',
+        pattern: /\/\*( ##Import).*?\*\//g,
+        templateFile: './story/import.js.hbs'
+      },
+      {
+        type: 'modify',
+        path: './../components/{{dashCase component}}/stories/index.js',
+        pattern: /\/\*( ##Story).*?\*\//g,
+        templateFile: './story/index.js.hbs'
+      },
+      ]
   });
 };
