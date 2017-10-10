@@ -14,14 +14,17 @@
     .fr-accordion__header {
       display: block;
       position: relative;
-      margin-bottom: 0;
       padding: 1rem 1.25rem;
       transition: background-color .15s ease-out, color .15s ease-out;
       border-bottom: 1px solid var(--col-grey-light);
-      font-size: 1.25rem;
-      line-height: 1.25;
       text-decoration: none;
       cursor: pointer;
+
+      h2 {
+        margin-bottom: 0;
+        font-size: 1.25rem;
+        line-height: 1.25;
+      }
 
       &::after {
         content: '';
