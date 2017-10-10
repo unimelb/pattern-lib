@@ -2,13 +2,13 @@
   <section-wrap class="bg-alt">
     <div class="listing listing--two">
       <list-item>
-        <card-focus-image-list 
+        <card-focus-image-list
           element="div"
-          fullImg
-          titleabove 
-          class="card--image-focus--col-brand bg-alt" 
-          thumb="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg" 
-          title="Learning and teaching" 
+          full-img
+          titleabove
+          class="card--image-focus--col-brand bg-alt"
+          thumb="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
+          title="Learning and teaching"
           >
           <p>Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat. </p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ducimus aperiam qui, numquam deleniti repudiandae quos, mollitia.</p>
@@ -36,13 +36,13 @@
         </card-focus-image-list>
       </list-item>
       <list-item>
-        <card-focus-image-list 
+        <card-focus-image-list
           element="div"
-          fullImg
+          full-img
           titleabove
-          class="card--image-focus--col-brand bg-alt" 
-          thumb="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg" 
-          title="Learning and teaching" 
+          class="card--image-focus--col-brand bg-alt"
+          thumb="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
+          title="Learning and teaching"
           excerpt="Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat.">
           <p>Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat. </p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ducimus aperiam qui, numquam deleniti repudiandae quos, mollitia.</p>

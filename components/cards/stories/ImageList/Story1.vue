@@ -4,91 +4,91 @@
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="http://about-us-unimelb.netlify.com/images/leadership/senior-leadership/Mr-Allan-Tait.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="http://via.placeholder.com/300x400"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/5.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/6.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/7.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
             <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/8.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/9.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/4.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
       <list-item>
         <card-image-list
           title="Mr John Smith"
-          meta="Provost" 
+          meta="Provost"
           thumb="https://randomuser.me/api/portraits/lego/3.jpg"
-          href="#" 
-        />    
+          href="#"
+        />
         </card-image-list>
       </list-item>
     </div>

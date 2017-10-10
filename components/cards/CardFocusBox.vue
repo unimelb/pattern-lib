@@ -4,8 +4,7 @@
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
 
     <div class="card__inner ">
-      <svg class="card--focus-box__icon" viewBox="20 0 150 150" width="100%" height="100%" v-html="icon">
-      </svg>
+      <svg class="card--focus-box__icon" viewBox="20 0 150 150" width="100%" height="100%" v-html="icon"/>
       <h3>{{ title }}</h3>
       <p>{{ excerpt }}</p>
     </div>

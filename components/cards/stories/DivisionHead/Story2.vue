@@ -2,7 +2,7 @@
   <section-wrap class="bg-white">
     <div class="listing listing--one">
       <list-item>
-        <card-division-head 
+        <card-division-head
           thumb="https://randomuser.me/api/portraits/lego/0.jpg"
           name="John Smith"
           :cols="1"

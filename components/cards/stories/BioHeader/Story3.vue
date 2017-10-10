@@ -12,7 +12,7 @@
   </section-wrap>
   <section-wrap small class="bg-alt">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ipsum neque, labore ducimus obcaecati voluptatem dignissimos! Est, ad, dolor. Alias doloribus tenetur sint illum beatae, inventore ullam hic sequi sit.
-  </section-wrap> 
+  </section-wrap>
   </main>
 </template>
 
