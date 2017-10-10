@@ -1,76 +1,82 @@
-const fs = require('fs');
-const path = require('path');
 const promptDirectory = require('inquirer-directory');
 
-
-module.exports = function (plop) {
+module.exports = function generator(plop) {
   // Component Generator
   plop.setGenerator('component', {
-      description: 'New Component',
-      prompts: [{
+    description: 'Create new component',
+    prompts: [
+      {
         type: 'input',
         name: 'name',
-        message: 'Enter component name'
-      }],
-      actions: [{
+        message: 'Enter component name',
+      },
+    ],
+    actions: [
+      {
         type: 'add',
         path: './../components/{{dashCase name}}/index.css',
-        templateFile: './component/index.css.hbs'
+        templateFile: './component/index.css.hbs',
       },
       {
         type: 'add',
         path: './../components/{{dashCase name}}/stories/index.js',
-        templateFile: './component/stories/index.js.hbs'
+        templateFile: './component/stories/index.js.hbs',
       },
       {
         type: 'add',
         path: './../components/{{dashCase name}}/stories/{{properCase name}}Default.vue',
-        templateFile: './component/stories/story.vue.hbs'
+        templateFile: './component/stories/Story.vue.hbs',
       },
       {
         type: 'add',
         path: './../components/{{dashCase name}}/{{properCase name}}.vue',
-        templateFile: './component/component.vue.hbs'
+        templateFile: './component/Component.vue.hbs',
       },
       {
         type: 'modify',
         path: './../components/index.css',
-        pattern: /\/\*\*.*\*\//g,
-        templateFile: './index.css.hbs'
-      }]
+        pattern: /\/\*\* GENERATOR \*\*\//g,
+        templateFile: './index.css.hbs',
+      },
+    ],
   });
+
   plop.setPrompt('directory', promptDirectory);
+
   // Story Generator
   plop.setGenerator('story', {
-      description: 'Adds new story',
-      prompts: [{
+    description: 'Add story to existing component',
+    prompts: [
+      {
         type: 'directory',
         name: 'component',
         basePath: './components',
-        message: 'Select Component'
+        message: 'Select component',
       },
       {
         type: 'input',
         name: 'story',
-        message: 'Story name'
-      }],
-      actions: [{
+        message: 'Story name',
+      },
+    ],
+    actions: [
+      {
         type: 'add',
         path: './../components/{{dashCase component}}/stories/{{properCase story}}.vue',
-        templateFile: './story/storycomponent.vue.hbs'
+        templateFile: './story/Story.vue.hbs',
       },
       {
         type: 'modify',
         path: './../components/{{dashCase component}}/stories/index.js',
         pattern: /\/\*( ##Import).*?\*\//g,
-        templateFile: './story/import.js.hbs'
+        templateFile: './story/import.js.hbs',
       },
       {
         type: 'modify',
         path: './../components/{{dashCase component}}/stories/index.js',
         pattern: /\/\*( ##Story).*?\*\//g,
-        templateFile: './story/index.js.hbs'
+        templateFile: './story/index.js.hbs',
       },
-      ]
+    ],
   });
 };
