@@ -18,7 +18,6 @@
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\"",
     "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\"",
-    "fix:stylelint": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" --fix",
     "generate": "plop --plopfile template/generator.js"
   },
   "dependencies": {
@@ -39,10 +38,10 @@
     "css-loader": "^0.28.1",
     "dotenv": "^4.0.0",
     "eslint": "^4.8.0",
-    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb": "^16.0.0",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-vue": "^3.13.0",
     "extract-text-webpack-plugin": "^2.1.0",
