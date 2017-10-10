@@ -17,7 +17,7 @@ const story = {
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
   </accordion-block>
 </accordion>
-`
+`,
 };
 
 const markup = new RenderMarkup(story);

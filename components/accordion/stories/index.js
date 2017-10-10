@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 
 import Story1 from './story1.js';
@@ -7,7 +6,7 @@ import Story3 from './story3.js';
 import Story4 from './story4.js';
 
 storiesOf('Accordion', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
