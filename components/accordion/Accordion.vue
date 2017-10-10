@@ -1,11 +1,11 @@
 <template>
-  <div class="fr-accordion js-fr-accordion">
+  <div class="fr-accordion js-fr-accordion" :data-open="open" :data-solo="solo">
     <slot></slot>
   </div>
 </template>
 
 <script>
-import Fraccordion from './accordion.js';
+import Accordion from './accordion.js';
 
 export default {
   props: {
@@ -13,9 +13,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    multiselect: {
+    solo: {
       type: Boolean,
-      default: true,
+      default: false,
     },
     open: {
       type: Boolean,
@@ -23,14 +23,9 @@ export default {
     },
   },
   mounted() {
-    /* eslint-disable no-underscore-dangle */
-    if (!this._props.disabled) {
-      Fraccordion({
-        firstPanelsOpenByDefault: this._props.open,
-        multiselectable: this._props.multiselect,
-      });
+    if (!this._props.disabled) { // eslint-disable-line no-underscore-dangle
+      Accordion(this.$el);
     }
-    /* eslint-enable no-underscore-dangle */
   },
 };
 </script>
