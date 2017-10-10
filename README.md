@@ -26,6 +26,7 @@ yarn
 
 - To build the documentation site to `/.out/docs`, run `yarn run build:docs`.
 - To build the library for production (e.g. for debugging purposes) to `.out/lib/<version>`, run `yarn run build:lib`.
+- For the library or documentation site to load the library assets from the CDN, set `LOAD_EXTERNAL_ASSETS=true` in `.env` before running either of the build commands.
 
 ### Linting
 
