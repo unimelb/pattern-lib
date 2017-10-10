@@ -1,26 +1,26 @@
 <template>
-  <a :href="href" class="btn-owner card card--imagelisting">
-    <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
+  <div class="btn-owner card card--focus-box card--focus-box-vert">
+    <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
+    <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
+
     <div class="card__inner ">
-      <h3 class="card__header">{{ title }}</h3>
-      <p class="card__meta">{{ meta }}</p>
+      <svg class="card--focus-box__icon" viewBox="20 0 150 150" width="100%" height="100%" v-html="icon"/>
+      <h3>{{ title }}</h3>
+      <p>{{ excerpt }}</p>
     </div>
-  </a>
+  </div>
 </template>
 
 <script>
+
 export default {
-  name: 'CardImageListing',
+  name: 'CardFocusBox',
   props: {
-    thumb: {
+    icon: {
       type: String,
-      default: 'http://via.placeholder.com/400x200',
+      required: true,
     },
     title: {
-      type: String,
-      default: 'Test title',
-    },
-    meta: {
       type: String,
       default: 'Test title',
     },

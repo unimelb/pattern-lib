@@ -1,24 +1,21 @@
 <template>
-  <div class="btn-owner card card--focus-box card--focus-box-vert">
-    <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
-    <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
-
+  <a :href="href" class="btn-owner card card--image card--bdr bg-inverted">
+    <div class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
-      <img class="card--focus-box__icon" :src="exampleIcon" alt="">
-      <h3>{{ title }}</h3>
+      <button-link class="btn--inverted btn--fullwidth" element="button">{{ title }}</button-link>
       <p>{{ excerpt }}</p>
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
-import exampleIcon from './learning-and-teaching1.svg';
-
-import icon from './../../icons/stories/Icon.vue';
+import ButtonLink from './../buttons/stories/ButtonLink.vue';
 
 export default {
-  name: 'CardFocusBox',
-  components: { icon },
+  name: 'CardImage',
+  components: {
+    ButtonLink,
+  },
   props: {
     thumb: {
       type: String,
@@ -37,7 +34,6 @@ export default {
       default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
   },
-  data: () => ({ exampleIcon }),
 };
 
 </script>

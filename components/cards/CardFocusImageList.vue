@@ -6,7 +6,7 @@
     </div>
     <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3 v-if="titleabove === false">{{ title }}</h3>
-      <div v-html="excerpt"></div>
+      <slot></slot>
     </div>
   </div>
   <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus">
@@ -15,18 +15,15 @@
     </div>
     <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3>{{ title }}</h3>
-      <div v-html="excerpt"></div>
+      <slot></slot>
       <button-icon element="button" class="btn--fullwidth">{{ title }}</button-icon>
     </div>
   </a>
 </template>
 
 <script>
-import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 
 export default {
-  name: 'CardFocusImages',
-  components: { ButtonIcon },
   props: {
     thumb: {
       type: String,
