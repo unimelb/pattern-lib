@@ -6,6 +6,8 @@ import { utils } from 'shared';
 
 import Icon from 'icons/stories/Icon.vue';
 import SectionWrap from '../components/section/stories/SectionWrap.vue';
+import ListItem from '../components/listing/stories/listitem.vue';
+import ButtonIcon from '../components/buttons/stories/ButtonIcon.vue';
 
 // Import documentation styles
 import './index.css';
@@ -25,6 +27,8 @@ if (process.env.LOAD_EXTERNAL_ASSETS === 'true') {
 // Register shared documentation components
 Vue.component('icon', Icon);
 Vue.component('section-wrap', SectionWrap);
+Vue.component('list-item', ListItem);
+Vue.component('button-icon', ButtonIcon);
 
 // Load stories
 const stories = require.context('../components', true, /stories\/index\.js$/);

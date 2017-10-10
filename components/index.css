@@ -28,4 +28,6 @@
 @import 'typography/index.css';
 @import 'welcome/index.css';
 
+@import 'cards/index.css';
+
 /*** Add new component below */
