@@ -1,15 +1,14 @@
 <template>
-  <section class="section bg-inverted">
-    <div class="section__inner section__inner--sml">
-      <quote author="Donald J. Trump">Some girls are just born with glitter in their veins</quote>
-    </div>
-  </section>
+  <quote author="Steve Wozniak">Never trust a computer you can’t throw out a window.</quote>
 </template>
 
 <script>
 import Quote from '../Quote.vue';
+import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
   components: { Quote },
+  decorator: ContentBlock,
+  decoratorProps: { small: true, bg: 'inverted' },
 };
 </script>

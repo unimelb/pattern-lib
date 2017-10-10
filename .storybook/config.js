@@ -1,6 +1,7 @@
 import Vue from 'vue';
-import { configure } from '@storybook/vue';
+import { configure, addDecorator } from '@storybook/vue';
 
+import { storyDecorator } from './utils';
 import { version } from '../package.json';
 import { utils } from 'shared';
 
@@ -29,6 +30,9 @@ Vue.component('icon', Icon);
 Vue.component('section-wrap', SectionWrap);
 Vue.component('list-item', ListItem);
 Vue.component('button-icon', ButtonIcon);
+
+// Add polymorphic decorator
+addDecorator(storyDecorator);
 
 // Load stories
 const stories = require.context('../components', true, /stories\/index\.js$/);

@@ -1,13 +1,14 @@
 <template>
-  <quote author="Steve Wozniak">Never trust a computer you can’t throw out a window.</quote>
+  <blockquote>
+    <p>The question of whether computers can think is like the question of whether submarines can swim.</p>
+    <cite>Edsger W. Dijkstra</cite>
+  </blockquote>
 </template>
 
 <script>
-import Quote from '../Quote.vue';
 import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
-  components: { Quote },
   decorator: ContentBlock,
   decoratorProps: { small: true },
 };

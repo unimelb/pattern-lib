@@ -17,9 +17,9 @@
         <div class="footer__main grid clearfix">
           <div class="footer__main__users cell cell--wide-1of4">
             <ul class="footer__users list-reset list-chevrons links-reset">
-              <li><a href="">Current students</a></li>
-              <li><a href="">Staff</a></li>
-              <li><a href="">Alumni</a></li>
+              <li><a href="https://students.unimelb.edu.au/">Current students</a></li>
+              <li><a href="https://staff.unimelb.edu.au/">Staff</a></li>
+              <li><a href="https://www.alumni.unimelb.edu.au/">Alumni</a></li>
             </ul>
           </div>
           <div class="footer__main__popular cell cell--wide-1of2">
