@@ -1,27 +1,13 @@
 import { storiesOf } from '@storybook/vue';
+import { createStory } from '.storybook/utils';
 
-import Story1 from './story1.js';
-import Story2 from './story2.js';
-import Story3 from './story3.js';
-import Story4 from './story4.js';
+import AccordionDefault from './AccordionDefault.vue';
+import AccordionFirstOpen from './AccordionFirstOpen.vue';
+import AccordionSoloSelect from './AccordionSoloSelect.vue';
+import AccordionNoJs from './AccordionNoJs.vue';
 
 storiesOf('Accordion', module)
-  .addDecorator((story) => {
-    const Story = story();
-    return {
-      components: { Story },
-      template: `
-        <main>
-          <section class="section">
-            <div class="section__inner">
-              <Story/>
-            </div>
-          </section>
-        </main>`,
-    };
-  })
-
-  .add('Default', Story1)
-  .add('First open', Story2)
-  .add('Solo select', Story3)
-  .add('No js', Story4);
+  .add('Default', createStory(AccordionDefault))
+  .add('First open', createStory(AccordionFirstOpen))
+  .add('Solo select', createStory(AccordionSoloSelect))
+  .add('No js', createStory(AccordionNoJs));
