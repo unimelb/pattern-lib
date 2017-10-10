@@ -7,6 +7,7 @@ import CardNewsStory1 from './News/Story1.vue';
 import CardNewsStory2 from './News/Story2.vue';
 import CardLinkStory1 from './Link/Story1.vue';
 import CardLinkStory2 from './Link/Story2.vue';
+import CardLinkStory3 from './Link/Story3.vue';
 import CardImageListStory1 from './ImageList/Story1.vue';
 import CardImageListStory2 from './ImageList/Story2.vue';
 import CardImageListStory3 from './ImageList/Story3.vue';
@@ -16,6 +17,11 @@ import CardFocusBoxStory2 from './FocusBox/Story2.vue';
 import CardFactsStory1 from './Facts/Story1.vue';
 import CardDivisionStory1 from './Division/Story1.vue';
 import CardDivisionHeadStory1 from './DivisionHead/Story1.vue';
+import CardDivisionHeadStory2 from './DivisionHead/Story2.vue';
+import CardDivisionHeadStory3 from './DivisionHead/Story3.vue';
+import CardBioHeaderStory1 from './BioHeader/Story1.vue';
+import CardBioHeaderStory2 from './BioHeader/Story2.vue';
+import CardBioHeaderStory3 from './BioHeader/Story3.vue';
 
 /* ##Import story component here */
 
@@ -31,8 +37,9 @@ storiesOf('Cards/News Listing', module)
 
 /* Link Stories  */
 storiesOf('Cards/Link Box', module)
-  .add('Default', createStory(CardLinkStory1))
-  .add('White', createStory(CardLinkStory2))
+  .add('3 Boxes', createStory(CardLinkStory1))
+  .add('4 Boxes', createStory(CardLinkStory2))
+  .add('Longer titles', createStory(CardLinkStory3))
 ;
 
 /* Image Listings */
@@ -60,20 +67,16 @@ storiesOf('Cards/Facts', module)
 
 storiesOf('Cards/Division', module)
   .add('Division Profile', createStory(CardDivisionStory1))
-  // .add('Division Heads (3 Col)', createStory(CardsImageDefault))
-  // .add('Division Heads (Compact)', createStory(CardsImageDefault))
-  // .add('Division Heads (1 Col)', createStory(CardsImageDefault))
 ;
 
 storiesOf('Cards/Division Head', module)
-  .add('Division Head (Single)', createStory(CardDivisionHeadStory1))
-  // .add('Division Heads (3 Col)', createStory(CardsImageDefault))
-  // .add('Division Heads (Compact)', createStory(CardsImageDefault))
-  // .add('Division Heads (1 Col)', createStory(CardsImageDefault))
+  .add('Division Head (Single)', createStory(CardDivisionHeadStory2))
+  .add('Division Heads (3 Col)', createStory(CardDivisionHeadStory1))
+  .add('Division Heads (Compact)', createStory(CardDivisionHeadStory3))
 ;
 
-// storiesOf('Cards/Bio Header', module)
-//   .add('Small (Default)', createStory(CardsImageDefault))
-//   .add('Normal', createStory(CardsImageDefault))
-
-// ;
+storiesOf('Cards/Bio Header', module)
+  .add('Small (Default)', createStory(CardBioHeaderStory1))
+  .add('Wide', createStory(CardBioHeaderStory2))
+  .add('With content', createStory(CardBioHeaderStory3))
+;
