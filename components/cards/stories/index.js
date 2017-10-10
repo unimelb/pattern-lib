@@ -32,51 +32,42 @@ storiesOf('Cards/Card with Image', module)
 /* News Stories  */
 storiesOf('Cards/News Listing', module)
   .add('3 Column', createStory(CardNewsStory1))
-  .add('1 Column', createStory(CardNewsStory2))
-;
+  .add('1 Column', createStory(CardNewsStory2));
 
 /* Link Stories  */
 storiesOf('Cards/Link Box', module)
   .add('3 Boxes', createStory(CardLinkStory1))
   .add('4 Boxes', createStory(CardLinkStory2))
-  .add('Longer titles', createStory(CardLinkStory3))
-;
+  .add('Longer titles', createStory(CardLinkStory3));
 
 /* Image Listings */
 storiesOf('Cards/Image Listing/Bio Images', module)
-  .add('Bio Images', createStory(CardImageListStory1))
-;
+  .add('Bio Images', createStory(CardImageListStory1));
 
 storiesOf('Cards/Image Listing/Focus Marks', module)
   .add('Three Column', createStory(CardImageListStory2))
-  .add('Two Column', createStory(CardImageListStory4))
-;
+  .add('Two Column', createStory(CardImageListStory4));
+
 storiesOf('Cards/Image Listing/Hero Image', module)
-  .add('Hero Image', createStory(CardImageListStory3))
-;
+  .add('Hero Image', createStory(CardImageListStory3));
 
 /* Focus Boxes */
 storiesOf('Cards/Focus Boxes', module)
   .add('3 Col', createStory(CardFocusBoxStory1))
-  .add('2 Col', createStory(CardFocusBoxStory2))
-;
+  .add('2 Col', createStory(CardFocusBoxStory2));
 
 storiesOf('Cards/Facts', module)
-  .add('Mixed sizes', createStory(CardFactsStory1))
-;
+  .add('Mixed sizes', createStory(CardFactsStory1));
 
 storiesOf('Cards/Division', module)
-  .add('Division Profile', createStory(CardDivisionStory1))
-;
+  .add('Division Profile', createStory(CardDivisionStory1));
 
 storiesOf('Cards/Division Head', module)
   .add('Division Head (Single)', createStory(CardDivisionHeadStory2))
   .add('Division Heads (3 Col)', createStory(CardDivisionHeadStory1))
-  .add('Division Heads (Compact)', createStory(CardDivisionHeadStory3))
-;
+  .add('Division Heads (Compact)', createStory(CardDivisionHeadStory3));
 
 storiesOf('Cards/Bio Header', module)
   .add('Small (Default)', createStory(CardBioHeaderStory1))
   .add('Wide', createStory(CardBioHeaderStory2))
-  .add('With content', createStory(CardBioHeaderStory3))
-;
+  .add('With content', createStory(CardBioHeaderStory3));
