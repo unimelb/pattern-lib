@@ -1,21 +1,21 @@
 <template>
-  <a :href="href" class="btn-owner card card--image card--bdr bg-inverted">
-    <div class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
+  <a :href="href" class="btn-owner card card--news card--bdr">
+    <div v-if="cols !== 1" class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
-      <button-link class="btn--inverted btn--fullwidth" element="button">{{ title }}</button-link>
+      <h4 class="card__meta">{{ meta }}</h4>
+      <h3 class="card__header">{{ title }}</h3>
       <p>{{ excerpt }}</p>
+    </div>
+    <div class="card__footer" v-if="cols !== 1">
+      <button-icon element="button" class="btn--fullwidth">Read More</button-icon>
     </div>
   </a>
 </template>
 
 <script>
-import ButtonLink from './../../buttons/stories/ButtonLink.vue';
 
 export default {
-  name: 'CardImage',
-  components: {
-    ButtonLink,
-  },
+  name: 'CardNews',
   props: {
     thumb: {
       type: String,
@@ -24,6 +24,14 @@ export default {
     title: {
       type: String,
       default: 'Test title',
+    },
+    meta: {
+      type: String,
+      default: '03 Apr 2017 | SPEECH',
+    },
+    cols: {
+      type: Number,
+      default: 3,
     },
     href: {
       type: String,

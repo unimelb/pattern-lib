@@ -1,23 +1,15 @@
 <template>
-  <a :href="href" class="btn-owner card card--news card--bdr">
-    <div v-if="cols !== 1" class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
+  <a :href="href" class="btn-owner card card--imagelisting">
+    <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
-      <h4 class="card__meta">{{ meta }}</h4>
       <h3 class="card__header">{{ title }}</h3>
-      <p>{{ excerpt }}</p>
-    </div>
-    <div class="card__footer" v-if="cols !== 1">
-      <button-icon element="button" class="btn--fullwidth">Read More</button-icon>
+      <p class="card__meta">{{ meta }}</p>
     </div>
   </a>
 </template>
 
 <script>
-import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
-
 export default {
-  name: 'CardNews',
-  components: { ButtonIcon },
   props: {
     thumb: {
       type: String,
@@ -29,11 +21,7 @@ export default {
     },
     meta: {
       type: String,
-      default: '03 Apr 2017 | SPEECH',
-    },
-    cols: {
-      type: Number,
-      default: 3,
+      default: 'Test title',
     },
     href: {
       type: String,

@@ -1,5 +1,5 @@
 <template>
-  <div class="card card--fact card--bdr">
+  <div class="card card--fact card--bdr bg-white text-center">
     <div class="card__inner">
       <h3 class="card__header" :class="{'card__header--sml' : smlHeader}">{{ title }}</h3>
       <h4 class="card__meta">{{ meta }}</h4>
