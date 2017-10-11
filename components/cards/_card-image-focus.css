@@ -5,7 +5,7 @@
 
   .card__thumb {
     position: relative;
-    height: 100%;
+    height: 240px;
 
     img {
       width: 100%;
@@ -15,9 +15,7 @@
     }
 
     &--full {
-      img {
-        height: 100%;
-      }
+      height: 100%;
     }
 
     &::before,
@@ -25,6 +23,7 @@
       content: '';
       display: inline-block;
       position: absolute;
+      z-index: 2;
       width: 5rem;
       height: 5rem;
       opacity: .6;
@@ -39,7 +38,7 @@
 
     &::after {
       right: 0;
-      bottom: 7px; /* positioning bug */
+      bottom: 0;
       background-image: url('~icons/focus-bottom-right.svg?fill=#9AD6C3');
     }
   }

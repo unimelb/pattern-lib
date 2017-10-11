@@ -11,8 +11,11 @@ function htmlBlock(markup) {
  * @param {Component} Story - the story's Vue component
  * @param {Boolean} showMinifiedMarkup - whether to show minifed markup in README
  */
-export default function createStory(Story, showMinifiedMarkup = false) {
+export default function createStory(Story, showMinifiedMarkup = false, customReadme = false) {
   const { prettified, minified } = renderMarkup(Story);
-  const readme = `${showMinifiedMarkup ? `### Minified markup\n${htmlBlock(minified)}\n### Markup\n` : ''}${htmlBlock(prettified)}`;
+  let readme = customReadme;
+  if (!readme) {
+    readme = `${showMinifiedMarkup ? `### Minified markup\n${htmlBlock(minified)}\n### Markup\n` : ''}${htmlBlock(prettified)}`;
+  }
   return withReadme(readme, () => Story);
 }
