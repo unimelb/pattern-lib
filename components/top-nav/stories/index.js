@@ -1,5 +1,4 @@
 import { storiesOf } from '@storybook/vue';
-import { withKnobs } from '@storybook/addon-knobs';
 import withReadme from 'storybook-readme/with-readme';
 import RenderMarkup from '../../RenderMarkup';
 
@@ -16,36 +15,25 @@ const markupTopNav = `## Minified top nav\n\`\`\`html\n<div class="header-tools"
 const markupBasicNav = `## Sample nav markup\n\`\`\`html\n${renderedSiteNav.max}\n\`\`\`\n`;
 const markupNestedNav = `## Sample nav markup\n\`\`\`html\n${renderedNestedSiteNav.max}\n\`\`\`\n`;
 
-storiesOf('Top nav', module)
-  .addDecorator(withKnobs)
-  .addDecorator((story) => {
-    const Story = story();
-    return {
-      components: { Story },
-      template: `
-        <div>
-          <Story/>
-        </div>`,
-    };
-  })
-
+storiesOf('Top nav/Search', module)
   .add(
     'Search only',
     withReadme(markupSearch, () => ({
       components: { Search },
-      mounted: () => { window.ui.loadHeaderTools(); },
+      mounted: window.ui.loadHeaderTools,
       template: `
         <div class="header-tools">
           <search />
         </div>`,
     }))
-  )
+  );
 
+storiesOf('Top nav/Site navigation', module)
   .add(
     'Basic site navigation',
     withReadme(markupTopNav + markupBasicNav, () => ({
       components: { TopNav, NavTrigger, Search },
-      mounted: () => { window.ui.loadHeaderTools(); },
+      mounted: window.ui.loadHeaderTools,
       template: `
       <div>
         <div class="header-tools">
@@ -56,11 +44,12 @@ storiesOf('Top nav', module)
       </div>`,
     }))
   )
+
   .add(
     'Nested site navigation',
     withReadme(markupTopNav + markupNestedNav, () => ({
       components: { TopNav, Search, NavTrigger },
-      mounted: () => { window.ui.loadHeaderTools(); },
+      mounted: window.ui.loadHeaderTools,
       template: `
       <div>
         <div class="header-tools">

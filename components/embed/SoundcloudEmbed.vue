@@ -1,5 +1,5 @@
 <template>
-  <div :class="classObj">
+  <div :class="classes">
     <iframe
       :src="src"
       :width="size[0]"
@@ -11,27 +11,32 @@
 </template>
 
 <script>
+const IFRAME_SIZES = {
+  classic: ['100%', '266'],
+  visual: ['450', '450'],
+};
+
 export default {
   props: {
-    src: String,
+    src: {
+      type: String,
+      required: true,
+    },
     mode: {
       type: String,
       default: 'classic',
+      validator: value => ['classic', 'visual'].indexOf(value) !== -1,
     },
   },
   computed: {
-    classObj() {
+    classes() {
       return [
         'embed',
         `embed--soundcloud-${this.mode}`,
       ];
     },
     size() {
-      return (
-        this.mode === 'classic'
-          ? ['100%', '266']
-          : ['450', '450']
-      );
+      return IFRAME_SIZES[this.mode];
     },
   },
 };
