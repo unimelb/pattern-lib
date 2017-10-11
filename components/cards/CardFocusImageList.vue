@@ -1,18 +1,14 @@
 <template>
   <div v-if="element === 'div'" class="card card--image-focus">
     <h3 v-if="titleabove === true" :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
-    <div class="card__thumb" :class="{'card__thumb--full': fullImg}">
-      <img :src="thumb">
-    </div>
+    <progressive-background :src="img" :placeholder="placeholder" class="card__thumb" :class="{'card__thumb--full': fullimg}" />
     <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3 v-if="titleabove === false">{{ title }}</h3>
       <slot></slot>
     </div>
   </div>
   <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus">
-    <div class="card__thumb">
-      <img :src="thumb">
-    </div>
+    <progressive-background :src="img" :placeholder="placeholder" class="card__thumb" :class="{'card__thumb--full': fullimg}" />
     <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3>{{ title }}</h3>
       <slot></slot>
@@ -25,11 +21,13 @@
 
 export default {
   props: {
-    thumb: {
+    placeholder: {
       type: String,
-      default: 'http://via.placeholder.com/200x400',
     },
-    fullImg: {
+    img: {
+      type: String,
+    },
+    fullimg: {
       type: Boolean,
       default: false,
     },

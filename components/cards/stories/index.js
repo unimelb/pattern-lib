@@ -22,6 +22,8 @@ import CardDivisionHeadStory3 from './DivisionHead/Story3.vue';
 import CardBioHeaderStory1 from './BioHeader/Story1.vue';
 import CardBioHeaderStory2 from './BioHeader/Story2.vue';
 import CardBioHeaderStory3 from './BioHeader/Story3.vue';
+import FocusImageReadme from './ImageList/FocusImageReadme.md';
+import HeroImageReadme from './ImageList/HeroImageReadme.md';
 
 /* ##Import story component here */
 
@@ -46,10 +48,10 @@ storiesOf('Cards/Image Listing/Bio Images', module)
 
 storiesOf('Cards/Image Listing/Focus Marks', module)
   .add('Three Column', createStory(CardImageListStory2))
-  .add('Two Column', createStory(CardImageListStory4));
+  .add('Two Column', createStory(CardImageListStory4, false, FocusImageReadme));
 
 storiesOf('Cards/Image Listing/Hero Image', module)
-  .add('Hero Image', createStory(CardImageListStory3));
+  .add('Hero Image', createStory(CardImageListStory3, false, HeroImageReadme));
 
 /* Focus Boxes */
 storiesOf('Cards/Focus Boxes', module)

@@ -5,6 +5,7 @@ import { version } from '../package.json';
 import sprite from './icons/sprite.svg';
 import HeaderTools from './top-nav/header-tools';
 import Frdialogmodal from './modal/dialogmodal';
+import VueProgressiveImage from 'vue-progressive-image';
 // import Fraccordion from './accordion/_fr-accordion';
 
 import * as shared from './shared';
@@ -31,6 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.ui.frdialogmodal();
 
   new Vue({ // eslint-disable-line no-new
-    el: '#root',
-  });
+    el: 'main',
+  }).use(VueProgressiveImage);
 });

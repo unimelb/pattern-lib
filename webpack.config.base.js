@@ -17,6 +17,7 @@ module.exports = {
       docs: path.resolve(__dirname, 'docs/'),
       icons: path.resolve(__dirname, 'components/icons/'),
       shared: path.resolve(__dirname, 'components/shared/'),
+      vue: 'vue/dist/vue.js',
     },
   },
   module: {
