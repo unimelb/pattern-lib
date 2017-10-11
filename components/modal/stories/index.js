@@ -18,18 +18,18 @@ Must be a button element.
 
 storiesOf('Modal', module)
   .add(
-    'Button trigger',
+    'Default',
     withReadme(docs, () => ({
       components: { Trigger, Modal },
       template: `
-        <main>
-          <section class="section">
-            <div class="section__inner">
-              <trigger />
-              <modal />
-            </div>
-          </section>
-        </main>
-      `,
+<main>
+  <section class="section">
+    <div class="section__inner">
+      <trigger />
+      <modal />
+    </div>
+  </section>
+</main>
+`,
     }))
   );
