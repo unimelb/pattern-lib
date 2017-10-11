@@ -9,6 +9,7 @@ export default function renderMarkup(Component, props) {
   vm.$mount();
 
   // Retrieve the markup of the instance's root element
+  if (!vm.$el.outerHTML) return {};
   const raw = vm.$el.outerHTML.replace(/<!(-)*>/g, '');
 
   return {

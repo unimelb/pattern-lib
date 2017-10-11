@@ -9,6 +9,6 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 export default {
   components: { Quote },
   decorator: ContentBlock,
-  decoratorProps: { small: true, bg: 'inverted' },
+  decoratorProps: { size: 'sml', bg: 'inverted' },
 };
 </script>

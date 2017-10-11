@@ -15,6 +15,6 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 export default {
   components: { Quote },
   decorator: ContentBlock,
-  decoratorProps: { small: true },
+  decoratorProps: { size: 'sml' },
 };
 </script>
