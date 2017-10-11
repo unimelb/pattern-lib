@@ -1,10 +1,10 @@
 .content-block {
   padding: calc(2 * var(--vr)) var(--vr);
-  padding-bottom: 1.75rem;
 
-  &--short {
-    padding-top: var(--vr);
-    padding-bottom: var(--vr);
+  /* remove default bottom margin of last child (typically `p`), and */
+  /* compensate for difference in font-size with first child (typically `h2`) */
+  & > *:last-child {
+    margin-bottom: calc(var(--hlsp) * (1.75rem - 1rem)); /* half line spacing * (font-size of `h2` - font-size of `p) */
   }
 
   & > * {
@@ -15,4 +15,9 @@
 
   &--sml > * { max-width: var(--w-sml); }
   &--lge > * { max-width: var(--w-lge); }
+
+  &--short {
+    padding-top: var(--vr);
+    padding-bottom: var(--vr);
+  }
 }
