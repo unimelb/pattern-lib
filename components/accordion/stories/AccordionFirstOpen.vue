@@ -12,12 +12,3 @@
     </accordion-block>
   </accordion>
 </template>
-
-<script>
-import Accordion from '../Accordion.vue';
-import AccordionBlock from '../AccordionBlock.vue';
-
-export default {
-  components: { Accordion, AccordionBlock },
-};
-</script>
