@@ -33,6 +33,6 @@ module.exports = merge(baseConfig, {
     ],
   },
   resolve: {
-      alias: {vue: 'vue/dist/vue.js'}
+    alias: { vue: 'vue/dist/vue.js' },
   },
 });
