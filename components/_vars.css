@@ -75,6 +75,8 @@
   /* Vertical rhythm */
   --vr: 1.5rem;
   --lh: 1.5;
+  --lsp: calc(var(--lh) - 1); /* line spacing (i.e. leading) */
+  --hlsp: calc(var(--lsp) / 2); /* half line spacing (multiple by font-size to get space above/below elements) */
 
   /* Layout widths */
   /* Beware of `border-box` sizing when combining these widths with left/right padding */

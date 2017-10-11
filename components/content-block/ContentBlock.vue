@@ -10,7 +10,11 @@
 <script>
 export default {
   props: {
-    small: {
+    size: {
+      type: String,
+      validator: value => ['sml', 'lge'].indexOf(value) !== -1,
+    },
+    short: {
       type: Boolean,
       default: false,
     },
@@ -19,8 +23,9 @@ export default {
   computed: {
     classes() {
       return {
-        'content-block--sml': this.small,
+        ...(this.size ? { [`content-block--${this.size}`]: true } : {}),
         ...(this.bg ? { [`bg-${this.bg}`]: true } : {}),
+        'content-block--short': this.short,
       };
     },
   },
