@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="content-block"
-    :class="classes"
-  >
+  <div :class="classes">
     <slot></slot>
   </div>
 </template>
@@ -23,9 +20,10 @@ export default {
   computed: {
     classes() {
       return {
-        ...(this.size ? { [`content-block--${this.size}`]: true } : {}),
-        ...(this.bg ? { [`bg-${this.bg}`]: true } : {}),
+        'content-block': true,
+        [`content-block--${this.size}`]: !!this.size,
         'content-block--short': this.short,
+        [`bg-${this.bg}`]: !!this.bg,
       };
     },
   },

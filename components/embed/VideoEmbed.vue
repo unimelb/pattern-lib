@@ -1,5 +1,5 @@
 <template>
-  <div :class="classObj">
+  <div :class="classes">
     <iframe
       :src="src"
       width="560"
@@ -13,11 +13,17 @@
 <script>
 export default {
   props: {
-    src: String,
-    ratio: String,
+    src: {
+      type: String,
+      required: true,
+    },
+    ratio: {
+      type: String,
+      validator: value => ['21_9'].indexOf(value) !== -1,
+    },
   },
   computed: {
-    classObj() {
+    classes() {
       return {
         embed: true,
         [`embed--${this.ratio}`]: !!this.ratio,

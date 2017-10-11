@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 import ArticleInset from './../../article/stories/ArticleInset.vue';
-import VideoEmbed from './../../embed/stories/VideoEmbed.vue';
+import VideoEmbed from './../../embed/VideoEmbed.vue';
 import FigureSection from './FigureSection.vue';
 import FigureProgressive from './FigureProgressive.vue';
 import FigureWrap from './FigureWrap.vue';
@@ -46,12 +46,12 @@ storiesOf('Figure', module)
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
           <p>Praesentium, quaerat! Odit numquam magnam, recusandae totam sint blanditiis autem quos. </p>
           <figure-wrap caption="embed test">
-            <video-embed src="https://www.youtube.com/embed/nlF7qp5GNPI"></video-embed>
+            <video-embed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
           </figure-wrap>
           <p>In officiis voluptatum repudiandae itaque aperiam iure dolorem vero nostrum nisi.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
           <figure-wrap inset right large caption="embed test">
-            <video-embed src="https://www.youtube.com/embed/nlF7qp5GNPI"></video-embed>
+            <video-embed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
           </figure-wrap>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem eos nihil odit, non commodi necessitatibus praesentium culpa totam debitis provident excepturi beatae doloribus, odio sit quaerat eveniet voluptatum maiores optio.</p>
 
