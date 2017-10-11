@@ -2,4 +2,4 @@
 import { createDecorator } from '../utils';
 import Pad from './Pad.vue';
 
-export const pad = createDecorator(Pad);
+export const PadDecorator = createDecorator(Pad);

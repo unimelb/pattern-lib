@@ -1,5 +1,5 @@
 <template>
-  <section class="section" :class="bgColor">
+  <section class="section" :class="{ [bgColor]: !!bgColor, 'section--centred': centred }">
     <div class="section__inner" :class="{'section__inner--sml': small, 'section__inner--mid': mid, 'section__inner--short': short}">
       <slot></slot>
     </div>
@@ -13,6 +13,7 @@ export default {
     small: Boolean,
     mid: Boolean,
     bgColor: String,
+    centred: Boolean,
   },
 };
 </script>

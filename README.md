@@ -26,6 +26,7 @@ yarn
 
 - To build the documentation site to `/.out/docs`, run `yarn run build:docs`.
 - To build the library for production (e.g. for debugging purposes) to `.out/lib/<version>`, run `yarn run build:lib`.
+- For the library or documentation site to load the library assets from the CDN, set `LOAD_EXTERNAL_ASSETS=true` in `.env` before running either of the build commands.
 
 ### Linting
 
@@ -41,6 +42,27 @@ For your own sanity, make sure to install your code editor's ESLint and stylelin
 - `yarn run lint:css --fix`
 - `yarn run lint:js`
 - `yarn run lint:js --fix`
+
+### Generator
+
+#### Components
+
+New components can be scaffolded by running :
+
+- `yarn generate component`
+
+You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story.
+
+
+#### Stories
+
+New stories can be scaffolded too by running
+
+- `yarn generate story`
+
+You will need to select the component from the list of folders, then confirm the selection by selecting `choose this directory`. You will then be asked to give the story a name.
+
+> **Note** This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
 
 
 ## Deployment

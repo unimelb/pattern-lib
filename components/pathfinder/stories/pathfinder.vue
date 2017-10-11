@@ -2,21 +2,22 @@
   <section class="section bg-inverted-dark" :style="`background-image: url(${image});`">
     <div class="section__inner">
       <div class="listing listing--three listing--center">
-        <ListItem v-for="box in boxes.split(',')" :key="box">
-          <CardPathfinder :title="box" />
-        </ListItem>
+        <list-item v-for="box in boxes.split(',')" :key="box">
+          <CardPathfinder :title="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.
+          </CardPathfinder>
+        </list-item>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import ListItem from '../../listing/stories/listitem.vue';
-import CardPathfinder from '../../card/stories/card-pathfinder.vue';
+import CardPathfinder from '../../cards/CardPathfinder.vue';
 
 export default {
   name: 'Pathfinder',
-  components: { CardPathfinder, ListItem },
+  components: { CardPathfinder },
   props: {
     image: {
       type: String,

@@ -1,0 +1,41 @@
+/**
+ * Pathfinder cards - highlight focus on hover
+ */
+.card--pathfinder {
+  padding: var(--vr);
+  text-align: center;
+
+  .card__header {
+    min-height: calc(var(--vr) * 3.5);
+    margin-top: var(--vr);
+    padding-right: var(--vr);
+    padding-left: var(--vr);
+    text-align: center;
+  }
+
+  .card__inner {
+    text-align: center;
+  }
+
+  &--sml {
+    text-align: center;
+
+    .btn {
+      margin-bottom: var(--vr);
+    }
+  }
+
+  .card__footer {
+    padding-top: 0;
+  }
+
+  .card--focus-box__cnr {
+    transition: opacity .3s;
+    opacity: .2;
+    color: #fff;
+  }
+
+  &:hover .card--focus-box__cnr {
+    opacity: .3;
+  }
+}

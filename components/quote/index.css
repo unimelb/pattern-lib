@@ -1,13 +1,15 @@
 blockquote,
-.blockquote {
+.quote {
   display: flex;
   position: relative;
   flex-direction: column;
   padding-right: var(--vr);
   padding-left: var(--vr);
+  border-color: var(--col-grey);
 
   p,
-  span {
+  &__content {
+    margin-bottom: 0;
     font-family: var(--ff-lead);
     font-size: 2.2rem;
     font-style: italic;
@@ -46,22 +48,19 @@ blockquote,
   &--bdr-top {
     padding-top: 2.2em;
     border-top: 2px solid;
-    border-color: var(--col-grey);
   }
 
   &--bdr-btm {
     padding-bottom: 2.2em;
     border-bottom: 2px solid;
-    border-color: var(--col-grey);
   }
 
-  .bg-inverted & {
-    &--bdr-top { border-color: #fff; }
-    &--bdr-btm { border-color: #fff; }
+  &--inverted {
+    border-color: #fff;
   }
 
-  &__author,
-  cite {
+  cite,
+  &__author {
     width: 100%;
     margin-top: calc(var(--vr) / 2);
     float: left;
