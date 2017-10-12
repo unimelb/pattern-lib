@@ -123,7 +123,31 @@ storiesOf('Section', module)
       template: `
         <section class="section section--image bg-inverted" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg');">
           <div class="section__inner section__inner--sml">
-            <div class="card card--focus-box card--focus-box--loose bg-white">
+            <div class="card card--focus-box bg-white">
+              <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+              <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+              <div class="card__inner ">
+                <h3 class="heading-section">${title}</h3>
+                <p>${paragraph}</p>
+                <button-icon>${btnText}</button-icon>
+              </div>
+            </div>
+          </div>
+        </section>
+      `,
+    };
+  })
+  .add('Section - Focus Box (blue marks)', () => {
+    const title = text('Title', 'Example Title');
+    const paragraph = text('Paragraph text', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ');
+    const btnText = text('Button Text', 'Example Title');
+
+    return {
+      components: { ButtonIcon },
+      template: `
+        <section class="section section--image bg-inverted" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg');">
+          <div class="section__inner section__inner--sml">
+            <div class="card card--focus-box card--focus-box--brand bg-white">
               <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
               <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
               <div class="card__inner ">

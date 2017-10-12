@@ -2,9 +2,9 @@
   <a :href="href" class="btn-owner card card--link card--bdr" :class="{'bg-inverted': inverted, 'bg-white' : !inverted}">
     <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <icon width="15px" height="15px" name="chevron-right" />
-    <h5 class="card__header">
+    <p class="card__header">
       {{ title }}
-    </h5>
+    </p>
   </a>
 </template>
 
