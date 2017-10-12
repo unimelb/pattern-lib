@@ -1,11 +1,8 @@
 import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
-import VueProgressiveImage from 'vue-progressive-image'
+import VueProgressiveImage from 'vue-progressive-image';
 
 import { storyDecorator } from './utils';
-import { version } from '../package.json';
-import { utils } from 'shared';
-
 import Icon from 'icons/stories/Icon.vue';
 import SectionWrap from '../components/section/stories/SectionWrap.vue';
 import ListItem from '../components/listing/stories/listitem.vue';
