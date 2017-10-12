@@ -117,4 +117,4 @@ storiesOf('Buttons', module)
       components: { ButtonIcon },
       template: `<button-icon icon="microphone" element="button">${btnText}</button-icon>`,
     };
-  }))
+  }));
