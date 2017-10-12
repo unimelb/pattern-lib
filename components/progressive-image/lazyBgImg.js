@@ -1,4 +1,4 @@
-export default function (el, binding) {
+export default function lazyBgImg(el, binding) {
   el.style.backgroundImage = `url(${binding.value.placeholder})`;
   el.classList.add('lazy-bgimg--loading');
 

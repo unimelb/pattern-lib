@@ -21,12 +21,19 @@ yarn
 
 ## Development
 
-1. Run `yarn start`
-1. Visit [http://localhost:7002/](http://localhost:7002/)
+Storybook is the main development environment.
 
-- To build the documentation site to `/.out/docs`, run `yarn run build:docs`.
-- To build the library for production (e.g. for debugging purposes) to `.out/lib/<version>`, run `yarn run build:lib`.
-- For the library or documentation site to load the library assets from the CDN, set `LOAD_EXTERNAL_ASSETS=true` in `.env` before running either of the build commands.
+- `yarn start` - [http://localhost:7002/](http://localhost:7002/)
+- `yarn run build` to build the documentation site to `/.out/docs`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the documentation site is to load the library assets locally (`false`) or from the CDN (`true`).
+
+### Targets
+
+#### Library - `targets/lib`
+
+The main library for use in the CMS. The target provides a local development environment for testing purposes.
+
+- `yarn run start:lib` - [http://localhost:7003/](http://localhost:7003/).
+- `yarn run build:lib` to compile the library to `.out/lib/<version>`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the library is to load its assets locally (`false`) or from the CDN (`true`).
 
 ### Linting
 
@@ -47,7 +54,7 @@ For your own sanity, make sure to install your code editor's ESLint and stylelin
 
 #### Components
 
-New components can be scaffolded by running :
+New components can be scaffolded by running:
 
 - `yarn generate component`
 
@@ -56,7 +63,7 @@ You will then be asked for the name of the component, this will be used to creat
 
 #### Stories
 
-New stories can be scaffolded too by running
+New stories can be scaffolded too by running:
 
 - `yarn generate story`
 

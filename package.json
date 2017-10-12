@@ -10,15 +10,16 @@
     "yarn": "*"
   },
   "scripts": {
-    "build:docs": "build-storybook -c .storybook -o .out/docs",
-    "build:lib": "NODE_ENV=production webpack --config webpack.config.js",
+    "build": "build-storybook -c .storybook -o .out/docs",
+    "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.config.js",
     "start": "start-storybook -p 7002 -c .storybook",
-    "prebuild:docs": "rm -Rf .out/docs",
+    "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
+    "prebuild": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
     "lint": "yarn run lint:js && yarn run lint:css",
-    "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\"",
-    "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\"",
-    "generate": "plop --plopfile template/generator.js"
+    "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\"",
+    "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\" \"targets/**/*.js\"",
+    "generate": "plop --plopfile generator/index.js"
   },
   "dependencies": {
     "ike.js": "^0.0.2",
@@ -47,6 +48,7 @@
     "file-loader": "^0.11.1",
     "fr-accordion": "^1.0.6",
     "fr-dialogmodal": "^1.0.4",
+    "html-webpack-plugin": "^2.30.1",
     "inquirer-directory": "^2.1.0",
     "plop": "^1.9.0",
     "postcss-cssnext": "^2.10.0",
@@ -68,6 +70,7 @@
     "svgo-loader": "^1.2.1",
     "vue-loader": "^13.0.4",
     "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
   "cacheDirectories": [
