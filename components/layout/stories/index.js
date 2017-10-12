@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 import pretty from 'pretty';
 
-import { version, unimelb } from '../../../package.json';
+import { version } from '../../../package.json';
 
 const assetsUrl = `${process.env.CDN_URL}/v${version}`;
 
