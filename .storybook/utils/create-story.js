@@ -11,7 +11,7 @@ function htmlBlock(markup) {
  * @param {Component} Story - the story's Vue component
  * @param {Object} opts - options for readme panel
  */
-export default function createStory(Story, opts = { showMinifiedMarkup: false, customReadme: false, shallowRender: false}) {
+export default function createStory(Story, opts = { showMinifiedMarkup: false, customReadme: false, shallowRender: false }) {
   const { prettified, minified } = renderMarkup(Story, opts);
   let readme = opts.customReadme;
   if (!readme) {

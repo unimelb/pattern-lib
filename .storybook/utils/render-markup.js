@@ -13,26 +13,26 @@ export default function renderMarkup(Component, opts = {}) {
   let raw = '';
 
   if (opts.shallowRender === true) {
+    /* eslint-disable no-underscore-dangle */
     if (vm._vnode.componentInstance.$children.length === 1) {
       const recs = vm._vnode.componentInstance.$children[0].$options._renderChildren;
       if (recs) {
-        const attrs = vm._vnode.componentInstance.$children[0].$vnode.componentInstance._props;
-        let outer = document.createElement(vm._vnode.componentInstance.$children[0].$vnode.componentOptions.tag);
-        for (let prop in attrs) {
-          if (attrs[prop]) {
-            outer.setAttribute(`:${prop}`, attrs[prop]);
+        const componentProps = vm._vnode.componentInstance.$children[0].$vnode.componentInstance._props;
+        const outer = document.createElement(vm._vnode.componentInstance.$children[0].$vnode.componentOptions.tag);
+        for (let attrNames = Object.keys(componentProps), attrVals = Object.values(componentProps), i = attrNames.length - 1; i >= 0; i -= 1) {
+          if (attrVals[i]) {
+            outer.setAttribute(`:${attrNames[i]}`, attrVals[i]);
           }
         }
-        for (let i = recs.length - 1; i >= 0; i--) {
+        for (let i = recs.length - 1; i >= 0; i -= 1) {
           if (recs[i].componentInstance && recs[i].componentInstance.$slots) {
-            let inner = document.createElement(recs[i].componentOptions.tag);
-            const obj = recs[i].componentInstance.$slots;
-            for (let prop in obj) {
-              for (let j = obj[prop].length - 1; j >= 0; j--) {
-                if (obj[prop][j].tag) {
-                  let slotcontent = obj[prop][j].elm;
-                  if (obj[prop][j].data) {
-                    slotcontent.setAttribute('slot', obj[prop][j].data.slot);
+            const inner = document.createElement(recs[i].componentOptions.tag);
+            for (let slots = Object.values(recs[i].componentInstance.$slots), k = slots.length - 1; k >= 0; k -= 1) {
+              for (let j = slots[k].length - 1; j >= 0; j -= 1) {
+                if (slots[k][j].tag) {
+                  const slotcontent = slots[k][j].elm;
+                  if (slots[k][j].data) {
+                    slotcontent.setAttribute('slot', slots[k][j].data.slot);
                   }
                   inner.appendChild(slotcontent);
                 }
@@ -44,7 +44,7 @@ export default function renderMarkup(Component, opts = {}) {
         raw = outer.outerHTML;
       }
     }
-
+    /* eslint-enable no-underscore-dangle */
   } else {
     raw = vm.$el.outerHTML.replace(/<!(-)*>/g, '');
   }
