@@ -16,14 +16,14 @@ storiesOf('Buttons', module)
     const btnText = text('Button Text', 'Button with icon');
     return {
       components: { ButtonIcon },
-      template: `<button-icon>${btnText}</button-icon>`,
+      template: `<button-icon >${btnText}</button-icon>`,
     };
   }))
   .add('Button with icon (as button element)', withReadme(buttonAsButton, () => {
     const btnText = text('Button Text', 'Button with icon');
     return {
       components: { ButtonIcon },
-      template: `<button-icon element="button">${btnText}</button-icon>`,
+      template: `<button-icon icon="twitter" element="button">${btnText}</button-icon>`,
     };
   }))
   .add('Button without icon', () => {
@@ -110,4 +110,11 @@ storiesOf('Buttons', module)
         </div>
         `,
     };
-  }));
+  }))
+  .add('Button with different icons', withReadme(buttonAsButton, () => {
+    const btnText = text('Button Text', 'Button with icon');
+    return {
+      components: { ButtonIcon },
+      template: `<button-icon icon="microphone" element="button">${btnText}</button-icon>`,
+    };
+  }))

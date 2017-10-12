@@ -26,6 +26,7 @@ export default {
       'phone',
       'location',
       'campaign',
+      'microphone',
       'jobs',
     ],
   }),
