@@ -15,9 +15,6 @@ module.exports = merge(sharedConfig, {
       './targets/lib/index.css',
     ],
   },
-  resolve: {
-    alias: { vue: 'vue/dist/vue.js' },
-  },
   devServer: {
     publicPath: sharedConfig.output.publicPath,
     hot: true, // enable hot module replacement
