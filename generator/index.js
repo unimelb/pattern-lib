@@ -36,7 +36,7 @@ module.exports = function generator(plop) {
         type: 'modify',
         path: './../components/index.css',
         pattern: /\/\*\* GENERATOR \*\*\//g,
-        templateFile: './index.css.hbs',
+        templateFile: './component/import.css.hbs',
       },
     ],
   });

@@ -2,12 +2,11 @@ import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 import pretty from 'pretty';
 
-import { version } from '../../../package.json';
+import { version, unimelb } from '../../../package.json';
 
 const assetsUrl = `${process.env.CDN_URL}/v${version}`;
 
 // Base layout markup
-// (can't put into Vue component because of `script` and can't use external markdown file because of `assetsUrl`)
 const markup = `\`\`\`html
 <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -19,12 +18,14 @@ const markup = `\`\`\`html
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700%7CSource+Sans+Pro:300,300i,400,400i,600,700">
   </head>
   <body>
-    <!-- banner goes here -->
-    <!-- breadcrumbs go here, if present -->
-    <main>
-      <!-- content goes here -->
-    </main>
-    <!-- footer goes here -->
+    <div id="ui">
+      <!-- banner goes here -->
+      <!-- breadcrumbs go here, if present -->
+      <main>
+        <!-- content goes here -->
+      </main>
+      <!-- footer goes here -->
+    </div>
     <script src="${assetsUrl}/ui.js"></script>
   </body>
 </html>
