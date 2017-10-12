@@ -9,13 +9,13 @@ function htmlBlock(markup) {
  * Create a story factory.
  * Usage: `storiesOf('my-component').add('my-story', createStory(MyStory))`
  * @param {Component} Story - the story's Vue component
- * @param {Boolean} showMinifiedMarkup - whether to show minifed markup in README
+ * @param {Object} opts - options for readme panel
  */
-export default function createStory(Story, showMinifiedMarkup = false, customReadme = false) {
-  const { prettified, minified } = renderMarkup(Story);
-  let readme = customReadme;
+export default function createStory(Story, opts = { showMinifiedMarkup: false, customReadme: false, shallowRender: false }) {
+  const { prettified, minified } = renderMarkup(Story, opts);
+  let readme = opts.customReadme;
   if (!readme) {
-    readme = `${showMinifiedMarkup ? `### Minified markup\n${htmlBlock(minified)}\n### Markup\n` : ''}${htmlBlock(prettified)}`;
+    readme = `${opts.showMinifiedMarkup ? `### Minified markup\n${htmlBlock(minified)}\n### Markup\n` : ''}${htmlBlock(prettified)}`;
   }
   return withReadme(readme, () => Story);
 }
