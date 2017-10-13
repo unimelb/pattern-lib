@@ -5,32 +5,28 @@
   list-style-type: none;
 
   &__item {
-    display: none;
+    display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
-
-    &:first-child {
-      .breadcrumbs__name {
-        display: none;
-      }
-    }
-
-    &:first-child,
-    &:last-child {
-      display: inline-block;
-    }
 
     &:last-child {
       font-weight: var(--fw-semibold);
     }
 
-    @media (--bp-tablet) {
-      display: inline-block;
+    @media (--bp-max-mobile) {
+      /* hide site name on mobile */
+      &:first-child .breadcrumbs__name {
+        display: none;
+      }
+    }
 
-      &:first-child {
-        .breadcrumbs__name {
-          display: inline-block;
-        }
+    @media (--bp-max-tablet) {
+      /* show ellipsis for intermediate items on mobile/tablet */
+      &:not(:first-child):not(:last-child) .breadcrumbs__name {
+        width: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }
