@@ -27,6 +27,7 @@
       bottom: 0;
     }
   }
+  /* Focus mark color modifiers */
 
   &--brand {
     .card--focus-box__cnr {
@@ -37,6 +38,54 @@
   &--white {
     .card--focus-box__cnr {
       color: #fff;
+    }
+  }
+
+  &--teal {
+    .card--focus-box__cnr {
+      color: var(--col-teal);
+    }
+  }
+
+  &--yellow {
+    .card--focus-box__cnr {
+      color: var(--col-yellow);
+    }
+  }
+
+  &--emerald {
+    .card--focus-box__cnr {
+      color: var(--col-emerald);
+    }
+  }
+
+  &--blue {
+    .card--focus-box__cnr {
+      color: var(--col-blue);
+    }
+  }
+
+  &--orange {
+    .card--focus-box__cnr {
+      color: var(--col-orange);
+    }
+  }
+
+  &--green {
+    .card--focus-box__cnr {
+      color: var(--col-green);
+    }
+  }
+
+  &--purple {
+    .card--focus-box__cnr {
+      color: var(--col-purple);
+    }
+  }
+
+  &--pink {
+    .card--focus-box__cnr {
+      color: var(--col-pink);
     }
   }
 

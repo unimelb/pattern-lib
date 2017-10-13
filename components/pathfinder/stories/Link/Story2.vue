@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CardLink from './../../CardLink.vue';
+import CardLink from './../../../cards/CardLink.vue';
 
 export default {
   components: { CardLink },

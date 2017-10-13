@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-owner card card--focus-box card--focus-box-vert">
+  <div class="card card--focus-box card--focus-box-vert bg-white" :class="colorClasses">
     <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
 
@@ -24,6 +24,10 @@ export default {
       type: String,
       default: 'Test title',
     },
+    color: {
+      type: String,
+      default: '',
+    },
     href: {
       type: String,
       default: '#',
@@ -31,6 +35,13 @@ export default {
     excerpt: {
       type: String,
       default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+    },
+  },
+  computed: {
+    colorClasses() {
+      return {
+        [`card--focus-box--${this.color}`]: this.color && this.color.length > 0,
+      };
     },
   },
 };

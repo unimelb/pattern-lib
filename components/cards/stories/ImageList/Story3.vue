@@ -2,6 +2,7 @@
   <section-wrap small class="bg-inverted" style="background-image: url('http://about-us-unimelb.netlify.com/images/UoM-soft-3.png')">
     <card-focus-image-list
       element="div"
+      color="white"
       fullimg
       hero
       titleabove

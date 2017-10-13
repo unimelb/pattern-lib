@@ -2,18 +2,17 @@ import { storiesOf } from '@storybook/vue';
 import { createStory } from '.storybook/utils';
 
 
-import CardImageStory1 from './Image/Story1.vue';
 import CardNewsStory1 from './News/Story1.vue';
 import CardNewsStory2 from './News/Story2.vue';
-import CardLinkStory1 from './Link/Story1.vue';
-import CardLinkStory2 from './Link/Story2.vue';
-import CardLinkStory3 from './Link/Story3.vue';
+
 import CardImageListStory1 from './ImageList/Story1.vue';
 import CardImageListStory2 from './ImageList/Story2.vue';
 import CardImageListStory3 from './ImageList/Story3.vue';
 import CardImageListStory4 from './ImageList/Story4.vue';
+import CardImageListStory5 from './ImageList/Story5.vue';
 import CardFocusBoxStory1 from './FocusBox/Story1.vue';
 import CardFocusBoxStory2 from './FocusBox/Story2.vue';
+import CardFocusBoxStory3 from './FocusBox/Story3.vue';
 import CardFactsStory1 from './Facts/Story1.vue';
 import CardDivisionStory1 from './Division/Story1.vue';
 import CardDivisionHeadStory1 from './DivisionHead/Story1.vue';
@@ -27,20 +26,11 @@ import HeroImageReadme from './ImageList/HeroImageReadme.md';
 
 /* ##Import story component here */
 
-/* Image Stories  */
-storiesOf('Cards/Card with Image', module)
-  .add('Default', createStory(CardImageStory1));
 
 /* News Stories  */
 storiesOf('Cards/News Listing', module)
   .add('3 Column', createStory(CardNewsStory1))
   .add('1 Column', createStory(CardNewsStory2));
-
-/* Link Stories  */
-storiesOf('Cards/Link Box', module)
-  .add('3 Boxes', createStory(CardLinkStory1))
-  .add('4 Boxes', createStory(CardLinkStory2))
-  .add('Longer titles', createStory(CardLinkStory3));
 
 /* Image Listings */
 storiesOf('Cards/Image Listing/Bio Images', module)
@@ -48,7 +38,8 @@ storiesOf('Cards/Image Listing/Bio Images', module)
 
 storiesOf('Cards/Image Listing/Focus Marks', module)
   .add('Three Column', createStory(CardImageListStory2))
-  .add('Two Column', createStory(CardImageListStory4, false, FocusImageReadme));
+  .add('Two Column', createStory(CardImageListStory4, false, FocusImageReadme))
+  .add('Color variations', createStory(CardImageListStory5));
 
 storiesOf('Cards/Image Listing/Hero Image', module)
   .add('Hero Image', createStory(CardImageListStory3, false, HeroImageReadme));
@@ -56,7 +47,8 @@ storiesOf('Cards/Image Listing/Hero Image', module)
 /* Focus Boxes */
 storiesOf('Cards/Focus Boxes', module)
   .add('3 Col', createStory(CardFocusBoxStory1))
-  .add('2 Col', createStory(CardFocusBoxStory2));
+  .add('2 Col', createStory(CardFocusBoxStory2))
+  .add('Colour variations', createStory(CardFocusBoxStory3));
 
 storiesOf('Cards/Facts', module)
   .add('Mixed sizes', createStory(CardFactsStory1));

@@ -29,6 +29,10 @@
     background-size: cover;
   }
 
+  &--image-mask {
+    opacity: .8;
+  }
+
   &--divider {
     &__inner {
       margin-top: auto;
