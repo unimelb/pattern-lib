@@ -11,7 +11,7 @@ export default {
     items: [
       { href: '/', text: 'About us' },
       { href: '/strategy', text: 'Strategy and governance' },
-    ]
-  })
+    ],
+  }),
 };
 </script>

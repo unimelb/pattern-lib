@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ol
-      class="breadcrumbs links-reset max"
+      class="breadcrumbs max links-reset"
       itemscope itemtype="http://schema.org/BreadcrumbList"
     >
       <li
@@ -20,13 +20,13 @@
             width="18" height="18"
           />
           <span class="breadcrumbs__name" itemprop="name">{{ item.text }}</span>
+          <icon
+            v-if="index < items.length - 1"
+            class="breadcrumbs__chevron"
+            name="chevron-right"
+            width="12" height="12"
+          />
         </a>
-        <icon
-          v-if="index < items.length - 1"
-          class="breadcrumbs__chevron"
-          name="chevron-right"
-          width="12" height="12"
-        />
       </li>
     </ol>
   </nav>
@@ -39,7 +39,7 @@ export default {
     items: {
       type: Array,
       required: true,
-      validator: (arr) => (
+      validator: arr => (
         arr.length > 0 &&
         arr.every(el => !!el.href && !!el.text)
       ),

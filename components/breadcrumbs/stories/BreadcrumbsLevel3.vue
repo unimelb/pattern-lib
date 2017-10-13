@@ -12,7 +12,7 @@ export default {
       { href: '/', text: 'About us' },
       { href: '/strategy', text: 'Strategy and governance' },
       { href: '/strategy/growing-esteem', text: 'Growing Esteem' },
-    ]
-  })
+    ],
+  }),
 };
 </script>

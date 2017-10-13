@@ -10,7 +10,7 @@ export default {
   data: () => ({
     items: [
       { href: '/', text: 'About us' },
-    ]
-  })
+    ],
+  }),
 };
 </script>
