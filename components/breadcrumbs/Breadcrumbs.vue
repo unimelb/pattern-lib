@@ -13,26 +13,20 @@
       >
         <meta :content="index + 1" itemprop="position">
         <a class="breadcrumbs__link" :href="item.href" itemprop="item">
-          <svg
+          <icon
             v-if="index === 0"
             class="breadcrumbs__home"
+            name="home"
             width="18" height="18"
-            role="presentation" focusable="false"
-          >
-            <use xlink:href="#home" />
-          </svg>
-          <span class="breadcrumbs__name" itemprop="name">
-            {{ item.text }}
-          </span>
+          />
+          <span class="breadcrumbs__name" itemprop="name">{{ item.text }}</span>
         </a>
-        <svg
+        <icon
           v-if="index < items.length - 1"
           class="breadcrumbs__chevron"
+          name="chevron-right"
           width="12" height="12"
-          role="presentation"  focusable="false"
-        >
-          <use xlink:href="#chevron-right" />
-        </svg>
+        />
       </li>
     </ol>
   </nav>
