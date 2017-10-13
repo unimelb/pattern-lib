@@ -12,6 +12,11 @@
 
     &:last-child {
       font-weight: var(--fw-semibold);
+
+      /* hide last chevron in case it is provided (e.g. in CMS) */
+      .breadcrumbs__chevron {
+        display: none;
+      }
     }
 
     /* hide site name on mobile */
