@@ -201,24 +201,22 @@
   }
 
   @media (--bp-tablet) and (--bp-max-desktop) {
-    @supports (display: flex) {
-      &__main {
-        display: flex;
-        flex-wrap: wrap;
+    &__main {
+      display: flex;
+      flex-wrap: wrap;
 
-        &__users,
-        &__ack {
-          flex: 1 1 50%;
-        }
-
-        &__popular {
-          order: 1;
-        }
+      &__users,
+      &__ack {
+        flex: 1 1 50%;
       }
 
       &__popular {
-        margin-bottom: 0;
+        order: 1;
       }
+    }
+
+    &__popular {
+      margin-bottom: 0;
     }
   }
 

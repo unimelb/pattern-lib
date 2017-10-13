@@ -1,13 +1,7 @@
 import { storiesOf } from '@storybook/vue';
-import withReadme from 'storybook-readme/with-readme';
-import RenderMarkup from '../../RenderMarkup';
+import { createStory } from '.storybook/utils';
 
-import BoilerplateFooter from './BoilerplateFooter.vue';
-
-const markup = new RenderMarkup(BoilerplateFooter);
+import FooterDefault from './FooterDefault.vue';
 
 storiesOf('Footer', module)
-  .add(
-    'Boilerplate code insert',
-    withReadme(markup.minifiedMarkup + markup.prettifiedMarkup, () => BoilerplateFooter)
-  );
+  .add('Default', createStory(FooterDefault));
