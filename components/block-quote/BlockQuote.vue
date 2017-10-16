@@ -1,10 +1,10 @@
 <template>
   <blockquote
-    class="quote"
-    :class="{ 'quote--bdr-top': borderTop, 'quote--bdr-btm': borderBottom }"
+    class="block-quote"
+    :class="{ 'block-quote--bdr-top': borderTop, 'block-quote--bdr-btm': borderBottom }"
   >
-    <p class="quote__content"><slot></slot></p>
-    <cite v-if="author" class="quote__author">{{ author }}</cite>
+    <p class="block-quote__content"><slot></slot></p>
+    <cite v-if="author" class="block-quote__author">{{ author }}</cite>
   </blockquote>
 </template>
 
