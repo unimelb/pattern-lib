@@ -13,6 +13,7 @@
 
 <script>
 export default {
+  name: 'accordion-panel',
   props: {
     title: String,
   },
