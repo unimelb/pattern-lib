@@ -78,7 +78,7 @@
           <div class="listing listing--three">
 
 
-          <div class="list-item">
+          <div class="ListItem">
               <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/learning-and-teaching">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/learning-teaching.jpg)"></div>
                   <div class="card__inner">
@@ -90,7 +90,7 @@
           </div>
 
 
-          <div class="list-item">
+          <div class="ListItem">
               <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/research">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/research.jpg)"></div>
                   <div class="card__inner">
@@ -102,7 +102,7 @@
           </div>
 
 
-          <div class="list-item">
+          <div class="ListItem">
               <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/engagement">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/engagement.jpg)"></div>
                   <div class="card__inner">
@@ -114,7 +114,7 @@
           </div>
 
 
-          <div class="list-item">
+          <div class="ListItem">
               <a class="btn-owner card card--image card--bdr bg-inverted" href="https://matrix-cms.unimelb.edu.au/about/strategy/growing-esteem/sustainability">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/sustainability.jpg)"></div>
                   <div class="card__inner">
@@ -126,7 +126,7 @@
           </div>
 
 
-          <div class="list-item">
+          <div class="ListItem">
               <a class="btn-owner card card--image card--bdr bg-inverted" href="http://about.unimelb.edu.au/strategy-and-leadership/reconciliation">
                   <div class="card__thumb card__thumb--zoom" style="background-image: url(https://matrix-cms.unimelb.edu.au/about/assets/images/strategy/reconciliation.jpg)"></div>
                   <div class="card__inner">

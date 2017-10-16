@@ -7,7 +7,7 @@
 
 <script>
 import VideoEmbed from '../VideoEmbed.vue';
-import SectionWrap from '../../section/stories/SectionWrap.vue';
+import SectionWrap from '../../section/SectionWrap.vue';
 
 export default {
   components: { VideoEmbed },

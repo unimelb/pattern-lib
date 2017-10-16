@@ -1,11 +1,11 @@
 <template>
-  <section-wrap>
+  <SectionWrap>
     <div class="listing listing--four listing--center">
-      <list-item><card-link inverted title="Ranking and Statistics" /></list-item>
-      <list-item><card-link inverted title="Test 2" /></list-item>
-      <list-item><card-link inverted title="Test 3" /></list-item>
+      <ListItem><card-link inverted title="Ranking and Statistics" /></ListItem>
+      <ListItem><card-link inverted title="Test 2" /></ListItem>
+      <ListItem><card-link inverted title="Test 3" /></ListItem>
     </div>
-  </section-wrap>
+  </SectionWrap>
 </template>
 
 <script>

@@ -1,98 +1,107 @@
 <template>
-  <section-wrap class="bg-alt">
+  <SectionWrap class="bg-alt">
     <div class="listing listing--three">
-      <list-item>
-        <card-focus-box
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="brand"
           :icon="Icon1"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="teal"
           :icon="Icon2"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ex quibusdam omnis, vitae reiciendis et, sunt voluptate, dolores autem explicabo hic rerum vero numquam sed eos eius officiis aut tempore.
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="yellow"
           :icon="Icon3"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="emerald"
           :icon="Icon3"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="blue"
           :icon="Icon3"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="orange"
           :icon="Icon3"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="green"
           :icon="Icon3"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="purple"
           :icon="Icon3"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
-        </card-focus-box>
-      </list-item>
-      <list-item>
-        <card-focus-box
+        </CardFocusBox>
+      </ListItem>
+      <ListItem>
+        <CardFocusBox
           element="div"
           color="pink"
           :icon="Icon3"
-          title="Learning and teaching"
+          vertical
           >
+          <h3>Learning and teaching</h3>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
-        </card-focus-box>
-      </list-item>
+        </CardFocusBox>
+      </ListItem>
     </div>
-  </section-wrap>
+  </SectionWrap>
 </template>
 
 <script>

@@ -1,9 +1,15 @@
 <template>
-  <section-wrap class="text-center" bg-color="inverted" bg-image="http://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png">
-    <h3 class="heading-section">Our Vision</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus consequuntur cumque adipisci illum eveniet, et, obcaecati cum officia vero laborum culpa est nobis accusantium debitis iusto quis voluptate repellat distinctio.</p>
-    <div><button class="btn btn--inverted btn--wide">Call to action</button></div>
-  </section-wrap> 
+  <SectionWrap small bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop=">
+    <CardFocusBox
+      element="div"
+      compact
+      class="card--image-focus--col-brand"
+      title="Learning and teaching"
+      >
+      <h2 class="text-left">Header</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
+    </CardFocusBox>
+  </SectionWrap>
 </template>
 
 <script>

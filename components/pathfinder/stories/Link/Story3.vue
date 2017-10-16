@@ -1,11 +1,11 @@
 <template>
-  <section-wrap>
+  <SectionWrap>
     <div class="listing listing--four listing--center">
-      <list-item><card-link inverted title="Test 1"/></list-item>
-      <list-item><card-link inverted title="This is an even Longer title that totally goes over three lines"/></list-item>
-      <list-item><card-link inverted title="This is a Longer title over two lines"/></list-item>
+      <ListItem><card-link inverted title="Test 1"/></ListItem>
+      <ListItem><card-link inverted title="This is an even Longer title that totally goes over three lines"/></ListItem>
+      <ListItem><card-link inverted title="This is a Longer title over two lines"/></ListItem>
     </div>
-  </section-wrap>
+  </SectionWrap>
 </template>
 
 <script>

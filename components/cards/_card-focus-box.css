@@ -27,8 +27,8 @@
       bottom: 0;
     }
   }
-  /* Focus mark color modifiers */
 
+  /* Focus mark color modifiers */
   &--brand {
     .card--focus-box__cnr {
       color: var(--col-brand);

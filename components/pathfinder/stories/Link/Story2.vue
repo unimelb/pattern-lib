@@ -1,12 +1,12 @@
 <template>
-  <section-wrap>
+  <SectionWrap>
     <div class="listing listing--four listing--center">
-      <list-item><card-link inverted title="Test 1"/></list-item>
-      <list-item><card-link inverted title="Test 2"/></list-item>
-      <list-item><card-link inverted title="This is a Longer title over two lines"/></list-item>
-      <list-item><card-link inverted title="Ranking and Statistics"/></list-item>
+      <ListItem><card-link inverted title="Test 1"/></ListItem>
+      <ListItem><card-link inverted title="Test 2"/></ListItem>
+      <ListItem><card-link inverted title="This is a Longer title over two lines"/></ListItem>
+      <ListItem><card-link inverted title="Ranking and Statistics"/></ListItem>
     </div>
-  </section-wrap>
+  </SectionWrap>
 </template>
 
 <script>

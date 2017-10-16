@@ -3,7 +3,7 @@
     <div v-if="thumb && thumb.length > 0" class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner">
       <button-link class="btn--inverted btn--fullwidth" element="button">{{ title }}</button-link>
-      <p><slot /></p>
+      <p><slot></slot></p>
     </div>
   </a>
 </template>
@@ -28,7 +28,6 @@ export default {
       type: String,
       default: '#',
     },
-
   },
 };
 

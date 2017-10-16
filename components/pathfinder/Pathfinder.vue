@@ -2,11 +2,11 @@
   <section class="section section--image section--image-mask bg-inverted-dark" :style="`background-image: url(${image});`">
     <div class="section__inner">
       <div class="listing listing--three listing--center">
-        <list-item v-for="box in boxes.split(',')" :key="box">
+        <ListItem v-for="box in boxes.split(',')" :key="box">
           <CardPathfinder :title="box">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.
           </CardPathfinder>
-        </list-item>
+        </ListItem>
       </div>
     </div>
   </section>

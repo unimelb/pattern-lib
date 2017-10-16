@@ -1,39 +1,39 @@
 <template>
-  <section-wrap>
+  <SectionWrap>
     <div class="listing listing--three">
-      <list-item>
-        <card-division-head
+      <ListItem>
+        <CardDivisionHead
           thumb="https://randomuser.me/api/portraits/lego/0.jpg"
           name="John Smith"
           title="Vice Principal Enterprise"
         >
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tenetur iste dolores, architecto mollitia, aut consectetur odio itaque neque et omnis eos cumque id asperiores voluptate. Qui aut aperiam adipisci.</p>
-      </card-division-head>
-      </list-item>
-      <list-item>
-        <card-division-head
+      </CardDivisionHead>
+      </ListItem>
+      <ListItem>
+        <CardDivisionHead
           thumb="https://randomuser.me/api/portraits/lego/1.jpg"
           name="Jane Citizen"
           title="Vice Principal Enterprise"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tenetur iste dolores, architecto mollitia, aut consectetur odio itaque neque et omnis eos cumque id asperiores voluptate. Qui aut aperiam adipisci.</p>
-        </card-division-head>
-      </list-item>
-      <list-item>
-        <card-division-head
+        </CardDivisionHead>
+      </ListItem>
+      <ListItem>
+        <CardDivisionHead
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           name="John Smith"
           title="Vice Principal Enterprise"
         >
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tenetur iste dolores, architecto mollitia, aut consectetur odio itaque neque et omnis eos cumque id asperiores voluptate. Qui aut aperiam adipisci.</p>
-        </card-division-head>
-      </list-item>
+        </CardDivisionHead>
+      </ListItem>
     </div>
-  </section-wrap>
+  </SectionWrap>
 </template>
 
 <script>
-import CardDivisionHead from './../../CardDivisionHead.vue';
+import CardDivisionHead from './../../../CardDivisionHead.vue';
 
 export default {
   components: { CardDivisionHead },

@@ -1,5 +1,5 @@
 <template>
-  <section-divider title="Some Heading" /> 
+  <SectionDivider title="Some Heading" />
 </template>
 
 <script>

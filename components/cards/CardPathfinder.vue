@@ -4,7 +4,7 @@
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
     <h3 class="card__header heading-section">{{ title }}</h3>
     <div class="card__inner">
-      <slot ></slot>
+      <p><slot ></slot></p>
     </div>
     <div class="card__footer">
       <button-icon icon="chevron-right" class="btn--inverted btn--fullwidth">Find out more</button-icon>
@@ -15,7 +15,7 @@
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
     <div class="card__inner">
       <button-icon icon="chevron-right" class="btn--inverted btn--fullwidth">{{ title }}</button-icon>
-      <p><slot /></p>
+      <p><slot></slot></p>
     </div>
   </a>
 </template>

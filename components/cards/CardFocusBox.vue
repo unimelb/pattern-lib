@@ -1,12 +1,11 @@
 <template>
-  <div class="card card--focus-box card--focus-box-vert bg-white" :class="colorClasses">
+  <div class="card card--focus-box bg-white" :class="classes">
     <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
     <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
 
-    <div class="card__inner ">
-      <svg class="card--focus-box__icon" viewBox="20 0 150 150" width="100%" height="100%" v-html="icon"/>
-      <h3>{{ title }}</h3>
-      <p>{{ excerpt }}</p>
+    <div class="card__inner">
+      <svg v-if="icon" class="card--focus-box__icon" viewBox="20 0 150 150" width="100%" height="100%" v-html="icon"/>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -32,14 +31,18 @@ export default {
       type: String,
       default: '#',
     },
+    vertical: {
+      type: Boolean,
+    },
     excerpt: {
       type: String,
       default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
   },
   computed: {
-    colorClasses() {
+    classes() {
       return {
+        'card--focus-box-vert': this.vertical,
         [`card--focus-box--${this.color}`]: this.color && this.color.length > 0,
       };
     },

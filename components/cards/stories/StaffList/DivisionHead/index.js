@@ -4,14 +4,12 @@ import { createStory } from '.storybook/utils';
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
 import Story3 from './Story3.vue';
-import Story4 from './Story4.vue';
 /* ##Import story component here */
 
-/* Section - Focus  */
-storiesOf('Section/Section', module)
-  .add('BG - White', createStory(Story1))
-  .add('BG - Inverted', createStory(Story2))
-  .add('BG - Alt', createStory(Story3))
-  .add('Small', createStory(Story4))
+/* Section - Staff Listing  */
+storiesOf('Cards/Staff List/Division Head', module)
+  .add('Division Head (3 Col)', createStory(Story1))
+  .add('Division Heads (Single)', createStory(Story2))
+  .add('Division Heads (Compact)', createStory(Story3))
   /* ##Story goes here */ 
 ;
