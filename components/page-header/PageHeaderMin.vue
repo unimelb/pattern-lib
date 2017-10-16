@@ -6,7 +6,7 @@
         <img
           class="page-header__logo"
           src="../shared/logo-responsive.svg"
-          width="117" height="117"
+          width="85" height="71"
           alt="The University of Melbourne homepage"
         >
       </a>
