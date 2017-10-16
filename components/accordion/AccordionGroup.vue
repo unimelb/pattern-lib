@@ -8,6 +8,7 @@
 import Fraccordion from './_fr-accordion.js';
 
 export default {
+  name: 'accordion-group',
   props: {
     disabled: {
       type: Boolean,

@@ -14,8 +14,8 @@ export default function renderMarkup(Component, opts = {}) {
 
   if (opts.shallowRender === true) {
     /* eslint-disable no-underscore-dangle */
-    if (vm._vnode.componentInstance.$children.length === 1) {
-      const recs = vm._vnode.componentInstance.$children[0].$options._renderChildren;
+    for (let h = 0, rootnodes = vm._vnode.componentInstance.$children.length; h < rootnodes; h += 1) {
+      const recs = vm._vnode.componentInstance.$children[h].$options._renderChildren;
       if (recs) {
         const componentProps = vm._vnode.componentInstance.$children[0].$vnode.componentInstance._props;
         const outer = document.createElement(vm._vnode.componentInstance.$children[0].$vnode.componentOptions.tag);
@@ -24,8 +24,9 @@ export default function renderMarkup(Component, opts = {}) {
             outer.setAttribute(`:${attrNames[i]}`, attrVals[i]);
           }
         }
-        for (let i = recs.length - 1; i >= 0; i -= 1) {
+        for (let i = 0, max = recs.length; i < max; i += 1) {
           if (recs[i].componentInstance && recs[i].componentInstance.$slots) {
+            // Content of slot is another component
             const inner = document.createElement(recs[i].componentOptions.tag);
             for (let slots = Object.values(recs[i].componentInstance.$slots), k = slots.length - 1; k >= 0; k -= 1) {
               for (let j = slots[k].length - 1; j >= 0; j -= 1) {
@@ -34,14 +35,17 @@ export default function renderMarkup(Component, opts = {}) {
                   if (slots[k][j].data) {
                     slotcontent.setAttribute('slot', slots[k][j].data.slot);
                   }
-                  inner.appendChild(slotcontent);
+                  inner.insertBefore(slotcontent, inner.firstChild);
                 }
               }
             }
             outer.appendChild(inner);
+          } else if (recs[i].tag) {
+            // Content of slot is HTML
+            outer.appendChild(recs[i].elm);
           }
         }
-        raw = outer.outerHTML;
+        raw += outer.outerHTML;
       }
     }
     /* eslint-enable no-underscore-dangle */
