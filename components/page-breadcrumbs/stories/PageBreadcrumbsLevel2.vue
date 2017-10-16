@@ -1,12 +1,12 @@
 <template>
-  <breadcrumbs :items="items" />
+  <PageBreadcrumbs :items="items" />
 </template>
 
 <script>
-import Breadcrumbs from '../Breadcrumbs.vue';
+import PageBreadcrumbs from '../PageBreadcrumbs.vue';
 
 export default {
-  components: { Breadcrumbs },
+  components: { PageBreadcrumbs },
   data: () => ({
     items: [
       { href: '/', text: 'About us' },

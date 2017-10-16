@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3 class="heading-section">Section with video embed</h3>
-    <video-embed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
+    <VideoEmbed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
   </div>
 </template>
 

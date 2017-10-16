@@ -1,4 +1,4 @@
-.breadcrumbs {
+.page-breadcrumbs {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -15,21 +15,21 @@
       font-weight: var(--fw-semibold);
 
       /* hide last chevron in case it is provided (e.g. in CMS) */
-      .breadcrumbs__chevron {
+      .page-breadcrumbs__chevron {
         display: none;
       }
     }
 
     /* hide site name on mobile */
     @media (--bp-max-mobile) {
-      &:first-child .breadcrumbs__name {
+      &:first-child .page-breadcrumbs__name {
         display: none;
       }
     }
 
     /* show ellipsis for intermediate items on mobile/tablet */
     @media (--bp-max-tablet) {
-      &:not(:first-child):not(:last-child) .breadcrumbs__name {
+      &:not(:first-child):not(:last-child) .page-breadcrumbs__name {
         width: 3rem;
         overflow: hidden;
         text-overflow: ellipsis;

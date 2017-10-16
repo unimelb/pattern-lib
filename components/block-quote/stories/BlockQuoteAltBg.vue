@@ -1,13 +1,13 @@
 <template>
-  <quote author="Steve Wozniak">Never trust a computer you can’t throw out a window.</quote>
+  <BlockQuote author="Steve Wozniak">Never trust a computer you can’t throw out a window.</BlockQuote>
 </template>
 
 <script>
-import Quote from '../Quote.vue';
+import BlockQuote from '../BlockQuote.vue';
 import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
-  components: { Quote },
+  components: { BlockQuote },
   decorator: ContentBlock,
   decoratorProps: { size: 'sml', bg: 'alt' },
 };
