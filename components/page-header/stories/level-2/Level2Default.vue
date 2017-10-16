@@ -1,6 +1,6 @@
 <template>
   <PageHeader
-    level="2"
+    :level="2"
     title="Strategy and governance"
     img="https://placeimg.com/990/530/arch/1"
   />
