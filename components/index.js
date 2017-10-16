@@ -2,14 +2,14 @@
 import Ike from 'ike.js';
 
 import { version } from '../package.json';
-import * as shared from './shared';
+import * as utils from './shared/utils';
 import sprite from './icons/sprite.svg';
 
 import HeaderTools from './top-nav/header-tools';
 import Frdialogmodal from './modal/dialogmodal';
 
 window.ui = {
-  utils: shared.utils,
+  utils,
   loadHeaderTools: () => { new HeaderTools(); },
   frdialogmodal: Frdialogmodal,
 };

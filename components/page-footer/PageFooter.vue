@@ -4,7 +4,7 @@
       <div class="page-footer__inner max">
         <div class="page-footer__header">
           <div class="page-footer__header__logo">
-            <a class="link-img" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" height="117" :src="logo" width="117"></a>
+            <a class="link-img" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" height="117" src="../shared/logo.svg" width="117"></a>
           </div>
           <div class="page-footer__header__search">
             <form action="https://search.unimelb.edu.au" class="page-footer-search" id="search">
@@ -151,11 +151,3 @@
     </div>
   </footer>
 </template>
-
-<script>
-import { logo } from 'shared';
-
-export default {
-  data: () => ({ logo }),
-};
-</script>
