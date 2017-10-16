@@ -38,7 +38,6 @@ storiesOf('Progressive Images', module)
     const btnText = text('Button Text', 'Example Title');
 
     return {
-      components: { ButtonIcon },
       template: `
           <section class="section section--image bg-inverted " v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
             <div class="section__inner section__inner--sml">

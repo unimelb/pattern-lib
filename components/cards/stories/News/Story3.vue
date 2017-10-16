@@ -9,7 +9,7 @@
       <ListItem><ButtonIcon>Read More</ButtonIcon></ListItem>
       <ListItem><ButtonIcon icon="microphone">Podcast</ButtonIcon></ListItem>
       <ListItem><ButtonIcon icon="twitter">Twitter</ButtonIcon></ListItem>
-    </div>    
+    </div>
   </SectionWrap>
 </template>
 
