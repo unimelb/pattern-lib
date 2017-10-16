@@ -1,0 +1,62 @@
+.page-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0;
+  padding-top: var(--vr);
+  padding-bottom: var(--vr);
+  list-style-type: none;
+
+  &__item {
+    margin-right: .25rem;
+    margin-bottom: 0;
+
+    &:last-child {
+      font-weight: var(--fw-semibold);
+
+      /* hide last chevron in case it is provided (e.g. in CMS) */
+      .page-breadcrumbs__chevron {
+        display: none;
+      }
+    }
+
+    /* hide site name on mobile */
+    @media (--bp-max-mobile) {
+      &:first-child .page-breadcrumbs__name {
+        display: none;
+      }
+    }
+
+    /* show ellipsis for intermediate items on mobile/tablet */
+    @media (--bp-max-tablet) {
+      &:not(:first-child):not(:last-child) .page-breadcrumbs__name {
+        width: 3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__home {
+    width: 1.125em;
+    height: 1.125em;
+    margin-right: .25em;
+    margin-bottom: .125em;
+    margin-left: .25em;
+  }
+
+  &__name {
+    padding: 0 .25rem;
+  }
+
+  &__chevron {
+    margin-top: .125em;
+    margin-left: .125em;
+  }
+}

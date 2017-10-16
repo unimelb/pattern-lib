@@ -6,7 +6,7 @@
         <input type="search" placeholder="Don't use the placeholder as a label!">
       </span>
       <button class="form--inline__button">
-        <icon class="form--inline__svg" name="search" />
+        <SvgIcon class="form--inline__svg" name="search" />
       </button>
     </div>
     <label>Email</label>

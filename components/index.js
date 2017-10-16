@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Ike from 'ike.js';
 
 import { version } from '../package.json';
+import * as utils from './shared/utils';
 import sprite from './icons/sprite.svg';
 import HeaderTools from './top-nav/header-tools';
 import Frdialogmodal from './modal/dialogmodal';
@@ -15,10 +16,8 @@ import './accordion';
 
 // Expose JS utilities
 window.ui = {
-  utils: shared.utils,
-  loadHeaderTools: () => {
-    new HeaderTools(); // eslint-disable-line no-new
-  },
+  utils,
+  loadHeaderTools: () => { new HeaderTools(); },
   frdialogmodal: Frdialogmodal,
 };
 
