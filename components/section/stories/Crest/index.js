@@ -11,4 +11,4 @@ storiesOf('Section/Crest', module)
   .add('Small width', createStory(Story1))
   .add('Divider', createStory(Story2))
   .add('Divider - subtitle', createStory(Story3));
-/* ##Story goes here */ 
+/* ##Story goes here */
