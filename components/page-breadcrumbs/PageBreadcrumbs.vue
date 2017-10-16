@@ -13,14 +13,14 @@
       >
         <meta :content="index + 1" itemprop="position">
         <a class="page-breadcrumbs__link" :href="item.href" itemprop="item">
-          <icon
+          <SvgIcon
             v-if="index === 0"
             class="page-breadcrumbs__home"
             name="home"
             width="18" height="18"
           />
           <span class="page-breadcrumbs__name" itemprop="name">{{ item.text }}</span>
-          <icon
+          <SvgIcon
             v-if="index < items.length - 1"
             class="page-breadcrumbs__chevron"
             name="chevron-right"
