@@ -1,28 +1,28 @@
 <template>
   <nav>
     <ol
-      class="breadcrumbs max links-reset"
+      class="page-breadcrumbs max links-reset"
       itemscope itemtype="http://schema.org/BreadcrumbList"
     >
       <li
         v-for="(item, index) in items"
         :key="item.href"
-        class="breadcrumbs__item"
+        class="page-breadcrumbs__item"
         itemprop="itemListElement"
         itemscope itemtype="http://schema.org/ListItem"
       >
         <meta :content="index + 1" itemprop="position">
-        <a class="breadcrumbs__link" :href="item.href" itemprop="item">
+        <a class="page-breadcrumbs__link" :href="item.href" itemprop="item">
           <icon
             v-if="index === 0"
-            class="breadcrumbs__home"
+            class="page-breadcrumbs__home"
             name="home"
             width="18" height="18"
           />
-          <span class="breadcrumbs__name" itemprop="name">{{ item.text }}</span>
+          <span class="page-breadcrumbs__name" itemprop="name">{{ item.text }}</span>
           <icon
             v-if="index < items.length - 1"
-            class="breadcrumbs__chevron"
+            class="page-breadcrumbs__chevron"
             name="chevron-right"
             width="12" height="12"
           />
@@ -34,7 +34,6 @@
 
 <script>
 export default {
-  name: 'BreadCrumbs',
   props: {
     items: {
       type: Array,

@@ -1,4 +1,4 @@
-.footer {
+.page-footer {
   padding: 0;
   background-color: var(--col-bg);
   color: #fff;
@@ -251,7 +251,7 @@
 /**
  * Search form
  */
-.footer-search {
+.page-footer-search {
   &__field {
     position: relative;
   }
