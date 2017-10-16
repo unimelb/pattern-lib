@@ -12,6 +12,5 @@ storiesOf('Section/Section', module)
   .add('BG - White', createStory(Story1))
   .add('BG - Inverted', createStory(Story2))
   .add('BG - Alt', createStory(Story3))
-  .add('Small', createStory(Story4))
-  /* ##Story goes here */ 
-;
+  .add('Small', createStory(Story4));
+/* ##Story goes here */ 

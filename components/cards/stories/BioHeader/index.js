@@ -10,6 +10,5 @@ import Story3 from './Story3.vue';
 storiesOf('Cards/Bio Header', module)
   .add('Small (Default)', createStory(Story1))
   .add('Wide', createStory(Story2))
-  .add('With content', createStory(Story3))
-  /* ##Story goes here */ 
-;
+  .add('With content', createStory(Story3));
+/* ##Story goes here */

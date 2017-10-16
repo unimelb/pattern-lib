@@ -14,6 +14,5 @@ storiesOf('Cards/Image Listing', module)
   .add('Three Column', createStory(Story1))
   .add('Two Column', createStory(Story2, false, FocusImageReadme))
   .add('Color variations', createStory(Story3))
-  .add('Hero Image', createStory(Story4, false, HeroImageReadme))
-  /* ##Story goes here */ 
-;
+  .add('Hero Image', createStory(Story4, false, HeroImageReadme));
+/* ##Story goes here */ 

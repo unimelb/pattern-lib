@@ -10,6 +10,5 @@ import Story3 from './Story3.vue';
 storiesOf('Cards/Staff List/Division Head', module)
   .add('Division Head (3 Col)', createStory(Story1))
   .add('Division Heads (Single)', createStory(Story2))
-  .add('Division Heads (Compact)', createStory(Story3))
-  /* ##Story goes here */ 
-;
+  .add('Division Heads (Compact)', createStory(Story3));
+/* ##Story goes here */ 

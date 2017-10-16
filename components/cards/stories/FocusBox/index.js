@@ -10,6 +10,5 @@ import Story3 from './Story3.vue';
 storiesOf('Cards/Focus Boxes', module)
   .add('3 Col', createStory(Story1))
   .add('2 Col', createStory(Story2))
-  .add('Colour variations', createStory(Story3))
-  /* ##Story goes here */ 
-;
+  .add('Colour variations', createStory(Story3));
+/* ##Story goes here */

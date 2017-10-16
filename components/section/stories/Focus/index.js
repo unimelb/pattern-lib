@@ -12,6 +12,6 @@ storiesOf('Section/Focus', module)
   .add('Default', createStory(Story1))
   .add('Wide width', createStory(Story2))
   .add('Progressive background image', createStory(Story3))
-  .add('Colour variations', createStory(Story4))
-  /* ##Story goes here */ 
-;
+  .add('Colour variations', createStory(Story4));
+/* ##Story goes here */ 
+

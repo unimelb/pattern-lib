@@ -8,6 +8,5 @@ import Story2 from './Story2.vue';
 /* News Listing Cards */
 storiesOf('Cards/News', module)
   .add('3 Column', createStory(Story1))
-  .add('1 Column', createStory(Story2))
-  /* ##Story goes here */ 
-;
+  .add('1 Column', createStory(Story2));
+/* ##Story goes here */ 

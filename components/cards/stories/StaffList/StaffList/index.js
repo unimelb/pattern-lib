@@ -6,6 +6,5 @@ import Story1 from './Story1.vue';
 
 /* Section - Staff Listing  */
 storiesOf('Cards/Staff List/Bios', module)
-  .add('Staff bios', createStory(Story1))
-  /* ##Story goes here */ 
-;
+  .add('Staff bios', createStory(Story1));
+/* ##Story goes here */ 
