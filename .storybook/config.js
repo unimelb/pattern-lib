@@ -17,7 +17,7 @@ import '../components/index.js';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
-Vue.component('svg-icon', SvgIcon);
+Vue.component('SvgIcon', SvgIcon);
 Vue.component('section-wrap', SectionWrap);
 Vue.component('list-item', ListItem);
 Vue.component('button-icon', ButtonIcon);

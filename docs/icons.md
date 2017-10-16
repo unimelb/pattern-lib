@@ -47,11 +47,11 @@ If an icon exceeds 1 kB, it is loaded as an external file like other assets (`ba
 
 ## How to use icons in Vue components
 
-Components that are meant to become container templates in the CMS don't have markup restrictions and can therefore include inline SVG. To add an icon to such a component, use the `Icon` component (registered globally for convenience). The icon must be present in the sprite file, `components/icons/sprite.svg`.
+Components that are meant to become container templates in the CMS don't have markup restrictions and can therefore include inline SVG. To add an icon to such a component, use the `SvgIcon` component (registered globally for convenience). The icon must be present in the sprite file, `components/icons/sprite.svg`.
 
 ```html
 <!-- USAGE -->
-<icon name="chevron-right" />
+<SvgIcon name="chevron-right" />
 
 <!-- OUTPUT -->
 <svg role="presentation" focusable="false">
@@ -59,13 +59,13 @@ Components that are meant to become container templates in the CMS don't have ma
 </svg>
 
 <!-- WITH CLASS & WIDTH/HEIGHT -->
-<icon class="my-component__icon" name="chevron-right" width="24" height="24" />
+<SvgIcon class="my-component__icon" name="chevron-right" width="24" height="24" />
 ```
 
-Many browsers have issues dealing with responsive SVGs (e.g. `width: 100%;`). For icons especially, it is better for the `svg` element to have a fixed width and height. You can do this by passing a `width` and `height` to the `Icon` component, but CSS is more practical as you can use relative units and resize the icon at different breakpoints.
+Many browsers have issues dealing with responsive SVGs (e.g. `width: 100%;`). For icons especially, it is better for the `svg` element to have a fixed width and height. You can do this by passing a `width` and `height` to the `SvgIcon` component, but CSS is more practical as you can use relative units and resize the icon at different breakpoints.
 
 ```html
-<icon class="my-component__icon" name="chevron-right" />
+<SvgIcon class="my-component__icon" name="chevron-right" />
 ```
 
 ```css

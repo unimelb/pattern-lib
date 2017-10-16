@@ -23,8 +23,8 @@ storiesOf('Progressive Images', module)
       <progressive-background no-ratio class="section section--image bg-inverted" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg">
         <div class="section__inner section__inner--sml">
           <div class="card card--focus-box card--focus-box--loose bg-white">
-            <svg-icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
-            <svg-icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+            <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+            <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
             <div class="card__inner ">
               <h3 class="heading-section">${title}</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -45,8 +45,8 @@ storiesOf('Progressive Images', module)
           <section class="section section--image bg-inverted " v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
             <div class="section__inner section__inner--sml">
               <div class="card card--focus-box card--focus-box--loose bg-white">
-                <svg-icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
-                <svg-icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+                <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+                <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
                 <div class="card__inner ">
                   <h3 class="heading-section">${title}</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
