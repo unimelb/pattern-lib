@@ -1,13 +1,13 @@
 <template>
-  <section-wrap class="bg-white">
+  <SectionWrap class="bg-white">
     <div class="listing listing--one">
-      <list-item>
-        <card-bio-header name="John longname-Smith" title="Vice-Chancellor" thumb="https://randomuser.me/api/portraits/lego/5.jpg">
+      <ListItem>
+        <CardBioHeader name="John longname-Smith" title="Vice-Chancellor" thumb="https://randomuser.me/api/portraits/lego/5.jpg">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae similique, exercitationem unde facilis possimus earum odio eos molestias, et aliquam illo velit! Vel, molestiae, eveniet! Molestias doloremque iste itaque consequatur!
-        </card-bio-header>
-      </list-item>
+        </CardBioHeader>
+      </ListItem>
     </div>
-  </section-wrap>
+  </SectionWrap>
 </template>
 
 <script>

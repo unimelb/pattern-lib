@@ -1,9 +1,9 @@
 <template>
-  <a :href="href" class="btn-owner card card--imagelisting">
+  <a :href="href" class="btn-owner card card--imagelisting card--bdr">
     <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
-      <h3 class="card__header">{{ title }}</h3>
-      <p class="card__meta">{{ meta }}</p>
+      <h3 class="card__header">{{ meta }}</h3>
+      <p class="card__meta">{{ title }}</p>
     </div>
   </a>
 </template>

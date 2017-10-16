@@ -1,6 +1,5 @@
 <template>
   <section class="split-section">
-
     <div class="split-section__side" :class="{'split-section__side--with-image': imageLeft}" :style="{backgroundImage: imageLeft ? `url('${bgImage}')` : '' }">
       <div class="split-section__inner" v-if="imageRight">
         <slot>
@@ -21,6 +20,16 @@
 <script>
 export default {
   name: 'SplitSection',
-  props: ['imageLeft', 'imageRight', 'bgImage'],
+  props: {
+    imageLeft: {
+      type: Boolean,
+    },
+    imageRight: {
+      type: Boolean,
+    },
+    bgImage: {
+      type: String,
+    },
+  },
 };
 </script>

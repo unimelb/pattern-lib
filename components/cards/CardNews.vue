@@ -2,7 +2,7 @@
   <a :href="href" class="btn-owner card card--news card--bdr">
     <div v-if="cols !== 1" class="card__thumb card__thumb--zoom" :style="{backgroundImage: `url('${thumb}')`}"></div>
     <div class="card__inner ">
-      <h4 class="card__meta">{{ meta }}</h4>
+      <p class="card__meta ">{{ meta }}</p>
       <h3 class="card__header">{{ title }}</h3>
       <p>{{ excerpt }}</p>
     </div>

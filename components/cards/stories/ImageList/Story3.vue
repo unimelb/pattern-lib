@@ -1,16 +1,76 @@
 <template>
-  <section-wrap small class="bg-inverted" style="background-image: url('http://about-us-unimelb.netlify.com/images/UoM-soft-3.png')">
-    <card-focus-image-list
-      element="div"
-      fullimg
-      hero
-      titleabove
-      img="http://about-us-unimelb.netlify.com/images/history.jpg"
-      title="Postera crescam laude"
-      >
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ullam quisquam nihil. At ducimus explicabo quidem distinctio magnam voluptas totam, repudiandae voluptatem aliquid consequuntur cupiditate, voluptates! In quis ratione laborum?
-    </card-focus-image-list>
-</section-wrap>
+  <SectionWrap class="bg-alt">
+    <div class="listing listing--two">
+      <ListItem>
+        <CardFocusImageList
+          element="div"
+          full-img
+          titleabove
+          class="card--image-focus--col-brand bg-alt"
+          img="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
+          title="Learning and teaching"
+          >
+          <p>Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ducimus aperiam qui, numquam deleniti repudiandae quos, mollitia.</p>
+          <ul>
+            <li>
+              Improve the retention and promotion of women and gender minorities in&nbsp;Science, Technology, Engineering, Maths and Medicine (STEMM)&nbsp;
+            </li>
+            <li>
+              Advancing gender equality in academia&nbsp;
+            </li>
+            <li>
+              Addressing the loss of women across the career pipeline&nbsp;
+            </li>
+            <li>
+              Tackling gender pay gaps&nbsp;
+            </li>
+            <li>
+              Removing obstacles faced by women&nbsp;
+            </li>
+            <li>
+              Making sustainable structural and cultural changes to advance gender equality&nbsp;
+            </li>
+          </ul>
+          <p>laudantium autem cupiditate quisquam magnam nobis corporis vitae ipsa aut eligendi iste facilis.</p>
+        </CardFocusImageList>
+      </ListItem>
+      <ListItem>
+        <CardFocusImageList
+          element="div"
+          full-img
+          titleabove
+          class="card--image-focus--col-brand bg-alt"
+          img="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
+          title="Learning and teaching"
+          excerpt="Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat.">
+          <p>Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ducimus aperiam qui, numquam deleniti repudiandae quos, mollitia.</p>
+          <ul>
+            <li>
+              Improve the retention and promotion of women and gender minorities in&nbsp;Science, Technology, Engineering, Maths and Medicine (STEMM)&nbsp;
+            </li>
+            <li>
+              Advancing gender equality in academia&nbsp;
+            </li>
+            <li>
+              Addressing the loss of women across the career pipeline&nbsp;
+            </li>
+            <li>
+              Tackling gender pay gaps&nbsp;
+            </li>
+            <li>
+              Removing obstacles faced by women&nbsp;
+            </li>
+            <li>
+              Making sustainable structural and cultural changes to advance gender equality&nbsp;
+            </li>
+          </ul>
+          <p>laudantium autem cupiditate quisquam magnam nobis corporis vitae ipsa aut eligendi iste facilis.</p>
+        </CardFocusImageList>
+      </ListItem>
+    </div>
+  </SectionWrap>
 </template>
 
 <script>
@@ -19,4 +79,5 @@ import CardFocusImageList from './../../CardFocusImageList.vue';
 export default {
   components: { CardFocusImageList },
 };
+
 </script>

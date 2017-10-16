@@ -1,0 +1,12 @@
+.card--stafflist {
+  .card__meta {
+    margin-bottom: 0;
+  }
+
+  .card__header {
+    margin-bottom: 0;
+    color: var(--col-brand);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}

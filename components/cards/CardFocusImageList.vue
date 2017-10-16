@@ -1,5 +1,5 @@
 <template>
-  <div v-if="element === 'div'" class="card card--image-focus">
+  <div v-if="element === 'div'" class="card card--image-focus" :class="colorClasses">
     <h3 v-if="titleabove === true" :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
     <progressive-background :src="img" :placeholder="placeholder" class="card__thumb" :class="{'card__thumb--full': fullimg}" />
     <div class="card__inner" :class="{'card__inner--tight': hero}">
@@ -7,7 +7,7 @@
       <slot></slot>
     </div>
   </div>
-  <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus">
+  <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus" :class="colorClasses">
     <progressive-background :src="img" :placeholder="placeholder" class="card__thumb" :class="{'card__thumb--full': fullimg}" />
     <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3>{{ title }}</h3>
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     placeholder: {
@@ -41,6 +40,9 @@ export default {
     hero: {
       type: Boolean,
     },
+    color: {
+      type: String,
+    },
     meta: {
       type: String,
       default: 'Test title',
@@ -56,6 +58,13 @@ export default {
     excerpt: {
       type: String,
       default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+    },
+  },
+  computed: {
+    colorClasses() {
+      return {
+        [`card--image-focus--col-${this.color}`]: this.color && this.color.length > 0,
+      };
     },
   },
 };

@@ -4,7 +4,7 @@ import VueProgressiveImage from 'vue-progressive-image';
 
 import { storyDecorator } from './utils';
 import SvgIcon from 'icons/SvgIcon.vue';
-import SectionWrap from '../components/section/stories/SectionWrap.vue';
+import SectionWrap from '../components/section/SectionWrap.vue';
 import ListItem from '../components/listing/stories/listitem.vue';
 import ButtonIcon from '../components/buttons/stories/ButtonIcon.vue';
 
@@ -18,8 +18,8 @@ import '../components/index.js';
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
 Vue.component('SvgIcon', SvgIcon);
-Vue.component('section-wrap', SectionWrap);
-Vue.component('list-item', ListItem);
+Vue.component('SectionWrap', SectionWrap);
+Vue.component('ListItem', ListItem);
 Vue.component('button-icon', ButtonIcon);
 
 // Add polymorphic decorator

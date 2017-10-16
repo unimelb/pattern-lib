@@ -1,19 +1,19 @@
 
 <template>
-  <section-wrap>
+  <SectionWrap>
     <div class="listing">
-      <list-item class="list-item--desk-1of2"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of2"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of4"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of4"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of4"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of4"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of3"><card-fact /></list-item>
-      <list-item class="list-item--desk-2of3"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of1"><card-fact /></list-item>
-      <list-item class="list-item--desk-1of1"><card-fact /></list-item>
+      <ListItem class="ListItem--desk-1of2"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of2"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of4"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of4"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of4"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of4"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of3"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-2of3"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of1"><CardFact /></ListItem>
+      <ListItem class="ListItem--desk-1of1"><CardFact /></ListItem>
     </div>
-  </section-wrap>
+  </SectionWrap>
 </template>
 
 <script>
