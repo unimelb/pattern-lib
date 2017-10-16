@@ -124,8 +124,8 @@ storiesOf('Section', module)
         <section class="section section--image bg-inverted" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg');">
           <div class="section__inner section__inner--sml">
             <div class="card card--focus-box bg-white">
-              <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
-              <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+              <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+              <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
               <div class="card__inner ">
                 <h3 class="heading-section">${title}</h3>
                 <p>${paragraph}</p>
@@ -148,8 +148,8 @@ storiesOf('Section', module)
         <section class="section section--image bg-inverted" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg');">
           <div class="section__inner section__inner--sml">
             <div class="card card--focus-box card--focus-box--brand bg-white">
-              <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
-              <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+              <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+              <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
               <div class="card__inner ">
                 <h3 class="heading-section">${title}</h3>
                 <p>${paragraph}</p>
@@ -172,8 +172,8 @@ storiesOf('Section', module)
         <section class="section section--image bg-inverted " v-bgimg="{imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg', placeholder: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg'}">
           <div class="section__inner section__inner--sml">
             <div class="card card--focus-box card--focus-box--loose bg-white">
-              <icon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
-              <icon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
+              <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" width="54px" height="54px" name="focus-top-left" />
+              <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" width="54px" height="54px" name="focus-bottom-right" />
               <div class="card__inner ">
                 <h3 class="heading-section">${title}</h3>
                 <p>${paragraph}</p>

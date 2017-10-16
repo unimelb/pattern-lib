@@ -3,7 +3,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ArticleStory from './ArticleStory.vue';
 import ArticleInset from './ArticleInset.vue';
-import BlockQuote from '../../block-quote/BlockQuote.vue';
+import BlockQuotation from '../../block-quotation/BlockQuotation.vue';
 
 storiesOf('Article', module)
   .addDecorator((story) => {
@@ -127,7 +127,7 @@ storiesOf('Article', module)
   .add(
     'Article with blockquote',
     (() => ({
-      components: { ArticleStory, BlockQuote },
+      components: { ArticleStory, BlockQuotation },
       template: `
             <article-story title="This is an article with a blockquote" >
               <h3>Test this is a subtitle that has been added from the WYSIWYG editor</h3>
@@ -142,7 +142,7 @@ storiesOf('Article', module)
               </p>
               <div>
 
-              <BlockQuote borderTop borderBottom author="Donald J. Trump">Some girls are just born with glitter in their veins</BlockQuote>
+              <BlockQuotation borderTop borderBottom author="Donald J. Trump">Some girls are just born with glitter in their veins</BlockQuotation>
 
               </div>
               <p>

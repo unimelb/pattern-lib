@@ -1,20 +1,20 @@
 <template>
-  <BlockQuote
+  <BlockQuotation
     author="Homer Simpson"
     border-top
     border-bottom
   >
     The Internet? Is that thing still around?
-  </BlockQuote>
+  </BlockQuotation>
 </template>
 
 <script>
-import BlockQuote from '../BlockQuote.vue';
+import BlockQuotation from '../BlockQuotation.vue';
 import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
-  components: { BlockQuote },
+  components: { BlockQuotation },
   decorator: ContentBlock,
-  decoratorProps: { size: 'sml', bg: 'inverted' },
+  decoratorProps: { size: 'sml' },
 };
 </script>

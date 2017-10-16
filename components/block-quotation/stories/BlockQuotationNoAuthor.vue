@@ -1,13 +1,13 @@
 <template>
-  <BlockQuote author="Steve Wozniak">Never trust a computer you can’t throw out a window.</BlockQuote>
+  <BlockQuotation>Java is, in many ways, C++–.</BlockQuotation>
 </template>
 
 <script>
-import BlockQuote from '../BlockQuote.vue';
+import BlockQuotation from '../BlockQuotation.vue';
 import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
-  components: { BlockQuote },
+  components: { BlockQuotation },
   decorator: ContentBlock,
   decoratorProps: { size: 'sml' },
 };

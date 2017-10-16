@@ -7,8 +7,7 @@
 /* Components - Alphabetically ordered */
 @import 'accordion/index.css';
 @import 'article/index.css';
-@import 'banner/index.css';
-@import 'block-quote/index.css';
+@import 'block-quotation/index.css';
 @import 'buttons/index.css';
 @import 'cards/index.css';
 @import 'contact-card/index.css';
@@ -20,6 +19,7 @@
 @import 'listing/index.css';
 @import 'modal/index.css';
 @import 'page-breadcrumbs/index.css';
+@import 'page-header/index.css';
 @import 'page-footer/index.css';
 @import 'progressive-image/index.css';
 @import 'quick-links-menu/index.css';

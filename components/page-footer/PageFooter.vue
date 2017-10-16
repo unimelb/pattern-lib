@@ -9,7 +9,7 @@
           <div class="page-footer__header__search">
             <form action="https://search.unimelb.edu.au" class="page-footer-search" id="search">
               <div class="page-footer-search__field">
-                <label><span class="page-footer-search__label">Search</span><a class="page-footer-search__submit" href="#"><icon class="page-footer-search__icon" name="search" /></a><input aria-label="Search the University" class="page-footer-search__input" name="q" placeholder="Type to search" type="search"></label>
+                <label><span class="page-footer-search__label">Search</span><a class="page-footer-search__submit" href="#"><SvgIcon class="page-footer-search__icon" name="search" /></a><input aria-label="Search the University" class="page-footer-search__input" name="q" placeholder="Type to search" type="search"></label>
               </div>
             </form>
           </div>
@@ -25,22 +25,22 @@
           <div class="page-footer__main__popular cell cell--wide-1of2">
             <ul class="page-footer__popular list-reset links-reset clearfix">
               <li><a class="link-icon" href="http://about.unimelb.edu.au/governance-and-leadership/faculties">
-                <icon class="link-icon__icon svg" name="faculty" /><span class="link-icon__text">Faculties &amp; graduate schools</span>
+                <SvgIcon class="link-icon__icon svg" name="faculty" /><span class="link-icon__text">Faculties &amp; graduate schools</span>
               </a></li>
               <li><a class="link-icon" href="https://maps.unimelb.edu.au/">
-                <icon class="link-icon__icon svg" name="location" /><span class="link-icon__text">Maps</span>
+                <SvgIcon class="link-icon__icon svg" name="location" /><span class="link-icon__text">Maps</span>
               </a></li>
               <li><a class="link-icon" href="http://library.unimelb.edu.au/">
-                <icon class="link-icon__icon svg" name="library" /><span class="link-icon__text">Library</span>
+                <SvgIcon class="link-icon__icon svg" name="library" /><span class="link-icon__text">Library</span>
               </a></li>
               <li><a class="link-icon" href="http://www.campaign.unimelb.edu.au/">
-                <icon class="link-icon__icon svg" name="campaign" /><span class="link-icon__text">Support the campaign</span>
+                <SvgIcon class="link-icon__icon svg" name="campaign" /><span class="link-icon__text">Support the campaign</span>
               </a></li>
               <li><a class="link-icon" href="http://www.unimelb.edu.au/contact/">
-                <icon class="link-icon__icon svg" name="phone" /><span class="link-icon__text">Contact us</span>
+                <SvgIcon class="link-icon__icon svg" name="phone" /><span class="link-icon__text">Contact us</span>
               </a></li>
               <li><a class="link-icon" href="http://about.unimelb.edu.au/careers">
-                <icon class="link-icon__icon svg" name="jobs" /><span class="link-icon__text">Jobs</span>
+                <SvgIcon class="link-icon__icon svg" name="jobs" /><span class="link-icon__text">Jobs</span>
               </a></li>
             </ul>
           </div>
@@ -122,9 +122,9 @@
           <div class="cell cell--wide-1of4">
             <p class="screenreaders-only">Follow us on:</p>
             <ul class="page-footer__social list-reset links-reset">
-              <li><a class="page-footer__social__link" href="https://www.facebook.com/unimelb"><icon aria-label="Facebook" class="page-footer__social__icon svg" name="facebook" /></a></li>
-              <li><a class="page-footer__social__link" href="https://www.twitter.com/unimelb"><icon aria-label="Twitter" class="page-footer__social__icon svg" name="twitter" /></a></li>
-              <li><a class="page-footer__social__link" href="https://www.linkedin.com/company/university-of-melbourne"><icon aria-label="LinkedIn" class="page-footer__social__icon svg" name="linkedin" /></a></li>
+              <li><a class="page-footer__social__link" href="https://www.facebook.com/unimelb"><SvgIcon aria-label="Facebook" class="page-footer__social__icon svg" name="facebook" /></a></li>
+              <li><a class="page-footer__social__link" href="https://www.twitter.com/unimelb"><SvgIcon aria-label="Twitter" class="page-footer__social__icon svg" name="twitter" /></a></li>
+              <li><a class="page-footer__social__link" href="https://www.linkedin.com/company/university-of-melbourne"><SvgIcon aria-label="LinkedIn" class="page-footer__social__icon svg" name="linkedin" /></a></li>
             </ul>
             <dl class="page-footer__contact clearfix">
               <dt>Phone:</dt>

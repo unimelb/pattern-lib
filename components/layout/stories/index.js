@@ -19,7 +19,7 @@ const markup = `\`\`\`html
   </head>
   <body>
     <div id="ui">
-      <!-- banner goes here -->
+      <!-- header goes here -->
       <!-- breadcrumbs go here, if present -->
       <main>
         <!-- content goes here -->
