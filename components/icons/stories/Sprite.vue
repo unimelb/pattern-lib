@@ -1,6 +1,6 @@
 <template>
   <div>
-    <icon v-for="n in names" :key="n" :name="n" />
+    <SvgIcon v-for="n in names" :key="n" :name="n" />
   </div>
 </template>
 

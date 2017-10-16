@@ -25,7 +25,7 @@ body {
   min-height: 100%;
   margin: 0;
   overflow-x: hidden;
-  background-color: var(--col-bg-secondary); /* same as banner/footer for scroll overflow */
+  background-color: var(--col-bg-secondary); /* same as page header/footer for scroll overflow */
 }
 
 nav,

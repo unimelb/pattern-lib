@@ -23,9 +23,9 @@
       <div class="article__social">
         <p class="article__social-heading">SHARE</p>
         <ul class="list-social">
-          <li class="list-social--twitter"><a href="https://twitter.com/unimelb"><icon name="twitter" width="25" height="25" /></a></li>
-          <li class="list-social--facebook"><a href="https://facebook.com/unimelb"><icon name="facebook" width="25" height="25" /></a></li>
-          <li class="list-social--linkedin"><a href="https://www.linkedin.com/in/the-university-of-melbourne-21543061"><icon name="linkedin" width="25" height="25" /></a></li>
+          <li class="list-social--twitter"><a href="https://twitter.com/unimelb"><SvgIcon name="twitter" width="25" height="25" /></a></li>
+          <li class="list-social--facebook"><a href="https://facebook.com/unimelb"><SvgIcon name="facebook" width="25" height="25" /></a></li>
+          <li class="list-social--linkedin"><a href="https://www.linkedin.com/in/the-university-of-melbourne-21543061"><SvgIcon name="linkedin" width="25" height="25" /></a></li>
         </ul>
       </div>
     </footer>
