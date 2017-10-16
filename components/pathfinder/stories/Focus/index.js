@@ -8,5 +8,5 @@ import Story2 from './Story2.vue';
 storiesOf('Pathfinder/Focus', module)
   .add('Focus pathfinder', createStory(Story1))
   .add('Compact Focus pathfinder', createStory(Story2))
-  /* ##Story goes here */ 
+  /* ##Story goes here */
 ;

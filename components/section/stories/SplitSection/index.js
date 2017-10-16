@@ -9,4 +9,4 @@ import Story2 from './Story2.vue';
 storiesOf('Section/Split Section', module)
   .add('Left', createStory(Story1))
   .add('Right', createStory(Story2));
-/* ##Story goes here */ 
+/* ##Story goes here */

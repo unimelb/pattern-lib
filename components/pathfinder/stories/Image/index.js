@@ -8,5 +8,5 @@ import Story2 from './Story2.vue';
 storiesOf('Pathfinder/Image card', module)
   .add('Image card', createStory(Story1))
   .add('No image', createStory(Story2))
-  /* ##Story goes here */ 
+  /* ##Story goes here */
 ;

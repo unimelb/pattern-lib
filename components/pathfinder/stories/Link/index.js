@@ -10,5 +10,5 @@ storiesOf('Pathfinder/Contextual Link', module)
   .add('3 Boxes', createStory(Story1))
   .add('4 Boxes', createStory(Story2))
   .add('Longer titles', createStory(Story3))
-  /* ##Story goes here */ 
+  /* ##Story goes here */
 ;
