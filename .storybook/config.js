@@ -3,7 +3,7 @@ import { configure, addDecorator } from '@storybook/vue';
 import VueProgressiveImage from 'vue-progressive-image';
 
 import { storyDecorator } from './utils';
-import Icon from 'icons/stories/Icon.vue';
+import SvgIcon from 'icons/SvgIcon.vue';
 import SectionWrap from '../components/section/SectionWrap.vue';
 import ListItem from '../components/listing/stories/listitem.vue';
 import ButtonIcon from '../components/buttons/stories/ButtonIcon.vue';
@@ -17,7 +17,7 @@ import '../components/index.js';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
-Vue.component('icon', Icon);
+Vue.component('SvgIcon', SvgIcon);
 Vue.component('SectionWrap', SectionWrap);
 Vue.component('ListItem', ListItem);
 Vue.component('button-icon', ButtonIcon);
