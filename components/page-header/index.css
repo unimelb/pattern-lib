@@ -1,7 +1,4 @@
-/**
- * Banner
- */
-.banner {
+.page-header {
   position: relative;
   padding: 2rem 0;
   padding-bottom: 0;
@@ -95,7 +92,7 @@
   }
 
   &--l1 {
-    .banner__heading {
+    .page-header__heading {
       margin-top: calc(var(--vr) * 4);
 
       @media (--bp-desktop) {
@@ -105,7 +102,7 @@
   }
 
   &--l2 {
-    .banner__heading {
+    .page-header__heading {
       margin-top: calc(var(--vr) * 2);
       font-size: 1.75rem;
 
@@ -119,7 +116,7 @@
     z-index: 0;
     padding: 0;
 
-    .banner__shape {
+    .page-header__shape {
       position: absolute;
       top: -35%; /* MAGIC NUMBER account for slight rotation */
       right: 0;
@@ -160,7 +157,7 @@
       }
     }
 
-    .banner__inner {
+    .page-header__inner {
       display: flex;
       position: relative;
       align-items: center;
@@ -169,7 +166,7 @@
       padding-bottom: 1rem;
     }
 
-    .banner__logo {
+    .page-header__logo {
       position: absolute;
 
       /* centre logo vertically */
@@ -184,7 +181,7 @@
       }
     }
 
-    .banner__heading {
+    .page-header__heading {
       width: auto;
       max-width: 35rem;
       margin: 1rem auto;

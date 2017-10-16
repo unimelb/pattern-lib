@@ -1,20 +1,20 @@
 <template>
-  <header :class="`banner banner--l${level}`">
-    <div v-if="level === 3" class="banner__shape"></div>
-    <div class="banner__inner max">
+  <header :class="`page-header page-header--l${level}`">
+    <div v-if="level === 3" class="page-header__shape"></div>
+    <div class="page-header__inner max">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
         <img
-          class="banner__logo"
+          class="page-header__logo"
           src="../shared/logo.svg"
           width="117" height="117"
           alt="The University of Melbourne homepage"
         >
       </a>
-      <p v-if="entity" class="banner__entity">{{ entity }}</p>
-      <h1 class="banner__heading">{{ title }}</h1>
+      <p v-if="entity" class="page-header__entity">{{ entity }}</p>
+      <h1 class="page-header__heading">{{ title }}</h1>
     </div>
     <div
-      class="banner__img banner__aperture"
+      class="page-header__img page-header__aperture"
       :style="`background-image: url('${img}');`"
     ></div>
   </header>

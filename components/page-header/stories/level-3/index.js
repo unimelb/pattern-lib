@@ -3,5 +3,5 @@ import { createStory } from '.storybook/utils';
 
 import Level3Default from './Level3Default.vue';
 
-storiesOf('Banner/Level 3', module)
+storiesOf('Page Header/Level 3', module)
   .add('Default', createStory(Level3Default));
