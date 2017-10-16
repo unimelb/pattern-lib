@@ -11,10 +11,10 @@
       </div>
       <hr v-if="!compact" >
       <slot></slot>
-      <button-icon v-if="cols === 1" class="btn--wide">Contacts and bio</button-icon>
+      <ButtonIcon v-if="cols === 1" class="btn--wide">Contacts and bio</ButtonIcon>
     </div>
     <div class="card__footer" v-if="cols !== 1 && compact === false">
-      <button-icon element="button" class="btn--fullwidth">Contacts and bio</button-icon>
+      <ButtonIcon element="button" class="btn--fullwidth">Contacts and bio</ButtonIcon>
     </div>
   </a>
 </template>

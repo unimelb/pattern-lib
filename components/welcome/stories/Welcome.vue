@@ -5,7 +5,7 @@
         <img :src="img" alt="">
         <figcaption class="text-center"><h6>Professor Glynn Davies</h6></figcaption>
       </figure>
-      <button-icon v-if="small" icon="chevron-right" class="btn--xsml">Bio and Recent Publications</button-icon>
+      <ButtonIcon v-if="small" icon="chevron-right" class="btn--xsml">Bio and Recent Publications</ButtonIcon>
     </div>
     <div class="welcome__inner ">
       <h2>Welcome from the Vice-Chancellor</h2>
@@ -13,17 +13,14 @@
       <img class="welcome__signature" :src="signature" alt="signature">
       <h6>Professor Glyn Davis AC</h6>
       <p>Vice Chancellor</p>
-      <button-icon v-if="!small" icon="chevron-right" class="btn--xsml">Bio and Recent Publications</button-icon>
+      <ButtonIcon v-if="!small" icon="chevron-right" class="btn--xsml">Bio and Recent Publications</ButtonIcon>
     </div>
   </div>
 
 </template>
 
 <script>
-import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
-
 export default {
-  components: { ButtonIcon },
   props: {
     img: {
       type: String,

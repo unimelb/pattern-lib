@@ -6,7 +6,6 @@ import {
 import VueProgressiveImage from 'vue-progressive-image';
 import withReadme from 'storybook-readme/with-readme';
 
-import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 import prgimgReadme from './progressive-image.md';
 import prgbgReadme from './progressive-background.md';
 import lazybgReadme from './lazybg-directive.md';
@@ -18,7 +17,6 @@ storiesOf('Progressive Images', module)
     const btnText = text('Button Text', 'Example Title');
 
     return {
-      components: { ButtonIcon },
       template: `
       <progressive-background no-ratio class="section section--image bg-inverted" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg">
         <div class="section__inner section__inner--sml">
@@ -28,7 +26,7 @@ storiesOf('Progressive Images', module)
             <div class="card__inner ">
               <h3 class="heading-section">${title}</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <button-icon>${btnText}</button-icon>
+              <ButtonIcon>${btnText}</ButtonIcon>
             </div>
           </div>
         </div>
@@ -50,7 +48,7 @@ storiesOf('Progressive Images', module)
                 <div class="card__inner ">
                   <h3 class="heading-section">${title}</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                  <button-icon>${btnText}</button-icon>
+                  <ButtonIcon>${btnText}</ButtonIcon>
                 </div>
               </div>
             </div>

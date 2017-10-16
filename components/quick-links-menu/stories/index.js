@@ -14,18 +14,18 @@ storiesOf('Quick Link Menu', module)
     return {
       components: { ButtonIcon, QuickLinks, QuickLinksMenuItem },
       template: `
-        <section-wrap class="bg-white">
+        <SectionWrap class="bg-white">
           <quick-links>
             <div slot="content">
               <h2>
                 ${title}
               </h2>
               <p>${content}</p>
-              <button-icon icon="chevron-right" class="btn--xwide">${btnText}</button-icon>
+              <ButtonIcon icon="chevron-right" class="btn--xwide">${btnText}</ButtonIcon>
             </div>
             ${menuLinks.map(item => `<quick-links-menu-item href="#">${item}</quick-links-menu-item>`).join('')}
           </quick-links>
-        </section-wrap>
+        </SectionWrap>
       `,
     };
   })
@@ -36,9 +36,9 @@ storiesOf('Quick Link Menu', module)
     const menuLinks = array('Menu Links', ['Strategy and governance', 'Leadership', 'Working with us', 'News and resources', 'Campus and maps']);
     const level = select('level', ['ql-menu--l1', 'ql-menu--l2', 'ql-menu--l3', 'ql-menu--l4'], 'ql-menu--l2');
     return {
-      components: { ButtonIcon, QuickLinks, QuickLinksMenuItem },
+      components: { QuickLinks, QuickLinksMenuItem },
       template: `
-        <section-wrap class="bg-white">
+        <SectionWrap class="bg-white">
           <quick-links level="${level}">
             <div slot="content">
               <h2>
@@ -49,7 +49,7 @@ storiesOf('Quick Link Menu', module)
             ${subTitle.length > 0 ? `<h3>${subTitle}</h3>` : ''}
             ${menuLinks.map(item => `<quick-links-menu-item href="#">${item}</quick-links-menu-item>`).join('')}
           </quick-links>
-        </section-wrap>
+        </SectionWrap>
       `,
     };
   });
