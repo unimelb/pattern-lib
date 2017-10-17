@@ -20,7 +20,7 @@ Vue.use(VueProgressiveImage);
 Vue.component('SvgIcon', SvgIcon);
 Vue.component('SectionWrap', SectionWrap);
 Vue.component('ListItem', ListItem);
-Vue.component('button-icon', ButtonIcon);
+Vue.component('ButtonIcon', ButtonIcon);
 
 // Add polymorphic decorator
 addDecorator(storyDecorator);
