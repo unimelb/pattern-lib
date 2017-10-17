@@ -56,7 +56,7 @@
     bottom: 0;
     width: 50%;
     max-width: 55rem;
-    background-color: inherit;
+    background-color: var(--col-brand-mid2);
     background-position: center bottom;
     background-size: cover;
 
@@ -73,16 +73,8 @@
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    height: 100%;
-    background-image: url('~icons/aperture.svg');
-    background-repeat: no-repeat;
-    background-position: -1px top;
-    background-size: cover;
-
-    @media (--bp-desktop) {
-      background-position: -1px center;
-    }
+    left: -1px; /* fix subtle border artefact in Firefox on some viewports */
+    background: url('~icons/aperture.svg') left center / cover;
   }
 
   &--l1 {
@@ -159,8 +151,10 @@
       }
     }
 
-    @media (--bp-tablet) {
-      .page-header__logo {
+    .page-header__logo {
+      font-size: .875rem; /* fix wrapping of `alt` text */
+
+      @media (--bp-tablet) {
         width: 85px;
         height: 71px;
       }

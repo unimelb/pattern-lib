@@ -1,7 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470.52 444">
-  <title>
-    aperture
-  </title>
-  <path d="M469.68-50H.52l-.57 271.2zM-.05 220.47L.52 550H190.2z" fill="#094183"/>
-  <path fill="#fff" opacity=".35" style="isolation:isolate" d="M.27 221.02l117.01-67.56-13.74 52.88-50.4 29.11 29.01 50.27-14.24 52.47L.27 221.02"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 542">
+  <path fill="#094183" d="M0 0v271.02L469.4 0H0zm0 271.02V542h156.45L0 271.02z"/>
+  <path fill="#fff" d="M117 203.46l-13.73 52.88-50.4 29.1 29 50.28-14.23 52.47L0 271z" style="isolation:isolate" opacity=".35"/>
 </svg>

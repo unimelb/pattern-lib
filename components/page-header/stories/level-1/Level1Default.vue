@@ -1,6 +1,6 @@
 <template>
   <PageHeader
-    title="About us"
+    title="About Us"
     img="https://placeimg.com/990/530/arch/1"
   />
 </template>

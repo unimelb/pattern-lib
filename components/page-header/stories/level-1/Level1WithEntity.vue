@@ -1,6 +1,6 @@
 <template>
   <PageHeader
-    title="About us"
+    title="About Us"
     entity="Faculty of Medicine, Dentistry and Health Science"
     img="https://placeimg.com/990/530/arch/1"
   />
