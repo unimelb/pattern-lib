@@ -12,7 +12,7 @@
     <div class="card__inner" :class="{'card__inner--tight': hero}">
       <h3>{{ title }}</h3>
       <slot></slot>
-      <button-icon element="button" class="btn--fullwidth">{{ title }}</button-icon>
+      <ButtonIcon element="button" class="btn--fullwidth">{{ title }}</ButtonIcon>
     </div>
   </a>
 </template>

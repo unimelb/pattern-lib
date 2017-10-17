@@ -5,7 +5,16 @@
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
-          thumb="http://about-us-unimelb.netlify.com/staffs/leadership/senior-leadership/Mr-Allan-Tait.jpg"
+          thumb="https://randomuser.me/api/portraits/lego/1.jpg"
+          href="#"
+        />
+        </CardStaffList>
+      </ListItem>
+      <ListItem>
+        <CardStaffList
+          title="Mr Johnathan Smithersonite"
+          meta="Provost"
+          thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           href="#"
         />
         </CardStaffList>
@@ -13,16 +22,7 @@
       <ListItem>
         <CardStaffList
           title="Mr John Smith"
-          meta="Provost"
-          thumb="http://via.placeholder.com/300x400"
-          href="#"
-        />
-        </CardStaffList>
-      </ListItem>
-      <ListItem>
-        <CardStaffList
-          title="Mr John Smith"
-          meta="Provost"
+          meta="Vice Grand Chancellor Provost"
           thumb="https://randomuser.me/api/portraits/lego/5.jpg"
           href="#"
         />
