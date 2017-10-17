@@ -1,19 +1,19 @@
 <template>
-  <section class="section section--image bg-inverted-dark" :style="`background-image: url('${crest}')`">
+  <section class="section section--image section--image-mask bg-inverted" style="background-image: url(http://about-us-unimelb.netlify.com/images/our-history/leaves.jpg)">
      <div class="section__inner">
         <div class="listing listing--three listing--center">
           <ListItem>
-            <CardPathfinder title="Engagement outcomes">
+            <CardPathfinder compact title="Engagement">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.
             </CardPathfinder>
           </ListItem>
           <ListItem>
-            <CardPathfinder title="A longer title goes here">
+            <CardPathfinder compact title="Something">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.
             </CardPathfinder>
           </ListItem>
           <ListItem>
-            <CardPathfinder title="World class research">
+            <CardPathfinder compact title="World class ">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.
             </CardPathfinder>
           </ListItem>
@@ -23,11 +23,9 @@
 </template>
 
 <script>
-import crest from './crest.png';
 import CardPathfinder from './../../../cards/CardPathfinder.vue';
 
 export default {
   components: { CardPathfinder },
-  data: () => ({ crest }),
 };
 </script>

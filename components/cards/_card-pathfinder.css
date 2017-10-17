@@ -37,4 +37,8 @@
   &:hover .card--focus-box__cnr {
     opacity: .3;
   }
+
+  .section--image-mask.bg-inverted & {
+    background-color: rgba(9, 65, 131, .9);
+  }
 }
