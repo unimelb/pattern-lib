@@ -33,6 +33,20 @@
       border-top: 1px solid #fff;
     }
 
+    &__main,
+    &__sub {
+      margin-bottom: 0;
+    }
+
+    &__main {
+      font-weight: var(--fw-semibold);
+    }
+
+    &__sub {
+      margin-top: .25rem;
+      font-size: .875em;
+    }
+
     @media (--bp-max-mobile) {
       width: 90%;
     }
@@ -43,12 +57,25 @@
     z-index: 1;
     width: 50%;
     max-width: calc(64rem * .4);
-    margin-top: var(--vr);
+    margin-top: calc(var(--vr) * 4);
     padding-right: 3rem;
+
+    /* reduce spacing when entity identifier is present */
+    .page-header__entity + & {
+      margin-top: calc(var(--vr) * 2.5);
+    }
 
     @media (--bp-max-mobile) {
       width: auto;
       margin-bottom: 28rem; /* push img down for long titles */
+    }
+
+    @media (--bp-desktop) {
+      margin-bottom: calc(var(--vr) * 4);
+
+      .page-header__entity + & {
+        margin-bottom: calc(var(--vr) * 3);
+      }
     }
   }
 
@@ -80,22 +107,18 @@
     background: url('~icons/aperture.svg') left center / cover;
   }
 
-  &--l1 {
-    .page-header__heading {
-      margin-top: calc(var(--vr) * 4);
-
-      @media (--bp-desktop) {
-        margin-bottom: calc(var(--vr) * 4);
-      }
-    }
-  }
-
   &--l2 {
     .page-header__heading {
       margin-top: calc(var(--vr) * 2);
       font-size: 1.75rem;
+    }
 
-      @media (--bp-desktop) {
+    .page-header__entity + .page-header__heading {
+      margin-top: calc(var(--vr) * 1.5); /* less when following entity identifier */
+    }
+
+    @media (--bp-desktop) {
+      .page-header__heading {
         margin-bottom: calc(var(--vr) * 2);
       }
     }
