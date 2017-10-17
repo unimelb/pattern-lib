@@ -96,7 +96,7 @@
     }
   }
 
-  /* Aperture mark */
+  /* Aperture with focus mark for level-1 and 2 headers */
   &__aperture::before {
     content: '';
     position: absolute;
@@ -107,6 +107,44 @@
     background: url('../shared/aperture.svg') left center / cover;
   }
 
+  /* Aperture without focus mark for level-3 header */
+  &__shape {
+    position: absolute;
+    top: -35%; /* MAGIC NUMBER account for slight rotation */
+    right: 0;
+    bottom: 0;
+    left: 27%;
+    transform: rotate(.25deg); /* rotate slightly */
+    background-color: inherit; /* pass on background colour to pseudo-elements */
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      background-color: inherit; /* inherit from shape and header */
+    }
+
+    /* triangle in top left-hand corner */
+    &::before {
+      top: 0;
+      height: 60%;
+      transform: skewY(-30deg);
+      transform-origin: top left;
+    }
+
+    /* triangle in bottom left-hand corner */
+    &::after {
+      bottom: 0;
+      height: 40%;
+      transform: skewY(60deg);
+      transform-origin: bottom left;
+    }
+  }
+
+  /* Level-2 header */
   &--l2 {
     .page-header__heading {
       margin-top: calc(var(--vr) * 2);
@@ -124,6 +162,7 @@
     }
   }
 
+  /* Level-3 header (i.e. `PageHeaderMin`) */
   &--l3 {
     z-index: 0;
     padding: 0;
@@ -134,42 +173,6 @@
       align-items: center;
       padding-top: 1rem;
       padding-bottom: 1rem;
-    }
-
-    .page-header__shape {
-      position: absolute;
-      top: -35%; /* MAGIC NUMBER account for slight rotation */
-      right: 0;
-      bottom: 0;
-      left: 27%;
-      transform: rotate(.25deg); /* rotate slightly */
-      background-color: inherit; /* pass on background colour to pseudo-elements */
-
-      &::before,
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        left: 0;
-        background-color: inherit; /* inherit from shape and header */
-      }
-
-      /* triangle in top left-hand corner */
-      &::before {
-        top: 0;
-        height: 60%;
-        transform: skewY(-30deg);
-        transform-origin: top left;
-      }
-
-      /* triangle in bottom left-hand corner */
-      &::after {
-        bottom: 0;
-        height: 40%;
-        transform: skewY(60deg);
-        transform-origin: bottom left;
-      }
     }
 
     .page-header__logo {
