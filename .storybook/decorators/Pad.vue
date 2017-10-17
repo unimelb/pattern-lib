@@ -1,6 +1,6 @@
 <template>
   <div class="pad">
-    <slot />
+    <slot></slot>
   </div>
 </template>
 
@@ -9,4 +9,3 @@
     padding: 1rem;
   }
 </style>
-

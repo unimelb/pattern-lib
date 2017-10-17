@@ -21,17 +21,55 @@ yarn
 
 ## Development
 
-1. Run `yarn start`
-1. Visit [http://localhost:7002/](http://localhost:7002/)
+Storybook is the main development environment.
 
-- To build the documentation site to `/.out/docs`, run `yarn run build:docs`.
-- To build the library for production (e.g. for debugging purposes) to `.out/lib/<version>`, run `yarn run build:lib`.
+- `yarn start` - [http://localhost:7002/](http://localhost:7002/)
+- `yarn run build` to build the documentation site to `/.out/docs`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the documentation site is to load the library assets locally (`false`) or from the CDN (`true`).
+
+### Targets
+
+#### Library - `targets/lib`
+
+The main library for use in the CMS. The target provides a local development environment for testing purposes.
+
+- `yarn run start:lib` - [http://localhost:7003/](http://localhost:7003/).
+- `yarn run build:lib` to compile the library to `.out/lib/<version>`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the library is to load its assets locally (`false`) or from the CDN (`true`).
 
 ### Linting
 
-CSS is linted on the fly with stylelint. The configuration file, `.stylelintrc` extends two shared configuration: [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) and [`stylelint-config-property-sort-order-smacss`](https://github.com/cahamilton/css-property-sort-order-smacss/blob/master/index.js).
+CSS files are linted on the fly with stylelint. The configuration file, `.stylelintrc`, extends two shared configuration: [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) and [`stylelint-config-property-sort-order-smacss`](https://github.com/cahamilton/css-property-sort-order-smacss/blob/master/index.js).
 
-For your own sanity, make sure to install your code editor's stylelint extension. If you can't be bothered re-ordering properties and blocks manually, use: `yarn run fix:stylelint`.
+JS files and single-file Vue components are linted on the fly with ESLint. The configuration file, `.eslintrc`, extends two shared configurations: [`eslint-config-airbnb`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) and [`plugin:vue/recommended`](https://github.com/vuejs/eslint-plugin-vue)
+
+For your own sanity, make sure to install your code editor's ESLint and stylelint extensions. The following commands are available for on-demand linting and fixing:
+
+- `yarn run lint`
+- `yarn run lint:fix`
+- `yarn run lint:css`
+- `yarn run lint:css --fix`
+- `yarn run lint:js`
+- `yarn run lint:js --fix`
+
+### Generator
+
+#### Components
+
+New components can be scaffolded by running:
+
+- `yarn generate component`
+
+You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story.
+
+
+#### Stories
+
+New stories can be scaffolded too by running:
+
+- `yarn generate story`
+
+You will need to select the component from the list of folders, then confirm the selection by selecting `choose this directory`. You will then be asked to give the story a name.
+
+> **Note** This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
 
 
 ## Deployment

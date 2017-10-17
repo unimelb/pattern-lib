@@ -1,30 +1,24 @@
+/*  eslint-disable no-new */
 import Ike from 'ike.js';
 
 import { version } from '../package.json';
+import * as utils from './shared/utils';
 import sprite from './icons/sprite.svg';
-import HeaderTools from './top-nav/header-tools';
-import Frdialogmodal from './modal/dialogmodal.js';
 
-import * as shared from './shared';
 import './progressive-image';
 import './side-panel';
+import HeaderTools from './top-nav/header-tools';
 
-// Expose JS utilities
 window.ui = {
-  utils: shared.utils
+  utils,
+  loadHeaderTools: () => { new HeaderTools(); },
 };
 
 // Inject SVG sprite
-const Sprite = new Ike(sprite, version);
+new Ike(sprite, version);
 
-const initPage = () => {
+// Initialise page on DOM loaded
+document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.remove('no-js');
-  loadHeaderTools();
-  Frdialogmodal();
-};
-
-document.addEventListener('DOMContentLoaded', initPage);
-
-window.loadHeaderTools = () => {
-  new HeaderTools();
-};
+  window.ui.loadHeaderTools();
+});

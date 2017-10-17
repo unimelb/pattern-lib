@@ -1,40 +1,23 @@
 .content-block {
-  padding: calc(2 * var(--vr)) 0;
-  padding-bottom: 1.75rem;
+  padding: var(--vr);
+
+  /* remove default bottom margin of last child (typically `p`), and */
+  /* compensate for difference in font-size with first child (typically `h2`) */
+  & > *:last-child {
+    margin-bottom: calc(var(--hlsp) * (1.75rem - 1rem)); /* half line spacing * (font-size of `h2` - font-size of `p) */
+  }
+
+  & > * {
+    max-width: var(--w-mid);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &--sml > * { max-width: var(--w-sml); }
+  &--lge > * { max-width: var(--w-lge); }
 
   &--short {
     padding-top: var(--vr);
     padding-bottom: var(--vr);
-  }
-
-  & > * {
-    max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: var(--vr);
-    padding-left: var(--vr);
-
-    .layout--left .layout__main &,
-    .layout--right .layout__main & {
-      max-width: calc((var(--w-mid) + 2 * var(--vr)) - var(--panel-width)); /* account for side nav */
-    }
-  }
-
-  &--sml > * {
-    max-width: calc(var(--w-sml) + (2 * var(--vr)));
-
-    .layout--left .layout__main &,
-    .layout--right .layout__main & {
-      max-width: calc((var(--w-sml) + 2 * var(--vr)) - var(--panel-width)); /* account for side nav */
-    }
-  }
-
-  &--lge > * {
-    max-width: var(--w-lge);
-
-    .layout--left .layout__main &,
-    .layout--right .layout__main & {
-      max-width: calc((var(--w-lge) + 2 * var(--vr)) - var(--panel-width)); /* account for side nav */
-    }
   }
 }

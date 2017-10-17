@@ -3,7 +3,7 @@
  */
 /* saw-tooth pattern */
 .bg-saw-tooth {
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHdpZHRoPSIyMCI+CiAgPHBhdGggZD0iTTkuMjkzIDJMMCAxMS4yOTNWMTJoLjcwN0wxMCAyLjcwNyAxOS4yOTMgMTJIMjB2LS43MDdMMTAuNzA3IDJIOS4yOTN6IiBvcGFjaXR5PSIuMiIgZmlsbD0iI2ZlZmVmZSIvPgo8L3N2Zz4=');
+  background-image: url('./shared/bg-saw-tooth.svg');
 }
 
 /* inverted background */
@@ -14,6 +14,11 @@
 
 .bg-inverted-dark {
   background-color: var(--col-bg-secondary);
+  color: #fff;
+}
+
+.bg-inverted-darker {
+  background-color: var(--col-bg-tertiary);
   color: #fff;
 }
 
@@ -221,6 +226,14 @@
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-italic {

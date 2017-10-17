@@ -1,22 +1,12 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import {
-  withKnobs,
-  text,
-  number,
-  boolean,
-  array,
-  select,
-  color,
-  date,
-} from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import ArticleStory from './ArticleStory.vue';
 import ArticleInset from './ArticleInset.vue';
-import Quote from './../../typography/stories/Quote.vue';
+import BlockQuotation from '../../block-quotation/BlockQuotation.vue';
 
 storiesOf('Article', module)
-  .addDecorator(story => {
+  .addDecorator((story) => {
     const Story = story();
     return {
       components: { Story },
@@ -31,20 +21,18 @@ storiesOf('Article', module)
   .addDecorator(withKnobs)
   .add(
     'Basic Article',
-    (() => {
-      return {
-        components: { ArticleStory },
-        template: `
+    () => ({
+      components: { ArticleStory },
+      template: `
           <div>
             <article-story>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officiis possimus accusamus esse obcaecati odio error asperiores nemo ducimus, aperiam minus exercitationem, aspernatur voluptatem, natus animi ullam odit. Laborum, error.</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta officiis possimus accusamus esse obcaecati odio error asperiores nemo ducimus, aperiam minus exercitationem, aspernatur voluptatem, natus animi ullam odit. Laborum, error.</p>
             </article-story>
           </div>
-        `
-      }
-    }
-  ))
+        `,
+    })
+  )
   .add(
     'Article',
     (() => {
@@ -123,26 +111,24 @@ storiesOf('Article', module)
             ${content}
             </div>
           </div>
-        `
-      }
+        `,
+      };
     }
-  ))
-  .add('Article Without Sidebar', () => {
-    return {
-      components: { ArticleInset },
-      template: `
+    )
+  )
+  .add('Article Without Sidebar', () => ({
+    components: { ArticleInset },
+    template: `
         <section-wrap small>
           <article-inset />
         </section-wrap>
-      `
-    }
-  })
+      `,
+  }))
   .add(
     'Article with blockquote',
-    (() => {
-      return {
-        components: { ArticleStory, Quote },
-        template: `
+    (() => ({
+      components: { ArticleStory, BlockQuotation },
+      template: `
             <article-story title="This is an article with a blockquote" >
               <h3>Test this is a subtitle that has been added from the WYSIWYG editor</h3>
               <p>
@@ -156,8 +142,8 @@ storiesOf('Article', module)
               </p>
               <div>
 
-              <quote bdrTop bdrBtm author="Donald J. Trump">Some girls are just born with glitter in their veins</quote>
-              
+              <BlockQuotation borderTop borderBottom author="Donald J. Trump">Some girls are just born with glitter in their veins</BlockQuotation>
+
               </div>
               <p>
                 More recently, through courses including the Master of Clinical Teaching, the clinical teaching model has begun reaching a generation of practising teaching professionals and leaders, as well as helping shape new teachers who are just beginning their classroom careers.
@@ -181,7 +167,7 @@ storiesOf('Article', module)
                 The second concerns the multifaceted and rapid technological change of very recent years, and the impacts of this change on how we learn and how we teach. How important is technological change to learning? As a university and as a school, are we doing all we can to lead a way into the future in response to this question?
               </p>
             </article-story>
-        `
-      }
-    }
-  ))
+        `,
+    })
+    )
+  );

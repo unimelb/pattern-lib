@@ -1,6 +1,11 @@
 .embed {
   position: relative;
-  padding-bottom: 56.25%; /* 16/9 by default */
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 56.25%; /* 16/9 by default */
+  }
 
   & > iframe {
     display: block; /* remove unwanted `inline-block` spacing */
@@ -12,34 +17,32 @@
   }
 
   /* wide ratio (21:9) */
-  &--21_9 {
+  &--21_9::before {
     padding-bottom: 42.5%;
   }
 
-  /* SoundCloud's "classic" embed (horizontal player) */
-  &--soundcloud-classic {
-    padding-bottom: 0; /* switch to fixed height */
+  /* SoundCloud embeds */
+  &--soundcloud-classic,
+  &--soundcloud-visual {
+    &::before { content: none; } /* switch to fixed height */
+  }
 
-    & > iframe {
-      position: static;
-      height: 166px;
-    }
+  /* SoundCloud's "classic" embed (horizontal player) */
+  &--soundcloud-classic > iframe {
+    position: static;
+    height: 166px;
   }
 
   /* SoundCloud's "visual" embed (square with background image) */
-  &--soundcloud-visual {
-    padding-bottom: 0; /* switch to fixed height */
+  &--soundcloud-visual > iframe {
+    position: static;
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
 
-    & > iframe {
-      position: static;
-      width: 15rem;
-      height: 15rem;
-      margin: 0 auto;
-
-      @media (--bp-desktop) {
-        width: 20rem;
-        height: 20rem;
-      }
+    @media (--bp-desktop) {
+      width: 20rem;
+      height: 20rem;
     }
   }
 }

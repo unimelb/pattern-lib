@@ -29,7 +29,7 @@
             Professor Zeger Degraeve
           </p>
           <p class="desc">
-            (Dean Melbourne Business School) 
+            (Dean Melbourne Business School)
           </p>
         </td>
       </tr>

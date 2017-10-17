@@ -34,6 +34,21 @@
     background-size: cover;
   }
 
+  &--image-mask {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: .4;
+      background-color: var(--col-grey-dark);
+    }
+  }
+
   &--divider {
     &__inner {
       margin-top: auto;

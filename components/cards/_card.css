@@ -1,0 +1,106 @@
+.card {
+  width: 100%;
+  min-height: 100%;
+  font-weight: normal;
+
+  &.btn-owner {
+    color: var(--col-brand);
+    text-decoration: none;
+
+    &:visited {
+      color: var(--col-brand);
+    }
+
+    &.bg-inverted {
+      color: white;
+      &:visited { color: white; }
+    }
+  }
+
+  &__inner {
+    padding: var(--vr);
+
+    &--tight {
+      padding: var(--vr) 0;
+    }
+  }
+
+  &__thumb {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &--zoom {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: transform .3s;
+        background: inherit;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: var(--vr);
+  }
+
+  /* One column */
+  .listing--one .list-item & {
+    flex-direction: column;
+
+    .card__inner {
+      margin-right: auto;
+    }
+
+    @media (--bp-x-tablet) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &--bdr-hover {
+    border-bottom: .4rem solid #eee;
+  }
+
+  &--bdr,
+  &--bdr:hover {
+    border-bottom: .4rem solid;
+
+    /* Border color sequence */
+    .list-item:nth-child(7n+1) & { border-color: var(--col-1); }
+    .list-item:nth-child(7n+2) & { border-color: var(--col-2); }
+    .list-item:nth-child(7n+3) & { border-color: var(--col-3); }
+    .list-item:nth-child(7n+4) & { border-color: var(--col-4); }
+    .list-item:nth-child(7n+5) & { border-color: var(--col-5); }
+    .list-item:nth-child(7n+6) & { border-color: var(--col-6); }
+    .list-item:nth-child(7n) & { border-color: var(--col-7); }
+  }
+
+  &--bdr-blue {
+    .list-item & {
+      border-bottom: .4rem solid var(--col-brand-mid2);
+    }
+  }
+
+  @supports (display: flex) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}

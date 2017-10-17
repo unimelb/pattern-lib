@@ -1,23 +1,26 @@
+/* stylelint-disable comment-empty-line-before */
 @import '_base.css';
 @import '_vars.css';
 @import '_shims.css';
 @import '_utils.css';
 
 /* Components - Alphabetically ordered */
+@import 'accordion/index.css';
 @import 'article/index.css';
-@import 'banner/index.css';
-@import 'breadcrumbs/index.css';
+@import 'block-quotation/index.css';
 @import 'buttons/index.css';
-@import 'card/index.css';
+@import 'cards/index.css';
 @import 'contact-card/index.css';
 @import 'content-block/index.css';
 @import 'document-list/index.css';
 @import 'embed/index.css';
 @import 'figure/index.css';
-@import 'footer/index.css';
 @import 'forms/index.css';
 @import 'listing/index.css';
 @import 'modal/index.css';
+@import 'page-breadcrumbs/index.css';
+@import 'page-header/index.css';
+@import 'page-footer/index.css';
 @import 'progressive-image/index.css';
 @import 'quick-links-menu/index.css';
 @import 'section/index.css';
@@ -27,4 +30,4 @@
 @import 'top-nav/index.css';
 @import 'typography/index.css';
 @import 'welcome/index.css';
-
+/*** Add new component below */

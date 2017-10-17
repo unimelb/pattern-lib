@@ -1,7 +1,8 @@
 .heading-page,
 .heading-page-sub,
 .heading-section,
-.heading-card {
+.heading-card,
+.lead {
   display: block;
   font-weight: bold;
   text-transform: none;
@@ -36,13 +37,16 @@ h2,
 }
 
 h3,
-.heading-card {
+.heading-card,
+.lead {
   margin-bottom: calc(var(--vr) / 2);
   font-size: 1.25rem; /* https://github.com/unimelb/atomisk/issues/56#issuecomment-327679214 */
 }
 
-.heading-card {
+.heading-card,
+.lead {
   font-family: var(--ff-normal);
+  font-weight: var(--fw-semibold);
 }
 
 h4 {

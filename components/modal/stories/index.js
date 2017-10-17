@@ -1,31 +1,9 @@
-import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
-import withReadme from 'storybook-readme/with-readme';
-import RenderMarkup from '../../RenderMarkup';
+import { createStory } from '.storybook/utils';
 
-import Trigger from './Trigger.vue';
-import Modal from './Modal.vue';
-const renderedTrigger = new RenderMarkup(Trigger);
-const renderedModal = new RenderMarkup(Modal);
-const markup = "## Trigger markup\nMust be a button element.\n```html\n" + renderedTrigger.max +
-  "\n```\n## Sample modal markup\n```html\n" + renderedModal.max + "\n```\n";
+import ModalDefault from './ModalDefault.vue';
+import TwoModalDialogs from './TwoModalDialogs.vue';
 
 storiesOf('Modal', module)
-  .add(
-    'Button trigger',
-    withReadme(markup, () => {
-      return {
-        components: { Trigger, Modal },
-        template: `
-<main>
-  <section class="section">
-    <div class="section__inner">
-      <trigger />
-      <modal />
-    </div>
-  </section>
-</main>
-`
-      }
-    })
-  );
+  .add('Default', createStory(ModalDefault, { shallowRender: true }))
+  .add('Two modal dialogs', createStory(TwoModalDialogs, { shallowRender: true }));
