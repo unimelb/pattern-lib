@@ -20,7 +20,7 @@
   &__entity {
     position: relative;
     z-index: 1;
-    width: 50%;
+    width: 45%;
     margin-top: calc(var(--vr) * 2);
 
     &::before {
@@ -47,7 +47,7 @@
       font-size: .875em;
     }
 
-    @media (--bp-max-mobile) {
+    @media (--bp-max-x-mobile) {
       width: 90%;
     }
   }
@@ -57,25 +57,10 @@
     z-index: 1;
     width: 50%;
     max-width: calc(64rem * .4);
-    margin-top: calc(var(--vr) * 4);
     padding-right: 3rem;
 
-    /* reduce spacing when entity identifier is present */
-    .page-header__entity + & {
-      margin-top: calc(var(--vr) * 2.5);
-    }
-
-    @media (--bp-max-mobile) {
-      width: auto;
-      margin-bottom: 28rem; /* push img down for long titles */
-    }
-
-    @media (--bp-desktop) {
-      margin-bottom: calc(var(--vr) * 4);
-
-      .page-header__entity + & {
-        margin-bottom: calc(var(--vr) * 3);
-      }
+    @media (--bp-max-x-mobile) {
+      width: 80%;
     }
   }
 
@@ -90,9 +75,12 @@
     background-position: center bottom;
     background-size: cover;
 
-    @media (--bp-max-mobile) {
-      top: 7rem;
-      width: 85%;
+    @media (--bp-max-x-mobile) {
+      position: relative;
+      width: calc(.86 * 20rem); /* `aperture.svg` viewbox ratio * height */
+      height: 20rem;
+      margin-top: -8rem;
+      margin-left: auto;
     }
   }
 
@@ -100,10 +88,10 @@
   &__aperture::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -1px; /* (1) fix subtle border artefact on some browser/viewport combinations */
     right: 0;
     bottom: 0;
-    left: -1px; /* fix subtle border artefact in Firefox on some viewports */
+    left: -1px; /* (1) */
     background: url('../shared/aperture.svg') left center / cover;
   }
 
@@ -141,6 +129,30 @@
       height: 40%;
       transform: skewY(60deg);
       transform-origin: bottom left;
+    }
+  }
+
+  /* Level-1 header */
+  &--l1 {
+    .page-header__heading {
+      margin: calc(var(--vr) * 3) 0;
+    }
+
+    /* less space when heading follows entity identifier */
+    .page-header__entity + .page-header__heading {
+      margin-top: calc(var(--vr) * 2);
+      margin-bottom: calc(var(--vr) * 2.5);
+    }
+
+    @media (--bp-desktop) {
+      .page-header__heading {
+        margin: calc(var(--vr) * 4) 0;
+      }
+
+      .page-header__entity + .page-header__heading {
+        margin-top: calc(var(--vr) * 3);
+        margin-bottom: calc(var(--vr) * 3.5);
+      }
     }
   }
 
