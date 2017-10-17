@@ -142,13 +142,8 @@
       right: 0;
       bottom: 0;
       left: 27%;
-
-      /* rotate slightly */
-      transform: rotate(.25deg);
-
-      /* saw tooth background pattern */
-      background-color: inherit;
-      background-image: url('~icons/bg-saw-tooth.svg');
+      transform: rotate(.25deg); /* rotate slightly */
+      background-color: inherit; /* pass on background colour to pseudo-elements */
 
       &::before,
       &::after {
@@ -157,7 +152,7 @@
         position: absolute;
         right: 0;
         left: 0;
-        background-color: inherit; /* inherit from header */
+        background-color: inherit; /* inherit from shape and header */
       }
 
       /* triangle in top left-hand corner */
