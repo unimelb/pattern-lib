@@ -1,5 +1,6 @@
 <template>
-  <section class="section section--image section--image-mask bg-inverted-dark" :style="`background-image: url(${image});`">
+  <section class="section section--image bg-inverted-dark" :style="`background-image: url(${image});`">
+    <div class="section--image-mask"></div>
     <div class="section__inner">
       <div class="listing listing--three listing--center">
         <ListItem v-for="box in boxes.split(',')" :key="box">

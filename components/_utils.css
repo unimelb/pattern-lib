@@ -17,6 +17,11 @@
   color: #fff;
 }
 
+.bg-inverted-darker {
+  background-color: var(--col-bg-tertiary);
+  color: #fff;
+}
+
 /* light-gray background */
 .bg-alt {
   background-color: var(--col-bg-grey);
