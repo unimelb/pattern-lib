@@ -1,6 +1,5 @@
 <template>
   <header :class="`page-header page-header--l${level}`">
-    <div v-if="level === 3" class="page-header__shape"></div>
     <div class="page-header__inner max">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
         <img
@@ -10,7 +9,10 @@
           alt="The University of Melbourne homepage"
         >
       </a>
-      <p v-if="entity" class="page-header__entity">{{ entity }}</p>
+      <div v-if="entity" class="page-header__entity">
+        <p class="page-header__entity__main" v-html="entity"></p>
+        <p v-if="entitySub" class="page-header__entity__sub" v-html="entitySub"></p>
+      </div>
       <h1 class="page-header__heading">{{ title }}</h1>
     </div>
     <div
@@ -32,7 +34,8 @@ export default {
       type: String,
       required: true,
     },
-    entity: String,
+    entity: String, /* raw HTML (line breaks allowed) */
+    entitySub: String, /* raw HTML (line breaks allowed) */
     img: {
       type: String,
       required: true,
