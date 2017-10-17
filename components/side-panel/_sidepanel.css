@@ -2,7 +2,7 @@
   &__inner {
     padding: var(--vr);
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       .layout--left & {
         padding-left: 0;
       }
@@ -23,13 +23,13 @@
       border-bottom: 1px solid var(--col-brand);
     }
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       padding-right: 0;
       padding-left: 0;
     }
   }
 
-  @media (--bp-desktop) {
+  @media (--bp-x-desktop) {
     padding-top: calc(var(--vr) * 5);
   }
 }

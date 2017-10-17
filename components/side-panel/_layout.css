@@ -10,7 +10,7 @@
     height: 100%;
     vertical-align: top;
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       width: var(--panel-width);
     }
   }
@@ -18,7 +18,7 @@
   &__pre {
     float: left;
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       float: none;
     }
   }
@@ -28,7 +28,7 @@
     width: 100%;
     float: left;
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       width: calc(100% - var(--panel-width));
       float: none;
     }

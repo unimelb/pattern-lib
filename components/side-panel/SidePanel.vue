@@ -12,15 +12,15 @@
 </template>
 
 <script>
-  import SidePanelNavItem from './SidePanelNavItem.vue';
+import SidePanelNavItem from './SidePanelNavItem.vue';
 
-  export default {
-    components: { SidePanelNavItem },
-    props: {
-      right: {
-        type: Boolean,
-        default: false
-      }
-    }
-  }
+export default {
+  components: { SidePanelNavItem },
+  props: {
+    right: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
 </script>
