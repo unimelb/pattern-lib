@@ -11,7 +11,13 @@
     max-width: var(--w-mid);
     margin-right: auto;
     margin-left: auto;
+
+    .layout--right .layout__main &,
+    .layout--right .layout__main & {
+      max-width: calc((var(--w-mid) - (var(--vr) * 2) ) - var(--panel-width)); /* account for side nav */
+    }
   }
+
 
   &--sml > * { max-width: var(--w-sml); }
   &--lge > * { max-width: var(--w-lge); }

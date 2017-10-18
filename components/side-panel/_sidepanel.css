@@ -10,11 +10,12 @@
   }
 
   &__title {
-    margin-bottom: calc(var(--vr) / 2);
+    margin-bottom: none;
     padding-left: calc(var(--vr) / 2);
   }
 
   &__nav {
+    margin-top: calc(var(--vr) / 2);
     padding: 0 var(--vr);
     list-style: none;
 
@@ -24,12 +25,25 @@
     }
 
     @media (--bp-x-desktop) {
+      display: block !important;
       padding-right: 0;
       padding-left: 0;
     }
   }
 
+  &__trigger {
+    float: right;
+
+    svg {
+      margin-top: .5em;
+    }
+
+    @media (--bp-x-desktop) {
+      display: none;
+    }
+  }
+
   @media (--bp-x-desktop) {
-    padding-top: calc(var(--vr) * 5);
+    padding-top: calc(var(--vr) * 4);
   }
 }
