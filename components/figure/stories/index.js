@@ -1,7 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 
-import ArticleInset from './../../article/stories/ArticleInset.vue';
 import VideoEmbed from './../../embed/VideoEmbed.vue';
 import FigureSection from './FigureSection.vue';
 import FigureProgressive from './FigureProgressive.vue';
@@ -19,14 +18,14 @@ storiesOf('Figure', module)
         </main>`,
     };
   })
-  .add('Article With Inset Figure', () => ({
+  /* .add('Article With Inset Figure', () => ({
     components: { ArticleInset },
     template: `
         <section-wrap small>
           <article-inset />
         </section-wrap>
       `,
-  }))
+  })) */
   .add('Section With Inset Figure', () => {
     const small = boolean('Small', true);
     return {

@@ -1,4 +1,4 @@
-.article {
+.article-wrap {
   display: flex;
   flex-flow: row wrap;
 
@@ -20,7 +20,7 @@
       width: 70%;
       padding: 0 var(--vr);
 
-      .article--nosidebar & {
+      .article-wrap--no-sidebar & {
         flex: none;
         width: 100%;
         padding: 0;
