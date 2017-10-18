@@ -4,9 +4,9 @@
   padding-top: calc(var(--vr) * 2);
   padding-bottom: calc(var(--vr) * 2);
 
-  /* fix alignment of first heading */
-  &__main > :matches(h3, .heading-card):first-child {
-    margin-top: -calc((1.25rem - 1rem) / 2);
+  /* fix alignment of first heading or lead paragraph */
+  &__main > :matches(h3, .heading-card, .lead):first-child {
+    margin-top: -calc((1.25rem - 1rem) / 2); /* heading/lead font size - base font size */
   }
 
   &__aside-box {

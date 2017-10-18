@@ -6,8 +6,7 @@
     :contact="contact"
     :column-layout="true"
   >
-    <h3>Opening remarks by Vice-Chancellor Glyn Davis</h3>
-    <p>Thank you Johanna. It is a great pleasure to be here, and I am honoured to ask to start off a day of serious discussions amongst the academic leadership at a great graduate school of education.</p>
+    <p class="lead">Thank you Johanna. It is a great pleasure to be here, and I am honoured to ask to start off a day of serious discussions.</p>
     <p>I’m conscious of what an important time this is with the departure of an outstanding leader in Professor Field Rickards. His contribution in 13 years as Dean (and indeed 43 years at the University) includes the transformation of the Faculty of Education into the MGSE and the reorganisation of professional teacher education at Melbourne, which has resulted in the school achieving stellar international rankings.</p>
     <p>From a wider University perspective, Field and the School have played an important role in shaping the Melbourne Curriculum (sometimes known as the Melbourne Model), with the Master of Teaching undoubtedly one its flagship degrees.</p>
     <BlockQuotation author="Steve Wozniak" border-top border-bottom>Never trust a computer you can’t throw out a window.</BlockQuotation>
