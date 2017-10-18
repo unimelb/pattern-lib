@@ -4,6 +4,7 @@
 .card--focus-box {
   position: relative;
   padding: calc(var(--vr) * 2);
+  text-align: left;
 
   &-vert {
     padding: var(--vr);
