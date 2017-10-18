@@ -16,7 +16,6 @@ export default {
   props: {
     icon: {
       type: String,
-      required: true,
     },
     title: {
       type: String,

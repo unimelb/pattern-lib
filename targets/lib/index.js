@@ -4,7 +4,7 @@ import VueProgressiveImage from 'vue-progressive-image';
 
 import lazyBgImg from '../../components/progressive-image';
 import { AccordionGroup, AccordionPanel } from '../../components/accordion';
-import { ModalDialog } from '../../components/modal';
+import ModalDialog from '../../components/modal';
 
 import '../../components';
 
