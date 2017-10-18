@@ -29,6 +29,7 @@
     margin-bottom: calc(var(--vr) / 2);
     font-size: 1.125em;
     font-weight: var(--fw-semibold);
+    text-transform: uppercase;
   }
 
   /* switch to sidebar layout unless `column` variant is used */

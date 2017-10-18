@@ -13,13 +13,13 @@
       role="contentinfo"
     >
       <div class="article-wrap__aside-box">
-        <time :datetime="date">{{ date }}</time> | <span class="article-wrap__type">{{ postType }}</span>
+        <time :datetime="date[0]">{{ date[1] }}</time> | <span class="article-wrap__type">{{ type }}</span>
       </div>
       <div v-if="contact" class="article-wrap__aside-box">
         <ContactList class="article-wrap__contact-list" v-bind="contact" />
       </div>
       <div class="article-wrap__aside-box article-wrap__social">
-        <p class="article-wrap__social-heading">SHARE</p>
+        <p class="article-wrap__social-heading">Share</p>
         <ul class="list-social">
           <li class="list-social--twitter"><a href="https://twitter.com/unimelb"><SvgIcon name="twitter" width="25" height="25" /></a></li>
           <li class="list-social--facebook"><a href="https://facebook.com/unimelb"><SvgIcon name="facebook" width="25" height="25" /></a></li>
@@ -41,18 +41,14 @@ export default {
       required: true,
     },
     contact: Object,
-    phone: {
-      type: String,
-    },
-    email: {
-      type: String,
-    },
     date: {
-      type: String,
+      type: Array, // e.g. ['1970-01-01', '1 Jan. 1970']
+      validator: arr => (
+        arr.length === 2
+        && arr.every(item => typeof item === 'string')
+      ),
     },
-    postType: {
-      type: String,
-    },
+    type: String,
     columnLayout: Boolean,
   },
   computed: {

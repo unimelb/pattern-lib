@@ -1,8 +1,8 @@
 <template>
   <ArticleWrap
     title="MGSE Professoriate Planning Day"
-    date="03 Apr 2017"
-    post-type="speech"
+    :date="['2017-04-03', '3 Apr. 2017']"
+    type="speech"
     :contact="contact"
   >
     <h3>Opening remarks by Vice-Chancellor Glyn Davis</h3>
