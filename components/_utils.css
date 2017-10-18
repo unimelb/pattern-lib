@@ -153,6 +153,28 @@
   }
 }
 
+/* definition list - i.e. `dl` */
+.list-def {
+  &__term,
+  &__desc {
+    display: block;
+  }
+
+  &__term {
+    margin-right: 1ch;
+    float: left;
+    clear: left;
+    font-weight: var(--fw-semibold);
+  }
+
+  &__desc {
+    margin-bottom: .25rem;
+    margin-left: 0; /* remove UA style */
+    overflow: hidden; /* for multi-line alignment */
+    text-overflow: ellipsis; /* for long unbreakable words */
+  }
+}
+
 /**
  * Push icon to the right of a block of text.
  * Used in buttons, menus, etc.
@@ -235,6 +257,18 @@
   font-style: italic;
 }
 
+/* ellipsis overflow */
+.text-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* prevent wrapping - e.g. for emails, URLs, etc. */
+.text-nowrap {
+  white-space: nowrap;
+}
+
 /**
  * Hide visually but not from screenreaders
  */
@@ -246,7 +280,7 @@
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
-/*
+/**
  * Download metadata
  */
 .metadata {

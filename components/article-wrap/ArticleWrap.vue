@@ -15,15 +15,8 @@
       <div class="article-wrap__meta">
         <time :datetime="date">{{ date }}</time> | <span class="article-wrap__type">{{ postType }}</span>
       </div>
-      <div class="article-wrap__contact">
-        <dl class="clearfix">
-          <dt>Contact :</dt>
-          <dd>{{ contact }}</dd>
-          <dt>Phone :</dt>
-          <dd><a :href="`tel:${phone}`">{{ phone }}</a></dd>
-          <dt>Email :</dt>
-          <dd><a :href="`mailto:${email}`">{{ email }}</a></dd>
-        </dl>
+      <div v-if="contact" class="article-wrap__contact">
+        <ContactList class="article-wrap__contact-list" v-bind="contact" />
       </div>
       <div class="article-wrap__social">
         <p class="article-wrap__social-heading">SHARE</p>
@@ -38,15 +31,16 @@
 </template>
 
 <script>
+import ContactList from '../contact-list/ContactList.vue';
+
 export default {
+  components: { ContactList },
   props: {
     title: {
       type: String,
       required: true,
     },
-    contact: {
-      type: String,
-    },
+    contact: Object,
     phone: {
       type: String,
     },

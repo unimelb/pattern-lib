@@ -1,11 +1,9 @@
 <template>
   <ArticleWrap
     title="MGSE Professoriate Planning Day"
-    contact="John Smith"
-    phone="+613 4234 2344"
-    email="john.smith@unimelb.edu.au"
     date="03 Apr 2017"
     post-type="speech"
+    :contact="contact"
   >
     <h3>Opening remarks by Vice-Chancellor Glyn Davis</h3>
     <p>Thank you Johanna. It is a great pleasure to be here, and I am honoured to ask to start off a day of serious discussions amongst the academic leadership at a great graduate school of education.</p>
@@ -26,9 +24,20 @@
 <script>
 import ArticleWrap from '../ArticleWrap.vue';
 import BlockQuotation from '../../block-quotation/BlockQuotation.vue';
+import MainDecorator from '.storybook/decorators/MainDecorator.vue';
 
 export default {
   components: { ArticleWrap, BlockQuotation },
+  decorator: MainDecorator,
+  data() {
+    return {
+      contact: {
+        name: 'John Robertson',
+        phone: '+613 4234 2344',
+        email: 'john.robertson@unimelb.edu.au',
+      },
+    };
+  },
 };
 </script>
 

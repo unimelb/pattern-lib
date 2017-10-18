@@ -19,9 +19,11 @@
 <script>
 import ArticleWrap from '../ArticleWrap.vue';
 import BlockQuotation from '../../block-quotation/BlockQuotation.vue';
+import MainDecorator from '.storybook/decorators/MainDecorator.vue';
 
 export default {
   components: { ArticleWrap, BlockQuotation },
+  decorator: MainDecorator,
 };
 </script>
 
