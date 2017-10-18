@@ -155,27 +155,33 @@
 
 /* definition list - i.e. `dl` */
 .list-def {
-  &__term,
-  &__desc {
+  & > dt,
+  & > dd {
     display: block;
   }
 
-  &__term {
+  & > dt {
     margin-right: 1ch;
     float: left;
     clear: left;
     font-weight: var(--fw-semibold);
   }
 
-  &__desc {
+  & > dd {
+    margin-bottom: .25rem;
     margin-left: 0; /* remove UA style */
     padding: 0 1px; /* fix cropped focus outline caused by hidden overflow */
     overflow: hidden; /* for multi-line alignment */
     text-overflow: ellipsis; /* for long unbreakable words */
 
-    &:not(:last-child) {
-      margin-bottom: .25rem;
+    &:last-child {
+      margin-bottom: 0;
     }
+  }
+
+  /* force `dd` to fall below `dt` when too long (must be combined with `clearfix`) */
+  &--wrap > dd {
+    float: left;
   }
 }
 

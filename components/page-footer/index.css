@@ -76,7 +76,6 @@
     margin-top: -.125rem; /* MAGIC NUMBER: fix alignment with headings */
     margin-bottom: 1.25rem;
     margin-left: -.5rem; /* offset by link padding so icon is aligned */
-    color: #fff;
 
     & > li,
     &__link {
@@ -101,24 +100,21 @@
     }
   }
 
-  /* Contact info */
+  /* contact info */
   &__contact {
     margin: 0;
 
     & > dt {
-      margin-right: .375rem;
-      float: left;
-      clear: left;
+      font-weight: normal;
     }
 
     & > dd {
-      margin-left: 0;
-      float: left;
+      margin-bottom: 0;
+    }
 
-      a {
-        color: inherit;
-        font-weight: inherit;
-      }
+    a {
+      color: inherit;
+      font-weight: inherit;
     }
   }
 

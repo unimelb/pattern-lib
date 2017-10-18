@@ -126,7 +126,7 @@
               <li><a class="page-footer__social__link" href="https://www.twitter.com/unimelb"><SvgIcon aria-label="Twitter" class="page-footer__social__icon svg" name="twitter" /></a></li>
               <li><a class="page-footer__social__link" href="https://www.linkedin.com/company/university-of-melbourne"><SvgIcon aria-label="LinkedIn" class="page-footer__social__icon svg" name="linkedin" /></a></li>
             </ul>
-            <dl class="page-footer__contact clearfix">
+            <dl class="page-footer__contact list-def list-def--wrap clearfix">
               <dt>Phone:</dt>
               <dd>13 MELB <small>(<a href="tel:136352">13 6352</a>)</small></dd>
               <dt>International:</dt>
