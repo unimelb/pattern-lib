@@ -10,7 +10,7 @@
     </template>
     <template v-if="email">
       <dt class="list-def__term">Email :</dt>
-      <dd class="list-def__desc"><a class="text-nowrap" :href="`mailto:${email}`">{{ email }}</a></dd>
+      <dd class="list-def__desc text-nowrap"><a :href="`mailto:${email}`">{{ email }}</a></dd>
     </template>
   </dl>
 </template>
