@@ -15,9 +15,18 @@
   }
 
   &__nav {
+    height: auto;
     margin-top: calc(var(--vr) / 2);
     padding: 0 var(--vr);
+    transition: opacity .3s ease;
     list-style: none;
+
+    &--closed {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+    }
 
     &-item {
       padding: calc(var(--vr) / 2);
