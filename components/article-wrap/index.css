@@ -31,43 +31,34 @@
     font-weight: var(--fw-semibold);
   }
 
-  &--no-sidebar {
-    display: block;
-  }
+  /* switch to sidebar layout unless `column` variant is used */
+  &:not(.article-wrap--column) {
+    @media (--bp-desktop) {
+      flex-flow: row wrap;
 
-  @media (--bp-desktop) {
-    flex-flow: row wrap;
+      .article-wrap__header {
+        flex-basis: 100%;
+        margin-bottom: calc(var(--vr) * 2.5);
+      }
 
-    &__header {
-      flex-basis: 100%;
-      margin-bottom: calc(var(--vr) * 2.5);
-    }
-
-    &__main {
-      flex: 1 1 auto;
-      order: 2;
-      width: 70%;
-      padding: 0 var(--vr);
-    }
-
-    &__aside {
-      flex: 1 1 auto;
-      order: 1;
-      width: 30%;
-    }
-
-    &--no-sidebar {
       .article-wrap__main {
-        flex: none;
-        width: 100%;
-        padding: 0;
+        flex: 1 1 auto;
+        order: 2;
+        width: 70%;
+        padding: 0 var(--vr);
+      }
+
+      .article-wrap__aside {
+        flex: 1 1 auto;
+        order: 1;
+        width: 30%;
       }
     }
-  }
 
-  @media (--bp-x-desktop) {
-    &__aside {
-      padding-right: var(--vr);
+    @media (--bp-x-desktop) {
+      .article-wrap__aside {
+        padding-right: var(--vr);
+      }
     }
   }
 }

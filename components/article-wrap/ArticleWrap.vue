@@ -1,14 +1,14 @@
 <template>
   <article
     class="article-wrap max"
-    :class="hasSidebar ? [] : ['article-wrap--no-sidebar', 'max--sml']"
+    :class="useColumnLayout ? ['article-wrap--column', 'max--sml'] : []"
   >
     <h1 class="article-wrap__header">{{ title }}</h1>
     <div class="article-wrap__main">
       <slot></slot>
     </div>
     <footer
-      v-if="hasSidebar"
+      v-if="hasMetadata"
       class="article-wrap__aside"
       role="contentinfo"
     >
@@ -53,10 +53,14 @@ export default {
     postType: {
       type: String,
     },
+    columnLayout: Boolean,
   },
   computed: {
-    hasSidebar() {
+    hasMetadata() {
       return this.date || this.postType || this.contact;
+    },
+    useColumnLayout() {
+      return this.columnLayout || !this.hasMetadata;
     },
   },
 };

@@ -1,5 +1,11 @@
 <template>
-  <ArticleWrap title="MGSE Professoriate Planning Day">
+  <ArticleWrap
+    title="MGSE Professoriate Planning Day"
+    date="03 Apr 2017"
+    post-type="speech"
+    :contact="contact"
+    :column-layout="true"
+  >
     <h3>Opening remarks by Vice-Chancellor Glyn Davis</h3>
     <p>Thank you Johanna. It is a great pleasure to be here, and I am honoured to ask to start off a day of serious discussions amongst the academic leadership at a great graduate school of education.</p>
     <p>I’m conscious of what an important time this is with the departure of an outstanding leader in Professor Field Rickards. His contribution in 13 years as Dean (and indeed 43 years at the University) includes the transformation of the Faculty of Education into the MGSE and the reorganisation of professional teacher education at Melbourne, which has resulted in the school achieving stellar international rankings.</p>
@@ -24,6 +30,15 @@ import MainDecorator from '.storybook/decorators/MainDecorator.vue';
 export default {
   components: { ArticleWrap, BlockQuotation },
   decorator: MainDecorator,
+  data() {
+    return {
+      contact: {
+        name: 'John Robertson',
+        phone: '+613 4234 2344',
+        email: 'john.robertson@unimelb.edu.au',
+      },
+    };
+  },
 };
 </script>
 
