@@ -1,53 +1,17 @@
 .article-wrap {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  padding-top: calc(var(--vr) * 2);
+  padding-bottom: calc(var(--vr) * 2);
 
-  &__header {
-    flex: 0 0 100%;
-    margin: calc(var(--vr) * 2) 0 4rem 0;
-  }
-
-  &__main {
-    width: 100%;
-
-    @media (--bp-desktop) {
-      flex: 0 0 70%;
-      order: 2;
-      width: 70%;
-      padding: 0 var(--vr);
-
-      .article-wrap--no-sidebar & {
-        flex: none;
-        width: 100%;
-        padding: 0;
-      }
-    }
-  }
-
-  &__aside {
-    width: 100%;
-    padding-top: 0;
-
-    @media (--bp-desktop) {
-      flex: 0 0 30%;
-      order: 1;
-      width: 30%;
-      padding-right: var(--vr);
-    }
-  }
-
-  &__meta,
-  &__contact,
-  &__social {
-    padding: var(--vr) 0;
-    border-bottom: 1px solid var(--col-brand);
-
-    &:first-child {
-      padding-top: 0;
+  &__aside-box {
+    &:not(:first-child) {
+      padding-top: var(--vr);
     }
 
-    &:last-child {
-      border-bottom: 0;
+    &:not(:last-child) {
+      padding-bottom: var(--vr);
+      border-bottom: 1px solid var(--col-brand);
     }
   }
 
@@ -61,15 +25,49 @@
     margin-bottom: 0;
   }
 
-  &__social {
-    &-heading {
-      margin-bottom: calc(var(--vr) / 2);
-      font-size: 1.125em;
-      font-weight: var(--fw-semibold);
+  &__social-heading {
+    margin-bottom: calc(var(--vr) / 2);
+    font-size: 1.125em;
+    font-weight: var(--fw-semibold);
+  }
+
+  &--no-sidebar {
+    display: block;
+  }
+
+  @media (--bp-desktop) {
+    flex-flow: row wrap;
+
+    &__header {
+      flex-basis: 100%;
+      margin-bottom: calc(var(--vr) * 2.5);
+    }
+
+    &__main {
+      flex: 1 1 auto;
+      order: 2;
+      width: 70%;
+      padding: 0 var(--vr);
+    }
+
+    &__aside {
+      flex: 1 1 auto;
+      order: 1;
+      width: 30%;
+    }
+
+    &--no-sidebar {
+      .article-wrap__main {
+        flex: none;
+        width: 100%;
+        padding: 0;
+      }
     }
   }
 
-  &--nosidebar {
-    display: block;
+  @media (--bp-x-desktop) {
+    &__aside {
+      padding-right: var(--vr);
+    }
   }
 }

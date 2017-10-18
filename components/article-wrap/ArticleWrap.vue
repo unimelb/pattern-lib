@@ -12,13 +12,13 @@
       class="article-wrap__aside"
       role="contentinfo"
     >
-      <div class="article-wrap__meta">
+      <div class="article-wrap__aside-box">
         <time :datetime="date">{{ date }}</time> | <span class="article-wrap__type">{{ postType }}</span>
       </div>
-      <div v-if="contact" class="article-wrap__contact">
+      <div v-if="contact" class="article-wrap__aside-box">
         <ContactList class="article-wrap__contact-list" v-bind="contact" />
       </div>
-      <div class="article-wrap__social">
+      <div class="article-wrap__aside-box article-wrap__social">
         <p class="article-wrap__social-heading">SHARE</p>
         <ul class="list-social">
           <li class="list-social--twitter"><a href="https://twitter.com/unimelb"><SvgIcon name="twitter" width="25" height="25" /></a></li>
@@ -56,7 +56,7 @@ export default {
   },
   computed: {
     hasSidebar() {
-      return this.date || this.postType || this.contact || this.phone || this.email;
+      return this.date || this.postType || this.contact;
     },
   },
 };
