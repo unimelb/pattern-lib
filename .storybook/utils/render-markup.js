@@ -24,7 +24,7 @@ export default function renderMarkup(Component, opts = {}) {
       outer.classList.add(vm._vnode.componentInstance._vnode.data.staticClass);
     }
     // Prevent double render
-    let renderedUids = [];
+    const renderedUids = [];
     for (let h = 0, rootnodes = vm._vnode.componentInstance.$children.length; h < rootnodes; h += 1) {
       const parent = vm._vnode.componentInstance.$children[h].$vnode.context._vnode;
       // Pass an empty div through, otherwise track context uids rendered
@@ -50,7 +50,7 @@ export default function renderMarkup(Component, opts = {}) {
         for (let i = 0, max = recs.length; i < max; i += 1) {
           if (recs[i].componentInstance && recs[i].componentInstance.$slots) {
             // Content of slot is another component
-            let inner = document.createElement(pascalToKebab(recs[i].componentOptions.tag));
+            const inner = document.createElement(pascalToKebab(recs[i].componentOptions.tag));
             for (let slots = Object.values(recs[i].componentInstance.$slots), k = slots.length - 1; k >= 0; k -= 1) {
               for (let j = slots[k].length - 1; j >= 0; j -= 1) {
                 if (slots[k][j].tag) {
