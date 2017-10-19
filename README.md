@@ -72,6 +72,27 @@ You will need to select the component from the list of folders, then confirm the
 > **Note** This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
 
 
+## Release process
+
+**At the start of a new release sprint:**
+
+- Create a ZenHub release called `next-release`.
+
+**Throughout the release sprint:**
+
+- Assign the appropriate `pr-` label to every new PR: `pr-major` if it contains a breaking change, `pr-minor` if it adds a new feature, `pr-patch` in all other cases.
+- Assign issues and PRs to `next-release` as they are resolved/merged.
+
+**At the end of the release sprint:**
+
+1. Look at all the PRs that were assigned to `next-release` throughout the sprint and identify the highest-level of change (major, minor or patch). Deduce the next release's version number and rename the ZenHub release accordingly.
+1. Create a new release notes draft based on the following template: `.github/RELEASE_NOTES_TEMPLATE.md`.
+1. Write the release notes by going through all the issues and PRs assigned to the ZenHub release.
+1. Deploy to production (cf. next section).
+1. Once the library and documentation sites are deployed, publish the release notes and close the ZenHub release.
+1. Share the ZenHub release report with stakeholders.
+
+
 ## Deployment
 
 To deploy to production:
@@ -86,14 +107,6 @@ Semaphore then automatically builds the library and syncs the output files to S3
 > **Note on versioning**: the version number follows the [semver](http://semver.org/) convention `MAJOR.MINOR.PATCH`, where: `MAJOR` corresponds to a breaking change (e.g. a change in a component's markup), `MINOR` to a new feature (e.g. a new component, a new feature for an existing component, etc.), and `PATCH` to a bug fix or under-the-hood change (e.g. code clean-up, performance improvement, etc.)
 
 > **Note on rebase**: rebasing `dev` onto `master` avoids creating a merge commit that would require merging `master` back into `dev`.
-
-### Release
-
-Once the library is deployed:
-
-1. Finalise the release notes, making sure that the title and tag name are correct (`vX.Y.Z`), then publish them.
-1. Create a new release notes draft based on the following template: `.github/RELEASE_NOTES_TEMPLATE.md`.
-1. Update the draft every time you merge a PR.
 
 
 ## Testing
