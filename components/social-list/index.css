@@ -1,0 +1,20 @@
+.social-list {
+  margin-left: -.5rem; /* offset by link padding so icon is aligned */
+
+  & > li,
+  &__link {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: bottom; /* remove unwanted inline-block spacing */
+  }
+
+  &__link {
+    padding: .5rem;
+    transition: transform .15s;
+
+    &:focus,
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
