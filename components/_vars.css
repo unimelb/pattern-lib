@@ -48,6 +48,7 @@
   /* Background colours */
   --col-bg: var(--col-brand);
   --col-bg-grey: #f7f7f7;
+  --col-bg-light-blue: color(var(--col-brand) tint(92%));
   --col-bg-white: #fff; /* just use #fff */
   --col-bg-secondary: rgb(3, 58, 123); /* only for bottom half of footer */
   --col-bg-secondary-grey: #e4e4e4;
@@ -94,6 +95,9 @@
 
   /* Border radius */
   --br: 3px;
+
+  /* Side nav width */
+  --panel-width: 17%;
 }
 
 /**

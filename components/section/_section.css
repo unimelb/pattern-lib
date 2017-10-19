@@ -11,6 +11,11 @@
     margin-left: auto;
     padding: calc(2 * var(--vr)) var(--vr);
 
+    .layout--left .layout__main &,
+    .layout--right .layout__main & {
+      max-width: calc(var(--w-mid) - var(--panel-width)); /* account for side nav */
+    }
+
     &--sml {
       max-width: calc(var(--w-sml) + 2 * var(--vr));
     }

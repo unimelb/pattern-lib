@@ -5,6 +5,8 @@ import { version } from '../package.json';
 import * as utils from './shared/utils';
 import sprite from './icons/sprite.svg';
 
+import './progressive-image';
+import './side-panel';
 import HeaderTools from './top-nav/header-tools';
 
 window.ui = {
