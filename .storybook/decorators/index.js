@@ -1,4 +1,4 @@
-/* eslint-disable prefer-default-export */
+/* eslint-disable import/prefer-default-export */
 import { createDecorator } from '../utils';
 
 import Pad from './Pad.vue';

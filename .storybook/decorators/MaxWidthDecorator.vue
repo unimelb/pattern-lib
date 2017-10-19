@@ -9,5 +9,5 @@ export default {
   props: {
     maxWidth: Number,
   },
-}
+};
 </script>
