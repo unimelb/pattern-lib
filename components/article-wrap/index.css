@@ -1,0 +1,70 @@
+.article-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(var(--vr) * 2);
+  padding-bottom: calc(var(--vr) * 2);
+
+  /* fix alignment of first heading or lead paragraph */
+  &__main > :matches(h3, .heading-card, .lead):first-child {
+    margin-top: -calc((1.25rem - 1rem) / 2); /* heading/lead font size - base font size */
+  }
+
+  &__aside-box {
+    &:not(:first-child) {
+      padding-top: var(--vr);
+    }
+
+    &:not(:last-child) {
+      padding-bottom: var(--vr);
+      border-bottom: 1px solid var(--col-brand);
+    }
+  }
+
+  &__type {
+    font-size: 1.125em;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+  }
+
+  &__contact-list {
+    margin-bottom: 0;
+  }
+
+  &__social-heading {
+    margin-bottom: .25rem;
+    font-size: 1.125em;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+  }
+
+  /* switch to sidebar layout unless `column` variant is used */
+  &:not(.article-wrap--column) {
+    @media (--bp-desktop) {
+      flex-flow: row wrap;
+
+      .article-wrap__header {
+        flex-basis: 100%;
+        margin-bottom: calc(var(--vr) * 2.5);
+      }
+
+      .article-wrap__main {
+        flex: 1 1 auto;
+        order: 2;
+        width: 70%;
+        padding: 0 var(--vr);
+      }
+
+      .article-wrap__aside {
+        flex: 1 1 auto;
+        order: 1;
+        width: 30%;
+      }
+    }
+
+    @media (--bp-x-desktop) {
+      .article-wrap__aside {
+        padding-right: var(--vr);
+      }
+    }
+  }
+}

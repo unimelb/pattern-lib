@@ -1,5 +1,5 @@
 <template>
-  <SectionWrap small class="bg-inverted" style="background-image: url('http://about-us-unimelb.netlify.com/images/UoM-soft-3.png')">
+  <SectionWrap small class="bg-inverted" :style="{ backgroundImage: 'url(http://about-us-unimelb.netlify.com/images/UoM-soft-3.png)' }">
     <CardFocusImageList
       element="div"
       color="white"

@@ -1,6 +1,6 @@
 <template>
   <a :href="href" class="btn-owner card card--imagelisting card--bdr">
-    <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
+    <div class="card__thumb" :style="{ backgroundImage: `url(${thumb})` }"></div>
     <div class="card__inner ">
       <h3 class="card__header">{{ meta }}</h3>
       <p class="card__meta">{{ title }}</p>
@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     thumb: {
@@ -34,5 +33,4 @@ export default {
     },
   },
 };
-
 </script>
