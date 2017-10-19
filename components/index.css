@@ -21,6 +21,8 @@
 @import 'page-breadcrumbs/index.css';
 @import 'page-header/index.css';
 @import 'page-footer/index.css';
+@import 'page-nav/index.css';
+@import 'page-search/index.css';
 @import 'progressive-image/index.css';
 @import 'quick-links-menu/index.css';
 @import 'section/index.css';
@@ -28,7 +30,6 @@
 @import 'social-list/index.css';
 @import 'stats/index.css';
 @import 'tables/index.css';
-@import 'top-nav/index.css';
 @import 'typography/index.css';
 @import 'welcome/index.css';
 /*** Add new component below */

@@ -20,3 +20,14 @@
     </div>
   </div>
 </template>
+
+<script>
+import Search from './search';
+
+export default {
+  name: 'page-search',
+  mounted() {
+    this.actor = new Search();
+  },
+};
+</script>

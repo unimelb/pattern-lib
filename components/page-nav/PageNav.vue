@@ -6,5 +6,24 @@
       </svg>
       <span class="link-icon__text">Menu</span>
     </a>
+    <div id="sitemap" role="navigation">
+      <h2 v-html="title"></h2>
+      <slot></slot>
+    </div>
   </div>
 </template>
+
+<script>
+import Nav from './nav';
+
+export default {
+  name: 'page-nav',
+  props: {
+    default: 'Site Navigation',
+    title: String,
+  },
+  mounted() {
+    this.actor = new Nav();
+  },
+};
+</script>

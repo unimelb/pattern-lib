@@ -1,5 +1,5 @@
 <template>
-  <modal-dialog title="Register your details" trigger="Enter the competition">
+  <ModalDialog title="Register your details" trigger="Enter the competition">
     <form class="form">
       <label>
         E-mail
@@ -17,7 +17,7 @@
       </fieldset>
       <input tabindex="3" type="submit">
     </form>
-  </modal-dialog>
+  </ModalDialog>
 </template>
 
 <script>
