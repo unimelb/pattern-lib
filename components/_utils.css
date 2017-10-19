@@ -27,6 +27,11 @@
   background-color: var(--col-bg-grey);
 }
 
+/* light-blue (used in side nav) */
+.bg-light-blue {
+  background-color: var(--col-bg-light-blue);
+}
+
 /* white background */
 .bg-white {
   background-color: #fff;
