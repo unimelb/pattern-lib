@@ -1,111 +1,31 @@
 import { storiesOf } from '@storybook/vue';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
-import withReadme from 'storybook-readme/with-readme';
+import { createStory } from '.storybook/utils';
 
-import ButtonReadme from './Buttons.md';
-import buttonWithIcon from './Button with icon.md';
-import buttonAsButton from './Button as button.md';
-import buttonWithIconClass from './Button with icon class.md';
-import ButtonLink from './ButtonLink.vue';
+import Story1 from './Story1.vue';
+import Story2 from './Story2.vue';
+import Story3 from './Story3.vue';
+import Story4 from './Story4.vue';
+import Story5 from './Story5.vue';
+import Story6 from './Story6.vue';
+import Story7 from './Story7.vue';
+import Story8 from './Story8.vue';
+import Story9 from './Story9.vue';
+import Story10 from './Story10.vue';
+import Story11 from './Story11.vue';
+import Story12 from './Story12.vue';
+/* ##Import story component here */
 
+/* Section - Focus  */
 storiesOf('Buttons', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withReadme(ButtonReadme))
-  .add('Button with icon', withReadme(buttonWithIcon, () => {
-    const btnText = text('Button Text', 'Button with icon');
-    return {
-      template: `<ButtonIcon >${btnText}</ButtonIcon>`,
-    };
-  }))
-  .add('Button with icon (as button element)', withReadme(buttonAsButton, () => {
-    const btnText = text('Button Text', 'Button with icon');
-    return {
-      template: `<ButtonIcon icon="twitter" element="button">${btnText}</ButtonIcon>`,
-    };
-  }))
-  .add('Button without icon', () => {
-    const btnText = text('Button Text', 'Button without icon');
-    return {
-      components: { ButtonLink },
-      template: `<button-link href="#" class="btn--sml">${btnText}</button-link>`,
-    };
-  })
-  .add('Button as button element', () => {
-    const btnText = text('Button Text', 'Button without icon as a button');
-    return {
-      components: { ButtonLink },
-      template: `<button-link element="button">${btnText}</button-link>`,
-    };
-  })
-  .add('Button small', () => {
-    const btnText = text('Button Text', 'I am a small button');
-    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right');
-    return {
-      template: `<ButtonIcon icon="${icons}" class="btn--sml">${btnText}</ButtonIcon>`,
-    };
-  })
-  .add('Button extra small', () => {
-    const btnText = text('Button Text', 'I am a really small button');
-    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right');
-    return {
-      template: `<ButtonIcon icon="${icons}" class="btn--xsml">${btnText}</ButtonIcon>`,
-    };
-  })
-  .add('Button wide', () => {
-    const btnText = text('Button Text', 'I am a wide button');
-    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right');
-    return {
-      template: `<ButtonIcon icon="${icons}" class="btn--wide">${btnText}</ButtonIcon>>`,
-    };
-  })
-  .add('Button extra wide', () => {
-    const btnText = text('Button Text', 'I am a really wide button');
-    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right');
-    return {
-      template: `<ButtonIcon icon="${icons}" class="btn--xwide">${btnText}</ButtonIcon>`,
-    };
-  })
-  .add('Button full width', () => {
-    const btnText = text('Button Text', 'I am a button that stretches to the width of the container');
-    const icons = select('Icon', ['chevron-right', 'close', 'download'], 'chevron-right');
-    return {
-      template: `<ButtonIcon icon="${icons}" class="btn--fullwidth">${btnText}</ButtonIcon>`,
-    };
-  })
-  .add('Button using btn--icon class', withReadme(buttonWithIconClass, () => {
-    const btnText = text('Button Text', 'Button with icon');
-    const icons = select('Icon', ['chevron-right', 'twitter', 'search', 'download'], 'chevron-right');
-    return {
-      template: `<button class="btn btn--icon btn--icon--${icons}">${btnText}</button>`,
-    };
-  }))
-  .add('Button using btn--icon class (wide)', withReadme(buttonWithIconClass, () => {
-    const btnText = text('Button Text', 'Button with icon');
-    const icons = select('Icon', ['chevron-right', 'twitter', 'search', 'download'], 'chevron-right');
-    const width = select('Width', ['', 'btn--wide', 'btn--xwide', 'btn--fullwidth'], 'btn--wide');
-    const height = select('Height', ['', 'btn--sml', 'btn--xsml'], '');
-    return {
-      template: `<button class="btn btn--icon ${width} ${height} btn--icon--${icons}">${btnText}</button>`,
-    };
-  }))
-  .add('Button using btn--icon class (inverted)', withReadme(buttonWithIconClass, () => {
-    const btnText = text('Button Text', 'Button with icon');
-    const icons = select('Icon', ['chevron-right', 'twitter', 'search', 'download'], 'chevron-right');
-    const width = select('Width', ['', 'btn--wide', 'btn--xwide', 'btn--fullwidth'], 'btn--wide');
-    const height = select('Height', ['', 'btn--sml', 'btn--xsml'], '');
-    return {
-      template: `
-        <div class="bg-inverted">
-          <div class="max" style="padding: 3rem">
-            <button class="btn btn--inverted btn--icon ${width} ${height} btn--icon--${icons}-inverted">${btnText}</button>
-          </div>
-        </div>
-        `,
-    };
-  }))
-  .add('Button with different icons', withReadme(buttonAsButton, () => {
-    const btnText = text('Button Text', 'Button with icon');
-    return {
-      template: `<ButtonIcon icon="microphone" element="button">${btnText}</ButtonIcon>`,
-    };
-  }));
+  .add('Button with icon', createStory(Story1))
+  .add('Button without icon', createStory(Story2))
+  .add('Button icon examples', createStory(Story3))
+  .add('Small', createStory(Story4))
+  .add('Extra Small', createStory(Story5))
+  .add('Wide', createStory(Story6))
+  .add('Extra Wide', createStory(Story7))
+  .add('Full Width', createStory(Story8))
+  .add('All Sizes', createStory(Story9))
+  .add('Button as <button> element', createStory(Story10))
+  .add('Inverted button', createStory(Story12))
+  .add('Button for use in the CMS (btn--icon)', createStory(Story11));
