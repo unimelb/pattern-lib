@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-owner card card--focus-box card--focus-box-vert bg-white">
+  <div class="btn-owner card card--focus-box bg-white" :class="classes">
     <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
     <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
     <div class="card__inner">
@@ -16,7 +16,6 @@ export default {
   props: {
     icon: {
       type: String,
-      required: true,
     },
     title: {
       type: String,
