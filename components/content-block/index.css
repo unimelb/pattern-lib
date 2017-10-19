@@ -1,5 +1,5 @@
 .content-block {
-  padding: var(--vr);
+  padding: calc(2 * var(--vr)) 0;
 
   /* remove default bottom margin of last child (typically `p`), and */
   /* compensate for difference in font-size with first child (typically `h2`) */
@@ -17,7 +17,6 @@
       max-width: calc((var(--w-mid) - (var(--vr) * 2) ) - var(--panel-width)); /* account for side nav */
     }
   }
-
 
   &--sml > * { max-width: var(--w-sml); }
   &--lge > * { max-width: var(--w-lge); }
