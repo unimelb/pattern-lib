@@ -17,7 +17,7 @@
     </div>
     <div
       class="page-header__img page-header__aperture"
-      :style="`background-image: url('${img}');`"
+      :style="{ backgroundImage: `url(${img})` }"
     ></div>
   </header>
 </template>

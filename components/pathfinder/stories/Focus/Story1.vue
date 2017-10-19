@@ -1,5 +1,5 @@
 <template>
-  <section class="section section--image bg-inverted-dark" :style="`background-image: url('${crest}')`">
+  <section class="section section--image bg-inverted-dark" :style="{ backgroundImage: `url(${crest})` }">
      <div class="section__inner">
         <div class="listing listing--three listing--center">
           <ListItem>
