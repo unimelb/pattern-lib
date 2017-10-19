@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     thumb: {
@@ -34,5 +33,4 @@ export default {
     },
   },
 };
-
 </script>
