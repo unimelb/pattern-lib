@@ -1,6 +1,5 @@
 import { storiesOf } from '@storybook/vue';
 import { withKnobs, text, array, select } from '@storybook/addon-knobs';
-import ButtonIcon from './../../buttons/stories/ButtonIcon.vue';
 import QuickLinks from './QuickLinks.vue';
 import QuickLinksMenuItem from './QuickLinksMenuItem.vue';
 
@@ -12,7 +11,7 @@ storiesOf('Quick Link Menu', module)
     const content = text('Content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur praesentium quam voluptatem qui minus, amet quidem facilis non commodi, distinctio dolore aperiam illum ut libero ad maxime dicta iure deleniti.');
     const menuLinks = array('Menu Links', ['Strategy and governance', 'Leadership', 'Working with us', 'News and resources', 'Campus and maps']);
     return {
-      components: { ButtonIcon, QuickLinks, QuickLinksMenuItem },
+      components: { QuickLinks, QuickLinksMenuItem },
       template: `
         <SectionWrap class="bg-white">
           <quick-links>
