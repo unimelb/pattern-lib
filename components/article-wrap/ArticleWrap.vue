@@ -20,11 +20,7 @@
       </div>
       <div class="article-wrap__aside-box article-wrap__social">
         <p class="article-wrap__social-heading">Share</p>
-        <ul class="list-social">
-          <li class="list-social--twitter"><a href="https://twitter.com/unimelb"><SvgIcon name="twitter" width="25" height="25" /></a></li>
-          <li class="list-social--facebook"><a href="https://facebook.com/unimelb"><SvgIcon name="facebook" width="25" height="25" /></a></li>
-          <li class="list-social--linkedin"><a href="https://www.linkedin.com/in/the-university-of-melbourne-21543061"><SvgIcon name="linkedin" width="25" height="25" /></a></li>
-        </ul>
+        <SocialList />
       </div>
     </footer>
   </article>
@@ -32,9 +28,10 @@
 
 <script>
 import ContactList from '../contact-list/ContactList.vue';
+import SocialList from '../social-list/SocialList.vue';
 
 export default {
-  components: { ContactList },
+  components: { ContactList, SocialList },
   props: {
     title: {
       type: String,

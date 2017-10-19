@@ -31,7 +31,7 @@
   }
 
   &__social-heading {
-    margin-bottom: calc(var(--vr) / 2);
+    margin-bottom: .25rem;
     font-size: 1.125em;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;

@@ -121,11 +121,7 @@
           </div>
           <div class="cell cell--wide-1of4">
             <p class="screenreaders-only">Follow us on:</p>
-            <ul class="page-footer__social list-reset links-reset">
-              <li><a class="page-footer__social__link" href="https://www.facebook.com/unimelb"><SvgIcon aria-label="Facebook" class="page-footer__social__icon svg" name="facebook" /></a></li>
-              <li><a class="page-footer__social__link" href="https://www.twitter.com/unimelb"><SvgIcon aria-label="Twitter" class="page-footer__social__icon svg" name="twitter" /></a></li>
-              <li><a class="page-footer__social__link" href="https://www.linkedin.com/company/university-of-melbourne"><SvgIcon aria-label="LinkedIn" class="page-footer__social__icon svg" name="linkedin" /></a></li>
-            </ul>
+            <SocialList class="page-footer__social" :with-colors="false" :icon-size="22" />
             <dl class="page-footer__contact list-def list-def--wrap clearfix">
               <dt>Phone:</dt>
               <dd>13 MELB <small>(<a href="tel:136352">13 6352</a>)</small></dd>
@@ -151,3 +147,12 @@
     </div>
   </footer>
 </template>
+
+<script>
+import SocialList from '../social-list/SocialList.vue';
+
+export default {
+  components: { SocialList },
+};
+</script>
+

@@ -34,6 +34,13 @@
 }
 
 /**
+ * Colours
+ */
+.col-facebook { color: var(--col-facebook); }
+.col-twitter { color: var(--col-twitter); }
+.col-linkedin { color: var(--col-linkedin); }
+
+/**
  * Max-width wrapper
  */
 .max {
@@ -124,32 +131,6 @@
   @supports (display: flex) {
     display: flex;
     align-items: center;
-  }
-}
-
-.list-social {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none;
-
-  li {
-    margin-right: .9em;
-    float: left;
-  }
-
-  &--twitter a,
-  &--twitter svg {
-    color: var(--col-twitter);
-  }
-
-  &--facebook a,
-  &--facebook svg {
-    color: var(--col-facebook);
-  }
-
-  &--linkedin a,
-  &--linkedin svg {
-    color: var(--col-linkedin);
   }
 }
 

@@ -75,29 +75,6 @@
   &__social {
     margin-top: -.125rem; /* MAGIC NUMBER: fix alignment with headings */
     margin-bottom: 1.25rem;
-    margin-left: -.5rem; /* offset by link padding so icon is aligned */
-
-    & > li,
-    &__link {
-      display: inline-block;
-      margin-bottom: 0;
-      vertical-align: bottom; /* remove unwanted inline-block spacing */
-    }
-
-    &__link {
-      padding: .5rem;
-      transition: transform .15s;
-
-      &:focus,
-      &:hover {
-        transform: scale(1.2);
-      }
-    }
-
-    &__icon {
-      width: 1.375rem;
-      height: 1.375rem;
-    }
   }
 
   /* contact info */
