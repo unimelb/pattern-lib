@@ -4,6 +4,6 @@
 - Icons used in container templates are to be inlined in the markup just as they appear in the documentation -- i.e.
   ```html
   <svg ...>
-    <use xlink:href="#<icon-name>" />
+    <use xlink:href="#icon-<name>" />
   </svg>
   ```

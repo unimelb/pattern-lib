@@ -55,7 +55,7 @@ Components that are meant to become container templates in the CMS don't have ma
 
 <!-- OUTPUT -->
 <svg role="presentation" focusable="false">
-  <use xlink:href="#chevron-right" />
+  <use xlink:href="#icon-chevron-right" />
 </svg>
 
 <!-- WITH CLASS & WIDTH/HEIGHT -->
