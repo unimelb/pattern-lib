@@ -1,6 +1,6 @@
 <template>
   <svg :width="width" :height="height" focusable="false" role="presentation">
-    <use :xlink:href="'#' + name" />
+    <use :xlink:href="'#icon-' + name" />
   </svg>
 </template>
 

@@ -34,6 +34,13 @@
 }
 
 /**
+ * Colours
+ */
+.col-facebook { color: var(--col-facebook); }
+.col-twitter { color: var(--col-twitter); }
+.col-linkedin { color: var(--col-linkedin); }
+
+/**
  * Max-width wrapper
  */
 .max {
@@ -127,29 +134,35 @@
   }
 }
 
-.list-social {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: none;
+/* definition list - i.e. `dl` */
+.list-def {
+  & > dt,
+  & > dd {
+    display: block;
+  }
 
-  li {
-    margin-right: .9em;
+  & > dt {
+    margin-right: 1ch;
     float: left;
+    clear: left;
+    font-weight: var(--fw-semibold);
   }
 
-  &--twitter a,
-  &--twitter svg {
-    color: var(--col-twitter);
+  & > dd {
+    margin-bottom: .25rem;
+    margin-left: 0; /* remove UA style */
+    padding: 0 1px; /* fix cropped focus outline caused by hidden overflow */
+    overflow: hidden; /* for multi-line alignment */
+    text-overflow: ellipsis; /* for long unbreakable words */
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  &--facebook a,
-  &--facebook svg {
-    color: var(--col-facebook);
-  }
-
-  &--linkedin a,
-  &--linkedin svg {
-    color: var(--col-linkedin);
+  /* force `dd` to fall below `dt` when too long (must be combined with `clearfix`) */
+  &--wrap > dd {
+    float: left;
   }
 }
 
@@ -235,6 +248,18 @@
   font-style: italic;
 }
 
+/* ellipsis overflow */
+.text-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* prevent wrapping - e.g. for emails, URLs, etc. */
+.text-nowrap {
+  white-space: nowrap;
+}
+
 /**
  * Hide visually but not from screenreaders
  */
@@ -246,7 +271,7 @@
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
-/*
+/**
  * Download metadata
  */
 .metadata {
