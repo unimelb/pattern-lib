@@ -34,7 +34,7 @@ export default function renderMarkup(Component, opts = {}) {
         let recs = vm._vnode.componentInstance.$children[h].$options._renderChildren;
         if (recs) {
           // Component outer
-          let componentProps = vm._vnode.componentInstance.$children[h].$vnode.componentOptions.propsData; //vm._vnode.componentInstance.$children[h].$vnode.componentInstance._props;
+          const componentProps = vm._vnode.componentInstance.$children[h].$vnode.componentOptions.propsData;
           outer = document.createElement(pascalToKebab(vm._vnode.componentInstance.$children[h].$vnode.componentOptions.tag));
           if (componentProps) {
             for (let attrNames = Object.keys(componentProps), attrVals = Object.values(componentProps), i = attrNames.length - 1; i >= 0; i -= 1) {
@@ -53,7 +53,6 @@ export default function renderMarkup(Component, opts = {}) {
             const inner = document.createElement(pascalToKebab(recs[i].componentOptions.tag));
             const componentProps = recs[i].componentOptions.propsData;
             if (componentProps) {
-              console.log(recs[i].componentOptions);
               for (let attrNames = Object.keys(componentProps), attrVals = Object.values(componentProps), j = attrNames.length - 1; j >= 0; j -= 1) {
                 inner.setAttribute(`${attrNames[j]}`, attrVals[j]);
               }
