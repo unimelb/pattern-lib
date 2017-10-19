@@ -11,24 +11,24 @@ export default {
   name: 'accordion-group',
   props: {
     disabled: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: 'false',
     },
     solo: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: 'false',
     },
     open: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: 'false',
     },
   },
   mounted() {
     /* eslint-disable no-underscore-dangle */
-    if (!this._props.disabled) {
+    if (this._props.disabled !== 'true') {
       Fraccordion({
-        firstPanelsOpenByDefault: this._props.open,
-        multiselectable: this._props.solo,
+        firstPanelsOpenByDefault: (this._props.open === 'true'),
+        multiselectable: (this._props.solo !== 'true'),
       });
     }
     /* eslint-enable no-underscore-dangle */

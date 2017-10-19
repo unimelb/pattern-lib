@@ -1,6 +1,6 @@
 <template>
   <div>
-    <modal-dialog title="Register your details" trigger="Enter the competition">
+    <ModalDialog title="Register your details" trigger="Enter the competition">
       <form class="form">
         <label>
           E-mail
@@ -18,10 +18,10 @@
         </fieldset>
         <input tabindex="3" type="submit">
       </form>
-    </modal-dialog>
-    <modal-dialog title="Another modal dialog" trigger="Another modal dialog">
+    </ModalDialog>
+    <ModalDialog title="Another modal dialog" trigger="Another modal dialog">
       <p>This one just has straight content, no forms to be had.</p>
-    </modal-dialog>
+    </ModalDialog>
   </div>
 </template>
 

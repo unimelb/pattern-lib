@@ -1,5 +1,5 @@
 <template>
-  <div class="accordion-group">
+  <div>
     <button class="btn fr-dialogmodal-open js-fr-dialogmodal-open" :aria-controls="`modal-dialog-1${this._uid}`">
       <span class="push-icon" v-html="trigger"></span>
     </button>
