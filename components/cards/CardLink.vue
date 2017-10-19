@@ -1,6 +1,6 @@
 <template>
   <a :href="href" class="btn-owner card card--link card--bdr" :class="{'bg-inverted': inverted, 'bg-white' : !inverted}">
-    <div class="card__thumb" :style="{backgroundImage: `url('${thumb}')`}"></div>
+    <div class="card__thumb" :style="{ backgroundImage: `url(${thumb})` }"></div>
     <SvgIcon width="15px" height="15px" name="chevron-right" />
     <p class="card__header">
       {{ title }}
