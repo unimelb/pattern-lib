@@ -1,8 +1,7 @@
 <template>
   <div class="header-tools">
     <PageSearch />
-    <PageNav>
-      <h2>About us</h2>
+    <PageNav title="Site Navigation">
       <ul>
         <li>
           <a href="/leadership">Leadership</a>
