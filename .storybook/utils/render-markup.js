@@ -51,6 +51,12 @@ export default function renderMarkup(Component, opts = {}) {
           if (recs[i].componentInstance && recs[i].componentInstance.$slots) {
             // Content of slot is another component
             const inner = document.createElement(pascalToKebab(recs[i].componentOptions.tag));
+            const componentProps = recs[i].componentOptions.propsData;
+            if (componentProps) {
+              for (let attrNames = Object.keys(componentProps), attrVals = Object.values(componentProps), j = attrNames.length - 1; j >= 0; j -= 1) {
+                inner.setAttribute(`${attrNames[j]}`, attrVals[j]);
+              }
+            }
             for (let slots = Object.values(recs[i].componentInstance.$slots), k = slots.length - 1; k >= 0; k -= 1) {
               for (let j = slots[k].length - 1; j >= 0; j -= 1) {
                 if (slots[k][j].tag) {
