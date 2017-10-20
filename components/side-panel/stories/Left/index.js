@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue';
 import { createStory } from '.storybook/utils';
-import PageHeader from './../../../page-header/PageHeader.vue';
-import PageFooter from './../../../page-footer/PageFooter.vue';
-import PageBreadcrumbs from './../../../page-breadcrumbs/PageBreadcrumbs.vue';
+import PageHeader from './../../../page/header/PageHeader.vue';
+import PageFooter from './../../../page/footer/PageFooter.vue';
+import PageBreadcrumbs from './../../../page/breadcrumbs/PageBreadcrumbs.vue';
 
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
