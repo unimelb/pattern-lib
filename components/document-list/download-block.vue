@@ -6,13 +6,12 @@
     <div class="download-block__inner">
       <h3>{{ header }}</h3>
       <ButtonIcon icon="download">{{ btnText }}</ButtonIcon>
-      <p class="metadata">File Name | 2.2mb | Fileformat</p>
+      <p class="metadata">{{ metadata }}</p>
     </div>
   </a>
 </template>
 
 <script>
-
 export default {
   props: {
     imgSrc: {
@@ -22,6 +21,10 @@ export default {
     header: {
       type: String,
       default: '',
+    },
+    metadata: {
+      type: String,
+      default: 'File Name | 2.2mb | Fileformat',
     },
     btnText: {
       type: String,
