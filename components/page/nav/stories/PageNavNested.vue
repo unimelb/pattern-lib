@@ -116,7 +116,7 @@
 
 <script>
 import PageNav from '../PageNav.vue';
-import PageSearch from '../../page-search/PageSearch.vue';
+import PageSearch from '../../search/PageSearch.vue';
 
 export default {
   components: { PageNav, PageSearch },

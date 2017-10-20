@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/vue';
 import withReadme from 'storybook-readme/with-readme';
 import pretty from 'pretty';
 
-import { version } from '../../../package.json';
+import { version } from '../../../../package.json';
 
 const assetsUrl = `${process.env.CDN_URL}/v${version}`;
 
@@ -31,7 +31,7 @@ const markup = `\`\`\`html
 </html>
 \`\`\``;
 
-storiesOf('Layout', module)
+storiesOf('Page / Layout', module)
   .add('Layout', withReadme(pretty(markup), () => ({
     template: '<p>See README panel.</p>',
   })));

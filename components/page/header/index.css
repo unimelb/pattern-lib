@@ -92,7 +92,7 @@
     right: 0;
     bottom: 0;
     left: -1px; /* (1) */
-    background: url('../shared/aperture.svg') left center / cover;
+    background: url('../../shared/aperture.svg') left center / cover;
   }
 
   /* Aperture without focus mark for level-3 header */

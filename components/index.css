@@ -18,11 +18,11 @@
 @import 'forms/index.css';
 @import 'listing/index.css';
 @import 'modal/index.css';
-@import 'page-breadcrumbs/index.css';
-@import 'page-header/index.css';
-@import 'page-footer/index.css';
-@import 'page-nav/index.css';
-@import 'page-search/index.css';
+@import 'page/breadcrumbs/index.css';
+@import 'page/header/index.css';
+@import 'page/footer/index.css';
+@import 'page/nav/index.css';
+@import 'page/search/index.css';
 @import 'progressive-image/index.css';
 @import 'quick-links-menu/index.css';
 @import 'section/index.css';

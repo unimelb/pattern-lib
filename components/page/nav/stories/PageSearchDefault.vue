@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import PageSearch from '../PageSearch.vue';
+import PageSearch from '../../search/PageSearch.vue';
 
 export default {
   components: { PageSearch },

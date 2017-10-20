@@ -6,7 +6,7 @@ import PageBreadcrumbsLevel2 from './PageBreadcrumbsLevel2.vue';
 import PageBreadcrumbsLevel3 from './PageBreadcrumbsLevel3.vue';
 import PageBreadcrumbsExtraLong from './PageBreadcrumbsExtraLong.vue';
 
-storiesOf('Page Breadcrumbs', module)
+storiesOf('Page / Breadcrumbs', module)
   .add('Level 1', createStory(PageBreadcrumbsLevel1))
   .add('Level 2', createStory(PageBreadcrumbsLevel2))
   .add('Level 3', createStory(PageBreadcrumbsLevel3))
