@@ -27,7 +27,8 @@
 
   &__inner--short {
     min-height: initial;
-    padding: calc(2 * var(--vr)) var(--vr);
+    padding-top: var(--vr);
+    padding-bottom: var(--vr);
   }
 
   &--image {
@@ -81,6 +82,11 @@
     &__inner {
       padding-top: calc(3 * var(--vr));
       padding-bottom: calc(3 * var(--vr));
+    }
+
+    &__inner--short {
+      padding-top: var(--vr);
+      padding-bottom: var(--vr);
     }
   }
 
