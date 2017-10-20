@@ -1,4 +1,4 @@
-import Blanket from '../page-search/blanket';
+import Blanket from '../search/blanket';
 import SiteNav from './site-nav';
 
 export default class Nav {

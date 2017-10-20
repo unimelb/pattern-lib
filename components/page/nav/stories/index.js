@@ -4,6 +4,9 @@ import { createStory } from '.storybook/utils';
 import PageNavDefault from './PageNavDefault.vue';
 import PageNavNested from './PageNavNested.vue';
 
-storiesOf('Page/Top Nav', module)
+import PageSearchDefault from './PageSearchDefault.vue';
+
+storiesOf('Page / Header tools', module)
   .add('Default', createStory(PageNavDefault, { shallowRender: true }))
+  .add('Search only', createStory(PageSearchDefault, { shallowRender: true }))
   .add('Nested site nav', createStory(PageNavNested, { shallowRender: true }));

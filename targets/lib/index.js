@@ -5,8 +5,8 @@ import VueProgressiveImage from 'vue-progressive-image';
 import lazyBgImg from '../../components/progressive-image';
 import { AccordionGroup, AccordionPanel } from '../../components/accordion';
 import ModalDialog from '../../components/modal';
-import PageNav from '../../components/page-nav';
-import PageSearch from '../../components/page-search';
+import PageNav from '../../components/page/nav';
+import PageSearch from '../../components/page/search';
 
 import '../../components';
 

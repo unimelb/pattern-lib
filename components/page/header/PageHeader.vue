@@ -4,7 +4,7 @@
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
         <img
           class="page-header__logo"
-          src="../shared/logo.svg"
+          src="../../shared/logo.svg"
           width="117" height="117"
           alt="The University of Melbourne homepage"
         >
