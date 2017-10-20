@@ -11,7 +11,11 @@
     </ListItem>
     <ListItem>
       <img src="https://placehold.it/600x200" alt="">
+<<<<<<< HEAD
     </ListItem>            
+=======
+    </ListItem>
+>>>>>>> refactor listing to use createStory
   </ListingWrap>
 </template>
 
