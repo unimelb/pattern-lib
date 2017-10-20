@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
+import { setOptions } from '@storybook/addon-options'
 import VueProgressiveImage from 'vue-progressive-image';
 
 import { storyDecorator } from './utils';
@@ -7,6 +8,8 @@ import SvgIcon from 'icons/SvgIcon.vue';
 import SectionWrap from '../components/section/SectionWrap.vue';
 import ListItem from '../components/listing/stories/listitem.vue';
 import ButtonIcon from '../components/buttons/ButtonIcon.vue';
+
+import { version } from '../package.json';
 
 // Import documentation styles
 import './index.css';
@@ -24,6 +27,11 @@ Vue.component('ButtonIcon', ButtonIcon);
 
 // Add polymorphic decorator
 addDecorator(storyDecorator);
+
+setOptions({
+  name: `Web Templates v${version}`,
+  url: '/',
+});
 
 // Load stories
 const stories = require.context('../components', true, /stories\/index\.js$/);
