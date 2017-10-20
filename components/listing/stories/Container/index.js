@@ -7,12 +7,19 @@ import Story3 from './Story3.vue';
 import Story4 from './Story4.vue';
 
 storiesOf('Listing/Container', module)
+<<<<<<< HEAD
   .addDecorator((story) => {
     return {
       components: { story },
       template: '<section-wrap><story></story></section-wrap>',
     };
   })
+=======
+  .addDecorator(story => ({
+    components: { story },
+    template: '<section-wrap></section-wrap>',
+  }))
+>>>>>>> refactor listing to use createStory
   .add('1 Column', createStory(Story1))
   .add('2 Column', createStory(Story2))
   .add('3 Column', createStory(Story3))
