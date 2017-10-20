@@ -17,9 +17,8 @@
 
 <script>
 import ListingWrap from './../../ListingWrap.vue';
-import ListItem from './../../ListItem.vue';
 
 export default {
-  components: { ListingWrap, ListItem },
+  components: { ListingWrap },
 };
 </script>

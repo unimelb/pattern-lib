@@ -9,7 +9,7 @@ import Story4 from './Story4.vue';
 storiesOf('Listing/Container', module)
   .addDecorator(story => ({
     components: { story },
-    template: '<section-wrap></section-wrap>',
+    template: '<section-wrap><story/></section-wrap>',
   }))
   .add('1 Column', createStory(Story1))
   .add('2 Column', createStory(Story2))
