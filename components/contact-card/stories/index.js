@@ -1,46 +1,13 @@
 import { storiesOf } from '@storybook/vue';
-import withReadme from 'storybook-readme/with-readme';
-import { PadDecorator } from '.storybook/decorators';
+import { createStory } from '.storybook/utils';
 
-import RenderMarkup from '../../RenderMarkup';
-import ContactCard from './ContactCard.vue';
-
-const markup1 = new RenderMarkup(ContactCard, { props: { columns: 1 } });
-const markup2 = new RenderMarkup(ContactCard, { props: { columns: 2 } });
-const markup3 = new RenderMarkup(ContactCard, { props: { columns: 3 } });
-const markupMap = new RenderMarkup(ContactCard, { props: { columns: 3, withMap: true } });
+import Story1 from './Story1.vue';
+import Story2 from './Story2.vue';
+import Story3 from './Story3.vue';
+import Story4 from './Story4.vue';
 
 storiesOf('Contact card', module)
-  .addDecorator(PadDecorator)
-
-  .add(
-    'One column',
-    withReadme(markup1.prettifiedMarkup, () => ({
-      components: { ContactCard },
-      template: '<contact-card :columns="1" />',
-    }))
-  )
-
-  .add(
-    'Two column',
-    withReadme(markup2.prettifiedMarkup, () => ({
-      components: { ContactCard },
-      template: '<contact-card :columns="2" />',
-    }))
-  )
-
-  .add(
-    'Three column',
-    withReadme(markup3.prettifiedMarkup, () => ({
-      components: { ContactCard },
-      template: '<contact-card :columns="3" />',
-    }))
-  )
-
-  .add(
-    'With map',
-    withReadme(markupMap.prettifiedMarkup, () => ({
-      components: { ContactCard },
-      template: '<contact-card :columns="3" :withMap="true" />',
-    }))
-  );
+  .add('One column', createStory(Story1))
+  .add('Two column', createStory(Story2))
+  .add('Three column', createStory(Story3))
+  .add('With map', createStory(Story4));
