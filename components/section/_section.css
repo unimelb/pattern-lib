@@ -87,7 +87,7 @@
     &__inner--short {
       padding-top: var(--vr);
       padding-bottom: var(--vr);
-    }    
+    }
   }
 
   @media (--bp-wide) {
