@@ -1,9 +1,9 @@
 <template>
-  <div :class="['stats', { 'stats--inverted': inverted }]">
-    <ul class="stats__list list-reset">
+  <div :class="['stats-group', { 'stats-group--inverted': inverted }]">
+    <ul class="stats-group__list list-reset">
       <slot></slot>
     </ul>
-    <p v-if="attribution" class="stats__attribution">{{ attribution }}</p>
+    <p v-if="attribution" class="stats-group__attribution">{{ attribution }}</p>
   </div>
 </template>
 
@@ -18,4 +18,3 @@ export default {
   },
 };
 </script>
-

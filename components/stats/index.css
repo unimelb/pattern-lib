@@ -1,7 +1,4 @@
-/**
- * Stats list
- */
-.stats {
+.stats-group {
   text-align: center;
 
   &__list {
@@ -18,10 +15,10 @@
     margin: 0 1rem var(--vr);
   }
 
-  &:not(.stats--inverted) .stats__item {
-    &:nth-child(1) .stats__icon { color: var(--col-1); }
-    &:nth-child(2) .stats__icon { color: var(--col-2); }
-    &:nth-child(3) .stats__icon { color: var(--col-3); }
+  &:not(.stats-group--inverted) .stats-group__item {
+    &:nth-child(1) .stats-group__icon { color: var(--col-1); }
+    &:nth-child(2) .stats-group__icon { color: var(--col-2); }
+    &:nth-child(3) .stats-group__icon { color: var(--col-3); }
   }
 
   &__icon {

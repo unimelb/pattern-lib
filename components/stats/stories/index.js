@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue';
 import { createStory } from '.storybook/utils';
 
-import StatsDefault from './StatsDefault.vue';
-import StatsInverted from './StatsInverted.vue';
-import StatsInvertedSection from './StatsInvertedSection.vue';
+import StatsGroupDefault from './StatsGroupDefault.vue';
+import StatsGroupInverted from './StatsGroupInverted.vue';
+import StatsGroupInvertedSection from './StatsGroupInvertedSection.vue';
 
 storiesOf('Stats', module)
-  .add('Default', createStory(StatsDefault))
-  .add('Inverted', createStory(StatsInverted))
-  .add('Inverted section with attribution', createStory(StatsInvertedSection));
+  .add('Default', createStory(StatsGroupDefault))
+  .add('Inverted', createStory(StatsGroupInverted))
+  .add('Inverted section with attribution', createStory(StatsGroupInvertedSection));

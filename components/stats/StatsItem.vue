@@ -1,17 +1,17 @@
 <template>
-  <li class="stats__item">
+  <li class="stats-group__item">
     <svg
-      class="stats__icon"
+      class="stats-group__icon"
       role="presentation" focusable="false"
       width="128" height="128"
       :viewbox="iconViewbox"
       v-html="icon"
     />
-    <strong class="stats__value">
-      <span class="stats__value__hash">#</span>
-      <span class="stats__value__num">{{ number }}</span>
+    <strong class="stats-group__value">
+      <span class="stats-group__value__hash">#</span>
+      <span class="stats-group__value__num">{{ number }}</span>
     </strong>
-    <span class="stats__text">{{ meta }}</span>
+    <span class="stats-group__text">{{ meta }}</span>
   </li>
 </template>
 
