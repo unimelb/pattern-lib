@@ -1,6 +1,7 @@
-import './StaffList';
-import './News';
+import './BioHeader';
+import './Contact';
+import './Facts';
 import './FocusBox';
 import './ImageList';
-import './Facts';
-import './BioHeader';
+import './News';
+import './StaffList';
