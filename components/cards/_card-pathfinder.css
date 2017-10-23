@@ -34,11 +34,13 @@
     color: #fff;
   }
 
-  &:hover .card--focus-box__cnr {
-    opacity: .3;
-  }
+  &:hover .card--focus-box__cnr { opacity: .3; }
 
   .section--image-mask.bg-inverted & {
-    background-color: rgba(9, 65, 131, .9);
+    background-color: color(var(--col-brand) alpha(-10%));
+
+    &:hover {
+      background-color: color(var(--col-brand) alpha(-10%) lightness(-2%));
+    }
   }
 }
