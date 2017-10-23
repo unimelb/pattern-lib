@@ -1,40 +1,11 @@
 import { storiesOf } from '@storybook/vue';
+import { createStory } from '.storybook/utils';
 
-import TableSimple from './table-simple.vue';
-import TableStats from './table-stats.vue';
+import TableDefault from './TableDefault.vue';
+import TableStats from './TableStats.vue';
+import TableStatsWrapped from './TableStatsWrapped.vue';
 
 storiesOf('Tables', module)
-  .addDecorator((story) => {
-    const Story = story();
-    return {
-      components: { Story },
-      template: `
-        <main>
-          <Story/>
-        </main>`,
-    };
-  })
-  .add('Table - basic', () => ({
-    components: { TableSimple },
-    template: `
-      <section-wrap>
-        <table-simple />
-      </section-wrap>
-    `,
-  }))
-  .add('Table - stats', () => ({
-    components: { TableStats },
-    template: `
-      <section-wrap>
-        <table-stats />
-      </section-wrap>
-    `,
-  }))
-  .add('Table - stats (with content block)', () => ({
-    components: { TableSimple },
-    template: `
-      <div class="content-block">
-        <table-simple />
-      </div>
-    `,
-  }));
+  .add('Default', createStory(TableDefault))
+  .add('Stats', createStory(TableStats))
+  .add('Stats, limit width', createStory(TableStatsWrapped));
