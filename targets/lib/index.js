@@ -10,6 +10,9 @@ import PageSearch from '../../components/page/search';
 
 import '../../components';
 
+// Load shared SVG assets
+require.context('../../components/shared', false, /\.svg$/);
+
 // Register Vue plugins, directives and components
 Vue.use(VueProgressiveImage);
 Vue.directive('bgimg', lazyBgImg);
