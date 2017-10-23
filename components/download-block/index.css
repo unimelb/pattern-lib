@@ -1,7 +1,10 @@
 .download-block {
+  display: flex;
+  align-items: center;
   padding: var(--vr);
   border: 1px solid var(--col-brand);
   border-radius: 4px;
+  outline-offset: 1px;
 
   &.btn-owner {
     color: var(--col-brand);
@@ -18,37 +21,26 @@
 
   &__inner {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: center;
-    text-align: left;
 
     @media (--bp-tablet) {
       width: 70%;
-      padding: var(--vr);
-      float: right;
+      padding-right: var(--vr);
+      padding-left: var(--vr);
     }
   }
 
   &__thumb {
-    display: none;
     width: 30%;
-    float: left;
 
-    @media (--bp-tablet) {
-      display: block;
+    @media (--bp-max-mobile) {
+      display: none;
     }
   }
 
   &__img {
     display: block;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  @supports (display: flex) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    max-width: 100%;
   }
 }
