@@ -1,8 +1,12 @@
 <template>
   <li class="stats__item">
-    <svg class="stats__icon" role="presentation" focusable="false" width="128" height="128">
-      <use :xlink:href="icon" />
-    </svg>
+    <svg
+      class="stats__icon"
+      role="presentation" focusable="false"
+      width="128" height="128"
+      :viewbox="iconViewbox"
+      v-html="icon"
+    />
     <strong class="stats__value">
       <span class="stats__value__hash">#</span>
       <span class="stats__value__num">{{ number }}</span>
@@ -14,17 +18,21 @@
 <script>
 export default {
   props: {
-    icon: {
-      type: String,
-      default: 'globe',
-    },
     number: {
       type: String,
-      default: '1',
+      required: true,
     },
     meta: {
       type: String,
-      default: 'in Australia',
+      required: true,
+    },
+    icon: {
+      type: String,
+      required: true,
+    },
+    iconViewbox: {
+      type: String,
+      required: true,
     },
   },
 };
