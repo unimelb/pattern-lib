@@ -26,7 +26,7 @@
     display: block;
     padding: calc(var(--vr) / 2);
     border-top: 2px solid var(--col-brand);
-    color: var(--vr-brand);
+    color: var(--col-brand);
     text-decoration: none;
 
     &:last-child {
