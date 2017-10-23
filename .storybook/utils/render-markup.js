@@ -65,6 +65,8 @@ export default function renderMarkup(Component, opts = {}) {
                     slotcontent.setAttribute('slot', slots[k][j].data.slot);
                   }
                   inner.insertBefore(slotcontent, inner.firstChild);
+                } else {
+                  inner.appendChild(slots[k][j].elm);
                 }
               }
             }

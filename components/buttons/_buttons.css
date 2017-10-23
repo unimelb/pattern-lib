@@ -136,4 +136,9 @@
       &-inverted::after { background-image: url('~icons/twitter.svg?fill=#fff'); }
     }
   }
+
+  &--disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
 }
