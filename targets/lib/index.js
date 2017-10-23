@@ -2,7 +2,6 @@
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 
-import lazyBgImg from '../../components/progressive-image';
 import { AccordionGroup, AccordionPanel } from '../../components/accordion';
 import ModalDialog from '../../components/modal';
 import PageNav from '../../components/page/nav';
@@ -15,7 +14,6 @@ require.context('../../components/shared', false, /\.svg$/);
 
 // Register Vue plugins, directives and components
 Vue.use(VueProgressiveImage);
-Vue.directive('bgimg', lazyBgImg);
 Vue.component('accordion-group', AccordionGroup);
 Vue.component('accordion-panel', AccordionPanel);
 Vue.component('modal-dialog', ModalDialog);
