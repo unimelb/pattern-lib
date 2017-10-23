@@ -11,14 +11,9 @@
   </div>
 </template>
 
-
 <script>
 export default {
-  name: 'QuickLinksMenu',
   props: {
-    menuLinks: {
-      type: Object,
-    },
     level: {
       type: String,
       default: 'ql-menu--l1',
