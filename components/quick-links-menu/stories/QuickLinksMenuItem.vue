@@ -9,9 +9,7 @@
 
 <script>
 export default {
-  name: 'ql-menu-item',
   props: {
-    title: String,
     href: String,
   },
 };
