@@ -32,25 +32,4 @@
       background-color: rgba(9, 65, 131, .7);
     }
   }
-
-  .checklist {
-    list-style-type: none;
-
-    &__item {
-      padding-left: 1.55rem;
-
-      &__checkbox {
-        margin-left: -1.55rem;
-
-        &:checked + .checklist__item__label {
-          text-decoration: line-through;
-        }
-      }
-
-      &__label {
-        font-weight: normal;
-        cursor: pointer;
-      }
-    }
-  }
 }
