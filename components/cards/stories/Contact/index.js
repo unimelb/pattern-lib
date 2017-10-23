@@ -6,7 +6,7 @@ import Story2 from './Story2.vue';
 import Story3 from './Story3.vue';
 import Story4 from './Story4.vue';
 
-storiesOf('Contact card', module)
+storiesOf('Cards/Contact', module)
   .add('One column', createStory(Story1))
   .add('Two column', createStory(Story2))
   .add('Three column', createStory(Story3))
