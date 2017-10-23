@@ -2,26 +2,19 @@
   padding: calc(var(--vr) / 2);
 
   &__icon {
-    margin-right: auto;
-    margin-left: auto;
+    margin: calc(var(--vr) * 2) auto;
   }
 
-  &--green {
-    .sublink-menu__icon {
-      fill: var(--col-green);
-    }
+  &--green .sublink-menu__icon {
+    fill: var(--col-green);
   }
 
-  &--red {
-    .sublink-menu__icon {
-      fill: var(--col-orange);
-    }
-  }  
+  &--red .sublink-menu__icon {
+    fill: var(--col-orange);
+  }
 
-  &--yellow {
-    .sublink-menu__icon {
-      fill: var(--col-yellow);
-    }
+  &--blue .sublink-menu__icon {
+    fill: var(--col-blue);
   }
 
   &__title {

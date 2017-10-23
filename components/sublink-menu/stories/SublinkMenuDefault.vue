@@ -2,7 +2,7 @@
   <SectionWrap bg-color="white">
     <ListingWrap cols="three">
       <ListItem>
-        <SublinkMenu title="A consistent strategy" icon-color="green">
+        <SublinkMenu title="A consistent strategy" icon="faculty" icon-color="blue">
           a consistent look and feel in our communications
           <SublinkMenuItem slot="menuitems" link="#">
             Our Brand Story
@@ -19,7 +19,7 @@
         </SublinkMenu>
       </ListItem>
       <ListItem>
-        <SublinkMenu title="A consistent tone" icon-color="blue">
+        <SublinkMenu title="A consistent tone" icon="library" icon-color="green">
           a consistent look and feel in our communications
           <SublinkMenuItem slot="menuitems" link="#">
             Our Brand Story
@@ -36,7 +36,7 @@
         </SublinkMenu>
       </ListItem>
       <ListItem>
-        <SublinkMenu title="A consistent look and feel" icon-color="yellow">
+        <SublinkMenu title="A consistent look and feel" icon="location" icon-color="red">
           a consistent look and feel in our communications
           <SublinkMenuItem slot="menuitems" link="#">
             Our Brand Story
