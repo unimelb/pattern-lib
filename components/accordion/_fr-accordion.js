@@ -120,7 +120,10 @@ const Fraccordion = function ({
 
 
 	// ACTIONS
-	function _hideAllPanels (accordionContainer) {
+	function _hideAllPanels (accordionPanel) {
+		// wrap each accordion
+		const accordionContainer = accordionPanel.parentNode;
+		
 		// get accordion elements
 		const siblingHeaders = _q(headerSelector, accordionContainer);
 		const siblingPanels = _q(panelSelector, accordionContainer);
