@@ -30,13 +30,13 @@
   &::before {
     content: '\00d7';
     position: absolute;
-    font-size: 1.5rem;
     top: -.325rem;
     left: .375rem;
     width: .675rem;
     height: .375rem;
     margin-left: -1.5rem;
     background: transparent;
+    font-size: 1.5rem;
   }
 
   &--cta::before {
