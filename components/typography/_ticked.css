@@ -1,0 +1,24 @@
+.ticked-li {
+  position: relative;
+  list-style-type: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: .55rem;
+    left: .375rem;
+    width: .675rem;
+    height: .375rem;
+    margin-left: -1.5rem;
+    transform: rotate(-45deg);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 3px solid var(--col-brand);
+    border-left: 3px solid var(--col-brand);
+    background: transparent;
+  }
+
+  &--cta::before {
+    border-color: var(--col-emerald);
+  }
+}
