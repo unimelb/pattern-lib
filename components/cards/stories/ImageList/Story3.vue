@@ -4,8 +4,9 @@
       <ListItem>
         <CardFocusImageList
           element="div"
-          full-img
           titleabove
+          tall
+          tight
           class="card--image-focus--col-brand bg-alt"
           img="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
           title="Learning and teaching"
@@ -38,7 +39,8 @@
       <ListItem>
         <CardFocusImageList
           element="div"
-          full-img
+          tall
+          tight
           titleabove
           class="card--image-focus--col-brand bg-alt"
           img="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
