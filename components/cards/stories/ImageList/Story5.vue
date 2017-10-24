@@ -11,7 +11,6 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.
         </CardImageList>
       </ListItem>
-    
     </div>
   </SectionWrap>
 </template>
@@ -46,7 +45,7 @@ export default {
       {
         title: 'Sed quisquam tempore minima ut omnis molestiae.',
         meta: 'Enim et tempore.',
-      },           
+      },
       {
         title: 'Similique molestiae doloremque perferendis nihil.',
         meta: 'Consequatur beatae dolores pariatur dolorum natus voluptas molestiae iste.',
