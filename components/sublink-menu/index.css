@@ -2,7 +2,7 @@
   padding: calc(var(--vr) / 2);
 
   &__icon {
-    margin: calc(var(--vr) * 2) auto;
+    margin: 0 auto calc(var(--vr) * 2) auto;
   }
 
   &--green .sublink-menu__icon {
