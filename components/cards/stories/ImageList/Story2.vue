@@ -3,7 +3,8 @@
     <CardFocusImageList
       element="div"
       color="white"
-      fullimg
+      full-img
+      tight
       hero
       titleabove
       img="http://about-us-unimelb.netlify.com/images/history.jpg"

@@ -1,18 +1,14 @@
 <template>
-  <div v-if="element === 'div'" class="card card--image-focus" :class="colorClasses">
+  <a :is="element" :href="element === 'a' ? href : false" class="card card--image-focus" :class="classes">
     <h3 v-if="titleabove === true" :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
-    <progressive-background :src="img" :placeholder="placeholder" class="card__thumb" :class="{'card__thumb--full': fullimg}" />
-    <div class="card__inner" :class="{'card__inner--tight': hero}">
+    <div v-if="!progressive" class="card__thumb" :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}">
+      <img :src="img" :placeholder="progressive ? placeholder : false" class="card__thumb">
+    </div>
+    <progressive-img v-if="progressive" :src="img" :placeholder="progressive ? placeholder : false" class="card__thumb" :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"/>
+    <div class="card__inner" :class="{'card__inner--tight': tight}">
       <h3 v-if="titleabove === false">{{ title }}</h3>
       <slot></slot>
-    </div>
-  </div>
-  <a v-else-if="element === 'a'" href="" class="btn-owner card card--image-focus" :class="colorClasses">
-    <progressive-background :src="img" :placeholder="placeholder" class="card__thumb" :class="{'card__thumb--full': fullimg}" />
-    <div class="card__inner" :class="{'card__inner--tight': hero}">
-      <h3>{{ title }}</h3>
-      <slot></slot>
-      <ButtonIcon element="button" class="btn--fullwidth">{{ title }}</ButtonIcon>
+      <ButtonIcon v-if="element === 'a'" element="button" class="btn--fullwidth">{{ title }}</ButtonIcon>
     </div>
   </a>
 </template>
@@ -20,13 +16,29 @@
 <script>
 export default {
   props: {
-    placeholder: {
-      type: String,
+    placeholder: String,
+    progressive: {
+      type: Boolean,
+      default: false,
     },
-    img: {
-      type: String,
+    img: String,
+    fullImg: {
+      type: Boolean,
+      default: false,
     },
-    fullimg: {
+    tall: {
+      type: Boolean,
+      default: false,
+    },
+    hero: {
+      type: Boolean,
+      default: false,
+    },
+    tight: {
+      type: Boolean,
+      default: false,
+    },
+    noFocus: {
       type: Boolean,
       default: false,
     },
@@ -34,15 +46,8 @@ export default {
       type: String,
       default: 'Test title',
     },
-    titleabove: {
-      type: Boolean,
-    },
-    hero: {
-      type: Boolean,
-    },
-    color: {
-      type: String,
-    },
+    titleabove: Boolean,
+    color: String,
     meta: {
       type: String,
       default: 'Test title',
@@ -61,9 +66,11 @@ export default {
     },
   },
   computed: {
-    colorClasses() {
+    classes() {
       return {
         [`card--image-focus--col-${this.color}`]: this.color && this.color.length > 0,
+        'btn-owner': this.element && this.element === 'a',
+        'card--image-no-focus': !!this.noFocus,
       };
     },
   },
