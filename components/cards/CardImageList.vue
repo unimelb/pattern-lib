@@ -34,7 +34,7 @@ export default {
     element: {
       type: String,
       default: 'a',
-    },    
+    },
     excerpt: {
       type: String,
       default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
