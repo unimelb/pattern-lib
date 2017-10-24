@@ -7,6 +7,7 @@ import LongHeadings from './LongHeadings.vue';
 import Lead from './Lead.vue';
 import Links from './Links.vue';
 import ListsOrdered from './ListsOrdered.vue';
+import ListsVariantBullets from './ListsVariantBullets.vue';
 import ListsUnordered from './ListsUnordered.vue';
 import ListsMixed from './ListsMixed.vue';
 
@@ -18,4 +19,5 @@ storiesOf('Typography', module)
   .add('Links', createStory(Links))
   .add('Lists - ordered', createStory(ListsOrdered))
   .add('Lists - unordered', createStory(ListsUnordered))
+  .add('Lists - variant bullets', createStory(ListsVariantBullets))
   .add('Lists - mixed', createStory(ListsMixed));
