@@ -1,4 +1,4 @@
-.ticked-li {
+.item-ticked {
   position: relative;
   list-style-type: none;
 
@@ -20,5 +20,26 @@
 
   &--cta::before {
     border-color: var(--col-emerald);
+  }
+}
+
+.item-crossed {
+  position: relative;
+  list-style-type: none;
+
+  &::before {
+    content: '\00d7';
+    position: absolute;
+    font-size: 1.5rem;
+    top: -.325rem;
+    left: .375rem;
+    width: .675rem;
+    height: .375rem;
+    margin-left: -1.5rem;
+    background: transparent;
+  }
+
+  &--cta::before {
+    color: var(--col-orange-dark);
   }
 }
