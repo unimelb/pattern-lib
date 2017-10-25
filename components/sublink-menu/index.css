@@ -1,0 +1,40 @@
+.sublink-menu {
+  padding: calc(var(--vr) / 2);
+
+  &__icon {
+    margin: 0 auto calc(var(--vr) * 2) auto;
+  }
+
+  &--green .sublink-menu__icon {
+    fill: var(--col-green);
+  }
+
+  &--red .sublink-menu__icon {
+    fill: var(--col-orange);
+  }
+
+  &--blue .sublink-menu__icon {
+    fill: var(--col-blue);
+  }
+
+  &__title {
+    margin-top: var(--vr);
+    font-family: var(--ff-lead);
+  }
+
+  &__item {
+    display: block;
+    padding: calc(var(--vr) / 2);
+    border-top: 2px solid var(--col-brand);
+    color: var(--col-brand);
+    text-decoration: none;
+
+    &:last-child {
+      border-bottom: 2px solid var(--col-brand);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

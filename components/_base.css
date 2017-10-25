@@ -71,7 +71,7 @@ ul ul {
 }
 
 li {
-  margin-bottom: calc(var(--vr) / 2);
+  margin-bottom: calc(var(--vr) * .75);
 }
 
 a {

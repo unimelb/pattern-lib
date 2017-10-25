@@ -1,6 +1,6 @@
 .card--image-focus {
   width: 100%;
-  padding: 0 !important;
+  padding: 0;
   text-align: left;
 
   .card__thumb {
@@ -14,10 +14,19 @@
       object-position: center;
     }
 
+    &--tall {
+      height: 360px;
+
+      img {
+        height: 360px;
+      }
+    }
+
     &--full {
       height: 100%;
 
       img {
+        display: flex;
         height: 100%;
       }
     }
@@ -25,7 +34,6 @@
     &::before,
     &::after {
       content: '';
-      display: inline-block;
       position: absolute;
       z-index: 2;
       width: 5rem;
@@ -76,7 +84,7 @@
     }
   }
 
-  &.bg-alt {
+  &__tight {
     .card__inner {
       padding-right: 0;
       padding-left: 0;

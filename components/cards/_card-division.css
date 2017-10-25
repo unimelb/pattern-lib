@@ -29,6 +29,11 @@
   }
 
   &--head {
+    .card__meta {
+      margin: var(--vr) 0;
+      font-weight: var(--fw-semibold);
+    }
+
     .card__thumb {
       position: relative;
       height: 360px;
@@ -75,6 +80,11 @@
     }
 
     .listing--one .list-item & {
+      .card__header {
+        font-family: var(--ff-lead);
+        font-size: 1.75rem;
+      }
+
       .card__inner {
         width: 100%;
         margin-right: auto;
@@ -113,6 +123,10 @@
 
       @media (--bp-x-tablet) {
         border-bottom: 0;
+
+        hr {
+          max-width: 50%;
+        }
       }
     }
   }
