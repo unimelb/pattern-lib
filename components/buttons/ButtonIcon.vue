@@ -1,5 +1,12 @@
 <template>
-  <component :is="element" class="btn" :class="classes" :href="element === 'a' ? href : false">
+  <component
+    :is="element"
+    :class="classes"
+    :href="isLink && href"
+    :aria-disabled="isLink && disabled ? 'true': 'false'"
+    :tabindex="isLink && disabled ? '-1' : false"
+    :disabled="!isLink && disabled"
+  >
     <span v-if="!noIcon" class="push-icon">
       <slot></slot>
       <SvgIcon class="push-icon__icon" width="15px" height="15px" :name="icon" />
@@ -35,15 +42,27 @@ export default {
     element: {
       type: String,
       default: 'a',
+      validator: val => ['a', 'button'].indexOf(val) !== -1,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
     classes() {
-      return {
-        [`btn--${this.size}`]: ['sml', 'xsml'].includes(this.size),
-        [`btn--${this.width}`]: ['wide', 'xwide', 'fullwidth'].includes(this.width),
-        'btn--inverted': this.inverted,
-      };
+      return [
+        'btn',
+        {
+          [`btn--${this.size}`]: ['sml', 'xsml'].includes(this.size),
+          [`btn--${this.width}`]: ['wide', 'xwide', 'fullwidth'].includes(this.width),
+          'btn--inverted': this.inverted,
+          'btn--disabled': this.disabled,
+        },
+      ];
+    },
+    isLink() {
+      return this.element === 'a';
     },
   },
 };
