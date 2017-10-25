@@ -13,6 +13,8 @@ import Story9 from './Story9.vue';
 import Story10 from './Story10.vue';
 import Story11 from './Story11.vue';
 import Story12 from './Story12.vue';
+import Story13 from './Story13.vue';
+import Story14 from './Story14.vue';
 /* ##Import story component here */
 
 /* Section - Focus  */
@@ -28,4 +30,6 @@ storiesOf('Buttons', module)
   .add('All Sizes', createStory(Story9))
   .add('Button as <button> element', createStory(Story10))
   .add('Inverted button', createStory(Story12))
-  .add('Button for use in the CMS (btn--icon)', createStory(Story11));
+  .add('Button for use in CMS (btn--icon)', createStory(Story11))
+  .add('Inverse button for use in CMS (btn--icon-before)', createStory(Story13))
+  .add('Prev/Next aligned buttons', createStory(Story14));

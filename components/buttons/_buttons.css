@@ -121,6 +121,11 @@
       &-inverted::after { background-image: url('~icons/chevron-right.svg?fill=#fff'); }
     }
 
+    &--chevron-left {
+      &::after { background-image: url('~icons/chevron-left.svg?fill=#074482'); }
+      &-inverted::after { background-image: url('~icons/chevron-left.svg?fill=#fff'); }
+    }
+
     &--download {
       &::after { background-image: url('~icons/download.svg?fill=#074482'); }
       &-inverted::after { background-image: url('~icons/download.svg?fill=#fff'); }
@@ -134,6 +139,29 @@
     &--twitter {
       &::after { background-image: url('~icons/twitter.svg?fill=#074482'); }
       &-inverted::after { background-image: url('~icons/twitter.svg?fill=#fff'); }
+    }
+  }
+
+  &--icon-before {
+    position: relative;
+    padding-left: calc(var(--vr) * 2);
+    text-align: left;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - (.75em / 2));
+      left: 1.25rem;
+      width: .75em;
+      height: .75em;
+      margin-top: .05rem;
+      background-size: cover;
+    }
+
+    &--center {
+      padding-right: calc(var(--vr) * 2);
+      text-align: center;
     }
   }
 }
