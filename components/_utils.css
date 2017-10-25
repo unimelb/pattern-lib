@@ -49,7 +49,7 @@
  * Max-width wrapper
  */
 .max {
-  max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
+  max-width: calc(var(--w-wide) + 2 * var(--vr)); /* account for padding */
   margin-right: auto;
   margin-left: auto;
   padding-right: var(--vr);
@@ -118,6 +118,20 @@
   margin-bottom: 0;
   padding-left: 0;
   list-style-type: none;
+}
+
+.list-spaced {
+  li {
+    margin-bottom: calc(var(--vr) * .75);
+  }
+
+  ol,
+  ul {
+    ol,
+    ul {
+      margin-top: calc(var(--vr) * .75);
+    }
+  }
 }
 
 /* with white chevron markers */
