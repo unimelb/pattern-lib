@@ -49,7 +49,7 @@
  * Max-width wrapper
  */
 .max {
-  max-width: calc(var(--w-wide) + 2 * var(--vr)); /* account for padding */
+  max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
   margin-right: auto;
   margin-left: auto;
   padding-right: var(--vr);
