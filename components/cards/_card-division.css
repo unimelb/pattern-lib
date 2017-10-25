@@ -85,12 +85,6 @@
         font-size: 1.75rem;
       }
 
-      @media (--bp-desktop) {
-        hr {
-          max-width: 50%;
-        }
-      }
-
       .card__inner {
         width: 100%;
         margin-right: auto;
@@ -129,6 +123,10 @@
 
       @media (--bp-x-tablet) {
         border-bottom: 0;
+
+        hr {
+          max-width: 50%;
+        }
       }
     }
   }
