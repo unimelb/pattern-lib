@@ -1,20 +1,33 @@
-.checklist {
-  list-style-type: none;
+.check-list {
+  margin-bottom: var(--vr);
+
+  &__list {
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 1.125rem;
+  }
 
   &__item {
-    padding-left: 1.55rem;
+    display: flex;
+  }
 
-    &__checkbox {
-      margin-left: -1.55rem;
+  &__checkbox {
+    margin-right: .5em;
 
-      &:checked + .checklist__item__label {
-        text-decoration: line-through;
-      }
+    &:checked + .check-list__label {
+      text-decoration: line-through;
     }
 
-    &__label {
-      font-weight: normal;
-      cursor: pointer;
+    &:not(:checked) + .check-list__label {
+      font-weight: var(--fw-semibold);
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

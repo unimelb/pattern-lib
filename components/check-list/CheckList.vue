@@ -1,40 +1,55 @@
 <template>
-  <form class="form" action="">
-    <ul class="checklist">
-      <slot></slot>
-    </ul>
-
-    <ButtonIcon :id="`check-list-1${this._uid}`" :href="href">{{ action }}</ButtonIcon>
-  </form>
+  <div class="check-list">
+    <ol class="check-list__list">
+      <li v-for="(item, index) in items" :key="item" class="check-list__item">
+        <input
+          :id="`ui-${_uid}-${index}`"
+          class="check-list__checkbox"
+          type="checkbox"
+          :checked="checkedItems[index]"
+          @change="onCheckboxChange(index, $event)"
+        >
+        <label class="check-list__label" :for="`ui-${_uid}-${index}`">
+          {{ item }}
+        </label>
+      </li>
+    </ol>
+    <ButtonIcon
+      v-if="btnHref && btnText"
+      class="check-list__btn"
+      :disabled="!itemsAllChecked"
+      :href="btnHref"
+    >
+      {{ btnText }}
+    </ButtonIcon>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    action: String,
-    href: String,
+    items: {
+      type: Array,
+      required: true,
+    },
+    btnHref: String,
+    btnText: String,
   },
-  mounted() {
-    /* eslint-disable no-underscore-dangle */
-    this.trigger = document.querySelector(`#check-list-1${this._uid}`);
-    /* eslint-enable no-underscore-dangle */
-    this.items = document.querySelectorAll('.checklist__item__checkbox', this.$el);
-
-    if (this.trigger) {
-      this.trigger.classList.add('btn--disabled');
-
-      for (let i = this.items.length - 1; i > 0; i -= 1) {
-        this.items[i].addEventListener('click', () => {
-          const checked = document.querySelectorAll('.checklist__item__checkbox:checked', this.$el);
-
-          if (this.items.length === checked.length) {
-            this.trigger.classList.remove('btn--disabled');
-          } else {
-            this.trigger.classList.add('btn--disabled');
-          }
-        });
-      }
-    }
+  data() {
+    return {
+      checkedItems: this.items.map(() => false),
+    };
+  },
+  computed: {
+    itemsAllChecked() {
+      return this.checkedItems.indexOf(false) === -1;
+    },
+  },
+  methods: {
+    onCheckboxChange(index, evt) {
+      this.$set(this.checkedItems, index, evt.target.checked);
+    },
   },
 };
 </script>
+
