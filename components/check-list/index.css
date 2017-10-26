@@ -9,9 +9,11 @@
 
   &__item {
     display: flex;
+    align-items: center;
   }
 
   &__checkbox {
+    flex-shrink: 0;
     margin-right: .5em;
 
     &:checked + .check-list__label {
