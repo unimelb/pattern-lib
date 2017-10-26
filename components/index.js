@@ -6,6 +6,7 @@ import * as utils from './shared/utils';
 import sprite from './icons/sprite.svg';
 
 import './side-panel';
+import initTracking from './page/tracking';
 
 window.ui = {
   utils,
@@ -17,4 +18,5 @@ new Ike(sprite, version);
 // Initialise page on DOM loaded
 document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.remove('no-js');
+  initTracking();
 });
