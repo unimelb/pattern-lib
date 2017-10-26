@@ -3,9 +3,17 @@ import CheckListItem from './CheckListItem.vue';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
 
 export default {
+  props: {
+    checkedCount: {
+      type: String,
+      default: '0',
+    },
+  },
   data() {
+    const count = parseInt(this.checkedCount, 10);
+
     return {
-      checkedItems: this.items.map(() => false),
+      checkedItems: this.items.map((item, index) => index < count),
     };
   },
   computed: {
