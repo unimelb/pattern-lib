@@ -1,5 +1,5 @@
 <template>
-  <AccordionGroup open="true">
+  <AccordionGroup open>
     <AccordionPanel>
       <h2 slot="title">Arts</h2>
       <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>

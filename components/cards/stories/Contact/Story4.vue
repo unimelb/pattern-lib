@@ -1,5 +1,5 @@
 <template>
-  <ContactCard :columns="3" :with-map="true" />
+  <ContactCard :columns="3" with-map />
 </template>
 
 <script>

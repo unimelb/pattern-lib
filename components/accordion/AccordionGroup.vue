@@ -11,27 +11,25 @@ export default {
   name: 'accordion-group',
   props: {
     disabled: {
-      type: String,
-      default: 'false',
+      type: Boolean,
+      default: false,
     },
     solo: {
-      type: String,
-      default: 'false',
+      type: Boolean,
+      default: false,
     },
     open: {
-      type: String,
-      default: 'false',
+      type: Boolean,
+      default: false,
     },
   },
   mounted() {
-    /* eslint-disable no-underscore-dangle */
-    if (this._props.disabled !== 'true') {
-      Fraccordion({
-        firstPanelsOpenByDefault: (this._props.open === 'true'),
-        multiselectable: (this._props.solo !== 'true'),
-      });
-    }
-    /* eslint-enable no-underscore-dangle */
+    if (this.disabled) return;
+
+    Fraccordion({
+      firstPanelsOpenByDefault: this.open,
+      multiselectable: !this.solo,
+    });
   },
 };
 </script>

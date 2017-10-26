@@ -1,5 +1,5 @@
 .content-block {
-  padding: calc(2 * var(--vr)) 0;
+  padding: calc(2 * var(--vr)) var(--vr);
 
   /* remove default bottom margin of last child (typically `p`), and */
   /* compensate for difference in font-size with first child (typically `h2`) */

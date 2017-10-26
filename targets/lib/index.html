@@ -21,7 +21,7 @@
     <!-- breadcrumbs go here, if present -->
     <main>
       <div class="content-block content-block--sml">
-        <accordion-group :open="false">
+        <accordion-group open>
           <accordion-panel>
             <h2 slot="title">Arts</h2>
             <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
@@ -32,7 +32,18 @@
             <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
           </accordion-panel>
-        </accordion>
+        </accordion-group>
+      </div>
+      <div class="content-block content-block--sml bg-alt">
+        <check-list checked-count="1">
+          <ol slot="list">
+            <li>Check the degree website.</li>
+            <li>Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item-cms: Check the entry requirements to clarify your eligibility for application.</li>
+            <li>Ensure you meet the University's language requirements.</li>
+            <li>Apply online or via the hardcopy application form.</li>
+          </ol>
+          <a slot="btn" href="/">Continue</a>
+        </check-list>
       </div>
       <progressive-background no-ratio class="section section--image section--image-mask bg-inverted" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg" placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg">
         <div class="section__inner section__inner--sml">
