@@ -120,6 +120,17 @@
   list-style-type: none;
 }
 
+.list-spaced {
+  li {
+    margin-bottom: calc(var(--vr) * .75);
+  }
+
+  ol,
+  ul {
+    margin-top: calc(var(--vr) * .75);
+  }
+}
+
 /* with white chevron markers */
 .list-chevrons > li {
   &::before {
