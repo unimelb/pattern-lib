@@ -16,7 +16,11 @@
 </template>
 
 <script>
+// Must import icon because `ButtonIcon` is used in `CheckList`, which is included in `lib` target
+import SvgIcon from '../icons/SvgIcon.vue';
+
 export default {
+  components: { SvgIcon },
   props: {
     href: {
       type: String,
