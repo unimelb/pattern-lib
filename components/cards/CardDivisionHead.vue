@@ -1,4 +1,3 @@
-
 <template>
   <a :href="href" class="btn-owner card card--division card--division--head card--bdr bg-white" :class="{'card--division--head-compact': compact}">
     <div class="card__thumb">
@@ -20,7 +19,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     thumb: {
@@ -45,5 +43,4 @@ export default {
     },
   },
 };
-
 </script>

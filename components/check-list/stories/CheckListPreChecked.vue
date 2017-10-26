@@ -1,5 +1,5 @@
 <template>
-  <CheckList checked-count="2">
+  <CheckList :checked-count="2">
     <ol slot="list">
       <li>Check the degree website.</li>
       <li>Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item-cms: Check the entry requirements to clarify your eligibility for application.</li>

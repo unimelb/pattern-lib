@@ -1,19 +1,19 @@
 <script>
+import { stringToNum } from '../shared/utils';
 import CheckListItem from './CheckListItem.vue';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
 
 export default {
   props: {
     checkedCount: {
-      type: String,
-      default: '0',
+      type: [Number, String],
+      default: 0,
     },
   },
   data() {
-    const count = parseInt(this.checkedCount, 10);
-
+    const numCheckedCount = stringToNum(this.checkedCount);
     return {
-      checkedItems: this.items.map((item, index) => index < count),
+      checkedItems: this.items.map((item, index) => index < numCheckedCount),
     };
   },
   computed: {
