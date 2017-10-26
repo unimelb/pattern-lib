@@ -76,21 +76,22 @@ You will need to select the component from the list of folders, then confirm the
 
 **At the start of a new release sprint:**
 
-- Create a ZenHub release called `next-release`.
+- Create a milestone called `next-release`.
 
 **Throughout the release sprint:**
 
 - Assign the appropriate `pr-` label to every new PR: `pr-major` if it contains a breaking change, `pr-minor` if it adds a new feature, `pr-patch` in all other cases.
 - Assign issues and PRs to `next-release` as they are resolved/merged.
+- Assign additional labels to issues when relevant (e.g. `bug`, `chore`, `feature`, etc.)
 
 **At the end of the release sprint:**
 
-1. Look at all the PRs that were assigned to `next-release` throughout the sprint and identify the highest-level of change (major, minor or patch). Deduce the next release's version number and rename the ZenHub release accordingly.
+1. Look at all the PRs that were assigned to `next-release` throughout the sprint and identify the highest-level of change (major, minor or patch). Deduce the next release's version number and rename the milestone accordingly.
 1. Create a new release notes draft based on the following template: `.github/RELEASE_NOTES_TEMPLATE.md`.
-1. Write the release notes by going through all the issues and PRs assigned to the ZenHub release.
+1. Write the release notes by going through all the issues and PRs assigned to the milestone.
 1. Deploy to production (cf. next section).
-1. Once the library and documentation sites are deployed, publish the release notes and close the ZenHub release.
-1. Share the ZenHub release report with stakeholders.
+1. Once the library and documentation sites are deployed, publish the release notes and close the milestone.
+1. Share the ZenHub milestone report with stakeholders.
 
 
 ## Deployment
