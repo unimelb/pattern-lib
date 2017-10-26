@@ -12,8 +12,11 @@
 
 <script>
 import CheckList from '../CheckList.vue';
+import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
   components: { CheckList },
+  decorator: ContentBlock,
+  decoratorProps: { size: 'sml' },
 };
 </script>
