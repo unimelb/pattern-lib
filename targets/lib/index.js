@@ -3,6 +3,7 @@ import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 
 import { AccordionGroup, AccordionPanel } from '../../components/accordion';
+import CheckList from '../../components/check-list';
 import ModalDialog from '../../components/modal';
 import PageNav from '../../components/page/nav';
 import PageSearch from '../../components/page/search';
@@ -16,6 +17,7 @@ require.context('../../components/shared', false, /\.svg$/);
 Vue.use(VueProgressiveImage);
 Vue.component('accordion-group', AccordionGroup);
 Vue.component('accordion-panel', AccordionPanel);
+Vue.component('check-list', CheckList);
 Vue.component('modal-dialog', ModalDialog);
 Vue.component('page-nav', PageNav);
 Vue.component('page-search', PageSearch);
