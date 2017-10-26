@@ -4,7 +4,7 @@
     :date="['2017-04-03', '3 Apr. 2017']"
     type="speech"
     :contact="contact"
-    :column-layout="true"
+    column-layout
   >
     <p class="lead">Thank you Johanna. It is a great pleasure to be here, and I am honoured to ask to start off a day of serious discussions.</p>
     <p>I’m conscious of what an important time this is with the departure of an outstanding leader in Professor Field Rickards. His contribution in 13 years as Dean (and indeed 43 years at the University) includes the transformation of the Faculty of Education into the MGSE and the reorganisation of professional teacher education at Melbourne, which has resulted in the school achieving stellar international rankings.</p>

@@ -1,55 +1,53 @@
 @import '_fr-accordion.css';
 
-.fr-accordion {
-  &--is-ready {
-    .fr-accordion__header {
-      display: block;
-      position: relative;
-      padding: 1rem 1.25rem;
-      transition: background-color .15s ease-out, color .15s ease-out;
-      border-bottom: 1px solid var(--col-grey-light);
-      text-decoration: none;
-      cursor: pointer;
+.fr-accordion--is-ready {
+  .fr-accordion__header {
+    display: block;
+    position: relative;
+    padding: 1rem 1.25rem;
+    transition: background-color .15s ease-out, color .15s ease-out;
+    border-bottom: 1px solid var(--col-grey-light);
+    text-decoration: none;
+    cursor: pointer;
 
-      h2 {
-        margin-bottom: 0;
-        font-size: 1.25rem;
-        line-height: 1.25;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 1.25rem;
-        width: 0;
-        height: 0;
-        margin-top: -.25rem;
-        border-top: .313rem solid currentColor;
-        border-right: .313rem solid transparent;
-        border-left: .313rem solid transparent;
-      }
-
-      &[aria-selected='true']::after {
-        border-top: 0;
-        border-bottom: .313rem solid currentColor;
-      }
-
-      &[aria-selected='true'],
-      &[aria-selected='false']:focus,
-      &[aria-selected='false']:hover {
-        background-color: var(--col-bg-grey);
-      }
+    h2 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+      line-height: 1.25;
     }
 
-    .fr-accordion__panel {
-      overflow: hidden;
-      transition: height .25s ease-out, visibility .25s;
-      background-color: var(--col-bg-grey);
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 1.25rem;
+      width: 0;
+      height: 0;
+      margin-top: -.25rem;
+      border-top: .313rem solid currentColor;
+      border-right: .313rem solid transparent;
+      border-left: .313rem solid transparent;
+    }
 
-      &__inner {
-        padding: 1.25rem;
-      }
+    &[aria-selected='true']::after {
+      border-top: 0;
+      border-bottom: .313rem solid currentColor;
+    }
+
+    &[aria-selected='true'],
+    &[aria-selected='false']:focus,
+    &[aria-selected='false']:hover {
+      background-color: var(--col-bg-grey);
+    }
+  }
+
+  .fr-accordion__panel {
+    overflow: hidden;
+    transition: height .25s ease-out, visibility .25s;
+    background-color: var(--col-bg-grey);
+
+    &__inner {
+      padding: 1.25rem;
     }
   }
 }

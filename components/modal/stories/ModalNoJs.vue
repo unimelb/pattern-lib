@@ -1,5 +1,5 @@
 <template>
-  <ModalDialog title="Register your details" trigger="Enter the competition" disabled="true">
+  <ModalDialog title="Register your details" trigger="Enter the competition" disabled>
     <form class="form">
       <label>
         E-mail

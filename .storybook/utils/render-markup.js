@@ -17,7 +17,6 @@ export default function renderMarkup(Component, opts = {}) {
   let raw = '';
 
   if (opts.shallowRender === true) {
-    /* eslint-disable no-underscore-dangle */
     // HTML outer
     let outer = document.createElement(vm._vnode.componentInstance._vnode.tag);
     if (vm._vnode.componentInstance._vnode.data && vm._vnode.componentInstance._vnode.data.staticClass) {
@@ -79,7 +78,6 @@ export default function renderMarkup(Component, opts = {}) {
         raw += outer.outerHTML;
       }
     }
-    /* eslint-enable no-underscore-dangle */
   } else {
     raw = vm.$el.outerHTML.replace(/<!(-)*>/g, '');
   }

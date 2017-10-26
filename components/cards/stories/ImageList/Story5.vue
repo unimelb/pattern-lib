@@ -1,7 +1,7 @@
 <template>
   <SectionWrap class="bg-alt">
     <div class="listing listing--four">
-      <ListItem v-for="item in items" :key="item">
+      <ListItem v-for="item in items" :key="item.title">
         <CardImageList
           :border="false"
           thumb="https://dummyimage.com/300x200.jpg"
