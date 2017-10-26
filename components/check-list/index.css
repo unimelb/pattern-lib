@@ -4,7 +4,6 @@
   &__list {
     padding-left: 0;
     list-style-type: none;
-    font-size: 1.125rem;
   }
 
   &__item {
@@ -14,22 +13,14 @@
 
   &__checkbox {
     flex-shrink: 0;
-    margin-right: .5em;
+    margin: 0 .5em 0 0;
 
     &:checked + .check-list__label {
       text-decoration: line-through;
-    }
-
-    &:not(:checked) + .check-list__label {
-      font-weight: var(--fw-semibold);
     }
   }
 
   &__label {
     cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
