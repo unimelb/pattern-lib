@@ -1,9 +1,13 @@
 <template>
-  <CheckList
-    :items="items"
-    btn-href="/"
-    btn-text="Continue"
-  />
+  <CheckList>
+    <ol slot="list">
+      <li>Check the degree website.</li>
+      <li>Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item-cms: Check the entry requirements to clarify your eligibility for application.</li>
+      <li>Ensure you meet the University's language requirements.</li>
+      <li>Apply online or via the hardcopy application form.</li>
+    </ol>
+    <a slot="btn" href="/">Continue</a>
+  </CheckList>
 </template>
 
 <script>
@@ -11,13 +15,5 @@ import CheckList from '../CheckList.vue';
 
 export default {
   components: { CheckList },
-  data: () => ({
-    items: [
-      'Check the degree website.',
-      'Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item-cms: Check the entry requirements to clarify your eligibility for application.',
-      'Ensure you meet the University\'s language requirements.',
-      'Apply online or via the hardcopy application form.',
-    ],
-  }),
 };
 </script>

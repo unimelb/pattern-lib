@@ -1,40 +1,8 @@
-<template>
-  <div class="check-list">
-    <ol class="check-list__list">
-      <li v-for="(item, index) in items" :key="item" class="check-list__item">
-        <input
-          :id="`ui-${_uid}-${index}`"
-          class="check-list__checkbox"
-          type="checkbox"
-          :checked="checkedItems[index]"
-          @change="onCheckboxChange(index, $event)"
-        >
-        <label class="check-list__label" :for="`ui-${_uid}-${index}`">
-          {{ item }}
-        </label>
-      </li>
-    </ol>
-    <ButtonIcon
-      v-if="btnHref && btnText"
-      class="check-list__btn"
-      :disabled="!itemsAllChecked"
-      :href="btnHref"
-    >
-      {{ btnText }}
-    </ButtonIcon>
-  </div>
-</template>
-
 <script>
+import CheckListItem from './CheckListItem.vue';
+import ButtonIcon from '../buttons/ButtonIcon.vue';
+
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: true,
-    },
-    btnHref: String,
-    btnText: String,
-  },
   data() {
     return {
       checkedItems: this.items.map(() => false),
@@ -45,11 +13,40 @@ export default {
       return this.checkedItems.indexOf(false) === -1;
     },
   },
+  beforeCreate() {
+    const list = this.$slots.list[0];
+    this.items = list.children.filter(item => item.tag === 'li');
+
+    const btn = this.$slots.btn[0];
+    this.btnHref = btn.data.attrs.href;
+    this.btnText = btn.children[0].text;
+  },
   methods: {
-    onCheckboxChange(index, evt) {
+    onToggleItem(index, evt) {
       this.$set(this.checkedItems, index, evt.target.checked);
     },
   },
+  render() {
+    return (
+      <div class="check-list">
+        <ol class="check-list__list">
+          {this.items.map((item, index) => (
+            <CheckListItem
+              index={index}
+              text={item.children[0].text}
+              checked={this.checkedItems[index]}
+              toggle={this.onToggleItem}
+            />
+          ))}
+        </ol>
+        <ButtonIcon
+          href={this.btnHref}
+          disabled={!this.itemsAllChecked}
+        >
+          {this.btnText}
+        </ButtonIcon>
+      </div>
+    );
+  },
 };
 </script>
-
