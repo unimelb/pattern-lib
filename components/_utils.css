@@ -127,10 +127,7 @@
 
   ol,
   ul {
-    ol,
-    ul {
-      margin-top: calc(var(--vr) * .75);
-    }
+    margin-top: calc(var(--vr) * .75);
   }
 }
 
