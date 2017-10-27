@@ -28,12 +28,18 @@ Storybook is the main development environment.
 
 ### Targets
 
-#### Library - `targets/lib`
+#### UI library - `targets/lib`
 
-The main library for use in the CMS. The target provides a local development environment for testing purposes.
+The main UI library for use in the CMS. The target provides a local development environment for testing purposes.
 
 - `yarn run start:lib` - [http://localhost:7003/](http://localhost:7003/).
-- `yarn run build:lib` to compile the library to `.out/lib/<version>`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the library is to load its assets locally (`false`) or from the CDN (`true`).
+- `yarn run build:lib` to compile the library to `.out/lib/<version>`, including `ui.css`, `ui.js`, `sprite.svg`, and SVG assets in `components/shared`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the library is to load its assets locally (`false`) or from the CDN (`true`).
+
+#### Vue library - `targets/vue`
+
+The library with all the Vue components for use in single-page apps and other Vue-based projects.
+
+- `yarn run build:vue` to compile the library to `.out/vue.js`.
 
 ### Linting
 
