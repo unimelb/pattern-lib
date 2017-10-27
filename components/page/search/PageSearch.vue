@@ -23,9 +23,12 @@
 
 <script>
 import Search from './search';
+import SvgIcon from './../../icons/SvgIcon.vue';
 
 export default {
   name: 'page-search',
+  components: { SvgIcon },
+  domFriendly: true,
   mounted() {
     this.actor = new Search();
   },
