@@ -1,0 +1,23 @@
+.alert {
+  display: flex;
+  align-items: center;
+  margin: var(--vr);
+  padding: var(--vr);
+  border-radius: 4px;
+  background-color: var(--col-brand-light);
+
+  &--warning {
+    background-color: var(--col-orange-light);
+    color: color(var(--col-orange-light) lightness(30%));
+  }
+
+  &--success {
+    background-color: var(--col-green-light);
+    color: color(var(--col-green-light) lightness(25%));
+  }
+
+  &--danger {
+    background-color: #ea4f62;
+    color: #fff;
+  }
+}
