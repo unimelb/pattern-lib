@@ -13,7 +13,7 @@
 
   &--success {
     background-color: var(--col-green-light);
-    color: color(var(--col-green-light) lightness(30%));
+    color: color(var(--col-green-light) lightness(25%));
   }
 
   &--danger {
