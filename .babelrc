@@ -9,7 +9,11 @@
             "> 1% in AU",
             "last 2 versions",
             "Firefox ESR",
+<<<<<<< HEAD
             "not ie < 11",
+=======
+            "ie >= 9",
+>>>>>>> origin/vue-target
             "iOS >= 8.4",
             "Safari >= 8",
             "Android >= 4.4"
