@@ -1,11 +1,9 @@
 require('dotenv').config();
 
-const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const sharedConfig = require('../webpack.config.shared.js');
-const pkg = require('./../../package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
@@ -17,8 +15,10 @@ module.exports = merge(sharedConfig, {
       './targets/lib/index.css',
     ],
   },
-  output: {
-    path: path.resolve(__dirname, `../../.out/lib/v${pkg.version}/`),
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js',
+    },
   },
   devServer: {
     publicPath: sharedConfig.output.publicPath,
