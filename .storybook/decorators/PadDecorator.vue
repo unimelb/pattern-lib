@@ -6,6 +6,6 @@
 
 <style scoped>
   .pad {
-    padding: 1rem;
+    padding: 1rem 2rem;
   }
 </style>

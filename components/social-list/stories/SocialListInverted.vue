@@ -4,11 +4,11 @@
 
 <script>
 import SocialList from '../SocialList.vue';
-import Pad from '.storybook/decorators/Pad.vue';
+import PadDecorator from '.storybook/decorators/PadDecorator.vue';
 
 export default {
   components: { SocialList },
-  decorator: Pad,
+  decorator: PadDecorator,
   decoratorProps: { class: 'bg-inverted' },
 };
 </script>
