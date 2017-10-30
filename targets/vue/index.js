@@ -1,4 +1,3 @@
-export { default as ProgressiveImage } from 'vue-progressive-image';
 export { default as AccordionGroup } from '../../components/accordion/AccordionGroup.vue';
 export { default as AccordionPanel } from '../../components/accordion/AccordionPanel.vue';
 export { default as ArticleWrap } from '../../components/article-wrap/ArticleWrap.vue';
