@@ -1,5 +1,5 @@
 {
-  "name": "web-templates-2017",
+  "name": "@unimelb/pattern-lib",
   "description": "A complete design system for the University of Melbourne.",
   "version": "0.0.7",
   "repository": "unimelb/unimelb-design-system",
@@ -25,7 +25,7 @@
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\"",
     "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\" \"targets/**/*.js\"",
     "generate": "plop --plopfile generator/index.js",
-    "prepublish": "yarn run build:vue"
+    "prepublish": "LOAD_EXTERNAL_ASSETS=true yarn run build:vue"
   },
   "dependencies": {
     "ike.js": "^0.0.2",
