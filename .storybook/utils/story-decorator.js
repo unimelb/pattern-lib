@@ -1,7 +1,9 @@
 /**
  * Polymorphic story decorator.
  * Allows to declaratively decorate a story with any component that contains `<slot></slot>`.
- * Usage: in a story's single-file component, add a `decorator` and optional `decoratorProps` property:
+ *
+ * Usage: in a story's single-file component, import the component to use as decorator
+ * then add the `decorator` and optional `decoratorProps` properties:
  * ```
  * export default {
  *   ...
@@ -19,8 +21,12 @@ export default function storyDecorator(storyFunc) {
   if (!Decorator) return Story;
 
   return {
-    components: { Decorator, Story },
-    template: '<decorator v-bind="decoratorProps"><story /></decorator>',
-    data() { return { decoratorProps }; },
+    render() {
+      return (
+        <Decorator {...{ props: decoratorProps }}>
+          <Story />
+        </Decorator>
+      );
+    },
   };
 }
