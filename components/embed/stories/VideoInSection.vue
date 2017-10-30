@@ -12,6 +12,6 @@ import SectionWrap from '../../section/SectionWrap.vue';
 export default {
   components: { VideoEmbed },
   decorator: SectionWrap,
-  decoratorProps: { bgColor: 'bg-inverted', centred: true },
+  decoratorProps: { bgColor: 'inverted', centred: true },
 };
 </script>
