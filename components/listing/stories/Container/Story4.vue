@@ -18,8 +18,10 @@
 <script>
 import ListingWrap from './../../ListingWrap.vue';
 import ListItem from './../../ListItem.vue';
+import SectionWrap from '../../../section/SectionWrap.vue';
 
 export default {
   components: { ListingWrap, ListItem },
+  decorator: SectionWrap,
 };
 </script>

@@ -13,7 +13,6 @@ const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.ver
 module.exports = {
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js',
       '.storybook': path.resolve(__dirname, '.storybook/'),
       docs: path.resolve(__dirname, 'docs/'),
       icons: path.resolve(__dirname, 'components/icons/'),
