@@ -13,6 +13,6 @@ module.exports = merge(sharedConfig, {
   output: {
     path: path.resolve(__dirname, '../../.out/'),
     filename: 'vue.js',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
 });
