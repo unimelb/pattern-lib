@@ -32,12 +32,12 @@
   },
   "dependencies": {
     "ike.js": "^0.0.2",
-    "vue": "^2.4.2",
+    "vue": "^2.5.2",
     "vue-progressive-image": "^2.2.1",
     "vue-scrollto": "^2.7.8"
   },
   "peerDependencies": {
-    "vue": "^2.4.2"
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     "@storybook/addon-notes": "^3.2.12",
@@ -84,6 +84,7 @@
     "svg-fill-loader": "^0.0.8",
     "svg-url-loader": "^2.1.1",
     "svgo-loader": "^1.2.1",
+    "vue-template-compiler": "^2.5.2",
     "vue-loader": "^13.0.4",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.9.1",
