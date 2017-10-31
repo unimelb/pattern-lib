@@ -7,6 +7,7 @@ import LongHeadings from './LongHeadings.vue';
 import Lead from './Lead.vue';
 import Links from './Links.vue';
 import ListsOrdered from './ListsOrdered.vue';
+import ListsOrderedGiant from './ListsOrderedGiant.vue';
 import ListsSpaced from './ListsSpaced.vue';
 import ListsVariantBullets from './ListsVariantBullets.vue';
 import ListsUnordered from './ListsUnordered.vue';
@@ -19,6 +20,7 @@ storiesOf('Typography', module)
   .add('Lead paragraph', createStory(Lead))
   .add('Links', createStory(Links))
   .add('Lists - ordered', createStory(ListsOrdered))
+  .add('Lists - ordered, giant', createStory(ListsOrderedGiant))
   .add('Lists - unordered', createStory(ListsUnordered))
   .add('Lists - spaced for longer content', createStory(ListsSpaced))
   .add('Lists - variant bullets', createStory(ListsVariantBullets))

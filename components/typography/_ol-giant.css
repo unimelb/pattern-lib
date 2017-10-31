@@ -1,0 +1,26 @@
+.giant {
+  padding-left: 0;
+  counter-reset: steps;
+
+  &__item {
+    position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 3.75rem;
+    list-style-type: none;
+    border-bottom: 1px solid var(--col-grey-mid);
+    counter-increment: steps;
+
+    &::before {
+      content: counter(steps);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: var(--ff-lead);
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+  }
+}
