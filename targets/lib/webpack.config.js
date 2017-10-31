@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const sharedConfig = require('../webpack.config.shared.js');
-const pkg = require('../package.json');
+const pkg = require('../../package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';

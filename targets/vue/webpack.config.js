@@ -12,5 +12,6 @@ module.exports = merge(sharedConfig, {
   },
   output: {
     path: path.resolve(__dirname, '../../.out/'),
+    libraryTarget: 'commonjs2',
   },
 });
