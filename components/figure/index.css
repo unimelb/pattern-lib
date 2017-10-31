@@ -17,6 +17,10 @@
     text-align: center;
   }
 
+  &--fill {
+    padding: 0;
+  }
+
   &--inset {
     figcaption {
       @media (--bp-desktop) {
