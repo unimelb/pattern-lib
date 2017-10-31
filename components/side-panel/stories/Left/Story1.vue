@@ -15,8 +15,11 @@
 </template>
 
 <script>
-import SidePanel from './../../SidePanel.vue';
+import SidePanel from '../../SidePanel.vue';
+import PageDecorator from '.storybook/decorators/PageDecorator.vue';
+
 export default {
   components: { SidePanel },
+  decorator: PageDecorator,
 };
 </script>

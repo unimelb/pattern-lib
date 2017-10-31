@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue';
-import withReadme from 'storybook-readme/with-readme';
-import pretty from 'pretty';
+import { createStory } from '.storybook/utils';
 
 import { version } from '../../../../package.json';
+import LayoutDefault from './LayoutDefault.vue';
 
 const assetsUrl = `${process.env.CDN_URL}/v${version}`;
 
@@ -32,6 +32,4 @@ const markup = `\`\`\`html
 \`\`\``;
 
 storiesOf('Page / Layout', module)
-  .add('Layout', withReadme(pretty(markup), () => ({
-    template: '<p>See README panel.</p>',
-  })));
+  .add('Layout', createStory(LayoutDefault, { customReadme: markup }));

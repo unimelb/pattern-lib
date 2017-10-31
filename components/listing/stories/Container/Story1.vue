@@ -16,9 +16,11 @@
 </template>
 
 <script>
-import ListingWrap from './../../ListingWrap.vue';
+import ListingWrap from '../../ListingWrap.vue';
+import SectionWrap from '../../../section/SectionWrap.vue';
 
 export default {
   components: { ListingWrap },
+  decorator: SectionWrap,
 };
 </script>

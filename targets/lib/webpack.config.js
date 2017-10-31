@@ -20,6 +20,11 @@ module.exports = merge(sharedConfig, {
   output: {
     path: path.resolve(__dirname, `../../.out/lib/v${pkg.version}/`),
   },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js',
+    },
+  },
   devServer: {
     publicPath: sharedConfig.output.publicPath,
     hot: true, // enable hot module replacement
