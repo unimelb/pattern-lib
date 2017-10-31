@@ -1,4 +1,4 @@
-🌐 **[Documentation site for v0.0.0](https://v0-0-0--atomisk-unimelb.netlify.com/)**
+🌐 **[Documentation site for v0.0.0](https://v0-0-0--pattern-lib-unimelb.netlify.com/)**
 
 ### Breaking changes 💥
 
