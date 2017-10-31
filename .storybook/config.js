@@ -28,8 +28,9 @@ Vue.component('ButtonIcon', ButtonIcon);
 // Add polymorphic decorator
 addDecorator(storyDecorator);
 
+// Configure Storybook UI
 setOptions({
-  name: `Web Templates v${version}`,
+  name: `Pattern Library v${version}`,
   url: '/',
 });
 
