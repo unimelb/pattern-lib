@@ -1,10 +1,10 @@
-# Design System Rebrand
+# Pattern Library
 
 **Copyright &copy; 2017 - The University of Melbourne**
 
 The contents of this repository have been produced by The University of Melbourne for internal use and must not be distributed without the express permission of The University of Melbourne.
 
-[![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/web-templates-2017)
+[![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/pattern-lib)
 
 
 ## Set-up
@@ -12,8 +12,8 @@ The contents of this repository have been produced by The University of Melbourn
 The design system requires Node.js v6.11.2, and the latest version of [yarn](https://yarnpkg.com/en/). To set it up, run:
 
 ```
-git clone https://github.com/unimelb/design-system-rebrand.git
-cd design-system-rebrand
+git clone https://github.com/unimelb/pattern-lib.git
+cd pattern-lib
 cp .env.example .env
 yarn
 ```
