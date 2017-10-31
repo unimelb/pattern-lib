@@ -1,5 +1,5 @@
 {
-  "name": "design-system-rebrand",
+  "name": "@unimelb/pattern-lib-vue",
   "description": "A complete design system for the University of Melbourne.",
   "version": "0.0.7",
   "repository": "unimelb/unimelb-design-system",
@@ -9,23 +9,32 @@
     "node": "~6.11.3",
     "yarn": "*"
   },
+  "main": ".out/vue.js",
+  "files": [
+    ".out/vue.js"
+  ],
   "scripts": {
-    "build": "build-storybook -c .storybook -o .out/docs",
-    "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.config.js",
-    "start": "start-storybook -p 7002 -c .storybook",
-    "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
     "prebuild": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
+    "build": "build-storybook -c .storybook -o .out/docs",
+    "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.config.js",
+    "build:vue": "LOAD_EXTERNAL_ASSETS=true NODE_ENV=production webpack --config targets/vue/webpack.config.js",
+    "start": "start-storybook -p 7002 -c .storybook",
+    "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\"",
     "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\" \"targets/**/*.js\"",
-    "generate": "plop --plopfile generator/index.js"
+    "generate": "plop --plopfile generator/index.js",
+    "prepublish": "LOAD_EXTERNAL_ASSETS=true yarn run build:vue"
   },
   "dependencies": {
     "ike.js": "^0.0.2",
     "vue": "^2.4.2",
     "vue-progressive-image": "^2.2.1",
     "vue-scrollto": "^2.7.8"
+  },
+  "peerDependencies": {
+    "vue": "^2.4.2"
   },
   "devDependencies": {
     "@storybook/addon-knobs": "^3.2.8",
