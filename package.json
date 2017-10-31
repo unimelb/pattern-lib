@@ -42,6 +42,7 @@
   "devDependencies": {
     "@storybook/addon-notes": "^3.2.12",
     "@storybook/addon-options": "^3.2.12",
+    "@storybook/addons": "^3.2.12",
     "@storybook/vue": "^3.2.8",
     "babel-core": "^6.24.1",
     "babel-eslint": "^8.0.1",
