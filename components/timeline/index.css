@@ -1,0 +1,71 @@
+.timeline {
+  position: relative;
+  max-width: var(--w-mid);
+  margin: 0 auto;
+  padding-bottom: 0;
+  font-size: 1em;
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+
+  &__header {
+    width: 28%;
+    margin: -4px 0 0;
+    padding-top: .125rem;
+    padding-right: 1.25rem;
+    padding-bottom: 1.875rem;
+    float: left;
+    font-size: .875rem;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    position: relative;
+    width: 68%;
+    margin: -4px 0 0;
+    padding-bottom: 1.875rem;
+    padding-left: 1.25rem;
+    float: left;
+    border-left: 1px solid var(--col-brand-light2);
+
+    &:last-child {
+      border-left-color: transparent; /* keep 1px border so dot remains aligned */
+    }
+
+    /* dot */
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: 6px; /* match horizontal dimension */
+      left: -6px; /* half of width, rounded up */
+      width: 11px;
+      height: 11px; /* odd number for dot to be perfectly centred on the 1px line */
+      transform: rotate(45deg);
+      background-color: var(--col-brand-light2);
+    }
+  }
+
+  @media screen and (--bp-desktop) {
+    &::before {
+      left: 32.5%;
+    }
+
+    &__header {
+      width: 33%;
+    }
+
+    &__body {
+      width: 63%;
+    }
+  }
+}

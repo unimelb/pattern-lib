@@ -33,6 +33,9 @@
 @import 'stats/index.css';
 @import 'sublink-menu/index.css';
 @import 'tables/index.css';
+@import 'tabs/index.css';
+@import 'timeline/index.css';
 @import 'typography/index.css';
 @import 'welcome/index.css';
+
 /*** Add new component below */
