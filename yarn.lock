@@ -3319,6 +3319,10 @@ fr-dialogmodal@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/fr-dialogmodal/-/fr-dialogmodal-1.0.4.tgz#ba72a7adbd3bcb3f9149a8799cbfc9af9d7705c0"
 
+fr-tabs@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/fr-tabs/-/fr-tabs-1.0.6.tgz#bf09560b5e73ffacd19be1d69a5778e1986566ca"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"

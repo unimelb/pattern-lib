@@ -7,6 +7,7 @@ import CheckList from '../../components/check-list';
 import ModalDialog from '../../components/modal';
 import PageNav from '../../components/page/nav';
 import PageSearch from '../../components/page/search';
+import TabGroup from '../../components/tabs';
 
 import '../../components';
 
@@ -21,6 +22,7 @@ Vue.component('check-list', CheckList);
 Vue.component('modal-dialog', ModalDialog);
 Vue.component('page-nav', PageNav);
 Vue.component('page-search', PageSearch);
+Vue.component('tab-group', TabGroup);
 
 // Create Vue instance
 new Vue({ el: '#ui' });

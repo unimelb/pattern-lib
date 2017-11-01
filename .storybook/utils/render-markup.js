@@ -5,6 +5,28 @@ function pascalToKebab(txt) {
   return txt.replace(/[a-z]([A-Z])+/g, m => (`${m[0]}-${m.substring(1)}`)).toLowerCase();
 }
 
+function renderDown(vnode) {
+  const out = document.createElement(pascalToKebab(vnode.tag));
+  if (vnode.data) {
+    if (vnode.data.staticClass) {
+      out.classList.add(vnode.data.staticClass);
+    }
+    if (vnode.data.attrs) {
+      for (let attrNames = Object.keys(vnode.data.attrs), attrVals = Object.values(vnode.data.attrs), i = attrNames.length - 1; i >= 0; i -= 1) {
+        out.setAttribute(`${attrNames[i]}`, attrVals[i]);
+      }
+    }
+  }
+  for (let max = vnode.children.length, i = 0; i < max; i += 1) {
+    if (vnode.children[i].tag && vnode.children[i].children) {
+      out.appendChild(renderDown(vnode.children[i]));
+    } else if (vnode.children[i].text) {
+      out.appendChild(document.createTextNode(vnode.children[i].text));
+    }
+  }
+  return out;
+}
+
 export default function renderMarkup(Component, opts = {}) {
   // Create component instance without mounting it
   const vm = new Vue({ render: createElement => createElement(Component) });
@@ -35,12 +57,17 @@ export default function renderMarkup(Component, opts = {}) {
           // Component outer
           const componentProps = vm._vnode.componentInstance.$children[h].$vnode.componentOptions.propsData;
           outer = document.createElement(pascalToKebab(vm._vnode.componentInstance.$children[h].$vnode.componentOptions.tag));
+          // Outer props
           if (componentProps) {
             for (let attrNames = Object.keys(componentProps), attrVals = Object.values(componentProps), i = attrNames.length - 1; i >= 0; i -= 1) {
               if (attrVals[i] !== 'false') {
                 outer.setAttribute(`${attrNames[i]}`, attrVals[i]);
               }
             }
+          }
+          // Outer class
+          if (vm._vnode.componentInstance.$children[h].$vnode.data.staticClass) {
+            outer.classList.add(vm._vnode.componentInstance.$children[h].$vnode.data.staticClass);
           }
         } else {
           // HTML outer
@@ -50,29 +77,49 @@ export default function renderMarkup(Component, opts = {}) {
           if (recs[i].componentInstance && recs[i].componentInstance.$slots) {
             // Content of slot is another component
             const inner = document.createElement(pascalToKebab(recs[i].componentOptions.tag));
-            const componentProps = recs[i].componentOptions.propsData;
+            let componentProps = recs[i].componentOptions.propsData;
+            // Inner props
             if (componentProps) {
               for (let attrNames = Object.keys(componentProps), attrVals = Object.values(componentProps), j = attrNames.length - 1; j >= 0; j -= 1) {
                 inner.setAttribute(`${attrNames[j]}`, attrVals[j]);
               }
+            } else if (recs[i].data.attrs) {
+              componentProps = recs[i].data.attrs;
+              for (let attrNames = Object.keys(componentProps), attrVals = Object.values(componentProps), j = attrNames.length - 1; j >= 0; j -= 1) {
+                inner.setAttribute(`${attrNames[j]}`, attrVals[j]);
+              }
+            }
+            if (recs[i].data.staticClass) {
+              inner.classList.add(recs[i].data.staticClass);
             }
             for (let slots = Object.values(recs[i].componentInstance.$slots), k = slots.length - 1; k >= 0; k -= 1) {
               for (let j = slots[k].length - 1; j >= 0; j -= 1) {
-                if (slots[k][j].tag) {
-                  const slotcontent = slots[k][j].elm;
-                  if (slots[k][j].data && slots[k][j].data.slot) {
-                    slotcontent.setAttribute('slot', slots[k][j].data.slot);
+                let slotcontent;
+                if (slots[k][j].elm && slots[k][j].tag && slots[k][j].data && slots[k][j].data.slot) {
+                  slotcontent = document.createElement(pascalToKebab(slots[k][j].tag));
+                  slotcontent.setAttribute('slot', slots[k][j].data.slot);
+                  inner.insertBefore(slotcontent, inner.firstChild);
+                } else if (slots[k][j].elm) {
+                  // Filter empty nodes
+                  inner.appendChild(slots[k][j].elm);
+                } else if (slots[k][j].tag) {
+                  slotcontent = renderDown(slots[k][j]);
+                  const props = slots[k][j].data.attrs;
+                  if (props) {
+                    for (let attrNames = Object.keys(props), attrVals = Object.values(props), l = attrNames.length - 1; l >= 0; l -= 1) {
+                      slotcontent.setAttribute(`${attrNames[l]}`, attrVals[l]);
+                    }
                   }
                   inner.insertBefore(slotcontent, inner.firstChild);
-                } else {
-                  inner.appendChild(slots[k][j].elm);
                 }
               }
             }
             outer.appendChild(inner);
-          } else if (recs[i].tag) {
+          } else if (recs[i].tag && recs[i].elm) {
             // Content of slot is HTML
             outer.appendChild(recs[i].elm);
+          } else if (recs[i].tag && !recs[i].elm) {
+            outer.appendChild(renderDown(recs[i]));
           }
         }
         raw += outer.outerHTML;

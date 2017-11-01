@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn fr-dialogmodal-open js-fr-dialogmodal-open" :aria-controls="`modal-dialog-1${this._uid}`" :disabled="disabled && 'disabled'">
+    <button v-if="!disabled" class="btn fr-dialogmodal-open js-fr-dialogmodal-open" :aria-controls="`modal-dialog-1${this._uid}`">
       <span class="push-icon" v-html="trigger"></span>
     </button>
     <div :class="!disabled && 'fr-dialogmodal js-fr-dialogmodal fr-dialogmodal--is-ready'" :id="`modal-dialog-1${this._uid}`" :aria-hidden="!disabled && 'true'">
