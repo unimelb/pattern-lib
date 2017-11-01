@@ -7,7 +7,7 @@
       <ListItem cols="1of1"><CardFact /></ListItem>
       <ListItem cols="1of3"><CardFact /></ListItem>
       <ListItem cols="2of3"><CardFact /></ListItem>
-      <ListItem cols="2of3"><CardFact /></ListItem>      
+      <ListItem cols="2of3"><CardFact /></ListItem>
       <ListItem cols="1of3"><CardFact /></ListItem>
       <ListItem cols="1of4"><CardFact /></ListItem>
       <ListItem cols="1of4"><CardFact /></ListItem>
