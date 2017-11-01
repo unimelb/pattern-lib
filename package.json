@@ -34,7 +34,8 @@
     "ike.js": "^0.0.2",
     "vue": "^2.5.2",
     "vue-progressive-image": "^2.2.1",
-    "vue-scrollto": "^2.7.8"
+    "vue-scrollto": "^2.7.8",
+    "vue-simple-photoswipe": "^1.0.3"
   },
   "peerDependencies": {
     "vue": "^2.5.2"
