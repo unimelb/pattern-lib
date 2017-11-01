@@ -1,5 +1,6 @@
 <template>
-  <div class="card card--fact card--bdr bg-white text-center">
+  <div class="card card--fact card--bdr bg-white text-center" :class="{'card--fact-image': icon}">
+    <img v-if="icon" class="card__thumb" :src="icon" alt="">
     <div class="card__inner">
       <h3 class="card__header" :class="{'card__header--sml' : smlHeader}">{{ title }}</h3>
       <h4 class="card__meta">{{ meta }}</h4>
@@ -16,6 +17,7 @@ export default {
       type: String,
       default: '42',
     },
+    icon: String,
     meta: {
       type: String,
       default: 'Million students',
