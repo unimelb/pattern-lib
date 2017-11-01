@@ -1,1 +1,2 @@
-export { default as TabGroup } from './TabGroup.vue';
+import TabGroup from './TabGroup.vue';
+export default TabGroup;
