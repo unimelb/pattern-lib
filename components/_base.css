@@ -26,6 +26,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: var(--col-bg-secondary); /* same as page header/footer for scroll overflow */
+
+  /* make fonts look a bit thiner */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 nav,
