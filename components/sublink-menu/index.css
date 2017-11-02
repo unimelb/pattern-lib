@@ -6,7 +6,7 @@
   }
 
   &--green .sublink-menu__icon {
-    fill: var(--col-green);
+    fill: var(--col-emerald);
   }
 
   &--red .sublink-menu__icon {
