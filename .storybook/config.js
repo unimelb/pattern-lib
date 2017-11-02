@@ -9,7 +9,7 @@ import SectionWrap from '../components/section/SectionWrap.vue';
 import ListItem from '../components/listing/ListItem.vue';
 import ButtonIcon from '../components/buttons/ButtonIcon.vue';
 
-import { version } from '../package.json';
+import { version, repository } from '../package.json';
 
 // Import documentation styles
 import './index.css';
@@ -31,7 +31,7 @@ addDecorator(storyDecorator);
 // Configure Storybook UI
 setOptions({
   name: `Pattern Library v${version}`,
-  url: '/',
+  url: repository.url.replace(/\.git$/, ''),
 });
 
 // Load stories
