@@ -101,7 +101,7 @@ export default function renderMarkup(Component, opts = {}) {
                   inner.insertBefore(slotcontent, inner.firstChild);
                 } else if (slots[k][j].elm) {
                   // Filter empty nodes
-                  inner.appendChild(slots[k][j].elm);
+                  inner.insertBefore(slots[k][j].elm, inner.firstChild);
                 } else if (slots[k][j].tag) {
                   slotcontent = renderDown(slots[k][j]);
                   const props = slots[k][j].data.attrs;
