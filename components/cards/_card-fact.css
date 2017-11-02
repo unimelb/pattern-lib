@@ -1,4 +1,8 @@
 .card--fact {
+  .card__inner {
+    display: block;
+  }
+
   .card__header {
     font-family: var(--ff-lead);
     font-size: 2.6rem;
@@ -8,8 +12,32 @@
     }
   }
 
+  .card__thumb {
+    width: auto;
+    max-height: 150px;
+  }
+
   .card__meta {
     font-size: 1.1rem;
+  }
+
+  &-image {
+    .card__thumb {
+      margin: var(--vr) auto;
+    }
+
+    .list-item--desk-1of1 & {
+      display: flex;
+      flex-direction: row;
+
+      .card__thumb {
+        width: 40%;
+      }
+
+      .card__inner {
+        width: 60%;
+      }
+    }
   }
 
   p {
