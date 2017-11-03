@@ -5,7 +5,7 @@ blockquote,
   flex-direction: column;
   padding-right: var(--vr);
   padding-left: var(--vr);
-  border-color: var(--col-grey);
+  border-color: var(--col-grey-mid-1);
 
   p,
   &__content {
@@ -17,7 +17,7 @@ blockquote,
     &::before,
     &::after {
       position: absolute;
-      color: var(--col-grey);
+      color: var(--col-grey-mid-1);
       font-size: 3rem;
       font-style: normal;
     }
@@ -64,7 +64,7 @@ blockquote,
     width: 100%;
     margin-top: calc(var(--vr) / 2);
     float: left;
-    color: var(--col-grey);
+    color: var(--col-grey-mid-1);
     font-size: 1.1em;
     font-style: normal;
     text-align: left;
