@@ -8,6 +8,7 @@ import ModalDialog from '../../components/modal';
 import PageNav from '../../components/page/nav';
 import PageSearch from '../../components/page/search';
 import TabGroup from '../../components/tabs';
+import PhotoGallery from '../../components/photo-gallery';
 
 import '../../components';
 
@@ -23,6 +24,7 @@ Vue.component('modal-dialog', ModalDialog);
 Vue.component('page-nav', PageNav);
 Vue.component('page-search', PageSearch);
 Vue.component('tab-group', TabGroup);
+Vue.component('photo-gallery', PhotoGallery);
 
 // Create Vue instance
 new Vue({ el: '#ui' });

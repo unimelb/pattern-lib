@@ -1,18 +1,18 @@
 <template>
   <ListingWrap class="photo-gallery preview-img-list">
     <ListItem :cols="item.size" v-for="(item, index) in slots" :key="item.id">
-      <figure class="photo-gallery__thumb">
-        <img class="preview-img-item" :src="item.src" @click="$photoswipe.open(index, slots)">
-        <figcaption>Lorem ipsum Duis exercitation dolore pariatur dolore.</figcaption>
-      </figure>
+      <FigureWrap class="photo-gallery__figure" :caption="captions ? item.title : false">
+        <img class="preview-img-item" :src="item.src" @click="noPopup === false && $photoswipe.open(index, slots, options)">
+      </FigureWrap>
     </ListItem>
   </ListingWrap>
 </template>
 
 <script>
 import ListingWrap from './../listing/ListingWrap.vue';
+import FigureWrap from './../figure/FigureWrap.vue';
 export default {
-  components: { ListingWrap },
+  components: { ListingWrap, FigureWrap },
   props: {
     cols: {
       type: String,
@@ -21,10 +21,15 @@ export default {
     images: {
       type: Array,
     },
+    captions: Boolean,
+    fullScreen: Boolean,
+    noPopup: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     slots() {
-      console.log('Slots', this.$slots);
       return this.$slots.default.map(node => ({
         src: node.data.attrs.src,
         msrc: node.data.attrs['data-thumb'],
@@ -33,6 +38,16 @@ export default {
         title: node.data.attrs['data-title'],
         size: node.data.attrs['data-size'],
       }));
+    },
+    options() {
+      return {
+        showHideOpacity: true,
+        getThumbBoundsFn: false,
+        shareEl: false,
+        fullscreenEl: this.fullScreen,
+        closeOnScroll: false,
+        bgOpacity: 0.95,
+      };
     },
   },
 };
