@@ -22,6 +22,53 @@
     padding: calc(2 * var(--vr));
   }
 
+  &__withquote {
+    padding: calc(var(--vr) * 2) var(--vr);
+    vertical-align: bottom !important;
+
+    .card--focus-box {
+      max-width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+      padding: calc(var(--vr) / 2);
+
+      .card__inner {
+        padding: calc(var(--vr) / 2) var(--vr);
+      }
+    }
+
+    .split-section__quote {
+      font-family: var(--ff-lead);
+      font-size: 1.25em;
+      font-style: italic;
+
+      &::before {
+        content: open-quote;
+      }
+
+      &::after {
+        content: close-quote;
+      }
+    }
+
+    .split-section__quote-cite {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      font-size: .9em;
+      font-weight: var(--fw-semibold);
+
+      &::before {
+        content: '\2014';
+      }
+    }
+
+    .card--focus-box__cnr {
+      width: 3em;
+      height: 3em;
+    }
+  }
+
   @media (--bp-desktop) {
     display: table;
     width: 100%;
