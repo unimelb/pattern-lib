@@ -35,9 +35,7 @@
     &--mobile {
       @media (--bp-desktop) {
         .fr-accordion__header {
-          margin-bottom: 0;
-          border-bottom: 0;
-          cursor: text;
+          display: none;
 
           > *:first-child::before,
           &[aria-selected='true'] > *:first-child::before {
