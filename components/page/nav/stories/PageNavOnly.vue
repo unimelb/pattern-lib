@@ -20,5 +20,6 @@ import PageNav from '../PageNav.vue';
 
 export default {
   components: { PageNav },
+  readme: { htmlTemplate: true },
 };
 </script>

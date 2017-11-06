@@ -10,5 +10,6 @@
 import CardFocusBox from './../../cards/CardFocusBox.vue';
 export default {
   components: { CardFocusBox },
+  readme: { htmlTemplate: true },
 };
 </script>

@@ -24,5 +24,6 @@ import AccordionPanel from '../AccordionPanel.vue';
 
 export default {
   components: { AccordionGroup, AccordionPanel },
+  readme: { htmlTemplate: true },
 };
 </script>

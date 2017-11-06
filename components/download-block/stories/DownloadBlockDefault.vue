@@ -18,5 +18,6 @@ export default {
   components: { DownloadBlock },
   decorator: SectionWrap,
   decoratorProps: { small: true },
+  readme: { source: { decorated: true } },
 };
 </script>

@@ -10,5 +10,6 @@ export default {
   components: { VideoEmbed },
   decorator: ContentBlock,
   decoratorProps: { bg: 'inverted', size: 'sml' },
+  readme: { source: { decorated: true } },
 };
 </script>

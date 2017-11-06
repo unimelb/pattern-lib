@@ -4,3 +4,8 @@
   </section-wrap>
 </template>
 
+<script>
+export default {
+  readme: { htmlTemplate: true },
+};
+</script>
