@@ -9,7 +9,9 @@ function renderDown(vnode) {
   const out = document.createElement(pascalToKebab(vnode.tag));
   if (vnode.data) {
     if (vnode.data.staticClass) {
-      out.classList.add(vnode.data.staticClass);
+      for (let classes = vnode.data.staticClass.split(' '), g = classes.length - 1; g >= 0; g -= 1) {
+        out.classList.add(classes[g]);
+      }
     }
     if (vnode.data.attrs) {
       for (let attrNames = Object.keys(vnode.data.attrs), attrVals = Object.values(vnode.data.attrs), i = attrNames.length - 1; i >= 0; i -= 1) {
@@ -42,7 +44,9 @@ export default function renderMarkup(Component, opts = {}) {
     // HTML outer
     let outer = document.createElement(vm._vnode.componentInstance._vnode.tag);
     if (vm._vnode.componentInstance._vnode.data && vm._vnode.componentInstance._vnode.data.staticClass) {
-      outer.classList.add(vm._vnode.componentInstance._vnode.data.staticClass);
+      for (let classes = vm._vnode.componentInstance._vnode.data.staticClass.split(' '), g = classes.length - 1; g >= 0; g -= 1) {
+        outer.classList.add(classes[g]);
+      }
     }
     // Prevent double render
     const renderedUids = [];
@@ -67,7 +71,9 @@ export default function renderMarkup(Component, opts = {}) {
           }
           // Outer class
           if (vm._vnode.componentInstance.$children[h].$vnode.data.staticClass) {
-            outer.classList.add(vm._vnode.componentInstance.$children[h].$vnode.data.staticClass);
+            for (let classes = vm._vnode.componentInstance.$children[h].$vnode.data.staticClass.split(' '), g = classes.length - 1; g >= 0; g -= 1) {
+              outer.classList.add(classes[g]);
+            }
           }
         } else {
           // HTML outer
@@ -90,7 +96,9 @@ export default function renderMarkup(Component, opts = {}) {
               }
             }
             if (recs[i].data.staticClass) {
-              inner.classList.add(recs[i].data.staticClass);
+              for (let classes = recs[i].data.staticClass.split(' '), g = classes.length - 1; g >= 0; g -= 1) {
+                inner.classList.add(classes[g]);
+              }
             }
             for (let slots = Object.values(recs[i].componentInstance.$slots), k = slots.length - 1; k >= 0; k -= 1) {
               for (let j = slots[k].length - 1; j >= 0; j -= 1) {
