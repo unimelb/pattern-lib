@@ -1,2 +1,2 @@
-export { default as AccordionGroup } from './AccordionGroup.vue';
-export { default as AccordionPanel } from './AccordionPanel.vue';
+import SectionToggle from './SectionToggle.vue';
+export default SectionToggle;
