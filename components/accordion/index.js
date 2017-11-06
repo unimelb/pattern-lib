@@ -1,2 +1,2 @@
-import AccordonGroup from './AccordonGroup.vue';
-export default AccordonGroup;
+import AccordionGroup from './AccordionGroup.vue';
+export default AccordionGroup;
