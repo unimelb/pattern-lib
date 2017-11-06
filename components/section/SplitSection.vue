@@ -1,6 +1,6 @@
 <template>
-  <section class="split-section">
-    <div class="split-section__side" :class="{ 'split-section__side--with-image': imageLeft, 'split-section__withquote': quote }" :style="{ backgroundImage: imageLeft ? `url(${bgImage})` : '' }">
+  <section class="split-section" :class="{ 'split-section--withquote': quote }">
+    <div class="split-section__side" :class="{ 'split-section__side--with-image': imageLeft }" :style="{ backgroundImage: imageLeft ? `url(${bgImage})` : '' }">
       <SplitSectionQuote v-if="quote && imageLeft" :quote="quote" :cite="cite" />
       <div class="split-section__inner" v-if="imageRight">
         <slot>
@@ -8,7 +8,7 @@
         </slot>
       </div>
     </div>
-    <div class="split-section__side" :class="{ 'split-section__side--with-image': imageRight, 'split-section__withquote': quote }" :style="{ backgroundImage: imageRight ? `url(${bgImage})` : '' }">
+    <div class="split-section__side" :class="{ 'split-section__side--with-image': imageRight }" :style="{ backgroundImage: imageRight ? `url(${bgImage})` : '' }">
       <SplitSectionQuote v-if="quote && imageRight" :quote="quote" :cite="cite" />
       <div class="split-section__inner" v-if="imageLeft">
         <slot>
