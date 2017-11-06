@@ -1,6 +1,7 @@
 <template>
-  <section class="split-section">
+  <section class="split-section" :class="{ 'split-section--withquote': quote }">
     <div class="split-section__side" :class="{ 'split-section__side--with-image': imageLeft }" :style="{ backgroundImage: imageLeft ? `url(${bgImage})` : '' }">
+      <SplitSectionQuote v-if="quote && imageLeft" :quote="quote" :cite="cite" />
       <div class="split-section__inner" v-if="imageRight">
         <slot>
           default left text
@@ -8,6 +9,7 @@
       </div>
     </div>
     <div class="split-section__side" :class="{ 'split-section__side--with-image': imageRight }" :style="{ backgroundImage: imageRight ? `url(${bgImage})` : '' }">
+      <SplitSectionQuote v-if="quote && imageRight" :quote="quote" :cite="cite" />
       <div class="split-section__inner" v-if="imageLeft">
         <slot>
           default right text
@@ -18,8 +20,11 @@
 </template>
 
 <script>
+import CardFocusBox from './../cards/CardFocusBox.vue';
+import SplitSectionQuote from './SplitSectionQuote.vue';
 export default {
   name: 'SplitSection',
+  components: { CardFocusBox, SplitSectionQuote },
   props: {
     imageLeft: {
       type: Boolean,
@@ -30,6 +35,8 @@ export default {
     bgImage: {
       type: String,
     },
+    quote: String,
+    cite: String,
   },
 };
 </script>

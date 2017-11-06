@@ -1,0 +1,14 @@
+.photo-gallery {
+  &__figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}

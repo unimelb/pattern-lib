@@ -9,6 +9,7 @@ import PageNav from '../../components/page/nav';
 import PageSearch from '../../components/page/search';
 import TabGroup from '../../components/tabs';
 import AccordionGroup from '../../components/accordion';
+import PhotoGallery from '../../components/photo-gallery';
 
 import '../../components';
 
@@ -24,6 +25,7 @@ Vue.component('page-nav', PageNav);
 Vue.component('page-search', PageSearch);
 Vue.component('tab-group', TabGroup);
 Vue.component('accordion-group', AccordionGroup);
+Vue.component('photo-gallery', PhotoGallery);
 
 // Create Vue instance
 new Vue({ el: '#ui' });

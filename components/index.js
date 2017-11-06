@@ -6,6 +6,7 @@ import * as utils from './shared/utils';
 import sprite from './icons/sprite.svg';
 
 import './side-panel';
+import './photo-gallery';
 import initTracking from './page/tracking';
 
 window.ui = {

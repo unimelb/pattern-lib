@@ -5271,6 +5271,10 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
+photoswipe@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/photoswipe/-/photoswipe-4.1.2.tgz#95c20a75cea23b70d6299641cad82e03cae7f797"
+
 pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -7645,6 +7649,13 @@ vue-scrollto@^2.7.8:
   dependencies:
     bezier-easing "^2.0.3"
 
+vue-simple-photoswipe@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/vue-simple-photoswipe/-/vue-simple-photoswipe-1.0.3.tgz#110c41730b2dbff83deff38f50d3c4f454d41d34"
+  dependencies:
+    photoswipe "^4.1.2"
+    vue "^2.4.2"
+
 vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-3.0.3.tgz#623658f81506aef9d121cdc113a4f5c9cac32df7"
@@ -7663,7 +7674,7 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@^2.5.2:
+vue@^2.4.2, vue@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.2.tgz#fd367a87bae7535e47f9dc5c9ec3b496e5feb5a4"
 

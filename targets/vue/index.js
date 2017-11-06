@@ -1,3 +1,4 @@
+export { default as AccordionGroup } from '../../components/accordion/AccordionGroup.vue';
 export { default as ArticleWrap } from '../../components/article-wrap/ArticleWrap.vue';
 export { default as BlockQuotation } from '../../components/block-quotation/BlockQuotation.vue';
 export { default as ButtonIcon } from '../../components/buttons/ButtonIcon.vue';
@@ -31,6 +32,7 @@ export { default as PageHeader } from '../../components/page/header/PageHeader.v
 export { default as PageNav } from '../../components/page/nav/PageNav.vue';
 export { default as PageSearch } from '../../components/page/search/PageSearch.vue';
 export { default as Pathfinder } from '../../components/pathfinder/Pathfinder.vue';
+export { default as PhotoGallery } from '../../components/photo-gallery/PhotoGallery.vue';
 export { default as SectionDivider } from '../../components/section/SectionDivider.vue';
 export { default as SectionToggle } from '../../components/section/toggle/SectionToggle.vue';
 export { default as SectionTwoCol } from '../../components/section/SectionTwoCol.vue';
