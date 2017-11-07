@@ -9,7 +9,7 @@
     <div class="cell cell--desk-1of3">
       <nav class="ql-menu__nav" v-if="menuLinks && menuLinks.length > 0">
         <slot name="menu-header"></slot>
-        <component :is="item.secondary ? 'QuickLinksSecondaryItem' : 'QuickLinksMenuItem'" :href="item.href" v-for="item in menuLinks" :key="item" :icon="item.secondary ? item.icon : false" :title="item.title" />
+        <QuickLinksMenuItem :href="item.href" v-for="item in menuLinks" :key="item" :title="item.title" />
       </nav>
     </div>
   </div>

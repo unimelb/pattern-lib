@@ -44,7 +44,7 @@ export default {
       ],
       secondaryLinks: [
         {
-          title: 'Welcome from the Vice Chancellor',
+          title: 'Welcome from the Vice-Chancellor',
           href: '#',
           icon: 'chevron-right',
         },

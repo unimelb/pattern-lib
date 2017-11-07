@@ -26,21 +26,13 @@
       }
     }
 
-    .ql-menu__secondary-link {
-      display: flex;
-      flex-direction: row;
-      padding: 1.5rem .75rem 1rem 0;
-      font-size: .9em;
-      font-weight: var(--fw-semibold);
-    }
-
     @media (--bp-desktop) {
       max-width: calc(20rem);
     }
   }
 
   &__secondary {
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     &-link {
       flex-direction: row;
@@ -59,12 +51,6 @@
   }
 
   &--l1 {
-    .ql-menu__nav {
-      margin-top: -var(--vr);
-    }
-  }
-
-  &--pad {
     .ql-menu__nav {
       margin-top: calc(var(--vr) * 1.5);
     }
