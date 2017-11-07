@@ -50,7 +50,7 @@ blockquote,
     border-top: 2px solid;
 
     .block-quotation__content::before {
-       top: .25em;
+      top: .25em;
     }
   }
 
@@ -59,7 +59,7 @@ blockquote,
     border-bottom: 2px solid;
 
     .block-quotation__content::after {
-       bottom: .5em;
+      bottom: .5em;
     }
   }
 
