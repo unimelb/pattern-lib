@@ -18,6 +18,6 @@ export default {
   components: { CheckList },
   decorator: ContentBlock,
   decoratorProps: { size: 'sml' },
-  readme: { htmlTemplate: true },
+  readme: { html: true },
 };
 </script>

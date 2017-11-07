@@ -31,7 +31,9 @@
     "prepublish": "LOAD_EXTERNAL_ASSETS=true yarn run build:vue"
   },
   "dependencies": {
+    "change-case": "^3.0.1",
     "ike.js": "^0.0.2",
+    "strip-html-comments": "^1.0.0",
     "vue": "^2.5.2",
     "vue-progressive-image": "^2.2.1",
     "vue-scrollto": "^2.7.8",
@@ -70,7 +72,6 @@
     "fr-tabs": "^1.0.6",
     "html-webpack-plugin": "^2.30.1",
     "inquirer-directory": "^2.1.0",
-    "lodash.merge": "^4.6.0",
     "plop": "^1.9.0",
     "postcss-cssnext": "^2.10.0",
     "postcss-import": "^9.1.0",

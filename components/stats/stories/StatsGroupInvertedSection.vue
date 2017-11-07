@@ -20,7 +20,7 @@ export default {
   data: () => ({ icons }),
   decorator: SectionWrap,
   decoratorProps: { bgColor: 'inverted' },
-  readme: { source: { decorated: true } },
+  readme: { decorated: true },
 };
 </script>
 

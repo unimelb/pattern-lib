@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import docs from './docs.md';
+
 export default {
   data: () => ({
     names: [
@@ -30,6 +32,7 @@ export default {
       'jobs',
     ],
   }),
+  readme: { custom: docs },
 };
 </script>
 

@@ -13,6 +13,6 @@ export default {
   components: { VideoEmbed },
   decorator: SectionWrap,
   decoratorProps: { bgColor: 'inverted', centred: true },
-  readme: { source: { decorated: true } },
+  readme: { decorated: true },
 };
 </script>

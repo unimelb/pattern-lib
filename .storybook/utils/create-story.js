@@ -1,18 +1,16 @@
 import Vue from 'vue';
 import pretty from 'pretty';
-import merge from 'lodash.merge';
+import { paramCase } from 'change-case';
+import stripHtmlComments from 'strip-html-comments';
 import withReadme from 'storybook-readme/with-readme';
 import { codeBlock, storyDecorator } from '.storybook/utils';
 
 const readmeDefaults = {
   custom: null,
-  htmlTemplate: false,
-  // vueTemplate: true,
-  source: {
-    full: true,
-    minified: false,
-    decorated: false,
-  },
+  html: false,
+  source: true,
+  minified: false,
+  decorated: false,
 };
 
 /**
@@ -22,7 +20,7 @@ const readmeDefaults = {
  * @param {Object} opts - options for readme panel
  */
 export default function createStory(Story) {
-  const readmeOpts = merge({}, readmeDefaults, Story.readme || {});
+  const readmeOpts = Object.assign({}, readmeDefaults, Story.readme || {});
   const readme = generateReadme(Story, readmeOpts);
   return withReadme(readme, () => Story);
 }
@@ -41,20 +39,24 @@ function generateReadme(Story, opts) {
 
   // Mount story and retrieve HTML source
   const vm = mount(Story);
-  const source = (vm.$el.outerHTML || '').replace(/(\<!--.*?\-->)/g, ''); // strip comments
 
-  // Render and append HTML template
-  if (opts.htmlTemplate) readmeArr.push('#### HTML template', codeBlock(pretty(reverseEngineerHtmlTemplate(vm))));
-  // if (opts.vueTemplate) readmeArr.push('#### Vue template', codeBlock(renderVueTemplate(), 'vue'));
-  if (!opts.source) return readmeArr.join('\n'); // return README if complete
+  if (opts.html) {
+    // Reverse-engineer and append HTML template
+    readmeArr.push('#### HTML template', codeBlock(pretty(reverseEngineerTemplate(vm))));
+  }
 
-  // Append full, minified and decorated source in turn
-  if (opts.source.minified) readmeArr.push('#### Minified source', codeBlock(source.replace(/\n/g, '')));
-  if (opts.source.full) readmeArr.push('#### Source', codeBlock(pretty(source)));
+  if (opts.source || opts.minified || opts.decorated) {
+    // Retrieve full HTML source from mounted story and strip comments left by Vue's `v-if` directive
+    const source = stripHtmlComments(vm.$el.outerHTML || '');
 
-  if (opts.source.decorated) {
-    const decoratedSource = mount(storyDecorator(() => Story)).$el.outerHTML;
-    readmeArr.push('#### Decorated source', codeBlock(pretty(decoratedSource)));
+    // Append minified, full and decorated source in turn
+    if (opts.minified) readmeArr.push('#### Minified source', codeBlock(source.replace(/\n/g, '')));
+    if (opts.source) readmeArr.push('#### Source', codeBlock(pretty(source)));
+
+    if (opts.decorated) {
+      const decoratedSource = mount(storyDecorator(() => Story)).$el.outerHTML;
+      readmeArr.push('#### Decorated source', codeBlock(pretty(decoratedSource)));
+    }
   }
 
   return readmeArr.join('\n');
@@ -74,22 +76,26 @@ function mount(Component) {
 }
 
 /**
- * Reverse-engineer the HTML template of a Vue component instance.
+ * Reverse-engineer the Vue or HTML template of a Vue component instance.
  * @param {Vue} vm
  * @return {String}
  */
-function reverseEngineerHtmlTemplate(vm) {
+function reverseEngineerTemplate(vm) {
   // Get root vnode (ignore wrapper)
   const root = vm.$children[0]._vnode;
 
   // Convert vnode to DOM element
   const elem = vnodeToElement(root);
 
-  // Retrieve markup and clean it a little
-  const markup = cleanUpBooleanAttrs(elem.outerHTML);
-  return markup;
+  // Return markup after cleaning it a little
+  return cleanUpBooleanAttrs(elem.outerHTML);
 }
 
+/**
+ * Convert a Vnode to a DOM element (or text node).
+ * @param {Object} vnode
+ * @return {Node}
+ */
 function vnodeToElement(vnode) {
   // A) Text node
   if (vnode.text) return document.createTextNode(vnode.text);
@@ -99,11 +105,11 @@ function vnodeToElement(vnode) {
   const isDomNode = !componentOptions; // whether vnode represents a normal DOM element (like `div`) or a Vue component
 
   // Find tag name and create element
-  const tag = isDomNode ? vnode.tag : pascalToKebab(componentOptions.tag);
+  const tag = isDomNode ? vnode.tag : paramCase(componentOptions.tag);
   const elem = document.createElement(tag);
 
   const props = componentOptions && componentOptions.propsData;
-  if (props) Object.keys(props).forEach(prop => { elem.setAttribute(prop, props[prop]); });
+  if (props) Object.keys(props).forEach(prop => { elem.setAttribute(paramCase(prop), props[prop]); });
 
   // Add `slot` attribute, classes, and remaining attributes
   const { attrs, slot, staticClass } = vnode.data || {};
@@ -116,15 +122,6 @@ function vnodeToElement(vnode) {
   children.forEach(child => { elem.appendChild(vnodeToElement(child)); });
 
   return elem;
-}
-
-/**
- * Convert a Pascal-case string to kebab case.
- * @param {String} txt
- * @return {String}
- */
-function pascalToKebab(txt) {
-  return txt.replace(/[a-z]([A-Z])+/g, m => (`${m[0]}-${m.substring(1)}`)).toLowerCase();
 }
 
 /**

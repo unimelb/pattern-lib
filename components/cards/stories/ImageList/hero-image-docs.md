@@ -1,15 +1,4 @@
-# Focus Images
-
-For the progressive image loading to work for this component you need to add the custom component `<progressive-background src="http://sourceimage.url">` instead of adding as a background image with an inline style.
-
-If you are able to generate a smaller image to use as a placeholder you can pass using the placeholder attribute, see progressive-images story for details.
-
-By default the image height will be limited to `240px`. Alternatively you can add the class `.card__thumb--full` to the progressive-background component to expand to the height of the image.
-
-> **Note**: Copying the rendered markup by inspecting the element will not work!.
-
-
-#### Hero Markup
+For the progressive image loader to work with this component, use the custom component `<progressive-background src="http://sourceimage.url">`. If you are able to generate a smaller image to use as placeholder you can pass it using the `placeholder` attribute -- cf. _Progressive Images / Background image loader_ for details. By default the image height will be limited to 240px. Add class `.card__thumb--full` to the `progressive-background` component to expand to the height of the image.
 
 ```html
 <section class="section bg-inverted" style="background-image: url(&quot;http://about-us-unimelb.netlify.com/images/UoM-soft-3.png&quot;);">
@@ -23,5 +12,4 @@ By default the image height will be limited to `240px`. Alternatively you can ad
     </div>
   </div>
 </section>
-
 ```

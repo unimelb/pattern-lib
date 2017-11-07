@@ -77,9 +77,11 @@
 
 <script>
 import CardFocusImageList from './../../CardFocusImageList.vue';
+import focusImageDocs from './focus-image-docs.md';
 
 export default {
   components: { CardFocusImageList },
+  readme: { custom: focusImageDocs },
 };
 
 </script>

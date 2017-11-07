@@ -7,6 +7,6 @@ import PageFooter from '../PageFooter.vue';
 
 export default {
   components: { PageFooter },
-  readme: { source: { minified: true } },
+  readme: { minified: true },
 };
 </script>

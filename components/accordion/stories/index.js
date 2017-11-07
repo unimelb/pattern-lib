@@ -7,7 +7,7 @@ import AccordionSoloSelect from './AccordionSoloSelect.vue';
 import AccordionNoJs from './AccordionNoJs.vue';
 
 storiesOf('Accordion', module)
-  .add('Default', createStory(AccordionDefault, { shallowRender: true }))
-  .add('First panel open', createStory(AccordionFirstOpen, { shallowRender: true }))
-  .add('Single panel open at a time', createStory(AccordionSoloSelect, { shallowRender: true }))
-  .add('No js', createStory(AccordionNoJs, { shallowRender: true }));
+  .add('Default', createStory(AccordionDefault))
+  .add('First panel open', createStory(AccordionFirstOpen))
+  .add('Single panel open at a time', createStory(AccordionSoloSelect))
+  .add('No js', createStory(AccordionNoJs));
