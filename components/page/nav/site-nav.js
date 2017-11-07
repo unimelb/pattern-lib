@@ -80,6 +80,8 @@ export default class SiteNav {
   * @param {Element} item
   */
   initNestedPanel(item) {
+    if (item.firstElementChild.classList.contains('accordion')) return;
+
     // Look for nested panel and list
     let panel = item.querySelector('.inner');
     const list = item.querySelector('ul');
