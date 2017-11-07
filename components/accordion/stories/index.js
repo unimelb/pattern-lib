@@ -13,7 +13,6 @@ storiesOf('Accordion', module)
   .add('Default', createStory(AccordionDefault))
   .add('First panel open', createStory(AccordionFirstOpen))
   .add('Single panel open at a time', createStory(AccordionSoloSelect))
-  .add('No js', createStory(AccordionNoJs));
-
-  .add('Generic section toggle', createStory(SectionToggleDefault, { shallowRender: true }))
-  .add('Generic section toggle, mobile only', createStory(SectionToggleMobile, { shallowRender: true }));
+  .add('No js', createStory(AccordionNoJs))
+  .add('Generic section toggle', createStory(SectionToggleDefault))
+  .add('Generic section toggle, mobile only', createStory(SectionToggleMobile));
