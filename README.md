@@ -135,4 +135,5 @@ Recommended mobile devices for testing:
 
 ## Developer documentation
 
+- [Documenting stories](docs/docs.md) - how to customise the content of the README panel for each story
 - [Icons](docs/icons.md) - how to add new icons, and how to use icons in CSS and Vue components
