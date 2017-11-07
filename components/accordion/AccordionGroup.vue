@@ -1,14 +1,14 @@
 <template>
-  <div class="fr-accordion js-fr-accordion">
+  <SectionToggle :disabled="disabled" :solo="solo" :open="open" class="accordion">
     <slot></slot>
-  </div>
+  </SectionToggle>
 </template>
 
 <script>
-import Fraccordion from './_fr-accordion.js';
+import SectionToggle from '../section/toggle/SectionToggle.vue';
 
 export default {
-  name: 'accordion-group',
+  components: { SectionToggle },
   props: {
     disabled: {
       type: Boolean,
@@ -22,14 +22,6 @@ export default {
       type: Boolean,
       default: false,
     },
-  },
-  mounted() {
-    if (this.disabled) return;
-
-    Fraccordion({
-      firstPanelsOpenByDefault: this.open,
-      multiselectable: !this.solo,
-    });
   },
 };
 </script>

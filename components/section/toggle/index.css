@@ -1,0 +1,54 @@
+@import '_fr-accordion.css';
+
+.fr-accordion--is-ready {
+  .fr-accordion__header {
+    display: block;
+    position: relative;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .fr-accordion__panel {
+    overflow: hidden;
+  }
+
+  &.section-toggle {
+    .fr-accordion__header {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--col-grey-light);
+
+      > *:first-child::before {
+        content: '+';
+        width: 1em;
+        padding-right: .75em;
+        float: left;
+        border: 0;
+        font-size: 1.5em;
+        line-height: 1;
+      }
+
+      &[aria-selected='true'] > *:first-child::before {
+        content: '\2013';
+      }
+    }
+
+    &--mobile {
+      @media (--bp-desktop) {
+        .fr-accordion__header {
+          display: none;
+
+          > *:first-child::before,
+          &[aria-selected='true'] > *:first-child::before {
+            display: none;
+          }
+        }
+
+        .fr-accordion__panel {
+          visibility: visible !important;
+          height: auto !important;
+          overflow: visible !important;
+        }
+      }
+    }
+  }
+}
