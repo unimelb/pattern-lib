@@ -120,5 +120,6 @@ import PageSearch from '../../search/PageSearch.vue';
 
 export default {
   components: { PageNav, PageSearch },
+  readme: { html: true },
 };
 </script>

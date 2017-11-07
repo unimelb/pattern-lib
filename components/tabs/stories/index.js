@@ -7,7 +7,7 @@ import TabsMaterial from './TabsMaterial.vue';
 // import TabsNoJs from './TabsNoJs.vue';
 
 storiesOf('Tabs', module)
-  .add('Conventional tabs', createStory(TabsDefault, { shallowRender: true }))
-  .add('Conventional tabs, featured alternate', createStory(TabsFeatured, { shallowRender: true }))
-  .add('Material style tabs', createStory(TabsMaterial, { shallowRender: true }));
-// .add('No js', createStory(TabsNoJs, { shallowRender: true }));
+  .add('Conventional tabs', createStory(TabsDefault))
+  .add('Conventional tabs, featured alternate', createStory(TabsFeatured))
+  .add('Material style tabs', createStory(TabsMaterial));
+// .add('No js', createStory(TabsNoJs));
