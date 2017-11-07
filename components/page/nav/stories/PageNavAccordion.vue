@@ -54,5 +54,9 @@ import AccordionGroup from '../../../accordion/AccordionGroup.vue';
 
 export default {
   components: { PageNav, PageSearch, AccordionGroup },
+  readme: {
+    html: true,
+    source: false,
+  },
 };
 </script>

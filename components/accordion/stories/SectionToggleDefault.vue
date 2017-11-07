@@ -12,5 +12,9 @@ import SectionToggle from '../../section/toggle/SectionToggle.vue';
 
 export default {
   components: { SectionToggle },
+  readme: {
+    html: true,
+    source: false,
+  },
 };
 </script>

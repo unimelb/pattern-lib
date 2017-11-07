@@ -9,7 +9,7 @@ The contents of this repository have been produced by The University of Melbourn
 
 ## Set-up
 
-The design system requires Node.js v6.11.2, and the latest version of [yarn](https://yarnpkg.com/en/). To set it up, run:
+The design system requires Node.js ~6.11.3, and the latest version of [yarn](https://yarnpkg.com/en/). To set it up, run:
 
 ```
 git clone https://github.com/unimelb/pattern-lib.git

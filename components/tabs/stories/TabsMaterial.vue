@@ -18,5 +18,9 @@ import TabGroup from '../TabGroup.vue';
 
 export default {
   components: { TabGroup },
+  readme: {
+    html: true,
+    source: false,
+  },
 };
 </script>

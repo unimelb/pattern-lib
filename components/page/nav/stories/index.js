@@ -8,7 +8,7 @@ import PageNavAccordion from './PageNavAccordion.vue';
 import PageSearchDefault from './PageSearchDefault.vue';
 
 storiesOf('Page / Header tools', module)
-  .add('Default', createStory(PageNavDefault, { shallowRender: true }))
-  .add('Search only', createStory(PageSearchDefault, { shallowRender: true }))
-  .add('Nested site nav', createStory(PageNavNested, { shallowRender: true }))
-  .add('Nested site nav, accordion alternate', createStory(PageNavAccordion, { shallowRender: true }));
+  .add('Default', createStory(PageNavDefault))
+  .add('Search only', createStory(PageSearchDefault))
+  .add('Nested site nav', createStory(PageNavNested))
+  .add('Nested site nav, accordion alternate', createStory(PageNavAccordion));

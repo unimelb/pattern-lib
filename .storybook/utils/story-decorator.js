@@ -11,11 +11,11 @@
  *   decoratorProps: { anyProp: true },
  * };
  * ```
- * @param {Function} storyFunc
+ * @param {Function} storyFn
  * @return {Component}
  */
-export default function storyDecorator(storyFunc) {
-  const Story = storyFunc();
+export default function storyDecorator(storyFn) {
+  const Story = storyFn();
   const { decorator: Decorator, decoratorProps = {} } = Story;
 
   if (!Decorator) return Story;
