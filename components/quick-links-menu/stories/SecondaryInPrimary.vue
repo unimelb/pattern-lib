@@ -25,26 +25,33 @@ export default {
         {
           title: 'Strategy and governance',
           href: '#',
+          secondary: false,
         },
         {
           title: 'Leadership',
           href: '#',
+          secondary: false,
         },
         {
           title: 'Priorities and partnerships',
           href: '#',
+          secondary: false,
         },
         {
           title: 'News and resources',
           href: '#',
+          secondary: false,
         },
         {
           title: 'Careers',
           href: '#',
+          secondary: false,
         },
         {
           title: 'Campus and Maps',
           href: '#',
+          icon: 'location',
+          secondary: true,
         },
       ],
     };

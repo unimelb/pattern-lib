@@ -26,12 +26,45 @@
       }
     }
 
+    .ql-menu__secondary-link {
+      display: flex;
+      flex-direction: row;
+      padding: 1.5rem .75rem 1rem 0;
+      font-size: .9em;
+      font-weight: var(--fw-semibold);
+    }
+
     @media (--bp-desktop) {
       max-width: calc(20rem);
     }
   }
 
+  &__secondary {
+    margin-top: 3rem;
+
+    &-link {
+      flex-direction: row;
+      margin: 0;
+      margin-top: calc(var(--vr) / 2);
+      padding-left: 0;
+      color: var(--col-brand);
+      font-size: .9em;
+      text-decoration: none;
+    }
+
+    &-icon {
+      margin-top: .25em;
+      margin-right: calc(var(--vr) / 2);
+    }
+  }
+
   &--l1 {
+    .ql-menu__nav {
+      margin-top: -var(--vr);
+    }
+  }
+
+  &--pad {
     .ql-menu__nav {
       margin-top: calc(var(--vr) * 1.5);
     }
