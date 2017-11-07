@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-white">
-    <QuickLinks :menu-links="menuLinks">
+    <QuickLinks :menu-links="menuLinks" :secondary-links="secondaryLinks" secondary-cols="one">
       <div slot="content">
         <h2>Australia's leading university</h2>
         <p class="lead">Our distinctive Melbourne experience helps graduates become well-rounded, thoughtful and skilled professionals – making
@@ -8,7 +8,6 @@
         <p>Our research helps solve social, economic and environmental challenges the world is facing today and into the future.
           And we’re tightly connected with our communities, at home and around the globe, a connection that enriches our learning,
           teaching and research.</p>
-        <ButtonIcon icon="chevron-right" style="margin-top: 1.5rem;" class="btn--xwide">Welcome from the Vice-Chancellor</ButtonIcon>
       </div>
     </QuickLinks>
   </SectionWrap>
@@ -42,9 +41,17 @@ export default {
           title: 'Careers',
           href: '#',
         },
+      ],
+      secondaryLinks: [
+        {
+          title: 'Welcome from the Vice Chancellor',
+          href: '#',
+          icon: 'chevron-right',
+        },
         {
           title: 'Campus and Maps',
           href: '#',
+          icon: 'location',
         },
       ],
     };
