@@ -13,7 +13,7 @@ export default {
 </script>
 ```
 
-The default README configuration is as follows:
+The default `readme` configuration is as follows:
 
 ```js
 {
@@ -35,7 +35,7 @@ It may also make sense to disable the HTML source with `source: false` in some r
 
 ## Custom documentation
 
-If a component requires custom documentation, place the documentation in a markdown file, import the file, and use the `custom` option:
+If a component requires custom documentation, place the documentation in a markdown file, import the file, and pass it to the `custom` option:
 
 ```html
 <script>
@@ -47,7 +47,7 @@ export default {
 </script>
 ```
 
-The content of the markdown file will appear at the start of the story's REAMDE. If you want the README to not show anything else, simply disable the `source` option:
+The content of the markdown file will appear at the start of the story's README. If don't want the README to show anything else, disable the `source` option:
 
 ```js
 export default {
