@@ -3,10 +3,12 @@ import { createStory } from '.storybook/utils';
 
 import PageNavDefault from './PageNavDefault.vue';
 import PageNavNested from './PageNavNested.vue';
+import PageNavAlt from './PageNavAlt.vue';
 
 import PageSearchDefault from './PageSearchDefault.vue';
 
 storiesOf('Page / Header tools', module)
   .add('Default', createStory(PageNavDefault))
   .add('Search only', createStory(PageSearchDefault))
-  .add('Nested site nav', createStory(PageNavNested));
+  .add('Nested site nav', createStory(PageNavNested))
+  .add('Site nav, alt buttons', createStory(PageNavAlt));
