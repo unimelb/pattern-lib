@@ -101,7 +101,7 @@ const Fraccordion = function ({
 		panel.style.height = panelHeight + 'px';
 		setTimeout(() => {
 			panel.style.transition = 'none';
-			panel.style.height = 'auto'
+			panel.style.height = 'auto';
 			//	recalc style and layout
 			panel.getBoundingClientRect();
 			panel.style.transition = '';
@@ -115,7 +115,15 @@ const Fraccordion = function ({
 		//	recalc style and layout
 		panel.getBoundingClientRect();
 		//	reset height
-		panel.style.height = 0;
+		panel.style.height = '0';
+		setTimeout(() => {
+			console.log(panel.style.height);
+			panel.style.transition = 'none';
+			panel.style.height = '0';
+			//	recalc style and layout
+			panel.getBoundingClientRect();
+			panel.style.transition = '';
+		}, transitionLength);
 	}
 
 

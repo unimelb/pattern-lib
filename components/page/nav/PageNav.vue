@@ -19,12 +19,12 @@ import Nav from './nav';
 export default {
   name: 'page-nav',
   props: {
+    root: {
+      type: String,
+    },
     title: {
       type: String,
       default: 'Site Navigation',
-    },
-    root: {
-      type: String,
     },
   },
   mounted() {

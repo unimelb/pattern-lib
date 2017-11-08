@@ -30,6 +30,9 @@ import ModalDialog from '../ModalDialog.vue';
 
 export default {
   components: { ModalDialog },
-  readme: { html: true },
+  readme: {
+    html: true,
+    source: false,
+  },
 };
 </script>

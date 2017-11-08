@@ -188,6 +188,74 @@
   }
 }
 
+/* Overrides for accordion */
+.sitenav .fr-accordion--is-ready.accordion {
+  .fr-accordion__header {
+    border-bottom: 0;
+
+    h2 {
+      padding-left: .75rem;
+      font-family: var(--ff-normal);
+      font-size: 1rem;
+      font-weight: var(--fw-semibold);
+    }
+
+    &[aria-selected='true'],
+    &[aria-selected='false']:focus,
+    &[aria-selected='false']:hover {
+      background-color: var(--col-bg-secondary);
+    }
+  }
+
+  .fr-accordion__panel {
+    background-color: var(--col-bg-secondary);
+
+    &__inner {
+      padding: 0;
+    }
+  }
+
+  .sitenav__list {
+    a {
+      padding-left: 3.25rem;
+    }
+
+    h2 {
+      padding-left: 2rem;
+    }
+
+    .sitenav__list {
+      a {
+        padding-left: 4.5rem;
+      }
+
+      h2 {
+        padding-left: 3.25rem;
+      }
+
+      .sitenav__list {
+        a {
+          padding-left: 5.75rem;
+        }
+
+        h2 {
+          padding-left: 4.5rem;
+        }
+
+        .sitenav__list {
+          a {
+            padding-left: 7rem;
+          }
+
+          h2 {
+            padding-left: 5.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @keyframes chevron-left {
   0% { transform: translateX(0); }
   50% { transform: translateX(-5px); }
