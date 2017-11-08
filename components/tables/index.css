@@ -11,78 +11,76 @@
     text-decoration: underline;
   }
 
-  &--striped {
-    tr:nth-child(even) {
-      background-color: var(--col-bg-grey);
-    }
-  }
-
-  thead th {
-    padding: 1em;
-    font-weight: 600;
+  td,
+  th {
+    padding: calc(var(--vr) / 1.5);
     text-align: left;
   }
 
   td {
-    padding: 1em;
-
-    /* responsive text on super long links */
-    overflow: hidden;
     border-right: 1px solid var(--col-grey-mid);
     border-bottom: 1px solid var(--col-grey-mid);
-    font-weight: 500;
-    text-align: left;
-    text-overflow: ellipsis;
-    vertical-align: top;
-
-    &:first-child {
-      border-right: 0;
-    }
-
-    p {
-      line-height: 1em;
-    }
   }
 
-  td,
-  th {
-    &.center {
+  &--tight td,
+  &--tight th {
+    padding: .8em;
+  }
+
+  &--loose td,
+  &--loose th {
+    padding: var(--vr);
+  }
+
+  &--centered {
+    td, th {
       text-align: center;
     }
+
+    tr td:nth-child(1),
+    tr th:nth-child(1) {
+      text-align: left;
+    }
   }
 
-  &--compact td { padding: .9em; }
-  &--padded td { padding: 2.3rem 1.6rem; }
-
-  th[colspan='3'] {
-    padding: var(--vr);
-    text-align: left;
-  }
-
-  tr {
-    &.highlight {
-      background-color: var(--col-grey-light);
-
-      td {
-        color: var(--col-brand);
-        font-weight: var(--fw-semibold);
-      }
+  &--striped {
+    tr:nth-child(even) {
+      background-color: var(--col-bg-grey);
     }
 
-    &.subheader {
+    tr.table-row--white {
+      background-color: white;
+    }
+
+    tr.table-row--info {
       background-color: var(--col-blue-light);
     }
 
-    &.blank {
-      background-color: #fff;
+    tr.table-row--inverted {
+      background-color: var(--col-brand);
+    }
+  }
+
+  &--hover {
+    tbody tr:hover {
+      background-color: var(--col-grey-mid);
+    }
+  }
+
+  &-row {
+    &--inverted {
+      background-color: var(--col-brand);
+      color: white;
     }
 
-    &.header {
-      background-color: var(--col-brand);
+    &--white {
+      background-color: white;
+      color: var(--col-brand);
+    }
 
-      th {
-        color: #fff;
-      }
+    &--info {
+      background-color: var(--col-blue-light);
+      color: var(--col-brand);
     }
   }
 }

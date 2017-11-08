@@ -1,42 +1,42 @@
 <template>
-  <table class="table table--striped" id="statstable">
+  <table class="table table--striped table--loose" id="statstable">
       <thead>
-        <tr class="header">
+        <tr class="table-row--inverted">
           <th>
             Independently published global and program rankings
           </th>
-          <th class="center">
+          <th>
             Australia ranking
           </th>
-          <th class="center">
+          <th>
             World ranking
-          </th>
-        </tr>
-        <tr class="blank">
-          <th>
-            <a>Times Higher Education World University Rankings 2016&nbsp;– 2017</a>
-          </th>
-          <th class="center">
-            1
-          </th>
-          <th class="center">
-            33
-          </th>
-        </tr>
-        <tr class="blank">
-          <th>
-            <a>Academic Ranking of World Universities</a>
-          </th>
-          <th class="center">
-            1
-          </th>
-          <th class="center">
-            40
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr class="subheader">
+        <tr class="table-row--white">
+          <th>
+            <a>Times Higher Education World University Rankings 2016&nbsp;– 2017</a>
+          </th>
+          <th>
+            1
+          </th>
+          <th>
+            33
+          </th>
+        </tr>
+        <tr class="table-row--white">
+          <th>
+            <a>Academic Ranking of World Universities</a>
+          </th>
+          <th>
+            1
+          </th>
+          <th>
+            40
+          </th>
+        </tr>
+        <tr class="table-row--info">
           <th colspan="3">
             <a>QS World University Rankings</a>
           </th>
@@ -45,10 +45,10 @@
           <td>
             Academic reputation
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             17
           </td>
         </tr>
@@ -56,14 +56,14 @@
           <td>
             Employer reputation
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             11
           </td>
         </tr>
-        <tr class="subheader">
+        <tr class="table-row--info">
           <th colspan="3">
             <a>QS World University Rankings (by subject)</a>
           </th>
@@ -72,10 +72,10 @@
           <td>
             Linguistics
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             24
           </td>
         </tr>
@@ -83,10 +83,10 @@
           <td>
             Performing Arts
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             26
           </td>
         </tr>
@@ -94,10 +94,10 @@
           <td>
             Computer Science and Information Systems
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             14
           </td>
         </tr>
@@ -105,10 +105,10 @@
           <td>
             Electrical Engineering
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             35
           </td>
         </tr>
@@ -116,10 +116,10 @@
           <td>
             Mechanical Engineering
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             44
           </td>
         </tr>
@@ -127,10 +127,10 @@
           <td>
             Biological Sciences
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             23
           </td>
         </tr>
@@ -138,10 +138,10 @@
           <td>
             Dentistry
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             28
           </td>
         </tr>
@@ -149,10 +149,10 @@
           <td>
             Chemistry
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             45
           </td>
         </tr>
@@ -160,10 +160,10 @@
           <td>
             Physics
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             48
           </td>
         </tr>
@@ -171,10 +171,10 @@
           <td>
             Business and Management Studies
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             22
           </td>
         </tr>
@@ -182,10 +182,10 @@
           <td>
             Education
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             5
           </td>
         </tr>
@@ -193,10 +193,10 @@
           <td>
             Law
           </td>
-          <td class="center">
+          <td>
             1
           </td>
-          <td class="center">
+          <td>
             11
           </td>
         </tr>
@@ -204,10 +204,10 @@
           <td>
             Economics and Econometrics
           </td>
-          <td class="center">
+          <td >
             1
           </td>
-          <td class="center">
+          <td >
             25
           </td>
         </tr>
@@ -215,10 +215,10 @@
           <td>
             Statistics and Operational Research
           </td>
-          <td class="center">
+          <td >
             1
           </td>
-          <td class="center">
+          <td >
             30
           </td>
         </tr>
@@ -226,10 +226,10 @@
           <td>
             Times Higher Education World Reputation Rankings 2016
           </td>
-          <td class="center">
+          <td >
             1
           </td>
-          <td class="center">
+          <td >
             49
           </td>
         </tr>
@@ -237,10 +237,10 @@
           <td>
             US News Best Global Universities
           </td>
-          <td class="center">
+          <td >
             1
           </td>
-          <td class="center">
+          <td >
             36
           </td>
         </tr>
