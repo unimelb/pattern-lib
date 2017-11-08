@@ -163,16 +163,16 @@
 
   &--alt {
     .sitenav__back-btn {
-      width: auto;
-      padding: 0 .5rem .5rem;
       display: block;
+      width: auto;
+      margin: .375rem;
+      padding: 0 .5rem .5rem;
+      float: right;
       border-radius: 3px;
       background-color: rgba(255, 255, 255, .1);
       color: white;
-      text-align: center;
       line-height: 1;
-      float: right;
-      margin: .375rem;
+      text-align: center;
 
       &::before {
         content: '\00D7';
@@ -201,9 +201,9 @@
 
     .home > a,
     .sitenav__nested-parent {
-      background-color: var(--col-bg-tertiary);
-      border-top: 0;
       padding-top: 1.75rem;
+      border-top: 0;
+      background-color: var(--col-bg-tertiary);
 
       &:hover {
         background-color: var(--col-bg-tertiary);
