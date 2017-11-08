@@ -14,6 +14,9 @@ export default class Nav {
         if (!this.menuTrigger.getAttribute('data-bound')) {
           this.menuTrigger.addEventListener('click', this.activateMenu.bind(this));
           this.menuTarget = document.getElementById('sitemap');
+          if (this.menuTrigger.parentNode.classList.contains('sitenav--alt')) {
+            this.menuTarget.classList.add('sitenav--alt');
+          }
           this.menu = new SiteNav(this.menuTarget, {
             root: document.body,
             closeSiteNav: this.dismissMenu.bind(this),
