@@ -1,13 +1,13 @@
 <template>
   <div class="content-block">
-    <TableStats />
+    <TableCentered />
   </div>
 </template>
 
 <script>
-import TableStats from './TableStats.vue';
+import TableCentered from './TableCentered.vue';
 
 export default {
-  components: { TableStats },
+  components: { TableCentered },
 };
 </script>
