@@ -30,6 +30,20 @@
 
     &--nested {
       position: absolute;
+
+      .sitenav__back-btn {
+        &::before {
+          content: '\2039';
+          font-size: 1.667rem;
+        }
+
+        &:hover,
+        &:focus {
+          &::before {
+            animation: chevron-left 1s infinite ease-in-out;
+          }
+        }
+      }
     }
 
     /* hide sidebar of parent panels */
@@ -43,34 +57,25 @@
     }
   }
 
-  /* close and back buttons */
-  /* HACK increase specificity to override `.button-ui`, which was part of the Buttons component until v6.0 */
-  &__back-btn.sitenav__back-btn {
+  &__back-btn {
     display: block;
     width: 100%;
     padding: 1.25rem;
     background-color: var(--col-bg-tertiary);
-    color: var(--col-brand-mid1);
-    font-size: .75rem;
-    font-weight: normal;
+    color: white;
+    font-weight: var(--fw-semibold);
     line-height: 1.96;
     text-align: left;
+    text-decoration: none;
     text-transform: uppercase;
 
     &::before {
-      content: '\2039';
+      content: '\00d7';
       padding-right: .625rem;
       float: left;
-      font-size: 1.25rem;
-      font-weight: normal;
+      font-size: 1.75rem;
+      font-weight: var(--fw-semibold);
       line-height: 1;
-    }
-
-    &:hover,
-    &:focus {
-      &::before {
-        animation: chevron-left 1s infinite ease-in-out;
-      }
     }
 
     &:hover {
@@ -87,6 +92,13 @@
       font-size: 1.5rem;
       font-weight: normal;
       line-height: .85;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        animation: chevron-right 1s infinite ease-in-out;
+      }
     }
   }
 
@@ -179,4 +191,9 @@
 @keyframes chevron-left {
   0% { transform: translateX(0); }
   50% { transform: translateX(-5px); }
+}
+
+@keyframes chevron-right {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
 }
