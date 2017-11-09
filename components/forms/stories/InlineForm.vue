@@ -1,6 +1,6 @@
 <template>
   <form class="form form--inline">
-    <label>Search</label>
+    <label>Please label the field appropriately</label>
     <div class="form--inline__row">
       <span class="form--inline__input">
         <input type="search" placeholder="Don't use the placeholder as a label!">
