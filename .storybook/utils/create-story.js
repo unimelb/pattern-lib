@@ -30,7 +30,7 @@ export default function createStory(Story) {
  * @param {Object} opts
  * @return {String}
  */
-export function generateReadme(Story, opts) {
+function generateReadme(Story, opts) {
   const readmeArr = [];
 
   // Start with custom documentation, if provided
@@ -48,13 +48,20 @@ export function generateReadme(Story, opts) {
     // Retrieve full HTML source from mounted story and strip comments left by Vue's `v-if` directive
     const source = stripHtmlComments(vm.$el.outerHTML || '');
 
-    // Append minified, full and decorated source in turn
-    if (opts.minified) readmeArr.push('#### Minified source', codeBlock(source.replace(/\n/g, '')));
-    if (opts.source) readmeArr.push('#### Source', codeBlock(pretty(source)));
+    if (opts.minified) {
+      // Append minified source
+      readmeArr.push('#### Minified source', codeBlock(source.replace(/\n/g, '')));
+    }
 
     if (opts.decorated) {
+      // Append decorated source
       const decoratedSource = mount(storyDecorator(() => Story)).$el.outerHTML;
       readmeArr.push('#### Decorated source', codeBlock(pretty(decoratedSource)));
+    }
+
+    if (opts.source) {
+      // Append full source
+      readmeArr.push('#### Source', codeBlock(pretty(source)));
     }
   }
 
