@@ -117,7 +117,8 @@
     ],
     "moduleNameMapper": {
       "^\\.storybook/(.*)$": "<rootDir>/.storybook/$1",
-      "^icons/(.*)$": "<rootDir>/components/icons/$1"
+      "^icons/(.*)$": "<rootDir>/components/icons/$1",
+      "^vue$": "vue/dist/vue.js"
     },
     "snapshotSerializers": [
       "<rootDir>/node_modules/jest-serializer-vue"
