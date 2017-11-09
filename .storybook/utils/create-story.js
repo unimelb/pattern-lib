@@ -31,7 +31,7 @@ export default function createStory(Story) {
  * @param {Object} opts
  * @return {String}
  */
-function generateReadme(Story, opts) {
+export function generateReadme(Story, opts) {
   const readmeArr = [];
 
   // Start with custom documentation, if provided
@@ -67,7 +67,7 @@ function generateReadme(Story, opts) {
  * @param {Object} Component
  * @return {Vue}
  */
-function mount(Component) {
+export function mount(Component) {
   // Create component instance without mounting it
   const vm = new Vue({ render: createElement => createElement(Component) });
 
@@ -80,7 +80,7 @@ function mount(Component) {
  * @param {Vue} vm
  * @return {String}
  */
-function reverseEngineerTemplate(vm) {
+export function reverseEngineerTemplate(vm) {
   // Get root vnode (ignore wrapper)
   const root = vm.$children[0]._vnode;
 
@@ -96,7 +96,7 @@ function reverseEngineerTemplate(vm) {
  * @param {Object} vnode
  * @return {Node}
  */
-function vnodeToElement(vnode) {
+export function vnodeToElement(vnode) {
   // A) Text node
   if (vnode.text) return document.createTextNode(vnode.text);
 
@@ -129,6 +129,6 @@ function vnodeToElement(vnode) {
  * @param {String} markup
  * @return {String}
  */
-function cleanUpBooleanAttrs(markup) {
+export function cleanUpBooleanAttrs(markup) {
   return markup.replace(/=""/g, '');
 }
