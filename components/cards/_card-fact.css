@@ -26,16 +26,18 @@
       margin: var(--vr) auto;
     }
 
-    .list-item--desk-1of1 & {
-      display: flex;
-      flex-direction: row;
+    @media (--bp-x-tablet) {
+      .list-item--desk-1of1 & {
+        display: flex;
+        flex-direction: row;
 
-      .card__thumb {
-        width: 40%;
-      }
+        .card__thumb {
+          width: 40%;
+        }
 
-      .card__inner {
-        width: 60%;
+        .card__inner {
+          width: 60%;
+        }
       }
     }
   }

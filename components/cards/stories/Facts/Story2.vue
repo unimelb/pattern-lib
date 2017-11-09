@@ -21,19 +21,19 @@
 </template>
 
 <script>
-import accomodationIcon from './accomodation.svg';
-import buildingIcon from './building.svg';
-import bioDiversityIcon from './biodiversity.svg';
-import carbonIcon from './carbon-reduction-pathways.svg';
-import citationIcon from './citation.svg';
-import facilityIcon from './facility-funding.svg';
-import grantsIcon from './grants.svg';
-import groupIcon from './group.svg';
-import internationalIcon from './international-students.svg';
-import medalIcon from './medal.svg';
-import phdIcon from './PhD-completions.svg';
-import socialMediaIcon from './social-media.svg';
-import solarPowerIcon from './solar-power.svg';
+import accomodationIcon from './../../../shared/accomodation.svg';
+import buildingIcon from './../../../shared/building.svg';
+import bioDiversityIcon from './../../../shared/biodiversity.svg';
+import carbonIcon from './../../../shared/carbon-reduction-pathways.svg';
+import citationIcon from './../../../shared/citation.svg';
+import facilityIcon from './../../../shared/facility-funding.svg';
+import grantsIcon from './../../../shared/grants.svg';
+import groupIcon from './../../../shared/group.svg';
+import internationalIcon from './../../../shared/international-students.svg';
+import medalIcon from './../../../shared/medal.svg';
+import phdIcon from './../../../shared/PhD-completions.svg';
+import socialMediaIcon from './../../../shared/social-media.svg';
+import solarPowerIcon from './../../../shared/solar-power.svg';
 import CardFact from './../../CardFacts.vue';
 
 export default {
