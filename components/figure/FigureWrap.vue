@@ -1,7 +1,7 @@
 <template>
   <figure :class="classes">
     <slot></slot>
-    <figcaption v-if="caption.length > 0">{{ caption }}</figcaption>
+    <figcaption v-if="caption">{{ caption }}</figcaption>
   </figure>
 </template>
 
@@ -10,7 +10,7 @@
 export default {
   props: {
     caption: {
-      type: String,
+      type: [Boolean, String],
       default: 'test caption',
     },
     inset: {
