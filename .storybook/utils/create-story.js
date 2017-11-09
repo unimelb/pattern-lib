@@ -69,7 +69,7 @@ export function generateReadme(Story, opts) {
  */
 export function mount(Component) {
   // Create component instance without mounting it
-  const vm = new Vue({ render: createElement => createElement(Component) });
+  const vm = new Vue(Component);
 
   // Render the instance outside of the DOM and return it
   return vm.$mount();
@@ -82,7 +82,7 @@ export function mount(Component) {
  */
 export function reverseEngineerTemplate(vm) {
   // Get root vnode (ignore wrapper)
-  const root = vm.$children[0]._vnode;
+  const root = vm._vnode;
 
   // Convert vnode to DOM element
   const elem = vnodeToElement(root);
@@ -96,7 +96,7 @@ export function reverseEngineerTemplate(vm) {
  * @param {Object} vnode
  * @return {Node}
  */
-export function vnodeToElement(vnode) {
+function vnodeToElement(vnode) {
   // A) Text node
   if (vnode.text) return document.createTextNode(vnode.text);
 
@@ -129,6 +129,6 @@ export function vnodeToElement(vnode) {
  * @param {String} markup
  * @return {String}
  */
-export function cleanUpBooleanAttrs(markup) {
+function cleanUpBooleanAttrs(markup) {
   return markup.replace(/=""/g, '');
 }
