@@ -1,9 +1,8 @@
 import Vue from 'vue';
 import pretty from 'pretty';
-import { paramCase } from 'change-case';
 import stripHtmlComments from 'strip-html-comments';
 import withReadme from 'storybook-readme/with-readme';
-import { codeBlock, storyDecorator } from '.storybook/utils';
+import { codeBlock, htmlTemplate, storyDecorator } from '.storybook/utils';
 
 const readmeDefaults = {
   custom: null,
@@ -31,7 +30,7 @@ export default function createStory(Story) {
  * @param {Object} opts
  * @return {String}
  */
-function generateReadme(Story, opts) {
+export function generateReadme(Story, opts) {
   const readmeArr = [];
 
   // Start with custom documentation, if provided
@@ -42,7 +41,7 @@ function generateReadme(Story, opts) {
 
   if (opts.html) {
     // Reverse-engineer and append HTML template
-    readmeArr.push('#### HTML template', codeBlock(pretty(reverseEngineerTemplate(vm))));
+    readmeArr.push('#### HTML template', codeBlock(htmlTemplate(vm)));
   }
 
   if (opts.source || opts.minified || opts.decorated) {
@@ -69,66 +68,8 @@ function generateReadme(Story, opts) {
  */
 function mount(Component) {
   // Create component instance without mounting it
-  const vm = new Vue({ render: createElement => createElement(Component) });
+  const vm = new Vue(Component);
 
   // Render the instance outside of the DOM and return it
   return vm.$mount();
-}
-
-/**
- * Reverse-engineer the Vue or HTML template of a Vue component instance.
- * @param {Vue} vm
- * @return {String}
- */
-function reverseEngineerTemplate(vm) {
-  // Get root vnode (ignore wrapper)
-  const root = vm.$children[0]._vnode;
-
-  // Convert vnode to DOM element
-  const elem = vnodeToElement(root);
-
-  // Return markup after cleaning it a little
-  return cleanUpBooleanAttrs(elem.outerHTML);
-}
-
-/**
- * Convert a Vnode to a DOM element (or text node).
- * @param {Object} vnode
- * @return {Node}
- */
-function vnodeToElement(vnode) {
-  // A) Text node
-  if (vnode.text) return document.createTextNode(vnode.text);
-
-  // B) Vue component or DOM element
-  const { componentOptions } = vnode;
-  const isDomNode = !componentOptions; // whether vnode represents a normal DOM element (like `div`) or a Vue component
-
-  // Find tag name and create element
-  const tag = isDomNode ? vnode.tag : paramCase(componentOptions.tag);
-  const elem = document.createElement(tag);
-
-  const props = componentOptions && componentOptions.propsData;
-  if (props) Object.keys(props).forEach((prop) => { elem.setAttribute(paramCase(prop), props[prop]); });
-
-  // Add `slot` attribute, classes, and remaining attributes
-  const { attrs, slot, staticClass } = vnode.data || {};
-  if (slot) elem.setAttribute('slot', slot);
-  if (staticClass) elem.className = staticClass;
-  if (attrs) Object.keys(attrs).forEach((attr) => { elem.setAttribute(attr, attrs[attr]); });
-
-  // Process and append children recursively
-  const children = (isDomNode ? vnode.children : componentOptions.children) || [];
-  children.forEach((child) => { elem.appendChild(vnodeToElement(child)); });
-
-  return elem;
-}
-
-/**
- * Clean up boolean attributes - e.g. `open=""` to `open`
- * @param {String} markup
- * @return {String}
- */
-function cleanUpBooleanAttrs(markup) {
-  return markup.replace(/=""/g, '');
 }

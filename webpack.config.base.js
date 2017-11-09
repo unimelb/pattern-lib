@@ -14,7 +14,6 @@ module.exports = {
   resolve: {
     alias: {
       '.storybook': path.resolve(__dirname, '.storybook/'),
-      docs: path.resolve(__dirname, 'docs/'),
       icons: path.resolve(__dirname, 'components/icons/'),
     },
   },
