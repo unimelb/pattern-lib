@@ -2,20 +2,20 @@
 <template>
   <SectionWrap>
     <div class="listing">
-      <ListItem cols="1of1"><CardFact title="Social media reach" :icon="SocialMediaIcon" /></ListItem>
+      <ListItem cols="1of1"><CardFact title="Social media reach" :icon="socialMediaIcon" /></ListItem>
     </div>
   </SectionWrap>
 </template>
 
 <script>
-import SocialMediaIcon from './social-media.svg';
+import socialMediaIcon from './../../../shared/social-media.svg';
 import CardFact from './../../CardFacts.vue';
 
 export default {
   components: { CardFact },
   data() {
     return {
-      SocialMediaIcon,
+      socialMediaIcon,
     };
   },
 };
