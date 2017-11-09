@@ -56,7 +56,7 @@
     }
 
     tr.table-row--highlight {
-      background-color: var(--col-blue-grey);
+      background-color: var(--col-bg-grey);
     }
 
     tr.table-row--info {
@@ -86,7 +86,7 @@
     }
 
     &--highlight {
-      background-color: var(--col-grey-mid);
+      background-color: var(--col-bg-grey);
     }
 
     &--info {
