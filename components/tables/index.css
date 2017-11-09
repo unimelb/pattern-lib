@@ -14,7 +14,9 @@
   td,
   th {
     padding: calc(var(--vr) / 1.5);
+    overflow: hidden;
     text-align: left;
+    text-overflow: ellipsis;
   }
 
   td {
@@ -33,7 +35,8 @@
   }
 
   &--centered {
-    td, th {
+    td,
+    th {
       text-align: center;
     }
 
