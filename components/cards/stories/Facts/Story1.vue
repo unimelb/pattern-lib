@@ -20,17 +20,9 @@
 </template>
 
 <script>
-import SampleImage1 from './building.svg';
-import SampleImage2 from './international-students.svg';
 import CardFact from './../../CardFacts.vue';
 
 export default {
   components: { CardFact },
-  data() {
-    return {
-      SampleImage1,
-      SampleImage2,
-    };
-  },
 };
 </script>
