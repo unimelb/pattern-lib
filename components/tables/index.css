@@ -55,6 +55,10 @@
       background-color: white;
     }
 
+    tr.table-row--highlight {
+      background-color: var(--col-blue-grey);
+    }
+
     tr.table-row--info {
       background-color: var(--col-blue-light);
     }
@@ -79,6 +83,10 @@
     &--white {
       background-color: white;
       color: var(--col-brand);
+    }
+
+    &--highlight {
+      background-color: var(--col-grey-mid);
     }
 
     &--info {
