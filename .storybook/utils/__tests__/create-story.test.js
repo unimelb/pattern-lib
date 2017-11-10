@@ -33,8 +33,8 @@ describe('createStory', () => {
     createStory({ template });
 
     const readme = withReadme.mock.calls[0][0];
-    expect(readme).toEqual(expect.stringContaining('Source'));
-    expect(readme).toEqual(expect.stringContaining(pretty(template)));
+    expect(readme).toContain('Source');
+    expect(readme).toContain(pretty(template));
   });
 
   test('should support generating an empty README', () => {
@@ -54,8 +54,8 @@ describe('createStory', () => {
     });
 
     const readme = withReadme.mock.calls[0][0];
-    expect(readme).toEqual(expect.stringContaining('custom'));
-    expect(readme).toEqual(expect.stringContaining('Source')); // check "Source" section is still there
+    expect(readme).toContain('custom');
+    expect(readme).toContain('Source'); // check "Source" section is still there
   });
 
   test('should support including the story\'s HTML template in the README', () => {
@@ -68,8 +68,8 @@ describe('createStory', () => {
     });
 
     const readme = withReadme.mock.calls[0][0];
-    expect(readme).toEqual(expect.stringContaining('HTML template'));
-    expect(readme).toEqual(expect.stringContaining('<html-template></html-template>'));
+    expect(readme).toContain('HTML template');
+    expect(readme).toContain('<html-template></html-template>');
   });
 
   test('should support including the story\'s minified source in the README', () => {
@@ -86,8 +86,8 @@ describe('createStory', () => {
     });
 
     const readme = withReadme.mock.calls[0][0];
-    expect(readme).toEqual(expect.stringContaining('Minified source'));
-    expect(readme).toEqual(expect.stringContaining('<div><p>Test</p></div>'));
+    expect(readme).toContain('Minified source');
+    expect(readme).toContain('<div><p>Test</p></div>');
   });
 
   test('should support including the story\'s decorated source in the README', () => {
@@ -100,11 +100,11 @@ describe('createStory', () => {
     });
 
     const readme = withReadme.mock.calls[0][0];
-    expect(readme).toEqual(expect.stringContaining('Decorated source'));
-    expect(readme).toEqual(expect.stringContaining(pretty(`
+    expect(readme).toContain('Decorated source');
+    expect(readme).toContain(pretty(`
       <div>
         <p>Test</p>
       </div>
-    `)));
+    `));
   });
 });
