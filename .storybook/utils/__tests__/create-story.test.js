@@ -4,7 +4,7 @@ import createStory from '../create-story';
 import withReadme from 'storybook-readme/with-readme';
 jest.mock('storybook-readme/with-readme');
 jest.mock('.storybook/utils', () => ({
-  codeBlock: (str) => str,
+  codeBlock: str => str,
   htmlTemplate: () => '<html-template></html-template>',
   storyDecorator: () => ({ template: '<div><p>Test</p></div>' }),
 }));
