@@ -6,6 +6,7 @@
     </CardFocusBox>
   </SectionWrap>
 </template>
+
 <script>
 import SectionWrap from '../../section/SectionWrap.vue';
 import CardFocusBox from '../../cards/CardFocusBox.vue';
