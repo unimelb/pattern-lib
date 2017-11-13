@@ -49,7 +49,7 @@
 
   /* Background colours */
   --col-bg: var(--col-brand);
-  --col-bg-grey: #eee;
+  --col-bg-grey: var(--col-grey-light);
   --col-bg-light-blue: color(var(--col-brand) tint(92%));
   --col-bg-white: #fff; /* just use #fff */
   --col-bg-secondary: rgb(3, 58, 123); /* only for bottom half of footer */

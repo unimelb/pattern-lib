@@ -1,12 +1,18 @@
 .section .form--inline,
 .form--inline {
   &__row {
-    display: table;
+    display: flex;
+    flex-direction: column;
     width: 100%;
 
     @media screen and (--bp-desktop) {
+      flex-direction: row;
       max-width: 44rem;
       margin: 0;
+
+      &--center {
+        margin: 1.5rem auto;
+      }
     }
   }
 
@@ -27,14 +33,15 @@
   }
 
   button&__button {
-    display: table-cell;
+    display: flex;
+    justify-content: center;
     min-width: 3rem;
     height: 3rem;
     margin-top: .375rem;
     margin-bottom: 1rem;
     margin-left: 0;
     padding: .667rem;
-    border-radius: 0 var(--br) var(--br) 0;
+    border-radius: 0 0 var(--br) var(--br);
     color: white;
     font-weight: var(--fw-semibold);
     line-height: 1;
@@ -43,10 +50,67 @@
       padding-right: 3rem;
       padding-left: 3rem;
     }
+
+    &--alt {
+      min-width: 9rem;
+      height: 4.333rem;
+      margin: 0;
+      border-color: var(--col-grey-mid);
+      background-color: var(--col-grey-mid);
+      color: var(--col-brand);
+      text-align: center;
+
+      &:hover {
+        border-color: var(--col-bg-secondary-grey);
+      }
+
+      &:active {
+        background-color: white;
+      }
+    }
+
+    @media screen and (--bp-desktop) {
+      border-radius: 0 var(--br) var(--br) 0;
+    }
   }
 
   &__svg {
-    max-width: 100%;
-    max-height: 100%;
+    width: 1rem;
+    height: 1rem;
+    margin: .125rem;
+  }
+
+  &__button-label {
+    margin-left: .75rem;
+    font-size: 1.25rem;
+  }
+
+  &__label {
+    color: var(--col-brand);
+  }
+
+  &__select {
+    display: block;
+    height: 4.333rem;
+    padding: .667rem 1.333rem;
+    border-radius: var(--br) var(--br) 0 0;
+    background: white;
+    line-height: 1.25;
+
+    select {
+      width: 100%;
+    }
+
+    @media screen and (--bp-desktop) {
+      min-width: 12rem;
+      border-radius: var(--br) 0 0 var(--br);
+    }
+  }
+
+  input[type='search']&__search {
+    margin: 0;
+    padding: 1rem .625rem;
+    border-radius: 0;
+    background: white;
   }
 }
