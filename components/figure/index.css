@@ -1,4 +1,6 @@
 .figure {
+  margin-right: auto;
+  margin-left: auto;
   padding: var(--vr);
 
   img,
@@ -78,9 +80,10 @@
           }
         }
       }
-
-      &-lge { width: 75%; }
-      &-sml { width: 35%; }
     }
   }
+
+  &--lge { width: 75%; }
+  &--med { width: 50%; }
+  &--sml { width: 35%; }
 }
