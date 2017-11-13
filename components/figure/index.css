@@ -80,6 +80,10 @@
           }
         }
       }
+
+      /* DEPRECATION WARNING - DEPRECATED IN v0.1 (REMOVE IN v0.2) */
+      &-lge { width: 75%; }
+      &-sml { width: 35%; }
     }
   }
 
