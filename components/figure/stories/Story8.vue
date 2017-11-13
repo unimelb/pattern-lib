@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section-wrap small short bg-color="white">
+    <section-wrap small nopad bg-color="white">
       <div>
         <h2>Heading</h2>
         <p>
@@ -15,7 +15,7 @@
         <p>At aperiam porro. Voluptas alias harum. Repellendus quaerat modi laudantium sed corrupti alias et quibusdam. At quas quia quos vel et sit eum officia.</p>
       </div>
     </section-wrap>
-      <section-wrap small short bg-color="white">
+      <section-wrap small nopad bg-color="white">
       <div>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.
@@ -29,7 +29,7 @@
         <p>At aperiam porro. Voluptas alias harum. Repellendus quaerat modi laudantium sed corrupti alias et quibusdam. At quas quia quos vel et sit eum officia.</p>
       </div>
     </section-wrap>
-      <section-wrap small short bg-color="white">
+      <section-wrap small nopad bg-color="white">
       <div>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.
