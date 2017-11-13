@@ -1,5 +1,7 @@
 .fr-accordion--is-ready {
   &.accordion {
+    margin-bottom: 1.5rem;
+    
     .fr-accordion__header {
       padding: 1rem 1.25rem;
       transition: background-color .15s ease-out, color .15s ease-out;

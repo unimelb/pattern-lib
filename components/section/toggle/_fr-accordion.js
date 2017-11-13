@@ -266,18 +266,21 @@ const Fraccordion = function ({
 	function init () {
 		if (accordionContainers.length) {
 			accordionContainers.forEach((accordionContainer) => {
-				_addA11y(accordionContainer);
-				_bindAccordionEvents(accordionContainer);
-				_hideAllPanels(accordionContainer);
-				// set all first accordion panels active on init if required (default behaviour)
-				// otherwise make sure first accordion header for each is focusable
-				if (firstPanelsOpenByDefault) {
-					_togglePanel(accordionContainer.querySelector(headerSelector));
-				} else {
-					accordionContainer.querySelector(headerSelector).setAttribute('tabindex', 0);
+				if (!accordionContainer.hasAttribute('data-bound')) {
+					_addA11y(accordionContainer);
+					_bindAccordionEvents(accordionContainer);
+					_hideAllPanels(accordionContainer);
+					// set all first accordion panels active on init if required (default behaviour)
+					// otherwise make sure first accordion header for each is focusable
+					if (firstPanelsOpenByDefault) {
+						_togglePanel(accordionContainer.querySelector(headerSelector));
+					} else {
+						accordionContainer.querySelector(headerSelector).setAttribute('tabindex', 0);
+					}
+					// set ready style hook
+					accordionContainer.classList.add(readyClass);
+					accordionContainer.setAttribute('data-bound', true);
 				}
-				// set ready style hook
-				accordionContainer.classList.add(readyClass);
 			});
 		}
 	}
