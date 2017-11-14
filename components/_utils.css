@@ -306,77 +306,48 @@
  * Grid
  */
 .grid {
-  margin-right: -.5rem;
-  margin-left: -.5rem;
+  display: flex;
+  flex-direction: column;  
 
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  &--flex {
-    display: flex;
+  @media (--bp-tablet) {
+    flex-direction: row;
+    flex-flow: row wrap;
   }
 }
 
-/**
- * Grid cells
- */
 .cell {
   width: 100%;
-  padding-right: .5rem;
-  padding-left: .5rem;
-  float: left;
-
-  &--mob {
-    &-1of2 { width: 50%; }
-    &-1of3 { width: 33.33%; }
-    &-1of4 { width: 25%; }
-    &-2of3 { width: 66.66%; }
-    &-3of4 { width: 75%; }
-  }
-
-  @media (--bp-max-mobile) {
-    &--mob-clear { clear: left; }
-  }
 
   @media (--bp-tablet) {
     &--tab {
-      &-1of2 { width: 50%; }
-      &-1of3 { width: 33.33%; }
-      &-1of4 { width: 25%; }
-      &-2of3 { width: 66.66%; }
-      &-3of4 { width: 75%; }
+      &-1of1 { width: 100%; }
+      &-1of2 { width: calc(100% / 2); }
+      &-1of3 { width: calc(100% / 3); }
+      &-2of3 { width: calc((100% / 3) * 2); }
+      &-1of4 { width: calc(100% / 4); }
+      &-3of4 { width: calc((100% / 4) * 3); }
     }
-  }
-
-  @media (--bp-only-tablet) {
-    &--tab-clear { clear: left; }
   }
 
   @media (--bp-desktop) {
     &--desk {
-      &-1of2 { width: 50%; }
-      &-1of3 { width: 33.33%; }
-      &-1of4 { width: 25%; }
-      &-2of3 { width: 66.66%; }
-      &-3of4 { width: 75%; }
+      &-1of1 { width: 100%; }
+      &-1of2 { width: calc(100% / 2); }
+      &-1of3 { width: calc(100% / 3); }
+      &-2of3 { width: calc((100% / 3) * 2); }
+      &-1of4 { width: calc(100% / 4); }
+      &-3of4 { width: calc((100% / 4) * 3); }
     }
-  }
-
-  @media (--bp-only-desktop) {
-    &--desk-clear { clear: left; }
   }
 
   @media (--bp-wide) {
     &--wide {
-      &-1of2 { width: 50%; }
-      &-1of3 { width: 33.33%; }
-      &-1of4 { width: 25%; }
-      &-2of3 { width: 66.66%; }
-      &-3of4 { width: 75%; }
-      &-clear { clear: left; }
+      &-1of1 { width: 100%; }
+      &-1of2 { width: calc(100% / 2); }
+      &-1of3 { width: calc(100% / 3); }
+      &-2of3 { width: calc((100% / 3) * 2); }
+      &-1of4 { width: calc(100% / 4); }
+      &-3of4 { width: calc((100% / 4) * 3); }
     }
   }
 }
