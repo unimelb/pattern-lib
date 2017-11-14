@@ -11,6 +11,7 @@ const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
 const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.version}/` : '';
 
 module.exports = {
+  devtool: isDev && 'source-map',
   resolve: {
     alias: {
       '.storybook': path.resolve(__dirname, '.storybook/'),
@@ -125,7 +126,5 @@ module.exports = {
       filename: '[name].css',
       disable: isDev,
     }),
-  ].concat(isDev ? [] : [
-    new webpack.optimize.UglifyJsPlugin(),
-  ]),
+  ],
 };
