@@ -4,6 +4,8 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+
 const sharedConfig = require('../webpack.config.shared.js');
 const pkg = require('../../package.json');
 
@@ -25,6 +27,31 @@ module.exports = merge(sharedConfig, {
       vue: 'vue/dist/vue.js',
     },
   },
+  module: {
+    rules: [
+      {
+        // Sprite icons (extract mode -- let Ike deal with injecting the extracted sprite)
+        test: /\.svg$/,
+        issuer: /sprite\/index\.js$/,
+        loader: 'svg-sprite-loader', // https://github.com/kisenka/svg-sprite-loader
+        options: {
+          extract: true,
+          symbolId: 'icon-[name]',
+        },
+      },
+    ],
+  },
+  plugins: [
+    new SpriteLoaderPlugin({
+      plainSprite: true,
+    }),
+  ].concat(isDev ? [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './targets/lib/index.html',
+      inject: true,
+    }),
+  ] : []),
   devServer: {
     publicPath: sharedConfig.output.publicPath,
     hot: true, // enable hot module replacement
@@ -37,11 +64,4 @@ module.exports = merge(sharedConfig, {
     disableHostCheck: true,
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
-  plugins: isDev ? [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './targets/lib/index.html',
-      inject: true,
-    }),
-  ] : [],
 });

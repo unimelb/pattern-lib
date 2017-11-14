@@ -1,19 +1,17 @@
 /*  eslint-disable no-new */
 import Vue from 'vue';
-import Ike from 'ike.js';
-import sprite from './icons/sprite.svg';
 
 import * as utils from './shared/utils';
 import { version } from '../package.json';
+
+// Auto-inject SVG icon sprite with `svg-sprite-loader`
+import './icons/sprite';
 
 import './side-panel';
 import './photo-gallery';
 
 // Expose JS utilities
 window.ui = { utils };
-
-// Inject SVG sprite
-new Ike(sprite, version);
 
 // Initialise page on DOM loaded
 document.addEventListener('DOMContentLoaded', () => {
