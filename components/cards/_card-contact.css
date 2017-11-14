@@ -20,8 +20,8 @@
   }
 
   &__lower {
-    background-color: white;
     padding: 1.5rem;
+    background-color: white;
 
     .cell {
       padding: 1.5rem;
