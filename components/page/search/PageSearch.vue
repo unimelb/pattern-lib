@@ -23,7 +23,7 @@
 
 <script>
 import Search from './search';
-import SvgIcon from './../../icons/SvgIcon.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
 
 export default {
   name: 'page-search',

@@ -14,6 +14,15 @@ module.exports = (storybookConfig, env) => {
     module: {
       rules: [
         {
+          // Sprite icons (auto-inject mode)
+          test: /\.svg$/,
+          issuer: /sprite\/index\.js$/,
+          loader: 'svg-sprite-loader', // https://github.com/kisenka/svg-sprite-loader
+          options: {
+            symbolId: 'icon-[name]',
+          },
+        },
+        {
           // Markdown loader
           test: /\.md$/,
           use: 'raw-loader',

@@ -1,6 +1,8 @@
 /*  eslint-disable no-new */
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
+import Ike from 'ike.js';
+import { version } from '../../package.json';
 
 import SectionToggle from '../../components/section/toggle';
 import CheckList from '../../components/check-list';
@@ -12,6 +14,11 @@ import AccordionGroup from '../../components/accordion';
 import PhotoGallery from '../../components/photo-gallery';
 
 import '../../components';
+
+// Inject SVG sprite
+const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
+const publicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${version}/` : '';
+new Ike(`${publicPath}sprite.svg`, version);
 
 // Load shared SVG assets
 require.context('../../components/shared', false, /\.svg$/);

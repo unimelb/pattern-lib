@@ -18,7 +18,7 @@ module.exports = merge.smart(sharedConfig, {
     rules: [
       {
         test: /\.(jpe?g|png|gif|svg|woff2?|ttf|otf|eot|ico)$/,
-        exclude: path.resolve(__dirname, '../../components/icons/'),
+        exclude: path.resolve(__dirname, '../../components/icons/sprite'),
         loader: 'file-loader',
         options: {
           emitFile: false, // don't emit static assets

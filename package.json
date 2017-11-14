@@ -35,7 +35,7 @@
     "change-case": "^3.0.1",
     "ike.js": "^0.0.2",
     "strip-html-comments": "^1.0.0",
-    "vue": "^2.5.2",
+    "vue": "2.5.2",
     "vue-progressive-image": "^2.2.1",
     "vue-scrollto": "^2.7.8",
     "vue-simple-photoswipe": "^1.0.3"
@@ -44,10 +44,10 @@
     "vue": "2.5.2"
   },
   "devDependencies": {
-    "@storybook/addon-notes": "^3.2.12",
-    "@storybook/addon-options": "^3.2.12",
-    "@storybook/addons": "^3.2.12",
-    "@storybook/vue": "^3.2.8",
+    "@storybook/addon-notes": "^3.2.15",
+    "@storybook/addon-options": "^3.2.15",
+    "@storybook/addons": "^3.2.15",
+    "@storybook/vue": "^3.2.15",
     "babel-core": "^6.24.1",
     "babel-eslint": "^8.0.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
@@ -93,6 +93,7 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint-order": "^0.7.0",
     "svg-fill-loader": "^0.0.8",
+    "svg-sprite-loader": "^3.4.1",
     "svg-url-loader": "^2.1.1",
     "svgo": "~0.7.2",
     "svgo-loader": "^1.2.1",
@@ -101,7 +102,7 @@
     "vue-loader": "^13.0.4",
     "vue-template-compiler": "2.5.2",
     "vue-test-utils": "^1.0.0-beta.4",
-    "webpack": "^2.5.1",
+    "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
