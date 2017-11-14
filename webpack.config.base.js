@@ -11,10 +11,11 @@ const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
 const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.version}/` : '';
 
 module.exports = {
+  devtool: isDev && 'source-map',
   resolve: {
     alias: {
       '.storybook': path.resolve(__dirname, '.storybook/'),
-      icons: path.resolve(__dirname, 'components/icons/'),
+      icons: path.resolve(__dirname, 'components/icons/sprite/'),
     },
   },
   module: {
@@ -64,7 +65,7 @@ module.exports = {
       {
         // Icons in CSS - e.g. url('~icons/chevron-right.svg?fill=#fff')
         test: /\.svg$/,
-        include: path.resolve(__dirname, 'components/icons/'),
+        include: path.resolve(__dirname, 'components/icons/sprite/'),
         issuer: /\.css$/,
         use: [
           {
@@ -79,33 +80,9 @@ module.exports = {
         ],
       },
       {
-        // Icon sprite
-        test: /sprite\.svg$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              publicPath: customPublicPath,
-            },
-          },
-        ].concat(isDev ? [] : [
-          {
-            loader: 'svgo-loader',
-            options: {
-              plugins: [
-                { removeDoctype: false },
-                { removeUselessDefs: false },
-                { cleanupIDs: false },
-              ],
-            },
-          },
-        ]),
-      },
-      {
         // Static assets
         test: /\.(jpe?g|png|gif|svg|woff2?|ttf|otf|eot|ico)$/,
-        exclude: path.resolve(__dirname, 'components/icons/'),
+        exclude: path.resolve(__dirname, 'components/icons/sprite/'),
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
@@ -125,7 +102,5 @@ module.exports = {
       filename: '[name].css',
       disable: isDev,
     }),
-  ].concat(isDev ? [] : [
-    new webpack.optimize.UglifyJsPlugin(),
-  ]),
+  ],
 };

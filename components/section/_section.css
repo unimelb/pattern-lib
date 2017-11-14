@@ -19,16 +19,22 @@
     &--sml {
       max-width: calc(var(--w-sml) + 2 * var(--vr));
     }
+
+    &--short {
+      min-height: 0 !important;
+      padding-top: var(--vr);
+      padding-bottom: var(--vr);
+    }
+
+    &--nopad {
+      min-height: 0 !important;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
   }
 
   &--centred {
     text-align: center;
-  }
-
-  &__inner--short {
-    min-height: initial;
-    padding-top: var(--vr);
-    padding-bottom: var(--vr);
   }
 
   &--image {

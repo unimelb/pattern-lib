@@ -50,5 +50,6 @@
 import FigureWrap from './../FigureWrap.vue';
 export default {
   components: { FigureWrap },
+  readme: { html: true },
 };
 </script>

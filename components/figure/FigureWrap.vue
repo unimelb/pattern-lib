@@ -20,6 +20,7 @@ export default {
     left: Boolean,
     right: Boolean,
     large: Boolean,
+    medium: Boolean,
     small: Boolean,
   },
   computed: {
@@ -29,8 +30,9 @@ export default {
         'figure--inset': this.inset,
         'figure--inset-left': this.left,
         'figure--inset-right': this.right,
-        'figure--inset-lge': this.large,
-        'figure--inset-sml': this.small,
+        'figure--lge': this.large,
+        'figure--med': this.medium,
+        'figure--sml': this.small,
       };
     },
   },
