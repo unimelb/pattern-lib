@@ -1,9 +1,9 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--three">
-      <ListItem><CardNews title="Test 1"/></ListItem>
-      <ListItem><CardNews title="Test 2"/></ListItem>
-      <ListItem><CardNews title="Test 3"/></ListItem>
+    <div class="listing grid">
+      <ListItem class="cell--desk-1of3"><CardNews title="Test 1"/></ListItem>
+      <ListItem class="cell--desk-1of3"><CardNews title="Test 2"/></ListItem>
+      <ListItem class="cell--desk-1of3"><CardNews title="Test 3"/></ListItem>
     </div>
   </SectionWrap>
 </template>

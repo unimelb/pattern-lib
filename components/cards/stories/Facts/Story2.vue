@@ -1,7 +1,7 @@
 
 <template>
   <SectionWrap>
-    <div class="listing">
+    <div class="listing grid">
       <ListItem cols="1of1"><CardFact title="Accomodation" :icon="accomodationIcon"/></ListItem>
       <ListItem cols="1of2"><CardFact title="Biodiversity" :icon="bioDiversityIcon"/></ListItem>
       <ListItem cols="1of2"><CardFact title="Building" :icon="buildingIcon"/></ListItem>

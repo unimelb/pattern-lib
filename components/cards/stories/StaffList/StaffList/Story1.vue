@@ -1,7 +1,7 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--four">
-      <ListItem>
+    <div class="listing grid">
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
@@ -10,7 +10,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr Johnathan Smithersonite"
           meta="Provost"
@@ -19,7 +19,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Vice Grand Chancellor Provost"
@@ -28,7 +28,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
@@ -37,7 +37,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
@@ -46,7 +46,7 @@
         />
         </CardStaffList>
       </ListItem>
-            <ListItem>
+            <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
@@ -55,7 +55,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
@@ -64,7 +64,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
@@ -73,7 +73,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"
@@ -82,7 +82,7 @@
         />
         </CardStaffList>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of4">
         <CardStaffList
           title="Mr John Smith"
           meta="Provost"

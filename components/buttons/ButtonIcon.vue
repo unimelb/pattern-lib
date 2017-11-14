@@ -2,7 +2,7 @@
   <component
     :is="element"
     :class="classes"
-    :href="isLink && href"
+    :href="href"
     :aria-disabled="isLink && disabled ? 'true': false"
     :tabindex="isLink && disabled ? '-1' : false"
     :disabled="!isLink && disabled"
@@ -24,6 +24,7 @@ export default {
   props: {
     href: {
       type: String,
+      default: '#',
     },
     icon: {
       type: String,

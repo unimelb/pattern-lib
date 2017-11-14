@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--three">
+    <div class="listing listing--three grid">
       <ListItem>
         <CardFocusImageList
           element="div"

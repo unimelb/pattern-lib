@@ -27,7 +27,7 @@
     }
 
     @media (--bp-x-tablet) {
-      .list-item--desk-1of1 & {
+      .cell--desk-1of1 & {
         display: flex;
         flex-direction: row;
 

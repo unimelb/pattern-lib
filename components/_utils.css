@@ -307,10 +307,9 @@
  */
 .grid {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 
   @media (--bp-tablet) {
-    flex-direction: row;
     flex-flow: row wrap;
   }
 }
