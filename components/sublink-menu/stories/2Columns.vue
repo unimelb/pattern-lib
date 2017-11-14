@@ -1,7 +1,7 @@
 <template>
   <SectionWrap bg-color="white">
     <ListingWrap cols="three" center>
-      <ListItem>
+      <ListItem class="cell--desk-1of2">
         <SublinkMenu title="A consistent strategy" icon="faculty" icon-color="blue">
           a consistent look and feel in our communications
           <SublinkMenuItem slot="menuitems" link="#">
@@ -18,7 +18,7 @@
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of2">
         <SublinkMenu title="A consistent tone" icon="library" icon-color="green">
           a consistent look and feel in our communications
           <SublinkMenuItem slot="menuitems" link="#">

@@ -1,27 +1,27 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--three">
-      <ListItem>
+    <div class="listing grid">
+      <ListItem class="cell--desk-1of3">
         <CardImage compact title="Growing esteem" >
           Find out about our strategic journey and where we're headed.
         </CardImage>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <CardImage compact title="Melbourne model" >
           Check out how our degrees are structured to give our students flexibility and focus.
         </CardImage>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <CardImage compact title="Our structure">
           this is a test of the content
         </CardImage>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <CardImage compact title="Governance">
           this is a test of the content
         </CardImage>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <CardImage compact title="Annual reports" >
           See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management.
         </CardImage>

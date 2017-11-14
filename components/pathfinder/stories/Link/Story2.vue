@@ -1,10 +1,10 @@
 <template>
   <SectionWrap>
-    <div class="listing listing--four listing--center">
-      <ListItem><card-link inverted title="Test 1"/></ListItem>
-      <ListItem><card-link inverted title="Test 2"/></ListItem>
-      <ListItem><card-link inverted title="This is a Longer title over two lines"/></ListItem>
-      <ListItem><card-link inverted title="Ranking and Statistics"/></ListItem>
+    <div class="listing grid listing--center">
+      <ListItem class="cell--desk-1of4"><card-link inverted title="Test 1"/></ListItem>
+      <ListItem class="cell--desk-1of4"><card-link inverted title="Test 2"/></ListItem>
+      <ListItem class="cell--desk-1of4"><card-link inverted title="This is a Longer title over two lines"/></ListItem>
+      <ListItem class="cell--desk-1of4"><card-link inverted title="Ranking and Statistics"/></ListItem>
     </div>
   </SectionWrap>
 </template>

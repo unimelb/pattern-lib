@@ -59,6 +59,7 @@
       background-color: var(--col-grey-mid);
       color: var(--col-brand);
       text-align: center;
+      vertical-align: middle;
 
       &:hover {
         border-color: var(--col-bg-secondary-grey);
