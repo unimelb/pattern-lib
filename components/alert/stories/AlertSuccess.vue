@@ -1,5 +1,8 @@
 <template>
-  <Alert level="success"><span class="text-bold">Alert !</span> Better check yourself before you wreck yourself</Alert>
+  <Alert level="success">
+    <strong>Alert!</strong>
+    &nbsp;Better check yourself before you wreck yourself
+</Alert>
 </template>
 
 <script>
