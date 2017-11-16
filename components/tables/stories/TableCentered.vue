@@ -1,7 +1,7 @@
 <template>
   <table class="table table--striped table--centered" id="statstable">
       <thead>
-        <tr class="table-row--inverted">
+        <tr class="table__row--inverted">
           <th>
             Independently published global and program rankings
           </th>
@@ -14,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table-row--white">
+        <tr class="table__row--white">
           <th>
             <a>Times Higher Education World University Rankings 2016&nbsp;– 2017</a>
           </th>
@@ -25,7 +25,7 @@
             33
           </th>
         </tr>
-        <tr class="table-row--white">
+        <tr class="table__row--white">
           <th>
             <a>Academic Ranking of World Universities</a>
           </th>
@@ -36,7 +36,7 @@
             40
           </th>
         </tr>
-        <tr class="table-row--info">
+        <tr class="table__row--info">
           <th colspan="3">
             <a>QS World University Rankings</a>
           </th>
@@ -63,10 +63,10 @@
             11
           </td>
         </tr>
-        <tr class="table-row--info">
-          <th colspan="3">
+        <tr class="table__row--info">
+          <td colspan="3">
             <a>QS World University Rankings (by subject)</a>
-          </th>
+          </td>
         </tr>
         <tr>
           <td>
@@ -222,7 +222,7 @@
             30
           </td>
         </tr>
-        <tr class="highlight">
+        <tr class="table__row--highlight">
           <td>
             Times Higher Education World Reputation Rankings 2016
           </td>
@@ -233,7 +233,7 @@
             49
           </td>
         </tr>
-        <tr class="highlight">
+        <tr class="table__row--highlight">
           <td>
             US News Best Global Universities
           </td>
