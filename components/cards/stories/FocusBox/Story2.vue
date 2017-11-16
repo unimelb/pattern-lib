@@ -1,7 +1,7 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--two">
-      <ListItem>
+    <div class="listing grid">
+      <ListItem class="cell--desk-1of2">
         <CardFocusBox
           element="div"
           class="card--image-focus--col-brand bg-white"
@@ -12,7 +12,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.
         </CardFocusBox>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of2">
         <CardFocusBox
           element="div"
           class="card--image-focus--col-brand bg-white"
@@ -23,7 +23,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ex quibusdam omnis, vitae reiciendis et, sunt voluptate, dolores autem explicabo hic rerum vero numquam sed eos eius officiis aut tempore.
         </CardFocusBox>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of2">
         <CardFocusBox
           element="div"
           class="card--image-focus--col-brand bg-white"
@@ -34,7 +34,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
         </CardFocusBox>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of2">
         <CardFocusBox
           element="div"
           class="card--image-focus--col-brand bg-white"

@@ -10,8 +10,8 @@
     >
       <a href='https://maps.unimelb.edu.au/parkville/building/152'>Raymond Priestley</a>
     </iframe>
-    <div class="contact-card__lower">
-      <div class="contact-card__col1_3" v-for="n in columns-0" :key="n" v-html="content[n-1]"></div>
+    <div class="contact-card__lower grid">
+      <div class="cell cell--desk-1of3" v-for="n in columns-0" :key="n" v-html="content[n-1]"></div>
     </div>
   </div>
 </template>

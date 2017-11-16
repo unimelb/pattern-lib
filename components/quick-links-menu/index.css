@@ -45,6 +45,7 @@
     }
 
     &-icon {
+      display: inline;
       margin-top: .25em;
       margin-right: calc(var(--vr) / 2);
     }

@@ -9,6 +9,6 @@ import PageSearch from '../../search/PageSearch.vue';
 
 export default {
   components: { PageSearch },
-  readme: { html: true },
+  readme: { html: true, source: false },
 };
 </script>

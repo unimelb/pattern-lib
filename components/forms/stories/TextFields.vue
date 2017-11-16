@@ -24,8 +24,8 @@
     <hr>
     <h4>Using grid to set width</h4>
 
-    <div class="grid grid--flex">
-      <div class="cell--mob-1of2">
+    <div class="grid">
+      <div class="cell cell--tab-1of2">
         <label>
           -1of2
           <div>
@@ -33,7 +33,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-1of2">
+      <div class="cell cell--tab-1of2">
         <label>-1of2</label>
         <div>
           <input type="text">
@@ -41,8 +41,8 @@
       </div>
     </div>
 
-    <div class="grid grid--flex">
-      <div class="cell--mob-1of3">
+    <div class="grid">
+      <div class="cell cell--tab-1of3">
         <label>
           -1of3
           <div>
@@ -50,7 +50,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-1of3">
+      <div class="cell cell--tab-1of3">
         <label>
           -1of3
           <div>
@@ -58,7 +58,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-1of3">
+      <div class="cell cell--tab-1of3">
         <label>
           -1of3
           <div>
@@ -68,8 +68,8 @@
       </div>
     </div>
 
-    <div class="grid grid--flex">
-      <div class="cell--mob-1of4">
+    <div class="grid">
+      <div class="cell cell--tab-1of4">
         <label>
           -1of4
           <div class="field">
@@ -77,7 +77,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-1of4">
+      <div class="cell cell--tab-1of4">
         <label>
           -1of4
           <div>
@@ -85,7 +85,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-1of4">
+      <div class="cell cell--tab-1of4">
         <label>
           -1of4
           <div>
@@ -93,7 +93,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-1of4">
+      <div class="cell cell--tab-1of4">
         <label>
           -1of4
           <div>
@@ -103,8 +103,8 @@
       </div>
     </div>
 
-    <div class="grid grid--flex">
-      <div class="cell--mob-2of3">
+    <div class="grid">
+      <div class="cell cell--tab-2of3">
         <label>
           -2of3
           <div>
@@ -112,7 +112,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-1of3">
+      <div class="cell cell--tab-1of3">
         <label>
           -1of3
           <div>
@@ -122,8 +122,8 @@
       </div>
     </div>
 
-    <div class="grid grid--flex">
-      <div class="cell--mob-1of4">
+    <div class="grid">
+      <div class="cell cell--tab-1of4">
         <label>
           -1of4
           <div>
@@ -131,7 +131,7 @@
           </div>
         </label>
       </div>
-      <div class="cell--mob-3of4">
+      <div class="cell cell--tab-3of4">
         <label>
           -3of4
           <div>

@@ -1,14 +1,14 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--three">
-      <ListItem><CardNews title="Test 1"/></ListItem>
-      <ListItem><CardNews title="Test 2"/></ListItem>
-      <ListItem><CardNews title="Test 3"/></ListItem>
+    <div class="listing listing--three grid">
+      <ListItem class="cell--desk-1of3"><CardNews title="Test 1"/></ListItem>
+      <ListItem class="cell--desk-1of3"><CardNews title="Test 2"/></ListItem>
+      <ListItem class="cell--desk-1of3"><CardNews title="Test 3"/></ListItem>
     </div>
-    <div style="margin-top: 1.5rem;" class="listing listing--three">
-      <ListItem><ButtonIcon>Read More</ButtonIcon></ListItem>
-      <ListItem><ButtonIcon icon="microphone">Podcast</ButtonIcon></ListItem>
-      <ListItem><ButtonIcon icon="twitter">Twitter</ButtonIcon></ListItem>
+    <div style="margin-top: 1.5rem;" class="listing listing--three grid">
+      <ListItem class="cell--desk-1of3"><ButtonIcon class="btn--fullwidth">Read More</ButtonIcon></ListItem>
+      <ListItem class="cell--desk-1of3"><ButtonIcon class="btn--fullwidth" icon="microphone">Podcast</ButtonIcon></ListItem>
+      <ListItem class="cell--desk-1of3"><ButtonIcon class="btn--fullwidth" icon="twitter">Twitter</ButtonIcon></ListItem>
     </div>
   </SectionWrap>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-white">
-    <div class="listing listing--one">
+    <div class="listing listing--one grid">
       <ListItem>
         <CardDivisionHead
           thumb="https://randomuser.me/api/portraits/lego/0.jpg"

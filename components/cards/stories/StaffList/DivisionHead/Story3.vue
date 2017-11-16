@@ -1,7 +1,7 @@
 <template>
   <SectionWrap>
-    <div class="listing listing--three">
-      <ListItem>
+    <div class="listing grid">
+      <ListItem class="cell--desk-1of3">
         <card-division-head
           compact
           thumb="https://randomuser.me/api/portraits/lego/0.jpg"
@@ -9,7 +9,7 @@
           title="Vice Principal Enterprise"
         />
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <card-division-head
           compact
           thumb="https://randomuser.me/api/portraits/lego/1.jpg"
@@ -17,7 +17,7 @@
           title="Vice Principal Enterprise"
         />
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <card-division-head
           compact
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"

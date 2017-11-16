@@ -1,7 +1,7 @@
 <template>
   <SectionWrap>
-    <div class="listing listing--three">
-      <ListItem>
+    <div class="listing grid">
+      <ListItem class="cell--desk-1of3">
         <CardDivisionHead
           thumb="https://randomuser.me/api/portraits/lego/0.jpg"
           name="John Smith"
@@ -10,7 +10,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tenetur iste dolores, architecto mollitia, aut consectetur odio itaque neque et omnis eos cumque id asperiores voluptate. Qui aut aperiam adipisci.</p>
       </CardDivisionHead>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <CardDivisionHead
           thumb="https://randomuser.me/api/portraits/lego/1.jpg"
           name="Jane Citizen"
@@ -19,7 +19,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tenetur iste dolores, architecto mollitia, aut consectetur odio itaque neque et omnis eos cumque id asperiores voluptate. Qui aut aperiam adipisci.</p>
         </CardDivisionHead>
       </ListItem>
-      <ListItem>
+      <ListItem class="cell--desk-1of3">
         <CardDivisionHead
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           name="John Smith"

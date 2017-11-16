@@ -20,27 +20,16 @@
   }
 
   &__lower {
-    display: table;
-    width: 100%;
+    padding: 1.5rem;
     background-color: white;
-  }
 
-  &__col1_3 {
-    margin-bottom: 0;
-    padding: 3rem 1.5rem;
-    border-top: 1px solid var(--col-grey-light);
-    vertical-align: top;
+    .cell {
+      padding: 1.5rem;
+      border-top: 1px solid var(--col-grey-light);
 
-    @media (--bp-x-tablet) {
-      display: inline-block;
-      width: 50%;
-      padding: 3rem;
-      border-top: 0;
-    }
-
-    @media (--bp-wide) {
-      display: table-cell;
-      width: 33.333%;
+      @media (--bp-desktop) {
+        border-top: 0;
+      }
     }
   }
 

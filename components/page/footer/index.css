@@ -80,6 +80,7 @@
   /* contact info */
   &__contact {
     margin: 0;
+    float: left;
 
     & > dt {
       font-weight: normal;
@@ -179,8 +180,13 @@
       flex-wrap: wrap;
 
       &__users,
-      &__ack {
+      &__popular {
         flex: 1 1 50%;
+      }
+
+      &__ack {
+        flex: 1 1 100%;
+        margin-top: 1.5rem;
       }
 
       &__popular {
@@ -188,7 +194,8 @@
       }
     }
 
-    &__popular {
+    &__popular,
+    &__users {
       margin-bottom: 0;
     }
   }

@@ -20,6 +20,6 @@ import AccordionGroup from '../AccordionGroup.vue';
 
 export default {
   components: { AccordionGroup },
-  readme: { html: true },
+  readme: { html: true, source: false },
 };
 </script>

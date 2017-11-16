@@ -16,6 +16,7 @@ export default {
         listing: true,
         'listing--center': this.center,
         [`listing--${this.cols}`]: ['one', 'two', 'three', 'four'].includes(this.cols),
+        grid: true,
       };
     },
   },
