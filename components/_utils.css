@@ -61,6 +61,10 @@
   &--lge { max-width: calc(var(--w-lge) + 2 * var(--vr)); }
 }
 
+.fill {
+  max-width: 100% !important;
+}
+
 /**
  * Link
  */
