@@ -55,4 +55,17 @@
   textarea {
     height: 14rem;
   }
+
+  /* Fill grid  */
+  .fill {
+    input[type='text'],
+    input[type='email'],
+    input[type='number'],
+    input[type='password'],
+    input[type='search'],
+    input[type='url'],
+    textarea {
+      max-width: 100%;
+    }
+  }
 }
