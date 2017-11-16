@@ -53,6 +53,7 @@ fieldset, blockquote {
 
 hr {
   margin: calc(var(--vr) * 2) 0;
+  border: 1px solid var(--col-grey-mid);
 }
 
 ol, ul {
