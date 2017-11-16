@@ -1,7 +1,7 @@
 <template>
   <Alert>
     <strong>Alert!</strong>
-    &nbsp;Better check yourself before you wreck yourself    
+    &nbsp;Better check yourself before you wreck yourself
   </Alert>
 </template>
 
