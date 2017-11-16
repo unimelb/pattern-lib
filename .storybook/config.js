@@ -4,7 +4,7 @@ import { setOptions } from '@storybook/addon-options';
 import VueProgressiveImage from 'vue-progressive-image';
 
 import { storyDecorator } from './utils';
-import SvgIcon from 'icons/SvgIcon.vue';
+import SvgIcon from '../components/icons/SvgIcon.vue';
 import SectionWrap from '../components/section/SectionWrap.vue';
 import ListItem from '../components/listing/ListItem.vue';
 import ButtonIcon from '../components/buttons/ButtonIcon.vue';

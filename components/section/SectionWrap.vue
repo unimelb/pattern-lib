@@ -1,6 +1,6 @@
 <template>
     <component :is="progressive ? 'progressive-background' : 'section'" :no-ratio="progressive" :src="progressive ? bgImage : false" class="section" :class="classes" :style="{ backgroundImage: bgImage && !progressive ? `url(${bgImage})` : '' }">
-    <div class="section__inner" :class="{'section__inner--sml': small, 'section__inner--mid': mid, 'section__inner--short': short}">
+    <div class="section__inner" :class="{'section__inner--sml': small, 'section__inner--mid': mid, 'section__inner--short': short, 'section__inner--nopad': nopad}">
       <slot></slot>
     </div>
   </component>
@@ -10,6 +10,7 @@
 export default {
   props: {
     short: Boolean,
+    nopad: Boolean,
     small: Boolean,
     mid: Boolean,
     bgImage: String,
@@ -22,7 +23,6 @@ export default {
       return {
         [`bg-${this.bgColor}`]: !!this.bgColor,
         'section--centred': this.centred,
-        'section--short': this.short,
         'section--image': this.bgImage && this.bgImage.length > 0,
       };
     },

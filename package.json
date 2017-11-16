@@ -27,6 +27,7 @@
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\"",
     "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\" \"targets/**/*.js\"",
+    "test": "jest",
     "generate": "plop --plopfile generator/index.js",
     "prepublish": "LOAD_EXTERNAL_ASSETS=true yarn run build:vue"
   },
@@ -34,26 +35,28 @@
     "change-case": "^3.0.1",
     "ike.js": "^0.0.2",
     "strip-html-comments": "^1.0.0",
-    "vue": "^2.5.2",
+    "vue": "2.5.2",
     "vue-progressive-image": "^2.2.1",
     "vue-scrollto": "^2.7.8",
     "vue-simple-photoswipe": "^1.0.3"
   },
   "peerDependencies": {
-    "vue": "^2.5.2"
+    "vue": "2.5.2"
   },
   "devDependencies": {
-    "@storybook/addon-notes": "^3.2.12",
-    "@storybook/addon-options": "^3.2.12",
-    "@storybook/addons": "^3.2.12",
-    "@storybook/vue": "^3.2.8",
+    "@storybook/addon-notes": "^3.2.15",
+    "@storybook/addon-options": "^3.2.15",
+    "@storybook/addons": "^3.2.15",
+    "@storybook/vue": "^3.2.15",
     "babel-core": "^6.24.1",
     "babel-eslint": "^8.0.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
+    "babel-jest": "^21.2.0",
     "babel-loader": "^7.0.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",
-    "babel-preset-env": "^1.4.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "caniuse-db": "^1.0.30000756",
     "css-loader": "^0.28.1",
@@ -72,6 +75,8 @@
     "fr-tabs": "^1.0.6",
     "html-webpack-plugin": "^2.30.1",
     "inquirer-directory": "^2.1.0",
+    "jest": "^21.2.1",
+    "jest-serializer-vue": "^0.3.0",
     "plop": "^1.9.0",
     "postcss-cssnext": "^2.10.0",
     "postcss-import": "^9.1.0",
@@ -88,17 +93,39 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint-order": "^0.7.0",
     "svg-fill-loader": "^0.0.8",
+    "svg-sprite-loader": "^3.4.1",
     "svg-url-loader": "^2.1.1",
-    "svgo": "~0.7.2",
-    "svgo-loader": "^1.2.1",
     "vue-html-loader": "^1.2.4",
+    "vue-jest": "^1.0.2",
     "vue-loader": "^13.0.4",
-    "vue-template-compiler": "^2.5.2",
-    "webpack": "^2.5.1",
+    "vue-template-compiler": "2.5.2",
+    "vue-test-utils": "^1.0.0-beta.4",
+    "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
   "cacheDirectories": [
     "node_modules"
-  ]
+  ],
+  "jest": {
+    "mapCoverage": true,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^\\.storybook/(.*)$": "<rootDir>/.storybook/$1",
+      "^icons/(.*)$": "<rootDir>/components/icons/$1",
+      "^vue$": "vue/dist/vue.js"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "transformIgnorePatterns": []
+  }
 }

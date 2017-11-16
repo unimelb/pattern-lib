@@ -1,4 +1,6 @@
 .figure {
+  margin-right: auto;
+  margin-left: auto;
   padding: var(--vr);
 
   img,
@@ -79,8 +81,13 @@
         }
       }
 
+      /* DEPRECATION WARNING - DEPRECATED IN v0.1 (REMOVE IN v0.2) */
       &-lge { width: 75%; }
       &-sml { width: 35%; }
     }
   }
+
+  &--lge { width: 75%; }
+  &--med { width: 50%; }
+  &--sml { width: 35%; }
 }

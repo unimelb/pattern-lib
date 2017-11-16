@@ -1,9 +1,11 @@
 .fr-accordion--is-ready {
   &.accordion {
+    margin-bottom: 1.5rem;
+
     .fr-accordion__header {
       padding: 1rem 1.25rem;
       transition: background-color .15s ease-out, color .15s ease-out;
-      border-bottom: 1px solid var(--col-grey-light);
+      border-bottom: 1px solid var(--col-bg-secondary-grey);
       text-decoration: none;
 
       h2 {
@@ -20,14 +22,14 @@
         width: 0;
         height: 0;
         margin-top: -.25rem;
-        border-top: .313rem solid currentColor;
-        border-right: .313rem solid transparent;
-        border-left: .313rem solid transparent;
+        border-top: .333rem solid currentColor;
+        border-right: .333rem solid transparent;
+        border-left: .333rem solid transparent;
       }
 
       &[aria-selected='true']::after {
         border-top: 0;
-        border-bottom: .313rem solid currentColor;
+        border-bottom: .333rem solid currentColor;
       }
 
       &[aria-selected='true'],
@@ -43,6 +45,7 @@
 
       &__inner {
         padding: 1.25rem;
+        border-bottom: 1px solid var(--col-bg-secondary-grey);
       }
     }
   }

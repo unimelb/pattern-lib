@@ -3,6 +3,9 @@
     "eslint-config-airbnb",
     "plugin:vue/recommended"
   ],
+  "env": {
+    "jest": true
+  },
   "rules": {
     "comma-dangle": [
       "error",
