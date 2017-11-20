@@ -95,7 +95,8 @@ export default class SiteNav {
     }
 
     // Add custom classes to `inner` wrapper and list
-    panel.classList.add('sitenav__panel', 'sitenav__panel--nested');
+    panel.classList.add('sitenav__panel');
+    panel.classList.add('sitenav__panel--nested'); // One call for each token: IE does not support multiple params on .add()
     list.classList.add('sitenav__list');
 
     // Look for the item's link and use it as the trigger for opening the nested panel
