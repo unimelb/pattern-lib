@@ -77,11 +77,11 @@
   &__svg {
     width: 1rem;
     height: 1rem;
-    margin: .125rem;
+    margin: .875rem .125rem;
   }
 
   &__button-label {
-    margin-left: .75rem;
+    margin: .75rem;
     font-size: 1.25rem;
   }
 
