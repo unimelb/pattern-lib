@@ -83,5 +83,6 @@ export default {
       ],
     };
   },
+  readme: { html: true, source: false },
 };
 </script>

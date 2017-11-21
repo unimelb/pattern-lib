@@ -1,8 +1,8 @@
 <template>
   <ListingWrap class="photo-gallery preview-img-list">
     <ListItem :cols="item.size" v-for="(item, index) in slots" :key="item.id">
-      <FigureWrap class="photo-gallery__figure" :caption="!captions && item.title">
-        <div class="preview-img-item" :style="`background-image:url(${item.src})`" @click="noPopup === false && $photoswipe.open(index, slots, options)"></div>
+      <FigureWrap class="photo-gallery__figure" :caption="captions && item.title">
+        <div :class="`preview-img-item${ noPopup === false ? '' : ' preview-img-item--nolink'}`" :style="`background-image:url(${item.src})`" @click="noPopup === false && $photoswipe.open(index, slots, options)"></div>
       </FigureWrap>
     </ListItem>
   </ListingWrap>
