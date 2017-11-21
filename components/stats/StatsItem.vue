@@ -1,12 +1,6 @@
 <template>
   <li class="stats-group__item">
-    <svg
-      class="stats-group__icon"
-      role="presentation" focusable="false"
-      width="128" height="128"
-      :viewbox="iconViewbox"
-      v-html="icon"
-    />
+    <div class="stats-group__icon" v-html="icon"></div>
     <strong class="stats-group__value">
       <span class="stats-group__value__hash">#</span>
       <span class="stats-group__value__num">{{ number }}</span>
@@ -27,10 +21,6 @@ export default {
       required: true,
     },
     icon: {
-      type: String,
-      required: true,
-    },
-    iconViewbox: {
       type: String,
       required: true,
     },
