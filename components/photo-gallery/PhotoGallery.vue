@@ -2,7 +2,7 @@
   <ListingWrap class="photo-gallery preview-img-list">
     <ListItem :cols="item.size" v-for="(item, index) in slots" :key="item.id">
       <FigureWrap class="photo-gallery__figure" :caption="!captions && item.title">
-        <img class="preview-img-item" :src="item.src" @click="noPopup === false && $photoswipe.open(index, slots, options)">
+        <div class="preview-img-item" :style="`background-image:url(${item.src})`" @click="noPopup === false && $photoswipe.open(index, slots, options)"></div>
       </FigureWrap>
     </ListItem>
   </ListingWrap>
