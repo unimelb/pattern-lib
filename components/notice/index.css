@@ -1,0 +1,33 @@
+.notice {
+  margin: var(--vr);
+  padding: var(--vr);
+  border-radius: 4px;
+  background-color: var(--col-brand-light);
+
+  &--warning {
+    background-color: var(--col-orange-light);
+    color: color(var(--col-orange) lightness(25%));
+
+    a {
+      color: color(var(--col-orange) lightness(25%));
+    }
+  }
+
+  &--success {
+    background-color: var(--col-green-light);
+    color: color(var(--col-green) lightness(25%));
+
+    a {
+      color: color(var(--col-green) lightness(25%));
+    }
+  }
+
+  &--danger {
+    background-color: var(--col-orange-dark);
+    color: #fff;
+
+    a {
+      color: #fff;
+    }
+  }
+}
