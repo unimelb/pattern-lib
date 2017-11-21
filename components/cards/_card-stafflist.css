@@ -3,6 +3,11 @@
     margin-bottom: 0;
   }
 
+  .card__thumb {
+    height: 240px;
+    background-position: center;
+  }
+
   .card__header {
     margin-bottom: 0;
     color: var(--col-brand);
