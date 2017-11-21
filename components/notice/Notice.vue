@@ -15,8 +15,8 @@ export default {
   computed: {
     classes() {
       return {
-        alert: true,
-        [`alert--${this.level}`]: !!this.level,
+        notice: true,
+        [`notice--${this.level}`]: !!this.level,
       };
     },
   },
