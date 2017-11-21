@@ -70,7 +70,7 @@ exports[`PageFooter should match snapshot 1`] = `
       </div>
        
       <div
-        class="page-footer__main grid clearfix"
+        class="page-footer__main grid"
       >
         <div
           class="page-footer__main__users cell cell--wide-1of4"
@@ -108,7 +108,7 @@ exports[`PageFooter should match snapshot 1`] = `
           class="page-footer__main__popular cell cell--wide-1of2"
         >
           <ul
-            class="page-footer__popular list-reset links-reset clearfix"
+            class="page-footer__popular list-reset links-reset"
           >
             <li>
               <a
@@ -234,13 +234,13 @@ exports[`PageFooter should match snapshot 1`] = `
       class="page-footer__inner max"
     >
       <div
-        class="grid clearfix"
+        class="grid"
       >
         <div
           class="cell cell--wide-3of4"
         >
           <div
-            class="grid clearfix"
+            class="grid"
           >
             <div
               class="cell cell--tab-1of2 cell--desk-1of3"
@@ -687,7 +687,7 @@ exports[`PageFooter should match snapshot 1`] = `
           </ul>
            
           <dl
-            class="page-footer__contact list-def list-def--wrap clearfix"
+            class="page-footer__contact list-def list-def--wrap"
           >
             <dt>
               Phone:
