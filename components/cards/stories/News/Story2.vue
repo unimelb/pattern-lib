@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--one">
+    <div class="grid grid--1col">
       <ListItem>
         <CardNews :cols="1" thumb="http://via.placeholder.com/200x400" title="Growing esteem" excerpt="Find out about our strategic journey and where we're headed."/>
       </ListItem>

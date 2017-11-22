@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--three">
+    <div class="grid grid--3col">
       <ListItem><CardNews title="Test 1"/></ListItem>
       <ListItem><CardNews title="Test 2"/></ListItem>
       <ListItem><CardNews title="Test 3"/></ListItem>

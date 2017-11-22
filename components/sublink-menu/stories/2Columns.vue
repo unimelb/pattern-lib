@@ -1,6 +1,6 @@
 <template>
   <SectionWrap bg-color="white">
-    <ListingWrap cols="three" center>
+    <ListingWrap cols="3" center>
       <ListItem>
         <SublinkMenu title="A consistent strategy" icon="faculty" icon-color="blue">
           a consistent look and feel in our communications

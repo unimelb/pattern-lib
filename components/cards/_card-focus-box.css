@@ -101,6 +101,13 @@
     stroke-width: 0;
   }
 
+  .cell:nth-child(7n+1) &__icon * { fill: var(--col-2); }
+  .cell:nth-child(7n+2) &__icon * { fill: var(--col-3); }
+  .cell:nth-child(7n+3) &__icon * { fill: var(--col-4); }
+  .cell:nth-child(7n+4) &__icon * { fill: var(--col-5); }
+  .cell:nth-child(7n+5) &__icon * { fill: var(--col-6); }
+  .cell:nth-child(7n+6) &__icon * { fill: var(--col-7); }
+  .cell:nth-child(7n) &__icon * { fill: var(--col-1); }
   .list-item:nth-child(7n+1) &__icon * { fill: var(--col-2); }
   .list-item:nth-child(7n+2) &__icon * { fill: var(--col-3); }
   .list-item:nth-child(7n+3) &__icon * { fill: var(--col-4); }

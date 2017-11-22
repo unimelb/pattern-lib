@@ -1,6 +1,6 @@
 <template>
   <SectionWrap>
-    <div class="listing listing--three">
+    <div class="grid grid--3col">
       <ListItem>
         <card-division-head
           compact

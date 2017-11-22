@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--three">
+    <div class="grid grid--3col">
       <ListItem>
         <CardImage thumb="http://via.placeholder.com/300x400" title="Growing esteem" >
           Find out about our strategic journey and where we're headed.

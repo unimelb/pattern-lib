@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--four">
+    <div class="grid grid--4col">
       <ListItem v-for="item in items" :key="item.title">
         <CardImageList
           :border="false"
