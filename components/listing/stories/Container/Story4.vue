@@ -1,5 +1,5 @@
 <template>
-  <ListingWrap cols="four">
+  <ListingWrap cols="4">
     <ListItem>
       <img src="https://placehold.it/600x200" alt="">
     </ListItem>

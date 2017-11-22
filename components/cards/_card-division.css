@@ -79,6 +79,7 @@
       }
     }
 
+    .grid--1col .cell &,
     .listing--one .list-item & {
       .card__header {
         font-family: var(--ff-lead);

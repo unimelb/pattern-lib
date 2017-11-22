@@ -1,6 +1,6 @@
 <template>
   <SectionWrap bg-color="white">
-    <ListingWrap cols="three" center>
+    <ListingWrap cols="3" center>
       <ListItem>
         <SublinkMenu title="A consistent strategy" img="http://unsplash.it/300/200?random&gravity=center">
           a consistent look and feel in our communications

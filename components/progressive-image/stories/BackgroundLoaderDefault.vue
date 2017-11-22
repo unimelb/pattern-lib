@@ -17,6 +17,7 @@ export default {
   readme: {
     custom: progressiveBgDocs,
     html: true,
+    source: false,
   },
 };
 </script>

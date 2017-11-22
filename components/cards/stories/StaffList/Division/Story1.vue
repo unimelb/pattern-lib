@@ -1,7 +1,7 @@
 
 <template>
   <SectionWrap>
-    <div class="listing listing--three">
+    <div class="grid grid--3col">
       <ListItem><CardDivision title="Enterprise" name="Johnathan Smithersonite" meta="Vice President of A very long Position Description"/></ListItem>
       <ListItem><CardDivision title="Research Infrastructure and Systems" name="John Smith" meta="Position Description"/></ListItem>
       <ListItem><CardDivision title="Enterprise" name="Jane Citizen" meta="Position Description"/></ListItem>

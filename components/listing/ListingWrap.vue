@@ -13,9 +13,9 @@ export default {
   computed: {
     classes() {
       return {
-        listing: true,
-        'listing--center': this.center,
-        [`listing--${this.cols}`]: ['one', 'two', 'three', 'four'].includes(this.cols),
+        grid: true,
+        'grid--center': this.center,
+        [`grid--${this.cols}col`]: ['1', '2', '3', '4'].includes(this.cols),
       };
     },
   },

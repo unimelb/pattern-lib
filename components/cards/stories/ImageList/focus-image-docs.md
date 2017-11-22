@@ -3,8 +3,8 @@ For the progressive image loader to work with this component, use the custom com
 ```html
 <section class="section bg-alt">
   <div class="section__inner">
-    <div class="listing listing--two">
-      <div class="list-item">
+    <div class="grid grid--2col">
+      <div class="cell">
         <div class="card card--image-focus card--image-focus--col-brand bg-alt">
           <h3 class="">Learning and teaching</h3>
           <progressive-background :src="https://matrix-cms.unimelb.edu.au/about/assets/images/careers/prideindiversity.jpg" :placeholder="placeholder" class="card__thumb card__thumb--full"  />
@@ -13,7 +13,7 @@ For the progressive image loader to work with this component, use the custom com
           </div>
         </div>
       </div>
-      <div class="list-item">
+      <div class="cell">
         <div class="card card--image-focus card--image-focus--col-brand bg-alt">
           <h3 class="">Learning and teaching</h3>
           <progressive-background :src="https://matrix-cms.unimelb.edu.au/about/assets/images/careers/prideindiversity.jpg" :placeholder="placeholder" class="card__thumb card__thumb--full"  />

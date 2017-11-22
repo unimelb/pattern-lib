@@ -1,8 +1,8 @@
 
 <template>
   <SectionWrap>
-    <div class="listing">
-      <ListItem cols="1of1"><CardFact title="Social media reach" :icon="socialMediaIcon" /></ListItem>
+    <div class="grid grid--1col">
+      <ListItem><CardFact title="Social media reach" :icon="socialMediaIcon" /></ListItem>
     </div>
   </SectionWrap>
 </template>
