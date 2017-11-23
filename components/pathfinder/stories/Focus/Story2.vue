@@ -1,7 +1,7 @@
 <template>
   <section class="section section--image bg-inverted-dark" :style="{ backgroundImage: `url(${crest})` }">
      <div class="section__inner">
-        <div class="listing listing--three listing--center">
+        <div class="grid grid--3col grid--center">
           <ListItem>
             <CardPathfinder compact title="Engagement">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.

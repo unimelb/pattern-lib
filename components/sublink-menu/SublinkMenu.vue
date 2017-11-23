@@ -1,6 +1,7 @@
 <template>
   <div :class="classes">
-    <SvgIcon width="100" height="100" class="sublink-menu__icon" :name="icon" />
+    <SvgIcon v-if="icon" width="100" height="100" class="sublink-menu__icon" :name="icon" />
+    <img class="sublink-menu__image" v-if="img && img.length > 0" :src="img" >
     <h3 class="sublink-menu__title"> {{ title }}</h3>
     <p class="sublink-menu__excerpt"><slot></slot></p>
     <nav class="sublink-menu__nav">
@@ -14,10 +15,8 @@ export default {
   props: {
     title: String,
     color: String,
-    icon: {
-      type: String,
-      default: 'campaign',
-    },
+    img: String,
+    icon: String,
     iconColor: String,
   },
   computed: {

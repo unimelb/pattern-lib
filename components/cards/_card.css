@@ -1,4 +1,7 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   width: 100%;
   min-height: 100%;
   font-weight: normal;
@@ -63,6 +66,7 @@
   }
 
   /* One column */
+  .grid--1col .cell &,
   .listing--one .list-item & {
     flex-direction: column;
 
@@ -71,7 +75,11 @@
     }
 
     @media (--bp-x-tablet) {
-      flex-direction: row-reverse;
+      flex-direction: row;
+
+      &--division {
+        flex-direction: row-reverse;
+      }
     }
   }
 
@@ -84,6 +92,13 @@
     border-bottom: .4rem solid;
 
     /* Border color sequence */
+    .cell:nth-child(7n+1) & { border-color: var(--col-1); }
+    .cell:nth-child(7n+2) & { border-color: var(--col-2); }
+    .cell:nth-child(7n+3) & { border-color: var(--col-3); }
+    .cell:nth-child(7n+4) & { border-color: var(--col-4); }
+    .cell:nth-child(7n+5) & { border-color: var(--col-5); }
+    .cell:nth-child(7n+6) & { border-color: var(--col-6); }
+    .cell:nth-child(7n) & { border-color: var(--col-7); }
     .list-item:nth-child(7n+1) & { border-color: var(--col-1); }
     .list-item:nth-child(7n+2) & { border-color: var(--col-2); }
     .list-item:nth-child(7n+3) & { border-color: var(--col-3); }
@@ -94,14 +109,9 @@
   }
 
   &--bdr-blue {
+    .cell &,
     .list-item & {
       border-bottom: .4rem solid var(--col-brand-mid2);
     }
-  }
-
-  @supports (display: flex) {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
   }
 }

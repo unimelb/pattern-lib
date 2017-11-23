@@ -5,6 +5,15 @@
     margin: 0 auto calc(var(--vr) * 2) auto;
   }
 
+  &__image {
+    width: 100%;
+
+    @supports (object-fit: cover) {
+      object-fit: cover;
+      height: 200px;
+    }
+  }
+
   &--green .sublink-menu__icon {
     fill: var(--col-emerald);
   }
@@ -18,6 +27,7 @@
   }
 
   &__title {
+    min-height: 3em;
     margin-top: var(--vr);
     font-family: var(--ff-lead);
   }
@@ -25,12 +35,12 @@
   &__item {
     display: block;
     padding: calc(var(--vr) / 2);
-    border-top: 2px solid var(--col-brand);
+    border-top: 2px solid var(--col-grey);
     color: var(--col-brand);
     text-decoration: none;
 
     &:last-child {
-      border-bottom: 2px solid var(--col-brand);
+      border-bottom: 2px solid var(--col-grey);
     }
 
     &:hover {

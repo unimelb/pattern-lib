@@ -1,6 +1,6 @@
 <template>
   <SectionWrap>
-    <div class="listing listing--four listing--center">
+    <div class="grid grid--4col grid--center">
       <ListItem><card-link inverted title="Test 1"/></ListItem>
       <ListItem><card-link inverted title="Test 2"/></ListItem>
       <ListItem><card-link inverted title="This is a Longer title over two lines"/></ListItem>

@@ -14,7 +14,7 @@
             </form>
           </div>
         </div>
-        <div class="page-footer__main grid clearfix">
+        <div class="page-footer__main grid">
           <div class="page-footer__main__users cell cell--wide-1of4">
             <ul class="page-footer__users list-reset list-chevrons links-reset">
               <li><a href="https://students.unimelb.edu.au/">Current students</a></li>
@@ -23,7 +23,7 @@
             </ul>
           </div>
           <div class="page-footer__main__popular cell cell--wide-1of2">
-            <ul class="page-footer__popular list-reset links-reset clearfix">
+            <ul class="page-footer__popular list-reset links-reset">
               <li><a class="link-icon" href="http://about.unimelb.edu.au/governance-and-leadership/faculties">
                 <SvgIcon class="link-icon__icon svg" name="faculty" /><span class="link-icon__text">Faculties &amp; graduate schools</span>
               </a></li>
@@ -52,9 +52,9 @@
     </div>
     <div class="page-footer__bottom">
       <div class="page-footer__inner max">
-        <div class="grid clearfix">
+        <div class="grid">
           <div class="cell cell--wide-3of4">
-            <div class="grid clearfix">
+            <div class="grid">
               <div class="cell cell--tab-1of2 cell--desk-1of3">
                 <a class="page-footer__sitemap-heading" href="https://coursesearch.unimelb.edu.au/">Study at Melbourne</a>
                 <ul class="page-footer__sitemap-pages page-footer__sitemap-pages--minor list-reset list-chevrons">
@@ -122,7 +122,7 @@
           <div class="cell cell--wide-1of4">
             <p class="screenreaders-only">Follow us on:</p>
             <SocialList class="page-footer__social" :with-colors="false" :icon-size="22" />
-            <dl class="page-footer__contact list-def list-def--wrap clearfix">
+            <dl class="page-footer__contact list-def list-def--wrap">
               <dt>Phone:</dt>
               <dd>13 MELB <small>(<a href="tel:136352">13 6352</a>)</small></dd>
               <dt>International:</dt>

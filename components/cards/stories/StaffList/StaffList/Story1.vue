@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="listing listing--four">
+    <div class="grid grid--4col">
       <ListItem>
         <CardStaffList
           title="Mr John Smith"

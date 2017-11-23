@@ -1,7 +1,7 @@
 <template>
   <section-wrap small>
-    <ul class="listing listing--four document-list document-list--thumbs">
-      <li class="list-item">
+    <ul class="grid grid--4col document-list document-list--thumbs">
+      <li class="cell">
         <a href="annualreport.pdf">
           <figure>
             <img src="http://unsplash.it/300/400?gravity=center">
@@ -9,7 +9,7 @@
           </figure>
         </a>
       </li>
-      <li class="list-item">
+      <li class="cell">
         <a href="annualreport.pdf">
           <figure>
             <img src="http://unsplash.it/300/400?gravity=center">
@@ -17,7 +17,7 @@
           </figure>
         </a>
       </li>
-      <li class="list-item">
+      <li class="cell">
         <a href="annualreport.pdf">
           <figure>
             <img src="http://unsplash.it/300/400?gravity=center">
@@ -25,7 +25,7 @@
           </figure>
         </a>
       </li>
-            <li class="list-item">
+            <li class="cell">
         <a href="annualreport.pdf">
           <figure>
             <img src="http://unsplash.it/300/400?gravity=center">
@@ -33,7 +33,7 @@
           </figure>
         </a>
       </li>
-      <li class="list-item">
+      <li class="cell">
         <a href="annualreport.pdf">
           <figure>
             <img src="http://unsplash.it/300/400?gravity=center">
