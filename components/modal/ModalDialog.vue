@@ -1,20 +1,24 @@
 <template>
   <div>
-    <button ref="trigger" v-if="!disabled" class="btn fr-dialogmodal-open js-fr-dialogmodal-open" :aria-controls="`modal-dialog-1${this._uid}`">
+    <button ref="trigger" @click="openDialog" v-if="!disabled" class="btn fr-dialogmodal-open js-fr-dialogmodal-open" :aria-controls="`modal-dialog-1${this._uid}`">
       <span class="push-icon" v-html="trigger"></span>
     </button>
-    <div ref="container" :class="!disabled && 'fr-dialogmodal js-fr-dialogmodal fr-dialogmodal--is-ready'" :id="`modal-dialog-1${this._uid}`" :aria-hidden="!disabled && 'true'">
+    <div ref="container" @click="closeContainer" @keypress.27="closeDialog" @keypress.9="inputTrap" :class="!disabled && 'fr-dialogmodal js-fr-dialogmodal fr-dialogmodal--is-ready'" :id="`modal-dialog-1${this._uid}`" :aria-hidden="!disabled && 'true'">
       <div ref="modal" class="fr-dialogmodal-modal js-fr-dialogmodal-modal" :aria-labelledby="`modal-dialog-title-1${this._uid}`" role="dialog">
         <div role="document">
           <h2 :id="`modal-dialog-title-1${this._uid}`" v-html="title"></h2>
           <slot></slot>
           <br>
-          <button ref="close" v-if="!disabled" class="fr-dialogmodal-close js-fr-dialogmodal-close" aria-label="Close Dialog" type="button">&#x2715;</button>
+          <button @click="closeDialog" v-if="!disabled" class="fr-dialogmodal-close js-fr-dialogmodal-close" aria-label="Close Dialog" type="button">&#x2715;</button>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<notes>
+
+</notes>
 
 <script>
 export default {
@@ -29,67 +33,80 @@ export default {
   },
   data() {
     return {
-      selector: '.js-fr-dialogmodal',
-      modalSelector: '.js-fr-dialogmodal-modal',
-      openSelector: '.js-fr-dialogmodal-open',
-      closeSelector: '.js-fr-dialogmodal-close',
-      isAlert: false,
-      readyClass: 'fr-dialogmodal--is-ready',
       activeClass: 'fr-dialogmodal--is-active',
+      focusableElements: [],
     };
   },
   mounted() {
-    if (this.$refs.trigger && this.$refs.close) {
-      this.$refs.trigger.addEventListener('click', this.openDialog);
-      this.$refs.close.addEventListener('click', this.closeDialog);
-      this.$refs.container.addEventListener('click', this.closeContainer);
-    }
+    const focusableSelectors = [
+      'a[href]',
+      'area[href]',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'button:not([disabled])',
+      'iframe',
+      'object',
+      'embed',
+      '[contenteditable]',
+      '[tabindex]:not([tabindex^="-"])',
+    ];
+    // Create array of focusable elements in context
+    this.focusableElements = [].slice.call(this.$refs.modal.querySelectorAll(focusableSelectors.join()));
   },
   methods: {
     openDialog() {
       const { container, modal } = this.$refs;
 
-      // show container and focus the modal
+      // Show container and focus the modal
       container.setAttribute('aria-hidden', false);
       modal.setAttribute('tabindex', -1);
-      // set first/last focusable elements
-      // focusableElements = _q(focusableSelectors.join(), modal);
-      // focus first element if exists, otherwise focus modal element
-      // if (focusableElements.length) focusableElements[0].focus();
-      // else modal.focus();
-      // update bound events
-      // _defer(_bindDocKey);
-      // _defer(_bindClosePointer);
-      // if contents are not interactive, bind click off
-      // if (!isAlert) _defer(_bindContainerPointer);
-      // reset scroll
+
+      // Focus first element if exists, otherwise focus modal element
+      if (this.focusableElements.length) {
+        this.focusableElements[0].focus();
+      } else {
+        modal.focus();
+      }
+
+      // Reset scroll
       modal.scrollTop = 0;
-      // update style hook
+
+      // Update style hook
       container.classList.add(this.activeClass);
     },
     closeDialog() {
       const { container, modal } = this.$refs;
 
-      // get container element
-      // const container = modal.parentElement;
-      // show container and focus the modal
+      // Hide container
       container.setAttribute('aria-hidden', true);
       modal.removeAttribute('tabindex');
-      // update bound events
-      // _unbindDocKey();
-      // _unbindClosePointer();
-      // if contents are not interactive, unbind click off
-      // if (!isAlert) _unbindContainerPointer();
-      // update style hook
+
+      // Update style hook
       container.classList.remove(this.activeClass);
-      // return focus to button that opened the modal and reset the reference
-      // if (returnfocus) {
-      //   currButtonOpen.focus();
-      //   currButtonOpen = null;
-      // }
+
+      // Return focus to trigger
+      this.$refs.trigger.focus();
     },
     closeContainer(e) {
       if (e.target === this.$refs.container) this.closeDialog();
+    },
+    inputTrap(e) {
+      // Get the index of the current active element within the modal
+      const focusedIndex = this.focusableElements.indexOf(document.activeElement);
+
+      // First element is focused and shiftkey is in use
+      if (e.shiftKey && (focusedIndex === 0 || focusedIndex === -1)) {
+        // Loop back to last el
+        this.focusableElements[this.focusableElements.length - 1].focus();
+        e.preventDefault();
+
+      // Last element is focused and shiftkey is not in use
+      } else if (!e.shiftKey && focusedIndex === this.focusableElements.length - 1) {
+        // Focus on first el
+        this.focusableElements[0].focus();
+        e.preventDefault();
+      }
     },
   },
 };
