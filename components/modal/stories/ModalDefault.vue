@@ -8,15 +8,15 @@
         </div>
       </label>
       <label>
-        E-mail
+        First name
         <div>
-          <input tabindex="2" type="email" name="f[email]" placeholder="2.com">
+          <input tabindex="2" type="text" name="f[text1]" placeholder="Jane">
         </div>
       </label>
       <label>
-        E-mail
+        Last name
         <div>
-          <input tabindex="3" type="email" name="f[email]" placeholder="3.com">
+          <input tabindex="3" type="text" name="f[text2]" placeholder="Example">
         </div>
       </label>
       <p>
