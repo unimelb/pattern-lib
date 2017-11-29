@@ -1,7 +1,0 @@
-.fr-tabs--is-ready .fr-tabs__tablist-item {
-  display: inline;
-}
-
-.fr-tabs__panel[aria-hidden='true'] {
-  display: none;
-}
