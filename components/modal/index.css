@@ -1,1 +1,72 @@
-@import '_fr-dialogmodal.css';
+/* functional */
+.modal-dialog {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+
+  /* decorative styles */
+  transform: translateZ(0);
+  transition: background-color .15s ease-out, visibility .15s ease-out;
+
+  &__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100vw - 3.75em);
+    max-height: calc(100vh - 3.75em);
+    padding: 4em 1.25em 0;
+    overflow: auto;
+    transform: translateX(-50%) translateY(-50%);
+    transition: opacity .15s ease-out;
+    opacity: 0;
+
+    /* decorative styles */
+    background-color: white;
+  }
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    transition: background-color .15s ease-out;
+
+    /* decorative styles */
+    background-color: rgba(34, 34, 34, .8);
+    box-shadow: 0 3.75em 0 0 rgba(34, 34, 34, .8);
+
+    .modal-dialog__modal {
+      opacity: 1;
+    }
+  }
+}
+
+@media all and (min-width: 31.25em) {
+  .modal-dialog .modal-dialog__modal {
+    min-width: 25em;
+    max-width: 37.5em;
+  }
+}
+
+.modal-dialog__open {
+  align-self: flex-start;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: .25em;
+  right: .25em;
+  padding: .25em;
+  font-size: 2em;
+  line-height: 1.25;
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--col-pink-dark);
+  }
+}

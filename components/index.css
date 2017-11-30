@@ -1,4 +1,6 @@
 /* stylelint-disable comment-empty-line-before */
+@import 'normalize.css';
+
 @import '_base.css';
 @import '_vars.css';
 @import '_shims.css';
