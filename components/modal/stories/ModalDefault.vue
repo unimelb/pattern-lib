@@ -7,15 +7,25 @@
           <input tabindex="1" type="email" name="f[email]" placeholder="jane@example.com">
         </div>
       </label>
-      <fieldset>
-        <p>
-          <label>
-            <input tabindex="2" type="checkbox" name="f[acceptance]" value="y">
-            I agree with the <a href="/tandc">terms &amp; conditions.</a>
-          </label>
-        </p>
-      </fieldset>
-      <input tabindex="3" type="submit">
+      <label>
+        First name
+        <div>
+          <input tabindex="2" type="text" name="f[text1]" placeholder="Jane">
+        </div>
+      </label>
+      <label>
+        Last name
+        <div>
+          <input tabindex="3" type="text" name="f[text2]" placeholder="Example">
+        </div>
+      </label>
+      <p>
+        <label>
+          <input tabindex="4" type="checkbox" name="f[acceptance]" value="y">
+          I agree with the <a href="/tandc">terms &amp; conditions.</a>
+        </label>
+      </p>
+      <input tabindex="5" type="submit">
     </form>
   </ModalDialog>
 </template>

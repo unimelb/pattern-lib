@@ -40,7 +40,7 @@
     margin-top: .375rem;
     margin-bottom: 1rem;
     margin-left: 0;
-    padding: .667rem;
+    padding: 0 .667rem;
     border-radius: 0 0 var(--br) var(--br);
     color: white;
     font-weight: var(--fw-semibold);
