@@ -7,11 +7,21 @@
     position: relative;
     height: 240px;
 
+    &-img,
     img {
       width: 100%;
       height: 240px;
-      object-fit: cover;
-      object-position: center;
+    }
+
+    &-img {
+      background-position: center;
+      background-size: cover;
+    }
+
+    img {
+      @supports (object-fit: cover) {
+        object-fit: cover;
+      }
     }
 
     &--tall {
