@@ -1,8 +1,9 @@
 .welcome {
   display: flex;
-  flex-flow: row-reverse;
+  flex-flow: row-reverse wrap;
 
   &__inner {
+    flex: auto;
     width: 100%;
     margin-right: auto;
     margin-left: 0;
@@ -12,7 +13,6 @@
     }
 
     @media (--bp-x-tablet) {
-      flex: 0 0 50%;
       width: 50%;
       padding-right: var(--vr);
 
@@ -22,12 +22,10 @@
     }
 
     @media (--bp-x-desktop) {
-      flex: 0 0 66.66%;
       width: 66.66%;
       padding-right: calc(var(--vr) * 2);
 
       .section__inner--sml & {
-        flex: 0 0 calc(50% - (var(--vr) * 2));
         width: calc(50% - (var(--vr) * 2));
         padding-right: var(--vr);
       }
@@ -103,18 +101,15 @@
     }
 
     @media (--bp-x-tablet) {
-      flex: 0 0 calc(50% - (var(--vr) * 2));
       width: calc(50% - (var(--vr) * 2));
       margin-right: var(--vr);
       margin-left: var(--vr);
     }
 
     @media (--bp-x-desktop) {
-      flex: 0 0 calc(33.3% - (var(--vr) * 2));
       width: calc(33.3% - (var(--vr) * 2));
 
       .section__inner--sml & {
-        flex: 0 0 calc(50% - (var(--vr) * 2));
         width: calc(50% - (var(--vr) * 2));
         margin-right: var(--vr);
         margin-left: var(--vr);
