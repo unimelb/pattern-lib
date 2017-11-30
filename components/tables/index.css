@@ -21,10 +21,18 @@
 
   td {
     border-right: 1px solid var(--col-grey-mid);
+
+    &:last-child {
+      border-right: 0;
+    }
   }
 
   tbody tr {
     border-bottom: 1px solid var(--col-grey-mid);
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   thead tr {
