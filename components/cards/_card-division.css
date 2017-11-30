@@ -8,10 +8,6 @@
   }
 
   .card__title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     min-height: 6.5rem;
     margin: 0;
     padding: var(--vr);
