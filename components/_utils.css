@@ -188,11 +188,14 @@
  * Used in buttons, menus, etc.
  */
 .push-icon {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-align: left;
 
   &__icon {
     display: inline-block;
+    flex-shrink: 0; /* prevent icon from shrinking */
     width: .75em;
     height: .75em;
     margin-left: 1em;
@@ -201,17 +204,6 @@
     &--left {
       margin-right: 1em;
       margin-left: 0;
-    }
-  }
-
-  @supports (display: flex) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    /* prevent icon from shrinking */
-    &__icon {
-      flex-shrink: 0;
     }
   }
 }
