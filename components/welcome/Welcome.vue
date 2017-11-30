@@ -2,7 +2,7 @@
   <div class="welcome">
     <div class="welcome__thumb">
       <figure>
-        <img :src="img" alt="">
+        <div class="welcome__thumb-img" :style="`background-image: url('${img}')`" > </div>
         <figcaption>
           <h6 class="welcome__caption-title">{{ name }}</h6>
         </figcaption>
