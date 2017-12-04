@@ -29,6 +29,7 @@ export { default as ModalDialog } from '../../components/modal/ModalDialog.vue';
 export { default as PageBreadcrumbs } from '../../components/page/breadcrumbs/PageBreadcrumbs.vue';
 export { default as PageFooter } from '../../components/page/footer/PageFooter.vue';
 export { default as PageHeader } from '../../components/page/header/PageHeader.vue';
+export { default as PageHeaderMin } from '../../components/page/header/PageHeaderMin.vue';
 // export { default as PageNav } from '../../components/page/nav/PageNav.vue';
 // export { default as PageSearch } from '../../components/page/search/PageSearch.vue';
 export { default as Pathfinder } from '../../components/pathfinder/Pathfinder.vue';

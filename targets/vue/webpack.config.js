@@ -21,6 +21,7 @@ module.exports = merge.smart(sharedConfig, {
         exclude: path.resolve(__dirname, '../../components/icons/sprite'),
         loader: 'file-loader',
         options: {
+          name: '[name].[ext]', // named assets not hashes
           emitFile: false, // don't emit static assets
         },
       },
