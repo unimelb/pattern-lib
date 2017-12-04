@@ -24,7 +24,7 @@ yarn
 Storybook is the main development environment.
 
 - `yarn start` - [http://localhost:7002/](http://localhost:7002/)
-- `yarn run build` to build the documentation site to `/.out/docs`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the documentation site is to load the library assets locally (`false`) or from the CDN (`true`).
+- `yarn build` to build the documentation site to `/.out/docs`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the documentation site is to load the library assets locally (`false`) or from the CDN (`true`).
 
 ### Targets
 
@@ -32,14 +32,23 @@ Storybook is the main development environment.
 
 The main UI library for use in the CMS. The target provides a local development environment for testing purposes.
 
-- `yarn run start:lib` - [http://localhost:7003/](http://localhost:7003/).
-- `yarn run build:lib` to compile the library to `.out/lib/<version>`, including `ui.css`, `ui.js`, `sprite.svg`, and SVG assets in `components/shared`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the library is to load its assets locally (`false`) or from the CDN (`true`).
+- `yarn start:lib` - [http://localhost:7003/](http://localhost:7003/).
+- `yarn build:lib` to compile the library to `.out/lib/<version>`, including `ui.css`, `ui.js`, `sprite.svg`, and SVG assets in `components/shared`. You can then use `http-server` or another static file server to serve the output directory.
+
+The following environment variables are available to configure the behaviour of `yarn build:lib`:
+
+- `LOAD_EXTERNAL_ASSETS` controls whether the library is to load its assets locally (`false`) or from the CDN (`true`).
+- `LIB_EMIT_HTML` controls whether to emit the demo HTML file - set it to `true` to emit the file.
+- `LIB_LOAD_VERSION` controls which version of the library to load in the demo:
+  - leave it blank to load the local bundles (e.g. to test a new feature),
+  - set it to `auto` to load the latest version from the CDN (i.e. the version specified in `package.json`),
+  - set it to a specific version number to load that version from the CDN - e.g. `0.0.12` (no `v` prefix).
 
 #### Vue library - `targets/vue`
 
 The library with all the Vue components for use in single-page apps and other Vue-based projects.
 
-- `yarn run build:vue` to compile the library to `.out/vue.js`.
+- `yarn build:vue` to compile the library to `.out/vue.js`.
 
 ### Linting
 
@@ -49,12 +58,12 @@ JS files and single-file Vue components are linted on the fly with ESLint. The c
 
 For your own sanity, make sure to install your code editor's ESLint and stylelint extensions. The following commands are available for on-demand linting and fixing:
 
-- `yarn run lint`
-- `yarn run lint:fix`
-- `yarn run lint:css`
-- `yarn run lint:css --fix`
-- `yarn run lint:js`
-- `yarn run lint:js --fix`
+- `yarn lint`
+- `yarn lint:fix`
+- `yarn lint:css`
+- `yarn lint:css --fix`
+- `yarn lint:js`
+- `yarn lint:js --fix`
 
 ### Generator
 
