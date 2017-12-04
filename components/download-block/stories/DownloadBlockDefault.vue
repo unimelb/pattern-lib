@@ -2,7 +2,7 @@
   <DownloadBlock
     href=""
     header="Annual Report"
-    img="http://unsplash.it/200/300"
+    img="https://unsplash.it/200/300"
     btn-text="Download the 2017 Annual Report"
     filename="annual-report.pdf"
     size="2.2 MB"
