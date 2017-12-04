@@ -12,6 +12,10 @@ const pkg = require('../../package.json');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
 
+const emitHtml = isDev || process.env.LIB_EMIT_HTML === 'true';
+const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? pkg.version : process.env.LIB_LOAD_VERSION;
+const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
+
 module.exports = merge(sharedConfig, {
   entry: {
     ui: [
@@ -21,10 +25,11 @@ module.exports = merge(sharedConfig, {
   },
   output: {
     path: path.resolve(__dirname, `../../.out/lib/v${pkg.version}/`),
+    publicPath,
   },
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js',
+      vue: `vue/dist/vue${isDev ? '' : '.min'}.js`,
     },
   },
   module: {
@@ -42,18 +47,19 @@ module.exports = merge(sharedConfig, {
     ],
   },
   plugins: [
-    new SpriteLoaderPlugin({
-      plainSprite: true,
-    }),
-  ].concat(isDev ? [
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: './targets/lib/index.html',
-      inject: true,
-    }),
-  ] : []),
+    new SpriteLoaderPlugin({ plainSprite: true }),
+  ]
+    .concat(isDev ? [
+      new webpack.HotModuleReplacementPlugin(),
+    ] : [])
+    .concat(emitHtml ? [
+      new HtmlWebpackPlugin({
+        template: './targets/lib/index.html',
+        inject: true,
+      }),
+    ] : []),
   devServer: {
-    publicPath: sharedConfig.output.publicPath,
+    publicPath,
     hot: true, // enable hot module replacement
     overlay: true, // show overlay in browser on compiler error or warning
     clientLogLevel: 'warning', // reduce browser console output
