@@ -21,10 +21,11 @@ module.exports = merge(sharedConfig, {
   },
   output: {
     path: path.resolve(__dirname, `../../.out/lib/v${pkg.version}/`),
+    publicPath,
   },
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js',
+      vue: `vue/dist/vue${isDev ? '' : '.min'}.js`,
     },
   },
   module: {
