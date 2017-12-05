@@ -14,18 +14,16 @@ export default {
   mounted() {
     this.tabs = [].slice.call(this.$el.querySelectorAll('.tabs__tablist-item > a'));
     this.panels = [].slice.call(this.$el.querySelectorAll('.tabs__panel'));
+    this.$el.addEventListener('keydown', e => this.handleKey(e));
   },
   methods: {
-    getCurrent(target) {
-      let curr = -1;
-      this.tabs.forEach((tab, index) => {
-        if (tab === target) curr = index;
-      }, this);
-      return curr;
-    },
     handleClick(e) {
       e.preventDefault();
-      this.showTab(this.getCurrent(e.target));
+      let curr = -1;
+      this.tabs.forEach((tab, index) => {
+        if (tab === e.target) curr = index;
+      }, this);
+      this.showTab(curr);
     },
     showTab(curr) {
       this.tabs.forEach((tab, index) => {
@@ -43,12 +41,13 @@ export default {
       }, this);
     },
     handleKey(e) {
-      console.log(e);
+      let curr = -1;
+      this.tabs.forEach((tab, index) => {
+        if (tab.getAttribute('tabindex') === '0') curr = index;
+      }, this);
 
-      const curr = this.getCurrent(e.target);
-
-      const prev = curr - 1 < 0 ? this.tabs.length : curr - 1;
-      const next = curr + 1 > this.tabs.length ? 0 : curr + 1;
+      const prev = curr - 1 < 0 ? this.tabs.length - 1 : curr - 1;
+      const next = curr + 1 > this.tabs.length - 1 ? 0 : curr + 1;
 
       // don't catch key events when ⌘ or Alt modifier is present
       if (e.metaKey || e.altKey) return;
