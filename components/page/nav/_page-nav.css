@@ -158,6 +158,8 @@
 
   /* show site nav */
   &.active {
+    top: 0;
+    min-height: 100%;
     transform: translateX(-100%);
   }
 
