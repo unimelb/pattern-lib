@@ -3,7 +3,7 @@
   z-index: 1;
   top: .4em;
   right: 0;
-  margin: 1em;
+  margin: .1em 1em 1em;
 
   &__search,
   &__menu {
@@ -12,6 +12,10 @@
     margin-right: .25rem;
     margin-left: .25rem;
     color: white;
+  }
+
+  @media (--bp-tablet) {
+    margin-top: 1em;
   }
 }
 
