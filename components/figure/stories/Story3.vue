@@ -6,7 +6,7 @@
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.
       </p>
       <figure-wrap inset left caption="embed test">
-        <img src="http://unsplash.it/600/400?random&gravity=center" alt="">
+        <img src="https://picsum.photos/600/400?random&gravity=center" alt="">
       </figure-wrap>
       <p>
         Blanditiis exercitationem id sapiente voluptatem dolorum est sapiente. Qui explicabo voluptatem dolores perspiciatis laborum animi. Similique animi molestiae ipsam accusamus incidunt rerum. Et fugiat ut eum dolores id. Quaerat repudiandae facere voluptas fuga laboriosam quo illo adipisci. Doloremque autem cum ea voluptatem id.

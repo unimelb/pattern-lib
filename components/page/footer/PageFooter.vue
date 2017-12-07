@@ -150,9 +150,10 @@
 
 <script>
 import SocialList from '../../social-list/SocialList.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
 
 export default {
-  components: { SocialList },
+  components: { SocialList, SvgIcon },
 };
 </script>
 

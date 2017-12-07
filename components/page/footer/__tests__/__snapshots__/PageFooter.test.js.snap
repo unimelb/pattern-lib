@@ -51,10 +51,15 @@ exports[`PageFooter should match snapshot 1`] = `
                   class="page-footer-search__submit"
                   href="#"
                 >
-                  <svgicon
+                  <svg
                     class="page-footer-search__icon"
-                    name="search"
-                  />
+                    focusable="false"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="#icon-search"
+                    />
+                  </svg>
                 </a>
                 <input
                   aria-label="Search the University"
@@ -115,10 +120,15 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="link-icon"
                 href="http://about.unimelb.edu.au/governance-and-leadership/faculties"
               >
-                <svgicon
+                <svg
                   class="link-icon__icon svg"
-                  name="faculty"
-                />
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-faculty"
+                  />
+                </svg>
                 <span
                   class="link-icon__text"
                 >
@@ -132,10 +142,15 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="link-icon"
                 href="https://maps.unimelb.edu.au/"
               >
-                <svgicon
+                <svg
                   class="link-icon__icon svg"
-                  name="location"
-                />
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-location"
+                  />
+                </svg>
                 <span
                   class="link-icon__text"
                 >
@@ -149,10 +164,15 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="link-icon"
                 href="http://library.unimelb.edu.au/"
               >
-                <svgicon
+                <svg
                   class="link-icon__icon svg"
-                  name="library"
-                />
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-library"
+                  />
+                </svg>
                 <span
                   class="link-icon__text"
                 >
@@ -166,10 +186,15 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="link-icon"
                 href="http://www.campaign.unimelb.edu.au/"
               >
-                <svgicon
+                <svg
                   class="link-icon__icon svg"
-                  name="campaign"
-                />
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-campaign"
+                  />
+                </svg>
                 <span
                   class="link-icon__text"
                 >
@@ -183,10 +208,15 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="link-icon"
                 href="http://www.unimelb.edu.au/contact/"
               >
-                <svgicon
+                <svg
                   class="link-icon__icon svg"
-                  name="phone"
-                />
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-phone"
+                  />
+                </svg>
                 <span
                   class="link-icon__text"
                 >
@@ -200,10 +230,15 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="link-icon"
                 href="http://about.unimelb.edu.au/careers"
               >
-                <svgicon
+                <svg
                   class="link-icon__icon svg"
-                  name="jobs"
-                />
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-jobs"
+                  />
+                </svg>
                 <span
                   class="link-icon__text"
                 >

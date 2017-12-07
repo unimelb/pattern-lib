@@ -13,7 +13,7 @@ export default {
   props: {
     thumb: {
       type: String,
-      default: 'http://via.placeholder.com/400x200',
+      default: 'https://via.placeholder.com/400x200',
     },
     title: {
       type: String,

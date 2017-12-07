@@ -1,5 +1,5 @@
 <template>
-  <section class="section section--image section--image-mask bg-inverted" :style="{ backgroundImage: 'url(http://about-us-unimelb.netlify.com/images/our-history/leaves.jpg)' }">
+  <section class="section section--image section--image-mask bg-inverted" :style="{ backgroundImage: 'url(https://about-us-unimelb.netlify.com/images/our-history/leaves.jpg)' }">
      <div class="section__inner">
         <div class="grid grid--3col grid--center">
           <ListItem>
