@@ -22,7 +22,7 @@ export default {
   props: {
     image: {
       type: String,
-      default: 'http://via.placeholder.com/400x200',
+      default: 'https://via.placeholder.com/400x200',
     },
     boxes: {
       type: String,

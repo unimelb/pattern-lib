@@ -8,7 +8,7 @@
           tall
           tight
           class="card--image-focus--col-brand bg-alt"
-          img="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
+          img="https://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
           title="Learning and teaching"
           >
           <p>Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat. </p>
@@ -43,7 +43,7 @@
           tight
           titleabove
           class="card--image-focus--col-brand bg-alt"
-          img="http://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
+          img="https://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
           title="Learning and teaching"
           excerpt="Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat.">
           <p>Lorem ipsum dolor sit amet officia eum laboriosam libero, adipisci, ab repellat. </p>

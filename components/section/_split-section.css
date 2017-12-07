@@ -29,13 +29,16 @@
     }
 
     .card--focus-box {
-      max-width: 70%;
       margin-right: auto;
       margin-left: auto;
       padding: calc(var(--vr) / 2);
 
       .card__inner {
         padding: var(--vr);
+      }
+
+      @media (--bp-desktop) {
+        max-width: 70%;
       }
     }
 

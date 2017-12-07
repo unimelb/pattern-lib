@@ -1,13 +1,14 @@
-/* Variables */
 :root {
   --width-sitenav: 18.75rem;
   --offset-sitenav: -calc(var(--width-sitenav) + 0);
   --tr-transform: transform .3s ease;
 }
 
-/**
- * Site navigation
- */
+/* stylelint-disable-next-line selector-type-no-unknown */
+page-nav {
+  display: none;
+}
+
 .sitenav {
   position: fixed;
   z-index: 101;
@@ -158,6 +159,8 @@
 
   /* show site nav */
   &.active {
+    top: 0;
+    min-height: 100%;
     transform: translateX(-100%);
   }
 
