@@ -4,7 +4,7 @@
       <figure>
         <div class="welcome__thumb-img" :style="`background-image: url('${img}')`" > </div>
         <figcaption>
-          <h6 class="welcome__caption-title">{{ name }}</h6>
+          <strong class="welcome__caption-title">{{ name }}</strong>
         </figcaption>
       </figure>
       <p v-if="captionText && captionText.length > 0" class="welcome__caption-text"> {{ captionText }}</p>
@@ -13,8 +13,11 @@
     <div class="welcome__inner ">
       <slot></slot>
       <img class="welcome__signature" :src="signature" alt="signature">
-      <h6>{{ name }}</h6>
-      <p>{{ title }}</p>
+      <p>
+        <strong>{{ name }}</strong>
+        <br>
+        {{ title }}
+      </p>
     </div>
   </div>
 </template>
