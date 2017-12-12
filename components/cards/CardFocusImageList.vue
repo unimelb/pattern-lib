@@ -2,7 +2,7 @@
   <a :is="element" :href="element === 'a' ? href : false" class="card card--image-focus" :class="classes">
     <h3 v-if="titleabove === true" :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
     <div v-if="!progressive" class="card__thumb" :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}">
-      <img :src="img" :placeholder="progressive ? placeholder : false" class="card__thumb">
+      <img :src="img" :placeholder="progressive ? placeholder : false" class="card__thumb" alt="">
     </div>
     <progressive-img v-if="progressive" :src="img" :placeholder="progressive ? placeholder : false" class="card__thumb" :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"/>
     <div class="card__inner" :class="{'card__inner--tight': tight}">
