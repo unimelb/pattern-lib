@@ -19,6 +19,7 @@ export default class Nav {
             closeSiteNav: this.dismissMenu.bind(this),
           });
           this.menuTrigger.setAttribute('data-bound', true);
+          this.menuTarget.setAttribute('aria-hidden', true);
         }
       }
     }
@@ -28,10 +29,12 @@ export default class Nav {
     e.preventDefault();
     this.blanket.show({ onClick: this.dismissMenu.bind(this) });
     this.menuTarget.classList.add('active');
+    this.menuTarget.removeAttribute('aria-hidden');
   }
 
   dismissMenu() {
     this.blanket.hide();
     this.menuTarget.classList.remove('active');
+    this.menuTarget.setAttribute('aria-hidden', true);
   }
 }

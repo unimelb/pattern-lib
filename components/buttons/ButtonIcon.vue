@@ -24,6 +24,7 @@ export default {
   props: {
     href: {
       type: String,
+      default: '#',
     },
     icon: {
       type: String,

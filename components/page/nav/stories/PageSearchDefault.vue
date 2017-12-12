@@ -1,7 +1,7 @@
 <template>
-  <div class="header-tools">
+  <nav class="header-tools">
     <PageSearch />
-  </div>
+  </nav>
 </template>
 
 <script>

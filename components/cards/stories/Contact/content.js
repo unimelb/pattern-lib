@@ -1,5 +1,5 @@
 export default [`
-  <div class="contact-card__title">Address</div>
+  <h4 class="contact-card__title">Address</h4>
   <div class="contact-card__detail">
     9th Floor, Raymond Priestley Building
     <br>
@@ -16,7 +16,7 @@ export default [`
   <span class="contact-card__detail--inline">Fax:</span>
   <span class="contact-card__detail--inline"><a href="tel:61393477253">+61 3 9347 7253</a></span>
 `, `
-  <div class="contact-card__title">Executive Liaison</div>
+  <h4 class="contact-card__title">Executive Liaison</h4>
   <div class="contact-card__detail">Ms Sally Hayes</div>
   <span class="contact-card__detail--inline">Email:</span>
   <span class="contact-card__detail--inline"><a href="mailto:sally.hayes@unimelb.edu.au">sally.hayes@unimelb.edu.au</a></span>
@@ -24,7 +24,7 @@ export default [`
   <span class="contact-card__detail--inline">Phone:</span>
   <span class="contact-card__detail--inline"><a href="tel:61383446134">+61 3 8344 6134</a></span>
 `, `
-  <div class="contact-card__title">Executive Support Officer</div>
+  <h4 class="contact-card__title">Executive Support Officer</h4>
   <div class="contact-card__detail">Ms Amelia Phipps</div>
   <span class="contact-card__detail--inline">Email:</span>
   <span class="contact-card__detail--inline"><a href="mailto:phipps.a@unimelb.edu.au">phipps.a@unimelb.edu.au</a></span>

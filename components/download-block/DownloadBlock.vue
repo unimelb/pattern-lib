@@ -19,6 +19,7 @@ export default {
   props: {
     href: {
       type: String,
+      default: '#',
       required: true,
     },
     header: {
