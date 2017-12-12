@@ -10,7 +10,7 @@
             <option>Graduate courses</option>
           </select>
         </span>
-        <input class="form--inline__search" type="search" placeholder="Type to search courses">
+        <input aria-label="Course title or keyword" class="form--inline__search" type="search" placeholder="Type to search courses">
         <button class="form--inline__button form--inline__button--alt">
           <SvgIcon class="form--inline__svg" name="search" />
           <span class="form--inline__button-label">Search</span>
