@@ -3,8 +3,13 @@ require('dotenv').config();
 const path = require('path');
 const merge = require('webpack-merge');
 const sharedConfig = require('../webpack.config.shared.js');
+const pkg = require('./../../package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+// Public path for static assets and icon sprite
+const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
+const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.version}/` : '';
 
 module.exports = merge.smart(sharedConfig, {
   entry: {
@@ -22,6 +27,7 @@ module.exports = merge.smart(sharedConfig, {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]', // named assets not hashes
+          publicPath: customPublicPath,
           emitFile: false, // don't emit static assets
         },
       },

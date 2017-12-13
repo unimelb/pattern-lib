@@ -26,6 +26,7 @@ export { default as SvgIcon } from '../../components/icons/SvgIcon.vue';
 export { default as ListingWrap } from '../../components/listing/ListingWrap.vue';
 export { default as ListItem } from '../../components/listing/ListItem.vue';
 export { default as ModalDialog } from '../../components/modal/ModalDialog.vue';
+export { default as Notice } from '../../components/notice/Notice.vue';
 export { default as PageBreadcrumbs } from '../../components/page/breadcrumbs/PageBreadcrumbs.vue';
 export { default as PageFooter } from '../../components/page/footer/PageFooter.vue';
 export { default as PageHeader } from '../../components/page/header/PageHeader.vue';
