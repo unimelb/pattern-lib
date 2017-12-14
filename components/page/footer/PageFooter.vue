@@ -9,7 +9,9 @@
           <div class="page-footer__header__search">
             <form action="https://search.unimelb.edu.au" class="page-footer-search" id="search">
               <div class="page-footer-search__field">
-                <label><span class="page-footer-search__label">Search</span><a class="page-footer-search__submit" href="#"><SvgIcon class="page-footer-search__icon" name="search" /></a><input aria-label="Search the University" class="page-footer-search__input" name="q" placeholder="Type to search" type="search"></label>
+                <label class="page-footer-search__label" for="f_s_q">Search</label>
+                <input id="f_s_q" aria-label="Search the University" class="page-footer-search__input" name="q" placeholder="Type to search" type="search">
+                <a class="page-footer-search__submit" aria-label="Submit" onclick="submit()" role="button" href="#"><SvgIcon class="page-footer-search__icon" name="search" /></a>
               </div>
             </form>
           </div>

@@ -41,34 +41,39 @@ exports[`PageFooter should match snapshot 1`] = `
             <div
               class="page-footer-search__field"
             >
-              <label>
-                <span
-                  class="page-footer-search__label"
-                >
-                  Search
-                </span>
-                <a
-                  class="page-footer-search__submit"
-                  href="#"
-                >
-                  <svg
-                    class="page-footer-search__icon"
-                    focusable="false"
-                    role="presentation"
-                  >
-                    <use
-                      xlink:href="#icon-search"
-                    />
-                  </svg>
-                </a>
-                <input
-                  aria-label="Search the University"
-                  class="page-footer-search__input"
-                  name="q"
-                  placeholder="Type to search"
-                  type="search"
-                />
+              <label
+                class="page-footer-search__label"
+                for="f_s_q"
+              >
+                Search
               </label>
+               
+              <input
+                aria-label="Search the University"
+                class="page-footer-search__input"
+                id="f_s_q"
+                name="q"
+                placeholder="Type to search"
+                type="search"
+              />
+               
+              <a
+                aria-label="Submit"
+                class="page-footer-search__submit"
+                href="#"
+                onclick="submit()"
+                role="button"
+              >
+                <svg
+                  class="page-footer-search__icon"
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-search"
+                  />
+                </svg>
+              </a>
             </div>
           </form>
         </div>
@@ -676,13 +681,18 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="social-list__link"
                 href="https://www.facebook.com/unimelb"
               >
-                <svgicon
+                <svg
                   aria-label="Facebook"
                   class="social-list__icon"
+                  focusable="false"
                   height="22"
-                  name="facebook"
+                  role="img"
                   width="22"
-                />
+                >
+                  <use
+                    xlink:href="#icon-facebook"
+                  />
+                </svg>
               </a>
             </li>
              
@@ -693,13 +703,18 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="social-list__link"
                 href="https://www.twitter.com/unimelb"
               >
-                <svgicon
+                <svg
                   aria-label="Twitter"
                   class="social-list__icon"
+                  focusable="false"
                   height="22"
-                  name="twitter"
+                  role="img"
                   width="22"
-                />
+                >
+                  <use
+                    xlink:href="#icon-twitter"
+                  />
+                </svg>
               </a>
             </li>
              
@@ -710,13 +725,18 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="social-list__link"
                 href="https://www.linkedin.com/company/university-of-melbourne"
               >
-                <svgicon
+                <svg
                   aria-label="LinkedIn"
                   class="social-list__icon"
+                  focusable="false"
                   height="22"
-                  name="linkedin"
+                  role="img"
                   width="22"
-                />
+                >
+                  <use
+                    xlink:href="#icon-linkedin"
+                  />
+                </svg>
               </a>
             </li>
           </ul>

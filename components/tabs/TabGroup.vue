@@ -14,7 +14,6 @@ export default {
   mounted() {
     this.tabs = [].slice.call(this.$el.querySelectorAll('.tabs__tablist-item > a'));
     this.panels = [].slice.call(this.$el.querySelectorAll('.tabs__panel'));
-    this.$el.addEventListener('keydown', e => this.handleKey(e));
   },
   methods: {
     handleClick(e) {
@@ -49,21 +48,19 @@ export default {
       const prev = curr - 1 < 0 ? this.tabs.length - 1 : curr - 1;
       const next = curr + 1 > this.tabs.length - 1 ? 0 : curr + 1;
 
-      // don't catch key events when ⌘ or Alt modifier is present
+      // Don't catch key events when ⌘ or Alt modifier is present
       if (e.metaKey || e.altKey) return;
 
-      // catch left/right and up/down arrow key events
-      // if new next/prev tab available, show it by passing tab anchor to _showTab method
       switch (e.keyCode) {
+        // left / up
         case 37:
         case 38:
           this.showTab(prev);
-          e.preventDefault();
           break;
+        // right / down
         case 39:
         case 40:
           this.showTab(next);
-          e.preventDefault();
           break;
         default:
           break;
@@ -73,7 +70,7 @@ export default {
   render() {
     return (
       <div class="tabs">
-        <ul class="tabs__tablist" role="tablist">
+        <ul class="tabs__tablist" role="tablist" onKeydown={this.handleKey}>
           {this.items.map((item, index) => (
             <li class="tabs__tablist-item" role="presentation">
               <a onClick={this.handleClick} class="tabs__tab" id={`ui-${this._uid}-tab-${index + 1}`} href={`#ui-${this._uid}-tab-panel-${index + 1}`} role="tab" aria-controls={`ui-${this._uid}-tab-panel-${index + 1}`} tabindex={index === 0 ? 0 : -1}>

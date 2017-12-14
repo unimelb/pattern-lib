@@ -38,7 +38,7 @@
       border-top: 0;
     }
 
-    @media (--bp-wide) {
+    @media (--bp-desktop) {
       display: table-cell;
       width: 33.333%;
     }
@@ -46,7 +46,7 @@
 
   &__title {
     display: block;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
     font-size: 1.2em;
     font-weight: bold;
   }
