@@ -28,6 +28,7 @@ export default {
     const btn = this.$slots.btn[0];
     this.btnHref = btn.data.attrs.href;
     this.btnText = btn.children[0].text;
+    this.btnIcon = (btn.data.staticClass === 'download') ? 'download' : 'chevron-right';
   },
   methods: {
     onToggleItem(index, evt) {
@@ -50,6 +51,7 @@ export default {
         <ButtonIcon
           href={this.btnHref}
           disabled={!this.itemsAllChecked}
+          icon={this.btnIcon}
         >
           {this.btnText}
         </ButtonIcon>
