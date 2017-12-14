@@ -36,11 +36,11 @@
     "es6-promise": "^4.1.1",
     "ike.js": "^0.0.2",
     "normalize.css": "^7.0.0",
+    "photoswipe": "^4.1.2",
     "strip-html-comments": "^1.0.0",
     "vue": "2.5.2",
     "vue-progressive-image": "^2.2.1",
-    "vue-scrollto": "^2.7.8",
-    "vue-simple-photoswipe": "^1.0.3"
+    "vue-scrollto": "^2.7.8"
   },
   "peerDependencies": {
     "vue": "2.5.2"

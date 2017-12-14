@@ -3681,18 +3681,6 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
 
-fr-accordion@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/fr-accordion/-/fr-accordion-1.0.6.tgz#2968901ccc461e2843640391dfa994af00073ed4"
-
-fr-dialogmodal@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/fr-dialogmodal/-/fr-dialogmodal-1.0.4.tgz#ba72a7adbd3bcb3f9149a8799cbfc9af9d7705c0"
-
-fr-tabs@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/fr-tabs/-/fr-tabs-1.0.6.tgz#bf09560b5e73ffacd19be1d69a5778e1986566ca"
-
 fragment-cache@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/fragment-cache/-/fragment-cache-0.2.1.tgz#4290fad27f13e89be7f33799c6bc5a0abfff0d19"
@@ -8942,13 +8930,6 @@ vue-scrollto@^2.7.8:
   dependencies:
     bezier-easing "^2.0.3"
 
-vue-simple-photoswipe@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vue-simple-photoswipe/-/vue-simple-photoswipe-1.0.3.tgz#110c41730b2dbff83deff38f50d3c4f454d41d34"
-  dependencies:
-    photoswipe "^4.1.2"
-    vue "^2.4.2"
-
 vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-3.0.3.tgz#623658f81506aef9d121cdc113a4f5c9cac32df7"
@@ -8976,10 +8957,6 @@ vue-test-utils@^1.0.0-beta.4:
 vue@2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.2.tgz#fd367a87bae7535e47f9dc5c9ec3b496e5feb5a4"
-
-vue@^2.4.2:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.3.tgz#e1a3b1f49b6e93e574ce040b95cbc873912fecc1"
 
 walker@~1.0.5:
   version "1.0.7"

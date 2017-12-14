@@ -9,9 +9,7 @@ import { version } from '../package.json';
 
 // Auto-inject SVG icon sprite with `svg-sprite-loader`
 import './icons/sprite';
-
 import './side-panel';
-import './photo-gallery';
 
 // Expose JS utilities
 window.ui = { utils };
