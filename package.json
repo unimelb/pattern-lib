@@ -92,6 +92,7 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint-order": "^0.7.0",
     "svg-fill-loader": "^0.0.8",
+    "svg-loader": "^0.0.2",
     "svg-sprite-loader": "^3.4.1",
     "svg-url-loader": "^2.1.1",
     "vue-html-loader": "^1.2.4",

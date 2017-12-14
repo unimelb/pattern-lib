@@ -80,9 +80,14 @@ module.exports = {
         ],
       },
       {
+        include: path.resolve(__dirname, 'components/icons/aboutus/'),
+        test: /\.svg$/,
+        loader: 'svg-loader',
+      },
+      {
         // Static assets
         test: /\.(jpe?g|png|gif|svg|woff2?|ttf|otf|eot|ico)$/,
-        exclude: path.resolve(__dirname, 'components/icons/sprite/'),
+        exclude: path.resolve(__dirname, 'components/icons/'),
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',

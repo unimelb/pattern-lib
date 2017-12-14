@@ -8350,6 +8350,10 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
+svg-loader@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/svg-loader/-/svg-loader-0.0.2.tgz#601ab2fdaa1dadae3ca9975b550de92a07e1d92b"
+
 svg-sprite-loader@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.4.1.tgz#6e807105fac025d6712eec85275002ed6d1a48f5"
