@@ -41,7 +41,7 @@ export default {
           {this.items.map((item, index) => (
             <CheckListItem
               index={index}
-              text={item.children[0].text}
+              content={item.children}
               checked={this.checkedItems[index]}
               toggle={this.onToggleItem}
             />
