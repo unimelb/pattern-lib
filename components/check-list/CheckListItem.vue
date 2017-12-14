@@ -1,18 +1,3 @@
-<template>
-  <li :key="index" class="check-list__item">
-    <input
-      :id="inputId"
-      class="check-list__checkbox"
-      type="checkbox"
-      :checked="checked"
-      @change="onChange"
-    >
-    <label class="check-list__label" :for="inputId">
-      {{ text }}
-    </label>
-  </li>
-</template>
-
 <script>
 export default {
   props: {
@@ -20,8 +5,8 @@ export default {
       type: Number,
       required: true,
     },
-    text: {
-      type: String,
+    content: {
+      type: Array,
       required: true,
     },
     checked: {
@@ -41,6 +26,21 @@ export default {
       return this.toggle.bind(this, this.index);
     },
   },
+  render() {
+    return (
+      <li key={this.index} class="check-list__item">
+        <input
+          id={this.inputId}
+          class="check-list__checkbox"
+          type="checkbox"
+          checked={this.checked}
+          onChange={this.onChange}
+        />
+        <label class="check-list__label" for={this.inputId}>
+          {this.content}
+        </label>
+      </li>
+    );
+  },
 };
 </script>
-

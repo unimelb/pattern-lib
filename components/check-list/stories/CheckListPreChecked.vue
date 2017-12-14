@@ -1,8 +1,8 @@
 <template>
   <CheckList :checked-count="2">
     <ol slot="list">
-      <li>Check the degree website.</li>
-      <li>Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item-cms: Check the entry requirements to clarify your eligibility for application.</li>
+      <li>Check the <a href="a link">degree website</a>.</li>
+      <li>Check the entry requirements to <em>clarify</em> your eligibility for application, duplicate instructions after to demonstrate a multiline item-cms: Check the entry requirements to clarify your eligibility for application.</li>
       <li>Ensure you meet the University's language requirements.</li>
       <li>Apply online or via the hardcopy application form.</li>
     </ol>
@@ -18,6 +18,6 @@ export default {
   components: { CheckList },
   decorator: ContentBlock,
   decoratorProps: { size: 'sml' },
-  readme: { html: true },
+  readme: { html: true, source: false },
 };
 </script>
