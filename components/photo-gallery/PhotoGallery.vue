@@ -1,18 +1,27 @@
 <template>
-  <ListingWrap class="photo-gallery preview-img-list">
-    <ListItem :cols="item.size" v-for="(item, index) in slots" :key="item.id">
-      <FigureWrap class="photo-gallery__figure" :caption="captions && item.title">
-        <div :class="`preview-img-item${ noPopup === false ? '' : ' preview-img-item--nolink'}`" :style="`background-image:url(${item.src})`" @click="noPopup === false && $photoswipe.open(index, slots, options)"></div>
-      </FigureWrap>
-    </ListItem>
-  </ListingWrap>
+  <div>
+    <ListingWrap class="photo-gallery preview-img-list">
+      <ListItem :cols="item.size" v-for="(item, index) in slots" :key="item.id">
+        <FigureWrap class="photo-gallery__figure" :caption="captions && item.title">
+          <div :class="`preview-img-item ${ noPopup === false ? '' : ' preview-img-item--nolink'}`" :style="`background-image:url(${item.src})`" @click="noPopup === false && open(index, slots, options)"></div>
+        </FigureWrap>
+      </ListItem>
+    </ListingWrap>
+    <PhotoSwipeMarkup />
+  </div>
 </template>
 
 <script>
+import 'photoswipe/dist/photoswipe.css';
+import 'photoswipe/dist/default-skin/default-skin.css';
+import PhotoSwipe from 'photoswipe/dist/photoswipe';
+import PhotoSwipeDefaultUI from 'photoswipe/dist/photoswipe-ui-default';
 import ListingWrap from './../listing/ListingWrap.vue';
 import FigureWrap from './../figure/FigureWrap.vue';
+import PhotoSwipeMarkup from './PhotoSwipeMarkup.vue';
+
 export default {
-  components: { ListingWrap, FigureWrap },
+  components: { ListingWrap, FigureWrap, PhotoSwipeMarkup },
   props: {
     cols: {
       type: String,
@@ -23,6 +32,7 @@ export default {
     },
     captions: Boolean,
     fullScreen: Boolean,
+    options: Object,
     noPopup: {
       type: Boolean,
       default: false,
@@ -39,15 +49,30 @@ export default {
         size: node.data.attrs['data-size'],
       }));
     },
-    options() {
-      return {
+  },
+  methods: {
+    open(
+      index,
+      items,
+      options = {
         showHideOpacity: true,
         getThumbBoundsFn: false,
         shareEl: false,
         fullscreenEl: this.fullScreen,
         closeOnScroll: false,
         bgOpacity: 0.95,
-      };
+      }
+    ) {
+      this.photoswipe = new PhotoSwipe(
+        this.$el.querySelector('.pswp'),
+        PhotoSwipeDefaultUI,
+        items,
+        options
+      );
+      this.photoswipe.init();
+    },
+    close() {
+      this.photoswipe.close();
     },
   },
 };
