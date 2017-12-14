@@ -1,5 +1,5 @@
 <template>
-  <div class="header-tools">
+  <nav class="header-tools">
     <PageSearch />
     <PageNav title="About us">
       <ul>
@@ -12,7 +12,7 @@
         <li><a href="https://search.unimelb.edu.au">Search</a></li>
       </ul>
     </PageNav>
-  </div>
+  </nav>
 </template>
 
 <script>

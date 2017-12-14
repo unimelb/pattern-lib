@@ -1,52 +1,50 @@
-.fr-accordion--is-ready {
-  &.accordion {
-    margin-bottom: 1.5rem;
+.accordion {
+  margin-bottom: 1.5rem;
 
-    .fr-accordion__header {
-      padding: 1rem 1.25rem;
-      transition: background-color .15s ease-out, color .15s ease-out;
-      border-bottom: 1px solid var(--col-bg-secondary-grey);
-      text-decoration: none;
+  .toggle__header {
+    padding: 1rem 1.25rem;
+    transition: background-color .15s ease-out, color .15s ease-out;
+    border-bottom: 1px solid var(--col-bg-secondary-grey);
+    text-decoration: none;
 
-      h2 {
-        margin-bottom: 0;
-        font-size: 1.25rem;
-        line-height: 1.25;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 1.25rem;
-        width: 0;
-        height: 0;
-        margin-top: -.25rem;
-        border-top: .333rem solid currentColor;
-        border-right: .333rem solid transparent;
-        border-left: .333rem solid transparent;
-      }
-
-      &[aria-selected='true']::after {
-        border-top: 0;
-        border-bottom: .333rem solid currentColor;
-      }
-
-      &[aria-selected='true'],
-      &[aria-selected='false']:focus,
-      &[aria-selected='false']:hover {
-        background-color: var(--col-bg-grey);
-      }
+    h2 {
+      margin-bottom: 0;
+      font-size: 1.25rem;
+      line-height: 1.25;
     }
 
-    .fr-accordion__panel {
-      transition: height .25s ease-out, visibility .25s;
-      background-color: var(--col-bg-grey);
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 1.25rem;
+      width: 0;
+      height: 0;
+      margin-top: -.25rem;
+      border-top: .333rem solid currentColor;
+      border-right: .333rem solid transparent;
+      border-left: .333rem solid transparent;
+    }
 
-      &__inner {
-        padding: 1.25rem;
-        border-bottom: 1px solid var(--col-bg-secondary-grey);
-      }
+    &[aria-selected='true']::after {
+      border-top: 0;
+      border-bottom: .333rem solid currentColor;
+    }
+
+    &[aria-selected='true'],
+    &[aria-selected='false']:focus,
+    &[aria-selected='false']:hover {
+      background-color: var(--col-bg-grey);
+    }
+  }
+
+  .toggle__panel {
+    transition: height .25s ease-out, visibility .25s;
+    background-color: var(--col-bg-grey);
+
+    &__inner {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--col-bg-secondary-grey);
     }
   }
 }

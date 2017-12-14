@@ -33,6 +33,7 @@
   }
 
   &__caption-title {
+    display: block;
     text-align: center;
   }
 

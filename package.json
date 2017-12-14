@@ -36,11 +36,11 @@
     "es6-promise": "^4.1.1",
     "ike.js": "^0.0.2",
     "normalize.css": "^7.0.0",
+    "photoswipe": "^4.1.2",
     "strip-html-comments": "^1.0.0",
     "vue": "2.5.2",
     "vue-progressive-image": "^2.2.1",
-    "vue-scrollto": "^2.7.8",
-    "vue-simple-photoswipe": "^1.0.3"
+    "vue-scrollto": "^2.7.8"
   },
   "peerDependencies": {
     "vue": "2.5.2"
@@ -72,9 +72,6 @@
     "eslint-plugin-vue": "^3.13.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
-    "fr-accordion": "^1.0.6",
-    "fr-dialogmodal": "^1.0.4",
-    "fr-tabs": "^1.0.6",
     "html-webpack-plugin": "^2.30.1",
     "inquirer-directory": "^2.1.0",
     "jest": "^21.2.1",

@@ -13,13 +13,9 @@
     transform: rotate(-45deg);
     border-top: 0;
     border-right: 0;
-    border-bottom: 3px solid var(--col-brand);
-    border-left: 3px solid var(--col-brand);
+    border-bottom: 2px solid var(--col-emerald);
+    border-left: 2px solid var(--col-emerald);
     background: transparent;
-  }
-
-  &--cta::before {
-    border-color: var(--col-emerald);
   }
 }
 
@@ -36,11 +32,8 @@
     height: .375rem;
     margin-left: -1.5rem;
     background: transparent;
+    color: var(--col-orange-dark);
     font-size: 1.5rem;
     font-weight: var(--fw-semibold);
-  }
-
-  &--cta::before {
-    color: var(--col-orange-dark);
   }
 }

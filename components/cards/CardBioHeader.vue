@@ -1,8 +1,6 @@
 <template>
   <div class="card card--division card--division--head card--bdr">
-    <div class="card__thumb" >
-      <img :src="thumb" alt="">
-    </div>
+    <div class="card__thumb" :style="{'background-image': `url(${thumb})`}"></div>
     <div class="card__inner ">
       <div class="card__subheader">
         <h3 class="card__header">{{ name }}</h3>

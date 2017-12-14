@@ -1,9 +1,16 @@
 <template>
-  <SectionWrap>
-    <PhotoGallery>
-      <img :src="image.src" alt="" :width="image.w" :key="image.id" :height="image.h" :data-title="image.title" :data-thumb="image.msrc" :data-size="image.size" v-for="image in images">
-    </PhotoGallery>
-  </SectionWrap>
+  <div>
+    <SectionWrap>
+      <PhotoGallery>
+        <img :src="image.src" alt="" :width="image.w" :key="image.id" :height="image.h" :data-title="image.title" :data-thumb="image.msrc" :data-size="image.size" v-for="image in images">
+      </PhotoGallery>
+    </SectionWrap>
+    <SectionWrap>
+      <PhotoGallery>
+        <img :src="image.src" alt="" :width="image.w" :key="image.id" :height="image.h" :data-title="image.title" :data-thumb="image.msrc" :data-size="image.size" v-for="image in images">
+      </PhotoGallery>
+    </SectionWrap>
+  </div>
 </template>
 
 <script>

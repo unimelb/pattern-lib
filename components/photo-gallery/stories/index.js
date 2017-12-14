@@ -4,9 +4,11 @@ import { createStory } from '.storybook/utils';
 import PhotoGalleryDefault from './PhotoGalleryDefault.vue';
 import WithCaptions from './WithCaptions.vue';
 import WithoutPopup from './WithoutPopup.vue';
+import TwoGalleries from './TwoGalleries.vue';
 /* ##Import story component here */
 
 storiesOf('Photo Gallery', module)
   .add('Default', createStory(PhotoGalleryDefault))
   .add('With captions', createStory(WithCaptions))
-  .add('Without popup', createStory(WithoutPopup));
+  .add('Without popup', createStory(WithoutPopup))
+  .add('Two on page', createStory(TwoGalleries));
