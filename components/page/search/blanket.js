@@ -9,7 +9,7 @@ export default class Blanket {
       this.el.className = 'blanket';
 
       // Add the blanket to the DOM
-      document.querySelector('body').appendChild(this.el);
+      document.body.appendChild(this.el);
     }
   }
 
