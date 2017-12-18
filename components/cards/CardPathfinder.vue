@@ -7,7 +7,7 @@
       <p><slot ></slot></p>
     </div>
     <div class="card__footer">
-      <ButtonIcon icon="chevron-right" class="btn--inverted btn--fullwidth">Find out more</ButtonIcon>
+      <ButtonIcon element="div" icon="chevron-right" class="btn--inverted btn--fullwidth">Find out more</ButtonIcon>
     </div>
   </a>
   <a v-else-if="compact" :href="href" class="btn-owner card card--focus-box bg-inverted card--pathfinder card--pathfinder--sml">
