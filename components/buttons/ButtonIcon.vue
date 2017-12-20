@@ -47,7 +47,7 @@ export default {
     element: {
       type: String,
       default: 'a',
-      validator: val => ['a', 'button'].indexOf(val) !== -1,
+      validator: val => ['a', 'button', 'div'].indexOf(val) !== -1,
     },
     disabled: {
       type: Boolean,

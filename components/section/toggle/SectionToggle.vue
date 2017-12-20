@@ -1,11 +1,24 @@
+<template>
+  <div>
+    <div class="toggle" role="tablist" aria-multiselectable="!solo" v-for="(item, index) in this.items" :key="item.id">
+      <div class="toggle__item">
+        <div @click="togglePanel" @keyup="handleKey" :id="`${namespace}-header-${index + 1}`" role="tab" :aria-controls="`${namespace}-panel-${index + 1}`" tabindex="0" class="toggle__header">
+          <h2>{{ item.data.attrs.title }}</h2>
+        </div>
+        <div :id="`${namespace}-panel-${index + 1}`" role="tabpanel" :aria-labelledby="`${namespace}-header-${index + 1}`" tabindex="0" class="toggle__panel">
+          <div class="toggle__panel__inner" v-html="content[index].innerHTML"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script>
+import { vnodeToElement } from '../../shared/utils';
+
 export default {
   name: 'section-toggle',
   props: {
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
     solo: {
       type: Boolean,
       default: false,
@@ -20,9 +33,20 @@ export default {
       current: 0,
     };
   },
+  computed: {
+    namespace() {
+      return `ui-toggle-${this._uid}`;
+    },
+  },
   beforeCreate() {
     const list = this.$slots.default;
     this.items = list.filter(item => item.tag === 'section');
+
+    this.content = [];
+    this.items.forEach((item, index) => {
+      this.content[index] = document.createElement('div');
+      item.children.forEach(node => this.content[index].appendChild(vnodeToElement(node)));
+    });
   },
   mounted() {
     if (this.disabled) return;
@@ -151,24 +175,6 @@ export default {
       // reset height
       panel.style.height = 0;
     },
-  },
-  render() {
-    return (
-      <div class="toggle" role="tablist" aria-multiselectable={!this.solo}>
-        {this.items.map((item, index) => (
-          <div class="toggle__item">
-            <div onClick={this.togglePanel} onKeyup={this.handleKey} id={`ui-toggle-header-${this._uid}-${index + 1}`} role="tab" aria-controls={`ui-toggle-panel-${this._uid}-${index + 1}`} tabindex="0" class="toggle__header">
-              <h2>{ item.data.attrs.title }</h2>
-            </div>
-            <div id={`ui-toggle-panel-${this._uid}-${index + 1}`} role="tabpanel" aria-labelledby={`ui-toggle-header-${this._uid}-${index + 1}`} tabindex="0" class="toggle__panel">
-              <div class="toggle__panel__inner">
-                { item.children }
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
   },
 };
 </script>
