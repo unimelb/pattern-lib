@@ -1,4 +1,6 @@
 /*  eslint-disable no-new */
+import 'babel-polyfill';
+
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 import Ike from 'ike.js';
