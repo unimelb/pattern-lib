@@ -1,13 +1,21 @@
 <template>
   <div class="header-tools__menu">
-    <a class="link-icon--vertical link-reset" href="#sitemap" @click.prevent="activateMenu">
+    <a
+      role="button"
+      aria-haspopup="true"
+      aria-controls="sitemapmenu"
+      href="#sitemap"
+      id="sitemapbutton"
+      class="link-icon--vertical link-reset"
+      @click.prevent="activateMenu"
+    >
       <svg class="link-icon__icon svg" role="presentation" focusable="false" viewBox="10 10 26 28">
         <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
       </svg>
       <span class="link-icon__text">Menu</span>
     </a>
     <div ref="sitemap" id="sitemap" class="sitenav sitenav__panel" role="navigation">
-      <button class="sitenav__back-btn button-ui" type="button" @click.prevent="dismissMenu">Close</button>
+      <button class="sitenav__back-btn button-ui" aria-label="Close" type="button" @click.prevent="dismissMenu">Close</button>
       <h2 ref="navtitle" v-html="title"></h2>
       <slot></slot>
     </div>
@@ -35,6 +43,7 @@ export default {
     this.state = { open: [this.$refs.sitemap] };
 
     this.initSiteNav();
+    this.initLinks();
     this.initInternalLinks();
     this.initNestedPanels();
 
@@ -45,6 +54,7 @@ export default {
       this.blanket.show({ onClick: this.dismissMenu.bind(this) });
       this.$refs.sitemap.classList.add('active');
       this.$refs.sitemap.removeAttribute('aria-hidden');
+      this.rootList.querySelector('a').focus();
     },
 
     dismissMenu() {
@@ -62,17 +72,29 @@ export default {
       }
 
       this.rootList.classList.add('sitenav__list');
+      this.rootList.id = 'sitemapmenu';
+      this.rootList.setAttribute('role', 'menu');
+      this.rootList.setAttribute('aria-labelledby', 'sitemapbutton');
 
       // 2. Inject home link as first item
       this.$refs.navtitle.parentNode.removeChild(this.$refs.navtitle);
 
       const homeItem = document.createElement('li');
       homeItem.className = 'home';
-      homeItem.innerHTML = `<a href="${this.root}">${(this.$refs.navtitle.textContent)}</a>`;
+      homeItem.setAttribute('role', 'none');
+      homeItem.innerHTML = `<a href="${this.root}" role="menuitem">${(this.$refs.navtitle.textContent)}</a>`;
       this.rootList.insertBefore(homeItem, this.rootList.firstChild);
 
       // 3. Move site nav to root container
       document.body.appendChild(this.$refs.sitemap);
+    },
+
+    // Set aria role
+    initLinks() {
+      const internalLinks = [].slice.call(this.$refs.sitemap.querySelectorAll('a[href]'));
+      internalLinks.forEach((link) => {
+        link.setAttribute('role', 'menuitem');
+      }, this);
     },
 
     initInternalLinks() {
@@ -110,6 +132,7 @@ export default {
       // Look for the item's link and use it as the trigger for opening the nested panel
       const trigger = item.querySelector('a');
       trigger.classList.add('sitenav__nested-trigger');
+      trigger.setAttribute('role', '"menuitem');
       trigger.addEventListener('click', this.openNestedPanel.bind(this, panel, true));
 
       // Inject button to close nested panel
@@ -117,6 +140,7 @@ export default {
       backBtn.className = 'sitenav__back-btn button-ui';
       backBtn.textContent = 'Back';
       backBtn.setAttribute('type', 'button');
+      backBtn.setAttribute('aria-label', 'Back');
       backBtn.addEventListener('click', this.closeNestedPanel.bind(this, panel, false));
       panel.insertBefore(backBtn, list);
 
@@ -126,6 +150,7 @@ export default {
       insertParentLink.classList.add('sitenav__nested-parent');
       insertParentLink.textContent = trigger.textContent;
       insertParentLink.setAttribute('href', trigger.getAttribute('href'));
+      insertParentLink.setAttribute('role', '"menuitem');
       insertParent.appendChild(insertParentLink);
       panel.insertBefore(insertParent, list);
     },
