@@ -5,7 +5,7 @@
       <span class="form--inline__input">
         <input id="f_q0" type="search" placeholder="Don't use the placeholder as a label!">
       </span>
-      <button class="form--inline__button">
+      <button class="form--inline__button" aria-label="Search">
         <SvgIcon class="form--inline__svg" name="search" />
       </button>
     </div>
@@ -14,7 +14,7 @@
       <span class="form--inline__input">
         <input id="f_eml0" aria-label="Email" type="email" placeholder="jane@example.com">
       </span>
-      <button class="form--inline__button form--inline__button--text">Submit!</button>
+      <button class="form--inline__button form--inline__button--text" aria-label="Submit">Submit!</button>
     </div>
   </form>
 </template>

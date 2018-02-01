@@ -11,7 +11,7 @@
           </select>
         </span>
         <input aria-label="Course title or keyword" class="form--inline__search" type="search" placeholder="Type to search courses">
-        <button class="form--inline__button form--inline__button--alt">
+        <button class="form--inline__button form--inline__button--alt" aria-label="Submit">
           <SvgIcon class="form--inline__svg" name="search" />
           <span class="form--inline__button-label">Search</span>
         </button>
