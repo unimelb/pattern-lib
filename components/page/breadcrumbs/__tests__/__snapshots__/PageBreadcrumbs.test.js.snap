@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
-<nav>
+<nav
+  aria-label="Breadcrumb"
+>
   <ol
     class="page-breadcrumbs max links-reset"
     itemscope="itemscope"
@@ -67,6 +69,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
       />
        
       <a
+        aria-current="true"
         class="page-breadcrumbs__link"
         href="/bar"
         itemprop="item"
