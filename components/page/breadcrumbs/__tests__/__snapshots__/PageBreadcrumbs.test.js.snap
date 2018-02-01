@@ -1,27 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
-<nav>
+<nav
+  aria-label="Breadcrumb"
+>
   <ol
     class="page-breadcrumbs max links-reset"
-    itemscope="itemscope"
-    itemtype="http://schema.org/BreadcrumbList"
   >
     <li
       class="page-breadcrumbs__item"
-      itemprop="itemListElement"
-      itemscope="itemscope"
-      itemtype="http://schema.org/ListItem"
     >
-      <meta
-        content="1"
-        itemprop="position"
-      />
-       
       <a
         class="page-breadcrumbs__link"
         href="/foo"
-        itemprop="item"
       >
         <svg
           class="page-breadcrumbs__home"
@@ -37,7 +28,6 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
          
         <span
           class="page-breadcrumbs__name"
-          itemprop="name"
         >
           Foo
         </span>
@@ -57,25 +47,16 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
     </li>
     <li
       class="page-breadcrumbs__item"
-      itemprop="itemListElement"
-      itemscope="itemscope"
-      itemtype="http://schema.org/ListItem"
     >
-      <meta
-        content="2"
-        itemprop="position"
-      />
-       
       <a
+        aria-current="page"
         class="page-breadcrumbs__link"
         href="/bar"
-        itemprop="item"
       >
         <!---->
          
         <span
           class="page-breadcrumbs__name"
-          itemprop="name"
         >
           Bar
         </span>
