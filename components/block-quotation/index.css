@@ -5,7 +5,6 @@ blockquote,
   flex-direction: column;
   padding-right: var(--vr);
   padding-left: var(--vr);
-  border-color: var(--col-grey-mid-1);
 
   p,
   &__content {
@@ -48,6 +47,7 @@ blockquote,
   &--bdr-top {
     padding-top: 2.2em;
     border-top: 2px solid;
+    border-color: var(--col-grey-mid-1);
 
     .block-quotation__content::before {
       top: .25em;
@@ -57,14 +57,11 @@ blockquote,
   &--bdr-btm {
     padding-bottom: 2.2em;
     border-bottom: 2px solid;
+    border-color: var(--col-grey-mid-1);
 
     .block-quotation__content::after {
       bottom: .5em;
     }
-  }
-
-  &--inverted {
-    border-color: #fff;
   }
 
   cite,
@@ -72,13 +69,31 @@ blockquote,
     width: 100%;
     margin-top: calc(var(--vr) / 2);
     float: left;
-    color: var(--col-grey-mid-1);
+    color: var(--col-grey-mid-2);
     font-size: 1.1em;
     font-style: normal;
     text-align: left;
 
     &::before {
       content: '—';
+    }
+  }
+
+  .bg-inverted & {
+    cite {
+      color: var(--col-grey-light);
+    }
+
+    &__content {
+      &::before,
+      &::after {
+        color: var(--col-grey-light);
+      }
+    }
+
+    &--bdr-btm,
+    &--bdr-top {
+      border-color: var(--col-grey-light);
     }
   }
 
