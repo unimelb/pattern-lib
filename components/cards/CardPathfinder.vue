@@ -1,5 +1,5 @@
 <template>
-  <a v-if="!compact" :href="href" class="btn-owner card card--focus-box bg-inverted card--pathfinder">
+  <a v-if="!compact" :href="href" :aria-label="title" class="btn-owner card card--focus-box bg-inverted card--pathfinder">
     <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
     <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
     <h3 class="card__header heading-section">{{ title }}</h3>
@@ -7,14 +7,14 @@
       <p><slot ></slot></p>
     </div>
     <div class="card__footer">
-      <ButtonIcon element="div" icon="chevron-right" class="btn--inverted btn--fullwidth">Find out more</ButtonIcon>
+      <ButtonIcon element="span" icon="chevron-right" class="btn--inverted btn--fullwidth">Find out more</ButtonIcon>
     </div>
   </a>
-  <a v-else-if="compact" :href="href" class="btn-owner card card--focus-box bg-inverted card--pathfinder card--pathfinder--sml">
+  <a v-else-if="compact" :href="href" :aria-label="title" class="btn-owner card card--focus-box bg-inverted card--pathfinder card--pathfinder--sml">
     <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--top-left" name="focus-top-left" width="54" height="54" />
     <SvgIcon class="card--focus-box__cnr card--focus-box__cnr--btm-right" name="focus-bottom-right" width="54" height="54" />
     <div class="card__inner">
-      <ButtonIcon icon="chevron-right" class="btn--inverted btn--fullwidth">{{ title }}</ButtonIcon>
+      <ButtonIcon element="span" icon="chevron-right" class="btn--inverted btn--fullwidth">{{ title }}</ButtonIcon>
       <p><slot></slot></p>
     </div>
   </a>
@@ -29,7 +29,7 @@ export default {
     },
     href: {
       type: String,
-      default: '#',
+      default: 'http://www.google.com.au',
     },
     compact: {
       type: Boolean,
