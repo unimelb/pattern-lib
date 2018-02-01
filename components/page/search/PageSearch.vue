@@ -6,12 +6,10 @@
     </a>
     <div ref="search" class="page-header-search">
       <form action="https://search.unimelb.edu.au" method="get">
-        <fieldset class="page-header-search__inline">
-          <input ref="input" class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University"><button class="page-header-search__submit" type="submit">
-            <SvgIcon class="page-header-search__icon" name="search" />
-            <span class="screenreaders-only">Go</span>
-          </button>
-        </fieldset>
+        <input ref="input" class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University"><button class="page-header-search__submit" type="submit">
+          <SvgIcon class="page-header-search__icon" name="search" />
+          <span class="screenreaders-only">Go</span>
+        </button>
         <a class="page-header-icon link-icon--close" href="#" @click.prevent="handleSearchClose">
           <SvgIcon class="page-header-search__icon--close" name="close" />
           Close
