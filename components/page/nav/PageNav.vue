@@ -54,6 +54,7 @@ export default {
       this.blanket.show({ onClick: this.dismissMenu.bind(this) });
       this.$refs.sitemap.classList.add('active');
       this.$refs.sitemap.removeAttribute('aria-hidden');
+      this.rootList.querySelector('a').focus();
     },
 
     dismissMenu() {
