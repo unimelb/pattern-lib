@@ -4,7 +4,6 @@
     :class="classes"
     :href="isLink && href"
     :aria-disabled="isLink && disabled ? 'true': false"
-    :tabindex="isLink && disabled ? '-1' : false"
     :disabled="!isLink && disabled"
   >
     <span v-if="!noIcon" class="push-icon">
