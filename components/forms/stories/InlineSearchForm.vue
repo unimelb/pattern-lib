@@ -5,7 +5,7 @@
       <div class="form--inline__row form--inline__row--center">
         <span class="form--inline__select">
           <label class="form--inline__label" for="course_type">Type</label>
-          <select name="course_type">
+          <select name="course_type" id="course_type">
             <option>Undergraduate courses</option>
             <option>Graduate courses</option>
           </select>
