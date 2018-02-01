@@ -1,6 +1,6 @@
 <template>
   <div class="header-tools__menu">
-    <a class="link-icon--vertical link-reset" href="#sitemap" @click.prevent="activateMenu">
+    <a class="link-icon--vertical link-reset" role="button" href="#sitemap" @click.prevent="activateMenu">
       <svg class="link-icon__icon svg" role="presentation" focusable="false" viewBox="10 10 26 28">
         <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
       </svg>

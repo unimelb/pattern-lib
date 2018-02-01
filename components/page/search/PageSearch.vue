@@ -1,6 +1,6 @@
 <template>
   <div class="header-tools__search">
-    <a class="link-icon--vertical link-reset" href="#search" @click.prevent="activateSearch">
+    <a class="link-icon--vertical link-reset" role="button" href="#search" @click.prevent="activateSearch">
       <SvgIcon class="link-icon__icon svg" name="search" />
       <span class="link-icon__text">Search</span>
     </a>
@@ -10,7 +10,7 @@
           <SvgIcon class="page-header-search__icon" name="search" />
           <span class="screenreaders-only">Go</span>
         </button>
-        <a class="page-header-icon link-icon--close" href="#" @click.prevent="handleSearchClose">
+        <a class="page-header-icon link-icon--close" role="button" href="#" @click.prevent="handleSearchClose">
           <SvgIcon class="page-header-search__icon--close" name="close" />
           Close
         </a>
