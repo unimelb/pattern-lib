@@ -1,19 +1,25 @@
 <template>
-  <nav aria-label="Breadcrumb">
-    <ol class="page-breadcrumbs max links-reset">
+  <nav aria-label="Breadcrumb"> 
+    <ol
+      class="page-breadcrumbs max links-reset"
+      itemscope itemtype="http://schema.org/BreadcrumbList"
+    >
       <li
         v-for="(item, index) in items"
         :key="item.href"
         class="page-breadcrumbs__item"
+        itemprop="itemListElement"
+        itemscope itemtype="http://schema.org/ListItem"
       >
-        <a class="page-breadcrumbs__link" :href="item.href" :aria-current="index === items.length -1 ? 'page' : false">
+        <meta :content="index + 1" itemprop="position">
+        <a class="page-breadcrumbs__link" :href="item.href" itemprop="item" :aria-current="index === items.length -1">
           <SvgIcon
             v-if="index === 0"
             class="page-breadcrumbs__home"
             name="home"
             width="18" height="18"
           />
-          <span class="page-breadcrumbs__name">{{ item.text }}</span>
+          <span class="page-breadcrumbs__name" itemprop="name">{{ item.text }}</span>
           <SvgIcon
             v-if="index < items.length - 1"
             class="page-breadcrumbs__chevron"
