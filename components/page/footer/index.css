@@ -97,7 +97,7 @@
 
   /* legal links (disclaimer, privacy, etc.) */
   &__legal {
-    color: var(--col-blue-mid);
+    color: var(--col-blue-light);
 
     &__sep {
       margin: 0 .375rem;
