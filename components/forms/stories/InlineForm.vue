@@ -3,7 +3,7 @@
     <label for="f_q0">Search</label>
     <div class="form--inline__row">
       <span class="form--inline__input">
-        <input id="f_q0" aria-label="Keyword" type="search" placeholder="Don't use the placeholder as a label!">
+        <input id="f_q0" type="search" placeholder="Don't use the placeholder as a label!">
       </span>
       <button class="form--inline__button">
         <SvgIcon class="form--inline__svg" name="search" />
