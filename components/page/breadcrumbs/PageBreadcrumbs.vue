@@ -1,5 +1,5 @@
 <template>
-  <nav aria-label="Breadcrumb"> 
+  <nav aria-label="Breadcrumb">
     <ol
       class="page-breadcrumbs max links-reset"
       itemscope itemtype="http://schema.org/BreadcrumbList"
