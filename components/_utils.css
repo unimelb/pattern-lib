@@ -290,7 +290,7 @@
 .metadata {
   margin-top: calc(var(--vr) / 2);
   margin-bottom: calc(var(--vr) / 2);
-  color: var(--col-grey);
+  color: var(--col-grey-mid-1);
   font-size: .9em;
 }
 
