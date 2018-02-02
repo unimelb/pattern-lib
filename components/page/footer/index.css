@@ -237,7 +237,7 @@
 
   &__icon {
     position: absolute;
-    top: 50%; /* vertical centring */
+    top: calc(50% - 10px); /* vertical centring */
     left: 0;
     width: 1.375rem;
     height: 1.375rem;
