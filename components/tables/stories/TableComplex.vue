@@ -1,14 +1,14 @@
 <template>
   <table class="table table--striped" id="statstable">
       <thead>
-        <tr class="table__row--inverted">
-          <th>
+        <tr class="table__row--inverted" scope="col">
+          <th id="header-rankings">
             Independently published global and program rankings
           </th>
-          <th>
+          <th id="header-aus-ranking">
             Australia ranking
           </th>
-          <th>
+          <th id="header-world-ranking">
             World ranking
           </th>
         </tr>
@@ -37,210 +37,210 @@
       </thead>
       <tbody>
         <tr class="table__row--info">
-          <td colspan="3">
+          <td colspan="3" id="qs-world-heading">
             <a>QS World University Rankings</a>
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-heading">
             Academic reputation
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-heading">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-heading">
             17
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-heading">
             Employer reputation
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-heading">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-heading">
             11
           </td>
         </tr>
         <tr class="table__row--info">
-          <td colspan="3">
+          <td colspan="3" id="qs-world-subjects">
             <a>QS World University Rankings (by subject)</a>
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Linguistics
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             24
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Performing Arts
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             26
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Computer Science and Information Systems
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             14
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Electrical Engineering
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             35
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Mechanical Engineering
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             44
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Biological Sciences
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             23
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Dentistry
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             28
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Chemistry
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             45
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Physics
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             48
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Business and Management Studies
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             22
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Education
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             5
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Law
           </td>
-          <td>
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td>
+          <td headers="header-world-ranking qs-world-subjects">
             11
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Economics and Econometrics
           </td>
-          <td >
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td >
+          <td headers="header-world-ranking qs-world-subjects">
             25
           </td>
         </tr>
         <tr>
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Statistics and Operational Research
           </td>
-          <td >
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td >
+          <td headers="header-world-ranking qs-world-subjects">
             30
           </td>
         </tr>
         <tr class="table__row--highlight">
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             Times Higher Education World Reputation Rankings 2016
           </td>
-          <td >
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td >
+          <td headers="header-world-ranking qs-world-subjects">
             49
           </td>
         </tr>
         <tr class="table__row--highlight">
-          <td>
+          <td headers="header-rankings qs-world-subjects">
             US News Best Global Universities
           </td>
-          <td >
+          <td headers="header-aus-ranking qs-world-subjects">
             1
           </td>
-          <td >
+          <td headers="header-world-ranking qs-world-subjects">
             36
           </td>
         </tr>
