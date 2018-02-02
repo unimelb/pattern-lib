@@ -10,6 +10,9 @@
 
 <body>
   <div id="ui">
+    <div class="screenreaders-only">
+      <a href="#main">main</a>
+    </div>
     <!-- header goes here -->
     <header class="page-header page-header--l1">
       <div class="page-header__inner max">
@@ -22,7 +25,7 @@
       <div class="page-header__img page-header__aperture" style="background-image: url(https://placeimg.com/990/530/arch/1);"></div>
     </header>
     <!-- breadcrumbs go here, if present -->
-    <main>
+    <main id="main">
       <div class="content-block content-block--sml">
         <accordion-group open>
           <section title="Arts">
@@ -95,11 +98,11 @@
                 <div class="page-footer-search__field">
                   <label>
                     <span class="page-footer-search__label">Search</span>
-                    <a href="#" class="page-footer-search__submit">
+                    <button type="submit" class="page-footer-search__submit">
                       <svg focusable="false" role="presentation" class="page-footer-search__icon">
                         <use xlink:href="#icon-search"></use>
                       </svg>
-                    </a>
+                    </button>
                     <input aria-label="Search the University" name="q" placeholder="Type to search" class="page-footer-search__input" type="search">
                   </label>
                 </div>

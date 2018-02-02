@@ -58,7 +58,7 @@
   --col-bg-tertiary: rgb(1, 42, 88); /* only for site-nav back button */
 
   /* Link colours - http://paletton.com/#uid=13o0u0kmmGKbYTnhIN2qUABwFtZ */
-  --col-link: rgb(5, 117, 149);
+  --col-link: rgb(15, 91, 114);
   --col-link-visited: var(--col-purple-dark);
   --col-link-active: rgb(2, 72, 92);
 
