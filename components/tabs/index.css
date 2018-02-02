@@ -16,7 +16,7 @@
     transition: background-color .15s ease-out, color .15s ease-out;
     border-radius: .25rem .25rem 0 0;
     background-color: var(--col-bg-grey);
-    color: #aaa;
+    color: #4f5156;
     text-decoration: none;
     text-transform: uppercase;
 
