@@ -61,7 +61,6 @@
   --col-link: rgb(15, 91, 114);
   --col-link-visited: var(--col-purple-dark);
   --col-link-active: rgb(2, 72, 92);
-
   --col-link-on-dark: rgb(124, 189, 205);
   --col-link-visited-on-dark: rgb(193, 202, 230);
   --col-link-active-on-dark: var(--col-bg-white);
