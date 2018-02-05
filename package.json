@@ -1,7 +1,7 @@
 {
   "name": "@unimelb/pattern-lib-vue",
   "description": "A complete design system for the University of Melbourne.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/unimelb/pattern-lib.git"
@@ -9,7 +9,7 @@
   "author": "The University of Melbourne",
   "license": "UNLICENSED",
   "engines": {
-    "node": "~6.11.3",
+    "node": "~9.2.0",
     "yarn": "*"
   },
   "main": ".out/vue.js",
@@ -39,7 +39,7 @@
     "photoswipe": "^4.1.2",
     "strip-html-comments": "^1.0.0",
     "vue": "2.5.2",
-    "vue-progressive-image": "^2.2.1",
+    "vue-progressive-image": "^2.4.4",
     "vue-scrollto": "^2.7.8"
   },
   "peerDependencies": {

@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav aria-label="Breadcrumb">
     <ol
       class="page-breadcrumbs max links-reset"
       itemscope itemtype="http://schema.org/BreadcrumbList"
@@ -12,7 +12,7 @@
         itemscope itemtype="http://schema.org/ListItem"
       >
         <meta :content="index + 1" itemprop="position">
-        <a class="page-breadcrumbs__link" :href="item.href" itemprop="item">
+        <a class="page-breadcrumbs__link" :href="item.href" itemprop="item" :aria-current="index === items.length -1">
           <SvgIcon
             v-if="index === 0"
             class="page-breadcrumbs__home"

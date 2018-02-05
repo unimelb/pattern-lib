@@ -14,6 +14,7 @@
   --col-grey: rgb(153, 162, 170);
   --col-grey-mid: rgb(198, 200, 202);
   --col-grey-mid-1: rgb(105, 109, 115);
+  --col-grey-mid-2: rgb(75, 77, 83);
   --col-grey-light: rgb(235, 236, 236);
   --col-teal-dark: rgb(2, 112, 127);
   --col-teal: rgb(63, 167, 194);
@@ -49,7 +50,7 @@
 
   /* Background colours */
   --col-bg: var(--col-brand);
-  --col-bg-grey: var(--col-grey-light);
+  --col-bg-grey: rgb(247, 247, 247);
   --col-bg-light-blue: color(var(--col-brand) tint(92%));
   --col-bg-white: #fff; /* just use #fff */
   --col-bg-secondary: rgb(3, 58, 123); /* only for bottom half of footer */
@@ -57,9 +58,12 @@
   --col-bg-tertiary: rgb(1, 42, 88); /* only for site-nav back button */
 
   /* Link colours - http://paletton.com/#uid=13o0u0kmmGKbYTnhIN2qUABwFtZ */
-  --col-link: rgb(5, 117, 149);
+  --col-link: rgb(15, 91, 114);
   --col-link-visited: var(--col-purple-dark);
   --col-link-active: rgb(2, 72, 92);
+  --col-link-on-dark: rgb(124, 189, 205);
+  --col-link-visited-on-dark: rgb(193, 202, 230);
+  --col-link-active-on-dark: var(--col-bg-white);
 
   /* Rotating colours */
   --col-1: var(--col-grey);
