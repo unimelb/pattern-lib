@@ -22,10 +22,13 @@ const markup = codeBlock(`
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700%7CSource+Sans+Pro:300,300i,400,400i,600,700">
   </head>
   <body>
+    <div class="screenreaders-only">
+      <a href="#main">main</a>
+    </div>
     <div id="ui">
       <!-- header goes here -->
       <!-- breadcrumbs go here, if present -->
-      <main>
+      <main id="main">
         <!-- content goes here -->
       </main>
       <!-- footer goes here -->

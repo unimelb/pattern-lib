@@ -1,4 +1,6 @@
 .side-panel {
+  background-color: transparent;
+
   &__inner {
     padding: var(--vr);
 
@@ -22,10 +24,13 @@
     list-style: none;
 
     &--closed {
-      height: 0;
-      margin: 0;
-      padding: 0;
-      opacity: 0;
+      @media (max-width: 1193px) {
+        display: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+      }
     }
 
     &-item {

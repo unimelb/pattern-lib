@@ -1,18 +1,16 @@
 <template>
   <div class="header-tools__search">
-    <a class="link-icon--vertical link-reset" href="#search" @click.prevent="activateSearch">
+    <a class="link-icon--vertical link-reset" role="button" href="#search" @click.prevent="activateSearch">
       <SvgIcon class="link-icon__icon svg" name="search" />
       <span class="link-icon__text">Search</span>
     </a>
     <div ref="search" class="page-header-search">
       <form action="https://search.unimelb.edu.au" method="get">
-        <fieldset class="page-header-search__inline">
-          <input ref="input" class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University"><button class="page-header-search__submit" type="submit">
-            <SvgIcon class="page-header-search__icon" name="search" />
-            <span class="screenreaders-only">Go</span>
-          </button>
-        </fieldset>
-        <a class="page-header-icon link-icon--close" href="#" @click.prevent="handleSearchClose">
+        <input ref="input" class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University"><button class="page-header-search__submit" type="submit">
+          <SvgIcon class="page-header-search__icon" name="search" />
+          <span class="screenreaders-only">Go</span>
+        </button>
+        <a class="page-header-icon link-icon--close" role="button" href="#" @click.prevent="handleSearchClose">
           <SvgIcon class="page-header-search__icon--close" name="close" />
           Close
         </a>

@@ -26,6 +26,10 @@
     width: 7.125rem;
     margin-right: auto;
     margin-left: auto;
+
+    .bg-inverted & {
+      color: #cbe8ef;
+    }
   }
 
   &__value {

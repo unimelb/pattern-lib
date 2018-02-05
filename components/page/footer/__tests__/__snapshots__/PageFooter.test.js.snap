@@ -57,12 +57,13 @@ exports[`PageFooter should match snapshot 1`] = `
                 type="search"
               />
                
-              <a
+              <button
                 aria-label="Submit"
                 class="page-footer-search__submit"
                 href="#"
                 onclick="submit()"
                 role="button"
+                type="submit"
               >
                 <svg
                   class="page-footer-search__icon"
@@ -73,7 +74,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     xlink:href="#icon-search"
                   />
                 </svg>
-              </a>
+              </button>
             </div>
           </form>
         </div>
