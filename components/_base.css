@@ -90,6 +90,15 @@ a {
   &:focus {
     text-decoration: none;
   }
+
+  .bg-inverted &,
+  .bg-inverted-dark &,
+  .bg-inverted-darker & {
+    color: var(--col-link-on-dark);
+
+    &:visited { color: var(--col-link-visited-on-dark); }
+    &:active { color: var(--col-link-active-on-dark); }
+  }
 }
 
 button, input, optgroup,
