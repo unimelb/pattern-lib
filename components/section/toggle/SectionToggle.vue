@@ -7,6 +7,7 @@
         </div>
         <div :id="`${namespace}-panel-${index + 1}`" role="tabpanel" :aria-labelledby="`${namespace}-header-${index + 1}`" tabindex="0" class="toggle__panel">
           <div class="toggle__panel__inner" v-html="content[index].innerHTML"></div>
+          <a :href="`#${namespace}-header-${index + 1}`" class="toggle__footer">Back to Top</a>
         </div>
       </div>
     </div>

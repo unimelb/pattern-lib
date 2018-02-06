@@ -1,4 +1,5 @@
 .social-list {
+  display: inline-block; /* fit to link width for bg */
   margin-left: -.5rem; /* offset by link padding so icon is aligned */
 
   & > li,
