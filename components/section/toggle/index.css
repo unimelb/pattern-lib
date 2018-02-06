@@ -47,7 +47,7 @@
           content: '';
           display: inline-block;
           position: relative;
-          top: .125rem;
+          top: -.25rem;
           width: .667rem;
           height: .667rem;
           margin-left: 1rem;
@@ -59,7 +59,7 @@
       }
 
       &[aria-selected='true'] > h2::after {
-        top: -.333rem;
+        top: .125rem;
         border-width: 0;
         border-top-width: 1px;
         border-left-width: 1px;
