@@ -77,7 +77,7 @@
         <div class="grid">
           <div class="cell cell--wide-3of4">
             <SectionToggle class="section-toggle section-toggle--mobile">
-              <section title="Site Map">
+              <section title="Site Map" close="Close Site Map">
                 <div class="grid">
                   <div class="cell cell--tab-1of2 cell--desk-1of3">
                     <a class="page-footer__sitemap-heading" href="https://coursesearch.unimelb.edu.au/">Study at Melbourne</a>

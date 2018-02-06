@@ -7,7 +7,7 @@
         </div>
         <div :id="`${namespace}-panel-${index + 1}`" role="tabpanel" :aria-labelledby="`${namespace}-header-${index + 1}`" tabindex="0" class="toggle__panel">
           <div class="toggle__panel__inner" v-html="content[index].innerHTML"></div>
-          <a :href="`#${namespace}-header-${index + 1}`" class="toggle__footer">Back to Top</a>
+          <a :href="`#${namespace}-header-${index + 1}`" @click.prevent="togglePanel" class="toggle__footer">{{ closeLabel(item.data.attrs) }}</a>
         </div>
       </div>
     </div>
@@ -59,6 +59,9 @@ export default {
     if (this.open) this.showCurrentPanel();
   },
   methods: {
+    closeLabel(attrs) {
+      return attrs.close || 'Close';
+    },
     hideAllPanels() {
       this.headers.forEach((_header, index) => {
         this.hidePanel(index);
@@ -81,7 +84,11 @@ export default {
     getCurrent(e) {
       let curr = -1;
       this.headers.forEach((header, index) => {
-        if (header === e.target.parentNode || header === e.target) curr = index;
+        if (header === e.target.parentNode.parentNode.firstChild ||
+            header === e.target.parentNode ||
+            header === e.target) {
+          curr = index;
+        }
       }, this);
       this.current = curr;
     },
