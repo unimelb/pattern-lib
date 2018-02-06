@@ -53,16 +53,16 @@
           margin-left: 1rem;
           transform: rotate(45deg);
           border: 0 solid white;
-          border-top-width: 1px;
-          border-left-width: 1px;
+          border-right-width: 1px;
+          border-bottom-width: 1px;
         }
       }
 
       &[aria-selected='true'] > h2::after {
         top: -.333rem;
         border-width: 0;
-        border-right-width: 1px;
-        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-left-width: 1px;
       }
     }
 
