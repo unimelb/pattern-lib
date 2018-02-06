@@ -877,7 +877,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     class="toggle__footer"
                     href="#ui-toggle-12-header-1"
                   >
-                    Back to Top
+                    Close Site Map
                   </a>
                 </div>
               </div>
