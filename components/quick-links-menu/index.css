@@ -99,6 +99,11 @@
       background-color: var(--col-brand);
       color: #fff;
 
+      &:active,
+      &:visited {
+        color: #fff;
+      }
+
       &:nth-child(1) { border-color: var(--col-1); }
       &:nth-child(2) { border-color: var(--col-2); }
       &:nth-child(3) { border-color: var(--col-3); }
