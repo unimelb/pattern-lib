@@ -261,6 +261,22 @@
   font-weight: var(--fw-semibold);
 }
 
+.text-bigger {
+  font-size: 1.333em;
+}
+
+.text-smaller {
+  font-size: .667em;
+}
+
+.emsp-r {
+  padding-right: 1em;
+}
+
+.emsp-l {
+  padding-left: 1em;
+}
+
 /* ellipsis overflow */
 .text-ellipsis {
   display: block;
