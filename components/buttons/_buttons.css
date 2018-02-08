@@ -42,6 +42,11 @@
     border-color: var(--col-brand);
     background-color: var(--col-brand);
     color: white;
+
+    &:hover {
+      border-color: white;
+      color: white;
+    }
   }
 
   &--inverted:focus,
