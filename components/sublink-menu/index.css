@@ -47,4 +47,11 @@
       text-decoration: underline;
     }
   }
+
+  &--pad .sublink-menu__nav .sublink-menu__item {
+    padding: 1.25rem;
+    border-width: 1px;
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
 }

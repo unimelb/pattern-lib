@@ -130,4 +130,9 @@
       border-bottom: .4rem solid var(--col-brand-mid2);
     }
   }
+
+  &--bdr-thin,
+  &--bdr-thin:hover {
+    border-width: .2rem;
+  }
 }
