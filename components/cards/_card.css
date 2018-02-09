@@ -14,7 +14,8 @@
       color: var(--col-brand);
     }
 
-    &.bg-inverted {
+    &.bg-inverted,
+    &.bg-inverted--o95 {
       color: white;
       &:visited { color: white; }
       &:hover { background-color: color(var(--col-brand) lightness(-2%)); }

@@ -22,6 +22,15 @@
   color: #fff;
 }
 
+.bg-inverted--o95 {
+  background-color: rgba(3, 58, 123, .95);
+  color: #fff;
+
+  .card--focus-box__cnr {
+    opacity: .85; /* push up opacity for focus color on blue bg */
+  }
+}
+
 /* light-gray background */
 .bg-alt {
   background-color: var(--col-bg-grey);
@@ -271,6 +280,12 @@
 
 .text-smaller {
   font-size: .667em;
+}
+
+.text-underborder {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--col-grey-mid);
 }
 
 .emsp-r {
