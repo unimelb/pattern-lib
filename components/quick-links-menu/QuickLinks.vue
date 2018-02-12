@@ -2,8 +2,8 @@
   <div class="grid ql-menu" :class="{[`ql-menu--l${level}`]: true, 'ql-menu--pad': pad }">
     <div class="cell cell--desk-2of3 ql-menu__content">
       <slot name="content"></slot>
-      <div class="ql-menu__secondary" :class="{[`listing--${secondaryCols}`]: true}" v-if="secondaryLinks && secondaryLinks.length > 0">
-        <QuickLinksSecondaryItem class="list-item" :href="item.href" v-for="item in secondaryLinks" :key="item.id" :icon="item.icon" :title="item.title" />
+      <div class="ql-menu__secondary" :class="{[`ql-menu__secondary--2col`]: secondaryCols === 2}" v-if="secondaryLinks && secondaryLinks.length > 0">
+        <QuickLinksSecondaryItem class="cell" :href="item.href" v-for="item in secondaryLinks" :key="item.id" :icon="item.icon" :title="item.title" />
       </div>
     </div>
     <div class="cell cell--desk-1of3">
@@ -29,8 +29,8 @@ export default {
     menuLinks: Array,
     secondaryLinks: Array,
     secondaryCols: {
-      type: String,
-      default: 'two',
+      type: Number,
+      default: 2,
     },
   },
 };

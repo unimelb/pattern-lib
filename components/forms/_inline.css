@@ -13,6 +13,10 @@
       &--center {
         margin: 1.5rem auto;
       }
+
+      &--fill {
+        max-width: none;
+      }
     }
   }
 
@@ -112,5 +116,33 @@
     padding: 1rem .625rem;
     border-radius: 0;
     background: white;
+  }
+
+  &.form--inverse {
+    button.form--inline__button--alt {
+      border-color: transparent;
+      background-color: var(--col-brand);
+      color: white;
+
+      &:focus,
+      &:hover {
+        border-color: color(#fff alpha(60%));
+      }
+
+      &:active {
+        transition: background-color .2s;
+        background-color: rgba(9, 65, 131, .7);
+      }
+    }
+
+    .form--inline__search,
+    .form--inline__select {
+      border: 1px solid color(var(--col-grey-light) lightness(-5%));
+      background-color: var(--col-bg-grey);
+    }
+
+    .form--inline__select {
+      border-right: 0;
+    }
   }
 }

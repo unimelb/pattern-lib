@@ -41,6 +41,13 @@
     color: #fff;
   }
 
+  &.bg-alt {
+    .card__header,
+    svg {
+      color: var(--col-brand);
+    }
+  }
+
   @media (--bp-desktop) {
     max-width: 14.3rem;
   }

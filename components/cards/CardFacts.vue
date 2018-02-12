@@ -1,5 +1,5 @@
 <template>
-  <div class="card card--fact card--bdr bg-white text-center" :class="{'card--fact-image': icon}">
+  <div class="card card--fact card--bdr bg-white text-center" :class="{'card--fact-image': icon, 'card--bdr-top': top, 'card--bdr-thin': thin}">
     <img v-if="icon" class="card__thumb" :src="icon" alt="">
     <div class="card__inner">
       <h3 class="card__header" :class="{'card__header--sml' : smlHeader}">{{ title }}</h3>
@@ -29,6 +29,14 @@ export default {
     excerpt: {
       type: String,
       default: 'Completed something or rather',
+    },
+    top: {
+      type: Boolean,
+      default: false,
+    },
+    thin: {
+      type: Boolean,
+      default: false,
     },
   },
 };

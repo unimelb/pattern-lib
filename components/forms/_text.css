@@ -1,6 +1,7 @@
 .mce form[id^='form_'],
 .form {
   input[type='search'] {
+    -webkit-appearance: textfield; /* stylelint-disable-line property-no-vendor-prefix */
     appearance: textfield;
   }
 
