@@ -25,6 +25,11 @@
 .shim-pt2 { padding-top: calc(2 * var(--vr)) !important; }
 .shim-pb2 { padding-bottom: calc(2 * var(--vr)) !important; }
 
+.shim-reset {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 /**
  * Prevent wrapping - e.g. for URLs, emails, etc.
  */

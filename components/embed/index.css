@@ -21,6 +21,10 @@
     padding-bottom: 42.5%;
   }
 
+  &--fillheight {
+    height: 100%;
+  }
+
   /* SoundCloud embeds */
   &--soundcloud-classic,
   &--soundcloud-visual {

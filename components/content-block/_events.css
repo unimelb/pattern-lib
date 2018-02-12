@@ -1,0 +1,60 @@
+.event-block {
+  padding: 1rem 0;
+
+  &__item {
+    margin-bottom: 0;
+    list-style-type: none;
+
+    &:last-child .event-block__link {
+      border-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: .5rem;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  &__date,
+  &__time {
+    position: relative;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    padding-left: calc(var(--vr));
+    font-weight: var(--fw-semibold);
+    text-align: left;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - (1rem / 2));
+      left: 0;
+      width: 1rem;
+      height: 1rem;
+      margin-top: .05rem;
+      background-size: cover;
+    }
+  }
+
+  &__date::before { background-image: url('~icons/calendar.svg?fill=#074482'); }
+  &__time::before { background-image: url('~icons/clock.svg?fill=#074482'); }
+
+  &__link {
+    display: block;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--col-grey);
+    color: var(--col-brand);
+    font-size: .9rem;
+    font-weight: normal;
+    text-decoration: none;
+
+    p {
+      margin-bottom: .75rem;
+    }
+  }
+}

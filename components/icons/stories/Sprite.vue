@@ -17,6 +17,8 @@ export default {
       'play',
       'home',
       'search',
+      'calendar',
+      'clock',
       'close',
       'focus-top-left',
       'focus-bottom-right',

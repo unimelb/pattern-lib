@@ -2,8 +2,8 @@
   <div :class="classes">
     <SvgIcon v-if="icon" width="100" height="100" class="sublink-menu__icon" :name="icon" />
     <img class="sublink-menu__image" v-if="img && img.length > 0" :src="img" alt="">
-    <h3 class="sublink-menu__title"> {{ title }}</h3>
-    <p class="sublink-menu__excerpt"><slot></slot></p>
+    <h3 v-if="title" class="sublink-menu__title"> {{ title }}</h3>
+    <p v-if="$slots.default" class="sublink-menu__excerpt"><slot></slot></p>
     <nav class="sublink-menu__nav">
       <slot name="menuitems"></slot>
     </nav>

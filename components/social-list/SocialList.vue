@@ -1,5 +1,5 @@
 <template>
-  <ul class="social-list list-reset links-reset">
+  <ul class="social-list list-reset links-reset bg-saw-tooth">
     <li v-if="facebook" :class="{ 'col-facebook': withColors }">
       <a class="social-list__link" href="https://www.facebook.com/unimelb">
         <SvgIcon aria-label="Facebook" class="social-list__icon" name="facebook" :width="iconSize" :height="iconSize" role="img" />
