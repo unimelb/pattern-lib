@@ -29,6 +29,14 @@ h1,
   line-height: 1.4;
 }
 
+.heading-lead {
+  font-family: var(--ff-lead);
+}
+
+.heading-normal {
+  font-family: var(--ff-normal);
+}
+
 h2,
 .heading-section {
   margin-bottom: var(--vr);
