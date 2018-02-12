@@ -5,6 +5,13 @@
   background-color: var(--col-bg);
   color: #fff;
 
+  &__logomat {
+    margin-top: -1rem;
+    margin-left: -1rem;
+    padding: 1rem;
+    background-color: var(--col-bg);
+  }
+
   &__logo {
     display: block;
     width: 48px;

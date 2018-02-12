@@ -1,3 +1,6 @@
+@import '_news.css';
+@import '_events.css';
+
 .content-block {
   padding: calc(2 * var(--vr)) var(--vr);
 

@@ -20,6 +20,10 @@
       max-width: calc(var(--w-sml) + 2 * var(--vr));
     }
 
+    &--xsml {
+      max-width: calc(var(--w-xsml) + 2 * var(--vr));
+    }
+
     &--short {
       min-height: 0 !important;
       padding-top: var(--vr);
