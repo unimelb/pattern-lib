@@ -101,13 +101,13 @@
     .cell:nth-child(7n+6) & { border-color: var(--col-6); }
     .cell:nth-child(7n) & { border-color: var(--col-7); }
 
-    .grid > .cell--col-1 & { border-color: var(--col-1); }
-    .grid > .cell--col-2 & { border-color: var(--col-2); }
-    .grid > .cell--col-3 & { border-color: var(--col-3); }
-    .grid > .cell--col-4 & { border-color: var(--col-4); }
-    .grid > .cell--col-5 & { border-color: var(--col-5); }
-    .grid > .cell--col-6 & { border-color: var(--col-6); }
-    .grid > .cell--col-7 & { border-color: var(--col-7); }
+    .cell--col-1 & { border-color: var(--col-1) !important; }
+    .cell--col-2 & { border-color: var(--col-2) !important; }
+    .cell--col-3 & { border-color: var(--col-3) !important; }
+    .cell--col-4 & { border-color: var(--col-4) !important; }
+    .cell--col-5 & { border-color: var(--col-5) !important; }
+    .cell--col-6 & { border-color: var(--col-6) !important; }
+    .cell--col-7 & { border-color: var(--col-7) !important; }
 
     .list-item:nth-child(7n+1) & { border-color: var(--col-1); }
     .list-item:nth-child(7n+2) & { border-color: var(--col-2); }
