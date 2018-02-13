@@ -18,7 +18,9 @@
     }
 
     &:nth-last-child(2) {
-      font-weight: var(--fw-semibold);
+      &:not(:first-child) {
+        font-weight: var(--fw-semibold);
+      }
 
       /* hide last chevron in case it is provided (e.g. in CMS) */
       .page-breadcrumbs__chevron {
@@ -28,12 +30,8 @@
 
     /* hide site name on mobile */
     @media (--bp-max-mobile) {
-      &:first-child .page-breadcrumbs__name {
+      &:first-child:not(:last-child):not(:nth-last-child(2)) .page-breadcrumbs__name {
         display: none;
-      }
-
-      &:only-child .page-breadcrumbs__name {
-        display: block;
       }
     }
 
@@ -41,7 +39,9 @@
       display: block;
 
       &:nth-last-child(2) {
-        font-weight: normal;
+        &:not(:first-child) {
+          font-weight: normal;
+        }
 
         .page-breadcrumbs__chevron {
           display: block;
