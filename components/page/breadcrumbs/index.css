@@ -32,6 +32,10 @@
       &:first-child .page-breadcrumbs__name {
         display: none;
       }
+
+      &:only-child .page-breadcrumbs__name {
+        display: block;
+      }
     }
 
     /* show ellipsis for intermediate items on mobile/tablet */
