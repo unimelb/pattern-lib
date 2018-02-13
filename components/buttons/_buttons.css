@@ -38,7 +38,7 @@
     color: #fff;
   }
 
-  &--cta {
+  &--cta.btn {
     border-color: var(--col-brand);
     background-color: var(--col-brand);
     color: white;
