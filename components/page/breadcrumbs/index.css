@@ -13,12 +13,11 @@
     margin-bottom: 0;
 
     &:first-child,
-    &:nth-last-child(2),
-    &:last-child {
+    &:nth-last-child(2) {
       display: block;
     }
 
-    &:last-child {
+    &:nth-last-child(2) {
       font-weight: var(--fw-semibold);
 
       /* hide last chevron in case it is provided (e.g. in CMS) */
@@ -38,18 +37,24 @@
       }
     }
 
-    /* show ellipsis for intermediate items on mobile/tablet */
-    @media (--bp-max-tablet) {
-      &:not(:first-child):not(:last-child) .page-breadcrumbs__name {
-        width: 1.75rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-    }
-
     @media (--bp-desktop) {
       display: block;
+
+      &:nth-last-child(2) {
+        font-weight: normal;
+
+        .page-breadcrumbs__chevron {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        font-weight: var(--fw-semibold);
+
+        .page-breadcrumbs__chevron {
+          display: none;
+        }
+      }
     }
   }
 
