@@ -5,6 +5,16 @@
   background-color: var(--col-bg);
   color: #fff;
 
+  &__darken {
+    &--o50 .page-header {
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    &--o75 .page-header {
+      background-color: rgba(0, 0, 0, .75);
+    }
+  }
+
   &__logomat {
     margin-top: -1rem;
     margin-left: -1rem;
