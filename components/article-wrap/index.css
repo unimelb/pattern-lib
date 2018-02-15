@@ -37,6 +37,19 @@
     text-transform: uppercase;
   }
 
+  &__categories {
+    &-heading {
+      margin-bottom: .25rem;
+      font-size: 1.125em;
+      font-weight: var(--fw-semibold);
+    }
+
+    a {
+      display: block;
+      padding: .25em 0;
+    }
+  }
+
   /* switch to sidebar layout unless `column` variant is used */
   &:not(.article-wrap--column) {
     @media (--bp-desktop) {

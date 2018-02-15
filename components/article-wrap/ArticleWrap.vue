@@ -15,6 +15,11 @@
       <div class="article-wrap__aside-box">
         <time :datetime="date[0]">{{ date[1] }}</time> | <span class="article-wrap__type">{{ type }}</span>
       </div>
+      <div v-if="categories" class="article-wrap__aside-box article-wrap__categories">
+        <p class="article-wrap__categories-heading">Categories</p>
+        <a href="">Melbourne</a>
+        <a href="">Articles</a>
+      </div>
       <div v-if="contact" class="article-wrap__aside-box">
         <ContactList class="article-wrap__contact-list" v-bind="contact" />
       </div>
@@ -47,6 +52,7 @@ export default {
     },
     type: String,
     columnLayout: Boolean,
+    categories: Boolean,
   },
   computed: {
     hasMetadata() {
