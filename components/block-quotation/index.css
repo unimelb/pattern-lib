@@ -10,14 +10,14 @@ blockquote,
   &__content {
     margin-bottom: 0;
     font-family: var(--ff-lead);
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-style: italic;
 
     &::before,
     &::after {
       position: absolute;
       color: var(--col-grey-mid-1);
-      font-size: 3rem;
+      font-size: 1.333em;
       font-style: normal;
     }
 
@@ -44,9 +44,16 @@ blockquote,
     }
   }
 
+  &.long {
+    p,
+    &__content {
+      font-size: 1.6rem;
+    }
+  }
+
   &--bdr-top {
-    padding-top: 2.2em;
-    border-top: 2px solid;
+    padding-top: 1.8em;
+    border-top: 1px solid;
     border-color: var(--col-grey-mid-1);
 
     .block-quotation__content::before {
@@ -55,8 +62,8 @@ blockquote,
   }
 
   &--bdr-btm {
-    padding-bottom: 2.2em;
-    border-bottom: 2px solid;
+    padding-bottom: 1.8em;
+    border-bottom: 1px solid;
     border-color: var(--col-grey-mid-1);
 
     .block-quotation__content::after {
