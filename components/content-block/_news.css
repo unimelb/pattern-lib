@@ -49,3 +49,52 @@
     }
   }
 }
+
+.tag {
+  display: inline-block;
+  margin-right: .5rem;
+  padding: .125rem .25rem;
+  border: 1px solid var(--col-grey-mid);
+  border-radius: var(--br);
+  color: var(--col-grey);
+  font-size: .75rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  .push-icon__icon {
+    width: 1em;
+    height: 1em;
+    margin-left: .125rem;
+    fill: var(--col-grey-mid);
+    vertical-align: -.125rem;
+  }
+
+  a& {
+    border-color: var(--col-link);
+    color: var(--col-link);
+    text-decoration: none;
+
+    .push-icon__icon {
+      fill: var(--col-link);
+    }
+
+    &:visited {
+      border-color: var(--col-link-visited);
+      color: var(--col-link-visited);
+
+      .push-icon__icon {
+        fill: var(--col-link-visited);
+      }
+    }
+
+    &:active {
+      border-color: var(--col-link-active);
+      color: var(--col-link-active);
+
+      .push-icon__icon {
+        fill: var(--col-link-active);
+      }
+    }
+  }
+}

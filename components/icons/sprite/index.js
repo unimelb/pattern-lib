@@ -19,4 +19,5 @@ import './microphone.svg';
 import './phone.svg';
 import './play.svg';
 import './search.svg';
+import './tag.svg';
 import './twitter.svg';

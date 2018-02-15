@@ -8,6 +8,7 @@ import ContentBlockShortAlt from './ContentBlockShortAlt.vue';
 import ContentBlockNews from './ContentBlockNews.vue';
 import ContentBlockEvent from './ContentBlockEvent.vue';
 import ContentBlockNewsEvents from './ContentBlockNewsEvents.vue';
+import ContentBlockNewsTags from './ContentBlockNewsTags.vue';
 
 storiesOf('Content Block', module)
   .add('Default (medium)', createStory(ContentBlockDefault))
@@ -16,4 +17,5 @@ storiesOf('Content Block', module)
   .add('Short + light', createStory(ContentBlockShortAlt))
   .add('News block', createStory(ContentBlockNews))
   .add('Event block', createStory(ContentBlockEvent))
-  .add('Combination News & Events', createStory(ContentBlockNewsEvents));
+  .add('Combination News & Events', createStory(ContentBlockNewsEvents))
+  .add('News block with tags', createStory(ContentBlockNewsTags));
