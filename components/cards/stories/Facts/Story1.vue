@@ -1,7 +1,7 @@
 
 <template>
   <SectionWrap>
-    <div class="grid">
+    <div class="grid grid--center">
       <ListItem cols="1of2"><CardFact /></ListItem>
       <ListItem cols="1of2"><CardFact /></ListItem>
       <ListItem cols="1of1"><CardFact /></ListItem>
