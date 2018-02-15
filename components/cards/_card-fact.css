@@ -15,6 +15,10 @@
   .card__thumb {
     width: auto;
     max-height: 150px;
+
+    & + .card__inner {
+      padding-top: 0;
+    }
   }
 
   .card__meta {
