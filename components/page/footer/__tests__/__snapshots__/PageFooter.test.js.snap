@@ -460,7 +460,7 @@ exports[`PageFooter should match snapshot 1`] = `
             <div
               aria-multiselectable="!solo"
               class="toggle"
-              role="tablist"
+              role="presentation"
             >
               <div
                 class="toggle__item"
@@ -471,7 +471,7 @@ exports[`PageFooter should match snapshot 1`] = `
                   aria-selected="false"
                   class="toggle__header"
                   id="ui-toggle-12-header-1"
-                  role="tab"
+                  role="heading"
                   tabindex="0"
                 >
                   <h2>
@@ -480,11 +480,12 @@ exports[`PageFooter should match snapshot 1`] = `
                 </div>
                  
                 <div
+                  aria-expanded="false"
                   aria-hidden="true"
                   aria-labelledby="ui-toggle-12-header-1"
                   class="toggle__panel"
                   id="ui-toggle-12-panel-1"
-                  role="tabpanel"
+                  role="region"
                   tabindex="-1"
                 >
                   <div
