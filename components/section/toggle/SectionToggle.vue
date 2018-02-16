@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="toggle" role="tablist" aria-multiselectable="!solo" v-for="(item, index) in this.items" :key="item.id">
+    <div class="toggle" role="presentation" aria-multiselectable="!solo" v-for="(item, index) in this.items" :key="item.id">
       <div class="toggle__item">
-        <div @click="togglePanel" @keyup="handleKey" :id="`${namespace}-header-${index + 1}`" role="tab" :aria-controls="`${namespace}-panel-${index + 1}`" tabindex="0" class="toggle__header">
+        <div @click="togglePanel" @keydown="handleKey" :id="`${namespace}-header-${index + 1}`" role="heading" :aria-controls="`${namespace}-panel-${index + 1}`" tabindex="0" class="toggle__header">
           <h2>{{ item.data.attrs.title }}</h2>
         </div>
-        <div :id="`${namespace}-panel-${index + 1}`" role="tabpanel" :aria-labelledby="`${namespace}-header-${index + 1}`" tabindex="0" class="toggle__panel">
+        <div :id="`${namespace}-panel-${index + 1}`" role="region" :aria-labelledby="`${namespace}-header-${index + 1}`" tabindex="0" class="toggle__panel" aria-expanded="false">
           <div class="toggle__panel__inner" v-html="content[index].innerHTML"></div>
           <a :href="`#${namespace}-header-${index + 1}`" @click.prevent="togglePanel" class="toggle__footer">{{ closeLabel(item.data.attrs) }}</a>
         </div>
@@ -108,35 +108,61 @@ export default {
       // Don't catch key events when ⌘ or Alt modifier is present
       if (e.metaKey || e.altKey) return;
 
+      // Allow tab to pass through
+      if (e.keyCode !== 9) e.preventDefault();
+
       this.getCurrent(e);
 
       switch (e.keyCode) {
+        // esc
+        case 27:
+          this.hidePanel(this.current);
+          break;
         // enter / space
         case 13:
         case 32:
           this.togglePanel(e);
           break;
-        // esc
-        case 27:
-          this.hidePanel(this.current);
+        // ctrl + pgdn
+        case 34:
+          if (e.ctrlKey) this.nextPanel();
+          break;
+        // ctrl + pgup
+        case 33:
+          if (e.ctrlKey)
+            ;
+          break;
+        // end
+        case 35:
+          this.current = this.headers.length - 1;
+          this.giveHeaderFocus();
+          break;
+        // home
+        case 36:
+          this.current = 0;
+          this.giveHeaderFocus();
           break;
         // left / up
         case 37:
-        case 38: {
-          this.current = this.current - 1 < 0 ? this.headers.length - 1 : this.current - 1;
-          this.giveHeaderFocus();
+        case 38:
+          this.previousPanel();
           break;
-        }
         // right / down
         case 39:
-        case 40: {
-          this.current = this.current + 1 > this.headers.length - 1 ? 0 : this.current + 1;
-          this.giveHeaderFocus();
+        case 40:
+          this.nextPanel();
           break;
-        }
         default:
           break;
       }
+    },
+    previousPanel() {
+      this.current = this.current - 1 < 0 ? this.headers.length - 1 : this.current - 1;
+      this.giveHeaderFocus();
+    },
+    nextPanel() {
+      this.current = this.current + 1 > this.headers.length - 1 ? 0 : this.current + 1;
+      this.giveHeaderFocus();
     },
     giveHeaderFocus() {
       // remove focusability from inactives
