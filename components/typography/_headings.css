@@ -12,14 +12,8 @@ h1,
 .heading-page {
   margin-bottom: calc(2 * var(--vr));
   font-family: var(--ff-lead);
-  font-size: 2.25rem;
+  font-size: 2rem;
   line-height: 1.3;
-
-  @media (--bp-tablet) {
-    /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
-    /* https://github.com/unimelb/pattern-lib/issues/181 */
-    font-size: 2.75rem;
-  }
 }
 
 .heading-page-sub {
