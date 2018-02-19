@@ -659,15 +659,6 @@ exports[`PageFooter should match snapshot 1`] = `
                               class="link-reset"
                               href="https://ask.unimelb.edu.au/app/ask"
                             >
-                              Contact us
-                            </a>
-                          </li>
-                           
-                          <li>
-                            <a
-                              class="link-reset"
-                              href="https://ask.unimelb.edu.au/"
-                            >
                               Enquiries
                             </a>
                           </li>
