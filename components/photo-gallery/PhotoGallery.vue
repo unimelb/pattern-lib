@@ -3,7 +3,7 @@
     <ListingWrap class="photo-gallery preview-img-list">
       <ListItem :cols="item.size" v-for="(item, index) in slots" :key="item.id">
         <FigureWrap class="photo-gallery__figure" :caption="captions && item.title">
-          <div :class="`preview-img-item ${ noPopup === false ? '' : ' preview-img-item--nolink'}`" :style="`background-image:url(${item.src})`" @click="noPopup === false && open(index, slots, options)"></div>
+          <div :class="{'preview-img-item': true, 'preview-img-item--nolink': noPopup }" :style="{'background-image': `url(${item.src})`, 'height': `${item.thumbHeight + 'px' || false}`}" @click="noPopup === false && open(index, slots, options)"></div>
         </FigureWrap>
       </ListItem>
     </ListingWrap>
@@ -51,6 +51,7 @@ export default {
         msrc: node.data.attrs['data-thumb'],
         w: node.data.attrs.width,
         h: node.data.attrs.height,
+        thumbHeight: node.data.attrs['data-thumb-height'],
         title: node.data.attrs['data-title'],
         size: node.data.attrs['data-size'],
       }));
