@@ -213,4 +213,14 @@
       }
     }
   }
+
+  &--campaign {
+    display: flex;
+    align-items: flex-end;
+
+    /* IE9 interprets vh as # of pages in print-mode */
+    @media screen {
+      min-height: 80vh;
+    }
+  }
 }
