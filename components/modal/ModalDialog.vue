@@ -43,12 +43,18 @@ export default {
       '[tabindex]:not([tabindex^="-"])',
     ];
 
+    // Move to end
+    this.$refs.container.parentNode.removeChild(this.$refs.container);
+    document.body.appendChild(this.$refs.container);
+
     // Create array of focusable elements in context
     this.focusableElements = [].slice.call(this.$refs.modal.querySelectorAll(focusableSelectors.join()));
   },
   methods: {
     openDialog() {
       const { container, modal } = this.$refs;
+
+      this.$root.$el.setAttribute('aria-hidden', true);
 
       // Show container and focus the modal
       container.setAttribute('aria-hidden', false);
@@ -70,6 +76,8 @@ export default {
       // Hide container
       container.setAttribute('aria-hidden', true);
       modal.removeAttribute('tabindex');
+
+      this.$root.$el.setAttribute('aria-hidden', false);
 
       // Return focus to trigger
       this.$refs.trigger.focus();

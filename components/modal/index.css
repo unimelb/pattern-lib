@@ -1,4 +1,8 @@
 /* functional */
+body > div[aria-hidden='true'] {
+  position: fixed;
+}
+
 .modal-dialog {
   position: fixed;
   z-index: 10;
