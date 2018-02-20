@@ -52,6 +52,8 @@ export default {
   },
   methods: {
     openDialog() {
+      this.$refs.container.classList.add('active');
+
       const { container, modal } = this.$refs;
 
       this.$root.$el.setAttribute('aria-hidden', true);
