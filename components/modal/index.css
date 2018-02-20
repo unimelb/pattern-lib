@@ -4,6 +4,7 @@ body > div[aria-hidden='true'] {
 }
 
 .modal-dialog {
+  display: none;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -15,6 +16,10 @@ body > div[aria-hidden='true'] {
   /* decorative styles */
   transform: translateZ(0);
   transition: background-color .15s ease-out, visibility .15s ease-out;
+
+  &.active {
+    display: block;
+  }
 
   &__modal {
     position: absolute;
