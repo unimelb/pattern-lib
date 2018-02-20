@@ -105,8 +105,7 @@
                   <div class="cell cell--tab-1of2 cell--desk-1of3 cell--tab-clear">
                     <a class="page-footer__sitemap-heading" href="http://www.unimelb.edu.au/contact">Contact &amp; Maps</a>
                     <ul class="page-footer__sitemap-pages page-footer__sitemap-pages--minor list-reset list-chevrons">
-                      <li><a class="link-reset" href="https://ask.unimelb.edu.au/app/ask">Contact us</a></li>
-                      <li><a class="link-reset" href="https://ask.unimelb.edu.au/">Enquiries</a></li>
+                      <li><a class="link-reset" href="https://ask.unimelb.edu.au/app/ask">Enquiries</a></li>
                       <li><a class="link-reset" href="http://newsroom.melbourne.edu/">Media</a></li>
                       <li><a class="link-reset" href="http://findanexpert.unimelb.edu.au/">Find an expert</a></li>
                       <li><a class="link-reset" href="https://maps.unimelb.edu.au/">Campus maps</a></li>

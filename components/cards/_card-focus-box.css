@@ -115,4 +115,14 @@
   .list-item:nth-child(7n+5) &__icon * { fill: var(--col-6); }
   .list-item:nth-child(7n+6) &__icon * { fill: var(--col-7); }
   .list-item:nth-child(7n) &__icon * { fill: var(--col-1); }
+
+  &:not(.page-header &,.split-section &) {
+    width: calc(100% + 3rem);
+    margin: -3rem -1.5rem;
+
+    @media (--bp-tablet) {
+      width: 100%;
+      margin: 0;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 
 <template>
   <SectionWrap>
-    <div class="grid grid--1col">
+    <div class="grid grid--center grid--1col">
       <ListItem><CardFact title="Social media reach" :icon="socialMediaIcon" /></ListItem>
     </div>
   </SectionWrap>

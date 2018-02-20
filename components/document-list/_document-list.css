@@ -1,7 +1,10 @@
 .document-list {
   [href$='.pdf' i],
+  [href$='.doc' i],
   [href$='.docx' i],
+  [href$='.dotx' i],
   [href$='.xlsx' i],
+  [href$='.xls' i],
   [href$='.pptx' i],
   [href$='.ppsx' i],
   [href$='.key' i],

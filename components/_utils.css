@@ -332,8 +332,8 @@
 .grid {
   display: flex;
   flex-direction: column;
-  margin-right: -.5rem;
-  margin-left: -.5rem;
+  margin-right: -calc(var(--vr) / 2);
+  margin-left: -calc(var(--vr) / 2);
 
   &--center {
     justify-content: center;

@@ -6,7 +6,7 @@
       width="100%"
       height="450"
       frameborder="0"
-      src="https://maps.unimelb.edu.au/parkville/building/152?SQ_DESIGN_NAME=plain"
+      src="https://maps.unimelb.edu.au/parkville/building/152?SQ_DESIGN_NAME=plain&borderwidth=0"
     >
       <a href='https://maps.unimelb.edu.au/parkville/building/152'>Raymond Priestley</a>
     </iframe>
