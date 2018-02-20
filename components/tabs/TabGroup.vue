@@ -1,21 +1,20 @@
 <template>
   <div class="tabs">
-    <ul class="tabs__tablist" role="tablist" @keydown="handleKey">
-      <li class="tabs__tablist-item" role="presentation" v-for="(item, index) in items" :key="index">
-        <a
-          class="tabs__tab"
-          role="tab"
-          ref="tabs"
-          @click="handleClick"
-          :id="`${namespace}-${index + 1}`"
-          :href="`#${namespace}-panel-${index + 1}`"
-          :aria-controls="`${namespace}-panel-${index + 1}`"
-          :tabindex="index === 0 ? 0 : -1"
-        >
-          {{ item.data.attrs.title }}
-        </a>
-      </li>
-    </ul>
+    <div class="tabs__tablist" role="tablist" @keydown="handleKey">
+      <button
+        class="tabs__tab"
+        role="tab"
+        ref="tabs"
+        @click="handleClick"
+        :id="`${namespace}-${index + 1}`"
+        :aria-controls="`${namespace}-panel-${index + 1}`"
+        :tabindex="index === 0 ? 0 : -1"
+        v-for="(item, index) in items"
+        :key="index"
+      >
+        {{ item.data.attrs.title }}
+      </button>
+    </div>
     <div
       class="tabs__panel"
       role="tabpanel"
@@ -76,7 +75,9 @@ export default {
         if (index === curr) {
           panel.setAttribute('tabindex', 0);
           panel.setAttribute('aria-selected', 'true');
-          // panel.focus();
+        } else {
+          panel.setAttribute('tabindex', -1);
+          panel.setAttribute('aria-selected', 'false');
         }
       }, this);
     },
