@@ -4,7 +4,6 @@
       <ListItem>
         <CardFocusImageList
           element="div"
-          titleabove
           tall
           tight
           class="card--image-focus--col-brand bg-alt"
@@ -41,7 +40,6 @@
           element="div"
           tall
           tight
-          titleabove
           class="card--image-focus--col-brand bg-alt"
           img="https://about-us-unimelb.netlify.com/images/working-with-us/careers/ParkvilleBotany.jpg"
           title="Learning and teaching"

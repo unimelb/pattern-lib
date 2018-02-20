@@ -1,6 +1,6 @@
 <template>
   <SectionWrap>
-    <div class="grid">
+    <div class="grid grid--center">
       <ListItem cols="1of2" class="cell--col-3"><CardFact :top="true" /></ListItem>
       <ListItem cols="1of2" class="cell--col-3"><CardFact :top="true" /></ListItem>
       <ListItem cols="1of1" class="cell--col-3"><CardFact :top="true" /></ListItem>

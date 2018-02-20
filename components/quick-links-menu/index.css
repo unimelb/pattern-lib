@@ -70,12 +70,11 @@
       }
     }
 
-    @media (--bp-tablet) {
+    @media (--bp-desktop) {
       &--2col,
       &--3col,
       &--4col {
         display: block;
-        column-fill: auto;
 
         .cell {
           break-inside: avoid;

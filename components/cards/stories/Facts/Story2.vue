@@ -1,10 +1,10 @@
 
 <template>
   <SectionWrap>
-    <div class="grid grid--1col">
+    <div class="grid grid--center grid--1col">
       <ListItem><CardFact title="Accomodation" :icon="accomodationIcon"/></ListItem>
     </div>
-    <div class="grid grid--2col">
+    <div class="grid grid--center grid--2col">
       <ListItem><CardFact title="Biodiversity" :icon="bioDiversityIcon"/></ListItem>
       <ListItem><CardFact title="Building" :icon="buildingIcon"/></ListItem>
       <ListItem><CardFact sml-header title="Carbon Reduction Pathways" meta="the header has card__header--sml class" :icon="carbonIcon" /></ListItem>
