@@ -6,12 +6,31 @@
   color: #fff;
 
   &__darken {
+    &--o25 .page-header {
+      background-color: rgba(0, 0, 0, .25);
+
+      .btn {
+        background-color: rgba(0, 0, 0, .5);
+      }
+    }
+
     &--o50 .page-header {
       background-color: rgba(0, 0, 0, .5);
+
+      .btn {
+        background-color: rgba(0, 0, 0, .5);
+      }
     }
 
     &--o75 .page-header {
       background-color: rgba(0, 0, 0, .75);
+    }
+
+    &--o25,
+    &--o50,
+    &--o75 {
+      background-position: 50%;
+      background-size: cover;
     }
   }
 

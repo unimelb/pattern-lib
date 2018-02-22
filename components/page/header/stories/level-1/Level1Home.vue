@@ -1,5 +1,5 @@
 <template>
-  <header class="page-header page-header--l1" style="background-image:url(https://placeimg.com/990/530/arch/1);background-size:cover">
+  <header class="page-header page-header--l1" style="background-image:url(https://placeimg.com/990/530/arch/1);background-size:cover;background-position:50%">
     <div class="page-header__inner max">
       <a class="link-img link-reset page-header__logomat" href="https://www.unimelb.edu.au/">
         <img
