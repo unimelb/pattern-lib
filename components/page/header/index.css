@@ -208,8 +208,8 @@
     display: flex;
     align-items: flex-end;
 
-    @media screen { /* IE9 interprets vh as # of pages in print-mode */ 
-      min-height: calc(80vh - 10.333rem);
+    @media screen {
+      min-height: calc(80vh - 10.333rem); /* IE9 interprets vh as # of pages in print-mode */
     }
   }
 
@@ -217,13 +217,13 @@
     display: table;
     width: 100%;
 
-    @media screen { /* IE9 interprets vh as # of pages in print-mode */ 
-      min-height: calc(80vh - 10.333rem);
-    }
-
     > *:first-child {
       display: table-cell;
       vertical-align: middle;
+    }
+
+    @media screen {
+      min-height: calc(80vh - 10.333rem);
     }
   }
 
@@ -235,7 +235,7 @@
       background-color: transparent;
     }
 
-    @media screen { /* IE9 interprets vh as # of pages in print-mode */ 
+    @media screen {
       min-height: 80vh;
 
       .page-header {
