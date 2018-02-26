@@ -6,6 +6,7 @@ import './chevron-right.svg';
 import './clock.svg';
 import './close.svg';
 import './download.svg';
+import './external.svg';
 import './facebook.svg';
 import './faculty.svg';
 import './focus-bottom-right.svg';
