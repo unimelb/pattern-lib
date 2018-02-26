@@ -5,35 +5,6 @@
   background-color: var(--col-bg);
   color: #fff;
 
-  &__darken {
-    &--o25 .page-header {
-      background-color: rgba(0, 0, 0, .25);
-
-      .btn {
-        background-color: rgba(0, 0, 0, .5);
-      }
-    }
-
-    &--o50 .page-header {
-      background-color: rgba(0, 0, 0, .5);
-
-      .btn {
-        background-color: rgba(0, 0, 0, .5);
-      }
-    }
-
-    &--o75 .page-header {
-      background-color: rgba(0, 0, 0, .75);
-    }
-
-    &--o25,
-    &--o50,
-    &--o75 {
-      background-position: 50%;
-      background-size: cover;
-    }
-  }
-
   &__logomat {
     margin-top: -1rem;
     margin-left: -1rem;
@@ -236,12 +207,69 @@
   &--baseline {
     display: flex;
     align-items: flex-end;
+
+    @media screen {
+      min-height: calc(80vh - 10.333rem); /* IE9 interprets vh as # of pages in print-mode */
+    }
+  }
+
+  &--center {
+    display: table;
+    width: 100%;
+
+    > *:first-child {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    @media screen {
+      min-height: calc(80vh - 10.333rem);
+    }
   }
 
   &--campaign {
-    /* IE9 interprets vh as # of pages in print-mode */
+    background-position: 50%;
+    background-size: cover;
+
+    .page-header {
+      background-color: transparent;
+    }
+
     @media screen {
       min-height: 80vh;
+
+      .page-header {
+        min-height: 80vh;
+      }
+    }
+  }
+
+  &__darken {
+    &--o25 .page-header {
+      background-color: rgba(0, 0, 0, .25);
+
+      .btn {
+        background-color: rgba(0, 0, 0, .5);
+      }
+    }
+
+    &--o50 .page-header {
+      background-color: rgba(0, 0, 0, .5);
+
+      .btn {
+        background-color: rgba(0, 0, 0, .5);
+      }
+    }
+
+    &--o75 .page-header {
+      background-color: rgba(0, 0, 0, .75);
+    }
+
+    &--o25,
+    &--o50,
+    &--o75 {
+      background-position: 50%;
+      background-size: cover;
     }
   }
 }
