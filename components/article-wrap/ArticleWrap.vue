@@ -15,10 +15,14 @@
       <div class="article-wrap__aside-box">
         <time :datetime="date[0]">{{ date[1] }}</time> | <span class="article-wrap__type">{{ type }}</span>
       </div>
-      <div v-if="categories" class="article-wrap__aside-box article-wrap__categories">
+      <div v-if="categories && categories.length > 0" class="article-wrap__aside-box article-wrap__categories">
         <p class="article-wrap__categories-heading">Categories</p>
-        <a href="">Melbourne</a>
-        <a href="">Articles</a>
+        <a
+          v-for="category in categories"
+          :key="`cat-${category}`"
+          :href="`cat-${category}`">
+          {{ category }}
+        </a>
       </div>
       <div v-if="contact" class="article-wrap__aside-box">
         <ContactList class="article-wrap__contact-list" v-bind="contact" />
@@ -52,7 +56,10 @@ export default {
     },
     type: String,
     columnLayout: Boolean,
-    categories: Boolean,
+    categories: {
+      type: Array,
+      validator: arr => arr.every(item => typeof item === 'string'),
+    },
   },
   computed: {
     hasMetadata() {
