@@ -6,7 +6,6 @@ import Level1Entity from './Level1Entity.vue';
 import Level1DualEntity from './Level1DualEntity.vue';
 import Level1Home from './Level1Home.vue';
 import Level1HomeCampaignButton from './Level1HomeCampaignButton.vue';
-import Level1HomeCampaignOverlay75 from './Level1HomeCampaignOverlay75.vue';
 import Level1HomeCampaignOverlay50 from './Level1HomeCampaignOverlay50.vue';
 import Level1HomeCampaignOverlay25 from './Level1HomeCampaignOverlay25.vue';
 
