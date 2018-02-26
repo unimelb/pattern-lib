@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="toggle" role="presentation" aria-multiselectable="!solo" v-for="(item, index) in this.items" :key="item.id">
+    <div class="toggle" :aria-multiselectable="!solo" v-for="(item, index) in this.items" :key="item.id">
       <div class="toggle__item">
-        <div @click="togglePanel" @keydown="handleKey" :id="`${namespace}-header-${index + 1}`" role="heading" :aria-controls="`${namespace}-panel-${index + 1}`" tabindex="0" class="toggle__header">
+        <div @click="togglePanel" @keydown="handleKey" :id="`${namespace}-header-${index + 1}`" :aria-controls="`${namespace}-panel-${index + 1}`" tabindex="0" class="toggle__header">
           <h2>{{ item.data.attrs.title }}</h2>
         </div>
         <div :id="`${namespace}-panel-${index + 1}`" role="region" :aria-labelledby="`${namespace}-header-${index + 1}`" tabindex="0" class="toggle__panel" aria-expanded="false">
           <div class="toggle__panel__inner" v-html="content[index].innerHTML"></div>
-          <a :href="`#${namespace}-header-${index + 1}`" @click.prevent="togglePanel" class="toggle__footer">{{ closeLabel(item.data.attrs) }}</a>
+          <a :href="`#${namespace}-header-${index + 1}`" :aria-labelledby="`${namespace}-header-${index + 1}`" @click.prevent="togglePanel" class="toggle__footer">{{ closeLabel(item.data.attrs) }}</a>
         </div>
       </div>
     </div>
