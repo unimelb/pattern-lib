@@ -42,6 +42,17 @@ table, blockquote, figure, fieldset, address {
   margin: 0 0 var(--vr);
 }
 
+pre {
+  overflow: scroll; /* prevent unbroken line from overflowing container width */
+
+  &.codeblock {
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, .033);
+    border-radius: var(--br);
+    background-color: rgba(0, 0, 0, .033);
+  }
+}
+
 form {
   margin: 0;
 }
