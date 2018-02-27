@@ -24,6 +24,13 @@
     padding: 1rem 1.5rem;
     border-top: 3px solid transparent;
     border-bottom: 1px solid var(--col-grey-mid);
+    color: var(--col-brand);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &:last-child {
       border-bottom-color: transparent;
@@ -42,9 +49,6 @@
       border-right: 1px solid transparent;
       border-bottom: 1px solid transparent;
       border-left: 1px solid var(--col-grey-mid);
-      color: var(--col-brand);
-      font-weight: bold;
-      text-decoration: none;
 
       &:first-child {
         border-left-color: transparent;
