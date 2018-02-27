@@ -14,6 +14,7 @@ export default {
       'chevron-left',
       'chevron-down',
       'download',
+      'external',
       'play',
       'home',
       'search',
