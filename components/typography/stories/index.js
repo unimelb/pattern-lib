@@ -6,6 +6,7 @@ import HeadingClasses from './HeadingClasses.vue';
 import LongHeadings from './LongHeadings.vue';
 import Lead from './Lead.vue';
 import Links from './Links.vue';
+import LinksExternal from './LinksExternal.vue';
 import ListsOrdered from './ListsOrdered.vue';
 import ListsOrderedGiant from './ListsOrderedGiant.vue';
 import ListsSpaced from './ListsSpaced.vue';
@@ -20,6 +21,7 @@ storiesOf('Typography', module)
   .add('Long headings', createStory(LongHeadings))
   .add('Lead paragraph', createStory(Lead))
   .add('Links', createStory(Links))
+  .add('Links - external', createStory(LinksExternal))
   .add('Lists - ordered', createStory(ListsOrdered))
   .add('Lists - ordered, giant', createStory(ListsOrderedGiant))
   .add('Lists - unordered', createStory(ListsUnordered))
