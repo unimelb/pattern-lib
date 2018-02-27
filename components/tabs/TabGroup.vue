@@ -1,31 +1,36 @@
 <template>
   <div class="tabs">
-    <div class="tabs__tablist" role="tablist" @keydown="handleKey">
-      <button
-        class="tabs__tab"
-        role="tab"
-        ref="tabs"
-        @click="handleClick"
-        :id="`${namespace}-${index + 1}`"
-        :aria-controls="`${namespace}-panel-${index + 1}`"
-        :tabindex="index === 0 ? 0 : -1"
+    <div class="tabs__section">
+      <div class="tabs__tablist max" role="tablist" @keydown="handleKey">
+        <button
+          class="tabs__tab"
+          role="tab"
+          ref="tabs"
+          @click="handleClick"
+          :id="`${namespace}-${index + 1}`"
+          :aria-controls="`${namespace}-panel-${index + 1}`"
+          :tabindex="index === 0 ? 0 : -1"
+          v-for="(item, index) in items"
+          :key="index"
+        >
+          {{ item.data.attrs.title }}
+        </button>
+      </div>
+    </div>
+    <div class="tabs__section">
+      <div
+        class="tabs__panel max"
+        role="tabpanel"
+        ref="panels"
         v-for="(item, index) in items"
+        v-html="content[index].innerHTML"
+        :id="`${namespace}-panel-${index + 1}`"
+        :aria-hidden="index !== 0"
+        :aria-labelledby="`${namespace}-${index + 1}`"
         :key="index"
       >
-        {{ item.data.attrs.title }}
-      </button>
+      </div>
     </div>
-    <div
-      class="tabs__panel"
-      role="tabpanel"
-      ref="panels"
-      v-for="(item, index) in items"
-      v-html="content[index].innerHTML"
-      :id="`${namespace}-panel-${index + 1}`"
-      :aria-hidden="index !== 0"
-      :aria-labelledby="`${namespace}-${index + 1}`"
-      :key="index"
-    ></div>
   </div>
 </template>
 
