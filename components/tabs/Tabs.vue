@@ -35,6 +35,9 @@ export default {
     this.tabs.forEach((tab, i) => {
       tab.namespace = this.namespace;
       tab.index = i;
+      if (i === 0) {
+        tab.isActive = true;
+      }
     });
   },
   methods: {
