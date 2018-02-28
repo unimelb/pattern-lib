@@ -6,85 +6,50 @@
           class="tabs__tab"
           role="tab"
           ref="tabs"
-          @click="handleClick"
+          :tabindex="tab.isActive ? 0 : -1"
+          v-for="(tab, index) in panels"
+          :key="index"
           :id="`${namespace}-${index + 1}`"
           :aria-controls="`${namespace}-panel-${index + 1}`"
-          :tabindex="index === 0 ? 0 : -1"
-          v-for="(item, index) in items"
-          :key="index"
+          @click="setActive(tab)"
         >
-          {{ item.data.attrs.title }}
+        {{ tab.title }}
         </button>
       </div>
     </div>
     <div class="tabs__section">
-      <div
-        class="tabs__panel max"
-        role="tabpanel"
-        ref="panels"
-        v-for="(item, index) in items"
-        v-html="content[index].innerHTML"
-        :id="`${namespace}-panel-${index + 1}`"
-        :aria-hidden="index !== 0"
-        :aria-labelledby="`${namespace}-${index + 1}`"
-        :key="index"
-      >
-      </div>
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
-import { vnodeToElement } from '../shared/utils';
-
 export default {
-  name: 'tab-group',
-  props: {
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
-  },
+  data: () => ({
+    panels: [],
+  }),
   computed: {
     namespace() {
       return `ui-tab-${this._uid}`;
     },
   },
-  beforeCreate() {
-    const list = this.$slots.default;
-    this.items = list.filter(item => item.tag === 'section');
-
-    this.content = [];
-    this.items.forEach((item, index) => {
-      this.content[index] = document.createElement('div');
-      item.children.forEach(node => this.content[index].appendChild(vnodeToElement(node)));
+  created() {
+    this.panels = this.$children;
+  },
+  mounted() {
+    this.panels.forEach((tab, i) => {
+      tab.namespace = this.namespace;
+      tab.index = i;
+      if (i === 0) {
+        tab.isActive = true;
+      }
     });
   },
   methods: {
-    handleClick(e) {
-      e.preventDefault();
-      let curr = -1;
-      this.$refs.tabs.forEach((tab, index) => {
-        if (tab === e.target) curr = index;
-      }, this);
-      this.showTab(curr);
-    },
-    showTab(curr) {
-      this.$refs.tabs.forEach((tab, index) => {
-        tab.setAttribute('tabindex', index === curr ? 0 : -1);
-      }, this);
-
-      this.$refs.panels.forEach((panel, index) => {
-        panel.setAttribute('aria-hidden', index !== curr);
-
-        if (index === curr) {
-          panel.setAttribute('tabindex', 0);
-          panel.setAttribute('aria-selected', 'true');
-        } else {
-          panel.setAttribute('tabindex', -1);
-          panel.setAttribute('aria-selected', 'false');
-        }
-      }, this);
+    setActive(selectedtab) {
+      this.panels.forEach((panel) => {
+        panel.isActive = (panel.title === selectedtab.title);
+      });
     },
     handleKey(e) {
       let curr = -1;
@@ -102,12 +67,12 @@ export default {
         // left / up
         case 37:
         case 38:
-          this.showTab(prev);
+          this.setActive(this.panels[prev]);
           break;
         // right / down
         case 39:
         case 40:
-          this.showTab(next);
+          this.setActive(this.panels[next]);
           break;
         default:
           break;
@@ -116,3 +81,4 @@ export default {
   },
 };
 </script>
+
