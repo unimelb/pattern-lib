@@ -1,22 +1,23 @@
 <template>
   <SectionWrap bg-color="white">
     <AccordionGroup>
-      <section title="Arts">
+      <AccordionPanel title="Arts">
         <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-      </section>
-      <section title="Science">
+        <ButtonIcon size="xsml">I am a child component</ButtonIcon>
+      </AccordionPanel>
+      <AccordionPanel title="Science">
         <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-      </section>
+      </AccordionPanel>
     </AccordionGroup>
     <p>Second group:</p>
     <AccordionGroup>
-      <section title="Arts 2">
+      <AccordionPanel title="Arts 2">
         <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci alias, cumque, esse incidunt consequatur, accusantium odit blanditiis ipsam dolorem repellendus ut corporis earum, illum a maiores optio voluptate dicta.</p>
-      </section>
-      <section title="An MCE form">
+      </AccordionPanel>
+      <AccordionPanel title="An MCE form">
         <form id="form_email_1698962" enctype="multipart/form-data" action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form" method="post">
           <input type="hidden" name="SQ_FORM_1698962_PAGE" value="1" class="sq-form-field" id="SQ_FORM_1698962_PAGE">
           <input type="hidden" name="form_email_1698962_referral_url" value="">
@@ -115,16 +116,17 @@
             The information on this form is being collected by the University of Melbourne for further communication regarding various courses, programs and events at the University in which you have expressed interest. Information collected will only be used by authorised staff for the purpose for which it was collected and will be protected against unauthorized access and use. You can access any personal information the University holds about you. Contact the <a href="http://www.unimelb.edu.au/governance/compliance/privacy/contacts">Privacy Officer</a> to find out more. The <a href="http://www.unimelb.edu.au/governance/compliance/privacy">University’s Privacy Policy</a> is available online.
           </p>
         </form>
-      </section>
+      </AccordionPanel>
     </AccordionGroup>
   </SectionWrap>
 </template>
 
 <script>
 import AccordionGroup from '../AccordionGroup.vue';
+import AccordionPanel from '../AccordionPanel.vue';
 
 export default {
-  components: { AccordionGroup },
+  components: { AccordionGroup, AccordionPanel },
   readme: { html: true, source: false },
 };
 </script>
