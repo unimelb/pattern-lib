@@ -1,24 +1,15 @@
 <template>
-  <div>
-    <div class="toggle" :aria-multiselectable="!solo" v-for="(item, index) in this.items" :key="item.id">
-      <div class="toggle__item">
-        <div @click="togglePanel" @keydown="handleKey" :id="`${namespace}-header-${index + 1}`" :aria-controls="`${namespace}-panel-${index + 1}`" tabindex="0" class="toggle__header">
-          <h2>{{ item.data.attrs.title }}</h2>
-        </div>
-        <div :id="`${namespace}-panel-${index + 1}`" role="region" :aria-labelledby="`${namespace}-header-${index + 1}`" tabindex="0" class="toggle__panel" aria-expanded="false">
-          <div class="toggle__panel__inner" v-html="content[index].innerHTML"></div>
-          <a :href="`#${namespace}-header-${index + 1}`" :aria-labelledby="`${namespace}-header-${index + 1}`" @click.prevent="togglePanel" class="toggle__footer">{{ closeLabel(item.data.attrs) }}</a>
-        </div>
-      </div>
-    </div>
+  <div class="toggle" :aria-multiselectable="!solo">
+    <slot></slot>
   </div>
 </template>
 
 <script>
-import { vnodeToElement } from '../../shared/utils';
+import SectionTogglePanel from './SectionTogglePanel.vue';
 
 export default {
   name: 'section-toggle',
+  components: { SectionTogglePanel },
   props: {
     solo: {
       type: Boolean,
@@ -29,61 +20,58 @@ export default {
       default: false,
     },
   },
-  data() {
-    return {
-      current: 0,
-    };
-  },
+  data: () => ({
+    panels: [],
+    current: 0,
+  }),
   computed: {
     namespace() {
       return `ui-toggle-${this._uid}`;
     },
   },
-  beforeCreate() {
-    const list = this.$slots.default;
-    this.items = list.filter(item => item.tag === 'section');
-
-    this.content = [];
-    this.items.forEach((item, index) => {
-      this.content[index] = document.createElement('div');
-      item.children.forEach(node => this.content[index].appendChild(vnodeToElement(node)));
-    });
+  created() {
+    this.panels = this.$children;
   },
   mounted() {
-    if (this.disabled) return;
+    this.panels.forEach((panel, i) => {
+      panel.namespace = this.namespace;
+      panel.index = i;
+      if (i === 0) {
+        panel.isActive = true;
+      }
+    });
 
-    this.headers = [].slice.call(this.$el.querySelectorAll('.toggle__header'));
-    this.panels = [].slice.call(this.$el.querySelectorAll('.toggle__panel'));
+    this.dom = {
+      headers: [].slice.call(this.$el.querySelectorAll('.toggle__header')),
+      panels: [].slice.call(this.$el.querySelectorAll('.toggle__panel')),
+    };
 
     this.hideAllPanels();
     if (this.open) this.showCurrentPanel();
   },
   methods: {
-    closeLabel(attrs) {
-      return attrs.close || 'Close';
-    },
     hideAllPanels() {
-      this.headers.forEach((_header, index) => {
+      this.dom.headers.forEach((_header, index) => {
         this.hidePanel(index);
       });
     },
     hidePanel(i) {
-      this.headers[i].setAttribute('aria-selected', 'false');
-      this.headers[i].setAttribute('aria-expanded', 'false');
-      if (this.panels[i].getAttribute('aria-hidden') === 'false') this.unsetPanelHeight(i);
-      this.panels[i].setAttribute('tabindex', -1);
-      this.panels[i].setAttribute('aria-hidden', 'true');
+      this.dom.headers[i].setAttribute('aria-selected', 'false');
+      this.dom.headers[i].setAttribute('aria-expanded', 'false');
+      if (this.dom.panels[i].getAttribute('aria-hidden') === 'false') this.unsetPanelHeight(i);
+      this.dom.panels[i].setAttribute('tabindex', -1);
+      this.dom.panels[i].setAttribute('aria-hidden', 'true');
     },
     showCurrentPanel() {
-      this.headers[this.current].setAttribute('aria-selected', 'true');
-      this.headers[this.current].setAttribute('aria-expanded', 'true');
+      this.dom.headers[this.current].setAttribute('aria-selected', 'true');
+      this.dom.headers[this.current].setAttribute('aria-expanded', 'true');
       this.setPanelHeight(this.current);
-      this.panels[this.current].setAttribute('tabindex', 0);
-      this.panels[this.current].setAttribute('aria-hidden', 'false');
+      this.dom.panels[this.current].setAttribute('tabindex', 0);
+      this.dom.panels[this.current].setAttribute('aria-hidden', 'false');
     },
     getCurrent(e) {
       let curr = -1;
-      this.headers.forEach((header, index) => {
+      this.dom.headers.forEach((header, index) => {
         if (header === e.target.parentNode.parentNode.firstChild ||
             header === e.target.parentNode ||
             header === e.target) {
@@ -95,7 +83,7 @@ export default {
     togglePanel(e) {
       this.getCurrent(e);
 
-      if (this.headers[this.current].getAttribute('aria-selected') === 'true') {
+      if (this.dom.headers[this.current].getAttribute('aria-selected') === 'true') {
         this.hidePanel(this.current);
         return;
       }
@@ -103,6 +91,46 @@ export default {
       if (this.solo) this.hideAllPanels();
 
       this.showCurrentPanel();
+    },
+
+    getPanelHeight(i) {
+      const p = this.dom.panels[i];
+      // set auto height and read offsetHeight
+      p.style.height = 'auto';
+      const height = p.offsetHeight;
+      // remove style
+      p.style.height = '';
+      return height;
+    },
+    setPanelHeight(i) {
+      const p = this.dom.panels[i];
+      // get panel height
+      const panelHeight = this.getPanelHeight(i);
+      // recalc style and layout
+      p.getBoundingClientRect();
+      // set height on panel, reset to 'auto' on transition complete
+      p.style.height = `${panelHeight}px`;
+      setTimeout(() => {
+        p.style.transition = 'none';
+        p.style.height = 'auto';
+        // recalc style and layout
+        p.getBoundingClientRect();
+        p.style.transition = '';
+      }, 250);
+    },
+    unsetPanelHeight(i) {
+      const p = this.dom.panels[i];
+      // get panel height
+      const panelHeight = this.getPanelHeight(i);
+      // set panel height from 'auto' to px
+      p.style.height = `${panelHeight}px`;
+      // recalc style and layout
+      p.getBoundingClientRect();
+      // reset height
+      p.style.height = 0;
+    },
+    handleClick(e) {
+      this.togglePanel(e);
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
@@ -134,7 +162,7 @@ export default {
           break;
         // end
         case 35:
-          this.current = this.headers.length - 1;
+          this.current = this.dom.headers.length - 1;
           this.giveHeaderFocus();
           break;
         // home
@@ -157,57 +185,21 @@ export default {
       }
     },
     previousPanel() {
-      this.current = this.current - 1 < 0 ? this.headers.length - 1 : this.current - 1;
+      this.current = this.current - 1 < 0 ? this.dom.headers.length - 1 : this.current - 1;
       this.giveHeaderFocus();
     },
     nextPanel() {
-      this.current = this.current + 1 > this.headers.length - 1 ? 0 : this.current + 1;
+      this.current = this.current + 1 > this.dom.headers.length - 1 ? 0 : this.current + 1;
       this.giveHeaderFocus();
     },
     giveHeaderFocus() {
       // remove focusability from inactives
-      this.headers.forEach((header) => {
+      this.dom.headers.forEach((header) => {
         header.setAttribute('tabindex', -1);
       });
       // set active focus
-      this.headers[this.current].setAttribute('tabindex', 0);
-      this.headers[this.current].focus();
-    },
-    getPanelHeight(i) {
-      const panel = this.panels[i];
-      // set auto height and read offsetHeight
-      panel.style.height = 'auto';
-      const height = panel.offsetHeight;
-      // remove style
-      panel.style.height = '';
-      return height;
-    },
-    setPanelHeight(i) {
-      const panel = this.panels[i];
-      // get panel height
-      const panelHeight = this.getPanelHeight(i);
-      // recalc style and layout
-      panel.getBoundingClientRect();
-      // set height on panel, reset to 'auto' on transition complete
-      panel.style.height = `${panelHeight}px`;
-      setTimeout(() => {
-        panel.style.transition = 'none';
-        panel.style.height = 'auto';
-        // recalc style and layout
-        panel.getBoundingClientRect();
-        panel.style.transition = '';
-      }, 250);
-    },
-    unsetPanelHeight(i) {
-      const panel = this.panels[i];
-      // get panel height
-      const panelHeight = this.getPanelHeight(i);
-      // set panel height from 'auto' to px
-      panel.style.height = `${panelHeight}px`;
-      // recalc style and layout
-      panel.getBoundingClientRect();
-      // reset height
-      panel.style.height = 0;
+      this.dom.headers[this.current].setAttribute('tabindex', 0);
+      this.dom.headers[this.current].focus();
     },
   },
 };
