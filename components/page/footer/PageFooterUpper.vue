@@ -61,9 +61,9 @@
         </div>
       </div>
       <div class="page-footer__legal links-reset">
-        <a href="http://safety.unimelb.edu.au/emergency">Emergency Information</a>
+        <a href="http://safety.unimelb.edu.au/emergency">Emergency information</a>
         <span class="page-footer__legal__sep">|</span>
-        <a href="http://www.unimelb.edu.au/governance/disclaimer">Disclaimer &amp; Copyright</a>
+        <a href="http://www.unimelb.edu.au/governance/disclaimer">Disclaimer &amp; copyright</a>
         <span class="page-footer__legal__sep">|</span>
         <a href="http://www.unimelb.edu.au/accessibility">Accessibility</a>
         <span class="page-footer__legal__sep">|</span>

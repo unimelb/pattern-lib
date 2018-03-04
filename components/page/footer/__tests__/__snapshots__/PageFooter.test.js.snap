@@ -400,7 +400,7 @@ exports[`PageFooter should match snapshot 1`] = `
         <a
           href="http://safety.unimelb.edu.au/emergency"
         >
-          Emergency Information
+          Emergency information
         </a>
          
         <span
@@ -412,7 +412,7 @@ exports[`PageFooter should match snapshot 1`] = `
         <a
           href="http://www.unimelb.edu.au/governance/disclaimer"
         >
-          Disclaimer & Copyright
+          Disclaimer & copyright
         </a>
          
         <span
