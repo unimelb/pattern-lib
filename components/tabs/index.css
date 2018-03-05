@@ -4,10 +4,10 @@
   }
 
   &__section {
-    background-color: var(--col-bg-grey);
+    background-color: var(--col-blue-light);
 
     & + .tabs__section {
-      border-top: 1px solid var(--col-grey-mid);
+      border-top: 5px solid var(--col-brand-mid1);
       background-color: white;
     }
   }
@@ -16,14 +16,19 @@
     margin-bottom: 0;
     padding-right: 0;
     padding-left: 0;
+
+    @media (--bp-tablet) {
+      padding-top: 1.5rem;
+    }
   }
 
   &__tab {
     display: block;
     width: 100%;
-    padding: 1rem 1.5rem;
+    padding: .75rem 1.5rem;
     border-top: 3px solid transparent;
-    border-bottom: 1px solid var(--col-grey-mid);
+    border-bottom: 1px solid var(--col-teal-mid);
+    background-color: var(--col-bg-grey);
     color: var(--col-brand);
     font-weight: bold;
     text-decoration: none;
@@ -37,41 +42,24 @@
     }
 
     &[tabindex='0'] {
-      border-color: var(--col-teal-mid) var(--col-grey-mid) var(--col-grey-mid);
       background-color: white;
     }
 
     @media (--bp-tablet) {
       display: inline-block;
       width: auto;
-      margin-top: 1.5rem;
-      padding: 0 1.5rem;
+      margin-bottom: -5px;
       border-right: 1px solid transparent;
-      border-bottom: 1px solid transparent;
-      border-left: 1px solid var(--col-grey-mid);
-
-      &:first-child {
-        border-left-color: transparent;
-      }
+      border-bottom: 5px solid var(--col-brand-mid1);
+      border-left: 1px solid var(--col-teal-mid);
 
       &:last-child {
-        border-right-color: var(--col-grey-mid);
+        border-right: 1px solid var(--col-teal-mid);
+        border-bottom-color: var(--col-brand-mid1);
       }
 
       &[tabindex='0'] {
-        margin-top: .5rem;
-        margin-bottom: -1px;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid transparent;
-
-        &:first-child {
-          border-left-color: var(--col-grey-mid);
-        }
-      }
-
-      &[tabindex='0'] + & {
-        border-left-color: transparent;
+        border-bottom-color: transparent;
       }
     }
   }
@@ -82,50 +70,6 @@
 
     &[aria-hidden='true'] {
       display: none;
-    }
-  }
-
-  &--alt {
-    .tabs__section {
-      background-color: var(--col-blue-light);
-
-      & + .tabs__section {
-        background-color: white;
-      }
-    }
-  }
-
-  /* deprecated */
-
-  &--material {
-    .tabs__tab {
-      border-bottom: 2px solid transparent;
-      border-radius: 0;
-      background-color: transparent;
-
-      &[tabindex='0'] {
-        border-bottom-color: var(--col-brand);
-      }
-    }
-
-    .tabs__panel {
-      padding-left: 0;
-      border-top: 1px solid var(--col-bg-light-blue);
-      border-bottom: 1px solid var(--col-bg-light-blue);
-      background-color: transparent;
-    }
-  }
-
-  &--featured {
-    .tabs__tab {
-      &[tabindex='0'] {
-        background-color: var(--col-bg-light-blue);
-        color: var(--col-brand);
-      }
-    }
-
-    .tabs__panel {
-      background-color: var(--col-bg-light-blue);
     }
   }
 }
