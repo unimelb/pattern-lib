@@ -10,7 +10,7 @@
             <div class="page-footer-search__field">
               <label class="page-footer-search__label" for="f_s_q">Search</label>
               <input id="f_s_q" aria-label="Search the University" class="page-footer-search__input" name="q" placeholder="Type to search" type="search">
-              <button type="submit" class="page-footer-search__submit" aria-label="Submit" onclick="submit()" role="button" href="#"><SvgIcon class="page-footer-search__icon" name="search" /></button>
+              <button type="submit" class="page-footer-search__submit" aria-label="Submit" onclick="submit()" href="#"><SvgIcon class="page-footer-search__icon" name="search" /></button>
             </div>
           </form>
         </div>

@@ -24,7 +24,7 @@ or
             <div class="page-footer-search__field">
               <label for="f_s_q" class="page-footer-search__label">Search</label>
               <input id="f_s_q" aria-label="Search the University" name="q" placeholder="Type to search" type="search" class="page-footer-search__input">
-              <button type="submit" aria-label="Submit" onclick="submit()" role="button" href="#" class="page-footer-search__submit">
+              <button type="submit" aria-label="Submit" onclick="submit()" href="#" class="page-footer-search__submit">
                 <svg focusable="false" role="presentation" class="page-footer-search__icon">
                   <use xlink:href="#icon-search"></use>
                 </svg>

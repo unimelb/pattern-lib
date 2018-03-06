@@ -62,7 +62,6 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="page-footer-search__submit"
                 href="#"
                 onclick="submit()"
-                role="button"
                 type="submit"
               >
                 <svg
