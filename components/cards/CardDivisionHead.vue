@@ -13,7 +13,7 @@
       <ButtonIcon v-if="cols === 1" class="btn--wide">Contacts and bio</ButtonIcon>
     </div>
     <div class="card__footer" v-if="cols !== 1 && compact === false">
-      <ButtonIcon element="button" class="btn--fullwidth">Contacts and bio</ButtonIcon>
+      <ButtonIcon element="span" class="btn--fullwidth">Contacts and bio</ButtonIcon>
     </div>
   </a>
 </template>
