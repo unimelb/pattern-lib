@@ -12,7 +12,7 @@
       <p>{{ excerpt }}</p>
     </div>
     <div class="card__footer">
-      <ButtonIcon element="button" class="btn--fullwidth">Contacts and bio</ButtonIcon>
+      <ButtonIcon element="span" class="btn--fullwidth">Contacts and bio</ButtonIcon>
     </div>
   </a>
 </template>
