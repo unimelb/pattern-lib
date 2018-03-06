@@ -8,7 +8,7 @@
     <div class="card__inner" :class="{'card__inner--tight': tight}">
       <h3 v-if="titleabove === false">{{ title }}</h3>
       <slot></slot>
-      <ButtonIcon v-if="element === 'a'" element="button" class="btn--fullwidth">{{ title }}</ButtonIcon>
+      <ButtonIcon v-if="element === 'a'" element="span" class="btn--fullwidth">{{ title }}</ButtonIcon>
     </div>
   </a>
 </template>
