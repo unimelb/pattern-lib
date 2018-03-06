@@ -1,6 +1,7 @@
 /* functional */
-body > div[aria-hidden='true'] {
+body > div[aria-hidden='true']:not(#sitemap) {
   position: fixed;
+  width: 100%;
 }
 
 .modal-dialog {

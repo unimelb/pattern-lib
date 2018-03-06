@@ -13,7 +13,6 @@ export { default as CardImageList } from '../../components/cards/CardImageList.v
 export { default as CardLink } from '../../components/cards/CardLink.vue';
 export { default as CardNews } from '../../components/cards/CardNews.vue';
 export { default as CardPathfinder } from '../../components/cards/CardPathfinder.vue';
-export { default as Cards } from '../../components/cards/Cards.vue';
 export { default as CardStaffList } from '../../components/cards/CardStaffList.vue';
 export { default as CheckList } from '../../components/check-list/CheckList.vue';
 export { default as ContactList } from '../../components/contact-list/ContactList.vue';

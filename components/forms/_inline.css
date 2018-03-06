@@ -98,7 +98,7 @@
     height: 4.333rem;
     padding: .667rem 1.333rem;
     border-radius: var(--br) var(--br) 0 0;
-    background: white;
+    background-color: var(--col-bg-grey);
     line-height: 1.25;
 
     select {
@@ -115,7 +115,6 @@
     margin: 0;
     padding: 1rem .625rem;
     border-radius: 0;
-    background: white;
   }
 
   &.form--inverse {
@@ -138,7 +137,6 @@
     .form--inline__search,
     .form--inline__select {
       border: 1px solid color(var(--col-grey-light) lightness(-5%));
-      background-color: var(--col-bg-grey);
     }
 
     .form--inline__select {

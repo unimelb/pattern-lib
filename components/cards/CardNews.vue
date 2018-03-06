@@ -7,7 +7,7 @@
       <p>{{ excerpt }}</p>
     </div>
     <div class="card__footer" v-if="cols !== 1">
-      <ButtonIcon element="button" class="btn--fullwidth">Read More</ButtonIcon>
+      <ButtonIcon element="span" class="btn--fullwidth">Read More</ButtonIcon>
     </div>
   </a>
 </template>

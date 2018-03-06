@@ -37,7 +37,7 @@
 
     &__img {
       width: 11.25rem;
-      height: 6.25rem;
+      height: 6.328125rem; /* stylelint-disable-line number-max-precision */
       margin-top: .333rem;
       margin-left: -12.5rem;
       float: left;

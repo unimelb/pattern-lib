@@ -1,5 +1,5 @@
 <template>
-  <SectionToggle :disabled="disabled" :solo="solo" :open="open" class="accordion">
+  <SectionToggle ref="toggle" :disabled="disabled" :solo="solo" :open="open" class="accordion">
     <slot></slot>
   </SectionToggle>
 </template>
@@ -22,6 +22,10 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  methods: {
+    handleClick(e) { this.$refs.toggle.handleClick(e); },
+    handleKey(e) { this.$refs.toggle.handleKey(e); },
   },
 };
 </script>
