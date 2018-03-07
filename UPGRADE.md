@@ -1,5 +1,9 @@
 # Upgrade Instructions
 
+## v2.0.1
+
+No change
+
 ## v2.0.0
 
 * For `AccordionGroup` component, change `<section>` children to `<accordion-panel>`
