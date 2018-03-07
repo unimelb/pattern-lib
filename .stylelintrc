@@ -23,6 +23,7 @@
     "function-url-no-scheme-relative": true,
     "function-url-quotes": "always",
     "media-feature-name-no-vendor-prefix": true,
+    "no-descending-specificity": null,
     "no-duplicate-selectors": true,
     "number-leading-zero": "never",
     "number-max-precision": 3,
