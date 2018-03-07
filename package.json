@@ -88,7 +88,7 @@
     "strip-html-comments": "^1.0.0",
     "style-loader": "^0.20.2",
     "stylelint": "^9.1.1",
-    "stylelint-config-property-sort-order-smacss": "^2.0.0",
+    "stylelint-config-property-sort-order-smacss": "^3.0.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^0.8.1",
     "svg-fill-loader": "^0.0.8",
@@ -100,7 +100,7 @@
     "vue-template-compiler": "2.5.13",
     "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.1",
+    "webpack-dev-server": "^3.1.0",
     "webpack-merge": "^4.1.2"
   },
   "cacheDirectories": [
