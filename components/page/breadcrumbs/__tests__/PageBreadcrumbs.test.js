@@ -38,23 +38,23 @@ describe('PageBreadcrumbs', () => {
     it('should render an array of breadcrumb items', () => {
       const elems = cmp.findAll('li');
       expect(elems.length).toBe(2);
-      expect(elems.at(0).find('a').hasAttribute('href', '/foo')).toBe(true);
+      expect(elems.at(0).find('a').attributes().href).toBe('/foo');
       expect(elems.at(0).text()).toContain('Foo');
-      expect(elems.at(1).find('a').hasAttribute('href', '/bar')).toBe(true);
+      expect(elems.at(1).find('a').attributes().href).toBe('/bar');
       expect(elems.at(1).text()).toContain('Bar');
     });
 
     it('should indicate the position of each item to search engines', () => {
       const elems = cmp.findAll('meta[itemprop="position"]');
       expect(elems.length).toBe(2);
-      expect(elems.at(0).hasAttribute('content', '1')).toBe(true);
-      expect(elems.at(1).hasAttribute('content', '2')).toBe(true);
+      expect(elems.at(0).attributes().content).toBe('1');
+      expect(elems.at(1).attributes().content).toBe('2');
     });
 
     it('should render a `home` and a `chevron-right` icon inside the first item', () => {
       const elems = cmp.find('li').findAll(SvgIcon);
-      expect(elems.at(0).hasProp('name', 'home')).toBe(true);
-      expect(elems.at(1).hasProp('name', 'chevron-right')).toBe(true);
+      expect(elems.at(0).props().name).toBe('home');
+      expect(elems.at(1).props().name).toBe('chevron-right');
 
       // Ensure the icons are actually rendered (cf. below)
       expect(elems.at(0).html()).toContain('svg');
