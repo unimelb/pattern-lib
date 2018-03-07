@@ -1,4 +1,5 @@
 export { default as AccordionGroup } from '../../components/accordion/AccordionGroup.vue';
+export { default as AccordionPanel } from '../../components/accordion/AccordionPanel.vue';
 export { default as ArticleWrap } from '../../components/article-wrap/ArticleWrap.vue';
 export { default as BlockQuotation } from '../../components/block-quotation/BlockQuotation.vue';
 export { default as ButtonIcon } from '../../components/buttons/ButtonIcon.vue';
@@ -36,6 +37,7 @@ export { default as Pathfinder } from '../../components/pathfinder/Pathfinder.vu
 export { default as PhotoGallery } from '../../components/photo-gallery/PhotoGallery.vue';
 export { default as SectionDivider } from '../../components/section/SectionDivider.vue';
 export { default as SectionToggle } from '../../components/section/toggle/SectionToggle.vue';
+export { default as SectionTogglePanel } from '../../components/section/toggle/SectionTogglePanel.vue';
 export { default as SectionTwoCol } from '../../components/section/SectionTwoCol.vue';
 export { default as SectionWrap } from '../../components/section/SectionWrap.vue';
 export { default as SplitSection } from '../../components/section/SplitSection.vue';
@@ -47,4 +49,5 @@ export { default as StatsItem } from '../../components/stats/StatsItem.vue';
 export { default as SublinkMenu } from '../../components/sublink-menu/SublinkMenu.vue';
 export { default as SublinkMenuItem } from '../../components/sublink-menu/SublinkMenuItem.vue';
 export { default as TabGroup } from '../../components/tabs/TabGroup.vue';
+export { default as Tab } from '../../components/tabs/Tab.vue';
 export { default as Welcome } from '../../components/welcome/Welcome.vue';
