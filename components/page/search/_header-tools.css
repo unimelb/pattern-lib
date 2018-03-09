@@ -158,13 +158,13 @@
 .sitenav {
   .page-header-search__form {
     margin-top: .5rem;
-    margin-bottom: .5rem;  
+    margin-bottom: .5rem;
     margin-left: 1rem;
   }
 
   .page-header-search__submit {
-    color: rgba(255, 255, 255, .4);
     background-color: rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .4);
   }
 
   .page-header-search__input {
@@ -175,8 +175,8 @@
       background-color: white;
 
       & + .page-header-search__submit {
-        color: white;
         background-color: rgb(93, 130, 173);
+        color: white;
       }
     }
   }
