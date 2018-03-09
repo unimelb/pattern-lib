@@ -4,15 +4,36 @@
   border-top: 1px solid #164b88;
   background-color: #0f4380;
 
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+  @media (--bp-xx-wide) {
+    padding-left: 8.125rem;
   }
 
-  li {
+  &.elevated {
+    padding-left: 1.5rem;
+    border-top: 0;
+
+    .megamenu__level-1 a {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .megamenu__level-2 {
+      padding-left: 8.5rem;
+
+      @media (--bp-xx-wide) {
+        padding-left: 8.125rem;
+      }
+    }
+
+    .megamenu__level-3 a {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+  }
+
+  &__item {
     margin-bottom: 0;
-    list-style: none;
+    list-style-type: none;
   }
 
   &__login {
@@ -22,6 +43,8 @@
 
   &__level-1 {
     display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
 
     .megamenu__item {
       padding-bottom: 0;
@@ -40,31 +63,81 @@
   }
 
   &__level-2 {
-    display: none;
-    transition: all .5s;
+    z-index: 2;
+    position: absolute;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 7rem;
+    transition: max-height .3s ease-in-out;
     opacity: 0;
+    max-height: 0;
+    background-color: #083c79;
+
+    @media (--bp-xx-wide) {
+      padding-left: 6.625rem;
+    }
 
     .text-white {
+      padding-top: .4375rem;
       color: white;
     }
 
-    &--open {
-      display: block;
-      position: absolute;
-      left: 0;
-      width: 100vw;
-      height: 20rem;
-      opacity: 1;
+    li.megamenu__item {
+      display: flex;
+      padding: 1.5rem 3rem;
+    }
+  }
+
+  &__level-1 .megamenu__item:hover {
+    a {
       background-color: #083c79;
+      text-decoration: none;
     }
 
-    li.megamenu__item {
-      padding: 3rem;
+    .megamenu__level-2 {
+      z-index: 3;
+      max-height: 22rem;
+      left: 0;
+      width: 100vw;
+      opacity: 1;
+      transition: max-height .3s ease-in-out;
+    }
+
+    .megamenu__level-3 a {
+      background-color: transparent;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
   &__level-3 {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0;
+    margin-left: 2rem;
+    padding-left: 0;
+    font-size: .9rem;
+
+    li {
+      margin-bottom: 0;
+      list-style-type: none;
+      border-left: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    a {
+      padding-left: 2rem;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
+}
+
+.page-header--study {
+  overflow: visible;
 }

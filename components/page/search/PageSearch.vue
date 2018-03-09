@@ -5,16 +5,12 @@
       <span class="link-icon__text">Search</span>
     </a>
     <div ref="search" class="page-header-search">
-      <form action="https://search.unimelb.edu.au" method="get">
-        <input ref="input" class="page-header-search__input" name="q" type="search" placeholder="Search the University" aria-label="Search the University"><button class="page-header-search__submit" type="submit">
-          <SvgIcon class="page-header-search__icon" name="search" />
-          <span class="screenreaders-only">Go</span>
-        </button>
+      <PageSearchForm>
         <a class="page-header-icon link-icon--close" role="button" href="#" @click.prevent="handleSearchClose">
           <SvgIcon class="page-header-search__icon--close" name="close" />
           Close
         </a>
-      </form>
+      </PageSearchForm>
     </div>
   </div>
 </template>
@@ -22,10 +18,11 @@
 <script>
 import SvgIcon from '../../icons/SvgIcon.vue';
 import Blanket from './blanket';
+import PageSearchForm from './PageSearchForm.vue';
 
 export default {
   name: 'page-search',
-  components: { SvgIcon },
+  components: { SvgIcon, PageSearchForm },
   domFriendly: true,
   mounted() {
     this.blanket = new Blanket();
