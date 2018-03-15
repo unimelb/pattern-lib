@@ -10,7 +10,7 @@
             alt="The University of Melbourne homepage"
           >
         </a>
-        <MegaMenu class="elevated" />
+        <MegaMenu />
         <slot></slot>
       </div>
     </header>

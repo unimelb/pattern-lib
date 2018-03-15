@@ -1,8 +1,8 @@
 <template>
   <nav class="megamenu" ref="rootmenu">
-    <ul class="megamenu__level-1">
+    <ul class="menu__section">
       <li
-        class="megamenu__item"
+        class="menu__item"
         v-for="(level1, index) in items"
         :key="`level1-${index}`"
         @mouseover="activateMenu(index)"
@@ -10,43 +10,34 @@
       >
         <a
           role="menuitem"
-          aria-haspopup="true"
-          :aria-expanded="level1.open ? 'true' : 'false'"
           :href="level1.href ? level1.href : '#'"
-          tabindex="0"
-          class="megamenu__link"
+          class="menu__link"
         >
           {{ level1.title }}
         </a>
-        <ul class="megamenu__level-2" v-if="level1.items">
-          <li
-            class="megamenu__item"
-            v-for="(level2, index) in level1.items"
-            :key="`level2-${index}`"
-            >
-              <h3 class="megamenu__subtitle">{{ level2.title }}</h3>
-              <ul class="megamenu__level-3">
-                <li v-for="(level3, index) in level2.items" :key="`level3-${index}`">
-                  <a class="megamenu__link" :href="level3.href">{{ level3.title }}</a>
-                </li>
-              </ul>
-          </li>
-        </ul>
+        <div
+          class="inner"
+          v-for="(level2, index) in level1.items"
+          :key="`level2-${index}`"
+        >
+          <h3 class="menu__sectiontitle">{{ level2.title }}</h3>
+          <ul class="menu__section">
+            <li class="menu__item" v-for="(level3, index) in level2.items" :key="`level3-${index}`">
+              <a class="menu__link" :href="level3.href">{{ level3.title }}</a>
+            </li>
+          </ul>
+        </div>
       </li>
-      <MegaMenuLogin v-if="showLogin" />
     </ul>
   </nav>
 </template>
 
 <script>
-import MegaMenuLogin from './MegaMenuLogin.vue';
 import Blanket from '../../search/blanket';
 
 export default {
-  components: { MegaMenuLogin },
   data() {
     return {
-      showLogin: false,
       isActive: false,
       items: [
         {
