@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import PageNav from '../nav/PageNav.vue';
-import PageSearchForm from './PageSearchForm.vue';
+import PageNav from './PageNav.vue';
+import PageSearchForm from '../search/PageSearchForm.vue';
 
 export default {
   name: 'search-integrated-nav',

@@ -1,35 +1,19 @@
 <template>
   <SearchIntegratedNav title="Study Hub">
     <ul>
-      <li>
-        <a href="why">Why, Melbourne?</a>
-        <div class="inner">
+      <li
+        v-for="(rootitem, rootindex) in items"
+        :key="`rootitem-${rootindex}`"
+      >
+        <a :href="rootitem.href">{{ rootitem.title }}</a>
+        <div
+          class="inner"
+          v-if="rootitem.items"
+        >
           <ul>
-            <li><a href="http://www.google.com">Entry requirements1</a></li>
-            <li><a href="http://www.google.com">Entry requirements2</a></li>
-            <li><a href="http://www.google.com">Entry requirements3</a></li>
-            <li><a href="http://www.google.com">Entry requirements4</a></li>
-            <li><a href="http://www.google.com">Entry requirements5</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <a>Find a course</a>
-      </li>
-      <li>
-        <a href="adm">Admissions</a>
-        <div class="inner">
-          <ul>
-            <li><a href="http://www.google.com">Entry non requirements6</a></li>
-            <li><a href="http://www.google.com">Entry non requirements7</a></li>
-            <li><a href="http://www.google.com">Entry non requirements8 has a particularly long title for no good reason</a></li>
-            <li><a href="http://www.google.com">Entry non requirements9</a></li>
-            <li><a href="http://www.google.com">Entry non requirements10</a></li>
-            <li><a href="http://www.google.com">Entry non requirements11</a></li>
-            <li><a href="http://www.google.com">Entry non requirements12</a></li>
-            <li><a href="http://www.google.com">Entry non requirements13</a></li>
-            <li><a href="http://www.google.com">Entry non requirements14</a></li>
-            <li><a href="http://www.google.com">Entry non requirements15</a></li>
+            <li v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
+              <a :href="menuitem.href">{{ menuitem.title }}</a>
+            </li>
           </ul>
         </div>
       </li>
@@ -38,10 +22,13 @@
 </template>
 
 <script>
-import SearchIntegratedNav from '../../search/SearchIntegratedNav.vue';
+import SearchIntegratedNav from '../SearchIntegratedNav.vue';
 
 export default {
   components: { SearchIntegratedNav },
+  props: {
+    items: Array,
+  },
   readme: { html: true, source: false },
 };
 </script>
