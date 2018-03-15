@@ -1,10 +1,12 @@
 <template>
-  <nav class="megamenu">
+  <nav class="megamenu" ref="rootmenu">
     <ul class="megamenu__level-1">
       <li
         class="megamenu__item"
         v-for="(level1, index) in items"
         :key="`level1-${index}`"
+        @mouseover="activateMenu(index)"
+        @mouseout="dismissMenu"
       >
         <a
           role="menuitem"
@@ -12,26 +14,20 @@
           :aria-expanded="level1.open ? 'true' : 'false'"
           :href="level1.href ? level1.href : '#'"
           tabindex="0"
+          class="megamenu__link"
         >
           {{ level1.title }}
         </a>
-        <ul class="megamenu__level-2" :class="{'megamenu__level-2--open': level1.open}">
+        <ul class="megamenu__level-2" v-if="level1.items">
           <li
             class="megamenu__item"
             v-for="(level2, index) in level1.items"
             :key="`level2-${index}`"
             >
-              <h3 class="text-white">
-                {{ level2.title }}
-              </h3>
+              <h3 class="megamenu__subtitle">{{ level2.title }}</h3>
               <ul class="megamenu__level-3">
-                <li
-                  v-for="(level3, index) in level2.items"
-                  :key="`level3-${index}`"
-                >
-                  <a :href="level3.href">
-                    {{ level3.title }}
-                  </a>
+                <li v-for="(level3, index) in level2.items" :key="`level3-${index}`">
+                  <a class="megamenu__link" :href="level3.href">{{ level3.title }}</a>
                 </li>
               </ul>
           </li>
@@ -44,12 +40,14 @@
 
 <script>
 import MegaMenuLogin from './MegaMenuLogin.vue';
+import Blanket from '../../search/blanket';
 
 export default {
   components: { MegaMenuLogin },
   data() {
     return {
       showLogin: false,
+      isActive: false,
       items: [
         {
           title: 'Why, Melbourne?',
@@ -57,11 +55,13 @@ export default {
           items: [
             {
               title: 'Why Melbourne',
+              feature: '',
               items: [
                 { title: 'Entry requirements1', href: 'http://www.google.com' },
                 { title: 'Entry requirements2', href: 'http://www.google.com' },
                 { title: 'Entry requirements3', href: 'http://www.google.com' },
                 { title: 'Entry requirements4', href: 'http://www.google.com' },
+                { title: 'Entry requirements5', href: 'http://www.google.com' },
               ],
             },
           ],
@@ -78,10 +78,9 @@ export default {
             {
               title: 'Admissions',
               items: [
-                { title: 'Entry non requirements5', href: 'http://www.google.com' },
                 { title: 'Entry non requirements6', href: 'http://www.google.com' },
                 { title: 'Entry non requirements7', href: 'http://www.google.com' },
-                { title: 'Entry non requirements8', href: 'http://www.google.com' },
+                { title: 'Entry non requirements8 has a particularly long title for no good reason', href: 'http://www.google.com' },
                 { title: 'Entry non requirements9', href: 'http://www.google.com' },
                 { title: 'Entry non requirements10', href: 'http://www.google.com' },
                 { title: 'Entry non requirements11', href: 'http://www.google.com' },
@@ -89,13 +88,34 @@ export default {
                 { title: 'Entry non requirements13', href: 'http://www.google.com' },
                 { title: 'Entry non requirements14', href: 'http://www.google.com' },
                 { title: 'Entry non requirements15', href: 'http://www.google.com' },
-                { title: 'Entry non requirements16', href: 'http://www.google.com' },
               ],
             },
           ],
         },
       ],
     };
+  },
+  mounted() {
+    this.blanket = new Blanket();
+  },
+  methods: {
+    activateMenu(lvl1index) {
+      if (this.$parent.$refs.headerroot && this.items[lvl1index].items !== undefined && !this.isActive) {
+        this.blanket.show({ onClick: this.dismissMenu.bind(this) });
+        this.$parent.$refs.headerroot.classList.add('active');
+        // this.$parent.$refs.headerroot.removeAttribute('aria-hidden');
+        this.isActive = true;
+      }
+    },
+
+    dismissMenu() {
+      if (this.$parent.$refs.headerroot && this.isActive) {
+        this.blanket.hide();
+        this.$parent.$refs.headerroot.classList.remove('active');
+        // this.$parent.$refs.headerroot.setAttribute('aria-hidden', true);
+        this.isActive = false;
+      }
+    },
   },
 };
 </script>

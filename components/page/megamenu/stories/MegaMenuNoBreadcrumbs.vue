@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="page-header page-header--l3 page-header--study">
+    <header ref="headerroot" class="page-header page-header--l3 page-header--study">
       <div class="page-header__inner">
         <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
           <img
@@ -11,6 +11,7 @@
           >
         </a>
         <MegaMenu class="elevated" />
+        <slot></slot>
       </div>
     </header>
   </div>
@@ -24,15 +25,3 @@ export default {
   components: { MegaMenu },
 };
 </script>
-
-<style lang="postcss">
-  .page-header--study {
-    .page-header__inner {
-      padding-left: 3rem;
-    }
-
-    nav {
-      background-color: transparent;
-    }
-  }
-</style>

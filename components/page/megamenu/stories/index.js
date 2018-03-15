@@ -1,15 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { createStory } from '.storybook/utils';
 
-import HeaderFullwidth from './HeaderFullwidth.vue';
-import MegaMenu from './MegaMenu.vue';
-import HeaderMegaMenu from './HeaderMegaMenu.vue';
-import MegaMenuNoBreadcrumbs from './MegaMenuNoBreadcrumbs.vue';
 import HybridMenu from './HybridMenu.vue';
 
 storiesOf('Page / Mega menu', module)
-  .add('Header', createStory(HeaderFullwidth))
-  .add('Mega menu', createStory(MegaMenu))
-  .add('Header and mega menu', createStory(HeaderMegaMenu))
-  .add('Header, mega menu replacing breadcrumbs', createStory(MegaMenuNoBreadcrumbs))
-  .add('Header and mega menu / hamburger hybrid', createStory(HybridMenu));
+  .add('Menu / hamburger hybrid', createStory(HybridMenu));
