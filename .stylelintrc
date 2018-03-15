@@ -26,7 +26,7 @@
     "no-descending-specificity": null,
     "no-duplicate-selectors": true,
     "number-leading-zero": "never",
-    "number-max-precision": 3,
+    "number-max-precision": 4,
     "order/order": ["custom-properties", "declarations", "rules", "at-rules"],
     "property-no-vendor-prefix": true,
     "selector-attribute-quotes": "always",

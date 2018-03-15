@@ -2,20 +2,21 @@
   <nav class="header-tools">
     <PageNav :title="items[0].title" v-if="items">
       <PageSearchForm />
-      <ul>
+      <ul class="menu__section">
         <li
+          class="menu__item"
           v-for="(rootitem, rootindex) in items"
           :key="`rootitem-${rootindex}`"
           v-if="rootindex != 0"
         >
-          <a :href="rootitem.href">{{ rootitem.title }}</a>
+          <a role="menuitem" class="menu__link" :href="rootitem.href">{{ rootitem.title }}</a>
           <div
             class="inner"
             v-if="rootitem.items"
           >
-            <ul>
-              <li v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
-                <a :href="menuitem.href">{{ menuitem.title }}</a>
+            <ul class="menu__section">
+              <li class="menu__item" v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
+                <a role="menuitem" class="menu__link" :href="menuitem.href">{{ menuitem.title }}</a>
               </li>
             </ul>
           </div>

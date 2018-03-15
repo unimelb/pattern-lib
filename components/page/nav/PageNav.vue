@@ -145,13 +145,11 @@ export default {
       panel.insertBefore(backBtn, list);
 
       // Inject link to parent in child
-      const insertParent = document.createElement('li');
-      const insertParentLink = document.createElement('a');
-      insertParentLink.classList.add('sitenav__nested-parent');
-      insertParentLink.textContent = trigger.textContent;
-      insertParentLink.setAttribute('href', trigger.getAttribute('href'));
-      insertParentLink.setAttribute('role', '"menuitem');
-      insertParent.appendChild(insertParentLink);
+      const insertParent = document.createElement('a');
+      insertParent.classList.add('sitenav__nested-parent');
+      insertParent.textContent = trigger.textContent;
+      insertParent.setAttribute('href', trigger.getAttribute('href'));
+      insertParent.setAttribute('role', 'menuitem');
       panel.insertBefore(insertParent, list);
     },
 

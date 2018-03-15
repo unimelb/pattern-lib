@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <MegaMenu :items="items"></MegaMenu>
-  </div>
+  <MegaMenu :items="items" />
 </template>
 
 <script>
