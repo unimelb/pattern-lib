@@ -1,8 +1,26 @@
 <template>
   <nav class="header-tools">
-    <PageNav :title="title">
+    <PageNav :title="items[0].title" v-if="items">
       <PageSearchForm />
-      <slot></slot>
+      <ul>
+        <li
+          v-for="(rootitem, rootindex) in items"
+          :key="`rootitem-${rootindex}`"
+          v-if="rootindex != 0"
+        >
+          <a :href="rootitem.href">{{ rootitem.title }}</a>
+          <div
+            class="inner"
+            v-if="rootitem.items"
+          >
+            <ul>
+              <li v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
+                <a :href="menuitem.href">{{ menuitem.title }}</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
     </PageNav>
   </nav>
 </template>
@@ -15,8 +33,11 @@ export default {
   name: 'search-integrated-nav',
   components: { PageNav, PageSearchForm },
   props: {
-    title: String,
-    default: 'Navigation',
+    title: {
+      type: String,
+      default: 'Navigation',
+    },
+    items: Array,
   },
 };
 </script>

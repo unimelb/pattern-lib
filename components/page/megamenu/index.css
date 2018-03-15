@@ -60,14 +60,6 @@
     }
   }
 
-  &__search {
-    &-icon {
-      display: inline-block;
-      width: 1.25rem;
-      height: 1.25rem;
-    }
-  }
-
   &__section {
     display: flex;
     margin-bottom: 0;
@@ -78,10 +70,15 @@
     }
 
     .menu__link {
-      display: block;
+      display: table-cell;
       position: relative;
-      padding: 1.5rem 1.5rem 2.25rem;
+      height: 5.4375rem; /* stylelint-disable-line number-max-precision */
+      padding: .5rem 1.5rem;
       color: white;
+      line-height: 1.1;
+      vertical-align: middle;
+      text-align: center;
+      text-decoration: none;
 
       &:hover,
       &[aria-expanded='true'] {
@@ -92,7 +89,7 @@
 
   &__sectiontitle {
     width: 25%;
-    padding-top: .4375rem; /* stylelint-disable number-max-precision */
+    padding-top: .4375rem; /* stylelint-disable-line number-max-precision */
     padding-left: 1.5rem;
     color: white;
   }
@@ -100,7 +97,7 @@
   &__section .menu__item:hover {
     .menu__link {
       background-color: #083c79;
-      text-decoration: none;
+      text-decoration: underline;
     }
 
     .inner {
@@ -113,6 +110,7 @@
 
     .menu__section .menu__link {
       background-color: transparent;
+      text-decoration: none;
 
       &:hover {
         text-decoration: underline;
@@ -138,8 +136,10 @@
 
     .menu__link {
       display: inline-block;
+      height: auto;
       padding: .75rem 1.5rem .75rem 2rem;
       text-decoration: none;
+      text-align: left;
 
       &:hover {
         text-decoration: underline;
@@ -167,9 +167,10 @@
     .link-img {
       margin: -.75rem;
       padding: .75rem;
+      border-radius: var(--br);
 
       &:hover {
-        background: rgba(255, 255, 255, .1);
+        background: rgba(255, 255, 255, .15);
       }
     }
 
@@ -184,7 +185,17 @@
 }
 
 .header-tools.elevated {
+  margin-right: 0;
   margin-left: auto;
+
+  .link-icon--vertical {
+    border-radius: var(--br);
+
+    &:hover {
+      background: rgba(255, 255, 255, .15);
+      color: white;
+    }
+  }
 
   @media (--bp-desktop) {
     display: none;

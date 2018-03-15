@@ -1,24 +1,28 @@
 <template>
   <div>
-    <MegaMenu :items="items">
-      <SearchIntegratedNav :items="items" class="elevated" />
-    </MegaMenu>
+    <MegaMenu :items="items"></MegaMenu>
   </div>
 </template>
 
 <script>
 import MegaMenu from '../MegaMenu.vue';
-import SearchIntegratedNav from '../../nav/stories/SearchIntegratedNav.vue';
 
 export default {
-  name: 'mega-menu-no-breadcrumbs',
-  components: { MegaMenu, SearchIntegratedNav },
+  components: { MegaMenu },
   data() {
     return {
       items: [
         {
-          title: 'Why, Melbourne?',
-          href: '/why',
+          title: 'Study',
+          href: '/',
+        },
+        {
+          title: 'Find a course',
+          href: '/find-a-course',
+        },
+        {
+          title: 'Why Melbourne',
+          href: '/why-melbourne',
           items: [
             { title: 'Entry requirements1', href: 'http://www.google.com' },
             { title: 'Entry requirements2', href: 'http://www.google.com' },
@@ -28,12 +32,8 @@ export default {
           ],
         },
         {
-          title: 'Find a course',
-          href: '/fac',
-        },
-        {
           title: 'Admissions',
-          href: '/adm',
+          href: '/admissions',
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
             { title: 'Entry non requirements7', href: 'http://www.google.com' },
@@ -46,6 +46,14 @@ export default {
             { title: 'Entry non requirements14', href: 'http://www.google.com' },
             { title: 'Entry non requirements15', href: 'http://www.google.com' },
           ],
+        },
+        {
+          title: 'Student experience',
+          href: '/student-experience',
+        },
+        {
+          title: 'Connect',
+          href: '/connect',
         },
       ],
     };

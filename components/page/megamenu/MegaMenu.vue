@@ -39,18 +39,20 @@
           </li>
         </ul>
       </nav>
-      <slot></slot>
+      <SearchIntegratedNav :items="items" class="elevated" />
     </div>
   </header>
 </template>
 
 <script>
 import Blanket from '../search/blanket';
+import SearchIntegratedNav from '../nav/SearchIntegratedNav.vue';
 
 export default {
   props: {
     items: Array,
   },
+  components: { SearchIntegratedNav },
   data() {
     return {
       isActive: false,
@@ -60,8 +62,8 @@ export default {
     this.blanket = new Blanket();
   },
   methods: {
-    activateMenu(lvl1index) {
-      if (this.$parent.$refs.headerroot && this.items[lvl1index].items !== undefined && !this.isActive) {
+    activateMenu(rootindex) {
+      if (this.$parent.$refs.headerroot && this.items[rootindex].items !== undefined && !this.isActive) {
         this.blanket.show({ onClick: this.dismissMenu.bind(this) });
         this.$parent.$refs.headerroot.classList.add('active');
         // this.$parent.$refs.headerroot.removeAttribute('aria-hidden');
