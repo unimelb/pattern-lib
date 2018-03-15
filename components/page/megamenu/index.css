@@ -5,6 +5,33 @@
   padding-left: 0;
   background-color: #0f4380;
 
+  .inner {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0;
+    background-color: #083c79;
+
+    .menu__item {
+      display: flex;
+      padding: 1.5rem;
+    }
+
+    @media (--bp-wide) {
+      padding-right: 7.85rem;
+      padding-left: 7.85rem;
+    }
+
+    @media (--bp-xx-wide) {
+      padding-right: 7.25rem;
+      padding-left: 7.25rem;
+    }
+  }
+
   @media (--bp-desktop) {
     display: block;
   }
@@ -128,33 +155,6 @@
       columns: 4;
       column-width: 25%;
     }
-  }
-}
-
-.inner {
-  display: none;
-  position: absolute;
-  z-index: 2;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 0;
-  background-color: #083c79;
-
-  .menu__item {
-    display: flex;
-    padding: 1.5rem;
-  }
-
-  @media (--bp-wide) {
-    padding-right: 7.85rem;
-    padding-left: 7.85rem;
-  }
-
-  @media (--bp-xx-wide) {
-    padding-right: 7.25rem;
-    padding-left: 7.25rem;
   }
 }
 
