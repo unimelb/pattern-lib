@@ -154,3 +154,15 @@
     color: var(--col-brand);
   }
 }
+
+.sitenav {
+  .page-header-search__form {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+  }
+
+  .page-header-search__input {
+    width: calc(100% - 4rem);
+  }
+}

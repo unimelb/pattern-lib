@@ -3,7 +3,6 @@ import { createStory } from '.storybook/utils';
 
 import PageNavDefault from './PageNavDefault.vue';
 import PageNavNested from './PageNavNested.vue';
-
 import PageSearchDefault from './PageSearchDefault.vue';
 
 storiesOf('Page / Header tools', module)
