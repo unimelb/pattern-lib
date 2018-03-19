@@ -6,15 +6,28 @@
 
 .megamenu {
   position: fixed;
+  z-index: 101;
   top: 0;
+  right: 100%;
+  width: 100%;
   min-height: 100%;
   transform: translateX(-100%);
-  z-index: 101;
   background-color: #0f4380;
   color: #fff;
-  transform: none;
-  width: 100%;
-  right: 0;
+
+  &__blanket {
+    position: absolute;
+    top: -7.5rem;
+    width: 100%;
+    height: 7.5rem;
+    margin: -1rem;
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  &.active {
+    right: 0;
+    transform: none;
+  }
 
   .inner {
     display: none;
@@ -26,7 +39,7 @@
     overflow-y: auto;
     transform: none;
     transition: var(--tr-transform);
-    background-color: var(--col-bg);    
+    background-color: var(--col-bg);
   }
 
   .page-header-search__form {
@@ -53,8 +66,8 @@
 
     &__nested-parent,
     &__link {
-      padding: .75rem 1rem .75rem 2rem;
       display: block;
+      padding: .75rem 1rem .75rem 2rem;
       color: white;
       text-decoration: none;
 
@@ -98,7 +111,6 @@
   }
 
   @media (--bp-tablet) {
-    right: var(--offset-sitenav);
     width: var(--width-sitenav);
     transform: translateX(var(--offset-sitenav));
     box-shadow: 1px 0 12px 3px rgba(0, 0, 0, .6);
@@ -109,14 +121,21 @@
   }
 
   @media (--bp-desktop) {
+    position: static;
     right: auto;
+    width: calc(100% - 1.5rem);
     height: 100%;
-    width: 100%;
     margin-left: 1.5rem;
     padding-left: 0;
-    position: static;
     transform: none;
     box-shadow: none;
+
+    &__blanket {
+      position: static;
+      height: auto;
+      margin: 1rem 0 0;
+      background-color: transparent;
+    }
 
     .inner {
       position: absolute;
@@ -153,11 +172,11 @@
 
     .menu {
       &__nested-parent {
-        font-size: .9rem;
         display: table-cell;
         position: relative;
         height: 5.4375rem;
         padding: .5rem 1.5rem 2rem;
+        font-size: .9rem;
         line-height: 1.1;
         text-align: center;
         text-decoration: none;
@@ -192,11 +211,21 @@
         border-bottom: none;
 
         .inner .menu__nested-parent {
-          width: 25%;
+          width: 33.333%;
           padding-top: .4375rem;
           padding-left: 1.5rem;
           font-size: 1.25rem;
+          line-height: 1.4;
+          text-align: left;
           text-decoration: none;
+
+          @media (--bp-x-desktop) {
+            width: 25%;
+          }
+
+          @media (--bp-xx-wide) {
+            width: 20%;
+          }
         }
 
         .menu__item {
@@ -208,11 +237,11 @@
           position: relative;
           height: 5.4375rem;
           padding: .5rem 1.5rem 2rem;
+          font-size: .9rem;
           line-height: 1.1;
           text-align: center;
           text-decoration: none;
           vertical-align: bottom;
-          font-size: .9rem;
 
           &:hover,
           &[aria-expanded='true'] {
@@ -275,7 +304,7 @@
 
         @media (--bp-x-desktop) {
           columns: 3;
-          column-width: 33%;
+          column-width: 33.333%;
         }
 
         @media (--bp-xx-wide) {
@@ -309,7 +338,6 @@
   }
 
   .header-tools__menu {
-    margin-right: 0;
     margin-left: auto;
 
     .link-icon--vertical {
@@ -329,4 +357,8 @@
 
 .page-header.active {
   z-index: 101;
+
+  .megamenu__blanket {
+    top: 0;
+  }
 }
