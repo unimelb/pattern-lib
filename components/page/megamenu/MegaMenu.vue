@@ -9,9 +9,9 @@
           alt="The University of Melbourne homepage"
         >
       </a>
-      <div class="megamenu__blanket" @click="dismissMobileMenu">
+      <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
         <nav class="megamenu" ref="rootmenu">
-          <button aria-label="Close" type="button" class="menu__back-btn" @click="dismissMobileMenu">Close</button>
+          <div role="button" aria-label="Close" class="menu__back-btn" @click="dismissMobileMenu">Close</div>
           <PageSearchForm />
           <ul class="menu__section">
             <li
@@ -21,17 +21,21 @@
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
             >
-              <a
-                role="menuitem"
+              <component
+                :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
-                :class="`${rootindex === 0 ? 'menu__nested-parent' : 'menu__link'}`"
+                :class="linkClasses(rootindex, rootitem)"
+                :is="rootitem.items ? 'div' : 'a'"
+                @click="openInner"
               >
                 {{ rootitem.title }}
-              </a>
+              </component>
               <div
                 class="inner"
                 v-if="rootitem.items"
+                ref="panels"
               >
+                <div rol="button" @click="closeInner" class="menu__back-btn">Back</div>
                 <a :href="rootitem.href" class="menu__nested-parent">{{ rootitem.title }}</a>
                 <ul class="menu__section">
                   <li class="menu__item" v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
@@ -85,8 +89,17 @@ export default {
   },
   mounted() {
     this.blanket = new Blanket();
+    window.addEventListener('resize', this.closeMobileIfDesktop.bind(this));
   },
   methods: {
+    linkClasses(rootindex, rootitem) {
+      if (rootindex === 0) {
+        return 'menu__nested-parent';
+      } else if (rootitem.items) {
+        return 'menu__link menu__link--nested';
+      }
+      return 'menu__link';
+    },
     activateDesktopMenu(rootindex) {
       if (this.items[rootindex].items !== undefined && !this.isActive && !this.isMobile) {
         this.blanket.show({ onClick: this.dismissDesktopMenu.bind(this) });
@@ -115,6 +128,26 @@ export default {
         this.$refs.rootmenu.classList.remove('active');
         this.$refs.headerroot.classList.remove('active');
         this.isActive = false;
+      }
+    },
+    dismissMobileMenuIfBlanket(e) {
+      if (e.target !== this.$refs.blanket) return;
+
+      this.dismissMobileMenu();
+    },
+    openInner(e) {
+      e.target.nextElementSibling.classList.add('open');
+    },
+    closeInner(e) {
+      e.target.parentElement.classList.remove('open');
+    },
+    closeMobileIfDesktop() {
+      if (this.isMobile) return;
+      if (this.isActive) {
+        this.dismissMobileMenu();
+        this.$refs.panels.forEach((panel) => {
+          panel.classList.remove('open');
+        });
       }
     },
   },

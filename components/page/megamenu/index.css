@@ -6,7 +6,7 @@
 
 .megamenu {
   position: fixed;
-  z-index: 101;
+  z-index: 102;
   top: 0;
   right: 100%;
   width: 100%;
@@ -40,6 +40,12 @@
     transform: none;
     transition: var(--tr-transform);
     background-color: var(--col-bg);
+
+    &.open {
+      display: block;
+      position: fixed;
+      right: auto;
+    }
   }
 
   .page-header-search__form {
@@ -76,6 +82,22 @@
         background-color: var(--col-bg-secondary);
         color: white;
         text-decoration: underline;
+      }
+    }
+
+    &__link--nested {
+      width: 100%;
+      font-weight: var(--fw-semibold);
+      text-align: left;
+      cursor: pointer;
+
+      &::after {
+        content: '\203a';
+        z-index: 9;
+        float: right;
+        font-size: 1.5rem;
+        font-weight: normal;
+        line-height: .85;
       }
     }
 
@@ -118,6 +140,10 @@
     .menu__section {
       padding-right: 0;
     }
+
+    .inner.open {
+      width: var(--width-sitenav);
+    }
   }
 
   @media (--bp-desktop) {
@@ -149,6 +175,11 @@
       padding-left: 0;
       background-color: #083c79;
 
+      &.open {
+        display: none;
+        position: absolute;
+      }
+
       .menu__item {
         display: flex;
         padding: 1.5rem;
@@ -176,7 +207,6 @@
         position: relative;
         height: 5.4375rem;
         padding: .5rem 1.5rem 2rem;
-        font-size: .9rem;
         line-height: 1.1;
         text-align: center;
         text-decoration: none;
@@ -189,6 +219,10 @@
         &--right {
           justify-content: flex-end;
         }
+      }
+
+      &__link--nested::after {
+        display: none;
       }
 
       &__login {
@@ -237,7 +271,6 @@
           position: relative;
           height: 5.4375rem;
           padding: .5rem 1.5rem 2rem;
-          font-size: .9rem;
           line-height: 1.1;
           text-align: center;
           text-decoration: none;
@@ -294,6 +327,7 @@
           display: inline-block;
           height: auto;
           padding: .75rem 1.5rem .75rem 2rem;
+          font-size: .9rem;
           text-align: left;
           text-decoration: none;
 
@@ -359,6 +393,7 @@
   z-index: 101;
 
   .megamenu__blanket {
+    z-index: 100;
     top: 0;
   }
 }
