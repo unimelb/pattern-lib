@@ -45,6 +45,7 @@
               </div>
             </li>
           </ul>
+          <PageSearch />
         </nav>
       </div>
       <div class="header-tools__menu">
@@ -69,10 +70,11 @@
 
 <script>
 import Blanket from '../search/blanket';
+import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 
 export default {
-  components: { PageSearchForm },
+  components: { PageSearch, PageSearchForm },
   props: {
     items: Array,
   },
