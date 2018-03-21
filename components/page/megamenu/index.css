@@ -18,6 +18,7 @@
   &__blanket {
     position: absolute;
     top: -7.5rem;
+    left: 0;
     width: 100%;
     height: 7.5rem;
     margin: -1rem;
@@ -159,8 +160,10 @@
   }
 
   @media (--bp-desktop) {
+    display: flex;
     position: static;
     right: auto;
+    justify-content: space-between;
     width: calc(100% - 1.5rem);
     height: 100%;
     margin-left: 1.5rem;
@@ -331,10 +334,12 @@
         margin-left: 2rem;
         padding-left: 0;
         columns: 2;
+        break-inside: avoid;
         column-width: 50%;
         font-size: .9rem;
 
         .menu__item {
+          display: inline-block;
           padding: 0;
           list-style-type: none;
           border-left: 1px solid rgba(255, 255, 255, .2);
@@ -389,6 +394,7 @@
   }
 
   .header-tools__menu {
+    align-self: center;
     margin-left: auto;
 
     .link-icon--vertical {
