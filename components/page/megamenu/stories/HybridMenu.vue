@@ -21,6 +21,12 @@ export default {
         {
           title: 'Why Melbourne',
           href: '/why-melbourne',
+          feature: {
+            title: 'Campaign title',
+            text: 'This should in theory be a super short para to sell the campaign, but I know <em>someone</em> will put too much text in',
+            img: 'https://placeimg.com/360/200/arch',
+            link: 'http://google.com',
+          },
           items: [
             { title: 'Entry requirements1', href: 'http://www.google.com' },
             { title: 'Entry requirements2', href: 'http://www.google.com' },
@@ -32,6 +38,10 @@ export default {
         {
           title: 'Admissions',
           href: '/admissions',
+          feature: {
+            title: 'Different campaign',
+            img: 'https://placeimg.com/360/200/nature',
+          },
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
             { title: 'Entry non requirements7', href: 'http://www.google.com' },

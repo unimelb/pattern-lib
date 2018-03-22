@@ -36,7 +36,21 @@
                 ref="panels"
               >
                 <div rol="button" @click="closeInner" class="menu__back-btn">Back</div>
-                <a :href="rootitem.href" class="menu__nested-parent">{{ rootitem.title }}</a>
+                <div class="menu__aside">
+                  <a :href="rootitem.href" class="menu__nested-parent">{{ rootitem.title }}</a>
+                  <component
+                    class="menu__campaign"
+                    v-if="rootitem.feature"
+                    :is="rootitem.feature.link ? 'a' : 'div'"
+                    :href="rootitem.feature.link"
+                    :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
+                  >
+                    <p class="menu__campaign-text" v-if="rootitem.feature.text || rootitem.feature.title">
+                      <strong class="menu__campaign-title" v-if="rootitem.feature.title">{{ rootitem.feature.title }}</strong>
+                      <span v-if="rootitem.feature.text" v-html="rootitem.feature.text"></span>
+                    </p>
+                  </component>
+                </div>
                 <ul class="menu__section">
                   <li class="menu__item" v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
                     <a class="menu__link" :href="menuitem.href" role="menuitem">{{ menuitem.title }}</a>

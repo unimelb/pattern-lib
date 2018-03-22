@@ -143,6 +143,38 @@
         text-decoration: underline;
       }
     }
+
+    &__campaign {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 10rem;
+      background-color: rgba(0, 0, 0, .5);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+
+      &-text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 1rem 1.25rem;
+        background-color: rgba(185, 61, 28, .95);
+        font-size: .8125rem;
+        line-height: 1.4;
+        text-decoration: none;
+      }
+
+      &-title {
+        display: block;
+        padding-bottom: .25rem;
+      }
+    }
+  }
+
+  a.menu__campaign:hover .menu__campaign-title {
+    text-decoration: underline;
   }
 
   @media (--bp-tablet) {
@@ -222,6 +254,20 @@
     }
 
     .menu {
+      &__aside {
+        width: 25%;
+        min-width: 17rem;
+      }
+
+      &__campaign {
+        width: 16.5rem;
+        margin-left: 1.5rem;
+
+        &-text {
+          padding: .75rem 1rem;
+        }
+      }
+
       &__nested-parent {
         display: table-cell;
         position: relative;
@@ -266,7 +312,9 @@
 
         .inner .menu__nested-parent {
           width: 33.333%;
+          height: auto;
           padding-top: .4375rem;
+          padding-bottom: .4375rem;
           padding-left: 1.5rem;
           font-size: 1.25rem;
           line-height: 1.4;
@@ -334,9 +382,10 @@
         margin-left: 2rem;
         padding-left: 0;
         columns: 2;
-        break-inside: avoid;
+        column-fill: auto;
         column-width: 50%;
         font-size: .9rem;
+        break-inside: avoid;
 
         .menu__item {
           display: inline-block;
