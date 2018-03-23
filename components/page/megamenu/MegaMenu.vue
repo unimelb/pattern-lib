@@ -20,6 +20,9 @@
               :key="`rootitem-${rootindex}`"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
+              @keydown="handleKey"
+              :tabindex="isSelected(rootindex)"
+              ref="rootitems"
             >
               <component
                 :role="rootitem.items ? 'button' : 'menuitem'"
@@ -53,7 +56,7 @@
                 </div>
                 <ul class="menu__section">
                   <li class="menu__item" v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
-                    <a class="menu__link" :href="menuitem.href" role="menuitem">{{ menuitem.title }}</a>
+                    <a tabindex="0" class="menu__link" :href="menuitem.href" role="menuitem">{{ menuitem.title }}</a>
                   </li>
                 </ul>
               </div>
@@ -71,6 +74,8 @@
           id="sitemapbutton"
           class="link-icon--vertical link-reset"
           @click.prevent="activateMobileMenu"
+          @keydown.13="activeMobileMenu"
+          :tabindex="isMobile ? -1 : 0"
         >
           <svg class="link-icon__icon svg" role="presentation" focusable="false" viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
@@ -96,11 +101,12 @@ export default {
     return {
       isActive: false,
       isOpen: false,
+      current: 0,
     };
   },
   computed: {
     isMobile() {
-      return (this.$refs.headerroot.offsetWidth < 768);
+      return (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false);
     },
   },
   mounted() {
@@ -117,16 +123,18 @@ export default {
       return 'menu__link';
     },
     activateDesktopMenu(rootindex) {
-      if (this.items[rootindex].items !== undefined && !this.isActive && !this.isMobile) {
+      if (rootindex !== -1 && this.items[rootindex].items !== undefined && !this.isActive && !this.isMobile) {
         this.blanket.show({ onClick: this.dismissDesktopMenu.bind(this) });
         this.$refs.headerroot.classList.add('active');
+        this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         this.isOpen = true;
       }
     },
-    dismissDesktopMenu() {
-      if (this.isOpen && !this.isActive && !this.isMobile) {
+    dismissDesktopMenu(props = {}) {
+      if ((this.isOpen && !this.isActive && !this.isMobile) || props.force) {
         this.blanket.hide();
         this.$refs.headerroot.classList.remove('active');
+        this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
         this.isOpen = false;
       }
     },
@@ -164,6 +172,65 @@ export default {
         this.$refs.panels.forEach((panel) => {
           panel.classList.remove('open');
         });
+      }
+    },
+    handleKey(e) {
+      // Don't catch key events when ⌘ or Alt modifier is present
+      if (e.metaKey || e.altKey) return;
+
+      // Allow tab to pass through
+      if (e.keyCode !== 9) e.preventDefault();
+
+      if (this.isMobile) {
+        this.handleKeyMobile(e);
+      } else {
+        this.handleKeyDesktop(e);
+      }
+    },
+    handleKeyMobile() {
+      //
+    },
+    getCurrent(e) {
+      let curr = -1;
+      this.items.forEach((rootitem, rootindex) => {
+        if (rootitem.title === e.target.innerText) {
+          curr = rootindex;
+        }
+      }, this);
+      this.current = curr;
+    },
+    isSelected(index) {
+      return index === this.current ? 0 : -1;
+    },
+    handleKeyDesktop(e) {
+      switch (e.keyCode) {
+        // esc
+        case 27:
+          this.current = 0;
+          break;
+        // enter / space
+        case 13:
+        case 32:
+          e.target.querySelector('.menu__link').click();
+          break;
+        // left
+        case 37:
+          this.current = this.current > 0 ? this.current - 1 : this.items.length - 1;
+          this.$refs.rootitems[this.current].focus();
+          break;
+        // right
+        case 39:
+          this.current = this.current < this.items.length - 1 ? this.current + 1 : 0;
+          this.$refs.rootitems[this.current].focus();
+          break;
+        // up
+        case 38:
+          break;
+        // down
+        case 40:
+          break;
+        default:
+          break;
       }
     },
   },

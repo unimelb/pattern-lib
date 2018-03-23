@@ -1,12 +1,25 @@
 <template>
   <div class="header-tools__search">
-    <a class="link-icon--vertical link-reset" role="button" href="#search" @click.prevent="activateSearch">
+    <a
+      class="link-icon--vertical link-reset"
+      role="button"
+      href="#search"
+      @click.prevent="activateSearch"
+      @keydown.13="activeSearch"
+      tabindex="0"
+    >
       <SvgIcon class="link-icon__icon svg" name="search" />
       <span class="link-icon__text">Search</span>
     </a>
     <div ref="search" class="page-header-search">
       <PageSearchForm>
-        <a class="page-header-icon link-icon--close" role="button" href="#" @click.prevent="handleSearchClose">
+        <a
+          class="page-header-icon link-icon--close"
+          role="button"
+          href="#"
+          @click.prevent="handleSearchClose"
+          tabindex="0"
+        >
           <SvgIcon class="page-header-search__icon--close" name="close" />
           Close
         </a>

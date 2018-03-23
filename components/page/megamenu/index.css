@@ -351,6 +351,8 @@
         }
       }
 
+      &__section .menu__item--over,
+      &__section .menu__item[tabindex='0'],
       &__section .menu__item:hover {
         .menu__link {
           background-color: #083c79;
@@ -382,7 +384,6 @@
         margin-left: 2rem;
         padding-left: 0;
         columns: 2;
-        column-fill: auto;
         column-width: 50%;
         font-size: .9rem;
         break-inside: avoid;
