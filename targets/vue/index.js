@@ -34,6 +34,7 @@ export { default as PageHeader } from '../../components/page/header/PageHeader.v
 export { default as PageHeaderMin } from '../../components/page/header/PageHeaderMin.vue';
 export { default as PageNav } from '../../components/page/nav/PageNav.vue';
 export { default as PageSearch } from '../../components/page/search/PageSearch.vue';
+export { default as PageSearchForm } from '../../components/page/search/PageSearchForm.vue';
 export { default as Pathfinder } from '../../components/pathfinder/Pathfinder.vue';
 export { default as PhotoGallery } from '../../components/photo-gallery/PhotoGallery.vue';
 export { default as SectionDivider } from '../../components/section/SectionDivider.vue';
