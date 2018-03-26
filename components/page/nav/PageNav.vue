@@ -86,7 +86,7 @@ export default {
       this.rootList.insertBefore(homeItem, this.rootList.firstChild);
 
       // 3. Move site nav to root container
-      document.body.appendChild(this.$refs.sitemap);
+      // document.body.appendChild(this.$refs.sitemap);
     },
 
     // Set aria role
@@ -132,7 +132,7 @@ export default {
       // Look for the item's link and use it as the trigger for opening the nested panel
       const trigger = item.querySelector('a');
       trigger.classList.add('sitenav__nested-trigger');
-      trigger.setAttribute('role', '"menuitem');
+      trigger.setAttribute('role', 'menuitem');
       trigger.addEventListener('click', this.openNestedPanel.bind(this, panel, true));
 
       // Inject button to close nested panel
@@ -145,13 +145,11 @@ export default {
       panel.insertBefore(backBtn, list);
 
       // Inject link to parent in child
-      const insertParent = document.createElement('li');
-      const insertParentLink = document.createElement('a');
-      insertParentLink.classList.add('sitenav__nested-parent');
-      insertParentLink.textContent = trigger.textContent;
-      insertParentLink.setAttribute('href', trigger.getAttribute('href'));
-      insertParentLink.setAttribute('role', '"menuitem');
-      insertParent.appendChild(insertParentLink);
+      const insertParent = document.createElement('a');
+      insertParent.classList.add('sitenav__nested-parent');
+      insertParent.textContent = trigger.textContent;
+      insertParent.setAttribute('href', trigger.getAttribute('href'));
+      insertParent.setAttribute('role', 'menuitem');
       panel.insertBefore(insertParent, list);
     },
 
