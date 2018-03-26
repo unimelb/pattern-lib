@@ -34,6 +34,7 @@ body {
 
 nav,
 main {
+  display: block;
   background-color: white; /* override scroll overflow background */
 }
 
