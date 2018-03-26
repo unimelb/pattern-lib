@@ -195,6 +195,7 @@ export default {
         // esc
         case 27:
           this.current = 0;
+          this.dismissAllDesktopChildren();
           this.dismissBlanket();
           break;
         // enter / space
