@@ -12,7 +12,7 @@
       <span class="link-icon__text">Search</span>
     </a>
     <div ref="search" class="page-header-search">
-      <PageSearchForm>
+      <PageSearchForm ref="form">
         <a
           class="page-header-icon link-icon--close"
           role="button"
@@ -47,7 +47,7 @@ export default {
       this.blanket.el.classList.add('white');
       this.blanket.el.addEventListener('click', this.handleSearchClose.bind(this));
 
-      this.$refs.input.focus();
+      this.$refs.form.$refs.input.focus();
     },
     handleSearchClose() {
       this.blanket.el.classList.remove('white');

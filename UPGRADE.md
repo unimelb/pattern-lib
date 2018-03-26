@@ -1,5 +1,9 @@
 # Upgrade Instructions
 
+## v2.1.2
+
+No change
+
 ## v2.1.1
 
 No change

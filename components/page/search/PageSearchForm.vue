@@ -9,7 +9,10 @@
 </template>
 
 <script>
+import SvgIcon from '../../icons/SvgIcon.vue';
+
 export default {
   name: 'page-search-form',
+  components: { SvgIcon },
 };
 </script>
