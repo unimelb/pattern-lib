@@ -1,5 +1,9 @@
 # Upgrade Instructions
 
+## v2.1.1
+
+No change
+
 ## v2.1.0
 
 * Remove css override for `main { display: block; }` - this is now included in the deployed css.
