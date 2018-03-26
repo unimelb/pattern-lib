@@ -1,5 +1,9 @@
 # Upgrade Instructions
 
+## v2.1.0
+
+* Remove css override for `main { display: block; }` - this is now included in the deployed css.
+
 ## v2.0.1
 
 No change
@@ -41,7 +45,7 @@ No change
 
 * Change all `<button>` inside `<a>` to `<span>` with the same classes for Pathfinders and Cards
 
-* Strongly recommend you use the `<page-footer>` component rather than a markup block
+* Strongly recommend you use the `<page-footer>` component rather than a markup block - this should be placed _inside_ the `<div id="ui">` block.
 
 ```html
 <page-footer></page-footer>
