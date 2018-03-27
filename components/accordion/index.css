@@ -42,7 +42,7 @@
     transition: height .25s ease-out, visibility .25s;
     background-color: var(--col-bg-grey);
 
-    &__inner {
+    &-inner {
       padding: 1.25rem;
       border-bottom: 1px solid var(--col-bg-secondary-grey);
     }
