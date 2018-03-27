@@ -462,28 +462,28 @@ exports[`PageFooter should match snapshot 1`] = `
             >
               <div
                 aria-controls="-panel-1"
-                aria-expanded="false"
-                aria-selected="false"
                 class="toggle__header"
                 id="-header-1"
                 tabindex="0"
               >
-                <h2>
+                <h2
+                  class="toggle__trigger"
+                >
                   Site Map
                 </h2>
               </div>
                
               <div
-                aria-expanded="false"
                 aria-hidden="true"
                 aria-labelledby="-header-1"
                 class="toggle__panel"
                 id="-panel-1"
                 role="region"
+                style="height: 0px;"
                 tabindex="-1"
               >
                 <div
-                  class="toggle__panel__inner"
+                  class="toggle__panel-inner"
                 >
                   <div
                     class="grid"

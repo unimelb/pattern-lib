@@ -34,7 +34,6 @@ export default {
   },
   mounted() {
     this.panels.forEach((panel, i) => {
-      panel.namespace = this.namespace;
       panel.index = i;
       if (i === 0) {
         panel.isActive = true;
@@ -56,18 +55,12 @@ export default {
       });
     },
     hidePanel(i) {
-      this.dom.headers[i].setAttribute('aria-selected', 'false');
-      this.dom.headers[i].setAttribute('aria-expanded', 'false');
-      if (this.dom.panels[i].getAttribute('aria-hidden') === 'false') this.unsetPanelHeight(i);
-      this.dom.panels[i].setAttribute('tabindex', -1);
-      this.dom.panels[i].setAttribute('aria-hidden', 'true');
+      this.panels[i].setExpanded(false);
+      this.panels[i].unsetPanelHeight();
     },
     showCurrentPanel() {
-      this.dom.headers[this.current].setAttribute('aria-selected', 'true');
-      this.dom.headers[this.current].setAttribute('aria-expanded', 'true');
-      this.setPanelHeight(this.current);
-      this.dom.panels[this.current].setAttribute('tabindex', 0);
-      this.dom.panels[this.current].setAttribute('aria-hidden', 'false');
+      this.panels[this.current].setExpanded(true);
+      this.panels[this.current].setPanelHeight();
     },
     getCurrent(e) {
       let curr = -1;
@@ -91,43 +84,6 @@ export default {
       if (this.solo) this.hideAllPanels();
 
       this.showCurrentPanel();
-    },
-
-    getPanelHeight(i) {
-      const p = this.dom.panels[i];
-      // set auto height and read offsetHeight
-      p.style.height = 'auto';
-      const height = p.offsetHeight;
-      // remove style
-      p.style.height = '';
-      return height;
-    },
-    setPanelHeight(i) {
-      const p = this.dom.panels[i];
-      // get panel height
-      const panelHeight = this.getPanelHeight(i);
-      // recalc style and layout
-      p.getBoundingClientRect();
-      // set height on panel, reset to 'auto' on transition complete
-      p.style.height = `${panelHeight}px`;
-      setTimeout(() => {
-        p.style.transition = 'none';
-        p.style.height = 'auto';
-        // recalc style and layout
-        p.getBoundingClientRect();
-        p.style.transition = '';
-      }, 250);
-    },
-    unsetPanelHeight(i) {
-      const p = this.dom.panels[i];
-      // get panel height
-      const panelHeight = this.getPanelHeight(i);
-      // set panel height from 'auto' to px
-      p.style.height = `${panelHeight}px`;
-      // recalc style and layout
-      p.getBoundingClientRect();
-      // reset height
-      p.style.height = 0;
     },
     handleClick(e) {
       this.togglePanel(e);

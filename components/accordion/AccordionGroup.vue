@@ -1,5 +1,10 @@
 <template>
-  <SectionToggle ref="toggle" :disabled="disabled" :solo="solo" :open="open" class="accordion">
+  <SectionToggle
+    ref="toggle"
+    :solo="solo"
+    :open="open"
+    class="accordion"
+  >
     <slot></slot>
   </SectionToggle>
 </template>
@@ -10,10 +15,6 @@ import SectionToggle from '../section/toggle/SectionToggle.vue';
 export default {
   components: { SectionToggle },
   props: {
-    disabled: {
-      type: Boolean,
-      default: false,
-    },
     solo: {
       type: Boolean,
       default: false,
@@ -22,6 +23,14 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  data() {
+    return {
+      namespace: '',
+    };
+  },
+  mounted() {
+    this.namespace = this.$refs.toggle.namespace;
   },
   methods: {
     handleClick(e) { this.$refs.toggle.handleClick(e); },
