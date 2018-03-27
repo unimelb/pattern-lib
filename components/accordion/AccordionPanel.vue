@@ -17,6 +17,7 @@ export default {
   },
   data: () => ({
     index: 0,
+    isExpanded: false,
   }),
   mounted() {
     this.$refs.panel.index = this.index;
@@ -25,10 +26,11 @@ export default {
   methods: {
     handleClick(e) { this.$parent.handleClick(e); },
     handleKey(e) { this.$parent.handleKey(e); },
-    setExpanded(val) { this.$refs.panel.isExpanded = val; },
+    setExpanded(val) { this.isExpanded = val; this.$refs.panel.isExpanded = this.isExpanded; },
     getPanelHeight() { this.$refs.panel.getPanelHeight(); },
     setPanelHeight() { this.$refs.panel.setPanelHeight(); },
     unsetPanelHeight() { this.$refs.panel.unsetPanelHeight(); },
+    header() { return this.$refs.panel.header(); },
   },
 };
 </script>

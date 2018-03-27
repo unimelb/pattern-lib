@@ -40,17 +40,12 @@ export default {
       }
     });
 
-    this.dom = {
-      headers: [].slice.call(this.$el.querySelectorAll('.toggle__header')),
-      panels: [].slice.call(this.$el.querySelectorAll('.toggle__panel')),
-    };
-
     this.hideAllPanels();
     if (this.open) this.showCurrentPanel();
   },
   methods: {
     hideAllPanels() {
-      this.dom.headers.forEach((_header, index) => {
+      this.panels.forEach((_p, index) => {
         this.hidePanel(index);
       });
     },
@@ -64,10 +59,10 @@ export default {
     },
     getCurrent(e) {
       let curr = -1;
-      this.dom.headers.forEach((header, index) => {
-        if (header === e.target.parentNode.parentNode.firstChild ||
-            header === e.target.parentNode ||
-            header === e.target) {
+      this.panels.forEach((panel, index) => {
+        if (panel.header() === e.target.parentNode.parentNode.firstChild ||
+            panel.header() === e.target.parentNode ||
+            panel.header() === e.target) {
           curr = index;
         }
       }, this);
@@ -76,7 +71,7 @@ export default {
     togglePanel(e) {
       this.getCurrent(e);
 
-      if (this.dom.headers[this.current].getAttribute('aria-selected') === 'true') {
+      if (this.panels[this.current].isExpanded) {
         this.hidePanel(this.current);
         return;
       }
@@ -118,7 +113,7 @@ export default {
           break;
         // end
         case 35:
-          this.current = this.dom.headers.length - 1;
+          this.current = this.panels.length - 1;
           this.giveHeaderFocus();
           break;
         // home
@@ -141,21 +136,21 @@ export default {
       }
     },
     previousPanel() {
-      this.current = this.current - 1 < 0 ? this.dom.headers.length - 1 : this.current - 1;
+      this.current = this.current - 1 < 0 ? this.panels.length - 1 : this.current - 1;
       this.giveHeaderFocus();
     },
     nextPanel() {
-      this.current = this.current + 1 > this.dom.headers.length - 1 ? 0 : this.current + 1;
+      this.current = this.current + 1 > this.panels.length - 1 ? 0 : this.current + 1;
       this.giveHeaderFocus();
     },
     giveHeaderFocus() {
       // remove focusability from inactives
-      this.dom.headers.forEach((header) => {
-        header.setAttribute('tabindex', -1);
+      this.panels.forEach((panel) => {
+        panel.header().setAttribute('tabindex', -1);
       });
       // set active focus
-      this.dom.headers[this.current].setAttribute('tabindex', 0);
-      this.dom.headers[this.current].focus();
+      this.panels[this.current].header().setAttribute('tabindex', 0);
+      this.panels[this.current].header().focus();
     },
   },
 };

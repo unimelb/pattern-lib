@@ -1,6 +1,7 @@
 <template>
   <div :class="`toggle__item${ isExpanded ? ' toggle__item--active' : '' }`">
     <div
+      ref="header"
       :id="`${namespace}-header-${index + 1}`"
       :aria-controls="`${namespace}-panel-${index + 1}`"
       tabindex="0"
@@ -81,6 +82,9 @@ export default {
   methods: {
     setExpanded(val) {
       this.isExpanded = val;
+    },
+    header() {
+      return this.$refs.header;
     },
     getPanelHeight() {
       const p = this.$refs.panel;
