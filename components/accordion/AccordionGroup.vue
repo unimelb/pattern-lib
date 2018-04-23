@@ -1,34 +1,32 @@
 <template>
-  <SectionToggle
+  <ToggleGroup
     ref="toggle"
     :solo="solo"
     :open="open"
-    class="accordion"
   >
     <slot></slot>
-  </SectionToggle>
+  </ToggleGroup>
 </template>
 
 <script>
-import SectionToggle from '../section/toggle/SectionToggle.vue';
+import ToggleGroup from '../toggle/ToggleGroup.vue';
 
 export default {
-  components: { SectionToggle },
+  name: 'accordion-group',
+  components: { ToggleGroup },
   props: {
     solo: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: 'false',
     },
     open: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: 'false',
     },
   },
-  data() {
-    return {
-      namespace: '',
-    };
-  },
+  data: () => ({
+    namespace: '',
+  }),
   mounted() {
     this.namespace = this.$refs.toggle.namespace;
   },
