@@ -8,6 +8,7 @@ import { version } from '../../package.json';
 
 import ToggleBlock from '../../components/toggle/ToggleBlock.vue';
 import ToggleGroup from '../../components/toggle/ToggleGroup.vue';
+import ToggleBlockMobile from '../../components/toggle/ToggleBlockMobile.vue';
 import Accordion from '../../components/accordion/Accordion.vue';
 import AccordionGroup from '../../components/accordion/AccordionGroup.vue';
 import CheckList from '../../components/check-list';
@@ -35,6 +36,7 @@ require.context('../../components/shared', false, /\.svg$/);
 Vue.use(VueProgressiveImage);
 Vue.component('toggle-block', ToggleBlock);
 Vue.component('toggle-group', ToggleGroup);
+Vue.component('toggle-block-mobile', ToggleBlockMobile);
 Vue.component('accordion', Accordion);
 Vue.component('accordion-group', AccordionGroup);
 Vue.component('check-list', CheckList);

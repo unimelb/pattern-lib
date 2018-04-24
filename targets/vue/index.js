@@ -40,6 +40,7 @@ export { default as PhotoGallery } from '../../components/photo-gallery/PhotoGal
 export { default as SectionDivider } from '../../components/section/SectionDivider.vue';
 export { default as ToggleBlock } from '../../components/toggle/ToggleBlock.vue';
 export { default as ToggleGroup } from '../../components/toggle/ToggleGroup.vue';
+export { default as ToggleBlockMobile } from '../../components/toggle/ToggleBlockMobile.vue';
 export { default as SectionTwoCol } from '../../components/section/SectionTwoCol.vue';
 export { default as SectionWrap } from '../../components/section/SectionWrap.vue';
 export { default as SplitSection } from '../../components/section/SplitSection.vue';

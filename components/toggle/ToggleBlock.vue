@@ -55,14 +55,15 @@ export default {
       index: 0,
     };
   },
-  mounted() {
+  created() {
     this.isActive = this.active;
-    if (this.$parent.namespace) {
+    if (this.$parent.namespace && this.$parent.namespace !== '') {
       this.namespace = this.$parent.namespace;
     } else {
       this.namespace = `ui-toggle-${this._uid}`;
     }
-
+  },
+  mounted() {
     if (this.$parent.handleClick) {
       this.bindClick(this.$parent.handleClick);
     } else {

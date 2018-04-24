@@ -16,7 +16,7 @@
     transition: max-height .3s ease-out;
 
     &--active {
-      max-height: 60rem;
+      max-height: 240rem;
       transition-timing-function: ease-in;
     }
   }
