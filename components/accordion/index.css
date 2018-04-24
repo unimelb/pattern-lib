@@ -1,11 +1,11 @@
 .accordion {
-  margin-bottom: 1.5rem;
-
-  .toggle__header {
+  .toggleblock__default {
+    width: 100%;
     padding: 1rem 1.25rem;
     transition: background-color .15s ease-out, color .15s ease-out;
     border-bottom: 1px solid var(--col-bg-secondary-grey);
     text-decoration: none;
+    cursor: pointer;
 
     h2 {
       margin-bottom: 0;
@@ -26,25 +26,21 @@
       border-left: .333rem solid transparent;
     }
 
-    &[aria-selected='true']::after {
+    &--active,
+    &:focus,
+    &:hover {
+      background-color: var(--col-bg-grey);
+    }
+
+    &--active::after {
       border-top: 0;
       border-bottom: .333rem solid currentColor;
     }
-
-    &[aria-selected='true'],
-    &[aria-selected='false']:focus,
-    &[aria-selected='false']:hover {
-      background-color: var(--col-bg-grey);
-    }
   }
 
-  .toggle__panel {
-    transition: height .25s ease-out, visibility .25s;
+  .toggleblock__hidden-inner {
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--col-bg-secondary-grey);
     background-color: var(--col-bg-grey);
-
-    &-inner {
-      padding: 1.25rem;
-      border-bottom: 1px solid var(--col-bg-secondary-grey);
-    }
   }
 }

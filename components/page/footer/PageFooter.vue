@@ -5,11 +5,14 @@
       <div class="page-footer__inner max">
         <div class="grid">
           <div class="cell cell--wide-3of4">
-            <SectionToggle class="section-toggle section-toggle--mobile">
-              <SectionTogglePanel title="Site Map" close="Close Site Map">
+            <ToggleBlockMobile>
+              <template slot="default">
+                <h2>Site Map</h2>
+              </template>
+              <template slot="hidden">
                 <PageFooterSitemap />
-              </SectionTogglePanel>
-            </SectionToggle>
+              </template>
+            </ToggleBlockMobile>
           </div>
           <div class="page-footer__main__ack cell cell--wide-1of4">
             <p class="page-footer__ack">We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated.</p>
@@ -21,16 +24,13 @@
 </template>
 
 <script>
-import SectionToggle from '../../section/toggle/SectionToggle.vue';
-import SectionTogglePanel from '../../section/toggle/SectionTogglePanel.vue';
-
+import ToggleBlockMobile from '../../toggle/ToggleBlockMobile.vue';
 import PageFooterUpper from './PageFooterUpper.vue';
 import PageFooterSitemap from './PageFooterSitemap.vue';
 
 export default {
   components: {
-    SectionToggle,
-    SectionTogglePanel,
+    ToggleBlockMobile,
     PageFooterUpper,
     PageFooterSitemap,
   },

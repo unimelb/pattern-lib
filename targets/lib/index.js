@@ -6,8 +6,11 @@ import VueProgressiveImage from 'vue-progressive-image';
 import Ike from 'ike.js';
 import { version } from '../../package.json';
 
-import SectionToggle from '../../components/section/toggle/SectionToggle.vue';
-import SectionTogglePanel from '../../components/section/toggle/SectionTogglePanel.vue';
+import ToggleBlock from '../../components/toggle/ToggleBlock.vue';
+import ToggleGroup from '../../components/toggle/ToggleGroup.vue';
+import ToggleBlockMobile from '../../components/toggle/ToggleBlockMobile.vue';
+import Accordion from '../../components/accordion/Accordion.vue';
+import AccordionGroup from '../../components/accordion/AccordionGroup.vue';
 import CheckList from '../../components/check-list';
 import MegaMenu from '../../components/page/megamenu';
 import ModalDialog from '../../components/modal';
@@ -17,8 +20,6 @@ import PageSearchForm from '../../components/page/search/PageSearchForm.vue';
 import PageFooter from '../../components/page/footer';
 import TabGroup from '../../components/tabs/TabGroup.vue';
 import Tab from '../../components/tabs/Tab.vue';
-import AccordionGroup from '../../components/accordion/AccordionGroup.vue';
-import AccordionPanel from '../../components/accordion/AccordionPanel.vue';
 import PhotoGallery from '../../components/photo-gallery';
 
 import '../../components';
@@ -33,8 +34,11 @@ require.context('../../components/shared', false, /\.svg$/);
 
 // Register Vue plugins, directives and components
 Vue.use(VueProgressiveImage);
-Vue.component('section-toggle', SectionToggle);
-Vue.component('section-toggle-panel', SectionTogglePanel);
+Vue.component('toggle-block', ToggleBlock);
+Vue.component('toggle-group', ToggleGroup);
+Vue.component('toggle-block-mobile', ToggleBlockMobile);
+Vue.component('accordion', Accordion);
+Vue.component('accordion-group', AccordionGroup);
 Vue.component('check-list', CheckList);
 Vue.component('mega-menu', MegaMenu);
 Vue.component('modal-dialog', ModalDialog);
@@ -44,8 +48,6 @@ Vue.component('page-search', PageSearch);
 Vue.component('page-search-form', PageSearchForm);
 Vue.component('tab-group', TabGroup);
 Vue.component('tab', Tab);
-Vue.component('accordion-group', AccordionGroup);
-Vue.component('accordion-panel', AccordionPanel);
 Vue.component('photo-gallery', PhotoGallery);
 
 // Create Vue instance

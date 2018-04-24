@@ -1,16 +1,16 @@
 import { storiesOf } from '@storybook/vue';
 import { createStory } from '.storybook/utils';
 
-import AccordionDefault from './AccordionDefault.vue';
-import AccordionFirstOpen from './AccordionFirstOpen.vue';
-import AccordionSoloSelect from './AccordionSoloSelect.vue';
+import Accordion from './Accordion.vue';
+import AccordionGroup from './AccordionGroup.vue';
+import AccordionGroupSolo from './AccordionGroupSolo.vue';
+import AccordionGroupOpen from './AccordionGroupOpen.vue';
 
-import SectionToggleDefault from './SectionToggleDefault.vue';
-import SectionToggleMobile from './SectionToggleMobile.vue';
+import ToggleBlockMobile from './ToggleBlockMobile.vue';
 
 storiesOf('Accordion', module)
-  .add('Default', createStory(AccordionDefault))
-  .add('First panel open', createStory(AccordionFirstOpen))
-  .add('Single panel open at a time', createStory(AccordionSoloSelect))
-  .add('Generic section toggle', createStory(SectionToggleDefault))
-  .add('Generic section toggle, mobile only', createStory(SectionToggleMobile));
+  .add('Single accordion', createStory(Accordion))
+  .add('Grouped accordions', createStory(AccordionGroup))
+  .add('Grouped accordions, single panel opens', createStory(AccordionGroupSolo))
+  .add('Grouped accordions, first panel open', createStory(AccordionGroupOpen))
+  .add('Mobile only toggle block', createStory(ToggleBlockMobile));
