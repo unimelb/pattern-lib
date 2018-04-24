@@ -9,6 +9,9 @@
 </template>
 
 <script>
+// toggle-group-hide-panel
+// toggle-group-show-current-panel
+
 export default {
   name: 'toggle-group',
   props: {
@@ -53,9 +56,11 @@ export default {
     },
     hidePanel(i) {
       this.panels[i].setActive(false);
+      this.$emit('toggle-group-hide-panel', i);
     },
     showCurrentPanel() {
       this.panels[this.current].setActive(true);
+      this.$emit('toggle-group-show-current-panel', this.current);
     },
     getCurrent(e) {
       let curr = -1;

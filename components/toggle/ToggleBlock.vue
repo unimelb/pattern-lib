@@ -29,6 +29,9 @@
 </template>
 
 <script>
+// toggle-block-set-active
+// toggle-block-toggle
+
 export default {
   name: 'toggle-block',
   props: {
@@ -74,11 +77,11 @@ export default {
     setIndex(v) { this.index = v; },
     setActive(v) {
       this.isActive = v;
-      this.$emit('toggle-block:setActive', this.isActive);
+      this.$emit('toggle-block-set-active', this.isActive);
     },
     toggle() {
       this.isActive = !this.isActive;
-      this.$emit('toggle-block:toggle', this.isActive);
+      this.$emit('toggle-block-toggle', this.isActive);
     },
     bindClick(fn) {
       this.trigger = this.$refs.header;
@@ -86,7 +89,6 @@ export default {
         if (el.context && el.context.$refs && el.context.$refs.trigger) this.trigger = el.context.$refs.trigger;
       });
       this.trigger.addEventListener('click', fn);
-      this.$emit('toggle-block:bound');
     },
   },
 };
