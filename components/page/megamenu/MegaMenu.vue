@@ -88,6 +88,11 @@
 </template>
 
 <script>
+// mega-menu-activate-desktop-menu
+// mega-menu-dismiss-desktop-menu
+// mega-menu-activate-mobile-menu
+// mega-menu-dismiss-mobile-menu
+
 import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
@@ -127,6 +132,7 @@ export default {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         this.isDesktopOpen = true;
+        this.$emit('mega-menu-activate-desktop-menu');
       }
     },
     dismissDesktopMenu(props = {}) {
@@ -134,6 +140,7 @@ export default {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;
+        this.$emit('mega-menu-dismiss-desktop-menu');
       }
     },
     dismissAllDesktopChildren() {
@@ -144,6 +151,7 @@ export default {
         this.activateBlanket(this.dismissMobileMenu.bind(this));
         this.$refs.rootmenu.classList.add('active');
         this.isMobileOpen = true;
+        this.$emit('mega-menu-activate-mobile-menu');
       }
     },
     activateBlanket(callback) {
@@ -159,6 +167,7 @@ export default {
         this.dismissBlanket();
         this.$refs.rootmenu.classList.remove('active');
         this.isMobileOpen = false;
+        this.$emit('mega-menu-dismiss-mobile-menu');
       }
     },
     dismissMobileMenuIfBlanket(e) {

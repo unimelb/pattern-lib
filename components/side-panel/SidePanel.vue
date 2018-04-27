@@ -13,10 +13,9 @@
 </template>
 
 <script>
-import SidePanelNavItem from './SidePanelNavItem.vue';
+// side-panel-toggle-open
 
 export default {
-  components: { SidePanelNavItem },
   props: {
     right: {
       type: Boolean,
@@ -36,6 +35,7 @@ export default {
   methods: {
     toggleOpen() {
       this.open = !this.open;
+      this.$emit('side-panel-toggle-open', this.open);
     },
   },
 };
