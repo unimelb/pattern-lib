@@ -4,8 +4,8 @@
       class="link-icon--vertical link-reset"
       role="button"
       href="#search"
-      @click.prevent="activateSearch"
-      @keydown.13="activeSearch"
+      @click.prevent="open"
+      @keypress.13="open"
       tabindex="0"
     >
       <SvgIcon class="link-icon__icon svg" name="search" />
@@ -17,7 +17,7 @@
           class="page-header-icon link-icon--close"
           role="button"
           href="#"
-          @click.prevent="handleSearchClose"
+          @click.prevent="close"
           tabindex="0"
         >
           <SvgIcon class="page-header-search__icon--close" name="close" />
@@ -29,6 +29,9 @@
 </template>
 
 <script>
+// page-search-open
+// page-search-close
+
 import SvgIcon from '../../icons/SvgIcon.vue';
 import Blanket from './blanket';
 import PageSearchForm from './PageSearchForm.vue';
@@ -41,17 +44,19 @@ export default {
     this.blanket = new Blanket();
   },
   methods: {
-    activateSearch() {
+    open() {
       this.$refs.search.classList.add('active');
 
       this.blanket.el.classList.add('white');
-      this.blanket.el.addEventListener('click', this.handleSearchClose.bind(this));
+      this.blanket.el.addEventListener('click', this.close.bind(this));
 
       this.$refs.form.$refs.input.focus();
+      this.$emit('page-search-open');
     },
-    handleSearchClose() {
+    close() {
       this.blanket.el.classList.remove('white');
       this.$refs.search.classList.remove('active');
+      this.$emit('page-search-close');
     },
   },
 };

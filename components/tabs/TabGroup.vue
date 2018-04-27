@@ -24,6 +24,8 @@
 </template>
 
 <script>
+// tab-group-set-active
+
 export default {
   data: () => ({
     panels: [],
@@ -50,6 +52,7 @@ export default {
       this.panels.forEach((panel) => {
         panel.isActive = (panel.title === selectedtab.title);
       });
+      this.$emit('tab-group-set-active', selectedtab.title);
     },
     handleKey(e) {
       let curr = -1;
