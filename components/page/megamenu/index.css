@@ -102,7 +102,7 @@
       }
     }
 
-    &__link[href="#"] {
+    &__link[href='#'] {
       opacity: .2;
       cursor: not-allowed;
     }
