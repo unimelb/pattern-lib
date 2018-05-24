@@ -1,4 +1,8 @@
 .page-footer {
+  /* default stacking */
+  position: relative;
+  z-index: 3;
+
   padding: 0;
   background-color: var(--col-bg);
   color: #fff;

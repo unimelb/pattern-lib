@@ -75,6 +75,10 @@
         content: '\2039';
         line-height: .9;
       }
+
+      .menu__section .menu__item {
+        width: 100%;
+      }
     }
 
     &__item {
@@ -96,6 +100,11 @@
         color: white;
         text-decoration: underline;
       }
+    }
+
+    &__link[href="#"] {
+      opacity: .2;
+      cursor: not-allowed;
     }
 
     &__link--nested {
@@ -190,6 +199,11 @@
 
     &.active {
       box-shadow: 1px 0 12px 3px rgba(0, 0, 0, .6);
+    }
+
+    .inner {
+      display: none;
+      left: 0;
     }
 
     .inner.open {

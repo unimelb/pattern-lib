@@ -84,6 +84,7 @@
 
   &__input {
     height: 2.25rem;
+    min-width: 12rem;
     margin: 0;
     padding: .25rem .75rem;
     border-width: 1px;
