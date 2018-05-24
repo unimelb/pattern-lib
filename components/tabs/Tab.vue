@@ -24,7 +24,7 @@ export default {
     namespace: '',
     index: 0,
   }),
-  mounted() {
+  created() {
     this.isActive = this.active;
   },
 };
