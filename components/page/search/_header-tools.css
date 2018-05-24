@@ -83,6 +83,7 @@
   }
 
   &__input {
+    min-width: 12rem;
     height: 2.25rem;
     margin: 0;
     padding: .25rem .75rem;

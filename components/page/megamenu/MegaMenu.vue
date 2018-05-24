@@ -24,15 +24,14 @@
               :tabindex="isSelected(rootindex)"
               ref="rootitems"
             >
-              <component
+              <a
                 :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
                 :class="linkClasses(rootindex, rootitem)"
-                :is="rootitem.items ? 'div' : 'a'"
                 @click="openInner"
               >
                 {{ rootitem.title }}
-              </component>
+              </a>
               <div
                 class="inner"
                 v-if="rootitem.items"
@@ -176,7 +175,10 @@ export default {
       this.dismissMobileMenu();
     },
     openInner(e) {
-      e.target.nextElementSibling.classList.add('open');
+      if (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false) {
+        e.preventDefault();
+        e.target.nextElementSibling.classList.add('open');
+      }
     },
     closeInner(e) {
       e.target.parentElement.classList.remove('open');
