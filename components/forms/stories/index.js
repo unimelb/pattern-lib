@@ -7,6 +7,7 @@ import TextFields from './TextFields.vue';
 import InlineForm from './InlineForm.vue';
 import InlineSearchForm from './InlineSearchForm.vue';
 import InlineSearchFormInverse from './InlineSearchFormInverse.vue';
+import StyledSelect from './StyledSelect.vue';
 
 storiesOf('Forms', module)
   .add('Text fields', createStory(TextFields))
@@ -14,4 +15,5 @@ storiesOf('Forms', module)
   .add('Inline search form', createStory(InlineSearchForm))
   .add('Inline search form (inverse)', createStory(InlineSearchFormInverse))
   .add('MCE form markup', createStory(MceForm))
-  .add('MCE date selector', createStory(MceDate));
+  .add('MCE date selector', createStory(MceDate))
+  .add('Styled select', createStory(StyledSelect));
