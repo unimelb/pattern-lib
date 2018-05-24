@@ -9,3 +9,63 @@
     }
   }
 }
+
+.styled-select {
+  position: relative;
+
+  select {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding: .5rem 1.75rem .5rem .75rem;
+    border: 0;
+    border-radius: 0;
+    background-color: white;
+    color: var(--col-brand);
+    font-size: 1rem;
+    font-weight: var(--fw-semibold);
+    -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 1rem;
+    right: .75rem;
+    width: .5rem;
+    height: .5rem;
+    transform: rotate(45deg);
+    border-right: 2px solid var(--col-brand);
+    border-bottom: 2px solid var(--col-brand);
+
+    @media (min-width: 1024px) {
+      top: 1.075rem;
+    }
+  }
+
+  &--blue {
+    position: relative;
+
+    select {
+      background-color: #5081bd;
+      color: white;
+    }
+
+    option {
+      color: white;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 2.8rem;
+      height: 40px;
+      border-right: 1px solid white;
+    }
+
+    &::after {
+      right: 1.2rem;
+      border-color: white;
+    }
+  }
+}
