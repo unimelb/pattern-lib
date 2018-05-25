@@ -10,6 +10,12 @@
   }
 }
 
+@media screen and (--bp-desktop) {
+  .grid .form select {
+    width: 100%;
+  }
+}
+
 .styled-select {
   position: relative;
 
