@@ -1,5 +1,6 @@
 <template>
   <form class="form">
+    <h2>Loose</h2>
     <div class="row">
       <label for="f_q0">Type</label>
       <StyledSelect id="f_q0">
@@ -18,6 +19,19 @@
         <option>Non-award</option>
       </StyledSelect>
     </div>
+
+    <SectionWrap class="bg-white">
+      <h2>Enclosed in a section</h2>
+      <div class="row">
+        <label for="f_q1">Type</label>
+        <StyledSelect blue id="f_q1">
+          <option>Undergraduate</option>
+          <option>Postgraduate</option>
+          <option>Reasearch</option>
+          <option>Non-award</option>
+        </StyledSelect>
+      </div>
+    </SectionWrap>
   </form>
 </template>
 
