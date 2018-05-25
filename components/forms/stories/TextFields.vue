@@ -141,5 +141,29 @@
       </div>
     </div>
 
+    <SectionWrap class="bg-white">
+      <h2 class="shim-pt2">Select</h2>
+      <div class="grid">
+        <div class="cell cell--tab-1of3">
+          <label for="f_q3">Type</label>
+          <select id="f_q3">
+            <option>Undergraduate</option>
+            <option>Postgraduate</option>
+            <option>Reasearch</option>
+            <option>Non-award</option>
+          </select>
+        </div>
+        <div class="cell cell--tab-2of3">
+          <label for="f_q4">Type</label>
+          <select id="f_q4">
+            <option>Undergraduate</option>
+            <option>Postgraduate</option>
+            <option>Reasearch</option>
+            <option>Non-award</option>
+          </select>
+        </div>
+      </div>
+    </SectionWrap>
+
   </form>
 </template>
