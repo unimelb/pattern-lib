@@ -10,6 +10,17 @@
   }
 }
 
+@media screen and (--bp-desktop) {
+  .mce form[id^='form_'] .grid,
+  .mce .grid form[id^='form_'],
+  .grid .form,
+  .form .grid {
+    select {
+      width: 100%;
+    }
+  }
+}
+
 .styled-select {
   position: relative;
 
