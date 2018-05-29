@@ -2,7 +2,7 @@
   <div class="check-list">
     <ol class="check-list__list">
       <li v-for="(item, index) in items" :key="item.id" class="check-list__item">
-        <input :id="`${namespace}-${index}`" class="check-list__checkbox" type="checkbox" :checked="checkedItems[index]" @change="onToggleItem(index, $event)">
+        <input :id="`${namespace}-${index}`" class="check-list__checkbox" type="checkbox" :checked="checkedItems[index]" @change="toggle(index, $event)">
         <label class="check-list__label" :for="`${namespace}-${index}`" v-html="content[index].innerHTML"></label>
       </li>
     </ol>
@@ -11,6 +11,8 @@
 </template>
 
 <script>
+// check-list-toggle
+
 import { stringToNum, vnodeToElement } from '../shared/utils';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
 
@@ -52,8 +54,9 @@ export default {
     this.btnIcon = (btn.data.staticClass === 'download') ? 'download' : 'chevron-right';
   },
   methods: {
-    onToggleItem(index, evt) {
+    toggle(index, evt) {
       this.$set(this.checkedItems, index, evt.target.checked);
+      this.$emit('check-list-toggle', index);
     },
   },
 };

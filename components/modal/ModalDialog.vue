@@ -17,6 +17,10 @@
 </template>
 
 <script>
+// modal-dialog-open-dialog
+// modal-dialog-close-dialog
+// modal-dialog-close-container
+
 export default {
   name: 'modal-dialog',
   props: {
@@ -71,6 +75,7 @@ export default {
 
       // Reset scroll
       modal.scrollTop = 0;
+      this.$emit('modal-dialog-open-dialog');
     },
     closeDialog() {
       const { container, modal } = this.$refs;
@@ -83,9 +88,11 @@ export default {
 
       // Return focus to trigger
       this.$refs.trigger.focus();
+      this.$emit('modal-dialog-close-dialog');
     },
     closeContainer(e) {
       if (e.target === this.$refs.container) this.closeDialog();
+      this.$emit('modal-dialog-close-container');
     },
     inputTrap(e) {
       // Get the index of the current active element within the modal

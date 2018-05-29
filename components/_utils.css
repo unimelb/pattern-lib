@@ -383,10 +383,6 @@ a[target='_blank'] {
   padding-right: calc(var(--vr) / 2);
   padding-left: calc(var(--vr) / 2);
 
-  * {
-    max-width: 100%;
-  }
-
   @media (--bp-tablet) {
     &--tab {
       &-1of1 { width: 100%; }

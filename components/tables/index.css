@@ -14,9 +14,12 @@
   td,
   th {
     padding: calc(var(--vr) / 1.5);
-    overflow: hidden;
     text-align: left;
-    text-overflow: ellipsis;
+
+    &.truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   td {

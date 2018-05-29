@@ -1,23 +1,31 @@
 <template>
-  <div class="toggle" :aria-multiselectable="!solo">
+  <component
+    class="togglegroup"
+    :is="container"
+    :aria-multiselectable="solo === 'false' ? 'true' : 'false'"
+  >
     <slot></slot>
-  </div>
+  </component>
 </template>
 
 <script>
-import SectionTogglePanel from './SectionTogglePanel.vue';
+// toggle-group-hide-panel
+// toggle-group-show-current-panel
 
 export default {
-  name: 'section-toggle',
-  components: { SectionTogglePanel },
+  name: 'toggle-group',
   props: {
+    container: {
+      type: String,
+      default: 'div',
+    },
     solo: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: 'false',
     },
     open: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: 'false',
     },
   },
   data: () => ({
@@ -34,14 +42,11 @@ export default {
   },
   mounted() {
     this.panels.forEach((panel, i) => {
-      panel.index = i;
-      if (i === 0) {
-        panel.isActive = true;
-      }
+      panel.setIndex(i);
     });
 
     this.hideAllPanels();
-    if (this.open) this.showCurrentPanel();
+    if (this.open === 'true') this.showCurrentPanel();
   },
   methods: {
     hideAllPanels() {
@@ -50,12 +55,12 @@ export default {
       });
     },
     hidePanel(i) {
-      this.panels[i].setExpanded(false);
-      this.panels[i].unsetPanelHeight();
+      this.panels[i].setActive(false);
+      this.$emit('toggle-group-hide-panel', i);
     },
     showCurrentPanel() {
-      this.panels[this.current].setExpanded(true);
-      this.panels[this.current].setPanelHeight();
+      this.panels[this.current].setActive(true);
+      this.$emit('toggle-group-show-current-panel', this.current);
     },
     getCurrent(e) {
       let curr = -1;
@@ -71,12 +76,12 @@ export default {
     togglePanel(e) {
       this.getCurrent(e);
 
-      if (this.panels[this.current].isExpanded) {
+      if (this.panels[this.current].getActive()) {
         this.hidePanel(this.current);
         return;
       }
 
-      if (this.solo) this.hideAllPanels();
+      if (this.solo === 'true') this.hideAllPanels();
 
       this.showCurrentPanel();
     },

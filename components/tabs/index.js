@@ -1,2 +1,2 @@
-import TabGroup from './TabGroup.vue';
-export default TabGroup;
+import Tabs from './Tabs.vue';
+export default Tabs;

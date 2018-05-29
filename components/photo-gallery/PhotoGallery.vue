@@ -12,6 +12,9 @@
 </template>
 
 <script>
+// photo-gallery-open
+// photo-gallery-close
+
 import 'photoswipe/dist/photoswipe.css';
 import 'photoswipe/dist/default-skin/default-skin.css';
 import PhotoSwipe from 'photoswipe/dist/photoswipe';
@@ -77,9 +80,11 @@ export default {
         options
       );
       this.photoswipe.init();
+      this.$emit('photo-gallery-open');
     },
     close() {
       this.photoswipe.close();
+      this.$emit('photo-gallery-close');
     },
   },
 };
