@@ -23,6 +23,11 @@
 </template>
 
 <script>
+// page-nav-activate-menu
+// page-nav-dismiss-menu
+// page-nav-open-nested-panel
+// page-nav-close-nested-panel
+
 import Blanket from '../search/blanket';
 
 export default {
@@ -55,12 +60,14 @@ export default {
       this.$refs.sitemap.classList.add('active');
       this.$refs.sitemap.removeAttribute('aria-hidden');
       this.rootList.querySelector('a').focus();
+      this.$emit('page-nav-activate-menu');
     },
 
     dismissMenu() {
       this.blanket.hide();
       this.$refs.sitemap.classList.remove('active');
       this.$refs.sitemap.setAttribute('aria-hidden', true);
+      this.$emit('page-nav-dismiss-menu');
     },
 
     initSiteNav() {
@@ -166,6 +173,7 @@ export default {
       // Open panel and push to state
       panel.classList.add('sitenav__panel--open');
       this.state.open.push(panel);
+      this.$emit('page-nav-open-nested-panel');
     },
 
     closeNestedPanel(panel, open, evt) {
@@ -181,6 +189,7 @@ export default {
       // Show parent sidebar (i.e. vertical overflow)
       const parent = this.state.open[this.state.open.length - 1];
       parent.classList.remove('sitenav__panel--nested-open');
+      this.$emit('page-nav-close-nested-panel');
     },
   },
 };

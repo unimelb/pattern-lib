@@ -24,15 +24,14 @@
               :tabindex="isSelected(rootindex)"
               ref="rootitems"
             >
-              <component
+              <a
                 :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
                 :class="linkClasses(rootindex, rootitem)"
-                :is="rootitem.items ? 'div' : 'a'"
                 @click="openInner"
               >
                 {{ rootitem.title }}
-              </component>
+              </a>
               <div
                 class="inner"
                 v-if="rootitem.items"
@@ -88,6 +87,11 @@
 </template>
 
 <script>
+// mega-menu-activate-desktop-menu
+// mega-menu-dismiss-desktop-menu
+// mega-menu-activate-mobile-menu
+// mega-menu-dismiss-mobile-menu
+
 import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
@@ -127,6 +131,7 @@ export default {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         this.isDesktopOpen = true;
+        this.$emit('mega-menu-activate-desktop-menu');
       }
     },
     dismissDesktopMenu(props = {}) {
@@ -134,6 +139,7 @@ export default {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;
+        this.$emit('mega-menu-dismiss-desktop-menu');
       }
     },
     dismissAllDesktopChildren() {
@@ -144,6 +150,7 @@ export default {
         this.activateBlanket(this.dismissMobileMenu.bind(this));
         this.$refs.rootmenu.classList.add('active');
         this.isMobileOpen = true;
+        this.$emit('mega-menu-activate-mobile-menu');
       }
     },
     activateBlanket(callback) {
@@ -159,6 +166,7 @@ export default {
         this.dismissBlanket();
         this.$refs.rootmenu.classList.remove('active');
         this.isMobileOpen = false;
+        this.$emit('mega-menu-dismiss-mobile-menu');
       }
     },
     dismissMobileMenuIfBlanket(e) {
@@ -167,7 +175,10 @@ export default {
       this.dismissMobileMenu();
     },
     openInner(e) {
-      e.target.nextElementSibling.classList.add('open');
+      if (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false) {
+        e.preventDefault();
+        e.target.nextElementSibling.classList.add('open');
+      }
     },
     closeInner(e) {
       e.target.parentElement.classList.remove('open');
