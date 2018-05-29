@@ -62,3 +62,20 @@ No change
 ```html
 <page-footer></page-footer>
 ```
+
+## v3.0.0
+
+* `TabGroup` component has been renamed to `Tabs`, now includes mobile support
+
+```html
+<tabs>
+  <tab title="First tab">
+    ...
+  </tab>
+  <tab title="Another tab etc.">
+    ...
+  </tab>
+</tabs>
+```
+
+* `SectionToggle` component has been renamed to `ToggleBlock`, but none of the implementations have changed (this is the component that drives the `Accordion` and `ToggleBlockMobile` used in the footer).
