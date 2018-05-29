@@ -1,7 +1,7 @@
 <template>
   <div
     :id="`${namespace}-panel-${index + 1}`"
-    v-if="isActive"
+    v-show="isActive"
     class="tabs__panel max"
     role="tabpanel"
     :aria-labelledby="`${namespace}-${index + 1}`"
