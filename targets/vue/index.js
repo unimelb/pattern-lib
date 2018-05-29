@@ -51,6 +51,6 @@ export { default as StatsGroup } from '../../components/stats/StatsGroup.vue';
 export { default as StatsItem } from '../../components/stats/StatsItem.vue';
 export { default as SublinkMenu } from '../../components/sublink-menu/SublinkMenu.vue';
 export { default as SublinkMenuItem } from '../../components/sublink-menu/SublinkMenuItem.vue';
-export { default as TabGroup } from '../../components/tabs/TabGroup.vue';
+export { default as Tabs } from '../../components/tabs/Tabs.vue';
 export { default as Tab } from '../../components/tabs/Tab.vue';
 export { default as Welcome } from '../../components/welcome/Welcome.vue';

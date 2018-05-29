@@ -18,7 +18,7 @@ import PageNav from '../../components/page/nav';
 import PageSearch from '../../components/page/search';
 import PageSearchForm from '../../components/page/search/PageSearchForm.vue';
 import PageFooter from '../../components/page/footer';
-import TabGroup from '../../components/tabs/TabGroup.vue';
+import Tabs from '../../components/tabs/Tabs.vue';
 import Tab from '../../components/tabs/Tab.vue';
 import PhotoGallery from '../../components/photo-gallery';
 
@@ -46,7 +46,7 @@ Vue.component('page-footer', PageFooter);
 Vue.component('page-nav', PageNav);
 Vue.component('page-search', PageSearch);
 Vue.component('page-search-form', PageSearchForm);
-Vue.component('tab-group', TabGroup);
+Vue.component('tabs', Tabs);
 Vue.component('tab', Tab);
 Vue.component('photo-gallery', PhotoGallery);
 

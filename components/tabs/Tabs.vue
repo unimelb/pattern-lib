@@ -1,17 +1,29 @@
 <template>
-  <div class="tabs">
+  <div class="tabs section">
     <div class="tabs__section">
-      <div class="tabs__tablist max" role="tablist" @keydown="handleKey">
+      <div class="styled-select tabs__tablist--mobile">
+        <select ref="selector" @change="setActive($refs.selector.value)">
+          <option
+            v-for="(tab, index) in panels"
+            :key="`${namespace}-mob-${index + 1}`"
+            :aria-controls="`${namespace}-panel-${index + 1}`"
+            :selected="tab.isActive ? 'selected' : null"
+          >
+          {{ tab.title }}
+          </option>
+        </select>
+      </div>
+      <div class="tabs__tablist max" role="tablist" @keyup="handleKey">
         <button
           class="tabs__tab"
           role="tab"
           ref="tabs"
           :tabindex="tab.isActive ? 0 : -1"
           v-for="(tab, index) in panels"
-          :key="index"
+          :key="`${namespace}-desk-${index + 1}`"
           :id="`${namespace}-${index + 1}`"
           :aria-controls="`${namespace}-panel-${index + 1}`"
-          @click="setActive(tab)"
+          @click="setActive(tab.title)"
         >
         {{ tab.title }}
         </button>
@@ -24,7 +36,7 @@
 </template>
 
 <script>
-// tab-group-set-active
+// tabs-set-active
 
 export default {
   data: () => ({
@@ -35,10 +47,8 @@ export default {
       return `ui-tab-${this._uid}`;
     },
   },
-  created() {
-    this.panels = this.$children;
-  },
   mounted() {
+    this.panels = this.$children;
     this.panels.forEach((tab, i) => {
       tab.namespace = this.namespace;
       tab.index = i;
@@ -48,11 +58,11 @@ export default {
     });
   },
   methods: {
-    setActive(selectedtab) {
+    setActive(selectedtitle) {
       this.panels.forEach((panel) => {
-        panel.isActive = (panel.title === selectedtab.title);
+        panel.isActive = (panel.title === selectedtitle);
       });
-      this.$emit('tab-group-set-active', selectedtab.title);
+      this.$emit('tabs-set-active', selectedtitle);
     },
     handleKey(e) {
       let curr = -1;
@@ -70,12 +80,12 @@ export default {
         // left / up
         case 37:
         case 38:
-          this.setActive(this.panels[prev]);
+          this.setActive(this.panels[prev].title);
           break;
         // right / down
         case 39:
         case 40:
-          this.setActive(this.panels[next]);
+          this.setActive(this.panels[next].title);
           break;
         default:
           break;
@@ -84,4 +94,3 @@ export default {
   },
 };
 </script>
-
