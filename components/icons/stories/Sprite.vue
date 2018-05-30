@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   svg {
     display: inline-block;
     width: 5rem;
