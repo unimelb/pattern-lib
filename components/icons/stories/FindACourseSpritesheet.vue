@@ -30,7 +30,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   svg {
     display: inline-block;
     width: 5rem;
