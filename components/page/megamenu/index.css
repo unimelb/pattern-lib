@@ -226,7 +226,7 @@
     &__blanket {
       position: static;
       height: auto;
-      margin: 1rem 0 0;
+      margin: calc(1rem - 5px) 0 0;
       background-color: transparent;
     }
 
@@ -301,10 +301,19 @@
 
       &__item {
         border-top: none;
+        border-bottom: 5px solid transparent;
 
         &--right {
           justify-content: flex-end;
         }
+
+        &:nth-child(7n+1).menu__item--active { border-bottom-color: var(--col-1); }
+        &:nth-child(7n+2).menu__item--active { border-bottom-color: var(--col-2); }
+        &:nth-child(7n+3).menu__item--active { border-bottom-color: var(--col-3); }
+        &:nth-child(7n+4).menu__item--active { border-bottom-color: var(--col-4); }
+        &:nth-child(7n+5).menu__item--active { border-bottom-color: var(--col-5); }
+        &:nth-child(7n+6).menu__item--active { border-bottom-color: var(--col-6); }
+        &:nth-child(7n).menu__item--active { border-bottom-color: var(--col-7); }
       }
 
       &__link--nested::after {

@@ -16,6 +16,7 @@
           <ul class="menu__section">
             <li
               class="menu__item"
+              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               v-for="(rootitem, rootindex) in items"
               :key="`rootitem-${rootindex}`"
               @mouseover="activateDesktopMenu(rootindex)"
@@ -99,7 +100,14 @@ import PageSearchForm from '../search/PageSearchForm.vue';
 export default {
   components: { PageSearch, PageSearchForm },
   props: {
-    items: Array,
+    items: {
+      type: Array,
+      required: true,
+    },
+    active: {
+      type: [String, Boolean],
+      default: false,
+    },
   },
   data() {
     return {
@@ -118,6 +126,20 @@ export default {
     window.addEventListener('resize', this.closeMobileIfDesktop.bind(this));
   },
   methods: {
+    rootOrChildrenActive(rootitem) {
+      if (!this.active) return false;
+
+      let displayActive = false;
+
+      if (this.active === rootitem.href) displayActive = true;
+      if (rootitem.items) {
+        rootitem.items.forEach((item) => {
+          if (item.href === this.active) displayActive = true;
+        });
+      }
+
+      return displayActive;
+    },
     linkClasses(rootindex, rootitem) {
       if (rootindex === 0) {
         return 'menu__nested-parent';

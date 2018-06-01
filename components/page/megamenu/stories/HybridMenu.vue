@@ -1,5 +1,5 @@
 <template>
-  <MegaMenu :items="items" />
+  <MegaMenu :items="items" active="/random-link" />
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
             link: 'http://google.com',
           },
           items: [
-            { title: 'Entry requirements1', href: 'http://www.google.com' },
+            { title: 'Entry requirements1', href: '/random-link' },
             { title: 'Entry requirements2', href: 'http://www.google.com' },
             { title: 'Entry requirements3', href: 'http://www.google.com' },
             { title: 'Entry requirements4', href: 'http://www.google.com' },
