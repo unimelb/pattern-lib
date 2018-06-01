@@ -78,4 +78,20 @@ No change
 </tabs>
 ```
 
+* `AccordionGroup` component now holds `Accordion` components
+
+```html
+<accordion-group>
+  <accordion name="First accordion">
+    ...
+  </accordion>
+  <accordion name="Another section etc.">
+    ...
+  </accordion>
+</accordion-group>
+```
+
+Note that the `Accordion` component now works by itself, and should be used instead of the `AccordionGroup` in most cases (`AccordionGroup` offers better
+keyboard accessibility between sections and single-open-at-a-time functionality).
+
 * `SectionToggle` component has been renamed to `ToggleBlock`, but none of the implementations have changed (this is the component that drives the `Accordion` and `ToggleBlockMobile` used in the footer).
