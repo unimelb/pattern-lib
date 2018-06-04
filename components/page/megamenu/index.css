@@ -311,6 +311,7 @@
       &__item {
         border-top: none;
         border-bottom: 5px solid transparent;
+        border-left: 0;
 
         &--right {
           justify-content: flex-end;
