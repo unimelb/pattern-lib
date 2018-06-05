@@ -36,6 +36,9 @@ export default {
     namespace() {
       return `ui-toggle-${this._uid}`;
     },
+    groupParent() {
+      return this;
+    },
   },
   created() {
     this.panels = this.$children;
@@ -43,6 +46,7 @@ export default {
   mounted() {
     this.panels.forEach((panel, i) => {
       panel.setIndex(i);
+      panel.isGrouped = true;
     });
 
     this.hideAllPanels();

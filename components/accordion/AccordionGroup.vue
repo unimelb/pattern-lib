@@ -30,9 +30,5 @@ export default {
   mounted() {
     this.namespace = this.$refs.toggle.namespace;
   },
-  methods: {
-    handleClick(e) { this.$refs.toggle.handleClick(e); },
-    handleKey(e) { this.$refs.toggle.handleKey(e); },
-  },
 };
 </script>
