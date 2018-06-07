@@ -10,7 +10,7 @@
         >
       </a>
       <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
-        <nav class="megamenu" ref="rootmenu">
+        <nav class="megamenu" id="sitemapmenu" ref="rootmenu">
           <div role="button" aria-label="Close" class="menu__back-btn" @click="dismissMobileMenu">Close</div>
           <PageSearchForm />
           <ul class="menu__section">
@@ -70,7 +70,7 @@
           role="button"
           aria-haspopup="true"
           aria-controls="sitemapmenu"
-          href="#sitemap"
+          href="#sitemapmenu"
           id="sitemapbutton"
           class="link-icon--vertical link-reset"
           @click.prevent="activateMobileMenu"
