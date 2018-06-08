@@ -114,3 +114,9 @@
     }
   }
 }
+
+.enquiry {
+  .toggleblock__default {
+    margin: auto;
+  }
+}

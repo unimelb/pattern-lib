@@ -108,6 +108,11 @@
 </template>
 
 <script>
-const body = document.body || document.querySelector('body');
-body.classList.add('mce');
+export default {
+  name: 'mce-form',
+  mounted() {
+    const body = document.body || document.querySelector('body');
+    body.classList.add('mce');
+  },
+};
 </script>
