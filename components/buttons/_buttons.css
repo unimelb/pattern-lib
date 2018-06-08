@@ -14,6 +14,7 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  cursor: pointer;
 
   &:focus,
   &:hover,
@@ -58,7 +59,8 @@
   }
 
   &--inverted:active,
-  &-owner:active .btn--inverted {
+  &-owner:active .btn--inverted,
+  &--hard {
     background-color: #fff;
     color: var(--col-brand);
   }
