@@ -1,5 +1,5 @@
 <template>
-  <header ref="headerroot" class="page-header page-header--l3 page-header--study">
+  <div ref="headerroot" class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
         <img
@@ -13,7 +13,7 @@
         <nav class="megamenu" id="sitemapmenu" ref="rootmenu">
           <div role="button" aria-label="Close" class="menu__back-btn" @click="dismissMobileMenu">Close</div>
           <PageSearchForm />
-          <ul class="menu__section">
+          <ul class="menu__section" role="menu">
             <li
               class="menu__item"
               :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
@@ -77,14 +77,15 @@
           @keydown.13="activeMobileMenu"
           :tabindex="isMobile ? -1 : 0"
         >
-          <svg class="link-icon__icon svg" role="presentation" focusable="false" viewBox="10 10 26 28">
+          <svg class="link-icon__icon svg" role="presentation" focusable="false" aria-labelledby="icon-menu" viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
+            <title id="icon-menu">Menu</title>
           </svg>
           <span class="link-icon__text">Menu</span>
         </a>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
