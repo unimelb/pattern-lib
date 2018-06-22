@@ -199,8 +199,10 @@ export default {
     },
     openInner(e) {
       if (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false) {
-        e.preventDefault();
-        e.target.nextElementSibling.classList.add('open');
+        if (e.target.nextElementSibling) {
+          e.preventDefault();
+          e.target.nextElementSibling.classList.add('open');
+        }
       }
     },
     closeInner(e) {
