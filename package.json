@@ -22,7 +22,7 @@
     "build": "build-storybook -c .storybook -o .out/docs",
     "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.config.js",
     "build:vue": "NODE_ENV=production webpack --config targets/vue/webpack.config.js",
-    "start": "start-storybook -p 7002 -c .storybook",
+    "dev": "start-storybook -p 7002 -c .storybook",
     "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
     "lint": "yarn run lint:js && yarn run lint:css",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\"",
