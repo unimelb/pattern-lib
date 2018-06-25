@@ -23,6 +23,10 @@
     }
   }
 
+  &--no-logo {
+    padding-top: 10.3125rem;
+  }
+
   /* Entity identifier */
   &__entity {
     position: relative;
@@ -165,6 +169,10 @@
 
   /* Level-2 header */
   &--l2 {
+    .page-header--campaign &.page-header {
+      min-height: 60vh;
+    }
+
     .page-header__heading {
       margin-top: calc(var(--vr) * 2);
       font-size: 1.75rem;
@@ -172,6 +180,10 @@
 
     .page-header__entity + .page-header__heading {
       margin-top: calc(var(--vr) * 1.5); /* less when following entity identifier */
+    }
+
+    .page-header--center {
+      min-height: calc(60vh - 10.333rem);
     }
 
     @media (--bp-desktop) {
