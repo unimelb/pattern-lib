@@ -5,11 +5,11 @@
   display: inline-block;
   padding: calc(var(--vr) * .8);
   transition: border-color .2s;
-  border: 2px solid color(var(--col-brand) alpha(70%));
+  border: 2px solid color(rgb(var(--col-brand)) alpha(70%));
   border-radius: var(--br);
-  outline-color: var(--col-brand-light);
+  outline-color: rgb(var(--col-navy-light));
   outline-offset: 1px;
-  color: var(--col-brand);
+  color: rgb(var(--col-brand));
   font-weight: var(--fw-semibold);
   text-align: center;
   text-decoration: none;
@@ -21,13 +21,13 @@
   &:visited,
   &-owner:focus .btn,
   &-owner:hover .btn {
-    border-color: var(--col-brand);
-    color: var(--col-brand);
+    border-color: rgb(var(--col-brand));
+    color: rgb(var(--col-brand));
   }
 
   &:active,
   &-owner:active .btn {
-    background-color: var(--col-brand);
+    background-color: rgb(var(--col-brand));
     color: #fff;
   }
 
@@ -40,8 +40,8 @@
   }
 
   &--cta.btn {
-    border-color: var(--col-brand);
-    background-color: var(--col-brand);
+    border-color: rgb(var(--col-brand));
+    background-color: rgb(var(--col-brand));
     color: white;
 
     &:hover {
@@ -62,7 +62,7 @@
   &-owner:active .btn--inverted,
   &--hard {
     background-color: #fff;
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
   }
 
   &--sml {

@@ -47,8 +47,8 @@
     margin-left: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid var(--col-grey);
-    color: var(--col-brand);
+    border-bottom: 1px solid rgb(var(--col-black-mid-2));
+    color: rgb(var(--col-brand));
     font-size: .9rem;
     font-weight: normal;
     text-decoration: none;

@@ -8,23 +8,23 @@
 
 /* inverted background */
 .bg-inverted {
-  background-color: var(--col-bg);
-  color: #fff;
+  background-color: rgb(var(--col-brand));
+  color: white;
 }
 
 .bg-inverted-dark {
-  background-color: var(--col-bg-secondary);
-  color: #fff;
+  background-color: rgb(var(--col-background-secondary-navy));
+  color: white;
 }
 
 .bg-inverted-darker {
-  background-color: var(--col-bg-tertiary);
-  color: #fff;
+  background-color: rgb(var(--col-background-tertiary-navy));
+  color: white;
 }
 
 .bg-inverted--o95 {
-  background-color: rgba(3, 58, 123, .95);
-  color: #fff;
+  background-color: rgba(var(--col-background-secondary-navy), .95);
+  color: white;
 
   .card--focus-box__cnr {
     opacity: .85; /* push up opacity for focus color on blue bg */
@@ -33,30 +33,30 @@
 
 /* light-gray background */
 .bg-alt {
-  background-color: var(--col-bg-grey);
+  background-color: rgb(var(--col-background-primary-grey));
 }
 
 .bg-alt-darker {
-  background-color: var(--col-bg-secondary-grey);
+  background-color: rgb(var(--col-background-secondary-grey));
 }
 
 /* light-blue (used in side nav) */
 .bg-light-blue {
-  background-color: var(--col-bg-light-blue);
+  background-color: color(rgb(var(--col-brand)) tint(92%));
 }
 
 /* white background */
 .bg-white {
-  background-color: #fff;
-  color: var(--col-brand);
+  background-color: white;
+  color: rgb(var(--col-brand));
 }
 
 /**
  * Colours
  */
-.col-facebook { color: var(--col-facebook); }
-.col-twitter { color: var(--col-twitter); }
-.col-linkedin { color: var(--col-linkedin); }
+.col-facebook { color: rgb(var(--col-facebook)); }
+.col-twitter { color: rgb(var(--col-twitter)); }
+.col-linkedin { color: rgb(var(--col-linkedin)); }
 
 /**
  * Max-width wrapper
@@ -299,7 +299,7 @@ a[target='_blank'] {
 .text-underborder {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--col-grey-mid);
+  border-bottom: 1px solid rgb(var(--col-black-mid-1));
 }
 
 .emsp-r {

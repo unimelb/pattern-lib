@@ -1,7 +1,7 @@
 .nav {
   &--horizontal {
-    border-bottom: .3125rem solid var(--col-blue-light); /* stylelint-disable-line number-max-precision */
-    background-color: var(--col-brand);
+    border-bottom: .3125rem solid rgb(var(--col-blue-light)); /* stylelint-disable-line number-max-precision */
+    background-color: rgb(var(--col-brand));
   }
 
   a&__link {
@@ -26,7 +26,7 @@
       height: 0;
       border: solid transparent;
       border-width: .625rem;
-      border-left-color: var(--col-blue-light);
+      border-left-color: rgb(var(--col-blue-light));
       pointer-events: none;
 
       @media (--bp-desktop) {
@@ -35,7 +35,7 @@
         margin-bottom: -.625rem;
         margin-left: -.625rem;
         border-width: 0 .625rem .625rem;
-        border-bottom-color: var(--col-blue-light);
+        border-bottom-color: rgb(var(--col-blue-light));
         border-left-color: transparent;
       }
     }

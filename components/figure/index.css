@@ -13,7 +13,7 @@
     margin-right: auto;
     margin-left: auto;
     caption-side: bottom;
-    color: color(var(--col-grey) shade(30%));
+    color: color(rgb(var(--col-black-mid-2)) shade(30%));
     font-size: .9em;
     font-style: italic;
     text-align: center;
@@ -39,7 +39,7 @@
           position: absolute;
           width: 2rem;
           margin-top: -calc(var(--vr) / 2);
-          border-top: 2px solid var(--col-brand);
+          border-top: 2px solid rgb(var(--col-black-mid-2));
         }
       }
     }
@@ -85,10 +85,6 @@
           }
         }
       }
-
-      /* DEPRECATION WARNING - DEPRECATED IN v0.1 (REMOVE IN v0.2) */
-      &-lge { width: 75%; }
-      &-sml { width: 35%; }
     }
   }
 

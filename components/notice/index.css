@@ -2,28 +2,28 @@
   margin: var(--vr);
   padding: var(--vr);
   border-radius: 4px;
-  background-color: var(--col-brand-light);
+  background-color: rgb(var(--col-navy-light));
 
   &--warning {
-    background-color: var(--col-orange-light);
-    color: color(var(--col-orange) lightness(25%));
+    background-color: rgb(var(--col-orange-light));
+    color: color(rgb(var(--col-orange-mid-2)) lightness(25%));
 
     a {
-      color: color(var(--col-orange) lightness(25%));
+      color: color(rgb(var(--col-orange-mid-2)) lightness(25%));
     }
   }
 
   &--success {
-    background-color: var(--col-green-light);
-    color: color(var(--col-green) lightness(25%));
+    background-color: rgb(var(--col-green-light));
+    color: color(rgb(var(--col-green-mid-2)) lightness(25%));
 
     a {
-      color: color(var(--col-green) lightness(25%));
+      color: color(rgb(var(--col-green-mid-2)) lightness(25%));
     }
   }
 
   &--danger {
-    background-color: var(--col-orange-dark);
+    background-color: rgb(var(--col-orange-dark));
     color: #fff;
 
     a {

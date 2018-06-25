@@ -4,7 +4,7 @@
   margin: 0 auto;
 
   a {
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
     text-decoration: none;
 
     &:hover {
@@ -28,7 +28,7 @@
   &__col1_3 {
     margin-bottom: 0;
     padding: 3rem 1.5rem;
-    border-top: 1px solid var(--col-grey-light);
+    border-top: 1px solid rgb(var(--col-black-light));
     vertical-align: top;
 
     @media (--bp-x-tablet) {

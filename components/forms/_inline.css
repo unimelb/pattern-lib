@@ -59,13 +59,13 @@
       min-width: 9rem;
       height: 4.333rem;
       margin: 0;
-      border-color: var(--col-grey-mid);
-      background-color: var(--col-grey-mid);
-      color: var(--col-brand);
+      border-color: rgb(var(--col-black-mid-1));
+      background-color: rgb(var(--col-black-mid-1));
+      color: rgb(var(--col-brand));
       text-align: center;
 
       &:hover {
-        border-color: var(--col-bg-secondary-grey);
+        border-color: rgb(var(--col-background-secondary-grey));
       }
 
       &:active {
@@ -90,7 +90,7 @@
   }
 
   &__label {
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
   }
 
   &__select {
@@ -98,7 +98,7 @@
     height: 4.333rem;
     padding: .667rem 1.333rem;
     border-radius: var(--br) var(--br) 0 0;
-    background-color: var(--col-bg-grey);
+    background-color: rgb(var(--col-background-primary-grey));
     line-height: 1.25;
 
     select {
@@ -120,23 +120,23 @@
   &.form--inverse {
     button.form--inline__button--alt {
       border-color: transparent;
-      background-color: var(--col-brand);
+      background-color: rgb(var(--col-brand));
       color: white;
 
       &:focus,
       &:hover {
-        border-color: color(#fff alpha(60%));
+        border-color: color(white alpha(60%));
       }
 
       &:active {
         transition: background-color .2s;
-        background-color: rgba(9, 65, 131, .7);
+        background-color: rgba(var(--col-brand), .7);
       }
     }
 
     .form--inline__search,
     .form--inline__select {
-      border: 1px solid color(var(--col-grey-light) lightness(-5%));
+      border: 1px solid color(rgb(var(--col-black-light)) lightness(-5%));
     }
 
     .form--inline__select {

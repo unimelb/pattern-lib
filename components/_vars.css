@@ -2,77 +2,84 @@
  * Variables
  */
 :root {
-  /* Brand palette */
-  --col-brand: rgb(9, 65, 131);
-  --col-brand-mid2: rgb(93, 130, 173);
-  --col-brand-mid1: rgb(171, 190, 213);
-  --col-brand-light2: rgb(218, 227, 237);
-  --col-brand-light: rgb(242, 245, 249);
+  /* Background colour palette */
+  /* Note - Primary Navy BG is same as UoM Navy */
+  --col-background-primary-navy: 9, 65, 131;
+  --col-background-primary-grey: 247, 247, 247;
+  --col-background-primary-white: 255, 255, 255;
+  --col-background-secondary-navy: 3, 58, 123;
+  --col-background-secondary-grey: 228, 228, 228;
+  --col-background-tertiary-navy: 1, 42, 88;
+
+  /* Primary palette */
+  /* Note - Navy Dark is UoM Navy */
+  --col-navy-dark: 9, 65, 131;
+  --col-navy-mid-2: 93, 130, 173;
+  --col-navy-mid-1: 171, 190, 213;
+  --col-navy-light: 242, 245, 249;
 
   /* Supporting palette */
-  --col-grey-dark: #000; /* just use #000 */
-  --col-grey: rgb(153, 162, 170);
-  --col-grey-mid: rgb(198, 200, 202);
-  --col-grey-mid-1: rgb(105, 109, 115);
-  --col-grey-mid-2: rgb(75, 77, 83);
-  --col-grey-light: rgb(235, 236, 236);
-  --col-teal-dark: rgb(2, 112, 127);
-  --col-teal: rgb(63, 167, 194);
-  --col-teal-mid: rgb(124, 189, 206);
-  --col-teal-light: rgb(196, 238, 238);
-  --col-yellow: rgb(236, 174, 101);
-  --col-yellow-mid: rgb(255, 220, 162);
-  --col-yellow-light: rgb(253, 242, 223);
-  --col-emerald-dark: rgb(34, 118, 95);
-  --col-emerald: rgb(89, 177, 127);
-  --col-emerald-mid: rgb(152, 214, 195);
-  --col-emerald-light: rgb(213, 242, 230);
-  --col-blue-dark: rgb(53, 101, 158);
-  --col-blue: rgb(93, 127, 190);
-  --col-blue-mid: rgb(173, 205, 240);
-  --col-blue-light: rgb(203, 232, 239);
-  --col-orange-dark: rgb(185, 61, 28);
-  --col-orange: rgb(231, 112, 82);
-  --col-orange-mid: rgb(255, 164, 120);
-  --col-orange-light: rgb(253, 235, 221);
-  --col-green-dark: rgb(70, 119, 73);
-  --col-green: rgb(161, 209, 114);
-  --col-green-mid: rgb(218, 226, 153);
-  --col-green-light: rgb(243, 248, 215);
-  --col-purple-dark: rgb(87, 96, 164);
-  --col-purple: rgb(114, 131, 191);
-  --col-purple-mid: rgb(176, 188, 225);
-  --col-purple-light: rgb(222, 231, 248);
-  --col-pink-dark: rgb(152, 65, 64);
-  --col-pink: rgb(238, 136, 137);
-  --col-pink-mid: rgb(255, 189, 204);
-  --col-pink-light: rgb(255, 223, 230);
+  --col-black-dark: 0, 0, 0;
+  --col-black-mid-2: 153, 162, 170;
+  --col-black-mid-1: 198, 200, 202;
+  --col-black-light: 235, 236, 236;
+  --col-teal-dark: 2, 112, 127;
+  --col-teal-mid-2: 63, 167, 194;
+  --col-teal-mid-1: 124, 189, 206;
+  --col-teal-light: 196, 238, 238;
 
-  /* Background colours */
-  --col-bg: var(--col-brand);
-  --col-bg-grey: rgb(247, 247, 247);
-  --col-bg-light-blue: color(var(--col-brand) tint(92%));
-  --col-bg-white: #fff; /* just use #fff */
-  --col-bg-secondary: rgb(3, 58, 123); /* only for bottom half of footer */
-  --col-bg-secondary-grey: #e4e4e4;
-  --col-bg-tertiary: rgb(1, 42, 88); /* only for site-nav back button */
+  /* Note - there is no dark yellow in the brand palette */
+  --col-yellow-mid-2: 236, 174, 101;
+  --col-yellow-mid-1: 255, 220, 162;
+  --col-yellow-light: 253, 242, 223;
+  --col-emerald-dark: 34, 118, 95;
+  --col-emerald-mid-2: 89, 177, 127;
+  --col-emerald-mid-1: 152, 214, 195;
+  --col-emerald-light: 213, 242, 230;
+  --col-blue-dark: 53, 101, 158;
+  --col-blue-mid-2: 93, 127, 190;
+  --col-blue-mid-1: 173, 205, 240;
+  --col-blue-light: 205, 230, 255;
+  --col-orange-dark: 185, 61, 28;
+  --col-orange-mid-2: 231, 112, 82;
+  --col-orange-mid-1: 255, 164, 120;
+  --col-orange-light: 255, 220, 186;
+  --col-green-dark: 70, 119, 73;
+  --col-green-mid-2: 161, 209, 114;
+  --col-green-mid-1: 218, 226, 153;
+  --col-green-light: 243, 248, 215;
+  --col-purple-dark: 87, 96, 164;
+  --col-purple-mid-2: 114, 131, 191;
+  --col-purple-mid-1: 176, 188, 225;
+  --col-purple-light: 222, 224, 248;
+  --col-pink-dark: 152, 65, 64;
+  --col-pink-mid-2: 238, 136, 137;
+  --col-pink-mid-1: 255, 189, 204;
+  --col-pink-light: 255, 223, 230;
 
-  /* Link colours - http://paletton.com/#uid=13o0u0kmmGKbYTnhIN2qUABwFtZ */
-  --col-link: rgb(15, 91, 114);
-  --col-link-visited: var(--col-purple-dark);
-  --col-link-active: rgb(2, 72, 92);
-  --col-link-on-dark: rgb(124, 189, 205);
-  --col-link-visited-on-dark: rgb(193, 202, 230);
-  --col-link-active-on-dark: var(--col-bg-white);
+  /* Colours that are outside of the brand palette */
+  --col-orange-mid-0: 255, 182, 145;
+  --col-grey-mid-1: 105, 109, 115;
+  --col-grey-mid-2: 75, 77, 83;
+  --col-brand: var(--col-navy-dark);
+  --col-brand-light-2: 218, 227, 237;
 
   /* Rotating colours */
-  --col-1: var(--col-grey);
-  --col-2: var(--col-teal);
-  --col-3: var(--col-yellow);
-  --col-4: var(--col-emerald);
-  --col-5: var(--col-orange);
-  --col-6: var(--col-purple);
-  --col-7: var(--col-pink);
+  --col-1: var(--col-black-mid-2);
+  --col-2: var(--col-teal-mid-2);
+  --col-3: var(--col-yellow-mid-2);
+  --col-4: var(--col-emerald-mid-2);
+  --col-5: var(--col-orange-mid-2);
+  --col-6: var(--col-purple-mid-2);
+  --col-7: var(--col-pink-mid-2);
+
+  /* Link colours - http://paletton.com/#uid=13o0u0kmmGKbYTnhIN2qUABwFtZ */
+  --col-link: 15, 91, 114;
+  --col-link-visited: var(--col-purple-dark);
+  --col-link-active: 2, 72, 92;
+  --col-link-on-dark: 124, 189, 205;
+  --col-link-visited-on-dark: 193, 202, 230;
+  --col-link-active-on-dark: 255, 255, 255;
 
   /* Third-party colours */
   --col-twitter: #55acee;

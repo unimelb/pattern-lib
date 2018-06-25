@@ -25,7 +25,7 @@
   position: relative;
   z-index: 1;
   background-color: white;
-  color: var(--col-brand);
+  color: rgb(var(--col-brand));
 
   select {
     display: block;
@@ -37,7 +37,7 @@
     border: 0;
     border-radius: 0;
     background-color: transparent;
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
     font-size: 1rem;
     font-weight: var(--fw-semibold);
     -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
@@ -52,8 +52,8 @@
     width: .5rem;
     height: .5rem;
     transform: rotate(45deg);
-    border-right: 2px solid var(--col-brand);
-    border-bottom: 2px solid var(--col-brand);
+    border-right: 2px solid rgb(var(--col-brand));
+    border-bottom: 2px solid rgb(var(--col-brand));
 
     @media (min-width: 1024px) {
       top: 1.075rem;

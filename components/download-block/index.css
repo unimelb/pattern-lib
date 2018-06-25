@@ -2,16 +2,16 @@
   display: flex;
   align-items: center;
   padding: var(--vr);
-  border: 1px solid var(--col-brand);
+  border: 1px solid rgb(var(--col-brand));
   border-radius: 4px;
   outline-offset: 1px;
 
   &.btn-owner {
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
     text-decoration: none;
 
     &:hover {
-      border-color: var(--col-brand-mid2);
+      border-color: rgb(var(--col-navy-mid-2));
 
       .download-block__inner h3 {
         text-decoration: underline;

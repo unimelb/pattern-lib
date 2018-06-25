@@ -25,7 +25,7 @@
     display: block;
     padding: .5rem;
     transition: all linear .1s;
-    background-color: var(--col-brand);
+    background-color: rgb(var(--col-brand));
     text-align: center;
 
     .link-icon__icon {
@@ -106,12 +106,12 @@
     border-style: solid;
     border-radius: 0 3px 3px 0;
     border-color: rgba(0, 0, 0, .1);
-    background-color: var(--col-brand-mid2);
+    background-color: var(--col-navy-mid-2);
     color: white;
     vertical-align: top;
 
     &:hover {
-      background-color: var(--col-brand);
+      background-color: rgb(var(--col-brand));
     }
   }
 
@@ -138,7 +138,7 @@
   margin-right: .5rem;
   margin-left: .5rem;
   padding: 1rem;
-  color: var(--col-brand-mid2);
+  color: var(--col-navy-mid-2);
   font-size: .6rem;
   line-height: 1;
   text-align: center;
@@ -152,6 +152,6 @@
   }
 
   &:hover {
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
   }
 }

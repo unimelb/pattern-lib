@@ -2,14 +2,14 @@
   position: relative;
   padding: 2rem 0 0;
   overflow: hidden;
-  background-color: var(--col-bg);
+  background-color: rgb(var(--col-brand));
   color: #fff;
 
   &__logomat {
     margin-top: -1rem;
     margin-left: -1rem;
     padding: 1rem;
-    background-color: var(--col-bg);
+    background-color: rgb(var(--col-brand));
   }
 
   &__logo {
@@ -78,7 +78,7 @@
     bottom: 0;
     width: 50%;
     max-width: 55rem;
-    background-color: var(--col-brand-mid2);
+    background-color: rgb(var(--col-navy-mid-2));
     background-position: center bottom;
     background-size: cover;
 

@@ -17,9 +17,9 @@
   }
 
   &:not(.stats-group--inverted) .stats-group__item {
-    &:nth-child(1) .stats-group__icon { color: var(--col-1); }
-    &:nth-child(2) .stats-group__icon { color: var(--col-2); }
-    &:nth-child(3) .stats-group__icon { color: var(--col-3); }
+    &:nth-child(1) .stats-group__icon { color: rgb(var(--col-1)); }
+    &:nth-child(2) .stats-group__icon { color: rgb(var(--col-2)); }
+    &:nth-child(3) .stats-group__icon { color: rgb(var(--col-3)); }
   }
 
   &__icon {
