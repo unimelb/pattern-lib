@@ -24,7 +24,13 @@
   }
 
   &--no-logo {
-    padding-top: 10.3125rem;
+    .page-header--center {
+      min-height: 80vh;
+    }
+
+    &.page-header--l2 .page-header--center {
+      min-height: 60vh;
+    }
   }
 
   /* Entity identifier */
