@@ -16,7 +16,7 @@
 
     &:not(:last-child) {
       padding-bottom: var(--vr);
-      border-bottom: 1px solid var(--col-brand);
+      border-bottom: 1px solid rgb(var(--col-brand));
     }
   }
 

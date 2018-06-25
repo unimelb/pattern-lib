@@ -16,7 +16,7 @@
     width: 6em;
     height: 6em;
     opacity: .5;
-    color: var(--col-emerald);
+    color: rgb(var(--col-emerald-mid-2));
 
     &--top-left {
       top: 0;
@@ -32,7 +32,7 @@
   /* Focus mark color modifiers */
   &--brand {
     .card--focus-box__cnr {
-      color: var(--col-brand);
+      color: rgb(var(--col-brand));
     }
   }
 
@@ -44,49 +44,49 @@
 
   &--teal {
     .card--focus-box__cnr {
-      color: var(--col-teal);
+      color: rgb(var(--col-teal-mid-2));
     }
   }
 
   &--yellow {
     .card--focus-box__cnr {
-      color: var(--col-yellow);
+      color: rgb(var(--col-yellow-mid-2));
     }
   }
 
   &--emerald {
     .card--focus-box__cnr {
-      color: var(--col-emerald);
+      color: rgb(var(--col-emerald-mid-2));
     }
   }
 
   &--blue {
     .card--focus-box__cnr {
-      color: var(--col-blue);
+      color: rgb(var(--col-blue-mid-2));
     }
   }
 
   &--orange {
     .card--focus-box__cnr {
-      color: var(--col-orange);
+      color: rgb(var(--col-orange-mid-2));
     }
   }
 
   &--green {
     .card--focus-box__cnr {
-      color: var(--col-green);
+      color: rgb(var(--col-green-mid-2));
     }
   }
 
   &--purple {
     .card--focus-box__cnr {
-      color: var(--col-purple);
+      color: rgb(var(--col-purple-mid-2));
     }
   }
 
   &--pink {
     .card--focus-box__cnr {
-      color: var(--col-pink);
+      color: rgb(var(--col-pink-mid-2));
     }
   }
 
@@ -101,20 +101,20 @@
     stroke-width: 0;
   }
 
-  .cell:nth-child(7n+1) &__icon * { fill: var(--col-2); }
-  .cell:nth-child(7n+2) &__icon * { fill: var(--col-3); }
-  .cell:nth-child(7n+3) &__icon * { fill: var(--col-4); }
-  .cell:nth-child(7n+4) &__icon * { fill: var(--col-5); }
-  .cell:nth-child(7n+5) &__icon * { fill: var(--col-6); }
-  .cell:nth-child(7n+6) &__icon * { fill: var(--col-7); }
-  .cell:nth-child(7n) &__icon * { fill: var(--col-1); }
-  .list-item:nth-child(7n+1) &__icon * { fill: var(--col-2); }
-  .list-item:nth-child(7n+2) &__icon * { fill: var(--col-3); }
-  .list-item:nth-child(7n+3) &__icon * { fill: var(--col-4); }
-  .list-item:nth-child(7n+4) &__icon * { fill: var(--col-5); }
-  .list-item:nth-child(7n+5) &__icon * { fill: var(--col-6); }
-  .list-item:nth-child(7n+6) &__icon * { fill: var(--col-7); }
-  .list-item:nth-child(7n) &__icon * { fill: var(--col-1); }
+  .cell:nth-child(7n+1) &__icon * { fill: rgb(var(--col-2)); }
+  .cell:nth-child(7n+2) &__icon * { fill: rgb(var(--col-3)); }
+  .cell:nth-child(7n+3) &__icon * { fill: rgb(var(--col-4)); }
+  .cell:nth-child(7n+4) &__icon * { fill: rgb(var(--col-5)); }
+  .cell:nth-child(7n+5) &__icon * { fill: rgb(var(--col-6)); }
+  .cell:nth-child(7n+6) &__icon * { fill: rgb(var(--col-7)); }
+  .cell:nth-child(7n) &__icon * { fill: rgb(var(--col-1)); }
+  .list-item:nth-child(7n+1) &__icon * { fill: rgb(var(--col-2)); }
+  .list-item:nth-child(7n+2) &__icon * { fill: rgb(var(--col-3)); }
+  .list-item:nth-child(7n+3) &__icon * { fill: rgb(var(--col-4)); }
+  .list-item:nth-child(7n+4) &__icon * { fill: rgb(var(--col-5)); }
+  .list-item:nth-child(7n+5) &__icon * { fill: rgb(var(--col-6)); }
+  .list-item:nth-child(7n+6) &__icon * { fill: rgb(var(--col-7)); }
+  .list-item:nth-child(7n) &__icon * { fill: rgb(var(--col-1)); }
 
   &:not(.page-header &,.split-section &) {
     width: calc(100% + 3rem);

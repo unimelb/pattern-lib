@@ -37,10 +37,10 @@
   &:hover .card--focus-box__cnr { opacity: .3; }
 
   .section--image-mask.bg-inverted & {
-    background-color: color(var(--col-brand) alpha(-10%));
+    background-color: color(rgb(var(--col-brand)) alpha(-10%));
 
     &:hover {
-      background-color: color(var(--col-brand) alpha(-10%) lightness(-2%));
+      background-color: color(rgb(var(--col-brand)) alpha(-10%) lightness(-2%));
     }
   }
 }

@@ -15,15 +15,15 @@
   }
 
   &--green .sublink-menu__icon {
-    fill: var(--col-emerald);
+    fill: rgb(var(--col-emerald-mid-2));
   }
 
   &--red .sublink-menu__icon {
-    fill: var(--col-orange);
+    fill: rgb(var(--col-orange-mid-2));
   }
 
   &--blue .sublink-menu__icon {
-    fill: var(--col-blue);
+    fill: rgb(var(--col-blue-mid-2));
   }
 
   &__title {
@@ -35,12 +35,12 @@
   &__item {
     display: block;
     padding: calc(var(--vr) / 2);
-    border-top: 2px solid var(--col-grey);
-    color: var(--col-brand);
+    border-top: 2px solid rgb(var(--col-black-mid-2));
+    color: rgb(var(--col-brand));
     text-decoration: none;
 
     &:last-child {
-      border-bottom: 2px solid var(--col-grey);
+      border-bottom: 2px solid rgb(var(--col-black-mid-2));
     }
 
     &:hover {

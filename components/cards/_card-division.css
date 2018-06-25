@@ -4,7 +4,7 @@
   hr {
     margin: var(--vr) 0;
     border: 0;
-    border-bottom: 2px solid var(--col-brand-mid1);
+    border-bottom: 2px solid rgb(var(--col-navy-mid-1));
   }
 
   .card__title {

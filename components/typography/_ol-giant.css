@@ -9,7 +9,7 @@
     padding-bottom: 1.5rem;
     padding-left: 3.75rem;
     list-style-type: none;
-    border-bottom: 1px solid var(--col-grey-mid);
+    border-bottom: 1px solid rgb(var(--col-black-mid-1));
     counter-increment: steps;
 
     &::before {

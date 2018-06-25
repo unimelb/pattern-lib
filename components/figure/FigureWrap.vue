@@ -22,6 +22,7 @@ export default {
     large: Boolean,
     medium: Boolean,
     small: Boolean,
+    fill: Boolean,
   },
   computed: {
     classes() {
@@ -33,6 +34,7 @@ export default {
         'figure--lge': this.large,
         'figure--med': this.medium,
         'figure--sml': this.small,
+        'figure--fill': this.fill,
       };
     },
   },

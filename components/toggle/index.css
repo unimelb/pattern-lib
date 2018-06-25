@@ -27,7 +27,7 @@
       position: relative;
       padding: .925rem;
       border-bottom: 3px solid rgba(255, 255, 255, .3);
-      background-color: var(--col-bg);
+      background-color: rgb(var(--col-brand));
       text-decoration: none;
       cursor: pointer;
 
@@ -73,7 +73,7 @@
       height: auto;
       padding: .925rem;
       border-top: 3px solid rgba(255, 255, 255, .3);
-      background-color: var(--col-bg);
+      background-color: rgb(var(--col-brand));
       color: white;
       font-family: var(--ff-normal);
       font-size: 1.2rem;
