@@ -31,7 +31,7 @@ export default {
           href: '#',
         },
         {
-          title: 'Priorities and partnerships',
+          title: 'Priorities and partnerships and priorities and partnerships',
           href: '#',
         },
         {

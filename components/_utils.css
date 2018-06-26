@@ -233,6 +233,12 @@ a[target='_blank'] {
       margin-left: 0;
     }
   }
+
+  &__text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 /**
