@@ -1,5 +1,9 @@
 <template>
-  <div class="grid ql-menu" :class="{[`ql-menu--l${level}`]: true, 'ql-menu--pad': pad }">
+  <div class="grid ql-menu" :class="{
+    [`ql-menu--l${level}`]: true,
+    'ql-menu--pad': pad,
+    'ql-menu--condensed': condensed
+  }">
     <div class="cell cell--desk-2of3 ql-menu__content">
       <slot name="content"></slot>
       <div class="ql-menu__secondary" :class="{[`ql-menu__secondary--2col`]: secondaryCols === 2}" v-if="secondaryLinks && secondaryLinks.length > 0">
@@ -26,6 +30,7 @@ export default {
       default: '1',
     },
     pad: Boolean,
+    condensed: Boolean,
     menuLinks: Array,
     secondaryLinks: Array,
     secondaryCols: {
