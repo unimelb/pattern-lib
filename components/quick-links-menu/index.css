@@ -164,4 +164,17 @@
       color: inherit;
     }
   }
+
+  &--condensed {
+    .ql-menu__link {
+      padding-top: .75rem;
+      padding-bottom: .5rem;
+      font-size: 1.125rem;
+    }
+
+    &.ql-menu--l2 .ql-menu__link {
+      padding-right: calc(var(--vr) / 2);
+      padding-left: calc(var(--vr) / 2);
+    }
+  }
 }
