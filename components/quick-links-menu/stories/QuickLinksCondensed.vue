@@ -33,6 +33,7 @@ export default {
         {
           title: 'Priorities and partnerships and priorities and partnerships',
           href: '#',
+          truncate: true,
         },
         {
           title: 'News and resources',

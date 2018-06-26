@@ -13,7 +13,13 @@
     <div class="cell cell--desk-1of3">
       <nav class="ql-menu__nav" v-if="menuLinks.length > 0">
         <slot name="menu-header"></slot>
-        <QuickLinksMenuItem :href="item.href" v-for="item in menuLinks" :key="item.id" :title="item.title" />
+        <QuickLinksMenuItem
+          :href="item.href"
+          v-for="item in menuLinks"
+          :key="item.id"
+          :title="item.title"
+          :truncate="item.truncate"
+        />
       </nav>
     </div>
   </div>

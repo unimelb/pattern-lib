@@ -172,9 +172,7 @@
       font-size: 1.125rem;
     }
 
-    &.ql-menu--l2 .ql-menu__link,
-    &.ql-menu--l3 .ql-menu__link,
-    &.ql-menu--l4 .ql-menu__link {
+    &.ql-menu--l2 .ql-menu__link {
       padding-right: calc(var(--vr) / 2);
       padding-left: calc(var(--vr) / 2);
     }

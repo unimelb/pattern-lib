@@ -216,7 +216,7 @@ a[target='_blank'] {
  */
 .push-icon {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   text-align: left;
 
@@ -225,6 +225,7 @@ a[target='_blank'] {
     flex-shrink: 0; /* prevent icon from shrinking */
     width: .75em;
     height: .75em;
+    margin-top: .25rem;
     margin-left: 1em;
     vertical-align: middle;
 
