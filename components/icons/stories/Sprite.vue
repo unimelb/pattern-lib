@@ -33,6 +33,7 @@ export default {
       'campaign',
       'microphone',
       'jobs',
+      'tag',
     ],
   }),
   readme: { custom: docs },
