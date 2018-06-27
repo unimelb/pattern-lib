@@ -1,6 +1,21 @@
 <template>
-    <component :is="progressive ? 'progressive-background' : element" :no-ratio="progressive" :src="progressive ? bgImage : false" class="section" :class="classes" :style="{ backgroundImage: bgImage && !progressive ? `url(${bgImage})` : '' }">
-    <div class="section__inner" :class="{'section__inner--sml': small, 'section__inner--mid': mid, 'section__inner--short': short, 'section__inner--nopad': nopad}">
+  <component
+    :is="progressive ? 'progressive-background' : element"
+    :no-ratio="progressive"
+    :src="progressive ? bgImage : false"
+    class="section"
+    :class="classes"
+    :style="{ backgroundImage: bgImage && !progressive ? `url(${bgImage})` : '' }"
+  >
+    <div
+      class="section__inner"
+      :class="{
+        'section__inner--sml': small,
+        'section__inner--mid': mid,
+        'section__inner--short': short,
+        'section__inner--nopad': nopad
+      }"
+    >
       <slot></slot>
     </div>
   </component>
