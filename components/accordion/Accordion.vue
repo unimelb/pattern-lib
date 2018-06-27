@@ -1,7 +1,7 @@
 <template>
   <ToggleBlock ref="comp" class="accordion">
     <template slot="default">
-      <h2 class="toggle__trigger" v-if="name" v-html="name"></h2>
+      <h2 class="toggle__trigger" v-html="name"></h2>
     </template>
     <template slot="hidden">
       <div class="toggleblock__hidden-inner">
@@ -22,6 +22,11 @@ export default {
       type: String,
     },
   },
+  computed: {
+    groupParent() {
+      return (this.$parent && this.$parent.$parent && this.$parent.$parent.$refs.toggle) ? this.$parent.$parent.$refs.toggle : false;
+    },
+  },
   mounted() {
     if (this.$parent.namespace) this.$refs.comp.namespace = this.$parent.namespace;
   },
@@ -29,14 +34,6 @@ export default {
     toggle() { this.$refs.comp.toggle(); },
     setActive(v) { this.$refs.comp.setActive(v); },
     setIndex(v) { this.$refs.comp.setIndex(v); },
-    handleClick(e) {
-      if (this.$parent.handleClick) {
-        this.$parent.handleClick(e);
-      } else {
-        this.$refs.comp.toggle();
-      }
-    },
-    handleKey(e) { this.$parent.handleKey(e); },
     getActive() { return this.$refs.comp.getActive(); },
     header() { return this.$refs.comp.header(); },
   },

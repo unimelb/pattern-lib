@@ -6,7 +6,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  color: var(--col-brand);
+  color: rgb(var(--col-brand));
   font-family: var(--ff-normal);
   font-size: 16px;
   line-height: var(--lh);
@@ -25,7 +25,7 @@ body {
   min-height: 100%;
   margin: 0;
   overflow-x: hidden;
-  background-color: var(--col-bg-secondary); /* same as page header/footer for scroll overflow */
+  background-color: rgb(var(--col-background-secondary-navy)); /* same as page header/footer for scroll overflow */
 
   /* make fonts look a bit thiner */
   -webkit-font-smoothing: antialiased;
@@ -65,7 +65,7 @@ fieldset, blockquote {
 
 hr {
   margin: calc(var(--vr) * 2) 0;
-  border: 1px solid var(--col-grey-mid);
+  border: 1px solid rgb(var(--col-black-mid-1));
 }
 
 ol, ul {
@@ -92,11 +92,11 @@ li {
 }
 
 a {
-  color: var(--col-link);
+  color: rgb(var(--col-link));
   font-weight: var(--fw-semibold);
 
-  &:visited { color: var(--col-link-visited); }
-  &:active { color: var(--col-link-active); }
+  &:visited { color: rgb(var(--col-link-visited)); }
+  &:active { color: rgb(var(--col-link-active)); }
 
   &:hover,
   &:focus {
@@ -106,10 +106,10 @@ a {
   .bg-inverted &,
   .bg-inverted-dark &,
   .bg-inverted-darker & {
-    color: var(--col-link-on-dark);
+    color: rgb(var(--col-link-on-dark));
 
-    &:visited { color: var(--col-link-visited-on-dark); }
-    &:active { color: var(--col-link-active-on-dark); }
+    &:visited { color: rgb(var(--col-link-visited-on-dark)); }
+    &:active { color: rgb(var(--col-link-active-on-dark)); }
   }
 }
 

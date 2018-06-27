@@ -1,10 +1,10 @@
 .news-block {
   width: 100%;
   padding: 0;
-  border-top: 1px solid var(--col-grey);
+  border-top: 1px solid rgb(var(--col-black-mid-2));
 
   &__link {
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
     font-weight: normal;
     text-decoration: none;
   }
@@ -19,7 +19,7 @@
     padding-top: 1.667rem;
     padding-bottom: 1rem;
     list-style-type: none;
-    border-bottom: 1px solid var(--col-grey);
+    border-bottom: 1px solid rgb(var(--col-black-mid-2));
     font-size: .9rem;
 
     p {

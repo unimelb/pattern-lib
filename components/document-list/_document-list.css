@@ -1,4 +1,6 @@
 .document-list {
+  .link-download,
+  &--download-all a,
   [href$='.pdf' i],
   [href$='.doc' i],
   [href$='.docx' i],
@@ -9,7 +11,6 @@
   [href$='.ppsx' i],
   [href$='.key' i],
   [href$='.csv' i],
-  .link-download,
   figcaption {
     &::after {
       content: '';

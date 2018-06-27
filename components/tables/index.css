@@ -7,7 +7,7 @@
   a,
   a:visited,
   a:hover {
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
     text-decoration: underline;
   }
 
@@ -23,7 +23,7 @@
   }
 
   td {
-    border-right: 1px solid var(--col-grey-mid);
+    border-right: 1px solid rgb(var(--col-black-mid-1));
 
     &:last-child {
       border-right: 0;
@@ -31,7 +31,7 @@
   }
 
   tbody tr {
-    border-bottom: 1px solid var(--col-grey-mid);
+    border-bottom: 1px solid rgb(var(--col-black-mid-1));
 
     &:last-child {
       border-bottom: 0;
@@ -76,51 +76,51 @@
 
   &--striped {
     tr:nth-child(even) {
-      background-color: var(--col-bg-grey);
+      background-color: rgb(var(--col-background-primary-grey));
     }
 
     tr.table__row--white {
-      background-color: #fff;
+      background-color: white;
     }
 
     tr.table__row--highlight {
-      background-color: var(--col-bg-grey);
+      background-color: rgb(var(--col-background-primary-grey));
     }
 
     tr.table__row--info {
-      background-color: var(--col-blue-light);
+      background-color: rgb(var(--col-blue-light));
     }
 
     tr.table__row--inverted {
-      background-color: var(--col-brand);
+      background-color: rgb(var(--col-brand));
     }
   }
 
   &--hover {
     tbody tr:hover {
-      background-color: var(--col-grey-mid);
+      background-color: rgb(var(--col-black-mid-1));
     }
   }
 
   &__row {
     &--inverted {
-      background-color: var(--col-brand);
-      color: #fff;
+      background-color: rgb(var(--col-brand));
+      color: white;
     }
 
     &--white {
-      background-color: #fff;
-      color: var(--col-brand);
+      background-color: white;
+      color: rgb(var(--col-brand));
     }
 
     &--highlight {
-      background-color: var(--col-bg-grey);
+      background-color: rgb(var(--col-background-primary-grey));
     }
 
     &--info {
       border-width: 2px;
-      background-color: var(--col-blue-light);
-      color: var(--col-brand);
+      background-color: rgb(var(--col-blue-light));
+      color: rgb(var(--col-brand));
     }
   }
 }

@@ -8,6 +8,10 @@
         <img src="https://picsum.photos/800/400?random&gravity=center" alt="">
       </figure-wrap>
       <p>Molestiae accusantium ducimus tempora delectus minima mollitia quia dicta alias. Fugiat magnam consequatur voluptatem sunt. Nesciunt est occaecati possimus quis iure architecto sunt. </p>
+      <figure-wrap fill caption="embed test">
+        <img src="https://picsum.photos/820/400?random&gravity=center" alt="">
+      </figure-wrap>
+      <p>The example above uses the <code>&lt;figure class="figure figure--fill"&gt;</code> variant, to completely fill the container with no padding left/right. </p>
     </div>
   </section-wrap>
 </template>

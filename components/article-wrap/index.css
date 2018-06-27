@@ -16,7 +16,7 @@
 
     &:not(:last-child) {
       padding-bottom: var(--vr);
-      border-bottom: 1px solid var(--col-brand);
+      border-bottom: 1px solid rgb(var(--col-brand));
     }
   }
 
@@ -79,5 +79,35 @@
         padding-right: var(--vr);
       }
     }
+  }
+}
+
+.tags {
+  &__heading {
+    display: inline-block;
+    margin-right: .5rem;
+    vertical-align: middle;
+
+    .push-icon__icon {
+      width: 1rem;
+      height: 1rem;
+      margin: 0;
+    }
+  }
+
+  &__listing {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.tag {
+  &--truncate {
+    display: inline-block;
+    width: 8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    white-space: nowrap;
   }
 }

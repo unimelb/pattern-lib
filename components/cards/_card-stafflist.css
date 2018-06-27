@@ -10,7 +10,7 @@
 
   .card__header {
     margin-bottom: 0;
-    color: var(--col-brand);
+    color: rgb(var(--col-brand));
     font-weight: bold;
     text-decoration: underline;
   }

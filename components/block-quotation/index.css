@@ -54,7 +54,7 @@ blockquote,
   &--bdr-top {
     padding-top: 1.8em;
     border-top: 1px solid;
-    border-color: var(--col-grey-mid-1);
+    border-color: rgb(var(--col-grey-mid-1));
 
     .block-quotation__content::before {
       top: .25em;
@@ -64,7 +64,7 @@ blockquote,
   &--bdr-btm {
     padding-bottom: 1.8em;
     border-bottom: 1px solid;
-    border-color: var(--col-grey-mid-1);
+    border-color: rgb(var(--col-grey-mid-1));
 
     .block-quotation__content::after {
       bottom: .5em;
@@ -88,19 +88,19 @@ blockquote,
 
   .bg-inverted & {
     cite {
-      color: var(--col-grey-light);
+      color: var(--col-black-light);
     }
 
     &__content {
       &::before,
       &::after {
-        color: var(--col-grey-light);
+        color: var(--col-black-light);
       }
     }
 
     &--bdr-btm,
     &--bdr-top {
-      border-color: var(--col-grey-light);
+      border-color: rgb(var(--col-black-light));
     }
   }
 

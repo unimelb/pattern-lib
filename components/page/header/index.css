@@ -2,14 +2,14 @@
   position: relative;
   padding: 2rem 0 0;
   overflow: hidden;
-  background-color: var(--col-bg);
+  background-color: rgb(var(--col-brand));
   color: #fff;
 
   &__logomat {
     margin-top: -1rem;
     margin-left: -1rem;
     padding: 1rem;
-    background-color: var(--col-bg);
+    background-color: rgb(var(--col-brand));
   }
 
   &__logo {
@@ -20,6 +20,16 @@
     @media (--bp-tablet) {
       width: 117px;
       height: 117px;
+    }
+  }
+
+  &--no-logo {
+    .page-header--center {
+      min-height: 80vh;
+    }
+
+    &.page-header--l2 .page-header--center {
+      min-height: 60vh;
     }
   }
 
@@ -78,7 +88,7 @@
     bottom: 0;
     width: 50%;
     max-width: 55rem;
-    background-color: var(--col-brand-mid2);
+    background-color: rgb(var(--col-navy-mid-2));
     background-position: center bottom;
     background-size: cover;
 
@@ -165,6 +175,10 @@
 
   /* Level-2 header */
   &--l2 {
+    .page-header--campaign &.page-header {
+      min-height: 60vh;
+    }
+
     .page-header__heading {
       margin-top: calc(var(--vr) * 2);
       font-size: 1.75rem;
@@ -172,6 +186,10 @@
 
     .page-header__entity + .page-header__heading {
       margin-top: calc(var(--vr) * 1.5); /* less when following entity identifier */
+    }
+
+    .page-header--center {
+      min-height: calc(60vh - 10.333rem);
     }
 
     @media (--bp-desktop) {

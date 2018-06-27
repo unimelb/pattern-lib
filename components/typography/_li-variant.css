@@ -13,8 +13,8 @@
     transform: rotate(-45deg);
     border-top: 0;
     border-right: 0;
-    border-bottom: 2px solid var(--col-emerald);
-    border-left: 2px solid var(--col-emerald);
+    border-bottom: 2px solid rgb(var(--col-emerald-mid-2));
+    border-left: 2px solid rgb(var(--col-emerald-mid-2));
     background: transparent;
   }
 }
@@ -32,7 +32,7 @@
     height: .375rem;
     margin-left: -1.5rem;
     background: transparent;
-    color: var(--col-orange-dark);
+    color: rgb(var(--col-orange-dark));
     font-size: 1.5rem;
     font-weight: var(--fw-semibold);
   }

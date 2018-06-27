@@ -77,6 +77,6 @@ body > div[aria-hidden='true']:not(#sitemap) {
   text-transform: uppercase;
 
   &:hover {
-    color: var(--col-pink-dark);
+    color: rgb(var(--col-pink-dark));
   }
 }

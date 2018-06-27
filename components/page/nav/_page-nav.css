@@ -12,7 +12,7 @@ page-nav {
 .sitenav {
   position: fixed;
   z-index: 101;
-  background-color: var(--col-bg);
+  background-color: rgb(var(--col-brand));
   color: #fff;
 
   li {
@@ -28,7 +28,7 @@ page-nav {
     overflow-y: auto;
     transform: translateX(0);
     transition: var(--tr-transform);
-    background-color: var(--col-bg);
+    background-color: rgb(var(--col-brand));
 
     &--nested {
       position: absolute;
@@ -57,7 +57,7 @@ page-nav {
     display: block;
     width: 100%;
     padding: 1.25rem;
-    background-color: var(--col-bg-tertiary);
+    background-color: rgb(var(--col-background-tertiary-navy));
     color: white;
     font-weight: var(--fw-semibold);
     line-height: 1.96;
@@ -140,7 +140,7 @@ page-nav {
 
       &:hover,
       &:focus {
-        background-color: var(--col-bg-secondary);
+        background-color: rgb(var(--col-background-secondary-navy));
         color: #fff;
       }
     }
@@ -149,7 +149,7 @@ page-nav {
   /* meta menu */
   &__meta {
     padding: 1.25rem 0;
-    color: var(--col-brand-light2);
+    color: var(--col-brand-light-2);
 
     a {
       padding: .25rem 1.25rem;

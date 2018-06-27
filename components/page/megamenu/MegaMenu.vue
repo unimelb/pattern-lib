@@ -1,5 +1,5 @@
 <template>
-  <header ref="headerroot" class="page-header page-header--l3 page-header--study">
+  <div ref="headerroot" class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
         <img
@@ -10,12 +10,13 @@
         >
       </a>
       <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
-        <nav class="megamenu" ref="rootmenu">
+        <nav class="megamenu" id="sitemapmenu" ref="rootmenu">
           <div role="button" aria-label="Close" class="menu__back-btn" @click="dismissMobileMenu">Close</div>
           <PageSearchForm />
-          <ul class="menu__section">
+          <ul class="menu__section" role="menu">
             <li
               class="menu__item"
+              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               v-for="(rootitem, rootindex) in items"
               :key="`rootitem-${rootindex}`"
               @mouseover="activateDesktopMenu(rootindex)"
@@ -69,21 +70,22 @@
           role="button"
           aria-haspopup="true"
           aria-controls="sitemapmenu"
-          href="#sitemap"
+          href="#sitemapmenu"
           id="sitemapbutton"
           class="link-icon--vertical link-reset"
           @click.prevent="activateMobileMenu"
           @keydown.13="activeMobileMenu"
           :tabindex="isMobile ? -1 : 0"
         >
-          <svg class="link-icon__icon svg" role="presentation" focusable="false" viewBox="10 10 26 28">
+          <svg class="link-icon__icon svg" role="presentation" focusable="false" aria-labelledby="icon-menu" viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
+            <title id="icon-menu">Menu</title>
           </svg>
           <span class="link-icon__text">Menu</span>
         </a>
       </div>
     </div>
-  </header>
+  </div>
 </template>
 
 <script>
@@ -99,7 +101,14 @@ import PageSearchForm from '../search/PageSearchForm.vue';
 export default {
   components: { PageSearch, PageSearchForm },
   props: {
-    items: Array,
+    items: {
+      type: Array,
+      required: true,
+    },
+    active: {
+      type: [String, Boolean],
+      default: false,
+    },
   },
   data() {
     return {
@@ -118,6 +127,20 @@ export default {
     window.addEventListener('resize', this.closeMobileIfDesktop.bind(this));
   },
   methods: {
+    rootOrChildrenActive(rootitem) {
+      if (!this.active) return false;
+
+      let displayActive = false;
+
+      if (this.active === rootitem.href) displayActive = true;
+      if (rootitem.items) {
+        rootitem.items.forEach((item) => {
+          if (item.href === this.active) displayActive = true;
+        });
+      }
+
+      return displayActive;
+    },
     linkClasses(rootindex, rootitem) {
       if (rootindex === 0) {
         return 'menu__nested-parent';
@@ -176,8 +199,10 @@ export default {
     },
     openInner(e) {
       if (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false) {
-        e.preventDefault();
-        e.target.nextElementSibling.classList.add('open');
+        if (e.target.nextElementSibling) {
+          e.preventDefault();
+          e.target.nextElementSibling.classList.add('open');
+        }
       }
     },
     closeInner(e) {

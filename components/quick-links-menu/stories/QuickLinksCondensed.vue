@@ -1,6 +1,6 @@
 <template>
   <SectionWrap class="bg-white">
-    <QuickLinks :menu-links="menuLinks">
+    <QuickLinks condensed :menu-links="menuLinks">
       <div slot="content">
         <h2>Australia's leading university</h2>
         <p class="lead">Our distinctive Melbourne experience helps graduates become well-rounded, thoughtful and skilled professionals – making
@@ -33,6 +33,7 @@ export default {
         {
           title: 'Priorities and partnerships and priorities and partnerships',
           href: '#',
+          truncate: true,
         },
         {
           title: 'News and resources',

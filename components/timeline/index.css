@@ -34,7 +34,7 @@
     padding-bottom: 1.875rem;
     padding-left: 1.25rem;
     float: left;
-    border-left: 1px solid var(--col-brand-light2);
+    border-left: 1px solid rgb(var(--col-brand-light-2));
 
     &:last-child {
       border-left-color: transparent; /* keep 1px border so dot remains aligned */
@@ -51,7 +51,7 @@
       width: 11px;
       height: 11px; /* odd number for dot to be perfectly centred on the 1px line */
       transform: rotate(45deg);
-      background-color: var(--col-brand-light2);
+      background-color: rgb(var(--col-brand-light-2));
     }
   }
 
