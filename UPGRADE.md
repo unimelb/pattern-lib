@@ -95,3 +95,7 @@ Note that the `Accordion` component now works by itself, and should be used inst
 keyboard accessibility between sections and single-open-at-a-time functionality).
 
 * `SectionToggle` component has been renamed to `ToggleBlock`, but none of the implementations have changed (this is the component that drives the `Accordion` and `ToggleBlockMobile` used in the footer).
+
+## v3.1.0
+
+No change
