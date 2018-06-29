@@ -37,6 +37,11 @@
 
   .header-tools__search {
     display: none;
+
+    .link-icon--vertical {
+      margin-top: 1.25rem;
+      margin-bottom: .75rem;
+    }
   }
 
   .inner {
@@ -230,7 +235,7 @@
     &__blanket {
       position: static;
       height: auto;
-      margin: calc(1rem - 5px) 0 0;
+      margin: 0;
       background-color: transparent;
     }
 
@@ -297,12 +302,12 @@
       &__nested-parent {
         display: table-cell;
         position: relative;
-        height: 5.4375rem;
-        padding: .5rem 1.5rem 2rem;
+        height: calc(6.4375rem - 5px);
+        padding: calc(1rem + 5px) 1.5rem 1rem;
         line-height: 1.1;
         text-align: center;
         text-decoration: none;
-        vertical-align: bottom;
+        vertical-align: middle;
       }
 
       &__item {
@@ -373,12 +378,12 @@
         .menu__link {
           display: table-cell;
           position: relative;
-          height: 5.4375rem;
-          padding: .5rem 1.5rem 2rem;
+          height: calc(6.4375rem - 5px);
+          padding: calc(1rem + 5px) 1.5rem 1rem;
           line-height: 1.1;
           text-align: center;
           text-decoration: none;
-          vertical-align: bottom;
+          vertical-align: middle;
 
           &:hover,
           &[aria-expanded='true'] {
