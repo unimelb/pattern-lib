@@ -264,7 +264,7 @@ exports[`PageFooter should match snapshot 1`] = `
           </p>
            
           <ul
-            class="social-list list-reset links-reset bg-saw-tooth page-footer__social"
+            class="social-list list-reset links-reset page-footer__social"
           >
             <li
               class=""
