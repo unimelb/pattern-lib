@@ -30,9 +30,8 @@
                 :href="rootitem.href"
                 :class="linkClasses(rootindex, rootitem)"
                 @click="openInner"
-              >
-                {{ rootitem.title }}
-              </a>
+                v-html="rootitem.title"
+              ></a>
               <div
                 class="inner"
                 v-if="rootitem.items"
@@ -56,7 +55,7 @@
                 </div>
                 <ul class="menu__section">
                   <li class="menu__item" v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
-                    <a tabindex="0" class="menu__link" :href="menuitem.href" role="menuitem">{{ menuitem.title }}</a>
+                    <a tabindex="0" class="menu__link" :href="menuitem.href" role="menuitem" v-html="menuitem.title"></a>
                   </li>
                 </ul>
               </div>
@@ -198,11 +197,9 @@ export default {
       this.dismissMobileMenu();
     },
     openInner(e) {
-      if (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false) {
-        if (e.target.nextElementSibling) {
-          e.preventDefault();
-          e.target.nextElementSibling.classList.add('open');
-        }
+      if (this.$refs.headerroot && this.$refs.headerroot.offsetWidth < 768 && e.target.nextElementSibling) {
+        e.preventDefault();
+        e.target.nextElementSibling.classList.add('open');
       }
     },
     closeInner(e) {

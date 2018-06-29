@@ -210,11 +210,6 @@
       box-shadow: 1px 0 12px 3px rgba(0, 0, 0, .6);
     }
 
-    .inner {
-      display: none;
-      left: 0;
-    }
-
     .inner.open {
       transform: translateX(var(--offset-sitenav));
     }
@@ -245,9 +240,11 @@
     }
 
     .inner {
+      display: none;
       position: absolute;
       z-index: 2;
       top: auto;
+      left: 0;
       height: auto;
       margin-top: 0;
       margin-bottom: 0;
