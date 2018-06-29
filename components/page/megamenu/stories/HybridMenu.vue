@@ -19,7 +19,7 @@ export default {
           href: '/find-a-course',
         },
         {
-          title: 'Why Melbourne',
+          title: "Why's Melbourne",
           href: '/why-melbourne',
           feature: {
             title: 'Campaign title',
