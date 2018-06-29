@@ -106,7 +106,7 @@
     border-style: solid;
     border-radius: 0 3px 3px 0;
     border-color: rgba(0, 0, 0, .1);
-    background-color: var(--col-navy-mid-2);
+    background-color: rgb(var(--col-navy-mid-2));
     color: white;
     vertical-align: top;
 
@@ -138,7 +138,7 @@
   margin-right: .5rem;
   margin-left: .5rem;
   padding: 1rem;
-  color: var(--col-navy-mid-2);
+  color: rgb(var(--col-navy-mid-2));
   font-size: .6rem;
   line-height: 1;
   text-align: center;
