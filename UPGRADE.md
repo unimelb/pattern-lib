@@ -98,4 +98,12 @@ keyboard accessibility between sections and single-open-at-a-time functionality)
 
 ## v3.1.0
 
+Named inset figure size variants that were deprecated in v0.1.x have now been removed:
+
+* `class="figure figure--inset figure--inset-lge"` becomes `class="figure figure--inset figure--lge`
+
+* `class="figure figure--inset figure--inset-sml"` becomes `class="figure figure--inset figure--sml`
+
+## v3.1.1
+
 No change
