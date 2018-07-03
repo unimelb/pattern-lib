@@ -1,5 +1,5 @@
 <template>
-  <div ref="headerroot" class="page-header page-header--l3 page-header--study">
+  <div ref="headerroot" role="banner" class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
         <img
@@ -10,7 +10,7 @@
         >
       </a>
       <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
-        <nav class="megamenu" id="sitemapmenu" ref="rootmenu">
+        <nav aria-label="Menu" class="megamenu" id="sitemapmenu" ref="rootmenu">
           <div role="button" aria-label="Close" class="menu__back-btn" @click="dismissMobileMenu">Close</div>
           <PageSearchForm />
           <ul class="menu__section" role="menu">
@@ -65,8 +65,7 @@
         </nav>
       </div>
       <div class="header-tools__menu">
-        <a
-          role="button"
+        <button
           aria-haspopup="true"
           aria-controls="sitemapmenu"
           href="#sitemapmenu"
@@ -78,10 +77,9 @@
         >
           <svg class="link-icon__icon svg" role="presentation" focusable="false" aria-labelledby="icon-menu" viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
-            <title id="icon-menu">Menu</title>
           </svg>
-          <span class="link-icon__text">Menu</span>
-        </a>
+          <span id="icon-menu" class="link-icon__text">Menu</span>
+        </button>
       </div>
     </div>
   </div>
@@ -114,6 +112,7 @@ export default {
       isMobileOpen: false,
       isDesktopOpen: false,
       current: 0,
+      pointer: 0,
     };
   },
   computed: {
@@ -224,9 +223,15 @@ export default {
       // Allow tab to pass through
       if (e.keyCode !== 9) e.preventDefault();
 
+      let cycle;
+      if (e.keyCode === 38 || e.keyCode === 40) {
+        cycle = this.$refs.rootitems[this.current].querySelectorAll('.menu__aside a,.menu__section a');
+      }
+
       switch (e.keyCode) {
         // esc
         case 27:
+          this.pointer = 0;
           this.current = 0;
           this.dismissAllDesktopChildren();
           this.dismissBlanket();
@@ -238,34 +243,54 @@ export default {
           break;
         // left
         case 37:
-          this.current = this.current > 0 ? this.current - 1 : this.items.length - 1;
-          this.dismissAllDesktopChildren();
-          this.$refs.rootitems[this.current].focus();
-          if (this.items[this.current].items) {
-            this.activateBlanket(this.dismissDesktopMenu.bind(this));
-          } else {
-            this.dismissBlanket();
-          }
+          this.prevRootItem();
           break;
         // right
         case 39:
-          this.current = this.current < this.items.length - 1 ? this.current + 1 : 0;
-          this.dismissAllDesktopChildren();
-          this.$refs.rootitems[this.current].focus();
-          if (this.items[this.current].items) {
-            this.activateBlanket(this.dismissDesktopMenu.bind(this));
-          } else {
-            this.dismissBlanket();
-          }
+          this.nextRootItem();
           break;
         // up
         case 38:
+          if (cycle.length > 1) {
+            this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
+            cycle[this.pointer].focus();
+          } else {
+            this.prevRootItem();
+          }
           break;
         // down
         case 40:
+          if (cycle.length > 1) {
+            this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
+            cycle[this.pointer].focus();
+          } else {
+            this.nextRootItem();
+          }
           break;
         default:
           break;
+      }
+    },
+    prevRootItem() {
+      this.pointer = 0;
+      this.current = this.current > 0 ? this.current - 1 : this.items.length - 1;
+      this.dismissAllDesktopChildren();
+      this.$refs.rootitems[this.current].focus();
+      if (this.items[this.current].items) {
+        this.activateBlanket(this.dismissDesktopMenu.bind(this));
+      } else {
+        this.dismissBlanket();
+      }
+    },
+    nextRootItem() {
+      this.pointer = 0;
+      this.current = this.current < this.items.length - 1 ? this.current + 1 : 0;
+      this.dismissAllDesktopChildren();
+      this.$refs.rootitems[this.current].focus();
+      if (this.items[this.current].items) {
+        this.activateBlanket(this.dismissDesktopMenu.bind(this));
+      } else {
+        this.dismissBlanket();
       }
     },
     getCurrent(e) {
