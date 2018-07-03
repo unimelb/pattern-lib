@@ -239,7 +239,10 @@ export default {
         // enter / space
         case 13:
         case 32:
-          e.target.querySelector('.menu__link').click();
+          if (e.target.classList.contains('.menu__item'))
+            e.target.querySelector('.menu__link').click();
+          else
+            e.target.click();
           break;
         // left
         case 37:
