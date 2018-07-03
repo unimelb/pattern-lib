@@ -42,6 +42,7 @@ export default {
   domFriendly: true,
   mounted() {
     this.blanket = new Blanket();
+    this.$refs.form.$refs.input.addEventListener('keyup', this.esc);
   },
   methods: {
     open() {
@@ -57,6 +58,9 @@ export default {
       this.blanket.el.classList.remove('white');
       this.$refs.search.classList.remove('active');
       this.$emit('page-search-close');
+    },
+    esc(e) {
+      if (e.keyCode === 27) this.close();
     },
   },
 };

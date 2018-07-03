@@ -262,6 +262,7 @@
       .menu__item {
         display: flex;
         padding: 1.5rem;
+        border-bottom: 0;
       }
 
       @media (--bp-wide) {
@@ -480,6 +481,7 @@
     margin-left: auto;
 
     .link-icon--vertical {
+      padding: .5rem 1rem;
       border-radius: var(--br);
 
       &:hover {
