@@ -108,7 +108,6 @@ page-nav {
 
     a {
       display: block;
-      outline-offset: -1px;
       color: inherit;
       text-decoration: none;
 

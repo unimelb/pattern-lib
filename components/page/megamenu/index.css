@@ -420,6 +420,7 @@
         column-width: 50%;
         font-size: .9rem;
         break-inside: avoid;
+        page-break-inside: avoid;
 
         .menu__item {
           display: inline-block;

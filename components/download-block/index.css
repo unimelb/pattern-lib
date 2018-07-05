@@ -4,7 +4,6 @@
   padding: var(--vr);
   border: 1px solid rgb(var(--col-brand));
   border-radius: 4px;
-  outline-offset: 1px;
 
   &.btn-owner {
     color: rgb(var(--col-brand));
