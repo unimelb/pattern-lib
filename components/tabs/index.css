@@ -102,7 +102,6 @@
         border-right-color: rgb(var(--col-teal-mid-2));
         border-bottom-color: transparent;
         border-left-color: rgb(var(--col-teal-mid-2));
-        outline: 0;
       }
     }
   }

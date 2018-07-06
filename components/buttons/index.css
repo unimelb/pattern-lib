@@ -7,8 +7,6 @@
   transition: border-color .2s;
   border: 2px solid color(rgb(var(--col-brand)) alpha(70%));
   border-radius: var(--br);
-  outline-color: rgb(var(--col-navy-light));
-  outline-offset: 1px;
   color: rgb(var(--col-brand));
   font-weight: var(--fw-semibold);
   text-align: center;

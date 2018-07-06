@@ -91,11 +91,10 @@
     border-style: solid;
     border-radius: 3px 0 0 3px;
     border-color: rgba(0, 0, 0, .1);
-    outline: 0; /* sorry */
-    outline-offset: -2px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .1) inset;
     vertical-align: top;
-    appearance: textfield;
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+    appearance: none;
   }
 
   &__submit {
