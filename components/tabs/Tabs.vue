@@ -14,7 +14,7 @@
         </select>
       </div>
       <div class="tabs__tablist max" role="tablist" @keyup="handleKey">
-        <button
+        <a
           class="tabs__tab"
           role="tab"
           ref="tabs"
@@ -26,7 +26,7 @@
           @click="setActive(tab.title)"
         >
         {{ tab.title }}
-        </button>
+        </a>
       </div>
     </div>
     <div class="tabs__section">

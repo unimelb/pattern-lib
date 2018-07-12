@@ -90,8 +90,6 @@
 /* wrapping an image (typically a logo) */
 .link-img {
   display: inline-block;
-  outline-offset: .25rem;
-  color: inherit; /* fix outline colour */
   vertical-align: bottom; /* fix unwanted inline-block space */
 
   & > img {

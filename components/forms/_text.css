@@ -1,8 +1,8 @@
 .mce form[id^='form_'],
 .form {
   input[type='search'] {
-    -webkit-appearance: textfield; /* stylelint-disable-line property-no-vendor-prefix */
-    appearance: textfield;
+    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+    appearance: none;
   }
 
   input[type='text'],
@@ -29,7 +29,6 @@
 
     &:focus {
       border-color: rgb(var(--col-blue-mid-1));
-      outline: 0;
       background-color: #fff;
       color: #000;
 

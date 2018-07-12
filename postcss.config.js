@@ -15,6 +15,7 @@ module.exports = {
         '> 1% in AU',
         'last 2 versions',
         'Firefox ESR',
+        'Firefox 45',
         'not ie < 11',
         'iOS >= 8.4',
         'Safari >= 8',
