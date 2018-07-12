@@ -1,5 +1,5 @@
 <template>
-  <div ref="headerroot" role="banner" class="page-header page-header--l3 page-header--study">
+  <div ref="headerroot" class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
         <img
