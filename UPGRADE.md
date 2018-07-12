@@ -107,3 +107,7 @@ Named inset figure size variants that were deprecated in v0.1.x have now been re
 ## v3.1.1
 
 No change
+
+## v3.1.2
+
+No change
