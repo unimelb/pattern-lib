@@ -42,6 +42,14 @@
     font-weight: var(--fw-semibold);
     -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
     -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+
+    option {
+      color: black;
+    }
+
+    &::-ms-expand {
+      display: none; /* stylelint-disable-line property-no-vendor-prefix */
+    }
   }
 
   &::after {
