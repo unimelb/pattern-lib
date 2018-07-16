@@ -278,13 +278,19 @@ exports[`PageFooter should match snapshot 1`] = `
                   class="social-list__icon"
                   focusable="false"
                   height="22"
-                  role="img"
+                  role="presentation"
                   width="22"
                 >
                   <use
                     xlink:href="#icon-facebook"
                   />
                 </svg>
+                 
+                <span
+                  class="screenreaders-only"
+                >
+                  Facebook
+                </span>
               </a>
             </li>
              
@@ -300,13 +306,19 @@ exports[`PageFooter should match snapshot 1`] = `
                   class="social-list__icon"
                   focusable="false"
                   height="22"
-                  role="img"
+                  role="presentation"
                   width="22"
                 >
                   <use
                     xlink:href="#icon-twitter"
                   />
                 </svg>
+                 
+                <span
+                  class="screenreaders-only"
+                >
+                  Twitter
+                </span>
               </a>
             </li>
              
@@ -322,13 +334,19 @@ exports[`PageFooter should match snapshot 1`] = `
                   class="social-list__icon"
                   focusable="false"
                   height="22"
-                  role="img"
+                  role="presentation"
                   width="22"
                 >
                   <use
                     xlink:href="#icon-linkedin"
                   />
                 </svg>
+                 
+                <span
+                  class="screenreaders-only"
+                >
+                  LinkedIn
+                </span>
               </a>
             </li>
           </ul>
