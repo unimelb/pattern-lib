@@ -22,11 +22,13 @@
 
 .link-icon {
   &--vertical {
-    display: block;
-    padding: .5rem;
+    display: inline-block;
+    width: 100%;
+    padding: .5rem 1rem;
     transition: all linear .1s;
     background-color: rgb(var(--col-brand));
     text-align: center;
+    vertical-align: top;
 
     .link-icon__icon {
       display: inline;

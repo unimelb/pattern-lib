@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import CardFocusBox from './../../../cards/CardFocusBox.vue';
+import CardFocusBox from '../../../cards/CardFocusBox.vue';
 
 export default {
   components: { CardFocusBox },

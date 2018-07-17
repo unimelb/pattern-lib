@@ -19,9 +19,9 @@ import 'photoswipe/dist/photoswipe.css';
 import 'photoswipe/dist/default-skin/default-skin.css';
 import PhotoSwipe from 'photoswipe/dist/photoswipe';
 import PhotoSwipeDefaultUI from 'photoswipe/dist/photoswipe-ui-default';
-import ListingWrap from './../listing/ListingWrap.vue';
-import FigureWrap from './../figure/FigureWrap.vue';
-import ListItem from './../listing/ListItem.vue';
+import ListingWrap from '../listing/ListingWrap.vue';
+import FigureWrap from '../figure/FigureWrap.vue';
+import ListItem from '../listing/ListItem.vue';
 import PhotoSwipeMarkup from './PhotoSwipeMarkup.vue';
 
 export default {

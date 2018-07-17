@@ -6,7 +6,7 @@
           <a class="link-img" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" height="117" src="../../shared/logo.svg" width="117"></a>
         </div>
         <div class="page-footer__header__search">
-          <form action="https://search.unimelb.edu.au" class="page-footer-search" id="search">
+          <form aria-hidden="true" action="https://search.unimelb.edu.au" class="page-footer-search" id="search">
             <div class="page-footer-search__field">
               <label class="page-footer-search__label" for="f_s_q">Search</label>
               <input id="f_s_q" aria-label="Search the University" class="page-footer-search__input" name="q" placeholder="Type to search" type="search">
@@ -84,4 +84,3 @@ export default {
   },
 };
 </script>
-

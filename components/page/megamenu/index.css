@@ -460,6 +460,7 @@
   overflow: visible;
 
   .page-header__inner {
+    height: 4.5rem;
     padding-left: 1rem;
 
     .link-img {
@@ -472,7 +473,7 @@
       }
     }
 
-    @media (--bp-desktop) {
+    @media (--bp-tablet) {
       height: 6.4375rem;
     }
   }
@@ -503,5 +504,22 @@
   .megamenu__blanket {
     z-index: 100;
     top: 0;
+  }
+}
+
+@media (--bp-max-mobile) {
+  .page-header--study .page-header__inner .link-img {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .logo-mask {
+    height: 2.625rem;
+    overflow: hidden;
+
+    .page-header__logo {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 }

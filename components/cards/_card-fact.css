@@ -4,8 +4,10 @@
   }
 
   .card__header {
+    margin-bottom: .75rem;
     font-family: var(--ff-lead);
     font-size: 2.6rem;
+    font-weight: bold;
 
     &--sml {
       font-size: 1.7rem;
@@ -22,7 +24,9 @@
   }
 
   .card__meta {
+    margin-bottom: .75rem;
     font-size: 1.1rem;
+    font-weight: var(--fw-semibold);
   }
 
   &-image {

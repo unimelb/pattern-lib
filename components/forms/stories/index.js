@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import MceForm from './MceForm.vue';
 import MceDate from './MceDate.vue';
@@ -7,6 +7,7 @@ import TextFields from './TextFields.vue';
 import InlineForm from './InlineForm.vue';
 import InlineSearchForm from './InlineSearchForm.vue';
 import InlineSearchFormInverse from './InlineSearchFormInverse.vue';
+import InlineSearchFormMin from './InlineSearchFormMin.vue';
 import StyledSelect from './StyledSelect.vue';
 
 storiesOf('Forms', module)
@@ -14,6 +15,7 @@ storiesOf('Forms', module)
   .add('Inline form', createStory(InlineForm))
   .add('Inline search form', createStory(InlineSearchForm))
   .add('Inline search form (inverse)', createStory(InlineSearchFormInverse))
+  .add('Inline search form (min)', createStory(InlineSearchFormMin))
   .add('MCE form markup', createStory(MceForm))
   .add('MCE date selector', createStory(MceDate))
   .add('Styled select', createStory(StyledSelect));

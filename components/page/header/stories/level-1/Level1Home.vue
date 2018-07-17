@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import CardPathfinder from './../../../../cards/CardPathfinder.vue';
+import CardPathfinder from '../../../../cards/CardPathfinder.vue';
 
 export default {
   components: { CardPathfinder },

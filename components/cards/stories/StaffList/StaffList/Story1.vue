@@ -96,7 +96,7 @@
 </template>
 
 <script>
-import CardStaffList from './../../../CardStaffList.vue';
+import CardStaffList from '../../../CardStaffList.vue';
 
 export default {
   components: { CardStaffList },

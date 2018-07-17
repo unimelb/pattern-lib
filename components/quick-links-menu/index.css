@@ -11,6 +11,10 @@
       margin-bottom: calc(var(--vr) * 2);
     }
 
+    .btn {
+      font-size: 1rem;
+    }
+
     @media (--bp-desktop) {
       padding-right: 3rem;
     }
@@ -19,7 +23,7 @@
   &__nav {
     a {
       color: rgb(var(--col-brand));
-      font-weight: normal;
+      font-weight: var(--fw-semibold);
 
       &:visited {
         color: rgb(var(--col-brand));
@@ -124,6 +128,7 @@
       border-width: 4px;
       border-color: rgb(var(--col-black-mid-2));
       background-color: rgb(var(--col-background-primary-grey));
+      font-weight: normal;
     }
   }
 
@@ -135,6 +140,7 @@
       border-color: rgb(var(--col-black-mid-2));
       background-color: rgb(var(--col-brand));
       color: #fff;
+      font-weight: normal;
 
       &:active,
       &:visited {

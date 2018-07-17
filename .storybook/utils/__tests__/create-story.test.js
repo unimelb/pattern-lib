@@ -1,7 +1,7 @@
 import pretty from 'pretty';
+import withReadme from 'storybook-readme/with-readme';
 import createStory from '../create-story';
 
-import withReadme from 'storybook-readme/with-readme';
 jest.mock('storybook-readme/with-readme');
 jest.mock('.storybook/utils', () => ({
   codeBlock: str => str,
@@ -58,7 +58,7 @@ describe('createStory', () => {
     expect(readme).toContain('Source'); // check "Source" section is still there
   });
 
-  test('should support including the story\'s HTML template in the README', () => {
+  test.skip('should support including the story\'s HTML template in the README', () => {
     createStory({
       template: '<div></div>',
       readme: {
@@ -90,7 +90,7 @@ describe('createStory', () => {
     expect(readme).toContain('<div><p>Test</p></div>');
   });
 
-  test('should support including the story\'s decorated source in the README', () => {
+  test.skip('should support including the story\'s decorated source in the README', () => {
     createStory({
       template: '<div></div>',
       readme: {

@@ -1,18 +1,20 @@
 <template>
-  <div ref="headerroot" role="banner" class="page-header page-header--l3 page-header--study">
+  <div ref="headerroot" class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
       <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
-        <img
-          class="page-header__logo"
-          src="../../shared/logo.svg"
-          width="117" height="117"
-          alt="The University of Melbourne homepage"
-        >
+        <div class="logo-mask">
+          <img
+            class="page-header__logo"
+            src="../../shared/logo.svg"
+            width="117" height="117"
+            alt="The University of Melbourne homepage"
+          >
+        </div>
       </a>
       <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
         <nav aria-label="Site" class="megamenu" id="sitemapmenu" ref="rootmenu">
           <div role="button" aria-label="Close" class="menu__back-btn" @click="dismissMobileMenu">Close</div>
-          <PageSearchForm />
+          <PageSearchForm aria-hidden="true" />
           <ul class="menu__section" role="menu">
             <li
               class="menu__item"
@@ -142,7 +144,8 @@ export default {
     linkClasses(rootindex, rootitem) {
       if (rootindex === 0) {
         return 'menu__nested-parent';
-      } else if (rootitem.items) {
+      }
+      if (rootitem.items) {
         return 'menu__link menu__link--nested';
       }
       return 'menu__link';
@@ -156,7 +159,8 @@ export default {
       }
     },
     dismissDesktopMenu(props = {}) {
-      if ((this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) || props.force) {
+      const { force } = props;
+      if ((this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) || force) {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;
