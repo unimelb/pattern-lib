@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import SectionTwoCol from './../../SectionTwoCol.vue';
-import FigureWrap from './../../../figure/FigureWrap.vue';
+import SectionTwoCol from '../../SectionTwoCol.vue';
+import FigureWrap from '../../../figure/FigureWrap.vue';
 export default {
   components: { SectionTwoCol, FigureWrap },
 };

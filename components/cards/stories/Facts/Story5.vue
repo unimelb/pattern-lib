@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CardFact from './../../CardFacts.vue';
+import CardFact from '../../CardFacts.vue';
 
 export default {
   components: { CardFact },

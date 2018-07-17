@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../../.storybook/utils';
 
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
@@ -14,4 +14,3 @@ storiesOf('Section/Focus', module)
   .add('Progressive background image', createStory(Story3))
   .add('Colour variations', createStory(Story4));
 /* ##Story goes here */
-

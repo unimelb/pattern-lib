@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import CardNews from './../../CardNews.vue';
+import CardNews from '../../CardNews.vue';
 
 export default {
   components: { CardNews },

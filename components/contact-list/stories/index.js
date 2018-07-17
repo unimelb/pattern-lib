@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import ContactListDefault from './ContactListDefault.vue';
 import ContactListLongDetails from './ContactListLongDetails.vue';

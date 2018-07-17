@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../../.storybook/utils';
 
 import PageBreadcrumbsLevel1 from './PageBreadcrumbsLevel1.vue';
 import PageBreadcrumbsLevel2 from './PageBreadcrumbsLevel2.vue';

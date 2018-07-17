@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import SectionDivider from './../../SectionDivider.vue';
+import SectionDivider from '../../SectionDivider.vue';
 export default {
   components: {
     SectionDivider,

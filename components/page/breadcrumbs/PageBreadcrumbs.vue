@@ -42,8 +42,8 @@ export default {
       type: Array,
       required: true,
       validator: arr => (
-        arr.length > 0 &&
-        arr.every(el => !!el.href && !!el.text)
+        arr.length > 0
+        && arr.every(el => !!el.href && !!el.text)
       ),
     },
   },

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import CardDivision from './../../../CardDivision.vue';
+import CardDivision from '../../../CardDivision.vue';
 
 export default {
   components: { CardDivision },

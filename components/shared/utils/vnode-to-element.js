@@ -18,7 +18,7 @@ export default function vnodeToElement(vnode) {
   const elem = document.createElement(tag);
 
   const props = componentOptions && componentOptions.propsData;
-  if (props) Object.keys(props).forEach((prop) => { elem.setAttribute(paramCase(prop), props[prop]); });
+  if (props) Object.keys(props).forEach((prop) => { elem.setAttribute(paramCase(prop), props[prop]); }); /* eslint-disable-line react/destructuring-assignment */
 
   // Add `slot` attribute, classes, and remaining attributes
   const { attrs, slot, staticClass } = vnode.data || {};

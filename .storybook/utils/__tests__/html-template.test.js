@@ -1,6 +1,6 @@
 import pretty from 'pretty';
 import { createLocalVue, shallow } from 'vue-test-utils';
-import { htmlTemplate } from '.storybook/utils';
+import htmlTemplate from '../html-template';
 
 describe('htmlTemplate', () => {
   let localVue;

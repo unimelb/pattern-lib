@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import CardBioHeader from './../../CardBioHeader.vue';
+import CardBioHeader from '../../CardBioHeader.vue';
 
 export default {
   components: { CardBioHeader },

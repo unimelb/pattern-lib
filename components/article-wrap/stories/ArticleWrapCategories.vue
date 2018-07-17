@@ -19,4 +19,3 @@ export default {
   components: { ArticleWrap },
 };
 </script>
-

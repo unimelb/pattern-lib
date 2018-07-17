@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SplitSection from './../../SplitSection.vue';
+import SplitSection from '../../SplitSection.vue';
 
 export default {
   components: { SplitSection },
