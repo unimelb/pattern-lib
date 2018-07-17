@@ -35,6 +35,7 @@ exports[`PageFooter should match snapshot 1`] = `
         >
           <form
             action="https://search.unimelb.edu.au"
+            aria-hidden="true"
             class="page-footer-search"
             id="search"
           >
