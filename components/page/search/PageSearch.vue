@@ -1,16 +1,14 @@
 <template>
   <div class="header-tools__search">
-    <a
+    <button
       class="link-icon--vertical link-reset"
-      role="button"
-      href="#search"
       @click.prevent="open"
       @keypress.13="open"
       tabindex="0"
     >
       <SvgIcon class="link-icon__icon svg" name="search" />
       <span class="link-icon__text">Search</span>
-    </a>
+    </button>
     <div ref="search" class="page-header-search">
       <PageSearchForm ref="form">
         <a
