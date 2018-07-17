@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import PhotoGalleryDefault from './PhotoGalleryDefault.vue';
 import WithCaptions from './WithCaptions.vue';

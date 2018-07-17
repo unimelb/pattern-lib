@@ -69,9 +69,9 @@ export default {
     getCurrent(e) {
       let curr = -1;
       this.panels.forEach((panel, index) => {
-        if (panel.header() === e.target.parentNode.parentNode.firstChild ||
-            panel.header() === e.target.parentNode ||
-            panel.header() === e.target) {
+        if (panel.header() === e.target.parentNode.parentNode.firstChild
+            || panel.header() === e.target.parentNode
+            || panel.header() === e.target) {
           curr = index;
         }
       }, this);
@@ -117,8 +117,7 @@ export default {
           break;
         // ctrl + pgup
         case 33:
-          if (e.ctrlKey)
-            ;
+          if (e.ctrlKey) ;
           break;
         // end
         case 35:

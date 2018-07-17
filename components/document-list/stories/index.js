@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import Story2 from './Story2.vue';
 import Story3 from './Story3.vue';

@@ -144,7 +144,8 @@ export default {
     linkClasses(rootindex, rootitem) {
       if (rootindex === 0) {
         return 'menu__nested-parent';
-      } if (rootitem.items) {
+      }
+      if (rootitem.items) {
         return 'menu__link menu__link--nested';
       }
       return 'menu__link';

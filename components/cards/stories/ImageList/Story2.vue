@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import CardFocusImageList from './../../CardFocusImageList.vue';
+import CardFocusImageList from '../../CardFocusImageList.vue';
 import heroImageDocs from './hero-image-docs.md';
 
 export default {

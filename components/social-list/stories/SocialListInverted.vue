@@ -4,7 +4,7 @@
 
 <script>
 import SocialList from '../SocialList.vue';
-import PadDecorator from '.storybook/decorators/PadDecorator.vue';
+import PadDecorator from '../../../.storybook/decorators/PadDecorator.vue';
 
 export default {
   components: { SocialList },

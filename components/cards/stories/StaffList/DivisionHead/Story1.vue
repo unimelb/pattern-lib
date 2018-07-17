@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import CardDivisionHead from './../../../CardDivisionHead.vue';
+import CardDivisionHead from '../../../CardDivisionHead.vue';
 
 export default {
   components: { CardDivisionHead },

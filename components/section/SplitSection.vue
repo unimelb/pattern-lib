@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import CardFocusBox from './../cards/CardFocusBox.vue';
+import CardFocusBox from '../cards/CardFocusBox.vue';
 import SplitSectionQuote from './SplitSectionQuote.vue';
 export default {
   name: 'SplitSection',

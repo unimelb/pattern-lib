@@ -24,7 +24,7 @@
 
 <script>
 import crest from './crest.png';
-import CardPathfinder from './../../../cards/CardPathfinder.vue';
+import CardPathfinder from '../../../cards/CardPathfinder.vue';
 
 export default {
   components: { CardPathfinder },

@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import NoticeDefault from './NoticeDefault.vue';
 import NoticeWarning from './NoticeWarning.vue';

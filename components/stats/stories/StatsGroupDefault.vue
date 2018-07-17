@@ -19,4 +19,3 @@ export default {
   decoratorProps: { size: 'sml' },
 };
 </script>
-
