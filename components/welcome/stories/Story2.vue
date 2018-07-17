@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Welcome from './../Welcome.vue';
+import Welcome from '../Welcome.vue';
 
 export default {
   components: { Welcome },

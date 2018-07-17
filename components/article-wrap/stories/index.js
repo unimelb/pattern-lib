@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import ArticleWrapDefault from './ArticleWrapDefault.vue';
 import ArticleWrapColumnLayout from './ArticleWrapColumnLayout.vue';

@@ -2,7 +2,9 @@ import Vue from 'vue';
 import pretty from 'pretty';
 import stripHtmlComments from 'strip-html-comments';
 import withReadme from 'storybook-readme/with-readme';
-import { codeBlock, htmlTemplate, storyDecorator } from '.storybook/utils';
+import codeBlock from './code-block';
+import htmlTemplate from './html-template';
+import storyDecorator from './story-decorator';
 
 const readmeDefaults = {
   custom: null,

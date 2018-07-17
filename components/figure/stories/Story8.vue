@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import FigureWrap from './../FigureWrap.vue';
+import FigureWrap from '../FigureWrap.vue';
 export default {
   components: { FigureWrap },
 };

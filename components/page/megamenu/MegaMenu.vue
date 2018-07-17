@@ -142,7 +142,8 @@ export default {
     linkClasses(rootindex, rootitem) {
       if (rootindex === 0) {
         return 'menu__nested-parent';
-      } else if (rootitem.items) {
+      }
+      if (rootitem.items) {
         return 'menu__link menu__link--nested';
       }
       return 'menu__link';
@@ -156,7 +157,8 @@ export default {
       }
     },
     dismissDesktopMenu(props = {}) {
-      if ((this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) || props.force) {
+      const { force } = props;
+      if ((this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) || force) {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;

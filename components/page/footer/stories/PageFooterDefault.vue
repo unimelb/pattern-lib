@@ -4,7 +4,7 @@
 
 <script>
 import PageFooter from '../PageFooter.vue';
-import { codeBlock } from '.storybook/utils';
+import { codeBlock } from '../../../../.storybook/utils';
 
 const out = codeBlock(`<page-footer></page-footer>
 

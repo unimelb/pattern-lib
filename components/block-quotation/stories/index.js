@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import BlockQuotationDefault from './BlockQuotationDefault.vue';
 import BlockQuotationWithBorders from './BlockQuotationWithBorders.vue';

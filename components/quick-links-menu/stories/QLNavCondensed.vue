@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import QuickLinks from './../QuickLinks.vue';
+import QuickLinks from '../QuickLinks.vue';
 
 export default {
   components: { QuickLinks },

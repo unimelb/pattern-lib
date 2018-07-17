@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import CardImage from './../../../cards/CardImage.vue';
+import CardImage from '../../../cards/CardImage.vue';
 
 export default {
   components: { CardImage },

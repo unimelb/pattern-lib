@@ -56,7 +56,7 @@
 <script>
 import SublinkMenu from '../SublinkMenu.vue';
 import SublinkMenuItem from '../SublinkMenuItem.vue';
-import ListingWrap from './../../listing/ListingWrap.vue';
+import ListingWrap from '../../listing/ListingWrap.vue';
 
 export default {
   components: { SublinkMenu, SublinkMenuItem, ListingWrap },

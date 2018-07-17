@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import CardFocusImageList from './../../CardFocusImageList.vue';
+import CardFocusImageList from '../../CardFocusImageList.vue';
 
 export default {
   components: { CardFocusImageList },

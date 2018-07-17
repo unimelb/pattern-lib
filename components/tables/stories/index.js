@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import TableDefault from './TableDefault.vue';
 import TableComplex from './TableComplex.vue';
