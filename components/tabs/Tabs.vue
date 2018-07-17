@@ -2,7 +2,7 @@
   <div class="tabs section">
     <div class="tabs__section">
       <div class="styled-select tabs__tablist--mobile">
-        <select role="region" aria-label="tab selection" ref="selector" @change="setActive($refs.selector.value)">
+        <select aria-hidden="true" ref="selector" @change="setActive($refs.selector.value)">
           <option
             v-for="(tab, index) in panels"
             :key="`${namespace}-mob-${index + 1}`"
