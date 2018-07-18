@@ -1,5 +1,7 @@
 <template>
-  <ListingWrap class="listing--links" cols="3">
+  <ListingWrap
+    class="listing--links"
+    cols="3">
     <ListItem>
       <a href="https://coursesearch.unimelb.edu.au/undergrad"><h3>Undergraduate courses</h3> <p>An undergraduate course is your first degree at university. Search here if you’re a secondary school student, or looking to start your first degree at university.</p></a>
     </ListItem>

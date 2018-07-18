@@ -1,7 +1,9 @@
 <template>
   <nav class="header-tools">
     <PageSearch />
-    <PageNav title="Site Navigation" root="/about">
+    <PageNav
+      title="Site Navigation"
+      root="/about">
       <ul>
         <li>
           <a href="/leadership">Leadership</a>
@@ -40,12 +42,12 @@
                 <div class="inner">
                   <ul>
                     <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches">News and speeches</a><div class="inner">
-                        <ul>
-                          <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/launch-of-educating-australia">Launch of Educating Australia</a></li>
-                          <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/mgse-professoriate-planning-day">MGSE Professoriate Planning Day</a></li>
-                          <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/university-wominjeka-welcome">University Wominjeka (Welcome)</a></li>
-                        </ul>
-                      </div>
+                      <ul>
+                        <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/launch-of-educating-australia">Launch of Educating Australia</a></li>
+                        <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/mgse-professoriate-planning-day">MGSE Professoriate Planning Day</a></li>
+                        <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/university-wominjeka-welcome">University Wominjeka (Welcome)</a></li>
+                      </ul>
+                    </div>
                     </li>
                     <li><a href="/leadership/office-of-the-vice-chancellor/past-vice-chancellors">Past Vice-Chancellors</a></li>
                   </ul>

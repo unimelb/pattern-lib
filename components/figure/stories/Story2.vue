@@ -1,11 +1,16 @@
 <template>
-  <section-wrap small bg-color="white">
+  <section-wrap
+    small
+    bg-color="white">
     <div>
       <h2>Heading</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.
       </p>
-      <figure-wrap inset right caption="embed test">
+      <figure-wrap
+        inset
+        right
+        caption="embed test">
         <img src="https://picsum.photos/600/400?random&gravity=center">
       </figure-wrap>
       <p>

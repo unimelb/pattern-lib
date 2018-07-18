@@ -1,6 +1,6 @@
 <template>
   <figure :class="classes">
-    <slot></slot>
+    <slot/>
     <figcaption v-if="caption">{{ caption }}</figcaption>
   </figure>
 </template>
@@ -17,12 +17,30 @@ export default {
       type: Boolean,
       default: false,
     },
-    left: Boolean,
-    right: Boolean,
-    large: Boolean,
-    medium: Boolean,
-    small: Boolean,
-    fill: Boolean,
+    left: {
+      type: Boolean,
+      default: false,
+    },
+    right: {
+      type: Boolean,
+      default: false,
+    },
+    large: {
+      type: Boolean,
+      default: false,
+    },
+    medium: {
+      type: Boolean,
+      default: false,
+    },
+    small: {
+      type: Boolean,
+      default: false,
+    },
+    fill: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {

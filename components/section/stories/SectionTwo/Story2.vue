@@ -8,7 +8,9 @@
     </div>
     <div slot="side">
       <FigureWrap>
-        <img src="https://dummyimage.com/300x200.jpg" alt="">
+        <img
+          src="https://dummyimage.com/300x200.jpg"
+          alt="">
       </FigureWrap>
     </div>
   </SectionTwoCol>

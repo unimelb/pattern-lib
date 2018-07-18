@@ -3,14 +3,39 @@
     <div class="page-footer__inner max">
       <div class="page-footer__header">
         <div class="page-footer__header__logo">
-          <a class="link-img" href="https://www.unimelb.edu.au"><img alt="The University of Melbourne homepage" height="117" src="../../shared/logo.svg" width="117"></a>
+          <a
+            class="link-img"
+            href="https://www.unimelb.edu.au"><img
+              alt="The University of Melbourne homepage"
+              height="117"
+              src="../../shared/logo.svg"
+              width="117"></a>
         </div>
         <div class="page-footer__header__search">
-          <form aria-hidden="true" action="https://search.unimelb.edu.au" class="page-footer-search" id="search">
+          <form
+            id="search"
+            aria-hidden="true"
+            action="https://search.unimelb.edu.au"
+            class="page-footer-search">
             <div class="page-footer-search__field">
-              <label class="page-footer-search__label" for="f_s_q">Search</label>
-              <input id="f_s_q" aria-label="Search the University" class="page-footer-search__input" name="q" placeholder="Type to search" type="search">
-              <button type="submit" class="page-footer-search__submit" aria-label="Submit" onclick="submit()" href="#"><SvgIcon class="page-footer-search__icon" name="search" /></button>
+              <label
+                class="page-footer-search__label"
+                for="f_s_q">Search</label>
+              <input
+                id="f_s_q"
+                aria-label="Search the University"
+                class="page-footer-search__input"
+                name="q"
+                placeholder="Type to search"
+                type="search">
+              <button
+                type="submit"
+                class="page-footer-search__submit"
+                aria-label="Submit"
+                onclick="submit()"
+                href="#"><SvgIcon
+                  class="page-footer-search__icon"
+                  name="search" /></button>
             </div>
           </form>
         </div>
@@ -25,29 +50,56 @@
         </div>
         <div class="page-footer__main__popular cell cell--wide-1of2">
           <ul class="page-footer__popular list-reset links-reset">
-            <li><a class="link-icon" href="http://about.unimelb.edu.au/governance-and-leadership/faculties">
-              <SvgIcon class="link-icon__icon svg" name="faculty" /><span class="link-icon__text">Faculties &amp; graduate schools</span>
+            <li><a
+              class="link-icon"
+              href="http://about.unimelb.edu.au/governance-and-leadership/faculties">
+              <SvgIcon
+                class="link-icon__icon svg"
+                name="faculty" /><span class="link-icon__text">Faculties &amp; graduate schools</span>
             </a></li>
-            <li><a class="link-icon" href="https://maps.unimelb.edu.au/">
-              <SvgIcon class="link-icon__icon svg" name="location" /><span class="link-icon__text">Maps</span>
+            <li><a
+              class="link-icon"
+              href="https://maps.unimelb.edu.au/">
+              <SvgIcon
+                class="link-icon__icon svg"
+                name="location" /><span class="link-icon__text">Maps</span>
             </a></li>
-            <li><a class="link-icon" href="http://library.unimelb.edu.au/">
-              <SvgIcon class="link-icon__icon svg" name="library" /><span class="link-icon__text">Library</span>
+            <li><a
+              class="link-icon"
+              href="http://library.unimelb.edu.au/">
+              <SvgIcon
+                class="link-icon__icon svg"
+                name="library" /><span class="link-icon__text">Library</span>
             </a></li>
-            <li><a class="link-icon" href="http://www.campaign.unimelb.edu.au/">
-              <SvgIcon class="link-icon__icon svg" name="campaign" /><span class="link-icon__text">Support the campaign</span>
+            <li><a
+              class="link-icon"
+              href="http://www.campaign.unimelb.edu.au/">
+              <SvgIcon
+                class="link-icon__icon svg"
+                name="campaign" /><span class="link-icon__text">Support the campaign</span>
             </a></li>
-            <li><a class="link-icon" href="http://www.unimelb.edu.au/contact/">
-              <SvgIcon class="link-icon__icon svg" name="phone" /><span class="link-icon__text">Contact us</span>
+            <li><a
+              class="link-icon"
+              href="http://www.unimelb.edu.au/contact/">
+              <SvgIcon
+                class="link-icon__icon svg"
+                name="phone" /><span class="link-icon__text">Contact us</span>
             </a></li>
-            <li><a class="link-icon" href="http://about.unimelb.edu.au/careers">
-              <SvgIcon class="link-icon__icon svg" name="jobs" /><span class="link-icon__text">Jobs</span>
+            <li><a
+              class="link-icon"
+              href="http://about.unimelb.edu.au/careers">
+              <SvgIcon
+                class="link-icon__icon svg"
+                name="jobs" /><span class="link-icon__text">Jobs</span>
             </a></li>
           </ul>
         </div>
         <div class="page-footer__main__contacts cell cell--wide-1of4">
           <p class="screenreaders-only">Follow us on:</p>
-          <SocialList class="page-footer__social" :with-colors="false" :icon-size="22" />
+          <SocialList
+            :with-colors="false"
+            :icon-size="22"
+            class="page-footer__social" />
           <dl class="page-footer__contact list-def list-def--wrap">
             <dt>Phone:</dt>
             <dd>13 MELB <small>(<a href="tel:136352">13 6352</a>)</small></dd>

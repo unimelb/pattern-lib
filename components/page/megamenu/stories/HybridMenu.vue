@@ -1,5 +1,7 @@
 <template>
-  <MegaMenu :items="items" active="/random-link" />
+  <MegaMenu
+    :items="items"
+    active="/random-link" />
 </template>
 
 <script>

@@ -1,9 +1,17 @@
 <template>
   <div>
     <ListingWrap class="photo-gallery preview-img-list">
-      <ListItem :cols="item.size" v-for="(item, index) in slots" :key="item.id">
-        <FigureWrap class="photo-gallery__figure" :caption="captions && item.title">
-          <div :class="{'preview-img-item': true, 'preview-img-item--nolink': noPopup }" :style="{'background-image': `url(${item.src})`, 'height': `${item.thumbHeight + 'px' || false}`}" @click="noPopup === false && open(index, slots, options)"></div>
+      <ListItem
+        v-for="(item, index) in slots"
+        :cols="item.size"
+        :key="item.id">
+        <FigureWrap
+          :caption="captions && item.title"
+          class="photo-gallery__figure">
+          <div
+            :class="{'preview-img-item': true, 'preview-img-item--nolink': noPopup }"
+            :style="{'background-image': `url(${item.src})`, 'height': `${item.thumbHeight + 'px' || false}`}"
+            @click="noPopup === false && open(index, slots, options)"/>
         </FigureWrap>
       </ListItem>
     </ListingWrap>
@@ -38,10 +46,20 @@ export default {
     },
     images: {
       type: Array,
+      default: () => [],
     },
-    captions: Boolean,
-    fullScreen: Boolean,
-    options: Object,
+    captions: {
+      type: Boolean,
+      default: false,
+    },
+    fullScreen: {
+      type: Boolean,
+      default: false,
+    },
+    options: {
+      type: Object,
+      default: () => ({}),
+    },
     noPopup: {
       type: Boolean,
       default: false,

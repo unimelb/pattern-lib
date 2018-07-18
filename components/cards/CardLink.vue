@@ -1,9 +1,18 @@
 <template>
-  <a :href="href" class="btn-owner card card--link card--bdr" :class="{'bg-inverted': inverted, 'bg-white' : !inverted}">
-    <div class="card__thumb" v-if="thumb" :style="{ backgroundImage: `url(${thumb})` }"></div>
+  <a
+    :href="href"
+    :class="{'bg-inverted': inverted, 'bg-white' : !inverted}"
+    class="btn-owner card card--link card--bdr">
+    <div
+      v-if="thumb"
+      :style="{ backgroundImage: `url(${thumb})` }"
+      class="card__thumb"/>
     <div class="card__header">
       <span>{{ title }}</span>
-      <SvgIcon width="15px" height="15px" name="chevron-right" />
+      <SvgIcon
+        width="15px"
+        height="15px"
+        name="chevron-right" />
     </div>
   </a>
 </template>

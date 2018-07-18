@@ -1,5 +1,8 @@
 <template>
-  <SectionWrap small bg-color="inverted" :style="{ backgroundImage: 'url(https://about-us-unimelb.netlify.com/images/UoM-soft-3.png)' }">
+  <SectionWrap
+    :style="{ backgroundImage: 'url(https://about-us-unimelb.netlify.com/images/UoM-soft-3.png)' }"
+    small
+    bg-color="inverted">
     <CardFocusImageList
       element="div"
       color="white"
@@ -9,7 +12,7 @@
       titleabove
       img="https://about-us-unimelb.netlify.com/images/history.jpg"
       title="Postera crescam laude"
-      >
+    >
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ullam quisquam nihil. At ducimus explicabo quidem distinctio magnam voluptas totam, repudiandae voluptatem aliquid consequuntur cupiditate, voluptates! In quis ratione laborum?
     </CardFocusImageList>
   </SectionWrap>

@@ -1,11 +1,15 @@
 <template>
-  <ToggleBlock ref="comp" class="accordion">
+  <ToggleBlock
+    ref="comp"
+    class="accordion">
     <template slot="default">
-      <h2 class="toggle__trigger" v-html="name"></h2>
+      <h2
+        class="toggle__trigger"
+        v-html="name"/>
     </template>
     <template slot="hidden">
       <div class="toggleblock__hidden-inner">
-        <slot></slot>
+        <slot/>
       </div>
     </template>
   </ToggleBlock>
@@ -15,11 +19,12 @@
 import ToggleBlock from '../toggle/ToggleBlock.vue';
 
 export default {
-  name: 'accordion',
+  name: 'Accordion',
   components: { ToggleBlock },
   props: {
     name: {
       type: String,
+      default: '',
     },
   },
   computed: {

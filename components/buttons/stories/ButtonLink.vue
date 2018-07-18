@@ -1,11 +1,16 @@
 <template>
-  <a v-if="element === 'a'" class="btn" :href="href"><slot></slot></a>
-  <button v-else-if="element === 'button'" class="btn"><slot></slot></button>
+  <a
+    v-if="element === 'a'"
+    :href="href"
+    class="btn"><slot/></a>
+  <button
+    v-else-if="element === 'button'"
+    class="btn"><slot/></button>
 </template>
 
 <script>
 export default {
-  name: 'button-link',
+  name: 'ButtonLink',
   props: {
     href: {
       type: String,

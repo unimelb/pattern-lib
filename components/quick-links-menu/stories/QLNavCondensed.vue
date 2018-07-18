@@ -1,10 +1,15 @@
 <template>
   <SectionWrap class="bg-white">
-    <QuickLinks condensed :menu-links="menuLinks" level="2">
+    <QuickLinks
+      :menu-links="menuLinks"
+      condensed
+      level="2">
       <div slot="content">
         <h2>Learning and teaching</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur praesentium quam voluptatem qui minus, amet quidem facilis non commodi, distinctio dolore aperiam illum ut libero ad maxime dicta iure deleniti.</p>
-        <ButtonIcon icon="chevron-right" class="btn--xwide">Read more</ButtonIcon>
+        <ButtonIcon
+          icon="chevron-right"
+          class="btn--xwide">Read more</ButtonIcon>
       </div>
     </QuickLinks>
   </SectionWrap>

@@ -1,14 +1,37 @@
 <template>
-  <a :is="element" :href="element === 'a' ? href : false" class="card card--image-focus" :class="classes">
-    <h3 v-if="titleabove === true" :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
-    <div v-if="!progressive" class="card__thumb" :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}">
-      <img :src="img" :placeholder="progressive ? placeholder : false" class="card__thumb" alt="">
+  <a
+    :is="element"
+    :href="element === 'a' ? href : false"
+    :class="classes"
+    class="card card--image-focus">
+    <h3
+      v-if="titleabove === true"
+      :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
+    <div
+      v-if="!progressive"
+      :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"
+      class="card__thumb">
+      <img
+        :src="img"
+        :placeholder="progressive ? placeholder : false"
+        class="card__thumb"
+        alt="">
     </div>
-    <progressive-img v-if="progressive" :src="img" :placeholder="progressive ? placeholder : false" class="card__thumb" :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"/>
-    <div class="card__inner" :class="{'card__inner--tight': tight}">
+    <progressive-img
+      v-if="progressive"
+      :src="img"
+      :placeholder="progressive ? placeholder : false"
+      :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"
+      class="card__thumb"/>
+    <div
+      :class="{'card__inner--tight': tight}"
+      class="card__inner">
       <h3 v-if="titleabove === false">{{ title }}</h3>
-      <slot></slot>
-      <ButtonIcon v-if="element === 'a'" element="span" class="btn--fullwidth">{{ title }}</ButtonIcon>
+      <slot/>
+      <ButtonIcon
+        v-if="element === 'a'"
+        element="span"
+        class="btn--fullwidth">{{ title }}</ButtonIcon>
     </div>
   </a>
 </template>
@@ -16,12 +39,18 @@
 <script>
 export default {
   props: {
-    placeholder: String,
+    placeholder: {
+      type: String,
+      default: '',
+    },
     progressive: {
       type: Boolean,
       default: false,
     },
-    img: String,
+    img: {
+      type: String,
+      default: '',
+    },
     fullImg: {
       type: Boolean,
       default: false,
@@ -46,8 +75,14 @@ export default {
       type: String,
       default: 'Test title',
     },
-    titleabove: Boolean,
-    color: String,
+    titleabove: {
+      type: Boolean,
+      default: false,
+    },
+    color: {
+      type: String,
+      default: '',
+    },
     meta: {
       type: String,
       default: 'Test title',

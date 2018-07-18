@@ -1,8 +1,16 @@
 <template>
-  <div class="card card--fact card--bdr bg-white text-center" :class="{'card--fact-image': icon, 'card--bdr-top': top, 'card--bdr-thin': thin}">
-    <img v-if="icon" class="card__thumb" :src="icon" alt="">
+  <div
+    :class="{'card--fact-image': icon, 'card--bdr-top': top, 'card--bdr-thin': thin}"
+    class="card card--fact card--bdr bg-white text-center">
+    <img
+      v-if="icon"
+      :src="icon"
+      class="card__thumb"
+      alt="">
     <div class="card__inner">
-      <div class="card__header" :class="{'card__header--sml' : smlHeader}">{{ title }}</div>
+      <div
+        :class="{'card__header--sml' : smlHeader}"
+        class="card__header">{{ title }}</div>
       <div class="card__meta">{{ meta }}</div>
       <p>{{ excerpt }}</p>
     </div>
@@ -17,7 +25,10 @@ export default {
       type: String,
       default: '42',
     },
-    icon: String,
+    icon: {
+      type: String,
+      default: '',
+    },
     meta: {
       type: String,
       default: 'Million students',

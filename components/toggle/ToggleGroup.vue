@@ -1,10 +1,10 @@
 <template>
   <component
-    class="togglegroup"
     :is="container"
     :aria-multiselectable="solo === 'false' ? 'true' : 'false'"
+    class="togglegroup"
   >
-    <slot></slot>
+    <slot/>
   </component>
 </template>
 
@@ -13,7 +13,7 @@
 // toggle-group-show-current-panel
 
 export default {
-  name: 'toggle-group',
+  name: 'ToggleGroup',
   props: {
     container: {
       type: String,

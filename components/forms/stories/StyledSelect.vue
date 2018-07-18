@@ -12,7 +12,9 @@
     </div>
     <div class="row">
       <label for="f_q1">Type</label>
-      <StyledSelect blue id="f_q1">
+      <StyledSelect
+        id="f_q1"
+        blue>
         <option>Undergraduate</option>
         <option>Postgraduate</option>
         <option>Reasearch</option>
@@ -24,7 +26,9 @@
       <h2>Enclosed in a section</h2>
       <div class="row">
         <label for="f_q2">Type</label>
-        <StyledSelect blue id="f_q2">
+        <StyledSelect
+          id="f_q2"
+          blue>
           <option>Undergraduate</option>
           <option>Postgraduate</option>
           <option>Reasearch</option>
@@ -36,7 +40,9 @@
       <div class="grid">
         <div class="cell cell--tab-1of3">
           <label for="f_q3">Type</label>
-          <StyledSelect blue id="f_q3">
+          <StyledSelect
+            id="f_q3"
+            blue>
             <option>Undergraduate</option>
             <option>Postgraduate</option>
             <option>Reasearch</option>
@@ -45,7 +51,9 @@
         </div>
         <div class="cell cell--tab-2of3">
           <label for="f_q4">Type</label>
-          <StyledSelect blue id="f_q4">
+          <StyledSelect
+            id="f_q4"
+            blue>
             <option>Undergraduate</option>
             <option>Postgraduate</option>
             <option>Reasearch</option>
