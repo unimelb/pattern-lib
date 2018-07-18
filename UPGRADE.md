@@ -110,7 +110,11 @@ No change
 
 ## v3.1.2
 
-No change
+Semantic `<nav>` element now has no default background colour, for use in breadcrumbs update this to
+
+```html
+<nav class="bg-white">
+```
 
 ## v3.1.3
 
