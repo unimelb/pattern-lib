@@ -2,17 +2,27 @@
   <div class="welcome">
     <div class="welcome__thumb">
       <figure>
-        <div class="welcome__thumb-img" :style="`background-image: url('${img}')`" > </div>
+        <div
+          :style="`background-image: url('${img}')`"
+          class="welcome__thumb-img" />
         <figcaption>
           <strong class="welcome__caption-title">{{ name }}</strong>
         </figcaption>
       </figure>
-      <p v-if="captionText && captionText.length > 0" class="welcome__caption-text"> {{ captionText }}</p>
-      <ButtonIcon v-if="btnText && btnText.length > 0" icon="chevron-right" class="btn--xsml">{{ btnText }}</ButtonIcon>
+      <p
+        v-if="captionText && captionText.length > 0"
+        class="welcome__caption-text"> {{ captionText }}</p>
+      <ButtonIcon
+        v-if="btnText && btnText.length > 0"
+        icon="chevron-right"
+        class="btn--xsml">{{ btnText }}</ButtonIcon>
     </div>
     <div class="welcome__inner ">
-      <slot></slot>
-      <img class="welcome__signature" :src="signature" alt="signature">
+      <slot/>
+      <img
+        :src="signature"
+        class="welcome__signature"
+        alt="signature">
       <p>
         <strong>{{ name }}</strong>
         <br>
@@ -31,15 +41,19 @@ export default {
     },
     name: {
       type: String,
+      default: '',
     },
     title: {
       type: String,
+      default: '',
     },
     captionText: {
       type: String,
+      default: '',
     },
     btnText: {
       type: String,
+      default: '',
     },
     signature: {
       type: String,

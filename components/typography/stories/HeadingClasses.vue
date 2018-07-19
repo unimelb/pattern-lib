@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div v-for="c in classes" :key="c">
+    <div
+      v-for="c in classes"
+      :key="c">
       <h1 :class="c">"{{ c }}" on &lt;h1&gt;</h1>
       <h2 :class="c">"{{ c }}" on &lt;h2&gt;</h2>
       <h3 :class="c">"{{ c }}" on &lt;h3&gt;</h3>

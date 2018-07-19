@@ -1,13 +1,20 @@
 <template>
   <main>
-    <section-wrap small short bg-color="white">
+    <section-wrap
+      small
+      short
+      bg-color="white">
       <div>
         <h2>Heading</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.
         </p>
-        <figure-wrap medium caption="embed test">
-          <progressive-img src="https://picsum.photos/800/400?random&gravity=center" alt=""/>
+        <figure-wrap
+          medium
+          caption="embed test">
+          <progressive-img
+            src="https://picsum.photos/800/400?random&gravity=center"
+            alt=""/>
         </figure-wrap>
         <p>
           Blanditiis exercitationem id sapiente voluptatem dolorum est sapiente. Qui explicabo voluptatem dolores perspiciatis laborum animi. Similique animi molestiae ipsam accusamus incidunt rerum. Et fugiat ut eum dolores id. Quaerat repudiandae facere voluptas fuga laboriosam quo illo adipisci. Doloremque autem cum ea voluptatem id.

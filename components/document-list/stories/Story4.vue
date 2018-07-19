@@ -4,7 +4,9 @@
       <li class="cell">
         <a href="annualreport.pdf">
           <figure>
-            <img src="https://picsum.photos/300/400?gravity=center" alt="">
+            <img
+              src="https://picsum.photos/300/400?gravity=center"
+              alt="">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
         </a>
@@ -12,7 +14,9 @@
       <li class="cell">
         <a href="annualreport.pdf">
           <figure>
-            <img src="https://picsum.photos/300/400?gravity=center" alt="">
+            <img
+              src="https://picsum.photos/300/400?gravity=center"
+              alt="">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
         </a>
@@ -20,15 +24,9 @@
       <li class="cell">
         <a href="annualreport.pdf">
           <figure>
-            <img src="https://picsum.photos/300/400?gravity=center" alt="">
-            <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
-          </figure>
-        </a>
-      </li>
-            <li class="cell">
-        <a href="annualreport.pdf">
-          <figure>
-            <img src="https://picsum.photos/300/400?gravity=center" alt="">
+            <img
+              src="https://picsum.photos/300/400?gravity=center"
+              alt="">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
         </a>
@@ -36,7 +34,19 @@
       <li class="cell">
         <a href="annualreport.pdf">
           <figure>
-            <img src="https://picsum.photos/300/400?gravity=center" alt="">
+            <img
+              src="https://picsum.photos/300/400?gravity=center"
+              alt="">
+            <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="cell">
+        <a href="annualreport.pdf">
+          <figure>
+            <img
+              src="https://picsum.photos/300/400?gravity=center"
+              alt="">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
         </a>

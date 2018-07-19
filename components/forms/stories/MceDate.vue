@@ -1,15 +1,28 @@
 <template>
-  <form id="form_email_1698962" enctype="multipart/form-data" onsubmit="return false" action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form" method="post">
+  <form
+    id="form_email_1698962"
+    enctype="multipart/form-data"
+    onsubmit="return false"
+    action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form"
+    method="post">
     <fieldset class="sq-form-section">
       <legend class="sq-form-section-title">Date only</legend>
       <div class="sq-form-question sq-form-question-datetime ">
         <fieldset>
-          <legend class="sq-form-question-title">Select a date <abbr class="sq-form-required-field" title="required">*</abbr></legend>
+          <legend class="sq-form-question-title">Select a date <abbr
+            class="sq-form-required-field"
+            title="required">*</abbr></legend>
           <div class="sq-form-question-answer">
-            <input type="hidden" name="q1861725_q1_show" value="dmy">
+            <input
+              type="hidden"
+              name="q1861725_q1_show"
+              value="dmy">
             <label for="q1861725_q1_value_d">Day</label>
-            <select name="q1861725_q1_value[d]" id="q1861725_q1_value_d" class="sq-form-field">
-              <option value="--"></option>
+            <select
+              id="q1861725_q1_value_d"
+              name="q1861725_q1_value[d]"
+              class="sq-form-field">
+              <option value="--"/>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -43,8 +56,11 @@
               <option value="31">31</option>
             </select>
             <label for="q1861725_q1_value_m">Month</label>
-            <select name="q1861725_q1_value[m]" id="q1861725_q1_value_m" class="sq-form-field">
-              <option value="--"></option>
+            <select
+              id="q1861725_q1_value_m"
+              name="q1861725_q1_value[m]"
+              class="sq-form-field">
+              <option value="--"/>
               <option value="1">Jan</option>
               <option value="2">Feb</option>
               <option value="3">Mar</option>
@@ -59,8 +75,11 @@
               <option value="12">Dec</option>
             </select>
             <label for="q1861725_q1_value_y">Year</label>
-            <select name="q1861725_q1_value[y]" id="q1861725_q1_value_y" class="sq-form-field">
-              <option value="--"></option>
+            <select
+              id="q1861725_q1_value_y"
+              name="q1861725_q1_value[y]"
+              class="sq-form-field">
+              <option value="--"/>
               <option value="1900">1900</option>
               <option value="1901">1901</option>
               <option value="1902">1902</option>
@@ -262,14 +281,28 @@
               <option value="2098">2098</option>
               <option value="2099">2099</option>
             </select>
-            <input type="hidden" name="q1861725_q1_value[h]" value="">
-            <input type="hidden" name="q1861725_q1_value[i]" value="">
-            <input type="hidden" name="q1861725_q1_value[s]" value="">
+            <input
+              type="hidden"
+              name="q1861725_q1_value[h]"
+              value="">
+            <input
+              type="hidden"
+              name="q1861725_q1_value[i]"
+              value="">
+            <input
+              type="hidden"
+              name="q1861725_q1_value[s]"
+              value="">
           </div>
         </fieldset>
       </div>
     </fieldset>
-    <input type="submit" name="form_email_1698962_submit" value="Submit" class="sq-form-submit" id="form_email_1698962_submit">
+    <input
+      id="form_email_1698962_submit"
+      type="submit"
+      name="form_email_1698962_submit"
+      value="Submit"
+      class="sq-form-submit">
   </form>
 </template>
 

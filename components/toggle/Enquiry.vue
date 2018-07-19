@@ -7,7 +7,7 @@
     </template>
     <template slot="hidden">
       <hr>
-      <slot></slot>
+      <slot/>
     </template>
   </ToggleBlock>
 </template>
@@ -16,7 +16,7 @@
 import ToggleBlock from './ToggleBlock.vue';
 
 export default {
-  name: 'enquiry',
+  name: 'Enquiry',
   components: { ToggleBlock },
   props: {
     title: {

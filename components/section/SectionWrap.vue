@@ -3,20 +3,20 @@
     :is="progressive ? 'progressive-background' : element"
     :no-ratio="progressive"
     :src="progressive ? bgImage : false"
-    class="section"
     :class="classes"
     :style="{ backgroundImage: bgImage && !progressive ? `url(${bgImage})` : '' }"
+    class="section"
   >
     <div
-      class="section__inner"
       :class="{
         'section__inner--sml': small,
         'section__inner--mid': mid,
         'section__inner--short': short,
         'section__inner--nopad': nopad
       }"
+      class="section__inner"
     >
-      <slot></slot>
+      <slot/>
     </div>
   </component>
 </template>
@@ -24,18 +24,42 @@
 <script>
 export default {
   props: {
-    short: Boolean,
+    short: {
+      type: Boolean,
+      default: false,
+    },
     element: {
       type: String,
       default: 'div',
     },
-    nopad: Boolean,
-    small: Boolean,
-    mid: Boolean,
-    bgImage: String,
-    bgColor: String,
-    centred: Boolean,
-    progressive: Boolean,
+    nopad: {
+      type: Boolean,
+      default: false,
+    },
+    small: {
+      type: Boolean,
+      default: false,
+    },
+    mid: {
+      type: Boolean,
+      default: false,
+    },
+    bgImage: {
+      type: String,
+      default: '',
+    },
+    bgColor: {
+      type: String,
+      default: '',
+    },
+    centred: {
+      type: Boolean,
+      default: false,
+    },
+    progressive: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {

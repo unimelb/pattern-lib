@@ -1,7 +1,18 @@
 <template>
   <SectionWrap>
-    <PhotoGallery captions no-popup>
-      <img :src="image.src" :alt="image.title" :width="image.w" :key="image.id" :height="image.h" :data-title="image.title" :data-thumb="image.msrc" :data-size="image.size" v-for="image in images">
+    <PhotoGallery
+      captions
+      no-popup>
+      <img
+        v-for="image in images"
+        :src="image.src"
+        :alt="image.title"
+        :width="image.w"
+        :key="image.id"
+        :height="image.h"
+        :data-title="image.title"
+        :data-thumb="image.msrc"
+        :data-size="image.size">
     </PhotoGallery>
   </SectionWrap>
 </template>

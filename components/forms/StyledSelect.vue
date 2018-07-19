@@ -1,14 +1,16 @@
 <template>
   <div :id="null">
-    <select :id="id" :class="extraclasses">
-      <slot></slot>
+    <select
+      :id="id"
+      :class="extraclasses">
+      <slot/>
     </select>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'styled-select',
+  name: 'StyledSelect',
   props: {
     id: {
       type: [String, Boolean],

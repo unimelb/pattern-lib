@@ -1,7 +1,12 @@
 <template>
-  <a class="download-block btn-owner" :href="href">
+  <a
+    :href="href"
+    class="download-block btn-owner">
     <div class="download-block__thumb">
-      <img class="download-block__img" :src="img" alt="">
+      <img
+        :src="img"
+        class="download-block__img"
+        alt="">
     </div>
     <div class="download-block__inner">
       <h3>{{ header }}</h3>
@@ -24,23 +29,30 @@ export default {
     },
     header: {
       type: String,
+      default: '',
       required: true,
     },
     img: {
       type: String,
+      default: '',
       required: true,
     },
     btnText: {
       type: String,
       default: 'Download',
     },
-    filename: String,
+    filename: {
+      type: String,
+      default: '',
+    },
     size: {
       type: String,
+      default: '',
       required: true,
     },
     format: {
       type: String,
+      default: '',
       required: true,
     },
   },

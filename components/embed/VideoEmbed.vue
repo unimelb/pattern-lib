@@ -6,7 +6,7 @@
       height="315"
       frameborder="0"
       allowfullscreen
-    ></iframe>
+    />
   </div>
 </template>
 
@@ -15,11 +15,13 @@ export default {
   props: {
     src: {
       type: String,
+      default: '',
       required: true,
     },
     ratio: {
       type: String,
-      validator: value => ['21_9'].indexOf(value) !== -1,
+      default: '',
+      validator: value => ['', '21_9'].indexOf(value) !== -1,
     },
   },
   computed: {

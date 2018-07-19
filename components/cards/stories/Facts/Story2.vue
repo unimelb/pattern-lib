@@ -2,21 +2,59 @@
 <template>
   <SectionWrap>
     <div class="grid grid--center grid--1col">
-      <ListItem><CardFact title="Accomodation" :icon="accomodationIcon"/></ListItem>
+      <ListItem><CardFact
+        :icon="accomodationIcon"
+        title="Accomodation"/></ListItem>
     </div>
     <div class="grid grid--center grid--2col">
-      <ListItem><CardFact title="Biodiversity" :icon="bioDiversityIcon"/></ListItem>
-      <ListItem><CardFact title="Building" :icon="buildingIcon"/></ListItem>
-      <ListItem><CardFact sml-header title="Carbon Reduction Pathways" meta="the header has card__header--sml class" :icon="carbonIcon" /></ListItem>
-      <ListItem><CardFact sml-header title="Citation" meta="the header has card__header--sml class" :icon="citationIcon" /></ListItem>
-      <ListItem><CardFact title="Facility Funding" :icon="facilityIcon" /></ListItem>
-      <ListItem><CardFact title="Grants" :icon="grantsIcon" /></ListItem>
-      <ListItem><CardFact sml-header title="Group" meta="the header has card__header--sml class" :icon="groupIcon" /></ListItem>
-      <ListItem><CardFact sml-header title="International Students" meta="the header has card__header--sml class" :icon="internationalIcon" /></ListItem>
-      <ListItem><CardFact title="Medal" :icon="medalIcon" /></ListItem>
-      <ListItem><CardFact title="PhD Completions" :icon="phdIcon" /></ListItem>
-      <ListItem><CardFact sml-header title="Social Media" meta="the header has card__header--sml class" :icon="socialMediaIcon" /></ListItem>
-      <ListItem><CardFact sml-header title="Solar Power" meta="the header has card__header--sml class" :icon="solarPowerIcon" /></ListItem>
+      <ListItem><CardFact
+        :icon="bioDiversityIcon"
+        title="Biodiversity"/></ListItem>
+      <ListItem><CardFact
+        :icon="buildingIcon"
+        title="Building"/></ListItem>
+      <ListItem><CardFact
+        :icon="carbonIcon"
+        sml-header
+        title="Carbon Reduction Pathways"
+        meta="the header has card__header--sml class" /></ListItem>
+      <ListItem><CardFact
+        :icon="citationIcon"
+        sml-header
+        title="Citation"
+        meta="the header has card__header--sml class" /></ListItem>
+      <ListItem><CardFact
+        :icon="facilityIcon"
+        title="Facility Funding" /></ListItem>
+      <ListItem><CardFact
+        :icon="grantsIcon"
+        title="Grants" /></ListItem>
+      <ListItem><CardFact
+        :icon="groupIcon"
+        sml-header
+        title="Group"
+        meta="the header has card__header--sml class" /></ListItem>
+      <ListItem><CardFact
+        :icon="internationalIcon"
+        sml-header
+        title="International Students"
+        meta="the header has card__header--sml class" /></ListItem>
+      <ListItem><CardFact
+        :icon="medalIcon"
+        title="Medal" /></ListItem>
+      <ListItem><CardFact
+        :icon="phdIcon"
+        title="PhD Completions" /></ListItem>
+      <ListItem><CardFact
+        :icon="socialMediaIcon"
+        sml-header
+        title="Social Media"
+        meta="the header has card__header--sml class" /></ListItem>
+      <ListItem><CardFact
+        :icon="solarPowerIcon"
+        sml-header
+        title="Solar Power"
+        meta="the header has card__header--sml class" /></ListItem>
     </div>
   </SectionWrap>
 </template>

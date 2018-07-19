@@ -1,5 +1,7 @@
 <template>
-  <SectionTwoCol small direction="left">
+  <SectionTwoCol
+    small
+    direction="left">
     <div slot="main">
       <h3 class="heading-section">Doloribus in mollitia.</h3>
       <p>Qui rem enim alias accusantium ut nostrum et iste. A quo voluptatem in culpa repudiandae facere. Veritatis magnam omnis distinctio ea modi. Ipsam aperiam corporis dolorum.</p>
@@ -8,7 +10,9 @@
     </div>
     <div slot="side">
       <FigureWrap>
-        <img src="https://dummyimage.com/300x200.jpg" alt="">
+        <img
+          src="https://dummyimage.com/300x200.jpg"
+          alt="">
       </FigureWrap>
     </div>
   </SectionTwoCol>

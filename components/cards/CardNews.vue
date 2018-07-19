@@ -1,13 +1,22 @@
 <template>
-  <a :href="href" class="btn-owner card card--news card--bdr">
-    <div v-if="cols !== 1" class="card__thumb card__thumb--zoom" :style="{ backgroundImage: `url(${thumb})` }"></div>
+  <a
+    :href="href"
+    class="btn-owner card card--news card--bdr">
+    <div
+      v-if="cols !== 1"
+      :style="{ backgroundImage: `url(${thumb})` }"
+      class="card__thumb card__thumb--zoom"/>
     <div class="card__inner ">
       <p class="card__meta ">{{ meta }}</p>
       <h3 class="card__header">{{ title }}</h3>
       <p>{{ excerpt }}</p>
     </div>
-    <div class="card__footer" v-if="cols !== 1">
-      <ButtonIcon element="span" class="btn--fullwidth">Read More</ButtonIcon>
+    <div
+      v-if="cols !== 1"
+      class="card__footer">
+      <ButtonIcon
+        element="span"
+        class="btn--fullwidth">Read More</ButtonIcon>
     </div>
   </a>
 </template>

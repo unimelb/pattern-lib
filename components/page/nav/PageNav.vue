@@ -1,23 +1,37 @@
 <template>
   <div class="header-tools__menu">
     <a
+      id="sitemapbutton"
       role="button"
       aria-haspopup="true"
       aria-controls="sitemapmenu"
       href="#sitemap"
-      id="sitemapbutton"
       class="link-icon--vertical link-reset"
       @click.prevent="activateMenu"
     >
-      <svg class="link-icon__icon svg" role="presentation" focusable="false" viewBox="10 10 26 28">
+      <svg
+        class="link-icon__icon svg"
+        role="presentation"
+        focusable="false"
+        viewBox="10 10 26 28">
         <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
       </svg>
       <span class="link-icon__text">Menu</span>
     </a>
-    <div ref="sitemap" id="sitemap" class="sitenav sitenav__panel" role="navigation">
-      <button class="sitenav__back-btn button-ui" aria-label="Close" type="button" @click.prevent="dismissMenu">Close</button>
-      <h2 ref="navtitle" v-html="title"></h2>
-      <slot></slot>
+    <div
+      id="sitemap"
+      ref="sitemap"
+      class="sitenav sitenav__panel"
+      role="navigation">
+      <button
+        class="sitenav__back-btn button-ui"
+        aria-label="Close"
+        type="button"
+        @click.prevent="dismissMenu">Close</button>
+      <h2
+        ref="navtitle"
+        v-html="title"/>
+      <slot/>
     </div>
   </div>
 </template>
@@ -31,7 +45,7 @@
 import Blanket from '../search/blanket';
 
 export default {
-  name: 'page-nav',
+  name: 'PageNav',
   props: {
     title: {
       type: String,

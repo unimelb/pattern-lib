@@ -5,7 +5,10 @@
       <li>And this one;</li>
       <li>As well as this other one.</li>
     </ol>
-    <a slot="btn" class="download" href="/">Download</a>
+    <a
+      slot="btn"
+      class="download"
+      href="/">Download</a>
   </CheckList>
 </template>
 

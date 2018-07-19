@@ -1,13 +1,16 @@
 <template>
   <div :style="{ maxWidth: `${maxWidth}rem` }">
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    maxWidth: Number,
+    maxWidth: {
+      type: Number,
+      default: 40,
+    },
   },
 };
 </script>

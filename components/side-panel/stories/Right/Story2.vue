@@ -6,13 +6,19 @@
       <SidePanelNavItem target="#section3"> Section 3</SidePanelNavItem>
     </SidePanel>
     <div class="layout__main">
-      <div id="section1" class="bg-white content-block">
+      <div
+        id="section1"
+        class="bg-white content-block">
         <h2>test content</h2>
       </div>
-      <section-wrap id="section2" class="bg-alt">
+      <section-wrap
+        id="section2"
+        class="bg-alt">
         test content
       </section-wrap>
-      <section-wrap id="section3" class="bg-white">
+      <section-wrap
+        id="section3"
+        class="bg-white">
         test content
       </section-wrap>
     </div>

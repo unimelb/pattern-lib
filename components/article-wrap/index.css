@@ -6,7 +6,7 @@
 
   /* fix alignment of first heading or lead paragraph */
   &__main > :matches(h3, .heading-card, .lead):first-child {
-    margin-top: -calc((1.25rem - 1rem) / 2); /* heading/lead font size - base font size */
+    margin-top: calc(0 - (1.25rem - 1rem) / 2); /* heading/lead font size - base font size */
   }
 
   &__aside-box {

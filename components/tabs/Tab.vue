@@ -1,19 +1,22 @@
 <template>
   <div
-    :id="`${namespace}-panel-${index + 1}`"
     v-show="isActive"
+    :id="`${namespace}-panel-${index + 1}`"
+    :aria-labelledby="`${namespace}-${index + 1}`"
     class="tabs__panel max"
     role="tabpanel"
-    :aria-labelledby="`${namespace}-${index + 1}`"
   >
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    title: String,
+    title: {
+      type: String,
+      default: '',
+    },
     active: {
       type: Boolean,
       default: false,

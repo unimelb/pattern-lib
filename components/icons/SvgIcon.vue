@@ -1,5 +1,9 @@
 <template>
-  <svg :width="width" :height="height" focusable="false" role="presentation">
+  <svg
+    :width="width"
+    :height="height"
+    focusable="false"
+    role="presentation">
     <use :xlink:href="'#icon-' + name" />
   </svg>
 </template>

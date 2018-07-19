@@ -38,7 +38,7 @@
           content: '';
           position: absolute;
           width: 2rem;
-          margin-top: -calc(var(--vr) / 2);
+          margin-top: calc(0 - var(--vr) / 2);
           border-top: 2px solid rgb(var(--col-black-mid-2));
         }
       }

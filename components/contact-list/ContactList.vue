@@ -18,9 +18,18 @@
 <script>
 export default {
   props: {
-    name: String,
-    phone: String,
-    email: String,
+    name: {
+      type: String,
+      default: '',
+    },
+    phone: {
+      type: String,
+      default: '',
+    },
+    email: {
+      type: String,
+      default: '',
+    },
   },
 };
 </script>

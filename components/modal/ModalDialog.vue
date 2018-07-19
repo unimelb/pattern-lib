@@ -1,15 +1,38 @@
 <template>
   <div>
-    <button ref="trigger" @click="openDialog" class="btn modal-dialog__open" :aria-controls="`modal-dialog-1${this._uid}`">
-      <span class="push-icon" v-html="trigger"></span>
+    <button
+      ref="trigger"
+      :aria-controls="`modal-dialog-1${_uid}`"
+      class="btn modal-dialog__open"
+      @click="openDialog">
+      <span
+        class="push-icon"
+        v-html="trigger"/>
     </button>
-    <div ref="container" @click="closeContainer" @keypress.27="closeDialog" @keypress.9="inputTrap" class="modal-dialog" :id="`modal-dialog-1${this._uid}`" aria-hidden="true">
-      <div ref="modal" class="modal-dialog__modal" :aria-labelledby="`modal-dialog-title-1${this._uid}`" role="dialog">
+    <div
+      ref="container"
+      :id="`modal-dialog-1${_uid}`"
+      class="modal-dialog"
+      aria-hidden="true"
+      @click="closeContainer"
+      @keypress.27="closeDialog"
+      @keypress.9="inputTrap">
+      <div
+        ref="modal"
+        :aria-labelledby="`modal-dialog-title-1${_uid}`"
+        class="modal-dialog__modal"
+        role="dialog">
         <div role="document">
-          <h2 :id="`modal-dialog-title-1${this._uid}`" v-html="title"></h2>
-          <slot></slot>
+          <h2
+            :id="`modal-dialog-title-1${_uid}`"
+            v-html="title"/>
+          <slot/>
           <br>
-          <button @click="closeDialog" class="modal-dialog__close" aria-label="Close Dialog" type="button">&#x2715;</button>
+          <button
+            class="modal-dialog__close"
+            aria-label="Close Dialog"
+            type="button"
+            @click="closeDialog">&#x2715;</button>
         </div>
       </div>
     </div>
@@ -22,10 +45,16 @@
 // modal-dialog-close-container
 
 export default {
-  name: 'modal-dialog',
+  name: 'ModalDialog',
   props: {
-    title: String,
-    trigger: String,
+    title: {
+      type: String,
+      default: '',
+    },
+    trigger: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {

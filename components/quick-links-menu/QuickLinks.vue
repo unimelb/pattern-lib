@@ -1,21 +1,34 @@
 <template>
-  <div class="grid ql-menu" :class="{
-    [`ql-menu--l${level}`]: true,
-    'ql-menu--pad': pad,
-    'ql-menu--condensed': condensed
-  }">
+  <div
+    :class="{
+      [`ql-menu--l${level}`]: true,
+      'ql-menu--pad': pad,
+      'ql-menu--condensed': condensed
+    }"
+    class="grid ql-menu">
     <div class="cell cell--desk-2of3 ql-menu__content">
-      <slot name="content"></slot>
-      <div class="ql-menu__secondary" :class="{[`ql-menu__secondary--2col`]: secondaryCols === 2}" v-if="secondaryLinks && secondaryLinks.length > 0">
-        <QuickLinksSecondaryItem class="cell" :href="item.href" v-for="item in secondaryLinks" :key="item.id" :icon="item.icon" :title="item.title" />
+      <slot name="content"/>
+      <div
+        v-if="secondaryLinks && secondaryLinks.length > 0"
+        :class="{[`ql-menu__secondary--2col`]: secondaryCols === 2}"
+        class="ql-menu__secondary">
+        <QuickLinksSecondaryItem
+          v-for="item in secondaryLinks"
+          :href="item.href"
+          :key="item.id"
+          :icon="item.icon"
+          :title="item.title"
+          class="cell" />
       </div>
     </div>
     <div class="cell cell--desk-1of3">
-      <nav class="ql-menu__nav" v-if="menuLinks.length > 0">
-        <slot name="menu-header"></slot>
+      <nav
+        v-if="menuLinks.length > 0"
+        class="ql-menu__nav">
+        <slot name="menu-header"/>
         <QuickLinksMenuItem
-          :href="item.href"
           v-for="item in menuLinks"
+          :href="item.href"
           :key="item.id"
           :title="item.title"
           :truncate="item.truncate"
@@ -35,10 +48,22 @@ export default {
       type: String,
       default: '1',
     },
-    pad: Boolean,
-    condensed: Boolean,
-    menuLinks: Array,
-    secondaryLinks: Array,
+    pad: {
+      type: Boolean,
+      default: false,
+    },
+    condensed: {
+      type: Boolean,
+      default: false,
+    },
+    menuLinks: {
+      type: Array,
+      default: () => [],
+    },
+    secondaryLinks: {
+      type: Array,
+      default: () => [],
+    },
     secondaryCols: {
       type: Number,
       default: 2,

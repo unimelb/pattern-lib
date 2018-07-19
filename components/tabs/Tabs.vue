@@ -2,35 +2,41 @@
   <div class="tabs section">
     <div class="tabs__section">
       <div class="styled-select tabs__tablist--mobile">
-        <select aria-hidden="true" ref="selector" @change="setActive($refs.selector.value)">
+        <select
+          ref="selector"
+          aria-hidden="true"
+          @change="setActive($refs.selector.value)">
           <option
             v-for="(tab, index) in panels"
             :key="`${namespace}-mob-${index + 1}`"
             :aria-controls="`${namespace}-panel-${index + 1}`"
             :selected="tab.isActive ? 'selected' : null"
           >
-          {{ tab.title }}
+            {{ tab.title }}
           </option>
         </select>
       </div>
-      <div class="tabs__tablist max" role="tablist" @keyup="handleKey">
+      <div
+        class="tabs__tablist max"
+        role="tablist"
+        @keyup="handleKey">
         <a
-          class="tabs__tab"
-          role="tab"
+          v-for="(tab, index) in panels"
           ref="tabs"
           :tabindex="tab.isActive ? 0 : -1"
-          v-for="(tab, index) in panels"
           :key="`${namespace}-desk-${index + 1}`"
           :id="`${namespace}-${index + 1}`"
           :aria-controls="`${namespace}-panel-${index + 1}`"
+          class="tabs__tab"
+          role="tab"
           @click="setActive(tab.title)"
         >
-        {{ tab.title }}
+          {{ tab.title }}
         </a>
       </div>
     </div>
     <div class="tabs__section">
-      <slot></slot>
+      <slot/>
     </div>
   </div>
 </template>

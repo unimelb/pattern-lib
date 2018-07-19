@@ -2,7 +2,10 @@
   <form class="form">
     <label for="t1">Label bound to input</label>
     <div>
-      <input id="t1" type="text" placeholder="Text…">
+      <input
+        id="t1"
+        type="text"
+        placeholder="Text…">
     </div>
 
     <label>

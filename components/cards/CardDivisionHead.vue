@@ -1,7 +1,12 @@
 <template>
-  <a :href="href" class="btn-owner card card--division card--division--head card--bdr bg-white" :class="{'card--division--head-compact': compact}">
+  <a
+    :href="href"
+    :class="{'card--division--head-compact': compact}"
+    class="btn-owner card card--division card--division--head card--bdr bg-white">
     <div class="card__thumb">
-      <div class="card__thumb-img" :style="`background-image: url('${thumb}')`" > </div>
+      <div
+        :style="`background-image: url('${thumb}')`"
+        class="card__thumb-img" />
     </div>
     <div class="card__inner">
       <div class="card__subheader">
@@ -9,11 +14,17 @@
         <p class="card__meta">{{ title }}</p>
       </div>
       <hr v-if="!compact" >
-      <slot></slot>
-      <ButtonIcon v-if="cols === 1" class="btn--wide">Contacts and bio</ButtonIcon>
+      <slot/>
+      <ButtonIcon
+        v-if="cols === 1"
+        class="btn--wide">Contacts and bio</ButtonIcon>
     </div>
-    <div class="card__footer" v-if="cols !== 1 && compact === false">
-      <ButtonIcon element="span" class="btn--fullwidth">Contacts and bio</ButtonIcon>
+    <div
+      v-if="cols !== 1 && compact === false"
+      class="card__footer">
+      <ButtonIcon
+        element="span"
+        class="btn--fullwidth">Contacts and bio</ButtonIcon>
     </div>
   </a>
 </template>
@@ -23,6 +34,7 @@ export default {
   props: {
     thumb: {
       type: String,
+      default: '',
     },
     cols: {
       type: Number,
@@ -30,9 +42,11 @@ export default {
     },
     title: {
       type: String,
+      default: '',
     },
     name: {
       type: String,
+      default: '',
     },
     href: {
       type: String,

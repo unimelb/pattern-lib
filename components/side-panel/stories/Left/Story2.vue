@@ -5,14 +5,20 @@
       <SidePanelNavItem target="#section2"> Section 2</SidePanelNavItem>
       <SidePanelNavItem target="#section3"> Section 3</SidePanelNavItem>
     </SidePanel>
-    <div id="section1" class="content-block bg-white">
+    <div
+      id="section1"
+      class="content-block bg-white">
       <h2>test content</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio similique dolor, quasi cupiditate dolore! Doloremque omnis corporis, libero, delectus adipisci ipsum nemo non ducimus necessitatibus eius? Repellendus et soluta, commodi!</p>
     </div>
-    <SectionWrap id="section2" class="bg-alt">
+    <SectionWrap
+      id="section2"
+      class="bg-alt">
       test content
     </SectionWrap>
-    <SectionWrap id="section3" class="bg-white">
+    <SectionWrap
+      id="section3"
+      class="bg-white">
       test content
     </SectionWrap>
   </main>

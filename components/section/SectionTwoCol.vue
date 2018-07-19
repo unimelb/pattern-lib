@@ -2,18 +2,18 @@
   <SectionWrap :small="small">
     <ListingWrap v-if="direction === 'left'">
       <ListItem cols="2of3">
-        <slot name="main"></slot>
+        <slot name="main"/>
       </ListItem>
       <ListItem cols="1of3">
-        <slot name="side"></slot>
+        <slot name="side"/>
       </ListItem>
     </ListingWrap>
     <ListingWrap v-if="direction === 'right'">
       <ListItem cols="1of3">
-        <slot name="side"></slot>
+        <slot name="side"/>
       </ListItem>
       <ListItem cols="2of3">
-        <slot name="main"></slot>
+        <slot name="main"/>
       </ListItem>
     </ListingWrap>
   </SectionWrap>

@@ -1,6 +1,10 @@
 <template>
-  <a :href="href" class="btn-owner card card--stafflist card--bdr-blue bg-white">
-    <div class="card__thumb" :style="{ backgroundImage: `url(${thumb})` }"></div>
+  <a
+    :href="href"
+    class="btn-owner card card--stafflist card--bdr-blue bg-white">
+    <div
+      :style="{ backgroundImage: `url(${thumb})` }"
+      class="card__thumb"/>
     <div class="card__inner ">
       <h3 class="card__header">{{ meta }}</h3>
       <p class="card__meta">{{ title }}</p>

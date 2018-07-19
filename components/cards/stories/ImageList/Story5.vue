@@ -1,13 +1,15 @@
 <template>
   <SectionWrap class="bg-alt">
     <div class="grid grid--4col">
-      <ListItem v-for="item in items" :key="item.title">
+      <ListItem
+        v-for="item in items"
+        :key="item.title">
         <CardImageList
           :border="false"
-          thumb="https://dummyimage.com/300x200.jpg"
           :title="item.title"
           :meta="item.meta"
-          >
+          thumb="https://dummyimage.com/300x200.jpg"
+        >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.
         </CardImageList>
       </ListItem>
