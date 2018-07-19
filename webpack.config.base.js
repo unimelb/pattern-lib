@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const pkg = require('./package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -102,5 +103,6 @@ module.exports = {
       filename: '[name].css',
       disable: isDev,
     }),
+    new VueLoaderPlugin(),
   ],
 };
