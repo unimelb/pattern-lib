@@ -20,11 +20,15 @@
   }
 
   &--fill {
-    padding-right: 0;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 
     img {
       display: block;
+    }
+
+    figcaption {
+      margin-bottom: 3rem;
     }
   }
 
