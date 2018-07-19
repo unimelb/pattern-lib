@@ -1,6 +1,6 @@
 :root {
   --width-sitenav: 18.75rem;
-  --offset-sitenav: -calc(var(--width-sitenav) + 0);
+  --offset-sitenav: calc(0 - var(--width-sitenav));
   --tr-transform: transform .3s ease;
 }
 
