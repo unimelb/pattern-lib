@@ -4,7 +4,7 @@
     :solo="solo"
     :open="open"
   >
-    <slot></slot>
+    <slot/>
   </ToggleGroup>
 </template>
 
@@ -12,7 +12,7 @@
 import ToggleGroup from '../toggle/ToggleGroup.vue';
 
 export default {
-  name: 'accordion-group',
+  name: 'AccordionGroup',
   components: { ToggleGroup },
   props: {
     solo: {

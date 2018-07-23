@@ -1,10 +1,12 @@
 <template>
   <blockquote
-    class="block-quotation"
     :class="{ 'block-quotation--bdr-top': borderTop, 'block-quotation--bdr-btm': borderBottom }"
+    class="block-quotation"
   >
-    <p class="block-quotation__content"><slot></slot></p>
-    <cite v-if="author" class="block-quotation__author">{{ author }}</cite>
+    <p class="block-quotation__content"><slot/></p>
+    <cite
+      v-if="author"
+      class="block-quotation__author">{{ author }}</cite>
   </blockquote>
 </template>
 
@@ -13,6 +15,7 @@ export default {
   props: {
     author: {
       type: String,
+      default: '',
     },
     borderTop: {
       type: Boolean,

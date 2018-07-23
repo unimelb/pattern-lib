@@ -1,13 +1,16 @@
 <template>
   <div :class="classes">
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    cols: String,
+    cols: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     classes() {

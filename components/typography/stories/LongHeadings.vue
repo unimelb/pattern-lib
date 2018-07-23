@@ -32,7 +32,10 @@
 <script>
 export default {
   props: {
-    classes: Array,
+    classes: {
+      type: Array,
+      default: () => [],
+    },
   },
 };
 </script>

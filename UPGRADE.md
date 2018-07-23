@@ -119,3 +119,7 @@ Semantic `<nav>` element now has no default background colour, for use in breadc
 ## v3.1.3
 
 No change
+
+## v3.1.4
+
+No change

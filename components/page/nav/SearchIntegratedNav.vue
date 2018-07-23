@@ -1,22 +1,33 @@
 <template>
   <nav class="header-tools">
-    <PageNav :title="items[0].title" v-if="items">
+    <PageNav
+      v-if="items"
+      :title="items[0].title">
       <PageSearchForm />
       <ul class="menu__section">
         <li
-          class="menu__item"
           v-for="(rootitem, rootindex) in items"
-          :key="`rootitem-${rootindex}`"
           v-if="rootindex != 0"
+          :key="`rootitem-${rootindex}`"
+          class="menu__item"
         >
-          <a role="menuitem" class="menu__link" :href="rootitem.href">{{ rootitem.title }}</a>
+          <a
+            :href="rootitem.href"
+            role="menuitem"
+            class="menu__link">{{ rootitem.title }}</a>
           <div
-            class="inner"
             v-if="rootitem.items"
+            class="inner"
           >
             <ul class="menu__section">
-              <li class="menu__item" v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
-                <a role="menuitem" class="menu__link" :href="menuitem.href">{{ menuitem.title }}</a>
+              <li
+                v-for="(menuitem, menuindex) in rootitem.items"
+                :key="`menuitem-${menuindex}`"
+                class="menu__item">
+                <a
+                  :href="menuitem.href"
+                  role="menuitem"
+                  class="menu__link">{{ menuitem.title }}</a>
               </li>
             </ul>
           </div>
@@ -31,14 +42,17 @@ import PageNav from './PageNav.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 
 export default {
-  name: 'search-integrated-nav',
+  name: 'SearchIntegratedNav',
   components: { PageNav, PageSearchForm },
   props: {
     title: {
       type: String,
       default: 'Navigation',
     },
-    items: Array,
+    items: {
+      type: Array,
+      default: () => [],
+    },
   },
 };
 </script>

@@ -2,23 +2,29 @@
   <div class="header-tools__search">
     <button
       class="link-icon--vertical link-reset"
+      tabindex="0"
       @click.prevent="open"
       @keypress.13="open"
-      tabindex="0"
     >
-      <SvgIcon class="link-icon__icon svg" name="search" />
+      <SvgIcon
+        class="link-icon__icon svg"
+        name="search" />
       <span class="link-icon__text">Search</span>
     </button>
-    <div ref="search" class="page-header-search">
+    <div
+      ref="search"
+      class="page-header-search">
       <PageSearchForm ref="form">
         <a
           class="page-header-icon link-icon--close"
           role="button"
           href="#"
-          @click.prevent="close"
           tabindex="0"
+          @click.prevent="close"
         >
-          <SvgIcon class="page-header-search__icon--close" name="close" />
+          <SvgIcon
+            class="page-header-search__icon--close"
+            name="close" />
           Close
         </a>
       </PageSearchForm>
@@ -35,7 +41,7 @@ import Blanket from './blanket';
 import PageSearchForm from './PageSearchForm.vue';
 
 export default {
-  name: 'page-search',
+  name: 'PageSearch',
   components: { SvgIcon, PageSearchForm },
   domFriendly: true,
   mounted() {

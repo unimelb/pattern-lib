@@ -1,5 +1,7 @@
 <template>
-  <MegaMenu :items="items" active="/random-link" />
+  <MegaMenu
+    :items="items"
+    active="/random-link" />
 </template>
 
 <script>
@@ -58,6 +60,18 @@ export default {
         {
           title: 'Student experience',
           href: '/student-experience',
+          feature: {
+            alt: 'Screen reader only caption!',
+            img: 'https://placeimg.com/360/200/nature',
+            link: 'http://google.com',
+          },
+          items: [
+            { title: 'Entry requirements21', href: '/2random-link' },
+            { title: 'Entry requirements22', href: 'http://2www.google.com' },
+            { title: 'Entry requirements23', href: 'http://2www.google.com' },
+            { title: 'Entry requirements24', href: 'http://2www.google.com' },
+            { title: 'Entry requirements25', href: 'http://2www.google.com' },
+          ],
         },
         {
           title: 'Connect',

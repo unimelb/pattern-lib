@@ -1,16 +1,24 @@
 <template>
   <ListingWrap cols="4">
     <ListItem>
-      <img src="https://placehold.it/600x200" alt="">
+      <img
+        src="https://placehold.it/600x200"
+        alt="">
     </ListItem>
     <ListItem>
-      <img src="https://placehold.it/600x200" alt="">
+      <img
+        src="https://placehold.it/600x200"
+        alt="">
     </ListItem>
     <ListItem>
-      <img src="https://placehold.it/600x200" alt="">
+      <img
+        src="https://placehold.it/600x200"
+        alt="">
     </ListItem>
     <ListItem>
-      <img src="https://placehold.it/600x200" alt="">
+      <img
+        src="https://placehold.it/600x200"
+        alt="">
     </ListItem>
   </ListingWrap>
 </template>

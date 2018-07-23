@@ -6,7 +6,7 @@
       :height="size[1]"
       frameborder="0"
       allowfullscreen
-    ></iframe>
+    />
   </div>
 </template>
 

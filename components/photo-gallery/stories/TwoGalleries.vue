@@ -2,12 +2,30 @@
   <div>
     <SectionWrap>
       <PhotoGallery>
-        <img :src="image.src" :alt="image.title" :width="image.w" :key="image.id" :height="image.h" :data-title="image.title" :data-thumb="image.msrc" :data-size="image.size" v-for="image in images">
+        <img
+          v-for="image in images"
+          :src="image.src"
+          :alt="image.title"
+          :width="image.w"
+          :key="image.id"
+          :height="image.h"
+          :data-title="image.title"
+          :data-thumb="image.msrc"
+          :data-size="image.size">
       </PhotoGallery>
     </SectionWrap>
     <SectionWrap>
       <PhotoGallery>
-        <img :src="image.src" :alt="image.title" :width="image.w" :key="image.id" :height="image.h" :data-title="image.title" :data-thumb="image.msrc" :data-size="image.size" v-for="image in images">
+        <img
+          v-for="image in images"
+          :src="image.src"
+          :alt="image.title"
+          :width="image.w"
+          :key="image.id"
+          :height="image.h"
+          :data-title="image.title"
+          :data-thumb="image.msrc"
+          :data-size="image.size">
       </PhotoGallery>
     </SectionWrap>
   </div>

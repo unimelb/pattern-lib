@@ -1,5 +1,7 @@
 <template>
-  <footer id="page-footer" class="page-footer">
+  <footer
+    id="page-footer"
+    class="page-footer">
     <PageFooterUpper />
     <div class="page-footer__bottom">
       <div class="page-footer__inner max">

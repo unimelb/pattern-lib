@@ -1,5 +1,8 @@
 <template>
-  <form action="https://search.unimelb.edu.au" method="get" class="page-header-search__form">
+  <form
+    action="https://search.unimelb.edu.au"
+    method="get"
+    class="page-header-search__form">
     <input
       ref="input"
       class="page-header-search__input"
@@ -7,11 +10,15 @@
       type="search"
       placeholder="Search the University"
       aria-label="Search the University"
-    ><button class="page-header-search__submit" type="submit">
-      <SvgIcon class="page-header-search__icon" name="search" />
+    ><button
+      class="page-header-search__submit"
+      type="submit">
+      <SvgIcon
+        class="page-header-search__icon"
+        name="search" />
       <span class="screenreaders-only">Go</span>
     </button>
-    <slot></slot>
+    <slot/>
   </form>
 </template>
 
@@ -19,7 +26,7 @@
 import SvgIcon from '../../icons/SvgIcon.vue';
 
 export default {
-  name: 'page-search-form',
+  name: 'PageSearchForm',
   components: { SvgIcon },
 };
 </script>

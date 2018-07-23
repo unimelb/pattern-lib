@@ -1,12 +1,8 @@
 require('dotenv').config();
 const merge = require('webpack-merge');
-
-const genDefaultConfig = require('@storybook/vue/dist/server/config/defaults/webpack.config.js');
 const baseConfig = require('../webpack.config.base.js');
 
-module.exports = (storybookConfig, env) => {
-  const defaultConfig = genDefaultConfig(storybookConfig, env);
-
+module.exports = (storybookConfig, env, defaultConfig) => {
   // Keep only storybook's JS rule
   defaultConfig.module.rules = defaultConfig.module.rules.filter(rule => rule.test.test('foo.js'));
 

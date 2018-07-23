@@ -6,11 +6,17 @@
     :aria-disabled="isLink && disabled ? 'true': false"
     :disabled="!isLink && disabled"
   >
-    <span v-if="!noIcon" class="push-icon">
-      <slot></slot>
-      <SvgIcon class="push-icon__icon" width="15px" height="15px" :name="icon" />
+    <span
+      v-if="!noIcon"
+      :class="`push-icon${top ? ' push-icon--top' : ''}`">
+      <slot/>
+      <SvgIcon
+        :name="icon"
+        class="push-icon__icon"
+        width="15px"
+        height="15px" />
     </span>
-    <slot v-if="noIcon"></slot>
+    <slot v-if="noIcon"/>
   </component>
 </template>
 
@@ -31,9 +37,11 @@ export default {
     },
     size: {
       type: String,
+      default: '',
     },
     width: {
       type: String,
+      default: '',
     },
     inverted: {
       type: Boolean,
@@ -49,6 +57,10 @@ export default {
       validator: val => ['a', 'button', 'div', 'span'].indexOf(val) !== -1,
     },
     disabled: {
+      type: Boolean,
+      default: false,
+    },
+    top: {
       type: Boolean,
       default: false,
     },

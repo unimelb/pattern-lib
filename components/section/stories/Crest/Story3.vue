@@ -1,5 +1,7 @@
 <template>
-  <SectionDivider title="Some Heading" subtitle="Based on statistics" />
+  <SectionDivider
+    title="Some Heading"
+    subtitle="Based on statistics" />
 </template>
 
 <script>

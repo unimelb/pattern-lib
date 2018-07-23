@@ -2,11 +2,18 @@
   <nav class="side-panel">
     <div class="side-panel__inner">
       <h5 class="side-panel__title">{{ title }}
-        <button class="side-panel__trigger" @click="toggleOpen">
-          <SvgIcon width="10" height="10" name="close" /> </button>
+        <button
+          class="side-panel__trigger"
+          @click="toggleOpen">
+          <SvgIcon
+            width="10"
+            height="10"
+            name="close" /> </button>
       </h5>
-      <ul class="side-panel__nav" :class="{'side-panel__nav--closed' : !open}">
-        <slot></slot>
+      <ul
+        :class="{'side-panel__nav--closed' : !open}"
+        class="side-panel__nav">
+        <slot/>
       </ul>
     </div>
   </nav>
@@ -23,6 +30,7 @@ export default {
     },
     title: {
       type: String,
+      default: '',
     },
     initialOpen: {
       type: Boolean,

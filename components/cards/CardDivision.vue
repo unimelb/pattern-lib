@@ -1,5 +1,7 @@
 <template>
-  <a :href="href" class="btn-owner card card--division card--bdr bg-white">
+  <a
+    :href="href"
+    class="btn-owner card card--division card--bdr bg-white">
     <div class="card__title bg-inverted">
       {{ title }}
     </div>
@@ -12,7 +14,9 @@
       <p>{{ excerpt }}</p>
     </div>
     <div class="card__footer">
-      <ButtonIcon element="span" class="btn--fullwidth">Contacts and bio</ButtonIcon>
+      <ButtonIcon
+        element="span"
+        class="btn--fullwidth">Contacts and bio</ButtonIcon>
     </div>
   </a>
 </template>
@@ -23,15 +27,19 @@ export default {
   props: {
     thumb: {
       type: String,
+      default: '',
     },
     title: {
       type: String,
+      default: '',
     },
     name: {
       type: String,
+      default: '',
     },
     meta: {
       type: String,
+      default: '',
     },
     href: {
       type: String,

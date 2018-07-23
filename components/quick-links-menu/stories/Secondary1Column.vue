@@ -1,13 +1,16 @@
 <template>
   <SectionWrap class="bg-white">
-    <QuickLinks :menu-links="menuLinks" :secondary-links="secondaryLinks" :secondary-cols="1">
+    <QuickLinks
+      :menu-links="menuLinks"
+      :secondary-links="secondaryLinks"
+      :secondary-cols="1">
       <div slot="content">
         <h2>Australia's leading university</h2>
         <p class="lead">Our distinctive Melbourne experience helps graduates become well-rounded, thoughtful and skilled professionals – making
-          a positive impact across the globe.</p>
+        a positive impact across the globe.</p>
         <p>Our research helps solve social, economic and environmental challenges the world is facing today and into the future.
-          And we’re tightly connected with our communities, at home and around the globe, a connection that enriches our learning,
-          teaching and research.</p>
+        And we’re tightly connected with our communities, at home and around the globe, a connection that enriches our learning,
+        teaching and research.</p>
       </div>
     </QuickLinks>
   </SectionWrap>

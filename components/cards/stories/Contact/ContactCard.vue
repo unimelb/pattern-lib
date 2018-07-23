@@ -11,7 +11,11 @@
       <a href='https://maps.unimelb.edu.au/parkville/building/152'>Raymond Priestley</a>
     </iframe>
     <div class="contact-card__lower">
-      <div class="contact-card__col1_3" v-for="n in columns-0" :key="n" v-html="content[n-1]"></div>
+      <div
+        v-for="n in columns-0"
+        :key="n"
+        class="contact-card__col1_3"
+        v-html="content[n-1]"/>
     </div>
   </div>
 </template>
@@ -21,8 +25,14 @@ import content from './content';
 
 export default {
   props: {
-    columns: Number,
-    withMap: Boolean,
+    columns: {
+      type: Number,
+      default: 1,
+    },
+    withMap: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     content,

@@ -1,31 +1,50 @@
 <template>
-  <div ref="headerroot" class="page-header page-header--l3 page-header--study">
+  <div
+    ref="headerroot"
+    class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
-      <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
+      <a
+        class="link-img link-reset"
+        href="https://www.unimelb.edu.au/">
         <div class="logo-mask">
           <img
             class="page-header__logo"
             src="../../shared/logo.svg"
-            width="117" height="117"
+            width="117"
+            height="117"
             alt="The University of Melbourne homepage"
           >
         </div>
       </a>
-      <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
-        <nav aria-label="Site" class="megamenu" id="sitemapmenu" ref="rootmenu">
-          <div role="button" aria-label="Close" class="menu__back-btn" @click="dismissMobileMenu">Close</div>
+      <div
+        ref="blanket"
+        class="megamenu__blanket"
+        @click="dismissMobileMenuIfBlanket"
+        @keypress.27="dismissMobileMenu">
+        <nav
+          id="sitemapmenu"
+          ref="rootmenu"
+          aria-label="Site"
+          class="megamenu">
+          <div
+            role="button"
+            aria-label="Close"
+            class="menu__back-btn"
+            @click="dismissMobileMenu">Close</div>
           <PageSearchForm aria-hidden="true" />
-          <ul class="menu__section" role="menu">
+          <ul
+            class="menu__section"
+            role="menu">
             <li
-              class="menu__item"
-              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               v-for="(rootitem, rootindex) in items"
+              ref="rootitems"
+              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               :key="`rootitem-${rootindex}`"
+              :tabindex="isSelected(rootindex)"
+              class="menu__item"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
               @keydown="handleKey"
-              :tabindex="isSelected(rootindex)"
-              ref="rootitems"
             >
               <a
                 :role="rootitem.items ? 'button' : 'menuitem'"
@@ -33,31 +52,55 @@
                 :class="linkClasses(rootindex, rootitem)"
                 @click="openInner"
                 v-html="rootitem.title"
-              ></a>
+              />
               <div
-                class="inner"
                 v-if="rootitem.items"
                 ref="panels"
+                class="inner"
               >
-                <div rol="button" @click="closeInner" class="menu__back-btn">Back</div>
+                <div
+                  rol="button"
+                  class="menu__back-btn"
+                  @click="closeInner">Back</div>
                 <div class="menu__aside">
-                  <a :href="rootitem.href" class="menu__nested-parent">{{ rootitem.title }}</a>
+                  <a
+                    :href="rootitem.href"
+                    class="menu__nested-parent">{{ rootitem.title }}</a>
                   <component
-                    class="menu__campaign"
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
                     :href="rootitem.feature.link"
                     :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
+                    class="menu__campaign"
                   >
-                    <p class="menu__campaign-text" v-if="rootitem.feature.text || rootitem.feature.title">
-                      <strong class="menu__campaign-title" v-if="rootitem.feature.title">{{ rootitem.feature.title }}</strong>
-                      <span v-if="rootitem.feature.text" v-html="rootitem.feature.text"></span>
+                    <p
+                      v-if="rootitem.feature.text || rootitem.feature.title"
+                      class="menu__campaign-text">
+                      <strong
+                        v-if="rootitem.feature.title"
+                        class="menu__campaign-title">{{ rootitem.feature.title }}</strong>
+                      <span
+                        v-if="rootitem.feature.text"
+                        v-html="rootitem.feature.text"/>
                     </p>
+                    <span
+                      v-if="rootitem.feature.alt"
+                      class="screenreaders-only"
+                      v-html="rootitem.feature.alt"
+                    />
                   </component>
                 </div>
                 <ul class="menu__section">
-                  <li class="menu__item" v-for="(menuitem, menuindex) in rootitem.items" :key="`menuitem-${menuindex}`">
-                    <a tabindex="0" class="menu__link" :href="menuitem.href" role="menuitem" v-html="menuitem.title"></a>
+                  <li
+                    v-for="(menuitem, menuindex) in rootitem.items"
+                    :key="`menuitem-${menuindex}`"
+                    class="menu__item">
+                    <a
+                      :href="menuitem.href"
+                      tabindex="0"
+                      class="menu__link"
+                      role="menuitem"
+                      v-html="menuitem.title"/>
                   </li>
                 </ul>
               </div>
@@ -68,19 +111,26 @@
       </div>
       <div class="header-tools__menu">
         <button
+          id="sitemapbutton"
+          :tabindex="isMobile ? -1 : 0"
           aria-haspopup="true"
           aria-controls="sitemapmenu"
           href="#sitemapmenu"
-          id="sitemapbutton"
           class="link-icon--vertical link-reset"
           @click.prevent="activateMobileMenu"
           @keydown.13="activeMobileMenu"
-          :tabindex="isMobile ? -1 : 0"
         >
-          <svg class="link-icon__icon svg" role="presentation" focusable="false" aria-labelledby="icon-menu" viewBox="10 10 26 28">
+          <svg
+            class="link-icon__icon svg"
+            role="presentation"
+            focusable="false"
+            aria-labelledby="icon-menu"
+            viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
           </svg>
-          <span id="icon-menu" class="link-icon__text">Menu</span>
+          <span
+            id="icon-menu"
+            class="link-icon__text">Menu</span>
         </button>
       </div>
     </div>

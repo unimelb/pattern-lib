@@ -7,7 +7,7 @@
     justify-content: space-around;
     max-width: var(--w-sml);
     margin-right: auto;
-    margin-bottom: -calc(var(--vr) / 4); /* MAGIC NUMBER: roughly equal spacing above and below stats */
+    margin-bottom: calc(0 - var(--vr) / 4); /* MAGIC NUMBER: roughly equal spacing above and below stats */
     margin-left: auto;
   }
 

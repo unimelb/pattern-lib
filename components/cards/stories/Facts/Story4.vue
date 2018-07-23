@@ -1,7 +1,9 @@
 
 <template>
   <div>
-    <CardFact title="With Small Header" sml-header />
+    <CardFact
+      title="With Small Header"
+      sml-header />
     <CardFact title="Without small header" />
   </div>
 </template>

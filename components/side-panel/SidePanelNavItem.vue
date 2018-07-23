@@ -1,12 +1,20 @@
 <template>
   <li class="side-panel__nav-item clearfix">
-    <a href="#" v-scroll-to="target">
+    <a
+      v-scroll-to="target"
+      href="#">
       <span v-if="right">
-        <slot></slot>
+        <slot/>
       </span>
-      <span v-if="!right" class="push-icon">
-        <slot></slot>
-        <SvgIcon class="push-icon__icon" name="chevron-right" width="10" height="10" />
+      <span
+        v-if="!right"
+        class="push-icon">
+        <slot/>
+        <SvgIcon
+          class="push-icon__icon"
+          name="chevron-right"
+          width="10"
+          height="10" />
       </span>
     </a>
   </li>
@@ -17,6 +25,7 @@ export default {
   props: {
     target: {
       type: String,
+      default: '',
     },
     right: {
       type: Boolean,

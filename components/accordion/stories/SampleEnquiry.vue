@@ -10,7 +10,9 @@
       <p class="text-center">This one uses custom markup for the "trigger" part:</p>
       <Enquiry>
         <template slot="trigger">
-          <ButtonIcon element="span" class="btn--hard">Enquire within!</ButtonIcon>
+          <ButtonIcon
+            element="span"
+            class="btn--hard">Enquire within!</ButtonIcon>
         </template>
         <MceForm />
       </Enquiry>

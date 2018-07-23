@@ -1,13 +1,15 @@
 <template>
   <div class="card card--division card--division--head card--bdr">
-    <div class="card__thumb" :style="{'background-image': `url(${thumb})`}"></div>
+    <div
+      :style="{'background-image': `url(${thumb})`}"
+      class="card__thumb"/>
     <div class="card__inner ">
       <div class="card__subheader">
         <h3 class="card__header">{{ name }}</h3>
         <p class="card__meta"> {{ title }}</p>
       </div>
       <hr>
-      <slot></slot>
+      <slot/>
     </div>
   </div>
 </template>
@@ -17,12 +19,15 @@ export default {
   props: {
     name: {
       type: String,
+      default: '',
     },
     title: {
       type: String,
+      default: '',
     },
     thumb: {
       type: String,
+      default: '',
     },
   },
 };

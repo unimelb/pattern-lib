@@ -1,14 +1,20 @@
 <template>
   <div :class="classes">
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    cols: String,
-    center: Boolean,
+    cols: {
+      type: String,
+      default: '',
+    },
+    center: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {

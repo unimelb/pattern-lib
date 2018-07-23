@@ -1,11 +1,11 @@
 <template>
   <article
-    class="article-wrap max"
     :class="useColumnLayout ? ['article-wrap--column', 'max--sml'] : []"
+    class="article-wrap max"
   >
     <h1 class="article-wrap__header">{{ title }}</h1>
     <div class="article-wrap__main">
-      <slot></slot>
+      <slot/>
     </div>
     <footer
       v-if="hasMetadata"
@@ -15,7 +15,9 @@
       <div class="article-wrap__aside-box">
         <time :datetime="date[0]">{{ date[1] }}</time> | <span class="article-wrap__type">{{ type }}</span>
       </div>
-      <div v-if="categories && categories.length > 0" class="article-wrap__aside-box article-wrap__categories">
+      <div
+        v-if="categories && categories.length > 0"
+        class="article-wrap__aside-box article-wrap__categories">
         <p class="article-wrap__categories-heading">Categories</p>
         <a
           v-for="category in categories"
@@ -24,8 +26,12 @@
           {{ category }}
         </a>
       </div>
-      <div v-if="contact" class="article-wrap__aside-box">
-        <ContactList class="article-wrap__contact-list" v-bind="contact" />
+      <div
+        v-if="contact"
+        class="article-wrap__aside-box">
+        <ContactList
+          v-bind="contact"
+          class="article-wrap__contact-list" />
       </div>
       <div class="article-wrap__aside-box article-wrap__social">
         <p class="article-wrap__social-heading">Share</p>
@@ -44,21 +50,34 @@ export default {
   props: {
     title: {
       type: String,
+      default: '',
       required: true,
     },
-    contact: Object,
+    contact: {
+      type: Object,
+      default: () => ({}),
+    },
     date: {
       type: Array, // e.g. ['1970-01-01', '1 Jan. 1970']
       validator: arr => (
-        arr.length === 2
-        && arr.every(item => typeof item === 'string')
+        arr.length === 0
+        || (arr.length === 2
+        && arr.every(item => typeof item === 'string'))
       ),
+      default: () => [],
     },
-    type: String,
-    columnLayout: Boolean,
+    type: {
+      type: String,
+      default: '',
+    },
+    columnLayout: {
+      type: Boolean,
+      default: true,
+    },
     categories: {
       type: Array,
-      validator: arr => arr.every(item => typeof item === 'string'),
+      validator: arr => arr.length === 0 || arr.every(item => typeof item === 'string'),
+      default: () => [],
     },
   },
   computed: {

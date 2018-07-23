@@ -6,7 +6,9 @@
       <li>Ensure you meet the University's language requirements.</li>
       <li>Apply online or via the hardcopy application form.</li>
     </ol>
-    <a slot="btn" href="/">Continue</a>
+    <a
+      slot="btn"
+      href="/">Continue</a>
   </CheckList>
 </template>
 

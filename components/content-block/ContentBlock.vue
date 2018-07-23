@@ -1,6 +1,6 @@
 <template>
   <div :class="classes">
-    <slot></slot>
+    <slot/>
   </div>
 </template>
 
@@ -9,13 +9,17 @@ export default {
   props: {
     size: {
       type: String,
-      validator: value => ['sml', 'lge'].indexOf(value) !== -1,
+      default: '',
+      validator: value => ['', 'sml', 'lge'].indexOf(value) !== -1,
     },
     short: {
       type: Boolean,
       default: false,
     },
-    bg: String,
+    bg: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     classes() {
