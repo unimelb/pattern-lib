@@ -83,6 +83,11 @@
                         v-if="rootitem.feature.text"
                         v-html="rootitem.feature.text"/>
                     </p>
+                    <span
+                      v-if="rootitem.feature.alt"
+                      class="screenreaders-only"
+                      v-html="rootitem.feature.alt"
+                    />
                   </component>
                 </div>
                 <ul class="menu__section">
