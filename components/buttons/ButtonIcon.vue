@@ -8,7 +8,7 @@
   >
     <span
       v-if="!noIcon"
-      class="push-icon">
+      :class="`push-icon${top ? ' push-icon--top' : ''}`">
       <slot/>
       <SvgIcon
         :name="icon"
@@ -57,6 +57,10 @@ export default {
       validator: val => ['a', 'button', 'div', 'span'].indexOf(val) !== -1,
     },
     disabled: {
+      type: Boolean,
+      default: false,
+    },
+    top: {
       type: Boolean,
       default: false,
     },
