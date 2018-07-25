@@ -24,18 +24,23 @@
           v-for="(tab, index) in panels"
           ref="tabs"
           :tabindex="tab.isActive ? 0 : -1"
+          :aria-selected="tab.isActive"
           :key="`${namespace}-desk-${index + 1}`"
           :id="`${namespace}-${index + 1}`"
           :aria-controls="`${namespace}-panel-${index + 1}`"
+          :href="`#${namespace}-panel-${index + 1}`"
           class="tabs__tab"
           role="tab"
-          @click="setActive(tab.title)"
+          @click.prevent="setActive(tab.title)"
         >
           {{ tab.title }}
         </a>
       </div>
     </div>
-    <div class="tabs__section">
+    <div
+      tabindex="0"
+      class="tabs__section"
+    >
       <slot/>
     </div>
   </div>
@@ -58,10 +63,9 @@ export default {
     this.panels.forEach((tab, i) => {
       tab.namespace = this.namespace;
       tab.index = i;
-      if (i === 0) {
-        tab.isActive = true;
-      }
     });
+
+    this.panels[0].isActive = true;
   },
   methods: {
     setActive(selectedtitle) {
@@ -87,11 +91,13 @@ export default {
         case 37:
         case 38:
           this.setActive(this.panels[prev].title);
+          this.$refs.tabs[prev].focus();
           break;
         // right / down
         case 39:
         case 40:
           this.setActive(this.panels[next].title);
+          this.$refs.tabs[next].focus();
           break;
         default:
           break;
