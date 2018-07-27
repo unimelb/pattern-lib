@@ -503,7 +503,7 @@ exports[`PageFooter should match snapshot 1`] = `
                 >
                   <a
                     class="page-footer__sitemap-heading"
-                    href="https://coursesearch.unimelb.edu.au/"
+                    href="https://study.unimelb.edu.au/"
                     tabindex="-1"
                   >
                     Study at Melbourne
@@ -515,27 +515,17 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="https://coursesearch.unimelb.edu.au/undergrad"
+                        href="https://study.unimelb.edu.au/find"
                         tabindex="-1"
                       >
-                        Undergraduate study
+                        Find a course
                       </a>
                     </li>
                      
                     <li>
                       <a
                         class="link-reset"
-                        href="https://coursesearch.unimelb.edu.au/grad"
-                        tabindex="-1"
-                      >
-                        Graduate study
-                      </a>
-                    </li>
-                     
-                    <li>
-                      <a
-                        class="link-reset"
-                        href="https://futurestudents.unimelb.edu.au/"
+                        href="https://study.unimelb.edu.au/connect-with-us/"
                         tabindex="-1"
                       >
                         Future students
@@ -545,7 +535,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="https://futurestudents.unimelb.edu.au/admissions"
+                        href="https://study.unimelb.edu.au/how-to-apply"
                         tabindex="-1"
                       >
                         Admissions, fees & applications
@@ -555,7 +545,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="https://futurestudents.unimelb.edu.au/info/international"
+                        href="https://study.unimelb.edu.au/connect-with-us/information-for-schools/information-for-schools-outside-australia"
                         tabindex="-1"
                       >
                         International students
@@ -611,7 +601,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/international-connections"
+                        href="https://iro.unimelb.edu.au/"
                         tabindex="-1"
                       >
                         International connections
@@ -631,7 +621,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/governance-and-leadership"
+                        href="https://about.unimelb.edu.au/strategy/our-structure"
                         tabindex="-1"
                       >
                         Structure and governance
@@ -869,16 +859,6 @@ exports[`PageFooter should match snapshot 1`] = `
                         tabindex="-1"
                       >
                         Events
-                      </a>
-                    </li>
-                     
-                    <li>
-                      <a
-                        class="link-reset"
-                        href="http://businessconnect.unimelb.edu.au/"
-                        tabindex="-1"
-                      >
-                        Business & Industry
                       </a>
                     </li>
                      
