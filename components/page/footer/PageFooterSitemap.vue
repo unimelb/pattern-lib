@@ -3,23 +3,20 @@
     <div class="cell cell--tab-1of2 cell--desk-1of3">
       <a
         class="page-footer__sitemap-heading"
-        href="https://coursesearch.unimelb.edu.au/">Study at Melbourne</a>
+        href="https://study.unimelb.edu.au/">Study at Melbourne</a>
       <ul class="page-footer__sitemap-pages page-footer__sitemap-pages--minor list-reset list-chevrons">
         <li><a
           class="link-reset"
-          href="https://coursesearch.unimelb.edu.au/undergrad">Undergraduate study</a></li>
+          href="https://study.unimelb.edu.au/find">Find a course</a></li>
         <li><a
           class="link-reset"
-          href="https://coursesearch.unimelb.edu.au/grad">Graduate study</a></li>
+          href="https://study.unimelb.edu.au/connect-with-us/">Future students</a></li>
         <li><a
           class="link-reset"
-          href="https://futurestudents.unimelb.edu.au/">Future students</a></li>
+          href="https://study.unimelb.edu.au/how-to-apply">Admissions, fees &amp; applications</a></li>
         <li><a
           class="link-reset"
-          href="https://futurestudents.unimelb.edu.au/admissions">Admissions, fees &amp; applications</a></li>
-        <li><a
-          class="link-reset"
-          href="https://futurestudents.unimelb.edu.au/info/international">International students</a></li>
+          href="https://study.unimelb.edu.au/connect-with-us/information-for-schools/information-for-schools-outside-australia">International students</a></li>
         <li><a
           class="link-reset"
           href="http://www.unimelb.edu.au/campustour">Campus tour</a></li>
@@ -38,13 +35,13 @@
           href="http://about.unimelb.edu.au/tradition-of-excellence">Tradition of excellence</a></li>
         <li><a
           class="link-reset"
-          href="http://about.unimelb.edu.au/international-connections">International connections</a></li>
+          href="https://iro.unimelb.edu.au/">International connections</a></li>
         <li><a
           class="link-reset"
           href="http://about.unimelb.edu.au/campuses-and-facilities">Campuses and facilities</a></li>
         <li><a
           class="link-reset"
-          href="http://about.unimelb.edu.au/governance-and-leadership">Structure and governance</a></li>
+          href="https://about.unimelb.edu.au/strategy/our-structure">Structure and governance</a></li>
         <li><a
           class="link-reset"
           href="http://about.unimelb.edu.au/policy-and-publications">Policy and publications</a></li>
@@ -124,9 +121,6 @@
         <li><a
           class="link-reset"
           href="https://events.unimelb.edu.au/">Events</a></li>
-        <li><a
-          class="link-reset"
-          href="http://businessconnect.unimelb.edu.au/">Business &amp; Industry</a></li>
         <li><a
           class="link-reset"
           href="http://www.sport.unimelb.edu.au/fitnesscentres">Sports facilities</a></li>
