@@ -35,7 +35,7 @@
       :class="{ 'col-linkedin': withColors }">
       <a
         class="social-list__link"
-        href="https://www.linkedin.com/company/university-of-melbourne">
+        href="https://www.linkedin.com/school/university-of-melbourne">
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
