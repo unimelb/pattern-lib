@@ -328,7 +328,7 @@ exports[`PageFooter should match snapshot 1`] = `
             >
               <a
                 class="social-list__link"
-                href="https://www.linkedin.com/company/university-of-melbourne"
+                href="https://www.linkedin.com/school/university-of-melbourne"
               >
                 <svg
                   aria-label="LinkedIn"
