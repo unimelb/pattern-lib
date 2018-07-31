@@ -59,7 +59,7 @@
                 class="inner"
               >
                 <div
-                  rol="button"
+                  role="button"
                   class="menu__back-btn"
                   @click="closeInner">Back</div>
                 <div class="menu__aside">
