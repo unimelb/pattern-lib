@@ -20,7 +20,7 @@
       :class="{ 'col-twitter': withColors }">
       <a
         class="social-list__link"
-        href="https://www.twitter.com/unimelb">
+        href="https://twitter.com/unimelb">
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
