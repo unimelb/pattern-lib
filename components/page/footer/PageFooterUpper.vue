@@ -52,7 +52,7 @@
           <ul class="page-footer__popular list-reset links-reset">
             <li><a
               class="link-icon"
-              href="http://about.unimelb.edu.au/governance-and-leadership/faculties">
+              href="https://about.unimelb.edu.au/strategy/our-structure/faculties-and-graduate-schools">
               <SvgIcon
                 class="link-icon__icon svg"
                 name="faculty" /><span class="link-icon__text">Faculties &amp; graduate schools</span>
@@ -66,28 +66,28 @@
             </a></li>
             <li><a
               class="link-icon"
-              href="http://library.unimelb.edu.au/">
+              href="https://library.unimelb.edu.au/">
               <SvgIcon
                 class="link-icon__icon svg"
                 name="library" /><span class="link-icon__text">Library</span>
             </a></li>
             <li><a
               class="link-icon"
-              href="http://www.campaign.unimelb.edu.au/">
+              href="https://www.alumni.unimelb.edu.au/give">
               <SvgIcon
                 class="link-icon__icon svg"
                 name="campaign" /><span class="link-icon__text">Support the campaign</span>
             </a></li>
             <li><a
               class="link-icon"
-              href="http://www.unimelb.edu.au/contact/">
+              href="https://www.unimelb.edu.au/contact/">
               <SvgIcon
                 class="link-icon__icon svg"
                 name="phone" /><span class="link-icon__text">Contact us</span>
             </a></li>
             <li><a
               class="link-icon"
-              href="http://about.unimelb.edu.au/careers">
+              href="https://about.unimelb.edu.au/careers">
               <SvgIcon
                 class="link-icon__icon svg"
                 name="jobs" /><span class="link-icon__text">Jobs</span>
@@ -108,18 +108,18 @@
             <dt>ABN:</dt>
             <dd>84 002 705 224</dd>
             <dt>CRICOS Provider Code:</dt>
-            <dd>00116K <small>(<a href="http://services.unimelb.edu.au/international/visas">visa information</a>)</small></dd>
+            <dd>00116K <small>(<a href="https://services.unimelb.edu.au/international/visas">visa information</a>)</small></dd>
           </dl>
         </div>
       </div>
       <div class="page-footer__legal links-reset">
-        <a href="http://safety.unimelb.edu.au/emergency">Emergency information</a>
+        <a href="https://safety.unimelb.edu.au/emergency">Emergency information</a>
         <span class="page-footer__legal__sep">|</span>
-        <a href="http://www.unimelb.edu.au/governance/disclaimer">Disclaimer &amp; copyright</a>
+        <a href="https://www.unimelb.edu.au/governance/disclaimer">Disclaimer &amp; copyright</a>
         <span class="page-footer__legal__sep">|</span>
-        <a href="http://www.unimelb.edu.au/accessibility">Accessibility</a>
+        <a href="https://www.unimelb.edu.au/accessibility">Accessibility</a>
         <span class="page-footer__legal__sep">|</span>
-        <a href="http://www.unimelb.edu.au/governance/compliance/privacy">Privacy</a>
+        <a href="https://www.unimelb.edu.au/governance/compliance/privacy">Privacy</a>
       </div>
     </div>
   </div>

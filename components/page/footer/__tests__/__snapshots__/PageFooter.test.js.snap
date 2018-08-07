@@ -124,7 +124,7 @@ exports[`PageFooter should match snapshot 1`] = `
             <li>
               <a
                 class="link-icon"
-                href="http://about.unimelb.edu.au/governance-and-leadership/faculties"
+                href="https://about.unimelb.edu.au/strategy/our-structure/faculties-and-graduate-schools"
               >
                 <svg
                   class="link-icon__icon svg"
@@ -168,7 +168,7 @@ exports[`PageFooter should match snapshot 1`] = `
             <li>
               <a
                 class="link-icon"
-                href="http://library.unimelb.edu.au/"
+                href="https://library.unimelb.edu.au/"
               >
                 <svg
                   class="link-icon__icon svg"
@@ -190,7 +190,7 @@ exports[`PageFooter should match snapshot 1`] = `
             <li>
               <a
                 class="link-icon"
-                href="http://www.campaign.unimelb.edu.au/"
+                href="https://www.alumni.unimelb.edu.au/give"
               >
                 <svg
                   class="link-icon__icon svg"
@@ -212,7 +212,7 @@ exports[`PageFooter should match snapshot 1`] = `
             <li>
               <a
                 class="link-icon"
-                href="http://www.unimelb.edu.au/contact/"
+                href="https://www.unimelb.edu.au/contact/"
               >
                 <svg
                   class="link-icon__icon svg"
@@ -234,7 +234,7 @@ exports[`PageFooter should match snapshot 1`] = `
             <li>
               <a
                 class="link-icon"
-                href="http://about.unimelb.edu.au/careers"
+                href="https://about.unimelb.edu.au/careers"
               >
                 <svg
                   class="link-icon__icon svg"
@@ -300,7 +300,7 @@ exports[`PageFooter should match snapshot 1`] = `
             >
               <a
                 class="social-list__link"
-                href="https://www.twitter.com/unimelb"
+                href="https://twitter.com/unimelb"
               >
                 <svg
                   aria-label="Twitter"
@@ -401,7 +401,7 @@ exports[`PageFooter should match snapshot 1`] = `
               <small>
                 (
                 <a
-                  href="http://services.unimelb.edu.au/international/visas"
+                  href="https://services.unimelb.edu.au/international/visas"
                 >
                   visa information
                 </a>
@@ -416,7 +416,7 @@ exports[`PageFooter should match snapshot 1`] = `
         class="page-footer__legal links-reset"
       >
         <a
-          href="http://safety.unimelb.edu.au/emergency"
+          href="https://safety.unimelb.edu.au/emergency"
         >
           Emergency information
         </a>
@@ -428,7 +428,7 @@ exports[`PageFooter should match snapshot 1`] = `
         </span>
          
         <a
-          href="http://www.unimelb.edu.au/governance/disclaimer"
+          href="https://www.unimelb.edu.au/governance/disclaimer"
         >
           Disclaimer & copyright
         </a>
@@ -440,7 +440,7 @@ exports[`PageFooter should match snapshot 1`] = `
         </span>
          
         <a
-          href="http://www.unimelb.edu.au/accessibility"
+          href="https://www.unimelb.edu.au/accessibility"
         >
           Accessibility
         </a>
@@ -452,7 +452,7 @@ exports[`PageFooter should match snapshot 1`] = `
         </span>
          
         <a
-          href="http://www.unimelb.edu.au/governance/compliance/privacy"
+          href="https://www.unimelb.edu.au/governance/compliance/privacy"
         >
           Privacy
         </a>
@@ -555,7 +555,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://www.unimelb.edu.au/campustour"
+                        href="https://www.unimelb.edu.au/campustour"
                         tabindex="-1"
                       >
                         Campus tour
@@ -569,7 +569,7 @@ exports[`PageFooter should match snapshot 1`] = `
                 >
                   <a
                     class="page-footer__sitemap-heading"
-                    href="http://about.unimelb.edu.au/"
+                    href="https://about.unimelb.edu.au/"
                     tabindex="-1"
                   >
                     About us
@@ -581,7 +581,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/strategy-and-leadership"
+                        href="https://about.unimelb.edu.au/strategy-and-leadership"
                         tabindex="-1"
                       >
                         Strategy and leadership
@@ -591,7 +591,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/tradition-of-excellence"
+                        href="https://about.unimelb.edu.au/facts-and-figures"
                         tabindex="-1"
                       >
                         Tradition of excellence
@@ -611,7 +611,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/campuses-and-facilities"
+                        href="https://maps.unimelb.edu.au"
                         tabindex="-1"
                       >
                         Campuses and facilities
@@ -631,7 +631,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/policy-and-publications"
+                        href="https://about.unimelb.edu.au/news-resources/reports-and-publications"
                         tabindex="-1"
                       >
                         Policy and publications
@@ -641,7 +641,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/careers"
+                        href="https://about.unimelb.edu.au/careers"
                         tabindex="-1"
                       >
                         Careers at Melbourne
@@ -655,7 +655,7 @@ exports[`PageFooter should match snapshot 1`] = `
                 >
                   <a
                     class="page-footer__sitemap-heading"
-                    href="http://www.unimelb.edu.au/contact"
+                    href="https://www.unimelb.edu.au/contact"
                     tabindex="-1"
                   >
                     Contact & Maps
@@ -677,6 +677,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
+                        data-notsecure=""
                         href="http://newsroom.melbourne.edu/"
                         tabindex="-1"
                       >
@@ -687,7 +688,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://findanexpert.unimelb.edu.au/"
+                        href="https://findanexpert.unimelb.edu.au/"
                         tabindex="-1"
                       >
                         Find an expert
@@ -707,7 +708,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://about.unimelb.edu.au/campuses-and-facilities/transport-and-parking"
+                        href="https://about.unimelb.edu.au/news-resources/campus-services-and-facilities/transport-and-parking"
                         tabindex="-1"
                       >
                         Traffic, parking & bicycles
@@ -717,6 +718,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
+                        data-notsecure=""
                         href="http://directory.unimelb.edu.au/"
                         tabindex="-1"
                       >
@@ -743,7 +745,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="https://www.alumni.unimelb.edu.au/alumni/alumni-benefits"
+                        href="https://www.alumni.unimelb.edu.au/benefits"
                         tabindex="-1"
                       >
                         Benefits & services
@@ -773,7 +775,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://mag.alumni.unimelb.edu.au/?sl=1"
+                        href="https://mag.alumni.unimelb.edu.au/?sl=1"
                         tabindex="-1"
                       >
                         3010: alumni magazine
@@ -787,7 +789,7 @@ exports[`PageFooter should match snapshot 1`] = `
                 >
                   <a
                     class="page-footer__sitemap-heading"
-                    href="http://research.unimelb.edu.au/"
+                    href="https://research.unimelb.edu.au/"
                     tabindex="-1"
                   >
                     Research
@@ -799,7 +801,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://research.unimelb.edu.au/melbourne-research-institutes"
+                        href="https://research.unimelb.edu.au/melbourne-research-institutes"
                         tabindex="-1"
                       >
                         Research institutes
@@ -809,7 +811,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://findanexpert.unimelb.edu.au/"
+                        href="https://findanexpert.unimelb.edu.au/"
                         tabindex="-1"
                       >
                         Find an expert or supervisor
@@ -819,7 +821,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="http://gradresearch.unimelb.edu.au/"
+                        href="https://gradresearch.unimelb.edu.au/"
                         tabindex="-1"
                       >
                         Graduate researchers
@@ -843,7 +845,7 @@ exports[`PageFooter should match snapshot 1`] = `
                 >
                   <a
                     class="page-footer__sitemap-heading"
-                    href="http://engagement.unimelb.edu.au/"
+                    href="https://engagement.unimelb.edu.au/"
                     tabindex="-1"
                   >
                     Engagement
@@ -865,6 +867,7 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
+                        data-notsecure=""
                         href="http://www.sport.unimelb.edu.au/fitnesscentres"
                         tabindex="-1"
                       >
