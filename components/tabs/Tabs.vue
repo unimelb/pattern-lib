@@ -1,5 +1,8 @@
 <template>
-  <div class="tabs section">
+  <div
+    :class="alt ? 'tabs--alt' : false"
+    class="tabs section"
+  >
     <div class="tabs__section">
       <div class="styled-select tabs__tablist--mobile">
         <select
@@ -50,6 +53,12 @@
 // tabs-set-active
 
 export default {
+  props: {
+    alt: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data: () => ({
     panels: [],
   }),
