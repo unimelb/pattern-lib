@@ -127,3 +127,7 @@ No change
 ## v3.1.5
 
 No change
+
+## v3.2.0
+
+No change
