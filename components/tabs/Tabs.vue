@@ -4,11 +4,15 @@
     class="tabs section"
   >
     <div class="tabs__section">
-      <div class="styled-select tabs__tablist--mobile">
+      <div
+        v-if="!min"
+        class="styled-select tabs__tablist--mobile"
+      >
         <select
           ref="selector"
           aria-hidden="true"
-          @change="setActive($refs.selector.value)">
+          @change="setActive($refs.selector.value)"
+        >
           <option
             v-for="(tab, index) in panels"
             :key="`${namespace}-mob-${index + 1}`"
@@ -20,6 +24,7 @@
         </select>
       </div>
       <div
+        :class="min ? 'tabs__tablist--min' : false"
         class="tabs__tablist max"
         role="tablist"
         @keyup="handleKey">
@@ -55,6 +60,10 @@
 export default {
   props: {
     alt: {
+      type: Boolean,
+      default: false,
+    },
+    min: {
       type: Boolean,
       default: false,
     },
