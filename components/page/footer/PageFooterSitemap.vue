@@ -10,9 +10,6 @@
           href="https://study.unimelb.edu.au/find">Find a course</a></li>
         <li><a
           class="link-reset"
-          href="https://study.unimelb.edu.au/connect-with-us/">Future students</a></li>
-        <li><a
-          class="link-reset"
           href="https://study.unimelb.edu.au/how-to-apply">Admissions, fees &amp; applications</a></li>
         <li><a
           class="link-reset"
@@ -20,6 +17,9 @@
         <li><a
           class="link-reset"
           href="https://www.unimelb.edu.au/campustour">Campus tour</a></li>
+        <li><a
+          class="link-reset"
+          href="https://study.unimelb.edu.au/connect-with-us/">Connect with us</a></li>
       </ul>
     </div>
     <div class="cell cell--tab-1of2 cell--desk-1of3">
