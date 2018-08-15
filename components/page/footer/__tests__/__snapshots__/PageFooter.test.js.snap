@@ -525,16 +525,6 @@ exports[`PageFooter should match snapshot 1`] = `
                     <li>
                       <a
                         class="link-reset"
-                        href="https://study.unimelb.edu.au/connect-with-us/"
-                        tabindex="-1"
-                      >
-                        Future students
-                      </a>
-                    </li>
-                     
-                    <li>
-                      <a
-                        class="link-reset"
                         href="https://study.unimelb.edu.au/how-to-apply"
                         tabindex="-1"
                       >
@@ -559,6 +549,16 @@ exports[`PageFooter should match snapshot 1`] = `
                         tabindex="-1"
                       >
                         Campus tour
+                      </a>
+                    </li>
+                     
+                    <li>
+                      <a
+                        class="link-reset"
+                        href="https://study.unimelb.edu.au/connect-with-us/"
+                        tabindex="-1"
+                      >
+                        Connect with us
                       </a>
                     </li>
                   </ul>
