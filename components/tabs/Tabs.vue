@@ -8,7 +8,7 @@
         <select
           ref="selector"
           aria-hidden="true"
-          @change="setActive($refs.selector.value)">
+          @change="setActive($refs.selector.selectedIndex)">
           <option
             v-for="(tab, index) in panels"
             :key="`${namespace}-mob-${index + 1}`"
@@ -34,7 +34,7 @@
           :href="`#${namespace}-panel-${index + 1}`"
           class="tabs__tab"
           role="tab"
-          @click.prevent="setActive(tab.title)"
+          @click.prevent="setActive(index)"
         >
           {{ tab.title }}
         </a>
@@ -77,11 +77,11 @@ export default {
     this.panels[0].isActive = true;
   },
   methods: {
-    setActive(selectedtitle) {
-      this.panels.forEach((panel) => {
-        panel.isActive = (panel.title === selectedtitle);
+    setActive(index) {
+      this.panels.forEach((panel, j) => {
+        panel.isActive = index === j;
       });
-      this.$emit('tabs-set-active', selectedtitle);
+      this.$emit('tabs-set-active', this.panels[index].title);
     },
     handleKey(e) {
       let curr = -1;
@@ -99,13 +99,13 @@ export default {
         // left / up
         case 37:
         case 38:
-          this.setActive(this.panels[prev].title);
+          this.setActive(prev);
           this.$refs.tabs[prev].focus();
           break;
         // right / down
         case 39:
         case 40:
-          this.setActive(this.panels[next].title);
+          this.setActive(next);
           this.$refs.tabs[next].focus();
           break;
         default:
