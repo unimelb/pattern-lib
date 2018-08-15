@@ -1,5 +1,8 @@
 <template>
-  <transition name="fade" mode="out-in">
+  <transition
+    name="fade"
+    mode="out-in"
+  >
     <div
       v-show="isActive"
       :id="`${namespace}-panel-${index + 1}`"

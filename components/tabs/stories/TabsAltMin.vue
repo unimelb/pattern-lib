@@ -16,7 +16,10 @@
         <p>We always use inclusive language, avoiding stereotypical and offensive terms that unnecessarily categorise people by attributes such as race, gender or disability. For example, say ‘student’ rather than ‘Asian student’, ‘chairperson’ in place of ‘chairman’ and ‘person with a disability’ instead of ‘disabled person’.</p>
       </Tab>
     </Tabs>
-    <SectionWrap bgColor="white" short>
+    <SectionWrap
+      bg-color="white"
+      short
+    >
       <p>(text below the tabs)</p>
     </SectionWrap>
   </div>
