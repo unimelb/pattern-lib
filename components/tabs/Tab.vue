@@ -1,13 +1,18 @@
 <template>
-  <div
-    v-show="isActive"
-    :id="`${namespace}-panel-${index + 1}`"
-    :aria-labelledby="`${namespace}-${index + 1}`"
-    class="tabs__panel max"
-    role="tabpanel"
+  <transition
+    name="fade"
+    mode="out-in"
   >
-    <slot/>
-  </div>
+    <div
+      v-show="isActive"
+      :id="`${namespace}-panel-${index + 1}`"
+      :aria-labelledby="`${namespace}-${index + 1}`"
+      class="tabs__panel max"
+      role="tabpanel"
+    >
+      <slot/>
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -32,3 +37,18 @@ export default {
   },
 };
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .25s ease .125s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+</style>
