@@ -4,7 +4,7 @@
 .heading-card,
 .lead {
   display: block;
-  font-weight: bold;
+  font-weight: var(--fw-semibold);
   text-transform: none;
 }
 
@@ -56,7 +56,7 @@ h3,
 .heading-card,
 .lead {
   font-family: var(--ff-normal);
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
 }
 
 h4 {
