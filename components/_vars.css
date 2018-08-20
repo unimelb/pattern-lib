@@ -103,7 +103,7 @@
 
   /* Typography */
   --ff-normal: 'Source Sans Pro', 'Gill Sans', 'Trebuchet MS', 'Arial', sans-serif;
-  --ff-lead: 'Noto Serif', 'Georgia', 'Times New Roman', serif;
+  --ff-lead: /*'Noto Serif', 'Georgia', 'Times New Roman', serif;*/ 'Source Sans Pro', 'Gill Sans', 'Trebuchet MS', 'Arial', sans-serif;
   --fw-semibold: 600;
   --fw-light: 300;
 
