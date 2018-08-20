@@ -39,7 +39,7 @@ table, blockquote, figure, fieldset, address {
 }
 
 p {
-  margin-bottom: calc(.667 * var(--vr));
+  margin: 0 0 1rem;
   line-height: 1.5rem;
 }
 
