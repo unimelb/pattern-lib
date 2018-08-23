@@ -11,20 +11,22 @@
 h1,
 .heading-page {
   margin-bottom: 2.25rem;
+  font-family: var(--ff-lead);
   font-size: 2.25rem;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   line-height: 3rem;
 }
 
 .heading-page-sub {
   margin-bottom: 2.25rem;
   font-size: 2rem;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   line-height: 1.4;
 }
 
 .heading-lead {
   font-family: var(--ff-lead);
+  font-weight: normal;
 }
 
 .heading-normal {
@@ -34,8 +36,9 @@ h1,
 h2,
 .heading-section {
   margin-bottom: 2rem;
+  font-family: var(--ff-lead);
   font-size: 1.75rem;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   line-height: 2.5rem;
 }
 
