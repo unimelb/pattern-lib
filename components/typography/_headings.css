@@ -4,7 +4,7 @@
 .heading-card,
 .lead {
   display: block;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   text-transform: none;
 }
 
@@ -20,13 +20,11 @@ h1,
 .heading-page-sub {
   margin-bottom: 2.25rem;
   font-size: 2rem;
-  font-weight: normal;
   line-height: 1.4;
 }
 
 .heading-lead {
   font-family: var(--ff-lead);
-  font-weight: normal;
 }
 
 .heading-normal {
@@ -46,7 +44,7 @@ h3,
 .heading-card {
   margin-bottom: 2rem;
   font-size: 1.5rem;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   line-height: 2rem;
 }
 
@@ -65,21 +63,21 @@ h3,
 h4 {
   margin-bottom: 1.25rem;
   font-size: 1.25rem;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   line-height: 1.75rem;
 }
 
 h5 {
   margin-bottom: 1.125rem;
   font-size: 1.125rem;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   line-height: 1.75rem;
 }
 
 h6 {
   margin-bottom: 1rem;
   font-size: 1rem;
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
   text-transform: uppercase;
 }
 
