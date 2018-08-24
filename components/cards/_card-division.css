@@ -13,11 +13,15 @@
     padding: var(--vr);
     font-family: var(--ff-lead);
     font-size: 1.125em;
-    font-weight: var(--fw-semibold);
   }
 
   .card__footer {
     padding: 0 var(--vr) var(--vr) var(--vr);
+  }
+
+  .card__header {
+    margin-bottom: 1rem;
+    font-family: var(--ff-lead);
   }
 
   .card__subheader {
@@ -25,6 +29,10 @@
   }
 
   &--head {
+    .card__header {
+      margin-bottom: 0;
+    }
+
     .card__meta {
       margin: var(--vr) 0;
       font-weight: var(--fw-semibold);
@@ -89,7 +97,6 @@
     .grid--1col .cell &,
     .listing--one .list-item & {
       .card__header {
-        font-family: var(--ff-lead);
         font-size: 1.75rem;
       }
 

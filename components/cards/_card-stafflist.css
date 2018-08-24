@@ -9,9 +9,9 @@
   }
 
   .card__header {
-    margin-bottom: 0;
+    margin-bottom: .75rem;
     color: rgb(var(--col-brand));
-    font-weight: bold;
+    font-weight: var(--fw-semibold);
     text-decoration: underline;
   }
 }

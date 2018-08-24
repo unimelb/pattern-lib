@@ -4,21 +4,21 @@
 .heading-card,
 .lead {
   display: block;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: none;
 }
 
 h1,
 .heading-page {
-  margin-bottom: calc(2 * var(--vr));
+  margin-bottom: 2.25rem;
   font-family: var(--ff-lead);
-  font-size: 2rem;
-  line-height: 1.3;
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 3rem;
 }
 
 .heading-page-sub {
-  margin-bottom: calc(1.5 * var(--vr));
-  font-family: var(--ff-lead);
+  margin-bottom: 2.25rem;
   font-size: 2rem;
   line-height: 1.4;
 }
@@ -33,39 +33,51 @@ h1,
 
 h2,
 .heading-section {
-  margin-bottom: var(--vr);
+  margin-bottom: 2rem;
   font-family: var(--ff-lead);
   font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 2.5rem;
 }
 
 h3,
-.heading-card,
+.heading-card {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 2rem;
+}
+
 .lead {
-  margin-bottom: calc(var(--vr) / 2);
-  font-size: 1.25rem; /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .heading-card,
 .lead {
   font-family: var(--ff-normal);
-  font-weight: var(--fw-semibold);
+  font-weight: normal;
 }
 
 h4 {
-  margin-bottom: calc(var(--vr) / 2);
-  font-size: 1.125rem;
-  font-weight: var(--fw-semibold);
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 1.75rem;
 }
 
 h5 {
-  margin-bottom: 0;
-  font-size: .875rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  margin-bottom: 1.125rem;
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.75rem;
 }
 
 h6 {
-  margin-bottom: 0;
-  font-size: .875rem;
-  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
 }
+
