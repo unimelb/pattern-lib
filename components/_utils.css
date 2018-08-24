@@ -187,7 +187,6 @@ a[target='_blank'] {
     margin-right: 1ch;
     float: left;
     clear: left;
-    font-weight: var(--fw-semibold);
   }
 
   & > dd {

@@ -110,6 +110,23 @@ a {
 
     &:visited { color: rgb(var(--col-link-visited-on-dark)); }
     &:active { color: rgb(var(--col-link-active-on-dark)); }
+
+    &.btn--inverted {
+      border-color: white;
+      color: white;
+
+      &:visited {
+        border-color: white;
+        color: white;
+      }
+
+      &:hover,
+      &:active {
+        border-color: rgba(255, 255, 255, .75);
+        background-color: transparent;
+        color: rgba(255, 255, 255, .75);
+      }
+    }
   }
 }
 

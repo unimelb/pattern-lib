@@ -1,13 +1,14 @@
 .card--fact {
   .card__inner {
     display: block;
+    padding-top: 0;
   }
 
   .card__header {
     margin-bottom: .75rem;
     font-family: var(--ff-lead);
     font-size: 2.6rem;
-    font-weight: bold;
+    font-weight: var(--fw-semibold);
 
     &--sml {
       font-size: 1.7rem;
@@ -17,10 +18,6 @@
   .card__thumb {
     width: auto;
     max-height: 150px;
-
-    & + .card__inner {
-      padding-top: 0;
-    }
   }
 
   .card__meta {
@@ -53,4 +50,8 @@
   p {
     font-size: .9rem;
   }
+}
+
+.grid--1col .card--fact .card__inner {
+  padding-top: 1.5rem;
 }

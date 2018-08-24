@@ -4,7 +4,7 @@
 .btn {
   display: inline-block;
   padding: calc(var(--vr) * .8);
-  transition: border-color .2s;
+  transition: border-color .2s, color .2s;
   border: 2px solid color(rgb(var(--col-brand)) alpha(70%));
   border-radius: var(--br);
   color: rgb(var(--col-brand));
