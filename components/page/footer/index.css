@@ -41,8 +41,9 @@
   /* Acknoledgement of Country */
   &__ack {
     margin-bottom: 0;
-    font-size: 1.5rem;
-    font-weight: var(--fw-light);
+    padding-top: .5rem;
+    font-family: var(--ff-lead);
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 
