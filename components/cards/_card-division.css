@@ -22,6 +22,8 @@
   .card__header {
     margin-bottom: 1rem;
     font-family: var(--ff-lead);
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .card__subheader {
@@ -34,7 +36,7 @@
     }
 
     .card__meta {
-      margin: var(--vr) 0;
+      margin: 1.25rem 0;
       font-weight: var(--fw-semibold);
     }
 
