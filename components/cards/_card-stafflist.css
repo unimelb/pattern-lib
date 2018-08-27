@@ -11,7 +11,9 @@
   .card__header {
     margin-bottom: 0;
     color: rgb(var(--col-brand));
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: var(--fw-semibold);
+    line-height: 2rem;
     text-decoration: underline;
   }
 }
