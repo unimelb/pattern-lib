@@ -13,7 +13,7 @@
       name="focus-bottom-right"
       width="54"
       height="54" />
-    <div
+    <h3
       v-if="!compact"
       class="card__header heading-section"
       v-html="title"/>

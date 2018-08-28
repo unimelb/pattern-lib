@@ -11,7 +11,6 @@
       :class="{
         'section__inner--sml': small,
         'section__inner--mid': mid,
-        'section__inner--xmid': xmid,
         'section__inner--short': short,
         'section__inner--nopad': nopad
       }"
@@ -42,10 +41,6 @@ export default {
       default: false,
     },
     mid: {
-      type: Boolean,
-      default: false,
-    },
-    xmid: {
       type: Boolean,
       default: false,
     },

@@ -41,11 +41,6 @@
     .link-icon--vertical {
       margin-top: 1.25rem;
       margin-bottom: .75rem;
-
-      &:hover {
-        background: rgba(255, 255, 255, .15);
-        color: white;
-      }
     }
   }
 
@@ -107,7 +102,6 @@
       display: block;
       padding: .75rem 1rem .75rem 2rem;
       color: white;
-      font-weight: normal;
       text-decoration: none;
 
       &:hover,
@@ -125,6 +119,7 @@
 
     &__link--nested {
       width: 100%;
+      font-weight: var(--fw-semibold);
       text-align: left;
       cursor: pointer;
 
@@ -133,6 +128,7 @@
         z-index: 9;
         float: right;
         font-size: 1.5rem;
+        font-weight: normal;
         line-height: .85;
       }
     }
@@ -147,6 +143,7 @@
       padding: 1.25rem;
       background-color: rgb(var(--col-background-tertiary-navy));
       color: white;
+      font-weight: var(--fw-semibold);
       line-height: 1.96;
       text-align: left;
       text-decoration: none;
@@ -159,6 +156,7 @@
         padding-right: .625rem;
         float: left;
         font-size: 1.75rem;
+        font-weight: var(--fw-semibold);
         line-height: 1.1;
         text-align: center;
       }
@@ -469,6 +467,10 @@
       margin: -.75rem;
       padding: .75rem;
       border-radius: var(--br);
+
+      &:hover {
+        background: rgba(255, 255, 255, .15);
+      }
     }
 
     @media (--bp-tablet) {
@@ -518,26 +520,6 @@
     .page-header__logo {
       width: 4rem;
       height: 4rem;
-    }
-  }
-}
-
-@media (min-width: 769px) {
-  .menu__item--over,
-  .menu__item[tabindex='0'] {
-    .menu__link--nested::after {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: 10;
-      bottom: .3125rem;
-      left: calc(50% - .3125rem);
-      width: .625rem;
-      height: .625rem;
-      transform: rotate(45deg);
-      border-right: 1px solid rgb(var(--col-blue-mid-2));
-      border-bottom: 1px solid rgb(var(--col-blue-mid-2));
-      pointer-events: none;
     }
   }
 }

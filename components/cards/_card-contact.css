@@ -46,9 +46,9 @@
 
   &__title {
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     font-size: 1.2em;
-    font-weight: var(--fw-semibold);
+    font-weight: bold;
   }
 
   &__detail {

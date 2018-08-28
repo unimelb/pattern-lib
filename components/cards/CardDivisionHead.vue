@@ -10,8 +10,8 @@
     </div>
     <div class="card__inner">
       <div class="card__subheader">
-        <div class="card__header">{{ name }}</div>
-        <div class="card__meta">{{ title }}</div>
+        <h3 class="card__header">{{ name }}</h3>
+        <p class="card__meta">{{ title }}</p>
       </div>
       <hr v-if="!compact" >
       <slot/>

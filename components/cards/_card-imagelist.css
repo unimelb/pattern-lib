@@ -13,6 +13,7 @@
 
   .card__header {
     color: rgb(var(--col-brand));
+    font-weight: bold;
     text-decoration: underline;
   }
 }

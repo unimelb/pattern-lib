@@ -16,14 +16,6 @@
       max-width: calc(var(--w-mid) - var(--panel-width)); /* account for side nav */
     }
 
-    &--mid {
-      max-width: calc(var(--w-mid) + 2 * var(--vr));
-    }
-
-    &--xmid {
-      max-width: calc(var(--w-xmid) + 2 * var(--vr));
-    }
-
     &--sml {
       max-width: calc(var(--w-sml) + 2 * var(--vr));
     }

@@ -14,6 +14,6 @@ storiesOf('Content Block', module)
   .add('Small', createStory(ContentBlockSmall))
   .add('Large + inverted', createStory(ContentBlockLargeInverted))
   .add('Short + light', createStory(ContentBlockShortAlt))
-  .add('News block, isolated', createStory(ContentBlockNews))
-  .add('Event block, isolated', createStory(ContentBlockEvent))
+  .add('News block', createStory(ContentBlockNews))
+  .add('Event block', createStory(ContentBlockEvent))
   .add('Combination News & Events', createStory(ContentBlockNewsEvents));

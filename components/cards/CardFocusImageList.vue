@@ -4,9 +4,9 @@
     :href="element === 'a' ? href : false"
     :class="classes"
     class="card card--image-focus">
-    <div
+    <h3
       v-if="titleabove === true"
-      :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</div>
+      :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
     <div
       v-if="!progressive"
       :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"
@@ -26,7 +26,7 @@
     <div
       :class="{'card__inner--tight': tight}"
       class="card__inner">
-      <div v-if="titleabove === false">{{ title }}</div>
+      <h3 v-if="titleabove === false">{{ title }}</h3>
       <slot/>
       <ButtonIcon
         v-if="element === 'a'"

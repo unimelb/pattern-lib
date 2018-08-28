@@ -22,10 +22,6 @@
     }
   }
 
-  th {
-    font-weight: var(--fw-semibold);
-  }
-
   td {
     border-right: 1px solid rgb(var(--col-black-mid-1));
 
