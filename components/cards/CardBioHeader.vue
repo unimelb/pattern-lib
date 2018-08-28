@@ -5,8 +5,8 @@
       class="card__thumb"/>
     <div class="card__inner ">
       <div class="card__subheader">
-        <h3 class="card__header">{{ name }}</h3>
-        <p class="card__meta"> {{ title }}</p>
+        <div class="card__header">{{ name }}</div>
+        <div class="card__meta"> {{ title }}</div>
       </div>
       <hr>
       <slot/>

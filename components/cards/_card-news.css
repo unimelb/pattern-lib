@@ -4,5 +4,6 @@
 
   .card__header {
     margin-top: var(--vr);
+    font-weight: var(--fw-semibold);
   }
 }
