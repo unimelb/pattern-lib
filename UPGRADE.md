@@ -1,5 +1,16 @@
 # Upgrade Instructions
 
+## v3.4.0
+
+The default class for buttons should now be `.button` to include the chevron icon.
+
+```html
+<a class="button"></a>
+<button class="button"></button>
+```
+
+Note this is not a breaking change, since the old behaviour still works, and will not be deprecated.
+
 ## v3.3.0
 ## v3.2.0
 ## v3.1.5
