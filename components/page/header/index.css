@@ -55,10 +55,6 @@
       margin-bottom: 0;
     }
 
-    &__main {
-      font-weight: var(--fw-semibold);
-    }
-
     &__sub {
       margin-top: .25rem;
       font-size: .875em;

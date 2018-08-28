@@ -37,7 +37,7 @@
     margin-top: 2rem;
     font-family: var(--ff-lead);
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1;
 
     &__hash {

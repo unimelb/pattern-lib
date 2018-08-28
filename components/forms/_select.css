@@ -39,12 +39,13 @@
     background-color: transparent;
     color: rgb(var(--col-brand));
     font-size: 1rem;
-    font-weight: var(--fw-semibold);
+    font-weight: normal;
     -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
     -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
 
     option {
       color: black;
+      font-weight: normal;
     }
 
     &::-ms-expand {

@@ -7,8 +7,8 @@
     </div>
     <div class="card__inner ">
       <div class="card__subheader">
-        <h3 class="card__header">{{ name }}</h3>
-        <p class="card__meta">{{ meta }}</p>
+        <div class="card__header">{{ name }}</div>
+        <div class="card__meta">{{ meta }}</div>
       </div>
       <hr>
       <p>{{ excerpt }}</p>
