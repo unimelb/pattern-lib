@@ -1,6 +1,10 @@
 <template>
   <header class="page-header page-header--l3">
-    <div class="page-header__shape bg-saw-tooth"/>
+    <div
+      :style="{ backgroundImage: image}"
+      class="page-header__shape" 
+      :class="{'bg-saw-tooth': !image, 'bg-pattern': image}"
+    />
     <div class="page-header__inner max">
       <a
         class="link-img link-reset"
@@ -16,3 +20,14 @@
     </div>
   </header>
 </template>
+
+<script>
+export default {
+  props: {
+    image: {
+      type: [String, Boolean],
+      default: false,
+    },
+  },
+};
+</script>
