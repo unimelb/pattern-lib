@@ -23,7 +23,7 @@ yarn
 
 Storybook is the main development environment.
 
-- `yarn start` - [http://localhost:7002/](http://localhost:7002/)
+- `yarn dev` - [http://localhost:7002/](http://localhost:7002/)
 - `yarn build` to build the documentation site to `/.out/docs`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the documentation site is to load the library assets locally (`false`) or from the CDN (`true`).
 
 ### Targets
