@@ -216,6 +216,17 @@
         height: 71px;
       }
     }
+
+    .bg-pattern {
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &--baseline {
