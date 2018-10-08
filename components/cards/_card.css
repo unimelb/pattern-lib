@@ -116,6 +116,26 @@
     .list-item:nth-child(7n+5) & { border-color: rgb(var(--col-5)); }
     .list-item:nth-child(7n+6) & { border-color: rgb(var(--col-6)); }
     .list-item:nth-child(7n) & { border-color: rgb(var(--col-7)); }
+
+    .colour-cycle--alt .cell:nth-child(4n+1) &,
+    .colour-cycle--alt .list-item:nth-child(4n+1) & {
+      border-color: rgb(var(--col-orange-mid-2));
+    }
+
+    .colour-cycle--alt .cell:nth-child(4n+2) &,
+    .colour-cycle--alt .list-item:nth-child(4n+2) & {
+      border-color: rgb(var(--col-teal-mid-2));
+    }
+
+    .colour-cycle--alt .cell:nth-child(4n+3) &,
+    .colour-cycle--alt .list-item:nth-child(4n+3) & {
+      border-color: rgb(var(--col-yellow-mid-2));
+    }
+
+    .colour-cycle--alt .cell:nth-child(4n) &,
+    .colour-cycle--alt .list-item:nth-child(4n) & {
+      border-color: rgb(var(--col-green-mid-2));
+    }
   }
 
   &--bdr-top,
