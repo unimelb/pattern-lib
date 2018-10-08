@@ -1,5 +1,6 @@
 # Upgrade Instructions
 
+## v3.5.0
 ## v3.4.0
 
 The default class for buttons should now be `.button` to include the chevron icon.
