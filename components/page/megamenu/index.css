@@ -472,10 +472,6 @@
       margin: -.75rem;
       padding: .75rem;
       border-radius: var(--br);
-
-      &:hover {
-        background: rgba(255, 255, 255, .15);
-      }
     }
 
     @media (--bp-tablet) {
@@ -525,6 +521,26 @@
     .page-header__logo {
       width: 4rem;
       height: 4rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .menu__item--over,
+  .menu__item[tabindex='0'] {
+    .menu__link--nested::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 10;
+      bottom: .3125rem;
+      left: calc(50% - .3125rem);
+      width: .625rem;
+      height: .625rem;
+      transform: rotate(45deg);
+      border-right: 1px solid rgb(var(--col-blue-mid-2));
+      border-bottom: 1px solid rgb(var(--col-blue-mid-2));
+      pointer-events: none;
     }
   }
 }
