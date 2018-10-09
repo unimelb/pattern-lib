@@ -26,6 +26,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-color: rgb(var(--col-background-secondary-navy)); /* same as page header/footer for scroll overflow */
+
+  /* make fonts look a bit thiner */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 main {
@@ -33,14 +37,9 @@ main {
   background-color: white; /* override scroll overflow background */
 }
 
-h1, h2, h3, h4, h5, h6, ul, ol, dl, hr, pre,
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, hr, pre,
 table, blockquote, figure, fieldset, address {
   margin: 0 0 var(--vr);
-}
-
-p {
-  margin: 0 0 1rem;
-  line-height: 1.5;
 }
 
 pre {

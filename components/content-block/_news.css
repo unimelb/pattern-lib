@@ -10,7 +10,7 @@
   }
 
   &__title {
-    font-weight: var(--fw-semibold);
+    font-weight: bold;
   }
 
   &__item {

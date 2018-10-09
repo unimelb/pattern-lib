@@ -52,6 +52,6 @@
     padding: 1.25rem;
     border-width: 1px;
     font-size: 1.125rem;
-    font-weight: var(--fw-semibold);
+    font-weight: bold;
   }
 }

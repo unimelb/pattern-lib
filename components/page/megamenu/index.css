@@ -107,7 +107,6 @@
       display: block;
       padding: .75rem 1rem .75rem 2rem;
       color: white;
-      font-weight: normal;
       text-decoration: none;
 
       &:hover,
@@ -125,6 +124,7 @@
 
     &__link--nested {
       width: 100%;
+      font-weight: var(--fw-semibold);
       text-align: left;
       cursor: pointer;
 
@@ -133,6 +133,7 @@
         z-index: 9;
         float: right;
         font-size: 1.5rem;
+        font-weight: normal;
         line-height: .85;
       }
     }
@@ -147,6 +148,7 @@
       padding: 1.25rem;
       background-color: rgb(var(--col-background-tertiary-navy));
       color: white;
+      font-weight: var(--fw-semibold);
       line-height: 1.96;
       text-align: left;
       text-decoration: none;
@@ -159,6 +161,7 @@
         padding-right: .625rem;
         float: left;
         font-size: 1.75rem;
+        font-weight: var(--fw-semibold);
         line-height: 1.1;
         text-align: center;
       }
