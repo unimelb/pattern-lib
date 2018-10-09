@@ -41,7 +41,7 @@
 
           &[tabindex='0'] {
             background-color: rgb(var(--col-navy-light));
-            font-weight: var(--fw-semibold);
+            font-weight: bold;
           }
         }
       }
@@ -85,7 +85,7 @@
     border-bottom: 1px solid rgb(var(--col-navy-mid-1));
     background-color: rgb(var(--col-navy-light));
     color: rgb(var(--col-brand));
-    font-weight: var(--fw-semibold);
+    font-weight: bold;
     text-decoration: none;
     cursor: pointer;
 

@@ -115,11 +115,11 @@
       <div class="page-footer__legal links-reset">
         <a href="https://safety.unimelb.edu.au/emergency">Emergency information</a>
         <span class="page-footer__legal__sep">|</span>
-        <a href="https://www.unimelb.edu.au/governance/disclaimer">Disclaimer &amp; copyright</a>
+        <a href="https://unimelb.edu.au/disclaimer">Disclaimer and copyright</a>
         <span class="page-footer__legal__sep">|</span>
         <a href="https://www.unimelb.edu.au/accessibility">Accessibility</a>
         <span class="page-footer__legal__sep">|</span>
-        <a href="https://www.unimelb.edu.au/governance/compliance/privacy">Privacy</a>
+        <a href="https://unimelb.edu.au/privacy">Privacy</a>
       </div>
     </div>
   </div>

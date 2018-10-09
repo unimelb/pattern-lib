@@ -7,7 +7,7 @@
 
   label {
     font-size: .95em;
-    font-weight: var(--fw-semibold);
+    font-weight: bold;
   }
 
   legend {

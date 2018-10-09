@@ -8,8 +8,8 @@
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"/>
     <div class="card__inner ">
-      <div class="card__header">{{ meta }}</div>
-      <div class="card__meta">{{ title }}</div>
+      <h3 class="card__header">{{ meta }}</h3>
+      <p class="card__meta">{{ title }}</p>
     </div>
   </a>
 </template>
