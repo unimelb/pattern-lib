@@ -428,9 +428,9 @@ exports[`PageFooter should match snapshot 1`] = `
         </span>
          
         <a
-          href="https://www.unimelb.edu.au/governance/disclaimer"
+          href="https://unimelb.edu.au/disclaimer"
         >
-          Disclaimer & copyright
+          Disclaimer and copyright
         </a>
          
         <span
@@ -452,7 +452,7 @@ exports[`PageFooter should match snapshot 1`] = `
         </span>
          
         <a
-          href="https://www.unimelb.edu.au/governance/compliance/privacy"
+          href="https://unimelb.edu.au/privacy"
         >
           Privacy
         </a>
@@ -900,11 +900,14 @@ exports[`PageFooter should match snapshot 1`] = `
         <div
           class="page-footer__main__ack cell cell--wide-1of4"
         >
-          <p
-            class="page-footer__ack"
+          <a
+            class="page-footer__ack link-reset"
+            href="https://unimelb.edu.au/reconciliation"
           >
+            
             We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated.
-          </p>
+          
+          </a>
         </div>
       </div>
     </div>
