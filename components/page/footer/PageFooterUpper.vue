@@ -20,10 +20,9 @@
             <div class="page-footer-search__field">
               <label
                 class="page-footer-search__label"
-                for="f_s_q">Search</label>
+                for="f_s_q">University Search</label>
               <input
                 id="f_s_q"
-                aria-label="Search the University"
                 class="page-footer-search__input"
                 name="q"
                 placeholder="Type to search"

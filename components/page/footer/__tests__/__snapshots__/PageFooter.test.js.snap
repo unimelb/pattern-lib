@@ -46,11 +46,10 @@ exports[`PageFooter should match snapshot 1`] = `
                 class="page-footer-search__label"
                 for="f_s_q"
               >
-                Search
+                University Search
               </label>
                
               <input
-                aria-label="Search the University"
                 class="page-footer-search__input"
                 id="f_s_q"
                 name="q"
