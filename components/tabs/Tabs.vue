@@ -1,16 +1,15 @@
 <template>
   <div
     :class="alt ? 'tabs--alt' : false"
-    class="tabs section"
-  >
+    class="tabs section">
     <div class="tabs__section">
       <div
         v-if="!min"
-        class="styled-select tabs__tablist--mobile"
-      >
+        class="styled-select tabs__tablist--mobile">
         <select
           ref="selector"
           aria-hidden="true"
+          aria-label="titles"
           @change="setActive($refs.selector.selectedIndex)"
         >
           <option
@@ -18,16 +17,15 @@
             :key="`${namespace}-mob-${index + 1}`"
             :aria-controls="`${namespace}-panel-${index + 1}`"
             :selected="tab.isActive ? 'selected' : null"
-          >
-            {{ tab.title }}
-          </option>
+          >{{ tab.title }}</option>
         </select>
       </div>
       <div
         :class="min ? 'tabs__tablist--min' : false"
         class="tabs__tablist max"
         role="tablist"
-        @keyup="handleKey">
+        @keyup="handleKey"
+      >
         <a
           v-for="(tab, index) in panels"
           ref="tabs"
@@ -40,15 +38,12 @@
           class="tabs__tab"
           role="tab"
           @click.prevent="setActive(index)"
-        >
-          {{ tab.title }}
-        </a>
+        >{{ tab.title }}</a>
       </div>
     </div>
     <div
       tabindex="0"
-      class="tabs__section"
-    >
+      class="tabs__section">
       <slot/>
     </div>
   </div>
