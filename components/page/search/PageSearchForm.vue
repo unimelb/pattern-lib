@@ -9,7 +9,7 @@
       name="q"
       type="search"
       placeholder="Search the University"
-      aria-label="Search the University"
+      aria-label="Search the University of Melbourne"
     ><button
       class="page-header-search__submit"
       type="submit">
