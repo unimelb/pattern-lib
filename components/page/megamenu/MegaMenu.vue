@@ -31,7 +31,9 @@
             aria-label="Close"
             class="menu__back-btn"
             @click="dismissMobileMenu">Close</div>
-          <PageSearchForm aria-hidden="true" />
+          <PageSearchForm
+            v-if="isMobileOpen"
+            aria-hidden="true"/>
           <ul
             class="menu__section"
             role="menu">
@@ -106,7 +108,7 @@
               </div>
             </li>
           </ul>
-          <PageSearch />
+          <PageSearch/>
         </nav>
       </div>
       <div class="header-tools__menu">
