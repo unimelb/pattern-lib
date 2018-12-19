@@ -8,8 +8,8 @@
         class="styled-select tabs__tablist--mobile">
         <select
           ref="selector"
+          :aria-label="tab.title"
           aria-hidden="true"
-          aria-label="titles"
           @change="setActive($refs.selector.selectedIndex)"
         >
           <option
