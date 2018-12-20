@@ -1,8 +1,7 @@
 <template>
   <transition
     name="fade"
-    mode="out-in"
-  >
+    mode="out-in">
     <div
       v-show="isActive"
       :id="`${namespace}-panel-${index + 1}`"
@@ -41,14 +40,13 @@ export default {
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity .25s ease .125s;
+  transition: opacity 0.25s ease 0.125s;
 }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0;
   visibility: hidden;
   position: absolute;
+  opacity: 0;
 }
-
 </style>
