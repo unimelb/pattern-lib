@@ -126,14 +126,14 @@
                             &quot;href&quot;: &quot;https:\/\/openday.unimelb.edu.au\/plan-my-day&quot;
                           }
       ]
-  }]" />
+  }]"
+  />
 </template>
 
 <script>
-import { codeBlock } from './.storybook/utils';
-
-import MegaMenu from '../MegaMenu.vue';
-import JSON from '../sample.json';
+import { codeBlock } from "../../../../.storybook/utils";
+import MegaMenu from "../MegaMenu.vue";
+import JSON from "../sample.json";
 
 const markup = codeBlock(`
 <mega-menu :items='[
@@ -161,11 +161,11 @@ const markup = codeBlock(`
 export default {
   components: { MegaMenu },
   data: () => ({
-    json: JSON.menu,
+    json: JSON.menu
   }),
   readme: {
     custom: markup,
-    source: false,
-  },
+    source: false
+  }
 };
 </script>

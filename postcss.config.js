@@ -3,9 +3,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   plugins: {
-    'postcss-import': {
-      plugins: [],
-    },
+    'postcss-import': {},
     'postcss-url': {},
     'postcss-nested': {},
     'postcss-cssnext': {
