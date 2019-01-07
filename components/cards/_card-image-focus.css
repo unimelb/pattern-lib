@@ -88,7 +88,9 @@
     }
 
     .card__inner {
-      h2, h3, h4 { /* stylelint-disable-line */
+      h2,
+      h3,
+      h4 { /* stylelint-disable-line */
         text-decoration: underline;
       }
     }
