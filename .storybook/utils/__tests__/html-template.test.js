@@ -36,22 +36,11 @@ describe('htmlTemplate', () => {
 
     const wrapper = mountFromTemplate(template);
     const markup = htmlTemplate(wrapper.vm);
-
-    expect(markup).toEqual(pretty(`
-      <div>
-        <p></p>
-        <input>
-      </div>
-    `));
+    expect(markup).toEqual(pretty('<div><p></p> <input></div>'));
   });
 
   test('should process classes and attributes', () => {
-    const template = `
-      <div class="test">
-        <p class="foo bar-baz">Test</p>
-        <input type="text" data-attr="foo" data-boolean-attr>
-      </div>
-    `;
+    const template = '<div class="test"><p class="foo bar-baz">Test</p><input type="text" data-attr="foo" data-boolean-attr></div>';
 
     const wrapper = mountFromTemplate(template);
     const markup = htmlTemplate(wrapper.vm);
@@ -93,12 +82,14 @@ describe('htmlTemplate', () => {
     const wrapper = mountFromTemplate(template, { MyComponent: true });
     const markup = htmlTemplate(wrapper.vm);
 
-    expect(markup).toEqual(pretty(`
+    expect(markup).toEqual(
+      pretty(`
       <my-component>
         <h2 slot="heading">Heading</h2>
         <p>Text</p>
       </my-component>
-    `));
+    `)
+    );
   });
 
   test('should process HTML-compliant component props', () => {
@@ -114,13 +105,15 @@ describe('htmlTemplate', () => {
     const wrapper = mountFromTemplate(template, { MyComponent: true });
     const markup = htmlTemplate(wrapper.vm);
 
-    expect(markup).toEqual(pretty(`
+    expect(markup).toEqual(
+      pretty(`
       <div>
         <my-component bool></my-component>
         <my-component string="foo"></my-component>
         <my-component multi-word-bool></my-component>
         <my-component multi-word-string="foo"></my-component>
       </div>
-    `));
+    `)
+    );
   });
 });

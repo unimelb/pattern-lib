@@ -17,7 +17,9 @@ html {
   }
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -37,8 +39,23 @@ main {
   background-color: white; /* override scroll overflow background */
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, dl, hr, pre,
-table, blockquote, figure, fieldset, address {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+hr,
+pre,
+table,
+blockquote,
+figure,
+fieldset,
+address {
   margin: 0 0 var(--vr);
 }
 
@@ -57,8 +74,12 @@ form {
   margin: 0;
 }
 
-th, td, button, legend,
-fieldset, blockquote {
+th,
+td,
+button,
+legend,
+fieldset,
+blockquote {
   padding: 0;
 }
 
@@ -67,10 +88,12 @@ hr {
   border: 1px solid rgb(var(--col-black-mid-1));
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: var(--vr);
 
-  ol, ul {
+  ol,
+  ul {
     margin-top: calc(var(--vr) / 2);
     margin-bottom: 0;
   }
@@ -112,8 +135,11 @@ a {
   }
 }
 
-button, input, optgroup,
-select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font: inherit;
   line-height: inherit;
 }
