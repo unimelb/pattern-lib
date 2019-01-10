@@ -5,7 +5,7 @@
     <div
       v-show="isActive"
       :id="`${namespace}-panel-${index + 1}`"
-      :aria-labelledby="`${namespace}-${index + 1}`"
+      :aria-label="`${namespace}-${index + 1}`"
       class="tabs__panel max"
       role="tabpanel"
     >
