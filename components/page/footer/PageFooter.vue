@@ -1,5 +1,7 @@
 <template>
-  <footer id="page-footer" class="page-footer">
+  <footer
+    id="page-footer"
+    class="page-footer">
     <PageFooterUpper/>
     <div class="page-footer__bottom">
       <div class="page-footer__inner max">
@@ -30,15 +32,15 @@
 </template>
 
 <script>
-import ToggleBlockMobile from "../../toggle/ToggleBlockMobile.vue";
-import PageFooterUpper from "./PageFooterUpper.vue";
-import PageFooterSitemap from "./PageFooterSitemap.vue";
+import ToggleBlockMobile from '../../toggle/ToggleBlockMobile.vue';
+import PageFooterUpper from './PageFooterUpper.vue';
+import PageFooterSitemap from './PageFooterSitemap.vue';
 
 export default {
   components: {
     ToggleBlockMobile,
     PageFooterUpper,
-    PageFooterSitemap
-  }
+    PageFooterSitemap,
+  },
 };
 </script>
