@@ -25,9 +25,9 @@
         </div>
       </div>
     </div>
-    <!-- START LIVEAGENT (DO NOT DELETE )-->
+    <!-- START LIVEAGENT (DO NOT DELETE)-->
     <div id="liveagent"/>
-    <!-- END LIVEAGENT (DO NOT DELETE )-->
+    <!-- END LIVEAGENT (DO NOT DELETE)-->
   </footer>
 </template>
 
