@@ -13,15 +13,15 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
 
 const emitHtml = isDev || process.env.LIB_EMIT_HTML === 'true';
-const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? pkg.version : process.env.LIB_LOAD_VERSION;
-const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
 
-module.exports = merge(sharedConfig, {
+const versionToLoad =  process.env.LIB_LOAD_VERSION === 'auto'
+    ? pkg.version
+    : process.env.LIB_LOAD_VERSION;
+
+const publicPath =  !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
+const mergedConfiguration = merge(sharedConfig, {
   entry: {
-    ui: [
-      './targets/lib/index.js',
-      './targets/lib/index.css',
-    ],
+    ui: ['./targets/lib/index.js', './targets/lib/index.css'],
   },
   output: {
     path: path.resolve(__dirname, `../../.out/lib/v${pkg.version}/`),
@@ -46,18 +46,18 @@ module.exports = merge(sharedConfig, {
       },
     ],
   },
-  plugins: [
-    new SpriteLoaderPlugin({ plainSprite: true }),
-  ]
-    .concat(isDev ? [
-      new webpack.HotModuleReplacementPlugin(),
-    ] : [])
-    .concat(emitHtml ? [
-      new HtmlWebpackPlugin({
-        template: './targets/lib/index.html',
-        inject: true,
-      }),
-    ] : []),
+  plugins: [new SpriteLoaderPlugin({ plainSprite: true })]
+    .concat(isDev ? [new webpack.HotModuleReplacementPlugin()] : [])
+    .concat(
+      emitHtml
+        ? [
+          new HtmlWebpackPlugin({
+            template: './targets/lib/index.html',
+            inject: true,
+          }),
+        ]
+        : []
+    ),
   devServer: {
     publicPath,
     hot: true, // enable hot module replacement
@@ -71,3 +71,6 @@ module.exports = merge(sharedConfig, {
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
 });
+console.log('mergedConfiguration.mode >>>>', mergedConfiguration.mode);
+
+module.exports = mergedConfiguration;
