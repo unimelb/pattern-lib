@@ -2,7 +2,7 @@
   <footer
     id="page-footer"
     class="page-footer">
-    <PageFooterUpper />
+    <PageFooterUpper/>
     <div class="page-footer__bottom">
       <div class="page-footer__inner max">
         <div class="grid">
@@ -12,20 +12,22 @@
                 <h2>Site Map</h2>
               </template>
               <template slot="hidden">
-                <PageFooterSitemap />
+                <PageFooterSitemap/>
               </template>
             </ToggleBlockMobile>
           </div>
           <div class="page-footer__main__ack cell cell--wide-1of4">
             <a
               href="https://unimelb.edu.au/reconciliation"
-              class="page-footer__ack link-reset">
-              We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated.
-            </a>
+              class="page-footer__ack link-reset"
+            >We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated.</a>
           </div>
         </div>
       </div>
     </div>
+    <!-- START LIVEAGENT (DO NOT DELETE)-->
+    <div id="liveagent"/>
+    <!-- END LIVEAGENT (DO NOT DELETE)-->
   </footer>
 </template>
 
