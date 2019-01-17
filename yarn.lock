@@ -999,11 +999,6 @@ axe-core@3.1.1:
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.1.1.tgz#c00515481b2abc47a87a3cbcd6ba2ae2d78d027f"
   integrity sha512-5/JPwRqOMDnEqonolatT9/i+aOTYCpTEHR4rqmYjWRn+oiZdRHbYv8MC+HNLEtP0I3mkC3glAF8fRkfKHrUOtw==
 
-axe-core@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.1.2.tgz#ca0aff897ebefca7552f97859dc1217c06c4f9e6"
-  integrity sha512-e1WVs0SQu3tM29J9a/mISGvlo2kdCStE+yffIAJF6eb42FS+eUFEVz9j4rgDeV2TAfPJmuOZdRetWYycIbK7Vg==
-
 axobject-query@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.0.2.tgz#ea187abe5b9002b377f925d8bf7d1c561adf38f9"
