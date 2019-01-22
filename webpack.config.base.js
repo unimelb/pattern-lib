@@ -9,7 +9,9 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 // Public path for static assets and icon sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
-const customPublicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${pkg.version}/` : '';
+const customPublicPath = loadExternalAssets
+  ? `${process.env.CDN_URL}/v${pkg.version}/`
+  : '';
 
 module.exports = {
   devtool: isDev && 'source-map',

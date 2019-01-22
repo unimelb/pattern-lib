@@ -6,7 +6,7 @@ const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
-const sharedConfig = require('../webpack.config.shared.js');
+const baseConfig = require('../../webpack.config.base.js');
 const pkg = require('../../package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -19,13 +19,14 @@ const versionToLoad =  process.env.LIB_LOAD_VERSION === 'auto'
     : process.env.LIB_LOAD_VERSION;
 
 const publicPath =  !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
-const mergedConfiguration = merge(sharedConfig, {
+const mergedConfiguration = merge(baseConfig, {
   entry: {
     ui: ['./targets/lib/index.js', './targets/lib/index.css'],
   },
   output: {
     path: path.resolve(__dirname, `../../.out/lib/v${pkg.version}/`),
     publicPath,
+    filename: '[name].js',
   },
   resolve: {
     alias: {
@@ -35,10 +36,17 @@ const mergedConfiguration = merge(sharedConfig, {
   module: {
     rules: [
       {
+        // JavaScript (ES6)
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
         // Sprite icons (extract mode -- let Ike deal with injecting the extracted sprite)
+        // https://github.com/kisenka/svg-sprite-loader
         test: /\.svg$/,
         issuer: /sprite\/index\.js$/,
-        loader: 'svg-sprite-loader', // https://github.com/kisenka/svg-sprite-loader
+        loader: 'svg-sprite-loader',
         options: {
           extract: true,
           symbolId: 'icon-[name]',
@@ -47,6 +55,7 @@ const mergedConfiguration = merge(sharedConfig, {
     ],
   },
   plugins: [new SpriteLoaderPlugin({ plainSprite: true })]
+    .concat(isDev ? [] : [new webpack.optimize.UglifyJsPlugin()])
     .concat(isDev ? [new webpack.HotModuleReplacementPlugin()] : [])
     .concat(
       emitHtml
@@ -71,6 +80,8 @@ const mergedConfiguration = merge(sharedConfig, {
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
 });
-console.log('mergedConfiguration.mode >>>>', mergedConfiguration.mode);
+console.log('mergedConfiguration >>>', mergedConfiguration);
+console.log('mergedConfiguration >>>', mergedConfiguration.module.rules);
+console.log('mergedConfiguration >>>', mergedConfiguration.plugins);
 
 module.exports = mergedConfiguration;

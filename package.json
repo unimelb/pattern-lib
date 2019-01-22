@@ -20,7 +20,7 @@
     "prebuild": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
     "build": "build-storybook -c .storybook -o .out/docs",
-    "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.config.js",
+    "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.config.lib.js",
     "build:vue": "NODE_ENV=production webpack --config targets/vue/webpack.config.js",
     "dev": "start-storybook -p 7002 -c .storybook",
     "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
