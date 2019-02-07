@@ -1,5 +1,7 @@
 <template>
-  <InPageNavigation cardTitle="on this page:" :cardLinks="cardData"></InPageNavigation>
+  <InPageNavigation
+    :card-links="cardData"
+    card-title="on this page:"/>
 </template>
 
 <script>
@@ -10,16 +12,17 @@ export default {
   data() {
     return {
       cardData: [{
-        title: "Conservatorium Directorate",
-        url: "google.com"
+        title: 'Conservatorium Directorate',
+        url: 'google.com',
       }, {
-        title: "Conservatorium Directorate",
-        url: "google.com"
-      }, {
-        title: "Conservatorium Directorate",
-        url: "google.com"
-      }]
-    }
+        title: 'Conservatorium Directorate',
+        url: 'google.com',
+      },
+      {
+        title: 'Conservatorium Directorate',
+        url: 'google.com',
+      }],
+    };
   },
 };
 </script>
