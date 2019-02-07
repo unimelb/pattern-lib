@@ -1,18 +1,24 @@
 <template>
   <CardInPageNavigation>
-  <div>
-    <h2 class="title">{{ cardTitle }}</h2>
-    <hr class="line"/>
-    <div class="linkContainer">
-    <li class="removeBullet" v-for="(link, index) in cardLinks" :key="index">
-      <a class="link" :href="link.url">{{ link.title }}
-        <SvgIcon
-      name="chevron-right"
-      class="icon" />
-      </a>
-    </li>
+    <div>
+      <h2 class="title">{{ cardTitle }}</h2>
+      <hr class="line">
+      <div class="linkContainer">
+        <li
+          v-for="(link, index) in cardLinks"
+          :key="index"
+          class="removeBullet"
+        >
+          <a
+            :href="link.url"
+            class="link">{{ link.title }}
+            <SvgIcon
+              name="chevron-right"
+              class="icon" />
+          </a>
+        </li>
+      </div>
     </div>
-  </div>
   </CardInPageNavigation>
 </template>
 
@@ -29,16 +35,20 @@ export default {
     },
     cardLinks: {
       type: Array,
-      default: [],
+      default: () => [],
     },
-  }
+  },
 };
 </script>
 
 <style scoped>
+@import '../_vars.css';
+
+
 .title {
+  color: var(--col-font);
+  font-family: var(--ff-normal);
   font-size: 18px;
-  color: #4A4A4A;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -46,29 +56,39 @@ export default {
 .line {
   width: 40px;
   margin: 0;
-  border: 1px solid #505D68;
+  border: 1px solid var(--col-line);
 }
 
 .removeBullet {
- list-style-type: none;
+  list-style-type: none;
 }
 
 .link {
+  color: var(--col-font);
+  font-family: var(--ff-normal);
   font-size: 16px;
-  color: #4A4A4A;
+  font-weight: normal;
   letter-spacing: 0;
-  font-weight: 400;
 }
 
 .icon {
   display: inline;
-  fill: #424B5A;
-  margin-left: 6px;
   width: 8px;
   height: 8px;
+  margin-left: 6px;
+  fill: var(--col-font);
 }
 
 .linkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
   margin-top: 23px;
+  margin-bottom: 84px;
+}
+
+.linkContainer > * {
+  flex: 0 50%;
 }
 </style>

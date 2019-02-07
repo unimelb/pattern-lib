@@ -23,30 +23,30 @@ export default {
 </script>
 
 <style>
+@import '../_vars.css';
+
 /**
  * In Page Navigation cards
  */
 .container {
-  display: block;
+  display: flex;
   position: relative;
-  width: 806px;
-  height: 478px;
   padding: 65px 54px 72px 95px;
-  background: white;
+  background: var(--col-background);
 }
 
 .topLeft {
   position: absolute;
   top: 0;
   left: 0;
-  fill: #D8D8D8;
+  fill: var(--col-focus);
 }
 
 .btmRight {
   position: absolute;
   right: 0;
   bottom: 0;
-  fill: #D8D8D8;
+  fill: var(--col-focus);
 }
 
 </style>
