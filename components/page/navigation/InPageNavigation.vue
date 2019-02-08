@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import CardPageNavigation from '../cards/CardPageNavigation.vue';
+import CardPageNavigation from '../../cards/CardPageNavigation.vue';
 
 
 export default {
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <style scoped>
-@import '../_vars.css';
+@import '../../_vars.css';
 
 
 .title {
