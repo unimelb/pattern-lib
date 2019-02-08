@@ -6,7 +6,7 @@
 
 <script>
 import InPageNavigation from '../InPageNavigation.vue';
-import { codeBlock } from '../../../.storybook/utils';
+import { codeBlock } from '../../../../.storybook/utils';
 
 const out = codeBlock(`  <InPageNavigation card-links="[{
         title: 'Conservatorium Directorate',
@@ -40,8 +40,4 @@ export default {
     };
   },
 };
-
-
-
-
 </script>

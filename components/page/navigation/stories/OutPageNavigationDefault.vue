@@ -6,7 +6,7 @@
 
 <script>
 import OutPageNavigation from '../OutPageNavigation.vue';
-import { codeBlock } from '../../../.storybook/utils';
+import { codeBlock } from '../../../../.storybook/utils';
 
 const out = codeBlock(`  <OutPageNavigation card-links="[{
         title: 'Conservatorium Directorate',
