@@ -1,17 +1,17 @@
 <template>
   <CardPageNavigation>
     <div>
-      <h2 class="title">{{ cardTitle }}</h2>
+      <h2 class="title">{{ cardTitle }}:</h2>
       <hr class="line">
       <div class="linkContainer">
         <li
-          v-for="(link, index) in cardLinks"
+          v-for="(data, index) in getInPageData"
           :key="index"
           class="removeBullet"
         >
           <a
-            :href="link.url"
-            class="link">{{ link.title }}
+            :href="data.id"
+            class="link">{{ data.label }}
             <SvgIcon
               name="chevron-right"
               class="icon" />
@@ -33,10 +33,22 @@ export default {
       type: String,
       default: '',
     },
-    cardLinks: {
-      type: Array,
-      default: () => [],
+    jumpNavClass: {
+      type: String,
+      required: true,
     },
+  },
+  computed: {
+    getInPageData() {
+      const pageNav = [];
+      document.querySelectorAll(`'${this.jumpNavClass}'`).forEach(element => {
+        pageNav.push({
+          id: '#' + element.id, 
+          label: element.innerText,
+        });
+      });
+      return pageNav;
+    }
   },
 };
 </script>
