@@ -7,17 +7,29 @@ The contents of this repository have been produced by The University of Melbourn
 [![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/pattern-lib)
 
 
-## Set-up
+## Getting started
 
-The design system requires Node.js ~6.11.3, and the latest version of [yarn](https://yarnpkg.com/en/). To set it up, run:
+The design system requires:
 
-```
+- [Node](https://nodejs.org/en/) (~6.11.3)
+- [Yarn](https://yarnpkg.com/lang/en/docs/install/) (latest version)
+
+
+```bash
+# 1. Clone the repository.
 git clone https://github.com/unimelb/pattern-lib.git
-cd pattern-lib
-cp .env.example .env
-yarn
-```
 
+# 2. Enter your newly-cloned folder.
+cd pattern-lib
+
+# 3. Copy the env file. 
+cp .env.example .env
+
+# 4. Install dependencies. Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install
+yarn
+
+# 5. Read the documentation linked below for "Setup and development".
+```
 
 ## Development
 
@@ -25,6 +37,25 @@ Storybook is the main development environment.
 
 - `yarn dev` - [http://localhost:7002/](http://localhost:7002/)
 - `yarn build` to build the documentation site to `/.out/docs`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the documentation site is to load the library assets locally (`false`) or from the CDN (`true`).
+
+
+### Generator
+
+This project includes generators to speed up common development tasks. Commands include:
+
+```bash
+# Generate a new component
+yarn generate component
+```
+You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story
+
+```bash
+# Generate a new view component
+yarn generate story
+```
+You will need to select the component from the list of folders, then confirm the selection by selecting `choose this directory`. You will then be asked to give the story a name.
+
+> **Note** This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
 
 ### Targets
 
@@ -64,27 +95,6 @@ For your own sanity, make sure to install your code editor's ESLint and stylelin
 - `yarn lint:css --fix`
 - `yarn lint:js`
 - `yarn lint:js --fix`
-
-### Generator
-
-#### Components
-
-New components can be scaffolded by running:
-
-- `yarn generate component`
-
-You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story.
-
-
-#### Stories
-
-New stories can be scaffolded too by running:
-
-- `yarn generate story`
-
-You will need to select the component from the list of folders, then confirm the selection by selecting `choose this directory`. You will then be asked to give the story a name.
-
-> **Note** This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
 
 
 ## Release process
