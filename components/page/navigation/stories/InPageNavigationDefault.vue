@@ -2,16 +2,10 @@
   <div>
     <InPageNavigation
       card-title="on this page"
-      jump-nav-class=".data-jump-nav"/>
-    <h1
-      id="h1"
-      class="data-jump-nav">h1</h1>
-    <h2
-      id="h2"
-      class="data-jump-nav">h2</h2>
-    <h3
-      id="h3"
-      class="data-jump-nav">h3</h3>
+      heading-level="h2"/>
+    <h2 id="a">Example 1</h2>
+    <h2 id="b">Example 2</h2>
+    <h2 id="c">Example 3</h2>
   </div>
 </template>
 
@@ -19,7 +13,9 @@
 import InPageNavigation from '../InPageNavigation.vue';
 import { codeBlock } from '../../../../.storybook/utils';
 
-const out = codeBlock(`<InPageNavigation card-title="on this page" jump-nav-class=".data-jump-nav" />`);
+const out = codeBlock(
+  '<InPageNavigation card-title="on this page" heading-level="h2" />'
+);
 
 export default {
   components: { InPageNavigation },
