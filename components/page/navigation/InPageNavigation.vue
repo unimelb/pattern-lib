@@ -7,14 +7,14 @@
         <li
           v-for="(data, index) in getInPageData"
           :key="index"
-          class="removeBullet"
-        >
+          class="removeBullet">
           <a
             :href="data.id"
-            class="link">{{ data.label }}
+            class="link">
+            {{ data.label }}
             <SvgIcon
               name="chevron-right"
-              class="icon" />
+              class="icon"/>
           </a>
         </li>
       </div>
@@ -25,7 +25,6 @@
 <script>
 import CardPageNavigation from '../../cards/CardPageNavigation.vue';
 
-
 export default {
   components: { CardPageNavigation },
   props: {
@@ -33,7 +32,7 @@ export default {
       type: String,
       default: '',
     },
-    jumpNavClass: {
+    headingLevel: {
       type: String,
       required: true,
     },
@@ -41,21 +40,22 @@ export default {
   computed: {
     getInPageData() {
       const pageNav = [];
-      document.querySelectorAll(`'${this.jumpNavClass}'`).forEach(element => {
-        pageNav.push({
-          id: '#' + element.id, 
-          label: element.innerText,
-        });
+      document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
+        if (element.id) {
+          pageNav.push({
+            id: `#${element.id}`,
+            label: element.innerText,
+          });
+        }
       });
       return pageNav;
-    }
+    },
   },
 };
 </script>
 
 <style scoped>
-@import '../../_vars.css';
-
+@import "../../_vars.css";
 
 .title {
   color: var(--col-font);
