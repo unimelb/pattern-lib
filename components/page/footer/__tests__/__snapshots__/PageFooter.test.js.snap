@@ -37,6 +37,7 @@ exports[`PageFooter should match snapshot 1`] = `
   </div>
    
   <div
+    class="liveagent"
     id="liveagent"
   />
 </footer>
