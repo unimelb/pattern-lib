@@ -1,5 +1,5 @@
 <template>
-  <CardPageNavigation>
+  <CardWrapper>
     <div>
       <h2 class="title">{{ cardTitle }}</h2>
       <hr class="line">
@@ -7,27 +7,26 @@
         <li
           v-for="(link, index) in cardLinks"
           :key="index"
-          class="removeBullet"
-        >
+          class="removeBullet">
           <a
             :href="link.url"
-            class="link">{{ link.title }}
+            class="link">
+            {{ link.title }}
             <SvgIcon
               name="chevron-right"
-              class="icon" />
+              class="icon"/>
           </a>
         </li>
       </div>
     </div>
-  </CardPageNavigation>
+  </CardWrapper>
 </template>
 
 <script>
-import CardPageNavigation from '../../cards/CardPageNavigation.vue';
-
+import CardWrapper from '../../cards/CardWrapper.vue';
 
 export default {
-  components: { CardPageNavigation },
+  components: { CardWrapper },
   props: {
     cardTitle: {
       type: String,
@@ -42,8 +41,7 @@ export default {
 </script>
 
 <style scoped>
-@import '../../_vars.css';
-
+@import "../../_vars.css";
 
 .title {
   color: var(--col-font);

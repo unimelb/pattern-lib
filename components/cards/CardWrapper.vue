@@ -1,34 +1,32 @@
 <template>
-  <div class="container">
+  <div class="card-container">
     <SvgIcon
       class="topLeft"
       name="focus-top-left"
       width="96"
-      height="96" />
+      height="96"/>
     <SvgIcon
       class="btmRight"
       name="focus-bottom-right"
       width="96"
-      height="96" />
+      height="96"/>
     <slot/>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'CardInPageNavigation',
+  name: 'CardWrapper',
 };
-
 </script>
 
-<style>
-@import '../_vars.css';
+<style scoped>
+@import "../_vars.css";
 
 /**
  * In Page Navigation cards
  */
-.container {
+.card-container {
   display: flex;
   position: relative;
   padding: 65px 54px 72px 95px;
@@ -48,5 +46,4 @@ export default {
   bottom: 0;
   fill: var(--col-focus);
 }
-
 </style>
