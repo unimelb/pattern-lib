@@ -1,5 +1,5 @@
 <template>
-  <CardPageNavigation>
+  <CardWrapper>
     <div>
       <h2 class="title">{{ cardTitle }}:</h2>
       <hr class="line">
@@ -19,14 +19,14 @@
         </li>
       </div>
     </div>
-  </CardPageNavigation>
+  </CardWrapper>
 </template>
 
 <script>
-import CardPageNavigation from '../../cards/CardPageNavigation.vue';
+import CardWrapper from '../../cards/CardWrapper.vue';
 
 export default {
-  components: { CardPageNavigation },
+  components: { CardWrapper },
   props: {
     cardTitle: {
       type: String,

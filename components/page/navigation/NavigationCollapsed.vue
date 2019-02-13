@@ -5,11 +5,10 @@
 </template>
 
 <script>
-import CardPageNavigation from '../../cards/CardPageNavigation.vue';
 import Dropdown from '../../dropdown/Dropdown.vue';
 
 export default {
-  components: { CardPageNavigation, Dropdown },
+  components: { Dropdown },
   props: {
     headingLevel: {
       type: String,
