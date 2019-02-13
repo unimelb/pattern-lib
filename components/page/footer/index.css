@@ -29,13 +29,17 @@
 
     a::before {
       margin-right: .375em;
-      vertical-align: 6%; /* MAGIC NUMBER */
+      vertical-align: 6%;
+
+      /* MAGIC NUMBER */
     }
   }
 
   /* list of popular links */
   &__popular {
-    line-height: calc(1.125 * var(--lh)); /* match size of `users` list items */
+    line-height: calc(1.125 * var(--lh));
+
+    /* match size of `users` list items */
   }
 
   /* Acknoledgement of Country */
@@ -76,7 +80,9 @@
 
   /* social links */
   &__social {
-    margin-top: -.125rem; /* MAGIC NUMBER: fix alignment with headings */
+    margin-top: -.125rem;
+
+    /* MAGIC NUMBER: fix alignment with headings */
     margin-bottom: 1.25rem;
   }
 
@@ -116,20 +122,31 @@
   }
 
   @media (--bp-max-desktop) {
-    &__inner { max-width: 52rem; }
+    &__inner {
+      max-width: 52rem;
+    }
   }
 
   @media (--bp-max-tablet) {
-    &__inner { max-width: 38rem; }
+    &__inner {
+      max-width: 38rem;
+    }
   }
 
   @media (--bp-max-mobile) {
-    &__inner { max-width: 22rem; }
+    &__inner {
+      max-width: 22rem;
+    }
   }
 
   @media (--bp-tablet) {
-    &__top { padding-bottom: 2.75rem; }
-    &__bottom { padding-top: 3rem; }
+    &__top {
+      padding-bottom: 2.75rem;
+    }
+
+    &__bottom {
+      padding-top: 3rem;
+    }
 
     /* footer header with logo and search form */
     &__header {
@@ -226,6 +243,23 @@
 }
 
 /**
+ * liveagent do not delete
+ */
+.liveagent {
+  display: block;
+  position: fixed;
+  z-index: 99999;
+  right: 15px;
+  bottom: 15px;
+  width: 168px;
+  height: 121px;
+}
+
+.liveagent img {
+  width: 100%;
+}
+
+/**
  * Search form
  */
 .page-footer-search {
@@ -241,7 +275,9 @@
 
   &__icon {
     position: absolute;
-    top: calc(50% - 10px); /* vertical centring */
+    top: calc(50% - 10px);
+
+    /* vertical centring */
     left: 0;
     width: 1.375rem;
     height: 1.375rem;
@@ -264,7 +300,9 @@
   &__input {
     display: block;
     width: 100%;
-    padding: .5rem .5rem .75rem 1.75rem; /* icon width + roughly .5rem */
+    padding: .5rem .5rem .75rem 1.75rem;
+
+    /* icon width + roughly .5rem */
     transition: border-bottom-color .3s;
     border: none;
     border-bottom: 2px solid rgb(var(--col-blue-mid-1));
