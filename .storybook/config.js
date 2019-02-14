@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
 import { setOptions } from '@storybook/addon-options';
+
 import VueProgressiveImage from 'vue-progressive-image';
 
 import { storyDecorator } from './utils';

@@ -3,7 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 // plugins
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
@@ -20,18 +20,17 @@ const customPublicPath = loadExternalAssets
 
 // --------
 
-const emitHtml = isDev || process.env.LIB_EMIT_HTML === 'true';
+const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto'
+  ? packageDotJSON.version
+  : process.env.LIB_LOAD_VERSION;
 
-const versionToLoad =  process.env.LIB_LOAD_VERSION === 'auto'
-    ? packageDotJSON.version
-    : process.env.LIB_LOAD_VERSION;
-
-const publicPath =  !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
+const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
 
 // --------
 
 module.exports = {
-  devtool: isDev && 'source-map',
+  mode: 'development',
+  devtool: 'source-map',
   entry: {
     ui: ['./targets/lib/index.js', './targets/lib/index.css'],
   },
@@ -42,7 +41,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      vue: `vue/dist/vue${isDev ? '' : '.min'}.js`,
+      vue: 'vue/dist/vue.js',
       '.storybook': path.resolve(__dirname, '../../.storybook/'),
       icons: path.resolve(__dirname, '../../components/icons/sprite/'),
     },
@@ -55,37 +54,32 @@ module.exports = {
         enforce: 'pre',
         loader: 'eslint-loader',
         options: {
-          emitError: !isDev,
-          emitWarning: isDev,
+          emitError: true,
+          emitWarning: true,
         },
       },
-
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: {
-            loader: 'style-loader',
-            options: { sourceMap: isDev },
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
           },
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                autoprefixer: false,
-                importLoaders: 2,
-                minimize: !isDev,
-                sourceMap: isDev,
-              },
+          {
+            loader: 'css-loader',
+            options: {
+              autoprefixer: false,
+              importLoaders: 2,
+              minimize: false,
+              sourceMap: true,
             },
-            'svg-fill-loader/encodeSharp',
-            {
-              loader: 'postcss-loader',
-              options: { sourceMap: isDev },
-            },
-          ],
-        }),
+          },
+          'svg-fill-loader/encodeSharp',
+          {
+            loader: 'postcss-loader',
+            options: { sourceMap: true },
+          },
+        ],
       },
-
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -137,33 +131,23 @@ module.exports = {
       'CDN_URL',
       'LOAD_EXTERNAL_ASSETS',
     ]),
-    new ExtractTextPlugin({
-      allChunks: true,
+    new MiniCssExtractPlugin({
       filename: '[name].css',
-      disable: isDev,
     }),
     new VueLoaderPlugin(),
     new SpriteLoaderPlugin({ plainSprite: true }),
-  ]
-    .concat(isDev ? [] : [new webpack.optimize.UglifyJsPlugin()])
-    .concat(isDev ? [new webpack.HotModuleReplacementPlugin()] : [])
-    .concat(
-      emitHtml
-        ? [
-          new HtmlWebpackPlugin({
-            template: './targets/lib/index.html',
-            inject: true,
-          }),
-        ]
-        : []
-    ),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './targets/lib/index.html',
+      inject: true,
+    }),
+  ],
   devServer: {
     publicPath,
-    hot: true,
     overlay: true,
     clientLogLevel: 'warning',
-    stats: 'minimal',
-    disableHostCheck: true,
+    stats: 'normal',
+    disableHostCheck: false,
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
 };

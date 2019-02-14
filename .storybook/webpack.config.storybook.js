@@ -1,9 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const pkg = require('./package.json');
+const pkg = require('../package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
@@ -18,14 +16,24 @@ module.exports = {
   devtool: isDev && 'source-map',
   resolve: {
     alias: {
-      '.storybook': path.resolve(__dirname, '.storybook/'),
-      icons: path.resolve(__dirname, 'components/icons/sprite/'),
+      '.storybook': path.resolve(__dirname, './'),
+      icons: path.resolve(__dirname, '../components/icons/sprite/'),
     },
   },
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
+        test: /\.js$/,
+        exclude: /node_modules/,
+        enforce: 'pre',
+        loader: 'eslint-loader',
+        options: {
+          emitError: true,
+          emitWarning: true,
+        },
+      },
+      {
+        test: /\.vue$/,
         exclude: /node_modules/,
         enforce: 'pre',
         loader: 'eslint-loader',
@@ -62,7 +70,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
-        include: path.resolve(__dirname, 'components/icons/sprite/'),
+        include: path.resolve(__dirname, '../components/icons/sprite/'),
         issuer: /\.css$/,
         use: [
           {
@@ -78,7 +86,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg|woff2?|ttf|otf|eot|ico)$/,
-        exclude: path.resolve(__dirname, 'components/icons/sprite/'),
+        exclude: path.resolve(__dirname, '../components/icons/sprite/'),
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',

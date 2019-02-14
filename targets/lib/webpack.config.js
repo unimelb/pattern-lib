@@ -14,11 +14,11 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 const emitHtml = isDev || process.env.LIB_EMIT_HTML === 'true';
 
-const versionToLoad =  process.env.LIB_LOAD_VERSION === 'auto'
-    ? pkg.version
-    : process.env.LIB_LOAD_VERSION;
+const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto'
+  ? pkg.version
+  : process.env.LIB_LOAD_VERSION;
 
-const publicPath =  !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
+const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
 const mergedConfiguration = merge(baseConfig, {
   entry: {
     ui: ['./targets/lib/index.js', './targets/lib/index.css'],
@@ -80,8 +80,4 @@ const mergedConfiguration = merge(baseConfig, {
     headers: { 'Access-Control-Allow-Origin': '*' },
   },
 });
-console.log('mergedConfiguration >>>', mergedConfiguration);
-console.log('mergedConfiguration >>>', mergedConfiguration.module.rules);
-console.log('mergedConfiguration >>>', mergedConfiguration.plugins);
-
 module.exports = mergedConfiguration;

@@ -44,10 +44,7 @@ const mergedConfiguration = merge.smart(baseConfig, {
       },
     ],
   },
-  plugins: isDev ? [] : [new webpack.optimize.UglifyJsPlugin()],
+  // plugins: isDev ? [] : [new webpack.optimize.UglifyJsPlugin()],
 });
-
-console.log('mergedConfiguration >>>>', mergedConfiguration.module.rules);
-console.log('mergedConfiguration >>>>', mergedConfiguration);
 
 module.exports = mergedConfiguration;

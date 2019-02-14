@@ -1,6 +1,10 @@
 import { storiesOf } from '@storybook/vue';
+import { addDecorator } from '@storybook/vue';
+import { withA11Y } from '@storybook/addon-a11y';
 import { createStory } from '../../../.storybook/utils';
 
+
+import StoryTest from './StoryTest.vue';
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
 import Story3 from './Story3.vue';
@@ -18,8 +22,11 @@ import Story14 from './Story14.vue';
 import Story15 from './Story15.vue';
 /* ##Import story component here */
 
+addDecorator(withA11Y)
+
 /* Section - Focus  */
 storiesOf('Buttons', module)
+  .add('Button bad a11y', createStory(StoryTest))
   .add('Button with icon', createStory(Story1))
   .add('Button without icon', createStory(Story2))
   .add('Button icon examples', createStory(Story3))

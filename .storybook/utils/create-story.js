@@ -52,13 +52,19 @@ function generateReadme(Story, opts) {
 
     if (opts.minified) {
       // Append minified source
-      readmeArr.push('#### Minified source', codeBlock(source.replace(/\n/g, '')));
+      readmeArr.push(
+        '#### Minified source',
+        codeBlock(source.replace(/\n/g, ''))
+      );
     }
 
     if (opts.decorated) {
       // Append decorated source
       const decoratedSource = mount(storyDecorator(() => Story)).$el.outerHTML;
-      readmeArr.push('#### Decorated source', codeBlock(pretty(decoratedSource)));
+      readmeArr.push(
+        '#### Decorated source',
+        codeBlock(pretty(decoratedSource))
+      );
     }
 
     if (opts.source) {
