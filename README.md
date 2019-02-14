@@ -156,3 +156,11 @@ Recommended mobile devices for testing:
 
 - [Documenting stories](docs/docs.md) - how to customise the content of the README panel for each story
 - [Icons](docs/icons.md) - how to add new icons, and how to use icons in CSS and Vue components
+
+## Example websites
+
+- The following UoM websites are using these components on the new Squiz CMS (Gen 2). Documentation on how to use these components in Edit+ [Gen 2 documentation] https://matrix-cms.unimelb.edu.au/web/mce 
+- [University Home Page] (https://unimelb.edu.au)
+- [About Us] (https://about.unimelb.edu.au)
+- [Brand Hub] (https://brandhub.unimelb.edu.au)
+- [MSpace] (https://mspace.unimelb.edu.au)
