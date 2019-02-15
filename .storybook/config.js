@@ -1,11 +1,8 @@
 import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
 import { checkA11y } from '@storybook/addon-a11y';
-
-import { setOptions } from '@storybook/addon-options';
-
+import { withOptions } from '@storybook/addon-options';
 import VueProgressiveImage from 'vue-progressive-image';
-
 import { storyDecorator } from './utils';
 import SvgIcon from '../components/icons/SvgIcon.vue';
 import SectionWrap from '../components/section/SectionWrap.vue';
@@ -34,10 +31,11 @@ addDecorator(checkA11y);
 
 
 // Configure Storybook UI
-setOptions({
+addDecorator(withOptions({
   name: `Pattern Library v${version}`,
   url: repository.url.replace(/\.git$/, ''),
-});
+}))
+
 
 // Load stories
 const stories = require.context('../components', true, /stories\/index\.js$/);

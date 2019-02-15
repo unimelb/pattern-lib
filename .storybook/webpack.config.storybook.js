@@ -1,17 +1,10 @@
+require("dotenv").config();
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const pkg = require('../package.json');
-
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
-
-// Public path for static assets and icon sprite
-const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
-const customPublicPath = loadExternalAssets
-  ? `${process.env.CDN_URL}/v${pkg.version}/`
-  : '';
 
 module.exports = {
   devtool: isDev && 'source-map',
@@ -80,8 +73,7 @@ module.exports = {
         exclude: path.resolve(__dirname, '../components/icons/sprite/'),
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
-          publicPath: customPublicPath,
+          name: '[name].[ext]'
         },
       },
       {
