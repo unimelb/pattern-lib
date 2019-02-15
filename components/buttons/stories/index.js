@@ -1,8 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 import { createStory } from '../../../.storybook/utils';
 
-
-import StoryTest from './StoryTest.vue';
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
 import Story3 from './Story3.vue';
@@ -37,5 +35,4 @@ storiesOf('Buttons', module)
   .add('Button for use in CMS (btn--icon)', createStory(Story11))
   .add('Inverse button for use in CMS (btn--icon-before)', createStory(Story13))
   .add('Prev/Next aligned buttons', createStory(Story14))
-  .add('CTA variant', createStory(Story15))
-  .add('Button bad a11y', createStory(StoryTest));
+  .add('CTA variant', createStory(Story15));
