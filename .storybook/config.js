@@ -40,7 +40,7 @@ setOptions({
 });
 
 // Load stories
-const stories = require.context('../components/buttons', true, /stories\/index\.js$/);
+const stories = require.context('../components', true, /stories\/index\.js$/);
 configure(loadStories, module);
 
 function loadStories() {
