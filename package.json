@@ -34,6 +34,7 @@
     "ike.js": "^0.0.2",
     "photoswipe": "^4.1.2",
     "vue": "2.5.16",
+    "vue-loader": "^15.2.6",
     "vue-progressive-image": "3.1.0",
     "vue-scrollto": "^2.11.0"
   },
@@ -41,11 +42,11 @@
     "vue": "2.5.13"
   },
   "devDependencies": {
-    "@storybook/addon-a11y": "^4.0.0-alpha.24",
-    "@storybook/addon-notes": "^4.0.0-alpha.24",
-    "@storybook/addon-options": "^4.0.0-alpha.24",
-    "@storybook/addons": "^4.0.0-alpha.24",
-    "@storybook/vue": "^4.0.0-alpha.24",
+    "@storybook/addon-a11y": "4.1.11",
+    "@storybook/addon-notes": "4.1.11",
+    "@storybook/addon-options": "4.1.11",
+    "@storybook/addons": "4.1.11",
+    "@storybook/vue": "4.1.11",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -100,7 +101,6 @@
     "vue-eslint-parser": "^5.0.0",
     "vue-html-loader": "^1.2.4",
     "vue-jest": "^2.6.0",
-    "vue-loader": "^15.2.6",
     "vue-template-compiler": "2.5.16",
     "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^4.29.0",

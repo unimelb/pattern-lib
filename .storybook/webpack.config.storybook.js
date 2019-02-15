@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const pkg = require('../package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -23,7 +24,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|vue)$/,
         exclude: /node_modules/,
         enforce: 'pre',
         loader: 'eslint-loader',
@@ -31,20 +32,6 @@ module.exports = {
           emitError: true,
           emitWarning: true,
         },
-      },
-      {
-        test: /\.vue$/,
-        exclude: /node_modules/,
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options: {
-          emitError: true,
-          emitWarning: true,
-        },
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
       },
       {
         test: /\.css$/,
@@ -67,6 +54,10 @@ module.exports = {
             options: { sourceMap: true },
           },
         ],
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
       },
       {
         test: /\.svg$/,
@@ -94,9 +85,16 @@ module.exports = {
         },
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
+        test: /\.svg$/,
+        issuer: /sprite\/index\.js$/,
+        loader: 'svg-sprite-loader',
+        options: {
+          symbolId: 'icon-[name]',
+        },
+      },
+      {
+        test: /\.md$/,
+        use: 'raw-loader',
       },
     ],
   },
@@ -108,6 +106,6 @@ module.exports = {
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-    }),
+    })
   ],
 };

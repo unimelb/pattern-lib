@@ -1,6 +1,4 @@
 import { storiesOf } from '@storybook/vue';
-import { addDecorator } from '@storybook/vue';
-import { withA11Y } from '@storybook/addon-a11y';
 import { createStory } from '../../../.storybook/utils';
 
 
@@ -22,11 +20,9 @@ import Story14 from './Story14.vue';
 import Story15 from './Story15.vue';
 /* ##Import story component here */
 
-addDecorator(withA11Y)
 
 /* Section - Focus  */
 storiesOf('Buttons', module)
-  .add('Button bad a11y', createStory(StoryTest))
   .add('Button with icon', createStory(Story1))
   .add('Button without icon', createStory(Story2))
   .add('Button icon examples', createStory(Story3))
@@ -41,4 +37,5 @@ storiesOf('Buttons', module)
   .add('Button for use in CMS (btn--icon)', createStory(Story11))
   .add('Inverse button for use in CMS (btn--icon-before)', createStory(Story13))
   .add('Prev/Next aligned buttons', createStory(Story14))
-  .add('CTA variant', createStory(Story15));
+  .add('CTA variant', createStory(Story15))
+  .add('Button bad a11y', createStory(StoryTest));

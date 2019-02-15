@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
+import { checkA11y } from '@storybook/addon-a11y';
+
 import { setOptions } from '@storybook/addon-options';
 
 import VueProgressiveImage from 'vue-progressive-image';
@@ -28,6 +30,8 @@ Vue.component('ButtonIcon', ButtonIcon);
 
 // Add polymorphic decorator
 addDecorator(storyDecorator);
+addDecorator(checkA11y);
+
 
 // Configure Storybook UI
 setOptions({
@@ -36,7 +40,7 @@ setOptions({
 });
 
 // Load stories
-const stories = require.context('../components', true, /stories\/index\.js$/);
+const stories = require.context('../components/buttons', true, /stories\/index\.js$/);
 configure(loadStories, module);
 
 function loadStories() {

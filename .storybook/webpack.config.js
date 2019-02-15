@@ -1,30 +1,11 @@
 // require("dotenv").config();
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.config.storybook.js');
-// const baseConfig = require("../webpack.config.base.js");
+const baseStorybookConfig = require('./webpack.config.storybook.js');
 
 module.exports = (storybookConfig, env, defaultConfig) => {
   // Keep only storybook's JS rule
   defaultConfig.module.rules = defaultConfig.module.rules.filter(rule => rule.test.test('foo.js'));
-  const mergedConfig = merge(defaultConfig, baseConfig, {
-    module: {
-      rules: [
-        {
-          test: /\.svg$/,
-          issuer: /sprite\/index\.js$/,
-          loader: 'svg-sprite-loader',
-          options: {
-            symbolId: 'icon-[name]',
-          },
-        },
-        {
-          // Markdown loader
-          test: /\.md$/,
-          use: 'raw-loader',
-        },
-      ],
-    },
-  });
-
+  const mergedConfig = merge(defaultConfig, baseStorybookConfig);
+  console.log(mergedConfig.module.rules)
   return mergedConfig;
 };
