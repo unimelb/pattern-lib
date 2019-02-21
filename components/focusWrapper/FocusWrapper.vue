@@ -21,26 +21,23 @@ export default {
 </script>
 
 <style scoped>
-@import '../_vars.css';
-
 .card-focus__container {
   display: flex;
   position: relative;
   padding: 65px 54px 72px 95px;
-  background: var(--col-background);
 }
 
 .card-focus__topLeft {
   position: absolute;
   top: 0;
   left: 0;
-  fill: var(--col-focus);
+  fill: grey;
 }
 
 .card-focus__bottomRight {
   position: absolute;
   right: 0;
   bottom: 0;
-  fill: var(--col-focus);
+  fill: grey;
 }
 </style>
