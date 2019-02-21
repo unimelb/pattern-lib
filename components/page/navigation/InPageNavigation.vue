@@ -1,5 +1,5 @@
 <template>
-  <CardWrapper>
+  <FocusWrapper>
     <div>
       <h2 class="title">{{ cardTitle }}:</h2>
       <hr class="line">
@@ -19,14 +19,14 @@
         </li>
       </div>
     </div>
-  </CardWrapper>
+  </FocusWrapper>
 </template>
 
 <script>
-import CardWrapper from '../../cards/CardWrapper.vue';
+import FocusWrapper from '../../focusWrapper/FocusWrapper.vue';
 
 export default {
-  components: { CardWrapper },
+  components: { FocusWrapper },
   props: {
     cardTitle: {
       type: String,
