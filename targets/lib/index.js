@@ -5,7 +5,7 @@ import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 import Ike from 'ike.js';
 import {
-    version,
+  version,
 } from '../../package.json';
 
 import ToggleBlock from '../../components/toggle/ToggleBlock.vue';
@@ -60,5 +60,5 @@ Vue.component('focus-wrapper', FocusWrapper);
 
 // Create Vue instance
 new Vue({
-    el: '#ui',
+  el: '#ui',
 });
