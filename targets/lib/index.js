@@ -25,7 +25,7 @@ import Tab from '../../components/tabs/Tab.vue';
 import PhotoGallery from '../../components/photo-gallery';
 import InPageNavigation from '../../components/page/navigation/InPageNavigation.vue';
 import OutPageNavigation from '../../components/page/navigation/OutPageNavigation.vue';
-
+import FocusWrapper from '../../components/focusWrapper/FocusWrapper.vue';
 
 import '../../components';
 
@@ -56,7 +56,7 @@ Vue.component('tab', Tab);
 Vue.component('photo-gallery', PhotoGallery);
 Vue.component('in-page-navigation', InPageNavigation);
 Vue.component('out-page-navigation', OutPageNavigation);
-
+Vue.component('focus-wrapper', FocusWrapper);
 
 // Create Vue instance
 new Vue({
