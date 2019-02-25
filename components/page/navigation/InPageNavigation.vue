@@ -1,7 +1,7 @@
 <template>
   <FocusWrapper>
     <div>
-      <h2 class="title">{{ cardTitle }}:</h2>
+      <h2 class="title">{{ title }}:</h2>
       <hr class="line">
       <div class="linkContainer">
         <li
@@ -28,7 +28,7 @@ import FocusWrapper from '../../focusWrapper/FocusWrapper.vue';
 export default {
   components: { FocusWrapper },
   props: {
-    cardTitle: {
+    title: {
       type: String,
       default: '',
     },
