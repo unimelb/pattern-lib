@@ -1,4 +1,15 @@
 # Components
+## Steps to create a new component: (WIP)
+- create a new component.
+  - name conventions
+  - dos and dont's to integrate with CMS.
+
+- Running demo environment to test component.
+  - commands: `yarn run ....`
+
+- Write a Unit test
+- Test accessibility
+- Check responsive features.
 
 ## registering a component before deploying 
 
