@@ -1,32 +1,33 @@
 # Components
 ## Steps to create a new component: (WIP)
-- create a new component.
-  - name conventions
+
+### create a new component.
+  - name conventions: Folders are `kebab-case` and component files are `PascalCase`
   - dos and dont's to integrate with CMS.
 
-- Running demo environment to test component.
-  - commands: `yarn run ....`
+### add the component to storybook:
+  -  add a `stories` folder under the new component folder. `components/new-component/stories/index.js`
+  - on `stories/index.js` add the different stories for the component. Each story should cover 1 variation of the component or use case.  
 
-- Write a Unit test
-- Test accessibility
-- Check responsive features.
+### Write a Unit test
+  - see docs/testing.md section.
+
+### Test accessibility and responsive features.
+  - Can I use the component with a keyboard?
+  - Is accessible on screen readers?
+  - Can I use the component on a small device?
 
 ## registering a component before deploying 
-
 - When a new component is created in the pattern library:
-
   - If this component is suitable to use in CMS, register the component in: `/targets/lib/index.js` which will be used to generate the bundle that will be deployed to `AWS` to be consumed by the CMS system as a CDN link.
-
   - Steps to add a component to deploy in target > lib for being used in CMS:
-
   1. Open `/targets/lib/index.js` and imoprt the component.
     `import MyNewComponent from '../../components/MyNewComponent/MyNewComponent.vue';`
   2. Register the Vue components:
     `Vue.component('my-new-component', MyNewComponent);`
 
 ## Component implentation guidelines:
-
-- Our Components meets Accessibility standards. [link to UOM a11y guidelines here]
+- Our Components meets Accessibility standards. [Unimelb accessibility guidelines](https://www.unimelb.edu.au/accessibility)
 - Our Components are unit tested and easily render in isolation with mocked data. (using storybook UI dev environment, which proves the component works in isolation)
 - Our Components are unit tested as a way of self-documenting the functionality.
 - Each component has a single responsibility and is loosely coupled.
@@ -36,8 +37,7 @@
 - Our components CSS is based on BEM (block element modifier) naming convention.
 - Our components are responsive.
 - Our components are "done" before "perfect".
-- Once a component is done, we check how it looks in browserstack.com [add main supported browsers here]
-  (resources: https://github.com/pablohpsilva/vuejs-component-style-guide#component-structure)
+- Once a component is done, we check how it looks in browserstack.com
 
 ## Notes for specific components:
 
