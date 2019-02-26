@@ -413,6 +413,7 @@ export default {
   margin-top: 14px;
   margin-left: 400px;
 }
+
 .menuTopItem {
   margin-left: 20px;
   color: #adcdf0;
