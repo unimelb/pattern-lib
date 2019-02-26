@@ -45,6 +45,8 @@ This project includes generators to speed up common development tasks. Commands 
 yarn generate component
 ```
 
+> **Note**: Always remember to add the new component to the file `index.js` inside of the folders `target/lib` and `target/vue`, that way the component will be exportable to `Matrix CMS` via `CDN` and `Vue` via `NPM`.
+
 You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story
 
 ```bash
@@ -54,7 +56,7 @@ yarn generate story
 
 You will need to select the component from the list of folders, then confirm the selection by selecting `choose this directory`. You will then be asked to give the story a name.
 
-> **Note** This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
+> **Note**: This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
 
 ### Targets
 
