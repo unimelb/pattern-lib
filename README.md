@@ -118,6 +118,9 @@ For your own sanity, make sure to install your code editor's ESLint and stylelin
 1. Once the library and documentation sites are deployed, publish the release notes and close the milestone.
 1. Share the ZenHub milestone report with stakeholders.
 
+**See more Notes about the release process in the release.md section in docs:**
+[Docs section](https://github.com/unimelb/pattern-lib/tree/master/docs)
+
 ## Deployment
 
 To deploy to production:
