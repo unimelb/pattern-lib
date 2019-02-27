@@ -3,11 +3,9 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-const isDev = process.env.NODE_ENV !== 'production';
-
 module.exports = {
-  devtool: isDev && 'source-map',
+  devtool: 'source-map',
+  mode: 'development',
   resolve: {
     alias: {
       '.storybook': path.resolve(__dirname, './'),
@@ -30,14 +28,12 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: 'style-loader'
           },
           {
             loader: 'css-loader',
             options: {
-              autoprefixer: false,
               importLoaders: 2,
-              minimize: false,
               sourceMap: true,
             },
           },
@@ -87,7 +83,7 @@ module.exports = {
       {
         test: /\.md$/,
         use: 'raw-loader',
-      },
+      }
     ],
   },
   plugins: [
@@ -95,9 +91,6 @@ module.exports = {
       'NODE_ENV',
       'CDN_URL',
       'LOAD_EXTERNAL_ASSETS',
-    ]),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    })
+    ])
   ],
 };
