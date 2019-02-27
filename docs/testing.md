@@ -3,10 +3,9 @@
 - `yarn test` to run the test suite with [Jest](https://facebook.github.io/jest/docs/en/api.html).
 - `yarn test --watch` to run Jest in watch mode (really cool).
 - `yarn test components/path/of/a/component/__tests__/myNewComponent.test.js` to test just one component at a time.
-- WEhen a new component is created: add a `__test__` folder and add a file with the unit test:
+- When a new component is created: add a `__test__` folder and add a file with the unit test:
 `components/my-component/__tests__/MyComponent.test.js`
-- A basic template to test is:
-
+- A basic test template looks like:
 ```js
 // we prefer shallow over mount()
 import { shallow } from 'vue-test-utils';
@@ -110,11 +109,11 @@ Output of `shallow(MyComponent)`:
 
 This is bad because we can't test the props or get a snapshot of the attributes that are passed to `SvgIcon`. We also can't tell whether the icon was purposely not rendered with something like `v-if="false"`, as this would result in the exact same output.
 
-### Testing accessibility (WIP)
+### Testing accessibility
 Example:
 
 ```js
-it('My Component thows no accessibillity violations', (done) => {
+it('My Component throws no accessibillity violations', (done) => {
     const html = shallow(PageFooter).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
