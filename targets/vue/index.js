@@ -111,6 +111,10 @@ export {
 }
   from '../../components/page/megamenu/MegaMenu.vue';
 export {
+  default as MegaMenuTop,
+}
+  from '../../components/page/megamenu/MegaMenuTop.vue';
+export {
   default as ModalDialog,
 }
   from '../../components/modal/ModalDialog.vue';
