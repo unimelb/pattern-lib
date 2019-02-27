@@ -16,6 +16,10 @@
           >
         </div>
       </a>
+      <span class="facultyTitle">
+        <hr class="facultyLine">
+        {{ facultyTitle }}
+      </span>
       <div
         ref="blanket"
         class="megamenu__blanket"
@@ -37,26 +41,22 @@
             v-if="isMobileOpen"
             aria-hidden="true"/>
           <ul
-            class="menu__section"
+            class="menuContainer"
             role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
-              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               :key="`rootitem-${rootindex}`"
               :tabindex="isSelected(rootindex)"
-              class="menu__item"
-              @mouseover="activateDesktopMenu(rootindex)"
-              @mouseout="dismissDesktopMenu"
+              class="menuList"
               @keydown="handleKey"
             >
               <a
                 :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
-                :class="linkClasses(rootindex, rootitem)"
+                class="menuItem"
                 @click="openInner"
-                v-html="rootitem.title"
-              />
+              >{{ rootitem.title }}</a>
               <div
                 v-if="rootitem.items"
                 ref="panels"
@@ -112,6 +112,16 @@
                 </ul>
               </div>
             </li>
+            <div
+              v-if="topItems != 0"
+              class="menuTopContainer">
+              <a
+                v-for="(item, index) in topItems"
+                :key="index"
+                :href="item.href"
+                class="menuTopItem"
+              >{{ item.title }}</a>
+            </div>
           </ul>
           <PageSearch/>
         </nav>
@@ -158,6 +168,10 @@ import PageSearchForm from '../search/PageSearchForm.vue';
 export default {
   components: { PageSearch, PageSearchForm },
   props: {
+    facultyTitle: {
+      type: String,
+      default: () => [],
+    },
     items: {
       type: Array,
       required: true,
@@ -165,6 +179,10 @@ export default {
     active: {
       type: [String, Boolean],
       default: false,
+    },
+    topItems: {
+      type: Array,
+      default: () => [],
     },
   },
   data() {
@@ -200,15 +218,6 @@ export default {
       }
 
       return displayActive;
-    },
-    linkClasses(rootindex, rootitem) {
-      if (rootindex === 0) {
-        return 'menu__nested-parent';
-      }
-      if (rootitem.items) {
-        return 'menu__link menu__link--nested';
-      }
-      return 'menu__link';
     },
     activateDesktopMenu(rootindex) {
       if (
@@ -390,3 +399,68 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.navMegaMenu {
+  position: fixed;
+  z-index: 102;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateX(0);
+  color: white;
+}
+
+.facultyTitle {
+  margin-right: 300px;
+  margin-left: 28px;
+  color: white;
+}
+
+.menuTopContainer {
+  display: flex;
+  position: absolute;
+  right: 115px;
+  margin-top: 14px;
+}
+
+.menuTopItem {
+  margin-left: 20px;
+  color: #adcdf0;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menuItem {
+  position: relative;
+  width: 33.333%;
+  height: calc(6.4375rem - 5px);
+  margin-right: 36px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menuList {
+  height: 20px;
+  margin-top: 52px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+
+.menuContainer {
+  display: flex;
+  right: 0;
+  padding-left: 18px;
+}
+
+.facultyLine {
+  width: 20px;
+  margin: 0;
+}
+</style>
