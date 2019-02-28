@@ -15,7 +15,7 @@ import Accordion from '../../components/accordion/Accordion.vue';
 import AccordionGroup from '../../components/accordion/AccordionGroup.vue';
 import CheckList from '../../components/check-list';
 import MegaMenu from '../../components/page/megamenu';
-import MegaMenuTop from '../../components/page/MegaMenuTop';
+import MegaMenuTop from '../../components/page/megamenu/MegaMenuTop.vue';
 import ModalDialog from '../../components/modal';
 import PageNav from '../../components/page/nav';
 import PageSearch from '../../components/page/search';
