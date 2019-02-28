@@ -18,11 +18,11 @@
   ],
   "scripts": {
     "dev": "start-storybook -p 7002 -c .storybook",
-    "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js --open",
+    "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.lib.dev.js --open",
     "prebuild": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
     "build": "build-storybook -c .storybook -o .out/docs",
-    "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.config.lib.prod.js",
+    "build:lib": "NODE_ENV=production webpack --config targets/lib/webpack.lib.prod.js",
     "build:vue": "NODE_ENV=production webpack --config targets/vue/webpack.config.js",
     "lint": "yarn lint:js && yarn lint:js --fix && yarn lint:css && yarn lint:css --fix",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\"",

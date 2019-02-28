@@ -3,14 +3,10 @@ const path = require('path');
 const webpack = require('webpack');
 
 // plugins
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const packageDotJSON = require('../../package.json');
-
-// process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-// const isDev = process.env.NODE_ENV !== 'production';
 
 // Public path for static assets and icon sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
@@ -19,13 +15,9 @@ const customPublicPath = loadExternalAssets
   : '';
 
 // --------
-
-// const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto'
-//   ? packageDotJSON.version
-//   : process.env.LIB_LOAD_VERSION;
-
-const publicPath = '';
-
+const isDev = process.env.NODE_ENV !== 'production';
+const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? pkg.version : process.env.LIB_LOAD_VERSION;
+const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
 // --------
 
 module.exports = {
@@ -42,7 +34,6 @@ module.exports = {
   resolve: {
     alias: {
       vue: 'vue/dist/vue.js',
-      // '.storybook': path.resolve(__dirname, '../../.storybook/'),
       icons: path.resolve(__dirname, '../../components/icons/sprite/'),
     },
   },
@@ -107,11 +98,6 @@ module.exports = {
           publicPath: customPublicPath,
         },
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'babel-loader',
-      // },
       {
         test: /\.svg$/,
         issuer: /sprite\/index\.js$/,
@@ -129,9 +115,6 @@ module.exports = {
       'CDN_URL',
       'LOAD_EXTERNAL_ASSETS',
     ]),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
     new VueLoaderPlugin(),
     new SpriteLoaderPlugin({ plainSprite: true }),
     new webpack.HotModuleReplacementPlugin(),
