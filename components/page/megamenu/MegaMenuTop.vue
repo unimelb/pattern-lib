@@ -112,17 +112,17 @@
                 </ul>
               </div>
             </li>
-            <div
-              v-if="topItems != 0"
-              class="menuTopContainer">
-              <a
-                v-for="(item, index) in topItems"
-                :key="index"
-                :href="item.href"
-                class="menuTopItem"
-              >{{ item.title }}</a>
-            </div>
           </ul>
+          <div
+            v-if="topItems != 0"
+            class="menuTopContainer">
+            <a
+              v-for="(item, index) in topItems"
+              :key="index"
+              :href="item.href"
+              class="menuTopItem"
+            >{{ item.title }}</a>
+          </div>
           <PageSearch/>
         </nav>
       </div>
@@ -416,7 +416,6 @@ export default {
 }
 
 .facultyTitle {
-  margin-right: 300px;
   margin-left: 28px;
   color: white;
 }
@@ -456,7 +455,7 @@ export default {
 .menuContainer {
   display: flex;
   right: 0;
-  padding-left: 18px;
+  padding-left: 0px;
 }
 
 .facultyLine {
