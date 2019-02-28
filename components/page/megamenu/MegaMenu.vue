@@ -17,6 +17,17 @@
         </div>
       </a>
       <div
+        v-if="title"
+        class="page-title"
+      >
+        <div class="page-title__separator"></div>
+        <a
+          :aria-label="title"
+          class="page-title__text"
+          href="/"
+          v-html="title"></a>
+      </div>
+      <div
         ref="blanket"
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
@@ -157,6 +168,10 @@ export default {
       required: true,
     },
     active: {
+      type: [String, Boolean],
+      default: false,
+    },
+    title: {
       type: [String, Boolean],
       default: false,
     },

@@ -1,5 +1,6 @@
 <template>
   <MegaMenu
+    title="Faculty name"
     :items="[{
       &quot;title&quot;: &quot;Study&quot;,
       &quot;href&quot;: &quot;https:\/\/study.unimelb.edu.au&quot;
@@ -155,7 +156,7 @@ const markup = codeBlock(`
     "title": "Menu title 2",
     "href": "/url-2",
   }
-]' active="/url-to-match" />
+]' active="/url-to-match" title="Header title"/>
 `);
 
 export default {
