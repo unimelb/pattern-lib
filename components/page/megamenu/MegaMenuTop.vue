@@ -37,91 +37,94 @@
             class="menu__back-btn"
             @click="dismissMobileMenu"
           >Close</div>
+
           <PageSearchForm
             v-if="isMobileOpen"
             aria-hidden="true"/>
-          <ul
-            class="menuContainer"
-            role="menu">
-            <li
-              v-for="(rootitem, rootindex) in items"
-              ref="rootitems"
-              :key="`rootitem-${rootindex}`"
-              :tabindex="isSelected(rootindex)"
-              class="menuList"
-              @keydown="handleKey"
-            >
+          <div class="menuContainer">
+            <div
+              v-if="topItems != 0"
+              class="menuTopContainer">
               <a
-                :role="rootitem.items ? 'button' : 'menuitem'"
-                :href="rootitem.href"
-                class="menuItem"
-                @click="openInner"
-              >{{ rootitem.title }}</a>
-              <div
-                v-if="rootitem.items"
-                ref="panels"
-                class="inner">
+                v-for="(item, index) in topItems"
+                :key="index"
+                :href="item.href"
+                class="menuTopItem"
+              >{{ item.title }}</a>
+            </div>
+            <ul
+              class="menuContainer__list"
+              role="menu">
+              <li
+                v-for="(rootitem, rootindex) in items"
+                ref="rootitems"
+                :key="`rootitem-${rootindex}`"
+                :tabindex="isSelected(rootindex)"
+                class="menuList"
+                @keydown="handleKey"
+              >
+                <a
+                  :role="rootitem.items ? 'button' : 'menuitem'"
+                  :href="rootitem.href"
+                  class="menuItem"
+                  @click="openInner"
+                >{{ rootitem.title }}</a>
                 <div
-                  role="button"
-                  class="menu__back-btn"
-                  @click="closeInner">Back</div>
-                <div class="menu__aside">
-                  <a
-                    :href="rootitem.href"
-                    class="menu__nested-parent">{{ rootitem.title }}</a>
-                  <component
-                    v-if="rootitem.feature"
-                    :is="rootitem.feature.link ? 'a' : 'div'"
-                    :href="rootitem.feature.link"
-                    :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
-                    class="menu__campaign"
-                  >
-                    <p
-                      v-if="rootitem.feature.text || rootitem.feature.title"
-                      class="menu__campaign-text"
-                    >
-                      <strong
-                        v-if="rootitem.feature.title"
-                        class="menu__campaign-title"
-                      >{{ rootitem.feature.title }}</strong>
-                      <span
-                        v-if="rootitem.feature.text"
-                        v-html="rootitem.feature.text"/>
-                    </p>
-                    <span
-                      v-if="rootitem.feature.alt"
-                      class="screenreaders-only"
-                      v-html="rootitem.feature.alt"
-                    />
-                  </component>
-                </div>
-                <ul class="menu__section">
-                  <li
-                    v-for="(menuitem, menuindex) in rootitem.items"
-                    :key="`menuitem-${menuindex}`"
-                    class="menu__item"
-                  >
+                  v-if="rootitem.items"
+                  ref="panels"
+                  class="inner">
+                  <div
+                    role="button"
+                    class="menu__back-btn"
+                    @click="closeInner">Back</div>
+                  <div class="menu__aside">
                     <a
-                      :href="menuitem.href"
-                      tabindex="0"
-                      class="menu__link"
-                      role="menuitem"
-                      v-html="menuitem.title"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-          <div
-            v-if="topItems != 0"
-            class="menuTopContainer">
-            <a
-              v-for="(item, index) in topItems"
-              :key="index"
-              :href="item.href"
-              class="menuTopItem"
-            >{{ item.title }}</a>
+                      :href="rootitem.href"
+                      class="menu__nested-parent">{{ rootitem.title }}</a>
+                    <component
+                      v-if="rootitem.feature"
+                      :is="rootitem.feature.link ? 'a' : 'div'"
+                      :href="rootitem.feature.link"
+                      :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
+                      class="menu__campaign"
+                    >
+                      <p
+                        v-if="rootitem.feature.text || rootitem.feature.title"
+                        class="menu__campaign-text"
+                      >
+                        <strong
+                          v-if="rootitem.feature.title"
+                          class="menu__campaign-title"
+                        >{{ rootitem.feature.title }}</strong>
+                        <span
+                          v-if="rootitem.feature.text"
+                          v-html="rootitem.feature.text"/>
+                      </p>
+                      <span
+                        v-if="rootitem.feature.alt"
+                        class="screenreaders-only"
+                        v-html="rootitem.feature.alt"
+                      />
+                    </component>
+                  </div>
+                  <ul class="menu__section">
+                    <li
+                      v-for="(menuitem, menuindex) in rootitem.items"
+                      :key="`menuitem-${menuindex}`"
+                      class="menu__item"
+                    >
+                      <a
+                        :href="menuitem.href"
+                        tabindex="0"
+                        class="menu__link"
+                        role="menuitem"
+                        v-html="menuitem.title"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </div>
           <PageSearch/>
         </nav>
@@ -401,6 +404,10 @@ export default {
 </script>
 
 <style scoped>
+.megamenu {
+  justify-content: flex-end;
+}
+
 .navMegaMenu {
   position: fixed;
   z-index: 102;
@@ -422,9 +429,7 @@ export default {
 
 .menuTopContainer {
   display: flex;
-  position: absolute;
-  right: 115px;
-  margin-top: 14px;
+  margin-top: 1rem;
 }
 
 .menuTopItem {
@@ -439,23 +444,29 @@ export default {
   position: relative;
   width: 33.333%;
   height: calc(6.4375rem - 5px);
-  margin-right: 36px;
+  margin-left: 36px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .menuList {
-  height: 20px;
-  margin-top: 52px;
-  margin-bottom: 0px;
+  /* height: 20px; */
+  /* margin-top: 52px; */
+  /* margin-bottom: 0px; */
   list-style: none;
 }
 
 .menuContainer {
   display: flex;
-  right: 0;
-  padding-left: 0px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.menuContainer__list {
+  display: flex;
+  margin-bottom: .5rem;
 }
 
 .facultyLine {
