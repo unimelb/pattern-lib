@@ -436,5 +436,11 @@ export default {
   color: #adcdf0;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: white;
+    text-decoration: underline;
+  }
 }
 </style>
