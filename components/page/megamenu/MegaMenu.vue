@@ -20,12 +20,12 @@
         v-if="title"
         class="page-title"
       >
-        <div class="page-title__separator"></div>
+        <div class="page-title__separator"/>
         <a
           :aria-label="title"
           class="page-title__text"
           href="/"
-          v-html="title"></a>
+          v-html="title"/>
       </div>
       <div
         ref="blanket"
