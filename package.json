@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "dev": "start-storybook -p 7002 -c .storybook",
-    "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.lib.dev.js --open",
+    "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js --open",
     "prebuild": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
     "build": "build-storybook -c .storybook -o .out/docs",

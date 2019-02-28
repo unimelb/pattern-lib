@@ -9,8 +9,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const packageDotJSON = require('../../package.json');
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-const isDev = process.env.NODE_ENV !== 'production';
+// process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+// const isDev = process.env.NODE_ENV !== 'production';
 
 // Public path for static assets and icon sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
@@ -20,11 +20,11 @@ const customPublicPath = loadExternalAssets
 
 // --------
 
-const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto'
-  ? packageDotJSON.version
-  : process.env.LIB_LOAD_VERSION;
+// const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto'
+//   ? packageDotJSON.version
+//   : process.env.LIB_LOAD_VERSION;
 
-const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
+const publicPath = '';
 
 // --------
 
@@ -42,7 +42,7 @@ module.exports = {
   resolve: {
     alias: {
       vue: 'vue/dist/vue.js',
-      '.storybook': path.resolve(__dirname, '../../.storybook/'),
+      // '.storybook': path.resolve(__dirname, '../../.storybook/'),
       icons: path.resolve(__dirname, '../../components/icons/sprite/'),
     },
   },
@@ -62,14 +62,12 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: 'style-loader'
           },
           {
             loader: 'css-loader',
             options: {
-              autoprefixer: false,
               importLoaders: 2,
-              minimize: false,
               sourceMap: true,
             },
           },
@@ -109,11 +107,11 @@ module.exports = {
           publicPath: customPublicPath,
         },
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: 'babel-loader',
+      // },
       {
         test: /\.svg$/,
         issuer: /sprite\/index\.js$/,

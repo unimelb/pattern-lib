@@ -26,11 +26,6 @@ module.exports = (storybookConfig, env, defaultConfig) => {
   // merge default storybook config with environment config
   const mergedConfig = merge(defaultConfig, environmentConfig);
 
-  console.log('ENV >>>', ENV);
-  console.log('mergedConfig >>>', mergedConfig);
-  console.log('mergedConfig.entry >>>', mergedConfig.entry);
-  console.log('mergedConfig.module.rules >>>', mergedConfig.module.rules);
-
   // Return the altered config
   return mergedConfig;
 };
