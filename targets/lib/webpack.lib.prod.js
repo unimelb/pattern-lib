@@ -5,9 +5,11 @@ const webpack = require('webpack');
 // plugins
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const packageDotJSON = require('../../package.json');
+
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 // Public path for static assets and icon sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
@@ -74,6 +76,13 @@ module.exports = {
         loader: 'vue-loader',
       },
       {
+        test: /\.m?js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+        }
+      },
+      {
         test: /\.svg$/,
         include: path.resolve(__dirname, '../../components/icons/sprite/'),
         issuer: /\.css$/,
@@ -120,5 +129,15 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     new SpriteLoaderPlugin({ plainSprite: true }),
-  ]
+  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: false
+      }),
+      new OptimizeCSSAssetsPlugin()
+    ]
+  }
 };
