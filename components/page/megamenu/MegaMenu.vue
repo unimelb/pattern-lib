@@ -32,6 +32,18 @@
             @click="dismissMobileMenu"
           >Close</div>
           <PageSearchForm v-if="isMobileOpen" aria-hidden="true"/>
+          <div v-if="facultyTitle != 0" class="facultyTitle">
+            <hr class="facultyLine">
+            {{ facultyTitle }}
+          </div>
+          <div v-if="topItems != 0" class="menuTopContainer">
+            <a
+              v-for="(item, index) in topItems"
+              :key="index"
+              :href="item.href"
+              class="menuTopItem"
+            >{{ item.title }}</a>
+          </div>
           <ul class="menu__section" role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
@@ -149,6 +161,10 @@ import MegaMenuTitle from "./MegaMenuTitle.vue";
 export default {
   components: { PageSearch, PageSearchForm, MegaMenuTitle },
   props: {
+    facultyTitle: {
+      type: String,
+      default: () => []
+    },
     items: {
       type: Array,
       required: true
@@ -173,7 +189,8 @@ export default {
       default: false
     },
     topItems: {
-      type: Array
+      type: Array,
+      default: () => []
     }
   },
   data() {
@@ -421,4 +438,3 @@ export default {
   text-transform: uppercase;
 }
 </style>
-

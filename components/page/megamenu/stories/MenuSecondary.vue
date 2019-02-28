@@ -1,5 +1,5 @@
 <template>
-  <mega-menu-top
+  <mega-menu
     :faculty-title="facultyTitle"
     :items="items"
     :top-items="topItems"
@@ -9,10 +9,10 @@
 
 <script>
 import { codeBlock } from '../../../../.storybook/utils';
-import MegaMenuTop from '../MegaMenuTop.vue';
+import MegaMenu from '../MegaMenu.vue';
 
 const markup = codeBlock(`
-  <mega-menu-top
+  <mega-menu
     faculty-title="Faculty of Fine Arts and Music"
     items="[
         {
@@ -124,11 +124,12 @@ const markup = codeBlock(`
         },
       ]"
     active="/random-link"
-  />
+  >
+  </mega-menu>
 `);
 
 export default {
-  components: { MegaMenuTop },
+  components: { MegaMenu },
   data() {
     return {
       facultyTitle: 'Faculty of Fine Arts and Music',
