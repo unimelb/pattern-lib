@@ -1,11 +1,9 @@
 require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
-
-// plugins
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const packageDotJSON = require('../../package.json');
 
 // Public path for static assets and icon sprite
@@ -16,7 +14,7 @@ const customPublicPath = loadExternalAssets
 
 // --------
 const isDev = process.env.NODE_ENV !== 'production';
-const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? pkg.version : process.env.LIB_LOAD_VERSION;
+const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? packageDotJSON.version : process.env.LIB_LOAD_VERSION;
 const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
 // --------
 
@@ -53,7 +51,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',

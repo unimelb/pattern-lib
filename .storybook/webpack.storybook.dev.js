@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
 
@@ -27,7 +27,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',
@@ -68,7 +68,7 @@ module.exports = {
         exclude: path.resolve(__dirname, '../components/icons/sprite/'),
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
         },
       },
       {
@@ -82,7 +82,7 @@ module.exports = {
       {
         test: /\.md$/,
         use: 'raw-loader',
-      }
+      },
     ],
   },
   plugins: [
@@ -90,6 +90,6 @@ module.exports = {
       'NODE_ENV',
       'CDN_URL',
       'LOAD_EXTERNAL_ASSETS',
-    ])
+    ]),
   ],
 };

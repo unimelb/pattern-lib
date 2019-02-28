@@ -1,15 +1,12 @@
 require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
-
-// plugins
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const packageDotJSON = require('../../package.json');
-
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 // Public path for static assets and icon sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
@@ -19,7 +16,7 @@ const customPublicPath = loadExternalAssets
 
 // --------
 const isDev = process.env.NODE_ENV !== 'production';
-const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? pkg.version : process.env.LIB_LOAD_VERSION;
+const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? packageDotJSON.version : process.env.LIB_LOAD_VERSION;
 const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
 // --------
 
@@ -80,7 +77,7 @@ module.exports = {
         exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
-        }
+        },
       },
       {
         test: /\.svg$/,
@@ -135,9 +132,9 @@ module.exports = {
       new UglifyJsPlugin({
         cache: true,
         parallel: true,
-        sourceMap: false
+        sourceMap: false,
       }),
-      new OptimizeCSSAssetsPlugin()
-    ]
-  }
+      new OptimizeCSSAssetsPlugin(),
+    ],
+  },
 };

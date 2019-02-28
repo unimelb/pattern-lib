@@ -34,7 +34,7 @@ addDecorator(checkA11y);
 addDecorator(withOptions({
   name: `Pattern Library v${version}`,
   url: repository.url.replace(/\.git$/, ''),
-}))
+}));
 
 
 // Load stories

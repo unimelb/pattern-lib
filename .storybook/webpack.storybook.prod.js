@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -66,7 +66,7 @@ module.exports = {
         exclude: path.resolve(__dirname, '../components/icons/sprite/'),
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
         },
       },
       {
@@ -80,7 +80,7 @@ module.exports = {
       {
         test: /\.md$/,
         use: 'raw-loader',
-      }
+      },
     ],
   },
   plugins: [
@@ -91,6 +91,6 @@ module.exports = {
     ]),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-    })
-  ]
+    }),
+  ],
 };

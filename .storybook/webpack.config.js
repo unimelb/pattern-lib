@@ -1,12 +1,12 @@
-require("dotenv").config();
+require('dotenv').config();
 const merge = require('webpack-merge');
 
 const configs = {
   development: require('./webpack.storybook.dev.js'),
-  production: require('./webpack.storybook.prod.js')
+  production: require('./webpack.storybook.prod.js'),
 };
-const ENV = process.env.NODE_ENV;
 
+const ENV = process.env.NODE_ENV;
 
 const environmentConfig = (() => {
   switch (ENV) {
