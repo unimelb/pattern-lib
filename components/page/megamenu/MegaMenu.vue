@@ -16,17 +16,9 @@
           >
         </div>
       </a>
-      <div
-        v-if="title"
-        class="page-title"
-      >
-        <div class="page-title__separator"/>
-        <a
-          :aria-label="title"
-          class="page-title__text"
-          href="/"
-          v-html="title"/>
-      </div>
+      <MegaMenuTitle
+        title="Faculty name"
+        href="/faculty-name"/>
       <div
         ref="blanket"
         class="megamenu__blanket"
@@ -159,19 +151,16 @@
 import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
+import MegaMenuTitle from './MegaMenuTitle.vue';
 
 export default {
-  components: { PageSearch, PageSearchForm },
+  components: { PageSearch, PageSearchForm, MegaMenuTitle },
   props: {
     items: {
       type: Array,
       required: true,
     },
     active: {
-      type: [String, Boolean],
-      default: false,
-    },
-    title: {
       type: [String, Boolean],
       default: false,
     },
