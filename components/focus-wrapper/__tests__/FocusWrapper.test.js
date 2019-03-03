@@ -10,7 +10,6 @@ const testComponent = {
 };
 
 describe('FocusWrapper', () => {
-
   it('should match snapshot', () => {
     const result = shallow(FocusWrapper).element;
     expect(result).toMatchSnapshot();
@@ -109,5 +108,4 @@ describe('FocusWrapper', () => {
     expect(wrapper.props().size).toBe('large');
     expect(wrapper.vm.normalizeSize).toBe(96);
   });
-
 });
