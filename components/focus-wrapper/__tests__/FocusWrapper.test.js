@@ -1,4 +1,4 @@
-import { shallow, mount } from 'vue-test-utils';
+import { shallow } from 'vue-test-utils';
 import { toHaveNoViolations } from 'jest-axe';
 import FocusWrapper from '../FocusWrapper.vue';
 
