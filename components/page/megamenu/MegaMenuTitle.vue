@@ -1,6 +1,7 @@
 <template>
   <div
     v-if="title"
+    :style="{'width': width && width || '50%'}"
     class="page-title"
   >
     <div class="page-title__separator"/>
@@ -8,7 +9,9 @@
       :aria-label="title"
       :href="href"
       class="page-title__text"
-      v-html="title"/>
+    >
+      {{ title }}
+    </a>
   </div>
 </template>
 
@@ -23,6 +26,10 @@ export default {
     href: {
       type: [String],
       required: true,
+    },
+    width: {
+      type: [String, Boolean],
+      default: false,
     },
   },
 };

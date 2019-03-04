@@ -18,7 +18,9 @@
       </a>
       <MegaMenuTitle
         :title="facultyName"
-        :href="facultyLink" />
+        :href="facultyLink"
+        :width="facultyWidth"
+      />
       <div
         ref="blanket"
         class="megamenu__blanket"
@@ -173,6 +175,11 @@ export default {
       type: [String],
       required: false,
       default: '/',
+    },
+    facultyWidth: {
+      type: [String, Boolean],
+      required: false,
+      default: false,
     },
   },
   data() {

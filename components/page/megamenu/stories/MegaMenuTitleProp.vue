@@ -4,7 +4,8 @@
       <div class="page-header__inner">
         <MegaMenuTitle
           title="This is a 2 line <br /> Faculty name"
-          href="/faculty-name"/>
+          href="/faculty-name"
+          width="10%"/>
       </div>
     </header>
   </div>
@@ -17,7 +18,8 @@ import { codeBlock } from '../../../../.storybook/utils';
 const markup = codeBlock(`
 <MegaMenuTitle
       title="Faculty name"
-      href="/link-to-faculty"/>
+      href="/link-to-faculty"
+      width="Faculty block width"/>
 `);
 
 export default {
