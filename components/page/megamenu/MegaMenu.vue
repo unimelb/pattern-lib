@@ -17,8 +17,8 @@
         </div>
       </a>
       <MegaMenuTitle
-        title="Faculty name"
-        href="/faculty-name"/>
+        :title="facultyName"
+        :href="facultyLink" />
       <div
         ref="blanket"
         class="megamenu__blanket"
@@ -163,6 +163,16 @@ export default {
     active: {
       type: [String, Boolean],
       default: false,
+    },
+    facultyName: {
+      type: [String],
+      required: false,
+      default: '',
+    },
+    facultyLink: {
+      type: [String],
+      required: false,
+      default: '/',
     },
   },
   data() {
