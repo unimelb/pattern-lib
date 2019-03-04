@@ -6,14 +6,12 @@ The contents of this repository have been produced by The University of Melbourn
 
 [![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/pattern-lib)
 
-
 ## Getting started
 
 The design system requires:
 
 - [Node](https://nodejs.org/en/) (~6.11.3)
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/) (latest version)
-
 
 ```bash
 # 1. Clone the repository.
@@ -22,13 +20,13 @@ git clone https://github.com/unimelb/pattern-lib.git
 # 2. Enter your newly-cloned folder.
 cd pattern-lib
 
-# 3. Copy the env file. 
+# 3. Copy the env file.
 cp .env.example .env
 
 # 4. Install dependencies. Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install
 yarn
 
-# 5. Read the documentation linked below for "Setup and development".
+# 5. Read the documentation linked below.
 ```
 
 ## Development
@@ -38,7 +36,6 @@ Storybook is the main development environment.
 - `yarn dev` - [http://localhost:7002/](http://localhost:7002/)
 - `yarn build` to build the documentation site to `/.out/docs`. Environment variable `LOAD_EXTERNAL_ASSETS` controls whether the documentation site is to load the library assets locally (`false`) or from the CDN (`true`).
 
-
 ### Generator
 
 This project includes generators to speed up common development tasks. Commands include:
@@ -47,15 +44,19 @@ This project includes generators to speed up common development tasks. Commands 
 # Generate a new component
 yarn generate component
 ```
+
+> **Note**: Always remember to add the new component to the file `index.js` inside of the folders `target/lib` and `target/vue`, that way the component will be exportable to `Matrix CMS` via `CDN` and `Vue` via `NPM`.
+
 You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story
 
 ```bash
 # Generate a new view component
 yarn generate story
 ```
+
 You will need to select the component from the list of folders, then confirm the selection by selecting `choose this directory`. You will then be asked to give the story a name.
 
-> **Note** This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
+> **Note**: This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
 
 ### Targets
 
@@ -96,7 +97,6 @@ For your own sanity, make sure to install your code editor's ESLint and stylelin
 - `yarn lint:js`
 - `yarn lint:js --fix`
 
-
 ## Release process
 
 **At the start of a new release sprint:**
@@ -118,6 +118,8 @@ For your own sanity, make sure to install your code editor's ESLint and stylelin
 1. Once the library and documentation sites are deployed, publish the release notes and close the milestone.
 1. Share the ZenHub milestone report with stakeholders.
 
+**See more Notes about the release process in the release.md section in docs:**
+[Docs section](https://github.com/unimelb/pattern-lib/tree/master/docs)
 
 ## Deployment
 
@@ -134,10 +136,18 @@ Semaphore then automatically builds the library and syncs the output files to S3
 
 > **Note on rebase**: rebasing `dev` onto `master` avoids creating a merge commit that would require merging `master` back into `dev`.
 
-
 ## Testing
 
+### How could you test before going live?
+
+> The `dev` branch is set up into `Semaphore CI` to deploy into the AWS S3 Bucket in a folder called `latest` where the `CMS` team can appoint to `latest` and test it out before go to `production`.
+
+> Each `pull request` that is opened, also is automatically generated a comment with a preview link to test it.
+
+> **Note**: Always check the `Semaphore CI` check into your `pull request` and make sure is building properly, before merge into `dev`.
+
 Supported browsers:
+
 - last two versions of Chrome, Firefox and Edge
 - IE 11
 - Safari 8+
@@ -146,20 +156,21 @@ Supported browsers:
 - Firefox ESR (v52.x)
 
 Recommended mobile devices for testing:
+
 - iPhone 4S
 - iPhone 6
 - iPad 2
 - Galaxy s5
 
-
 ## Developer documentation
 
 - [Documenting stories](docs/docs.md) - how to customise the content of the README panel for each story
 - [Icons](docs/icons.md) - how to add new icons, and how to use icons in CSS and Vue components
+- [Contributing](CONTRIBUTING.md) - how to get involved and contribute code
 
 ## Example websites
 
-- The following UoM websites are using these components on the new Squiz CMS (Gen 2). Documentation on how to use these components in Edit+ [Gen 2 documentation](https://matrix-cms.unimelb.edu.au/web/mce) 
+- The following UoM websites are using these components on the new Squiz CMS (Gen 2). Documentation on how to use these components in Edit+ [Gen 2 documentation](https://matrix-cms.unimelb.edu.au/web/mce)
 - [University Home Page](https://unimelb.edu.au)
 - [About Us](https://about.unimelb.edu.au)
 - [Brand Hub](https://brandhub.unimelb.edu.au)
