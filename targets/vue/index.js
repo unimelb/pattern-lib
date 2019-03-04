@@ -91,6 +91,10 @@ export {
 }
   from '../../components/embed/VideoEmbed.vue';
 export {
+  default as FocusWrapper,
+}
+  from '../../components/focus-wrapper/FocusWrapper.vue';
+export {
   default as FigureWrap,
 }
   from '../../components/figure/FigureWrap.vue';
