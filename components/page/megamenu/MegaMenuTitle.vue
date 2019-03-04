@@ -1,6 +1,5 @@
 <template>
   <div
-    v-if="title"
     :style="{'width': width && width || '50%'}"
     class="page-title"
   >
