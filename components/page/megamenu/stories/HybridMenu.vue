@@ -2,7 +2,7 @@
   <MegaMenu
     :items="items"
     active="/random-link"
-    faculty-name="This is the Faculty name"
+    faculty-name="This is a <br /> Faculty name"
     faculty-link="/faculty-link" />
 </template>
 

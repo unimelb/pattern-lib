@@ -3,7 +3,7 @@
     <header class="page-header page-header--l3 page-header--study">
       <div class="page-header__inner">
         <MegaMenuTitle
-          title="Faculty name"
+          title="This is a 2 line <br /> Faculty name"
           href="/faculty-name"/>
       </div>
     </header>
