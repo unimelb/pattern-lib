@@ -3,8 +3,8 @@
   position: relative;
   padding: 65px 54px 72px 95px;
 
-  &__topLeft,
-  &__bottomRight {
+  &__top-left,
+  &__bottom-right {
     position: absolute;
     top: 0;
     left: 0;
@@ -43,11 +43,11 @@
     }
 
     &.semi-opaque {
-      opacity: .33;
+      opacity: .35;
     }
   }
 
-  &__bottomRight {
+  &__bottom-right {
     top: inherit;
     right: 0;
     bottom: 0;

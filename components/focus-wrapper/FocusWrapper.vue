@@ -1,13 +1,13 @@
 <template>
   <div class="card-focus">
     <SvgIcon
-      :class="['card-focus__topLeft', color, {'semi-opaque': semiOpaque}]"
+      :class="['card-focus__top-left', color, {'semi-opaque': semiOpaque}]"
       :width="normalizeSize"
       :height="normalizeSize"
       name="focus-top-left"
     />
     <SvgIcon
-      :class="['card-focus__bottomRight', color, {'semi-opaque': semiOpaque}]"
+      :class="['card-focus__bottom-right', color, {'semi-opaque': semiOpaque}]"
       :width="normalizeSize"
       :height="normalizeSize"
       name="focus-bottom-right"
