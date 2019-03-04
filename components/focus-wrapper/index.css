@@ -1,7 +1,10 @@
 .card-focus {
   display: flex;
   position: relative;
-  padding: 65px 54px 72px 95px;
+
+  &--padded {
+    padding: 65px 54px 72px 95px;
+  }
 
   &__top-left,
   &__bottom-right {

@@ -1,5 +1,7 @@
 <template>
-  <div class="card-focus">
+  <div
+    :class="[{'card-focus--padded': padded}]"
+    class="card-focus">
     <SvgIcon
       :class="['card-focus__top-left', color, {'semi-opaque': semiOpaque}]"
       :width="normalizeSize"
@@ -33,6 +35,10 @@ export default {
       type: String,
       default: 'medium',
       validator: size => ['small', 'medium', 'large'].indexOf(size) > -1,
+    },
+    padded: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

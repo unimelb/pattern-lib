@@ -38,13 +38,15 @@ describe('FocusWrapper', () => {
     expect(wrapper.find('svgicon').exists()).toBe(true);
   });
 
-  it('should have default props color/semiOpaque/size', () => {
+  it('should have default props color/semiOpaque/size/padding', () => {
     const wrapper = shallow(FocusWrapper);
     expect(wrapper.props().color).toBe('');
     expect(wrapper.props().semiOpaque).toBe(false);
     expect(wrapper.find('svgicon').classes().indexOf('semi-opaque')).toBe(-1);
     expect(wrapper.props().size).toBe('medium');
     expect(wrapper.vm.normalizeSize).toBe(72);
+    expect(wrapper.props().padded).toBe(false);
+    expect(wrapper.classes().indexOf('card-focus--padded')).toBe(-1);
   });
 
   it('should accept only correct color value', () => {
@@ -107,5 +109,16 @@ describe('FocusWrapper', () => {
     });
     expect(wrapper.props().size).toBe('large');
     expect(wrapper.vm.normalizeSize).toBe(96);
+  });
+
+  it('should render padded', () => {
+    const wrapper = shallow(FocusWrapper, {
+      propsData: {
+        padded: true,
+      },
+    });
+
+    expect(wrapper.props().padded).toBe(true);
+    expect(wrapper.classes().indexOf('card-focus--padded')).toBeGreaterThan(-1);
   });
 });

@@ -1,7 +1,10 @@
 <template>
   <SectionWrap small>
-    <FocusWrapper>
-      <div class="placeholder"/>
+    <FocusWrapper
+      padded
+      class="bg-white"
+    >
+      <p>Padded Content</p>
     </FocusWrapper>
   </SectionWrap>
 </template>
@@ -9,27 +12,18 @@
 <script>
 import { codeBlock } from '../../../.storybook/utils';
 import FocusWrapper from '../FocusWrapper.vue';
-import SectionWrap from '../../section/SectionWrap.vue';
 
 const markup = codeBlock(`
-  <FocusWrapper>
+  <FocusWrapper padded>
     ...
   </FocusWrapper>
 `);
 
 export default {
-  components: { FocusWrapper, SectionWrap },
+  components: { FocusWrapper },
   readme: {
     custom: markup,
     source: false,
   },
 };
 </script>
-
-<style>
-  .placeholder {
-    height: 80px;
-    width: 100%;
-    background: #fff;
-  }
-</style>
