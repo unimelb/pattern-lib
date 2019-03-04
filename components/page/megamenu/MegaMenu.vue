@@ -32,16 +32,12 @@
             @click="dismissMobileMenu"
           >Close</div>
           <PageSearchForm v-if="isMobileOpen" aria-hidden="true"/>
-          <div v-if="facultyTitle != 0" class="facultyTitle">
-            <hr class="facultyLine">
-            {{ facultyTitle }}
-          </div>
-          <div v-if="topItems != 0" class="menuTopContainer">
+          <div v-if="topItems" class="menu-top">
             <a
               v-for="(item, index) in topItems"
               :key="index"
               :href="item.href"
-              class="menuTopItem"
+              class="menu-top__item"
             >{{ item.title }}</a>
           </div>
           <ul class="menu__section" role="menu">
@@ -422,25 +418,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.menuTopContainer {
-  display: flex;
-  position: absolute;
-  margin-top: 14px;
-  margin-left: 400px;
-}
-
-.menuTopItem {
-  margin-left: 20px;
-  color: #adcdf0;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover,
-  &:focus {
-    color: white;
-    text-decoration: underline;
-  }
-}
-</style>

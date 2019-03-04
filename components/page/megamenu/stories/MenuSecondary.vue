@@ -1,10 +1,8 @@
 <template>
   <mega-menu
-    :faculty-title="facultyTitle"
     :items="items"
     :top-items="topItems"
-    active="/random-link"
-  />
+    active="/random-link"/>
 </template>
 
 <script>
@@ -13,7 +11,6 @@ import MegaMenu from '../MegaMenu.vue';
 
 const markup = codeBlock(`
   <mega-menu
-    faculty-title="Faculty of Fine Arts and Music"
     items="[
         {
           title: 'About us',
@@ -132,7 +129,6 @@ export default {
   components: { MegaMenu },
   data() {
     return {
-      facultyTitle: 'Faculty of Fine Arts and Music',
       items: [
         {
           title: 'About us',
