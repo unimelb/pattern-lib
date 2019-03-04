@@ -235,7 +235,4 @@ export {
 }
   from '../../components/page/navigation/OutPageNavigation.vue';
 
-export {
-  default as FocusWrapper,
-}
-  from '../../components/focusWrapper/FocusWrapper.vue';
+
