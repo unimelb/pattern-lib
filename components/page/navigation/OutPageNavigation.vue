@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import FocusWrapper from '../../focusWrapper/FocusWrapper.vue';
+import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 
 export default {
   components: { FocusWrapper },
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../../_vars.css";
+@import '../../_vars.css';
 
 .title {
   color: var(--col-font);

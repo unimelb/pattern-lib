@@ -25,7 +25,7 @@ import Tab from '../../components/tabs/Tab.vue';
 import PhotoGallery from '../../components/photo-gallery';
 import InPageNavigation from '../../components/page/navigation/InPageNavigation.vue';
 import OutPageNavigation from '../../components/page/navigation/OutPageNavigation.vue';
-import FocusWrapper from '../../components/focusWrapper/FocusWrapper.vue';
+import FocusWrapper from '../../components/focus-wrapper/FocusWrapper.vue';
 import SvgIcon from '../../components/icons/SvgIcon.vue';
 
 
