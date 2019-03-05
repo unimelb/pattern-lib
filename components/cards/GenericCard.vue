@@ -38,13 +38,10 @@ export default {
       type: String,
       default: '',
     },
-    meta: {
-      type: String,
-      default: '',
-    },
     cols: {
       type: Number,
       default: 3,
+      validator: value => value && value <= 3,
     },
     href: {
       type: String,
@@ -52,7 +49,7 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+      default: 'Lorem ipsum dolor sit amet, consectetur.',
     },
   },
   computed: {
