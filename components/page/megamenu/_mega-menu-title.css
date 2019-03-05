@@ -1,0 +1,20 @@
+.page-title {
+  flex: 1 0 auto;
+  max-width: 50%;
+  padding: 0 .5em;
+
+  &__separator {
+    width: 20px;
+    height: 2px;
+    background: #fff;
+  }
+
+  &__text {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  @media (--bp-desktop) {
+    max-width: 10rem;
+  }
+}
