@@ -1,17 +1,17 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="grid grid--2col">
+    <div class="grid grid--3col">
       <ListItem>
         <GenericCard
-          :cols="2"
+          :cols="3"
           title="Test 1"
-        />
-      </ListItem>
-      <ListItem>
-        <GenericCard
-          :cols="2"
-          title="Test 1"
-        />
+        >
+          <template
+            slot="links">
+            <a href="/">View generic details ></a>
+            <a href="/">View generic staff ></a>
+          </template>
+        </GenericCard>
       </ListItem>
     </div>
   </SectionWrap>

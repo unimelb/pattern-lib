@@ -8,17 +8,20 @@
       class="card__thumb card__thumb--zoom"/>
     <div class="card__inner ">
       <h3 class="card__header">{{ title }}</h3>
-      <div class="card__sub-title">
-        <slot name="sub-title"/>
-      </div>
       <div
-        v-if="meta"
-        class="card__meta">{{ meta }}</div>
+        v-if="hasSubTitleSlots"
+        class="card__sub-titles">
+        <slot name="sub-title-1"/>
+        <slot name="sub-title-2"/>
+        <slot name="sub-title-3"/>
+      </div>
       <div class="card__excerpt">{{ excerpt }}</div>
+      <div
+        v-if="cols !== 1"
+        class="card__links">
+        <slot name="links"/>
+      </div>
     </div>
-    <div
-      v-if="cols !== 1"
-      class="card__footer"/>
   </a>
 </template>
 
@@ -50,6 +53,11 @@ export default {
     excerpt: {
       type: String,
       default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+    },
+  },
+  computed: {
+    hasSubTitleSlots() {
+      return !!this.$slots['sub-title-1'] || !!this.$slots['sub-title-2'] || !!this.$slots['sub-title-3'];
     },
   },
 };

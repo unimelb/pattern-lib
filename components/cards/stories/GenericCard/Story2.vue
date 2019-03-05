@@ -1,20 +1,23 @@
 <template>
   <SectionWrap class="bg-alt">
-    <div class="grid grid--2col">
+    <div class="grid grid--3col">
       <ListItem>
         <GenericCard
-          :cols="2"
+          :cols="3"
           title="Test 1"
-          meta="December 31 1992"
-        >
-          <div
-            slot="sub-title"
-            class="sub-title">
-            <SvgIcon
-              name="calendar" />
-            <span>Lorem ipsum</span>
-          </div>
-        </GenericCard>
+        />
+      </ListItem>
+      <ListItem>
+        <GenericCard
+          :cols="3"
+          title="Test 1"
+        />
+      </ListItem>
+      <ListItem>
+        <GenericCard
+          :cols="3"
+          title="Test 1"
+        />
       </ListItem>
     </div>
   </SectionWrap>
@@ -27,15 +30,3 @@ export default {
   components: { GenericCard },
 };
 </script>
-
-<style>
-  .sub-title {
-    display: flex;
-    align-items: center;
-    margin: 0;
-
-    svg {
-      margin: 0 5px 0 0;
-    }
-  }
-</style>
