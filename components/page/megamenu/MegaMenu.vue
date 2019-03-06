@@ -1,7 +1,11 @@
 <template>
-  <div ref="headerroot" class="page-header page-header--l3 page-header--study">
+  <div
+    ref="headerroot"
+    class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
-      <a class="link-img link-reset" href="https://www.unimelb.edu.au/">
+      <a
+        class="link-img link-reset"
+        href="https://www.unimelb.edu.au/">
         <div class="logo-mask">
           <img
             class="page-header__logo"
@@ -24,23 +28,33 @@
         @click="dismissMobileMenuIfBlanket"
         @keypress.27="dismissMobileMenu"
       >
-        <nav id="sitemapmenu" ref="rootmenu" aria-label="Site" class="megamenu">
+        <nav
+          id="sitemapmenu"
+          ref="rootmenu"
+          aria-label="Site"
+          class="megamenu">
           <div
             role="button"
             aria-label="Close"
             class="menu__back-btn"
             @click="dismissMobileMenu"
           >Close</div>
-          <PageSearchForm v-if="isMobileOpen" aria-hidden="true"/>
-          <div v-if="topItems" class="menu-top">
+          <PageSearchForm
+            v-if="isMobileOpen"
+            aria-hidden="true"/>
+          <div
+            v-if="topNavigationItems"
+            class="menu-top">
             <a
-              v-for="(item, index) in topItems"
+              v-for="(item, index) in topNavigationItems"
               :key="index"
               :href="item.href"
               class="menu-top__item"
             >{{ item.title }}</a>
           </div>
-          <ul class="menu__section" role="menu">
+          <ul
+            class="menu__section"
+            role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -59,10 +73,18 @@
                 @click="openInner"
                 v-html="rootitem.title"
               />
-              <div v-if="rootitem.items" ref="panels" class="inner">
-                <div role="button" class="menu__back-btn" @click="closeInner">Back</div>
+              <div
+                v-if="rootitem.items"
+                ref="panels"
+                class="inner">
+                <div
+                  role="button"
+                  class="menu__back-btn"
+                  @click="closeInner">Back</div>
                 <div class="menu__aside">
-                  <a :href="rootitem.href" class="menu__nested-parent">{{ rootitem.title }}</a>
+                  <a
+                    :href="rootitem.href"
+                    class="menu__nested-parent">{{ rootitem.title }}</a>
                   <component
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
@@ -78,7 +100,9 @@
                         v-if="rootitem.feature.title"
                         class="menu__campaign-title"
                       >{{ rootitem.feature.title }}</strong>
-                      <span v-if="rootitem.feature.text" v-html="rootitem.feature.text"/>
+                      <span
+                        v-if="rootitem.feature.text"
+                        v-html="rootitem.feature.text"/>
                     </p>
                     <span
                       v-if="rootitem.feature.alt"
@@ -104,14 +128,6 @@
                 </ul>
               </div>
             </li>
-            <div v-if="topItems != 0" class="menuTopContainer">
-              <a
-                v-for="(item, index) in topItems"
-                class="menuTopItem"
-                :key="index"
-                :href="item.href"
-              >{{ item.title }}</a>
-            </div>
           </ul>
           <PageSearch/>
         </nav>
@@ -134,9 +150,11 @@
             aria-labelledby="icon-menu"
             viewBox="10 10 26 28"
           >
-            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"></path>
+            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/>
           </svg>
-          <span id="icon-menu" class="link-icon__text">Menu</span>
+          <span
+            id="icon-menu"
+            class="link-icon__text">Menu</span>
         </button>
       </div>
     </div>
@@ -149,52 +167,52 @@
 // mega-menu-activate-mobile-menu
 // mega-menu-dismiss-mobile-menu
 
-import Blanket from "../search/blanket";
-import PageSearch from "../search/PageSearch.vue";
-import PageSearchForm from "../search/PageSearchForm.vue";
-import MegaMenuTitle from "./MegaMenuTitle.vue";
+import Blanket from '../search/blanket';
+import PageSearch from '../search/PageSearch.vue';
+import PageSearchForm from '../search/PageSearchForm.vue';
+import MegaMenuTitle from './MegaMenuTitle.vue';
 
 export default {
   components: { PageSearch, PageSearchForm, MegaMenuTitle },
   props: {
     facultyTitle: {
       type: String,
-      default: () => []
+      default: () => [],
     },
     items: {
       type: Array,
-      required: true
+      required: true,
     },
     active: {
       type: [String, Boolean],
-      default: false
+      default: false,
     },
     facultyName: {
       type: [String],
       required: false,
-      default: ""
+      default: '',
     },
     facultyLink: {
       type: [String],
       required: false,
-      default: "/"
+      default: '/',
     },
     facultyWidth: {
       type: [String, Boolean],
       required: false,
-      default: false
+      default: false,
     },
-    topItems: {
+    topNavigationItems: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   data() {
     return {
       isMobileOpen: false,
       isDesktopOpen: false,
       current: 0,
-      pointer: 0
+      pointer: 0,
     };
   },
   computed: {
@@ -202,11 +220,11 @@ export default {
       return this.$refs.headerroot
         ? this.$refs.headerroot.offsetWidth < 768
         : false;
-    }
+    },
   },
   mounted() {
     this.blanket = new Blanket();
-    window.addEventListener("resize", this.closeMobileIfDesktop.bind(this));
+    window.addEventListener('resize', this.closeMobileIfDesktop.bind(this));
   },
   methods: {
     rootOrChildrenActive(rootitem) {
@@ -216,7 +234,7 @@ export default {
 
       if (this.active === rootitem.href) displayActive = true;
       if (rootitem.items) {
-        rootitem.items.forEach(item => {
+        rootitem.items.forEach((item) => {
           if (item.href === this.active) displayActive = true;
         });
       }
@@ -225,65 +243,63 @@ export default {
     },
     linkClasses(rootindex, rootitem) {
       if (rootindex === 0) {
-        return "menu__nested-parent";
+        return 'menu__nested-parent';
       }
       if (rootitem.items) {
-        return "menu__link menu__link--nested";
+        return 'menu__link menu__link--nested';
       }
-      return "menu__link";
+      return 'menu__link';
     },
     activateDesktopMenu(rootindex) {
       if (
-        rootindex !== -1 &&
-        this.items[rootindex].items !== undefined &&
-        !this.isMobileOpen &&
-        !this.isMobile
+        rootindex !== -1
+        && this.items[rootindex].items !== undefined
+        && !this.isMobileOpen
+        && !this.isMobile
       ) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
-        this.$refs.rootitems[rootindex].classList.add("menu__item--over");
+        this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         this.isDesktopOpen = true;
-        this.$emit("mega-menu-activate-desktop-menu");
+        this.$emit('mega-menu-activate-desktop-menu');
       }
     },
     dismissDesktopMenu(props = {}) {
       const { force } = props;
       if (
-        (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) ||
-        force
+        (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
+        || force
       ) {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;
-        this.$emit("mega-menu-dismiss-desktop-menu");
+        this.$emit('mega-menu-dismiss-desktop-menu');
       }
     },
     dismissAllDesktopChildren() {
-      this.$refs.rootitems.forEach(item =>
-        item.classList.remove("menu__item--over")
-      );
+      this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
     },
     activateMobileMenu() {
       if (!this.isMobileOpen) {
         this.activateBlanket(this.dismissMobileMenu.bind(this));
-        this.$refs.rootmenu.classList.add("active");
+        this.$refs.rootmenu.classList.add('active');
         this.isMobileOpen = true;
-        this.$emit("mega-menu-activate-mobile-menu");
+        this.$emit('mega-menu-activate-mobile-menu');
       }
     },
     activateBlanket(callback) {
       this.blanket.show({ onClick: callback });
-      this.$refs.headerroot.classList.add("active");
+      this.$refs.headerroot.classList.add('active');
     },
     dismissBlanket() {
       this.blanket.hide();
-      this.$refs.headerroot.classList.remove("active");
+      this.$refs.headerroot.classList.remove('active');
     },
     dismissMobileMenu() {
       if (this.isMobileOpen) {
         this.dismissBlanket();
-        this.$refs.rootmenu.classList.remove("active");
+        this.$refs.rootmenu.classList.remove('active');
         this.isMobileOpen = false;
-        this.$emit("mega-menu-dismiss-mobile-menu");
+        this.$emit('mega-menu-dismiss-mobile-menu');
       }
     },
     dismissMobileMenuIfBlanket(e) {
@@ -293,23 +309,23 @@ export default {
     },
     openInner(e) {
       if (
-        this.$refs.headerroot &&
-        this.$refs.headerroot.offsetWidth < 768 &&
-        e.target.nextElementSibling
+        this.$refs.headerroot
+        && this.$refs.headerroot.offsetWidth < 768
+        && e.target.nextElementSibling
       ) {
         e.preventDefault();
-        e.target.nextElementSibling.classList.add("open");
+        e.target.nextElementSibling.classList.add('open');
       }
     },
     closeInner(e) {
-      e.target.parentElement.classList.remove("open");
+      e.target.parentElement.classList.remove('open');
     },
     closeMobileIfDesktop() {
       if (this.isMobile) return;
       if (this.isMobileOpen) {
         this.dismissMobileMenu();
-        this.$refs.panels.forEach(panel => {
-          panel.classList.remove("open");
+        this.$refs.panels.forEach((panel) => {
+          panel.classList.remove('open');
         });
       }
     },
@@ -326,7 +342,7 @@ export default {
       let cycle;
       if (e.keyCode === 38 || e.keyCode === 40) {
         cycle = this.$refs.rootitems[this.current].querySelectorAll(
-          ".menu__aside a,.menu__section a"
+          '.menu__aside a,.menu__section a'
         );
       }
 
@@ -341,8 +357,8 @@ export default {
         // enter / space
         case 13:
         case 32:
-          if (e.target.classList.contains(".menu__item")) {
-            e.target.querySelector(".menu__link").click();
+          if (e.target.classList.contains('.menu__item')) {
+            e.target.querySelector('.menu__link').click();
           } else {
             e.target.click();
           }
@@ -358,8 +374,7 @@ export default {
         // up
         case 38:
           if (cycle.length > 1) {
-            this.pointer =
-              this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
+            this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
           } else {
             this.prevRootItem();
@@ -368,8 +383,7 @@ export default {
         // down
         case 40:
           if (cycle.length > 1) {
-            this.pointer =
-              this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
+            this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
             cycle[this.pointer].focus();
           } else {
             this.nextRootItem();
@@ -381,8 +395,7 @@ export default {
     },
     prevRootItem() {
       this.pointer = 0;
-      this.current =
-        this.current > 0 ? this.current - 1 : this.items.length - 1;
+      this.current = this.current > 0 ? this.current - 1 : this.items.length - 1;
       this.dismissAllDesktopChildren();
       this.$refs.rootitems[this.current].focus();
       if (this.items[this.current].items) {
@@ -393,8 +406,7 @@ export default {
     },
     nextRootItem() {
       this.pointer = 0;
-      this.current =
-        this.current < this.items.length - 1 ? this.current + 1 : 0;
+      this.current = this.current < this.items.length - 1 ? this.current + 1 : 0;
       this.dismissAllDesktopChildren();
       this.$refs.rootitems[this.current].focus();
       if (this.items[this.current].items) {
@@ -414,7 +426,7 @@ export default {
     },
     isSelected(index) {
       return index === this.current ? 0 : -1;
-    }
-  }
+    },
+  },
 };
 </script>

@@ -1,8 +1,12 @@
 <template>
   <mega-menu
     :items="items"
-    :top-items="topItems"
-    active="/random-link"/>
+    :top-navigation-items="topItems"
+    faculty-name="This is a Faculty name"
+    faculty-link="/faculty-link"
+    faculty-width="20%"
+    active="/random-link"
+  />
 </template>
 
 <script>
@@ -11,6 +15,9 @@ import MegaMenu from '../MegaMenu.vue';
 
 const markup = codeBlock(`
   <mega-menu
+    faculty-name="This is a Faculty name"
+    faculty-link="/faculty-link"
+    faculty-width="20%"
     items="[
         {
           title: 'About us',
@@ -98,7 +105,7 @@ const markup = codeBlock(`
           href: '/connect',
         },
       ]"
-    top-items="[
+    top-navigation-items="[
         {
           title: 'Students',
           href: '/students',
