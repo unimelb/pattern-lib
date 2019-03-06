@@ -20,3 +20,20 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+.menu-top__item {
+  margin-left: 20px;
+  color: #adcdf0;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: white;
+    text-decoration: underline;
+  }
+}
+</style>

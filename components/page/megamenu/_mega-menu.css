@@ -10,20 +10,6 @@
   z-index: 2;
   right: 98px;
   margin-top: 14px;
-
-  &__item {
-    margin-left: 20px;
-    color: #adcdf0;
-    font-size: 14px;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus {
-      color: white;
-      text-decoration: underline;
-    }
-  }
 }
 
 .megamenu {
