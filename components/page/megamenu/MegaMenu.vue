@@ -42,16 +42,11 @@
           <PageSearchForm
             v-if="isMobileOpen"
             aria-hidden="true"/>
-          <div
+          <MegaMenuTopNavigation
             v-if="topNavigationItems"
-            class="menu-top">
-            <a
-              v-for="(item, index) in topNavigationItems"
-              :key="index"
-              :href="item.href"
-              class="menu-top__item"
-            >{{ item.title }}</a>
-          </div>
+            :top-navigation-items="topNavigationItems"
+            class="menu-top"
+          />
           <ul
             class="menu__section"
             role="menu">
@@ -171,9 +166,15 @@ import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
+import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
-  components: { PageSearch, PageSearchForm, MegaMenuTitle },
+  components: {
+    PageSearch,
+    PageSearchForm,
+    MegaMenuTitle,
+    MegaMenuTopNavigation,
+  },
   props: {
     facultyTitle: {
       type: String,
