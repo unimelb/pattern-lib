@@ -3,7 +3,7 @@
     <SvgIcon
       v-for="n in names"
       :key="n"
-      :name="n" />
+      :name="n"/>
   </div>
 </template>
 
@@ -37,6 +37,7 @@ export default {
       'microphone',
       'jobs',
       'tag',
+      'hamburger',
     ],
   }),
   readme: { custom: docs },
@@ -44,10 +45,10 @@ export default {
 </script>
 
 <style scoped>
-  svg {
-    display: inline-block;
-    width: 5rem;
-    height: 5rem;
-    margin: .5rem;
-  }
+svg {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
+}
 </style>
