@@ -11,7 +11,7 @@ import InPageNavigation from '../InPageNavigation.vue';
 import { codeBlock } from '../../../../.storybook/utils';
 
 const out = codeBlock(
-  '<in-page-navigation title="on this page" heading-level="h2" />'
+  '<in-page-navigation color="your choice of color" title="on this page" heading-level="h2"></in-page-navigation>'
 );
 
 export default {

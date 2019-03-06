@@ -8,7 +8,9 @@
 import NavigationCollapsed from '../NavigationCollapsed.vue';
 import { codeBlock } from '../../../../.storybook/utils';
 
-const out = codeBlock('<NavigationCollapsed heading-level="h2" />');
+const out = codeBlock(
+  '<navigation-collapsed heading-level="h2"></navigation-collapsed>'
+);
 
 export default {
   components: { NavigationCollapsed },
