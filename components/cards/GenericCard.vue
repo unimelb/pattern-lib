@@ -1,13 +1,15 @@
 <template>
-  <a
-    :href="href"
-    class="btn-owner card card--generic">
-    <div
+  <div
+    :class="['btn-owner', 'card', 'card--generic', className]">
+    <a
       v-if="cols !== 1"
+      :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb card__thumb--zoom"/>
     <div class="card__inner ">
-      <h3 class="card__header">{{ title }}</h3>
+      <h3 class="card__header">
+        <a :href="href">{{ title }}</a>
+      </h3>
       <div
         v-if="hasSubTitleSlots"
         class="card__sub-titles">
@@ -22,7 +24,7 @@
         <slot name="links"/>
       </div>
     </div>
-  </a>
+  </div>
 </template>
 
 <script>
@@ -50,6 +52,10 @@ export default {
     excerpt: {
       type: String,
       default: 'Lorem ipsum dolor sit amet, consectetur.',
+    },
+    className: {
+      type: String,
+      default: '',
     },
   },
   computed: {
