@@ -55,7 +55,7 @@ describe('GenericCard', () => {
 
     expect(typeof wrapper.props().href).toBe('string');
     expect(wrapper.props().href).toBe(href);
-    expect(wrapper.attributes().href).toBe(href);
+    expect(wrapper.find('.card__thumb').attributes().href).toBe(href);
   });
 
   it('should render thumb from prop with correct type', () => {
@@ -104,9 +104,14 @@ describe('GenericCard', () => {
     expect(cols.validator && cols.validator(4)).toBeFalsy();
   });
 
-  it('should be a link', () => {
+  it('should have card image as link', () => {
     const wrapper = shallow(GenericCard);
-    expect(wrapper.element.tagName).toBe('A');
+    expect(wrapper.find('.card__thumb').element.tagName).toBe('A');
+  });
+
+  it('should have card title as link', () => {
+    const wrapper = shallow(GenericCard);
+    expect(wrapper.find('.card__title').element.tagName).toBe('A');
   });
 
   it('should have title container with 3 slots', () => {

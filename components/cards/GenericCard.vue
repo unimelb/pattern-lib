@@ -8,7 +8,9 @@
       class="card__thumb card__thumb--zoom"/>
     <div class="card__inner ">
       <h3 class="card__header">
-        <a :href="href">{{ title }}</a>
+        <a
+          :href="href"
+          class="card__title">{{ title }}</a>
       </h3>
       <div
         v-if="hasSubTitleSlots"
