@@ -3,18 +3,18 @@
     class="btn-owner card card--stafflist card--bdr-blue bg-white">
     <a
       :href="href"
+      :style="{ backgroundImage: `url(${thumb})` }"
       title="profile image"
-      aria-label="Profile image">
-      <div
-        :style="{ backgroundImage: `url(${thumb})` }"
-        class="card__thumb"/>
-    </a>
+      aria-label="Profile image"
+      class="card__thumb"/>
     <div class="card__inner ">
       <a
         :href="href"
         title="profile position link"
-        aria-label="Profile position">
-        <h3 class="card__header">{{ position }}</h3>
+        aria-label="Profile position"
+        class="card__header"
+      >
+        <h3>{{ position }}</h3>
       </a>
       <p class="card__meta">
         <a
