@@ -22,3 +22,4 @@ import './play.svg';
 import './search.svg';
 import './twitter.svg';
 import './tag.svg';
+import './envelope.svg';
