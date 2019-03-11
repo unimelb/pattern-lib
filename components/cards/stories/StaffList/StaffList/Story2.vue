@@ -4,8 +4,8 @@
       <ListItem>
         <CardStaffList
           :cols="3"
-          title="Mr John Smith"
-          meta="Provost"
+          name="Mr John Smith"
+          position="Provost"
           thumb="https://randomuser.me/api/portraits/lego/1.jpg"
           href="#"
           phone="+123456789"
@@ -15,8 +15,8 @@
       <ListItem>
         <CardStaffList
           :cols="3"
-          title="Mr Johnathan Smithersonite"
-          meta="Provost"
+          name="Mr Johnathan Smithersonite"
+          position="Provost"
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           href="#"
           phone="+123456789"
@@ -25,8 +25,8 @@
       <ListItem>
         <CardStaffList
           :cols="3"
-          title="Mr John Smith"
-          meta="Vice Grand Chancellor Provost"
+          name="Mr John Smith"
+          position="Vice Grand Chancellor Provost"
           thumb="https://randomuser.me/api/portraits/lego/5.jpg"
           href="#"
           email="emailme@google.com"
@@ -34,8 +34,8 @@
       </ListItem>
       <ListItem>
         <CardStaffList
-          title="Mr John Smith"
-          meta="Provost"
+          name="Mr John Smith"
+          position="Provost"
           thumb="https://randomuser.me/api/portraits/lego/6.jpg"
           href="#"
         />

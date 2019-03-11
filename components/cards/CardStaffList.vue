@@ -12,11 +12,18 @@
     <div class="card__inner ">
       <a
         :href="href"
-        title="profile name link"
-        aria-label="Profile Name">
-        <h3 class="card__header">{{ meta }}</h3>
+        title="profile position link"
+        aria-label="Profile position">
+        <h3 class="card__header">{{ position }}</h3>
       </a>
-      <p class="card__meta">{{ title }}</p>
+      <p class="card__meta">
+        <a
+          :href="href"
+          title="profile name link"
+          aria-label="Profile name">
+          {{ name }}
+        </a>
+      </p>
       <div
         v-if="cols < 4"
         class="card__footer">
@@ -59,21 +66,17 @@ export default {
       type: String,
       default: 'https://via.placeholder.com/400x200',
     },
-    title: {
+    position: {
       type: String,
-      default: 'Test title',
+      default: 'Test position',
     },
-    meta: {
+    name: {
       type: String,
-      default: 'Test title',
+      default: 'Test name',
     },
     href: {
       type: String,
       default: '#',
-    },
-    excerpt: {
-      type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
     phone: {
       type: [String, Boolean],
