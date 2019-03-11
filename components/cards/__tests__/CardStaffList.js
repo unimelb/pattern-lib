@@ -76,94 +76,63 @@ describe('CardStaffList', () => {
     expect(wrapper.props().href).toBe(href);
     expect(wrapper.find('.card__thumb').attributes().href).toBe(href);
   });
-  //
-  // it('should render thumb from prop with correct type', () => {
-  //   const thumb = 'http://';
-  //   const wrapper = shallow(GenericCard, {
-  //     propsData: {
-  //       thumb,
-  //     },
-  //   });
-  //
-  //   expect(typeof wrapper.props().thumb).toBe('string');
-  //   expect(wrapper.props().thumb).toBe(thumb);
-  //   expect(wrapper.find('.card__thumb').attributes().style).toBe('background-image: url(http://);');
-  // });
-  //
-  // it('should render excerpt from prop with correct type', () => {
-  //   const excerpt = 'Lorem ipsum';
-  //   const wrapper = shallow(GenericCard, {
-  //     propsData: {
-  //       excerpt,
-  //     },
-  //   });
-  //
-  //   expect(typeof wrapper.props().excerpt).toBe('string');
-  //   expect(wrapper.props().excerpt).toBe(excerpt);
-  //   expect(wrapper.find('.card__excerpt').text()).toBe(excerpt);
-  // });
-  //
-  // it('should accept cols prop with correct type', () => {
-  //   const cols = 3;
-  //   const wrapper = shallow(GenericCard, {
-  //     propsData: {
-  //       cols,
-  //     },
-  //   });
-  //
-  //   expect(typeof wrapper.props().cols).toBe('number');
-  //   expect(wrapper.props().cols).toBe(cols);
-  // });
-  //
-  // it('should accept cols max = 3 and min = 1', () => {
-  //   const wrapper = shallow(GenericCard);
-  //   const { cols } = wrapper.vm.$options.props;
-  //
-  //   expect(cols.validator && cols.validator(0)).toBeFalsy();
-  //   expect(cols.validator && cols.validator(4)).toBeFalsy();
-  // });
-  //
-  // it('should have card image as link', () => {
-  //   const wrapper = shallow(GenericCard);
-  //   expect(wrapper.find('.card__thumb').element.tagName).toBe('A');
-  // });
-  //
-  // it('should have card title as link', () => {
-  //   const wrapper = shallow(GenericCard);
-  //   expect(wrapper.find('.card__title').element.tagName).toBe('A');
-  // });
-  //
-  // it('should have title container with 3 slots', () => {
-  //   const wrapper = shallow(GenericCard, {
-  //     slots: {
-  //       'sub-title-1': '<div class="sub-1">Sub 1</div>',
-  //       'sub-title-2': '<div class="sub-2">Sub 2</div>',
-  //       'sub-title-3': '<div class="sub-3">Sub 3</div>',
-  //       'sub-title-4': '<div class="sub-4">Sub 4</div>',
-  //     },
-  //   });
-  //   const sub1 = wrapper.find('.sub-1');
-  //   const sub2 = wrapper.find('.sub-2');
-  //   const sub3 = wrapper.find('.sub-3');
-  //   const sub4 = wrapper.find('.sub-4');
-  //   expect(sub1.exists()).toBe(true);
-  //   expect(sub2.exists()).toBe(true);
-  //   expect(sub3.exists()).toBe(true);
-  //   expect(sub4.exists()).toBe(false);
-  // });
-  //
-  // it('should hide title container if no slots', () => {
-  //   const wrapper = shallow(GenericCard);
-  //   expect(wrapper.vm.hasSubTitleSlots).toBe(false);
-  // });
-  //
-  // it('should have link container with links slot', () => {
-  //   const wrapper = shallow(GenericCard, {
-  //     slots: {
-  //       links: '<a>link</a>',
-  //     },
-  //   });
-  //   const link = wrapper.find('a');
-  //   expect(link.exists()).toBe(true);
-  // });
+
+  it('should render thumb from prop with correct type', () => {
+    const thumb = 'http://';
+    const wrapper = shallow(CardStaffList, {
+      propsData: {
+        thumb,
+      },
+    });
+
+    expect(typeof wrapper.props().thumb).toBe('string');
+    expect(wrapper.props().thumb).toBe(thumb);
+    expect(wrapper.find('.card__thumb').attributes().style).toBe('background-image: url(http://);');
+  });
+
+  it('should accept cols prop with correct type', () => {
+    const cols = 3;
+    const wrapper = shallow(CardStaffList, {
+      propsData: {
+        cols,
+      },
+    });
+
+    expect(typeof wrapper.props().cols).toBe('number');
+    expect(wrapper.props().cols).toBe(cols);
+  });
+
+  it('should have card image as link', () => {
+    const wrapper = shallow(CardStaffList);
+    expect(wrapper.find('.card__thumb').element.tagName).toBe('A');
+  });
+
+  it('should have card position as link', () => {
+    const wrapper = shallow(CardStaffList);
+    expect(wrapper.find('.card__header').element.tagName).toBe('A');
+  });
+
+  it('should have card name as link', () => {
+    const wrapper = shallow(CardStaffList);
+    expect(wrapper.find('.card__meta').find('a').element.tagName).toBe('A');
+  });
+
+  it('should hide footer container if no cols => 4', () => {
+    const wrapper = shallow(CardStaffList, {
+      propsData: {
+        cols: 4,
+      },
+    });
+    expect(wrapper.find('.card__footer').exists()).toBe(false);
+  });
+
+  it('should hide phone if no prop', () => {
+    const wrapper = shallow(CardStaffList);
+    expect(wrapper.find('.card__phone').exists()).toBe(false);
+  });
+
+  it('should hide email if no prop', () => {
+    const wrapper = shallow(CardStaffList);
+    expect(wrapper.find('.card__email').exists()).toBe(false);
+  });
 });

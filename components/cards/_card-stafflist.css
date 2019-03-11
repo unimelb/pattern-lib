@@ -9,10 +9,12 @@
   }
 
   .card__header {
-    margin-bottom: 0;
-    color: rgb(var(--col-brand));
-    font-weight: bold;
-    text-decoration: underline;
+    a {
+      margin-bottom: 0;
+      color: rgb(var(--col-brand));
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
 
   .card__footer {
