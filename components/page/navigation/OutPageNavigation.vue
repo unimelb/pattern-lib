@@ -1,5 +1,7 @@
 <template>
-  <FocusWrapper>
+  <FocusWrapper
+    :color="color"
+    padded>
     <div>
       <h2 class="title">{{ cardTitle }}</h2>
       <hr class="line">
@@ -36,12 +38,16 @@ export default {
       type: Array,
       default: () => [],
     },
+    color: {
+      type: String,
+      default: '',
+    },
   },
 };
 </script>
 
 <style scoped>
-@import '../../_vars.css';
+@import "../../_vars.css";
 
 .title {
   color: var(--col-font);

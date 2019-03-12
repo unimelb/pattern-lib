@@ -1,0 +1,70 @@
+<template>
+  <div
+    :class="['btn-owner', 'card', 'card--generic', className]">
+    <a
+      v-if="cols !== 1"
+      :href="href"
+      :style="{ backgroundImage: `url(${thumb})` }"
+      class="card__thumb card__thumb--zoom"/>
+    <div class="card__inner ">
+      <h3 class="card__header">
+        <a
+          :href="href"
+          class="card__title">{{ title }}</a>
+      </h3>
+      <div
+        v-if="hasSubTitleSlots"
+        class="card__sub-titles">
+        <slot name="sub-title-1"/>
+        <slot name="sub-title-2"/>
+        <slot name="sub-title-3"/>
+      </div>
+      <div class="card__excerpt">{{ excerpt }}</div>
+      <div
+        v-if="cols !== 1"
+        class="card__links">
+        <slot name="links"/>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: 'GenericCard',
+  props: {
+    thumb: {
+      type: String,
+      default: 'https://via.placeholder.com/400x200',
+    },
+    title: {
+      type: String,
+      default: '',
+    },
+    cols: {
+      type: Number,
+      default: 3,
+      validator: value => value && value <= 3,
+    },
+    href: {
+      type: String,
+      default: '#',
+    },
+    excerpt: {
+      type: String,
+      default: 'Lorem ipsum dolor sit amet, consectetur.',
+    },
+    className: {
+      type: String,
+      default: '',
+    },
+  },
+  computed: {
+    hasSubTitleSlots() {
+      return !!this.$slots['sub-title-1'] || !!this.$slots['sub-title-2'] || !!this.$slots['sub-title-3'];
+    },
+  },
+};
+
+</script>
