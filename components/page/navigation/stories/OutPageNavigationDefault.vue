@@ -1,6 +1,7 @@
 <template>
   <OutPageNavigation
     :card-links="cardData"
+    color="navy"
     card-title="out of this page:"/>
 </template>
 
@@ -8,7 +9,8 @@
 import OutPageNavigation from '../OutPageNavigation.vue';
 import { codeBlock } from '../../../../.storybook/utils';
 
-const out = codeBlock(`  <out-page-navigation card-links="[{
+const out = codeBlock(`" Use one of those colors: 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink' " 
+<out-page-navigation color="navy" card-links="[{
         title: 'Conservatorium Directorate',
         url: 'google.com',
       }, {
@@ -25,7 +27,7 @@ const out = codeBlock(`  <out-page-navigation card-links="[{
 
 export default {
   components: { OutPageNavigation },
-  readme: { custom: out, source: false },
+  readme: { custom: out, source: true },
   data() {
     return {
       cardData: [

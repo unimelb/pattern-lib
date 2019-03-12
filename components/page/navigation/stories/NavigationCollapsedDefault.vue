@@ -1,19 +1,12 @@
 <template>
-  <div>
-    <NavigationCollapsed heading-level="h2"/>
-  </div>
+  <navigation-collapsed heading-level="h2"/>
 </template>
 
 <script>
 import NavigationCollapsed from '../NavigationCollapsed.vue';
-import { codeBlock } from '../../../../.storybook/utils';
-
-const out = codeBlock(
-  '<navigation-collapsed heading-level="h2"></navigation-collapsed>'
-);
 
 export default {
   components: { NavigationCollapsed },
-  readme: { custom: out, source: false },
+  readme: { source: true, html: true },
 };
 </script>
