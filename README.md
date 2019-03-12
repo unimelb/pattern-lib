@@ -45,9 +45,9 @@ This project includes generators to speed up common development tasks. Commands 
 yarn generate component
 ```
 
-> **Note**: Always remember to add the new component to the file `index.js` inside of the folders `target/lib` and `target/vue`, that way the component will be exportable to `Matrix CMS` via `CDN` and `Vue` via `NPM`.
-
 You will then be asked for the name of the component, this will be used to create a new folder with a minimal component layout and story
+
+> **Note**: Always remember to add the new component to the file `index.js` inside of the folders `target/lib` and `target/vue`, that way the component will be exportable to `Matrix CMS` via `CDN` and `Vue` via `NPM`.
 
 ```bash
 # Generate a new view component
@@ -56,7 +56,29 @@ yarn generate story
 
 You will need to select the component from the list of folders, then confirm the selection by selecting `choose this directory`. You will then be asked to give the story a name.
 
-> **Note**: This requires some special comments are added in the stories/index.js file. If it doesn't work make sure the comments are the same as in the template directory
+> **Note**: This requires some special comments are added in the `stories/index.js` file. If it doesn't work make sure the comments are the same as in the template directory.
+
+### Using a component in CMS
+
+In Storybook: When adding the "how to use a component" documentation, add a description that clearly shows that ( in the CMS environment) a component must be used in the way of closing the tag explicitly, as shown in the folllowing example:
+
+## Do not:
+(In the CMS, self closing tags won't load the component:)
+
+```bash
+# self close the components
+<my-new-component/>
+```
+
+## Do
+(To be compatible with CMS, call the component this way:)
+```bash
+# explicity closing
+<my-new-component></my-new-component>
+```
+
+> **Note**: Matrix CMS can only use the components in that way and must be in the `target/lib` folder as well. You can self-close a component when importing it in a parent component in the pattern-lib context. The rule described above applies just when the component is called in the CMS context. ie. footer component, which is used like this in CMS: `<page-footer></page-footer>` instead of `<page-footer />`.
+
 
 ### Targets
 
