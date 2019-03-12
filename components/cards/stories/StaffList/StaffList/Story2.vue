@@ -49,6 +49,6 @@ import CardStaffList from '../../../CardStaffList.vue';
 
 export default {
   components: { CardStaffList },
+  readme: { html: true, source: true },
 };
-
 </script>
