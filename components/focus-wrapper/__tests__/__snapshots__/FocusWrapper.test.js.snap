@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FocusWrapper should match snapshot 1`] = `
+<div
+  class="card-focus"
+>
+  <svgicon
+    class="card-focus__top-left"
+    height="72"
+    name="focus-top-left"
+    width="72"
+  />
+   
+  <svgicon
+    class="card-focus__bottom-right"
+    height="72"
+    name="focus-bottom-right"
+    width="72"
+  />
+   
+</div>
+`;

@@ -1,5 +1,7 @@
 <template>
-  <FocusWrapper>
+  <FocusWrapper
+    :color="color"
+    padded>
     <div>
       <h2 class="title">{{ title }}:</h2>
       <hr class="line">
@@ -23,7 +25,7 @@
 </template>
 
 <script>
-import FocusWrapper from '../../focusWrapper/FocusWrapper.vue';
+import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 
 export default {
   components: { FocusWrapper },
@@ -35,6 +37,10 @@ export default {
     headingLevel: {
       type: String,
       required: true,
+    },
+    color: {
+      type: String,
+      default: '',
     },
   },
   computed: {

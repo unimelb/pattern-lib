@@ -91,6 +91,10 @@ export {
 }
   from '../../components/embed/VideoEmbed.vue';
 export {
+  default as FocusWrapper,
+}
+  from '../../components/focus-wrapper/FocusWrapper.vue';
+export {
   default as FigureWrap,
 }
   from '../../components/figure/FigureWrap.vue';
@@ -230,8 +234,3 @@ export {
   default as OutPageNavigation,
 }
   from '../../components/page/navigation/OutPageNavigation.vue';
-
-export {
-  default as FocusWrapper,
-}
-  from '../../components/focusWrapper/FocusWrapper.vue';

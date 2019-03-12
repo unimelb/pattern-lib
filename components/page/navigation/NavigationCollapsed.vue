@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../../_vars.css";
+@import '../../_vars.css';
 
 .navigation-container {
   display: flex;

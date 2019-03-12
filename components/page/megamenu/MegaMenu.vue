@@ -17,6 +17,7 @@
         </div>
       </a>
       <MegaMenuTitle
+        v-if="facultyName"
         :title="facultyName"
         :href="facultyLink"
         :width="facultyWidth"
