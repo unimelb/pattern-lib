@@ -4,18 +4,18 @@
   --tr-transform: transform .3s ease;
 }
 
-.menu-top {
+.megamenu__top-navigation {
   display: flex;
-  position: absolute;
-  z-index: 2;
-  right: 98px;
-  margin-top: 14px;
+}
+
+.megamenu__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .megamenu {
-  position: fixed;
   z-index: 102;
-  top: 0;
   right: -100%;
   width: 100%;
   height: 100%;
@@ -34,12 +34,7 @@
   }
 
   &__blanket {
-    position: absolute;
-    top: -7.5rem;
-    left: 0;
     width: 100%;
-    height: 7.5rem;
-    margin: -1rem;
     background-color: rgba(0, 0, 0, .5);
   }
 
@@ -231,19 +226,13 @@
 
   @media (--bp-desktop) {
     display: flex;
-    position: static;
-    right: auto;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
-    height: 100%;
     padding-left: 0;
     transform: none;
     box-shadow: none;
 
     &__blanket {
-      position: static;
-      height: auto;
-      margin: 0;
       background-color: transparent;
     }
 

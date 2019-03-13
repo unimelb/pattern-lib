@@ -42,91 +42,93 @@
           <PageSearchForm
             v-if="isMobileOpen"
             aria-hidden="true"/>
-          <MegaMenuTopNavigation
-            v-if="topNavigationItems"
-            :top-navigation-items="topNavigationItems"
-            class="menu-top"
-          />
-          <ul
-            class="menu__section"
-            role="menu">
-            <li
-              v-for="(rootitem, rootindex) in items"
-              ref="rootitems"
-              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
-              :key="`rootitem-${rootindex}`"
-              :tabindex="isSelected(rootindex)"
-              class="menu__item"
-              @mouseover="activateDesktopMenu(rootindex)"
-              @mouseout="dismissDesktopMenu"
-              @keydown="handleKey"
-            >
-              <a
-                :role="rootitem.items ? 'button' : 'menuitem'"
-                :href="rootitem.href"
-                :class="linkClasses(rootindex, rootitem)"
-                @click="openInner"
-                v-html="rootitem.title"
-              />
-              <div
-                v-if="rootitem.items"
-                ref="panels"
-                class="inner">
+          <div class="megamenu__container">
+            <MegaMenuTopNavigation
+              v-if="topNavigationItems"
+              :top-navigation-items="topNavigationItems"
+              class="megamenu__top-navigation"
+            />
+            <ul
+              class="menu__section"
+              role="menu">
+              <li
+                v-for="(rootitem, rootindex) in items"
+                ref="rootitems"
+                :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
+                :key="`rootitem-${rootindex}`"
+                :tabindex="isSelected(rootindex)"
+                class="menu__item"
+                @mouseover="activateDesktopMenu(rootindex)"
+                @mouseout="dismissDesktopMenu"
+                @keydown="handleKey"
+              >
+                <a
+                  :role="rootitem.items ? 'button' : 'menuitem'"
+                  :href="rootitem.href"
+                  :class="linkClasses(rootindex, rootitem)"
+                  @click="openInner"
+                  v-html="rootitem.title"
+                />
                 <div
-                  role="button"
-                  class="menu__back-btn"
-                  @click="closeInner">Back</div>
-                <div class="menu__aside">
-                  <a
-                    :href="rootitem.href"
-                    class="menu__nested-parent">{{ rootitem.title }}</a>
-                  <component
-                    v-if="rootitem.feature"
-                    :is="rootitem.feature.link ? 'a' : 'div'"
-                    :href="rootitem.feature.link"
-                    :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
-                    class="menu__campaign"
-                  >
-                    <p
-                      v-if="rootitem.feature.text || rootitem.feature.title"
-                      class="menu__campaign-text"
-                    >
-                      <strong
-                        v-if="rootitem.feature.title"
-                        class="menu__campaign-title"
-                      >{{ rootitem.feature.title }}</strong>
-                      <span
-                        v-if="rootitem.feature.text"
-                        v-html="rootitem.feature.text"/>
-                    </p>
-                    <span
-                      v-if="rootitem.feature.alt"
-                      class="screenreaders-only"
-                      v-html="rootitem.feature.alt"
-                    />
-                  </component>
-                </div>
-                <ul class="menu__section">
-                  <li
-                    v-for="(menuitem, menuindex) in rootitem.items"
-                    :key="`menuitem-${menuindex}`"
-                    class="menu__item"
-                  >
+                  v-if="rootitem.items"
+                  ref="panels"
+                  class="inner">
+                  <div
+                    role="button"
+                    class="menu__back-btn"
+                    @click="closeInner">Back</div>
+                  <div class="menu__aside">
                     <a
-                      :href="menuitem.href"
-                      tabindex="0"
-                      class="menu__link"
-                      role="menuitem"
-                      v-html="menuitem.title"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-          <PageSearch/>
+                      :href="rootitem.href"
+                      class="menu__nested-parent">{{ rootitem.title }}</a>
+                    <component
+                      v-if="rootitem.feature"
+                      :is="rootitem.feature.link ? 'a' : 'div'"
+                      :href="rootitem.feature.link"
+                      :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
+                      class="menu__campaign"
+                    >
+                      <p
+                        v-if="rootitem.feature.text || rootitem.feature.title"
+                        class="menu__campaign-text"
+                      >
+                        <strong
+                          v-if="rootitem.feature.title"
+                          class="menu__campaign-title"
+                        >{{ rootitem.feature.title }}</strong>
+                        <span
+                          v-if="rootitem.feature.text"
+                          v-html="rootitem.feature.text"/>
+                      </p>
+                      <span
+                        v-if="rootitem.feature.alt"
+                        class="screenreaders-only"
+                        v-html="rootitem.feature.alt"
+                      />
+                    </component>
+                  </div>
+                  <ul class="menu__section">
+                    <li
+                      v-for="(menuitem, menuindex) in rootitem.items"
+                      :key="`menuitem-${menuindex}`"
+                      class="menu__item"
+                    >
+                      <a
+                        :href="menuitem.href"
+                        tabindex="0"
+                        class="menu__link"
+                        role="menuitem"
+                        v-html="menuitem.title"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
+      <PageSearch/>
       <div class="header-tools__menu">
         <button
           id="sitemapbutton"
