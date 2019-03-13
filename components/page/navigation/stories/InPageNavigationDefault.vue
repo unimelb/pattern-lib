@@ -7,14 +7,10 @@
 
 <script>
 import InPageNavigation from '../InPageNavigation.vue';
-import { codeBlock } from '../../../../.storybook/utils';
-
-const out = codeBlock(
-  "Use one of those colors: 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'"
-);
+import inPageNavigationDocs from './in-page-navigation-docs.md';
 
 export default {
   components: { InPageNavigation },
-  readme: { custom: out, source: true, html: true },
+  readme: { custom: inPageNavigationDocs, source: true, html: true },
 };
 </script>
