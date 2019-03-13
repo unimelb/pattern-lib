@@ -95,7 +95,7 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      default: 'Lorem ipsum dolor sit amet, consectetur.',
     },
   },
 };
