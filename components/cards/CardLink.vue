@@ -1,18 +1,23 @@
 <template>
   <a
     :href="href"
-    :class="{'bg-inverted': inverted, 'bg-white' : !inverted}"
-    class="btn-owner card card--link card--bdr">
+    :class="{'bg-inverted card--bdr': inverted, 'bg-white card--bdr-grey' : !inverted}"
+    tabindex="0"
+    role="button"
+    class="btn-owner card card--link ">
     <div
       v-if="thumb"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"/>
-    <div class="card__header">
-      <span>{{ title }}</span>
+    <div
+      :class="{'cl-white' : inverted, 'cl-inverted': !inverted}"
+      class="card__header">
+      <span :class="{'title-inverted': !inverted}">{{ title }}</span>
       <SvgIcon
         width="15px"
         height="15px"
-        name="chevron-right" />
+        name="chevron-right"
+      />
     </div>
   </a>
 </template>
@@ -35,6 +40,11 @@ export default {
     inverted: {
       type: Boolean,
       default: false,
+    },
+    cols: {
+      type: Number,
+      default: 4,
+      validator: cols => cols <= 4,
     },
   },
 };
