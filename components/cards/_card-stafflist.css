@@ -3,6 +3,12 @@
     margin-bottom: 0;
   }
 
+  .card__inner {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
   .card__thumb {
     height: 240px;
     background-position: center;
