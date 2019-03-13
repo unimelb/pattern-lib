@@ -1,13 +1,15 @@
 <template>
-  <FocusWrapper>
+  <FocusWrapper
+    :color="color"
+    padded>
     <div>
       <h2 class="title">{{ cardTitle }}</h2>
       <hr class="line">
-      <div class="linkContainer">
+      <div class="container">
         <li
           v-for="(link, index) in cardLinks"
           :key="index"
-          class="removeBullet">
+          class="list-reset">
           <a
             :href="link.url"
             class="link">
@@ -36,12 +38,16 @@ export default {
       type: Array,
       default: () => [],
     },
+    color: {
+      type: String,
+      default: '',
+    },
   },
 };
 </script>
 
 <style scoped>
-@import '../../_vars.css';
+@import "../../_vars.css";
 
 .title {
   color: var(--col-font);
@@ -57,7 +63,7 @@ export default {
   border: 1px solid var(--col-line);
 }
 
-.removeBullet {
+.list-reset {
   list-style-type: none;
 }
 
@@ -77,7 +83,7 @@ export default {
   fill: var(--col-font);
 }
 
-.linkContainer {
+.container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -86,7 +92,7 @@ export default {
   margin-bottom: 84px;
 }
 
-.linkContainer > * {
+.container > * {
   flex: 0 50%;
 }
 </style>
