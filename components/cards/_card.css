@@ -151,6 +151,13 @@
     }
   }
 
+  &--bdr-grey {
+    .cell &,
+    .list-item & {
+      border-bottom: .4rem solid rgb(153, 162, 170);
+    }
+  }
+
   &--bdr-thin,
   &--bdr-thin:hover {
     border-width: .2rem;
