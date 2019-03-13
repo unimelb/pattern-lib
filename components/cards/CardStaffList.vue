@@ -25,6 +25,9 @@
         </a>
       </p>
       <div
+        v-if="excerpt"
+        class="card__excerpt">{{ excerpt }}</div>
+      <div
         v-if="cols < 4"
         class="card__footer">
         <a
@@ -89,6 +92,10 @@ export default {
     cols: {
       type: Number,
       default: 0,
+    },
+    excerpt: {
+      type: String,
+      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
     },
   },
 };
