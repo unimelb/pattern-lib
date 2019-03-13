@@ -75,5 +75,4 @@ describe('MegaMenuTitle', () => {
     const wrapper = shallow(MegaMenuTitle);
     expect(wrapper.element.style.width).toBe(defaultWidth);
   });
-
 });
