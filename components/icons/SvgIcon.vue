@@ -11,6 +11,7 @@
 </template>
 
 <script>
+// TODO: investigate refactoring to import svgs dynamically using <path> or base64 in CSS
 export default {
   name: 'SvgIcon',
   props: ['name', 'width', 'height', 'viewBox'],
