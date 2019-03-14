@@ -31,6 +31,8 @@ yarn
 
 ## Development
 
+- [Contributing Guidelines](CONTRIBUTING.md)
+
 Storybook is the main development environment.
 
 - `yarn dev` - [http://localhost:7002/](http://localhost:7002/)
@@ -63,6 +65,7 @@ You will need to select the component from the list of folders, then confirm the
 In Storybook: When adding the "how to use a component" documentation, add a description that clearly shows that ( in the CMS environment) a component must be used in the way of closing the tag explicitly, as shown in the folllowing example:
 
 ## Do not:
+
 (In the CMS, self closing tags won't load the component:)
 
 ```bash
@@ -71,14 +74,15 @@ In Storybook: When adding the "how to use a component" documentation, add a desc
 ```
 
 ## Do
+
 (To be compatible with CMS, call the component this way:)
+
 ```bash
 # explicity closing
 <my-new-component></my-new-component>
 ```
 
 > **Note**: Matrix CMS can only use the components in that way and must be in the `target/lib` folder as well. You can self-close a component when importing it in a parent component in the pattern-lib context. The rule described above applies just when the component is called in the CMS context. ie. footer component, which is used like this in CMS: `<page-footer></page-footer>` instead of `<page-footer />`.
-
 
 ### Targets
 
