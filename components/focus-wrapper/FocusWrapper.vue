@@ -25,8 +25,13 @@
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
+
 export default {
   name: 'FocusWrapper',
+  components: {
+    SvgIcon,
+  },
   props: {
     color: {
       type: String,
