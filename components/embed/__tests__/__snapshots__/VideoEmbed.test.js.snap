@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenericCard should match snapshot 1`] = `
+<div
+  class="embed"
+>
+  <iframe
+    allowfullscreen="allowfullscreen"
+    frameborder="0"
+    height="315"
+    src="/"
+    width="560"
+  />
+</div>
+`;

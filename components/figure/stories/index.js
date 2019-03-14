@@ -13,6 +13,7 @@ import Story9 from './Story9.vue';
 import Story10 from './Story10.vue';
 import Story11 from './Story11.vue';
 import Story12 from './Story12.vue';
+import Story13 from './Story13.vue';
 
 storiesOf('Figure', module)
   .add('medium inset right figure', createStory(Story2))
@@ -26,4 +27,5 @@ storiesOf('Figure', module)
   .add('Inline - Full', createStory(Story1))
   .add('Inline - Large', createStory(Story10))
   .add('Inline - Medium', createStory(Story11))
-  .add('Inline - small', createStory(Story12));
+  .add('Inline - small', createStory(Story12))
+  .add('large inset right video', createStory(Story13));
