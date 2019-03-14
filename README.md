@@ -34,6 +34,8 @@ yarn
 
 ## Development
 
+- [Contributing Guidelines](CONTRIBUTING.md)
+
 Storybook is the main development environment.
 
 - `yarn dev` - [http://localhost:7002/](http://localhost:7002/)
