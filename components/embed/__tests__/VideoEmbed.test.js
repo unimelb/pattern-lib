@@ -133,5 +133,4 @@ describe('GenericCard', () => {
     });
     expect(wrapper.classes().indexOf('embed--inset--sml')).toBeGreaterThan(0);
   });
-
 });

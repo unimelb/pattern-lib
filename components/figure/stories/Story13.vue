@@ -22,7 +22,7 @@
 </template>
 
 <script>
-// import FigureWrap from '../FigureWrap.vue';
+
 import VideoEmbed from '../../embed/VideoEmbed.vue';
 export default {
   components: { VideoEmbed },
