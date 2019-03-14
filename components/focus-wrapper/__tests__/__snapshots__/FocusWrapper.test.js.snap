@@ -8,15 +8,25 @@ exports[`FocusWrapper should match snapshot 1`] = `
     class="card-focus__top-left"
     height="72"
     name="focus-top-left"
+    view-box="0 0 112 112"
     width="72"
-  />
+  >
+    <path
+      d="m0 0v112l32-32v-48h48l32-32h-112z"
+    />
+  </svgicon>
    
   <svgicon
     class="card-focus__bottom-right"
     height="72"
     name="focus-bottom-right"
+    view-box="0 0 112 112"
     width="72"
-  />
+  >
+    <path
+      d="m112 0-32 32v48h-48l-32 32h112v-112z"
+    />
+  </svgicon>
    
 </div>
 `;
