@@ -35,6 +35,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
           <use
             xlink:href="#icon-home"
           />
+           
         </svg>
          
         <span
@@ -54,6 +55,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
           <use
             xlink:href="#icon-chevron-right"
           />
+           
         </svg>
       </a>
     </li>
