@@ -4,7 +4,7 @@
     :class="{'bg-inverted card--bdr': inverted, 'bg-white card--bdr-grey' : !inverted}"
     tabindex="0"
     role="button"
-    class="btn-owner card card--link ">
+    class="btn-owner card card--link card--bdr">
     <div
       v-if="thumb"
       :style="{ backgroundImage: `url(${thumb})` }"
@@ -44,7 +44,7 @@ export default {
     cols: {
       type: Number,
       default: 4,
-      validator: cols => cols <= 4,
+      validator: cols => cols && cols <= 4,
     },
   },
 };
