@@ -21,6 +21,8 @@
         :title="facultyName"
         :href="facultyLink"
         :width="facultyWidth"
+        :has-aperture="facultyAperture"
+        :aperture-color="facultyApertureColor"
       />
       <div
         ref="blanket"
@@ -181,6 +183,13 @@ export default {
       type: [String, Boolean],
       required: false,
       default: false,
+    },
+    facultyAperture: {
+      type: [Boolean],
+      default: false,
+    },
+    facultyApertureColor: {
+      type: [String],
     },
   },
   data() {
