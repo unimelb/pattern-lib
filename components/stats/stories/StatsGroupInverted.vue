@@ -1,5 +1,6 @@
 <template>
-  <StatsGroup inverted>
+<div>test</div>
+  <!-- <StatsGroup inverted>
     <StatsItem
       :icon="icons[0]"
       number="1"
@@ -12,7 +13,7 @@
       :icon="icons[2]"
       number="11"
       meta="Graduate employability worldwide" />
-  </StatsGroup>
+  </StatsGroup> -->
 </template>
 
 <script>
