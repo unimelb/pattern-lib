@@ -2,7 +2,7 @@
 
 exports[`CardLink should match snapshot 1`] = `
 <a
-  class="btn-owner card card--link card--bdr"
+  class="btn-owner card card--link card--bdr bg-white card--bdr-grey"
   href="#"
   role="button"
   tabindex="0"
