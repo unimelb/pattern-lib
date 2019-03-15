@@ -190,6 +190,7 @@ export default {
     },
     facultyApertureColor: {
       type: [String],
+      default: 'back',
     },
   },
   data() {
