@@ -43,26 +43,28 @@
     text-align: center;
   }
 
-  .title-inverted{
+  .title-inverted {
     color: #000;
-    line-height: 26px;
-    font-weight: 600;
     font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
   }
 
-  .cl-white{
+  .cl-white {
     color: #fff;
-    svg{
+
+    svg {
       color: #fff;
     }
   }
 
-  .cl-inverted{
+  .cl-inverted {
     color: #000;
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
-    svg{
+
+    svg {
       color: #000;
     }
   }
@@ -107,5 +109,3 @@
     justify-content: center;
   }
 }
-
-
