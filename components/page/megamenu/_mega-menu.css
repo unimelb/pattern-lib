@@ -466,6 +466,7 @@
   .page-header__inner {
     height: 4.5rem;
     padding-left: 1rem;
+    overflow: hidden;
 
     .link-img {
       margin: -.75rem;
@@ -520,12 +521,6 @@
     .page-header__logo {
       width: 4rem;
       height: 4rem;
-    }
-  }
-
-  .page-header {
-    .page-title {
-      max-width: 100%;
     }
   }
 }
