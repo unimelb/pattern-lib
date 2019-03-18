@@ -1,6 +1,6 @@
 ## Generic Card Component
 
-The Generic Card component can be create with in 3 different options of views `(1/2/3 columns)`.
+The Generic Card component can be created within 3 different options of views `(1/2/3 columns)`.
 
 The component props are
 
@@ -20,7 +20,7 @@ You can add only 3 sub-titles in slots
 
 Cols props can be more then `0` and must be less then `3`.
 
-The component have one slot for links.
+The component has one slot for links.
 
 ### Usage Example
 

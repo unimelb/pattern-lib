@@ -3,22 +3,22 @@
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="test">
+        alt="alt text goes here">
     </ListItem>
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="test">
+        alt="alt text goes here">
     </ListItem>
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="test">
+        alt="alt text goes here">
     </ListItem>
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="test">
+        alt="alt text goes here">
     </ListItem>
   </ListingWrap>
 </template>

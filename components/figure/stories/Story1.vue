@@ -8,7 +8,7 @@
       <figure-wrap caption="embed test">
         <img
           src="https://picsum.photos/800/400?random&gravity=center"
-          alt="test">
+          alt="alt text goes here">
       </figure-wrap>
       <p>Molestiae accusantium ducimus tempora delectus minima mollitia quia dicta alias. Fugiat magnam consequatur voluptatem sunt. Nesciunt est occaecati possimus quis iure architecto sunt.</p>
       <figure-wrap
@@ -16,7 +16,7 @@
         caption="embed test">
         <img
           src="https://picsum.photos/820/400?random&gravity=center"
-          alt="test">
+          alt="alt text goes here">
       </figure-wrap>
       <p>
         The example above uses the
