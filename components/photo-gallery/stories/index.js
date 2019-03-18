@@ -6,6 +6,7 @@ import WithCaptions from './WithCaptions.vue';
 import SingleColumn from './SingleColumn.vue';
 import WithoutPopup from './WithoutPopup.vue';
 import TwoGalleries from './TwoGalleries.vue';
+import InPage from './InPage.vue';
 /* ##Import story component here */
 
 storiesOf('Photo Gallery', module)
@@ -13,4 +14,5 @@ storiesOf('Photo Gallery', module)
   .add('With captions', createStory(WithCaptions))
   .add('Single Column', createStory(SingleColumn))
   .add('Without popup', createStory(WithoutPopup))
-  .add('Two on page', createStory(TwoGalleries));
+  .add('Two on page', createStory(TwoGalleries))
+  .add('In page', createStory(InPage));
