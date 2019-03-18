@@ -23,3 +23,18 @@
     cursor: default;
   }
 }
+
+.photo-gallery-in-page {
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 400px;
+    cursor: pointer;
+  }
+
+  img {
+    width: inherit;
+    height: 100%;
+  }
+}
