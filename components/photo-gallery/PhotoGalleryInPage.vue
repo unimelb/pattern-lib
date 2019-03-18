@@ -9,19 +9,12 @@
         @click="move('prev')"
         @keydown.13="move('prev')"
       >
-        <SvgIcon
-          class="photo-gallery-in-page__chevron"
-          name="chevron-left"
-          width="30"
-          height="30"
-        />
+        <SvgIcon class="photo-gallery-in-page__chevron" name="chevron-left" width="30" height="30"/>
       </div>
 
       <div class="photo-gallery-in-page--container">
-        <figure >
-          <img
-            :src="selectedItem.src"
-            :alt="selectedItem.title">
+        <figure>
+          <img :src="selectedItem.src" :alt="selectedItem.title">
         </figure>
       </div>
       <div
@@ -53,36 +46,31 @@
           @click="open(index)"
           @keydown.13="open(index)"
         >
-          <img
-            :src="image.src"
-            :alt="image.title"
-          >
+          <img :src="image.src" :alt="image.title">
         </div>
       </div>
-      <div class="photo-gallery-in-page__images-count">
-        {{ selectedIndex + 1 }} / {{ images.length }}
-      </div>
+      <div class="photo-gallery-in-page__images-count">{{ selectedIndex + 1 }} / {{ images.length }}</div>
       <figcaption
         :id="'caption' + selectedIndex"
-        class="photo-gallery-in-page__title">{{ selectedItem.title }}</figcaption>
+        class="photo-gallery-in-page__title"
+      >{{ selectedItem.title }}</figcaption>
       <div class="photo-gallery-in-page__description">{{ selectedItem.description }}</div>
     </figure>
   </div>
 </template>
 
 <script>
-
 export default {
   props: {
     images: {
       type: Array,
-      default: () => [{}],
-    },
+      default: () => [{}]
+    }
   },
   data() {
     return {
       selectedItem: this.images ? this.images[0] : {},
-      selectedIndex: 0,
+      selectedIndex: 0
     };
   },
   methods: {
@@ -95,12 +83,12 @@ export default {
       const current = this.selectedIndex;
       const directions = {
         prev: (current + len - 1) % len,
-        next: (current + 1) % len,
+        next: (current + 1) % len
       };
       const nextIndex = directions[direction];
       this.selectedItem = this.images[nextIndex];
       this.selectedIndex = nextIndex;
-    },
-  },
+    }
+  }
 };
 </script>

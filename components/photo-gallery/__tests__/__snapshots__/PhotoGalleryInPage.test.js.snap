@@ -61,9 +61,7 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     <div
       class="photo-gallery-in-page__images-count"
     >
-      
       1 / 1
-    
     </div>
      
     <figcaption
