@@ -1,7 +1,7 @@
 <template>
   <ArticleWrap
     :date="['2017-04-03', '3 Apr. 2017']"
-    :contact="[contact]"
+    :contact="contact"
     :categories="['Sustainability','Tim Flannery', 'Melbourne Sustainable Society', 'Institute']"
     title="MGSE Professoriate Planning Day"
     type="speech"

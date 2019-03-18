@@ -18,11 +18,11 @@
 
 <script>
 import GenericCard from '../../GenericCard.vue';
-import genericCardDoc from './generic-card-docs.md';
+import genericCardDocs from './generic-card-docs.md';
 
 export default {
   components: { GenericCard },
-  readme: { custom: genericCardDoc },
+  readme: { custom: genericCardDocs },
 };
 </script>
 

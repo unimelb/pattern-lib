@@ -1,6 +1,6 @@
 ## Breadcrumbs
 
-The level of the `breadcrumbs` is decided by the object `items` that you send as a prop to the component.
+The level of the `breadcrumbs` is decided by the array `items` that you send as a prop to the component.
 
 - Example of the extra long:
 
