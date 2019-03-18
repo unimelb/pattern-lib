@@ -1,8 +1,35 @@
 .page-title {
-  position: relative;
-  flex: 1 0 auto;
-  max-width: 50%;
+  /* max-width: 50%; */
   margin: 0 1.5em;
+
+  @media (--bp-max-tablet) {
+    width: auto !important;
+  }
+
+  @media (--bp-desktop) {
+    position: relative;
+    flex: 1 0 auto;
+  }
+
+  &--aperture {
+    margin-left: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: calc(100vw - 64px);
+      background: #000;
+      z-index: -1;
+      transform: translate(-20px, -10px) rotate(15deg);
+      transform-origin: bottom left;
+      
+      @media (--bp-desktop) {
+        transform: translate(-20px, 10px) rotate(15deg);
+      }
+    }
+  }
 
   &__separator {
     width: 20px;
@@ -31,6 +58,6 @@
   }
 
   @media (--bp-desktop) {
-    max-width: 10rem;
+    /* max-width: 10rem; */
   }
 }

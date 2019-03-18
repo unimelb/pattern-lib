@@ -1,7 +1,7 @@
 <template>
   <div
     :style="{'width': width && width || '50%'}"
-    class="page-title"
+    class="page-title page-title--aperture"
   >
     <div class="page-title--top-layout">
       <div class="page-title__separator"/>
@@ -13,10 +13,10 @@
         {{ title }}
       </a>
     </div>
-    <div
+    <!-- <div
       v-if="hasAperture"
       :style="styles"
-      class="page-title__aperture"/>
+      class="page-title__aperture"/> -->
   </div>
 </template>
 
