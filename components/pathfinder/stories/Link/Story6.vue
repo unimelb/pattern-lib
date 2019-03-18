@@ -31,9 +31,11 @@
 
 <script>
 import CardLink from '../../../cards/CardLink.vue';
+import pathfinderLinkComponentDocs from './pathfinder-link-component-docs.md';
 
 export default {
   components: { CardLink },
+  readme: { custom: pathfinderLinkComponentDocs, source: true, html: true },
 };
 
 </script>

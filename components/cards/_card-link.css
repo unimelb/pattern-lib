@@ -44,28 +44,28 @@
   }
 
   .title-inverted {
-    color: #000;
+    color: rgb(var(--col-black-dark));
     font-size: 16px;
     font-weight: 600;
     line-height: 26px;
   }
 
   .cl-white {
-    color: #fff;
+    color: rgb(var(--col-link-active-on-dark));
 
     svg {
-      color: #fff;
+      color: rgb(var(--col-link-active-on-dark));
     }
   }
 
   .cl-inverted {
-    color: #000;
+    color: rgb(var(--col-black-dark));
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
 
     svg {
-      color: #000;
+      color: rgb(var(--col-black-dark));
     }
   }
 
