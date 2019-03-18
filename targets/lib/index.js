@@ -57,6 +57,8 @@ import StatsItem from '../../components/stats/StatsItem.vue';
 import SublinkMenu from '../../components/sublink-menu/SublinkMenu.vue';
 import SublinkMenuItem from '../../components/sublink-menu/SublinkMenuItem.vue';
 import Welcome from '../../components/welcome/Welcome.vue';
+import CardImage from '../../components/cards/CardImage.vue';
+import CardLink from '../../components/cards/CardLink.vue';
 
 
 import '../../components';
@@ -120,6 +122,8 @@ Vue.component('stats-item', StatsItem);
 Vue.component('sublink-menu', SublinkMenu);
 Vue.component('sublink-menu-item', SublinkMenuItem);
 Vue.component('welcome', Welcome);
+Vue.component('card-image', CardImage);
+Vue.component('card-link', CardLink);
 
 
 // Create Vue instance

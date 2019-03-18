@@ -4,20 +4,17 @@
       <ListItem>
         <GenericCard
           :cols="3"
-          title="Test 1"
-        />
+          title="Test 1"/>
       </ListItem>
       <ListItem>
         <GenericCard
           :cols="3"
-          title="Test 1"
-        />
+          title="Test 1"/>
       </ListItem>
       <ListItem>
         <GenericCard
           :cols="3"
-          title="Test 1"
-        />
+          title="Test 1"/>
       </ListItem>
     </div>
   </SectionWrap>
@@ -25,8 +22,10 @@
 
 <script>
 import GenericCard from '../../GenericCard.vue';
+import genericCardDoc from './generic-card-docs.md';
 
 export default {
   components: { GenericCard },
+  readme: { custom: genericCardDoc },
 };
 </script>
