@@ -1,6 +1,5 @@
 <template>
-<div>test</div>
-  <!-- <StatsGroup
+  <StatsGroup
     inverted
     attribution="Times Higher Education World University Rankings 2016-2017/QS Graduate Employability 2016"
   >
@@ -16,7 +15,7 @@
       :icon="icons[2]"
       number="11"
       meta="Graduate employability worldwide" />
-  </StatsGroup> -->
+  </StatsGroup>
 </template>
 
 <script>
