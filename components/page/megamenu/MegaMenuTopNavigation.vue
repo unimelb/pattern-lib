@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mega-top">
     <a
       v-for="(item, index) in topNavigationItems"
       :key="index"
@@ -21,19 +21,22 @@ export default {
 };
 </script>
 
-
 <style scoped>
-.menu-top__item {
-  margin-left: 20px;
-  color: #adcdf0;
-  font-size: 14px;
-  text-decoration: none;
-  text-transform: uppercase;
+  .mega-top {
+    display: flex;
+  }
 
-  &:hover,
-  &:focus {
+  .menu-top__item {
+    margin-left: 20px;
+    color: #adcdf0;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .menu-top__item:hover,
+  .menu-top__item:focus {
     color: white;
     text-decoration: underline;
   }
-}
 </style>

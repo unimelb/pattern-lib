@@ -1,7 +1,6 @@
 <template>
   <div class="header-tools__menu">
-    <p>MegaMenuHeaderTools</p>
-    <!-- <button
+    <button
       id="sitemapbutton"
       :tabindex="isMobile ? -1 : 0"
       aria-haspopup="true"
@@ -22,7 +21,7 @@
       <span
         id="icon-menu"
         class="link-icon__text">Menu</span>
-    </button> -->
+    </button>
   </div>
 </template>
 

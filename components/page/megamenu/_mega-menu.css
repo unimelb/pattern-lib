@@ -4,16 +4,27 @@
   --tr-transform: transform .3s ease;
 }
 
-.megamenu__top-navigation {
+.megamenu__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.megamenu__main-container {
   display: flex;
 }
 
-.megamenu__container {
+.megamenu__navigation-container{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  border: 1px solid yellow;
+}
+.megamenu__search-container{
+  border: 1px solid blueviolet;
 }
 
+
+/* ********** START .megamenu ********** */
 .megamenu {
   z-index: 102;
   right: -100%;
@@ -35,6 +46,7 @@
 
   &__blanket {
     width: 100%;
+    border: 1px solid red;
     background-color: rgba(0, 0, 0, .5);
   }
 
@@ -253,6 +265,7 @@
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
       padding-left: 0;
+      border: 1px solid red;
       background-color: #083c79;
 
       &.open {
@@ -300,8 +313,8 @@
       &__nested-parent {
         display: table-cell;
         position: relative;
-        height: calc(6.4375rem - 5px);
-        padding: calc(1rem + 5px) 1.5rem 1rem;
+        /* height: calc(6.4375rem - 5px); */
+        padding: 0 1.2rem;
         line-height: 1.1;
         text-align: center;
         text-decoration: none;
@@ -372,8 +385,8 @@
         .menu__link {
           display: table-cell;
           position: relative;
-          height: calc(6.4375rem - 5px);
-          padding: calc(1rem + 5px) 1.2rem 1rem;
+          /* height: calc(6.4375rem - 5px); */
+          padding: 0 1.2rem;
           line-height: 1.1;
           text-align: center;
           text-decoration: none;
@@ -433,7 +446,7 @@
         .menu__link {
           display: inline-block;
           height: auto;
-          padding: .75rem 1.5rem .75rem 2rem;
+          padding: 0 1.5rem 0 2rem;
           font-size: .9rem;
           text-align: left;
           text-decoration: none;
@@ -456,11 +469,19 @@
     }
   }
 }
+/* ********** END .megamenu ********** */
 
+
+
+
+
+
+/* ********** START .page-header--study ********** */
 .page-header--study {
   overflow: visible;
 
   .page-header__inner {
+    justify-content: space-between;
     height: 4.5rem;
     padding-left: 1rem;
 
@@ -494,7 +515,14 @@
     }
   }
 }
+/* ********** END .page-header--study ********** */
 
+
+
+
+
+
+/* ********** START .page-header ********** */
 .page-header.active {
   z-index: 101;
 
@@ -503,7 +531,14 @@
     top: 0;
   }
 }
+/* ********** END .page-header ********** */
 
+
+
+
+
+
+/* ********** START MEDIA QUERY max-width: 480px ********** */
 @media (--bp-max-mobile) {
   .page-header--study .page-header__inner .link-img {
     padding-right: 0;
@@ -526,7 +561,14 @@
     }
   }
 }
+/* ********** END MEDIA QUERY max-width: 480px ********** */
 
+
+
+
+
+
+/* ********** START MEDIA QUERY min-width: 769px ********** */
 @media (min-width: 769px) {
   .menu__item--over,
   .menu__item[tabindex='0'] {
@@ -538,7 +580,7 @@
       bottom: .3125rem;
       left: calc(50% - .3125rem);
       width: .625rem;
-      height: .625rem;
+      /* height: .625rem; */
       transform: rotate(45deg);
       border-right: 1px solid rgb(var(--col-blue-mid-2));
       border-bottom: 1px solid rgb(var(--col-blue-mid-2));
@@ -546,3 +588,4 @@
     }
   }
 }
+/* ********** END MEDIA QUERY min-width: 769px ********** */

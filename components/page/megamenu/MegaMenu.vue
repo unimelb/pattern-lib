@@ -4,124 +4,122 @@
     ref="headerroot"
     class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
-      <a
-        class="link-img link-reset"
-        href="https://www.unimelb.edu.au/">
-        <div class="logo-mask">
-          <img
-            class="page-header__logo"
-            src="../../shared/logo.svg"
-            width="117"
-            height="117"
-            alt="The University of Melbourne homepage"
-          >
-        </div>
-      </a>
-      <!-- <MegaMenuTitle
-        v-if="facultyName"
-        :title="facultyName"
-        :href="facultyLink"
-        :width="facultyWidth"
-      /> -->
-      <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
-        <!-- <div
-          role="button"
-          aria-label="Close"
-          class="menu__back-btn"
-          @click="dismissMobileMenu">
-          Close
-        </div> -->
-        <!-- <PageSearchForm
-          v-if="isMobileOpen"
-          aria-hidden="true"/> -->
-        <!-- <MegaMenuTopNavigation
-          v-if="topNavigationItems"
-          :top-navigation-items="topNavigationItems"
-          class="megamenu__top-navigation"
-        /> -->
-        <nav id="sitemapmenu" ref="rootmenu" aria-label="Site" class="megamenu">
-           <ul
-    class="menu__section"
-    role="menu">
-    <li
-      v-for="(rootitem, rootindex) in items"
-      ref="rootitems"
-      class="menu__item"
-      :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
-      :key="`rootitem-${rootindex}`"
-      :tabindex="isSelected(rootindex)"
-      @mouseover="activateDesktopMenu(rootindex)"
-      @mouseout="dismissDesktopMenu"
-      @keydown="handleKey"
-    >
-      <a
-        :role="rootitem.items ? 'button' : 'menuitem'"
-        :href="rootitem.href"
-        :class="linkClasses(rootindex, rootitem)"
-        @click="openInner"
-        v-html="rootitem.title"
-      />
-      <div
-        v-if="rootitem.items"
-        ref="panels"
-        class="inner">
-       
-        <div
-          role="button"
-          class="menu__back-btn"
-          @click="closeInner">Back</div>
-       
-        <div class="menu__aside">
-          <a
-            :href="rootitem.href"
-            class="menu__nested-parent">{{ rootitem.title }}</a>
-          <component
-            v-if="rootitem.feature"
-            :is="rootitem.feature.link ? 'a' : 'div'"
-            :href="rootitem.feature.link"
-            :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
-            class="menu__campaign"
-          >
-            <p
-              v-if="rootitem.feature.text || rootitem.feature.title"
-              class="menu__campaign-text"
-            >
-              <strong
-                v-if="rootitem.feature.title"
-                class="menu__campaign-title"
-              >{{ rootitem.feature.title }}</strong>
-              <span
-                v-if="rootitem.feature.text"
-                v-html="rootitem.feature.text"/>
-            </p>
-            <span
-              v-if="rootitem.feature.alt"
-              class="screenreaders-only"
-              v-html="rootitem.feature.alt"
-            />
-          </component>
-        </div>
-        <ul class="menu__section">
-          <li
-            v-for="(menuitem, menuindex) in rootitem.items"
-            :key="`menuitem-${menuindex}`"
-            class="menu__item"
-          >
-            <a
-              :href="menuitem.href"
-              tabindex="0"
-              class="menu__link"
-              role="menuitem"
-              v-html="menuitem.title"
-            />
-          </li>
-        </ul>
+      <div class="megamenu__logo-container">
+        <MegaMenuLogo />
+        <MegaMenuTitle
+          v-if="facultyName"
+          :title="facultyName"
+          :href="facultyLink"
+          :width="facultyWidth"
+        />
       </div>
-    </li>
-  </ul>
-        </nav>      
-      </div>      
-      <!-- <PageSearch/>       -->
+
+      <div class="megamenu__main-container">
+        <div class="megamenu__navigation-container">
+          <MegaMenuTopNavigation
+            v-if="topNavigationItems"
+            :top-navigation-items="topNavigationItems"
+          />
+          <div ref="blanket" class="megamenu__blanket" @click="dismissMobileMenuIfBlanket" @keypress.27="dismissMobileMenu">
+            <!-- <div
+              role="button"
+              aria-label="Close"
+              class="menu__back-btn"
+              @click="dismissMobileMenu">
+              Close
+            </div> -->
+            <!-- <PageSearchForm
+              v-if="isMobileOpen"
+              aria-hidden="true"/> -->
+            <nav id="sitemapmenu" ref="rootmenu" aria-label="Site" class="megamenu">
+              <ul
+                class="menu__section"
+                role="menu">
+                <li
+                  v-for="(rootitem, rootindex) in items"
+                  ref="rootitems"
+                  class="menu__item"
+                  :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
+                  :key="`rootitem-${rootindex}`"
+                  :tabindex="isSelected(rootindex)"
+                  @mouseover="activateDesktopMenu(rootindex)"
+                  @mouseout="dismissDesktopMenu"
+                  @keydown="handleKey">
+                  <a
+                    :role="rootitem.items ? 'button' : 'menuitem'"
+                    :href="rootitem.href"
+                    :class="linkClasses(rootindex, rootitem)"
+                    @click="openInner"
+                    v-html="rootitem.title"
+                  />
+                  <div
+                    v-if="rootitem.items"
+                    ref="panels"
+                    class="inner">
+                  
+                    <div
+                      role="button"
+                      class="menu__back-btn"
+                      @click="closeInner">Back</div>
+                  
+                    <div class="menu__aside">
+                      <a
+                        :href="rootitem.href"
+                        class="menu__nested-parent">{{ rootitem.title }}</a>
+                      <component
+                        v-if="rootitem.feature"
+                        :is="rootitem.feature.link ? 'a' : 'div'"
+                        :href="rootitem.feature.link"
+                        :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
+                        class="menu__campaign"
+                      >
+                        <p
+                          v-if="rootitem.feature.text || rootitem.feature.title"
+                          class="menu__campaign-text"
+                        >
+                          <strong
+                            v-if="rootitem.feature.title"
+                            class="menu__campaign-title"
+                          >{{ rootitem.feature.title }}</strong>
+                          <span
+                            v-if="rootitem.feature.text"
+                            v-html="rootitem.feature.text"/>
+                        </p>
+                        <span
+                          v-if="rootitem.feature.alt"
+                          class="screenreaders-only"
+                          v-html="rootitem.feature.alt"
+                        />
+                      </component>
+                    </div>
+                    <ul class="menu__section">
+                      <li
+                        v-for="(menuitem, menuindex) in rootitem.items"
+                        :key="`menuitem-${menuindex}`"
+                        class="menu__item"
+                      >
+                        <a
+                          :href="menuitem.href"
+                          tabindex="0"
+                          class="menu__link"
+                          role="menuitem"
+                          v-html="menuitem.title"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>      
+          </div>
+        </div>
+
+        <div class="megamenu__search-container">
+          <PageSearch/>
+        </div>
+      </div>
+     
+      
       <!-- <MegaMenuHeaderTools /> -->
     </div>
   </div>
@@ -136,18 +134,18 @@
 import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
+import MegaMenuLogo from './MegaMenuLogo.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
-import MegaMenuMainNavigation from './MegaMenuMainNavigation.vue';
 import MegaMenuHeaderTools from './MegaMenuHeaderTools.vue';
 
 export default {
   components: {
     PageSearch,
     PageSearchForm,
+    MegaMenuLogo,
     MegaMenuTitle,
     MegaMenuTopNavigation,
-    MegaMenuMainNavigation,
     MegaMenuHeaderTools,
   },
   props: {
