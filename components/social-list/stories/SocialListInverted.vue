@@ -1,5 +1,5 @@
 <template>
-  <SocialList :with-colors="false" />
+  <SocialList :with-colors="false"/>
 </template>
 
 <script>
@@ -10,5 +10,6 @@ export default {
   components: { SocialList },
   decorator: PadDecorator,
   decoratorProps: { class: 'bg-inverted' },
+  readme: { source: true, html: true },
 };
 </script>

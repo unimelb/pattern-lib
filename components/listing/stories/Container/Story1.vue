@@ -3,22 +3,22 @@
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="">
+        alt="test">
     </ListItem>
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="">
+        alt="test">
     </ListItem>
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="">
+        alt="test">
     </ListItem>
     <ListItem>
       <img
         src="https://placehold.it/600x200"
-        alt="">
+        alt="test">
     </ListItem>
   </ListingWrap>
 </template>
@@ -30,5 +30,6 @@ import SectionWrap from '../../../section/SectionWrap.vue';
 export default {
   components: { ListingWrap },
   decorator: SectionWrap,
+  readme: { source: true, html: true },
 };
 </script>

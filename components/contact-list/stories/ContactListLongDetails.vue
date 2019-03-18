@@ -12,6 +12,7 @@ import MaxWidthDecorator from '../../../.storybook/decorators/MaxWidthDecorator.
 
 export default {
   components: { ContactList },
+  readme: { source: true, html: true },
   decorator: MaxWidthDecorator,
   decoratorProps: { maxWidth: 13 },
 };

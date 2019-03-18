@@ -3,9 +3,7 @@
     author="Homer Simpson"
     border-top
     border-bottom
-  >
-    The Internet? Is that thing still around?
-  </BlockQuotation>
+  >The Internet? Is that thing still around?</BlockQuotation>
 </template>
 
 <script>
@@ -14,6 +12,7 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
   components: { BlockQuotation },
+  readme: { source: true, html: true },
   decorator: ContentBlock,
   decoratorProps: { size: 'sml', bg: 'inverted' },
 };

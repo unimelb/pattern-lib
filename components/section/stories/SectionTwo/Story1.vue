@@ -17,7 +17,7 @@
       <FigureWrap>
         <img
           src="https://dummyimage.com/300x200.jpg"
-          alt="">
+          alt="test">
       </FigureWrap>
       <p>Qui rerum laudantium quis hic tempora. Quia suscipit placeat est illo omnis nemo fuga. Nobis suscipit sint odit quidem sit et sed deleniti.</p>
     </div>
@@ -29,5 +29,6 @@ import SectionTwoCol from '../../SectionTwoCol.vue';
 import FigureWrap from '../../../figure/FigureWrap.vue';
 export default {
   components: { SectionTwoCol, FigureWrap },
+  readme: { source: true, html: true },
 };
 </script>
