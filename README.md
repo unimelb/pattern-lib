@@ -6,6 +6,9 @@ The contents of this repository have been produced by The University of Melbourn
 
 [![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/pattern-lib)
 
+- [Development Preview](https://dev--pattern-lib-unimelb.netlify.com/) (Netlify deploy from `dev` branch)
+- [Production](https://pattern-lib-unimelb.netlify.com/) (Netlify deploy from `master` branch)
+
 ## Getting started
 
 The design system requires:

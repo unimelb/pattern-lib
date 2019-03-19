@@ -7,24 +7,16 @@
         <SublinkMenu class="sublink-menu--pad">
           <SublinkMenuItem
             slot="menuitems"
-            link="#">
-            Find an expert or supervisor
-          </SublinkMenuItem>
+            link="#">Find an expert or supervisor</SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something">
-            Apply for graduate research
-          </SublinkMenuItem>
+            link="#something">Apply for graduate research</SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something">
-            Graduate research scholarships
-          </SublinkMenuItem>
+            link="#something">Graduate research scholarships</SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something">
-            Information for graduate researchers
-          </SublinkMenuItem>
+            link="#something">Information for graduate researchers</SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
       <ListItem>
@@ -35,7 +27,9 @@
               href="#"
               class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
-              <strong class="card__header shim-mt0 shim-pb1">Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
+              <strong
+                class="card__header shim-mt0 shim-pb1"
+              >Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
             </a>
           </div>
           <div class="cell cell--col-2">
@@ -43,7 +37,9 @@
               href="#"
               class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
-              <strong class="card__header shim-mt0 shim-pb1">Growing girls’ interest in STEM for the workforce of the future</strong>
+              <strong
+                class="card__header shim-mt0 shim-pb1"
+              >Growing girls’ interest in STEM for the workforce of the future</strong>
             </a>
           </div>
         </div>
@@ -54,7 +50,9 @@
               href="#"
               class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
-              <strong class="card__header shim-mt0 shim-pb1">Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
+              <strong
+                class="card__header shim-mt0 shim-pb1"
+              >Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
             </a>
           </div>
           <div class="cell cell--col-4">
@@ -62,7 +60,9 @@
               href="#"
               class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
-              <strong class="card__header shim-mt0 shim-pb1">Growing girls’ interest in STEM for the workforce of the future</strong>
+              <strong
+                class="card__header shim-mt0 shim-pb1"
+              >Growing girls’ interest in STEM for the workforce of the future</strong>
             </a>
           </div>
         </div>
@@ -78,5 +78,6 @@ import ListingWrap from '../../listing/ListingWrap.vue';
 
 export default {
   components: { SublinkMenu, SublinkMenuItem, ListingWrap },
+  readme: { source: true, html: true },
 };
 </script>

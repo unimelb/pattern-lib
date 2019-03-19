@@ -9,5 +9,6 @@ import Dropdown from '../Dropdown.vue';
 
 export default {
   components: { Dropdown },
+  readme: { source: true, html: true },
 };
 </script>

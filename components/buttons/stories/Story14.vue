@@ -12,3 +12,9 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  readme: { source: true, html: true },
+};
+</script>

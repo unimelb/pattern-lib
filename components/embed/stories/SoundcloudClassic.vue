@@ -10,6 +10,7 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
   components: { SoundcloudEmbed },
+  readme: { source: true, html: true },
   decorator: ContentBlock,
 };
 </script>

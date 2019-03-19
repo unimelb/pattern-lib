@@ -9,3 +9,9 @@
     <ButtonIcon icon="chevron-down">I am a button with an icon</ButtonIcon>
   </div>
 </template>
+
+<script>
+export default {
+  readme: { source: true, html: true },
+};
+</script>
