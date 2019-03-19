@@ -82,7 +82,7 @@ Vue.component('accordion', Accordion);
 Vue.component('accordion-group', AccordionGroup);
 Vue.component('check-list', CheckList);
 Vue.component('mega-menu', MegaMenu);
-Vue.component('MegaMenuTitle', MegaMenuTitle);
+Vue.component('mega-menu-title', MegaMenuTitle);
 Vue.component('modal-dialog', ModalDialog);
 Vue.component('page-footer', PageFooter);
 Vue.component('page-nav', PageNav);
