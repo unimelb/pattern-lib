@@ -27,6 +27,9 @@
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
         @keypress.27="dismissMobileMenu">
+        <MegamenuTopNavigation
+          v-if="isShowTopMenu"
+          :items="topMenu"/>
         <nav
           id="sitemapmenu"
           ref="rootmenu"
@@ -155,9 +158,12 @@ import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
+import MegamenuTopNavigation from './MegamenuTopNavigation.vue';
 
 export default {
-  components: { PageSearch, PageSearchForm, MegaMenuTitle },
+  components: {
+    PageSearch, PageSearchForm, MegaMenuTitle, MegamenuTopNavigation,
+  },
   props: {
     items: {
       type: Array,
@@ -182,6 +188,10 @@ export default {
       required: false,
       default: false,
     },
+    topMenu: {
+      type: Array,
+      default: () => [],
+    },
   },
   data() {
     return {
@@ -194,6 +204,9 @@ export default {
   computed: {
     isMobile() {
       return (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false);
+    },
+    isShowTopMenu() {
+      return this.topMenu.length;
     },
   },
   mounted() {

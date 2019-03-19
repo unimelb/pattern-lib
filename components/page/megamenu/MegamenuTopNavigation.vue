@@ -1,7 +1,7 @@
 <template>
   <div class="mega-top">
     <a
-      v-for="(item, index) in topNavigationItems"
+      v-for="(item, index) in items"
       :key="index"
       :href="item.href"
       class="menu-top__item">
@@ -14,7 +14,7 @@
 export default {
   name: 'MegaMenuTopNavigation',
   props: {
-    topNavigationItems: {
+    items: {
       type: Array,
       default: () => [],
     },
