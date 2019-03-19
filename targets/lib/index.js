@@ -62,7 +62,6 @@ import CardImage from '../../components/cards/CardImage.vue';
 import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
 
-
 import '../../components';
 
 // Inject SVG sprite
@@ -128,7 +127,6 @@ Vue.component('sublink-menu-item', SublinkMenuItem);
 Vue.component('welcome', Welcome);
 Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
-
 
 // Create Vue instance
 new Vue({
