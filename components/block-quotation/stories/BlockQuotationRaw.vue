@@ -10,6 +10,7 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
   decorator: ContentBlock,
+  readme: { source: true, html: true },
   decoratorProps: { size: 'sml' },
 };
 </script>

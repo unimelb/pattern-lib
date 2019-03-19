@@ -1,6 +1,7 @@
 import { shallow } from 'vue-test-utils';
 import { toHaveNoViolations } from 'jest-axe';
 import FocusWrapper from '../FocusWrapper.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
 
 expect.extend(toHaveNoViolations);
 
@@ -35,14 +36,13 @@ describe('FocusWrapper', () => {
 
   it('should have focus top and bottom item,', () => {
     const wrapper = shallow(FocusWrapper);
-    expect(wrapper.find('svgicon').exists()).toBe(true);
+    expect(wrapper.find(SvgIcon).exists()).toBe(true);
   });
 
   it('should have default props color/semiOpaque/size/padding', () => {
     const wrapper = shallow(FocusWrapper);
     expect(wrapper.props().color).toBe('');
     expect(wrapper.props().semiOpaque).toBe(false);
-    expect(wrapper.find('svgicon').classes().indexOf('semi-opaque')).toBe(-1);
     expect(wrapper.props().size).toBe('medium');
     expect(wrapper.vm.normalizeSize).toBe(72);
     expect(wrapper.props().padded).toBe(false);
@@ -66,8 +66,8 @@ describe('FocusWrapper', () => {
         semiOpaque: true,
       },
     });
+
     expect(wrapper.props().semiOpaque).toBe(true);
-    expect(wrapper.find('svgicon').classes().indexOf('semi-opaque')).toBeGreaterThan(-1);
   });
 
   it('should accept only correct size value', () => {

@@ -11,5 +11,6 @@ import ContentBlock from '../ContentBlock.vue';
 
 export default {
   components: { ContentBlock },
+  readme: { source: true, html: true },
 };
 </script>

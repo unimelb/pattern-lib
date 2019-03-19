@@ -5,11 +5,11 @@
     <div>
       <h2 class="title">{{ title }}:</h2>
       <hr class="line">
-      <div class="linkContainer">
+      <div class="container">
         <li
           v-for="(data, index) in getInPageData"
           :key="index"
-          class="removeBullet">
+          class="list-reset">
           <a
             :href="data.id"
             class="link">
@@ -77,7 +77,7 @@ export default {
   border: 1px solid var(--col-line);
 }
 
-.removeBullet {
+.list-reset {
   list-style-type: none;
 }
 
@@ -97,7 +97,7 @@ export default {
   fill: var(--col-font);
 }
 
-.linkContainer {
+.container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -106,7 +106,7 @@ export default {
   margin-bottom: 84px;
 }
 
-.linkContainer > * {
+.container > * {
   flex: 0 50%;
 }
 </style>

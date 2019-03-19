@@ -6,3 +6,9 @@
     <button class="btn btn--icon-before btn--icon--twitter">Button with twitter icon</button>
   </div>
 </template>
+
+<script>
+export default {
+  readme: { source: true, html: true },
+};
+</script>
