@@ -7,7 +7,6 @@
     "jest": true
   },
   "rules": {
-    "at-rule-no-unknown": false,
     "comma-dangle": [
       "error",
       {

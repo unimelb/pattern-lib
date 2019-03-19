@@ -1,24 +1,17 @@
 .page-title {
   /* max-width: 50%; */
   margin: 0 1.5em;
-  @media (--bp-max-tablet) {
-    width: auto !important;
-  }
-  @media (--bp-desktop) {
-    position: relative;
-    flex: 1 0 auto;
-  }
   &--aperture {
     margin-left: 2rem;
     &::before {
       content: '';
       position: absolute;
       bottom: 0;
+      z-index: -1;
       width: 100%;
       height: calc(100vw - 64px);
-      background: #000;
-      z-index: -1;
       transform: translate(-20px, -10px) rotate(15deg);
+      background: #000;
       transform-origin: bottom left;
       @media (--bp-desktop) {
         transform: translate(-20px, 10px) rotate(15deg);
@@ -46,6 +39,13 @@
   &--top-layout {
     position: relative;
     z-index: 1;
+  }
+  @media (--bp-max-tablet) {
+    width: auto !important;
+  }
+  @media (--bp-desktop) {
+    position: relative;
+    flex: 1 0 auto;
   }
   @media (--bp-desktop) {
     /* max-width: 10rem; */
