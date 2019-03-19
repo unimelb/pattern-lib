@@ -7,27 +7,11 @@
 
 <script>
 import OutPageNavigation from '../OutPageNavigation.vue';
-import { codeBlock } from '../../../../.storybook/utils';
-
-const out = codeBlock(`" Use one of those colors: 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink' " 
-<out-page-navigation color="navy" card-links="[{
-        title: 'Conservatorium Directorate',
-        url: 'google.com',
-      }, {
-        title: 'Conservatorium Directorate',
-        url: 'google.com',
-      },
-      {
-        title: 'Conservatorium Directorate',
-        url: 'google.com',
-      }]"
-    card-title="out of this page:">
-    </out-page-navigation>
-    `);
+import outPageNavigationDocs from './out-page-navigation-docs.md';
 
 export default {
   components: { OutPageNavigation },
-  readme: { custom: out, source: true },
+  readme: { custom: outPageNavigationDocs, source: true },
   data() {
     return {
       cardData: [

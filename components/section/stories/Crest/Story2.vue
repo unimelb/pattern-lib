@@ -1,5 +1,5 @@
 <template>
-  <SectionDivider title="Some Heading" />
+  <SectionDivider title="Some Heading"/>
 </template>
 
 <script>
@@ -8,5 +8,6 @@ export default {
   components: {
     SectionDivider,
   },
+  readme: { source: true, html: true },
 };
 </script>

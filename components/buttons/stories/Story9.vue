@@ -10,3 +10,9 @@
       size="xsml">I am a button with width and height modifiers</ButtonIcon>
   </div>
 </template>
+
+<script>
+export default {
+  readme: { source: true, html: true },
+};
+</script>
