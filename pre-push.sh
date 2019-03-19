@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # pre-push hook for git
-# to activate it
+# updates the pre-release version number before pushing
+# This will only have any effect when pushing to the dev (or $protected) branch
+# Its purpose is to jig the version number to prompt remote build (currently via Semaphore)
+# to install it:
 # ln -s pre-push.sh .git/hooks/pre-push
 # requires
 #   jq, available on homebrew and elsewhere
@@ -15,7 +18,7 @@ REMOTE="origin/$protected_branch"
 current_SEMVER=$(jq '.version' package.json |tr -d '"')
 PACKAGE='package.json'
 run_checks() {
-    check1&&check2
+    checkCommits&&check1
 }
 check1() {
     # check if remote SemVer is the same as local
@@ -40,11 +43,30 @@ updateSemVer() {
     git commit -m "Updated to version $newversion"
 }
 
-# check if there are any commits to push to remote
-commits=$(git log "$REMOTE".."$BRANCH")
-if [ -z "$commits" ]; then
-    exit 0
-fi
+checkCommits() {
+    # check if there are any commits to push to remote
+    # we actually don't want any to be there, contrary to a normal
+    # pre-push hook
+    local commits
+    commits=$(git log "$REMOTE".."$BRANCH")
+    if [ -z "$commits" ]; then
+	echo "Pushing to $protected_branch will trigger a build."
+	read -r -p "Are you sure you wish to continue? [y/n] " response
+	case "$response" in
+	    [yY][eE][sS]|[yY]) 
+		return 0
+		;;
+	    *)
+		return 1
+		;;
+	esac
+    else
+	echo "Don't push commits directly to the $protected_branch branch."
+	echo "Please create and merge a feature branch as per gitflow."
+	echo "See https://github.com/unimelb/digital-and-online-channels-development-team-knowledge/blob/master/gitflow-process/README.md"
+	return 1
+    fi
+}
 
 # run checks and push only if they pass
 if [[ $BRANCH == "$protected_branch" ]]
