@@ -16,5 +16,6 @@ import Welcome from '../Welcome.vue';
 
 export default {
   components: { Welcome },
+  readme: { source: true, html: true },
 };
 </script>

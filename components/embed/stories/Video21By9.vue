@@ -1,8 +1,7 @@
 <template>
   <VideoEmbed
     src="https://www.youtube.com/embed/nlF7qp5GNPI"
-    ratio="21_9"
-  />
+    ratio="21_9"/>
 </template>
 
 <script>
@@ -11,6 +10,7 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
   components: { VideoEmbed },
+  readme: { source: true, html: true },
   decorator: ContentBlock,
 };
 </script>

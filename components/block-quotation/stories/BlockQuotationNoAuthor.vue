@@ -8,6 +8,7 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 
 export default {
   components: { BlockQuotation },
+  readme: { source: true, html: true },
   decorator: ContentBlock,
   decoratorProps: { size: 'sml' },
 };
