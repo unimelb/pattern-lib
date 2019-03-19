@@ -1,22 +1,18 @@
 <template>
   <div
     :style="{'width': width && width || '50%'}"
-    class="page-title page-title--aperture"
-  >
+    class="page-title page-title--aperture">
     <div class="page-title--top-layout">
       <div class="page-title__separator"/>
       <a
         :aria-label="title"
         :href="href"
-        class="page-title__text"
-      >
-        {{ title }}
-      </a>
+        class="page-title__text">{{ title }}</a>
     </div>
     <!-- <div
       v-if="hasAperture"
       :style="styles"
-      class="page-title__aperture"/> -->
+    class="page-title__aperture"/>-->
   </div>
 </template>
 
