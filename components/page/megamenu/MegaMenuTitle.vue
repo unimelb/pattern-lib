@@ -1,7 +1,8 @@
 <template>
   <div
     :style="{'width': width && width || '50%'}"
-    class="page-title page-title--aperture">
+    :class="hasAperture ? 'page-title--aperture' : '' "
+    class="page-title">
     <div class="page-title--top-layout">
       <div class="page-title__separator"/>
       <a
@@ -9,10 +10,6 @@
         :href="href"
         class="page-title__text">{{ title }}</a>
     </div>
-    <!-- <div
-      v-if="hasAperture"
-      :style="styles"
-    class="page-title__aperture"/>-->
   </div>
 </template>
 
