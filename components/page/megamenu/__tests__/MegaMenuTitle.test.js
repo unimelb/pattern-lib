@@ -88,10 +88,10 @@ describe('MegaMenuTitle', () => {
     const wrapper = shallow(MegaMenuTitle, {
       propsData: {
         hasAperture: true,
-        href:'/'
+        href: '/',
       },
     });
-    const expectedClasses = ["page-title", "page-title--aperture"];
+    const expectedClasses = ['page-title', 'page-title--aperture'];
     expect(wrapper.classes()).toEqual(expectedClasses);
   });
 
