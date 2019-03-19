@@ -39,13 +39,13 @@
   background-color: rgb(var(--col-brand));
   color: white;
   &.active {
+    border: 1px solid red;
     top: 0;
     min-height: 100%;
     transform: translateX(-100%);
   }
   &__blanket {
-    /* width: 100%;
-    background-color: rgba(0, 0, 0, .5); */
+    border: 1px solid greenyellow;
     position: absolute;
     top: -7.5rem;
     left: 0;
@@ -69,14 +69,14 @@
       transform: translateX(-100%);
     }
   }
-  /* >.page-header-search__form {
+  >.page-header-search__form {
     margin-top: .5rem;
     margin-bottom: .5rem;
     margin-left: 1rem;
     .page-header-search__input {
       width: calc(100% - 4rem);
     }
-  } */
+  }
   .menu__section {
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, .05);
@@ -216,10 +216,10 @@
     transform: none;
     box-shadow: none;
     &__blanket {
-      background-color: transparent;
       position: static;
       height: auto;
       margin: 0;
+      background-color: transparent;
     }
     .inner {
       display: none;
