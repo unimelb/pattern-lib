@@ -1,16 +1,15 @@
 <template>
   <div
     :style="{'width': width && width || '50%'}"
-    class="page-title"
-  >
-    <div class="page-title__separator"/>
-    <a
-      :aria-label="title"
-      :href="href"
-      class="page-title__text"
-    >
-      {{ title }}
-    </a>
+    :class="hasAperture ? 'page-title--aperture' : '' "
+    class="page-title">
+    <div class="page-title--top-layout">
+      <div class="page-title__separator"/>
+      <a
+        :aria-label="title"
+        :href="href"
+        class="page-title__text">{{ title }}</a>
+    </div>
   </div>
 </template>
 
@@ -29,6 +28,21 @@ export default {
     width: {
       type: [String, Boolean],
       default: false,
+    },
+    hasAperture: {
+      type: Boolean,
+      default: false,
+    },
+    apertureColor: {
+      type: String,
+      default: 'black',
+    },
+  },
+  computed: {
+    styles() {
+      return {
+        background: this.apertureColor,
+      };
     },
   },
 };

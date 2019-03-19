@@ -461,7 +461,8 @@
 }
 
 .page-header--study {
-  overflow: visible;
+  /* TODO: need to check any flow on effects for removing this */
+  /* overflow: visible; */
 
   .page-header__inner {
     height: 4.5rem;
@@ -500,6 +501,7 @@
 
 .page-header.active {
   z-index: 101;
+  overflow: visible;
 
   .megamenu__blanket {
     z-index: 100;
@@ -520,12 +522,6 @@
     .page-header__logo {
       width: 4rem;
       height: 4rem;
-    }
-  }
-
-  .page-header {
-    .page-title {
-      max-width: 100%;
     }
   }
 }

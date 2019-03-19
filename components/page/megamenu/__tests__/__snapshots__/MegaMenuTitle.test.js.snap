@@ -6,15 +6,17 @@ exports[`MegaMenuTitle should match snapshot 1`] = `
   style="width: 50%;"
 >
   <div
-    class="page-title__separator"
-  />
-   
-  <a
-    class="page-title__text"
+    class="page-title--top-layout"
   >
-    
-    false
-  
-  </a>
+    <div
+      class="page-title__separator"
+    />
+     
+    <a
+      class="page-title__text"
+    >
+      false
+    </a>
+  </div>
 </div>
 `;
