@@ -21,6 +21,8 @@
         :title="facultyName"
         :href="facultyLink"
         :width="facultyWidth"
+        :has-aperture="facultyAperture"
+        :aperture-color="facultyApertureColor"
       />
       <div
         ref="blanket"
@@ -158,12 +160,9 @@ import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
-import MegamenuTopNavigation from './MegamenuTopNavigation.vue';
 
 export default {
-  components: {
-    PageSearch, PageSearchForm, MegaMenuTitle, MegamenuTopNavigation,
-  },
+  components: { PageSearch, PageSearchForm, MegaMenuTitle },
   props: {
     items: {
       type: Array,
@@ -187,6 +186,14 @@ export default {
       type: [String, Boolean],
       required: false,
       default: false,
+    },
+    facultyAperture: {
+      type: [Boolean],
+      default: false,
+    },
+    facultyApertureColor: {
+      type: [String],
+      default: 'back',
     },
     topMenu: {
       type: Array,
