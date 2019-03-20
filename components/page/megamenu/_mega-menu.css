@@ -367,10 +367,7 @@
         }
 
         .menu__link {
-          //display: table-cell;
           position: relative;
-          //height: calc(6.4375rem - 5px);
-          //padding: calc(1rem + 5px) 1.2rem 1rem;
           line-height: 1.1;
           text-align: center;
           text-decoration: none;
@@ -433,7 +430,6 @@
         .menu__link {
           display: inline-block;
           height: auto;
-          //padding: .75rem 1.5rem .75rem 2rem;
           font-size: .9rem;
           text-align: left;
           text-decoration: none;

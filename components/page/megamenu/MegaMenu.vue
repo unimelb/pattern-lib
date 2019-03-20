@@ -29,7 +29,7 @@
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
         @keypress.27="dismissMobileMenu">
-        <MegamenuTopNavigation
+        <MegaMenuTopNavigation
           v-if="isShowTopMenu"
           :items="topMenu"/>
         <nav
@@ -163,11 +163,11 @@ import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
-import MegamenuTopNavigation from './MegamenuTopNavigation.vue';
+import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
   components: {
-    PageSearch, PageSearchForm, MegaMenuTitle, MegamenuTopNavigation,
+    PageSearch, PageSearchForm, MegaMenuTitle, MegaMenuTopNavigation,
   },
   props: {
     items: {
