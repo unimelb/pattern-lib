@@ -23,20 +23,3 @@ Cols props can be more then `0` and must be less then `3`.
 The component has one slot for links.
 
 ### Usage Example
-
-```html
-<SectionWrap class="bg-alt">
-  <div class="grid grid--2col">
-    <ListItem>
-      <GenericCard :cols="2" title="Test 1">
-        <!--Slots-->
-      </GenericCard>
-    </ListItem>
-    <ListItem>
-      <GenericCard :cols="2" title="Test 1">
-        <!--Slots-->
-      </GenericCard>
-    </ListItem>
-  </div>
-</SectionWrap>
-```
