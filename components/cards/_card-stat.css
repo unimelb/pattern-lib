@@ -1,24 +1,23 @@
-.card--stat{
-    &.btn-owner {
-        &.bg-inverted,
-        &.bg-inverted--o95 {
-            color: white;
-            &:visited { color: white; }
-            &:hover { background-color: color(rgb(var(--col-brand)) lightness(-2%)); }
-        }
+.card--stat {
+  &.btn-owner {
+    &.bg-inverted,
+    &.bg-inverted--o95 {
+      color: white;
+      &:visited { color: white; }
+      &:hover { background-color: color(rgb(var(--col-brand)) lightness(-2%)); }
     }
+  }
 }
 
-.card{
-    &-header{
-        &__heading{
-            font-size: 61px;
-            font-weight: 700;
-        }
+.card {
+  &-header {
+    &__heading {
+      font-size: 61px;
+      font-weight: var(--fw-semibold);
     }
+  }
 }
 
-.card-focus{
-    height: 100%;
+.card-focus {
+  height: 100%;
 }
-
