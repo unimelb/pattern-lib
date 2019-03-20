@@ -35,8 +35,9 @@
         <nav
           id="sitemapmenu"
           ref="rootmenu"
+          :class="['megamenu', isShowTopMenu && 'with-top-menu']"
           aria-label="Site"
-          class="megamenu">
+        >
           <div
             role="button"
             aria-label="Close"
@@ -46,8 +47,10 @@
             v-if="isMobileOpen"
             aria-hidden="true"/>
           <ul
+            :style="menuSectionStyle"
             class="menu__section"
-            role="menu">
+            role="menu"
+          >
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -119,9 +122,9 @@
               </div>
             </li>
           </ul>
-          <PageSearch/>
         </nav>
       </div>
+      <PageSearch/>
       <div class="header-tools__menu">
         <button
           id="sitemapbutton"
@@ -160,9 +163,12 @@ import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
+import MegamenuTopNavigation from './MegamenuTopNavigation.vue';
 
 export default {
-  components: { PageSearch, PageSearchForm, MegaMenuTitle },
+  components: {
+    PageSearch, PageSearchForm, MegaMenuTitle, MegamenuTopNavigation,
+  },
   props: {
     items: {
       type: Array,
@@ -199,6 +205,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    menuRightAlign: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -214,6 +224,10 @@ export default {
     },
     isShowTopMenu() {
       return this.topMenu.length;
+    },
+    menuSectionStyle() {
+      console.log(this.menuRightAlign);
+      return this.menuRightAlign ? { 'margin-left': 'auto' } : '';
     },
   },
   mounted() {
@@ -236,9 +250,9 @@ export default {
       return displayActive;
     },
     linkClasses(rootindex, rootitem) {
-      if (rootindex === 0) {
-        return 'menu__nested-parent';
-      }
+      // if (rootindex === 0) {
+      //   return 'menu__link menu__nested-parent';
+      // }
       if (rootitem.items) {
         return 'menu__link menu__link--nested';
       }
