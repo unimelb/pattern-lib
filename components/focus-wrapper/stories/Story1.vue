@@ -7,29 +7,19 @@
 </template>
 
 <script>
-import { codeBlock } from '../../../.storybook/utils';
 import FocusWrapper from '../FocusWrapper.vue';
 import SectionWrap from '../../section/SectionWrap.vue';
 
-const markup = codeBlock(`
-  <FocusWrapper>
-    ...
-  </FocusWrapper>
-`);
-
 export default {
   components: { FocusWrapper, SectionWrap },
-  readme: {
-    custom: markup,
-    source: false,
-  },
+  readme: { source: true, html: true },
 };
 </script>
 
 <style>
-  .placeholder {
-    height: 80px;
-    width: 100%;
-    background: #fff;
-  }
+.placeholder {
+  height: 80px;
+  width: 100%;
+  background: #fff;
+}
 </style>
