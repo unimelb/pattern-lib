@@ -1,12 +1,12 @@
 <template>
-  <SectionWrap class="bg-alt colour-cycle--alt ">
+  <SectionWrap class="bg-alt colour-cycle--alt">
     <div class="grid grid--3col">
       <ListItem>
         <CardStat
           :cols="3"
           stat="590K"
           element="div"
-          class="card--image-focus--col-brand "
+          class="card--image-focus--col-brand"
           vertical
           color="green"
           excerpt="should not be repeated within the text of the card"
@@ -16,7 +16,7 @@
         <CardStat
           :cols="3"
           element="div"
-          class="card--image-focus--col-brand "
+          class="card--image-focus--col-brand"
           vertical
           color="teal"
           stat="123456"
@@ -27,7 +27,7 @@
         <CardStat
           :cols="3"
           element="div"
-          class="card--image-focus--col-brand "
+          class="card--image-focus--col-brand"
           vertical
           color="yellow"
           stat="290%"
@@ -39,11 +39,10 @@
 </template>
 
 <script>
-
 import CardStat from '../../CardStat.vue';
 
 export default {
   components: { CardStat },
+  readme: { source: true, html: true },
 };
-
 </script>

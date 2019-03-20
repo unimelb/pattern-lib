@@ -2,8 +2,7 @@
   <FocusWrapper
     :color="color"
     size="large">
-    <div
-      :class="classes">
+    <div :class="classes">
       <div class="card__inner">
         <h3 class="card-header__heading">{{ stat }}</h3>
         <p>{{ excerpt }}</p>
@@ -13,7 +12,6 @@
 </template>
 
 <script>
-
 import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 
 export default {
@@ -56,12 +54,13 @@ export default {
       return {
         'card--focus-box-vert': this.vertical,
         [`card--focus-box--${this.color}`]: this.color && this.color.length > 0,
-        'card--stat btn-owner card card--focus-box bg-inverted': this.inverted && !this.isBlack,
-        'card--stat btn-owner card card--focus-box bg-white': !this.inverted && !this.isBlack,
+        'card--stat btn-owner card card--focus-box bg-inverted':
+          this.inverted && !this.isBlack,
+        'card--stat btn-owner card card--focus-box bg-white':
+          !this.inverted && !this.isBlack,
         'card--stat btn-owner card card--focus-box bg-alt': this.isBlack,
       };
     },
   },
 };
-
 </script>
