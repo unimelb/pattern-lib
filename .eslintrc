@@ -25,9 +25,30 @@
     "import/no-unresolved": "off",
     "jsx-a11y/label-has-for": "off",
     "max-len": "off",
-    "no-param-reassign": ["error", { "props": false }],
-    "no-underscore-dangle": ["error", { "allow": ["_uid", "_vnode", "_renderChildren"] }],
-    "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_uid",
+          "_vnode",
+          "_renderChildren"
+        ]
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true,
+        "variables": true
+      }
+    ],
     "react/jsx-filename-extension": "off",
     "react/react-in-jsx-scope": "off",
     "react/no-unknown-property": "off",

@@ -10,10 +10,10 @@ describe('CardStaffList', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types thumb/name/href/position/phone/email/cols', () => {
+  it('should have default props and correct types thumb/name/href/position/phone/email/cols/excerpt', () => {
     const wrapper = shallow(CardStaffList);
     const {
-      thumb, name, cols, href, position, email, phone,
+      thumb, name, cols, href, position, email, phone, excerpt,
     } = wrapper.vm.$options.props;
 
     expect(thumb.type).toBe(String);
@@ -36,6 +36,9 @@ describe('CardStaffList', () => {
 
     expect(phone.type).toEqual([String, Boolean]);
     expect(wrapper.props().phone).toBe(false);
+
+    expect(excerpt.type).toBe(String);
+    expect(wrapper.props().excerpt).toBe('Lorem ipsum dolor sit amet, consectetur.');
   });
 
   it('should render name from prop with correct type', () => {
@@ -100,6 +103,19 @@ describe('CardStaffList', () => {
 
     expect(typeof wrapper.props().cols).toBe('number');
     expect(wrapper.props().cols).toBe(cols);
+  });
+
+  it('should render excerpt from prop with correct type', () => {
+    const excerpt = 'Lorem ipsum';
+    const wrapper = shallow(CardStaffList, {
+      propsData: {
+        excerpt,
+      },
+    });
+
+    expect(typeof wrapper.props().excerpt).toBe('string');
+    expect(wrapper.props().excerpt).toBe(excerpt);
+    expect(wrapper.find('.card__excerpt').text()).toBe(excerpt);
   });
 
   it('should have card image as link', () => {

@@ -4,10 +4,8 @@
       <ListItem>
         <GenericCard
           :cols="3"
-          title="Test 1"
-        >
-          <template
-            slot="links">
+          title="Test 1">
+          <template slot="links">
             <a href="/">View generic details ></a>
             <a href="/">View generic staff ></a>
           </template>
@@ -19,8 +17,10 @@
 
 <script>
 import GenericCard from '../../GenericCard.vue';
+import genericCardDocs from './generic-card-docs.md';
 
 export default {
   components: { GenericCard },
+  readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>

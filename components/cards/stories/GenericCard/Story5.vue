@@ -4,8 +4,7 @@
       <ListItem>
         <GenericCard
           :cols="2"
-          title="Test 1"
-        >
+          title="Test 1">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -14,8 +13,7 @@
           <div
             slot="sub-title-2"
             class="sub-title">
-            <SvgIcon
-              name="calendar" />
+            <SvgIcon name="calendar"/>
             <span>March 31 1992</span>
           </div>
           <div
@@ -31,16 +29,17 @@
 
 <script>
 import GenericCard from '../../GenericCard.vue';
+import genericCardDocs from './generic-card-docs.md';
 
 export default {
   components: { GenericCard },
+  readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>
-
 <style>
-  .sub-title {
-    display: flex;
-    align-items: center;
-    margin: 0;
-  }
+.sub-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
 </style>

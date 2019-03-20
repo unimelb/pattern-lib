@@ -3,9 +3,9 @@
     <SidePanel
       class="layout__pre bg-light-blue"
       title="Navigation">
-      <SidePanelNavItem target="#section1"> Section 1</SidePanelNavItem>
-      <SidePanelNavItem target="#section2"> Section 2</SidePanelNavItem>
-      <SidePanelNavItem target="#section3"> Section 3</SidePanelNavItem>
+      <SidePanelNavItem target="#section1">Section 1</SidePanelNavItem>
+      <SidePanelNavItem target="#section2">Section 2</SidePanelNavItem>
+      <SidePanelNavItem target="#section3">Section 3</SidePanelNavItem>
     </SidePanel>
     <SectionWrap
       id="section1"
@@ -15,14 +15,10 @@
     </SectionWrap>
     <SectionWrap
       id="section2"
-      class="bg-alt">
-      test content
-    </SectionWrap>
+      class="bg-alt">test content</SectionWrap>
     <SectionWrap
       id="section3"
-      class="bg-white">
-      test content
-    </SectionWrap>
+      class="bg-white">test content</SectionWrap>
   </main>
 </template>
 
@@ -34,5 +30,6 @@ import PageDecorator from '../../../../.storybook/decorators/PageDecorator.vue';
 export default {
   components: { SidePanel, SidePanelNavItem },
   decorator: PageDecorator,
+  readme: { source: true, html: true },
 };
 </script>

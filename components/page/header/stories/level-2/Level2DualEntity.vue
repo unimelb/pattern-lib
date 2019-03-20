@@ -13,5 +13,6 @@ import PageHeader from '../../PageHeader.vue';
 
 export default {
   components: { PageHeader },
+  readme: { source: true, html: true },
 };
 </script>

@@ -4,13 +4,11 @@
       <ListItem>
         <GenericCard
           :cols="2"
-          title="Test 1"
-        >
+          title="Test 1">
           <div
             slot="sub-title-1"
             class="sub-title">
-            <SvgIcon
-              name="calendar" />
+            <SvgIcon name="calendar"/>
             <span>Lorem ipsum</span>
           </div>
         </GenericCard>
@@ -21,20 +19,22 @@
 
 <script>
 import GenericCard from '../../GenericCard.vue';
+import genericCardDocs from './generic-card-docs.md';
 
 export default {
   components: { GenericCard },
+  readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>
 
 <style>
-  .sub-title {
-    display: flex;
-    align-items: center;
-    margin: 0;
+.sub-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
 
-    svg {
-      margin: 0 5px 0 0;
-    }
+  svg {
+    margin: 0 5px 0 0;
   }
+}
 </style>
