@@ -13,7 +13,7 @@
 
 .preview-img-item {
   width: 100%;
-  height: 200px;
+  max-height: 200px;
   background-position: 50%;
   background-size: cover;
   cursor: pointer;
