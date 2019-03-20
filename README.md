@@ -200,6 +200,7 @@ Recommended mobile devices for testing:
 ## Example websites
 
 - The following UoM websites are using these components on the new Squiz CMS (Gen 2). Documentation on how to use these components in Edit+ [Gen 2 documentation](https://matrix-cms.unimelb.edu.au/web/mce)
+
 - [University Home Page](https://unimelb.edu.au)
 - [About Us](https://about.unimelb.edu.au)
 - [Brand Hub](https://brandhub.unimelb.edu.au)
