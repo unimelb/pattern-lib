@@ -46,14 +46,19 @@ export default {
       type: Boolean,
       default: false,
     },
+    isBlack: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {
       return {
         'card--focus-box-vert': this.vertical,
         [`card--focus-box--${this.color}`]: this.color && this.color.length > 0,
-        'card--stat btn-owner card card--focus-box bg-inverted': this.inverted,
-        'card--stat btn-owner card card--focus-box bg-white': !this.inverted,
+        'card--stat btn-owner card card--focus-box bg-inverted': this.inverted && !this.isBlack,
+        'card--stat btn-owner card card--focus-box bg-white': !this.inverted && !this.isBlack,
+        'card--stat btn-owner card card--focus-box bg-alt': this.isBlack,
       };
     },
   },

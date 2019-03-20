@@ -10,10 +10,10 @@ describe('CardStat', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types vertical/excerpt/stat/cols/inverted', () => {
+  it('should have default props and correct types vertical/excerpt/stat/cols/inverted/isBlack', () => {
     const wrapper = shallow(CardStat);
     const {
-      vertical, excerpt, stat, cols, inverted,
+      vertical, excerpt, stat, cols, inverted, isBlack,
     } = wrapper.vm.$options.props;
 
     expect(vertical.type).toBe(Boolean);
@@ -30,6 +30,9 @@ describe('CardStat', () => {
 
     expect(inverted.type).toBe(Boolean);
     expect(wrapper.props().inverted).toBe(false);
+
+    expect(isBlack.type).toBe(Boolean);
+    expect(wrapper.props().isBlack).toBe(false);
   });
 
   it('should render stat from prop with correct type', () => {
