@@ -73,20 +73,12 @@ export default {
   methods: {
     open(
       index,
-      items,
-      options = {
-        showHideOpacity: true,
-        getThumbBoundsFn: false,
-        shareEl: false,
-        fullscreenEl: this.fullScreen,
-        closeOnScroll: false,
-        bgOpacity: 0.95,
-      }
+      items
     ) {
-      console.log('open');
+      // console.log('open');
     },
     close() {
-      console.log('close');
+      // console.log('close');
     },
   },
 };
