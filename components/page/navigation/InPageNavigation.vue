@@ -1,0 +1,112 @@
+<template>
+  <FocusWrapper
+    :color="color"
+    padded>
+    <div>
+      <h2 class="title">{{ title }}:</h2>
+      <hr class="line">
+      <div class="container">
+        <li
+          v-for="(data, index) in getInPageData"
+          :key="index"
+          class="list-reset">
+          <a
+            :href="data.id"
+            class="link">
+            {{ data.label }}
+            <SvgIcon
+              name="chevron-right"
+              class="icon"/>
+          </a>
+        </li>
+      </div>
+    </div>
+  </FocusWrapper>
+</template>
+
+<script>
+import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
+
+export default {
+  components: { FocusWrapper },
+  props: {
+    title: {
+      type: String,
+      default: '',
+    },
+    headingLevel: {
+      type: String,
+      required: true,
+    },
+    color: {
+      type: String,
+      default: '',
+    },
+  },
+  computed: {
+    getInPageData() {
+      const pageNav = [];
+      document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
+        if (element.id) {
+          pageNav.push({
+            id: `#${element.id}`,
+            label: element.innerText,
+          });
+        }
+      });
+      return pageNav;
+    },
+  },
+};
+</script>
+
+<style scoped>
+@import "../../_vars.css";
+
+.title {
+  color: var(--col-font);
+  font-family: var(--ff-normal);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.line {
+  width: 40px;
+  margin: 0;
+  border: 1px solid var(--col-line);
+}
+
+.list-reset {
+  list-style-type: none;
+}
+
+.link {
+  color: var(--col-font);
+  font-family: var(--ff-normal);
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+.icon {
+  display: inline;
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  fill: var(--col-font);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 23px;
+  margin-bottom: 84px;
+}
+
+.container > * {
+  flex: 0 50%;
+}
+</style>

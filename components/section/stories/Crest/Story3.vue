@@ -1,7 +1,7 @@
 <template>
   <SectionDivider
     title="Some Heading"
-    subtitle="Based on statistics" />
+    subtitle="Based on statistics"/>
 </template>
 
 <script>
@@ -10,5 +10,6 @@ export default {
   components: {
     SectionDivider,
   },
+  readme: { source: true, html: true },
 };
 </script>

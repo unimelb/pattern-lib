@@ -1,7 +1,8 @@
 <template>
   <div
     class="page-header--campaign"
-    style="background-image:url(https://placeimg.com/990/530/arch/1)">
+    style="background-image:url(https://placeimg.com/990/530/arch/1)"
+  >
     <header class="page-header">
       <div class="page-header__inner max">
         <a
@@ -19,7 +20,7 @@
       <div class="section__inner section__inner--xsml">
         <CardPathfinder
           titleonly
-          title="Talent for every<br>possible outcome" />
+          title="Talent for every<br>possible outcome"/>
       </div>
     </header>
   </div>
@@ -30,5 +31,6 @@ import CardPathfinder from '../../../../cards/CardPathfinder.vue';
 
 export default {
   components: { CardPathfinder },
+  readme: { source: true, html: true },
 };
 </script>

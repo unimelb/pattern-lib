@@ -1,7 +1,7 @@
 {
   "name": "@unimelb/pattern-lib-vue",
   "description": "A complete design system for the University of Melbourne.",
-  "version": "3.5.8",
+  "version": "4.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/unimelb/pattern-lib.git"
@@ -24,7 +24,7 @@
     "build:vue": "NODE_ENV=production webpack --config targets/vue/webpack.config.js",
     "dev": "start-storybook -p 7002 -c .storybook",
     "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
-    "lint": "yarn run lint:js && yarn run lint:css",
+    "lint": "yarn lint:js && yarn lint:js --fix && yarn lint:css && yarn lint:css --fix",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\"",
     "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\" \"targets/**/*.js\"",
     "test": "jest",
@@ -34,6 +34,7 @@
   "dependencies": {
     "ike.js": "^0.0.2",
     "photoswipe": "^4.1.2",
+    "semver": "^5.6.0",
     "vue": "2.5.16",
     "vue-progressive-image": "3.1.0",
     "vue-scrollto": "^2.11.0"

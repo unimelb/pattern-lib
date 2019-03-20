@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardStaffList should match snapshot 1`] = `
+<div
+  class="btn-owner card card--stafflist card--bdr-blue bg-white"
+>
+  <a
+    aria-label="Profile image"
+    class="card__thumb"
+    href="#"
+    style="background-image: url(https://via.placeholder.com/400x200);"
+    title="profile image"
+  />
+   
+  <div
+    class="card__inner "
+  >
+    <a
+      aria-label="Profile position"
+      class="card__header"
+      href="#"
+      title="profile position link"
+    >
+      <h3>
+        Test position
+      </h3>
+    </a>
+     
+    <p
+      class="card__meta"
+    >
+      <a
+        aria-label="Profile name"
+        href="#"
+        title="profile name link"
+      >
+        
+        Test name
+      
+      </a>
+    </p>
+     
+    <div
+      class="card__excerpt"
+    >
+      Lorem ipsum dolor sit amet, consectetur.
+    </div>
+     
+    <div
+      class="card__footer"
+    >
+      <!---->
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;

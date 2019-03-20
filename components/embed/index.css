@@ -49,4 +49,43 @@
       height: 20rem;
     }
   }
+
+  &--inset {
+    iframe {
+      @media (--bp-desktop) {
+        display: table-caption;
+        margin-top: inherit;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 2rem;
+          margin-top: calc(0 - var(--vr) / 2);
+          border-top: 2px solid rgb(var(--col-black-mid-2));
+        }
+      }
+    }
+
+    @media (--bp-desktop) {
+      display: table;
+      position: relative;
+      width: 50%;
+
+      &--lge { width: 75%; }
+      &--med { width: 50%; }
+      &--sml { width: 35%; }
+
+      &-right {
+        margin-right: -5rem;
+        margin-left: 5px;
+        float: right;
+      }
+
+      &-left {
+        margin-right: 18px;
+        margin-left: -5rem;
+        float: left;
+      }
+    }
+  }
 }

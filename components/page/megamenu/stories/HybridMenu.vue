@@ -1,7 +1,10 @@
 <template>
   <MegaMenu
     :items="items"
-    active="/random-link" />
+    active="/random-link"
+    faculty-name="This is a Faculty name"
+    faculty-link="/faculty-link"
+    faculty-width="20%"/>
 </template>
 
 <script>

@@ -16,6 +16,14 @@
           >
         </div>
       </a>
+      <MegaMenuTitle
+        v-if="facultyName"
+        :title="facultyName"
+        :href="facultyLink"
+        :width="facultyWidth"
+        :has-aperture="facultyAperture"
+        :aperture-color="facultyApertureColor"
+      />
       <div
         ref="blanket"
         class="megamenu__blanket"
@@ -148,9 +156,10 @@
 import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
+import MegaMenuTitle from './MegaMenuTitle.vue';
 
 export default {
-  components: { PageSearch, PageSearchForm },
+  components: { PageSearch, PageSearchForm, MegaMenuTitle },
   props: {
     items: {
       type: Array,
@@ -159,6 +168,29 @@ export default {
     active: {
       type: [String, Boolean],
       default: false,
+    },
+    facultyName: {
+      type: [String],
+      required: false,
+      default: '',
+    },
+    facultyLink: {
+      type: [String],
+      required: false,
+      default: '/',
+    },
+    facultyWidth: {
+      type: [String, Boolean],
+      required: false,
+      default: false,
+    },
+    facultyAperture: {
+      type: [Boolean],
+      default: false,
+    },
+    facultyApertureColor: {
+      type: [String],
+      default: 'back',
     },
   },
   data() {

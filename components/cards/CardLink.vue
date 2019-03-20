@@ -1,18 +1,23 @@
 <template>
   <a
     :href="href"
-    :class="{'bg-inverted': inverted, 'bg-white' : !inverted}"
+    :class="classes"
+    tabindex="0"
+    role="button"
     class="btn-owner card card--link card--bdr">
     <div
       v-if="thumb"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"/>
-    <div class="card__header">
-      <span>{{ title }}</span>
+    <div
+      :class="card_header_classes"
+      class="card__header">
+      <span :class="{'title-inverted': !inverted}">{{ title }}</span>
       <SvgIcon
         width="15px"
         height="15px"
-        name="chevron-right" />
+        name="chevron-right"
+      />
     </div>
   </a>
 </template>
@@ -35,6 +40,29 @@ export default {
     inverted: {
       type: Boolean,
       default: false,
+    },
+    cols: {
+      type: Number,
+      default: 4,
+      validator: cols => cols && cols <= 4,
+    },
+  },
+  computed: {
+    classes() {
+      return [
+        {
+          'bg-inverted card--bdr': this.inverted,
+          'bg-white card--bdr-grey': !this.inverted,
+        },
+      ];
+    },
+    card_header_classes() {
+      return [
+        {
+          'cl-white': this.inverted,
+          'cl-inverted': !this.inverted,
+        },
+      ];
     },
   },
 };

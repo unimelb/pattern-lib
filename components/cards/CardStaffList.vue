@@ -1,15 +1,64 @@
 <template>
-  <a
-    :href="href"
+  <div
     class="btn-owner card card--stafflist card--bdr-blue bg-white">
-    <div
+    <a
+      :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
+      title="profile image"
+      aria-label="Profile image"
       class="card__thumb"/>
     <div class="card__inner ">
-      <h3 class="card__header">{{ meta }}</h3>
-      <p class="card__meta">{{ title }}</p>
+      <a
+        :href="href"
+        title="profile position link"
+        aria-label="Profile position"
+        class="card__header"
+      >
+        <h3>{{ position }}</h3>
+      </a>
+      <p class="card__meta">
+        <a
+          :href="href"
+          title="profile name link"
+          aria-label="Profile name">
+          {{ name }}
+        </a>
+      </p>
+      <div
+        v-if="excerpt"
+        class="card__excerpt">{{ excerpt }}</div>
+      <div
+        v-if="cols < 4"
+        class="card__footer">
+        <a
+          v-if="phone"
+          :href="'tel:' + phone"
+          class="card__phone"
+          title="profile phone number"
+          aria-label="Phone Number"
+        >
+          <SvgIcon
+            name="phone"
+            width="15px"
+            height="15px"/>
+          {{ phone }}
+        </a>
+        <a
+          v-if="email"
+          :href="'mailto:' + email"
+          class="card__email"
+          title="profile email"
+          aria-label="Email"
+        >
+          <SvgIcon
+            name="envelope"
+            width="15px"
+            height="15px"/>
+          {{ email }}</a>
+      </div>
     </div>
-  </a>
+
+  </div>
 </template>
 
 <script>
@@ -20,21 +69,33 @@ export default {
       type: String,
       default: 'https://via.placeholder.com/400x200',
     },
-    title: {
+    position: {
       type: String,
-      default: 'Test title',
+      default: 'Test position',
     },
-    meta: {
+    name: {
       type: String,
-      default: 'Test title',
+      default: 'Test name',
     },
     href: {
       type: String,
       default: '#',
     },
+    phone: {
+      type: [String, Boolean],
+      default: false,
+    },
+    email: {
+      type: [String, Boolean],
+      default: false,
+    },
+    cols: {
+      type: Number,
+      default: 0,
+    },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+      default: 'Lorem ipsum dolor sit amet, consectetur.',
     },
   },
 };
