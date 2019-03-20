@@ -1,8 +1,8 @@
 <template>
   <SectionWrap>
     <PhotoGalleryInPage
-      cols="3"
       :images="images"
+      cols="3"
     />
   </SectionWrap>
 </template>
