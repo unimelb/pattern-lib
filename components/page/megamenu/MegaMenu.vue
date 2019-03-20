@@ -226,7 +226,6 @@ export default {
       return this.topMenu.length;
     },
     menuSectionStyle() {
-      console.log(this.menuRightAlign);
       return this.menuRightAlign ? { 'margin-left': 'auto' } : '';
     },
   },
