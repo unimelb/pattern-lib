@@ -21,7 +21,6 @@
         class="arrow-wrapper"
         tabindex="0"
         role="button"
-        title="Next (arrow right)"
         @click="move('next')"
         @keydown.13="move('next')"
       >
@@ -38,6 +37,7 @@
         <div
           v-for="(image, index) in images"
           :key="image.id"
+          :caption="captions && item.title"
           :class="{ active: index === selectedIndex}"
           :aria-describedby="'caption' + selectedIndex"
           class="thumb"
@@ -64,7 +64,19 @@ export default {
   props: {
     images: {
       type: Array,
-      default: () => [{}]
+      default: () => []
+    },
+    captions: {
+      type: Boolean,
+      default: false
+    },
+    fullScreen: {
+      type: Boolean,
+      default: false
+    },
+    options: {
+      type: Object,
+      default: () => ({})
     }
   },
   data() {
