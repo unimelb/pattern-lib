@@ -1,5 +1,5 @@
 <template>
-  <VideoEmbed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
+  <VideoEmbed src="https://www.youtube.com/embed/nlF7qp5GNPI"/>
 </template>
 
 <script>
@@ -10,6 +10,6 @@ export default {
   components: { VideoEmbed },
   decorator: ContentBlock,
   decoratorProps: { bg: 'inverted', size: 'sml' },
-  readme: { decorated: true },
+  readme: { decorated: true, source: true, html: true },
 };
 </script>

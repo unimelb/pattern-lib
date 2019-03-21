@@ -67,6 +67,14 @@ export {
 }
   from '../../components/cards/CardStaffList.vue';
 export {
+  default as GenericCard,
+}
+  from '../../components/cards/GenericCard.vue';
+export {
+  default as CardStat,
+}
+  from '../../components/cards/CardStat.vue';
+export {
   default as CheckList,
 }
   from '../../components/check-list/CheckList.vue';
@@ -114,6 +122,10 @@ export {
   default as MegaMenu,
 }
   from '../../components/page/megamenu/MegaMenu.vue';
+export {
+  default as MegaMenuTitle,
+}
+  from '../../components/page/megamenu/MegaMenuTitle.vue';
 export {
   default as ModalDialog,
 }
@@ -187,6 +199,10 @@ export {
 }
   from '../../components/section/SplitSection.vue';
 export {
+  default as SplitSectionQuote,
+}
+  from '../../components/section/SplitSectionQuote.vue';
+export {
   default as SidePanel,
 }
   from '../../components/side-panel/SidePanel.vue';
@@ -234,3 +250,7 @@ export {
   default as OutPageNavigation,
 }
   from '../../components/page/navigation/OutPageNavigation.vue';
+export {
+  default as Dropdown,
+}
+  from '../../components/dropdown/Dropdown.vue';

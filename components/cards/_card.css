@@ -20,6 +20,10 @@
       &:visited { color: white; }
       &:hover { background-color: color(rgb(var(--col-brand)) lightness(-2%)); }
     }
+    &.bg-alt {
+      color: rgb(var(--col-link-active-on-dark));
+      background-color: rgb(var(--col-black-dark));
+    }
   }
 
   &__inner {
@@ -148,6 +152,13 @@
     .cell &,
     .list-item & {
       border-bottom: .4rem solid rgb(var(--col-navy-mid-2));
+    }
+  }
+
+  &--bdr-grey {
+    .cell &,
+    .list-item & {
+      border-bottom: .4rem solid rgb(153, 162, 170);
     }
   }
 
