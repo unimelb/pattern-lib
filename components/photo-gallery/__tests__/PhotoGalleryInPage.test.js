@@ -1,23 +1,26 @@
-import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import sinon from 'sinon';
 import PhotoGalleryInPage from '../PhotoGalleryInPage.vue';
 
 expect.extend(toHaveNoViolations);
 
-const imagesMock = [
-  {
-    id: 1,
-    src: 'test',
-    title: 'test1',
-    description: 'test1',
-  },
-  {
-    id: 2,
-    src: 'test',
-    title: 'test2',
-    description: 'test2',
-  },
+const imagesMock = [{
+  id: 1,
+  src: 'test',
+  title: 'test1',
+  description: 'test1',
+},
+{
+  id: 2,
+  src: 'test',
+  title: 'test2',
+  description: 'test2',
+},
 ];
 
 describe('PhotoGalleryInPage', () => {
@@ -65,7 +68,9 @@ describe('PhotoGalleryInPage', () => {
       },
     });
 
-    wrapper.setMethods({ move });
+    wrapper.setMethods({
+      move,
+    });
     wrapper.find('.arrow-wrapper').trigger('click');
     expect(move.called).toBe(true);
   });
@@ -78,7 +83,9 @@ describe('PhotoGalleryInPage', () => {
       },
     });
 
-    wrapper.setMethods({ open });
+    wrapper.setMethods({
+      open,
+    });
     wrapper.find('.thumb').trigger('click');
     expect(open.called).toBe(true);
   });
@@ -115,7 +122,9 @@ describe('PhotoGalleryInPage', () => {
       },
     });
 
-    wrapper.setMethods({ move });
+    wrapper.setMethods({
+      move,
+    });
     wrapper.find('.arrow-wrapper').trigger('keydown.enter');
     expect(move.called).toBe(true);
   });
@@ -128,7 +137,9 @@ describe('PhotoGalleryInPage', () => {
       },
     });
 
-    wrapper.setMethods({ open });
+    wrapper.setMethods({
+      open,
+    });
     wrapper.find('.thumb').trigger('keydown.enter');
     expect(open.called).toBe(true);
   });
