@@ -13,7 +13,8 @@ REPO_ROOT=$(git rev-parse --show-toplevel)
 echo "Git repo is at $REPO_ROOT"
 BRANCH=$(git branch | cut -d' ' -f2 | tr -d "[:space:]")
 LOCAL_SEMVER_CMD="$REPO_ROOT/node_modules/semver/bin/semver"
-protected_branch="dev"
+#protected_branch="dev"
+protected_branch="enhance/githook-fixtty"
 REMOTE="origin/$protected_branch"
 current_SEMVER=$(jq '.version' package.json |tr -d '"')
 PACKAGE='package.json'
@@ -38,9 +39,14 @@ check2() {
 updateSemVer() {
     local newversion
     newversion=$($LOCAL_SEMVER_CMD -i prerelease --preid 'beta' "$current_SEMVER")
-    jq --arg NEWVERSION "$newversion" '.version |= $NEWVERSION' "$PACKAGE" | sponge "$PACKAGE"
-    git add package.json
-    git commit -m "Updated to version $newversion"
+    echo "New version is $newversion"
+    if [ ! -z "$newversion" ]; then
+	jq --arg NEWVERSION "$newversion" '.version |= $NEWVERSION' "$PACKAGE" | sponge "$PACKAGE"
+	git add package.json
+	git commit -m "Updated to version $newversion"
+    else
+	return 1
+    fi
 }
 
 checkCommits() {
