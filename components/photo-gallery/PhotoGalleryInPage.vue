@@ -44,7 +44,6 @@
         <div
           v-for="(image, index) in images"
           :key="image.id"
-          :caption="captions && item.title"
           :class="{ active: index === selectedIndex}"
           :aria-describedby="'caption' + selectedIndex"
           class="thumb"
@@ -76,7 +75,7 @@ export default {
   props: {
     images: {
       type: Array,
-      default: () => [],
+      default: () => [{}],
     },
   },
   data() {
