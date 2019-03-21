@@ -73,8 +73,7 @@
       cursor: pointer;
       margin-right: 5px;
       opacity: .7;
-      flex: 1;
-      flex-basis: 5%;
+      width: initial;
       &.active {
         opacity: 1;
         fill: rgba(153, 162, 170, .25);
