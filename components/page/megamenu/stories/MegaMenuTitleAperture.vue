@@ -12,9 +12,11 @@
 
 <script>
 import MegaMenu from '../MegaMenu.vue';
+import MegaMenuDocs from './mega-menu-docs.md';
 
 export default {
   components: { MegaMenu },
+  readme: { custom: MegaMenuDocs, source: true, html: true },
   data() {
     return {
       items: [
@@ -31,7 +33,8 @@ export default {
           href: '/why-melbourne',
           feature: {
             title: 'Campaign title',
-            text: 'This should in theory be a super short para to sell the campaign, but I know <em>someone</em> will put too much text in',
+            text:
+              'This should in theory be a super short para to sell the campaign, but I know <em>someone</em> will put too much text in',
             img: 'https://placeimg.com/360/200/arch',
             link: 'http://google.com',
           },
@@ -53,13 +56,32 @@ export default {
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
             { title: 'Entry non requirements7', href: 'http://www.google.com' },
-            { title: 'Entry non requirements8 has a particularly long title for no good reason', href: 'http://www.google.com' },
+            {
+              title:
+                'Entry non requirements8 has a particularly long title for no good reason',
+              href: 'http://www.google.com',
+            },
             { title: 'Entry non requirements9', href: 'http://www.google.com' },
-            { title: 'Entry non requirements10', href: 'http://www.google.com' },
-            { title: 'Entry non requirements11', href: 'http://www.google.com' },
-            { title: 'Entry non requirements12', href: 'http://www.google.com' },
-            { title: 'Entry non requirements13', href: 'http://www.google.com' },
-            { title: 'Entry non requirements14', href: 'http://www.google.com' },
+            {
+              title: 'Entry non requirements10',
+              href: 'http://www.google.com',
+            },
+            {
+              title: 'Entry non requirements11',
+              href: 'http://www.google.com',
+            },
+            {
+              title: 'Entry non requirements12',
+              href: 'http://www.google.com',
+            },
+            {
+              title: 'Entry non requirements13',
+              href: 'http://www.google.com',
+            },
+            {
+              title: 'Entry non requirements14',
+              href: 'http://www.google.com',
+            },
             { title: 'Entry non requirements15', href: 'http://www.google.com' },
           ],
         },
