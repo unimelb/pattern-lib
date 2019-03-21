@@ -78,18 +78,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    captions: {
-      type: Boolean,
-      default: false,
-    },
-    fullScreen: {
-      type: Boolean,
-      default: false,
-    },
-    options: {
-      type: Object,
-      default: () => ({}),
-    },
   },
   data() {
     return {
