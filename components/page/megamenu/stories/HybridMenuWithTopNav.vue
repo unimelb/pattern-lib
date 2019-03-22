@@ -1,8 +1,7 @@
-<template>
+s<template>
   <MegaMenu
     :items="items"
     :top-menu="topMenu"
-    :menu-right-align="true"
     active="/random-link"
     faculty-name="This is a Faculty name"
     faculty-link="/faculty-link"

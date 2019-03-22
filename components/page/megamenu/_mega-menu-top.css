@@ -3,12 +3,17 @@
     display: flex;
     justify-content: flex-end;
     padding: 0 1.2rem;
+    list-style-type: none;
+    margin: 0;
+    li {
+      margin-bottom: 0;
+    }
   }
 
   .menu-top__item {
-    margin-left: 20px;
-    color: #adcdf0;
-    font-size: 14px;
+    margin-left: 1.25rem;
+    color: rgba(var(--col-blue-mid-1));
+    font-size: .8rem;
     text-decoration: none;
     text-transform: uppercase;
   }

@@ -7,7 +7,8 @@
     <div class="page-header__inner">
       <a
         class="link-img link-reset"
-        href="https://www.unimelb.edu.au/">
+        href="https://www.unimelb.edu.au/"
+      >
         <div class="logo-mask">
           <img
             class="page-header__logo"
@@ -49,7 +50,6 @@
             v-if="isMobileOpen"
             aria-hidden="true"/>
           <ul
-            :style="menuSectionStyle"
             class="menu__section"
             role="menu"
           >
@@ -207,10 +207,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    menuRightAlign: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {
@@ -226,9 +222,6 @@ export default {
     },
     isShowTopMenu() {
       return this.topMenu.length;
-    },
-    menuSectionStyle() {
-      return this.menuRightAlign ? { 'margin-left': 'auto' } : '';
     },
   },
   mounted() {

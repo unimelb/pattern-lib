@@ -1,14 +1,20 @@
 <template>
-  <div class="mega-top">
-    <a
-      v-for="(item, index) in items"
-      :key="index"
-      :href="item.href"
-      role="menuitem"
-      class="menu-top__item">
-      {{ item.title }}
-    </a>
-  </div>
+  <nav >
+    <ul class="mega-top">
+      <li
+        v-for="(item, index) in items"
+        :key="index"
+      >
+        <a
+          :href="item.href"
+          role="menuitem"
+          class="menu-top__item">
+          {{ item.title }}
+        </a>
+      </li>
+    </ul>
+
+  </nav>
 </template>
 
 <script>

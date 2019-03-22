@@ -336,6 +336,7 @@
         margin-bottom: 0;
         padding-left: 0;
         border-bottom: none;
+        margin-left: auto;
 
         .inner .menu__nested-parent {
           width: 33.333%;
