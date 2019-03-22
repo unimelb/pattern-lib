@@ -212,13 +212,12 @@
     right: auto;
     justify-content: space-between;
     width: 100%;
-    height: 123%;
     padding-left: 0;
     transform: none;
     box-shadow: none;
 
-    &.with-top-menu {
-      height: 96%;
+    &__with-top-menu {
+      height: 98%;
       .menu__section {
         .menu__link {
           padding-top: 0;
@@ -460,6 +459,8 @@
   .page-header__inner {
     height: 4.5rem;
     padding-left: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
 
     .link-img {
       margin: -.75rem;
@@ -559,5 +560,12 @@
       display: block;
       float: right;
     }
+  }
+}
+
+.page-header {
+  &__with-top-menu {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }

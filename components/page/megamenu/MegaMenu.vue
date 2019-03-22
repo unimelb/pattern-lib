@@ -1,7 +1,9 @@
 <template>
   <div
     ref="headerroot"
-    class="page-header page-header--l3 page-header--study">
+    :class="[isShowTopMenu && 'page-header__with-top-menu']"
+    class="page-header page-header--l3 page-header--study"
+  >
     <div class="page-header__inner">
       <a
         class="link-img link-reset"
@@ -35,7 +37,7 @@
         <nav
           id="sitemapmenu"
           ref="rootmenu"
-          :class="['megamenu', isShowTopMenu && 'with-top-menu']"
+          :class="['megamenu', isShowTopMenu && 'megamenu__with-top-menu']"
           aria-label="Site"
         >
           <div
