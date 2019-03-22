@@ -63,6 +63,7 @@ import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
 import CardStat from '../../components/cards/CardStat.vue';
 
+import PhotoGalleryInPage from '../../components/photo-gallery/PhotoGalleryInPage.vue';
 
 import '../../components';
 
@@ -130,6 +131,7 @@ Vue.component('welcome', Welcome);
 Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
 Vue.component('card-stat', CardStat);
+Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
 
 // Create Vue instance
 new Vue({

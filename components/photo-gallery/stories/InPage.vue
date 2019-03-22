@@ -2,7 +2,6 @@
   <SectionWrap style="background: #000;">
     <PhotoGalleryInPage
       :images="images"
-      cols="3"
     />
   </SectionWrap>
 </template>
@@ -10,6 +9,7 @@
 <script>
 import PhotoGalleryInPage from '../PhotoGalleryInPage.vue';
 import sample from '../sample.json';
+import PhotoGalaryInPageDocs from './photo-gallery-in-page.md';
 
 export default {
   components: { PhotoGalleryInPage },
@@ -18,6 +18,6 @@ export default {
       images: sample,
     };
   },
-  readme: { html: true, source: false },
+  readme: { custom: PhotoGalaryInPageDocs, source: true, html: true },
 };
 </script>
