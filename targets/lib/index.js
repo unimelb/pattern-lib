@@ -61,6 +61,7 @@ import Welcome from '../../components/welcome/Welcome.vue';
 import CardImage from '../../components/cards/CardImage.vue';
 import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
+import PhotoGalleryInPage from '../../components/photo-gallery/PhotoGalleryInPage.vue';
 
 import '../../components';
 
@@ -127,6 +128,7 @@ Vue.component('sublink-menu-item', SublinkMenuItem);
 Vue.component('welcome', Welcome);
 Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
+Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
 
 // Create Vue instance
 new Vue({
