@@ -13,8 +13,7 @@ REPO_ROOT=$(git rev-parse --show-toplevel)
 echo "Git repo is at $REPO_ROOT"
 BRANCH=$(git branch | cut -d' ' -f2 | tr -d "[:space:]")
 LOCAL_SEMVER_CMD="$REPO_ROOT/node_modules/semver/bin/semver"
-#protected_branch="dev"
-protected_branch="enhance/githook-fixtty"
+protected_branch="dev"
 REMOTE="origin/$protected_branch"
 current_SEMVER=$(jq '.version' package.json |tr -d '"')
 PACKAGE='package.json'
@@ -45,6 +44,8 @@ updateSemVer() {
 	git add package.json
 	git commit -m "Updated to version $newversion"
     else
+	echo "Something went wrong with the version update."
+	echo "Check that you have the semver node package installed."
 	return 1
     fi
 }
@@ -85,8 +86,7 @@ then
         echo "failed"
         exit 1
     else
-	echo "would have passed but failing for now"
-	exit 1
+	echo "passed"
     fi
 fi
 exit 0
