@@ -21,6 +21,7 @@
         class="arrow-wrapper"
         tabindex="0"
         role="button"
+        title="Next (arrow right)"
         @click="move('next')"
         @keydown.13="move('next')"
       >

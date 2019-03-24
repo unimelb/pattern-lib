@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div
-      :class="classes">
+    <div :class="classes">
       <div class="photo-gallery-pop-over__images-count">
         {{ selectedIndex + 1 }} / {{ images.length }}
         <div
@@ -11,13 +10,8 @@
           @click="openStateToggle()"
           @keydown.13="openStateToggle()"
         >
-          <SvgIcon
-            name="close"
-            width="32"
-            height="32"
-          />
+          <SvgIcon name="close" width="32" height="32"/>
         </div>
-
       </div>
       <div class="photo-gallery-pop-over__slider">
         <div
@@ -33,15 +27,12 @@
             name="chevron-left"
             width="30"
             height="30"
-
           />
         </div>
 
         <div class="photo-gallery-pop-over--container">
-          <figure >
-            <img
-              :src="selectedItem.src"
-              :alt="selectedItem.title">
+          <figure>
+            <img :src="selectedItem.src" :alt="selectedItem.title">
           </figure>
         </div>
         <div
@@ -73,59 +64,52 @@
             @click="open(index)"
             @keydown.13="open(index)"
           >
-            <img
-              :src="image.src"
-              :alt="image.title"
-            >
+            <img :src="image.src" :alt="image.title">
           </div>
         </div>
         <figcaption
           :id="'caption' + selectedIndex"
-          class="photo-gallery-pop-over__title">{{ selectedItem.title }}</figcaption>
+          class="photo-gallery-pop-over__title"
+        >{{ selectedItem.title }}</figcaption>
         <div class="photo-gallery-pop-over__description">{{ selectedItem.description }}</div>
       </figure>
     </div>
-    <Thumbnails
-      :images="images"
-      :callback="openThumb"
-      :display-caption="displayCaption"
-    />
+    <Thumbnails :images="images" :callback="openThumb" :display-caption="displayCaption"/>
   </div>
 </template>
 
 <script>
-
-import Thumbnails from './Thumbnails';
+import Thumbnails from "./Thumbnails";
 
 export default {
   components: { Thumbnails },
   props: {
     images: {
       type: Array,
-      default: () => [{}],
+      default: () => [{}]
     },
     displayCaption: {
       type: Boolean,
-      default: false,
-    },
+      default: false
+    }
   },
   data() {
     return {
       selectedItem: this.images ? this.images[0] : {},
       selectedIndex: 0,
-      openState: false,
+      openState: false
     };
   },
   computed: {
     classes() {
       return {
-        'photo-gallery-pop-over': true,
-        'photo-gallery-pop-over__open': this.openState,
+        "photo-gallery-pop-over": true,
+        "photo-gallery-pop-over__open": this.openState
       };
-    },
+    }
   },
   created() {
-    window.addEventListener('keyup', this.keyBoardActions);
+    window.addEventListener("keyup", this.keyBoardActions);
   },
   methods: {
     open(index) {
@@ -144,7 +128,7 @@ export default {
       const current = this.selectedIndex;
       const directions = {
         prev: (current + len - 1) % len,
-        next: (current + 1) % len,
+        next: (current + 1) % len
       };
       const nextIndex = directions[direction];
       this.selectedItem = this.images[nextIndex];
@@ -152,15 +136,15 @@ export default {
     },
     keyBoardActions(e) {
       if (e.keyCode === 37) {
-        this.move('prev');
+        this.move("prev");
       }
       if (e.keyCode === 39) {
-        this.move('next');
+        this.move("next");
       }
       if (e.keyCode === 27) {
         this.openState = false;
       }
-    },
-  },
+    }
+  }
 };
 </script>
