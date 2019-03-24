@@ -9,6 +9,7 @@
   &__top-left,
   &__bottom-right {
     position: absolute;
+    z-index: 90;
     top: 0;
     left: 0;
     fill: rgb(var(--col-blue-mid-2));
