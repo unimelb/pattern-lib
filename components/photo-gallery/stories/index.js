@@ -8,6 +8,7 @@ import WithoutPopup from './WithoutPopup.vue';
 import TwoGalleries from './TwoGalleries.vue';
 import InPage from './InPage.vue';
 import PopOver from './PopOver.vue';
+import PopOverWithCaptions from './PopOverWithCaptions.vue';
 /* ##Import story component here */
 
 storiesOf('Photo Gallery', module)
@@ -17,4 +18,5 @@ storiesOf('Photo Gallery', module)
   .add('Without popup', createStory(WithoutPopup))
   .add('Two on page', createStory(TwoGalleries))
   .add('In page', createStory(InPage))
-  .add('PopOver', createStory(PopOver));
+  .add('PopOver', createStory(PopOver))
+  .add('PopOver with captions', createStory(PopOverWithCaptions));

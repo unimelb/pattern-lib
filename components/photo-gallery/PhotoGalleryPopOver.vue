@@ -87,7 +87,9 @@
     </div>
     <Thumbnails
       :images="images"
-      :callback="openThumb"/>
+      :callback="openThumb"
+      :display-caption="displayCaption"
+    />
   </div>
 </template>
 
@@ -101,6 +103,10 @@ export default {
     images: {
       type: Array,
       default: () => [{}],
+    },
+    displayCaption: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

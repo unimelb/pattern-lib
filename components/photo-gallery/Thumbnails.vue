@@ -8,7 +8,7 @@
         :cols="image.size || '1of1'"
       >
         <FigureWrap
-          :caption="image.title && image.title"
+          :caption="displayCaption && image.title"
           class="thumbnails__figure"
         >
           <img
@@ -20,7 +20,7 @@
           >
         </FigureWrap>
         <div
-          v-if="image.description"
+          v-if="displayCaption"
           class="thumbnails__description">
           {{ image.description }}
         </div>
@@ -80,6 +80,10 @@ export default {
     callback: {
       type: Function,
       default: () => {},
+    },
+    displayCaption: {
+      type: Boolean,
+      default: false,
     },
   },
 };
