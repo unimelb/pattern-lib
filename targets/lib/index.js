@@ -62,6 +62,7 @@ import CardImage from '../../components/cards/CardImage.vue';
 import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
 import PhotoGalleryInPage from '../../components/photo-gallery/PhotoGalleryInPage.vue';
+import PhotoGalleryPopOver from '../../components/photo-gallery/PhotoGalleryPopOver.vue';
 
 import '../../components';
 
@@ -129,6 +130,7 @@ Vue.component('welcome', Welcome);
 Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
 Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
+Vue.component('photo-gallery-pop-over', PhotoGalleryPopOver);
 
 // Create Vue instance
 new Vue({
