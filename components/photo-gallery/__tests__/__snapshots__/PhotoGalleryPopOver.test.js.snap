@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoGalleryPopOver should match snapshot 1`] = `
+<div>
+  <div
+    class="photo-gallery-pop-over"
+  >
+    <div
+      class="photo-gallery-pop-over__images-count"
+    >
+      
+      1 / 1
+      
+      <div
+        class="photo-gallery-pop-over__close"
+        tabindex="0"
+        title="Close (Esc)"
+      >
+        <svgicon
+          height="32"
+          name="close"
+          width="32"
+        />
+      </div>
+    </div>
+     
+    <div
+      class="photo-gallery-pop-over__slider"
+    >
+      <div
+        class="arrow-wrapper"
+        role="button"
+        tabindex="0"
+        title="Previous (arrow left)"
+      >
+        <svgicon
+          class="photo-gallery-pop-over__chevron"
+          height="30"
+          name="chevron-left"
+          width="30"
+        />
+      </div>
+       
+      <div
+        class="photo-gallery-pop-over--container"
+      >
+        <figure>
+          <img />
+        </figure>
+      </div>
+       
+      <div
+        class="arrow-wrapper"
+        role="button"
+        tabindex="0"
+        title="Next (arrow right)"
+      >
+        <svgicon
+          class="photo-gallery-pop-over__chevron"
+          height="30"
+          name="chevron-right"
+          width="30"
+        />
+      </div>
+    </div>
+     
+    <figure>
+      <div
+        class="photo-gallery-pop-over__thumbnails"
+      >
+        <div
+          aria-describedby="caption0"
+          class="thumb active"
+          role="button"
+          tabindex="0"
+        >
+          <img />
+        </div>
+      </div>
+       
+      <figcaption
+        class="photo-gallery-pop-over__title"
+        id="caption0"
+      >
+        
+      </figcaption>
+       
+      <div
+        class="photo-gallery-pop-over__description"
+      >
+        
+      </div>
+    </figure>
+  </div>
+   
+  <!---->
+</div>
+`;
