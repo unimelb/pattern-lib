@@ -66,7 +66,7 @@ import CardStat from '../../components/cards/CardStat.vue';
 import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue';
 import CardEvents from '../../components/cards/CardEvents.vue';
 import CardFeaturesPanel from '../../components/cards/CardFeaturesPanel.vue';
-import PhotoGalleryPopOver from '../../components/photo-gallery/PhotoGalleryPopOver.vue';
+import PhotoGalleryPopOver from '../../components/photo-gallery-in-page/PhotoGalleryPopOver.vue';
 
 import '../../components';
 
