@@ -18,7 +18,7 @@
       </div>
 
       <div class="photo-gallery-in-page--container">
-        <figure >
+        <figure class="photo-gallery-in-page__figure">
           <img
             :src="selectedItem.src"
             :alt="selectedItem.title">

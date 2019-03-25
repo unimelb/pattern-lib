@@ -133,7 +133,6 @@ Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
 Vue.component('card-stat', CardStat);
 Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
-Vue.component('photo-gallery-pop-over', PhotoGalleryPopOver);
 
 // Create Vue instance
 new Vue({

@@ -11,7 +11,7 @@ import PopOver from './PopOver.vue';
 import PopOverWithCaptions from './PopOverWithCaptions.vue';
 /* ##Import story component here */
 
-storiesOf('Photo Gallery', module)
+storiesOf('Photo Gallery (Deprecated)', module)
   .add('Default', createStory(PhotoGalleryDefault))
   .add('With captions', createStory(WithCaptions))
   .add('Single Column', createStory(SingleColumn))
