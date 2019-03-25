@@ -5,7 +5,7 @@
     />
   </SectionWrap>
 </template>
-
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid architecto asperiores, corporis eligendi eos ex, explicabo facere fugit itaque iusto laudantium magni minima nostrum perferendis praesentium, quas quisquam quos recusandae voluptatem? Asperiores beatae commodi corporis magnam unde. Commodi dolor dolorem enim illo modi nesciunt nulla reprehenderit sint, vel veniam.
 <script>
 import PhotoGalleryInPage from '../PhotoGalleryInPage.vue';
 import sample from '../sample.json';

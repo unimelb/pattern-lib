@@ -11,6 +11,7 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
       class="arrow-wrapper"
       role="button"
       tabindex="0"
+      title="Previous (arrow left)"
     >
       <svgicon
         class="photo-gallery-in-page__chevron"
@@ -23,7 +24,9 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     <div
       class="photo-gallery-in-page--container"
     >
-      <figure>
+      <figure
+        class="photo-gallery-in-page__figure"
+      >
         <img />
       </figure>
     </div>
@@ -32,6 +35,7 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
       class="arrow-wrapper"
       role="button"
       tabindex="0"
+      title="Next (arrow right)"
     >
       <svgicon
         class="photo-gallery-in-page__chevron"
