@@ -61,7 +61,7 @@ import Welcome from '../../components/welcome/Welcome.vue';
 import CardImage from '../../components/cards/CardImage.vue';
 import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
-import PhotoGalleryInPage from '../../components/photo-gallery/PhotoGalleryInPage.vue';
+import PhotoGalleryInPage from '../../components/photo-gallery-in-page/PhotoGalleryInPage.vue';
 
 import '../../components';
 

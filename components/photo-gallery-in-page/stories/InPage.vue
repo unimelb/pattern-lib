@@ -1,5 +1,5 @@
 <template>
-  <SectionWrap style="background: #000;">
+  <SectionWrap>
     <PhotoGalleryInPage
       :images="images"
     />
