@@ -3,6 +3,13 @@
 # updates the pre-release version number before pushing
 # This will only have any effect when pushing to the dev (or $protected) branch
 # Its purpose is to jig the version number to prompt remote build (currently via Semaphore)
+# Expected behaviour:
+# on clean dev branch
+# git push (1st time)
+# - update SemVer version number
+# - make a commit (but don't push)
+# git push (2nd time)
+# - pushes single commit only if it relates to a version change
 # to install it:
 # cp ./pre-push.sh .git/hooks/pre-push
 # requires
