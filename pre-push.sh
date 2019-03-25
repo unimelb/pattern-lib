@@ -17,16 +17,22 @@ protected_branch="dev"
 REMOTE="origin/$protected_branch"
 current_SEMVER=$(jq '.version' package.json |tr -d '"')
 PACKAGE='package.json'
+commits=$(git log --oneline $BRANCH ^$REMOTE | wc -l)
 run_checks() {
-    checkCommits&&check1
+    checkCommits $commits && check1 $commits
 }
 check1() {
     # check if remote SemVer is the same as local
+    local commits=$1
     VERSION_CHANGED=$(git diff "$BRANCH".."$REMOTE" -G '"version":' -- "$REPO_ROOT/$PACKAGE" | wc -l)
     if [ "$VERSION_CHANGED" -gt "0" ]
     then
-	echo "Remote dev branch has a different version. Please pull from remote and try again."
-	return 1
+	if [ "$commits" -eq 1 ]; then
+	    return 0
+	else
+	    echo "Remote dev branch has a different version. Please pull from remote and try again."
+	    return 1
+	fi
     else
 	updateSemVer
     fi
@@ -49,15 +55,18 @@ updateSemVer() {
 	return 1
     fi
 }
-
 checkCommits() {
     # check if there are any commits to push to remote
     # we actually don't want any to be there, contrary to a normal
     # pre-push hook
-    local commits
-    commits=$(git log "$REMOTE".."$BRANCH")
-    if [ -z "$commits" ]; then
+    # 1 commit is ok iff it is only the version change
+    local commits=$1
+    #commits=$(git log "$REMOTE".."$BRANCH")
+    
+    if [ "$commits" -eq 0 ]; then
 	# git hooks don't read from stdin by default
+	return 0
+    elif [ "$commits" -eq 1 ]; then
 	echo "Pushing to $protected_branch will trigger a build."
 	read -r -p "Are you sure you wish to continue? [y/n] " response < /dev/tty
 	case "$response" in
@@ -67,7 +76,7 @@ checkCommits() {
 	    *)
 		return 1
 		;;
-	esac
+	 esac
     else
 	echo "Don't push commits directly to the $protected_branch branch."
 	echo "Please create and merge a feature branch as per gitflow."
