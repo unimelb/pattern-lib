@@ -5,6 +5,7 @@
         class="arrow-wrapper"
         role="button"
         tabindex="0"
+        title="Previous (arrow left)"
         @click="move('prev')"
         @keydown.13="move('prev')"
       >
@@ -13,12 +14,11 @@
           name="chevron-left"
           width="30"
           height="30"
-
         />
       </div>
 
       <div class="photo-gallery-in-page--container">
-        <figure >
+        <figure class="photo-gallery-in-page__figure">
           <img
             :src="selectedItem.src"
             :alt="selectedItem.title">
@@ -28,6 +28,7 @@
         class="arrow-wrapper"
         tabindex="0"
         role="button"
+        title="Next (arrow right)"
         @click="move('next')"
         @keydown.13="move('next')"
       >

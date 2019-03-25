@@ -9,13 +9,13 @@
       width: 100%;
       object-fit: contain;
     }
+  }
 
-    figure {
-      cursor: pointer;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
+  &__figure {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
   }
 
   &__chevron {
