@@ -2,43 +2,23 @@
   <div class="photo-gallery-in-page">
     <div class="photo-gallery-in-page__slider">
       <div
-        class="arrow-wrapper left"
+        class="arrow-wrapper"
         role="button"
         tabindex="0"
         title="Previous (arrow left)"
         @click="move('prev')"
         @keydown.13="move('prev')"
       >
-        <SvgIcon
-          class="photo-gallery-in-page__chevron"
-          name="chevron-left"
-          width="30"
-          height="30"/>
+        <SvgIcon class="photo-gallery-in-page__chevron" name="chevron-left" width="30" height="30"/>
       </div>
 
-      <div
-        class="photo-gallery-in-page--container">
-        <swiper
-          ref="slider"
-          :options="swiperOption">
-          <swiper-slide
-            v-for="(slide, index) in media"
-            :key="index">
-            <figure class="photo-gallery-in-page__figure">
-              <img
-                v-if="slide.type === 'image'"
-                :src="slide.src"
-                :alt="slide.title"
-              >
-              <VideoEmbed
-                v-if="slide.type === 'video'"
-                :src="slide.src"/>
-            </figure>
-          </swiper-slide>
-        </swiper>
+      <div class="photo-gallery-in-page--container">
+        <figure>
+          <img :src="selectedItem.src" :alt="selectedItem.title">
+        </figure>
       </div>
       <div
-        class="arrow-wrapper right"
+        class="arrow-wrapper"
         tabindex="0"
         role="button"
         title="Next (arrow right)"
@@ -53,11 +33,11 @@
         />
       </div>
     </div>
-    <figure class="photo-gallery-in-page__figure-thumbnails">
+    <figure>
       <div class="photo-gallery-in-page__thumbnails">
         <div
-          v-for="(item, index) in media"
-          :key="item.id"
+          v-for="(image, index) in images"
+          :key="image.id"
           :class="{ active: index === selectedIndex}"
           :aria-describedby="'caption' + selectedIndex"
           class="thumb"
@@ -66,19 +46,10 @@
           @click="open(index)"
           @keydown.13="open(index)"
         >
-          <img
-            v-if="item.type === 'image'"
-            :src="item.src"
-            :alt="item.title">
-          <div
-            v-if="item.type === 'video'"
-            class="embed--video">
-            <div class="embed--cover"/>
-            <VideoEmbed :src="item.src"/>
-          </div>
+          <img :src="image.src" :alt="image.title">
         </div>
       </div>
-      <div class="photo-gallery-in-page__media-count">{{ selectedIndex + 1 }} / {{ media.length }}</div>
+      <div class="photo-gallery-in-page__images-count">{{ selectedIndex + 1 }} / {{ images.length }}</div>
       <figcaption
         :id="'caption' + selectedIndex"
         class="photo-gallery-in-page__title"
@@ -89,60 +60,47 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
-
-import VideoEmbed from '../embed/VideoEmbed.vue';
-
 export default {
-  components: { VideoEmbed, swiper, swiperSlide },
   props: {
-    media: {
+    images: {
       type: Array,
-      default: () => [{}],
+      default: () => []
     },
+    captions: {
+      type: Boolean,
+      default: false
+    },
+    fullScreen: {
+      type: Boolean,
+      default: false
+    },
+    options: {
+      type: Object,
+      default: () => ({})
+    }
   },
   data() {
-    const vm = this;
     return {
-      selectedItem: this.media ? this.media[0] : {},
-      selectedIndex: 0,
-      swiperOption: {
-        on: {
-          slideChange() {},
-          slideChangeTransitionEnd() {
-            vm.selectedItem = vm.media[this.activeIndex];
-            vm.selectedIndex = this.activeIndex;
-          },
-        },
-      },
+      selectedItem: this.images ? this.images[0] : {},
+      selectedIndex: 0
     };
-  },
-  mounted() {
-    this.swiper = this.$refs.slider.swiper;
   },
   methods: {
     open(index) {
-      this.selectedItem = this.media[index];
+      this.selectedItem = this.images[index];
       this.selectedIndex = index;
-      if (this.swiper) {
-        this.swiper.slideTo(index);
-      }
     },
     move(direction) {
-      const len = this.media.length;
+      const len = this.images.length;
       const current = this.selectedIndex;
       const directions = {
         prev: (current + len - 1) % len,
-        next: (current + 1) % len,
+        next: (current + 1) % len
       };
       const nextIndex = directions[direction];
-      // Set current
-      this.selectedItem = this.media[nextIndex];
+      this.selectedItem = this.images[nextIndex];
       this.selectedIndex = nextIndex;
-      if (this.swiper) {
-        this.swiper.slideTo(nextIndex);
-      }
-    },
-  },
+    }
+  }
 };
 </script>

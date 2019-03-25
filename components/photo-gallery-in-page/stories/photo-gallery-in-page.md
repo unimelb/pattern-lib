@@ -1,24 +1,22 @@
 ## Photo Gallery In Page
 
-The Photo Gallery In Page component receive an Array called `media` to build gallery.
+The Photo Gallery In Page component receive an Array called `images` to build gallery.
 
 Example:
 
 ```
-:media='[
+:images='[
   {
       "id": 1,
       "src": "Image url",
       "title": "Image title",
-      "description": "Image description",
-      "type": "image"
+      "description": "Image description"
     },
     {
       "id": 2,
-      "src": "Video url",
-      "title": "Video title",
-      "description": "Video description",
-      "type": "video"
+      "src": "Image url",
+      "title": "Image title",
+      "description": "Image description"
     },
 ]'
 ```
@@ -26,20 +24,18 @@ Example:
 Usage:
 
 ```html
-<photo-gallery-in-page media="[
+<photo-gallery-in-page images="[
   {
     'id': 1,
     'src': 'http://pandaznaet.ru/wp-content/uploads/2015/11/kak-budut-vyglyadet-supergeroi-na-pensii-3.jpg',
     'title': 'Image 1',
-    'description': 'Lorem ipsum dolor sit amet.',
-    'type': 'image'
+    'description': 'Lorem ipsum dolor sit amet.'
   },
   {
     'id': 2,
-    'src': 'https://www.youtube.com/embed/nlF7qp5GNPI',
-    'title': 'Video',
-    'description': 'Lorem ipsum dolor sit amet.',
-    'type': 'video'
+    'src': 'http://pandaznaet.ru/wp-content/uploads/2015/11/kak-budut-vyglyadet-supergeroi-na-pensii-4.jpg',
+    'title': 'Image 2',
+    'description': 'Lorem ipsum dolor sit amet.'
   }]'>
 </photo-gallery-in-page>
 ```

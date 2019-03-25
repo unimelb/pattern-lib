@@ -8,7 +8,7 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     class="photo-gallery-in-page__slider"
   >
     <div
-      class="arrow-wrapper left"
+      class="arrow-wrapper"
       role="button"
       tabindex="0"
       title="Previous (arrow left)"
@@ -24,11 +24,13 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     <div
       class="photo-gallery-in-page--container"
     >
-      <!---->
+      <figure>
+        <img />
+      </figure>
     </div>
      
     <div
-      class="arrow-wrapper right"
+      class="arrow-wrapper"
       role="button"
       tabindex="0"
       title="Next (arrow right)"
@@ -42,9 +44,7 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     </div>
   </div>
    
-  <figure
-    class="photo-gallery-in-page__figure-thumbnails"
-  >
+  <figure>
     <div
       class="photo-gallery-in-page__thumbnails"
     >
@@ -54,14 +54,12 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
         role="button"
         tabindex="0"
       >
-        <!---->
-         
-        <!---->
+        <img />
       </div>
     </div>
      
     <div
-      class="photo-gallery-in-page__media-count"
+      class="photo-gallery-in-page__images-count"
     >
       1 / 1
     </div>
