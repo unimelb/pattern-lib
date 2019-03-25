@@ -24,7 +24,9 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     <div
       class="photo-gallery-in-page--container"
     >
-      <figure>
+      <figure
+        class="photo-gallery-in-page__figure"
+      >
         <img />
       </figure>
     </div>
