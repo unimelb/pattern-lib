@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div
-      :class="classes">
+    <div :class="classes">
       <div class="photo-gallery-pop-over__images-count">
         {{ selectedIndex + 1 }} / {{ images.length }}
         <div
@@ -14,10 +13,8 @@
           <SvgIcon
             name="close"
             width="32"
-            height="32"
-          />
+            height="32"/>
         </div>
-
       </div>
       <div class="photo-gallery-pop-over__slider">
         <div
@@ -33,12 +30,11 @@
             name="chevron-left"
             width="30"
             height="30"
-
           />
         </div>
 
         <div class="photo-gallery-pop-over--container">
-          <figure >
+          <figure>
             <img
               :src="selectedItem.src"
               :alt="selectedItem.title">
@@ -75,27 +71,25 @@
           >
             <img
               :src="image.src"
-              :alt="image.title"
-            >
+              :alt="image.title">
           </div>
         </div>
         <figcaption
           :id="'caption' + selectedIndex"
-          class="photo-gallery-pop-over__title">{{ selectedItem.title }}</figcaption>
+          class="photo-gallery-pop-over__title"
+        >{{ selectedItem.title }}</figcaption>
         <div class="photo-gallery-pop-over__description">{{ selectedItem.description }}</div>
       </figure>
     </div>
     <Thumbnails
       :images="images"
       :callback="openThumb"
-      :display-caption="displayCaption"
-    />
+      :display-caption="displayCaption"/>
   </div>
 </template>
 
 <script>
-
-import Thumbnails from './Thumbnails';
+import Thumbnails from './Thumbnails.vue';
 
 export default {
   components: { Thumbnails },
