@@ -20,8 +20,12 @@
       <div class="photo-gallery-in-page--container">
         <figure class="photo-gallery-in-page__figure">
           <img
+            v-if="selectedItem.type === 'image'"
             :src="selectedItem.src"
             :alt="selectedItem.title">
+          <VideoEmbed
+            v-if="selectedItem.type === 'video'"
+            :src="selectedItem.src"/>
         </figure>
       </div>
       <div
@@ -40,7 +44,7 @@
         />
       </div>
     </div>
-    <figure>
+    <figure class="photo-gallery-in-page__figure-thumbnails">
       <div class="photo-gallery-in-page__thumbnails">
         <div
           v-for="(image, index) in images"
@@ -54,9 +58,16 @@
           @keydown.13="open(index)"
         >
           <img
+            v-if="image.type === 'image'"
             :src="image.src"
             :alt="image.title"
           >
+          <div
+            v-if="image.type === 'video'"
+            class="embed--video">
+            <div class="embed--cover"/>
+            <VideoEmbed :src="image.src"/>
+          </div>
         </div>
       </div>
       <div class="photo-gallery-in-page__images-count">
@@ -71,8 +82,9 @@
 </template>
 
 <script>
-
+import VideoEmbed from '../embed/VideoEmbed';
 export default {
+  components: { VideoEmbed },
   props: {
     images: {
       type: Array,
