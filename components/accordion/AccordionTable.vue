@@ -3,9 +3,7 @@
     ref="comp"
     class="accordion">
     <template slot="default">
-      <h2
-        class="toggle__trigger"
-        v-html="name"/>
+      <slot name="header-table"/>
     </template>
     <template slot="hidden">
       <div class="toggleblock__hidden-inner">
@@ -19,7 +17,7 @@
 import ToggleBlock from '../toggle/ToggleBlock.vue';
 
 export default {
-  name: 'Accordion',
+  name: 'AccordionTable',
   components: { ToggleBlock },
   props: {
     name: {
