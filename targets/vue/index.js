@@ -71,6 +71,10 @@ export {
 }
   from '../../components/cards/GenericCard.vue';
 export {
+  default as CardStat,
+}
+  from '../../components/cards/CardStat.vue';
+export {
   default as CheckList,
 }
   from '../../components/check-list/CheckList.vue';

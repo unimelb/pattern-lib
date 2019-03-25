@@ -2,6 +2,7 @@
   <div
     :class="[{'card-focus--padded': padded}]"
     class="card-focus">
+    <slot/>
     <SvgIcon
       :class="['card-focus__top-left', color, {'semi-opaque': semiOpaque}]"
       :width="normalizeSize"
@@ -20,7 +21,7 @@
     >
       <path d="m112 0-32 32v48h-48l-32 32h112v-112z"/>
     </SvgIcon>
-    <slot/>
+
   </div>
 </template>
 

@@ -22,7 +22,7 @@ import genericCardDocs from './generic-card-docs.md';
 
 export default {
   components: { GenericCard },
-  readme: { custom: genericCardDocs },
+  readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>
 

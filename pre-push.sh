@@ -4,7 +4,7 @@
 # This will only have any effect when pushing to the dev (or $protected) branch
 # Its purpose is to jig the version number to prompt remote build (currently via Semaphore)
 # to install it:
-# ln -s pre-push.sh .git/hooks/pre-push
+# cp ./pre-push.sh .git/hooks/pre-push
 # requires
 #   jq, available on homebrew and elsewhere
 #   sponge (from moreutils), available from homebrew and elsewhere
@@ -38,9 +38,16 @@ check2() {
 updateSemVer() {
     local newversion
     newversion=$($LOCAL_SEMVER_CMD -i prerelease --preid 'beta' "$current_SEMVER")
-    jq --arg NEWVERSION "$newversion" '.version |= $NEWVERSION' "$PACKAGE" | sponge "$PACKAGE"
-    git add package.json
-    git commit -m "Updated to version $newversion"
+    echo "New version is $newversion"
+    if [ ! -z "$newversion" ]; then
+	jq --arg NEWVERSION "$newversion" '.version |= $NEWVERSION' "$PACKAGE" | sponge "$PACKAGE"
+	git add package.json
+	git commit -m "Updated to version $newversion"
+    else
+	echo "Something went wrong with the version update."
+	echo "Check that you have the semver node package installed."
+	return 1
+    fi
 }
 
 checkCommits() {
@@ -50,8 +57,9 @@ checkCommits() {
     local commits
     commits=$(git log "$REMOTE".."$BRANCH")
     if [ -z "$commits" ]; then
+	# git hooks don't read from stdin by default
 	echo "Pushing to $protected_branch will trigger a build."
-	read -r -p "Are you sure you wish to continue? [y/n] " response
+	read -r -p "Are you sure you wish to continue? [y/n] " response < /dev/tty
 	case "$response" in
 	    [yY][eE][sS]|[yY]) 
 		return 0
