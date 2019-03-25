@@ -64,7 +64,7 @@ import CardStaffList from '../../components/cards/CardStaffList.vue';
 import CardStat from '../../components/cards/CardStat.vue';
 
 import PhotoGalleryInPage from '../../components/photo-gallery/PhotoGalleryInPage.vue';
-import PhotoGalleryPopOver from '../../components/photo-gallery/PhotoGalleryPopOver.vue';
+import PhotoGalleryPopOver from '../../components/photo-gallery-in-page/PhotoGalleryPopOver.vue';
 
 import '../../components';
 

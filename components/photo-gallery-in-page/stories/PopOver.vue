@@ -1,8 +1,7 @@
 <template>
-  <SectionWrap style="background: #000;">
+  <SectionWrap>
     <PhotoGalleryPopOver
       :images="images"
-      display-caption
     />
   </SectionWrap>
 </template>

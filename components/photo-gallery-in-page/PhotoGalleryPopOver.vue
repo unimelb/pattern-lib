@@ -34,7 +34,7 @@
         </div>
 
         <div class="photo-gallery-pop-over--container">
-          <figure>
+          <figure class="photo-gallery-pop-over__figure">
             <img
               :src="selectedItem.src"
               :alt="selectedItem.title">
