@@ -4,9 +4,9 @@ exports[`FocusWrapper should match snapshot 1`] = `
 <div
   class="card-focus"
 >
-  <!---->
    
   <!---->
    
+  <!---->
 </div>
 `;
