@@ -26,6 +26,9 @@ cd pattern-lib
 # 3. Copy the env file.
 cp .env.example .env
 
+# 4. Copy the git pre-push hook
+cp pre-push.sh .git/hooks/pre-push
+
 # 4. Install dependencies. Make sure yarn is installed: https://yarnpkg.com/lang/en/docs/install
 yarn
 
@@ -164,6 +167,20 @@ Semaphore then automatically builds the library and syncs the output files to S3
 > **Note on versioning**: the version number follows the [semver](http://semver.org/) convention `MAJOR.MINOR.PATCH`, where: `MAJOR` corresponds to a breaking change (e.g. a change in a component's markup), `MINOR` to a new feature (e.g. a new component, a new feature for an existing component, etc.), and `PATCH` to a bug fix or under-the-hood change (e.g. code clean-up, performance improvement, etc.)
 
 > **Note on rebase**: rebasing `dev` onto `master` avoids creating a merge commit that would require merging `master` back into `dev`.
+
+### Semi-automatic deployment to dev
+
+Pre-release builds can be created like this (using the git pre-push hook behind the scenes):
+
+1. Check out a clean `dev` branch
+1. in bash `git push`
+  - This will increment the pre-release version number and make a commit to your local repository
+1. in bash `git push` again
+  - You will be prompted that this will trigger a build. Answer 'y'
+  - This will push (only) your version number change commit to the remote `dev` repo
+1. After the normal checks a build with the new version will be triggered by Semaphore
+
+> **Note on pre-release versions**: These are legitimate [semver](http://semver.org/) versions. They have the format MAJOR.MINOR.PATCH-beta.NUMBER. **Only** these pre-release versions will be published on `dev`.
 
 ## Testing
 
