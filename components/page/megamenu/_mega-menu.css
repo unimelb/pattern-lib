@@ -385,11 +385,6 @@
 
       &__section .menu__item--over,
       &__section .menu__item[tabindex='0'] {
-        .menu__link {
-          background-color: #083c79;
-          text-decoration: underline;
-        }
-
         .inner {
           display: flex;
           z-index: 3;
