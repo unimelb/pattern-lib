@@ -10,5 +10,5 @@ import ShowcaseDefault from './ShowcaseDefault.vue';
 
 /* Focus Boxes */
 storiesOf('Showcase', module)
-  .add('Showcase default', createStory(ShowcaseDefault));
+  .add('Showcase performer profile', createStory(ShowcaseDefault));
 /* ##Story goes here */
