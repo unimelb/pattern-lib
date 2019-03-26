@@ -1,11 +1,14 @@
 <template>
   <div
     ref="headerroot"
-    class="page-header page-header--l3 page-header--study">
+    :class="[isShowTopMenu && 'page-header__with-top-menu']"
+    class="page-header page-header--l3 page-header--study"
+  >
     <div class="page-header__inner">
       <a
         class="link-img link-reset"
-        href="https://www.unimelb.edu.au/">
+        href="https://www.unimelb.edu.au/"
+      >
         <div class="logo-mask">
           <img
             class="page-header__logo"
@@ -29,11 +32,15 @@
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
         @keypress.27="dismissMobileMenu">
+        <MegaMenuTopNavigation
+          v-if="isShowTopMenu"
+          :items="topMenu"/>
         <nav
           id="sitemapmenu"
           ref="rootmenu"
+          :class="['megamenu', isShowTopMenu && 'megamenu__with-top-menu']"
           aria-label="Site"
-          class="megamenu">
+        >
           <div
             role="button"
             aria-label="Close"
@@ -44,7 +51,8 @@
             aria-hidden="true"/>
           <ul
             class="menu__section"
-            role="menu">
+            role="menu"
+          >
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -116,9 +124,9 @@
               </div>
             </li>
           </ul>
-          <PageSearch/>
         </nav>
       </div>
+      <PageSearch/>
       <div class="header-tools__menu">
         <button
           id="sitemapbutton"
@@ -157,9 +165,12 @@ import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
+import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
-  components: { PageSearch, PageSearchForm, MegaMenuTitle },
+  components: {
+    PageSearch, PageSearchForm, MegaMenuTitle, MegaMenuTopNavigation,
+  },
   props: {
     items: {
       type: Array,
@@ -192,6 +203,10 @@ export default {
       type: [String],
       default: 'back',
     },
+    topMenu: {
+      type: Array,
+      default: () => [],
+    },
   },
   data() {
     return {
@@ -204,6 +219,9 @@ export default {
   computed: {
     isMobile() {
       return (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false);
+    },
+    isShowTopMenu() {
+      return this.topMenu.length;
     },
   },
   mounted() {
@@ -226,9 +244,9 @@ export default {
       return displayActive;
     },
     linkClasses(rootindex, rootitem) {
-      if (rootindex === 0) {
-        return 'menu__nested-parent';
-      }
+      // if (rootindex === 0) {
+      //   return 'menu__link menu__nested-parent';
+      // }
       if (rootitem.items) {
         return 'menu__link menu__link--nested';
       }
