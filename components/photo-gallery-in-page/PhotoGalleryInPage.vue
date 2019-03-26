@@ -13,8 +13,7 @@
           class="photo-gallery-in-page__chevron"
           name="chevron-left"
           width="30"
-          height="30"
-        />
+          height="30"/>
       </div>
 
       <div class="photo-gallery-in-page--container">
@@ -22,7 +21,8 @@
           <img
             v-if="selectedItem.type === 'image'"
             :src="selectedItem.src"
-            :alt="selectedItem.title">
+            :alt="selectedItem.title"
+          >
           <VideoEmbed
             v-if="selectedItem.type === 'video'"
             :src="selectedItem.src"/>
@@ -60,8 +60,7 @@
           <img
             v-if="image.type === 'image'"
             :src="image.src"
-            :alt="image.title"
-          >
+            :alt="image.title">
           <div
             v-if="image.type === 'video'"
             class="embed--video">
@@ -70,19 +69,18 @@
           </div>
         </div>
       </div>
-      <div class="photo-gallery-in-page__images-count">
-        {{ selectedIndex + 1 }} / {{ images.length }}
-      </div>
+      <div class="photo-gallery-in-page__images-count">{{ selectedIndex + 1 }} / {{ images.length }}</div>
       <figcaption
         :id="'caption' + selectedIndex"
-        class="photo-gallery-in-page__title">{{ selectedItem.title }}</figcaption>
+        class="photo-gallery-in-page__title"
+      >{{ selectedItem.title }}</figcaption>
       <div class="photo-gallery-in-page__description">{{ selectedItem.description }}</div>
     </figure>
   </div>
 </template>
 
 <script>
-import VideoEmbed from '../embed/VideoEmbed';
+import VideoEmbed from '../embed/VideoEmbed.vue';
 export default {
   components: { VideoEmbed },
   props: {
