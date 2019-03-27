@@ -6,3 +6,4 @@ import './ImageList';
 import './News';
 import './StaffList';
 import './GenericCard';
+import './Profiles';
