@@ -90,7 +90,7 @@
     &__nested-parent,
     &__link {
       display: block;
-      padding: .75rem 1rem .75rem 2rem;
+      padding: .75rem 2rem .75rem;
       color: white;
       text-decoration: none;
 
@@ -217,7 +217,7 @@
     box-shadow: none;
 
     &__with-top-menu {
-      height: 98%;
+      height: 66%;
       .menu__section {
         .menu__link {
           padding-top: 0;
@@ -385,11 +385,6 @@
 
       &__section .menu__item--over,
       &__section .menu__item[tabindex='0'] {
-        .menu__link {
-          background-color: #083c79;
-          text-decoration: underline;
-        }
-
         .inner {
           display: flex;
           z-index: 3;
@@ -566,11 +561,15 @@
 
 .page-header {
   &__with-top-menu {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    @media (--bp-desktop) {
+      max-height: 115px;
+      padding: 0;
+      .page-header__inner {
+        height: 100%;
+      }
+    }
   }
 }
-
 
 .test {
   .megamenu {

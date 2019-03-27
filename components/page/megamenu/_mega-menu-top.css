@@ -2,7 +2,7 @@
   .mega-top {
     display: flex;
     justify-content: flex-end;
-    padding: 0 1.2rem;
+    padding: .5rem 2rem 0;
     list-style-type: none;
     margin: 0;
     li {

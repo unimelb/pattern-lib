@@ -1,4 +1,4 @@
-s<template>
+<template>
   <MegaMenu
     :items="items"
     :top-menu="topMenu"

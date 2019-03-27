@@ -4,12 +4,58 @@
       <ListItem>
         <GenericCard
           :cols="2"
-          title="Test 1"/>
+          thumb="https://via.placeholder.com/400x200"
+          title="Test 1"
+          href="#"
+          excerpt="Lorem ipsum dolor sit amet, consectetur."
+        >
+          <div
+            slot="sub-title-1"
+            class="sub-title">
+            <span>Sub-title 1</span>
+          </div>
+          <div
+            slot="sub-title-2"
+            class="sub-title">
+            <SvgIcon name="calendar"/>
+            <span>March 31 1992</span>
+          </div>
+          <div
+            slot="sub-title-3"
+            class="sub-title">
+            <span>Theme: Lorem ipsum.</span>
+          </div>
+          <template slot="links">
+            <a href="/">View generic details ></a>
+            <a href="/">View generic staff ></a>
+          </template>
+        </GenericCard>
       </ListItem>
       <ListItem>
         <GenericCard
           :cols="2"
-          title="Test 1"/>
+          thumb="https://via.placeholder.com/400x200"
+          title="Test 2"
+          href="#"
+          excerpt="Lorem ipsum dolor sit amet, consectetur."
+        >
+          <div
+            slot="sub-title-1"
+            class="sub-title">
+            <span>Sub-title 1</span>
+          </div>
+          <div
+            slot="sub-title-2"
+            class="sub-title">
+            <SvgIcon name="calendar"/>
+            <span>March 31 1992</span>
+          </div>
+          <div
+            slot="sub-title-3"
+            class="sub-title">
+            <span>Theme: Lorem ipsum.</span>
+          </div>
+        </GenericCard>
       </ListItem>
     </div>
   </SectionWrap>

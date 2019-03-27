@@ -2,7 +2,7 @@
   <div
     ref="headerroot"
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
-    class="page-header page-header--l3 page-header--study test"
+    class="page-header page-header--l3 page-header--study"
   >
     <div class="page-header__inner">
       <a
