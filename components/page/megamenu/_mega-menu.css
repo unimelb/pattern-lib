@@ -570,3 +570,38 @@
     padding-bottom: 1rem;
   }
 }
+
+
+.test {
+  .megamenu {
+    @media (--bp-desktop) {
+      .menu {
+        &__section .menu__section {
+          .menu__item {
+            border-left: none;
+          }
+          @media (--bp-x-desktop) {
+            columns: 2;
+            column-width: 50%;
+          }
+
+          @media (--bp-xx-wide) {
+            columns: 4;
+            column-width: 25%;
+          }
+        }
+      }
+      .inner{
+        @media (--bp-wide) {
+          padding-right: 4rem;
+          padding-left: 4rem;
+        }
+
+        @media (--bp-xx-wide) {
+          padding-right: 4rem;
+          padding-left: 4rem;
+        }
+      }
+    }
+  }
+}

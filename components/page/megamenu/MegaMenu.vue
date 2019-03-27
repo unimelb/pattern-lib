@@ -2,7 +2,7 @@
   <div
     ref="headerroot"
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
-    class="page-header page-header--l3 page-header--study"
+    class="page-header page-header--l3 page-header--study test"
   >
     <div class="page-header__inner">
       <a
@@ -80,10 +80,31 @@
                   role="button"
                   class="menu__back-btn"
                   @click="closeInner">Back</div>
-                <div class="menu__aside">
+
+                <!--выпадающий список-->
+                <ul class="menu__section">
                   <a
                     :href="rootitem.href"
                     class="menu__nested-parent">{{ rootitem.title }}</a>
+                  <li
+                    v-for="(menuitem, menuindex) in rootitem.items"
+                    :key="`menuitem-${menuindex}`"
+                    class="menu__item">
+                    <a
+                      :href="menuitem.href"
+                      tabindex="0"
+                      class="menu__link"
+                      role="menuitem"
+                      v-html="menuitem.title"/>
+                  </li>
+                </ul>
+
+
+                <!--ебучая картинка-->
+                <div class="menu__aside">
+                  <!--<a-->
+                  <!--:href="rootitem.href"-->
+                  <!--class="menu__nested-parent">{{ rootitem.title }}</a>-->
                   <component
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
@@ -108,19 +129,8 @@
                     />
                   </component>
                 </div>
-                <ul class="menu__section">
-                  <li
-                    v-for="(menuitem, menuindex) in rootitem.items"
-                    :key="`menuitem-${menuindex}`"
-                    class="menu__item">
-                    <a
-                      :href="menuitem.href"
-                      tabindex="0"
-                      class="menu__link"
-                      role="menuitem"
-                      v-html="menuitem.title"/>
-                  </li>
-                </ul>
+
+
               </div>
             </li>
           </ul>
