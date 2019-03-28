@@ -3,7 +3,10 @@
     padding: .5rem 0 0 1.5rem;
   }
 
-  .card__thumb {
+  .card__image {
+    width: 100%;
+    height: auto;
+
     @media (--bp-tablet) {
       max-width: 192px;
       height: 136px;

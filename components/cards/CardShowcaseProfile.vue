@@ -1,8 +1,10 @@
 <template>
   <div class="card card--bdr card--showcase-profile">
-    <div
-      :style="{'background-image': `url(${thumb})`}"
-      class="card__thumb"/>
+    <!-- <div :style="{'background-image': `url(${thumb})`}" class="card__thumb"/> -->
+    <img
+      :src="thumb"
+      :alt="title + ' image'"
+      class="card__image">
     <div class="card__inner">
       <h6 class="card__title">{{ title }}</h6>
       <p class="card__sub-title">{{ subTitle }}</p>

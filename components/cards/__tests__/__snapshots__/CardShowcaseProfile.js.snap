@@ -4,9 +4,10 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
 <div
   class="card card--bdr card--showcase-profile"
 >
-  <div
-    class="card__thumb"
-    style="background-image: url(https://via.placeholder.com/800x630);"
+  <img
+    alt=" image"
+    class="card__image"
+    src="https://via.placeholder.com/800x630"
   />
    
   <div

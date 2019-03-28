@@ -47,8 +47,19 @@
   padding-right: calc(var(--vr) / 2);
   padding-left: calc(var(--vr) / 2);
 
-  @media (--bp-tablet) {
+  &--no-padding {
+    padding-left: 0;
+    padding-right: 0;
 
+    @media (--bp-tablet) {
+      margin-top: calc(var(--vr) / 2);
+      margin-bottom: calc(var(--vr) / 2);
+      padding-right: calc(var(--vr) / 2);
+      padding-left: calc(var(--vr) / 2);
+    }
+  }
+
+  @media (--bp-tablet) {
     &--tab {
       &-1of1 {
         width: 100%;

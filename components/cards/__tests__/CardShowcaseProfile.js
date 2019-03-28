@@ -46,7 +46,7 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().thumb).toBe('string');
     expect(wrapper.props().thumb).toBe(thumb);
-    expect(wrapper.find('.card__thumb').attributes().style).toBe('background-image: url(http://);');
+    expect(wrapper.find('img').html()).toContain(thumb);
   });
 
   it('should render title from prop with correct type', () => {
