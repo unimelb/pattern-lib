@@ -8,7 +8,7 @@
       </div>
       <div class="card__details">
         <h6 class="card__title">{{ title }}</h6>
-        <p class="card_sub-title">{{ subTitle }}</p>
+        <p class="card__sub-title">{{ subTitle }}</p>
         <div class="card__dash"/>
         <button
           class="card__button"

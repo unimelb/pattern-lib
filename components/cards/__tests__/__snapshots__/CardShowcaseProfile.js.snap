@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardShowcaseProfile should match snapshot 1`] = `
+<div
+  class="card--showcase-profile card--bdr card__container"
+>
+  <div
+    class="card__container-inner"
+  >
+    <div
+      class="card__image"
+    >
+      <img
+        alt="image"
+        src="https://via.placeholder.com/192x136"
+      />
+    </div>
+     
+    <div
+      class="card__details"
+    >
+      <h6
+        class="card__title"
+      >
+        
+      </h6>
+       
+      <p
+        class="card__sub-title"
+      >
+        
+      </p>
+       
+      <div
+        class="card__dash"
+      />
+       
+      <button
+        class="card__button"
+      >
+        
+        Show bio
+        
+        <!---->
+      </button>
+    </div>
+  </div>
+   
+  <p
+    class="card__bio"
+    name="fade"
+    style="display: none;"
+  >
+    
+  </p>
+</div>
+`;

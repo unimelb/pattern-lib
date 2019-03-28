@@ -29,7 +29,7 @@
     font-weight: var(--fw-semibold);
   }
 
-  .card_sub-title {
+  .card__sub-title {
     margin: 0;
   }
 
