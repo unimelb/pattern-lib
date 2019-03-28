@@ -1,28 +1,24 @@
 <template>
-  <div class="card--showcase-profile card--bdr card__container">
-    <div class="card__container-inner">
-      <div class="card__image">
-        <img
-          :src="thumb"
-          :alt="title + 'image'">
-      </div>
-      <div class="card__details">
-        <h6 class="card__title">{{ title }}</h6>
-        <p class="card__sub-title">{{ subTitle }}</p>
-        <div class="card__dash"/>
-        <button
-          class="card__button"
-          @click="[(isHidden = !isHidden), buttonLabel]">
-          {{ label }}
-          <SvgIcon
-            :name="iconName"
-            aria-label="chevron"
-            class="card__icon"
-            width="10px"
-            height="10px"
-          />
-        </button>
-      </div>
+  <div class="card card--bdr card--showcase-profile">
+    <div
+      :style="{'background-image': `url(${thumb})`}"
+      class="card__thumb"/>
+    <div class="card__inner">
+      <h6 class="card__title">{{ title }}</h6>
+      <p class="card__sub-title">{{ subTitle }}</p>
+      <div class="card__dash"/>
+      <button
+        class="card__button"
+        @click="[(isHidden = !isHidden), buttonLabel]">
+        {{ label }}
+        <SvgIcon
+          :name="iconName"
+          aria-label="chevron"
+          class="card__icon"
+          width="10px"
+          height="10px"
+        />
+      </button>
     </div>
     <transition name="fade">
       <p
@@ -41,7 +37,7 @@ export default {
   props: {
     thumb: {
       type: String,
-      default: 'https://via.placeholder.com/192x136',
+      default: 'https://via.placeholder.com/800x630',
     },
     title: {
       type: String,
