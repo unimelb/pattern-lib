@@ -51,6 +51,22 @@
     background-color: rgb(var(--col-navy-light));
   }
 
+  /* Enter and leave animations can use different */
+  /* durations and timing functions.              */
+  .slide-fade-enter-active {
+    transition: all .3s ease-in-out;
+  }
+
+  .slide-fade-leave-active {
+    transition: all .8s ease-in-out;
+  }
+
+  .slide-fade-enter,
+  .slide-fade-leave-to {
+    transform: translate(10px);
+    opacity: 0;
+  }
+
   @media (--bp-tablet) {
     flex-direction: row;
     flex-wrap: wrap;

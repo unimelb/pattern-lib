@@ -41,7 +41,7 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
    
   <p
     class="card__bio"
-    name="fade"
+    name="slide-fade"
     style="display: none;"
   >
     

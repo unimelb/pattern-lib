@@ -22,7 +22,7 @@
         />
       </button>
     </div>
-    <transition name="fade">
+    <transition name="slide-fade">
       <p
         v-show="!isHidden"
         class="card__bio">{{ bio }}</p>
