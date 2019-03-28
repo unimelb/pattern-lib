@@ -1,7 +1,7 @@
 <template>
   <div
     ref="headerroot"
-    :class="[isShowTopMenu && 'page-header__with-top-menu']"
+    :class="[isShowTopMenu && 'page-header__with-top-menu', isModifiedMenu && 'page-header__modified-menu']"
     class="page-header page-header--l3 page-header--study"
   >
     <div class="page-header__inner">
@@ -81,53 +81,61 @@
                   class="menu__back-btn"
                   @click="closeInner">Back</div>
 
-                <!--выпадающий список-->
-                <ul class="menu__section">
-                  <a
-                    :href="rootitem.href"
-                    class="menu__nested-parent">{{ rootitem.title }}</a>
-                  <li
-                    v-for="(menuitem, menuindex) in rootitem.items"
-                    :key="`menuitem-${menuindex}`"
-                    class="menu__item">
-                    <a
-                      :href="menuitem.href"
-                      tabindex="0"
-                      class="menu__link"
-                      role="menuitem"
-                      v-html="menuitem.title"/>
-                  </li>
-                </ul>
 
+                <!--выпадающий список-->
+                <div
+                  v-if="isModifiedMenu"
+                  class="menu__block">
+                  <div>
+                    <a
+                      :href="rootitem.href"
+                      class="menu__nested-parent">{{ rootitem.title }}</a>
+                  </div>
+
+                  <ul
+                    :class="isColColumns(rootindex)"
+                    class="menu__section">
+                    <li
+                      v-for="(menuitem, menuindex) in rootitem.items"
+                      :key="`menuitem-${menuindex}`"
+                      class="menu__item">
+                      <a
+                        :href="menuitem.href"
+                        tabindex="0"
+                        class="menu__link"
+                        role="menuitem"
+                        v-html="menuitem.title"/>
+                      <SvgIcon
+                        name="chevron-right"
+                        class="icon"/>
+                    </li>
+                  </ul>
+                </div>
 
                 <!--ебучая картинка-->
-                <div class="menu__aside">
-                  <!--<a-->
-                  <!--:href="rootitem.href"-->
-                  <!--class="menu__nested-parent">{{ rootitem.title }}</a>-->
+                <div
+                  v-if="isModifiedMenu"
+                  class="menu__aside">
                   <component
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
                     :href="rootitem.feature.link"
                     :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
                     class="menu__campaign"
-                  >
-                    <p
-                      v-if="rootitem.feature.text || rootitem.feature.title"
-                      class="menu__campaign-text">
-                      <strong
-                        v-if="rootitem.feature.title"
-                        class="menu__campaign-title">{{ rootitem.feature.title }}</strong>
-                      <span
-                        v-if="rootitem.feature.text"
-                        v-html="rootitem.feature.text"/>
-                    </p>
-                    <span
-                      v-if="rootitem.feature.alt"
-                      class="screenreaders-only"
-                      v-html="rootitem.feature.alt"
-                    />
-                  </component>
+                  />
+                  <div class="menu__aside-info">
+                    <p class="menu__aside-info__text">Dance 40 at VCA celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae felis id tortor congue dapibus. In pulvinar semper dolor. Sed non mi non arcu dictum hendrerit. Nulla partititor sed rcu nec malesuada </p>
+                    <div class="menu__aside-info__link">
+                      <a
+                        href="/"
+                        class="link">
+                        View more details
+                        <SvgIcon
+                          name="chevron-right"
+                          class="icon"/>
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
 
@@ -217,6 +225,10 @@ export default {
       type: Array,
       default: () => [],
     },
+    isModifiedMenu: {
+      type: [Boolean],
+      default: false,
+    },
   },
   data() {
     return {
@@ -239,6 +251,12 @@ export default {
     window.addEventListener('resize', this.closeMobileIfDesktop.bind(this));
   },
   methods: {
+    isColColumns(rootindex) {
+      if (this.items[rootindex].items.length <= 5) {
+        return 'cols-1';
+      }
+      return 'cols-2';
+    },
     rootOrChildrenActive(rootitem) {
       if (!this.active) return false;
 

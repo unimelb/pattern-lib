@@ -571,36 +571,93 @@
   }
 }
 
-.test {
-  .megamenu {
+
+.page-header{
+  &__modified-menu{
     @media (--bp-desktop) {
       .menu {
+        &__block{
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+        }
+
+        &__campaign{
+          height: 16.5rem;
+        }
+
         &__section .menu__section {
+          margin-left: 0;
+          padding-top: 1.5rem;
+
           .menu__item {
             border-left: none;
-          }
-          @media (--bp-x-desktop) {
-            columns: 2;
-            column-width: 50%;
-          }
+            padding-bottom: 1.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
-          @media (--bp-xx-wide) {
-            columns: 4;
-            column-width: 25%;
+            a{
+              padding-bottom: 3px;
+              padding-left: 1.5rem;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .menu__section{
+          color: #ffac71;
+        }
+
+        &__aside {
+          width: 50%;
+          display: flex;
+
+          &-info{
+            padding-right: 1rem;
+            padding-left: 1rem;
+            width: 50%;
+
+            &__link{
+              position: absolute;
+              right: 3rem;
+
+              a{
+                color: white;
+                font-weight: 600;
+              }
+            }
           }
         }
       }
       .inner{
         @media (--bp-wide) {
-          padding-right: 4rem;
-          padding-left: 4rem;
+          padding-right: 2rem;
+          padding-left: 2rem;
         }
 
         @media (--bp-xx-wide) {
-          padding-right: 4rem;
-          padding-left: 4rem;
+          padding-right: 2rem;
+          padding-left: 2rem;
         }
       }
     }
   }
+}
+
+.icon {
+  display: inline;
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  text-align: center;
+  fill: var(--col-background);
+}
+
+.cols-1 {
+  columns: 1!important;
+  width: 50%!important;
+}
+.cols-2{
+  columns: 2!important;
 }
