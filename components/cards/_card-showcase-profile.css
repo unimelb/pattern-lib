@@ -4,7 +4,7 @@
   }
 
   .card__thumb {
-    @media (--bp-desktop) {
+    @media (--bp-tablet) {
       max-width: 192px;
       height: 136px;
     }
@@ -29,6 +29,11 @@
   .card__button {
     font-weight: 600;
     text-decoration: underline;
+    margin-bottom: .5rem;
+
+    @media (--bp-desktop) {
+      margin: 0;
+    }
   }
 
   .card__icon {
@@ -43,7 +48,7 @@
     background-color: rgb(var(--col-navy-light));
   }
 
-  @media (--bp-desktop) {
+  @media (--bp-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
   }

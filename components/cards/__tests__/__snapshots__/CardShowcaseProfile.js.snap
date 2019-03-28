@@ -2,48 +2,40 @@
 
 exports[`CardShowcaseProfile should match snapshot 1`] = `
 <div
-  class="card--showcase-profile card--bdr card__container"
+  class="card card--bdr card--showcase-profile"
 >
   <div
-    class="card__container-inner"
+    class="card__thumb"
+    style="background-image: url(https://via.placeholder.com/800x630);"
+  />
+   
+  <div
+    class="card__inner"
   >
-    <div
-      class="card__image"
+    <h6
+      class="card__title"
     >
-      <img
-        alt="image"
-        src="https://via.placeholder.com/192x136"
-      />
-    </div>
+      
+    </h6>
+     
+    <p
+      class="card__sub-title"
+    >
+      
+    </p>
      
     <div
-      class="card__details"
+      class="card__dash"
+    />
+     
+    <button
+      class="card__button"
     >
-      <h6
-        class="card__title"
-      >
-        
-      </h6>
-       
-      <p
-        class="card__sub-title"
-      >
-        
-      </p>
-       
-      <div
-        class="card__dash"
-      />
-       
-      <button
-        class="card__button"
-      >
-        
-        Show bio
-        
-        <!---->
-      </button>
-    </div>
+      
+      Show bio
+      
+      <!---->
+    </button>
   </div>
    
   <p

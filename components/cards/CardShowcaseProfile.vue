@@ -61,7 +61,7 @@ export default {
   },
   computed: {
     buttonLabel() {
-      if (this.isHidden === false) {
+      if (!this.isHidden) {
         this.setLabelHide();
         this.setIconUp();
       } else {
