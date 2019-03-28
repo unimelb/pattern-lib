@@ -1,9 +1,4 @@
 .card--showcase-profile {
-  @media (--bp-desktop) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .card__inner {
     padding: .5rem 0 0 1.5rem;
   }
@@ -46,5 +41,10 @@
     margin: 0;
     max-width: 100%;
     background-color: rgb(var(--col-navy-light));
+  }
+
+  @media (--bp-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
