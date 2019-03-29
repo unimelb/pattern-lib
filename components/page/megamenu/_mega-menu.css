@@ -570,12 +570,19 @@
     }
   }
 }
-
+.megamenu .menu__item--active {
+  border-left-color: rgb(171, 190, 213);
+}
 
 .page-header{
   &__modified-menu{
     @media (--bp-desktop) {
       .menu {
+        &__item{
+          &:hover{
+            border-bottom-color: rgb(var(--col-navy-mid-1));
+          }
+        }
         &__block{
           display: flex;
           flex-direction: column;
@@ -584,6 +591,15 @@
 
         &__campaign{
           height: 16.5rem;
+        }
+
+        &__section{
+          .menu__link {
+            &:hover,
+            &[aria-expanded='true'] {
+              background-color: inherit;
+            }
+          }
         }
 
         &__section .menu__section {
@@ -631,6 +647,8 @@
         }
       }
       .inner{
+        animation: fadeIn .5s backwards;
+
         @media (--bp-wide) {
           padding-right: 2rem;
           padding-left: 2rem;

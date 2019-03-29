@@ -275,7 +275,7 @@ export default {
       // if (rootindex === 0) {
       //   return 'menu__link menu__nested-parent';
       // }
-      if (rootitem.items) {
+      if (rootitem.items && !this.isModifiedMenu) {
         return 'menu__link menu__link--nested';
       }
       return 'menu__link';
