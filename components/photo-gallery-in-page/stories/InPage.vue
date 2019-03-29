@@ -1,7 +1,7 @@
 <template>
   <SectionWrap>
     <PhotoGalleryInPage
-      :images="images"
+      :media="media"
     />
   </SectionWrap>
 </template>
@@ -15,7 +15,7 @@ export default {
   components: { PhotoGalleryInPage },
   data() {
     return {
-      images: sample,
+      media: sample,
     };
   },
   readme: { custom: PhotoGalaryInPageDocs, source: true, html: true },

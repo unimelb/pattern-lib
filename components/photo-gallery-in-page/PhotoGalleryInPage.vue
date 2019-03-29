@@ -47,8 +47,8 @@
     <figure class="photo-gallery-in-page__figure-thumbnails">
       <div class="photo-gallery-in-page__thumbnails">
         <div
-          v-for="(image, index) in images"
-          :key="image.id"
+          v-for="(item, index) in media"
+          :key="item.id"
           :class="{ active: index === selectedIndex}"
           :aria-describedby="'caption' + selectedIndex"
           class="thumb"
@@ -58,18 +58,18 @@
           @keydown.13="open(index)"
         >
           <img
-            v-if="image.type === 'image'"
-            :src="image.src"
-            :alt="image.title">
+            v-if="item.type === 'image'"
+            :src="item.src"
+            :alt="item.title">
           <div
-            v-if="image.type === 'video'"
+            v-if="item.type === 'video'"
             class="embed--video">
             <div class="embed--cover"/>
-            <VideoEmbed :src="image.src"/>
+            <VideoEmbed :src="item.src"/>
           </div>
         </div>
       </div>
-      <div class="photo-gallery-in-page__images-count">{{ selectedIndex + 1 }} / {{ images.length }}</div>
+      <div class="photo-gallery-in-page__media-count">{{ selectedIndex + 1 }} / {{ media.length }}</div>
       <figcaption
         :id="'caption' + selectedIndex"
         class="photo-gallery-in-page__title"
@@ -84,31 +84,31 @@ import VideoEmbed from '../embed/VideoEmbed.vue';
 export default {
   components: { VideoEmbed },
   props: {
-    images: {
+    media: {
       type: Array,
       default: () => [{}],
     },
   },
   data() {
     return {
-      selectedItem: this.images ? this.images[0] : {},
+      selectedItem: this.media ? this.media[0] : {},
       selectedIndex: 0,
     };
   },
   methods: {
     open(index) {
-      this.selectedItem = this.images[index];
+      this.selectedItem = this.media[index];
       this.selectedIndex = index;
     },
     move(direction) {
-      const len = this.images.length;
+      const len = this.media.length;
       const current = this.selectedIndex;
       const directions = {
         prev: (current + len - 1) % len,
         next: (current + 1) % len,
       };
       const nextIndex = directions[direction];
-      this.selectedItem = this.images[nextIndex];
+      this.selectedItem = this.media[nextIndex];
       this.selectedIndex = nextIndex;
     },
   },

@@ -27,7 +27,9 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
       <figure
         class="photo-gallery-in-page__figure"
       >
-        <img />
+        <!---->
+         
+        <!---->
       </figure>
     </div>
      
@@ -46,7 +48,9 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     </div>
   </div>
    
-  <figure>
+  <figure
+    class="photo-gallery-in-page__figure-thumbnails"
+  >
     <div
       class="photo-gallery-in-page__thumbnails"
     >
@@ -56,16 +60,16 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
         role="button"
         tabindex="0"
       >
-        <img />
+        <!---->
+         
+        <!---->
       </div>
     </div>
      
     <div
-      class="photo-gallery-in-page__images-count"
+      class="photo-gallery-in-page__media-count"
     >
-      
       1 / 1
-    
     </div>
      
     <figcaption
