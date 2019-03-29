@@ -81,8 +81,51 @@
                   class="menu__back-btn"
                   @click="closeInner">Back</div>
 
-
-                <!--выпадающий список-->
+                <div
+                  v-if="!isModifiedMenu"
+                  class="menu__aside">
+                  <a
+                    :href="rootitem.href"
+                    class="menu__nested-parent">{{ rootitem.title }}</a>
+                  <component
+                    v-if="rootitem.feature"
+                    :is="rootitem.feature.link ? 'a' : 'div'"
+                    :href="rootitem.feature.link"
+                    :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
+                    class="menu__campaign"
+                  >
+                    <p
+                      v-if="rootitem.feature.text || rootitem.feature.title"
+                      class="menu__campaign-text">
+                      <strong
+                        v-if="rootitem.feature.title"
+                        class="menu__campaign-title">{{ rootitem.feature.title }}</strong>
+                      <span
+                        v-if="rootitem.feature.text"
+                        v-html="rootitem.feature.text"/>
+                    </p>
+                    <span
+                      v-if="rootitem.feature.alt"
+                      class="screenreaders-only"
+                      v-html="rootitem.feature.alt"
+                    />
+                  </component>
+                </div>
+                <ul
+                  v-if="!isModifiedMenu"
+                  class="menu__section">
+                  <li
+                    v-for="(menuitem, menuindex) in rootitem.items"
+                    :key="`menuitem-${menuindex}`"
+                    class="menu__item">
+                    <a
+                      :href="menuitem.href"
+                      tabindex="0"
+                      class="menu__link"
+                      role="menuitem"
+                      v-html="menuitem.title"/>
+                  </li>
+                </ul>
                 <div
                   v-if="isModifiedMenu"
                   class="menu__block">
@@ -111,8 +154,6 @@
                     </li>
                   </ul>
                 </div>
-
-                <!--ебучая картинка-->
                 <div
                   v-if="isModifiedMenu"
                   class="menu__aside">
@@ -137,8 +178,6 @@
                     </div>
                   </div>
                 </div>
-
-
               </div>
             </li>
           </ul>
