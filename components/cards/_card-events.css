@@ -1,0 +1,29 @@
+.card-events {
+  color: rgb(var(--col-brand));
+
+  .card__title {
+    font-size: 20px;
+    color: #000;
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+  }
+
+  .card__sub-titles {
+    margin-bottom: .25rem;
+    border-top: 1px solid #000;
+    padding: .5rem 0;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    @media (--bp-max-mobile) {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  .card__excerpt {
+    @media (--bp-desktop) {
+      display: none;
+    }
+  }
+}

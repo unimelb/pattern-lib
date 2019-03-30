@@ -33,4 +33,19 @@
       text-decoration: underline;
     }
   }
+
+  &--full-width {
+    @media (--bp-desktop) {
+      .card__thumb--zoom {
+        width: 30%;
+        height: 100%;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.grid--1col .cell .card--generic--full-width .card__inner {
+  flex: 1;
+  margin-right: 0;
 }

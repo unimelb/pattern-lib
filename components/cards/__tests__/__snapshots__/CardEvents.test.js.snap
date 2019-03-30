@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardEvents should match snapshot 1`] = `
+<div
+  class="btn-owner card card--generic card--generic--full-width card-events "
+>
+  <a
+    class="card__thumb card__thumb--zoom"
+    href="#"
+    style="background-image: url(https://via.placeholder.com/400x200);"
+  />
+   
+  <div
+    class="card__inner "
+  >
+    <h3
+      class="card__header"
+    >
+      <a
+        class="card__title"
+        href="#"
+      >
+        
+      </a>
+    </h3>
+     
+    <!---->
+     
+    <div
+      class="card__excerpt"
+    >
+      Lorem ipsum dolor sit amet, consectetur.
+    </div>
+     
+    <div
+      class="card__links"
+    />
+  </div>
+</div>
+`;
