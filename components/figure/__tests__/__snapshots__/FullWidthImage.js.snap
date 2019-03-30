@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FullWidthImage should match snapshot 1`] = `
+<div
+  class="full-width-image"
+  style="background-image: url(); height: 100%;"
+/>
+`;
