@@ -1,5 +1,10 @@
-import { shallow, mount } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+  mount,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import CardEvents from '../CardEvents.vue';
 
 expect.extend(toHaveNoViolations);
@@ -13,7 +18,10 @@ describe('CardEvents', () => {
   it('should have default props and correct types thumb/title/href/excerpt', () => {
     const wrapper = shallow(CardEvents);
     const {
-      thumb, title, href, excerpt,
+      thumb,
+      title,
+      href,
+      excerpt,
     } = wrapper.vm.$options.props;
 
     expect(thumb.type).toBe(String);
@@ -26,7 +34,7 @@ describe('CardEvents', () => {
     expect(wrapper.props().href).toBe('#');
 
     expect(excerpt.type).toBe(String);
-    expect(wrapper.props().excerpt).toBe('Lorem ipsum dolor sit amet, consectetur.');
+    expect(wrapper.props().excerpt).toBe('');
   });
 
   it('should render title from prop with correct type', () => {
