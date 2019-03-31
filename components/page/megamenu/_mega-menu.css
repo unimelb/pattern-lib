@@ -578,7 +578,6 @@
 .page-header{
   &__modified-menu{
     .menu {
-
       &__mobile{
         padding-left: 27px;
         &--line{
@@ -618,7 +617,6 @@
           justify-content: space-between;
           align-items: center;
         }
-
       }
 
       &__block{
@@ -629,14 +627,14 @@
 
       &__campaign{
         height: 16.5rem;
-        @media (--bp-x-desktop) {
+
+        @media(--bp-only-desktop){
           width: 90%;
         }
       }
 
       &__section{
         .menu__link {
-
           &:hover,
           &[aria-expanded='true'] {
             background-color: inherit;
@@ -671,7 +669,7 @@
         width: 50%;
         display: flex;
 
-        @media (--bp-x-desktop) {
+        @media (--bp-only-desktop) {
           flex-direction: column;
         }
 
@@ -680,7 +678,7 @@
           padding-left: 1rem;
           width: 50%;
 
-          @media (--bp-x-desktop) {
+          @media (--bp-only-desktop) {
             width: 100%;
             margin-bottom: 1rem;
           }
