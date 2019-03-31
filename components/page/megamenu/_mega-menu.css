@@ -571,7 +571,7 @@
   }
 }
 
-.megamenu .menu__item--active {
+.menu__item--active {
   border-left-color: rgb(171, 190, 213);
 }
 
@@ -585,8 +585,6 @@
           max-width: 5%;
           border: 0;
           border-bottom: 2px solid white;
-        }
-        &--tile{
         }
       }
       &__item {
