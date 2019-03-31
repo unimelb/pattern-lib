@@ -10,7 +10,7 @@
     <slot
       v-for="(_, name) in $slots"
       :name="name"
-      :slot="name" />
+      :slot="name"/>
   </GenericCard>
 </template>
 
@@ -34,7 +34,7 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur.',
+      default: '',
     },
     className: {
       type: String,

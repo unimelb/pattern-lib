@@ -3,21 +3,22 @@
 
   .card__title {
     font-size: 20px;
-    color: #000;
     font-weight: var(--fw-semibold);
     text-decoration: none;
   }
 
   .card__sub-titles {
     margin-bottom: .25rem;
-    border-top: 1px solid #000;
+    border-top: 1px solid;
     padding: .5rem 0;
+
     svg {
       width: 18px;
       height: 18px;
     }
+
     @media (--bp-max-mobile) {
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid;
     }
   }
 

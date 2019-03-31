@@ -63,7 +63,7 @@ import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
 import CardStat from '../../components/cards/CardStat.vue';
 import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue';
-import CardEvents from '../../components/cards/CardEvents';
+import CardEvents from '../../components/cards/CardEvents.vue';
 
 import '../../components';
 
