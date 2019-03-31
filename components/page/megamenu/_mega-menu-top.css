@@ -5,10 +5,17 @@
     padding: .5rem 2rem 0;
     list-style-type: none;
     margin: 0;
+
     li {
       margin-bottom: 0;
     }
+    @media(--bp-max-mobile){
+      display: block;
+      padding: 0;
+    }
   }
+
+
 
   .menu-top__item {
     margin-left: 1.25rem;
@@ -16,6 +23,9 @@
     font-size: .8rem;
     text-decoration: none;
     text-transform: uppercase;
+    @media(--bp-max-mobile){
+      color: white;
+    }
   }
 
   .menu-top__item:hover,

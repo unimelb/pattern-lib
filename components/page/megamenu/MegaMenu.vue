@@ -53,6 +53,14 @@
             class="menu__section"
             role="menu"
           >
+            <div
+              v-if="isModifiedMenu && isMobileOpen"
+              class="menu__mobile">
+              <hr class="menu__mobile--line">
+              <p class="menu__mobile--title">
+                {{ facultyName }}
+              </p>
+            </div>
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -69,8 +77,12 @@
                 :href="rootitem.href"
                 :class="linkClasses(rootindex, rootitem)"
                 @click="openInner"
-                v-html="rootitem.title"
-              />
+              >{{ rootitem.title }}
+                <SvgIcon
+                  v-if="isModifiedMenu && isMobileOpen"
+                  name="chevron-right"
+                  class="icon"/>
+              </a>
               <div
                 v-if="rootitem.items"
                 ref="panels"
@@ -181,6 +193,9 @@
               </div>
             </li>
           </ul>
+          <MegaMenuTopNavigation
+            v-if="isModifiedMenu && isMobileOpen"
+            :items="topMenu"/>
         </nav>
       </div>
       <PageSearch/>

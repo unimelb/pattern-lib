@@ -571,10 +571,6 @@
   }
 }
 
-
-
-
-
 .megamenu .menu__item--active {
   border-left-color: rgb(171, 190, 213);
 }
@@ -582,6 +578,18 @@
 .page-header{
   &__modified-menu{
     .menu {
+
+      &__mobile{
+        padding-left: 27px;
+        &--line{
+          margin: 15px 0;
+          max-width: 5%;
+          border: 0;
+          border-bottom: 2px solid white;
+        }
+        &--tile{
+        }
+      }
       &__item{
         &:hover{
           border-bottom-color: rgb(var(--col-navy-mid-1));
@@ -604,6 +612,13 @@
           padding: .75rem 2rem .75rem;
           font-size: 1.1rem;
         }
+
+        @media(--bp-max-mobile){
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
       }
 
       &__block{
