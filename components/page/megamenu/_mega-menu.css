@@ -570,94 +570,135 @@
     }
   }
 }
+
+
+
+
+
 .megamenu .menu__item--active {
   border-left-color: rgb(171, 190, 213);
 }
 
 .page-header{
   &__modified-menu{
-    @media (--bp-desktop) {
-      .menu {
-        &__item{
-          &:hover{
-            border-bottom-color: rgb(var(--col-navy-mid-1));
+    .menu {
+      &__item{
+        &:hover{
+          border-bottom-color: rgb(var(--col-navy-mid-1));
+        }
+      }
+
+      &__nested-parent,
+      &__link {
+        @media (--bp-x-desktop) {
+          padding: .75rem 0.9rem .75rem;
+          font-size: 0.9rem;
+        }
+
+        @media(--bp-wide){
+          padding: .75rem 1rem .75rem;
+          font-size: 1rem;
+        }
+
+        @media(--bp-x-wide){
+          padding: .75rem 2rem .75rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      &__block{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+
+      &__campaign{
+        height: 16.5rem;
+        @media (--bp-x-desktop) {
+          width: 90%;
+        }
+      }
+
+      &__section{
+        .menu__link {
+
+          &:hover,
+          &[aria-expanded='true'] {
+            background-color: inherit;
           }
         }
-        &__block{
+      }
+
+      &__section .menu__section {
+        margin-left: 0;
+        padding-top: 1.5rem;
+
+        .menu__item {
+          border-left: none;
+          padding-bottom: 1.5rem;
           display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          a{
+            padding-bottom: 3px;
+            padding-left: 1.5rem;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .menu__section{
+        color: #ffac71;
+      }
+
+      &__aside {
+        width: 50%;
+        display: flex;
+
+        @media (--bp-x-desktop) {
           flex-direction: column;
+        }
+
+        &-info{
+          padding-right: 1rem;
+          padding-left: 1rem;
           width: 50%;
-        }
 
-        &__campaign{
-          height: 16.5rem;
-        }
+          @media (--bp-x-desktop) {
+            width: 100%;
+            margin-bottom: 1rem;
+          }
 
-        &__section{
-          .menu__link {
-            &:hover,
-            &[aria-expanded='true'] {
-              background-color: inherit;
+          &__text{
+            @media (--bp-x-desktop) {
+              padding: 0.5rem;
             }
           }
-        }
 
-        &__section .menu__section {
-          margin-left: 0;
-          padding-top: 1.5rem;
-
-          .menu__item {
-            border-left: none;
-            padding-bottom: 1.5rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+          &__link{
+            position: absolute;
+            right: 3rem;
 
             a{
-              padding-bottom: 3px;
-              padding-left: 1.5rem;
-              font-size: 1rem;
-            }
-          }
-        }
-
-        .menu__section{
-          color: #ffac71;
-        }
-
-        &__aside {
-          width: 50%;
-          display: flex;
-
-          &-info{
-            padding-right: 1rem;
-            padding-left: 1rem;
-            width: 50%;
-
-            &__link{
-              position: absolute;
-              right: 3rem;
-
-              a{
-                color: white;
-                font-weight: 600;
-              }
+              color: white;
+              font-weight: 600;
             }
           }
         }
       }
-      .inner{
-        animation: fadeIn .5s backwards;
+    }
+    .inner{
+      animation: fadeIn .5s backwards;
 
-        @media (--bp-wide) {
-          padding-right: 2rem;
-          padding-left: 2rem;
-        }
+      @media (--bp-wide) {
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
 
-        @media (--bp-xx-wide) {
-          padding-right: 2rem;
-          padding-left: 2rem;
-        }
+      @media (--bp-xx-wide) {
+        padding-right: 2rem;
+        padding-left: 2rem;
       }
     }
   }
@@ -665,8 +706,10 @@
 
 .icon {
   display: inline;
-  width: 8px;
-  height: 8px;
+  width: 0.5rem;
+  height: 0.5rem;
+  min-width: 0.5rem;
+  min-height: 0.5rem;
   margin-left: 6px;
   text-align: center;
   fill: var(--col-background);
