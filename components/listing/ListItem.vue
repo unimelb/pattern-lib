@@ -12,15 +12,20 @@ export default {
       default: '',
     },
     noPadding: {
-      type: Boolean,
-      default: false,
+      type: String,
+      default: '',
     },
   },
   computed: {
     classes() {
       return {
         cell: true,
-        'cell--no-padding': this.noPadding,
+        [`cell--no-padding-${this.noPadding}`]: [
+          'all',
+          'mobile',
+          'tab',
+          'desk',
+        ].includes(this.noPadding),
         [`cell--desk-${this.cols}`]: [
           '1of1',
           '1of2',
