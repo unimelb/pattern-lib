@@ -167,7 +167,7 @@
                   </ul>
                 </div>
                 <div
-                  v-if="isModifiedMenu"
+                  v-if="isModifiedMenu && !isMobileOpen"
                   class="menu__aside">
                   <component
                     v-if="rootitem.feature"
@@ -306,6 +306,7 @@ export default {
   },
   methods: {
     isColColumns(rootindex) {
+      if (this.isMobileOpen) return '';
       if (this.items[rootindex].items.length <= 5) {
         return 'cols-1';
       }
