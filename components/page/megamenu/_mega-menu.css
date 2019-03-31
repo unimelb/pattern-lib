@@ -569,13 +569,7 @@
       }
     }
   }
-}
 
-.menu__item--active {
-  border-left-color: rgb(171, 190, 213);
-}
-
-.page-header {
   &__modified-menu {
     .menu {
       &__mobile {
@@ -743,4 +737,8 @@
 }
 .cols-2 {
   columns: 2 !important;
+}
+
+.menu__item--active {
+  border-left-color: rgb(171, 190, 213);
 }
