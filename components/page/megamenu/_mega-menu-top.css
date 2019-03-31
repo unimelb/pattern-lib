@@ -9,7 +9,7 @@
     li {
       margin-bottom: 0;
     }
-    @media(--bp-max-mobile){
+    @media (--bp-max-mobile) {
       display: block;
       padding: 0;
     }
@@ -23,7 +23,7 @@
     font-size: .8rem;
     text-decoration: none;
     text-transform: uppercase;
-    @media(--bp-max-mobile){
+    @media (--bp-max-mobile) {
       color: white;
     }
   }

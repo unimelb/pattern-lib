@@ -575,12 +575,12 @@
   border-left-color: rgb(171, 190, 213);
 }
 
-.page-header{
-  &__modified-menu{
+.page-header {
+  &__modified-menu {
     .menu {
-      &__mobile{
+      &__mobile {
         padding-left: 27px;
-        &--line{
+        &--line {
           margin: 15px 0;
           max-width: 5%;
           border: 0;
@@ -589,11 +589,11 @@
         &--tile{
         }
       }
-      &__item{
-        &:hover{
+      &__item {
+        &:hover {
           border-bottom-color: rgb(var(--col-navy-mid-1));
         }
-        @media(--bp-max-mobile){
+        @media (--bp-max-mobile) {
           align-items: center;
         }
       }
@@ -601,45 +601,45 @@
       &__nested-parent,
       &__link {
         @media (--bp-x-desktop) {
-          padding: .75rem 0.9rem .75rem;
-          font-size: 0.9rem;
+          padding: .75rem .9rem .75rem;
+          font-size: .9rem;
         }
 
-        @media(--bp-wide){
+        @media (--bp-wide) {
           padding: .75rem 1rem .75rem;
           font-size: 1rem;
         }
 
-        @media(--bp-x-wide){
+        @media (--bp-x-wide) {
           padding: .75rem 2rem .75rem;
           font-size: 1.1rem;
         }
 
-        @media(--bp-max-mobile){
+        @media (--bp-max-mobile) {
           display: flex;
           justify-content: space-between;
           align-items: center;
         }
       }
 
-      &__block{
+      &__block {
         display: flex;
         flex-direction: column;
         width: 50%;
-          @media(--bp-max-mobile){
-            width: 100%;
-          }
+        @media (--bp-max-mobile) {
+          width: 100%;
+        }
       }
 
-      &__campaign{
+      &__campaign {
         height: 16.5rem;
 
-        @media(--bp-only-desktop){
+        @media (--bp-only-desktop) {
           width: 90%;
         }
       }
 
-      &__section{
+      &__section {
         .menu__link {
           &:hover,
           &[aria-expanded='true'] {
@@ -659,20 +659,20 @@
           flex-direction: row;
           justify-content: space-between;
 
-            @media(--bp-max-mobile){
-              padding-right: 25px;
-              padding-bottom: 5px;
-            }
-
-          a{
+          a {
             padding-bottom: 3px;
             padding-left: 1.5rem;
             font-size: 1rem;
           }
+
+          @media (--bp-max-mobile) {
+            padding-right: 25px;
+            padding-bottom: 5px;
+          }
         }
       }
 
-      .menu__section{
+      .menu__section {
         color: #ffac71;
       }
 
@@ -680,39 +680,39 @@
         width: 50%;
         display: flex;
 
-        @media (--bp-only-desktop) {
-          flex-direction: column;
-        }
-
-        &-info{
+        &-info {
           padding-right: 1rem;
           padding-left: 1rem;
           width: 50%;
+
+          &__text {
+            @media (--bp-x-desktop) {
+              padding: .5rem;
+            }
+          }
+
+          &__link {
+            position: absolute;
+            right: 3rem;
+
+            a {
+              color: white;
+              font-weight: 600;
+            }
+          }
 
           @media (--bp-only-desktop) {
             width: 100%;
             margin-bottom: 1rem;
           }
+        }
 
-          &__text{
-            @media (--bp-x-desktop) {
-              padding: 0.5rem;
-            }
-          }
-
-          &__link{
-            position: absolute;
-            right: 3rem;
-
-            a{
-              color: white;
-              font-weight: 600;
-            }
-          }
+        @media (--bp-only-desktop) {
+          flex-direction: column;
         }
       }
     }
-    .inner{
+    .inner {
       animation: fadeIn .5s backwards;
 
       @media (--bp-wide) {
@@ -730,19 +730,19 @@
 
 .icon {
   display: inline;
-  width: 0.5rem;
-  height: 0.5rem;
-  min-width: 0.5rem;
-  min-height: 0.5rem;
+  width: .5rem;
+  height: .5rem;
+  min-width: .5rem;
+  min-height: .5rem;
   margin-left: 6px;
   text-align: center;
   fill: var(--col-background);
 }
 
 .cols-1 {
-  columns: 1!important;
-  width: 50%!important;
+  columns: 1 !important;
+  width: 50% !important;
 }
-.cols-2{
-  columns: 2!important;
+.cols-2 {
+  columns: 2 !important;
 }
