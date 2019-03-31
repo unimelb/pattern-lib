@@ -1,6 +1,5 @@
 <template>
   <div class="card card--bdr card--showcase-profile">
-    <!-- <div :style="{'background-image': `url(${thumb})`}" class="card__thumb"/> -->
     <img
       :src="thumb"
       :alt="title + ' image'"
