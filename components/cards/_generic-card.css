@@ -1,6 +1,8 @@
 .card--generic {
   background-color: white;
   color: rgb(var(--col-brand));
+  border-radius: var(--br-cards);
+  box-shadow: rgb(var(--col-box-shadow)) 0 2px 2px 0;
 
   .card__header {
     margin-bottom: .5rem;
