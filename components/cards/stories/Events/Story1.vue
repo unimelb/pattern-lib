@@ -19,11 +19,6 @@
             <SvgIcon name="calendar"/>
             <span>March 31 1992</span>
           </div>
-          <div
-            slot="sub-title-3"
-            class="sub-title">
-            <span>Theme: Lorem ipsum.</span>
-          </div>
           <template slot="links">
             <a href="/">View generic details ></a>
             <a href="/">View generic staff ></a>
@@ -47,11 +42,6 @@
             class="sub-title">
             <SvgIcon name="calendar"/>
             <span>March 31 1992</span>
-          </div>
-          <div
-            slot="sub-title-3"
-            class="sub-title">
-            <span>Theme: Lorem ipsum.</span>
           </div>
           <template slot="links">
             <a href="/">View generic details ></a>
