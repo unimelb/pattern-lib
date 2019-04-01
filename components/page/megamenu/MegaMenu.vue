@@ -1,7 +1,7 @@
 <template>
   <div
     ref="headerroot"
-    :class="[isShowTopMenu && 'page-header__with-top-menu', isModifiedMenu && 'page-header__modified-menu']"
+    :class="[isShowTopMenu && 'page-header__with-top-menu']"
     class="page-header page-header--l3 page-header--study"
   >
     <div class="page-header__inner">
@@ -54,7 +54,7 @@
             role="menu"
           >
             <div
-              v-if="isModifiedMenu && isMobileOpen"
+              v-if="isMobileOpen"
               class="menu__mobile">
               <hr class="menu__mobile--line">
               <p class="menu__mobile--title">
@@ -78,7 +78,7 @@
                 @click="openInner"
               >{{ rootitem.title }}
                 <SvgIcon
-                  v-if="isModifiedMenu && isMobileOpen"
+                  v-if="isMobileOpen"
                   name="chevron-right"
                   class="icon"/>
               </a>
@@ -91,61 +91,12 @@
                   role="button"
                   class="menu__back-btn"
                   @click="closeInner">Back</div>
-
-                <div
-                  v-if="!isModifiedMenu"
-                  class="menu__aside">
-                  <a
-                    :href="rootitem.href"
-                    class="menu__nested-parent">{{ rootitem.title }}</a>
-                  <component
-                    v-if="rootitem.feature"
-                    :is="rootitem.feature.link ? 'a' : 'div'"
-                    :href="rootitem.feature.link"
-                    :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
-                    class="menu__campaign"
-                  >
-                    <p
-                      v-if="rootitem.feature.text || rootitem.feature.title"
-                      class="menu__campaign-text">
-                      <strong
-                        v-if="rootitem.feature.title"
-                        class="menu__campaign-title">{{ rootitem.feature.title }}</strong>
-                      <span
-                        v-if="rootitem.feature.text"
-                        v-html="rootitem.feature.text"/>
-                    </p>
-                    <span
-                      v-if="rootitem.feature.alt"
-                      class="screenreaders-only"
-                      v-html="rootitem.feature.alt"
-                    />
-                  </component>
-                </div>
-                <ul
-                  v-if="!isModifiedMenu"
-                  class="menu__section">
-                  <li
-                    v-for="(menuitem, menuindex) in rootitem.items"
-                    :key="`menuitem-${menuindex}`"
-                    class="menu__item">
-                    <a
-                      :href="menuitem.href"
-                      tabindex="0"
-                      class="menu__link"
-                      role="menuitem"
-                      v-html="menuitem.title"/>
-                  </li>
-                </ul>
-                <div
-                  v-if="isModifiedMenu"
-                  class="menu__block">
+                <div class="menu__block">
                   <div>
                     <a
                       :href="rootitem.href"
                       class="menu__nested-parent">{{ rootitem.title }}</a>
                   </div>
-
                   <ul
                     :class="isColColumns(rootindex)"
                     class="menu__section">
@@ -166,7 +117,7 @@
                   </ul>
                 </div>
                 <div
-                  v-if="isModifiedMenu && !isMobileOpen"
+                  v-if="!isMobileOpen"
                   class="menu__aside">
                   <component
                     v-if="rootitem.feature"
@@ -193,7 +144,7 @@
             </li>
           </ul>
           <MegaMenuTopNavigation
-            v-if="isModifiedMenu && isMobileOpen"
+            v-if="isMobileOpen"
             :items="topMenu"/>
         </nav>
       </div>
@@ -278,10 +229,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    isModifiedMenu: {
-      type: [Boolean],
-      default: false,
-    },
   },
   data() {
     return {
@@ -329,7 +276,7 @@ export default {
       // if (rootindex === 0) {
       //   return 'menu__link menu__nested-parent';
       // }
-      if (rootitem.items && !this.isModifiedMenu) {
+      if (rootitem.items) {
         return 'menu__link menu__link--nested';
       }
       return 'menu__link';

@@ -2,7 +2,6 @@
   <MegaMenu
     :items="items"
     :top-menu="topMenu"
-    :is-modified-menu="true"
     active="/random-link"
     faculty-name="Faculty of Fine Arts and Music"
     faculty-link="/faculty-link"
