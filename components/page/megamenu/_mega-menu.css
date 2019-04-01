@@ -521,6 +521,13 @@
   /* TODO: need to check any flow on effects for removing this */
   /* overflow: visible; */
 
+  .page-header-search__submit{
+    background-color: rgb(var(--col-black-dark));
+    &:hover {
+      background-color: rgb(var(--col-black-dark));
+    }
+  }
+
   .page-header__inner {
     height: 4.5rem;
     padding-left: 1rem;
