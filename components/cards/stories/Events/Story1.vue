@@ -20,8 +20,22 @@
             <span>March 31 1992</span>
           </div>
           <template slot="links">
-            <a href="/">View generic details ></a>
-            <a href="/">View generic staff ></a>
+            <a href="/">
+              View generic details
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10"/>
+            </a>
+            <a href="/">
+              View generic staff
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10"/>
+            </a>
           </template>
         </CardEvents>
       </ListItem>
@@ -44,8 +58,22 @@
             <span>March 31 1992</span>
           </div>
           <template slot="links">
-            <a href="/">View generic details ></a>
-            <a href="/">View generic staff ></a>
+            <a href="/">
+              View generic details
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10"/>
+            </a>
+            <a href="/">
+              View generic staff
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10"/>
+            </a>
           </template>
         </CardEvents>
       </ListItem>

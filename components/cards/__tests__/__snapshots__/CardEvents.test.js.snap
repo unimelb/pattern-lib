@@ -2,7 +2,7 @@
 
 exports[`CardEvents should match snapshot 1`] = `
 <div
-  class="btn-owner card card--generic card--generic--full-width card-events "
+  class="btn-owner card card--generic card--generic--full-width card--events "
 >
   <a
     class="card__thumb card__thumb--zoom"
