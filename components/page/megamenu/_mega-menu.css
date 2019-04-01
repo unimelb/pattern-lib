@@ -63,6 +63,16 @@
   }
 
   .menu {
+    &__mobile {
+      padding-left: 27px;
+      &--line {
+        margin: 15px 0;
+        max-width: 5%;
+        border: 0;
+        border-bottom: 2px solid white;
+      }
+    }
+
     &__section {
       padding: 0;
       border-bottom: 1px solid rgba(255, 255, 255, .05);
@@ -311,7 +321,6 @@
         width: 50%;
         display: flex;
         padding-top: 14px;
-
 
         &-info {
           width: 50%;
@@ -626,20 +635,6 @@
       padding: 0;
       .page-header__inner {
         height: 100%;
-      }
-    }
-  }
-
-  &__modified-menu {
-    .menu {
-      &__mobile {
-        padding-left: 27px;
-        &--line {
-          margin: 15px 0;
-          max-width: 5%;
-          border: 0;
-          border-bottom: 2px solid white;
-        }
       }
     }
   }
