@@ -592,26 +592,6 @@
   }
 }
 
-@media (min-width: 769px) {
-  .menu__item--over,
-  .menu__item[tabindex='0'] {
-    .menu__link--nested::after {
-      //content: '';
-      //display: block;
-      //position: absolute;
-      //z-index: 10;
-      //bottom: .3125rem;
-      //left: calc(50% - .3125rem);
-      //width: .625rem;
-      //height: .625rem;
-      //transform: rotate(45deg);
-      //border-right: 1px solid rgb(var(--col-blue-mid-2));
-      //border-bottom: 1px solid rgb(var(--col-blue-mid-2));
-      //pointer-events: none;
-    }
-  }
-}
-
 .page-header__inner {
   .header-tools__search {
     display: none;
