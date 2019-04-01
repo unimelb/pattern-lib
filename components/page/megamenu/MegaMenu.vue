@@ -33,7 +33,7 @@
         @click="dismissMobileMenuIfBlanket"
         @keypress.27="dismissMobileMenu">
         <MegaMenuTopNavigation
-          v-if="isShowTopMenu"
+          v-if="isShowTopMenu && isMobileOpen === false"
           :items="topMenu"/>
         <nav
           id="sitemapmenu"
@@ -77,10 +77,6 @@
                 :class="linkClasses(rootindex, rootitem)"
                 @click="openInner"
               >{{ rootitem.title }}
-                <SvgIcon
-                  v-if="isMobileOpen"
-                  name="chevron-right"
-                  class="icon"/>
               </a>
               <div
                 v-if="rootitem.items"
