@@ -1,0 +1,74 @@
+.card--showcase-profile {
+  .card__inner {
+    padding: .5rem 0 0 1.5rem;
+  }
+
+  .card__image {
+    width: 100%;
+    height: auto;
+
+    @media (--bp-tablet) {
+      max-width: 192px;
+      height: 136px;
+    }
+  }
+
+  .card__title {
+    font-size: 20px;
+    font-weight: var(--fw-semibold);
+  }
+
+  .card__sub-title {
+    margin: 0;
+  }
+
+  .card__dash {
+    height: 4px;
+    width: 37px;
+    background: rgb(9, 65, 131);
+    margin: .5rem 0 .5rem 0;
+  }
+
+  .card__button {
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: .5rem;
+
+    @media (--bp-desktop) {
+      margin: 0;
+    }
+  }
+
+  .card__icon {
+    display: initial;
+    margin-left: 4px;
+  }
+
+  .card__bio {
+    padding: 12px 16px 12px 16px;
+    margin: 0;
+    max-width: 100%;
+    background-color: rgb(var(--col-navy-light));
+  }
+
+  /* Enter and leave animations can use different */
+  /* durations and timing functions.              */
+  .slide-fade-enter-active {
+    transition: all .3s ease-in-out;
+  }
+
+  .slide-fade-leave-active {
+    transition: all .8s ease-in-out;
+  }
+
+  .slide-fade-enter,
+  .slide-fade-leave-to {
+    transform: translate(10px);
+    opacity: 0;
+  }
+
+  @media (--bp-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
