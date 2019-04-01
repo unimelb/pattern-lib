@@ -5,7 +5,7 @@
     &::before {
       content: '';
       position: absolute;
-      bottom: -0.5rem;
+      bottom: -.5rem;
       z-index: -1;
       width: 100%;
       height: calc(100vw - 64px);
@@ -21,7 +21,7 @@
     width: 20px;
     height: 2px;
     background: #fff;
-    margin-bottom: 0.25rem;
+    margin-bottom: .25rem;
   }
   &__text {
     color: #fff;

@@ -332,13 +332,13 @@
 
           &__link {
             text-align: right;
-            @media (--bp-x-desktop) {
-              padding-right: 1rem;
-            }
 
             a {
               color: white;
               font-weight: 600;
+            }
+            @media (--bp-x-desktop) {
+              padding-right: 1rem;
             }
           }
         }
@@ -521,7 +521,7 @@
   /* TODO: need to check any flow on effects for removing this */
   /* overflow: visible; */
 
-  .page-header-search__submit{
+  .page-header-search__submit {
     background-color: rgb(var(--col-black-dark));
     &:hover {
       background-color: rgb(var(--col-black-dark));

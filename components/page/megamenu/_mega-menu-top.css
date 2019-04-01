@@ -5,9 +5,13 @@
     padding: .5rem 2rem 0;
     list-style-type: none;
     margin: 0;
+    
+    li {
+      margin-bottom: 0;
+    }
 
     @media (--bp-x-desktop) {
-      padding: .5rem 0.8rem 0;
+      padding: .5rem .8rem 0;
     }
 
     @media (--bp-wide) {
@@ -16,11 +20,6 @@
 
     @media (--bp-x-wide) {
       padding: .5rem 2rem 0;
-    }
-
-
-    li {
-      margin-bottom: 0;
     }
     @media (--bp-max-mobile) {
       display: block;
