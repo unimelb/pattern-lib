@@ -35,6 +35,13 @@
   }
 
   &--full-width {
+    .card__inner {
+      .grid--1col .cell & {
+        flex: 1;
+        margin-right: 0;
+      }
+    }
+
     @media (--bp-desktop) {
       .card__thumb--zoom {
         width: 30%;
@@ -43,9 +50,4 @@
       }
     }
   }
-}
-
-.grid--1col .cell .card--generic--full-width .card__inner {
-  flex: 1;
-  margin-right: 0;
 }
