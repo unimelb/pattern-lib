@@ -64,7 +64,6 @@
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
-              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               :key="`rootitem-${rootindex}`"
               :tabindex="isSelected(rootindex)"
               class="menu__item"

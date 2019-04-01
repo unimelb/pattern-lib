@@ -6,6 +6,19 @@
     list-style-type: none;
     margin: 0;
 
+    @media (--bp-x-desktop) {
+      padding: .5rem 0.8rem 0;
+    }
+
+    @media (--bp-wide) {
+      padding: .5rem 1rem 0;
+    }
+
+    @media (--bp-x-wide) {
+      padding: .5rem 2rem 0;
+    }
+
+
     li {
       margin-bottom: 0;
     }

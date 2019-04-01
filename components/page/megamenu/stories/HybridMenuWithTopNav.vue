@@ -2,6 +2,7 @@
   <MegaMenu
     :items="items"
     :top-menu="topMenu"
+    :is-modified-menu="true"
     active="/random-link"
     faculty-name="This is a Faculty name"
     faculty-link="/faculty-link"

@@ -1,12 +1,11 @@
 .page-title {
-  /* max-width: 50%; */
   margin: 0 1.5em;
   &--aperture {
     margin-left: 2rem;
     &::before {
       content: '';
       position: absolute;
-      bottom: 0;
+      bottom: -0.5rem;
       z-index: -1;
       width: 100%;
       height: calc(100vw - 64px);
@@ -22,6 +21,7 @@
     width: 20px;
     height: 2px;
     background: #fff;
+    margin-bottom: 0.25rem;
   }
   &__text {
     color: #fff;
@@ -39,6 +39,7 @@
   &--top-layout {
     position: relative;
     z-index: 1;
+    top: 6px;
   }
   @media (--bp-max-tablet) {
     width: auto !important;
@@ -46,8 +47,5 @@
   @media (--bp-desktop) {
     position: relative;
     flex: 1 0 auto;
-  }
-  @media (--bp-desktop) {
-    /* max-width: 10rem; */
   }
 }
