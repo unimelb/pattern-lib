@@ -38,7 +38,7 @@ describe('CardStaffList', () => {
     expect(wrapper.props().phone).toBe(false);
 
     expect(excerpt.type).toBe(String);
-    expect(wrapper.props().excerpt).toBe('Lorem ipsum dolor sit amet, consectetur.');
+    expect(wrapper.props().excerpt).toBe('');
   });
 
   it('should render name from prop with correct type', () => {

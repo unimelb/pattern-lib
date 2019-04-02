@@ -13,7 +13,7 @@ exports[`CardStaffList should match snapshot 1`] = `
   />
    
   <div
-    class="card__inner "
+    class="card__inner"
   >
     <a
       aria-label="Profile position"
@@ -34,17 +34,11 @@ exports[`CardStaffList should match snapshot 1`] = `
         href="#"
         title="profile name link"
       >
-        
         Test name
-      
       </a>
     </p>
      
-    <div
-      class="card__excerpt"
-    >
-      Lorem ipsum dolor sit amet, consectetur.
-    </div>
+    <!---->
      
     <div
       class="card__footer"

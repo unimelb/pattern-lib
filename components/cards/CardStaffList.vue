@@ -1,13 +1,13 @@
 <template>
-  <div
-    class="btn-owner card card--stafflist card--bdr-blue bg-white">
+  <div class="btn-owner card card--stafflist card--bdr-blue bg-white">
     <a
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
       title="profile image"
       aria-label="Profile image"
-      class="card__thumb"/>
-    <div class="card__inner ">
+      class="card__thumb"
+    />
+    <div class="card__inner">
       <a
         :href="href"
         title="profile position link"
@@ -20,9 +20,7 @@
         <a
           :href="href"
           title="profile name link"
-          aria-label="Profile name">
-          {{ name }}
-        </a>
+          aria-label="Profile name">{{ name }}</a>
       </p>
       <div
         v-if="excerpt"
@@ -54,15 +52,14 @@
             name="envelope"
             width="15px"
             height="15px"/>
-          {{ email }}</a>
+          {{ email }}
+        </a>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-
 export default {
   props: {
     thumb: {
@@ -95,9 +92,8 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur.',
+      default: '',
     },
   },
 };
-
 </script>
