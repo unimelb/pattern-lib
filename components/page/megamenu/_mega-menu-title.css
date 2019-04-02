@@ -1,19 +1,31 @@
 .page-title {
   margin: 0 1.5em;
   &--aperture {
-    margin-left: 2rem;
+    width: 20%;
+    overflow: hidden;
+    align-self: stretch;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    @media (--bp-max-mobile) {
+      padding: 0 2rem 0 .5rem;
+    }
     &::before {
       content: '';
       position: absolute;
-      bottom: -.5rem;
+      bottom: 1.5rem;
       z-index: -1;
-      width: 100%;
+      width: 75%;
       height: calc(100vw - 64px);
       transform: translate(-20px, -10px) rotate(15deg);
       background: #000;
       transform-origin: bottom left;
       @media (--bp-desktop) {
         transform: translate(-20px, 10px) rotate(15deg);
+      }
+      @media (--bp-max-mobile) {
+        width: 100%;
+        bottom: .5rem;
       }
     }
   }
