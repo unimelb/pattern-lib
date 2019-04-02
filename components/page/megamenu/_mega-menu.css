@@ -250,7 +250,7 @@
     }
   }
 
-  @media (--bp-desktop) {
+  @media (--bp-x-desktop) {
     display: flex;
     position: static;
     right: auto;
@@ -305,10 +305,6 @@
       @media (--bp-wide) {
         padding: 0 5.5rem;
       }
-
-      @media (--bp-xx-wide) {
-        padding: 0 5.5rem;
-      }
     }
 
     > .page-header-search__form,
@@ -321,13 +317,29 @@
         width: 50%;
         display: flex;
         padding-top: 14px;
+        flex-direction: row;
+
+        @media (--bp-x-desktop) {
+          width: 50%;
+          flex-direction: column;
+          padding-right: 1rem;
+        }
+
+        @media (--bp-wide) {
+          width: 50%;
+          flex-direction: row;
+          padding-right: 0;
+        }
 
         &-info {
           width: 50%;
-          &__text {
-            @media (--bp-x-desktop) {
-              padding-right: 1rem;
-            }
+
+          @media (--bp-x-desktop) {
+            width: 100%;
+          }
+
+          @media (--bp-wide) {
+            width: 50%;
           }
 
           &__link {
@@ -346,8 +358,18 @@
 
       &__campaign {
         width: 50%;
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        margin: 0 1.5rem;
+        min-height: 10rem;
+
+        @media (--bp-x-desktop) {
+          width: 100%;
+          margin: 0 0 1rem 0;
+        }
+
+        @media (--bp-wide) {
+          width: 50%;
+          margin: 0 1.5rem;
+        }
       }
 
       &__nested-parent {
@@ -405,7 +427,7 @@
           padding-top: .4375rem;
           padding-bottom: .4375rem;
           padding-left: 1.5rem;
-          font-size: 1.25rem;
+          font-size: 1.55rem;
           line-height: 1.4;
           text-align: left;
           text-decoration: none;
@@ -559,7 +581,7 @@
       }
     }
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       display: none;
     }
   }
@@ -607,7 +629,7 @@
     }
   }
 
-  @media (--bp-desktop) {
+  @media (--bp-x-desktop) {
     .header-tools__search {
       display: block;
       float: right;
@@ -617,7 +639,7 @@
 
 .page-header {
   &__with-top-menu {
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       max-height: 115px;
       padding: 0;
       .page-header__inner {

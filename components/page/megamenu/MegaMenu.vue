@@ -76,8 +76,8 @@
                 :href="rootitem.href"
                 :class="linkClasses(rootindex, rootitem)"
                 @click="openInner"
-              >{{ rootitem.title }}
-              </a>
+                v-html="rootitem.title"
+              />
               <div
                 v-if="rootitem.items"
                 ref="panels"
@@ -107,13 +107,13 @@
                         role="menuitem"
                         v-html="menuitem.title"/>
                       <SvgIcon
+                        v-if="!isMobileOpen"
                         name="chevron-right"
                         class="icon"/>
                     </li>
                   </ul>
                 </div>
                 <div
-                  v-if="!isMobileOpen"
                   class="menu__aside">
                   <component
                     v-if="rootitem.feature"
