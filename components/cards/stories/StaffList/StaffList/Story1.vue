@@ -5,7 +5,6 @@
         <CardStaffList
           name="Mr John Smith"
           position="Provost"
-          thumb="https://randomuser.me/api/portraits/lego/1.jpg"
           href="#"
           excerpt="Lorem ipsum dolor sit amet, consectetur."
         />

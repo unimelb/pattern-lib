@@ -1,5 +1,9 @@
-import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import CardStaffList from '../CardStaffList.vue';
 
 expect.extend(toHaveNoViolations);
@@ -13,11 +17,18 @@ describe('CardStaffList', () => {
   it('should have default props and correct types thumb/name/href/position/phone/email/cols/excerpt', () => {
     const wrapper = shallow(CardStaffList);
     const {
-      thumb, name, cols, href, position, email, phone, excerpt,
+      thumb,
+      name,
+      cols,
+      href,
+      position,
+      email,
+      phone,
+      excerpt,
     } = wrapper.vm.$options.props;
 
     expect(thumb.type).toBe(String);
-    expect(wrapper.props().thumb).toBe('https://via.placeholder.com/400x200');
+    expect(wrapper.props().thumb).toBe('https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png');
 
     expect(name.type).toBe(String);
     expect(wrapper.props().name).toBe('Test name');
