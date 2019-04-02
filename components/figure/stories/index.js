@@ -19,6 +19,7 @@ import Story15 from './Story15.vue';
 import Story16 from './Story16.vue';
 import Story17 from './Story17.vue';
 import Story18 from './Story18.vue';
+import Story19 from './Story19.vue';
 
 storiesOf('Figure', module)
   .add('medium inset right figure', createStory(Story2))
@@ -38,4 +39,5 @@ storiesOf('Figure', module)
   .add('Medium inset right video', createStory(Story15))
   .add('Medium inset left video', createStory(Story16))
   .add('Small inset right video', createStory(Story17))
-  .add('Small inset left video', createStory(Story18));
+  .add('Small inset left video', createStory(Story18))
+  .add('Full Width Image', createStory(Story19));
