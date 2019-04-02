@@ -2,7 +2,7 @@
   <div class="photo-gallery-in-page">
     <div class="photo-gallery-in-page__slider">
       <div
-        class="arrow-wrapper"
+        class="arrow-wrapper left"
         role="button"
         tabindex="0"
         title="Previous (arrow left)"
@@ -16,20 +16,29 @@
           height="30"/>
       </div>
 
-      <div class="photo-gallery-in-page--container">
-        <figure class="photo-gallery-in-page__figure">
-          <img
-            v-if="selectedItem.type === 'image'"
-            :src="selectedItem.src"
-            :alt="selectedItem.title"
-          >
-          <VideoEmbed
-            v-if="selectedItem.type === 'video'"
-            :src="selectedItem.src"/>
-        </figure>
+      <div
+        class="photo-gallery-in-page--container">
+        <swiper
+          ref="slider"
+          :options="swiperOption">
+          <swiper-slide
+            v-for="(slide, index) in media"
+            :key="index">
+            <figure class="photo-gallery-in-page__figure">
+              <img
+                v-if="slide.type === 'image'"
+                :src="slide.src"
+                :alt="slide.title"
+              >
+              <VideoEmbed
+                v-if="slide.type === 'video'"
+                :src="slide.src"/>
+            </figure>
+          </swiper-slide>
+        </swiper>
       </div>
       <div
-        class="arrow-wrapper"
+        class="arrow-wrapper right"
         tabindex="0"
         role="button"
         title="Next (arrow right)"
@@ -81,6 +90,7 @@
 
 <script>
 import VideoEmbed from '../embed/VideoEmbed.vue';
+
 export default {
   components: { VideoEmbed },
   props: {
@@ -90,15 +100,42 @@ export default {
     },
   },
   data() {
+    const vm = this;
     return {
       selectedItem: this.media ? this.media[0] : {},
       selectedIndex: 0,
+      swiperOption: {
+        on: {
+          // init() {},
+          // click(e) {},
+          // tap(e) {},
+          // doubleTap(e) {},
+          // sliderMove(e) {},
+          slideChange() {},
+          // slideChangeTransitionStart() {},
+          slideChangeTransitionEnd() {
+            vm.selectedItem = vm.media[this.activeIndex];
+            vm.selectedIndex = this.activeIndex;
+          },
+          // transitionStart() {},
+          // transitionEnd() {},
+          // fromEdge() {},
+          // reachBeginning() {},
+          // reachEnd() {},
+        },
+      },
     };
+  },
+  mounted() {
+    this.swiper = this.$refs.slider.swiper;
   },
   methods: {
     open(index) {
       this.selectedItem = this.media[index];
       this.selectedIndex = index;
+      if (this.swiper) {
+        this.swiper.slideTo(index);
+      }
     },
     move(direction) {
       const len = this.media.length;
@@ -108,8 +145,12 @@ export default {
         next: (current + 1) % len,
       };
       const nextIndex = directions[direction];
+      // Set current
       this.selectedItem = this.media[nextIndex];
       this.selectedIndex = nextIndex;
+      if (this.swiper) {
+        this.swiper.slideTo(nextIndex);
+      }
     },
   },
 };

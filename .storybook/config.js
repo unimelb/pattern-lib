@@ -2,6 +2,8 @@ import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
 import { setOptions } from '@storybook/addon-options';
 import VueProgressiveImage from 'vue-progressive-image';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
 
 import { storyDecorator } from './utils';
 import SvgIcon from '../components/icons/SvgIcon.vue';
@@ -20,6 +22,7 @@ import '../components/index.js';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
+Vue.use(VueAwesomeSwiper);
 Vue.component('SvgIcon', SvgIcon);
 Vue.component('SectionWrap', SectionWrap);
 Vue.component('ListItem', ListItem);

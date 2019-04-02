@@ -3,6 +3,8 @@ import 'babel-polyfill';
 
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
 import Ike from 'ike.js';
 import {
   version,
@@ -76,6 +78,7 @@ require.context('../../components/shared', false, /\.svg$/);
 
 // Register Vue plugins, directives and components
 Vue.use(VueProgressiveImage);
+Vue.use(VueAwesomeSwiper);
 Vue.component('toggle-block', ToggleBlock);
 Vue.component('toggle-group', ToggleGroup);
 Vue.component('toggle-block-mobile', ToggleBlockMobile);
