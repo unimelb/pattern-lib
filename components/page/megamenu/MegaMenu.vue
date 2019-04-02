@@ -274,15 +274,6 @@ export default {
 
       return displayActive;
     },
-    linkClasses(rootindex, rootitem) {
-      // if (rootindex === 0) {
-      //   return 'menu__link menu__nested-parent';
-      // }
-      // if (rootitem.items) {
-      //   return 'menu__link menu__link--nested';
-      // }
-      // return 'menu__link';
-    },
     activateDesktopMenu(rootindex) {
       if (rootindex !== -1 && this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
