@@ -3,6 +3,6 @@
 exports[`FullWidthImage should match snapshot 1`] = `
 <div
   class="full-width-image"
-  style="background-image: url(); background-size: cover; min-height: 32vw; max-height: 60vh;"
+  style="background-image: url();"
 />
 `;

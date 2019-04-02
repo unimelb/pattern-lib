@@ -16,9 +16,6 @@ export default {
     styleObject() {
       return {
         backgroundImage: `url(${this.imageUrl})`,
-        backgroundSize: 'cover',
-        minHeight: '32vw',
-        maxHeight: '60vh',
       };
     },
   },
