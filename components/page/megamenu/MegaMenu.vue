@@ -74,10 +74,14 @@
               <a
                 :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
-                :class="linkClasses(rootindex, rootitem)"
+                class="menu__link"
                 @click="openInner"
-                v-html="rootitem.title"
-              />
+              >{{ rootitem.title }}
+                <SvgIcon
+                  v-if="isMobileOpen"
+                  name="chevron-right"
+                  class="icon"/>
+              </a>
               <div
                 v-if="rootitem.items"
                 ref="panels"
@@ -122,7 +126,9 @@
                     :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
                     class="menu__campaign"
                   />
-                  <div class="menu__aside-info">
+                  <div
+                    v-if="!isMobileOpen"
+                    class="menu__aside-info">
                     <p class="menu__aside-info__text">Dance 40 at VCA celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae felis id tortor congue dapibus. In pulvinar semper dolor. Sed non mi non arcu dictum hendrerit. Nulla partititor sed rcu nec malesuada </p>
                     <div class="menu__aside-info__link">
                       <a
@@ -272,10 +278,10 @@ export default {
       // if (rootindex === 0) {
       //   return 'menu__link menu__nested-parent';
       // }
-      if (rootitem.items) {
-        return 'menu__link menu__link--nested';
-      }
-      return 'menu__link';
+      // if (rootitem.items) {
+      //   return 'menu__link menu__link--nested';
+      // }
+      // return 'menu__link';
     },
     activateDesktopMenu(rootindex) {
       if (rootindex !== -1 && this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
