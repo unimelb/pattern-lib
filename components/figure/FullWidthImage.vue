@@ -11,16 +11,14 @@ export default {
       type: String,
       default: '',
     },
-    height: {
-      type: String,
-      default: '100%',
-    },
   },
   computed: {
     styleObject() {
       return {
         backgroundImage: `url(${this.imageUrl})`,
-        height: this.height,
+        backgroundSize: 'cover',
+        minHeight: '32vw',
+        maxHeight: '60vh',
       };
     },
   },
