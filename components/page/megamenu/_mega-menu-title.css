@@ -7,9 +7,6 @@
     padding: 0 2rem;
     display: flex;
     align-items: center;
-    @media (--bp-max-mobile) {
-      padding: 0 2rem 0 .5rem;
-    }
     &::before {
       content: '';
       position: absolute;
@@ -27,6 +24,9 @@
         width: 100%;
         bottom: .5rem;
       }
+    }
+    @media (--bp-max-mobile) {
+      padding: 0 2rem 0 .5rem;
     }
   }
   &__separator {

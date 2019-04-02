@@ -319,28 +319,8 @@
         padding-top: 14px;
         flex-direction: row;
 
-        @media (--bp-x-desktop) {
-          width: 50%;
-          flex-direction: column;
-          padding-right: 1rem;
-        }
-
-        @media (--bp-wide) {
-          width: 50%;
-          flex-direction: row;
-          padding-right: 0;
-        }
-
         &-info {
           width: 50%;
-
-          @media (--bp-x-desktop) {
-            width: 100%;
-          }
-
-          @media (--bp-wide) {
-            width: 50%;
-          }
 
           &__link {
             text-align: right;
@@ -353,6 +333,26 @@
               padding-right: 1rem;
             }
           }
+
+          @media (--bp-x-desktop) {
+            width: 100%;
+          }
+
+          @media (--bp-wide) {
+            width: 50%;
+          }
+        }
+
+        @media (--bp-x-desktop) {
+          width: 50%;
+          flex-direction: column;
+          padding-right: 1rem;
+        }
+
+        @media (--bp-wide) {
+          width: 50%;
+          flex-direction: row;
+          padding-right: 0;
         }
       }
 
