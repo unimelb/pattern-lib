@@ -83,6 +83,10 @@ export {
 }
   from '../../components/cards/CardEvents.vue';
 export {
+  default as CardFeaturesPanel,
+}
+  from '../../components/cards/CardFeaturesPanel.vue';
+export {
   default as CheckList,
 }
   from '../../components/check-list/CheckList.vue';
