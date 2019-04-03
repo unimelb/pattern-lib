@@ -85,6 +85,7 @@
               <div
                 v-if="rootitem.items"
                 ref="panels"
+                :class="{'inner--fade': isAnimate}"
                 class="inner"
               >
                 <div
@@ -238,6 +239,8 @@ export default {
       isDesktopOpen: false,
       current: 0,
       pointer: 0,
+      lastIndex: 0,
+      isAnimate: true,
     };
   },
   computed: {
@@ -280,6 +283,14 @@ export default {
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
+      }
+      if (this.lastIndex !== 0 && this.items[rootindex].items !== undefined && (rootindex === this.lastIndex - 1 || rootindex === this.lastIndex + 1)) {
+        this.isAnimate = false;
+      } else {
+        this.isAnimate = true;
+      }
+      if (this.items[rootindex].items !== undefined) {
+        this.lastIndex = rootindex;
       }
     },
     dismissDesktopMenu(props = {}) {

@@ -45,7 +45,9 @@
     transform: none;
     transition: var(--tr-transform);
     background-color: rgb(var(--col-brand));
-    animation: fadeIn .5s backwards;
+    &--fade {
+      animation: fadeIn .5s backwards;
+    }
 
     &.open {
       transform: translateX(-100%);
