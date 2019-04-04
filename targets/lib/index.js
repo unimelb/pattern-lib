@@ -65,6 +65,7 @@ import PhotoGalleryInPage from '../../components/photo-gallery-in-page/PhotoGall
 import CardStat from '../../components/cards/CardStat.vue';
 import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue';
 import CardEvents from '../../components/cards/CardEvents.vue';
+import CardFeaturesPanel from '../../components/cards/CardFeaturesPanel.vue';
 
 import '../../components';
 
@@ -135,6 +136,7 @@ Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
 Vue.component('card-stat', CardStat);
 Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
+Vue.component('card-features-panel', CardFeaturesPanel);
 
 // Create Vue instance
 new Vue({
