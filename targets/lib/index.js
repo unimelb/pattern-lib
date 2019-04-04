@@ -61,9 +61,11 @@ import Welcome from '../../components/welcome/Welcome.vue';
 import CardImage from '../../components/cards/CardImage.vue';
 import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
+import PhotoGalleryInPage from '../../components/photo-gallery-in-page/PhotoGalleryInPage.vue';
 import CardStat from '../../components/cards/CardStat.vue';
 import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue';
 import CardEvents from '../../components/cards/CardEvents.vue';
+import CardFeaturesPanel from '../../components/cards/CardFeaturesPanel.vue';
 
 import '../../components';
 
@@ -130,9 +132,11 @@ Vue.component('sublink-menu-item', SublinkMenuItem);
 Vue.component('welcome', Welcome);
 Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
+Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
 Vue.component('card-stat', CardStat);
 Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
+Vue.component('card-features-panel', CardFeaturesPanel);
 
 // Create Vue instance
 new Vue({

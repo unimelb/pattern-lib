@@ -1,0 +1,98 @@
+.figure {
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--vr);
+
+  img,
+  .embed {
+    width: 100%;
+  }
+
+  figcaption {
+    margin-top: 1.5em;
+    margin-right: auto;
+    margin-left: auto;
+    caption-side: bottom;
+    color: color(rgb(var(--col-black-mid-2)) shade(30%));
+    font-size: .9em;
+    font-style: italic;
+    text-align: center;
+  }
+
+  &--fill {
+    margin: 0;
+    padding: 0;
+
+    img {
+      display: block;
+    }
+
+    figcaption {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &--inset {
+    figcaption {
+      @media (--bp-desktop) {
+        display: table-caption;
+        margin-top: inherit;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 2rem;
+          margin-top: calc(0 - var(--vr) / 2);
+          border-top: 2px solid rgb(var(--col-black-mid-2));
+        }
+      }
+    }
+
+    @media (--bp-desktop) {
+      display: table;
+      position: relative;
+      width: 50%;
+
+      &-right {
+        margin-right: -5rem;
+        margin-left: auto;
+        float: right;
+
+        .figure--inset-lge & {
+          margin-right: -10rem;
+        }
+
+        figcaption {
+          padding-right: var(--vr);
+          text-align: right;
+
+          &::before {
+            right: var(--vr);
+          }
+        }
+      }
+
+      &-left {
+        margin-left: -5rem;
+        float: left;
+
+        .figure--inset-lge & {
+          margin-left: -10rem;
+        }
+
+        figcaption {
+          padding-left: var(--vr);
+          text-align: left;
+
+          &::before {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  &--lge { width: 75%; }
+  &--med { width: 50%; }
+  &--sml { width: 35%; }
+}

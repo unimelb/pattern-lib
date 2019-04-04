@@ -10,6 +10,7 @@
           href="#"
           phone="+123456789"
           email="emailme@google.com"
+          excerpt="Lorem ipsum dolor sit amet, consectetur."
         />
       </ListItem>
       <ListItem>
@@ -20,6 +21,7 @@
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           href="#"
           phone="+123456789"
+          excerpt="Lorem ipsum dolor sit amet, consectetur."
         />
       </ListItem>
       <ListItem>
@@ -30,6 +32,7 @@
           thumb="https://randomuser.me/api/portraits/lego/5.jpg"
           href="#"
           email="emailme@google.com"
+          excerpt="Lorem ipsum dolor sit amet, consectetur."
         />
       </ListItem>
       <ListItem>
@@ -38,6 +41,7 @@
           position="Provost"
           thumb="https://randomuser.me/api/portraits/lego/6.jpg"
           href="#"
+          excerpt="Lorem ipsum dolor sit amet, consectetur."
         />
       </ListItem>
     </div>
