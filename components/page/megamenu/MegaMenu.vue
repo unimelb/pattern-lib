@@ -197,10 +197,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    topMenu: {
-      type: Array,
-      default: () => [],
-    },
   },
   data() {
     return {
