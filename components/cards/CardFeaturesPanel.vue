@@ -8,14 +8,13 @@
         class="card__thumb-img"/>
     </div>
     <div class="card__inner">
-      <div class="card__subheader">
-        <h5 class="card__title">{{ title }}</h5>
-        <p class="card__meta">{{ text }}</p>
-      </div>
+      <h5 class="card__title">{{ title }}</h5>
+      <p class="card__meta">{{ text }}</p>
     </div>
-    <div class="card__footer">
+    <div
+      v-if="href"
+      class="card__footer">
       <ButtonIcon
-        v-if="href"
         :href="href"
         class="btn--wide btn--cta btn--sml">Read more</ButtonIcon>
     </div>
