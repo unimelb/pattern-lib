@@ -17,6 +17,16 @@
     }
   }
 
+  .sub-title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    svg {
+      margin: 0 5px 0 0;
+    }
+  }
+
   .card__meta {
     margin-bottom: .25rem;
   }
