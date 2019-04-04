@@ -48,18 +48,15 @@
           <PageSearchForm
             v-if="isMobileOpen"
             aria-hidden="true"/>
+          <MegaMenuTitle
+            v-if="facultyName && isMobileOpen"
+            :title="facultyName"
+            :href="facultyLink"
+            :width="facultyWidth" />
           <ul
             class="menu__section"
             role="menu"
           >
-            <div
-              v-if="isMobileOpen"
-              class="menu__mobile">
-              <hr class="menu__mobile--line">
-              <p class="menu__mobile--title">
-                {{ facultyName }}
-              </p>
-            </div>
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
