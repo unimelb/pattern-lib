@@ -34,5 +34,6 @@ import CardDivisionHead from '../../../CardDivisionHead.vue';
 
 export default {
   components: { CardDivisionHead },
+  readme: { html: true, source: true },
 };
 </script>
