@@ -63,6 +63,8 @@ import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
 import PhotoGalleryInPage from '../../components/photo-gallery-in-page/PhotoGalleryInPage.vue';
 import CardStat from '../../components/cards/CardStat.vue';
+import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue';
+import CardEvents from '../../components/cards/CardEvents.vue';
 
 import '../../components';
 
@@ -131,6 +133,8 @@ Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
 Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
 Vue.component('card-stat', CardStat);
+Vue.component('card-showcase-profile', CardShowcaseProfile);
+Vue.component('card-events', CardEvents);
 
 // Create Vue instance
 new Vue({
