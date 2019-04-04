@@ -1,7 +1,6 @@
 <template>
   <div
     :style="{'width': width && width || '50%'}"
-    :class="hasAperture ? 'page-title--aperture' : '' "
     class="page-title">
     <div class="page-title--top-layout">
       <div class="page-title__separator"/>
@@ -28,21 +27,6 @@ export default {
     width: {
       type: [String, Boolean],
       default: false,
-    },
-    hasAperture: {
-      type: Boolean,
-      default: false,
-    },
-    apertureColor: {
-      type: String,
-      default: 'black',
-    },
-  },
-  computed: {
-    styles() {
-      return {
-        background: this.apertureColor,
-      };
     },
   },
 };
