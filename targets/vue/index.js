@@ -254,3 +254,8 @@ export {
   default as Dropdown,
 }
   from '../../components/dropdown/Dropdown.vue';
+
+export {
+  default as PhotoGalleryInPage,
+}
+  from '../../components/photo-gallery-in-page/PhotoGalleryInPage.vue';
