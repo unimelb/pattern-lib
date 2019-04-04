@@ -16,7 +16,6 @@
     position: relative;
     z-index: 1;
     top: 6px;
-    padding-left: .75rem;
   }
 
   @media (--bp-max-tablet) {

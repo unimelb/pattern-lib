@@ -6,7 +6,7 @@ import HybridMenu from './HybridMenu.vue';
 import HybridMenuProp from './HybridMenuProp.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
 import HybridMenuWithTopNav from './HybridMenuWithTopNav.vue';
-import MegaMenuExpanded from './MegaMenuExpanded.vue';
+// import MegaMenuExpanded from './MegaMenuExpanded.vue';
 
 storiesOf('Page / Mega menu', module)
   .add('Menu / hamburger hybrid', createStory(HybridMenu))
