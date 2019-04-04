@@ -3,6 +3,10 @@ export {
 }
   from '../../components/accordion/Accordion.vue';
 export {
+  default as AccordionTable,
+}
+  from '../../components/accordion/AccordionTable.vue';
+export {
   default as AccordionGroup,
 }
   from '../../components/accordion/AccordionGroup.vue';

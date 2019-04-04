@@ -3,11 +3,11 @@
     ref="comp"
     class="accordion">
     <template slot="default">
-      <slot name="header-table"/>
+      <slot name="title"/>
     </template>
     <template slot="hidden">
       <div class="toggleblock__hidden-inner">
-        <slot/>
+        <slot name="container"/>
       </div>
     </template>
   </ToggleBlock>
