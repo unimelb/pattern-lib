@@ -26,15 +26,3 @@ export default {
   readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>
-
-<style>
-.sub-title {
-  display: flex;
-  align-items: center;
-  margin: 0;
-
-  svg {
-    margin: 0 5px 0 0;
-  }
-}
-</style>
