@@ -35,9 +35,9 @@
   }
 
   &--show-on-desktop {
-    display:none;
+    display: none;
 
-    @media (--bp-x-desktop){
+    @media (--bp-x-desktop) {
       display: block;
     }
   }
