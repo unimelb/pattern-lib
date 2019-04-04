@@ -89,13 +89,13 @@
 </template>
 
 <script>
-import VueAwesomeSwiper from 'vue-awesome-swiper';
+import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import 'swiper/dist/css/swiper.css';
 
 import VideoEmbed from '../embed/VideoEmbed.vue';
 
 export default {
-  components: { VideoEmbed, VueAwesomeSwiper },
+  components: { VideoEmbed, swiper, swiperSlide },
   props: {
     media: {
       type: Array,
