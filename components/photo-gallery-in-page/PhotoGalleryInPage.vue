@@ -89,10 +89,13 @@
 </template>
 
 <script>
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
+
 import VideoEmbed from '../embed/VideoEmbed.vue';
 
 export default {
-  components: { VideoEmbed },
+  components: { VideoEmbed, VueAwesomeSwiper },
   props: {
     media: {
       type: Array,
@@ -106,22 +109,11 @@ export default {
       selectedIndex: 0,
       swiperOption: {
         on: {
-          // init() {},
-          // click(e) {},
-          // tap(e) {},
-          // doubleTap(e) {},
-          // sliderMove(e) {},
           slideChange() {},
-          // slideChangeTransitionStart() {},
           slideChangeTransitionEnd() {
             vm.selectedItem = vm.media[this.activeIndex];
             vm.selectedIndex = this.activeIndex;
           },
-          // transitionStart() {},
-          // transitionEnd() {},
-          // fromEdge() {},
-          // reachBeginning() {},
-          // reachEnd() {},
         },
       },
     };
