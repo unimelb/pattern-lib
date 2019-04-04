@@ -6,8 +6,6 @@
     faculty-name="Faculty of Fine Arts and Music"
     faculty-link="/faculty-link"
     faculty-width="20%"
-    faculty-aperture
-    faculty-aperture-color="red"
   />
 </template>
 

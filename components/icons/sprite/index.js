@@ -3,6 +3,7 @@ import './campaign.svg';
 import './chevron-down.svg';
 import './chevron-left.svg';
 import './chevron-right.svg';
+import './chevron-up.svg';
 import './clock.svg';
 import './close.svg';
 import './download.svg';

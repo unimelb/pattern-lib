@@ -1,6 +1,8 @@
 .card--generic {
   background-color: white;
   color: rgb(var(--col-brand));
+  border-radius: var(--br-cards);
+  box-shadow: rgb(var(--col-box-shadow)) 0 2px 2px 0;
 
   .card__header {
     margin-bottom: .5rem;
@@ -31,6 +33,23 @@
     a {
       font-weight: var(--fw-semibold);
       text-decoration: underline;
+    }
+  }
+
+  &--full-width {
+    .card__inner {
+      .grid--1col .cell & {
+        flex: 1;
+        margin-right: 0;
+      }
+    }
+
+    @media (--bp-desktop) {
+      .card__thumb--zoom {
+        width: 30%;
+        height: 100%;
+        background-size: contain;
+      }
     }
   }
 }
