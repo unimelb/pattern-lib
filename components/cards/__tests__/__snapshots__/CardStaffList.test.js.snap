@@ -8,12 +8,12 @@ exports[`CardStaffList should match snapshot 1`] = `
     aria-label="Profile image"
     class="card__thumb"
     href="#"
-    style="background-image: url(https://via.placeholder.com/400x200);"
+    style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png);"
     title="profile image"
   />
    
   <div
-    class="card__inner "
+    class="card__inner"
   >
     <a
       aria-label="Profile position"
@@ -34,17 +34,11 @@ exports[`CardStaffList should match snapshot 1`] = `
         href="#"
         title="profile name link"
       >
-        
         Test name
-      
       </a>
     </p>
      
-    <div
-      class="card__excerpt"
-    >
-      Lorem ipsum dolor sit amet, consectetur.
-    </div>
+    <!---->
      
     <div
       class="card__footer"
