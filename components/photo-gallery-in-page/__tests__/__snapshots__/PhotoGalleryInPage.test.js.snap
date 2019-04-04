@@ -24,19 +24,7 @@ exports[`PhotoGalleryInPage should match snapshot 1`] = `
     <div
       class="photo-gallery-in-page--container"
     >
-      <swiper
-        options="[object Object]"
-      >
-        <swiper-slide>
-          <figure
-            class="photo-gallery-in-page__figure"
-          >
-            <!---->
-             
-            <!---->
-          </figure>
-        </swiper-slide>
-      </swiper>
+      <!---->
     </div>
      
     <div
