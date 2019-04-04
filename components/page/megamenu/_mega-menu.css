@@ -34,6 +34,14 @@
     background-color: rgba(0, 0, 0, .5);
   }
 
+  &--show-on-desktop {
+    display:none;
+
+    @media (--bp-x-desktop){
+      display: block;
+    }
+  }
+
   .inner {
     position: absolute;
     top: 0;

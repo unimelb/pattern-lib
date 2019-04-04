@@ -31,6 +31,7 @@
         @click="dismissMobileMenuIfBlanket"
         @keypress.27="dismissMobileMenu">
         <MegaMenuTopNavigation
+          class="megamenu--show-on-desktop"
           v-if="isShowTopMenu && isMobileOpen === false"
           :items="topMenu"/>
         <nav
