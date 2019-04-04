@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import SearchFilter from "../SearchFilter.vue";
+import SearchFilter from '../SearchFilter.vue';
 
 export default {
   components: { SearchFilter },
-  readme: { html: true, source: false }
+  readme: { html: true, source: false },
 };
 </script>

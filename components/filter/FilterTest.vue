@@ -2,45 +2,40 @@
   <div>
     <h1>Filter</h1>
 
-    <input type="text" v-model="searchTitle" placeholder="Search Title">
-    <input type="text" v-model="searchType" placeholder="Search Type">
-    <label>
-      Perfomance type
-      <Dropdown v-model="searchType" :values="getTypes"/>
-    </label>
-    <input type="text" v-model="searchSchool" placeholder="Search School">
-    <input type="text" v-model="searchDisciplines" placeholder="Search Disciplines">
-
-    <div v-for="(item, index) in filteredData" :key="index">
-      <h2>Title: {{ item.title }}</h2>
-      <p>Type: {{ item.type }}</p>
-      <p>School: {{ item.school }}</p>
-      <p>Discipline: {{ item.disciplines }}</p>
-    </div>
+    <input
+      v-model="searchTitle"
+      type="text"
+      placeholder="Search Title">
+    <input
+      v-model="searchDescription"
+      type="text"
+      placeholder="Search Description">
 
     <SectionWrap class="bg-alt">
-      <div class="grid grid--2col">
-        <ListItem v-for="(item, index) in filteredData" :key="index">
+      <div class="grid grid--3col">
+        <ListItem
+          v-for="(item, index) in filteredData"
+          :key="index">
           <GenericCard
-            :cols="2"
-            thumb="https://via.placeholder.com/400x200"
+            :cols="3"
+            :thumb="item.img_url"
             :title="item.title"
-            href="#"
-            :excerpt="item.disciplines"
+            :href="item.link"
+            :excerpt="item.description"
           >
-            <div slot="sub-title-1" class="sub-title">
-              <span>Sub-title 1</span>
+            <div
+              slot="sub-title-1"
+              class="sub-title">
+              <span>{{ item.performance }}</span>
             </div>
-            <div slot="sub-title-2" class="sub-title">
+            <div
+              slot="sub-title-2"
+              class="sub-title">
               <SvgIcon name="calendar"/>
-              <span>March 31 1992</span>
-            </div>
-            <div slot="sub-title-3" class="sub-title">
-              <span>Theme: Lorem ipsum.</span>
+              <span>{{ item.start_time }}</span>
             </div>
             <template slot="links">
-              <a href="/">View generic details ></a>
-              <a href="/">View generic staff ></a>
+              <a :href="item.link">View showcase ></a>
             </template>
           </GenericCard>
         </ListItem>
@@ -49,63 +44,25 @@
   </div>
 </template>
 <script>
-import Dropdown from "../dropdown/Dropdown.vue";
-import GenericCard from "../cards/GenericCard.vue";
+import GenericCard from '../cards/GenericCard.vue';
+import cardsData from './data.json';
 
 export default {
-  components: { Dropdown, GenericCard },
+  components: { GenericCard },
   data() {
     return {
-      data: [
-        {
-          title: "test 1 aa",
-          type: "season", //array
-          school: "a", //array
-          disciplines: "arts" //array
-        },
-        {
-          title: "test 2 bb",
-          type: "perfomance",
-          school: "b",
-          disciplines: "music"
-        },
-        {
-          title: "test 1 aa",
-          type: "season",
-          school: "a",
-          disciplines: "arts"
-        },
-        {
-          title: "test 1 aa",
-          type: "season",
-          school: "a",
-          disciplines: "arts"
-        }
-      ],
-      searchTitle: "",
-      searchType: "",
-      searchSchool: "",
-      searchDisciplines: ""
+      searchTitle: '',
+      searchDescription: '',
+      cardsData,
     };
   },
   computed: {
     filteredData() {
-      return this.data.filter(data => {
-        return (
-          data.title.match(this.searchTitle) &&
-          data.type.match(this.searchType) &&
-          data.school.match(this.searchSchool) &&
-          data.disciplines.match(this.searchDisciplines)
-        );
-      });
+      return this.cardsData.filter(
+        data => data.title.match(new RegExp(this.searchTitle, 'i'))
+          && data.description.match(new RegExp(this.searchDescription, 'i'))
+      );
     },
-    getTypes() {
-      let types = [];
-      this.data.forEach(element => {
-        types.push(element.type);
-      });
-      return types;
-    }
-  }
+  },
 };
 </script>

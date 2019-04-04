@@ -9,8 +9,13 @@
             type="search"
             placeholder="Type to search courses"
           >
-          <button class="buttonSearch" aria-label="Submit">
-            <SvgIcon height="10px" width="10px" name="search"/>
+          <button
+            class="buttonSearch"
+            aria-label="Submit">
+            <SvgIcon
+              height="10px"
+              width="10px"
+              name="search"/>
             <span>Search</span>
           </button>
           <button
@@ -28,15 +33,15 @@
 </template>
 
 <script>
-import FilterDetails from "./FilterDetails.vue";
+import FilterDetails from './FilterDetails.vue';
 
 export default {
   components: { FilterDetails },
   data() {
     return {
-      showFilterDetails: false
+      showFilterDetails: false,
     };
-  }
+  },
 };
 </script>
 
