@@ -8,7 +8,7 @@ import WithoutPopup from './WithoutPopup.vue';
 import TwoGalleries from './TwoGalleries.vue';
 /* ##Import story component here */
 
-storiesOf('Photo Gallery', module)
+storiesOf('Photo Gallery (Deprecated)', module)
   .add('Default', createStory(PhotoGalleryDefault))
   .add('With captions', createStory(WithCaptions))
   .add('Single Column', createStory(SingleColumn))
