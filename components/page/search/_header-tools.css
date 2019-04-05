@@ -9,7 +9,6 @@
   &__search,
   &__menu {
     display: inline-block;
-    width: 4rem;
     margin-right: .25rem;
     margin-left: .25rem;
     color: white;
