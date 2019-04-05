@@ -7,8 +7,7 @@
     <div class="page-header__inner">
       <a
         class="link-img link-reset"
-        href="https://www.unimelb.edu.au/"
-      >
+        href="https://www.unimelb.edu.au/">
         <div class="logo-mask">
           <img
             class="page-header__logo"
@@ -29,10 +28,13 @@
         ref="blanket"
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
-        @keypress.27="dismissMobileMenu">
+        @keypress.27="dismissMobileMenu"
+      >
         <MegaMenuTopNavigation
-          v-if="isShowTopMenu"
-          :items="topMenu"/>
+          v-if="isShowTopMenu && isMobileOpen === false"
+          :items="topMenu"
+          class="megamenu--show-on-desktop"
+        />
         <nav
           id="sitemapmenu"
           ref="rootmenu"
@@ -43,18 +45,23 @@
             role="button"
             aria-label="Close"
             class="menu__back-btn"
-            @click="dismissMobileMenu">Close</div>
+            @click="dismissMobileMenu"
+          >Close</div>
           <PageSearchForm
             v-if="isMobileOpen"
             aria-hidden="true"/>
+          <MegaMenuTitle
+            v-if="facultyName && isMobileOpen"
+            :title="facultyName"
+            :href="facultyLink"
+            :width="facultyWidth"
+          />
           <ul
             class="menu__section"
-            role="menu"
-          >
+            role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
-              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               :key="`rootitem-${rootindex}`"
               :tabindex="isSelected(rootindex)"
               class="menu__item"
@@ -65,63 +72,88 @@
               <a
                 :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
-                :class="linkClasses(rootindex, rootitem)"
+                class="menu__link"
                 @click="openInner"
-                v-html="rootitem.title"
-              />
+              >
+                {{ rootitem.title }}
+                <SvgIcon
+                  v-if="isMobileOpen"
+                  name="chevron-right"
+                  class="icon"/>
+              </a>
               <div
                 v-if="rootitem.items"
                 ref="panels"
+                :class="{'inner--fade': isAnimate}"
                 class="inner"
               >
                 <div
                   role="button"
                   class="menu__back-btn"
                   @click="closeInner">Back</div>
+                <div class="menu__block">
+                  <div>
+                    <a
+                      :href="rootitem.href"
+                      class="menu__nested-parent">{{ rootitem.title }}</a>
+                  </div>
+                  <ul
+                    :class="isColColumns(rootindex)"
+                    class="menu__section">
+                    <li
+                      v-for="(menuitem, menuindex) in rootitem.items"
+                      :key="`menuitem-${menuindex}`"
+                      class="menu__item"
+                    >
+                      <a
+                        :href="menuitem.href"
+                        tabindex="0"
+                        class="menu__link"
+                        role="menuitem"
+                        v-html="menuitem.title"
+                      />
+                      <SvgIcon
+                        v-if="!isMobileOpen"
+                        name="chevron-right"
+                        class="icon"/>
+                    </li>
+                  </ul>
+                </div>
                 <div class="menu__aside">
-                  <a
-                    :href="rootitem.href"
-                    class="menu__nested-parent">{{ rootitem.title }}</a>
                   <component
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
                     :href="rootitem.feature.link"
                     :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
                     class="menu__campaign"
-                  >
+                  />
+                  <div
+                    v-if="rootitem.feature"
+                    class="menu__aside-info">
                     <p
-                      v-if="rootitem.feature.text || rootitem.feature.title"
-                      class="menu__campaign-text">
-                      <strong
-                        v-if="rootitem.feature.title"
-                        class="menu__campaign-title">{{ rootitem.feature.title }}</strong>
-                      <span
-                        v-if="rootitem.feature.text"
-                        v-html="rootitem.feature.text"/>
-                    </p>
-                    <span
-                      v-if="rootitem.feature.alt"
-                      class="screenreaders-only"
-                      v-html="rootitem.feature.alt"
-                    />
-                  </component>
+                      v-if="rootitem.feature.text"
+                      class="menu__aside-info__text"
+                    >{{ rootitem.feature.text }}</p>
+                    <div
+                      v-if="rootitem.feature.link"
+                      class="menu__aside-info__link">
+                      <a
+                        :href="rootitem.feature.link"
+                        class="link">
+                        View more details
+                        <SvgIcon
+                          name="chevron-right"
+                          class="icon"/>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <ul class="menu__section">
-                  <li
-                    v-for="(menuitem, menuindex) in rootitem.items"
-                    :key="`menuitem-${menuindex}`"
-                    class="menu__item">
-                    <a
-                      :href="menuitem.href"
-                      tabindex="0"
-                      class="menu__link"
-                      role="menuitem"
-                      v-html="menuitem.title"/>
-                  </li>
-                </ul>
               </div>
             </li>
           </ul>
+          <MegaMenuTopNavigation
+            v-if="isMobileOpen"
+            :items="topMenu"/>
         </nav>
       </div>
       <PageSearch/>
@@ -141,8 +173,9 @@
             role="presentation"
             focusable="false"
             aria-labelledby="icon-menu"
-            viewBox="10 10 26 28">
-            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
+            viewBox="10 10 26 28"
+          >
+            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/>
           </svg>
           <span
             id="icon-menu"
@@ -167,7 +200,10 @@ import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
   components: {
-    PageSearch, PageSearchForm, MegaMenuTitle, MegaMenuTopNavigation,
+    PageSearch,
+    PageSearchForm,
+    MegaMenuTitle,
+    MegaMenuTopNavigation,
   },
   props: {
     items: {
@@ -204,11 +240,15 @@ export default {
       isDesktopOpen: false,
       current: 0,
       pointer: 0,
+      lastIndex: 0,
+      isAnimate: true,
     };
   },
   computed: {
     isMobile() {
-      return (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false);
+      return this.$refs.headerroot
+        ? this.$refs.headerroot.offsetWidth < 768
+        : false;
     },
     isShowTopMenu() {
       return this.topMenu.length;
@@ -219,6 +259,13 @@ export default {
     window.addEventListener('resize', this.closeMobileIfDesktop.bind(this));
   },
   methods: {
+    isColColumns(rootindex) {
+      if (this.isMobileOpen) return '';
+      if (this.items[rootindex].items.length <= 5) {
+        return 'cols-1';
+      }
+      return 'cols-2';
+    },
     rootOrChildrenActive(rootitem) {
       if (!this.active) return false;
 
@@ -233,26 +280,37 @@ export default {
 
       return displayActive;
     },
-    linkClasses(rootindex, rootitem) {
-      // if (rootindex === 0) {
-      //   return 'menu__link menu__nested-parent';
-      // }
-      if (rootitem.items) {
-        return 'menu__link menu__link--nested';
-      }
-      return 'menu__link';
-    },
     activateDesktopMenu(rootindex) {
-      if (rootindex !== -1 && this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
+      if (
+        rootindex !== -1
+        && this.items[rootindex].items !== undefined
+        && !this.isMobileOpen
+        && !this.isMobile
+      ) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
       }
+      if (
+        this.lastIndex !== 0
+        && this.items[rootindex].items !== undefined
+        && (rootindex === this.lastIndex - 1 || rootindex === this.lastIndex + 1)
+      ) {
+        this.isAnimate = false;
+      } else {
+        this.isAnimate = true;
+      }
+      if (this.items[rootindex].items !== undefined) {
+        this.lastIndex = rootindex;
+      }
     },
     dismissDesktopMenu(props = {}) {
       const { force } = props;
-      if ((this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) || force) {
+      if (
+        (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
+        || force
+      ) {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;
@@ -292,7 +350,11 @@ export default {
       this.dismissMobileMenu();
     },
     openInner(e) {
-      if (this.$refs.headerroot && this.$refs.headerroot.offsetWidth < 768 && e.target.nextElementSibling) {
+      if (
+        this.$refs.headerroot
+        && this.$refs.headerroot.offsetWidth < 768
+        && e.target.nextElementSibling
+      ) {
         e.preventDefault();
         e.target.nextElementSibling.classList.add('open');
       }
@@ -321,7 +383,9 @@ export default {
 
       let cycle;
       if (e.keyCode === 38 || e.keyCode === 40) {
-        cycle = this.$refs.rootitems[this.current].querySelectorAll('.menu__aside a,.menu__section a');
+        cycle = this.$refs.rootitems[this.current].querySelectorAll(
+          '.menu__aside a,.menu__section a'
+        );
       }
 
       switch (e.keyCode) {

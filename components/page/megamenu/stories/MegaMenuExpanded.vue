@@ -34,7 +34,7 @@ export default {
           feature: {
             title: 'Campaign title',
             text:
-              'This should in theory be a super short para to sell the campaign, but I know <em>someone</em> will put too much text in',
+                                'This should in theory be a super short para to sell the campaign, but I know <em>someone</em> will put too much text in',
             img: 'https://placeimg.com/360/200/arch',
             link: 'http://google.com',
           },
@@ -58,7 +58,7 @@ export default {
             { title: 'Entry non requirements7', href: 'http://www.google.com' },
             {
               title:
-                'Entry non requirements8',
+                                    'Entry non requirements8',
               href: 'http://www.google.com',
             },
             { title: 'Entry non requirements9', href: 'http://www.google.com' },

@@ -1,20 +1,30 @@
 .page-title {
-  margin: 0 1.5em;
+  margin: 0 1.25em;
+  padding: 1rem 0;
 
   &__separator {
     width: 20px;
     height: 2px;
     background: #fff;
+    margin-bottom: .25rem;
   }
 
   &__text {
     color: #fff;
     text-decoration: none;
+
+    &:visited {
+      color: #fff;
+    }
   }
 
   &--top-layout {
-    position: relative;
-    z-index: 1;
+    /* position: relative;
+    z-index: 1; */
+
+    @media (--bp-desktop) {
+      margin-top: 6px;
+    }
   }
 
   @media (--bp-max-tablet) {
