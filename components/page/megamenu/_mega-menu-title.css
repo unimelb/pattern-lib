@@ -1,9 +1,6 @@
 .page-title {
   margin: 0 1.25em;
-
-  .active & {
-    padding: 1rem 0;
-  }
+  padding: 1rem 0;
 
   &__separator {
     width: 20px;
@@ -20,10 +17,9 @@
   &--top-layout {
     position: relative;
     z-index: 1;
-    top: 6px;
 
-    .active & {
-      top: 0;
+    @media (--bp-desktop) {
+      top: 6px;
     }
   }
 
