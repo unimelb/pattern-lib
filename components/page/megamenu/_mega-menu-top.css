@@ -1,21 +1,41 @@
 .megamenu__blanket {
   .mega-top {
-    display: flex;
-    justify-content: flex-end;
-    padding: .5rem 2rem 0;
+    padding: 0;
     list-style-type: none;
     margin: 0;
+
     li {
       margin-bottom: 0;
+    }
+
+    @media (--bp-desktop) {
+      display: flex;
+      justify-content: flex-end;
+      padding: .5rem 2rem 0;
+    }
+
+    @media (--bp-x-desktop) {
+      padding: .5rem .8rem 0;
+    }
+
+    @media (--bp-wide) {
+      padding: .5rem 1rem 0;
+    }
+
+    @media (--bp-x-wide) {
+      padding: .5rem 2rem 0;
     }
   }
 
   .menu-top__item {
     margin-left: 1.25rem;
     color: rgba(var(--col-blue-mid-1));
-    font-size: .8rem;
+    font-size: .9rem;
     text-decoration: none;
     text-transform: uppercase;
+    @media (--bp-max-mobile) {
+      color: white;
+    }
   }
 
   .menu-top__item:hover,
