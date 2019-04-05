@@ -7,8 +7,7 @@
     <div class="page-header__inner">
       <a
         class="link-img link-reset"
-        href="https://www.unimelb.edu.au/"
-      >
+        href="https://www.unimelb.edu.au/">
         <div class="logo-mask">
           <img
             class="page-header__logo"
@@ -29,11 +28,13 @@
         ref="blanket"
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
-        @keypress.27="dismissMobileMenu">
+        @keypress.27="dismissMobileMenu"
+      >
         <MegaMenuTopNavigation
           v-if="isShowTopMenu && isMobileOpen === false"
           :items="topMenu"
-          class="megamenu--show-on-desktop"/>
+          class="megamenu--show-on-desktop"
+        />
         <nav
           id="sitemapmenu"
           ref="rootmenu"
@@ -44,7 +45,8 @@
             role="button"
             aria-label="Close"
             class="menu__back-btn"
-            @click="dismissMobileMenu">Close</div>
+            @click="dismissMobileMenu"
+          >Close</div>
           <PageSearchForm
             v-if="isMobileOpen"
             aria-hidden="true"/>
@@ -52,11 +54,11 @@
             v-if="facultyName && isMobileOpen"
             :title="facultyName"
             :href="facultyLink"
-            :width="facultyWidth" />
+            :width="facultyWidth"
+          />
           <ul
             class="menu__section"
-            role="menu"
-          >
+            role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -72,7 +74,8 @@
                 :href="rootitem.href"
                 class="menu__link"
                 @click="openInner"
-              >{{ rootitem.title }}
+              >
+                {{ rootitem.title }}
                 <SvgIcon
                   v-if="isMobileOpen"
                   name="chevron-right"
@@ -100,13 +103,15 @@
                     <li
                       v-for="(menuitem, menuindex) in rootitem.items"
                       :key="`menuitem-${menuindex}`"
-                      class="menu__item">
+                      class="menu__item"
+                    >
                       <a
                         :href="menuitem.href"
                         tabindex="0"
                         class="menu__link"
                         role="menuitem"
-                        v-html="menuitem.title"/>
+                        v-html="menuitem.title"
+                      />
                       <SvgIcon
                         v-if="!isMobileOpen"
                         name="chevron-right"
@@ -114,8 +119,7 @@
                     </li>
                   </ul>
                 </div>
-                <div
-                  class="menu__aside">
+                <div class="menu__aside">
                   <component
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
@@ -124,12 +128,17 @@
                     class="menu__campaign"
                   />
                   <div
-                    v-if="!isMobileOpen"
+                    v-if="rootitem.feature"
                     class="menu__aside-info">
-                    <p class="menu__aside-info__text">Dance 40 at VCA celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae felis id tortor congue dapibus. In pulvinar semper dolor. Sed non mi non arcu dictum hendrerit. Nulla partititor sed rcu nec malesuada </p>
-                    <div class="menu__aside-info__link">
+                    <p
+                      v-if="rootitem.feature.text"
+                      class="menu__aside-info__text"
+                    >{{ rootitem.feature.text }}</p>
+                    <div
+                      v-if="rootitem.feature.link"
+                      class="menu__aside-info__link">
                       <a
-                        href="/"
+                        :href="rootitem.feature.link"
                         class="link">
                         View more details
                         <SvgIcon
@@ -164,8 +173,9 @@
             role="presentation"
             focusable="false"
             aria-labelledby="icon-menu"
-            viewBox="10 10 26 28">
-            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
+            viewBox="10 10 26 28"
+          >
+            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/>
           </svg>
           <span
             id="icon-menu"
@@ -190,7 +200,10 @@ import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
   components: {
-    PageSearch, PageSearchForm, MegaMenuTitle, MegaMenuTopNavigation,
+    PageSearch,
+    PageSearchForm,
+    MegaMenuTitle,
+    MegaMenuTopNavigation,
   },
   props: {
     items: {
@@ -233,7 +246,9 @@ export default {
   },
   computed: {
     isMobile() {
-      return (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false);
+      return this.$refs.headerroot
+        ? this.$refs.headerroot.offsetWidth < 768
+        : false;
     },
     isShowTopMenu() {
       return this.topMenu.length;
@@ -266,13 +281,22 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex) {
-      if (rootindex !== -1 && this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
+      if (
+        rootindex !== -1
+        && this.items[rootindex].items !== undefined
+        && !this.isMobileOpen
+        && !this.isMobile
+      ) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
       }
-      if (this.lastIndex !== 0 && this.items[rootindex].items !== undefined && (rootindex === this.lastIndex - 1 || rootindex === this.lastIndex + 1)) {
+      if (
+        this.lastIndex !== 0
+        && this.items[rootindex].items !== undefined
+        && (rootindex === this.lastIndex - 1 || rootindex === this.lastIndex + 1)
+      ) {
         this.isAnimate = false;
       } else {
         this.isAnimate = true;
@@ -283,7 +307,10 @@ export default {
     },
     dismissDesktopMenu(props = {}) {
       const { force } = props;
-      if ((this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) || force) {
+      if (
+        (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
+        || force
+      ) {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;
@@ -323,7 +350,11 @@ export default {
       this.dismissMobileMenu();
     },
     openInner(e) {
-      if (this.$refs.headerroot && this.$refs.headerroot.offsetWidth < 768 && e.target.nextElementSibling) {
+      if (
+        this.$refs.headerroot
+        && this.$refs.headerroot.offsetWidth < 768
+        && e.target.nextElementSibling
+      ) {
         e.preventDefault();
         e.target.nextElementSibling.classList.add('open');
       }
@@ -352,7 +383,9 @@ export default {
 
       let cycle;
       if (e.keyCode === 38 || e.keyCode === 40) {
-        cycle = this.$refs.rootitems[this.current].querySelectorAll('.menu__aside a,.menu__section a');
+        cycle = this.$refs.rootitems[this.current].querySelectorAll(
+          '.menu__aside a,.menu__section a'
+        );
       }
 
       switch (e.keyCode) {
