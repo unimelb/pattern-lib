@@ -12,6 +12,10 @@
   &__text {
     color: #fff;
     text-decoration: none;
+
+    &:visited {
+      color: #fff;
+    }
   }
 
   &--top-layout {
