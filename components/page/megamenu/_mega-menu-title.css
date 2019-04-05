@@ -19,11 +19,11 @@
   }
 
   &--top-layout {
-    position: relative;
-    z-index: 1;
+    /* position: relative;
+    z-index: 1; */
 
     @media (--bp-desktop) {
-      top: 6px;
+      margin-top: 6px;
     }
   }
 

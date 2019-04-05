@@ -229,6 +229,19 @@
       }
     }
 
+    &__aside {
+      &-info {
+        margin: var(--vr) 1.25rem;
+
+        &__link {
+          a {
+            color: #fff;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
     &__campaign {
       display: block;
       position: relative;
@@ -336,11 +349,6 @@
 
           &__link {
             text-align: right;
-
-            a {
-              color: white;
-              font-weight: 600;
-            }
           }
 
           @media (--bp-x-desktop) {
