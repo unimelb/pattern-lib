@@ -16,8 +16,7 @@
           height="30"/>
       </div>
 
-      <div
-        class="photo-gallery-in-page--container">
+      <div class="photo-gallery-in-page--container">
         <swiper
           ref="slider"
           :options="swiperOption">
@@ -28,8 +27,7 @@
               <img
                 v-if="slide.type === 'image'"
                 :src="slide.src"
-                :alt="slide.title"
-              >
+                :alt="slide.title">
               <VideoEmbed
                 v-if="slide.type === 'video'"
                 :src="slide.src"/>
@@ -89,7 +87,10 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import {
+  swiper,
+  swiperSlide,
+} from 'vue-awesome-swiper/dist/vue-awesome-swiper';
 
 import VideoEmbed from '../embed/VideoEmbed.vue';
 
