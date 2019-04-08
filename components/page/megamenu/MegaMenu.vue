@@ -70,7 +70,7 @@
               @keydown="handleKey"
             >
               <a
-                :role="rootitem.items ? 'button' : 'menuitem'"
+                :role="rootitem.items ? 'menuitem' : 'button'"
                 :href="rootitem.href"
                 class="menu__link"
                 @click="openInner"
@@ -99,7 +99,8 @@
                   </div>
                   <ul
                     :class="isColColumns(rootindex)"
-                    class="menu__section">
+                    class="menu__section"
+                    role="menu">
                     <li
                       v-for="(menuitem, menuindex) in rootitem.items"
                       :key="`menuitem-${menuindex}`"

@@ -1,6 +1,8 @@
 <template>
   <nav >
-    <ul class="mega-top">
+    <ul
+      class="mega-top"
+      role="menu">
       <li
         v-for="(item, index) in items"
         :key="index"
