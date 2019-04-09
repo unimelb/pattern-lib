@@ -126,9 +126,13 @@
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
                     :href="rootitem.feature.link"
-                    :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
                     class="menu__campaign"
-                  />
+                  >
+                    <img
+                      :src="rootitem.feature.img"
+                      :alt="rootitem.feature.alt"
+                      class="menu__campaign--img">
+                  </component>
                   <div
                     v-if="rootitem.feature"
                     class="menu__aside-info">

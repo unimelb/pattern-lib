@@ -13,18 +13,19 @@
   }
 
   &--top-layout {
-    /* position: relative;
-    z-index: 1; */
+    @media(--bp-max-x-mobile){
+      margin-left: 20px;
+    }
+
+    @media (--bp-desktop) {
+      margin-top: 6px;
+    }
 
     hr{
       margin: 0 0 .25rem 0;
       width: 20px;
       size: 2px;
       background: #fff;
-    }
-
-    @media (--bp-desktop) {
-      margin-top: 6px;
     }
   }
 

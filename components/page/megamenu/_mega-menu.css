@@ -355,22 +355,16 @@
     .menu {
       &__aside {
         width: 50%;
-        display: flex;
-        flex-direction: row;
 
         &-info {
-          width: 50%;
+          width: 100%;
+
+          &__text{
+            padding: .5rem;
+          }
 
           &__link {
             text-align: right;
-          }
-
-          @media (--bp-x-desktop) {
-            width: 100%;
-          }
-
-          @media (--bp-wide) {
-            width: 50%;
           }
         }
 
@@ -387,18 +381,11 @@
       }
 
       &__campaign {
-        width: 50%;
+        width: 100%;
         margin: 0 1.5rem;
         min-height: 10rem;
-
-        @media (--bp-x-desktop) {
+        &--img{
           width: 100%;
-          margin: 0 0 1rem 0;
-        }
-
-        @media (--bp-wide) {
-          width: 50%;
-          margin: 0 1.5rem;
         }
       }
 

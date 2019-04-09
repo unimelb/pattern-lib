@@ -32,8 +32,7 @@ export default {
           href: '/why-melbourne',
           feature: {
             title: 'Campaign title',
-            text:
-              'Pariatur veniam occaecat mollit nostrud nostrud commodo aute adipisicing et. Nulla ipsum et eiusmod dolore id adipisicing ea nostrud consequat. Non cillum ullamco dolore fugiat nulla. Et Lorem ex magna enim dolore consectetur sunt consequat. Elit excepteur ipsum sunt laboris eu commodo anim proident occaecat.',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://placeimg.com/360/200/arch',
             link: 'http://google.com',
           },
@@ -50,9 +49,7 @@ export default {
           href: '/admissions',
           feature: {
             title: 'Different campaign',
-            text:
-              'Consequat id nostrud nulla et amet dolore proident velit nostrud elit cupidatat ut occaecat. Eiusmod laborum ullamco nisi commodo voluptate ex amet esse exercitation adipisicing in labore dolor. Ut enim incididunt ullamco aliqua consectetur. Anim veniam elit enim ea ex duis. Ad consectetur sunt eu ullamco. Veniam anim labore sint laboris esse. Mollit irure sit non ad ex eu nostrud id laboris ut qui.',
-            img: 'https://placeimg.com/360/200/nature',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           },
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
@@ -91,8 +88,7 @@ export default {
           href: '/student-experience',
           feature: {
             alt: 'screen reader only',
-            text:
-              'Commodo ullamco sit voluptate amet mollit et velit et sunt Lorem anim ipsum. Fugiat veniam fugiat voluptate laborum do sit nisi. Aliqua laborum commodo voluptate incididunt ullamco culpa exercitation ea deserunt consectetur occaecat eu. Pariatur esse eu voluptate adipisicing enim id. Aute est ea deserunt cillum ipsum. Exercitation laboris dolore eu laborum nostrud tempor in veniam aliqua dolor. Pariatur voluptate occaecat reprehenderit proident ex voluptate ea aliqua minim.',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://placeimg.com/360/200/nature',
             link: 'http://google.com',
           },
