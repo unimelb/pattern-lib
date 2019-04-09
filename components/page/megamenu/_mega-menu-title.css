@@ -1,17 +1,11 @@
 .page-title {
   margin: 0 1.25em;
   padding: 1rem 0;
-
-  &__separator {
-    width: 20px;
-    height: 2px;
-    background: #fff;
-    margin-bottom: .25rem;
-  }
+  text-decoration: none;
 
   &__text {
     color: #fff;
-    text-decoration: none;
+    padding-top: 2px;
 
     &:visited {
       color: #fff;
@@ -21,6 +15,13 @@
   &--top-layout {
     /* position: relative;
     z-index: 1; */
+
+    hr{
+      margin: 0 0 .25rem 0;
+      width: 20px;
+      size: 2px;
+      background: #fff;
+    }
 
     @media (--bp-desktop) {
       margin-top: 6px;
