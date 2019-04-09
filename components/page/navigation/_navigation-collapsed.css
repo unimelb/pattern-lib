@@ -1,0 +1,22 @@
+@import '../../_vars.css';
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 29px;
+  width: 252px;
+  background-color: var(--col-background);
+  border: 1px solid #979797;
+  border-radius: 3px;
+
+  div,
+  .select {
+    width: 100%;
+  }
+
+  &__fixed {
+    position: fixed;
+    top: 10px;
+  }
+}

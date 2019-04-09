@@ -1,10 +1,12 @@
 <template>
   <div>
-    <select class="select">
+    <select
+      class="select"
+      @change="callback">
       <option
         v-for="(value, index) in values"
         :key="index"
-        :value="value"
+        :value="value.value || value"
       >{{ value.label || value }}</option>
     </select>
   </div>
@@ -16,6 +18,10 @@ export default {
     values: {
       type: Array,
       required: true,
+    },
+    callback: {
+      type: Function,
+      default: () => {},
     },
   },
 };

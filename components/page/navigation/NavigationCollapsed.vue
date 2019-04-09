@@ -1,6 +1,10 @@
 <template>
-  <div class="navigation-container">
-    <Dropdown :values="getInPageData"/>
+  <div
+    :class="classes"
+    class="navigation-container">
+    <Dropdown
+      :values="sections"
+      :callback="scroll"/>
   </div>
 </template>
 
@@ -13,33 +17,52 @@ export default {
     headingLevel: {
       type: String,
       required: true,
+      validator: value => ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(value) > -1,
     },
   },
+  data() {
+    return {
+      sections: [],
+      fixed: false,
+    };
+  },
   computed: {
+    classes() {
+      return {
+        'navigation-container__fixed': this.fixed,
+      };
+    },
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        this.getInPageData();
+      }
+    };
+    window.addEventListener('scroll', () => {
+      const { scrollY } = window;
+      this.fixed = scrollY > 50;
+    });
+  },
+  methods: {
     getInPageData() {
       const pageNav = [];
-      document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
+      document.querySelectorAll(this.headingLevel).forEach((element) => {
         if (element.id) {
           pageNav.push({
-            id: `#${element.id}`,
+            value: element.id,
             label: element.innerText,
           });
         }
+
+        this.sections = pageNav;
       });
-      return pageNav;
+    },
+    scroll(e) {
+      const scrollToID = e.target.value;
+      const scrollToElem = document.getElementById(scrollToID);
+      scrollToElem.scrollIntoView({ block: 'center', behavior: 'smooth' });
     },
   },
 };
 </script>
-
-<style scoped>
-@import '../../_vars.css';
-
-.navigation-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  background-color: var(--col-background);
-}
-</style>
