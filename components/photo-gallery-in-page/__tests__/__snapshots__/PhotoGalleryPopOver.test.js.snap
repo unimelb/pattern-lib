@@ -44,9 +44,7 @@ exports[`PhotoGalleryPopOver should match snapshot 1`] = `
       <div
         class="photo-gallery-pop-over--container"
       >
-        <figure
-          class="photo-gallery-pop-over__figure"
-        >
+        <figure>
           <img />
         </figure>
       </div>

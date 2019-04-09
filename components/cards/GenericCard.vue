@@ -1,8 +1,7 @@
 <template>
   <div
-    :class="['btn-owner', 'card', 'card--generic', className]">
+    :class="['btn-owner', 'card', 'card--generic', cols === 1 && 'card--generic--full-width' , className]">
     <a
-      v-if="cols !== 1"
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb card__thumb--zoom"/>
@@ -21,7 +20,6 @@
       </div>
       <div class="card__excerpt">{{ excerpt }}</div>
       <div
-        v-if="cols !== 1"
         class="card__links">
         <slot name="links"/>
       </div>

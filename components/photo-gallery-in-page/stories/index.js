@@ -1,5 +1,9 @@
-import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import {
+  storiesOf,
+} from '@storybook/vue';
+import {
+  createStory,
+} from '../../../.storybook/utils';
 
 import PhotoGalleryInPage from './InPage';
 import PopOver from './PopOver.vue';

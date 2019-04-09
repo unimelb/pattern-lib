@@ -147,4 +147,13 @@ describe('GenericCard', () => {
     const link = wrapper.find('a');
     expect(link.exists()).toBe(true);
   });
+
+  it('should render as full width when 1 col set', () => {
+    const wrapper = shallow(GenericCard, {
+      propsData: {
+        cols: 1,
+      },
+    });
+    expect(wrapper.classes()).toContain('card--generic--full-width');
+  });
 });

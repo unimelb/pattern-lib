@@ -75,6 +75,18 @@ export {
 }
   from '../../components/cards/CardStat.vue';
 export {
+  default as CardShowcaseProfile,
+}
+  from '../../components/cards/CardShowcaseProfile.vue';
+export {
+  default as CardEvents,
+}
+  from '../../components/cards/CardEvents.vue';
+export {
+  default as CardFeaturesPanel,
+}
+  from '../../components/cards/CardFeaturesPanel.vue';
+export {
   default as CheckList,
 }
   from '../../components/check-list/CheckList.vue';
@@ -254,3 +266,8 @@ export {
   default as Dropdown,
 }
   from '../../components/dropdown/Dropdown.vue';
+
+export {
+  default as PhotoGalleryInPage,
+}
+  from '../../components/photo-gallery-in-page/PhotoGalleryInPage.vue';

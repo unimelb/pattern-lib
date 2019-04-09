@@ -1,14 +1,19 @@
+@import 'swiper/dist/css/swiper.css';
+
 .photo-gallery-in-page,
 .photo-gallery-pop-over {
   color: #fff;
   background: #000;
+
   &__slider {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+
     img {
       width: 100%;
       object-fit: contain;
+      height: 100%;
     }
   }
 
@@ -17,6 +22,14 @@
     padding: 0;
     margin: 0;
     display: flex;
+    width: 100%;
+    height: 100%;
+
+    .embed {
+      width: 100%;
+      height: 100%;
+      flex: 1;
+    }
   }
 
   &__chevron {
@@ -31,6 +44,7 @@
     height: 600px;
     margin: auto;
     background: #000;
+
     @media (--bp-max-mobile) {
       width: 100%;
       height: 400px;
@@ -50,9 +64,31 @@
       opacity: .7;
       width: 100%;
       flex: 1;
+
       &.active {
         opacity: 1;
         fill: rgba(153, 162, 170, .25);
+      }
+    }
+
+    .embed {
+      &--video {
+        position: relative;
+        width: 100px;
+        height: 100%;
+
+        .embed {
+          height: 100%;
+        }
+      }
+
+      &--cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
       }
     }
 
@@ -60,16 +96,18 @@
       width: auto;
       height: 100%;
     }
+
     @media (--bp-max-mobile) {
       width: 100%;
     }
   }
 
-  &__images-count {
+  &__media-count {
     width: 80%;
     margin: auto;
     padding-top: 11px;
     font-size: 16px;
+
     @media (--bp-max-mobile) {
       width: 90%;
     }
@@ -81,6 +119,7 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 25px;
+
     @media (--bp-max-mobile) {
       width: 90%;
     }
@@ -91,6 +130,7 @@
     margin: auto;
     font-size: 16px;
     line-height: 25px;
+
     @media (--bp-max-mobile) {
       width: 90%;
     }
@@ -98,6 +138,7 @@
 
   .arrow-wrapper {
     padding: 10px;
+
     @media (--bp-max-mobile) {
       display: none;
     }
@@ -107,6 +148,7 @@
 .photo-gallery-pop-over {
   display: none;
   background: rgba(0, 0, 0, .9);
+
   &__open {
     display: flex;
     flex-direction: column;
@@ -117,6 +159,7 @@
     left: 0;
     justify-content: center;
     align-items: center;
+
     @media (--bp-max-mobile) {
       justify-content: flex-start;
       padding-top: 2rem;
@@ -130,6 +173,7 @@
 
   &__slider {
     width: 80%;
+
     @media (--bp-max-mobile) {
       width: 100%;
     }
@@ -137,6 +181,7 @@
 
   &__thumbnails {
     display: none;
+
     @media (--bp-max-mobile) {
       display: flex;
     }
@@ -144,6 +189,7 @@
 
   figure {
     width: 80%;
+
     @media (--bp-max-mobile) {
       width: 100%;
     }
@@ -153,6 +199,7 @@
     width: 64%;
     margin: 0 auto;
     position: relative;
+
     @media (--bp-max-mobile) {
       width: 88%;
       margin-bottom: 1rem;
@@ -165,6 +212,7 @@
     top: -.5rem;
     right: -5.5rem;
     cursor: pointer;
+
     @media (--bp-max-mobile) {
       right: .5rem;
     }
@@ -186,6 +234,7 @@
     margin: 0;
     flex-direction: column;
     cursor: pointer;
+
     img {
       object-fit: contain;
       width: 100%;

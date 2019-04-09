@@ -1,18 +1,18 @@
 <template>
   <MegaMenu
     :items="items"
+    :top-menu="topMenu"
     active="/random-link"
     faculty-name="Faculty of Fine Arts and Music"
     faculty-link="/faculty-link"
     faculty-width="20%"
-    faculty-aperture
-    faculty-aperture-color="red"
   />
 </template>
 
 <script>
 import MegaMenu from '../MegaMenu.vue';
 import MegaMenuDocs from './mega-menu-docs.md';
+import sample from '../sample';
 
 export default {
   components: { MegaMenu },
@@ -58,7 +58,7 @@ export default {
             { title: 'Entry non requirements7', href: 'http://www.google.com' },
             {
               title:
-                'Entry non requirements8 has a particularly long title for no good reason',
+                'Entry non requirements8',
               href: 'http://www.google.com',
             },
             { title: 'Entry non requirements9', href: 'http://www.google.com' },
@@ -106,6 +106,7 @@ export default {
           href: '/connect',
         },
       ],
+      topMenu: sample.topMenu,
     };
   },
 };

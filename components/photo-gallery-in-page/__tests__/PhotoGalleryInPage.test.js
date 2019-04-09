@@ -1,23 +1,29 @@
-import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+  mount,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import sinon from 'sinon';
 import PhotoGalleryInPage from '../PhotoGalleryInPage.vue';
 
 expect.extend(toHaveNoViolations);
 
-const imagesMock = [
-  {
-    id: 1,
-    src: 'test',
-    title: 'test1',
-    description: 'test1',
-  },
-  {
-    id: 2,
-    src: 'test',
-    title: 'test2',
-    description: 'test2',
-  },
+const mediaMock = [{
+  id: 1,
+  src: 'test',
+  title: 'test1',
+  description: 'test1',
+  type: 'image',
+},
+{
+  id: 2,
+  src: 'test',
+  title: 'test2',
+  description: 'test2',
+  type: 'video',
+},
 ];
 
 describe('PhotoGalleryInPage', () => {
@@ -26,30 +32,30 @@ describe('PhotoGalleryInPage', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types images', () => {
+  it('should have default props and correct types media', () => {
     const wrapper = shallow(PhotoGalleryInPage);
     const {
-      images,
+      media,
     } = wrapper.vm.$options.props;
 
-    expect(images.type).toBe(Array);
-    expect(wrapper.props().images).toEqual([{}]);
+    expect(media.type).toBe(Array);
+    expect(wrapper.props().media).toEqual([{}]);
   });
 
-  it('should render images from prop', () => {
+  it('should render media from prop', () => {
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
-    expect(wrapper.props().images.length).toBe(2);
+    expect(wrapper.props().media.length).toBe(2);
     expect(wrapper.find('img').attributes().src).toBe('test');
   });
 
-  it('should set active to first image as default', () => {
-    const wrapper = shallow(PhotoGalleryInPage, {
+  it('should set active to first media as default', () => {
+    const wrapper = mount(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
     expect(wrapper.vm.selectedIndex).toBe(0);
@@ -61,11 +67,13 @@ describe('PhotoGalleryInPage', () => {
     const move = sinon.stub();
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
 
-    wrapper.setMethods({ move });
+    wrapper.setMethods({
+      move,
+    });
     wrapper.find('.arrow-wrapper').trigger('click');
     expect(move.called).toBe(true);
   });
@@ -74,19 +82,21 @@ describe('PhotoGalleryInPage', () => {
     const open = sinon.stub();
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
 
-    wrapper.setMethods({ open });
+    wrapper.setMethods({
+      open,
+    });
     wrapper.find('.thumb').trigger('click');
     expect(open.called).toBe(true);
   });
 
-  it('should change image on arrow click', () => {
+  it('should change media on arrow click', () => {
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
 
@@ -98,7 +108,7 @@ describe('PhotoGalleryInPage', () => {
   it('should change image on thumb click', () => {
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
     wrapper.findAll('.thumb').at(1).trigger('click');
@@ -111,11 +121,13 @@ describe('PhotoGalleryInPage', () => {
     const move = sinon.stub();
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
 
-    wrapper.setMethods({ move });
+    wrapper.setMethods({
+      move,
+    });
     wrapper.find('.arrow-wrapper').trigger('keydown.enter');
     expect(move.called).toBe(true);
   });
@@ -124,38 +136,63 @@ describe('PhotoGalleryInPage', () => {
     const open = sinon.stub();
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
 
-    wrapper.setMethods({ open });
+    wrapper.setMethods({
+      open,
+    });
     wrapper.find('.thumb').trigger('keydown.enter');
     expect(open.called).toBe(true);
   });
 
-  it('should render current image number', () => {
+  it('should render current media number', () => {
     const wrapper = shallow(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
 
-    expect(wrapper.find('.photo-gallery-in-page__images-count').text()).toBe('1 / 2');
+    expect(wrapper.find('.photo-gallery-in-page__media-count').text()).toBe('1 / 2');
     wrapper.find('.arrow-wrapper').trigger('click');
-    expect(wrapper.find('.photo-gallery-in-page__images-count').text()).toBe('2 / 2');
+    expect(wrapper.find('.photo-gallery-in-page__media-count').text()).toBe('2 / 2');
   });
 
   it('should render current image title/description', () => {
-    const wrapper = shallow(PhotoGalleryInPage, {
+    const wrapper = mount(PhotoGalleryInPage, {
       propsData: {
-        images: imagesMock,
+        media: mediaMock,
       },
     });
 
+    expect(wrapper.vm.selectedIndex).toBe(0);
+    expect(wrapper.vm.selectedItem.id).toBe(1);
     expect(wrapper.find('.photo-gallery-in-page__title').text()).toBe('test1');
     expect(wrapper.find('.photo-gallery-in-page__description').text()).toBe('test1');
     wrapper.find('.arrow-wrapper').trigger('click');
     expect(wrapper.find('.photo-gallery-in-page__title').text()).toBe('test2');
     expect(wrapper.find('.photo-gallery-in-page__description').text()).toBe('test2');
+  });
+
+  it('should render embed if image type', () => {
+    const wrapper = mount(PhotoGalleryInPage, {
+      propsData: {
+        media: mediaMock,
+      },
+    });
+    wrapper.find('.arrow-wrapper').trigger('click');
+    wrapper.find('.arrow-wrapper').trigger('click');
+    expect(wrapper.find('.thumb img').exists()).toBe(true);
+  });
+
+  it('should render embed if video type', () => {
+    const wrapper = mount(PhotoGalleryInPage, {
+      propsData: {
+        media: mediaMock,
+      },
+    });
+    wrapper.find('.arrow-wrapper').trigger('click');
+    expect(wrapper.find('.embed').exists()).toBe(true);
   });
 });

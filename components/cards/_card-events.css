@@ -1,0 +1,41 @@
+.card--events {
+  color: rgb(var(--col-brand));
+
+  .card__title {
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+  }
+
+  .card__sub-titles {
+    margin-bottom: .25rem;
+    border-top: 1px solid #c6c8ca;
+    padding: .5rem 0;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (--bp-max-mobile) {
+      border-bottom: 1px solid #c6c8ca;
+    }
+  }
+
+  .card__links {
+    @media (--bp-desktop) {
+      margin-top: calc(var(--vr) * -1.5);
+    }
+  }
+
+  .card__excerpt {
+    @media (--bp-desktop) {
+      display: none;
+    }
+  }
+
+  @media (--bp-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

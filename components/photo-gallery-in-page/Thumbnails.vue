@@ -9,8 +9,7 @@
       >
         <FigureWrap
           :caption="displayCaption && image.title"
-          class="thumbnails__figure"
-        >
+          class="thumbnails__figure">
           <img
             :src="image.src"
             :alt="image.title"
@@ -21,9 +20,7 @@
         </FigureWrap>
         <div
           v-if="displayCaption"
-          class="thumbnails__description">
-          {{ image.description }}
-        </div>
+          class="thumbnails__description">{{ image.description }}</div>
       </ListItem>
     </ListingWrap>
   </div>
@@ -35,13 +32,15 @@ import ListingWrap from '../listing/ListingWrap.vue';
 import FigureWrap from '../figure/FigureWrap.vue';
 import ListItem from '../listing/ListItem.vue';
 
-
 Vue.directive('vpshow', {
   inViewport(el) {
     const rect = el.getBoundingClientRect();
-    return !(rect.bottom < 0 || rect.right < 0
+    return !(
+      rect.bottom < 0
+      || rect.right < 0
       || rect.left > window.innerWidth
-      || rect.top > window.innerHeight);
+      || rect.top > window.innerHeight
+    );
   },
 
   bind(el, binding) {

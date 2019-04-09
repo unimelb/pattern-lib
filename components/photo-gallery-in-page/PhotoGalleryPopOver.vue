@@ -34,7 +34,7 @@
         </div>
 
         <div class="photo-gallery-pop-over--container">
-          <figure class="photo-gallery-pop-over__figure">
+          <figure>
             <img
               :src="selectedItem.src"
               :alt="selectedItem.title">
@@ -89,7 +89,7 @@
 </template>
 
 <script>
-import Thumbnails from './Thumbnails.vue';
+import Thumbnails from './Thumbnails';
 
 export default {
   components: { Thumbnails },
