@@ -152,17 +152,17 @@
       }
 
       @media (--bp-x-desktop) {
-        padding: .75rem .9rem .75rem;
+        padding: .75rem .5rem .75rem;
         font-size: .9rem;
       }
 
       @media (--bp-wide) {
-        padding: .75rem 1rem .75rem;
+        padding: .75rem .65rem .75rem;
         font-size: 1rem;
       }
 
       @media (--bp-x-wide) {
-        padding: .75rem 2rem .75rem;
+        padding: .75rem 1rem .75rem;
       }
     }
 
@@ -304,6 +304,20 @@
 
     &__with-top-menu {
       height: 66%;
+      padding-right: 1rem;
+
+      @media (--bp-x-desktop) {
+        padding-right: 0;
+      }
+
+      @media (--bp-wide) {
+        padding-right: .3rem;
+      }
+
+      @media (--bp-x-wide) {
+        padding-right: 1rem;
+      }
+
       .menu__section {
         .menu__link {
           padding-top: 0;
