@@ -1,9 +1,11 @@
-@import 'swiper/dist/css/swiper.css';
-
 .photo-gallery-in-page,
 .photo-gallery-pop-over {
   color: #fff;
   background: #000;
+
+  .mint-swipe {
+    width: 100%;
+  }
 
   &__slider {
     display: flex;

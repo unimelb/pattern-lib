@@ -12576,6 +12576,13 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-swipe@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/vue-swipe/-/vue-swipe-2.4.0.tgz#af65420417cc65a21a454022f755cb5d661c56ea"
+  integrity sha512-0N5gOED0XF/KsyeF7mT+52J2hGdnHx47xiBbVlZjCxzOyLHWX03W2/G4VhC7bvlMZO7kMt9I/rMPwKZhmk1XTQ==
+  dependencies:
+    wind-dom "0.0.3"
+
 vue-template-compiler@2.5.16:
   version "2.5.16"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.16.tgz#93b48570e56c720cdf3f051cc15287c26fbd04cb"
@@ -12864,6 +12871,11 @@ wide-align@^1.1.0:
   integrity sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==
   dependencies:
     string-width "^1.0.2 || 2"
+
+wind-dom@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/wind-dom/-/wind-dom-0.0.3.tgz#3456e3d959dbebdcbf76ca68c6a4e8142f26360f"
+  integrity sha1-NFbj2Vnb69y/dspoxqToFC8mNg8=
 
 window-size@0.1.0:
   version "0.1.0"

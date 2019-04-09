@@ -2,7 +2,7 @@
   <div class="photo-gallery-in-page">
     <div class="photo-gallery-in-page__slider">
       <div
-        class="arrow-wrapper left"
+        class="arrow-wrapper"
         role="button"
         tabindex="0"
         title="Previous (arrow left)"
@@ -17,26 +17,31 @@
       </div>
 
       <div class="photo-gallery-in-page--container">
-        <swiper
-          ref="slider"
-          :options="swiperOption">
-          <swiper-slide
+        <swipe
+          ref="swipe"
+          :default-index="selectedIndex"
+          :show-indicators="false"
+          :continuous="false"
+          :auto="0"
+          :changed="indexChanged"
+        >
+          <swipe-item
             v-for="(slide, index) in media"
-            :key="index">
-            <figure class="photo-gallery-in-page__figure">
-              <img
-                v-if="slide.type === 'image'"
-                :src="slide.src"
-                :alt="slide.title">
-              <VideoEmbed
-                v-if="slide.type === 'video'"
-                :src="slide.src"/>
-            </figure>
-          </swiper-slide>
-        </swiper>
+            :key="index"
+            class="photo-gallery-in-page__figure"
+          >
+            <img
+              v-if="slide.type === 'image'"
+              :src="slide.src"
+              :alt="slide.title">
+            <VideoEmbed
+              v-if="slide.type === 'video'"
+              :src="slide.src"/>
+          </swipe-item>
+        </swipe>
       </div>
       <div
-        class="arrow-wrapper right"
+        class="arrow-wrapper"
         tabindex="0"
         role="button"
         title="Next (arrow right)"
@@ -51,7 +56,7 @@
         />
       </div>
     </div>
-    <figure class="photo-gallery-in-page__figure-thumbnails">
+    <figure>
       <div class="photo-gallery-in-page__thumbnails">
         <div
           v-for="(item, index) in media"
@@ -87,42 +92,26 @@
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import VideoEmbed from '../embed/VideoEmbed.vue';
 export default {
-  components: { VideoEmbed, swiper, swiperSlide },
+  components: { VideoEmbed },
   props: {
     media: {
       type: Array,
-      default: () => [{}],
+      default: () => [],
     },
   },
   data() {
-    const vm = this;
     return {
       selectedItem: this.media ? this.media[0] : {},
       selectedIndex: 0,
-      swiperOption: {
-        on: {
-          slideChange() {},
-          slideChangeTransitionEnd() {
-            vm.selectedItem = vm.media[this.activeIndex];
-            vm.selectedIndex = this.activeIndex;
-          },
-        },
-      },
     };
-  },
-  mounted() {
-    this.swiper = this.$refs.slider.swiper;
   },
   methods: {
     open(index) {
       this.selectedItem = this.media[index];
       this.selectedIndex = index;
-      if (this.swiper) {
-        this.swiper.slideTo(index);
-      }
+      this.$refs.swipe.goto(index);
     },
     move(direction) {
       const len = this.media.length;
@@ -132,12 +121,14 @@ export default {
         next: (current + 1) % len,
       };
       const nextIndex = directions[direction];
-      // Set current
       this.selectedItem = this.media[nextIndex];
       this.selectedIndex = nextIndex;
-      if (this.swiper) {
-        this.swiper.slideTo(nextIndex);
-      }
+      this.$refs.swipe.goto(nextIndex);
+    },
+    indexChanged(index) {
+      console.log(index);
+      console.log(this);
     },
   },
 };
+</script>

@@ -4,9 +4,13 @@ import 'babel-polyfill';
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 import Ike from 'ike.js';
+import { Swipe, SwipeItem } from 'vue-swipe';
+require('vue-swipe/dist/vue-swipe.css');
+
 import {
   version,
 } from '../../package.json';
+
 
 import ToggleBlock from '../../components/toggle/ToggleBlock.vue';
 import ToggleGroup from '../../components/toggle/ToggleGroup.vue';
@@ -79,6 +83,8 @@ new Ike(`${publicPath}sprite.svg`, version);
 require.context('../../components/shared', false, /\.svg$/);
 
 // Register Vue plugins, directives and components
+Vue.component('swipe', Swipe);
+Vue.component('swipe-item', SwipeItem);
 Vue.use(VueProgressiveImage);
 Vue.component('toggle-block', ToggleBlock);
 Vue.component('toggle-group', ToggleGroup);
