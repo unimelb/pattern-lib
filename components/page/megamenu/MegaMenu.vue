@@ -111,12 +111,13 @@
                         tabindex="0"
                         class="menu__link"
                         role="menuitem"
-                        v-html="menuitem.title"
-                      />
-                      <SvgIcon
-                        v-if="!isMobileOpen"
-                        name="chevron-right"
-                        class="icon"/>
+                      >
+                        {{ menuitem.title }}
+                        <SvgIcon
+                          v-if="!isMobileOpen"
+                          name="chevron-right"
+                          class="icon"/>
+                      </a>
                     </li>
                   </ul>
                 </div>

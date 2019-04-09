@@ -539,11 +539,12 @@
         }
 
         .menu__link {
-          display: inline-block;
           height: auto;
           font-size: .9rem;
           text-align: left;
           text-decoration: none;
+          display: flex;
+          width: 100%;
 
           &:hover {
             text-decoration: underline;
