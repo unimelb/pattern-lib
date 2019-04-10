@@ -42,11 +42,6 @@
     background-size: cover;
     border-radius: 4px 0 0 4px;
 
-    @media(--bp-max-mobile){
-      padding-top: 56.25%;
-      border-radius: 4px 4px 0 0;
-    }
-
     &--image {
       position: relative;
       width: 100%;
@@ -55,6 +50,11 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+    }
+
+    @media (--bp-max-mobile) {
+      padding-top: 56.25%;
+      border-radius: 4px 4px 0 0;
     }
   }
 
