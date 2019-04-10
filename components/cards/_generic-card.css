@@ -58,7 +58,7 @@
       .card__thumb--zoom {
         width: 30%;
         height: 100%;
-        background-size: contain;
+        background-size: cover;
       }
     }
   }
