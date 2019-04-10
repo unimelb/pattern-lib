@@ -55,7 +55,7 @@
     }
 
     @media (--bp-desktop) {
-      .card__thumb--zoom {
+      .card__thumb--image {
         width: 30%;
         height: 100%;
         background-size: cover;

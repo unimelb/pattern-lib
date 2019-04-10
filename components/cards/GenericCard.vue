@@ -4,7 +4,7 @@
     <a
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
-      class="card__thumb card__thumb--zoom"/>
+      class="card__thumb card__thumb--image"/>
     <div class="card__inner ">
       <h3 class="card__header">
         <a
