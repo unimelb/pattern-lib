@@ -1,22 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MegaMenuTitle should match snapshot 1`] = `
-<div
+<a
   class="page-title"
   style="width: 50%;"
 >
   <div
     class="page-title--top-layout"
   >
-    <div
-      class="page-title__separator"
-    />
+    <hr />
      
-    <a
+    <span
       class="page-title__text"
     >
       false
-    </a>
+    </span>
   </div>
-</div>
+</a>
 `;

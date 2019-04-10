@@ -7,6 +7,10 @@
     color: #fff;
     padding-top: 2px;
 
+    &:visited {
+      color: #fff;
+    }
+
     @media (--bp-x-desktop) {
       font-size: 1.1rem;
     }
@@ -14,26 +18,22 @@
     @media (--bp-wide) {
       font-size: 1.25rem;
     }
-
-    &:visited {
-      color: #fff;
-    }
   }
 
   &--top-layout {
-    @media(--bp-max-x-mobile){
+
+    hr {
+      margin: 0 0 .25rem 0;
+      width: 48px;
+      size: 2px;
+      background: #fff;
+    }
+    @media (--bp-max-x-mobile) {
       margin-left: 20px;
     }
 
     @media (--bp-desktop) {
       margin-top: 6px;
-    }
-
-    hr{
-      margin: 0 0 .25rem 0;
-      width: 48px;
-      size: 2px;
-      background: #fff;
     }
   }
 

@@ -306,6 +306,12 @@
       height: 66%;
       padding-right: 1rem;
 
+      .menu__section {
+        .menu__link {
+          padding-top: 0;
+        }
+      }
+
       @media (--bp-x-desktop) {
         padding-right: 0;
       }
@@ -316,12 +322,6 @@
 
       @media (--bp-x-wide) {
         padding-right: 1rem;
-      }
-
-      .menu__section {
-        .menu__link {
-          padding-top: 0;
-        }
       }
     }
 
@@ -359,7 +359,7 @@
         &-info {
           width: 100%;
 
-          &__text{
+          &__text {
             padding: .5rem;
           }
 
@@ -384,7 +384,7 @@
         width: auto;
         margin: 0 1.5rem;
         min-height: 10rem;
-        &--img{
+        &--img {
           width: 100%;
         }
       }
