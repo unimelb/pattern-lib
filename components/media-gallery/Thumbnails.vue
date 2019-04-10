@@ -3,24 +3,35 @@
     <ListingWrap>
       <ListItem
         v-vpshow
-        v-for="(image, index) in images"
-        :key="image.id"
-        :cols="image.size || '1of1'"
+        v-for="(item, index) in media"
+        :key="item.id"
+        :cols="item.size || '1of1'"
       >
         <FigureWrap
-          :caption="displayCaption && image.title"
+          :caption="displayCaption && item.title"
           class="thumbnails__figure">
           <img
-            :src="image.src"
-            :alt="image.title"
+            v-if="item.type === 'image'"
+            :src="item.src"
+            :alt="item.title"
             tabindex="0"
             @click="callback(index)"
             @keydown.13="callback(index)"
           >
+          <div
+            v-if="item.type === 'video'"
+            class="embed--video"
+            tabindex="0"
+            @click="callback(index)"
+            @keydown.13="callback(index)"
+          >
+            <div class="embed--cover"/>
+            <VideoEmbed :src="item.src"/>
+          </div>
         </FigureWrap>
         <div
           v-if="displayCaption"
-          class="thumbnails__description">{{ image.description }}</div>
+          class="thumbnails__description">{{ item.description }}</div>
       </ListItem>
     </ListingWrap>
   </div>
@@ -31,6 +42,7 @@ import Vue from 'vue';
 import ListingWrap from '../listing/ListingWrap.vue';
 import FigureWrap from '../figure/FigureWrap.vue';
 import ListItem from '../listing/ListItem.vue';
+import VideoEmbed from '../embed/VideoEmbed.vue';
 
 Vue.directive('vpshow', {
   inViewport(el) {
@@ -70,9 +82,10 @@ export default {
     ListingWrap,
     ListItem,
     FigureWrap,
+    VideoEmbed,
   },
   props: {
-    images: {
+    media: {
       type: Array,
       default: () => [{}],
     },

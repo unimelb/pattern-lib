@@ -1,22 +1,22 @@
 <template>
   <SectionWrap>
-    <PhotoGalleryPopOver
-      :images="images"
-      display-caption
+    <MediaGallery
+      :media="media"
+      in-page
     />
   </SectionWrap>
 </template>
 
 <script>
-import PhotoGalleryPopOver from '../PhotoGalleryPopOver.vue';
+import MediaGallery from '../MediaGallery.vue';
 import sample from '../sample.json';
 import PhotoGalaryPopOverDocs from './photo-gallery-pop-over.md';
 
 export default {
-  components: { PhotoGalleryPopOver },
+  components: { MediaGallery },
   data() {
     return {
-      images: sample,
+      media: sample,
     };
   },
   readme: { custom: PhotoGalaryPopOverDocs, source: true, html: true },

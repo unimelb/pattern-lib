@@ -4,8 +4,6 @@ import 'babel-polyfill';
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 import Ike from 'ike.js';
-import { Swipe, SwipeItem } from 'vue-swipe';
-require('vue-swipe/dist/vue-swipe.css');
 
 import {
   version,
@@ -65,12 +63,11 @@ import Welcome from '../../components/welcome/Welcome.vue';
 import CardImage from '../../components/cards/CardImage.vue';
 import CardLink from '../../components/cards/CardLink.vue';
 import CardStaffList from '../../components/cards/CardStaffList.vue';
-import PhotoGalleryInPage from '../../components/photo-gallery-in-page/PhotoGalleryInPage.vue';
 import CardStat from '../../components/cards/CardStat.vue';
 import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue';
 import CardEvents from '../../components/cards/CardEvents.vue';
 import CardFeaturesPanel from '../../components/cards/CardFeaturesPanel.vue';
-import PhotoGalleryPopOver from '../../components/photo-gallery-in-page/PhotoGalleryPopOver.vue';
+import MediaGallery from '../../components/media-gallery/MediaGallery.vue';
 
 import '../../components';
 
@@ -83,8 +80,6 @@ new Ike(`${publicPath}sprite.svg`, version);
 require.context('../../components/shared', false, /\.svg$/);
 
 // Register Vue plugins, directives and components
-Vue.component('swipe', Swipe);
-Vue.component('swipe-item', SwipeItem);
 Vue.use(VueProgressiveImage);
 Vue.component('toggle-block', ToggleBlock);
 Vue.component('toggle-group', ToggleGroup);
@@ -139,12 +134,12 @@ Vue.component('sublink-menu-item', SublinkMenuItem);
 Vue.component('welcome', Welcome);
 Vue.component('card-image', CardImage);
 Vue.component('card-link', CardLink);
-Vue.component('photo-gallery-in-page', PhotoGalleryInPage);
 Vue.component('card-stat', CardStat);
 Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
 Vue.component('card-features-panel', CardFeaturesPanel);
-Vue.component('photo-gallery-pop-over', PhotoGalleryPopOver);
+Vue.component('media-gallery', MediaGallery);
+
 
 // Create Vue instance
 new Vue({

@@ -1,11 +1,6 @@
-.photo-gallery-in-page,
-.photo-gallery-pop-over {
+.photo-gallery {
   color: #fff;
   background: #000;
-
-  .mint-swipe {
-    width: 100%;
-  }
 
   &__slider {
     display: flex;
@@ -39,7 +34,7 @@
     cursor: pointer;
   }
 
-  &--container {
+  &__container {
     display: flex;
     justify-content: center;
     width: 80%;
@@ -147,9 +142,11 @@
   }
 }
 
-.photo-gallery-pop-over {
+.photo-gallery--pop-over {
   display: none;
   background: rgba(0, 0, 0, .9);
+  position: relative;
+  z-index: 3;
 
   &__open {
     display: flex;
@@ -168,7 +165,7 @@
     }
   }
 
-  &--container {
+  &__container {
     width: 100%;
     background: transparent;
   }
@@ -197,8 +194,8 @@
     }
   }
 
-  &__images-count {
-    width: 64%;
+  &__media-count {
+    width: 72%;
     margin: 0 auto;
     position: relative;
 
@@ -236,6 +233,7 @@
     margin: 0;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
 
     img {
       object-fit: contain;
@@ -264,5 +262,18 @@
 
   .anim-reveal {
     animation: reveal 1s backwards;
+  }
+
+  .embed {
+    position: relative;
+
+    &--cover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
   }
 }

@@ -8,8 +8,6 @@ import SvgIcon from '../components/icons/SvgIcon.vue';
 import SectionWrap from '../components/section/SectionWrap.vue';
 import ListItem from '../components/listing/ListItem.vue';
 import ButtonIcon from '../components/buttons/ButtonIcon.vue';
-require('vue-swipe/dist/vue-swipe.css');
-import { Swipe, SwipeItem } from 'vue-swipe';
 import { version, repository } from '../package.json';
 
 // Import documentation styles
@@ -20,8 +18,6 @@ import '../components/index.css';
 import '../components/index.js';
 
 // Register shared documentation plugins and components
-Vue.component('swipe', Swipe);
-Vue.component('swipe-item', SwipeItem);
 Vue.use(VueProgressiveImage);
 Vue.component('SvgIcon', SvgIcon);
 Vue.component('SectionWrap', SectionWrap);
