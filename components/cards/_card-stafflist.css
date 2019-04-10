@@ -12,28 +12,12 @@
   }
 
   .card__header {
+    text-decoration: none;
+
     a {
       margin-bottom: 0;
       color: rgb(var(--col-brand));
       font-weight: bold;
-      text-decoration: underline;
-    }
-  }
-
-  .card__footer {
-    border-top: 1px solid rgb(var(--col-brand));
-    padding: 16px 0 0 0;
-    margin-top: 16px;
-  }
-
-  .card__phone,
-  .card__email {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-
-    svg {
-      margin-right: .8rem;
     }
   }
 
@@ -47,8 +31,31 @@
   }
 
   .card__excerpt {
-    border-top: 1px solid rgb(var(--col-brand));
+    border-top: 1px solid rgb(var(--col-black-mid-1));
+    box-sizing: border-box;
     margin-top: 16px;
     padding-top: 16px;
+  }
+
+  .card__footer {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top: 1px solid rgb(var(--col-black-mid-1));
+    padding: 16px 0 0 0;
+    margin-top: 16px;
+  }
+
+  .card__phone,
+  .card__email {
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+
+    svg {
+      margin-right: .8rem;
+    }
   }
 }
