@@ -474,7 +474,7 @@
       }
 
       &__section .menu__item--over,
-      &__section .menu__item[tabindex='0'] {
+      &__section .menu__item {
         .inner {
           display: flex;
           z-index: 3;
