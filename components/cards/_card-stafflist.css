@@ -1,7 +1,4 @@
 .card--stafflist {
-  .card__meta {
-    margin-bottom: 0;
-  }
 
   .card__inner {
     display: flex;
@@ -36,5 +33,18 @@
     svg {
       margin-right: .8rem;
     }
+  }
+
+  .card__position {
+    font-size: 20px;
+  }
+
+  .card__name {
+    font-size: 16px;
+    font-weight: var(--fw-regular);
+  }
+
+  .card__excerpt {
+    margin-top: 40px;
   }
 }

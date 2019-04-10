@@ -10,18 +10,12 @@
     <div class="card__inner">
       <a
         :href="href"
-        title="profile position link"
+        title="profile link"
         aria-label="Profile position"
-        class="card__header"
-      >
-        <h3>{{ position }}</h3>
+        class="card__header">
+        <h6 class="card__position">{{ position }}</h6>
+        <h6 class="card__name">{{ name }}</h6>
       </a>
-      <p class="card__meta">
-        <a
-          :href="href"
-          title="profile name link"
-          aria-label="Profile name">{{ name }}</a>
-      </p>
       <div
         v-if="excerpt"
         class="card__excerpt">{{ excerpt }}</div>
