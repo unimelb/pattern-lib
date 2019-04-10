@@ -22,6 +22,19 @@ export default {
         {
           title: 'Study',
           href: '/',
+          feature: {
+            alt: 'screen reader only',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            img: 'https://placeimg.com/360/200/nature',
+            link: 'http://google.com',
+          },
+          items: [
+            { title: 'Entry requirements21', href: '/2random-link' },
+            { title: 'Entry requirements22', href: 'http://2www.google.com' },
+            { title: 'Entry requirements23', href: 'http://2www.google.com' },
+            { title: 'Entry requirements24', href: 'http://2www.google.com' },
+            { title: 'Entry requirements25', href: 'http://2www.google.com' },
+          ],
         },
         {
           title: 'Find a course',

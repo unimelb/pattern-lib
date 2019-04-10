@@ -298,18 +298,12 @@ export default {
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
       }
-      if (
-        this.lastIndex !== 0
-        && this.items[rootindex].items !== undefined
-        && (rootindex === this.lastIndex - 1 || rootindex === this.lastIndex + 1)
-      ) {
+      if (this.items[this.lastIndex].items !== undefined) {
         this.isAnimate = false;
       } else {
         this.isAnimate = true;
       }
-      if (this.items[rootindex].items !== undefined) {
-        this.lastIndex = rootindex;
-      }
+      this.lastIndex = rootindex;
     },
     dismissDesktopMenu(props = {}) {
       const { force } = props;
