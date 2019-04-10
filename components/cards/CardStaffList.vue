@@ -20,7 +20,7 @@
         v-if="excerpt"
         class="card__excerpt">{{ excerpt }}</div>
       <div
-        v-if="cols < 4"
+        v-if="renderFooter"
         class="card__footer">
         <a
           v-if="phone"
@@ -88,6 +88,11 @@ export default {
     excerpt: {
       type: String,
       default: '',
+    },
+  },
+  computed: {
+    renderFooter() {
+      return this.cols < 4 && (this.phone || this.email);
     },
   },
 };

@@ -21,12 +21,14 @@
   }
 
   .card__footer {
-    padding: 0;
+    border-top: 1px solid rgb(var(--col-brand));
+    padding: 16px 0 0 0;
+    margin-top: 16px;
   }
 
   .card__phone,
   .card__email {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     text-decoration: none;
 
@@ -45,6 +47,8 @@
   }
 
   .card__excerpt {
-    margin-top: 40px;
+    border-top: 1px solid rgb(var(--col-brand));
+    margin-top: 16px;
+    padding-top: 16px;
   }
 }
