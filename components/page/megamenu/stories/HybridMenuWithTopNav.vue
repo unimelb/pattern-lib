@@ -4,9 +4,9 @@
     :top-menu="topMenu"
     :is-modified-menu="true"
     active="/random-link"
-    faculty-name="This is a Faculty name"
+    faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
     faculty-link="/faculty-link"
-    faculty-width="20%"
+    faculty-width="24%"
   />
 </template>
 
