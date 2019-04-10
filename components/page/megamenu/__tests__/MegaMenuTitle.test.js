@@ -41,7 +41,7 @@ describe('MegaMenuTitle', () => {
 
   it('should have title as link', () => {
     const wrapper = shallow(MegaMenuTitle);
-    expect(wrapper.find('.page-title__text').element.tagName).toBe('A');
+    expect(wrapper.find('.page-title__text').element.tagName).toBe('SPAN');
   });
 
   it('should render href from prop with correct type', () => {
@@ -54,7 +54,7 @@ describe('MegaMenuTitle', () => {
 
     expect(typeof wrapper.props().href).toBe('string');
     expect(wrapper.props().href).toBe(href);
-    expect(wrapper.find('.page-title__text').attributes().href).toBe(href);
+    expect(wrapper.find('.page-title').attributes().href).toBe(href);
   });
 
   it('should render with correct width from prop', () => {
