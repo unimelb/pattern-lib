@@ -75,7 +75,7 @@ describe('CardStaffList', () => {
 
     expect(typeof wrapper.props().position).toBe('string');
     expect(wrapper.props().position).toBe(position);
-    expect(wrapper.find('h6').text()).toBe(position);
+    expect(wrapper.find('h3').text()).toBe(position);
   });
 
   it('should render href from prop with correct type', () => {

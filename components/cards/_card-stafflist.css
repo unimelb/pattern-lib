@@ -23,11 +23,13 @@
 
   .card__position {
     font-size: 20px;
+    margin-bottom: 0;
   }
 
   .card__name {
     font-size: 16px;
     font-weight: var(--fw-regular);
+    margin-bottom: 0;
   }
 
   .card__excerpt {

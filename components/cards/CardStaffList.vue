@@ -13,8 +13,8 @@
         title="profile link"
         aria-label="Profile position"
         class="card__header">
-        <h6 class="card__position">{{ position }}</h6>
-        <h6 class="card__name">{{ name }}</h6>
+        <h3 class="card__position">{{ position }}</h3>
+        <h4 class="card__name">{{ name }}</h4>
       </a>
       <div
         v-if="excerpt"

@@ -21,17 +21,17 @@ exports[`CardStaffList should match snapshot 1`] = `
       href="#"
       title="profile link"
     >
-      <h6
+      <h3
         class="card__position"
       >
         Test position
-      </h6>
+      </h3>
        
-      <h6
+      <h4
         class="card__name"
       >
         Test name
-      </h6>
+      </h4>
     </a>
      
     <!---->
