@@ -230,9 +230,12 @@
     }
 
     &__aside {
+      @media (--bp-max-mobile) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 1.5rem;
+      }
       &-info {
-        margin: var(--vr) 1.25rem;
-
         &__link {
           a {
             color: #fff;
@@ -244,15 +247,21 @@
 
     &__campaign {
       display: block;
-      position: relative;
       width: 100%;
-      max-height: 16rem;
-      background-color: rgba(0, 0, 0, .5);
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: white;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      padding: 56.25% 0 0 0;
+
       img{
-        padding-bottom: 20%;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
       }
 
 
@@ -386,7 +395,6 @@
 
       &__campaign {
         width: auto;
-        margin: 0 1.5rem;
         min-height: 10rem;
         &--img {
           width: 100%;
@@ -483,7 +491,13 @@
           display: flex;
           z-index: 3;
           box-shadow: 1px 6px 12px -3px rgba(0, 0, 0, .6);
-          height: 500px;
+          @media (--bp-x-desktop) {
+            height: 500px;
+          }
+
+          @media (--bp-xx-wide) {
+            height: 600px;
+          }
         }
 
         .menu__section .menu__link {
