@@ -6,6 +6,7 @@
   &__text {
     color: #fff;
     padding-top: 2px;
+    line-height: 1.25rem;
 
     &:visited {
       color: #fff;
@@ -27,8 +28,10 @@
       width: 48px;
       size: 2px;
       background: #fff;
+      border: 1px solid rgb(var(--col-background-primary-white));
     }
-    @media (--bp-max-x-mobile) {
+
+    @media (--bp-max-tablet) {
       margin-left: 20px;
     }
 
