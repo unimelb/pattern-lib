@@ -4,10 +4,9 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
 <div
   class="card card--bdr card--showcase-profile"
 >
-  <img
-    alt=" image"
+  <div
     class="card__image"
-    src="https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png"
+    style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
   />
    
   <div

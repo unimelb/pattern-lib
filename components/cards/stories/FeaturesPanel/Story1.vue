@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import CardFeaturesPanel from "../../CardFeaturesPanel.vue";
-import featuresPanel from "./features-panel.md";
+import CardFeaturesPanel from '../../CardFeaturesPanel.vue';
+import featuresPanel from './features-panel.md';
 
 export default {
   components: { CardFeaturesPanel },
-  readme: { custom: featuresPanel, source: true, html: true }
+  readme: { custom: featuresPanel, source: true, html: true },
 };
 </script>

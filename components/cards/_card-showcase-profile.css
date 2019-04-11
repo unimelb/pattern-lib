@@ -4,21 +4,16 @@
   }
 
   .card__image {
-    width: 128px;
-    height: 128px;
-
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     border-radius: 4px 0 0 4px;
-    position: relative;
-    overflow: hidden;
+    padding-top: 56.25%;
 
     @media (--bp-tablet) {
-      max-width: 128px;
-      max-height: 128px;
-      padding-top: 56.25%;
-      border-radius: 4px 4px 0 0;
+      width: 128px;
+      height: 128px;
+      padding-top: 0;
     }
   }
 

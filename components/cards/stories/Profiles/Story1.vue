@@ -30,16 +30,18 @@
       />
     </ListItem>
     <ListItem no-padding="mobile">
-      <CardShowcaseProfile title="Student Name" sub-title="Study Program"/>
+      <CardShowcaseProfile
+        title="Student Name"
+        sub-title="Study Program"/>
     </ListItem>
   </div>
 </template>
 
 <script>
-import CardShowcaseProfile from "../../CardShowcaseProfile.vue";
+import CardShowcaseProfile from '../../CardShowcaseProfile.vue';
 
 export default {
   components: { CardShowcaseProfile },
-  readme: { html: true, source: true }
+  readme: { html: true, source: true },
 };
 </script>
