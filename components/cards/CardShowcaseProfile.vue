@@ -23,21 +23,28 @@
         />
       </button>
     </div>
+
     <transition name="slide-fade">
       <p
         v-show="!isHidden"
-        class="card__bio">{{ bio }}</p>
+        class="card__bio">
+        <VideoEmbed
+          v-if="video"
+          :src="video"/>
+        {{ bio }}
+      </p>
     </transition>
   </div>
 </template>
 
 <script>
 import SvgIcon from '../icons/SvgIcon.vue';
+import VideoEmbed from '../embed/VideoEmbed.vue';
 import { IMAGE_PLACEHOLDER_SHORT } from '../../utils/placeholders';
 
 export default {
   name: 'Showcase',
-  components: { SvgIcon },
+  components: { SvgIcon, VideoEmbed },
   props: {
     thumb: {
       type: String,
@@ -48,6 +55,10 @@ export default {
       default: '',
     },
     subTitle: {
+      type: String,
+      default: '',
+    },
+    video: {
       type: String,
       default: '',
     },

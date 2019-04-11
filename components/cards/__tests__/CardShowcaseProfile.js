@@ -18,12 +18,13 @@ describe('CardShowcaseProfile', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types thumb/title/subTitle/bio', () => {
+  it('should have default props and correct types thumb/title/subTitle/video/bio', () => {
     const wrapper = shallow(CardShowcaseProfile);
     const {
       thumb,
       title,
       subTitle,
+      video,
       bio,
     } = wrapper.vm.$options.props;
 
@@ -35,6 +36,9 @@ describe('CardShowcaseProfile', () => {
 
     expect(subTitle.type).toBe(String);
     expect(wrapper.props().subTitle).toBe('');
+
+    expect(video.type).toBe(String);
+    expect(wrapper.props().video).toBe('');
 
     expect(bio.type).toBe(String);
     expect(wrapper.props().bio).toBe('');
