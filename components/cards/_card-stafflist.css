@@ -35,11 +35,11 @@
     box-sizing: border-box;
     margin-top: 16px;
     padding-top: 16px;
+    flex: 1 0 auto;
   }
 
   .card__footer {
     display: flex;
-    flex: 1 0 auto;
     flex-direction: column;
     justify-content: flex-end;
     border-top: 1px solid rgb(var(--col-black-mid-1));
