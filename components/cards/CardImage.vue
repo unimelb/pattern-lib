@@ -5,7 +5,7 @@
     <div
       v-if="thumb && thumb.length > 0"
       :style="{ backgroundImage: `url(${thumb})` }"
-      class="card__thumb card__thumb--image"/>
+      class="card__thumb card__thumb--zoom"/>
     <div class="card__inner">
       <button-link
         class="btn--inverted btn--fullwidth"
