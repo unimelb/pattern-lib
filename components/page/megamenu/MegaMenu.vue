@@ -467,8 +467,7 @@ export default {
       }, this);
       this.current = curr;
     },
-    isSelected(index) {
-      // return index === this.current ? 0 : -1;
+    isSelected() {
       return -1;
     },
   },

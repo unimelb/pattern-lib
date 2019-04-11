@@ -230,11 +230,6 @@
     }
 
     &__aside {
-      @media (--bp-max-mobile) {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        margin-top: 1.5rem;
-      }
       &-info {
         &__link {
           a {
@@ -242,6 +237,11 @@
             font-weight: 600;
           }
         }
+      }
+      @media (--bp-max-mobile) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 1.5rem;
       }
     }
 
@@ -253,7 +253,7 @@
       overflow: hidden;
       padding: 56.25% 0 0 0;
 
-      img{
+      img {
         display: block;
         max-width: 100%;
         max-height: 100%;
@@ -263,7 +263,6 @@
         left: 0;
         right: 0;
       }
-
 
       &-text {
         position: absolute;
@@ -576,7 +575,7 @@
   /* overflow: visible; */
 
   .page-header-search__submit {
-    background-color: rgba(var(--col-black-dark), .1);
+    border-color: rgba(var(--col-black-dark), .1);
     background-color: rgb(var(--col-navy-mid-2));
     &:hover {
       background-color: rgb(var(--col-background-primary-navy));
