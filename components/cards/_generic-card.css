@@ -56,9 +56,11 @@
     }
 
     .card__thumb {
+      padding-top: 56.25%;	
+
       @media (--bp-desktop) {
         width: 30%;
-        height: 100%;
+        padding-top: 0;
       }
     }
   }
