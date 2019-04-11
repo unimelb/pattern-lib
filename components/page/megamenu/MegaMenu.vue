@@ -83,8 +83,6 @@
               </a>
               <div
                 v-if="rootitem.items"
-                ref="panels"
-                :class="{'inner--fade': isAnimate}"
                 class="inner"
               >
                 <div
@@ -287,6 +285,12 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex) {
+      if (this.items[this.lastIndex].items !== undefined) {
+        this.isAnimate = false;
+      } else {
+        this.isAnimate = true;
+      }
+
       if (
         rootindex !== -1
         && this.items[rootindex].items !== undefined
@@ -295,13 +299,9 @@ export default {
       ) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
+        if (this.isAnimate) this.$refs.rootitems[rootindex].lastChild.classList.add('inner--fade');
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
-      }
-      if (this.items[this.lastIndex].items !== undefined) {
-        this.isAnimate = false;
-      } else {
-        this.isAnimate = true;
       }
       this.lastIndex = rootindex;
     },
@@ -319,6 +319,7 @@ export default {
     },
     dismissAllDesktopChildren() {
       this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
+      if (!this.isAnimate) this.$refs.rootitems.forEach(item => item.lastChild.classList.remove('inner--fade'));
     },
     activateMobileMenu() {
       if (!this.isMobileOpen) {
@@ -467,7 +468,8 @@ export default {
       this.current = curr;
     },
     isSelected(index) {
-      return index === this.current ? 0 : -1;
+      // return index === this.current ? 0 : -1;
+      return -1;
     },
   },
 };
