@@ -1,16 +1,15 @@
 <template>
   <div class="card card--bdr card--showcase-profile">
-    <img
-      :src="thumb"
-      :alt="title + ' image'"
-      class="card__image">
+    <div
+      v-if="thumb && thumb.length > 0"
+      :style="{ backgroundImage: `url(${thumb})` }"
+      class="card__image"
+    />
     <div class="card__inner">
       <h6 class="card__title">{{ title }}</h6>
       <p class="card__sub-title">{{ subTitle }}</p>
       <div class="card__dash"/>
-      <button
-        class="card__button"
-        @click="[(isHidden = !isHidden), buttonLabel]">
+      <button v-if="bio" class="card__button" @click="[(isHidden = !isHidden), buttonLabel]">
         {{ label }}
         <SvgIcon
           :name="iconName"
@@ -22,42 +21,41 @@
       </button>
     </div>
     <transition name="slide-fade">
-      <p
-        v-show="!isHidden"
-        class="card__bio">{{ bio }}</p>
+      <p v-show="!isHidden" class="card__bio">{{ bio }}</p>
     </transition>
   </div>
 </template>
 
 <script>
-import SvgIcon from '../icons/SvgIcon.vue';
+import SvgIcon from "../icons/SvgIcon.vue";
+import { IMAGE_384_272 } from "../../utils/placeholders";
 
 export default {
-  name: 'Showcase',
+  name: "Showcase",
   components: { SvgIcon },
   props: {
     thumb: {
       type: String,
-      default: 'https://via.placeholder.com/800x630',
+      default: IMAGE_384_272
     },
     title: {
       type: String,
-      default: '',
+      default: ""
     },
     subTitle: {
       type: String,
-      default: '',
+      default: ""
     },
     bio: {
       type: String,
-      default: '',
-    },
+      default: ""
+    }
   },
   data() {
     return {
       isHidden: true,
-      label: 'Show bio',
-      iconName: 'chevron-down',
+      label: "Show bio",
+      iconName: "chevron-down"
     };
   },
   computed: {
@@ -70,21 +68,21 @@ export default {
         this.setIconDown();
       }
       return this.label;
-    },
+    }
   },
   methods: {
     setLabelHide() {
-      this.label = 'Hide bio';
+      this.label = "Hide bio";
     },
     setIconUp() {
-      this.iconName = 'chevron-up';
+      this.iconName = "chevron-up";
     },
     setLabelShow() {
-      this.label = 'Show bio';
+      this.label = "Show bio";
     },
     setIconDown() {
-      this.iconName = 'chevron-down';
-    },
-  },
+      this.iconName = "chevron-down";
+    }
+  }
 };
 </script>
