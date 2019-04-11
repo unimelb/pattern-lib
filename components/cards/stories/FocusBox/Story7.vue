@@ -4,7 +4,6 @@
       <ListItem>
         <CardStat
           :cols="3"
-          is-black
           stat="590K"
           element="div"
           class="card--image-focus--col-brand"
@@ -16,7 +15,6 @@
       <ListItem>
         <CardStat
           :cols="3"
-          is-black
           element="div"
           class="card--image-focus--col-brand"
           vertical
@@ -28,7 +26,6 @@
       <ListItem>
         <CardStat
           :cols="3"
-          is-black
           element="div"
           class="card--image-focus--col-brand"
           vertical
