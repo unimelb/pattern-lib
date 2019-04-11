@@ -3,7 +3,7 @@
     <div
       v-if="thumb && thumb.length > 0"
       :style="{ backgroundImage: `url(${thumb})` }"
-      class="card__image"
+      class="card__thumb"
     />
     <div class="card__inner">
       <h6 class="card__title">{{ title }}</h6>
