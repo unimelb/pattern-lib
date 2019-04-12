@@ -25,14 +25,14 @@
     </div>
 
     <transition name="slide-fade">
-      <p
+      <div
         v-show="!isHidden"
         class="card__bio">
         <VideoEmbed
           v-if="video"
           :src="video"/>
-        {{ bio }}
-      </p>
+        <p>{{ bio }}</p>
+      </div>
     </transition>
   </div>
 </template>

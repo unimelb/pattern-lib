@@ -4,10 +4,6 @@
   }
 
   .card__thumb {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 4px 0 0 4px;
     padding-top: 56.25%;
 
     @media (--bp-tablet) {
