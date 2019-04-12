@@ -3,13 +3,13 @@
     padding: .5rem 0 0 1.5rem;
   }
 
-  .card__image {
-    width: 100%;
-    height: auto;
+  .card__thumb {
+    padding-top: 56.25%;
 
     @media (--bp-tablet) {
-      max-width: 192px;
-      height: 136px;
+      width: 128px;
+      height: 128px;
+      padding-top: 0;
     }
   }
 

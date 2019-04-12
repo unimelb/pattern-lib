@@ -5,6 +5,10 @@ import {
   toHaveNoViolations,
 } from 'jest-axe';
 import CardShowcaseProfile from '../CardShowcaseProfile.vue';
+import {
+  IMAGE_PLACEHOLDER_SHORT,
+} from '../../../utils/placeholders';
+
 
 expect.extend(toHaveNoViolations);
 
@@ -14,23 +18,27 @@ describe('CardShowcaseProfile', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types thumb/title/subTitle/bio', () => {
+  it('should have default props and correct types thumb/title/subTitle/video/bio', () => {
     const wrapper = shallow(CardShowcaseProfile);
     const {
       thumb,
       title,
       subTitle,
+      video,
       bio,
     } = wrapper.vm.$options.props;
 
     expect(thumb.type).toEqual(String);
-    expect(wrapper.props().thumb).toBe('https://via.placeholder.com/800x630');
+    expect(wrapper.props().thumb).toBe(IMAGE_PLACEHOLDER_SHORT);
 
     expect(title.type).toBe(String);
     expect(wrapper.props().title).toBe('');
 
     expect(subTitle.type).toBe(String);
     expect(wrapper.props().subTitle).toBe('');
+
+    expect(video.type).toBe(String);
+    expect(wrapper.props().video).toBe('');
 
     expect(bio.type).toBe(String);
     expect(wrapper.props().bio).toBe('');
@@ -46,7 +54,7 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().thumb).toBe('string');
     expect(wrapper.props().thumb).toBe(thumb);
-    expect(wrapper.find('img').html()).toContain(thumb);
+    expect(wrapper.find('.card__thumb').attributes().style).toBe('background-image: url(http://);');
   });
 
   it('should render title from prop with correct type', () => {

@@ -22,12 +22,13 @@
 </template>
 
 <script>
+import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
+
 export default {
   props: {
     thumb: {
       type: String,
-      default:
-        'https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png',
+      default: IMAGE_PLACEHOLDER_BIG,
     },
     title: {
       type: String,
