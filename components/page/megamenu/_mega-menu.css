@@ -16,7 +16,7 @@
   transform: translateX(0);
   transition: var(--tr-transform);
   background-color: rgb(var(--col-brand));
-  color: white;
+  color: rgb(var(--col-background-primary-white));
 
   &.active {
     top: 0;
@@ -99,6 +99,7 @@
   .menu {
     &__mobile {
       padding-left: 27px;
+
       &--line {
         margin: 15px 0;
         max-width: 5%;
@@ -142,12 +143,12 @@
       justify-content: space-between;
       align-items: center;
       padding: .75rem 2rem .75rem;
-      color: white;
+      color: rgb(var(--col-background-primary-white));
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: white;
+        color: rgb(var(--col-background-primary-white));
         text-decoration: underline;
       }
 
@@ -196,7 +197,7 @@
       width: 100%;
       padding: 1.25rem;
       background-color: rgb(var(--col-background-tertiary-navy));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
       font-weight: var(--fw-semibold);
       line-height: 1.96;
       text-align: left;
@@ -223,6 +224,7 @@
     &__block {
       width: 50%;
       margin-right: 1rem;
+
       @media (--bp-max-mobile) {
         width: 100%;
         margin-right: 0;
@@ -235,7 +237,7 @@
 
         &__link {
           a {
-            color: #fff;
+            color: rgb(var(--col-background-primary-white));
             font-weight: 600;
           }
         }
@@ -250,7 +252,7 @@
       background-color: rgba(0, 0, 0, .5);
       background-repeat: no-repeat;
       background-size: cover;
-      color: white;
+      color: rgb(var(--col-background-primary-white));
 
       &-text {
         position: absolute;
@@ -304,6 +306,7 @@
 
     &__with-top-menu {
       height: 66%;
+
       .menu__section {
         .menu__link {
           padding-top: 0;
@@ -556,6 +559,7 @@
 
   .page-header-search__submit {
     background-color: rgb(var(--col-black-dark));
+
     &:hover {
       background-color: rgb(var(--col-black-dark));
     }
@@ -588,7 +592,7 @@
 
       &:hover {
         background: rgba(255, 255, 255, .15);
-        color: white;
+        color: rgb(var(--col-background-primary-white));
       }
     }
 
@@ -635,7 +639,7 @@
 
       &:hover {
         background: rgba(255, 255, 255, .15);
-        color: white;
+        color: rgb(var(--col-background-primary-white));
       }
     }
   }
@@ -654,6 +658,7 @@
     @media (--bp-x-desktop) {
       max-height: 115px;
       padding: 0;
+
       .page-header__inner {
         height: 100%;
       }
@@ -669,17 +674,18 @@
   min-height: .5rem;
   margin-left: 6px;
   text-align: center;
-  fill: var(--col-background);
+  fill: rgb(var(--col-background-primary-white));
 }
 
 .cols-1 {
   columns: 1 !important;
   width: 50% !important;
 }
+
 .cols-2 {
   columns: 2 !important;
 }
 
 .menu__item--active {
-  border-left-color: rgb(171, 190, 213);
+  border-left-color: rgb(var(--col-navy-mid-1));
 }

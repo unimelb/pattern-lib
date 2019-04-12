@@ -52,7 +52,7 @@ export default {
 .title {
   color: var(--col-font);
   font-family: var(--ff-normal);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -70,7 +70,7 @@ export default {
 .link {
   color: var(--col-font);
   font-family: var(--ff-normal);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0;
 }

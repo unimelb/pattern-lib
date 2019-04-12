@@ -13,7 +13,7 @@ page-nav {
   position: fixed;
   z-index: 101;
   background-color: rgb(var(--col-brand));
-  color: #fff;
+  color: rgb(var(--col-background-primary-white));
 
   li {
     margin-bottom: 0;
@@ -58,7 +58,7 @@ page-nav {
     width: 100%;
     padding: 1.25rem;
     background-color: rgb(var(--col-background-tertiary-navy));
-    color: white;
+    color: rgb(var(--col-background-primary-white));
     font-weight: var(--fw-semibold);
     line-height: 1.96;
     text-align: left;
@@ -140,7 +140,7 @@ page-nav {
       &:hover,
       &:focus {
         background-color: rgb(var(--col-background-secondary-navy));
-        color: #fff;
+        color: rgb(var(--col-background-primary-white));
       }
     }
   }
@@ -169,7 +169,9 @@ page-nav {
     width: var(--width-sitenav);
 
     /* now that width is fixed, switch to margin so that sitemap link doesn't hide panel scrollbars */
-    &__panel { padding-right: 0; }
+    &__panel {
+      padding-right: 0;
+    }
 
     &.active {
       transform: translateX(var(--offset-sitenav));

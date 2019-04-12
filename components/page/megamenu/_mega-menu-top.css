@@ -33,14 +33,15 @@
     font-size: .9rem;
     text-decoration: none;
     text-transform: uppercase;
+
     @media (--bp-max-mobile) {
-      color: white;
+      color: rgb(var(--col-background-primary-white));
     }
   }
 
   .menu-top__item:hover,
   .menu-top__item:focus {
-    color: white;
+    color: rgb(var(--col-background-primary-white));
     text-decoration: underline;
   }
 }

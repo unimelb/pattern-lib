@@ -10,11 +10,11 @@
   }
 
   &__text {
-    color: #fff;
+    color: rgb(var(--col-background-primary-white));
     text-decoration: none;
 
     &:visited {
-      color: #fff;
+      color: rgb(var(--col-background-primary-white));
     }
   }
 
