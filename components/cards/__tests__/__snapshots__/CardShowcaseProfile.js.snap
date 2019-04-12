@@ -31,15 +31,16 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
     <!---->
   </div>
    
-  <p
+  <div
     class="card__bio"
     name="slide-fade"
     style="display: none;"
   >
     <!---->
-    
+     
+    <p>
       
-    
-  </p>
+    </p>
+  </div>
 </div>
 `;
