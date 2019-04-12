@@ -15,8 +15,8 @@
     position: absolute;
     width: 6em;
     height: 6em;
-    opacity: .5;
-    color: rgb(var(--col-emerald-mid-2));
+    opacity: .3;
+    color: rgb(var(--col-black-mid-2));
 
     &--top-left {
       top: 0;
