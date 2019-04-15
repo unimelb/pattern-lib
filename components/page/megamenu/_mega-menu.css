@@ -221,8 +221,11 @@
     }
 
     &__block {
-      width: 50%;
       margin-right: 1rem;
+      @media (--bp-x-desktop) {
+        width: 50%;
+      }
+
       @media (--bp-max-mobile) {
         width: 100%;
         margin-right: 0;
@@ -231,6 +234,13 @@
 
     &__aside {
       &-info {
+        padding: 12px 20px;
+        @media (--bp-x-desktop) {
+          padding: 0;
+        }
+        @media (--bp-max-mobile) {
+          padding: 0;
+        }
         &__link {
           a {
             color: #fff;
@@ -665,7 +675,6 @@
     .header-tools__search {
       display: block;
       float: right;
-      margin-left: 1.25rem;
     }
   }
 }
