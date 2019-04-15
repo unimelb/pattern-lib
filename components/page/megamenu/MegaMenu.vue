@@ -4,7 +4,8 @@
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
     class="page-header page-header--l3 page-header--study"
   >
-    <div class="page-header__inner">
+    <div
+      class="page-header__inner">
       <a
         class="link-img link-reset"
         href="https://www.unimelb.edu.au/">
@@ -40,6 +41,7 @@
           ref="rootmenu"
           :class="['megamenu', isShowTopMenu && 'megamenu__with-top-menu']"
           aria-label="Site"
+          @mouseleave="dismissMenu"
         >
           <div
             role="button"
@@ -83,7 +85,7 @@
               </a>
               <div
                 v-if="rootitem.items"
-                class="inner"
+                class="inner inner--fade"
               >
                 <div
                   role="button"
@@ -244,7 +246,7 @@ export default {
       isDesktopOpen: false,
       current: 0,
       pointer: 0,
-      lastIndex: 0,
+      lastIndex: null,
       isAnimate: true,
     };
   },
@@ -285,10 +287,12 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex) {
-      if (this.items[this.lastIndex].items !== undefined) {
+      if (this.lastIndex !== null && this.items[this.lastIndex].items !== undefined && this.items[rootindex].items !== undefined) {
         this.isAnimate = false;
+        this.lastIndex = rootindex;
       } else {
         this.isAnimate = true;
+        this.lastIndex = rootindex;
       }
 
       if (
@@ -303,7 +307,6 @@ export default {
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
       }
-      this.lastIndex = rootindex;
     },
     dismissDesktopMenu(props = {}) {
       const { force } = props;
@@ -317,9 +320,17 @@ export default {
         this.$emit('mega-menu-dismiss-desktop-menu');
       }
     },
+    dismissMenu() {
+      this.lastIndex = null;
+    },
     dismissAllDesktopChildren() {
       this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
-      if (!this.isAnimate) this.$refs.rootitems.forEach(item => item.lastChild.classList.remove('inner--fade'));
+
+      this.$refs.rootitems.forEach((item) => {
+        if (!this.isAnimate && item.lastChild.classList && item.lastChild.classList.contains('inner--fade') === true) {
+          item.lastChild.classList.remove('inner--fade');
+        }
+      });
     },
     activateMobileMenu() {
       if (!this.isMobileOpen) {
