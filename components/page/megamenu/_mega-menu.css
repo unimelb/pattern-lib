@@ -235,17 +235,17 @@
     &__aside {
       &-info {
         padding: 12px 20px;
-        @media (--bp-x-desktop) {
-          padding: 0;
-        }
-        @media (--bp-max-mobile) {
-          padding: 0;
-        }
         &__link {
           a {
             color: #fff;
             font-weight: 600;
           }
+        }
+        @media (--bp-x-desktop) {
+          padding: 0;
+        }
+        @media (--bp-max-mobile) {
+          padding: 0;
         }
       }
       @media (--bp-max-mobile) {
