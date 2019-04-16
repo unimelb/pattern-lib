@@ -10,7 +10,7 @@
 <script>
 import MediaGallery from '../MediaGallery.vue';
 import sample from '../sample.json';
-import PhotoGalaryPopOverDocs from './photo-gallery-pop-over.md';
+import MediaGalleryDocs from './media-gallery.md';
 
 export default {
   components: { MediaGallery },
@@ -19,6 +19,6 @@ export default {
       media: sample,
     };
   },
-  readme: { custom: PhotoGalaryPopOverDocs, source: true, html: true },
+  readme: { custom: MediaGalleryDocs, source: true, html: true },
 };
 </script>

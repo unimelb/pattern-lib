@@ -8,9 +8,11 @@ import {
 import MediaGalleryInPage from './MediaGalleryInPage.vue';
 import MediaGalleryPopOver from './MediaGalleryPopOver.vue';
 import MediaGalleryPopOverWithCaption from './MediaGalleryPopOverWithCaption.vue';
+import MediaGalleryThumbnails from './MediaGalleryThumbnails.vue';
 /* ##Import story component here */
 
 storiesOf('Media Gallery', module)
   .add('In page', createStory(MediaGalleryInPage))
   .add('Pop Over', createStory(MediaGalleryPopOver))
-  .add('Pop Over with captions', createStory(MediaGalleryPopOverWithCaption));
+  .add('Pop Over with captions', createStory(MediaGalleryPopOverWithCaption))
+  .add('Standalone thumbnails', createStory(MediaGalleryThumbnails));
