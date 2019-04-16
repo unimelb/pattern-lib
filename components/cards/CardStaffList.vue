@@ -10,23 +10,17 @@
     <div class="card__inner">
       <a
         :href="href"
-        title="profile position link"
+        title="profile link"
         aria-label="Profile position"
-        class="card__header"
-      >
-        <h3>{{ position }}</h3>
+        class="card__header">
+        <h3 class="card__position">{{ position }}</h3>
+        <h4 class="card__name">{{ name }}</h4>
       </a>
-      <p class="card__meta">
-        <a
-          :href="href"
-          title="profile name link"
-          aria-label="Profile name">{{ name }}</a>
-      </p>
       <div
         v-if="excerpt"
         class="card__excerpt">{{ excerpt }}</div>
       <div
-        v-if="cols < 4"
+        v-if="renderFooter"
         class="card__footer">
         <a
           v-if="phone"
@@ -94,6 +88,11 @@ export default {
     excerpt: {
       type: String,
       default: '',
+    },
+  },
+  computed: {
+    renderFooter() {
+      return this.cols < 4 && (this.phone || this.email);
     },
   },
 };
