@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaGallery Common should match snapshot 1`] = `
+<div>
+  <div
+    class="photo-gallery"
+  >
+    <!---->
+     
+    <div
+      class="photo-gallery__slider"
+    >
+      <div
+        class="arrow-wrapper"
+        role="button"
+        tabindex="0"
+        title="Previous (arrow left)"
+      >
+        <!---->
+      </div>
+       
+      <!---->
+       
+      <div
+        class="arrow-wrapper"
+        role="button"
+        tabindex="0"
+        title="Next (arrow right)"
+      >
+        <!---->
+      </div>
+    </div>
+     
+    <!---->
+  </div>
+   
+  <!---->
+</div>
+`;

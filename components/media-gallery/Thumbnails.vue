@@ -9,24 +9,25 @@
       >
         <FigureWrap
           :caption="displayCaption && item.title"
-          class="thumbnails__figure">
-          <img
-            v-if="item.type === 'image'"
-            :src="item.src"
-            :alt="item.title"
-            tabindex="0"
-            @click="callback(index)"
-            @keydown.13="callback(index)"
-          >
+          class="thumbnails__figure"
+          tabindex="0"
+        >
           <div
-            v-if="item.type === 'video'"
-            class="embed--video"
-            tabindex="0"
+            class="thumbnails__figure--item"
             @click="callback(index)"
-            @keydown.13="callback(index)"
-          >
-            <div class="embed--cover"/>
-            <VideoEmbed :src="item.src"/>
+            @keydown.13="callback(index)">
+            <img
+              v-if="item.type === 'image'"
+              :src="item.src"
+              :alt="item.title"
+            >
+            <div
+              v-if="item.type === 'video'"
+              class="embed--video"
+            >
+              <div class="embed--cover"/>
+              <VideoEmbed :src="item.src"/>
+            </div>
           </div>
         </FigureWrap>
         <div

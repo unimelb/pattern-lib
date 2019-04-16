@@ -33,7 +33,9 @@
             width="30"
             height="30"/>
         </div>
-        <div :class="containerClasses">
+        <div
+          v-if="media.length"
+          :class="containerClasses">
           <slider
             ref="slider"
             :options="options"
@@ -70,7 +72,7 @@
           />
         </div>
       </div>
-      <figure>
+      <figure v-if="media.length">
         <div :class="thumbClasses">
           <div
             v-for="(item, index) in media"
