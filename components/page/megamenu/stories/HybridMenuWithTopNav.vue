@@ -2,7 +2,6 @@
   <MegaMenu
     :items="items"
     :top-menu="topMenu"
-    :is-modified-menu="true"
     active="/random-link"
     faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
     faculty-link="/faculty-link"
@@ -13,9 +12,12 @@
 <script>
 import MegaMenu from '../MegaMenu.vue';
 import sample from '../sample';
+import megaMenuDocs from './mega-menu-docs.md';
 
 export default {
   components: { MegaMenu },
+  readme: { custom: megaMenuDocs, source: true, html: true },
+
   data() {
     return {
       items: [
@@ -24,7 +26,8 @@ export default {
           href: '/',
           feature: {
             alt: 'screen reader only',
-            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text:
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://placeimg.com/360/200/nature',
             link: 'http://google.com',
           },
@@ -45,7 +48,8 @@ export default {
           href: '/why-melbourne',
           feature: {
             title: 'Campaign title',
-            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text:
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://placeimg.com/360/200/arch',
             link: 'http://google.com',
           },
@@ -62,7 +66,8 @@ export default {
           href: '/admissions',
           feature: {
             title: 'Different campaign',
-            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text:
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           },
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
@@ -101,7 +106,8 @@ export default {
           href: '/student-experience',
           feature: {
             alt: 'screen reader only',
-            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text:
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://placeimg.com/360/200/nature',
             link: 'http://google.com',
           },

@@ -57,8 +57,7 @@ export default {
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
             { title: 'Entry non requirements7', href: 'http://www.google.com' },
             {
-              title:
-                'Entry non requirements8',
+              title: 'Entry non requirements8',
               href: 'http://www.google.com',
             },
             { title: 'Entry non requirements9', href: 'http://www.google.com' },
