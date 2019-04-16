@@ -68,6 +68,7 @@ import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue'
 import CardEvents from '../../components/cards/CardEvents.vue';
 import CardFeaturesPanel from '../../components/cards/CardFeaturesPanel.vue';
 import MediaGallery from '../../components/media-gallery/MediaGallery.vue';
+import Thumbnails from '../../components/media-gallery/Thumbnails.vue';
 
 import '../../components';
 
@@ -139,7 +140,7 @@ Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
 Vue.component('card-features-panel', CardFeaturesPanel);
 Vue.component('media-gallery', MediaGallery);
-
+Vue.component('thumbnails', MediaGallery);
 
 // Create Vue instance
 new Vue({
