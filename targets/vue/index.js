@@ -266,3 +266,11 @@ export {
   default as Dropdown,
 }
   from '../../components/dropdown/Dropdown.vue';
+export {
+  default as MediaGallery,
+}
+  from '../../components/media-gallery/MediaGallery.vue';
+export {
+  default as Thumbnails,
+}
+  from '../../components/media-gallery/Thumbnails.vue';

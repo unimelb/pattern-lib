@@ -32,7 +32,7 @@ Example:
 Usage:
 
 ```html
-<photo-gallery-pop-over 
+<photo-gallery-pop-over
     in-page
     media="[
       {
@@ -53,7 +53,7 @@ Usage:
       }]"
   >
 </photo-gallery-in-page>
-<photo-gallery-pop-over 
+<photo-gallery-pop-over
     pop-over
     :media="mediaData"
   >
@@ -63,7 +63,5 @@ Usage:
 Usage:
 
 ```html
-    <Thumbnails
-       :media="mediaData"
-       display-caption/>
+<thumbnails :media="mediaData" display-caption> </thumbnails>
 ```
