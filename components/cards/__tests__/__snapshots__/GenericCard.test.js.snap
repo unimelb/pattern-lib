@@ -5,7 +5,7 @@ exports[`GenericCard should match snapshot 1`] = `
   class="btn-owner card card--generic"
 >
   <a
-    class="card__thumb card__thumb--zoom"
+    class="card__thumb"
     href="#"
     style="background-image: url(https://via.placeholder.com/400x200);"
   />

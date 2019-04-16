@@ -33,13 +33,13 @@ export default {
 </script>
 
 <style scoped>
-@import '../../_vars.css';
+@import "../../_vars.css";
 
 .navigation-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 50px;
-  background-color: var(--col-background);
+  background-color: var(--col-background-primary-white);
 }
 </style>

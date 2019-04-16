@@ -19,7 +19,6 @@
       </ListItem>
       <ListItem>
         <CardFeaturesPanel
-          thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           title="A state-of-the-art precint"
           text="Aute enim laboris do mollit voluptate proident magna nostrud pariatur. Eu consequat tempor enim nostrud ut cupidatat. Id ex officia occaecat esse adipisicing et magna sunt occaecat cillum. Nostrud velit ullamco ea minim duis incididunt sint."
           href="#"

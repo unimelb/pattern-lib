@@ -1,5 +1,9 @@
-import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import CardStat from '../CardStat.vue';
 
 expect.extend(toHaveNoViolations);
@@ -10,10 +14,14 @@ describe('CardStat', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types vertical/excerpt/stat/cols/inverted/isBlack', () => {
+  it('should have default props and correct types vertical/excerpt/stat/cols/inverted', () => {
     const wrapper = shallow(CardStat);
     const {
-      vertical, excerpt, stat, cols, inverted, isBlack,
+      vertical,
+      excerpt,
+      stat,
+      cols,
+      inverted,
     } = wrapper.vm.$options.props;
 
     expect(vertical.type).toBe(Boolean);
@@ -30,9 +38,6 @@ describe('CardStat', () => {
 
     expect(inverted.type).toBe(Boolean);
     expect(wrapper.props().inverted).toBe(false);
-
-    expect(isBlack.type).toBe(Boolean);
-    expect(wrapper.props().isBlack).toBe(false);
   });
 
   it('should render stat from prop with correct type', () => {
@@ -72,7 +77,9 @@ describe('CardStat', () => {
 
   it('should accept cols max = 3 and min = 2', () => {
     const wrapper = shallow(CardStat);
-    const { cols } = wrapper.vm.$options.props;
+    const {
+      cols,
+    } = wrapper.vm.$options.props;
 
     expect(cols.validator && cols.validator(1)).toBeFalsy();
     expect(cols.validator && cols.validator(4)).toBeFalsy();

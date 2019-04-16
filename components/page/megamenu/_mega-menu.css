@@ -99,6 +99,7 @@
   .menu {
     &__mobile {
       padding-left: 27px;
+
       &--line {
         margin: 15px 0;
         max-width: 5%;
@@ -222,6 +223,7 @@
 
     &__block {
       margin-right: 1rem;
+
       @media (--bp-x-desktop) {
         width: 50%;
       }
@@ -587,6 +589,7 @@
   .page-header-search__submit {
     border-color: rgba(var(--col-black-dark), .1);
     background-color: rgb(var(--col-navy-mid-2));
+
     &:hover {
       background-color: rgb(var(--col-background-primary-navy));
     }
@@ -684,6 +687,7 @@
     @media (--bp-x-desktop) {
       max-height: 115px;
       padding: 0;
+
       .page-header__inner {
         height: 100%;
       }
@@ -699,13 +703,14 @@
   min-height: .5rem;
   margin-left: 6px;
   text-align: center;
-  fill: var(--col-background);
+  fill: var(--col-background-primary-white);
 }
 
 .cols-1 {
   columns: 1 !important;
   width: 50% !important;
 }
+
 .cols-2 {
   columns: 2 !important;
 }

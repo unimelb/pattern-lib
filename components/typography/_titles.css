@@ -1,0 +1,91 @@
+.title--xxl {
+  margin-bottom: .75rem !important;
+  font-family: var(--ff-lead) !important;
+  font-size: 2.6rem !important;
+  font-weight: var(--fw-bold) !important;
+}
+
+/* h1 */
+.title--xl {
+  margin-bottom: calc(2 * var(--vr)) !important;
+  font-family: var(--ff-lead) !important;
+  font-size: 2rem !important;
+  line-height: 1.3 !important;
+}
+
+/* h2 */
+.title--lg {
+  margin-bottom: var(--vr) !important;
+  font-family: var(--ff-lead) !important;
+  font-size: 1.75rem !important;
+}
+
+/* h3 */
+.title--md {
+  margin-bottom: calc(var(--vr) / 2) !important;
+  font-size: 1.25rem !important;
+}
+
+/* h4 */
+.title--sm {
+  margin-bottom: calc(var(--vr) / 2) !important;
+  font-size: 1.125rem !important;
+  font-weight: var(--fw-semibold) !important;
+}
+
+/* h5 */
+.title--xs {
+  margin-bottom: 0 !important;
+  font-size: .875rem !important;
+  font-weight: var(--fw-bold) !important;
+  text-transform: uppercase !important;
+}
+
+/* h6 */
+.title--xxs {
+  margin-bottom: 0 !important;
+  font-size: .875rem !important;
+  font-weight: var(--fw-bold) !important;
+}
+
+.content-block {
+
+  h1 {
+    margin-bottom: calc(2 * var(--vr)) !important;
+    font-family: var(--ff-lead) !important;
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h2 {
+    margin-bottom: var(--vr) !important;
+    font-family: var(--ff-lead) !important;
+    font-size: 1.75rem !important;
+  }
+
+  h3 {
+    margin-bottom: calc(var(--vr) / 2) !important;
+    font-size: 1.25rem !important;
+
+    /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
+  }
+
+  h4 {
+    margin-bottom: calc(var(--vr) / 2) !important;
+    font-size: 1.125rem !important;
+    font-weight: var(--fw-semibold) !important;
+  }
+
+  h5 {
+    margin-bottom: 0 !important;
+    font-size: .875rem !important;
+    font-weight: var(--fw-bold) !important;
+    text-transform: uppercase !important;
+  }
+
+  h6 {
+    margin-bottom: 0 !important;
+    font-size: .875rem !important;
+    font-weight: var(--fw-bold) !important;
+  }
+}
