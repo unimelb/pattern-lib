@@ -39,13 +39,11 @@
           <slider
             ref="slider"
             :options="options"
-            @slide="slide"
-          >
+            @slide="slide">
             <slideritem
               v-for="(slide, index) in media"
               :key="index"
-              class="photo-gallery__figure"
-            >
+              class="photo-gallery__figure">
               <img
                 v-if="slide.type === 'image'"
                 :src="slide.src"
@@ -68,8 +66,7 @@
             class="photo-gallery__chevron"
             name="chevron-right"
             width="30"
-            height="30"
-          />
+            height="30"/>
         </div>
       </div>
       <figure v-if="media.length">
@@ -99,11 +96,11 @@
         </div>
         <div
           v-if="inPage"
-          class="photo-gallery__media-count">{{ selectedIndex + 1 }} / {{ media.length }}</div>
+          class="photo-gallery__media-count"
+        >{{ selectedIndex + 1 }} / {{ media.length }}</div>
         <figcaption
           :id="'caption' + selectedIndex"
-          :class="titleClasses"
-        >{{ selectedItem.title }}</figcaption>
+          :class="titleClasses">{{ selectedItem.title }}</figcaption>
         <div :class="descriptionClasses">{{ selectedItem.description }}</div>
       </figure>
     </div>
@@ -111,7 +108,8 @@
       v-if="popOver"
       :media="media"
       :callback="openThumb"
-      :display-caption="displayCaption"/>
+      :display-caption="displayCaption"
+    />
   </div>
 </template>
 
@@ -119,11 +117,15 @@
 import { slider, slideritem } from 'vue-concise-slider';
 import VideoEmbed from '../embed/VideoEmbed.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
-import Thumbnails from './Thumbnails';
+import Thumbnails from './Thumbnails.vue';
 
 export default {
   components: {
-    VideoEmbed, slider, slideritem, SvgIcon, Thumbnails,
+    VideoEmbed,
+    slider,
+    slideritem,
+    SvgIcon,
+    Thumbnails,
   },
   props: {
     media: {
