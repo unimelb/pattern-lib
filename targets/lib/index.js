@@ -140,7 +140,7 @@ Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
 Vue.component('card-features-panel', CardFeaturesPanel);
 Vue.component('media-gallery', MediaGallery);
-Vue.component('thumbnails', MediaGallery);
+Vue.component('thumbnails', Thumbnails);
 
 // Create Vue instance
 new Vue({

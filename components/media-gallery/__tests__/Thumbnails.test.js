@@ -85,5 +85,4 @@ describe('Thumbnails', () => {
     wrapper.find('.thumbnails__figure--item').trigger('click');
     expect(callback.called).toBe(true);
   });
-
 });
