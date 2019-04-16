@@ -5,7 +5,8 @@
     "title": "Video 1",
     "description": "Lorem ipsum dolor sit amet.",
     "size": "1of3",
-    "type": "video"
+    "type": "video",
+    "altText": "alt text"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "title": "Image 4",
     "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
     "size": "1of3",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "title": "Image 5",
     "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
     "size": "1of3",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "title": "Image 1",
     "description": "Lorem ipsum dolor sit amet.",
     "size": "1of2",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "title": "Image 2",
     "description": "Lorem ipsum dolor sit amet.",
     "size": "1of2",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "title": "Image 6",
     "description": "Lorem ipsum dolor sit amet.",
     "size": "1of4",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "title": "Image 7",
     "description": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
     "size": "1of4",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "title": "Image 8",
     "description": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
     "size": "1of4",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "title": "Image 9",
     "description": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
     "size": "1of4",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 10,
@@ -77,7 +86,8 @@
     "title": "Image 1",
     "description": "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
     "size": "1of1",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 11,
@@ -85,7 +95,8 @@
     "title": "Image 3",
     "description": "Lorem ipsum dolor sit amet.",
     "size": "1of3",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 12,
@@ -93,7 +104,8 @@
     "title": "Image 4",
     "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
     "size": "1of3",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   },
   {
     "id": 13,
@@ -101,6 +113,7 @@
     "title": "Image 5",
     "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
     "size": "1of3",
-    "type": "image"
+    "type": "image",
+    "altText": "alt text"
   }
 ]

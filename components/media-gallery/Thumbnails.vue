@@ -19,7 +19,7 @@
             <img
               v-if="item.type === 'image'"
               :src="item.src"
-              :alt="item.title"
+              :alt="item.altText"
             >
             <div
               v-if="item.type === 'video'"

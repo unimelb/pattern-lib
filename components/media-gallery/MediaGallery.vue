@@ -49,7 +49,7 @@
               <img
                 v-if="slide.type === 'image'"
                 :src="slide.src"
-                :alt="slide.title">
+                :alt="slide.altText">
               <VideoEmbed
                 v-if="slide.type === 'video'"
                 :src="slide.src"/>
@@ -88,7 +88,7 @@
             <img
               v-if="item.type === 'image'"
               :src="item.src"
-              :alt="item.title">
+              :alt="item.altText">
             <div
               v-if="item.type === 'video'"
               class="embed--video">

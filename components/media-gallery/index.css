@@ -54,12 +54,14 @@
     width: 80%;
     margin: auto;
     overflow-x: auto;
+    overflow-y: hidden;
 
     .thumb {
       cursor: pointer;
       margin-right: 5px;
       opacity: .7;
       width: 100%;
+      height: 100%;
       flex: 1;
 
       &.active {
