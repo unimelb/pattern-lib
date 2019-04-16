@@ -64,7 +64,6 @@ export default {
 @import "../../_vars.css";
 
 .title {
-  color: var(--col-font);
   font-family: var(--ff-normal);
   font-size: 18px;
   font-weight: 600;
@@ -74,7 +73,7 @@ export default {
 .line {
   width: 40px;
   margin: 0;
-  border: 1px solid var(--col-line);
+  border: 1px solid;
 }
 
 .list-reset {
@@ -82,7 +81,6 @@ export default {
 }
 
 .link {
-  color: var(--col-font);
   font-family: var(--ff-normal);
   font-size: 16px;
   font-weight: normal;
@@ -94,7 +92,6 @@ export default {
   width: 8px;
   height: 8px;
   margin-left: 6px;
-  fill: var(--col-font);
 }
 
 .container {
