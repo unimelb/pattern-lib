@@ -1,5 +1,9 @@
-import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import {
+  storiesOf,
+} from '@storybook/vue';
+import {
+  createStory,
+} from '../../../.storybook/utils';
 
 import HeadingElements from './HeadingElements.vue';
 import HeadingClasses from './HeadingClasses.vue';
@@ -14,10 +18,15 @@ import ListsVariantBullets from './ListsVariantBullets.vue';
 import ListsUnordered from './ListsUnordered.vue';
 import ListsMixed from './ListsMixed.vue';
 import Pre from './Pre.vue';
+import Headings from './Headings.vue';
+
+
+storiesOf('Typography (deprecated)', module)
+  .add('Heading elements', createStory(HeadingElements))
+  .add('Heading classes', createStory(HeadingClasses));
 
 storiesOf('Typography', module)
-  .add('Heading elements', createStory(HeadingElements))
-  .add('Heading classes', createStory(HeadingClasses))
+  .add('Titles', createStory(Headings))
   .add('Long headings', createStory(LongHeadings))
   .add('Lead paragraph', createStory(Lead))
   .add('Links', createStory(Links))

@@ -1,14 +1,16 @@
 <template>
   <div class="card card--bdr card--showcase-profile">
-    <img
-      :src="thumb"
-      :alt="title + ' image'"
-      class="card__image">
+    <div
+      v-if="thumb && thumb.length > 0"
+      :style="{ backgroundImage: `url(${thumb})` }"
+      class="card__thumb"
+    />
     <div class="card__inner">
       <h6 class="card__title">{{ title }}</h6>
       <p class="card__sub-title">{{ subTitle }}</p>
       <div class="card__dash"/>
       <button
+        v-if="bio"
         class="card__button"
         @click="[(isHidden = !isHidden), buttonLabel]">
         {{ label }}
@@ -21,30 +23,42 @@
         />
       </button>
     </div>
+
     <transition name="slide-fade">
-      <p
+      <div
         v-show="!isHidden"
-        class="card__bio">{{ bio }}</p>
+        class="card__bio">
+        <VideoEmbed
+          v-if="video"
+          :src="video"/>
+        <p>{{ bio }}</p>
+      </div>
     </transition>
   </div>
 </template>
 
 <script>
 import SvgIcon from '../icons/SvgIcon.vue';
+import VideoEmbed from '../embed/VideoEmbed.vue';
+import { IMAGE_PLACEHOLDER_SHORT } from '../../utils/placeholders';
 
 export default {
   name: 'Showcase',
-  components: { SvgIcon },
+  components: { SvgIcon, VideoEmbed },
   props: {
     thumb: {
       type: String,
-      default: 'https://via.placeholder.com/800x630',
+      default: IMAGE_PLACEHOLDER_SHORT,
     },
     title: {
       type: String,
       default: '',
     },
     subTitle: {
+      type: String,
+      default: '',
+    },
+    video: {
       type: String,
       default: '',
     },
