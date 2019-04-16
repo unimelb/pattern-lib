@@ -3,7 +3,7 @@
     :color="color"
     padded>
     <div>
-      <h2 class="title">{{ title }}:</h2>
+      <h2 class="title--md">{{ title }}:</h2>
       <hr class="line">
       <div class="container">
         <li
