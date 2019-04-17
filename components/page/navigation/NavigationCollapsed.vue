@@ -4,7 +4,9 @@
     class="navigation-container">
     <Dropdown
       :values="sections"
-      :callback="scroll"/>
+      :callback="scroll"
+      :selected-item="selectedItem.value"
+    />
   </div>
 </template>
 
@@ -24,6 +26,8 @@ export default {
     return {
       sections: [],
       fixed: false,
+      selectedItem: false,
+      autoSelect: true,
     };
   },
   computed: {
@@ -42,6 +46,9 @@ export default {
     window.addEventListener('scroll', () => {
       const { scrollY } = window;
       this.fixed = scrollY > 50;
+      if (this.autoSelect) {
+        this.autoSelectOnScroll();
+      }
     });
   },
   methods: {
@@ -59,9 +66,26 @@ export default {
       });
     },
     scroll(e) {
+      this.autoSelect = false;
       const scrollToID = e.target.value;
       const scrollToElem = document.getElementById(scrollToID);
-      scrollToElem.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      const count = scrollToElem.offsetTop - window.pageYOffset - 50;
+      window.scrollBy({ top: count, left: 0, behavior: 'smooth' });
+      this.autoSelect = true;
+    },
+    autoSelectOnScroll() {
+      let first = false;
+      this.sections.forEach((item) => {
+        if (first) {
+          return;
+        }
+        const elem = document.getElementById(item.value);
+        const offset = elem.getBoundingClientRect();
+        if (offset.top >= 0 && first === false) {
+          this.selectedItem = item;
+          first = true;
+        }
+      });
     },
   },
 };
