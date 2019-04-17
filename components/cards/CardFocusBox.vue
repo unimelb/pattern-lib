@@ -1,7 +1,11 @@
 <template>
   <FocusWrapper
+    :semi-opaque="semiOpaque"
     :color="color"
-    size="large">
+    :class="classes"
+    size="large"
+    class="card card--focus-box"
+  >
     <div class="card__inner">
       <svg
         v-if="icon"
@@ -48,12 +52,15 @@ export default {
       default:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
+    semiOpaque: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {
       return {
         'card--focus-box-vert': this.vertical,
-        [`card--focus-box--${this.color}`]: this.color && this.color.length > 0,
       };
     },
   },

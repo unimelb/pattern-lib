@@ -6,6 +6,11 @@
   padding: calc(var(--vr) * 2);
   text-align: left;
 
+  &-vert {
+    padding: var(--vr);
+    text-align: center;
+  }
+
   &__icon {
     width: 100%;
     max-width: 200px;
@@ -15,6 +20,11 @@
     margin-left: auto;
     padding: 0 var(--vr);
     stroke-width: 0;
+  }
+
+  .card__inner {
+    display: flex;
+    flex-direction: column;
   }
 
   .cell:nth-child(7n+1) &__icon *,
