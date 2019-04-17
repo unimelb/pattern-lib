@@ -26,7 +26,6 @@
       </ListItem>
       <ListItem>
         <CardFeaturesPanel
-          thumb="https://randomuser.me/api/portraits/lego/1.jpg"
           title="Tailored for apprentices and trainees"
           text="Aliqua anim tempor enim pariatur consequat. Ad tempor dolor occaecat ullamco ea magna reprehenderit. Sint consectetur occaecat anim qui consectetur amet labore pariatur enim fugiat ea."
         />

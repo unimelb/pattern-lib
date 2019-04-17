@@ -114,6 +114,7 @@
   --fw-semibold: 600;
   --fw-bold: 700;
   --fw-light: 300;
+  --fw-regular: 400;
 
   /* Border radius */
   --br: 3px;
@@ -122,11 +123,7 @@
   /* Side nav width */
   --panel-width: 17%;
 
-  /* FFAM VARIABLES */
-  --col-focus: #d8d8d8;
-  --col-background: #fff;
-  --col-font: #4a4a4a;
-  --col-line: #505d68;
+  /* Box shadow */
   --col-box-shadow: 0, 0, 0, .12;
 }
 

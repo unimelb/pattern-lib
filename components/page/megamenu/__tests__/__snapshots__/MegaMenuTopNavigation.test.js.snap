@@ -4,6 +4,7 @@ exports[`MegaMenuTitle should match snapshot 1`] = `
 <nav>
   <ul
     class="mega-top"
+    role="menu"
   />
 </nav>
 `;

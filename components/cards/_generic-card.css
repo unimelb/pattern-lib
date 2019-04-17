@@ -3,6 +3,7 @@
   color: rgb(var(--col-brand));
   border-radius: var(--br-cards);
   box-shadow: rgb(var(--col-box-shadow)) 0 2px 2px 0;
+  overflow: hidden;
 
   .card__header {
     margin-bottom: .5rem;
@@ -54,11 +55,12 @@
       }
     }
 
-    @media (--bp-desktop) {
-      .card__thumb--zoom {
+    .card__thumb {
+      padding-top: 56.25%;
+
+      @media (--bp-desktop) {
         width: 30%;
-        height: 100%;
-        background-size: contain;
+        padding-top: 0;
       }
     }
   }
