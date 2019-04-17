@@ -6,6 +6,7 @@
       :values="sections"
       :callback="scroll"
       :selected-item="selectedItem.value"
+      tabindex="0"
     />
   </div>
 </template>
