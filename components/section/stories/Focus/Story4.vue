@@ -7,7 +7,7 @@
       <CardFocusBox
         element="div"
         compact
-        class="card--image-focus--col-brand"
+        class="card--image-focus--col-brand bg-white"
         title="Learning and teaching"
       >
         <h2 class="text-left">Header</h2>
