@@ -32,7 +32,7 @@ Example:
 Usage:
 
 ```html
-<photo-gallery-pop-over
+<media-gallery
     in-page
     media="[
       {
@@ -52,12 +52,12 @@ Usage:
         'type': 'Video'
       }]"
   >
-</photo-gallery-in-page>
-<photo-gallery-pop-over
+</media-gallery>
+<media-gallery
     pop-over
     :media="mediaData"
   >
-</photo-gallery-in-page>
+</media-gallery>
 ```
 
 Usage:
