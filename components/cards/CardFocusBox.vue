@@ -1,17 +1,7 @@
 <template>
-  <div
-    :class="classes"
-    class="btn-owner card card--focus-box bg-white">
-    <SvgIcon
-      class="card--focus-box__cnr card--focus-box__cnr--top-left"
-      name="focus-top-left"
-      width="54"
-      height="54" />
-    <SvgIcon
-      class="card--focus-box__cnr card--focus-box__cnr--btm-right"
-      name="focus-bottom-right"
-      width="54"
-      height="54" />
+  <FocusWrapper
+    :color="color"
+    size="large">
     <div class="card__inner">
       <svg
         v-if="icon"
@@ -19,16 +9,19 @@
         viewBox="20 0 150 150"
         width="100%"
         height="100%"
-        v-html="icon"/>
+        v-html="icon"
+      />
       <slot/>
     </div>
-  </div>
+  </FocusWrapper>
 </template>
 
 <script>
+import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 
 export default {
   name: 'CardFocusBox',
+  components: { FocusWrapper },
   props: {
     icon: {
       type: String,
@@ -52,7 +45,8 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+      default:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
   },
   computed: {
@@ -64,5 +58,4 @@ export default {
     },
   },
 };
-
 </script>

@@ -8,8 +8,7 @@
           class="card--image-focus--col-brand bg-white"
           vertical
         >
-          <h3>Learning and teaching</h3>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.
+          <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus d
         </CardFocusBox>
       </ListItem>
       <ListItem>
@@ -19,8 +18,7 @@
           class="card--image-focus--col-brand bg-white"
           vertical
         >
-          <h3>Learning and teaching</h3>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ex quibusdam omnis, vitae reiciendis et, sunt voluptate, dolores autem explicabo hic rerum vero numquam sed eos eius officiis aut tempore.
+          <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ex quibusdam omnis, vitae reiciendis et, sunt voluptate, dolores autem explicabo hic rerum vero numquam sed eos eius officiis aut tempore.
         </CardFocusBox>
       </ListItem>
       <ListItem>
@@ -30,8 +28,7 @@
           class="card--image-focus--col-brand bg-white"
           vertical
         >
-          <h3>Learning and teaching</h3>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
+          <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
         </CardFocusBox>
       </ListItem>
     </div>
@@ -50,5 +47,4 @@ export default {
   components: { CardFocusBox },
   data: () => ({ Icon1, Icon2, Icon3 }),
 };
-
 </script>
