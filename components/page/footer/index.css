@@ -4,7 +4,7 @@
   z-index: 3;
   padding: 0;
   background-color: rgb(var(--col-brand));
-  color: #fff;
+  color: rgb(var(--col-background-primary-white));
 
   /* top half with logo, search, popular links, etc. */
   &__top {
@@ -62,7 +62,7 @@
     }
 
     &:visited {
-      color: #fff;
+      color: rgb(var(--col-background-primary-white));
     }
   }
 
@@ -221,6 +221,7 @@
   }
 
   @media (--bp-wide) {
+
     &__top,
     &__bottom {
       padding: 3.75rem 0;
@@ -284,7 +285,7 @@
   }
 
   &__submit {
-    color: white;
+    color: rgb(var(--col-background-primary-white));
   }
 
   &__icon-mask {
@@ -312,7 +313,7 @@
     appearance: none;
 
     &:focus {
-      border-bottom-color: #fff;
+      border-bottom-color: rgb(var(--col-background-primary-white));
     }
 
     &::placeholder {

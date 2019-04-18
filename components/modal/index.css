@@ -35,7 +35,7 @@ body > div[aria-hidden='true']:not(#sitemap) {
     opacity: 0;
 
     /* decorative styles */
-    background-color: white;
+    background-color: rgb(var(--col-background-primary-white));
   }
 
   &[aria-hidden='true'] {

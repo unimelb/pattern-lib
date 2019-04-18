@@ -27,7 +27,9 @@ body {
   min-height: 100%;
   margin: 0;
   overflow-x: hidden;
-  background-color: rgb(var(--col-background-secondary-navy)); /* same as page header/footer for scroll overflow */
+  background-color: rgb(var(--col-background-secondary-navy));
+
+  /* same as page header/footer for scroll overflow */
 
   /* make fonts look a bit thiner */
   -webkit-font-smoothing: antialiased;
@@ -36,7 +38,9 @@ body {
 
 main {
   display: block;
-  background-color: white; /* override scroll overflow background */
+  background-color: rgb(var(--col-background-primary-white));
+
+  /* override scroll overflow background */
 }
 
 h1,
@@ -60,7 +64,9 @@ address {
 }
 
 pre {
-  overflow: scroll; /* prevent unbroken line from overflowing container width */
+  overflow: scroll;
+
+  /* prevent unbroken line from overflowing container width */
 
   &.codeblock {
     padding: 1rem;
@@ -101,12 +107,18 @@ ul {
 
 ol ol {
   list-style-type: lower-alpha;
-  ol { list-style-type: lower-roman; }
+
+  ol {
+    list-style-type: lower-roman;
+  }
 }
 
 ul ul {
   list-style-type: circle;
-  ul { list-style-type: square; }
+
+  ul {
+    list-style-type: square;
+  }
 }
 
 li {
@@ -117,8 +129,13 @@ a {
   color: rgb(var(--col-link));
   font-weight: var(--fw-semibold);
 
-  &:visited { color: rgb(var(--col-link-visited)); }
-  &:active { color: rgb(var(--col-link-active)); }
+  &:visited {
+    color: rgb(var(--col-link-visited));
+  }
+
+  &:active {
+    color: rgb(var(--col-link-active));
+  }
 
   &:hover,
   &:focus {
@@ -130,8 +147,13 @@ a {
   .bg-inverted-darker & {
     color: rgb(var(--col-link-on-dark));
 
-    &:visited { color: rgb(var(--col-link-visited-on-dark)); }
-    &:active { color: rgb(var(--col-link-active-on-dark)); }
+    &:visited {
+      color: rgb(var(--col-link-visited-on-dark));
+    }
+
+    &:active {
+      color: rgb(var(--col-link-active-on-dark));
+    }
   }
 }
 

@@ -16,7 +16,7 @@
   transform: translateX(0);
   transition: var(--tr-transform);
   background-color: rgb(var(--col-brand));
-  color: white;
+  color: rgb(var(--col-background-primary-white));
 
   &.active {
     top: 0;
@@ -143,12 +143,12 @@
       justify-content: space-between;
       align-items: center;
       padding: .75rem 2rem .75rem;
-      color: white;
+      color: rgb(var(--col-background-primary-white));
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: white;
+        color: rgb(var(--col-background-primary-white));
         text-decoration: underline;
       }
 
@@ -197,7 +197,7 @@
       width: 100%;
       padding: 1.25rem;
       background-color: rgb(var(--col-background-tertiary-navy));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
       font-weight: var(--fw-semibold);
       line-height: 1.96;
       text-align: left;
@@ -239,7 +239,7 @@
         padding: 12px 20px;
         &__link {
           a {
-            color: #fff;
+            color: rgb(var(--col-background-primary-white));
             font-weight: 600;
           }
         }
@@ -260,21 +260,11 @@
     &__campaign {
       display: block;
       width: 100%;
-      height: auto;
-      position: relative;
-      overflow: hidden;
-      padding: 56.25% 0 0 0;
-
-      img {
-        display: block;
-        max-width: 100%;
-        max-height: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
+      max-height: 16rem;
+      background-color: rgba(0, 0, 0, .5);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: rgb(var(--col-background-primary-white));
 
       &-text {
         position: absolute;
@@ -622,7 +612,7 @@
 
       &:hover {
         background: rgba(255, 255, 255, .15);
-        color: white;
+        color: rgb(var(--col-background-primary-white));
       }
     }
 
@@ -669,7 +659,7 @@
 
       &:hover {
         background: rgba(255, 255, 255, .15);
-        color: white;
+        color: rgb(var(--col-background-primary-white));
       }
     }
   }
@@ -703,7 +693,7 @@
   min-height: .5rem;
   margin-left: 6px;
   text-align: center;
-  fill: var(--col-background-primary-white);
+  fill: rgb(var(--col-background-primary-white));
 }
 
 .cols-1 {
@@ -716,5 +706,5 @@
 }
 
 .menu__item--active {
-  border-left-color: rgb(171, 190, 213);
+  border-left-color: rgb(var(--col-navy-mid-1));
 }

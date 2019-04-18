@@ -5,11 +5,11 @@
   line-height: 1rem;
 
   &__text {
-    color: #fff;
-    padding-top: 2px;
+    color: rgb(var(--col-background-primary-white));
+    text-decoration: none;
 
     &:visited {
-      color: #fff;
+      color: rgb(var(--col-background-primary-white));
     }
 
     @media (--bp-x-desktop) {

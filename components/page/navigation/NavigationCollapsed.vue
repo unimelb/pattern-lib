@@ -40,6 +40,6 @@ export default {
   align-items: center;
   justify-content: center;
   height: 50px;
-  background-color: var(--col-background-primary-white);
+  background-color: rgb(var(--col-background-primary-white));
 }
 </style>
