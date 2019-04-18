@@ -94,7 +94,10 @@ describe('Dropdown', () => {
           value: 'value selected2',
         }],
         selectedItem: 'value1',
+        callback: jest.fn(),
       },
     });
+    wrapper.find('select').trigger('change');
+    expect(wrapper.vm.callback).toHaveBeenCalledTimes(1);
   });
 });
