@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     selected() {
-      const defaultValue = this.values[0] ? this.values[0].value : false;
+      const defaultValue = this.values && this.values[0] ? this.values[0].value : false;
       const selectedValue = this.selectedItem;
       return selectedValue || defaultValue;
     },
