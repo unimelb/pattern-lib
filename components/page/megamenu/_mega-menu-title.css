@@ -29,6 +29,11 @@
     margin-left: 10px;
     margin-top: 6px;
 
+    .active & {
+      margin-left: 1.25rem;
+      margin-top: 0;
+    }
+
     hr {
       margin: 0 100% .25rem 0;
       width: 48px;
