@@ -8,7 +8,7 @@
       margin-bottom: 0;
     }
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       display: flex;
       justify-content: flex-end;
       padding: .5rem 2rem 0;
@@ -33,9 +33,6 @@
     font-size: .9rem;
     text-decoration: none;
     text-transform: uppercase;
-    @media (--bp-max-mobile) {
-      color: white;
-    }
   }
 
   .menu-top__item:hover,

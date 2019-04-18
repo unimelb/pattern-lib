@@ -2,11 +2,11 @@
   margin: 0 1.25em;
   padding: .9rem 0;
   text-decoration: none;
+  line-height: 1rem;
 
   &__text {
     color: #fff;
     padding-top: 2px;
-    line-height: 1.25rem;
 
     &:visited {
       color: #fff;
@@ -19,9 +19,15 @@
     @media (--bp-wide) {
       font-size: 1.25rem;
     }
+
+    @media (--bp-tablet) {
+      line-height: 1.25rem;
+    }
   }
 
   &--top-layout {
+    margin-left: 10px;
+    margin-top: 6px;
 
     hr {
       margin: 0 100% .25rem 0;
@@ -29,14 +35,6 @@
       size: 2px;
       background: #fff;
       border: 1px solid rgb(var(--col-background-primary-white));
-    }
-
-    @media (--bp-max-tablet) {
-      margin-left: 20px;
-    }
-
-    @media (--bp-desktop) {
-      margin-top: 6px;
     }
   }
 
