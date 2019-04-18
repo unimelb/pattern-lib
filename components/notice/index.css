@@ -24,10 +24,10 @@
 
   &--danger {
     background-color: rgb(var(--col-orange-dark));
-    color: #fff;
+    color: rgb(var(--col-background-primary-white));
 
     a {
-      color: #fff;
+      color: rgb(var(--col-background-primary-white));
     }
   }
 }

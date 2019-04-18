@@ -53,6 +53,7 @@
   }
 
   &--centered {
+
     td,
     th {
       text-align: center;
@@ -80,7 +81,7 @@
     }
 
     tr.table__row--white {
-      background-color: white;
+      background-color: rgb(var(--col-background-primary-white));
     }
 
     tr.table__row--highlight {
@@ -105,11 +106,11 @@
   &__row {
     &--inverted {
       background-color: rgb(var(--col-brand));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
     }
 
     &--white {
-      background-color: white;
+      background-color: rgb(var(--col-background-primary-white));
       color: rgb(var(--col-brand));
     }
 

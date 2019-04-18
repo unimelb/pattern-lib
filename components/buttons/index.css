@@ -26,25 +26,25 @@
   &:active,
   &-owner:active .btn {
     background-color: rgb(var(--col-brand));
-    color: #fff;
+    color: rgb(var(--col-background-primary-white));
   }
 
   &--inverted,
   &--inverted:visited,
   &--inverted:focus {
-    border-color: color(#fff alpha(30%));
+    border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
     background-color: transparent;
-    color: #fff;
+    color: rgb(var(--col-background-primary-white));
   }
 
   &--cta.btn {
     border-color: rgb(var(--col-brand));
     background-color: rgb(var(--col-brand));
-    color: white;
+    color: rgb(var(--col-background-primary-white));
 
     &:hover {
-      border-color: white;
-      color: white;
+      border-color: rgb(var(--col-background-primary-white));
+      color: rgb(var(--col-background-primary-white));
     }
   }
 
@@ -52,14 +52,14 @@
   &--inverted:hover,
   &-owner:focus .btn--inverted,
   &-owner:hover .btn--inverted {
-    border-color: #fff;
-    color: #fff;
+    border-color: rgb(var(--col-background-primary-white));
+    color: rgb(var(--col-background-primary-white));
   }
 
   &--inverted:active,
   &-owner:active .btn--inverted,
   &--hard {
-    background-color: #fff;
+    background-color: rgb(var(--col-background-primary-white));
     color: rgb(var(--col-brand));
   }
 
@@ -122,28 +122,53 @@
     }
 
     &--chevron-right {
-      &::after { background-image: url('~icons/chevron-right.svg?fill=#074482'); }
-      &-inverted::after { background-image: url('~icons/chevron-right.svg?fill=#fff'); }
+      &::after {
+        background-image: url('~icons/chevron-right.svg?fill=#074482');
+      }
+
+      &-inverted::after {
+        background-image: url('~icons/chevron-right.svg?fill=#fff');
+      }
     }
 
     &--chevron-left {
-      &::after { background-image: url('~icons/chevron-left.svg?fill=#074482'); }
-      &-inverted::after { background-image: url('~icons/chevron-left.svg?fill=#fff'); }
+      &::after {
+        background-image: url('~icons/chevron-left.svg?fill=#074482');
+      }
+
+      &-inverted::after {
+        background-image: url('~icons/chevron-left.svg?fill=#fff');
+      }
     }
 
     &--download {
-      &::after { background-image: url('~icons/download.svg?fill=#074482'); }
-      &-inverted::after { background-image: url('~icons/download.svg?fill=#fff'); }
+      &::after {
+        background-image: url('~icons/download.svg?fill=#074482');
+      }
+
+      &-inverted::after {
+        background-image: url('~icons/download.svg?fill=#fff');
+      }
     }
 
     &--search {
-      &::after { background-image: url('~icons/search.svg?fill=#074482'); }
-      &-inverted::after { background-image: url('~icons/search.svg?fill=#fff'); }
+      &::after {
+        background-image: url('~icons/search.svg?fill=#074482');
+      }
+
+      &-inverted::after {
+        background-image: url('~icons/search.svg?fill=#fff');
+      }
     }
 
     &--twitter {
-      &::after { background-image: url('~icons/twitter.svg?fill=#074482'); }
-      &-inverted::after { background-image: url('~icons/twitter.svg?fill=#fff'); }
+      &::after {
+        background-image: url('~icons/twitter.svg?fill=#074482');
+      }
+
+      &-inverted::after {
+        background-image: url('~icons/twitter.svg?fill=#fff');
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 .card--news {
-  background-color: white;
+  background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
 
   .card__header {
