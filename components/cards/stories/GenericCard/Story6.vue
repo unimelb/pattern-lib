@@ -11,6 +11,17 @@
           </template>
         </GenericCard>
       </ListItem>
+      <ListItem>
+        <GenericCard
+          :cols="3"
+          title="Test 1"
+          excerpt="Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.">
+          <template slot="links">
+            <a href="/">View generic details ></a>
+            <a href="/">View generic staff ></a>
+          </template>
+        </GenericCard>
+      </ListItem>
     </div>
   </SectionWrap>
 </template>
