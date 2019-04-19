@@ -266,3 +266,7 @@ export {
   default as Dropdown,
 }
   from '../../components/dropdown/Dropdown.vue';
+export {
+  default as Tables,
+}
+  from '../../components/tables/Tables.vue';

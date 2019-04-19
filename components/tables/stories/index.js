@@ -8,6 +8,7 @@ import TableTight from './TableTight.vue';
 import TableLoose from './TableLoose.vue';
 import TableHover from './TableHover.vue';
 import TableStatsWrapped from './TableStatsWrapped.vue';
+import TableBasic from './TableBasic.vue';
 
 storiesOf('Tables', module)
   .add('Default', createStory(TableDefault))
@@ -16,4 +17,5 @@ storiesOf('Tables', module)
   .add('In small section', createStory(TableStatsWrapped))
   .add('Tight padded', createStory(TableTight))
   .add('Loose padded', createStory(TableLoose))
-  .add('Hover', createStory(TableHover));
+  .add('Hover', createStory(TableHover))
+  .add('Basic', createStory(TableBasic));
