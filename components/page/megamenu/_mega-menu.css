@@ -64,7 +64,6 @@
 
     @media (--bp-x-desktop) {
       display: none;
-      position: absolute;
       z-index: 2;
       top: 100%;
       left: 0;
@@ -77,12 +76,16 @@
 
     @media (--bp-wide) {
       padding-left: 125px;
-      padding-right: 125px;
+      padding-right: 85px;
+    }
+
+    @media (--bp-x-wide) {
+      padding-right: 105px;
     }
 
     @media (--bp-xx-wide) {
       padding-left: 130px;
-      padding-right: 130px;
+      padding-right: 120px;
     }
   }
 
@@ -153,17 +156,17 @@
       }
 
       @media (--bp-x-desktop) {
-        padding: .75rem .9rem .75rem;
-        font-size: .9rem;
+        padding: .75rem .5rem .75rem;
+        font-size: 1rem;
       }
 
       @media (--bp-wide) {
-        padding: .75rem 1rem .75rem;
+        padding: .75rem .65rem .75rem;
         font-size: 1rem;
       }
 
       @media (--bp-x-wide) {
-        padding: .75rem 2rem .75rem;
+        padding: .75rem 1rem .75rem;
       }
     }
 
@@ -222,8 +225,11 @@
     }
 
     &__block {
-      width: 50%;
       margin-right: 1rem;
+
+      @media (--bp-x-desktop) {
+        width: 50%;
+      }
 
       @media (--bp-max-mobile) {
         width: 100%;
@@ -232,9 +238,9 @@
     }
 
     &__aside {
-      &-info {
-        margin: var(--vr) 1.25rem;
+      margin: 1.5rem;
 
+      &-info {
         &__link {
           a {
             color: rgb(var(--col-background-primary-white));
@@ -242,17 +248,14 @@
           }
         }
       }
+
+      @media (--bp-desktop) {
+        margin: 0;
+      }
     }
 
     &__campaign {
       display: block;
-      position: relative;
-      width: 100%;
-      max-height: 16rem;
-      background-color: rgba(0, 0, 0, .5);
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: rgb(var(--col-background-primary-white));
 
       &-text {
         position: absolute;
@@ -269,6 +272,11 @@
       &-title {
         display: block;
         padding-bottom: .25rem;
+      }
+
+      &--img {
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -305,12 +313,25 @@
     box-shadow: none;
 
     &__with-top-menu {
-      height: 66%;
+      height: 67%;
+      padding-right: 1rem;
 
       .menu__section {
         .menu__link {
           padding-top: 0;
         }
+      }
+
+      @media (--bp-x-desktop) {
+        padding-right: .35rem;
+      }
+
+      @media (--bp-wide) {
+        padding-right: .3rem;
+      }
+
+      @media (--bp-x-wide) {
+        padding-right: 1.1rem;
       }
     }
 
@@ -344,22 +365,16 @@
     .menu {
       &__aside {
         width: 50%;
-        display: flex;
-        flex-direction: row;
 
         &-info {
-          width: 50%;
+          width: 100%;
+
+          &__text {
+            padding: .5rem;
+          }
 
           &__link {
             text-align: right;
-          }
-
-          @media (--bp-x-desktop) {
-            width: 100%;
-          }
-
-          @media (--bp-wide) {
-            width: 50%;
           }
         }
 
@@ -372,22 +387,6 @@
           width: 50%;
           flex-direction: row;
           padding-right: 0;
-        }
-      }
-
-      &__campaign {
-        width: 50%;
-        margin: 0 1.5rem;
-        min-height: 10rem;
-
-        @media (--bp-x-desktop) {
-          width: 100%;
-          margin: 0 0 1rem 0;
-        }
-
-        @media (--bp-wide) {
-          width: 50%;
-          margin: 0 1.5rem;
         }
       }
 
@@ -503,8 +502,6 @@
         columns: 2;
         column-width: 50%;
         font-size: .9rem;
-        break-inside: avoid;
-        page-break-inside: avoid;
 
         .menu__item {
           padding: 0 1.5rem 0 0;
@@ -513,6 +510,7 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          break-inside: avoid;
 
           a {
             padding-bottom: 3px;
@@ -528,11 +526,12 @@
         }
 
         .menu__link {
-          display: inline-block;
           height: auto;
           font-size: .9rem;
           text-align: left;
           text-decoration: none;
+          display: flex;
+          width: 100%;
 
           &:hover {
             text-decoration: underline;
@@ -558,10 +557,11 @@
   /* overflow: visible; */
 
   .page-header-search__submit {
-    background-color: rgb(var(--col-black-dark));
+    border-color: rgba(var(--col-black-dark), .1);
+    background-color: rgb(var(--col-navy-mid-2));
 
     &:hover {
-      background-color: rgb(var(--col-black-dark));
+      background-color: rgb(var(--col-background-primary-navy));
     }
   }
 
@@ -648,7 +648,6 @@
     .header-tools__search {
       display: block;
       float: right;
-      margin-left: 1.25rem;
     }
   }
 }
