@@ -22,12 +22,12 @@
   }
 
   .card__position {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 0;
   }
 
   .card__name {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--fw-regular);
     margin-bottom: 0;
   }
@@ -51,7 +51,7 @@
 
   .card__phone,
   .card__email {
-    font-size: 14px;
+    font-size: .875rem;
     display: inline-flex;
     align-items: center;
     text-decoration: none;

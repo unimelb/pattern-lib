@@ -6,14 +6,18 @@
   background-position: center;
 
   &__inner {
-    max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
+    max-width: calc(var(--w-mid) + 2 * var(--vr));
+
+    /* account for padding */
     margin-right: auto;
     margin-left: auto;
     padding: calc(2 * var(--vr)) var(--vr);
 
     .layout--left .layout__main &,
     .layout--right .layout__main & {
-      max-width: calc(var(--w-mid) - var(--panel-width)); /* account for side nav */
+      max-width: calc(var(--w-mid) - var(--panel-width));
+
+      /* account for side nav */
     }
 
     &--sml {
@@ -56,7 +60,7 @@
       bottom: 0;
       left: 0;
       opacity: .2;
-      background-color: black;
+      background-color: var(--col-black-dark);
     }
   }
 

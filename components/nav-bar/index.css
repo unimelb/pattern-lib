@@ -24,7 +24,7 @@
     width: 100%;
     padding: 1.25rem;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
-    color: white;
+    color: rgb(var(--col-background-primary-white));
     font-size: .9rem;
     font-weight: bold;
     text-decoration: none;
@@ -68,7 +68,7 @@
 .toggleblock.nav--toggle {
   margin-bottom: 0;
   background-color: rgb(var(--col-blue-mid-2));
-  color: white;
+  color: rgb(var(--col-background-primary-white));
 
   .toggleblock__default {
     display: flex;
@@ -91,14 +91,14 @@
   .nav__link {
     border-color: rgba(255, 255, 255, .25);
     background-color: rgb(var(--col-blue-mid-1));
-    color: black;
+    color: var(--col-black-dark);
 
     &--current {
       background-color: rgb(var(--col-blue-mid-2));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
 
       &::after {
-        border-left-color: white;
+        border-left-color: rgb(var(--col-background-primary-white));
       }
     }
   }
@@ -120,12 +120,12 @@
 
     .nav__link {
       background-color: rgb(var(--col-blue-mid-2));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
     }
 
     .nav__link--current {
       background-color: rgb(var(--col-blue-mid-2));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
 
       &::after {
         border-bottom-color: rgb(var(--col-blue-mid-1));

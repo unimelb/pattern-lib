@@ -7,7 +7,9 @@
     justify-content: space-around;
     max-width: var(--w-sml);
     margin-right: auto;
-    margin-bottom: calc(0 - var(--vr) / 4); /* MAGIC NUMBER: roughly equal spacing above and below stats */
+    margin-bottom: calc(0 - var(--vr) / 4);
+
+    /* MAGIC NUMBER: roughly equal spacing above and below stats */
     margin-left: auto;
   }
 
@@ -17,9 +19,17 @@
   }
 
   &:not(.stats-group--inverted) .stats-group__item {
-    &:nth-child(1) .stats-group__icon { color: rgb(var(--col-1)); }
-    &:nth-child(2) .stats-group__icon { color: rgb(var(--col-2)); }
-    &:nth-child(3) .stats-group__icon { color: rgb(var(--col-3)); }
+    &:nth-child(1) .stats-group__icon {
+      color: rgb(var(--col-1));
+    }
+
+    &:nth-child(2) .stats-group__icon {
+      color: rgb(var(--col-2));
+    }
+
+    &:nth-child(3) .stats-group__icon {
+      color: rgb(var(--col-3));
+    }
   }
 
   &__icon {
@@ -28,7 +38,7 @@
     margin-left: auto;
 
     .bg-inverted & {
-      color: #cbe8ef;
+      color: var(--col-teal-light);
     }
   }
 
@@ -41,7 +51,9 @@
     line-height: 1;
 
     &__hash {
-      margin-left: -.5ch; /* offset hash so number is a little more centred */
+      margin-left: -.5ch;
+
+      /* offset hash so number is a little more centred */
       font-size: 65%;
       line-height: inherit;
       vertical-align: 35%;

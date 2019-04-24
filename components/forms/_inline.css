@@ -63,7 +63,7 @@
     margin-left: 0;
     padding: 0 .667rem;
     border-radius: 0 0 var(--br) var(--br);
-    color: white;
+    color: rgb(var(--col-background-primary-white));
     font-weight: var(--fw-semibold);
     line-height: 1;
 
@@ -86,7 +86,7 @@
       }
 
       &:active {
-        background-color: white;
+        background-color: rgb(var(--col-background-primary-white));
       }
     }
 
@@ -130,11 +130,11 @@
     button.form--inline__button--alt {
       border-color: transparent;
       background-color: rgb(var(--col-brand));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
 
       &:focus,
       &:hover {
-        border-color: color(white alpha(60%));
+        border-color: color(rgb(var(--col-background-primary-white)) alpha(60%));
       }
 
       &:active {

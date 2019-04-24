@@ -33,7 +33,7 @@
 
       > h2 {
         margin-bottom: 0;
-        color: white;
+        color: rgb(var(--col-background-primary-white));
         font-family: var(--ff-normal);
         font-size: 1.2rem;
         font-weight: var(--fw-semibold);
@@ -74,7 +74,7 @@
       padding: .925rem;
       border-top: 3px solid rgba(255, 255, 255, .3);
       background-color: rgb(var(--col-brand));
-      color: white;
+      color: rgb(var(--col-background-primary-white));
       font-family: var(--ff-normal);
       font-size: 1.2rem;
       font-weight: var(--fw-semibold);
