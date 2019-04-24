@@ -33,10 +33,6 @@
     font-size: .9rem;
     text-decoration: none;
     text-transform: uppercase;
-
-    @media (--bp-max-mobile) {
-      color: rgb(var(--col-background-primary-white));
-    }
   }
 
   .menu-top__item:hover,
