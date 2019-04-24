@@ -1,6 +1,7 @@
 .page-title {
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   position: relative;
   margin: 5px 1.25rem 0;
   text-decoration: none;
@@ -21,6 +22,11 @@
 
   .megamenu & {
     padding: 20px 0;
+    width: auto !important;
+  }
+
+  @media (--bp-tablet) {
+    line-height: 1.25rem;
   }
 
   @media (--bp-x-desktop) {
@@ -29,17 +35,5 @@
 
   @media (--bp-wide) {
     font-size: 1.25rem;
-  }
-
-  @media (--bp-tablet) {
-    line-height: 1.25rem;
-  }
-
-  @media (--bp-max-tablet) {
-    width: auto !important;
-  }
-
-  @media (--bp-desktop) {
-    flex: 1 0 auto;
   }
 }
