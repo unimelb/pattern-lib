@@ -238,36 +238,26 @@
     }
 
     &__aside {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      margin-top: 1.5rem;
+
       &-info {
-        padding: 12px 20px;
         &__link {
           a {
             color: rgb(var(--col-background-primary-white));
             font-weight: 600;
           }
         }
-        @media (--bp-x-desktop) {
-          padding: 0;
-        }
-        @media (--bp-max-mobile) {
-          padding: 0;
-        }
       }
-      @media (--bp-max-mobile) {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-        margin-top: 1.5rem;
+
+      @media (--bp-desktop) {
+        margin: 0;
       }
     }
 
     &__campaign {
       display: block;
-      width: 100%;
-      max-height: 16rem;
-      background-color: rgba(0, 0, 0, .5);
-      background-repeat: no-repeat;
-      background-size: cover;
-      color: rgb(var(--col-background-primary-white));
 
       &-text {
         position: absolute;
@@ -284,6 +274,11 @@
       &-title {
         display: block;
         padding-bottom: .25rem;
+      }
+
+      &--img {
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -394,14 +389,6 @@
           width: 50%;
           flex-direction: row;
           padding-right: 0;
-        }
-      }
-
-      &__campaign {
-        width: auto;
-        min-height: 10rem;
-        &--img {
-          width: 100%;
         }
       }
 
