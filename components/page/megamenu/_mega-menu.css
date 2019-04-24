@@ -64,7 +64,6 @@
 
     @media (--bp-x-desktop) {
       display: none;
-      position: absolute;
       z-index: 2;
       top: 100%;
       left: 0;
@@ -77,12 +76,16 @@
 
     @media (--bp-wide) {
       padding-left: 125px;
-      padding-right: 125px;
+      padding-right: 85px;
+    }
+
+    @media (--bp-x-wide) {
+      padding-right: 105px;
     }
 
     @media (--bp-xx-wide) {
       padding-left: 130px;
-      padding-right: 130px;
+      padding-right: 120px;
     }
   }
 
