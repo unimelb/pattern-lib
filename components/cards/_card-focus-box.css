@@ -38,7 +38,7 @@
 
   &--white {
     .card--focus-box__cnr {
-      color: #fff;
+      color: rgb(var(--col-background-primary-white));
     }
   }
 
@@ -156,7 +156,7 @@
     fill: rgb(var(--col-green-mid-2));
   }
 
-  &:not(.page-header &,.split-section &) {
+  &:not(.page-header &, .split-section &) {
     width: calc(100% + 3rem);
     margin: -3rem -1.5rem;
 

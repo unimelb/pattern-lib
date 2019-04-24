@@ -19,34 +19,24 @@ exports[`CardStaffList should match snapshot 1`] = `
       aria-label="Profile position"
       class="card__header"
       href="#"
-      title="profile position link"
+      title="profile link"
     >
-      <h3>
+      <h3
+        class="card__position"
+      >
         Test position
       </h3>
-    </a>
-     
-    <p
-      class="card__meta"
-    >
-      <a
-        aria-label="Profile name"
-        href="#"
-        title="profile name link"
+       
+      <h4
+        class="card__name"
       >
         Test name
-      </a>
-    </p>
+      </h4>
+    </a>
      
     <!---->
      
-    <div
-      class="card__footer"
-    >
-      <!---->
-       
-      <!---->
-    </div>
+    <!---->
   </div>
 </div>
 `;

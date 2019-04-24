@@ -3,7 +3,7 @@
     :color="color"
     padded>
     <div>
-      <h2 class="title">{{ title }}:</h2>
+      <h2 class="title--md">{{ title }}:</h2>
       <hr class="line">
       <div class="container">
         <li
@@ -64,9 +64,8 @@ export default {
 @import "../../_vars.css";
 
 .title {
-  color: var(--col-font);
   font-family: var(--ff-normal);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -74,7 +73,7 @@ export default {
 .line {
   width: 40px;
   margin: 0;
-  border: 1px solid var(--col-line);
+  border: 1px solid;
 }
 
 .list-reset {
@@ -82,9 +81,8 @@ export default {
 }
 
 .link {
-  color: var(--col-font);
   font-family: var(--ff-normal);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0;
 }
@@ -94,7 +92,6 @@ export default {
   width: 8px;
   height: 8px;
   margin-left: 6px;
-  fill: var(--col-font);
 }
 
 .container {

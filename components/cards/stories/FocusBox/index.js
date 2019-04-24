@@ -1,5 +1,9 @@
-import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../../.storybook/utils';
+import {
+  storiesOf,
+} from '@storybook/vue';
+import {
+  createStory,
+} from '../../../../.storybook/utils';
 
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
@@ -18,5 +22,5 @@ storiesOf('Cards/Focus Boxes', module)
   .add('Alt colour cycle', createStory(Story4))
   .add('Version of no icon - white', createStory(Story5))
   .add('Version of no icon - inverted', createStory(Story6))
-  .add('Version of no icon - black', createStory(Story7));
+  .add('Version of no icon - alt', createStory(Story7));
 /* ##Story goes here */

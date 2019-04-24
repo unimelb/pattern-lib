@@ -62,7 +62,7 @@ describe('CardStaffList', () => {
 
     expect(typeof wrapper.props().name).toBe('string');
     expect(wrapper.props().name).toBe(name);
-    expect(wrapper.find('.card__meta').text()).toBe(name);
+    expect(wrapper.find('.card__name').text()).toBe(name);
   });
 
   it('should render position from prop with correct type', () => {
@@ -139,9 +139,9 @@ describe('CardStaffList', () => {
     expect(wrapper.find('.card__header').element.tagName).toBe('A');
   });
 
-  it('should have card name as link', () => {
+  it('should have card position and name be a link', () => {
     const wrapper = shallow(CardStaffList);
-    expect(wrapper.find('.card__meta').find('a').element.tagName).toBe('A');
+    expect(wrapper.find('.card__inner').find('a').element.tagName).toBe('A');
   });
 
   it('should hide footer container if no cols => 4', () => {

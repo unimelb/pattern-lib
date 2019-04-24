@@ -4,10 +4,9 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
 <div
   class="card card--bdr card--showcase-profile"
 >
-  <img
-    alt=" image"
-    class="card__image"
-    src="https://via.placeholder.com/800x630"
+  <div
+    class="card__thumb"
+    style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
   />
    
   <div
@@ -29,22 +28,19 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
       class="card__dash"
     />
      
-    <button
-      class="card__button"
-    >
-      
-      Show bio
-      
-      <!---->
-    </button>
+    <!---->
   </div>
    
-  <p
+  <div
     class="card__bio"
     name="slide-fade"
     style="display: none;"
   >
-    
-  </p>
+    <!---->
+     
+    <p>
+      
+    </p>
+  </div>
 </div>
 `;

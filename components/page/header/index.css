@@ -3,7 +3,7 @@
   padding: 2rem 0 0;
   overflow: hidden;
   background-color: rgb(var(--col-brand));
-  color: #fff;
+  color: rgb(var(--col-background-primary-white));
 
   &__logomat {
     margin-top: -1rem;
@@ -94,7 +94,9 @@
 
     @media (--bp-max-x-mobile) {
       position: relative;
-      width: calc(.86 * 20rem); /* `aperture.svg` viewbox ratio * height */
+      width: calc(.86 * 20rem);
+
+      /* `aperture.svg` viewbox ratio * height */
       height: 20rem;
       margin-top: -8rem;
       margin-left: auto;
@@ -105,22 +107,32 @@
   &__aperture::before {
     content: '';
     position: absolute;
-    top: -1px; /* (1) fix subtle border artefact on some browser/viewport combinations */
+    top: -1px;
+
+    /* (1) fix subtle border artefact on some browser/viewport combinations */
     right: 0;
     bottom: 0;
-    left: -1px; /* (1) */
+    left: -1px;
+
+    /* (1) */
     background: url('../../shared/aperture.svg') left center / cover;
   }
 
   /* Aperture without focus mark for level-3 header */
   &__shape {
     position: absolute;
-    top: -35%; /* MAGIC NUMBER account for slight rotation */
+    top: -35%;
+
+    /* MAGIC NUMBER account for slight rotation */
     right: 0;
     bottom: 0;
     left: 27%;
-    transform: rotate(.25deg); /* rotate slightly */
-    background-color: inherit; /* pass on background colour to pseudo-elements */
+    transform: rotate(.25deg);
+
+    /* rotate slightly */
+    background-color: inherit;
+
+    /* pass on background colour to pseudo-elements */
 
     &::before,
     &::after {
@@ -129,7 +141,9 @@
       position: absolute;
       right: 0;
       left: 0;
-      background-color: inherit; /* inherit from shape and header */
+      background-color: inherit;
+
+      /* inherit from shape and header */
     }
 
     /* triangle in top left-hand corner */
@@ -185,7 +199,9 @@
     }
 
     .page-header__entity + .page-header__heading {
-      margin-top: calc(var(--vr) * 1.5); /* less when following entity identifier */
+      margin-top: calc(var(--vr) * 1.5);
+
+      /* less when following entity identifier */
     }
 
     .page-header--center {
@@ -213,7 +229,9 @@
     }
 
     .page-header__logo {
-      font-size: .875rem; /* fix wrapping of `alt` text */
+      font-size: .875rem;
+
+      /* fix wrapping of `alt` text */
 
       @media (--bp-tablet) {
         width: 85px;
@@ -238,7 +256,9 @@
     align-items: flex-end;
 
     @media screen {
-      min-height: calc(80vh - 10.333rem); /* IE9 interprets vh as # of pages in print-mode */
+      min-height: calc(80vh - 10.333rem);
+
+      /* IE9 interprets vh as # of pages in print-mode */
     }
   }
 
