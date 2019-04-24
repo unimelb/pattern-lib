@@ -502,8 +502,8 @@
         columns: 2;
         column-width: 50%;
         font-size: .9rem;
-        break-inside: avoid;
-        page-break-inside: avoid;
+        /* break-inside: avoid; */
+        /* page-break-inside: avoid; */
 
         .menu__item {
           padding: 0 1.5rem 0 0;
@@ -512,6 +512,7 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          break-inside: avoid;
 
           a {
             padding-bottom: 3px;
