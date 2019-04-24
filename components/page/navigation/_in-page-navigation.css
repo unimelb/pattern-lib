@@ -1,0 +1,47 @@
+@import '../../_vars.css';
+
+.in-page-navigation {
+  .title {
+    font-family: var(--ff-normal);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .line {
+    width: 40px;
+    margin: 0;
+    border: 1px solid;
+  }
+
+  .list-reset {
+    list-style-type: none;
+  }
+
+  .link {
+    font-family: var(--ff-normal);
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  .icon {
+    display: inline;
+    width: 8px;
+    height: 8px;
+    margin-left: 6px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 23px;
+    margin-bottom: 84px;
+  }
+
+  .container > * {
+    flex: 0 50%;
+  }
+}

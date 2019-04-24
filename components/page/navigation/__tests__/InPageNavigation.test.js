@@ -67,4 +67,13 @@ describe('InPageNavigation', () => {
     expect(typeof wrapper.props().color).toBe('string');
     expect(wrapper.props().color).toBe(color);
   });
+
+  it('should validate headingLevel', () => {
+    const wrapper = shallow(InPageNavigation);
+    const {
+      headingLevel,
+    } = wrapper.vm.$options.props;
+
+    expect(headingLevel.validator && headingLevel.validator('test')).toBeFalsy();
+  });
 });

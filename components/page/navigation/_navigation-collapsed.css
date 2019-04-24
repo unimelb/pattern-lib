@@ -1,21 +1,28 @@
 @import '../../_vars.css';
 
 .navigation-container {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  height: 29px;
+  height: 39px;
   width: 252px;
-  background-color: var(--col-background-primary-navy);
-  border: 1px solid #979797;
-  border-radius: 3px;
+  align-self: center;
 
-  div,
-  .select {
+  .dropdown {
     width: 100%;
   }
 
+  .dropdown .select {
+    width: 100%;
+    border: 2px solid #094183;
+    height: 39px;
+    border-radius: 3px;
+    background: #fff;
+    padding-left: 1rem;
+  }
+
   &__fixed {
+    display: flex;
     position: fixed;
     top: 10px;
   }

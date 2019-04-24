@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="dropdown">
     <select
       :value="selected"
       class="select"
@@ -39,11 +39,3 @@ export default {
   },
 };
 </script>
-
-
-<style scoped>
-.select {
-  border: 1px;
-  border-color: #979797;
-}
-</style>

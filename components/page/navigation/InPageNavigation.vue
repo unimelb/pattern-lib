@@ -2,12 +2,12 @@
   <FocusWrapper
     :color="color"
     padded>
-    <div>
+    <div class="in-page-navigation">
       <h2 class="title--md">{{ title }}:</h2>
       <hr class="line">
       <div class="container">
         <li
-          v-for="(data, index) in getInPageData"
+          v-for="(data, index) in sections"
           :key="index"
           class="list-reset">
           <a
@@ -37,13 +37,24 @@ export default {
     headingLevel: {
       type: String,
       required: true,
+      validator: value => ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(value) > -1,
     },
     color: {
       type: String,
       default: '',
     },
   },
-  computed: {
+  data() {
+    return {
+      sections: [],
+    };
+  },
+  mounted() {
+    window.addEventListener('load', () => {
+      this.getInPageData();
+    });
+  },
+  methods: {
     getInPageData() {
       const pageNav = [];
       document.querySelectorAll(this.headingLevel).forEach((element) => {
@@ -53,57 +64,10 @@ export default {
             label: element.innerText,
           });
         }
+
+        this.sections = pageNav;
       });
-      return pageNav;
     },
   },
 };
 </script>
-
-<style scoped>
-@import "../../_vars.css";
-
-.title {
-  font-family: var(--ff-normal);
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.line {
-  width: 40px;
-  margin: 0;
-  border: 1px solid;
-}
-
-.list-reset {
-  list-style-type: none;
-}
-
-.link {
-  font-family: var(--ff-normal);
-  font-size: 16px;
-  font-weight: normal;
-  letter-spacing: 0;
-}
-
-.icon {
-  display: inline;
-  width: 8px;
-  height: 8px;
-  margin-left: 6px;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 23px;
-  margin-bottom: 84px;
-}
-
-.container > * {
-  flex: 0 50%;
-}
-</style>

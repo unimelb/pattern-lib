@@ -39,17 +39,17 @@ export default {
     },
   },
   mounted() {
-    document.onreadystatechange = () => {
-      if (document.readyState === 'complete') {
-        this.getInPageData();
-      }
-    };
+    window.addEventListener('load', () => {
+      this.getInPageData();
+    });
     window.addEventListener('scroll', () => {
       const { scrollY } = window;
-      this.fixed = scrollY > 50;
       if (this.autoSelect) {
         this.autoSelectOnScroll();
       }
+      const inPageNav = document.querySelector('.in-page-navigation');
+      const inPageNavOffset = inPageNav.getBoundingClientRect();
+      this.fixed = (window.innerHeight - inPageNavOffset.height + 50) + inPageNavOffset.top < scrollY;
     });
   },
   methods: {
