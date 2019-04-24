@@ -2,26 +2,42 @@
   <MegaMenu
     :items="items"
     :top-menu="topMenu"
-    :is-modified-menu="true"
     active="/random-link"
-    faculty-name="This is a Faculty name"
+    faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
     faculty-link="/faculty-link"
-    faculty-width="20%"
+    faculty-width="25.5%"
   />
 </template>
 
 <script>
 import MegaMenu from '../MegaMenu.vue';
 import sample from '../sample';
+import megaMenuDocs from './mega-menu-docs.md';
 
 export default {
   components: { MegaMenu },
+  readme: { custom: megaMenuDocs, source: true, html: true },
+
   data() {
     return {
       items: [
         {
           title: 'Study',
           href: '/',
+          feature: {
+            alt: 'screen reader only',
+            text:
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            img: 'https://placeimg.com/360/200/nature',
+            link: 'http://google.com',
+          },
+          items: [
+            { title: 'Entry requirements21', href: '/2random-link' },
+            { title: 'Entry requirements22', href: 'http://2www.google.com' },
+            { title: 'Entry requirements23', href: 'http://2www.google.com' },
+            { title: 'Entry requirements24', href: 'http://2www.google.com' },
+            { title: 'Entry requirements25', href: 'http://2www.google.com' },
+          ],
         },
         {
           title: 'Find a course',
@@ -33,7 +49,7 @@ export default {
           feature: {
             title: 'Campaign title',
             text:
-              'Pariatur veniam occaecat mollit nostrud nostrud commodo aute adipisicing et. Nulla ipsum et eiusmod dolore id adipisicing ea nostrud consequat. Non cillum ullamco dolore fugiat nulla. Et Lorem ex magna enim dolore consectetur sunt consequat. Elit excepteur ipsum sunt laboris eu commodo anim proident occaecat.',
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://placeimg.com/360/200/arch',
             link: 'http://google.com',
           },
@@ -51,8 +67,7 @@ export default {
           feature: {
             title: 'Different campaign',
             text:
-              'Consequat id nostrud nulla et amet dolore proident velit nostrud elit cupidatat ut occaecat. Eiusmod laborum ullamco nisi commodo voluptate ex amet esse exercitation adipisicing in labore dolor. Ut enim incididunt ullamco aliqua consectetur. Anim veniam elit enim ea ex duis. Ad consectetur sunt eu ullamco. Veniam anim labore sint laboris esse. Mollit irure sit non ad ex eu nostrud id laboris ut qui.',
-            img: 'https://placeimg.com/360/200/nature',
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           },
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
@@ -92,7 +107,7 @@ export default {
           feature: {
             alt: 'screen reader only',
             text:
-              'Commodo ullamco sit voluptate amet mollit et velit et sunt Lorem anim ipsum. Fugiat veniam fugiat voluptate laborum do sit nisi. Aliqua laborum commodo voluptate incididunt ullamco culpa exercitation ea deserunt consectetur occaecat eu. Pariatur esse eu voluptate adipisicing enim id. Aute est ea deserunt cillum ipsum. Exercitation laboris dolore eu laborum nostrud tempor in veniam aliqua dolor. Pariatur voluptate occaecat reprehenderit proident ex voluptate ea aliqua minim.',
+              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://placeimg.com/360/200/nature',
             link: 'http://google.com',
           },
