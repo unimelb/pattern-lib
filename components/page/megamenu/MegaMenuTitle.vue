@@ -3,13 +3,7 @@
     :style="{'width': width && width || '50%'}"
     :aria-label="title"
     :href="href"
-    class="page-title">
-    <div class="page-title--top-layout">
-      <hr>
-      <span
-        class="page-title__text">{{ title }}</span>
-    </div>
-  </a>
+    class="page-title">{{ title }}</a>
 </template>
 
 <script>
