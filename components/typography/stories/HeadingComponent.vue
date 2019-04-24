@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import headingsDoc from './headings.md';
+
 import Heading1 from '../headings/Heading1.vue';
 import Heading2 from '../headings/Heading2.vue';
 import Heading3 from '../headings/Heading3.vue';
@@ -34,8 +36,13 @@ import Heading6 from '../headings/Heading6.vue';
 
 export default {
   components: {
-    Heading1, Heading2, Heading3, Heading4, Heading5, Heading6,
+    Heading1,
+    Heading2,
+    Heading3,
+    Heading4,
+    Heading5,
+    Heading6,
   },
-  readme: { source: true, html: true },
+  readme: { custom: headingsDoc, source: true, html: true },
 };
 </script>
