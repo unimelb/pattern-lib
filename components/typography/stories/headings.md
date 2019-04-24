@@ -9,7 +9,7 @@ set the size of the heading based on the class:
 options are:
 
 ```css
-title--xxl, title--xl, title--lg, title--md, title--sm, title--xs, title--xxs
+xxl, xl, lg, md, sm, xs, xxs
 ```
 
 - text

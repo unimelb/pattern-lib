@@ -1,25 +1,25 @@
 <template>
   <div>
     <Heading1
-      size="title--xxl"
+      size="xxl"
       text="Heading1"/>
     <Heading1
-      size="title--xl"
+      size="xl"
       text="Heading1"/>
     <Heading2
-      size="title--lg"
+      size="lg"
       text="Heading2"/>
     <Heading3
-      size="title--md"
+      size="md"
       text="Heading3"/>
     <Heading4
-      size="title--sm"
+      size="sm"
       text="Heading4"/>
     <Heading5
-      size="title--xs"
+      size="xs"
       text="Heading5"/>
     <Heading6
-      size="title--xxs"
+      size="xxs"
       text="Heading6"/>
   </div>
 </template>
