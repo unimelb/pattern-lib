@@ -238,9 +238,7 @@
     }
 
     &__aside {
-      margin-left: 1.5rem;
-      margin-right: 1.5rem;
-      margin-top: 1.5rem;
+      margin: 1.5rem;
 
       &-info {
         &__link {
@@ -482,13 +480,6 @@
           display: flex;
           z-index: 3;
           box-shadow: 1px 6px 12px -3px rgba(0, 0, 0, .6);
-          @media (--bp-x-desktop) {
-            height: 500px;
-          }
-
-          @media (--bp-xx-wide) {
-            height: 600px;
-          }
         }
 
         .menu__section .menu__link {
