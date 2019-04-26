@@ -57,10 +57,10 @@ export default {
   methods: {
     getInPageData() {
       const pageNav = [];
-      document.querySelectorAll(this.headingLevel).forEach((element) => {
+      document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
         if (element.id) {
           pageNav.push({
-            id: element.id,
+            id: `#${element.id}`,
             label: element.innerText,
           });
         }
