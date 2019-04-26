@@ -6,8 +6,8 @@ import {
 } from '../../../.storybook/utils';
 
 import FilterDefault from './FilterDefault.vue';
-import FilterTest from './FilterTest.vue';
+import FilterShowcase from './FilterShowcase.vue';
 
 storiesOf('Filter', module)
   .add('Filter', createStory(FilterDefault))
-  .add('Filter Test', createStory(FilterTest));
+  .add('Filter Showcase', createStory(FilterShowcase));
