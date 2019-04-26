@@ -11,7 +11,7 @@
     display: inline-block;
     margin-right: .25rem;
     margin-left: .25rem;
-    color: white;
+    color: rgb(var(--col-background-primary-white));
   }
 
   @media (--bp-tablet) {
@@ -47,7 +47,7 @@
     &:hover {
       transition: all linear .1s;
       background: rgba(255, 255, 255, .15);
-      color: white;
+      color: rgb(var(--col-background-primary-white));
       text-decoration: none;
     }
   }
@@ -107,7 +107,7 @@
     border-radius: 0 3px 3px 0;
     border-color: rgba(0, 0, 0, .1);
     background-color: rgb(var(--col-navy-mid-2));
-    color: white;
+    color: rgb(var(--col-background-primary-white));
     vertical-align: top;
 
     &:hover {

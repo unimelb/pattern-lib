@@ -1,15 +1,9 @@
 <template>
-  <div
+  <a
     :style="{'width': width && width || '50%'}"
-    class="page-title">
-    <div class="page-title--top-layout">
-      <div class="page-title__separator"/>
-      <a
-        :aria-label="title"
-        :href="href"
-        class="page-title__text">{{ title }}</a>
-    </div>
-  </div>
+    :aria-label="title"
+    :href="href"
+    class="page-title">{{ title }}</a>
 </template>
 
 <script>
