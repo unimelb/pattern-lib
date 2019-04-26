@@ -3,16 +3,16 @@
 </template>
 
 <script>
-import FilterShowcaseCards from "../FilterShowcaseCards.vue";
-import cardsData from "../data.json";
+import FilterShowcaseCards from '../FilterShowcaseCards.vue';
+import cardsData from '../data.json';
 
 export default {
   components: { FilterShowcaseCards },
   data() {
     return {
-      cardsData
+      cardsData,
     };
   },
-  readme: { html: true, source: false }
+  readme: { html: true, source: false },
 };
 </script>

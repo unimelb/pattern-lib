@@ -1,35 +1,55 @@
 <template>
   <div>
     <SectionWrap bg-color="inverted">
-      <form class="form form--inline">
-        <div class="form--inline__row form--inline__row--center">
-          <input
-            v-model="searchData"
-            aria-label="Card title"
-            class="form--inline__search"
-            type="search"
-            placeholder="Type to search title or description"
-          >
-          <button class="form--inline__button form--inline__button--alt" aria-label="Search">
-            <SvgIcon class="form--inline__svg" name="search"/>
-            <span class="form--inline__button-label">Search</span>
-          </button>
-          <button
-            class="form--inline__button form--inline__button-border form--inline__button--alt test"
-            aria-label="Filters"
-            @click="!showDetails"
-          >
-            <SvgIcon class="form--inline__svg" name="external"/>
-            <span class="form--inline__button-label">Filters</span>
-          </button>
-        </div>
-      </form>
-      <FilterDetails v-show="showDetails"></FilterDetails>
+      <div class="form form--inline__row form--inline__row--center">
+        <input
+          v-model="searchData"
+          aria-label="Card title"
+          class="form--inline__search"
+          type="search"
+          placeholder="Type to search title or description"
+        >
+        <button
+          class="form--inline__button form--inline__button--alt"
+          aria-label="Search">
+          <SvgIcon
+            class="form--inline__svg"
+            name="search"/>
+          <span class="form--inline__button-label">Search</span>
+        </button>
+        <button
+          class="form--inline__button form--inline__button-border form--inline__button--alt test"
+          aria-label="Filters"
+          @click="handleFilterDetails"
+        >
+          <SvgIcon
+            class="form--inline__svg"
+            name="external"/>
+          <span class="form--inline__button-label">Filters</span>
+          <SvgIcon
+            class="form--inline__svg"
+            name="chevron-down"/>
+        </button>
+      </div>
+      <div
+        v-for="(item, index) in data"
+        :key="index">
+        <FilterDetails
+          v-if="showDetails"
+          :schools="item.school"
+          :perfomances="item.performance"
+          :dates="item.start_time"
+          :disciplines="item.disciplines"
+          :locations="item.location"
+        />
+      </div>
     </SectionWrap>
 
     <SectionWrap class="bg-alt">
       <div class="grid grid--3col">
-        <ListItem v-for="(item, index) in filteredData" :key="index">
+        <ListItem
+          v-for="(item, index) in filteredData"
+          :key="index">
           <GenericCard
             :cols="3"
             :thumb="item.img_url"
@@ -37,10 +57,16 @@
             :href="item.link"
             :excerpt="item.description"
           >
-            <div slot="sub-title-1" class="sub-title">
-              <span v-for="(item, index) in item.performance" :key="index">{{ item }}</span>
+            <div
+              slot="sub-title-1"
+              class="sub-title">
+              <span
+                v-for="(item, index) in item.performance"
+                :key="index">{{ item }}</span>
             </div>
-            <div slot="sub-title-2" class="sub-title">
+            <div
+              slot="sub-title-2"
+              class="sub-title">
               <SvgIcon name="calendar"/>
               <span>{{ item.start_time }}</span>
             </div>
@@ -54,32 +80,36 @@
   </div>
 </template>
 <script>
-import FilterDetails from "./FilterDetails.vue";
-import GenericCard from "../cards/GenericCard.vue";
+import FilterDetails from './FilterDetails.vue';
+import GenericCard from '../cards/GenericCard.vue';
 
 export default {
   components: { FilterDetails, GenericCard },
   props: {
     data: {
       type: Array,
-      default: ""
-    }
+      default: () => [],
+    },
   },
   data() {
     return {
-      searchData: "",
-      showDetails: false
+      searchData: '',
+      showDetails: false,
     };
   },
   computed: {
     filteredData() {
       return this.data.filter(
-        data =>
-          data.title.match(new RegExp(this.searchData, "i")) ||
-          data.description.match(new RegExp(this.searchData, "i"))
+        data => data.title.match(new RegExp(this.searchData, 'i'))
+          || data.description.match(new RegExp(this.searchData, 'i'))
       );
-    }
-  }
+    },
+  },
+  methods: {
+    handleFilterDetails() {
+      this.showDetails = !this.showDetails;
+    },
+  },
 };
 </script>
 
@@ -92,4 +122,3 @@ export default {
   border-radius: 3px 3px 3px 3px;
 }
 </style>
-
