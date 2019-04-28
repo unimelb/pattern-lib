@@ -9,7 +9,7 @@
 
   .card__sub-titles {
     margin-bottom: .25rem;
-    border-top: 1px solid #c6c8ca;
+    border-bottom: 0;
     padding: .5rem 0;
 
     svg {
