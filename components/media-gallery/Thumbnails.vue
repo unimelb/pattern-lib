@@ -9,23 +9,22 @@
       >
         <FigureWrap
           :caption="displayCaption && item.title"
-          class="thumbnails__figure"
+          class="thumbnails__item"
           tabindex="0"
         >
           <div
-            class="thumbnails__figure--item"
             @click="callback(index)"
             @keydown.13="callback(index)">
             <img
               v-if="item.type === 'image'"
               :src="item.src"
               :alt="item.altText"
+              class="thumbnails__image"
             >
             <div
               v-if="item.type === 'video'"
-              class="embed--video"
+              class="thumbnails__video"
             >
-              <div class="embed--cover"/>
               <VideoEmbed :src="item.src"/>
             </div>
           </div>

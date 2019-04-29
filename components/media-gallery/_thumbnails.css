@@ -1,5 +1,5 @@
 .thumbnails {
-  &__figure {
+  &__item {
     display: flex;
     justify-content: center;
     padding: 0;
@@ -8,18 +8,29 @@
     cursor: pointer;
     position: relative;
 
-    img {
-      object-fit: contain;
-      width: 100%;
-      height: 100%;
-      max-height: 250px;
-    }
-
     figcaption {
       color: #000;
       font-size: 1rem;
       margin: .5rem auto;
       font-weight: var(--fw-semibold);
+    }
+  }
+
+  &__image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    max-height: 250px;
+  }
+
+  &__video {
+    ::before {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 2;
     }
   }
 
@@ -35,18 +46,5 @@
 
   .anim-reveal {
     animation: reveal 1s backwards;
-  }
-
-  .embed {
-    position: relative;
-
-    &--cover {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-    }
   }
 }
