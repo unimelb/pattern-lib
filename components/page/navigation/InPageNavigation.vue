@@ -2,14 +2,15 @@
   <FocusWrapper
     :color="color"
     padded>
-    <div>
+    <div class="in-page-navigation">
       <h2 class="in-page-navigation__title">{{ title }}:</h2>
       <hr class="in-page-navigation__line">
-      <div class="in-page-navigation in-page-navigation__container">
+      <div class="in-page-navigation__container">
         <li
           v-for="(data, index) in getInPageData"
           :key="index"
-          class="list-reset">
+          class="in-page-navigation__position list-reset"
+        >
           <a
             :href="data.id"
             class="in-page-navigation__link">

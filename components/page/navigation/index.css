@@ -1,13 +1,12 @@
 .in-page-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 23px;
-  margin-bottom: 84px;
 
-  &__container > * {
-    flex: 0 50%;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 23px;
+    margin-bottom: 84px;
   }
 
   &__title {
@@ -35,5 +34,9 @@
     width: 8px;
     height: 8px;
     margin-left: 6px;
+  }
+
+  &__position {
+    flex: 0 50%;
   }
 }
