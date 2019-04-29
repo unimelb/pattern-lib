@@ -2,7 +2,9 @@
   <SectionWrap>
     <ThumbnailGallery
       :media="media"
-      display-caption/>
+      display-caption
+      columns="2"
+    />
   </SectionWrap>
 </template>
 

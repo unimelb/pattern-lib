@@ -78,7 +78,7 @@
             :key="item.id"
             :class="{ active: index === selectedIndex}"
             :aria-describedby="'caption' + selectedIndex"
-            class="thumb"
+            class="media-gallery__thumbnails--thumb"
             tabindex="0"
             role="button"
             @click="open(index)"
@@ -113,6 +113,7 @@
       :media="media"
       :callback="openThumb"
       :display-caption="displayCaption"
+      :columns="columns"
     />
   </div>
 </template>
@@ -132,6 +133,10 @@ export default {
     ThumbnailGallery,
   },
   props: {
+    columns: {
+      type: String,
+      default: '1',
+    },
     media: {
       type: Array,
       default: () => [],

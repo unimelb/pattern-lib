@@ -2,6 +2,7 @@
   <SectionWrap>
     <MediaGallery
       :media="media"
+      columns="3"
       pop-over
     />
   </SectionWrap>

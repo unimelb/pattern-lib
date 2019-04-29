@@ -1,11 +1,10 @@
 <template>
   <div class="thumbnails">
-    <ListingWrap>
+    <ListingWrap :cols="columns">
       <ListItem
         v-vpshow
         v-for="(item, index) in media"
         :key="item.id"
-        :cols="item.size || '1of1'"
         class="thumbnails__item-wrap"
       >
         <FigureWrap
@@ -86,6 +85,10 @@ export default {
     VideoEmbed,
   },
   props: {
+    columns: {
+      type: String,
+      default: '1',
+    },
     media: {
       type: Array,
       default: () => [{}],

@@ -32,17 +32,31 @@ describe('MediaGallery Common', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types media', () => {
+  it('should have default props and correct types media, inPage, popOver, columns, displayCaption', () => {
     const wrapper = shallow(MediaGallery);
     const {
-      media, inPage, popOver, displayCaption,
+      media, inPage, popOver, columns, displayCaption,
     } = wrapper.vm.$options.props;
 
+    expect(columns.type).toBe(String);
+    expect(wrapper.props().columns).toBe('1');
     expect(media.type).toBe(Array);
     expect(inPage.type).toBe(Boolean);
     expect(popOver.type).toBe(Boolean);
     expect(displayCaption.type).toBe(Boolean);
     expect(wrapper.props().media).toEqual([]);
+  });
+
+  it('should accept cols prop with correct type', () => {
+    const columns = '3';
+    const wrapper = shallow(MediaGallery, {
+      propsData: {
+        columns,
+      },
+    });
+
+    expect(typeof wrapper.props().columns).toBe('string');
+    expect(wrapper.props().columns).toBe(columns);
   });
 
   it('should render media image in slider from prop', () => {
@@ -87,7 +101,7 @@ describe('MediaGallery Common', () => {
     wrapper.setMethods({
       move,
     });
-    wrapper.find('.arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     expect(move.called).toBe(true);
   });
 
@@ -102,7 +116,7 @@ describe('MediaGallery Common', () => {
     wrapper.setMethods({
       open,
     });
-    wrapper.find('.thumb').trigger('click');
+    wrapper.find('.media-gallery__thumbnails--image').trigger('click');
     expect(open.called).toBe(true);
   });
 
@@ -113,7 +127,7 @@ describe('MediaGallery Common', () => {
       },
     });
 
-    wrapper.find('.arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     expect(wrapper.vm.selectedIndex).toBe(1);
     expect(wrapper.vm.selectedItem.id).toBe(2);
   });
@@ -129,7 +143,7 @@ describe('MediaGallery Common', () => {
     wrapper.setMethods({
       move,
     });
-    wrapper.find('.arrow-wrapper').trigger('keydown.enter');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('keydown.enter');
     expect(move.called).toBe(true);
   });
 
@@ -144,74 +158,10 @@ describe('MediaGallery Common', () => {
     expect(wrapper.vm.selectedItem.id).toBe(1);
     expect(wrapper.find('.media-gallery__title').text()).toBe('test1');
     expect(wrapper.find('.media-gallery__description').text()).toBe('test1');
-    wrapper.find('.arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     expect(wrapper.find('.media-gallery__title').text()).toBe('test2');
     expect(wrapper.find('.media-gallery__description').text()).toBe('test2');
   });
-
-  // it('should render current media number', () => {
-  //   const wrapper = shallow(MediaGallery, {
-  //     propsData: {
-  //       media: mediaMock,
-  //     },
-  //   });
-  //
-  //   expect(wrapper.find('.media-gallery__media-count').text()).toBe('1 / 2');
-  //   wrapper.find('.arrow-wrapper').trigger('click');
-  //   expect(wrapper.find('.media-gallery__media-count').text()).toBe('2 / 2');
-  // });
-
-  //
-  // it('should change image on thumb click', () => {
-  //   const wrapper = shallow(MediaGallery, {
-  //     propsData: {
-  //       media: mediaMock,
-  //     },
-  //   });
-  //   wrapper.findAll('.thumb').at(1).trigger('click');
-  //   expect(wrapper.findAll('.thumb').at(1).classes()).toContain('active');
-  //   expect(wrapper.vm.selectedIndex).toBe(1);
-  //   expect(wrapper.vm.selectedItem.id).toBe(2);
-  // });
-  //
-  //
-  // it('should have enter event on thumb', () => {
-  //   const open = sinon.stub();
-  //   const wrapper = shallow(MediaGallery, {
-  //     propsData: {
-  //       media: mediaMock,
-  //     },
-  //   });
-  //
-  //   wrapper.setMethods({
-  //     open,
-  //   });
-  //   wrapper.find('.thumb').trigger('keydown.enter');
-  //   expect(open.called).toBe(true);
-  // });
-  //
-
-  //
-  // it('should render embed if image type', () => {
-  //   const wrapper = mount(MediaGallery, {
-  //     propsData: {
-  //       media: mediaMock,
-  //     },
-  //   });
-  //   wrapper.find('.arrow-wrapper').trigger('click');
-  //   wrapper.find('.arrow-wrapper').trigger('click');
-  //   expect(wrapper.find('.thumb img').exists()).toBe(true);
-  // });
-  //
-  // it('should render embed if video type', () => {
-  //   const wrapper = mount(MediaGallery, {
-  //     propsData: {
-  //       media: mediaMock,
-  //     },
-  //   });
-  //   wrapper.find('.arrow-wrapper').trigger('click');
-  //   expect(wrapper.find('.embed').exists()).toBe(true);
-  // });
 });
 
 describe('MediaGallery InPage', () => {
@@ -224,7 +174,7 @@ describe('MediaGallery InPage', () => {
     });
 
     expect(wrapper.find('.media-gallery__media-count').text()).toBe('1 / 2');
-    wrapper.find('.arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     expect(wrapper.find('.media-gallery__media-count').text()).toBe('2 / 2');
   });
 
@@ -235,8 +185,8 @@ describe('MediaGallery InPage', () => {
         inPage: true,
       },
     });
-    wrapper.findAll('.thumb').at(1).trigger('click');
-    expect(wrapper.findAll('.thumb').at(1).classes()).toContain('active');
+    wrapper.findAll('.media-gallery__thumbnails--thumb').at(1).trigger('click');
+    expect(wrapper.findAll('.media-gallery__thumbnails--thumb').at(1).classes()).toContain('active');
     expect(wrapper.vm.selectedIndex).toBe(1);
     expect(wrapper.vm.selectedItem.id).toBe(2);
   });
@@ -253,7 +203,7 @@ describe('MediaGallery InPage', () => {
     wrapper.setMethods({
       open,
     });
-    wrapper.find('.thumb').trigger('keydown.enter');
+    wrapper.find('.media-gallery__thumbnails--image').trigger('keydown.enter');
     expect(open.called).toBe(true);
   });
 
@@ -264,9 +214,9 @@ describe('MediaGallery InPage', () => {
         inPage: true,
       },
     });
-    wrapper.find('.arrow-wrapper').trigger('click');
-    wrapper.find('.arrow-wrapper').trigger('click');
-    expect(wrapper.find('.thumb img').exists()).toBe(true);
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
+    expect(wrapper.find('.media-gallery__thumbnails--image').exists()).toBe(true);
   });
 
   it('should render embed if video type', () => {
@@ -276,7 +226,7 @@ describe('MediaGallery InPage', () => {
         inPage: true,
       },
     });
-    wrapper.find('.arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     expect(wrapper.find('.embed').exists()).toBe(true);
   });
 });
@@ -306,7 +256,7 @@ describe('MediaGallery Pop-over', () => {
     });
 
     expect(wrapper.find('.media-gallery--pop-over__media-count').text()).toBe('1 / 2');
-    wrapper.find('.arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     expect(wrapper.find('.media-gallery--pop-over__media-count').text()).toBe('2 / 2');
   });
 
@@ -333,7 +283,7 @@ describe('MediaGallery Pop-over', () => {
     wrapper.setMethods({
       openThumb,
     });
-    wrapper.find('.thumbnails__figure--item').trigger('click');
+    wrapper.find('.thumbnails__item div').trigger('click');
     expect(openThumb.called).toBe(true);
   });
 
@@ -345,7 +295,7 @@ describe('MediaGallery Pop-over', () => {
       },
     });
 
-    wrapper.find('.thumbnails__figure--item').trigger('click');
+    wrapper.find('.thumbnails__item div').trigger('click');
     expect(wrapper.vm.openState).toBe(true);
     expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--pop-over__open');
   });

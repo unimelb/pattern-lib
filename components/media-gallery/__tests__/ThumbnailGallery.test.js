@@ -11,7 +11,6 @@ const mediaMock = [
     src: 'test',
     title: 'test1',
     description: 'test1',
-    size: '1of1',
     type: 'image',
   },
   {
@@ -19,7 +18,6 @@ const mediaMock = [
     src: 'test2',
     title: 'test2',
     description: 'test2',
-    size: '1of1',
     type: 'video',
   },
 ];
@@ -30,18 +28,33 @@ describe('ThumbnailGallery', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types images/callback', () => {
+  it('should have default props and correct types images/callback/columns/displayCaption', () => {
     const wrapper = shallow(ThumbnailGallery);
     const {
       media,
       callback,
+      columns,
       displayCaption,
     } = wrapper.vm.$options.props;
 
+    expect(columns.type).toBe(String);
+    expect(wrapper.props().columns).toBe('1');
     expect(media.type).toBe(Array);
     expect(callback.type).toBe(Function);
     expect(displayCaption.type).toBe(Boolean);
     expect(wrapper.props().media).toEqual([{}]);
+  });
+
+  it('should accept columns prop with correct type', () => {
+    const columns = '3';
+    const wrapper = shallow(ThumbnailGallery, {
+      propsData: {
+        columns,
+      },
+    });
+
+    expect(typeof wrapper.props().columns).toBe('string');
+    expect(wrapper.props().columns).toBe(columns);
   });
 
   it('should render images from prop', () => {
@@ -71,7 +84,7 @@ describe('ThumbnailGallery', () => {
       },
     });
     expect(wrapper.props().displayCaption).toBe(true);
-    expect(wrapper.find('.ThumbnailGallery__description').exists()).toBe(true);
+    expect(wrapper.find('.thumbnails__description').exists()).toBe(true);
   });
 
   it('should have click event on thumb', () => {
@@ -82,7 +95,7 @@ describe('ThumbnailGallery', () => {
         callback,
       },
     });
-    wrapper.find('.ThumbnailGallery__figure--item').trigger('click');
+    wrapper.find('.thumbnails__item div').trigger('click');
     expect(callback.called).toBe(true);
   });
 });

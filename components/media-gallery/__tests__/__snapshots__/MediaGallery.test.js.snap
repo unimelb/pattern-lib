@@ -11,7 +11,7 @@ exports[`MediaGallery Common should match snapshot 1`] = `
       class="media-gallery__slider"
     >
       <div
-        class="arrow-wrapper"
+        class="media-gallery__arrow-wrapper"
         role="button"
         tabindex="0"
         title="Previous (arrow left)"
@@ -22,7 +22,7 @@ exports[`MediaGallery Common should match snapshot 1`] = `
       <!---->
        
       <div
-        class="arrow-wrapper"
+        class="media-gallery__arrow-wrapper"
         role="button"
         tabindex="0"
         title="Next (arrow right)"
