@@ -12,7 +12,9 @@
           class="list-reset">
           <a
             :href="data.id"
-            class="link">
+            class="link"
+            @click="scroll"
+          >
             {{ data.label }}
             <SvgIcon
               name="chevron-right"
@@ -60,13 +62,20 @@ export default {
       document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
         if (element.id) {
           pageNav.push({
-            id: `#${element.id}`,
+            id: `${element.id}`,
             label: element.innerText,
           });
         }
 
         this.sections = pageNav;
       });
+    },
+    scroll(e) {
+      e.preventDefault();
+      const scrollToID = e.target.getAttribute('href');
+      const scrollToElem = document.getElementById(scrollToID);
+      const count = scrollToElem.offsetTop - window.pageYOffset - 50;
+      window.scrollBy({ top: count, left: 0, behavior: 'smooth' });
     },
   },
 };
