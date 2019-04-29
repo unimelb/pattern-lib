@@ -16,10 +16,10 @@
 
     &.bg-inverted,
     &.bg-inverted--o95 {
-      color: white;
+      color: rgb(var(--col-background-primary-white));
 
       &:visited {
-        color: white;
+        color: rgb(var(--col-background-primary-white));
       }
 
       &:hover {

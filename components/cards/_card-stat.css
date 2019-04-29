@@ -1,10 +1,17 @@
 .card--stat {
   &.btn-owner {
+
     &.bg-inverted,
     &.bg-inverted--o95 {
-      color: white;
-      &:visited { color: white; }
-      &:hover { background-color: color(rgb(var(--col-brand)) lightness(-2%)); }
+      color: rgb(var(--col-background-primary-white));
+
+      &:visited {
+        color: rgb(var(--col-background-primary-white));
+      }
+
+      &:hover {
+        background-color: color(rgb(var(--col-brand)) lightness(-2%));
+      }
     }
   }
 }
@@ -12,7 +19,7 @@
 .card {
   &-header {
     &__heading {
-      font-size: 61px;
+      font-size: 3.8125rem;
       font-weight: var(--fw-semibold);
     }
   }

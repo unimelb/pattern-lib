@@ -2,14 +2,14 @@
   color: rgb(var(--col-brand));
 
   .card__title {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: var(--fw-bold);
     text-decoration: none;
   }
 
   .card__sub-titles {
     margin-bottom: .25rem;
-    border-top: 1px solid #c6c8ca;
+    border-bottom: 0;
     padding: .5rem 0;
 
     svg {
