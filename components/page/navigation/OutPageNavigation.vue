@@ -3,20 +3,20 @@
     :color="color"
     padded>
     <div>
-      <h2 class="title">{{ cardTitle }}</h2>
-      <hr class="line">
-      <div class="container">
+      <h2 class="in-page-navigation__title">{{ cardTitle }}</h2>
+      <hr class="in-page-navigation__line">
+      <div class="in-page-navigation in-page-navigation__container">
         <li
           v-for="(link, index) in cardLinks"
           :key="index"
           class="list-reset">
           <a
             :href="link.url"
-            class="link">
+            class="in-page-navigation__link">
             {{ link.title }}
             <SvgIcon
               name="chevron-right"
-              class="icon"/>
+              class="in-page-navigation__icon"/>
           </a>
         </li>
       </div>
