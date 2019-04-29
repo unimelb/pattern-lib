@@ -1,18 +1,18 @@
 <template>
   <SectionWrap>
-    <Thumbnails
+    <ThumbnailGallery
       :media="media"
       display-caption/>
   </SectionWrap>
 </template>
 
 <script>
-import Thumbnails from '../Thumbnails.vue';
+import ThumbnailGallery from '../ThumbnailGallery.vue';
 import sample from '../sample.json';
 import MediaGalleryDocs from './media-gallery.md';
 
 export default {
-  components: { Thumbnails },
+  components: { ThumbnailGallery },
   data() {
     return {
       media: sample,

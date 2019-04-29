@@ -273,4 +273,4 @@ export {
 export {
   default as Thumbnails,
 }
-  from '../../components/media-gallery/Thumbnails.vue';
+  from '../../components/media-gallery/ThumbnailGallery.vue';

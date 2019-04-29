@@ -2,9 +2,9 @@
 
 The Photo Gallery component receives an Array called `media` to build the gallery.
 This component can be viewed in two types `In Page` and `Pop-over`. This types should be specified in a component like an in the example below. This attribute is required.
-The `Pop-over` component uses Thumbnails component to show page thumbnails. In images object you should set size for every image ( `1of1`, `1of2`, `1of3`, `1of4`).
+The `Pop-over` component uses ThumbnailGallery component to show page thumbnails. In images object you should set size for every image ( `1of1`, `1of2`, `1of3`, `1of4`).
 Both components may have two types of media Video or image. This option is required for each media.
-By the way, you can use the `Thumbnails` component separately (look to Usage Thumbnails). Add `display-caption` attribute if you need to display captions.
+By the way, you can use the `ThumbnailGallery` component separately (look to Usage Thumbnails). Add `display-caption` attribute if you need to display captions.
 
 Example:
 

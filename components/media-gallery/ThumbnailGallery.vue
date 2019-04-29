@@ -6,6 +6,7 @@
         v-for="(item, index) in media"
         :key="item.id"
         :cols="item.size || '1of1'"
+        class="thumbnails__item-wrap"
       >
         <FigureWrap
           :caption="displayCaption && item.title"
@@ -59,8 +60,8 @@ Vue.directive('vpshow', {
     el.classList.add('invisible');
     el.$onScroll = () => {
       if (binding.def.inViewport(el)) {
-        el.classList.add('anim-reveal');
-        el.classList.remove('invisible');
+        el.classList.add('thumbnails__anim-reveal');
+        el.classList.remove('thumbnails__invisible');
         binding.def.unbind(el, binding);
       }
     };

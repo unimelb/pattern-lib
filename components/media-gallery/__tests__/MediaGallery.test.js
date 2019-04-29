@@ -73,7 +73,7 @@ describe('MediaGallery Common', () => {
     });
     expect(wrapper.vm.selectedIndex).toBe(0);
     expect(wrapper.vm.selectedItem.id).toBe(1);
-    expect(wrapper.find('.photo-gallery__container img').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery__container img').exists()).toBe(true);
   });
 
   it('should have click event on arrows', () => {
@@ -142,11 +142,11 @@ describe('MediaGallery Common', () => {
 
     expect(wrapper.vm.selectedIndex).toBe(0);
     expect(wrapper.vm.selectedItem.id).toBe(1);
-    expect(wrapper.find('.photo-gallery__title').text()).toBe('test1');
-    expect(wrapper.find('.photo-gallery__description').text()).toBe('test1');
+    expect(wrapper.find('.media-gallery__title').text()).toBe('test1');
+    expect(wrapper.find('.media-gallery__description').text()).toBe('test1');
     wrapper.find('.arrow-wrapper').trigger('click');
-    expect(wrapper.find('.photo-gallery__title').text()).toBe('test2');
-    expect(wrapper.find('.photo-gallery__description').text()).toBe('test2');
+    expect(wrapper.find('.media-gallery__title').text()).toBe('test2');
+    expect(wrapper.find('.media-gallery__description').text()).toBe('test2');
   });
 
   // it('should render current media number', () => {
@@ -156,9 +156,9 @@ describe('MediaGallery Common', () => {
   //     },
   //   });
   //
-  //   expect(wrapper.find('.photo-gallery__media-count').text()).toBe('1 / 2');
+  //   expect(wrapper.find('.media-gallery__media-count').text()).toBe('1 / 2');
   //   wrapper.find('.arrow-wrapper').trigger('click');
-  //   expect(wrapper.find('.photo-gallery__media-count').text()).toBe('2 / 2');
+  //   expect(wrapper.find('.media-gallery__media-count').text()).toBe('2 / 2');
   // });
 
   //
@@ -223,9 +223,9 @@ describe('MediaGallery InPage', () => {
       },
     });
 
-    expect(wrapper.find('.photo-gallery__media-count').text()).toBe('1 / 2');
+    expect(wrapper.find('.media-gallery__media-count').text()).toBe('1 / 2');
     wrapper.find('.arrow-wrapper').trigger('click');
-    expect(wrapper.find('.photo-gallery__media-count').text()).toBe('2 / 2');
+    expect(wrapper.find('.media-gallery__media-count').text()).toBe('2 / 2');
   });
 
   it('should change image on thumb click', () => {
@@ -290,11 +290,11 @@ describe('MediaGallery Pop-over', () => {
       },
     });
 
-    expect(wrapper.find('.photo-gallery').classes()).toContain('photo-gallery--pop-over');
-    expect(wrapper.find('.photo-gallery--pop-over__media-count').exists()).toBe(true);
-    expect(wrapper.find('.photo-gallery--pop-over__close').exists()).toBe(true);
-    expect(wrapper.find('.photo-gallery__slider').classes()).toContain('photo-gallery--pop-over__slider');
-    expect(wrapper.find('.photo-gallery__container').classes()).toContain('photo-gallery--pop-over__container');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--pop-over');
+    expect(wrapper.find('.media-gallery--pop-over__media-count').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery--pop-over__close').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery--pop-over__slider');
+    expect(wrapper.find('.media-gallery__container').classes()).toContain('media-gallery--pop-over__container');
   });
 
   it('should render current media number', () => {
@@ -305,9 +305,9 @@ describe('MediaGallery Pop-over', () => {
       },
     });
 
-    expect(wrapper.find('.photo-gallery--pop-over__media-count').text()).toBe('1 / 2');
+    expect(wrapper.find('.media-gallery--pop-over__media-count').text()).toBe('1 / 2');
     wrapper.find('.arrow-wrapper').trigger('click');
-    expect(wrapper.find('.photo-gallery--pop-over__media-count').text()).toBe('2 / 2');
+    expect(wrapper.find('.media-gallery--pop-over__media-count').text()).toBe('2 / 2');
   });
 
   it('should have thumbnails component', () => {
@@ -347,6 +347,6 @@ describe('MediaGallery Pop-over', () => {
 
     wrapper.find('.thumbnails__figure--item').trigger('click');
     expect(wrapper.vm.openState).toBe(true);
-    expect(wrapper.find('.photo-gallery').classes()).toContain('photo-gallery--pop-over__open');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--pop-over__open');
   });
 });

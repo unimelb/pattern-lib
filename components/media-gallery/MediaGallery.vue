@@ -3,10 +3,10 @@
     <div :class="classes">
       <div
         v-if="popOver"
-        class="photo-gallery--pop-over__media-count">
+        class="media-gallery--pop-over__media-count">
         {{ selectedIndex + 1 }} / {{ media.length }}
         <div
-          class="photo-gallery--pop-over__close"
+          class="media-gallery--pop-over__close"
           tabindex="0"
           title="Close (Esc)"
           @click="openStateToggle()"
@@ -20,7 +20,7 @@
       </div>
       <div :class="sliderClasses">
         <div
-          class="arrow-wrapper"
+          class="media-gallery__arrow-wrapper"
           role="button"
           tabindex="0"
           title="Previous (arrow left)"
@@ -28,7 +28,7 @@
           @keydown.13="move('prev')"
         >
           <SvgIcon
-            class="photo-gallery__chevron"
+            class="media-gallery__chevron"
             name="chevron-left"
             width="30"
             height="30"/>
@@ -43,11 +43,13 @@
             <slideritem
               v-for="(slide, index) in media"
               :key="index"
-              class="photo-gallery__figure">
+              class="media-gallery__figure">
               <img
                 v-if="slide.type === 'image'"
                 :src="slide.src"
-                :alt="slide.altText">
+                :alt="slide.altText"
+                class="media-gallery__slider--image"
+              >
               <VideoEmbed
                 v-if="slide.type === 'video'"
                 :src="slide.src"/>
@@ -55,7 +57,7 @@
           </slider>
         </div>
         <div
-          class="arrow-wrapper"
+          class="media-gallery__arrow-wrapper"
           tabindex="0"
           role="button"
           title="Next (arrow right)"
@@ -63,7 +65,7 @@
           @keydown.13="move('next')"
         >
           <SvgIcon
-            class="photo-gallery__chevron"
+            class="media-gallery__chevron"
             name="chevron-right"
             width="30"
             height="30"/>
@@ -85,7 +87,9 @@
             <img
               v-if="item.type === 'image'"
               :src="item.src"
-              :alt="item.altText">
+              :alt="item.altText"
+              class="media-gallery__thumbnails--image"
+            >
             <div
               v-if="item.type === 'video'"
               class="embed--video">
@@ -96,7 +100,7 @@
         </div>
         <div
           v-if="inPage"
-          class="photo-gallery__media-count"
+          class="media-gallery__media-count"
         >{{ selectedIndex + 1 }} / {{ media.length }}</div>
         <figcaption
           :id="'caption' + selectedIndex"
@@ -104,7 +108,7 @@
         <div :class="descriptionClasses">{{ selectedItem.description }}</div>
       </figure>
     </div>
-    <Thumbnails
+    <ThumbnailGallery
       v-if="popOver"
       :media="media"
       :callback="openThumb"
@@ -117,7 +121,7 @@
 import { slider, slideritem } from 'vue-concise-slider';
 import VideoEmbed from '../embed/VideoEmbed.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
-import Thumbnails from './Thumbnails.vue';
+import ThumbnailGallery from './ThumbnailGallery.vue';
 
 export default {
   components: {
@@ -125,7 +129,7 @@ export default {
     slider,
     slideritem,
     SvgIcon,
-    Thumbnails,
+    ThumbnailGallery,
   },
   props: {
     media: {
@@ -166,39 +170,39 @@ export default {
   computed: {
     classes() {
       return {
-        'photo-gallery': true,
-        'photo-gallery--pop-over': this.popOver,
-        'photo-gallery--pop-over__open': this.openState,
+        'media-gallery': true,
+        'media-gallery--pop-over': this.popOver,
+        'media-gallery--pop-over__open': this.openState,
       };
     },
     sliderClasses() {
       return {
-        'photo-gallery__slider': true,
-        'photo-gallery--pop-over__slider': this.popOver,
+        'media-gallery__slider': true,
+        'media-gallery--pop-over__slider': this.popOver,
       };
     },
     containerClasses() {
       return {
-        'photo-gallery__container': true,
-        'photo-gallery--pop-over__container': this.popOver,
+        'media-gallery__container': true,
+        'media-gallery--pop-over__container': this.popOver,
       };
     },
     thumbClasses() {
       return {
-        'photo-gallery__thumbnails': true,
-        'photo-gallery--pop-over__thumbnails': this.popOver,
+        'media-gallery__thumbnails': true,
+        'media-gallery--pop-over__thumbnails': this.popOver,
       };
     },
     titleClasses() {
       return {
-        'photo-gallery__title': true,
-        'photo-gallery--pop-over__title': this.popOver,
+        'media-gallery__title': true,
+        'media-gallery--pop-over__title': this.popOver,
       };
     },
     descriptionClasses() {
       return {
-        'photo-gallery__description': true,
-        'photo-gallery--pop-over__description': this.popOver,
+        'media-gallery__description': true,
+        'media-gallery--pop-over__description': this.popOver,
       };
     },
   },

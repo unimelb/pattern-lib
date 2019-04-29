@@ -3,12 +3,12 @@
 exports[`MediaGallery Common should match snapshot 1`] = `
 <div>
   <div
-    class="photo-gallery"
+    class="media-gallery"
   >
     <!---->
      
     <div
-      class="photo-gallery__slider"
+      class="media-gallery__slider"
     >
       <div
         class="arrow-wrapper"
