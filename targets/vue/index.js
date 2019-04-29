@@ -75,6 +75,22 @@ export {
 }
   from '../../components/cards/GenericCard.vue';
 export {
+  default as CardStat,
+}
+  from '../../components/cards/CardStat.vue';
+export {
+  default as CardShowcaseProfile,
+}
+  from '../../components/cards/CardShowcaseProfile.vue';
+export {
+  default as CardEvents,
+}
+  from '../../components/cards/CardEvents.vue';
+export {
+  default as CardFeaturesPanel,
+}
+  from '../../components/cards/CardFeaturesPanel.vue';
+export {
   default as CheckList,
 }
   from '../../components/check-list/CheckList.vue';

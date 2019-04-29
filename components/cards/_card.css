@@ -16,9 +16,15 @@
 
     &.bg-inverted,
     &.bg-inverted--o95 {
-      color: white;
-      &:visited { color: white; }
-      &:hover { background-color: color(rgb(var(--col-brand)) lightness(-2%)); }
+      color: rgb(var(--col-background-primary-white));
+
+      &:visited {
+        color: rgb(var(--col-background-primary-white));
+      }
+
+      &:hover {
+        background-color: color(rgb(var(--col-brand)) lightness(-2%));
+      }
     }
   }
 
@@ -93,29 +99,89 @@
     border-bottom: .4rem solid;
 
     /* Border color sequence */
-    .cell:nth-child(7n+1) & { border-color: rgb(var(--col-1)); }
-    .cell:nth-child(7n+2) & { border-color: rgb(var(--col-2)); }
-    .cell:nth-child(7n+3) & { border-color: rgb(var(--col-3)); }
-    .cell:nth-child(7n+4) & { border-color: rgb(var(--col-4)); }
-    .cell:nth-child(7n+5) & { border-color: rgb(var(--col-5)); }
-    .cell:nth-child(7n+6) & { border-color: rgb(var(--col-6)); }
-    .cell:nth-child(7n) & { border-color: rgb(var(--col-7)); }
+    .cell:nth-child(7n+1) & {
+      border-color: rgb(var(--col-1));
+    }
 
-    .cell--col-1 & { border-color: rgb(var(--col-1)) !important; }
-    .cell--col-2 & { border-color: rgb(var(--col-2)) !important; }
-    .cell--col-3 & { border-color: rgb(var(--col-3)) !important; }
-    .cell--col-4 & { border-color: rgb(var(--col-4)) !important; }
-    .cell--col-5 & { border-color: rgb(var(--col-5)) !important; }
-    .cell--col-6 & { border-color: rgb(var(--col-6)) !important; }
-    .cell--col-7 & { border-color: rgb(var(--col-7)) !important; }
+    .cell:nth-child(7n+2) & {
+      border-color: rgb(var(--col-2));
+    }
 
-    .list-item:nth-child(7n+1) & { border-color: rgb(var(--col-1)); }
-    .list-item:nth-child(7n+2) & { border-color: rgb(var(--col-2)); }
-    .list-item:nth-child(7n+3) & { border-color: rgb(var(--col-3)); }
-    .list-item:nth-child(7n+4) & { border-color: rgb(var(--col-4)); }
-    .list-item:nth-child(7n+5) & { border-color: rgb(var(--col-5)); }
-    .list-item:nth-child(7n+6) & { border-color: rgb(var(--col-6)); }
-    .list-item:nth-child(7n) & { border-color: rgb(var(--col-7)); }
+    .cell:nth-child(7n+3) & {
+      border-color: rgb(var(--col-3));
+    }
+
+    .cell:nth-child(7n+4) & {
+      border-color: rgb(var(--col-4));
+    }
+
+    .cell:nth-child(7n+5) & {
+      border-color: rgb(var(--col-5));
+    }
+
+    .cell:nth-child(7n+6) & {
+      border-color: rgb(var(--col-6));
+    }
+
+    .cell:nth-child(7n) & {
+      border-color: rgb(var(--col-7));
+    }
+
+    .cell--col-1 & {
+      border-color: rgb(var(--col-1)) !important;
+    }
+
+    .cell--col-2 & {
+      border-color: rgb(var(--col-2)) !important;
+    }
+
+    .cell--col-3 & {
+      border-color: rgb(var(--col-3)) !important;
+    }
+
+    .cell--col-4 & {
+      border-color: rgb(var(--col-4)) !important;
+    }
+
+    .cell--col-5 & {
+      border-color: rgb(var(--col-5)) !important;
+    }
+
+    .cell--col-6 & {
+      border-color: rgb(var(--col-6)) !important;
+    }
+
+    .cell--col-7 & {
+      border-color: rgb(var(--col-7)) !important;
+    }
+
+    .list-item:nth-child(7n+1) & {
+      border-color: rgb(var(--col-1));
+    }
+
+    .list-item:nth-child(7n+2) & {
+      border-color: rgb(var(--col-2));
+    }
+
+    .list-item:nth-child(7n+3) & {
+      border-color: rgb(var(--col-3));
+    }
+
+    .list-item:nth-child(7n+4) & {
+      border-color: rgb(var(--col-4));
+    }
+
+    .list-item:nth-child(7n+5) & {
+      border-color: rgb(var(--col-5));
+    }
+
+    .list-item:nth-child(7n+6) & {
+      border-color: rgb(var(--col-6));
+    }
+
+    .list-item:nth-child(7n) & {
+      border-color: rgb(var(--col-7));
+    }
 
     .colour-cycle--alt .cell:nth-child(4n+1) &,
     .colour-cycle--alt .list-item:nth-child(4n+1) & {
@@ -145,6 +211,7 @@
   }
 
   &--bdr-blue {
+
     .cell &,
     .list-item & {
       border-bottom: .4rem solid rgb(var(--col-navy-mid-2));
@@ -152,6 +219,7 @@
   }
 
   &--bdr-grey {
+
     .cell &,
     .list-item & {
       border-bottom: .4rem solid rgb(153, 162, 170);

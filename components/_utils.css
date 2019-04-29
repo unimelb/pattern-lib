@@ -1,37 +1,43 @@
 /**
  * Background
  */
+
 /* saw-tooth pattern */
+
 .bg-saw-tooth {
   background-image: url('./shared/bg-saw-tooth.svg');
 }
 
 /* inverted background */
+
 .bg-inverted {
   background-color: rgb(var(--col-brand));
-  color: white;
+  color: rgb(var(--col-background-primary-white));
 }
 
 .bg-inverted-dark {
   background-color: rgb(var(--col-background-secondary-navy));
-  color: white;
+  color: rgb(var(--col-background-primary-white));
 }
 
 .bg-inverted-darker {
   background-color: rgb(var(--col-background-tertiary-navy));
-  color: white;
+  color: rgb(var(--col-background-primary-white));
 }
 
 .bg-inverted--o95 {
   background-color: rgba(var(--col-background-secondary-navy), .95);
-  color: white;
+  color: rgb(var(--col-background-primary-white));
 
   .card--focus-box__cnr {
-    opacity: .85; /* push up opacity for focus color on blue bg */
+    opacity: .85;
+
+    /* push up opacity for focus color on blue bg */
   }
 }
 
 /* light-gray background */
+
 .bg-alt {
   background-color: rgb(var(--col-background-primary-grey));
 }
@@ -41,63 +47,98 @@
 }
 
 /* light-blue (used in side nav) */
+
 .bg-light-blue {
   background-color: color(rgb(var(--col-brand)) tint(92%));
 }
 
 /* white background */
+
 .bg-white {
-  background-color: white;
+  background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
 }
 
 /**
  * Colours
  */
-.col-facebook { color: rgb(var(--col-facebook)); }
-.col-twitter { color: rgb(var(--col-twitter)); }
-.col-linkedin { color: rgb(var(--col-linkedin)); }
+
+.col-facebook {
+  color: rgb(var(--col-facebook));
+}
+
+.col-twitter {
+  color: rgb(var(--col-twitter));
+}
+
+.col-linkedin {
+  color: rgb(var(--col-linkedin));
+}
 
 /**
  * Max-width wrapper
  */
+
 .max {
-  max-width: calc(var(--w-mid) + 2 * var(--vr)); /* account for padding */
+  max-width: calc(var(--w-mid) + 2 * var(--vr));
+
+  /* account for padding */
   margin-right: auto;
   margin-left: auto;
   padding-right: var(--vr);
   padding-left: var(--vr);
 
-  &--xxsml { max-width: calc(var(--w-xxsml) + 2 * var(--vr)); }
-  &--xsml { max-width: calc(var(--w-xsml) + 2 * var(--vr)); }
-  &--sml { max-width: calc(var(--w-sml) + 2 * var(--vr)); }
-  &--lge { max-width: calc(var(--w-lge) + 2 * var(--vr)); }
+  &--xxsml {
+    max-width: calc(var(--w-xxsml) + 2 * var(--vr));
+  }
+
+  &--xsml {
+    max-width: calc(var(--w-xsml) + 2 * var(--vr));
+  }
+
+  &--sml {
+    max-width: calc(var(--w-sml) + 2 * var(--vr));
+  }
+
+  &--lge {
+    max-width: calc(var(--w-lge) + 2 * var(--vr));
+  }
 }
 
 /**
  * Link
  */
+
 /* reset */
+
 .link-reset,
 .links-reset a {
   font-weight: inherit;
   text-decoration: none;
 
-  &:any-link { color: inherit; }
-  &:hover { text-decoration: underline; }
+  &:any-link {
+    color: inherit;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /* wrapping an image (typically a logo) */
+
 .link-img {
   display: inline-block;
-  vertical-align: bottom; /* fix unwanted inline-block space */
+  vertical-align: bottom;
 
+  /* fix unwanted inline-block space */
   & > img {
     display: block;
   }
 }
 
 /* with text and icon (e.g. `popular` list in footer) */
+
 .link-icon {
   display: inline-block;
   position: relative;
@@ -114,10 +155,16 @@
 
   &__text {
     display: inline-block;
-    padding-right: .125rem; /* for focus outline */
-    padding-left: calc(1.3 * 1em + .5em); /* icon width .5em */
+    padding-right: .125rem;
+
+    /* for focus outline */
+    padding-left: calc(1.3 * 1em + .5em);
+
+    /* icon width .5em */
     text-decoration: inherit;
-    vertical-align: top; /* fix unwanted inline-block space */
+    vertical-align: top;
+
+    /* fix unwanted inline-block space */
   }
 }
 
@@ -138,7 +185,9 @@ a[target='_blank'] {
 /**
  * List
  */
+
 /* reset */
+
 .list-reset {
   margin-bottom: 0;
   padding-left: 0;
@@ -147,7 +196,9 @@ a[target='_blank'] {
 
 .list-spaced {
   li {
-    margin-bottom: calc(var(--vr) * .75); /* 1.125rem */
+    margin-bottom: calc(var(--vr) * .75);
+
+    /* 1.125rem */
     padding-left: calc(var(--vr) * .75);
   }
 
@@ -158,6 +209,7 @@ a[target='_blank'] {
 }
 
 /* with white chevron markers */
+
 .list-chevrons > li {
   &::before {
     content: '';
@@ -177,7 +229,9 @@ a[target='_blank'] {
 }
 
 /* definition list - i.e. `dl` */
+
 .list-def {
+
   & > dt,
   & > dd {
     display: block;
@@ -192,11 +246,18 @@ a[target='_blank'] {
 
   & > dd {
     margin-bottom: .25rem;
-    margin-left: 0; /* remove UA style */
-    padding: 0 1px; /* fix cropped focus outline caused by hidden overflow */
-    overflow: hidden; /* for multi-line alignment */
-    text-overflow: ellipsis; /* for long unbreakable words */
+    margin-left: 0;
 
+    /* remove UA style */
+    padding: 0 1px;
+
+    /* fix cropped focus outline caused by hidden overflow */
+    overflow: hidden;
+
+    /* for multi-line alignment */
+    text-overflow: ellipsis;
+
+    /* for long unbreakable words */
     &:last-child {
       margin-bottom: 0;
     }
@@ -212,6 +273,7 @@ a[target='_blank'] {
  * Push icon to the right of a block of text.
  * Used in buttons, menus, etc.
  */
+
 .push-icon {
   display: flex;
   align-items: center;
@@ -220,7 +282,9 @@ a[target='_blank'] {
 
   &__icon {
     display: inline-block;
-    flex-shrink: 0; /* prevent icon from shrinking */
+    flex-shrink: 0;
+
+    /* prevent icon from shrinking */
     width: .75em;
     height: .75em;
     margin-left: 1em;
@@ -251,6 +315,7 @@ a[target='_blank'] {
  * Boxed content
  * Removes top spacing of first child and bottom spacing of last child
  */
+
 .box {
   & > *:last-child {
     margin-bottom: 0;
@@ -266,7 +331,9 @@ a[target='_blank'] {
 /**
  * Clearfix
  */
+
 .clearfix {
+
   &::before,
   &::after {
     content: '';
@@ -323,6 +390,7 @@ a[target='_blank'] {
 }
 
 /* ellipsis overflow */
+
 .text-ellipsis {
   display: block;
   overflow: hidden;
@@ -330,6 +398,7 @@ a[target='_blank'] {
 }
 
 /* prevent wrapping - e.g. for emails, URLs, etc. */
+
 .text-nowrap {
   white-space: nowrap;
 }
@@ -337,6 +406,7 @@ a[target='_blank'] {
 /**
  * Hide visually but not from screenreaders
  */
+
 .screenreaders-only {
   position: absolute !important;
   width: 1px !important;
@@ -348,6 +418,7 @@ a[target='_blank'] {
 /**
  * Download metadata
  */
+
 .metadata {
   margin-top: calc(var(--vr) / 2);
   margin-bottom: calc(var(--vr) / 2);
@@ -358,14 +429,21 @@ a[target='_blank'] {
 /**
  * Animations
  */
+
 @keyframes fadeIn {
-  from { opacity: 0; }
+  from {
+    opacity: 0;
+  }
 }
 
 @keyframes slideFromRight {
-  from { transform: translateX(100%); }
+  from {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes slideFromTop {
-  from { transform: translateY(-100%); }
+  from {
+    transform: translateY(-100%);
+  }
 }

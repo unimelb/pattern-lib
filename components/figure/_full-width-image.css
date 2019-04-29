@@ -1,0 +1,11 @@
+.full-width-image {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 38vw;
+
+  @media (--bp-tablet) {
+    height: 28vw;
+  }
+}

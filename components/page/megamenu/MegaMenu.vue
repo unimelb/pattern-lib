@@ -1,8 +1,11 @@
 <template>
   <div
     ref="headerroot"
-    class="page-header page-header--l3 page-header--study">
-    <div class="page-header__inner">
+    :class="[isShowTopMenu && 'page-header__with-top-menu']"
+    class="page-header page-header--l3 page-header--study"
+  >
+    <div
+      class="page-header__inner">
       <a
         class="link-img link-reset"
         href="https://www.unimelb.edu.au/">
@@ -21,34 +24,46 @@
         :title="facultyName"
         :href="facultyLink"
         :width="facultyWidth"
-        :has-aperture="facultyAperture"
-        :aperture-color="facultyApertureColor"
       />
       <div
         ref="blanket"
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
-        @keypress.27="dismissMobileMenu">
+        @keypress.27="dismissMobileMenu"
+      >
+        <MegaMenuTopNavigation
+          v-if="isShowTopMenu && isMobileOpen === false"
+          :items="topMenu"
+          class="megamenu--show-on-desktop"
+        />
         <nav
           id="sitemapmenu"
           ref="rootmenu"
+          :class="['megamenu', isShowTopMenu && 'megamenu__with-top-menu']"
           aria-label="Site"
-          class="megamenu">
+          @mouseleave="dismissMenu"
+        >
           <div
             role="button"
             aria-label="Close"
             class="menu__back-btn"
-            @click="dismissMobileMenu">Close</div>
+            @click="dismissMobileMenu"
+          >Close</div>
           <PageSearchForm
             v-if="isMobileOpen"
             aria-hidden="true"/>
+          <MegaMenuTitle
+            v-if="facultyName && isMobileOpen"
+            :title="facultyName"
+            :href="facultyLink"
+            :width="facultyWidth"
+          />
           <ul
             class="menu__section"
             role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
-              :class="rootOrChildrenActive(rootitem) ? 'menu__item--active' : null"
               :key="`rootitem-${rootindex}`"
               :tabindex="isSelected(rootindex)"
               class="menu__item"
@@ -57,68 +72,97 @@
               @keydown="handleKey"
             >
               <a
-                :role="rootitem.items ? 'button' : 'menuitem'"
+                :role="rootitem.items ? 'menuitem' : 'button'"
                 :href="rootitem.href"
-                :class="linkClasses(rootindex, rootitem)"
+                class="menu__link"
                 @click="openInner"
-                v-html="rootitem.title"
-              />
+              >
+                {{ rootitem.title }}
+                <SvgIcon
+                  v-if="isMobileOpen"
+                  name="chevron-right"
+                  class="icon"/>
+              </a>
               <div
                 v-if="rootitem.items"
-                ref="panels"
-                class="inner"
+                class="inner inner--fade"
               >
                 <div
                   role="button"
                   class="menu__back-btn"
                   @click="closeInner">Back</div>
+                <div class="menu__block">
+                  <div>
+                    <a
+                      :href="rootitem.href"
+                      class="menu__nested-parent">{{ rootitem.title }}</a>
+                  </div>
+                  <ul
+                    :class="isColColumns(rootindex)"
+                    class="menu__section"
+                    role="menu">
+                    <li
+                      v-for="(menuitem, menuindex) in rootitem.items"
+                      :key="`menuitem-${menuindex}`"
+                      class="menu__item"
+                    >
+                      <a
+                        :href="menuitem.href"
+                        tabindex="0"
+                        class="menu__link"
+                        role="menuitem"
+                      >
+                        {{ menuitem.title }}
+                        <SvgIcon
+                          v-if="!isMobileOpen"
+                          name="chevron-right"
+                          class="icon"/>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
                 <div class="menu__aside">
-                  <a
-                    :href="rootitem.href"
-                    class="menu__nested-parent">{{ rootitem.title }}</a>
                   <component
                     v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
                     :href="rootitem.feature.link"
-                    :style="rootitem.feature.img ? `background-image:url(${rootitem.feature.img})` : null"
                     class="menu__campaign"
                   >
-                    <p
-                      v-if="rootitem.feature.text || rootitem.feature.title"
-                      class="menu__campaign-text">
-                      <strong
-                        v-if="rootitem.feature.title"
-                        class="menu__campaign-title">{{ rootitem.feature.title }}</strong>
-                      <span
-                        v-if="rootitem.feature.text"
-                        v-html="rootitem.feature.text"/>
-                    </p>
-                    <span
-                      v-if="rootitem.feature.alt"
-                      class="screenreaders-only"
-                      v-html="rootitem.feature.alt"
-                    />
+                    <img
+                      :src="rootitem.feature.img"
+                      :alt="rootitem.feature.alt"
+                      class="menu__campaign--img">
                   </component>
+                  <div
+                    v-if="rootitem.feature"
+                    class="menu__aside-info">
+                    <p
+                      v-if="rootitem.feature.text"
+                      class="menu__aside-info__text"
+                    >{{ rootitem.feature.text }}</p>
+                    <div
+                      v-if="rootitem.feature.link"
+                      class="menu__aside-info__link">
+                      <a
+                        :href="rootitem.feature.link"
+                        class="link">
+                        View more details
+                        <SvgIcon
+                          name="chevron-right"
+                          class="icon"/>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <ul class="menu__section">
-                  <li
-                    v-for="(menuitem, menuindex) in rootitem.items"
-                    :key="`menuitem-${menuindex}`"
-                    class="menu__item">
-                    <a
-                      :href="menuitem.href"
-                      tabindex="0"
-                      class="menu__link"
-                      role="menuitem"
-                      v-html="menuitem.title"/>
-                  </li>
-                </ul>
               </div>
             </li>
           </ul>
-          <PageSearch/>
+          <MegaMenuTopNavigation
+            v-if="isMobileOpen"
+            :items="topMenu"/>
         </nav>
       </div>
+      <PageSearch/>
       <div class="header-tools__menu">
         <button
           id="sitemapbutton"
@@ -135,8 +179,9 @@
             role="presentation"
             focusable="false"
             aria-labelledby="icon-menu"
-            viewBox="10 10 26 28">
-            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
+            viewBox="10 10 26 28"
+          >
+            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/>
           </svg>
           <span
             id="icon-menu"
@@ -157,9 +202,15 @@ import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
+import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
-  components: { PageSearch, PageSearchForm, MegaMenuTitle },
+  components: {
+    PageSearch,
+    PageSearchForm,
+    MegaMenuTitle,
+    MegaMenuTopNavigation,
+  },
   props: {
     items: {
       type: Array,
@@ -184,13 +235,9 @@ export default {
       required: false,
       default: false,
     },
-    facultyAperture: {
-      type: [Boolean],
-      default: false,
-    },
-    facultyApertureColor: {
-      type: [String],
-      default: 'back',
+    topMenu: {
+      type: Array,
+      default: () => [],
     },
   },
   data() {
@@ -199,11 +246,18 @@ export default {
       isDesktopOpen: false,
       current: 0,
       pointer: 0,
+      lastIndex: null,
+      isAnimate: true,
     };
   },
   computed: {
     isMobile() {
-      return (this.$refs.headerroot ? this.$refs.headerroot.offsetWidth < 768 : false);
+      return this.$refs.headerroot
+        ? this.$refs.headerroot.offsetWidth < 768
+        : false;
+    },
+    isShowTopMenu() {
+      return this.topMenu.length;
     },
   },
   mounted() {
@@ -211,6 +265,13 @@ export default {
     window.addEventListener('resize', this.closeMobileIfDesktop.bind(this));
   },
   methods: {
+    isColColumns(rootindex) {
+      if (this.isMobileOpen) return '';
+      if (this.items[rootindex].items.length <= 5) {
+        return 'cols-1';
+      }
+      return 'cols-2';
+    },
     rootOrChildrenActive(rootitem) {
       if (!this.active) return false;
 
@@ -225,34 +286,51 @@ export default {
 
       return displayActive;
     },
-    linkClasses(rootindex, rootitem) {
-      if (rootindex === 0) {
-        return 'menu__nested-parent';
-      }
-      if (rootitem.items) {
-        return 'menu__link menu__link--nested';
-      }
-      return 'menu__link';
-    },
     activateDesktopMenu(rootindex) {
-      if (rootindex !== -1 && this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
+      if (this.lastIndex !== null && this.items[this.lastIndex].items !== undefined && this.items[rootindex].items !== undefined) {
+        this.isAnimate = false;
+        this.lastIndex = rootindex;
+      } else {
+        this.isAnimate = true;
+        this.lastIndex = rootindex;
+      }
+
+      if (
+        rootindex !== -1
+        && this.items[rootindex].items !== undefined
+        && !this.isMobileOpen
+        && !this.isMobile
+      ) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
+        if (this.isAnimate) this.$refs.rootitems[rootindex].lastChild.classList.add('inner--fade');
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
       }
     },
     dismissDesktopMenu(props = {}) {
       const { force } = props;
-      if ((this.isDesktopOpen && !this.isMobileOpen && !this.isMobile) || force) {
+      if (
+        (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
+        || force
+      ) {
         this.dismissBlanket();
         this.dismissAllDesktopChildren();
         this.isDesktopOpen = false;
         this.$emit('mega-menu-dismiss-desktop-menu');
       }
     },
+    dismissMenu() {
+      this.lastIndex = null;
+    },
     dismissAllDesktopChildren() {
       this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
+
+      this.$refs.rootitems.forEach((item) => {
+        if (!this.isAnimate && item.lastChild.classList && item.lastChild.classList.contains('inner--fade') === true) {
+          item.lastChild.classList.remove('inner--fade');
+        }
+      });
     },
     activateMobileMenu() {
       if (!this.isMobileOpen) {
@@ -284,7 +362,11 @@ export default {
       this.dismissMobileMenu();
     },
     openInner(e) {
-      if (this.$refs.headerroot && this.$refs.headerroot.offsetWidth < 768 && e.target.nextElementSibling) {
+      if (
+        this.$refs.headerroot
+        && this.$refs.headerroot.offsetWidth < 768
+        && e.target.nextElementSibling
+      ) {
         e.preventDefault();
         e.target.nextElementSibling.classList.add('open');
       }
@@ -313,7 +395,9 @@ export default {
 
       let cycle;
       if (e.keyCode === 38 || e.keyCode === 40) {
-        cycle = this.$refs.rootitems[this.current].querySelectorAll('.menu__aside a,.menu__section a');
+        cycle = this.$refs.rootitems[this.current].querySelectorAll(
+          '.menu__aside a,.menu__section a'
+        );
       }
 
       switch (e.keyCode) {
@@ -394,8 +478,8 @@ export default {
       }, this);
       this.current = curr;
     },
-    isSelected(index) {
-      return index === this.current ? 0 : -1;
+    isSelected() {
+      return -1;
     },
   },
 };

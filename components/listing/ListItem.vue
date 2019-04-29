@@ -11,12 +11,29 @@ export default {
       type: String,
       default: '',
     },
+    noPadding: {
+      type: String,
+      default: '',
+    },
   },
   computed: {
     classes() {
       return {
         cell: true,
-        [`cell--desk-${this.cols}`]: ['1of1', '1of2', '1of3', '2of3', '1of4', '3of4'].includes(this.cols),
+        [`cell--no-padding-${this.noPadding}`]: [
+          'all',
+          'mobile',
+          'tab',
+          'desk',
+        ].includes(this.noPadding),
+        [`cell--desk-${this.cols}`]: [
+          '1of1',
+          '1of2',
+          '1of3',
+          '2of3',
+          '1of4',
+          '3of4',
+        ].includes(this.cols),
       };
     },
   },

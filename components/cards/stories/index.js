@@ -6,3 +6,6 @@ import './ImageList';
 import './News';
 import './StaffList';
 import './GenericCard';
+import './Profiles';
+import './Events';
+import './FeaturesPanel';

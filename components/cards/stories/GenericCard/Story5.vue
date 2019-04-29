@@ -36,10 +36,3 @@ export default {
   readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>
-<style>
-.sub-title {
-  display: flex;
-  align-items: center;
-  margin: 0;
-}
-</style>

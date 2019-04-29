@@ -1,34 +1,26 @@
 <template>
-  <div
-    class="btn-owner card card--stafflist card--bdr-blue bg-white">
+  <div class="btn-owner card card--stafflist card--bdr-blue bg-white">
     <a
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
       title="profile image"
       aria-label="Profile image"
-      class="card__thumb"/>
-    <div class="card__inner ">
+      class="card__thumb"
+    />
+    <div class="card__inner">
       <a
         :href="href"
-        title="profile position link"
+        title="profile link"
         aria-label="Profile position"
-        class="card__header"
-      >
-        <h3>{{ position }}</h3>
+        class="card__header">
+        <h3 class="card__position">{{ position }}</h3>
+        <h4 class="card__name">{{ name }}</h4>
       </a>
-      <p class="card__meta">
-        <a
-          :href="href"
-          title="profile name link"
-          aria-label="Profile name">
-          {{ name }}
-        </a>
-      </p>
       <div
         v-if="excerpt"
         class="card__excerpt">{{ excerpt }}</div>
       <div
-        v-if="cols < 4"
+        v-if="renderFooter"
         class="card__footer">
         <a
           v-if="phone"
@@ -54,20 +46,20 @@
             name="envelope"
             width="15px"
             height="15px"/>
-          {{ email }}</a>
+          {{ email }}
+        </a>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-
 export default {
   props: {
     thumb: {
       type: String,
-      default: 'https://via.placeholder.com/400x200',
+      default:
+        'https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png',
     },
     position: {
       type: String,
@@ -95,9 +87,13 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur.',
+      default: '',
+    },
+  },
+  computed: {
+    renderFooter() {
+      return this.cols < 4 && (this.phone || this.email);
     },
   },
 };
-
 </script>

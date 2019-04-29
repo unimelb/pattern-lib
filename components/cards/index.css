@@ -10,4 +10,8 @@
 @import '_card-news.css';
 @import '_card-pathfinder.css';
 @import '_card-contact.css';
-@import '_generic-card.css';
+@import '_card-generic.css';
+@import '_card-stat.css';
+@import '_card-showcase-profile.css';
+@import '_card-events.css';
+@import '_card-features-panel.css';

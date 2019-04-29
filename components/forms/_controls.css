@@ -1,5 +1,6 @@
 .mce form[id^='form_'],
 .form {
+
   input[type='checkbox'],
   input[type='radio'] {
     margin-right: .5em;
@@ -13,7 +14,7 @@
     border: 2px solid rgb(var(--col-brand));
     border-radius: var(--br);
     background-color: rgb(var(--col-brand));
-    color: white;
+    color: rgb(var(--col-background-primary-white));
     font-weight: var(--fw-semibold);
     text-align: center;
     text-decoration: none;
