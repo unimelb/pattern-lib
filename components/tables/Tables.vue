@@ -25,10 +25,20 @@
           :data-label="tdindex !== table.thead[0] ? tdindex + ':' : '' "
         >
           {{ ' ' + tditems }}
+          <svg
+            v-if="lastTheadItem === tdindex"
+            focusable="false"
+            role="presentation"
+            class="push-icon__icon"
+          >
+            <use xlink:href="#icon-external"/>
+          </svg>
         </td>
       </tr>
     </tbody>
+
   </table>
+
 </template>
 
 <script>
@@ -39,6 +49,14 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return {
+      lastTheadItem: '',
+    };
+  },
+  mounted() {
+    this.lastTheadItem = this.table.thead[this.table.thead.length - 1];
   },
 };
 </script>

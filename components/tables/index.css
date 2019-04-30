@@ -3,6 +3,13 @@
   table-layout: fixed;
   border-spacing: 0;
   border-collapse: collapse;
+  font-size: 1.15rem;
+  @media(--bp-max-desktop){
+    font-size: 1rem;
+  }
+  @media(--bp-only-tablet){
+    font-size: .8rem;
+  }
 
   a,
   a:visited,
@@ -15,7 +22,6 @@
   th {
     padding: calc(var(--vr) / 1.5);
     text-align: left;
-
     &.truncate {
       overflow: hidden;
       text-overflow: ellipsis;
@@ -32,15 +38,39 @@
     border-bottom: 1px solid rgb(var(--col-navy-mid-2));
     td:first-child {
       font-weight: var(--fw-bold);
-      text-decoration: underline;
+      @media(--bp-x-tablet){
+        text-decoration: underline;
+      }
     }
     td:last-child {
       text-decoration: underline;
+      @media(--bp-x-tablet){
+        text-align: right;
+        padding-left: 0;
+        padding-right: 3rem;
+      }
+      @media(--bp-max-desktop){
+        padding-right: 1.2rem;
+      }
+      @media(--bp-only-tablet){
+        padding-right: .75rem;
+      }
     }
   }
 
   thead tr {
     border: 0;
+  }
+
+  thead th:last-child {
+    text-align: right;
+    padding-right: 3rem;
+    @media(--bp-max-desktop){
+      padding-right: 1.2rem;
+    }
+    @media(--bp-only-tablet){
+      padding-right: .75rem;
+    }
   }
 
   &--tight td,
@@ -54,12 +84,10 @@
   }
 
   &--centered {
-
     td,
     th {
       text-align: center;
     }
-
     tr td:nth-child(1),
     tr th:nth-child(1) {
       text-align: left;
@@ -78,7 +106,7 @@
 
   &--striped {
     tr:nth-child(even) {
-      background-color: #abbed5;
+      background-color: #F2F5F9;
     }
 
     tr.table__row--white {
@@ -130,6 +158,7 @@
 @media (--bp-max-x-mobile) {
   .table {
     border: 0;
+    background-color: white;
 
     thead {
       display: none;
@@ -138,17 +167,17 @@
     tbody tr {
       margin: 1rem;
       display: block;
-      border-bottom: 2px solid #ddd;
+      border-bottom: 1px solid #ABBED5;
     }
 
     tbody td {
       display: block;
       font-size: 1rem;
-
+      padding-top: 0;
+      padding-bottom: 0;
       &::before {
         content: attr(data-label);
         float: left;
-        text-transform: uppercase;
         font-weight: bold;
         padding-right: 5px;
       }
@@ -157,11 +186,24 @@
         background-color: #094183;
         color: white;
         font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-decoration: none;
+        margin-bottom: .3rem;
       }
     }
 
     tbody td:last-child {
       border-bottom: 0;
+      padding-bottom: .5rem;
     }
+  }
+}
+
+.push-icon {
+  &__icon {
+    width: 1.15em;
+    height: 1.15em;
+    margin-left: .5em;
   }
 }
