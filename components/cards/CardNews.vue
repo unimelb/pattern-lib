@@ -5,9 +5,10 @@
     <div
       v-if="cols !== 1"
       :style="{ backgroundImage: `url(${thumb})` }"
-      class="card__thumb card__thumb--zoom"/>
-    <div class="card__inner ">
-      <p class="card__meta ">{{ meta }}</p>
+      class="card__thumb card__thumb--zoom"
+    />
+    <div class="card__inner">
+      <p class="card__meta">{{ meta }}</p>
       <h3 class="card__header">{{ title }}</h3>
       <p>{{ excerpt }}</p>
     </div>
@@ -22,7 +23,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'CardNews',
   props: {
@@ -48,9 +48,9 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+      default:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
   },
 };
-
 </script>

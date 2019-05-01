@@ -65,6 +65,8 @@ import CardStat from '../../components/cards/CardStat.vue';
 import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue';
 import CardEvents from '../../components/cards/CardEvents.vue';
 import CardFeaturesPanel from '../../components/cards/CardFeaturesPanel.vue';
+import CardNews from '../../components/cards/CardNews.vue';
+
 
 import '../../components';
 
@@ -135,6 +137,7 @@ Vue.component('card-stat', CardStat);
 Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
 Vue.component('card-features-panel', CardFeaturesPanel);
+Vue.component('card-news', CardNews);
 
 // Create Vue instance
 new Vue({
