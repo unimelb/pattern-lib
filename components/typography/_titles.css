@@ -38,15 +38,15 @@
     margin-bottom: calc(var(--vr) / 2);
     font-size: 1.5188rem;
     line-height: 1.7469rem;
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-bold);
   }
 
   /* h5 */
   &--xs {
     margin-bottom: 0;
-    font-size: .875rem;
+    font-size: 1.325rem;
     font-weight: var(--fw-bold);
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
 
   /* h6 */
