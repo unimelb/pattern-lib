@@ -2,7 +2,7 @@
   background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
   border-radius: var(--br-cards);
-  box-shadow: rgb(var(--col-box-shadow)) 0 2px 2px 0;
+  box-shadow: rgba(0, 0, 0, .18) 0 2px 2px 0;
   overflow: hidden;
 
   .card__thumb {
