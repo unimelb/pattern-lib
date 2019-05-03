@@ -22,7 +22,7 @@
         element="div"
         compact
         color="green"
-        class="card--image-focus--col-brand"
+        class="card--image-focus--col-brand bg-white"
         title="Learning and teaching"
       >
         <h2 class="text-left">Header</h2>
@@ -37,7 +37,7 @@
         element="div"
         compact
         color="yellow"
-        class="card--image-focus--col-brand"
+        class="card--image-focus--col-brand bg-white"
         title="Learning and teaching"
       >
         <h2 class="text-left">Header</h2>
@@ -52,7 +52,7 @@
         element="div"
         compact
         color="blue"
-        class="card--image-focus--col-brand"
+        class="card--image-focus--col-brand bg-white"
         title="Learning and teaching"
       >
         <h2 class="text-left">Header</h2>
@@ -67,7 +67,7 @@
         element="div"
         compact
         color="emerald"
-        class="card--image-focus--col-brand"
+        class="card--image-focus--col-brand bg-white"
         title="Learning and teaching"
       >
         <h2 class="text-left">Header</h2>
