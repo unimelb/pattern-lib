@@ -198,6 +198,7 @@
 // mega-menu-activate-mobile-menu
 // mega-menu-dismiss-mobile-menu
 
+import SvgIcon from '../../icons/SvgIcon.vue';
 import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
@@ -206,6 +207,7 @@ import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
   components: {
+    SvgIcon,
     PageSearch,
     PageSearchForm,
     MegaMenuTitle,
