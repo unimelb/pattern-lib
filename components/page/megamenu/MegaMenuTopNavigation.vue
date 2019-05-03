@@ -15,7 +15,6 @@
         </a>
       </li>
     </ul>
-
   </nav>
 </template>
 

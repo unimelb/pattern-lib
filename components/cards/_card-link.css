@@ -45,7 +45,7 @@
 
   .title-inverted {
     color: rgb(var(--col-black-dark));
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 26px;
   }
@@ -60,7 +60,7 @@
 
   .cl-inverted {
     color: rgb(var(--col-black-dark));
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 26px;
 
@@ -92,6 +92,7 @@
   }
 
   &.bg-alt {
+
     .card__header,
     svg {
       color: rgb(var(--col-brand));

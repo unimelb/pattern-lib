@@ -2,21 +2,22 @@
   <FocusWrapper
     :color="color"
     padded>
-    <div>
-      <h2 class="title">{{ cardTitle }}</h2>
-      <hr class="line">
-      <div class="container">
+    <div class="in-page-navigation">
+      <h2 class="in-page-navigation__title">{{ cardTitle }}</h2>
+      <hr class="in-page-navigation__line">
+      <div class="in-page-navigation__container">
         <li
           v-for="(link, index) in cardLinks"
           :key="index"
-          class="list-reset">
+          class="in-page-navigation__position list-reset"
+        >
           <a
             :href="link.url"
-            class="link">
+            class="in-page-navigation__link">
             {{ link.title }}
             <SvgIcon
               name="chevron-right"
-              class="icon"/>
+              class="in-page-navigation__icon"/>
           </a>
         </li>
       </div>
@@ -51,7 +52,7 @@ export default {
 
 .title {
   font-family: var(--ff-normal);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -68,7 +69,7 @@ export default {
 
 .link {
   font-family: var(--ff-normal);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
   letter-spacing: 0;
 }
