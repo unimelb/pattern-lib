@@ -73,8 +73,6 @@ import Heading4 from '../../components/typography/headings/Heading4.vue';
 import Heading5 from '../../components/typography/headings/Heading5.vue';
 import Heading6 from '../../components/typography/headings/Heading6.vue';
 
-
-
 import '../../components';
 
 // Inject SVG sprite
