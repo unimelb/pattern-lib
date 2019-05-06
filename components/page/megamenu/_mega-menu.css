@@ -476,7 +476,8 @@
       }
 
       &__section .menu__item--over,
-      &__section .menu__item[tabindex='4']:focus-within {
+      &__section .menu__item[tabindex='0']:focus,
+      &__section .menu__item[tabindex='0']:focus-within {
         .inner {
           display: flex;
           z-index: 3;

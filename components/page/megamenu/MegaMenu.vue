@@ -3,13 +3,13 @@
     ref="headerroot"
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
     class="page-header page-header--l3 page-header--study"
+    @keydown="handleTabKey"
   >
     <div
       class="page-header__inner">
       <a
         class="link-img link-reset"
-        href="https://www.unimelb.edu.au/"
-        tabindex="1">
+        href="https://www.unimelb.edu.au/">
         <div class="logo-mask">
           <img
             class="page-header__logo"
@@ -61,7 +61,7 @@
           />
           <ul
             class="menu__section"
-            role="menu">
+            role="menubar">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -386,6 +386,16 @@ export default {
         });
       }
     },
+    handleTabKey(e) {
+      switch (e.keyCode) {
+        case 9:
+          // this.dismissBlanket();
+          break;
+
+        default:
+          break;
+      }
+    },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
       if (e.metaKey || e.altKey) return;
@@ -477,7 +487,7 @@ export default {
       }
     },
     isSelected(index) {
-      return index === this.current ? 4 : -1;
+      return index === this.current ? 0 : -1;
     },
   },
 };

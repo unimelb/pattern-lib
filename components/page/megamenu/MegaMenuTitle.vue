@@ -3,8 +3,7 @@
     :style="{'width': width && width || '50%'}"
     :aria-label="title"
     :href="href"
-    class="page-title"
-    tabindex="3">{{ title }}</a>
+    class="page-title">{{ title }}</a>
 </template>
 
 <script>
