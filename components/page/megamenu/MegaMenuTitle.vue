@@ -4,7 +4,7 @@
     :aria-label="title"
     :href="href"
     class="page-title"
-    tabindex="2">{{ title }}</a>
+    tabindex="3">{{ title }}</a>
 </template>
 
 <script>
