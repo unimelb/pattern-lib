@@ -1,11 +1,14 @@
 <template>
   <div
-    :class="['btn-owner', 'card', 'card--generic', cols === 1 && 'card--generic--full-width' , className]">
+    :class="['btn-owner', 'card', 'card--generic', cols === 1 && 'card--generic--full-width' , className]"
+  >
     <a
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
-      class="card__thumb"/>
-    <div class="card__inner ">
+      :aria-label="'Image for' + title"
+      class="card__thumb"
+    />
+    <div class="card__inner">
       <h3 class="card__header">
         <a
           :href="href"
@@ -19,8 +22,7 @@
         <slot name="sub-title-3"/>
       </div>
       <div class="card__excerpt">{{ excerpt }}</div>
-      <div
-        class="card__links">
+      <div class="card__links">
         <slot name="links"/>
       </div>
     </div>
@@ -28,7 +30,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'GenericCard',
   props: {
@@ -60,9 +61,12 @@ export default {
   },
   computed: {
     hasSubTitleSlots() {
-      return !!this.$slots['sub-title-1'] || !!this.$slots['sub-title-2'] || !!this.$slots['sub-title-3'];
+      return (
+        !!this.$slots['sub-title-1']
+        || !!this.$slots['sub-title-2']
+        || !!this.$slots['sub-title-3']
+      );
     },
   },
 };
-
 </script>

@@ -4,6 +4,7 @@
       v-if="thumb && thumb.length > 0"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"
+      aria-label="Profile Image"
     />
     <div class="card__inner">
       <h6 class="card__title">{{ title }}</h6>
