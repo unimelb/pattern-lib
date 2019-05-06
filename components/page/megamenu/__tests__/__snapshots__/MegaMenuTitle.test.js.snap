@@ -4,7 +4,6 @@ exports[`MegaMenuTitle should match snapshot 1`] = `
 <a
   class="page-title"
   style="width: 50%;"
-  tabindex="3"
 >
   false
 </a>
