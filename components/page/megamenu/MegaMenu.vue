@@ -8,7 +8,8 @@
       class="page-header__inner">
       <a
         class="link-img link-reset"
-        href="https://www.unimelb.edu.au/">
+        href="https://www.unimelb.edu.au/"
+        tabindex="1">
         <div class="logo-mask">
           <img
             class="page-header__logo"
@@ -386,6 +387,7 @@ export default {
       }
     },
     handleKey(e) {
+      /* eslint-disable no-alert, no-console */
       // Don't catch key events when ⌘ or Alt modifier is present
       if (e.metaKey || e.altKey) return;
 
@@ -406,7 +408,10 @@ export default {
         // esc
         case 27:
           this.pointer = 0;
-          this.current = 0;
+
+          // Set current menu item focus.
+          this.$refs.rootitems[this.current].focus();
+
           this.dismissAllDesktopChildren();
           this.dismissBlanket();
           break;
@@ -433,20 +438,23 @@ export default {
             this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
           } else {
-            this.prevRootItem();
+            // this.prevRootItem();
           }
           break;
         // down
         case 40:
+          // console.log('cycle', cycle);   
           if (cycle.length > 1) {
             this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
+            console.log('this.pointer', this.pointer);
             cycle[this.pointer].focus();
           } else {
-            this.nextRootItem();
+            // this.nextRootItem();
           }
           break;
         default:
           break;
+          /* eslint-enable no-alert, no-console */
       }
     },
     prevRootItem() {
@@ -471,17 +479,18 @@ export default {
         this.dismissBlanket();
       }
     },
-    getCurrent(e) {
-      let curr = -1;
-      this.items.forEach((rootitem, rootindex) => {
-        if (rootitem.title === e.target.innerText) {
-          curr = rootindex;
-        }
-      }, this);
-      this.current = curr;
-    },
-    isSelected() {
-      return -1;
+    // getCurrent(e) {
+    //   let curr = -1;
+    //   this.items.forEach((rootitem, rootindex) => {
+    //     if (rootitem.title === e.target.innerText) {
+    //       curr = rootindex;
+    //     }
+    //   }, this);
+    //   this.current = curr;
+    // },
+    isSelected(index) {
+      // return -1;
+      return index === this.current ? 4 : -1;
     },
   },
 };

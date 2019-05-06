@@ -2,7 +2,7 @@
   <div class="header-tools__search">
     <button
       class="link-icon--vertical link-reset"
-      tabindex="0"
+      tabindex="3"
       @click.prevent="open"
       @keypress.13="open"
     >

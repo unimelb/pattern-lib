@@ -475,7 +475,7 @@
       }
 
       &__section .menu__item--over,
-      &__section .menu__item[tabindex='0'] {
+      &__section .menu__item[tabindex='4']:focus-within {
         .inner {
           display: flex;
           z-index: 3;
@@ -602,13 +602,15 @@
   }
 }
 
-.page-header.active {
-  z-index: 101;
-  overflow: visible;
+.page-header {
+  &.active, &:focus-within {
+    z-index: 101;
+    overflow: visible;
 
-  .megamenu__blanket {
-    z-index: 100;
-    top: 0;
+    .megamenu__blanket {
+      z-index: 100;
+      top: 0;
+    }
   }
 }
 
