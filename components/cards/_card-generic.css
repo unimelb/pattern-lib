@@ -18,6 +18,7 @@
 
     a {
       text-decoration: none;
+      color: rgb(var(--col-background-primary-navy));
     }
   }
 
@@ -67,6 +68,7 @@
     a {
       font-weight: var(--fw-semibold);
       text-decoration: underline;
+      color: rgb(var(--col-background-primary-navy));
     }
   }
 
