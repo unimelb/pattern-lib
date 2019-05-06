@@ -603,13 +603,25 @@
 }
 
 .page-header {
-  &.active, &:focus-within {
+  &.active,
+  &:focus-within {
     z-index: 101;
     overflow: visible;
 
     .megamenu__blanket {
       z-index: 100;
       top: 0;
+    }
+  }
+
+  &__with-top-menu {
+    @media (--bp-x-desktop) {
+      max-height: 115px;
+      padding: 0;
+
+      .page-header__inner {
+        height: 100%;
+      }
     }
   }
 }
@@ -650,19 +662,6 @@
     .header-tools__search {
       display: block;
       float: right;
-    }
-  }
-}
-
-.page-header {
-  &__with-top-menu {
-    @media (--bp-x-desktop) {
-      max-height: 115px;
-      padding: 0;
-
-      .page-header__inner {
-        height: 100%;
-      }
     }
   }
 }
