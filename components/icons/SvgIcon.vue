@@ -3,9 +3,11 @@
     :width="width"
     :height="height"
     :viewBox="viewBox"
+    :aria-label="'Icon ' + name"
     focusable="false"
-    role="presentation">
-    <use :xlink:href="'#icon-' + name" />
+    role="img"
+  >
+    <use :xlink:href="'#icon-' + name"/>
     <slot/>
   </svg>
 </template>
