@@ -387,7 +387,6 @@ export default {
       }
     },
     handleKey(e) {
-      /* eslint-disable no-alert, no-console */
       // Don't catch key events when ⌘ or Alt modifier is present
       if (e.metaKey || e.altKey) return;
 
@@ -412,8 +411,9 @@ export default {
           // Set current menu item focus.
           this.$refs.rootitems[this.current].focus();
 
-          this.dismissAllDesktopChildren();
-          this.dismissBlanket();
+          // TEMP REMOVE - turn back on when looking into menu a11y improvements.
+          // this.dismissAllDesktopChildren();
+          // this.dismissBlanket();
           break;
         // enter / space
         case 13:
@@ -443,10 +443,8 @@ export default {
           break;
         // down
         case 40:
-          // console.log('cycle', cycle);   
           if (cycle.length > 1) {
             this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
-            console.log('this.pointer', this.pointer);
             cycle[this.pointer].focus();
           } else {
             // this.nextRootItem();
@@ -454,7 +452,6 @@ export default {
           break;
         default:
           break;
-          /* eslint-enable no-alert, no-console */
       }
     },
     prevRootItem() {
@@ -479,17 +476,7 @@ export default {
         this.dismissBlanket();
       }
     },
-    // getCurrent(e) {
-    //   let curr = -1;
-    //   this.items.forEach((rootitem, rootindex) => {
-    //     if (rootitem.title === e.target.innerText) {
-    //       curr = rootindex;
-    //     }
-    //   }, this);
-    //   this.current = curr;
-    // },
     isSelected(index) {
-      // return -1;
       return index === this.current ? 4 : -1;
     },
   },
