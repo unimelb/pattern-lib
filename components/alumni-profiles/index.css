@@ -1,0 +1,53 @@
+.alumni{
+    &--block{
+        display: flex;
+        justify-content: space-between;
+        @media(--bp-max-x-mobile){
+            display: block;
+        }
+        &-img{
+            width: 33%;
+            height: 20rem;
+            margin-top: 0;
+            margin-bottom: 0;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @media(--bp-max-x-mobile){
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        &-info{
+            width: 65%;
+            @media(--bp-max-x-mobile){
+                width: 100%;
+            }
+            &_title{
+                font-size: 1rem;
+            }
+            &_name{
+                margin: 0;
+                font-size: 1.8rem;
+                line-height: 1.5rem;
+            }
+            &_line{
+                width: 2.5rem;
+                padding: 0;
+                margin: 1rem 0 1rem 0;
+                size: 2px;
+            }
+            &_short-text,
+            &_long-text{
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+.card--focus-box{
+    @media(--bp-max-x-mobile){
+        padding: 1rem!important;
+    }
+}

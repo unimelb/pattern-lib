@@ -7,6 +7,10 @@ export {
 }
   from '../../components/accordion/AccordionGroup.vue';
 export {
+  default as AlumniProfiles,
+}
+  from '../../components/alumni-profiles/AlumniProfiles.vue';
+export {
   default as ArticleWrap,
 }
   from '../../components/article-wrap/ArticleWrap.vue';

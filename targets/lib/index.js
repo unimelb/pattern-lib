@@ -12,6 +12,7 @@ import ToggleBlock from '../../components/toggle/ToggleBlock.vue';
 import ToggleGroup from '../../components/toggle/ToggleGroup.vue';
 import ToggleBlockMobile from '../../components/toggle/ToggleBlockMobile.vue';
 import Accordion from '../../components/accordion/Accordion.vue';
+import AlumniProfiles from '../../components/alumni-profiles/AlumniProfiles.vue';
 import AccordionGroup from '../../components/accordion/AccordionGroup.vue';
 import CheckList from '../../components/check-list';
 import MegaMenu from '../../components/page/megamenu';
@@ -149,6 +150,8 @@ Vue.component('heading3', Heading3);
 Vue.component('heading4', Heading4);
 Vue.component('heading5', Heading5);
 Vue.component('heading6', Heading6);
+Vue.component('alumni-profiles', AlumniProfiles);
+
 
 // Create Vue instance
 new Vue({
