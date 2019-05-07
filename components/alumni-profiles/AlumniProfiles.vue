@@ -72,7 +72,7 @@ export default {
     window.removeEventListener('resize', this.getWindowWidth);
   },
   methods: {
-    getWindowWidth(event) {
+    getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
       if (this.windowWidth < 599) {
         this.size = 'small';
