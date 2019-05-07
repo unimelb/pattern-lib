@@ -63,7 +63,7 @@ export default {
     };
   },
   mounted() {
-    this.$nextTick(function () {
+    this.$nextTick(() => {
       window.addEventListener('resize', this.getWindowWidth);
       this.getWindowWidth();
     });
