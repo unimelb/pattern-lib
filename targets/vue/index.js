@@ -294,3 +294,7 @@ export {
   default as Heading6,
 }
   from '../../components/typography/headings/Heading6.vue';
+export {
+  default as Testimonials,
+}
+  from '../../components/testimonials/Testimonials.vue';

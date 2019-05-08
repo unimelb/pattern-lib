@@ -73,6 +73,7 @@ import Heading3 from '../../components/typography/headings/Heading3.vue';
 import Heading4 from '../../components/typography/headings/Heading4.vue';
 import Heading5 from '../../components/typography/headings/Heading5.vue';
 import Heading6 from '../../components/typography/headings/Heading6.vue';
+import Testimonials from '../../components/testimonials/Testimonials.vue';
 
 import '../../components';
 
@@ -151,6 +152,7 @@ Vue.component('heading4', Heading4);
 Vue.component('heading5', Heading5);
 Vue.component('heading6', Heading6);
 Vue.component('alumni-profiles', AlumniProfiles);
+Vue.component('testimonials', Testimonials);
 
 
 // Create Vue instance
