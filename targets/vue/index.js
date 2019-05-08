@@ -270,3 +270,27 @@ export {
   default as Tables,
 }
   from '../../components/tables/Tables.vue';
+export {
+  default as Heading1,
+}
+  from '../../components/typography/headings/Heading1.vue';
+export {
+  default as Heading2,
+}
+  from '../../components/typography/headings/Heading2.vue';
+export {
+  default as Heading3,
+}
+  from '../../components/typography/headings/Heading3.vue';
+export {
+  default as Heading4,
+}
+  from '../../components/typography/headings/Heading4.vue';
+export {
+  default as Heading5,
+}
+  from '../../components/typography/headings/Heading5.vue';
+export {
+  default as Heading6,
+}
+  from '../../components/typography/headings/Heading6.vue';

@@ -66,6 +66,13 @@ import CardShowcaseProfile from '../../components/cards/CardShowcaseProfile.vue'
 import CardEvents from '../../components/cards/CardEvents.vue';
 import CardFeaturesPanel from '../../components/cards/CardFeaturesPanel.vue';
 import Tables from '../../components/tables/Tables.vue';
+import CardNews from '../../components/cards/CardNews.vue';
+import Heading1 from '../../components/typography/headings/Heading1.vue';
+import Heading2 from '../../components/typography/headings/Heading2.vue';
+import Heading3 from '../../components/typography/headings/Heading3.vue';
+import Heading4 from '../../components/typography/headings/Heading4.vue';
+import Heading5 from '../../components/typography/headings/Heading5.vue';
+import Heading6 from '../../components/typography/headings/Heading6.vue';
 
 import '../../components';
 
@@ -136,6 +143,13 @@ Vue.component('card-stat', CardStat);
 Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
 Vue.component('card-features-panel', CardFeaturesPanel);
+Vue.component('card-news', CardNews);
+Vue.component('heading1', Heading1);
+Vue.component('heading2', Heading2);
+Vue.component('heading3', Heading3);
+Vue.component('heading4', Heading4);
+Vue.component('heading5', Heading5);
+Vue.component('heading6', Heading6);
 Vue.component('tables', Tables);
 
 // Create Vue instance

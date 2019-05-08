@@ -8,7 +8,7 @@
         class="card__thumb-img"/>
     </div>
     <div class="card__inner">
-      <h5 class="card__title">{{ title }}</h5>
+      <h3 class="card__title">{{ title }}</h3>
       <p class="card__meta">{{ text }}</p>
     </div>
     <div

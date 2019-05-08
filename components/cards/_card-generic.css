@@ -2,15 +2,38 @@
   background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
   border-radius: var(--br-cards);
-  box-shadow: rgb(var(--col-box-shadow)) 0 2px 2px 0;
+  box-shadow: rgba(0, 0, 0, .18) 0 2px 2px 0;
   overflow: hidden;
+
+  .card__thumb {
+    padding-top: 56.25%;
+
+    &--square {
+      padding-top: 100%;
+    }
+  }
 
   .card__header {
     margin-bottom: .5rem;
+
+    a {
+      text-decoration: none;
+      color: rgb(var(--col-background-primary-navy));
+    }
+  }
+
+  .card__inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   .card__sub-titles {
     margin-bottom: .25rem;
+    border-top: 1px solid rgb(var(--col-black-mid-1));
+    border-bottom: 1px solid rgb(var(--col-black-mid-1));
+    padding: 16px 0;
+    font-weight: 600;
 
     svg {
       width: 18px;
@@ -33,7 +56,8 @@
   }
 
   .card__excerpt {
-    margin: 1.5rem 0;
+    margin: 1rem 0;
+    flex: 1;
   }
 
   .card__links {
@@ -44,20 +68,12 @@
     a {
       font-weight: var(--fw-semibold);
       text-decoration: underline;
+      color: rgb(var(--col-background-primary-navy));
     }
   }
 
   &--full-width {
-    .card__inner {
-      .grid--1col .cell & {
-        flex: 1;
-        margin-right: 0;
-      }
-    }
-
     .card__thumb {
-      padding-top: 56.25%;
-
       @media (--bp-desktop) {
         width: 30%;
         padding-top: 0;

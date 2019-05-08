@@ -2,21 +2,22 @@
   <FocusWrapper
     :color="color"
     padded>
-    <div>
-      <h2 class="title--md">{{ title }}:</h2>
-      <hr class="line">
-      <div class="container">
+    <div class="in-page-navigation">
+      <h2 class="in-page-navigation__title">{{ title }}:</h2>
+      <hr class="in-page-navigation__line">
+      <div class="in-page-navigation__container">
         <li
           v-for="(data, index) in getInPageData"
           :key="index"
-          class="list-reset">
+          class="in-page-navigation__position list-reset"
+        >
           <a
             :href="data.id"
-            class="link">
+            class="in-page-navigation__link">
             {{ data.label }}
             <SvgIcon
               name="chevron-right"
-              class="icon"/>
+              class="in-page-navigation__icon"/>
           </a>
         </li>
       </div>
@@ -59,51 +60,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-@import "../../_vars.css";
-
-.title {
-  font-family: var(--ff-normal);
-  font-size: 1.125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.line {
-  width: 40px;
-  margin: 0;
-  border: 1px solid;
-}
-
-.list-reset {
-  list-style-type: none;
-}
-
-.link {
-  font-family: var(--ff-normal);
-  font-size: 1rem;
-  font-weight: normal;
-  letter-spacing: 0;
-}
-
-.icon {
-  display: inline;
-  width: 8px;
-  height: 8px;
-  margin-left: 6px;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-top: 23px;
-  margin-bottom: 84px;
-}
-
-.container > * {
-  flex: 0 50%;
-}
-</style>

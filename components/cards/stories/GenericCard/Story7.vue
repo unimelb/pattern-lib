@@ -1,5 +1,5 @@
 <template>
-  <SectionWrap class="bg-alt">
+  <SectionWrap bg-color="inverted">
     <div class="grid grid--3col">
       <ListItem>
         <GenericCard
@@ -15,7 +15,8 @@
         <GenericCard
           :cols="3"
           title="Test 1"
-          excerpt="Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.">
+          excerpt="Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur."
+        >
           <template slot="links">
             <a href="/">View generic details ></a>
             <a href="/">View generic staff ></a>
