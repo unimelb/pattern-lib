@@ -14,8 +14,10 @@
         <div class="alumni--block-info">
           <p class="alumni--block-info_title">Alumni profile</p>
           <h3 class="alumni--block-info_name">{{ name }}</h3>
-          <hr class="alumni--block-info_line">
-          <p class="alumni--block-info_short-text">{{ short_text }}</p>
+          <hr
+            :class="{'alumni--block-info_line inverted': inverted, 'alumni--block-info_line': !inverted}">
+          <p
+            class="alumni--block-info_short-text">{{ short_text }}</p>
           <p class="alumni--block-info_long-text">{{ long_text }}</p>
         </div>
       </div>
@@ -27,6 +29,7 @@
 <script>
 
 import CardFocusBox from '../cards/CardFocusBox.vue';
+import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 
 export default {
   name: 'AlumniProfiles',
@@ -34,7 +37,7 @@ export default {
   props: {
     thumb: {
       type: String,
-      default: 'https://placeimg.com/360/200/nature',
+      default: IMAGE_PLACEHOLDER_BIG,
     },
     name: {
       type: String,

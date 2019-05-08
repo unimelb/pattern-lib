@@ -11,30 +11,37 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+      padding-bottom: 44%;
       @media (--bp-max-x-mobile) {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
+        padding-bottom: 133%;
       }
     }
     &-info {
       width: 65%;
       &_title {
         font-size: 1rem;
+        text-transform: uppercase;
+        margin: 0 0 1px 0;
       }
       &_name {
         margin: 0;
         font-size: 1.8rem;
         line-height: 1.5rem;
       }
-      &_line {
-        width: 2.5rem;
-        padding: 0;
-        margin: 1rem 0 1rem 0;
-        size: 2px;
-      }
       &_short-text,
       &_long-text {
         font-size: .9rem;
+      }
+      &_line {
+        margin: 24px 0 17px 0;
+        border: 0;
+        width: 40px;
+        border-bottom: 2px solid rgb(var(--col-navy-mid-1));
+        &.inverted {
+          border-bottom: 2px solid white;
+        }
       }
       @media (--bp-max-x-mobile) {
         width: 100%;
