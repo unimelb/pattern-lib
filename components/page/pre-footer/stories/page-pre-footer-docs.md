@@ -3,13 +3,12 @@
 The Pre-footer component accepts 2 max slots for links with svg icons and 8 max slots for social media icons links.
 Non-social links should be wrapped in 
 ```html
-<tempalte></template>
+<template></template>
 ``` 
 tag. Inside this `template` tag can be anything but the styles that implemented on the component side will work only for `svg` and `a` tags.
 
 The social slots should be implemented via `a` tag. Inside `a` tag should be social svg icon.
 
-The Pre-footer accept `theme` property. This prop not required. This prop accept 2 themes `theme="dark"` and `theme="light"`.
 
 ### Example
 ```html

@@ -61,6 +61,7 @@
     display: flex;
     align-items: flex-start;
     width: 100%;
+    flex: .5;
 
     a {
       margin-right: 1.5rem;
@@ -74,19 +75,6 @@
     @media (--bp-desktop) {
       align-items: center;
       justify-content: flex-end;
-    }
-  }
-
-  &.dark {
-    background: #000;
-  }
-
-  &.light {
-    background: #fff;
-    color: #000;
-
-    a {
-      color: #000;
     }
   }
 }
