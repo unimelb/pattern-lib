@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="theme"
+    :class="className"
     class="pre-footer">
     <div class="pre-footer__inner">
       <div
@@ -34,7 +34,7 @@
 export default {
   name: 'PagePreFooter',
   props: {
-    theme: {
+    className: {
       type: String,
       default: '',
     },

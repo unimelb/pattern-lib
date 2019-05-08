@@ -10,27 +10,27 @@ describe('PagePreFooter', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types theme', () => {
+  it('should have default props and correct types className', () => {
     const wrapper = shallow(PagePreFooter);
     const {
-      theme,
+      className,
     } = wrapper.vm.$options.props;
 
-    expect(theme.type).toBe(String);
-    expect(wrapper.props().theme).toBe('');
+    expect(className.type).toBe(String);
+    expect(wrapper.props().className).toBe('');
   });
 
-  it('should render theme from prop with correct type', () => {
-    const theme = 'dark';
+  it('should render className from prop with correct type', () => {
+    const className = 'test';
     const wrapper = shallow(PagePreFooter, {
       propsData: {
-        theme,
+        className,
       },
     });
 
-    expect(typeof wrapper.props().theme).toBe('string');
-    expect(wrapper.props().theme).toBe(theme);
-    expect(wrapper.classes()).toContain('dark');
+    expect(typeof wrapper.props().className).toBe('string');
+    expect(wrapper.props().className).toBe(className);
+    expect(wrapper.classes()).toContain('test');
   });
 
   it('should 2 links slots', () => {

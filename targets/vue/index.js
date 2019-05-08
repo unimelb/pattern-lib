@@ -286,3 +286,6 @@ export {
   default as Heading6,
 }
   from '../../components/typography/headings/Heading6.vue';
+export {
+  default as PagePreFooter,
+} from '../../components/page/pre-footer/PagePreFooter.vue';
