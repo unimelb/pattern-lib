@@ -5,9 +5,9 @@
     class="page-header page-header--l3 page-header--study"
     @keydown="handleTabKey"
   >
-    <div
-      class="page-header__inner">
+    <div class="page-header__inner">
       <a
+        tabindex="0"
         class="link-img link-reset"
         href="https://www.unimelb.edu.au/">
         <div class="logo-mask">
@@ -61,19 +61,19 @@
           />
           <ul
             class="menu__section"
-            role="menubar">
+            role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
               :key="`rootitem-${rootindex}`"
-              :tabindex="isSelected(rootindex)"
+              tabindex="0"
               class="menu__item"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
               @keydown="handleKey"
             >
               <a
-                :role="rootitem.items ? 'menuitem' : 'button'"
+                :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
                 class="menu__link"
                 @click="openInner"
@@ -86,8 +86,7 @@
               </a>
               <div
                 v-if="rootitem.items"
-                class="inner inner--fade"
-              >
+                class="inner inner--fade">
                 <div
                   role="button"
                   class="menu__back-btn"
@@ -109,10 +108,8 @@
                     >
                       <a
                         :href="menuitem.href"
-                        tabindex="0"
                         class="menu__link"
-                        role="menuitem"
-                      >
+                        role="menuitem">
                         {{ menuitem.title }}
                         <SvgIcon
                           v-if="!isMobileOpen"
@@ -132,7 +129,8 @@
                     <img
                       :src="rootitem.feature.img"
                       :alt="rootitem.feature.alt"
-                      class="menu__campaign--img">
+                      class="menu__campaign--img"
+                    >
                   </component>
                   <div
                     v-if="rootitem.feature"
@@ -290,7 +288,11 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex) {
-      if (this.lastIndex !== null && this.items[this.lastIndex].items !== undefined && this.items[rootindex].items !== undefined) {
+      if (
+        this.lastIndex !== null
+        && this.items[this.lastIndex].items !== undefined
+        && this.items[rootindex].items !== undefined
+      ) {
         this.isAnimate = false;
         this.lastIndex = rootindex;
       } else {
@@ -306,7 +308,11 @@ export default {
       ) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
-        if (this.isAnimate) this.$refs.rootitems[rootindex].lastChild.classList.add('inner--fade');
+        if (this.isAnimate) {
+          this.$refs.rootitems[rootindex].lastChild.classList.add(
+            'inner--fade'
+          );
+        }
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
       }
@@ -330,7 +336,11 @@ export default {
       this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
 
       this.$refs.rootitems.forEach((item) => {
-        if (!this.isAnimate && item.lastChild.classList && item.lastChild.classList.contains('inner--fade') === true) {
+        if (
+          !this.isAnimate
+          && item.lastChild.classList
+          && item.lastChild.classList.contains('inner--fade') === true
+        ) {
           item.lastChild.classList.remove('inner--fade');
         }
       });
