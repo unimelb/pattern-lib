@@ -3,11 +3,12 @@
     :width="width"
     :height="height"
     :viewBox="viewBox"
-    :aria-label="'Icon ' + name"
+    aria-labelledby="icon"
     focusable="false"
     role="img"
   >
     <use :xlink:href="'#icon-' + name"/>
+    <title id="”icon">{{ name }}</title>
     <slot/>
   </svg>
 </template>
