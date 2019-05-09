@@ -1,15 +1,10 @@
 @import '../../_vars.css';
 
-.pre-footer {
+.social-media-bar {
   display: flex;
   align-items: center;
   min-height: 82px;
   background: rgba(var(--col-background-primary-navy));
-  color: #fff;
-
-  a {
-    color: #fff;
-  }
 
   &__inner {
     display: flex;
@@ -35,25 +30,27 @@
     line-height: 2.5;
     margin-bottom: 1rem;
 
-    &--link {
-      display: flex;
-      align-items: center;
-      margin-right: 3rem;
-
-      a {
-        font-size: 18px;
-        font-family: var(--ff-normal);
-        font-weight: 600;
-      }
-
-      svg {
-        margin-right: .8rem;
-      }
-    }
-
     @media (--bp-desktop) {
       flex-direction: row;
       margin-bottom: 0;
+    }
+  }
+
+  &__link-item {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+
+    a {
+      font-size: 1rem;
+      font-family: var(--fw-semibold);
+      font-weight: 600;
+      color: #fff;
+    }
+
+    svg {
+      color: #fff;
+      margin-right: .8rem;
     }
   }
 
@@ -65,6 +62,7 @@
 
     a {
       margin-right: 1.5rem;
+      color: #fff;
 
       @media (--bp-desktop) {
         margin-right: 0;
