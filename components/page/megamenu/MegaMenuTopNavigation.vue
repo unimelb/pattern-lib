@@ -1,5 +1,5 @@
 <template>
-  <nav >
+  <nav>
     <ul
       class="mega-top"
       role="menu">
