@@ -26,7 +26,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
         itemprop="item"
       >
         <svg
-          aria-labelledby="icon"
+          aria-label="home"
           class="page-breadcrumbs__home"
           focusable="false"
           height="18"
@@ -37,9 +37,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
             xlink:href="#icon-home"
           />
            
-          <title
-            id="”icon"
-          >
+          <title>
             home
           </title>
            
@@ -53,7 +51,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
         </span>
          
         <svg
-          aria-labelledby="icon"
+          aria-label="chevron-right"
           class="page-breadcrumbs__chevron"
           focusable="false"
           height="12"
@@ -64,9 +62,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
             xlink:href="#icon-chevron-right"
           />
            
-          <title
-            id="”icon"
-          >
+          <title>
             chevron-right
           </title>
            
