@@ -6,7 +6,7 @@
 
   a {
     &,
-    &:hover, 
+    &:hover,
     &:visited {
       color: rgb(var(--col-brand));
     }
