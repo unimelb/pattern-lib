@@ -12,6 +12,7 @@
     margin-right: .25rem;
     margin-left: .25rem;
     color: rgb(var(--col-background-primary-white));
+    z-index: 103;
   }
 
   @media (--bp-tablet) {
