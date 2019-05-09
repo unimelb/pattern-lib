@@ -3,7 +3,6 @@
     ref="headerroot"
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
     class="page-header page-header--l3 page-header--study"
-    @keydown="handleTabKey"
   >
     <div class="page-header__inner">
       <a
@@ -394,16 +393,6 @@ export default {
         this.$refs.panels.forEach((panel) => {
           panel.classList.remove('open');
         });
-      }
-    },
-    handleTabKey(e) {
-      switch (e.keyCode) {
-        case 9:
-          // this.dismissBlanket();
-          break;
-
-        default:
-          break;
       }
     },
     handleKey(e) {
