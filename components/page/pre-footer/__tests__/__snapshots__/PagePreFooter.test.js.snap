@@ -2,10 +2,10 @@
 
 exports[`PagePreFooter should match snapshot 1`] = `
 <div
-  class="pre-footer"
+  class="social-media-bar"
 >
   <div
-    class="pre-footer__inner"
+    class="social-media-bar__inner"
   >
     <!---->
      

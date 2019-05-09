@@ -1,22 +1,22 @@
 <template>
   <div
     :class="className"
-    class="pre-footer">
-    <div class="pre-footer__inner">
+    class="social-media-bar">
+    <div class="social-media-bar__inner">
       <div
         v-if="hasLinksSlots"
-        class="pre-footer__links">
-        <div class="pre-footer__links--link">
+        class="social-media-bar__links">
+        <div class="social-media-bar__link-item">
           <slot name="link-1" />
         </div>
-        <div class="pre-footer__links--link">
+        <div class="social-media-bar__link-item">
           <slot
             name="link-2"/>
         </div>
       </div>
       <div
         v-if="hasSocialSlots"
-        class="pre-footer__social">
+        class="social-media-bar__social">
         <slot name="social-1"/>
         <slot name="social-2"/>
         <slot name="social-3"/>
