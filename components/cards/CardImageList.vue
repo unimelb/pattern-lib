@@ -6,8 +6,9 @@
     class="btn-owner card card--imagelisting">
     <div
       :style="{ backgroundImage: `url(${thumb})` }"
+      :aria-label="title"
       class="card__thumb"/>
-    <div class="card__inner ">
+    <div class="card__inner">
       <h3 class="card__header">{{ meta }}</h3>
       <p class="card__meta">{{ title }}</p>
     </div>
@@ -43,7 +44,8 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
+      default:
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.',
     },
   },
   computed: {

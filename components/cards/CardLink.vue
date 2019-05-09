@@ -4,11 +4,14 @@
     :class="classes"
     tabindex="0"
     role="button"
-    class="btn-owner card card--link card--bdr">
+    class="btn-owner card card--link card--bdr"
+  >
     <div
       v-if="thumb"
       :style="{ backgroundImage: `url(${thumb})` }"
-      class="card__thumb"/>
+      :aria-label="title"
+      class="card__thumb"
+    />
     <div
       :class="card_header_classes"
       class="card__header">
@@ -16,8 +19,7 @@
       <SvgIcon
         width="15px"
         height="15px"
-        name="chevron-right"
-      />
+        name="chevron-right"/>
     </div>
   </a>
 </template>
@@ -66,5 +68,4 @@ export default {
     },
   },
 };
-
 </script>
