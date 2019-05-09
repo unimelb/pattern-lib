@@ -5,6 +5,7 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
   class="card card--bdr card--showcase-profile"
 >
   <div
+    aria-label="Profile Image"
     class="card__thumb"
     style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
   />

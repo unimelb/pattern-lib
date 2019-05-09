@@ -5,44 +5,41 @@
     <div
       :class="{ 'split-section__side--with-image': imageLeft }"
       :style="{ backgroundImage: imageLeft ? `url(${bgImage})` : '' }"
-      class="split-section__side">
+      class="split-section__side"
+    >
       <SplitSectionQuote
         v-if="quote && imageLeft"
         :quote="quote"
-        :cite="cite" />
+        :cite="cite"/>
       <div
         v-if="imageRight"
         class="split-section__inner">
-        <slot>
-          default left text
-        </slot>
+        <slot>default left text</slot>
       </div>
     </div>
     <div
       :class="{ 'split-section__side--with-image': imageRight }"
       :style="{ backgroundImage: imageRight ? `url(${bgImage})` : '' }"
-      class="split-section__side">
+      class="split-section__side"
+    >
       <SplitSectionQuote
         v-if="quote && imageRight"
         :quote="quote"
-        :cite="cite" />
+        :cite="cite"/>
       <div
         v-if="imageLeft"
         class="split-section__inner">
-        <slot>
-          default right text
-        </slot>
+        <slot>default right text</slot>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import CardFocusBox from '../cards/CardFocusBox.vue';
 import SplitSectionQuote from './SplitSectionQuote.vue';
 export default {
   name: 'SplitSection',
-  components: { CardFocusBox, SplitSectionQuote },
+  components: { SplitSectionQuote },
   props: {
     imageLeft: {
       type: Boolean,
