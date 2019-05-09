@@ -17,11 +17,11 @@ exports[`CardFeaturesPanel should match snapshot 1`] = `
   <div
     class="card__inner"
   >
-    <h5
+    <h3
       class="card__title"
     >
       
-    </h5>
+    </h3>
      
     <p
       class="card__meta"

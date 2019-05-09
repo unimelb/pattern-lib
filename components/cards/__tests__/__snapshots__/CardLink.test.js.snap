@@ -8,6 +8,7 @@ exports[`CardLink should match snapshot 1`] = `
   tabindex="0"
 >
   <div
+    aria-label="Test title"
     class="card__thumb"
     style="background-image: url(https://via.placeholder.com/400x200);"
   />
