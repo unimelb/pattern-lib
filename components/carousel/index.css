@@ -1,0 +1,14 @@
+@import '../_vars.css';
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 663px;
+  margin: auto;
+  background: rgb(var(--col-background-primary-navy));
+
+  &--slider {
+    height: 548px;
+  }
+}

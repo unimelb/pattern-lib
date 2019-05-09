@@ -12341,6 +12341,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-concise-slider@^3.3.9:
+  version "3.3.9"
+  resolved "https://registry.npmjs.org/vue-concise-slider/-/vue-concise-slider-3.3.9.tgz#8122987efd3ade7a20efccd62ace0b276de7cec7"
+  integrity sha512-8bT3oPkN7wqigZ9i7xkA5viYvyvjO1HuLH0pzlQ7qvTMadQ3cT7wadvEdEJK7jQiSGS5tXfl3VODhoGnv6oZPA==
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
