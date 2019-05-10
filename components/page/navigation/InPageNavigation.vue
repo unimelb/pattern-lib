@@ -3,22 +3,22 @@
     :color="color"
     padded>
     <div class="in-page-navigation">
-      <h2 class="title--md">{{ title }}:</h2>
-      <hr class="line">
-      <div class="container">
+      <h2 class="in-page-navigation__title">{{ title }}:</h2>
+      <hr class="in-page-navigation__line">
+      <div class="in-page-navigation__container">
         <li
           v-for="(data, index) in sections"
           :key="index"
-          class="list-reset">
+          class="in-page-navigation__position list-reset">
           <a
             :href="data.id"
-            class="link"
+            class="in-page-navigation__link"
             @click="scroll"
           >
             {{ data.label }}
             <SvgIcon
               name="chevron-right"
-              class="icon"/>
+              class="in-page-navigation__icon"/>
           </a>
         </li>
       </div>
