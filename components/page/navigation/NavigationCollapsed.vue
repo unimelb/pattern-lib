@@ -34,7 +34,7 @@ export default {
   computed: {
     classes() {
       return {
-        'navigation-container__fixed': this.fixed,
+        'navigation-container--fixed': this.fixed,
       };
     },
   },

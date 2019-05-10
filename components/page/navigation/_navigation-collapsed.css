@@ -1,29 +1,19 @@
-@import '../../_vars.css';
-
 .navigation-container {
   display: none;
   align-items: center;
   justify-content: center;
-  height: 39px;
-  width: 252px;
   align-self: center;
-
-  .dropdown {
-    width: 100%;
-  }
+  padding: 10px;
 
   .dropdown .select {
-    width: 100%;
     border: 2px solid #094183;
-    height: 39px;
-    border-radius: 3px;
-    background: #fff;
-    padding-left: 1rem;
   }
 
-  &__fixed {
+  &--fixed {
     display: flex;
     position: fixed;
-    top: 10px;
+    top: 0;
+    width: 100%;
+    background: #fff;
   }
 }
