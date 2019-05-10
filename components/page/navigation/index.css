@@ -4,14 +4,13 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: 23px;
-    margin-bottom: 84px;
+    margin-top: 1.3rem;
   }
 
   &__title {
     font-family: var(--ff-normal);
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
 
