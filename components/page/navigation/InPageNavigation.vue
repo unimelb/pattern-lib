@@ -1,32 +1,30 @@
 <template>
-  <div>
-    <FocusWrapper
-      :color="color"
-      padded>
-      <div class="in-page-navigation">
-        <h2 class="in-page-navigation__title">{{ title }}:</h2>
-        <hr class="in-page-navigation__line">
-        <div class="in-page-navigation__container">
-          <li
-            v-for="(data, index) in sections"
-            :key="index"
-            class="in-page-navigation__position list-reset">
-            <a
-              :href="data.id"
-              class="in-page-navigation__link"
-              @click="scroll"
-            >
-              {{ data.label }}
-              <SvgIcon
-                name="chevron-right"
-                class="in-page-navigation__icon"/>
-            </a>
-          </li>
-        </div>
-        <navigation-collapsed :heading-level="headingLevel"/>
+  <FocusWrapper
+    :color="color"
+    padded>
+    <div class="in-page-navigation">
+      <h2 class="in-page-navigation__title">{{ title }}:</h2>
+      <hr class="in-page-navigation__line">
+      <div class="in-page-navigation__container">
+        <li
+          v-for="(data, index) in sections"
+          :key="index"
+          class="in-page-navigation__position list-reset">
+          <a
+            :href="data.id"
+            class="in-page-navigation__link"
+            @click="scroll"
+          >
+            {{ data.label }}
+            <SvgIcon
+              name="chevron-right"
+              class="in-page-navigation__icon"/>
+          </a>
+        </li>
       </div>
-    </FocusWrapper>
-  </div>
+      <navigation-collapsed :heading-level="headingLevel"/>
+    </div>
+  </FocusWrapper>
 </template>
 
 <script>
