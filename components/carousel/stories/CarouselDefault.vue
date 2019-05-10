@@ -5,6 +5,7 @@
 <script>
 import Carousel from '../Carousel.vue';
 import sample from '../sample.json';
+import CarouselDoc from './carousel-doc.md';
 
 export default {
   components: { Carousel },
@@ -13,5 +14,6 @@ export default {
       stories: sample,
     };
   },
+  readme: { custom: CarouselDoc, source: true, html: true },
 };
 </script>
