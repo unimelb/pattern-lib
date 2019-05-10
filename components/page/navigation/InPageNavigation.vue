@@ -63,7 +63,7 @@ export default {
         if (element.id) {
           pageNav.push({
             id: `${element.id}`,
-            label: element.innerText,
+            label: element.textContent,
           });
         }
 

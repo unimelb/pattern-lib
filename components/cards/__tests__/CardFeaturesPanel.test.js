@@ -46,7 +46,7 @@ describe('CardFeaturesPanel', () => {
 
     expect(typeof wrapper.props().title).toBe('string');
     expect(wrapper.props().title).toBe(title);
-    expect(wrapper.find('h5').text()).toBe(title);
+    expect(wrapper.find('h3').text()).toBe(title);
   });
 
   it('should render text from prop with correct type', () => {

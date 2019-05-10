@@ -101,6 +101,11 @@
     stroke-width: 0;
   }
 
+  .card__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
   .cell:nth-child(7n+1) &__icon *,
   .list-item:nth-child(7n+1) &__icon * {
     fill: rgb(var(--col-2));
