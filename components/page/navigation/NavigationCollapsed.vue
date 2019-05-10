@@ -1,7 +1,7 @@
 <template>
   <div
     :class="classes"
-    class="navigation-container">
+    class="in-page-navigation__collapsed">
     <Dropdown
       :values="sections"
       :callback="scroll"
@@ -34,7 +34,7 @@ export default {
   computed: {
     classes() {
       return {
-        'navigation-container--fixed': this.fixed,
+        'in-page-navigation__collapsed--fixed': this.fixed,
       };
     },
   },
