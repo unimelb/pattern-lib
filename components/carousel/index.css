@@ -86,9 +86,11 @@
     &--controls {
       display: flex;
       color: #000;
+      justify-content: flex-end;
 
       &__control {
         cursor: pointer;
+        color: rgb(var(--col-background-primary-navy));
       }
     }
 
@@ -106,7 +108,10 @@
       }
 
       &--text {
-        padding: .3rem .1rem;
+        padding: .3rem .4rem;
+        color: rgb(var(--col-background-primary-navy));
+        font-weight: var(--fw-bold);
+        font-size: 1.2rem;
       }
 
       &__active {
