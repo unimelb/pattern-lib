@@ -217,9 +217,9 @@ export default {
       this.countTime = 0;
     },
     moveToStory(storyIndex) {
-      this.$refs.slider.$emit('slideTo', storyIndex);
       this.selectedItem = this.stories[storyIndex];
       this.selectedIndex = storyIndex;
+      this.$refs.slider.$emit('slideTo', storyIndex);
     },
   },
 };
