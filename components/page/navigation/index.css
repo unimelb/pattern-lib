@@ -35,7 +35,11 @@
   }
 
   &__position {
-    flex: 0 50%;
+    flex: 0 100%;
+
+    @media (--bp-tablet) {
+      flex: 0 50%;
+    }
   }
 
   &__collapsed {
