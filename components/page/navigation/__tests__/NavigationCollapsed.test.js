@@ -54,6 +54,6 @@ describe('NavigationCollapsed', () => {
     });
 
     wrapper.setData({ fixed: true });
-    expect(wrapper.classes()).toContain('navigation-container--fixed');
+    expect(wrapper.classes()).toContain('in-page-navigation__collapsed--fixed');
   });
 });

@@ -2,7 +2,7 @@
 
 exports[`NavigationCollapsed should match snapshot 1`] = `
 <div
-  class="navigation-container"
+  class="in-page-navigation__collapsed"
 >
   <!---->
 </div>

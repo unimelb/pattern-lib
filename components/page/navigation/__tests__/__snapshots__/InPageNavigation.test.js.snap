@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InPageNavigation should match snapshot 1`] = `<!---->`;
+exports[`InPageNavigation should match snapshot 1`] = `
+<div>
+  <!---->
+</div>
+`;
