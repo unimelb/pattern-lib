@@ -290,3 +290,7 @@ export {
   default as Heading6,
 }
   from '../../components/typography/headings/Heading6.vue';
+export {
+  default as Carousel,
+}
+  from '../../components/carousel/Carousel.vue';

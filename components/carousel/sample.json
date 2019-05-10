@@ -3,24 +3,24 @@
     "src": "https://images.pexels.com/photos/255419/pexels-photo-255419.jpeg?cs=srgb&dl=africa-arid-barren-255419.jpg&fm=jpg",
     "altText": "test",
     "title": "Story 1",
-    "description": "Lorem ipsum dolor sit amet.",
+    "description": "Story 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae doloremque eius harum iusto laboriosam reiciendis similique tempore voluptatem, voluptatibus.",
     "buttonText": "Register",
-    "buttonLink": "google.com"
+    "buttonHref": "google.com"
   },
   {
     "src": "http://salonatmosfera.ru/image/cache/catalog/Collections/ABK/Wide%20and%20Style/40WIDE-STYLE-1340x880.jpg",
     "altText": "test",
     "title": "Story 2",
-    "description": "Lorem ipsum dolor sit amet.",
-    "buttonText": "Register",
-    "buttonLink": "google.com"
+    "description": "Story 2 description",
+    "buttonText": "Login",
+    "buttonHref": "google.com"
   },
   {
     "src": "http://6.hikb.at/wycieczki/sabaudia/pb-1218040.jpg",
     "altText": "test",
-    "title": "Story 1",
-    "description": "Lorem ipsum dolor sit amet.",
-    "buttonText": "Register",
-    "buttonLink": "google.com"
+    "title": "Story 3",
+    "description": "Story 3 description",
+    "buttonText": "Read",
+    "buttonHref": "google.com"
   }
 ]
