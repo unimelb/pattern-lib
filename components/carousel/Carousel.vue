@@ -161,12 +161,14 @@ export default {
   },
   computed: {
     storiesData() {
-      this.stories.map((item, index) => {
-        item.isActive = index === this.selectedIndex;
-        return item;
+      const data = [];
+      this.stories.forEach((item, index) => {
+        data.push({
+          ...item,
+          isActive: index === this.selectedIndex,
+        });
       });
-
-      return this.stories;
+      return data;
     },
   },
   methods: {
