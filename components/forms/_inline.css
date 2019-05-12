@@ -98,11 +98,10 @@
 
     &--reset {
       min-width: 9rem;
-      height: 4.333rem;
       margin: 0;
       border: 2px solid rgb(var(--col-navy-dark), .3);
       border-radius: 4px;
-      background-color: #CBE8EF;
+      background-color: #cbe8ef;
       font-size: 1rem;
       color: #094183;
       height: 40px;
@@ -111,7 +110,6 @@
     }
     &--apply {
       min-width: 9rem;
-      height: 4.333rem;
       margin: 0;
       border: 2px solid rgb(var(--col-navy-dark), .3);
       border-radius: 4px;
