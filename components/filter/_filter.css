@@ -1,4 +1,69 @@
 .filter {
   display: flex;
   background-color: #094183;
+  &-block{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-right: 2rem;
+    &_title{
+      font-size: 1.15rem;
+      color: #094183;
+      border-bottom: 1px solid #C2C2C2;
+      padding-bottom: 1rem;
+      margin: 0;
+      &-dates{
+        margin: 0;
+        color: rgba(var(--col-black-dark));
+        font-weight: var(--fw-semibold);
+        padding: 1rem 0;
+      }
+    }
+    &_group{
+      display: flex;
+      flex-direction: column;
+      max-height: 200px;
+      overflow-y: auto;
+      &-item{
+        font-size: 1rem;
+      }
+    }
+  }
+  &-button{
+    &_group{
+      background-color: #CBE8EF;
+      padding: 1rem 0 1rem 0;
+      border-radius: 0 0 4px 4px;
+      display: flex;
+      justify-content: center;
+      button:last-child{
+        margin-left: 1rem;
+        border-color: rgba(var(--col-navy-dark), .3);
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  background-color: white;
+  color: navy;
+  padding: 10px;
+}
+
+.col {
+  flex: 1;
+}
+
+.check-list{
+  max-height: 250px;
+  overflow-y: auto;
+  padding-top: 1rem;
+  &__item{
+    margin: 0;
+  }
+}
+
+.check-list__checkbox:checked + .check-list__label{
+  text-decoration: none;
 }

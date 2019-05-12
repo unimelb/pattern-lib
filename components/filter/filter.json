@@ -1,0 +1,8 @@
+
+{
+  "schools": ["All School","School1", "School2", "School3", "School4"],
+  "performance": ["All performance", "Exhibition", "Event", "Production", "Season", "Other"],
+  "disciplines": ["All disciplines", "Visual Art", "Indigenous Arts and Culture", "Production Graduates from the Bachelor of Fine Arts Production at the VCA", "Discipline", "Discipline", "Discipline", "Discipline", "Discipline", "Discipline", "Discipline"],
+  "locations":  ["All locations", "Margaret Lawrence Gallery and The Stables", "Performing Arts Building", "Production", "Grant Street Theatre"]
+}
+

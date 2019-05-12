@@ -18,6 +18,7 @@
       </li>
     </ol>
     <ButtonIcon
+      v-if="isShowButton"
       :href="btnHref"
       :disabled="!itemsAllChecked"
       :icon="btnIcon">{{ btnText }}</ButtonIcon>
@@ -25,7 +26,6 @@
 </template>
 
 <script>
-// check-list-toggle
 
 import { stringToNum, vnodeToElement } from '../shared/utils';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
@@ -36,6 +36,14 @@ export default {
     checkedCount: {
       type: [Number, String],
       default: 0,
+    },
+    isShowButton: {
+      type: Boolean,
+      default: true,
+    },
+    isFilterCheckList: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -71,7 +79,24 @@ export default {
     toggle(index, evt) {
       this.$set(this.checkedItems, index, evt.target.checked);
       this.$emit('check-list-toggle', index);
+      if (this.isFilterCheckList) {
+        if (index !== 0) {
+          this.checkedItems[0] = false;
+        } else {
+          this.checkedItems = this.checkedItems.map((element, iter) => {
+            if (iter !== 0) return false;
+            return true;
+          });
+        }
+      }
+    },
+    resetChecked() {
+      this.checkedItems = this.checkedItems.map((element, iter) => {
+        if (iter !== 0) return false;
+        return true;
+      });
     },
   },
+
 };
 </script>

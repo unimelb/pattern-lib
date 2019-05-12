@@ -1,7 +1,10 @@
 <template>
   <div>
-    <SectionWrap bg-color="inverted">
-      <div class="form form--inline__row form--inline__row--center">
+    <SectionWrap bg-color="white">
+      <div
+        :class="{ 'search-border': !showDetails }"
+        class="form form--inline__row form--inline__row--filter"
+      >
         <input
           v-model="searchData"
           aria-label="Card title"
@@ -31,52 +34,50 @@
             name="chevron-down"/>
         </button>
       </div>
-      <div
-        v-for="(item, index) in data"
-        :key="index">
+      <div>
         <FilterDetails
           v-if="showDetails"
-          :schools="item.school"
-          :perfomances="item.performance"
-          :dates="item.start_time"
-          :disciplines="item.disciplines"
-          :locations="item.location"
+          :schools="data.schools"
+          :perfomances="data.performance"
+          :dates="data.start_time"
+          :disciplines="data.disciplines"
+          :locations="data.locations"
         />
       </div>
     </SectionWrap>
 
-    <SectionWrap class="bg-alt">
-      <div class="grid grid--3col">
-        <ListItem
-          v-for="(item, index) in filteredData"
-          :key="index">
-          <GenericCard
-            :cols="3"
-            :thumb="item.img_url"
-            :title="item.title"
-            :href="item.link"
-            :excerpt="item.description"
-          >
-            <div
-              slot="sub-title-1"
-              class="sub-title">
-              <span
-                v-for="(item, index) in item.performance"
-                :key="index">{{ item }}</span>
-            </div>
-            <div
-              slot="sub-title-2"
-              class="sub-title">
-              <SvgIcon name="calendar"/>
-              <span>{{ item.start_time }}</span>
-            </div>
-            <template slot="links">
-              <a :href="item.link">View showcase ></a>
-            </template>
-          </GenericCard>
-        </ListItem>
-      </div>
-    </SectionWrap>
+    <!--<SectionWrap class="bg-alt">-->
+    <!--<div class="grid grid&#45;&#45;3col">-->
+    <!--<ListItem-->
+    <!--v-for="(item, index) in filteredData"-->
+    <!--:key="index">-->
+    <!--<GenericCard-->
+    <!--:cols="3"-->
+    <!--:thumb="item.img_url"-->
+    <!--:title="item.title"-->
+    <!--:href="item.link"-->
+    <!--:excerpt="item.description"-->
+    <!--&gt;-->
+    <!--<div-->
+    <!--slot="sub-title-1"-->
+    <!--class="sub-title">-->
+    <!--<span-->
+    <!--v-for="(item, index) in item.performance"-->
+    <!--:key="index">{{ item }}</span>-->
+    <!--</div>-->
+    <!--<div-->
+    <!--slot="sub-title-2"-->
+    <!--class="sub-title">-->
+    <!--<SvgIcon name="calendar"/>-->
+    <!--<span>{{ item.start_time }}</span>-->
+    <!--</div>-->
+    <!--<template slot="links">-->
+    <!--<a :href="item.link">View showcase ></a>-->
+    <!--</template>-->
+    <!--</GenericCard>-->
+    <!--</ListItem>-->
+    <!--</div>-->
+    <!--</SectionWrap>-->
   </div>
 </template>
 <script>
@@ -87,7 +88,7 @@ export default {
   components: { FilterDetails, GenericCard },
   props: {
     data: {
-      type: Array,
+      type: Object,
       default: () => [],
     },
   },
@@ -120,5 +121,10 @@ export default {
 
 .form--inline__button-border {
   border-radius: 3px 3px 3px 3px;
+}
+
+.search-border{
+  border-bottom: 8px solid #CBE8EF;
+  border-radius: 4px;
 }
 </style>
