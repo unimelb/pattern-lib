@@ -18,12 +18,12 @@
     > :first-child {
       border-radius: var(--br) var(--br) 0 0;
 
-      @media screen and (--bp-desktop) {
+      @media screen and (--bp-x-tablet) {
         border-radius: var(--br) 0 0 var(--br);
       }
     }
 
-    @media screen and (--bp-desktop) {
+    @media screen and (--bp-x-tablet) {
       flex-direction: row;
       margin: 0;
 

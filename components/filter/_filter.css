@@ -49,6 +49,9 @@
   background-color: white;
   color: navy;
   padding: 10px;
+  @media(--bp-max-x-mobile){
+    flex-direction: column;
+  }
 }
 
 .col {
@@ -66,4 +69,9 @@
 
 .check-list__checkbox:checked + .check-list__label{
   text-decoration: none;
+}
+
+.accordion .toggleblock__default h2{
+  font-size: 1rem;
+  color: rgba(var(--col-background-primary-navy));
 }

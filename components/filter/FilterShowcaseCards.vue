@@ -21,6 +21,7 @@
           <span class="form--inline__button-label">Search</span>
         </button>
         <button
+          v-if="!isMobile"
           class="form--inline__button form--inline__button-border form--inline__button--alt test"
           aria-label="Filters"
           @click="handleFilterDetails"
@@ -36,12 +37,13 @@
       </div>
       <div>
         <FilterDetails
-          v-if="showDetails"
+          v-if="showDetails || isMobile"
           :schools="data.schools"
           :perfomances="data.performance"
           :dates="data.start_time"
           :disciplines="data.disciplines"
           :locations="data.locations"
+          :is-mobile="isMobile"
         />
       </div>
     </SectionWrap>
@@ -96,6 +98,7 @@ export default {
     return {
       searchData: '',
       showDetails: false,
+      isMobile: false,
     };
   },
   computed: {
@@ -106,9 +109,26 @@ export default {
       );
     },
   },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.getWindowWidth);
+      this.getWindowWidth();
+    });
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.getWindowWidth);
+  },
   methods: {
     handleFilterDetails() {
       this.showDetails = !this.showDetails;
+    },
+    getWindowWidth() {
+      this.windowWidth = document.documentElement.clientWidth;
+      if (this.windowWidth < 599) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
     },
   },
 };

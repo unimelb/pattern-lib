@@ -26,9 +26,6 @@
         </div>
       </form>
     </div>
-    <div>
-      <FilterDetails v-if="showFilterDetails"/>
-    </div>
   </div>
 </template>
 
