@@ -1,8 +1,28 @@
 <template>
-  <in-page-navigation
-    color="navy"
-    title="on this page"
-    heading-level="h2"/>
+  <SectionWrap bg-color="white">
+    <in-page-navigation
+      color="navy"
+      title="on this page"
+      heading-level="h1"/>
+    <div style="height: 500px;">
+      <h1 id="navigation-test1">Section1</h1>
+    </div>
+    <div style="height: 500px;">
+      <h1 id="navigation-test2">Section2</h1>
+    </div>
+    <div style="height: 500px;">
+      <h1 id="navigation-test3">Section3</h1>
+    </div>
+    <div style="height: 500px;">
+      <h1 id="navigation-test4">Section4</h1>
+    </div>
+    <div style="height: 500px;">
+      <h1 id="navigation-test5">Section5</h1>
+    </div>
+    <div style="height: 500px;">
+      <h1 id="navigation-test6">Section6</h1>
+    </div>
+  </SectionWrap>
 </template>
 
 <script>

@@ -125,6 +125,17 @@
 
   /* Box shadow */
   --col-box-shadow: 0, 0, 0, .12;
+
+  /* Font size variable for calculation */
+  --fs: 1.15;
+
+  /* Font sizes */
+  --h1-fs: calc(var(--h2-fs) * var(--fs));
+  --h2-fs: calc(var(--h3-fs) * var(--fs));
+  --h3-fs: calc(var(--h4-fs) * var(--fs));
+  --h4-fs: calc(var(--h5-fs) * var(--fs));
+  --h5-fs: calc(var(--h6-fs) * var(--fs));
+  --h6-fs: calc(1rem * var(--fs));
 }
 
 /**
