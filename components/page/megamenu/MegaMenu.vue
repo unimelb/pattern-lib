@@ -4,9 +4,9 @@
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
     class="page-header page-header--l3 page-header--study"
   >
-    <div
-      class="page-header__inner">
+    <div class="page-header__inner">
       <a
+        tabindex="0"
         class="link-img link-reset"
         href="https://www.unimelb.edu.au/">
         <div class="logo-mask">
@@ -65,14 +65,14 @@
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
               :key="`rootitem-${rootindex}`"
-              :tabindex="isSelected(rootindex)"
+              tabindex="0"
               class="menu__item"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
               @keydown="handleKey"
             >
               <a
-                :role="rootitem.items ? 'menuitem' : 'button'"
+                :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
                 class="menu__link"
                 @click="openInner"
@@ -85,8 +85,7 @@
               </a>
               <div
                 v-if="rootitem.items"
-                class="inner inner--fade"
-              >
+                class="inner inner--fade">
                 <div
                   role="button"
                   class="menu__back-btn"
@@ -108,10 +107,8 @@
                     >
                       <a
                         :href="menuitem.href"
-                        tabindex="0"
                         class="menu__link"
-                        role="menuitem"
-                      >
+                        role="menuitem">
                         {{ menuitem.title }}
                         <SvgIcon
                           v-if="!isMobileOpen"
@@ -131,7 +128,8 @@
                     <img
                       :src="rootitem.feature.img"
                       :alt="rootitem.feature.alt"
-                      class="menu__campaign--img">
+                      class="menu__campaign--img"
+                    >
                   </component>
                   <div
                     v-if="rootitem.feature"
@@ -198,6 +196,7 @@
 // mega-menu-activate-mobile-menu
 // mega-menu-dismiss-mobile-menu
 
+import SvgIcon from '../../icons/SvgIcon.vue';
 import Blanket from '../search/blanket';
 import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
@@ -206,6 +205,7 @@ import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 
 export default {
   components: {
+    SvgIcon,
     PageSearch,
     PageSearchForm,
     MegaMenuTitle,
@@ -287,7 +287,11 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex) {
-      if (this.lastIndex !== null && this.items[this.lastIndex].items !== undefined && this.items[rootindex].items !== undefined) {
+      if (
+        this.lastIndex !== null
+        && this.items[this.lastIndex].items !== undefined
+        && this.items[rootindex].items !== undefined
+      ) {
         this.isAnimate = false;
         this.lastIndex = rootindex;
       } else {
@@ -303,7 +307,11 @@ export default {
       ) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
-        if (this.isAnimate) this.$refs.rootitems[rootindex].lastChild.classList.add('inner--fade');
+        if (this.isAnimate) {
+          this.$refs.rootitems[rootindex].lastChild.classList.add(
+            'inner--fade'
+          );
+        }
         this.isDesktopOpen = true;
         this.$emit('mega-menu-activate-desktop-menu');
       }
@@ -327,7 +335,11 @@ export default {
       this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
 
       this.$refs.rootitems.forEach((item) => {
-        if (!this.isAnimate && item.lastChild.classList && item.lastChild.classList.contains('inner--fade') === true) {
+        if (
+          !this.isAnimate
+          && item.lastChild.classList
+          && item.lastChild.classList.contains('inner--fade') === true
+        ) {
           item.lastChild.classList.remove('inner--fade');
         }
       });
@@ -404,9 +416,13 @@ export default {
         // esc
         case 27:
           this.pointer = 0;
-          this.current = 0;
-          this.dismissAllDesktopChildren();
-          this.dismissBlanket();
+
+          // Set current menu item focus.
+          this.$refs.rootitems[this.current].focus();
+
+          // TEMP REMOVE - turn back on when looking into menu a11y improvements.
+          // this.dismissAllDesktopChildren();
+          // this.dismissBlanket();
           break;
         // enter / space
         case 13:
@@ -431,7 +447,7 @@ export default {
             this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
           } else {
-            this.prevRootItem();
+            // this.prevRootItem();
           }
           break;
         // down
@@ -440,7 +456,7 @@ export default {
             this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
             cycle[this.pointer].focus();
           } else {
-            this.nextRootItem();
+            // this.nextRootItem();
           }
           break;
         default:
@@ -469,17 +485,8 @@ export default {
         this.dismissBlanket();
       }
     },
-    getCurrent(e) {
-      let curr = -1;
-      this.items.forEach((rootitem, rootindex) => {
-        if (rootitem.title === e.target.innerText) {
-          curr = rootindex;
-        }
-      }, this);
-      this.current = curr;
-    },
-    isSelected() {
-      return -1;
+    isSelected(index) {
+      return index === this.current ? 0 : -1;
     },
   },
 };

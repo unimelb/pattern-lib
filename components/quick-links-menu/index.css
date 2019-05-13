@@ -47,6 +47,10 @@
       color: rgb(var(--col-brand));
       font-size: .9em;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &-icon {
@@ -60,6 +64,7 @@
       width: 100%;
       margin-bottom: 0;
       padding-bottom: .75rem;
+      break-inside: avoid;
 
       &--flat {
         display: block;
@@ -74,27 +79,28 @@
       }
     }
 
-    @media (--bp-desktop) {
-
-      &--2col,
-      &--3col,
-      &--4col {
+    &--2col,
+    &--3col,
+    &--4col {
+      @media (--bp-desktop) {
         display: block;
-
-        .cell {
-          break-inside: avoid;
-        }
       }
+    }
 
-      &--2col {
+    &--2col {
+      @media (--bp-desktop) {
         columns: 2;
       }
+    }
 
-      &--3col {
+    &--3col {
+      @media (--bp-desktop) {
         columns: 3;
       }
+    }
 
-      &--4col {
+    &--4col {
+      @media (--bp-desktop) {
         columns: 4;
       }
     }
