@@ -81,7 +81,7 @@ export default {
     window.addEventListener('scroll', this.checkNavigation);
   },
   destroyed() {
-    window.removeEventListener('scroll', this.checkNavigation); 
+    window.removeEventListener('scroll', this.checkNavigation);
   },
   methods: {
     getInPageData() {
