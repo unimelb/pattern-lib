@@ -2,7 +2,9 @@
   <FocusWrapper
     :color="color"
     padded>
-    <div class="in-page-navigation">
+    <div
+      ref="inPageNavigation"
+      class="in-page-navigation">
       <h2 class="in-page-navigation__title">{{ title }}:</h2>
       <hr class="in-page-navigation__line">
       <div class="in-page-navigation__container">
@@ -13,7 +15,7 @@
           <a
             :href="data.id"
             class="in-page-navigation__link"
-            @click="scroll"
+            @click="scrollOnClick"
           >
             {{ data.label }}
             <SvgIcon
@@ -22,17 +24,26 @@
           </a>
         </li>
       </div>
-      <navigation-collapsed :heading-level="headingLevel"/>
+      <div
+        :class="classes"
+        class="in-page-navigation__collapsed">
+        <Dropdown
+          :values="sections"
+          :callback="scrollOnSelect"
+          :selected-item="selectedItem.value"
+          tabindex="0"
+        />
+      </div>
     </div>
   </FocusWrapper>
 </template>
 
 <script>
 import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
-import NavigationCollapsed from './NavigationCollapsed.vue';
+import Dropdown from '../../dropdown/Dropdown.vue';
 
 export default {
-  components: { FocusWrapper, NavigationCollapsed },
+  components: { FocusWrapper, Dropdown },
   props: {
     title: {
       type: String,
@@ -51,11 +62,28 @@ export default {
   data() {
     return {
       sections: [],
+      fixed: false,
+      selectedItem: false,
+      autoSelect: true,
+      scrollOffset: 50,
     };
+  },
+  computed: {
+    classes() {
+      return {
+        'in-page-navigation__collapsed--fixed': this.fixed,
+      };
+    },
   },
   mounted() {
     window.addEventListener('load', () => {
       this.getInPageData();
+    });
+
+    window.addEventListener('scroll', () => {
+      this.autoSelectOnScroll();
+
+      this.isFixedBar();
     });
   },
   methods: {
@@ -64,20 +92,49 @@ export default {
       document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
         if (element.id) {
           pageNav.push({
-            id: `${element.id}`,
+            id: element.id,
             label: element.textContent,
+            value: element.id,
           });
         }
 
         this.sections = pageNav;
       });
     },
-    scroll(e) {
-      e.preventDefault();
+    isFixedBar() {
+      const { scrollY } = window;
+      const inPageNavOffset = this.$refs.inPageNavigation.getBoundingClientRect();
+
+      this.fixed = (window.innerHeight - inPageNavOffset.height + this.scrollOffset) + inPageNavOffset.top < scrollY;
+    },
+    scrollOnClick(e) {
       const scrollToID = e.target.getAttribute('href');
       const scrollToElem = document.getElementById(scrollToID);
-      const count = scrollToElem.offsetTop - window.pageYOffset - 50;
+
+      e.preventDefault();
+
+      this.scrollTo(scrollToElem);
+    },
+    scrollOnSelect(e) {
+      const scrollToID = e.target.value;
+      const scrollToElem = document.getElementById(scrollToID);
+
+      this.scrollTo(scrollToElem);
+    },
+    scrollTo(scrollToElem) {
+      const count = scrollToElem.offsetTop - window.pageYOffset - this.scrollOffset;
+
       window.scrollBy({ top: count, left: 0, behavior: 'smooth' });
+    },
+    autoSelectOnScroll() {
+      this.sections.forEach((item) => {
+        const elem = document.getElementById(item.id);
+        const offset = elem.getBoundingClientRect();
+
+        if (offset.top < this.scrollOffset) {
+          this.selectedItem = item;
+        }
+      });
     },
   },
 };
