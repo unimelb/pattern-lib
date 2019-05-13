@@ -35,6 +35,28 @@
   }
 
   &__position {
-    flex: 0 50%;
+    flex: 1 100%;
+
+    @media (--bp-tablet) {
+      flex: 1 50%;
+    }
+  }
+
+  &__collapsed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    position: fixed;
+    top: -50%;
+    left: 0;
+    transition: all .3s;
+    padding: .5rem;
+    width: 100%;
+    background: #fff;
+
+    &--fixed {
+      top: 0;
+    }
   }
 }
