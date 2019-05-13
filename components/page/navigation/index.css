@@ -35,10 +35,10 @@
   }
 
   &__position {
-    flex: 0 100%;
+    flex: 1 100%;
 
     @media (--bp-tablet) {
-      flex: 0 50%;
+      flex: 1 50%;
     }
   }
 

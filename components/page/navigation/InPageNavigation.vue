@@ -62,7 +62,7 @@ export default {
   data() {
     return {
       sections: [],
-      fixed: false,
+      isFixed: false,
       selectedItem: false,
       autoSelect: true,
       scrollOffset: 50,
@@ -71,7 +71,7 @@ export default {
   computed: {
     classes() {
       return {
-        'in-page-navigation__collapsed--fixed': this.fixed,
+        'in-page-navigation__collapsed--fixed': this.isFixed,
       };
     },
   },
@@ -88,7 +88,7 @@ export default {
       const pageNav = [];
 
       document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
-        if (element.id) {
+        if (element.id.includes('navigation')) {
           pageNav.push({
             id: element.id,
             label: element.textContent,
@@ -100,15 +100,19 @@ export default {
       });
     },
     checkNavigation() {
-      this.autoSelectOnScroll();
+      this.selectedItem = this.autoSelectOnScroll();
 
-      this.isFixedBar();
+      this.isFixed = this.isFixedBar();
     },
     isFixedBar() {
-      const { scrollY } = window;
       const inPageNavOffset = this.$refs.inPageNavigation.getBoundingClientRect();
+      const elementToChange = this.sections[0];
 
-      this.fixed = (window.innerHeight - inPageNavOffset.height + this.scrollOffset) + inPageNavOffset.top < scrollY;
+      if (this.sections.length >= 1) {
+        return document.getElementById(elementToChange.id).getBoundingClientRect().top < Math.abs(inPageNavOffset.top);
+      }
+
+      return false;
     },
     scrollOnClick(e) {
       const scrollToID = e.target.getAttribute('href');
@@ -130,14 +134,18 @@ export default {
       window.scrollBy({ top: count, left: 0, behavior: 'smooth' });
     },
     autoSelectOnScroll() {
+      let selectedItem = false;
+
       this.sections.forEach((item) => {
         const elem = document.getElementById(item.id);
         const offset = elem.getBoundingClientRect();
 
         if (offset.top < this.scrollOffset) {
-          this.selectedItem = item;
+          selectedItem = item;
         }
       });
+
+      return selectedItem;
     },
   },
 };
