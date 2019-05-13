@@ -12,48 +12,49 @@
 
   /* h1 */
   &--xl {
-    margin-bottom: calc(1.5 * var(--vr));
     font-family: var(--ff-lead);
-    font-size: 2.3125rem;
+    font-size: var(--h1-fs);
     line-height: 2.6594rem;
+    margin-bottom: 2rem;
   }
 
   /* h2 */
   &--lg {
-    margin-bottom: var(--vr);
     font-family: var(--ff-lead);
-    font-size: 2.0125rem;
-    line-height: 2.3144rem;
+    font-size: var(--h2-fs);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
   }
 
   /* h3 */
   &--md {
-    margin-bottom: calc(var(--vr) / 2);
-    font-size: 1.75rem;
-    line-height: 2.0125rem;
+    font-size: var(--h3-fs);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
   }
 
   /* h4 */
   &--sm {
-    margin-bottom: calc(var(--vr) / 2);
-    font-size: 1.5188rem;
-    line-height: 1.7469rem;
+    font-size: var(--h4-fs);
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
     font-weight: var(--fw-bold);
   }
 
   /* h5 */
   &--xs {
-    margin-bottom: 0;
-    font-size: 1.325rem;
+    font-size: var(--h5-fs);
+    line-height: 1.3;
+    margin-bottom: 1rem;
     font-weight: var(--fw-bold);
     text-transform: capitalize;
   }
 
   /* h6 */
   &--xxs {
-    margin-bottom: 0;
-    font-size: 1.15rem;
-    line-height: 1.3225rem;
+    font-size: var(--h6-fs);
+    line-height: 1.3;
+    margin-bottom: .75rem;
     font-weight: var(--fw-bold);
   }
 }
@@ -68,38 +69,39 @@
   }
 
   h2 {
-    margin-bottom: var(--vr);
     font-family: var(--ff-lead);
-    font-size: 2.0125rem;
-    line-height: 2.3144rem;
+    font-size: var(--h2-fs);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
   }
 
   h3 {
-    margin-bottom: calc(var(--vr) / 2);
-    font-size: 1.75rem;
-    line-height: 2.0125rem;
+    font-size: var(--h3-fs);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
 
     /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
   }
 
   h4 {
-    margin-bottom: calc(var(--vr) / 2);
-    font-size: 1.5188rem;
-    line-height: 1.7469rem;
-    font-weight: var(--fw-semibold);
+    font-size: var(--h4-fs);
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+    font-weight: var(--fw-bold);
   }
 
   h5 {
-    margin-bottom: 0;
-    font-size: .875rem;
+    font-size: var(--h5-fs);
+    line-height: 1.3;
+    margin-bottom: 1rem;
     font-weight: var(--fw-bold);
     text-transform: uppercase;
   }
 
   h6 {
-    margin-bottom: 0;
-    font-size: 1.15rem;
-    line-height: 1.3225rem;
+    font-size: var(--h6-fs);
+    line-height: 1.3;
+    margin-bottom: .75rem;
     font-weight: var(--fw-bold);
   }
 }
