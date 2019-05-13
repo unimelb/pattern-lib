@@ -43,19 +43,20 @@
   }
 
   &__collapsed {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    position: fixed;
+    top: -50%;
+    left: 0;
+    transition: all .3s;
     padding: .5rem;
+    width: 100%;
+    background: #fff;
 
     &--fixed {
-      position: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      align-self: center;
       top: 0;
-      left: 0;
-      width: 100%;
-      background: #fff;
     }
   }
 }
