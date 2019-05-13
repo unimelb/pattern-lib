@@ -287,5 +287,5 @@ export {
 }
   from '../../components/typography/headings/Heading6.vue';
 export {
-  default as PagePreFooter,
-} from '../../components/page/pre-footer/PagePreFooter.vue';
+  default as SocialMediaBar,
+} from '../../components/page/social-media-bar/SocialMediaBar.vue';
