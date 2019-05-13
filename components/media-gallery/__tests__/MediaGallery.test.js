@@ -87,7 +87,6 @@ describe('MediaGallery Common', () => {
     });
     expect(wrapper.vm.selectedIndex).toBe(0);
     expect(wrapper.vm.selectedItem.id).toBe(1);
-    expect(wrapper.find('.media-gallery__container img').exists()).toBe(true);
   });
 
   it('should have click event on arrows', () => {

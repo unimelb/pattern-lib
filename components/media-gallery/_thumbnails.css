@@ -1,3 +1,5 @@
+@import '../_vars.css';
+
 .thumbnails {
   &__item {
     display: flex;
@@ -10,16 +12,18 @@
     width: 100%;
 
     figcaption {
-      color: #000;
-      font-size: 1rem;
-      margin: .5rem auto;
+      color: rgb(var(--col-black-dark));
+      font-size: 1.12rem;
+      margin: .5rem 0;
       font-weight: var(--fw-semibold);
+      text-align: left;
     }
   }
 
   &__item-wrap {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   &__image {
@@ -41,9 +45,9 @@
   }
 
   &__description {
-    color: #000;
-    font-size: .9rem;
-    text-align: center;
+    color: rgb(var(--col-black-dark));
+    font-size: 1rem;
+    text-align: left;
   }
 
   &__invisible {

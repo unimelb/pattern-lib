@@ -37,9 +37,11 @@
           v-if="media.length"
           :class="containerClasses">
           <slider
+            v-if="inPage || openState"
             ref="slider"
             :options="options"
-            @slide="slide">
+            @slide="slide"
+          >
             <slideritem
               v-for="(slide, index) in media"
               :key="index"
@@ -48,7 +50,7 @@
                 v-if="slide.type === 'image'"
                 :src="slide.src"
                 :alt="slide.altText"
-                class="media-gallery__slider--image"
+                class="media-gallery__slider-image"
               >
               <VideoEmbed
                 v-if="slide.type === 'video'"
@@ -221,11 +223,13 @@ export default {
     open(index) {
       this.selectedItem = this.media[index];
       this.selectedIndex = index;
-      this.$refs.slider.$emit('slideTo', index);
+      if (this.$refs.slider) {
+        this.$refs.slider.$emit('slideTo', index);
+      }
     },
     openThumb(index) {
+      this.options.currentPage = index;
       this.openStateToggle();
-      setTimeout(() => this.open(index), 10);
     },
     openStateToggle() {
       this.openState = !this.openState;
@@ -240,7 +244,9 @@ export default {
       const nextIndex = directions[direction];
       this.selectedItem = this.media[nextIndex];
       this.selectedIndex = nextIndex;
-      this.$refs.slider.$emit('slideTo', nextIndex);
+      if (this.$refs.slider) {
+        this.$refs.slider.$emit('slideTo', nextIndex);
+      }
     },
     slide(slide) {
       this.selectedItem = this.media[slide.currentPage];
