@@ -6,11 +6,9 @@ import {
 } from '../../../../.storybook/utils';
 
 import InPageNavigationDefault from './InPageNavigationDefault.vue';
-import OutPageNavigationDefault from './OutPageNavigationDefault.vue';
 
 /* ##Import story component here */
 
 storiesOf('Page / Navigation', module)
-  .add('In page Navigation', createStory(InPageNavigationDefault))
-  .add('Out Page Navigation', createStory(OutPageNavigationDefault));
+  .add('In page Navigation', createStory(InPageNavigationDefault));
 /* ##Story goes here */
