@@ -76,19 +76,17 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener('load', () => {
-      this.getInPageData();
-    });
+    this.getInPageData();
 
-    window.addEventListener('scroll', () => {
-      this.autoSelectOnScroll();
-
-      this.isFixedBar();
-    });
+    window.addEventListener('scroll', this.checkNavigation);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.checkNavigation); 
   },
   methods: {
     getInPageData() {
       const pageNav = [];
+
       document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
         if (element.id) {
           pageNav.push({
@@ -100,6 +98,11 @@ export default {
 
         this.sections = pageNav;
       });
+    },
+    checkNavigation() {
+      this.autoSelectOnScroll();
+
+      this.isFixedBar();
     },
     isFixedBar() {
       const { scrollY } = window;
