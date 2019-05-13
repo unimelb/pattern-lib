@@ -36,33 +36,36 @@
     }
   }
 
-  &__link-item {
+  &--link {
     display: flex;
     align-items: center;
     margin-right: 3rem;
+    font-size: 1rem;
+    font-weight: var(--fw-semibold);
+    color: #fff;
 
-    a {
-      font-size: 1rem;
-      font-family: var(--fw-semibold);
-      font-weight: 600;
+    &:visited {
       color: #fff;
     }
 
-    svg {
-      color: #fff;
+    &--icon {
       margin-right: .8rem;
     }
   }
 
-  &__social {
+  &--social {
     display: flex;
     align-items: flex-start;
     width: 100%;
     flex: .5;
 
-    a {
+    &--link {
       margin-right: 1.5rem;
       color: #fff;
+
+      &:visited {
+        color: #fff;
+      }
 
       @media (--bp-desktop) {
         margin-right: 0;
