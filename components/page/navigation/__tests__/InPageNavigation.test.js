@@ -1,5 +1,6 @@
 import {
   shallow,
+  mount,
 } from 'vue-test-utils';
 import {
   toHaveNoViolations,
@@ -75,5 +76,17 @@ describe('InPageNavigation', () => {
     } = wrapper.vm.$options.props;
 
     expect(headingLevel.validator && headingLevel.validator('test')).toBeFalsy();
+  });
+
+  it('should add fixed class to component on scroll', () => {
+    const headingLevel = 'h2';
+    const wrapper = mount(InPageNavigation, {
+      propsData: {
+        headingLevel,
+      },
+    });
+
+    wrapper.setData({ isFixed: true });
+    expect(wrapper.find('.in-page-navigation__collapsed').classes()).toContain('in-page-navigation__collapsed--fixed');
   });
 });
