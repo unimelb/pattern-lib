@@ -48,6 +48,7 @@
     justify-content: center;
     align-self: center;
     position: fixed;
+    z-index: 1000;
     top: -50%;
     left: 0;
     transition: all .3s;
