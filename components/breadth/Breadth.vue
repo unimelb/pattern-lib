@@ -3,12 +3,16 @@
     <div>
       <label>
         Discipline
-        <Dropdown v-model="searchDiscipline" :values="filteredDisciplines"/>
+        <DropdownVmodel
+          v-model="selectedDiscipline"
+          :values="filteredDisciplines"/>
       </label>
 
       <label>
         Location
-        <Dropdown v-model="searchLocation" :values="filteredLocations"/>
+        <DropdownVmodel
+          v-model="selectedLocation"
+          :values="filteredLocations"/>
       </label>
 
       <label>
@@ -21,7 +25,9 @@
         >
       </label>
     </div>
-    <div v-for="(item, index) in filteredData" :key="index">
+    <div
+      v-for="(item, index) in filteredData"
+      :key="index">
       <accordion :name="item.name">
         <table class="table table--striped">
           <tr>
@@ -65,64 +71,62 @@
 </template>
 
 <script>
-import Accordion from "../accordion/Accordion.vue";
-import Dropdown from "../dropdown/Dropdown.vue";
+import Accordion from '../accordion/Accordion.vue';
+import DropdownVmodel from '../dropdown/DropdownVmodel.vue';
 
 export default {
   components: {
     Accordion,
-    Dropdown
+    DropdownVmodel,
   },
 
   props: {
     data: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
 
   data() {
     return {
-      searchDiscipline: "",
-      searchLocation: "",
-      searchAudition: "",
-      selectedItem: false
+      selectedDiscipline: '',
+      selectedLocation: '',
+      searchAudition: '',
     };
   },
 
   computed: {
     filteredData() {
       return this.data.filter(
-        data =>
-          data.discipline.match(new RegExp(this.searchDiscipline, "i")) &&
-          data.location.match(new RegExp(this.searchLocation, "i")) &&
-          data.audition.match(new RegExp(this.searchAudition, "i"))
+        data => data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
+          && data.location.match(new RegExp(this.selectedLocation, 'i'))
+          && data.audition.match(new RegExp(this.searchAudition, 'i'))
       );
     },
 
     filteredDisciplines() {
-      let disciplines = [];
-      this.data.forEach(element => {
+      const disciplines = [];
+      this.data.forEach((element) => {
         disciplines.push(element.discipline);
       });
       return disciplines;
     },
 
     filteredLocations() {
-      let locations = [];
-      this.data.forEach(element => {
+      const locations = [];
+      this.data.forEach((element) => {
         locations.push(element.location);
       });
       return locations;
     },
 
     filteredAuditions() {
-      let auditions = [];
-      this.data.forEach(element => {
+      const auditions = [];
+      this.data.forEach((element) => {
         auditions.push(element.audition);
       });
       return auditions;
-    }
-  }
+    },
+  },
 };
 </script>
