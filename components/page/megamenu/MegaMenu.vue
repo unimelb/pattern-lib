@@ -253,7 +253,7 @@ export default {
   computed: {
     isMobile() {
       return this.$refs.headerroot
-        ? this.$refs.headerroot.offsetWidth < 899
+        ? this.$refs.headerroot.offsetWidth < 900
         : false;
     },
     isShowTopMenu() {
@@ -376,7 +376,7 @@ export default {
     openInner(e) {
       if (
         this.$refs.headerroot
-        && this.$refs.headerroot.offsetWidth < 899
+        && this.$refs.headerroot.offsetWidth < 900
         && e.target.nextElementSibling
       ) {
         e.preventDefault();
