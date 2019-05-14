@@ -11,12 +11,12 @@
         <li
           v-for="(data, index) in sections"
           :key="index"
-          class="in-page-navigation__position list-reset">
+          class="in-page-navigation__position list-reset"
+        >
           <a
             :href="data.id"
             class="in-page-navigation__link"
-            @click="scrollOnClick"
-          >
+            @click="scrollOnClick">
             {{ data.label }}
             <SvgIcon
               name="chevron-right"
@@ -87,17 +87,19 @@ export default {
     getInPageData() {
       const pageNav = [];
 
-      document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
-        if (element.id.includes('navigation')) {
-          pageNav.push({
-            id: element.id,
-            label: element.textContent,
-            value: element.id,
-          });
-        }
+      Array.prototype.slice
+        .apply(document.querySelectorAll(`${this.headingLevel}`))
+        .forEach((element) => {
+          if (element.id.includes('navigation')) {
+            pageNav.push({
+              id: element.id,
+              label: element.textContent,
+              value: element.id,
+            });
+          }
 
-        this.sections = pageNav;
-      });
+          this.sections = pageNav;
+        });
     },
     checkNavigation() {
       this.selectedItem = this.autoSelectOnScroll();
@@ -109,7 +111,10 @@ export default {
       const elementToChange = this.sections[0];
 
       if (this.sections.length >= 1) {
-        return document.getElementById(elementToChange.id).getBoundingClientRect().top < Math.abs(inPageNavOffset.top);
+        return (
+          document.getElementById(elementToChange.id).getBoundingClientRect()
+            .top < Math.abs(inPageNavOffset.top)
+        );
       }
 
       return false;
