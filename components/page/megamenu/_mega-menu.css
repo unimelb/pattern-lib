@@ -149,8 +149,7 @@
       color: rgb(var(--col-background-primary-white));
       text-decoration: none;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: rgb(var(--col-background-primary-white));
         text-decoration: underline;
       }
@@ -478,8 +477,7 @@
       }
 
       &__section .menu__item--over,
-      &__section .menu__item[tabindex='0']:focus,
-      &__section .menu__item[tabindex='0']:focus-within {
+      &__section .menu__item[tabindex='0'] {
         .inner {
           display: flex;
           z-index: 3;
@@ -607,8 +605,7 @@
 }
 
 .page-header {
-  &.active,
-  &:focus-within {
+  &.active {
     z-index: 101;
     overflow: visible;
   }

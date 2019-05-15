@@ -65,14 +65,14 @@
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
               :key="`rootitem-${rootindex}`"
-              tabindex="0"
+              :tabindex="isSelected(rootindex)"
               class="menu__item"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
               @keydown="handleKey"
             >
               <a
-                :role="rootitem.items ? 'button' : 'menuitem'"
+                :role="rootitem.items ? 'menuitem' : 'button'"
                 :href="rootitem.href"
                 class="menu__link"
                 @click="openInner"
@@ -416,13 +416,9 @@ export default {
         // esc
         case 27:
           this.pointer = 0;
-
-          // Set current menu item focus.
-          this.$refs.rootitems[this.current].focus();
-
-          // TEMP REMOVE - turn back on when looking into menu a11y improvements.
-          // this.dismissAllDesktopChildren();
-          // this.dismissBlanket();
+          this.current = 0;
+          this.dismissAllDesktopChildren();
+          this.dismissBlanket();
           break;
         // enter / space
         case 13:
@@ -447,7 +443,7 @@ export default {
             this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
           } else {
-            // this.prevRootItem();
+            this.prevRootItem();
           }
           break;
         // down
@@ -456,7 +452,7 @@ export default {
             this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
             cycle[this.pointer].focus();
           } else {
-            // this.nextRootItem();
+            this.nextRootItem();
           }
           break;
         default:
@@ -485,8 +481,8 @@ export default {
         this.dismissBlanket();
       }
     },
-    isSelected(index) {
-      return index === this.current ? 0 : -1;
+    isSelected() {
+      return -1;
     },
   },
 };
