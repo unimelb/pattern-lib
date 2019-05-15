@@ -71,6 +71,7 @@ import Heading3 from '../../components/typography/headings/Heading3.vue';
 import Heading4 from '../../components/typography/headings/Heading4.vue';
 import Heading5 from '../../components/typography/headings/Heading5.vue';
 import Heading6 from '../../components/typography/headings/Heading6.vue';
+import SocialMediaBar from '../../components/page/social-media-bar/SocialMediaBar.vue';
 
 import '../../components';
 
@@ -147,7 +148,7 @@ Vue.component('heading3', Heading3);
 Vue.component('heading4', Heading4);
 Vue.component('heading5', Heading5);
 Vue.component('heading6', Heading6);
-
+Vue.component('social-media-bar', SocialMediaBar);
 // Create Vue instance
 new Vue({
   el: '#ui',
