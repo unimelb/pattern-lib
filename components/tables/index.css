@@ -4,11 +4,21 @@
   border-spacing: 0;
   border-collapse: collapse;
 
-  a,
-  a:visited,
-  a:hover {
-    color: rgb(var(--col-brand));
-    text-decoration: underline;
+  a {
+    &,
+    &:hover,
+    &:visited {
+      color: rgb(var(--col-brand));
+    }
+
+    &,
+    &:visited {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   td,

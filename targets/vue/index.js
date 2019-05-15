@@ -259,10 +259,6 @@ export {
 }
   from '../../components/page/navigation/InPageNavigation.vue';
 export {
-  default as OutPageNavigation,
-}
-  from '../../components/page/navigation/OutPageNavigation.vue';
-export {
   default as Dropdown,
 }
   from '../../components/dropdown/Dropdown.vue';
@@ -290,3 +286,6 @@ export {
   default as Heading6,
 }
   from '../../components/typography/headings/Heading6.vue';
+export {
+  default as SocialMediaBar,
+} from '../../components/page/social-media-bar/SocialMediaBar.vue';

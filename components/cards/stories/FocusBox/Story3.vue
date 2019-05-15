@@ -5,7 +5,7 @@
         <CardFocusBox
           :icon="Icon1"
           element="div"
-          color="brand"
+          color="navy"
           vertical>
           <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.
         </CardFocusBox>
@@ -41,7 +41,7 @@
         <CardFocusBox
           :icon="Icon3"
           element="div"
-          color="blue"
+          color="navy"
           vertical>
           <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
         </CardFocusBox>

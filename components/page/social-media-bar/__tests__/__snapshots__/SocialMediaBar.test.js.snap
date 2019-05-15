@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMediaBar should match snapshot 1`] = `
+<div
+  class="social-media-bar"
+>
+  <div
+    class="social-media-bar__inner"
+  >
+    <div
+      class="social-media-bar__links"
+    >
+      <!---->
+       
+      <!---->
+    </div>
+     
+    <div
+      class="social-media-bar__social"
+    >
+      <!---->
+       
+      <!---->
+       
+      <!---->
+       
+      <!---->
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;

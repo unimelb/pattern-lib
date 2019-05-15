@@ -25,7 +25,6 @@ import Tabs from '../../components/tabs/Tabs.vue';
 import Tab from '../../components/tabs/Tab.vue';
 import PhotoGallery from '../../components/photo-gallery';
 import InPageNavigation from '../../components/page/navigation/InPageNavigation.vue';
-import OutPageNavigation from '../../components/page/navigation/OutPageNavigation.vue';
 import FocusWrapper from '../../components/focus-wrapper/FocusWrapper.vue';
 import SvgIcon from '../../components/icons/SvgIcon.vue';
 import ListingWrap from '../../components/listing/ListingWrap.vue';
@@ -72,6 +71,7 @@ import Heading3 from '../../components/typography/headings/Heading3.vue';
 import Heading4 from '../../components/typography/headings/Heading4.vue';
 import Heading5 from '../../components/typography/headings/Heading5.vue';
 import Heading6 from '../../components/typography/headings/Heading6.vue';
+import SocialMediaBar from '../../components/page/social-media-bar/SocialMediaBar.vue';
 
 import '../../components';
 
@@ -102,7 +102,6 @@ Vue.component('tabs', Tabs);
 Vue.component('tab', Tab);
 Vue.component('photo-gallery', PhotoGallery);
 Vue.component('in-page-navigation', InPageNavigation);
-Vue.component('out-page-navigation', OutPageNavigation);
 Vue.component('focus-wrapper', FocusWrapper);
 Vue.component('svg-icon', SvgIcon);
 Vue.component('listing-wrap', ListingWrap);
@@ -149,7 +148,7 @@ Vue.component('heading3', Heading3);
 Vue.component('heading4', Heading4);
 Vue.component('heading5', Heading5);
 Vue.component('heading6', Heading6);
-
+Vue.component('social-media-bar', SocialMediaBar);
 // Create Vue instance
 new Vue({
   el: '#ui',

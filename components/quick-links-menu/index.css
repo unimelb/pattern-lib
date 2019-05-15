@@ -47,6 +47,10 @@
       color: rgb(var(--col-brand));
       font-size: .9em;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     &-icon {
