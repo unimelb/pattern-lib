@@ -259,10 +259,6 @@ export {
 }
   from '../../components/page/navigation/InPageNavigation.vue';
 export {
-  default as OutPageNavigation,
-}
-  from '../../components/page/navigation/OutPageNavigation.vue';
-export {
   default as Dropdown,
 }
   from '../../components/dropdown/Dropdown.vue';

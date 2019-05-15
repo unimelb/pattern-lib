@@ -19,7 +19,7 @@
       </tr>
       <tr>
         <td>
-          Faculty of Business and Economics
+          <a href="#">Faculty of Business and Economics</a>
         </td>
         <td>
           <p class="desc">

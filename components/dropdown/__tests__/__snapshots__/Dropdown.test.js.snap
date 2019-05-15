@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown should match snapshot 1`] = `
+<div
+  class="dropdown"
+>
+  <select
+    class="select"
+  />
+</div>
+`;

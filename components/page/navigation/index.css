@@ -1,18 +1,16 @@
 .in-page-navigation {
-
   &__container {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: 23px;
-    margin-bottom: 84px;
+    margin-top: 1.3rem;
   }
 
   &__title {
     font-family: var(--ff-normal);
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
 
@@ -37,6 +35,29 @@
   }
 
   &__position {
-    flex: 0 50%;
+    flex: 1 100%;
+
+    @media (--bp-tablet) {
+      flex: 1 50%;
+    }
+  }
+
+  &__collapsed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    position: fixed;
+    z-index: 1000;
+    top: -50%;
+    left: 0;
+    transition: all .3s;
+    padding: .5rem;
+    width: 100%;
+    background: #fff;
+
+    &--fixed {
+      top: 0;
+    }
   }
 }
