@@ -126,6 +126,7 @@
                     class="menu__campaign"
                   >
                     <img
+                      v-if="rootitem.feature.img"
                       :src="rootitem.feature.img"
                       :alt="rootitem.feature.alt"
                       class="menu__campaign--img"
