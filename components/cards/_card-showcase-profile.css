@@ -34,12 +34,12 @@
     text-decoration: underline;
     margin-bottom: .5rem;
 
-    @media (--bp-desktop) {
-      margin: 0;
-    }
-
     &:hover {
       text-decoration: none;
+    }
+
+    @media (--bp-desktop) {
+      margin: 0;
     }
   }
 
