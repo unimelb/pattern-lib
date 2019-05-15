@@ -16,7 +16,7 @@ exports[`SocialMediaBar should match snapshot 1`] = `
     </div>
      
     <div
-      class="social-media-bar--social"
+      class="social-media-bar__social"
     >
       <!---->
        
