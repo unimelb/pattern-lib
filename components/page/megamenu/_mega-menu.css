@@ -253,7 +253,7 @@
         }
       }
 
-      @media (--bp-desktop) {
+      @media (--bp-x-desktop) {
         margin: 0;
       }
     }
