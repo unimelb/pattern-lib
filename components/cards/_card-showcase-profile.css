@@ -37,6 +37,10 @@
     @media (--bp-desktop) {
       margin: 0;
     }
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   .card__icon {
