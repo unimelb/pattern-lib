@@ -286,3 +286,6 @@ export {
   default as Heading6,
 }
   from '../../components/typography/headings/Heading6.vue';
+export {
+  default as SocialMediaBar,
+} from '../../components/page/social-media-bar/SocialMediaBar.vue';

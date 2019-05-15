@@ -24,3 +24,6 @@ import './search.svg';
 import './twitter.svg';
 import './tag.svg';
 import './envelope.svg';
+import './newspaper.svg';
+import './instagram.svg';
+import './vimeo.svg';
