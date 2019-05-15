@@ -1,7 +1,7 @@
 <template>
   <section-wrap bg-color="white">
-    <div>
-      <label>
+    <div class="breadth search-box">
+      <label class="label">
         Discipline
         <DropdownVmodel
           v-model="selectedDiscipline"
@@ -17,14 +17,15 @@
 
       <label>
         Audition Requirement
-        <input
-          v-model="searchAudition"
-          aria-label="Audition requirement"
-          type="search"
-          placeholder="Audition requirement"
-        >
+        <DropdownVmodel
+          v-model="selectedAudition"
+          :values="filteredAuditions"/>
       </label>
     </div>
+
+    <button
+      aria-label="Reset all"
+      @click="resetChecked">Reset all</button>
     <div
       v-for="(item, index) in filteredData"
       :key="index">
@@ -91,7 +92,7 @@ export default {
     return {
       selectedDiscipline: '',
       selectedLocation: '',
-      searchAudition: '',
+      selectedAudition: '',
     };
   },
 
@@ -100,7 +101,7 @@ export default {
       return this.data.filter(
         data => data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
           && data.location.match(new RegExp(this.selectedLocation, 'i'))
-          && data.audition.match(new RegExp(this.searchAudition, 'i'))
+          && data.audition.match(new RegExp(this.selectedAudition, 'i'))
       );
     },
 
@@ -126,6 +127,13 @@ export default {
         auditions.push(element.audition);
       });
       return auditions;
+    },
+  },
+  methods: {
+    resetChecked() {
+      this.selectedDiscipline = '';
+      this.selectedLocation = '';
+      this.selectedAudition = '';
     },
   },
 };

@@ -1,5 +1,12 @@
 .breadth {
-  h1 {
-    color: red;
+
+  &.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label {
+    margin-left: 10px;
   }
 }

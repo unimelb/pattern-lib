@@ -4,9 +4,11 @@
 
 <script>
 import Breadth from '../Breadth.vue';
+import breadthDoc from './breadth.md';
+
 export default {
   components: { Breadth },
-  readme: { source: true, html: true },
+  readme: { custom: breadthDoc, source: true, html: true },
   data() {
     return {
       data: [
