@@ -249,6 +249,7 @@ export default {
       pointer: 0,
       lastIndex: null,
       isAnimate: true,
+      isActive: false,
     };
   },
   computed: {
@@ -424,11 +425,11 @@ export default {
         // enter / space
         case 13:
         case 32:
-          if (e.target.classList.contains('.menu__item')) {
-            e.target.querySelector('.menu__link').click();
-          } else {
-            e.target.click();
-          }
+          this.items.forEach((item, index) => {
+            if (item.title.replace(/\s/g, '') === e.target.innerText.replace(/\s/g, '')) {
+              this.activateDesktopMenu(index);
+            }
+          });
           break;
         // left
         case 37:
