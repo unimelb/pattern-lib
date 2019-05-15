@@ -2,13 +2,14 @@
   <div class="dropdown">
     <select
       v-model="selectedOption"
-      class="select"
+      class="select-css"
       @input="event => { $emit('input', event.target.value)}"
     >
       <option
         v-for="(value, index) in values"
         :key="index"
         :value="value.value || value"
+        class="option"
       >{{ value.label || value }}</option>
     </select>
   </div>

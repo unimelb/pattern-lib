@@ -5,7 +5,7 @@ exports[`Dropdown should match snapshot 1`] = `
   class="dropdown"
 >
   <select
-    class="select"
+    class="select-css"
   />
 </div>
 `;

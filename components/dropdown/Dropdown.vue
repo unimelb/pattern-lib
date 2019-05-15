@@ -2,9 +2,8 @@
   <div class="dropdown">
     <select
       :value="selected"
-      class="select"
-      @change="callback"
-    >
+      class="select-css"
+      @change="callback">
       <option
         v-for="(value, index) in values"
         :key="index"

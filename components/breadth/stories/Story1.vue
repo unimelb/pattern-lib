@@ -1,5 +1,7 @@
 <template>
-  <breadth :data="data"/>
+  <section-wrap bg-color="white">
+    <breadth :data="data"/>
+  </section-wrap>
 </template>
 
 <script>

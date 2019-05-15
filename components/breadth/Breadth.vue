@@ -1,5 +1,5 @@
 <template>
-  <section-wrap bg-color="white">
+  <div>
     <div class="breadth search-box">
       <label class="label">
         Discipline
@@ -8,14 +8,14 @@
           :values="filteredDisciplines"/>
       </label>
 
-      <label>
+      <label class="label">
         Location
         <DropdownVmodel
           v-model="selectedLocation"
           :values="filteredLocations"/>
       </label>
 
-      <label>
+      <label class="label">
         Audition Requirement
         <DropdownVmodel
           v-model="selectedAudition"
@@ -68,7 +68,7 @@
         </table>
       </accordion>
     </div>
-  </section-wrap>
+  </div>
 </template>
 
 <script>
