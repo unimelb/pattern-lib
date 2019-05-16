@@ -44,6 +44,7 @@ export default {
     name: {
       type: String,
       default: '',
+      required: true,
     },
     post: {
       type: String,
@@ -52,6 +53,7 @@ export default {
     testimonials: {
       type: String,
       default: '',
+      required: true,
     },
     inverted: {
       type: Boolean,
@@ -60,6 +62,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
   },
   data() {

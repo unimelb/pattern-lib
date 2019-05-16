@@ -41,10 +41,12 @@ export default {
     name: {
       type: String,
       default: '',
+      required: true,
     },
     text: {
       type: String,
       default: '',
+      required: true,
     },
     inverted: {
       type: Boolean,
@@ -53,6 +55,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
   },
   data() {
