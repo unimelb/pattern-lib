@@ -68,7 +68,7 @@
   .card__links {
     display: flex;
     flex-direction: column;
-    text-align: right;
+    align-items: flex-end;
 
     a {
       font-weight: var(--fw-semibold);
