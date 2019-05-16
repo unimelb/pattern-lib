@@ -8,6 +8,7 @@ blockquote,
 
   p,
   &__content {
+    position: relative;
     margin-bottom: 0;
     font-family: var(--ff-lead);
     font-size: 1.8rem;
@@ -17,7 +18,7 @@ blockquote,
     &::after {
       position: absolute;
       color: var(--col-grey-mid-1);
-      font-size: 1.333em;
+      font-size: 2.4rem;
       font-style: normal;
     }
 
@@ -80,11 +81,20 @@ blockquote,
     font-size: 1.1em;
     font-style: normal;
     text-align: left;
+    font-weight: var(--fw-bold);
 
     &::before {
       content: '—';
     }
   }
+
+  &__sub-cite {
+    font-weight: var(--fw-regular);
+
+    @media (--bp-x-tablet){
+      margin-top: calc(var(--vr) / 2);
+    }
+  } 
 
   .bg-inverted & {
     cite {
@@ -107,5 +117,28 @@ blockquote,
   @media (--bp-desktop) {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  &--small {
+    p,
+    .block-quotation__content {
+      font-size: 1.15rem;
+      line-height: 1.9rem;
+
+      &::before {
+        top: -.25em !important;
+        left: -1.5rem !important;
+      }
+
+      &::after {
+        right: -1.5rem;
+      }
+    }
+
+    .block-quotation__author {
+      /* margin: 0; */
+      font-size: 1.15rem;
+      line-height: 1.5rem;
+    }
   }
 }
