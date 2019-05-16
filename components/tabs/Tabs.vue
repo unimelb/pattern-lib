@@ -14,8 +14,8 @@
         >
           <option
             v-for="(tab, index) in panels"
-            :key="`${namespace}-mob-${index + 1}`"
-            :aria-controls="`${namespace}-panel-${index + 1}`"
+            :key="`ui-tab-${_uid}-mob-${index + 1}`"
+            :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
             :selected="tab.isActive ? 'selected' : null"
           >{{ tab.title }}</option>
         </select>
@@ -31,10 +31,10 @@
           ref="tabs"
           :tabindex="tab.isActive ? 0 : -1"
           :aria-selected="tab.isActive"
-          :key="`${namespace}-desk-${index + 1}`"
-          :id="`${namespace}-${index + 1}`"
-          :aria-controls="`${namespace}-panel-${index + 1}`"
-          :href="`#${namespace}-panel-${index + 1}`"
+          :key="`ui-tab-${_uid}-desk-${index + 1}`"
+          :id="`ui-tab-${_uid}-${index + 1}`"
+          :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
+          :href="`#ui-tab-${_uid}-panel-${index + 1}`"
           class="tabs__tab"
           role="tab"
           @click.prevent="setActive(index)"
@@ -66,15 +66,10 @@ export default {
   data: () => ({
     panels: [],
   }),
-  computed: {
-    namespace() {
-      return `ui-tab-${this._uid}`;
-    },
-  },
   mounted() {
     this.panels = this.$children;
     this.panels.forEach((tab, i) => {
-      tab.namespace = this.namespace;
+      tab.namespace = `ui-tab-${this._uid}`;
       tab.index = i;
     });
 
