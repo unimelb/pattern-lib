@@ -1,4 +1,6 @@
 .card--showcase-profile {
+  background-color: #fff;
+
   .card__inner {
     padding: .5rem 0 0 1.5rem;
   }
