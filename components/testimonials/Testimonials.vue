@@ -6,15 +6,15 @@
       semi-opaque
       class="card--image-focus--col-brand"
     >
-      <div class="testimonials--block">
+      <div class="testimonials">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="title"
-          class="testimonials--block-img"/>
-        <div class="testimonials--block-info">
+          class="testimonials__img"/>
+        <div class="testimonials__info">
           <BlockQuotation>{{ testimonials }}</BlockQuotation>
-          <h3 class="testimonials--block-info_name"> &#8212; {{ name }}</h3>
-          <p class="testimonials--block-info_post">{{ post }}</p>
+          <h3 class="testimonials__name"> &#8212; {{ name }}</h3>
+          <p class="testimonials__post">{{ post }}</p>
         </div>
       </div>
     </CardFocusBox>
