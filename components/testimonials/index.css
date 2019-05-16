@@ -1,97 +1,37 @@
 .testimonials {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  padding: 35px;
 
   &__img {
-    width: 33%;
     height: 20rem;
     margin-top: 0;
-    margin-bottom: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-bottom: 133%;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-bottom: 44%;
-    @media (--bp-max-x-mobile) {
-      width: 100%;
-      margin-bottom: 3rem;
-      padding-bottom: 133%;
+
+    @media (--bp-desktop) {
+      width: 33%;
+      margin-bottom: 0;
+      padding-bottom: 44%;
     }
   }
 
   &__info {
-    width: 60%;
-    margin-top: 30px;
+    width: 100%;
 
-    @media (--bp-max-x-mobile) {
-      width: 100%;
+    @media (--bp-desktop) {
+      width: 60%;
     }
   }
 
-  &__title {
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin: 0 0 1px 0;
+  @media (--bp-desktop) {
+    flex-direction: row;
+    padding: 70px;
   }
-
-  &__name {
-    margin: 0;
-    font-size: 1.15rem;
-    line-height: 1.5rem;
-  }
-
-  &__long-text {
-    font-size: .9rem;
-  }
-
-  &__line {
-    margin: 24px 0 17px 0;
-    border: 0;
-    width: 40px;
-    border-bottom: 2px solid rgb(var(--col-navy-mid-1));
-
-    &.inverted {
-      border-bottom: 2px solid white;
-    }
-  }
-
-  @media (--bp-max-x-mobile) {
-    display: block;
-  }
-}
-
-.card--focus-box {
-  @media (--bp-max-x-mobile) {
-    padding: 1rem !important;
-  }
-}
-
-blockquote,
-.block-quotation {
-  margin-bottom: 4rem;
-  p,
-  &__content {
-    font-size: 1rem !important;
-    line-height: 30px;
-  }
-  @media (--bp-max-x-mobile) {
-    margin-bottom: 3rem;
-  }
-}
-
-.block-quotation__content::before {
-  font-size: 4rem !important;
-  top: -.25em !important;
-  @media (--bp-max-x-mobile) {
-    left: -1.5rem !important;
-  }
-}
-
-.block-quotation__content::after {
-  font-size: 4rem !important;
-  bottom: -3rem !important;
-  @media (--bp-max-x-mobile) {
-    right: -1.5rem !important;
-    bottom: -3rem !important;
-  }
-}
+} 

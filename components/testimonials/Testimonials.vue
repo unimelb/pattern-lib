@@ -1,10 +1,10 @@
 <template>
   <div ref="card">
-    <CardFocusBox
+    <FocusWrapper
       :class="{'bg-inverted': inverted, 'bg-alt': !inverted}"
       :size="size"
+      color="navy"
       semi-opaque
-      class="card--image-focus--col-brand"
     >
       <div class="testimonials">
         <div
@@ -12,26 +12,27 @@
           :aria-label="title"
           class="testimonials__img"/>
         <div class="testimonials__info">
-          <BlockQuotation>{{ testimonials }}</BlockQuotation>
-          <h3 class="testimonials__name"> &#8212; {{ name }}</h3>
-          <p class="testimonials__post">{{ post }}</p>
+          <BlockQuotation 
+            :author="name"
+            :sub-cite="post"
+            size="small">{{ testimonials }}</BlockQuotation>
         </div>
       </div>
-    </CardFocusBox>
+    </FocusWrapper>
   </div>
 </template>
 
 
 <script>
 
-import CardFocusBox from '../cards/CardFocusBox.vue';
+import FocusWrapper from '../focus-wrapper/FocusWrapper.vue'
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 import ContentBlock from '../content-block/ContentBlock.vue';
 import BlockQuotation from '../block-quotation/BlockQuotation.vue';
 
 export default {
   name: 'Testimonials',
-  components: { CardFocusBox, BlockQuotation },
+  components: { BlockQuotation, FocusWrapper },
   decorator: ContentBlock,
   decoratorProps: { size: 'sml' },
   props: {
