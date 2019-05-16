@@ -12,7 +12,7 @@
           :aria-label="title"
           class="testimonials__img"/>
         <div class="testimonials__info">
-          <BlockQuotation 
+          <BlockQuotation
             :author="name"
             :sub-cite="post"
             size="small">{{ testimonials }}</BlockQuotation>
@@ -25,7 +25,7 @@
 
 <script>
 
-import FocusWrapper from '../focus-wrapper/FocusWrapper.vue'
+import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 import ContentBlock from '../content-block/ContentBlock.vue';
 import BlockQuotation from '../block-quotation/BlockQuotation.vue';

@@ -91,10 +91,10 @@ blockquote,
   &__sub-cite {
     font-weight: var(--fw-regular);
 
-    @media (--bp-x-tablet){
+    @media (--bp-x-tablet) {
       margin-top: calc(var(--vr) / 2);
     }
-  } 
+  }
 
   .bg-inverted & {
     cite {
@@ -114,11 +114,6 @@ blockquote,
     }
   }
 
-  @media (--bp-desktop) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
   &--small {
     p,
     .block-quotation__content {
@@ -136,9 +131,13 @@ blockquote,
     }
 
     .block-quotation__author {
-      /* margin: 0; */
       font-size: 1.15rem;
       line-height: 1.5rem;
     }
+  }
+
+  @media (--bp-desktop) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
