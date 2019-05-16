@@ -150,10 +150,6 @@ a {
     &:visited {
       color: rgb(var(--col-link-visited-on-dark));
     }
-
-    &:active {
-      color: rgb(var(--col-link-active-on-dark));
-    }
   }
 }
 
