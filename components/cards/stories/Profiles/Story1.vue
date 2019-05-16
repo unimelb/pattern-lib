@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SectionWrap bg-color="white">
+    <SectionWrap bg-color="alt">
       <ListItem no-padding="mobile">
         <CardShowcaseProfile
           thumb="https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png"
