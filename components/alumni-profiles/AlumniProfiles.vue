@@ -16,7 +16,8 @@
           <p class="alumni__title">Alumni profile</p>
           <h3 class="alumni__name">{{ name }}</h3>
           <hr
-            :class="{'alumni__line alumni__line--inverted': inverted, 'alumni__line': !inverted}">
+            :class="lineClass"
+            class="alumni__line">
           <p class="alumni__short-text">{{ text }}</p>
         </div>
       </div>
@@ -57,6 +58,11 @@ export default {
     return {
       size: 'large',
     };
+  },
+  computed: {
+    lineClass() {
+      return (this.inverted) ? 'alumni__line alumni__line--inverted' : '';
+    },
   },
   mounted() {
     this.$nextTick(() => {
