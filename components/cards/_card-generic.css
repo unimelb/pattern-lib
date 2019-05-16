@@ -15,10 +15,14 @@
 
   .card__header {
     margin-bottom: .5rem;
+  }
 
-    a {
-      text-decoration: none;
-      color: rgb(var(--col-background-primary-navy));
+  .card__title {
+    text-decoration: none;
+    color: rgb(var(--col-background-primary-navy));
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -26,6 +30,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    padding-bottom: 1rem;
   }
 
   .card__sub-titles {
@@ -67,8 +72,11 @@
 
     a {
       font-weight: var(--fw-semibold);
-      text-decoration: underline;
       color: rgb(var(--col-background-primary-navy));
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
