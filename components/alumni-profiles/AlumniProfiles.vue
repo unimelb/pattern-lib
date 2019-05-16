@@ -9,7 +9,7 @@
       <div class="alumni">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
-          :aria-label="title"
+          :aria-label="name"
           class="alumni__img"
           role="img" />
         <div class="alumni__info">
@@ -51,11 +51,6 @@ export default {
     inverted: {
       type: Boolean,
       default: false,
-    },
-    title: {
-      type: String,
-      default: '',
-      required: true,
     },
   },
   data() {

@@ -9,12 +9,12 @@
       <div class="testimonials">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
-          :aria-label="title"
+          :aria-label="name"
           class="testimonials__img"
           role="img" />
         <div class="testimonials__info">
           <BlockQuotation
-            :author="name"
+            :author="author"
             :sub-cite="post"
             size="small">{{ testimonials }}</BlockQuotation>
         </div>
@@ -46,6 +46,11 @@ export default {
       default: '',
       required: true,
     },
+    year: {
+      ype: String,
+      default: '',
+      required: true,
+    },
     post: {
       type: String,
       default: '',
@@ -59,16 +64,16 @@ export default {
       type: Boolean,
       default: false,
     },
-    title: {
-      type: String,
-      default: '',
-      required: true,
-    },
   },
   data() {
     return {
       size: 'large',
     };
+  },
+  computed: {
+    author() {
+      return `${this.name}, ${this.year}`;
+    },
   },
   mounted() {
     this.$nextTick(() => {
