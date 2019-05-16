@@ -10,7 +10,8 @@
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="title"
-          class="alumni__img"/>
+          class="alumni__img"
+          role="img" />
         <div class="alumni__info">
           <p class="alumni__title">Alumni profile</p>
           <h3 class="alumni__name">{{ name }}</h3>
