@@ -14,10 +14,10 @@
 
   &::before {
     position: relative;
-    top: -5px;
     content: '';
-    width: 50px;
+    width: 1.25rem;
     border: 1px solid rgb(var(--col-background-primary-white));
+    margin-bottom: .75rem;
   }
 
   .megamenu & {

@@ -263,10 +263,6 @@ export {
 }
   from '../../components/page/navigation/InPageNavigation.vue';
 export {
-  default as OutPageNavigation,
-}
-  from '../../components/page/navigation/OutPageNavigation.vue';
-export {
   default as Dropdown,
 }
   from '../../components/dropdown/Dropdown.vue';
@@ -298,3 +294,6 @@ export {
   default as Testimonials,
 }
   from '../../components/testimonials/Testimonials.vue';
+export {
+  default as SocialMediaBar,
+} from '../../components/page/social-media-bar/SocialMediaBar.vue';
