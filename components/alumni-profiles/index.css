@@ -47,7 +47,7 @@
     width: 2.5rem;
     border-bottom: 2px solid rgb(var(--col-navy-mid-1));
 
-    &.inverted {
+    &--inverted {
       border-bottom: 2px solid white;
     }
   }
