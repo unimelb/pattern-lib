@@ -6,19 +6,19 @@
       semi-opaque
       class="card--image-focus--col-brand"
     >
-      <div class="alumni--block">
+      <div class="alumni">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="title"
-          class="alumni--block-img"/>
-        <div class="alumni--block-info">
-          <p class="alumni--block-info_title">Alumni profile</p>
-          <h3 class="alumni--block-info_name">{{ name }}</h3>
+          class="alumni__img"/>
+        <div class="alumni__info">
+          <p class="alumni__title">Alumni profile</p>
+          <h3 class="alumni__name">{{ name }}</h3>
           <hr
-            :class="{'alumni--block-info_line inverted': inverted, 'alumni--block-info_line': !inverted}">
+            :class="{'alumni__line inverted': inverted, 'alumni__line': !inverted}">
           <p
-            class="alumni--block-info_short-text">{{ short_text }}</p>
-          <p class="alumni--block-info_long-text">{{ long_text }}</p>
+            class="alumni__short-text">{{ short_text }}</p>
+          <p class="alumni__long-text">{{ long_text }}</p>
         </div>
       </div>
     </CardFocusBox>
