@@ -1,10 +1,10 @@
 <template>
   <div ref="card">
-    <CardFocusBox
+    <FocusWrapper
       :class="{'bg-inverted': inverted, 'bg-alt': !inverted}"
       :size="size"
+      color="navy"
       semi-opaque
-      class="card--image-focus--col-brand"
     >
       <div class="alumni">
         <div
@@ -15,25 +15,23 @@
           <p class="alumni__title">Alumni profile</p>
           <h3 class="alumni__name">{{ name }}</h3>
           <hr
-            :class="{'alumni__line inverted': inverted, 'alumni__line': !inverted}">
-          <p
-            class="alumni__short-text">{{ short_text }}</p>
-          <p class="alumni__long-text">{{ long_text }}</p>
+            :class="{'alumni__line alumni__line--inverted': inverted, 'alumni__line': !inverted}">
+          <p class="alumni__short-text">{{ text }}</p>
         </div>
       </div>
-    </CardFocusBox>
+    </FocusWrapper>
   </div>
 </template>
 
 
 <script>
 
-import CardFocusBox from '../cards/CardFocusBox.vue';
+import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 
 export default {
   name: 'AlumniProfiles',
-  components: { CardFocusBox },
+  components: { FocusWrapper },
   props: {
     thumb: {
       type: String,
@@ -43,11 +41,7 @@ export default {
       type: String,
       default: '',
     },
-    short_text: {
-      type: String,
-      default: '',
-    },
-    long_text: {
+    text: {
       type: String,
       default: '',
     },
