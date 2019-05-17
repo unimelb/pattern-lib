@@ -550,13 +550,13 @@
           columns: 4;
           column-width: 25%;
         }
+      }
+    }
 
-        /* Hack to not target IE11 as focus-within breaks menu */
-        @supports (display: flex) {
-          &__section .menu__item[tabindex='0']:focus-within .inner {
-            display: flex;
-          }
-        }
+    /* Hack to not target IE11 as focus-within breaks menu */
+    @supports (display: flex) {
+      .menu__section .menu__item[tabindex='0']:focus-within .inner {
+        display: flex;
       }
     }
   }
