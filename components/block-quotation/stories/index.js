@@ -2,6 +2,8 @@ import { storiesOf } from '@storybook/vue';
 import { createStory } from '../../../.storybook/utils';
 
 import BlockQuotationDefault from './BlockQuotationDefault.vue';
+import BlockQuotationSubCite from './BlockQuotationSubCite.vue';
+import BlockQuotationSmall from './BlockQuotationSmall.vue';
 import BlockQuotationWithBorders from './BlockQuotationWithBorders.vue';
 import BlockQuotationNoAuthor from './BlockQuotationNoAuthor.vue';
 import BlockQuotationAltBg from './BlockQuotationAltBg.vue';
@@ -12,6 +14,8 @@ import BlockQuotationLong from './BlockQuotationLong.vue';
 
 storiesOf('Block Quotation', module)
   .add('Default', createStory(BlockQuotationDefault))
+  .add('With Sub cite', createStory(BlockQuotationSubCite))
+  .add('Small', createStory(BlockQuotationSmall))
   .add('With borders', createStory(BlockQuotationWithBorders))
   .add('Without author', createStory(BlockQuotationNoAuthor))
   .add('Long', createStory(BlockQuotationLong))
