@@ -94,19 +94,19 @@
 
   &--lge {
     width: 75%;
-    @media(--bp-max-x-mobile){
+    @media (--bp-max-x-mobile) {
       width: 100%;
     }
   }
   &--med {
     width: 50%;
-    @media(--bp-max-x-mobile){
+    @media (--bp-max-x-mobile) {
       width: 100%;
     }
   }
   &--sml {
     width: 35%;
-    @media(--bp-max-x-mobile){
+    @media (--bp-max-x-mobile) {
       width: 100%;
     }
   }
