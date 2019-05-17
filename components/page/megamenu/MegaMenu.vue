@@ -65,14 +65,14 @@
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
               :key="`rootitem-${rootindex}`"
-              :tabindex="isSelected(rootindex)"
+              tabindex="0"
               class="menu__item"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
               @keydown="handleKey"
             >
               <a
-                :role="rootitem.items ? 'menuitem' : 'button'"
+                :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
                 class="menu__link"
                 @click="openInner"
@@ -419,16 +419,21 @@ export default {
         case 27:
           this.pointer = 0;
 
+          // Set current menu item focus.
           this.$refs.rootitems[this.current].focus();
+
+          // TEMP REMOVE - turn back on when looking into menu a11y improvements.
+          // this.dismissAllDesktopChildren();
+          // this.dismissBlanket();
           break;
         // enter / space
         case 13:
         case 32:
-          this.items.forEach((item, index) => {
-            if (item.title.replace(/\s/g, '') === e.target.innerText.replace(/\s/g, '')) {
-              this.activateDesktopMenu(index);
-            }
-          });
+          if (e.target.classList.contains('.menu__item')) {
+            e.target.querySelector('.menu__link').click();
+          } else {
+            e.target.click();
+          }
           break;
         // left
         case 37:
@@ -443,6 +448,8 @@ export default {
           if (cycle.length > 1) {
             this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
+          } else {
+            // this.prevRootItem();
           }
           break;
         // down
@@ -450,6 +457,8 @@ export default {
           if (cycle.length > 1) {
             this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
             cycle[this.pointer].focus();
+          } else {
+            // this.nextRootItem();
           }
           break;
         default:
