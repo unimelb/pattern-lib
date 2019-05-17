@@ -418,9 +418,8 @@ export default {
         // esc
         case 27:
           this.pointer = 0;
-          this.current = 0;
-          this.dismissAllDesktopChildren();
-          this.dismissBlanket();
+
+          this.$refs.rootitems[this.current].focus();
           break;
         // enter / space
         case 13:
@@ -444,8 +443,6 @@ export default {
           if (cycle.length > 1) {
             this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
-          } else {
-            this.prevRootItem();
           }
           break;
         // down
@@ -453,8 +450,6 @@ export default {
           if (cycle.length > 1) {
             this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
             cycle[this.pointer].focus();
-          } else {
-            this.nextRootItem();
           }
           break;
         default:
@@ -483,8 +478,8 @@ export default {
         this.dismissBlanket();
       }
     },
-    isSelected() {
-      return -1;
+    isSelected(index) {
+      return index === this.current ? 0 : -1;
     },
   },
 };

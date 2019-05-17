@@ -149,7 +149,8 @@
       color: rgb(var(--col-background-primary-white));
       text-decoration: none;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: rgb(var(--col-background-primary-white));
         text-decoration: underline;
       }
@@ -476,8 +477,7 @@
         }
       }
 
-      &__section .menu__item--over,
-      &__section .menu__item[tabindex='0'] {
+      &__section .menu__item--over {
         .inner {
           display: flex;
           z-index: 3;
@@ -550,6 +550,13 @@
           column-width: 25%;
         }
       }
+
+      /* Hack to not target IE11 as focus-within breaks menu */
+      @supports (display: flex) {
+        &__section .menu__item[tabindex='0']:focus-within .inner {
+          display: flex;
+        }
+      }
     }
   }
 }
@@ -605,7 +612,8 @@
 }
 
 .page-header {
-  &.active {
+  &.active,
+  &:focus {
     z-index: 101;
     overflow: visible;
   }
@@ -618,6 +626,14 @@
       .page-header__inner {
         height: 100%;
       }
+    }
+  }
+
+  /* Hack to not target IE11 as focus-within breaks menu */
+  @supports (display: flex) {
+    .page-header:focus-within {
+      z-index: 101;
+      overflow: visible;
     }
   }
 }
