@@ -47,7 +47,7 @@
     top: 0;
     right: -100%;
     width: 100%;
-    height: 100%;
+    height: inherit;
     overflow-x: hidden;
     overflow-y: auto;
     transform: none;
@@ -477,9 +477,7 @@
         }
       }
 
-      &__section .menu__item--over,
-      &__section .menu__item[tabindex='0']:focus,
-      &__section .menu__item[tabindex='0']:focus-within {
+      &__section .menu__item--over {
         .inner {
           display: flex;
           z-index: 3;
@@ -552,6 +550,13 @@
           column-width: 25%;
         }
       }
+
+      /* Hack to not target IE11 as focus-within breaks menu */
+      @supports (display: flex) {
+        &__section .menu__item[tabindex='0']:focus-within .inner {
+          display: flex;
+        }
+      }
     }
   }
 }
@@ -608,7 +613,7 @@
 
 .page-header {
   &.active,
-  &:focus-within {
+  &:focus {
     z-index: 101;
     overflow: visible;
   }
@@ -621,6 +626,14 @@
       .page-header__inner {
         height: 100%;
       }
+    }
+  }
+
+  /* Hack to not target IE11 as focus-within breaks menu */
+  @supports (display: flex) {
+    .page-header:focus-within {
+      z-index: 101;
+      overflow: visible;
     }
   }
 }
