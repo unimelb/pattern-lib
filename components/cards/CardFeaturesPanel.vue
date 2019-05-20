@@ -1,7 +1,7 @@
 <template>
   <div
     :href="href"
-    class="card card--features-panel card--features-panel--head bg-white">
+    class="card card--features-panel card--features-panel--head">
     <div class="card__thumb">
       <div
         :style="`background-image: url('${thumb}')`"

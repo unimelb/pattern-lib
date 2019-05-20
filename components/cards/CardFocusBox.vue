@@ -3,7 +3,7 @@
     :semi-opaque="semiOpaque"
     :color="color"
     :class="classes"
-    size="large"
+    :size="size"
     class="card card--focus-box"
   >
     <div class="card__inner">
@@ -55,6 +55,10 @@ export default {
     semiOpaque: {
       type: Boolean,
       default: false,
+    },
+    size: {
+      type: String,
+      default: 'large',
     },
   },
   computed: {

@@ -126,6 +126,7 @@
                     class="menu__campaign"
                   >
                     <img
+                      v-if="rootitem.feature.img"
                       :src="rootitem.feature.img"
                       :alt="rootitem.feature.alt"
                       class="menu__campaign--img"
@@ -248,12 +249,13 @@ export default {
       pointer: 0,
       lastIndex: null,
       isAnimate: true,
+      isActive: false,
     };
   },
   computed: {
     isMobile() {
       return this.$refs.headerroot
-        ? this.$refs.headerroot.offsetWidth < 768
+        ? this.$refs.headerroot.offsetWidth < 900
         : false;
     },
     isShowTopMenu() {
@@ -376,7 +378,7 @@ export default {
     openInner(e) {
       if (
         this.$refs.headerroot
-        && this.$refs.headerroot.offsetWidth < 768
+        && this.$refs.headerroot.offsetWidth < 900
         && e.target.nextElementSibling
       ) {
         e.preventDefault();
