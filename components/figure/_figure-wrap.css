@@ -93,21 +93,26 @@
   }
 
   &--lge {
-    width: 75%;
-    @media (--bp-max-x-mobile) {
-      width: 100%;
+    width: 100%;
+
+    @media (--bp-desktop) {
+      width: 75%;
     }
   }
+
   &--med {
-    width: 50%;
-    @media (--bp-max-x-mobile) {
-      width: 100%;
+    width: 100%;
+
+    @media (--bp-desktop) {
+      width: 50%;
     }
   }
+
   &--sml {
-    width: 35%;
-    @media (--bp-max-x-mobile) {
-      width: 100%;
+    width: 100%;
+
+    @media (--bp-desktop) {
+      width: 35%;
     }
   }
 }
