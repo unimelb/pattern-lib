@@ -71,6 +71,15 @@
             width="30"
             height="30"/>
         </a>
+        <a
+          v-if="youtubeLink"
+          :href="youtubeLink"
+          class="social-media-bar__link--social">
+          <SvgIcon
+            name="youtube"
+            width="30"
+            height="30"/>
+        </a>
       </div>
     </div>
   </div>
@@ -108,6 +117,10 @@ export default {
       default: false,
     },
     vimeoLink: {
+      type: [String, Boolean],
+      default: false,
+    },
+    youtubeLink: {
       type: [String, Boolean],
       default: false,
     },
