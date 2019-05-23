@@ -92,7 +92,21 @@
     }
   }
 
-  &--lge { width: 75%; }
-  &--med { width: 50%; }
-  &--sml { width: 35%; }
+  &--lge {
+    @media (--bp-desktop) {
+      width: 75%;
+    }
+  }
+
+  &--med {
+    @media (--bp-desktop) {
+      width: 50%;
+    }
+  }
+
+  &--sml {
+    @media (--bp-desktop) {
+      width: 35%;
+    }
+  }
 }
