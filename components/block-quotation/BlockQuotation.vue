@@ -1,9 +1,13 @@
 <template>
   <blockquote
-    :class="{ 'block-quotation--bdr-top': borderTop, 'block-quotation--bdr-btm': borderBottom , 'block-quotation--small': size==='small'}"
+    :class="{ 'block-quotation--bdr-top': borderTop, 'block-quotation--bdr-btm': borderBottom , 'block-quotation--small': small }"
     class="block-quotation"
   >
-    <p class="block-quotation__content"><slot/></p>
+    <p
+      :class="{ 'block-quotation__content--large-quotes': largeQuotes }"
+      class="block-quotation__content">
+      <slot/>
+    </p>
     <cite
       v-if="author"
       class="block-quotation__author">{{ author }}
@@ -33,9 +37,13 @@ export default {
       type: Boolean,
       default: false,
     },
-    size: {
-      type: String,
-      default: '',
+    largeQuotes: {
+      type: Boolean,
+      default: false,
+    },
+    small: {
+      type: Boolean,
+      default: false,
     },
   },
 };

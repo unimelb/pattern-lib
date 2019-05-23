@@ -24,10 +24,22 @@
   }
 
   &__info {
+    display: flex;
     width: 100%;
 
     @media (--bp-desktop) {
       width: 60%;
+    }
+  }
+
+  &__quotation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .block-quotation__content {
+    @media (--bp-desktop) {
+      margin-bottom: 2rem;
     }
   }
 

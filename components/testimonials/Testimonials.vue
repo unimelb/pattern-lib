@@ -1,7 +1,6 @@
 <template>
   <div ref="card">
     <FocusWrapper
-      :class="{'bg-inverted': inverted, 'bg-alt': !inverted}"
       :size="size"
       color="navy"
       semi-opaque
@@ -16,7 +15,9 @@
           <BlockQuotation
             :author="author"
             :sub-cite="post"
-            size="small">{{ testimonials }}</BlockQuotation>
+            small
+            large-quotes
+            class="testimonials__quotation">{{ testimonials }}</BlockQuotation>
         </div>
       </div>
     </FocusWrapper>
