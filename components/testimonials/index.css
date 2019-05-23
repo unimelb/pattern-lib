@@ -28,7 +28,7 @@
     width: 100%;
 
     @media (--bp-desktop) {
-      width: 60%;
+      width: 59%;
     }
   }
 

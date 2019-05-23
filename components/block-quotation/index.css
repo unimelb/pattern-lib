@@ -18,7 +18,7 @@ blockquote,
     &::after {
       position: absolute;
       color: var(--col-grey-mid-1);
-      font-size: 2.4rem;
+      font-size: 2.8rem;
       font-style: normal;
       line-height: 0;
     }
@@ -39,8 +39,11 @@ blockquote,
     }
 
     &--large-quotes {
-      &::before, &::after {
-        font-size: 5rem !important;
+      &::before,
+      &::after {
+        @media (--bp-desktop) {
+          font-size: 5rem !important;
+        }
       }
     }
   }
@@ -109,12 +112,15 @@ blockquote,
   }
 
   &--small {
+    padding-left: 0;
+    padding-right: 0;
+
     p,
     .block-quotation__content {
       font-size: .95rem;
       line-height: 1.6;
 
-      @media(--bp-desktop){
+      @media (--bp-desktop) {
         font-size: 1.15rem;
         line-height: 1.65;
       }
