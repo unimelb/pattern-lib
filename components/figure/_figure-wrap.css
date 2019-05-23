@@ -93,24 +93,18 @@
   }
 
   &--lge {
-    width: 100%;
-
     @media (--bp-desktop) {
       width: 75%;
     }
   }
 
   &--med {
-    width: 100%;
-
     @media (--bp-desktop) {
       width: 50%;
     }
   }
 
   &--sml {
-    width: 100%;
-
     @media (--bp-desktop) {
       width: 35%;
     }
