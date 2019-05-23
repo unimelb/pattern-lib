@@ -16,10 +16,6 @@
       width: 18px;
       height: 18px;
     }
-
-    @media (--bp-max-mobile) {
-      border-bottom: 1px solid #c6c8ca;
-    }
   }
 
   .card__excerpt {

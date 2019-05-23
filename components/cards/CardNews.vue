@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-owner card card--news card--bdr">
+  <div class="card card--news card--bdr">
     <a
       v-if="cols !== 1"
       :href="href"
