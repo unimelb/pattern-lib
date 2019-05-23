@@ -1,9 +1,8 @@
 <template>
   <section-wrap
     long
-    bg-color="alt">
+    bg-color="inverted">
     <Testimonials
-      inverted
       name="Hannah Kerber"
       year="2016"
       thumb="https://source.unsplash.com/featured/?portrait"
