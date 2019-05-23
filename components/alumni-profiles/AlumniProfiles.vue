@@ -1,7 +1,6 @@
 <template>
   <div ref="card">
     <FocusWrapper
-      :class="{'bg-inverted': inverted, 'bg-alt': !inverted}"
       :size="size"
       color="navy"
       semi-opaque
@@ -15,9 +14,7 @@
         <div class="alumni__info">
           <p class="alumni__title">Alumni profile</p>
           <h3 class="alumni__name">{{ name }}</h3>
-          <hr
-            :class="lineClass"
-            class="alumni__line">
+          <hr class="alumni__line">
           <p class="alumni__short-text">{{ text }}</p>
         </div>
       </div>
@@ -49,20 +46,11 @@ export default {
       default: '',
       required: true,
     },
-    inverted: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {
       size: 'large',
     };
-  },
-  computed: {
-    lineClass() {
-      return (this.inverted) ? 'alumni__line alumni__line--inverted' : '';
-    },
   },
   mounted() {
     this.$nextTick(() => {
