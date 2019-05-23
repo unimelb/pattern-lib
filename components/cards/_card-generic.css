@@ -34,10 +34,9 @@
   }
 
   .card__sub-titles {
-    margin-bottom: .25rem;
     border-top: 1px solid rgb(var(--col-black-mid-1));
-    padding-top: 16px;
-    font-weight: 600;
+    padding-top: 1rem;
+    font-weight: var(--fw-semibold);
 
     svg {
       width: 18px;
@@ -61,7 +60,7 @@
 
   .card__excerpt {
     border-top: 1px solid rgb(var(--col-black-mid-1));
-    padding-top: 16px;
+    padding-top: 1rem;
     margin: 1rem 0;
     flex: 1 1 auto;
   }
