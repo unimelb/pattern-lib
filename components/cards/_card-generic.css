@@ -29,7 +29,7 @@
   .card__inner {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex: 1 1 auto;
     padding-bottom: 1rem;
   }
 
@@ -62,7 +62,7 @@
 
   .card__excerpt {
     margin: 1rem 0;
-    flex: 1;
+    flex: 1 1 auto;
   }
 
   .card__links {
