@@ -61,10 +61,6 @@ export default {
       default: '',
       required: true,
     },
-    inverted: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {
