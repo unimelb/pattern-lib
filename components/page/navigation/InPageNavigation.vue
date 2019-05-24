@@ -15,7 +15,7 @@
           class="in-page-navigation__position list-reset"
         >
           <a
-            :href="data.id"
+            :href="`#${data.id}`"
             class="in-page-navigation__link"
             @click="scrollOnClick">
             {{ data.label }}
@@ -26,6 +26,7 @@
         </li>
       </div>
       <div
+        ref="dropdown"
         :class="classes"
         class="in-page-navigation__collapsed">
         <Dropdown
@@ -40,11 +41,17 @@
 </template>
 
 <script>
+import smoothscroll from 'smoothscroll-polyfill';
+
 import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 import Dropdown from '../../dropdown/Dropdown.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
+
+// Initiate smooth scroll polyfill.
+smoothscroll.polyfill();
 
 export default {
-  components: { FocusWrapper, Dropdown },
+  components: { FocusWrapper, Dropdown, SvgIcon },
   props: {
     title: {
       type: String,
@@ -66,7 +73,6 @@ export default {
       isFixed: false,
       selectedItem: false,
       autoSelect: true,
-      scrollOffset: 50,
       size: 'medium',
     };
   },
@@ -80,6 +86,7 @@ export default {
 
   mounted() {
     this.getInPageData();
+
     window.addEventListener('scroll', this.checkNavigation);
 
     this.$nextTick(() => {
@@ -93,20 +100,24 @@ export default {
   },
   methods: {
     getInPageData() {
-      const pageNav = [];
+      const headings = [].slice.call(document.querySelectorAll(`${this.headingLevel}`));
 
-      Array.prototype.slice
-        .apply(document.querySelectorAll(`${this.headingLevel}`))
-        .forEach((element) => {
-          if (element.id.includes('navigation')) {
-            pageNav.push({
-              id: element.id,
-              label: element.textContent,
-              value: element.id,
-            });
+      this.sections = headings
+        .filter((heading) => {
+          if (heading.id.includes('navigation')) {
+            return true;
           }
 
-          this.sections = pageNav;
+          return false;
+        })
+        .map((heading) => {
+          const element = {
+            id: heading.id,
+            label: heading.textContent,
+            value: heading.id,
+          };
+
+          return element;
         });
     },
     checkNavigation() {
@@ -129,7 +140,7 @@ export default {
     },
     scrollOnClick(e) {
       const scrollToID = e.target.getAttribute('href');
-      const scrollToElem = document.getElementById(scrollToID);
+      const scrollToElem = document.querySelector(scrollToID);
 
       e.preventDefault();
 
@@ -142,7 +153,8 @@ export default {
       this.scrollTo(scrollToElem);
     },
     scrollTo(scrollToElem) {
-      const count = scrollToElem.offsetTop - window.pageYOffset - this.scrollOffset;
+      const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height;
+      const count = scrollToElem.offsetTop - window.pageYOffset - scrollOffset;
 
       window.scrollBy({ top: count, left: 0, behavior: 'smooth' });
     },
@@ -152,8 +164,9 @@ export default {
       this.sections.forEach((item) => {
         const elem = document.getElementById(item.id);
         const offset = elem.getBoundingClientRect();
+        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height + 1; // Add one pixel so it triggers the change
 
-        if (offset.top < this.scrollOffset) {
+        if (offset.top < scrollOffset) {
           selectedItem = item;
         }
       });
