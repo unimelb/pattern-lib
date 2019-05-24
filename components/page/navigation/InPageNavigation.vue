@@ -154,9 +154,9 @@ export default {
     },
     scrollTo(scrollToElem) {
       const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height;
-      const count = scrollToElem.offsetTop - window.pageYOffset - scrollOffset;
+      const scrollToPosition = scrollToElem.offsetTop - window.pageYOffset - scrollOffset;
 
-      window.scrollBy({ top: count, left: 0, behavior: 'smooth' });
+      window.scrollBy({ top: scrollToPosition, left: 0, behavior: 'smooth' });
     },
     autoSelectOnScroll() {
       let selectedItem = false;
