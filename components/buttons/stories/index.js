@@ -16,6 +16,7 @@ import Story12 from './Story12.vue';
 import Story13 from './Story13.vue';
 import Story14 from './Story14.vue';
 import Story15 from './Story15.vue';
+import ButtonAdjacent from './ButtonAdjacent.vue';
 /* ##Import story component here */
 
 /* Section - Focus  */
@@ -29,6 +30,7 @@ storiesOf('Buttons', module)
   .add('Extra Wide', createStory(Story7))
   .add('Full Width', createStory(Story8))
   .add('All Sizes', createStory(Story9))
+  .add('Adjacent Buttons', createStory(ButtonAdjacent))
   .add('Button as <button> element', createStory(Story10))
   .add('Inverted button', createStory(Story12))
   .add('Button for use in CMS (btn--icon)', createStory(Story11))
