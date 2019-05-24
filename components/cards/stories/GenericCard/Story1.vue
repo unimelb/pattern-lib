@@ -4,7 +4,7 @@
       <ListItem>
         <GenericCard
           :cols="2"
-          thumb="https://via.placeholder.com/400x200"
+          thumb
           title="Test 1"
           href="#"
           excerpt="Lorem ipsum dolor sit amet, consectetur."

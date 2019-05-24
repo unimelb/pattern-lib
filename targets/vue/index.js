@@ -7,6 +7,10 @@ export {
 }
   from '../../components/accordion/AccordionGroup.vue';
 export {
+  default as AlumniProfiles,
+}
+  from '../../components/alumni-profiles/AlumniProfiles.vue';
+export {
   default as ArticleWrap,
 }
   from '../../components/article-wrap/ArticleWrap.vue';
@@ -286,3 +290,10 @@ export {
   default as Heading6,
 }
   from '../../components/typography/headings/Heading6.vue';
+export {
+  default as Testimonials,
+}
+  from '../../components/testimonials/Testimonials.vue';
+export {
+  default as SocialMediaBar,
+} from '../../components/page/social-media-bar/SocialMediaBar.vue';

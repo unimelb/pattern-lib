@@ -1,5 +1,5 @@
 <template>
-  <BlockQuotation author="Steve Wozniak">Never trust a computer you can’t throw out a window.</BlockQuotation>
+  <BlockQuotation author="Steve Wozniak">Lorem ipsum dolor sit amet consectetur.</BlockQuotation>
 </template>
 
 <script>

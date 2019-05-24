@@ -1,5 +1,9 @@
-import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import GenericCard from '../GenericCard.vue';
 
 expect.extend(toHaveNoViolations);
@@ -13,11 +17,15 @@ describe('GenericCard', () => {
   it('should have default props and correct types thumb/title/href/excerpt', () => {
     const wrapper = shallow(GenericCard);
     const {
-      thumb, title, cols, href, excerpt,
+      thumb,
+      title,
+      cols,
+      href,
+      excerpt,
     } = wrapper.vm.$options.props;
 
     expect(thumb.type).toBe(String);
-    expect(wrapper.props().thumb).toBe('https://via.placeholder.com/400x200');
+    expect(wrapper.props().thumb).toBe('https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png');
 
     expect(title.type).toBe(String);
     expect(wrapper.props().title).toBe('');
@@ -98,7 +106,9 @@ describe('GenericCard', () => {
 
   it('should accept cols max = 3 and min = 1', () => {
     const wrapper = shallow(GenericCard);
-    const { cols } = wrapper.vm.$options.props;
+    const {
+      cols,
+    } = wrapper.vm.$options.props;
 
     expect(cols.validator && cols.validator(0)).toBeFalsy();
     expect(cols.validator && cols.validator(4)).toBeFalsy();
