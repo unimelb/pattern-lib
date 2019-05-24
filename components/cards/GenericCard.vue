@@ -30,12 +30,14 @@
 </template>
 
 <script>
+import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
+
 export default {
   name: 'GenericCard',
   props: {
     thumb: {
       type: String,
-      default: 'https://via.placeholder.com/400x200',
+      default: IMAGE_PLACEHOLDER_BIG,
     },
     title: {
       type: String,
