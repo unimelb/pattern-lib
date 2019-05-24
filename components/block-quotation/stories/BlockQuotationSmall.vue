@@ -1,7 +1,7 @@
 <template>
   <BlockQuotation
     author="Steve Wozniak"
-    size="small">Never trust a computer you can’t throw out a small window.</BlockQuotation>
+    small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sit harum dolorem sapiente, ab possimus molestias impedit nostrum quidem modi suscipit saepe ullam quas nemo inventore animi eaque, similique velit.</BlockQuotation>
 </template>
 
 <script>

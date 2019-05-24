@@ -1,6 +1,7 @@
 <template>
   <FocusWrapper
     :color="color"
+    :size="size"
     padded>
     <div
       ref="inPageNavigation"
@@ -66,6 +67,7 @@ export default {
       selectedItem: false,
       autoSelect: true,
       scrollOffset: 50,
+      size: 'medium',
     };
   },
   computed: {
@@ -75,13 +77,19 @@ export default {
       };
     },
   },
+
   mounted() {
     this.getInPageData();
-
     window.addEventListener('scroll', this.checkNavigation);
+
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.getWindowWidth);
+      this.getWindowWidth();
+    });
   },
   destroyed() {
     window.removeEventListener('scroll', this.checkNavigation);
+    window.removeEventListener('resize', this.getWindowWidth);
   },
   methods: {
     getInPageData() {
@@ -151,6 +159,14 @@ export default {
       });
 
       return selectedItem;
+    },
+    getWindowWidth() {
+      this.windowWidth = document.documentElement.clientWidth;
+      if (this.windowWidth < 481) {
+        this.size = 'small';
+      } else {
+        this.size = 'medium';
+      }
     },
   },
 };
