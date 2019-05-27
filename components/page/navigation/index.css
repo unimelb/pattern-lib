@@ -1,4 +1,8 @@
 .in-page-navigation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
   &__container {
     display: flex;
     flex-wrap: wrap;
@@ -49,15 +53,16 @@
     align-self: center;
     position: fixed;
     z-index: 1000;
-    top: -50%;
+    top: 0;
     left: 0;
     transition: all .3s;
     padding: .5rem;
     width: 100%;
     background: #fff;
+    transform: translateY(-100%);
 
     &--fixed {
-      top: 0;
+      transform: translateY(0);
     }
   }
 }

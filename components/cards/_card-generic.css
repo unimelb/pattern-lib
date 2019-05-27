@@ -87,5 +87,11 @@
         padding-top: 0;
       }
     }
+
+    .card__inner {
+      @media (--bp-desktop) {
+        width: 70%;
+      }
+    }
   }
 }
