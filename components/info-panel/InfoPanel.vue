@@ -1,14 +1,13 @@
 <template>
   <div class="info-panel">
-    <div>
-      <SvgIcon
-        :name="iconName"
-        :aria-label="iconName"
-        class="info-panel__icon"
-        width="20px"
-        height="20px"
-      />
-    </div>
+    <SvgIcon
+      v-if="iconName"
+      :name="iconName"
+      :aria-label="iconName"
+      class="info-panel__icon"
+      width="20px"
+      height="20px"
+    />
     <div class="info-panel__inner">
       <h4 class="title--xxs info-panel__title">{{ title }}</h4>
       <slot/>
@@ -30,6 +29,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
   },
 };

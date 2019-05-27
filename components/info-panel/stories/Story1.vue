@@ -6,20 +6,17 @@
           <InfoPanel
             icon-name="calendar"
             title="When">
-            <p>19th May 2018</p>
+            <p class="info-panel__text">19th May 2018</p>
           </InfoPanel>
         </ListItem>
         <ListItem>
           <InfoPanel
             icon-name="jobs"
             title="Further information">
-            <a href="/">
+            <a
+              href="/"
+              target="_blank">
               Melbourne Recital Centre
-              <SvgIcon
-                name="external"
-                aria-label="External icon"
-                width="18px"
-                height="18px"/>
             </a>
           </InfoPanel>
         </ListItem>
@@ -27,9 +24,9 @@
           <InfoPanel
             icon-name="location"
             title="Location">
-            <p>Type: Concert</p>
-            <p>School: Melbourne</p>
-            <p>Conservatorium of Music</p>
+            <p class="info-panel__text">Type: Concert</p>
+            <p class="info-panel__text">School: Melbourne</p>
+            <p class="info-panel__text">Conservatorium of Music</p>
           </InfoPanel>
         </ListItem>
       </div>
@@ -40,20 +37,17 @@
           <InfoPanel
             icon-name="calendar"
             title="When">
-            <p>19th May 2018</p>
+            <p class="info-panel__text">19th May 2018</p>
           </InfoPanel>
         </ListItem>
         <ListItem>
           <InfoPanel
             icon-name="jobs"
             title="Further information">
-            <a href="/">
+            <a
+              href="/"
+              target="_blank">
               Melbourne Recital Centre
-              <SvgIcon
-                name="external"
-                aria-label="External icon"
-                width="18px"
-                height="18px"/>
             </a>
           </InfoPanel>
         </ListItem>
@@ -61,18 +55,18 @@
           <InfoPanel
             icon-name="location"
             title="Location">
-            <p>Type: Concert</p>
-            <p>School: Melbourne</p>
-            <p>Conservatorium of Music</p>
+            <p class="info-panel__text">Type: Concert</p>
+            <p class="info-panel__text">School: Melbourne</p>
+            <p class="info-panel__text">Conservatorium of Music</p>
           </InfoPanel>
         </ListItem>
         <ListItem>
           <InfoPanel
             icon-name="location"
             title="Location">
-            <p>Type: Concert</p>
-            <p>School: Melbourne</p>
-            <p>Conservatorium of Music</p>
+            <p class="info-panel__text">Type: Concert</p>
+            <p class="info-panel__text">School: Melbourne</p>
+            <p class="info-panel__text">Conservatorium of Music</p>
           </InfoPanel>
         </ListItem>
       </div>

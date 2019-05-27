@@ -15,12 +15,7 @@
     align-content: flex-start;
   }
 
-  p {
+  &__text {
     margin-bottom: 0;
-  }
-
-  svg {
-    display: inline;
-    margin-left: .3125rem;
   }
 }
