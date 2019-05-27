@@ -45,7 +45,7 @@
     -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
 
     option {
-      color: var(--col-black-dark);
+      color: rgb(var(--col-black-dark));
     }
 
     &::-ms-expand {

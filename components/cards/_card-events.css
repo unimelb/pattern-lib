@@ -18,12 +18,6 @@
     }
   }
 
-  .card__links {
-    @media (--bp-desktop) {
-      margin-top: calc(var(--vr) * -1.5);
-    }
-  }
-
   .card__excerpt {
     @media (--bp-desktop) {
       display: none;
