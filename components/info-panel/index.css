@@ -1,0 +1,26 @@
+.info-panel {
+  display: flex;
+
+  &__title {
+    margin-bottom: .375rem;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  svg {
+    display: inline;
+    margin-left: .3125rem;
+  }
+}
