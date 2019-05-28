@@ -47,9 +47,6 @@ import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 import Dropdown from '../../dropdown/Dropdown.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 
-// Initiate smooth scroll polyfill.
-smoothscroll.polyfill();
-
 export default {
   components: { FocusWrapper, Dropdown, SvgIcon },
   props: {
@@ -84,6 +81,13 @@ export default {
     },
   },
 
+  beforeMount() {
+    // Initiate smooth scroll polyfill.
+    if (typeof window !== 'undefined') {
+      smoothscroll.polyfill();
+    }
+  },
+
   mounted() {
     this.getInPageData();
 
@@ -100,7 +104,9 @@ export default {
   },
   methods: {
     getInPageData() {
-      const headings = [].slice.call(document.querySelectorAll(`${this.headingLevel}`));
+      const headings = [].slice.call(
+        document.querySelectorAll(`${this.headingLevel}`)
+      );
 
       this.sections = headings
         .filter((heading) => {
