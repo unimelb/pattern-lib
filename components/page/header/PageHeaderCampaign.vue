@@ -1,27 +1,18 @@
 <template>
-  <div class="page-header--campaign" :style="`background-image: url(${img})`">
-    <header class="page-header page-header--l2 page-header--no-logo">
-      <div class="page-header--center">
-        <div class="max max--xsml text-center shim-pb2">
-          <h1 v-if="title" class="shim-mb1">{{title}}</h1>
-          <h3 v-if="subTitle" class="shim-mb2">{{ subTitle }}</h3>
-          <a v-if="buttonText" class="btn btn--inverted" :href="link">
-            <span class="push-icon">
-              {{buttonText}}
-              <svg
-                width="15px"
-                height="15px"
-                focusable="false"
-                role="presentation"
-                class="push-icon__icon"
-              >
-                <use xlink:href="#icon-chevron-right"></use>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-    </header>
+  <div
+    :style="`background-image: url(${img})`"
+    class="campaign">
+    <div class="campaign__container">
+      <h1
+        v-if="title"
+        class="campaign__title">{{ title }}</h1>
+      <h1
+        v-if="subTitle"
+        class="campaign__title">{{ subTitle }}</h1>
+      <button-icon
+        :href="link"
+        class="btn--cta">Call to Action</button-icon>
+    </div>
   </div>
 </template>
 
@@ -30,24 +21,77 @@ export default {
   props: {
     img: {
       type: String,
-      default: ""
+      default: '',
     },
     title: {
       type: String,
-      default: ""
+      default: '',
     },
     subTitle: {
       type: String,
-      default: ""
+      default: '',
     },
     buttonText: {
       type: String,
-      default: ""
+      default: '',
     },
     link: {
       type: String,
-      default: ""
-    }
-  }
+      default: '',
+    },
+  },
 };
 </script>
+
+<style scoped>
+@import "../../_vars.css";
+
+.campaign {
+  background-position: 50%;
+  background-size: cover;
+  min-height: 386px;
+
+  @media (--bp-wide) {
+    min-height: 400px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 138px 26px 26px 26px;
+
+    @media (--bp-x-desktop) {
+      align-items: flex-start;
+      padding: 117px 0 117px 100px;
+      max-width: 775px;
+    }
+  }
+
+  &__title {
+    font-family: var(--ff-normal);
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    line-height: 27px;
+    text-align: center;
+    margin: 0;
+
+    @media (--bp-x-tablet) {
+      font-size: 58px;
+      letter-spacing: -0.85px;
+      line-height: 64px;
+    }
+
+    @media (--bp-wide) {
+      font-size: 68px;
+      letter-spacing: -1px;
+      line-height: 66px;
+    }
+  }
+}
+
+.btn--cta {
+  margin-top: 40px;
+}
+</style>
