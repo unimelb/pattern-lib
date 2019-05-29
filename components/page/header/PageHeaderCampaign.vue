@@ -47,9 +47,13 @@ export default {
 @import "../../_vars.css";
 
 .campaign {
-  background-position: 50%;
+  background-position: 65%;
   background-size: cover;
   min-height: 386px;
+
+  @media (--bp-x-tablet) {
+    background-position: 50%;
+  }
 
   @media (--bp-wide) {
     min-height: 400px;
