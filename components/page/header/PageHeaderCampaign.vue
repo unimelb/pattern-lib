@@ -11,7 +11,7 @@
         class="campaign__title">{{ subTitle }}</h1>
       <button-icon
         :href="link"
-        class="btn--cta">Call to Action</button-icon>
+        class="btn--cta">{{ buttonText }}</button-icon>
     </div>
   </div>
 </template>
@@ -63,39 +63,39 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 138px 26px 26px 26px;
+    padding: 8.625rem 1.625rem 1.625rem 1.625rem;
 
     @media (--bp-x-desktop) {
       align-items: flex-start;
-      padding: 117px 0 117px 100px;
-      max-width: 775px;
+      padding: 7.3125rem 0 7.3125rem 6.25rem;
+      max-width: 48.4375rem;
     }
   }
 
   &__title {
     font-family: var(--ff-normal);
-    font-size: 27px;
-    font-weight: 600;
-    letter-spacing: -0.4px;
-    line-height: 27px;
+    font-size: 1.6875rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: -0.025rem;
+    line-height: 1.6875rem;
     text-align: center;
     margin: 0;
 
     @media (--bp-x-tablet) {
-      font-size: 58px;
-      letter-spacing: -0.85px;
-      line-height: 64px;
+      font-size: 3.625rem;
+      letter-spacing: -0.0531rem;
+      line-height: 4rem;
     }
 
     @media (--bp-wide) {
-      font-size: 68px;
-      letter-spacing: -1px;
-      line-height: 66px;
+      font-size: 4.25rem;
+      letter-spacing: -0.0625rem;
+      line-height: 4.125rem;
     }
   }
 }
 
 .btn--cta {
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 </style>
