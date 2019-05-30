@@ -75,6 +75,7 @@ import Heading6 from '../../components/typography/headings/Heading6.vue';
 import SocialMediaBar from '../../components/page/social-media-bar/SocialMediaBar.vue';
 import Testimonials from '../../components/testimonials/Testimonials.vue';
 import InfoPanel from '../../components/info-panel/InfoPanel.vue';
+import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 
 import '../../components';
 
@@ -155,6 +156,7 @@ Vue.component('social-media-bar', SocialMediaBar);
 Vue.component('alumni-profiles', AlumniProfiles);
 Vue.component('testimonials', Testimonials);
 Vue.component('info-panel', InfoPanel);
+Vue.component('page-header-campaign', PageHeaderCampaign);
 // Create Vue instance
 new Vue({
   el: '#ui',

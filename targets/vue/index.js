@@ -302,3 +302,7 @@ export {
   default as InfoPanel,
 }
   from '../../components/info-panel/InfoPanel.vue';
+export {
+  default as PageHeaderCampaign,
+}
+  from '../../components/campaign/PageHeaderCampaign.vue';
