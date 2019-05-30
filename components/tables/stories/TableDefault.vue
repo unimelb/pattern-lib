@@ -44,3 +44,12 @@
     </tbody>
   </table>
 </template>
+
+<script>
+import TableWrapper from '../TableWrapper.vue';
+
+export default {
+  components: { TableWrapper },
+  readme: { html: true, source: false },
+};
+</script>

@@ -155,7 +155,15 @@ Vue.component('social-media-bar', SocialMediaBar);
 Vue.component('alumni-profiles', AlumniProfiles);
 Vue.component('testimonials', Testimonials);
 Vue.component('info-panel', InfoPanel);
+
 // Create Vue instance
 new Vue({
   el: '#ui',
+  beforeMount() {
+    const wrapper = document.createElement('table-wrapper');
+    const tableElements = document.querySelectorAll('table');
+
+    tableElements[0].parentNode.insertBefore(wrapper, tableElements[0]);
+    wrapper.appendChild(tableElements[0]);
+  },
 });
