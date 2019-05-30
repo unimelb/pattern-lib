@@ -5,6 +5,7 @@
     button-text="Call to action text"
     link="google.com"
     img="https://placeimg.com/1000/400/people/grayscale"
+    bg-position="65"
   />
 </template>
 

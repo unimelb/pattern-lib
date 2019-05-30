@@ -1,0 +1,51 @@
+.campaign {
+  background-size: cover;
+  min-height: 386px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8.625rem 1.625rem 1.625rem 1.625rem;
+
+    @media (--bp-x-desktop) {
+      align-items: flex-start;
+      padding: 7.3125rem 0 7.3125rem 6.25rem;
+      max-width: 48.4375rem;
+    }
+  }
+
+  &__title {
+    font-family: var(--ff-normal);
+    font-size: 1.6875rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: -.025rem;
+    line-height: 1.6875rem;
+    text-align: center;
+    margin: 0;
+
+    @media (--bp-x-tablet) {
+      font-size: 3.625rem;
+      letter-spacing: -.0531rem;
+      line-height: 4rem;
+    }
+
+    @media (--bp-wide) {
+      font-size: 4.25rem;
+      letter-spacing: -.0625rem;
+      line-height: 4.125rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 2.5rem;
+  }
+
+  @media (--bp-x-tablet) {
+    background-position: 50%;
+  }
+
+  @media (--bp-wide) {
+    min-height: 400px;
+  }
+}
