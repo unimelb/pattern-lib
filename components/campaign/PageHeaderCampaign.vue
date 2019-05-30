@@ -9,21 +9,20 @@
         :style="`max-width: ${titleWidth};`"
         class="page-campaign__title">{{ title }}</h2>
       <button-icon
-        v-if="link"
+        v-if="link && buttonText"
         :href="link"
-        class="btn--cta page-campaign__btn">{{ buttonText }}</button-icon>
+        class="btn--cta page-campaign__btn"
+      >{{ buttonText }}</button-icon>
     </div>
   </div>
 </template>
 
 <script>
-import BgImage from '../../.storybook/placeholders/campaign-banner.png';
-
 export default {
   props: {
     img: {
       type: String,
-      default: BgImage,
+      default: '',
     },
     xPosition: {
       type: String,
