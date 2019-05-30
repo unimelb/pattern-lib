@@ -14,8 +14,8 @@
 
   &__logo {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 4rem;
+    height: 3rem;
 
     @media (--bp-tablet) {
       width: 117px;
