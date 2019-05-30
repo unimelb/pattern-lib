@@ -1,0 +1,76 @@
+@import '../_vars.css';
+
+.page-campaign {
+  display: flex;
+  background-size: cover;
+  min-height: 26.25rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 1.625rem 1.625rem 1.625rem;
+
+    @media (--bp-x-tablet) {
+      padding-bottom: 3rem;
+    }
+
+    @media (--bp-x-wide) {
+      justify-content: center;
+      align-items: flex-start;
+      padding: 7.3125rem 0 2.875rem 6.25rem;
+      max-width: 48.4375rem;
+    }
+  }
+
+  &__title {
+    font-family: var(--ff-normal);
+    font-size: 1.6875rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: -.4px;
+    line-height: 1.6875rem;
+    text-shadow: 0 0 .125rem rgba(239, 239, 239, .8);
+    text-align: center;
+    margin: 0;
+
+    @media (--bp-x-tablet) {
+      font-size: 48px;
+      letter-spacing: -.0531rem;
+      line-height: 4rem;
+      text-shadow: 0 0 .1875rem #f4f4f4;
+    }
+
+    @media (--bp-x-wide) {
+      text-align: left;
+      line-height: 4rem;
+    }
+
+    @media (--bp-x-wide) {
+      font-size: 3.75rem;
+      letter-spacing: -.0625rem;
+      line-height: 4.125rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 2rem;
+  }
+
+  @media (--bp-x-tablet) {
+    min-height: 36.5rem;
+  }
+
+  @media (--bp-x-wide) {
+    min-height: 25rem;
+  }
+
+  @media (--bp-x-tablet) {
+    background-position: 50%;
+  }
+
+  @media (--bp-x-wide) {
+    min-height: 25rem;
+  }
+}

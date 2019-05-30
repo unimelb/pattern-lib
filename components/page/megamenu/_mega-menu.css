@@ -643,16 +643,6 @@
     padding-right: 0;
     padding-left: 0;
   }
-
-  .logo-mask {
-    height: 2.625rem;
-    overflow: hidden;
-
-    .page-header__logo {
-      width: 4rem;
-      height: 4rem;
-    }
-  }
 }
 
 .page-header__inner {
