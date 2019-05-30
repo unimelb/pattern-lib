@@ -23,7 +23,7 @@
     }
   }
 
-  .logo-mask {	
+  .logo-mask {
     padding: calc(var(--vr) / 3);
 
     @media (--bp-tablet) {
