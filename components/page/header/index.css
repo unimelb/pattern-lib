@@ -14,12 +14,20 @@
 
   &__logo {
     display: block;
-    width: 4rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
 
     @media (--bp-tablet) {
       width: 117px;
       height: 117px;
+    }
+  }
+
+  .logo-mask {	
+    padding: calc(var(--vr) / 3);
+
+    @media (--bp-tablet) {
+      padding: 0;
     }
   }
 
