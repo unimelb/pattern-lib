@@ -75,6 +75,7 @@ import Heading6 from '../../components/typography/headings/Heading6.vue';
 import SocialMediaBar from '../../components/page/social-media-bar/SocialMediaBar.vue';
 import Testimonials from '../../components/testimonials/Testimonials.vue';
 import InfoPanel from '../../components/info-panel/InfoPanel.vue';
+import TableResponsive from '../../components/tables/tableResponsive.vue';
 
 import '../../components';
 
@@ -155,15 +156,20 @@ Vue.component('social-media-bar', SocialMediaBar);
 Vue.component('alumni-profiles', AlumniProfiles);
 Vue.component('testimonials', Testimonials);
 Vue.component('info-panel', InfoPanel);
+Vue.component('table-responsive', TableResponsive);
 
 // Create Vue instance
 new Vue({
   el: '#ui',
-  beforeMount() {
-    const wrapper = document.createElement('table-wrapper');
+  beforeCreate() {
     const tableElements = document.querySelectorAll('table');
+    const elem = [].slice.call(tableElements);
 
-    tableElements[0].parentNode.insertBefore(wrapper, tableElements[0]);
-    wrapper.appendChild(tableElements[0]);
+    elem.forEach((e) => {
+      const wrapper = document.createElement('table-responsive');
+
+      e.parentNode.insertBefore(wrapper, e);
+      wrapper.appendChild(e);
+    });
   },
 });

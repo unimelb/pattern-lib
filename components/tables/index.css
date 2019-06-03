@@ -113,6 +113,12 @@
     }
   }
 
+  &--responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
   &__row {
     &--inverted {
       background-color: rgb(var(--col-brand));

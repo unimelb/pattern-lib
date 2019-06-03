@@ -46,10 +46,10 @@
 </template>
 
 <script>
-import TableWrapper from '../TableWrapper.vue';
+import TableResponsive from '../TableResponsive.vue';
 
 export default {
-  components: { TableWrapper },
+  components: { TableResponsive },
   readme: { html: true, source: false },
 };
 </script>
