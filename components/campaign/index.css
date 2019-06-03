@@ -54,8 +54,17 @@
     }
   }
 
+  &--black {
+    color: rgb(var(--col-link-active-on-dark));
+    text-shadow: 0 0 3px rgb(var(--col-black-dark));
+  }
+
   &__btn {
     margin-top: 2rem;
+
+    &--black {
+      color: #7cbdce;
+    }
   }
 
   @media (--bp-x-tablet) {

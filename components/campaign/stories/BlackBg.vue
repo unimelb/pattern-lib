@@ -1,12 +1,13 @@
 <template>
   <PageHeaderCampaign
-    img="https://matrix-cms.unimelb.edu.au/web/assets/images/banners/study-mid-year-banner.jpg/banner.jpg"
+    img="https://matrix-cms.unimelb.edu.au/web/assets/images/banners/dancers.jpg/banner.jpg"
     title="Come as you are, leave as you want to be."
     title-width="100%"
     button-text="Call to action text"
     link="google.com"
     x-position="87"
     y-position="0"
+    bg-black
   />
 </template>
 

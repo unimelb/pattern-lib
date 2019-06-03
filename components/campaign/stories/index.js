@@ -6,6 +6,8 @@ import {
 } from '../../../.storybook/utils';
 
 import Default from './Default.vue';
+import BlackBg from './BlackBg.vue';
 
 storiesOf('Campaign', module)
-  .add('Default', createStory(Default));
+  .add('Default', createStory(Default))
+  .add('Black Background', createStory(BlackBg));
