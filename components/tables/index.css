@@ -117,6 +117,44 @@
     display: block;
     width: 100%;
     overflow-x: auto;
+
+    .table {
+      table-layout: auto;
+    }
+
+    thead {
+      display: none;
+
+      @media (--bp-x-tablet) {
+        display: table-header-group;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          display: flex;
+          width: auto;
+          padding: .5rem;
+          border-right: 0;
+
+          &::before {
+            content: attr(data-label);
+            font-weight: var(--fw-bold);
+            margin-right: .5rem;
+
+            @media (--bp-x-tablet) {
+              display: none;
+            }
+          }
+
+          @media (--bp-x-tablet) {
+            display: table-cell;
+            padding: 1rem;
+          }
+        }
+      }
+    }
   }
 
   &__row {

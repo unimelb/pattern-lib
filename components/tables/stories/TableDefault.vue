@@ -44,12 +44,3 @@
     </tbody>
   </table>
 </template>
-
-<script>
-import TableResponsive from '../TableResponsive.vue';
-
-export default {
-  components: { TableResponsive },
-  readme: { html: true, source: false },
-};
-</script>
