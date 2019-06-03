@@ -7,13 +7,13 @@
       <h2
         v-if="title"
         :style="`max-width: ${titleWidth};`"
-        :class="['page-campaign__title', bgBlack ? 'page-campaign--black': '']"
+        :class="['page-campaign__title', bgDark ? 'page-campaign--dark': '']"
       >{{ title }}</h2>
       <button-icon
         v-if="link && buttonText"
         :href="link"
-        :class="[bgBlack ? '' : 'btn--cta', 'page-campaign__btn', 'page-campaign__btn--black']"
-        :inverted="bgBlack"
+        :class="[bgDark ? '' : 'btn--cta', 'page-campaign__btn', 'page-campaign__btn--dark']"
+        :inverted="bgDark"
       >{{ buttonText }}</button-icon>
     </div>
   </div>
@@ -50,7 +50,7 @@ export default {
       type: String,
       default: '',
     },
-    bgBlack: {
+    bgDark: {
       type: Boolean,
       default: false,
     },
