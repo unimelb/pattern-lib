@@ -9,15 +9,13 @@
         tabindex="0"
         class="link-img link-reset"
         href="https://www.unimelb.edu.au/">
-        <div class="logo-mask">
-          <img
-            class="page-header__logo"
-            src="../shared/logo.svg"
-            width="117"
-            height="117"
-            alt="The University of Melbourne homepage"
-          >
-        </div>
+        <img
+          class="page-header__logo"
+          src="../../shared/logov2.svg"
+          width="148"
+          height="148"
+          alt="The University of Melbourne homepage"
+        >
       </a>
       <MegaMenuTitle
         v-if="facultyName"

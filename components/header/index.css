@@ -23,14 +23,6 @@
     }
   }
 
-  .logo-mask {
-    padding: calc(var(--vr) / 3);
-
-    @media (--bp-tablet) {
-      padding: 0;
-    }
-  }
-
   &--no-logo {
     .page-header--center {
       min-height: 80vh;
@@ -242,8 +234,8 @@
       /* fix wrapping of `alt` text */
 
       @media (--bp-tablet) {
-        width: 85px;
-        height: 71px;
+        width: 88px;
+        height: 88px;
       }
     }
 

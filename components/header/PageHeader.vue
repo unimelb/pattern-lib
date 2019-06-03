@@ -6,9 +6,9 @@
         href="https://www.unimelb.edu.au/">
         <img
           class="page-header__logo"
-          src="../shared/logo.svg"
-          width="117"
-          height="117"
+          src="../../shared/logov2.svg"
+          width="148"
+          height="148"
           alt="The University of Melbourne homepage"
         >
       </a>
@@ -46,11 +46,11 @@ export default {
       required: true,
     },
     entity: {
-      type: String, /* raw HTML (line breaks allowed) */
+      type: String /* raw HTML (line breaks allowed) */,
       default: '',
     },
     entitySub: {
-      type: String, /* raw HTML (line breaks allowed) */
+      type: String /* raw HTML (line breaks allowed) */,
       default: '',
     },
     img: {

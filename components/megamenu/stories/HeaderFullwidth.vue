@@ -7,13 +7,13 @@
           href="https://www.unimelb.edu.au/">
           <img
             class="page-header__logo"
-            src="../../../shared/logo.svg"
-            width="117"
-            height="117"
+            src="../../../shared/logov2.svg"
+            width="148"
+            height="148"
             alt="The University of Melbourne homepage"
           >
         </a>
-        <PageBreadcrumbs :items="items" />
+        <PageBreadcrumbs :items="items"/>
       </div>
     </header>
   </div>
@@ -35,13 +35,13 @@ export default {
 </script>
 
 <style lang="postcss">
-  .page-header--study {
-    .page-header__inner {
-      padding-left: 3rem;
-    }
-
-    nav {
-      background-color: transparent;
-    }
+.page-header--study {
+  .page-header__inner {
+    padding-left: 3rem;
   }
+
+  nav {
+    background-color: transparent;
+  }
+}
 </style>

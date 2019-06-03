@@ -11,7 +11,7 @@
         href="https://www.unimelb.edu.au/">
         <img
           class="page-header__logo"
-          src="../shared/logo-responsive.svg"
+          src="../../shared/logov2.svg"
           width="85"
           height="71"
           alt="The University of Melbourne homepage"

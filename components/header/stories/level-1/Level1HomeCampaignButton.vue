@@ -6,13 +6,13 @@
     <header class="page-header">
       <div class="page-header__inner max">
         <a
-          class="link-img link-reset page-header__logomat"
+          class="link-img link-reset"
           href="https://www.unimelb.edu.au/">
           <img
             class="page-header__logo"
-            src="../../../shared/logo.svg"
-            width="117"
-            height="117"
+            src="../../../../shared/logov2.svg"
+            width="148"
+            height="148"
             alt="The University of Melbourne homepage"
           >
         </a>
@@ -21,7 +21,8 @@
         <a
           class="btn btn--center btn--cta"
           href>
-          <span class="push-icon">Call to action
+          <span class="push-icon">
+            Call to action
             <svg
               width="15px"
               height="15px"
