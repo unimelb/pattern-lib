@@ -75,7 +75,7 @@ import Heading6 from '../../components/typography/headings/Heading6.vue';
 import SocialMediaBar from '../../components/page/social-media-bar/SocialMediaBar.vue';
 import Testimonials from '../../components/testimonials/Testimonials.vue';
 import InfoPanel from '../../components/info-panel/InfoPanel.vue';
-import TableResponsive from '../../components/tables/tableResponsive.vue';
+import TableResponsive from '../../components/tables/TableResponsive.vue';
 
 import '../../components';
 
