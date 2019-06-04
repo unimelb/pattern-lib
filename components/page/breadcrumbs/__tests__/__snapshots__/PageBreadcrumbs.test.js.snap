@@ -38,7 +38,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
           />
            
           <title>
-            home
+            Home
           </title>
            
         </svg>
@@ -63,7 +63,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
           />
            
           <title>
-            chevron-right
+            Chevron-right
           </title>
            
         </svg>
