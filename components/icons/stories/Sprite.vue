@@ -43,6 +43,7 @@ export default {
       'tag',
       'newspaper',
       'envelope',
+      'info',
     ],
   }),
   readme: { custom: docs },
