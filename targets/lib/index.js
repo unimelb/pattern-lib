@@ -76,6 +76,7 @@ import SocialMediaBar from '../../components/page/social-media-bar/SocialMediaBa
 import Testimonials from '../../components/testimonials/Testimonials.vue';
 import InfoPanel from '../../components/info-panel/InfoPanel.vue';
 import TableResponsive from '../../components/tables/TableResponsive.vue';
+import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 
 import '../../components';
 
@@ -157,6 +158,7 @@ Vue.component('alumni-profiles', AlumniProfiles);
 Vue.component('testimonials', Testimonials);
 Vue.component('info-panel', InfoPanel);
 Vue.component('table-responsive', TableResponsive);
+Vue.component('page-header-campaign', PageHeaderCampaign);
 
 // Create Vue instance
 new Vue({
