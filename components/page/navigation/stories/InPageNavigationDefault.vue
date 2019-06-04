@@ -11,16 +11,23 @@
       <h1 id="navigation-test2">Section2</h1>
     </div>
     <div style="height: 500px;">
-      <h1 id="navigation-test3">Section3 with a really really really really really really long heading</h1>
+      <h1
+        id="navigation-test3"
+      >Section3 with a really really really really really really long heading</h1>
     </div>
     <div style="height: 500px;">
-      <h1 id="navigation-test4">Section4</h1>
+      <h1
+        id="navigation-test4"
+      >Section4 with a really really really really really really really really really really really really long heading</h1>
     </div>
     <div style="height: 500px;">
       <h1 id="navigation-test5">Section5</h1>
     </div>
     <div style="height: 500px;">
       <h1 id="navigation-test6">Section6</h1>
+    </div>
+    <div style="height: 500px;">
+      <h1 id="navigation-test7">Section7</h1>
     </div>
   </SectionWrap>
 </template>
