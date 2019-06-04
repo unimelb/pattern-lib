@@ -1,6 +1,7 @@
 <template>
   <FocusWrapper
     :color="color"
+    :size="size"
     padded>
     <div
       ref="inPageNavigation"
@@ -11,12 +12,12 @@
         <li
           v-for="(data, index) in sections"
           :key="index"
-          class="in-page-navigation__position list-reset">
+          class="in-page-navigation__position list-reset"
+        >
           <a
-            :href="data.id"
+            :href="`#${data.id}`"
             class="in-page-navigation__link"
-            @click="scrollOnClick"
-          >
+            @click="scrollOnClick">
             {{ data.label }}
             <SvgIcon
               name="chevron-right"
@@ -25,6 +26,7 @@
         </li>
       </div>
       <div
+        ref="dropdown"
         :class="classes"
         class="in-page-navigation__collapsed">
         <Dropdown
@@ -39,11 +41,14 @@
 </template>
 
 <script>
+import smoothscroll from 'smoothscroll-polyfill';
+
 import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 import Dropdown from '../../dropdown/Dropdown.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
 
 export default {
-  components: { FocusWrapper, Dropdown },
+  components: { FocusWrapper, Dropdown, SvgIcon },
   props: {
     title: {
       type: String,
@@ -65,7 +70,7 @@ export default {
       isFixed: false,
       selectedItem: false,
       autoSelect: true,
-      scrollOffset: 50,
+      size: 'medium',
     };
   },
   computed: {
@@ -75,29 +80,51 @@ export default {
       };
     },
   },
+
+  beforeMount() {
+    // Initiate smooth scroll polyfill.
+    if (typeof window !== 'undefined') {
+      smoothscroll.polyfill();
+    }
+  },
+
   mounted() {
     this.getInPageData();
 
     window.addEventListener('scroll', this.checkNavigation);
+
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.getWindowWidth);
+      this.getWindowWidth();
+    });
   },
   destroyed() {
     window.removeEventListener('scroll', this.checkNavigation);
+    window.removeEventListener('resize', this.getWindowWidth);
   },
   methods: {
     getInPageData() {
-      const pageNav = [];
+      const headings = [].slice.call(
+        document.querySelectorAll(`${this.headingLevel}`)
+      );
 
-      document.querySelectorAll(`${this.headingLevel}`).forEach((element) => {
-        if (element.id.includes('navigation')) {
-          pageNav.push({
-            id: element.id,
-            label: element.textContent,
-            value: element.id,
-          });
-        }
+      this.sections = headings
+        .filter((heading) => {
+          if (heading.id.includes('navigation')) {
+            return true;
+          }
 
-        this.sections = pageNav;
-      });
+          return false;
+        })
+        .map((heading) => {
+          const element = {
+            id: heading.id,
+            label: heading.textContent,
+            value: heading.id,
+          };
+
+          return element;
+        });
     },
     checkNavigation() {
       this.selectedItem = this.autoSelectOnScroll();
@@ -109,14 +136,17 @@ export default {
       const elementToChange = this.sections[0];
 
       if (this.sections.length >= 1) {
-        return document.getElementById(elementToChange.id).getBoundingClientRect().top < Math.abs(inPageNavOffset.top);
+        return (
+          document.getElementById(elementToChange.id).getBoundingClientRect()
+            .top < Math.abs(inPageNavOffset.top)
+        );
       }
 
       return false;
     },
     scrollOnClick(e) {
       const scrollToID = e.target.getAttribute('href');
-      const scrollToElem = document.getElementById(scrollToID);
+      const scrollToElem = document.querySelector(scrollToID);
 
       e.preventDefault();
 
@@ -129,9 +159,10 @@ export default {
       this.scrollTo(scrollToElem);
     },
     scrollTo(scrollToElem) {
-      const count = scrollToElem.offsetTop - window.pageYOffset - this.scrollOffset;
+      const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height;
+      const scrollToPosition = scrollToElem.offsetTop - window.pageYOffset - scrollOffset;
 
-      window.scrollBy({ top: count, left: 0, behavior: 'smooth' });
+      window.scrollBy({ top: scrollToPosition, left: 0, behavior: 'smooth' });
     },
     autoSelectOnScroll() {
       let selectedItem = false;
@@ -139,13 +170,22 @@ export default {
       this.sections.forEach((item) => {
         const elem = document.getElementById(item.id);
         const offset = elem.getBoundingClientRect();
+        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height + 1; // Add one pixel so it triggers the change
 
-        if (offset.top < this.scrollOffset) {
+        if (offset.top < scrollOffset) {
           selectedItem = item;
         }
       });
 
       return selectedItem;
+    },
+    getWindowWidth() {
+      this.windowWidth = document.documentElement.clientWidth;
+      if (this.windowWidth < 481) {
+        this.size = 'small';
+      } else {
+        this.size = 'medium';
+      }
     },
   },
 };

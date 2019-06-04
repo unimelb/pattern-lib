@@ -23,6 +23,14 @@
     }
   }
 
+  .logo-mask {
+    padding: calc(var(--vr) / 3);
+
+    @media (--bp-tablet) {
+      padding: 0;
+    }
+  }
+
   &--no-logo {
     .page-header--center {
       min-height: 80vh;

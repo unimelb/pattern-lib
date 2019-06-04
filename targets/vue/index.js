@@ -296,4 +296,13 @@ export {
   from '../../components/testimonials/Testimonials.vue';
 export {
   default as SocialMediaBar,
-} from '../../components/page/social-media-bar/SocialMediaBar.vue';
+}
+  from '../../components/page/social-media-bar/SocialMediaBar.vue';
+export {
+  default as InfoPanel,
+}
+  from '../../components/info-panel/InfoPanel.vue';
+export {
+  default as PageHeaderCampaign,
+}
+  from '../../components/campaign/PageHeaderCampaign.vue';

@@ -68,7 +68,7 @@
   .card__links {
     display: flex;
     flex-direction: column;
-    text-align: right;
+    align-items: flex-end;
 
     a {
       font-weight: var(--fw-semibold);
@@ -85,6 +85,12 @@
       @media (--bp-desktop) {
         width: 30%;
         padding-top: 0;
+      }
+    }
+
+    .card__inner {
+      @media (--bp-desktop) {
+        width: 70%;
       }
     }
   }

@@ -4,6 +4,7 @@
 .btn {
   display: inline-block;
   padding: calc(var(--vr) * .8);
+  width: 100%;
   transition: border-color .2s;
   border: 2px solid rgb(var(--col-brand));
   border-radius: var(--br);
@@ -32,6 +33,15 @@
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
     text-decoration: none;
+  }
+
+  & + & {
+    margin-top: 1rem;
+
+    @media (--bp-tablet) {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
   }
 
   &--inverted,
@@ -208,5 +218,9 @@
   &--disabled {
     opacity: .5;
     pointer-events: none;
+  }
+
+  @media (--bp-tablet) {
+    width: auto;
   }
 }

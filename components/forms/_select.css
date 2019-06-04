@@ -45,7 +45,7 @@
     -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
 
     option {
-      color: var(--col-black-dark);
+      color: rgb(var(--col-black-dark));
     }
 
     &::-ms-expand {
@@ -71,7 +71,7 @@
 
   &--blue {
     position: relative;
-    background-color: #5081bd;
+    background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
 
     select {
