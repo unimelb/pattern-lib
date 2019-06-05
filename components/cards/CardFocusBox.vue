@@ -4,19 +4,18 @@
     :color="color"
     :class="classes"
     :size="size"
-    class="card card--focus-box">
-    <div class="card__inner">
-      <!-- eslint-disable vue/no-v-html -->
-      <svg
-        v-if="icon"
-        class="card--focus-box__icon"
-        viewBox="20 0 150 150"
-        width="100%"
-        height="100%"
-        v-html="icon" />
-      <!-- eslint-enable vue/no-v-html -->
-      <slot />
-    </div>
+    padded
+    class="card card--focus-box"
+  >
+    <svg
+      v-if="icon"
+      class="card--focus-box__icon"
+      viewBox="20 0 150 150"
+      width="100%"
+      height="100%"
+      v-html="icon"
+    />
+    <slot/>
   </FocusWrapper>
 </template>
 
