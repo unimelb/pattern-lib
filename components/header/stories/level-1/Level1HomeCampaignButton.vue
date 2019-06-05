@@ -5,17 +5,7 @@
   >
     <header class="page-header">
       <div class="page-header__inner max">
-        <a
-          class="link-img link-reset page-header__logomat"
-          href="https://www.unimelb.edu.au/">
-          <img
-            class="page-header__logo"
-            src="../../../../shared/logo.svg"
-            width="117"
-            height="117"
-            alt="The University of Melbourne homepage"
-          >
-        </a>
+        <logo/>
       </div>
       <div class="page-header--baseline max max--xsml shim-pb2">
         <a
@@ -38,3 +28,13 @@
     </header>
   </div>
 </template>
+
+<script>
+import Logo from '../../../../logo/Logo.vue';
+
+export default {
+  components: {
+    Logo,
+  },
+};
+</script>
