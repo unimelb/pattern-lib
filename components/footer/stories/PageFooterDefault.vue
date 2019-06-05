@@ -16,7 +16,7 @@ or
       <div class="page-footer__header">
         <div class="page-footer__header__logo">
           <a href="https://www.unimelb.edu.au" class="link-img">
-            <img alt="The University of Melbourne homepage" height="117" src="https://d2glwx35mhbfwf.cloudfront.net/v1.5.0/logov2.svg" width="117">
+            <img alt="The University of Melbourne homepage" height="117" src="https://d2glwx35mhbfwf.cloudfront.net/v1.5.0/logo.svg" width="117">
           </a>
         </div>
         <div class="page-footer__header__search">

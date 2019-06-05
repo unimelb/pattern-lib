@@ -8,9 +8,9 @@
             href="https://www.unimelb.edu.au">
             <img
               alt="The University of Melbourne homepage"
-              height="148"
-              src="../../shared/logov2.svg"
-              width="148"
+              height="117"
+              src="../../shared/logo.svg"
+              width="117"
             >
           </a>
         </div>
