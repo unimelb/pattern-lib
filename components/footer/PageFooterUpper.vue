@@ -2,18 +2,7 @@
   <div class="page-footer__top">
     <div class="page-footer__inner max">
       <div class="page-footer__header">
-        <div class="page-footer__header__logo">
-          <a
-            class="link-img"
-            href="https://www.unimelb.edu.au">
-            <img
-              alt="The University of Melbourne homepage"
-              height="117"
-              src="../../shared/logo.svg"
-              width="117"
-            >
-          </a>
-        </div>
+        <logo/>
         <div class="page-footer__header__search">
           <form
             id="search"
@@ -172,13 +161,15 @@
 </template>
 
 <script>
-import SocialList from '../social-list/SocialList.vue';
-import SvgIcon from '../icons/SvgIcon.vue';
+import SocialList from '../../social-list/SocialList.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
+import Logo from '../../logo/Logo.vue';
 
 export default {
   components: {
     SocialList,
     SvgIcon,
+    Logo,
   },
 };
 </script>
