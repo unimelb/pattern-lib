@@ -1,39 +1,52 @@
 import { storiesOf } from '@storybook/vue';
 import { createStory } from '../../../.storybook/utils';
 
-import Story1 from './Story1.vue';
-import Story2 from './Story2.vue';
-import Story3 from './Story3.vue';
-import Story4 from './Story4.vue';
-import Story5 from './Story5.vue';
-import Story6 from './Story6.vue';
-import Story7 from './Story7.vue';
-import Story8 from './Story8.vue';
-import Story9 from './Story9.vue';
-import Story10 from './Story10.vue';
-import Story11 from './Story11.vue';
-import Story12 from './Story12.vue';
-import Story13 from './Story13.vue';
-import Story14 from './Story14.vue';
-import Story15 from './Story15.vue';
-import ButtonAdjacent from './ButtonAdjacent.vue';
+import StoryButtonDefault from './StoryButtonDefault.vue';
+import StoryButtonNoIcon from './StoryButtonNoIcon.vue';
+import StoryButtonIcons from './StoryButtonIcons.vue';
+import StoryButtonSmall from './StoryButtonSmall.vue';
+import StoryButtonExtraSmall from './StoryButtonExtraSmall.vue';
+import StoryButtonWide from './StoryButtonWide.vue';
+import StoryButtonExtraWide from './StoryButtonExtraWide.vue';
+import StoryButtonFullWidth from './StoryButtonFullWidth.vue';
+import StoryButtonElement from './StoryButtonElement.vue';
+import StoryButtonCMSIcons from './StoryButtonCMSIcons.vue';
+import StoryButtonInverted from './StoryButtonInverted.vue';
+import StoryButtonCMSIconsInverse from './StoryButtonCMSIconsInverse.vue';
+import StoryButtonsPrevNext from './StoryButtonsPrevNext.vue';
+import StoryButtonCTA from './StoryButtonCTA.vue';
+import StoryButtonAdjacent from './StoryButtonAdjacent.vue';
+import StoryButtonAdjacentFullWidth from './StoryButtonAdjacentFullWidth.vue';
+
+import ButtonDefault from './ButtonDefault.vue';
 /* ##Import story component here */
 
 /* Section - Focus  */
 storiesOf('Buttons', module)
-  .add('Button with icon', createStory(Story1))
-  .add('Button without icon', createStory(Story2))
-  .add('Button icon examples', createStory(Story3))
-  .add('Small', createStory(Story4))
-  .add('Extra Small', createStory(Story5))
-  .add('Wide', createStory(Story6))
-  .add('Extra Wide', createStory(Story7))
-  .add('Full Width', createStory(Story8))
-  .add('All Sizes', createStory(Story9))
-  .add('Adjacent Buttons', createStory(ButtonAdjacent))
-  .add('Button as <button> element', createStory(Story10))
-  .add('Inverted button', createStory(Story12))
-  .add('Button for use in CMS (btn--icon)', createStory(Story11))
-  .add('Inverse button for use in CMS (btn--icon-before)', createStory(Story13))
-  .add('Prev/Next aligned buttons', createStory(Story14))
-  .add('CTA variant', createStory(Story15));
+  .add('Default', createStory(StoryButtonDefault))
+  .add('No Icon', createStory(StoryButtonNoIcon))
+  .add('Icons', createStory(StoryButtonIcons))
+  // .add('Adjacent Buttons', createStory(StoryButtonAdjacent))
+  .add('Button as <button> element', createStory(StoryButtonElement))
+  .add('Inverted button', createStory(StoryButtonInverted))
+  .add('Prev/Next aligned buttons', createStory(StoryButtonsPrevNext))
+  .add('CTA variant', createStory(StoryButtonCTA));
+
+storiesOf('Buttons/Adjacent', module)
+  .add('Default', createStory(StoryButtonAdjacent))
+  .add('Full Width', createStory(StoryButtonAdjacentFullWidth));
+
+storiesOf('Buttons/Width', module)
+  .add('Default', createStory(ButtonDefault))
+  .add('Wide', createStory(StoryButtonWide))
+  .add('Extra Wide', createStory(StoryButtonExtraWide))
+  .add('Full Width', createStory(StoryButtonFullWidth));
+
+storiesOf('Buttons/Sizes', module)
+  .add('Default', createStory(ButtonDefault))
+  .add('Extra Small', createStory(StoryButtonExtraSmall))
+  .add('Small', createStory(StoryButtonSmall));
+
+storiesOf('Buttons/CMS', module)
+  .add('Default (btn--icon)', createStory(StoryButtonCMSIcons))
+  .add('Inverse (btn--icon-before)', createStory(StoryButtonCMSIconsInverse));

@@ -35,12 +35,16 @@
     text-decoration: none;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   & + & {
-    margin-top: 1rem;
+    margin-top: var(--vr);
 
     @media (--bp-tablet) {
       margin-top: 0;
-      margin-left: 1rem;
+      margin-left: var(--vr);
     }
   }
 
@@ -112,6 +116,11 @@
   &--fullwidth {
     min-width: 100%;
     text-align: center;
+
+    & + & {
+      margin-top: var(--vr);
+      margin-left: 0;
+    }
   }
 
   &--center {
