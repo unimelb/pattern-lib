@@ -1,7 +1,15 @@
 <template>
-  <Logo
-    height="500"
-    width="500"/>
+  <SectionWrap bg-color="white">
+    <h1>Small</h1>
+    <Logo small/>
+
+    <h1>Medium</h1>
+    <Logo medium/>
+
+    <h1>Large</h1>
+    <Logo large/>
+  </SectionWrap>
+
 </template>
 
 <script>

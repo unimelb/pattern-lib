@@ -2,4 +2,32 @@
   &__link {
     line-height: 0;
   }
+
+  &--small {
+    display: block;
+    height: 66px;
+    width: 66px;
+  }
+
+  &--medium {
+    display: block;
+    width: 66px;
+    height: 66px;
+
+    @media (--bp-tablet) {
+      height: 96px;
+      width: 96px;
+    }
+  }
+
+  &--large {
+    display: block;
+    width: 66px;
+    height: 66px;
+
+    @media (--bp-tablet) {
+      height: 148px;
+      width: 148px;
+    }
+  }
 }

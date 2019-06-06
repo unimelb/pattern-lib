@@ -3,8 +3,7 @@
     class="logo__link"
     href="https://www.unimelb.edu.au">
     <img
-      :height="height"
-      :width="width"
+      :class="classes"
       alt="The University of Melbourne homepage"
       src="../shared/logov2.svg"
     >
@@ -14,13 +13,30 @@
 <script>
 export default {
   props: {
-    height: {
-      type: Number,
-      default: 148,
+    small: {
+      type: Boolean,
+      default: false,
     },
-    width: {
-      type: Number,
-      default: 148,
+    medium: {
+      type: Boolean,
+      default: false,
+    },
+    large: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    classes() {
+      if ((this.small || this.medium || this.large) === false) {
+        return 'logo--large';
+      } return [
+        {
+          'logo--small': this.small,
+          'logo--medium': this.medium,
+          'logo--large': this.large,
+        },
+      ];
     },
   },
 };
