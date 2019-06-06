@@ -2,7 +2,7 @@
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   height: 38vw;
 
   @media (--bp-tablet) {
