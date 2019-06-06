@@ -1,5 +1,5 @@
 <template>
-  <ButtonIcon size="sml">I am a button with no icon</ButtonIcon>
+  <ButtonIcon href="www.google.com">I am a button with an icon</ButtonIcon>
 </template>
 
 <script>

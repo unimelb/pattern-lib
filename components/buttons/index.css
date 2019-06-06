@@ -5,6 +5,7 @@
   display: inline-block;
   padding: calc(var(--vr) * .8);
   width: 100%;
+  margin-bottom: 1rem;
   transition: border-color .2s;
   border: 2px solid rgb(var(--col-brand));
   border-radius: var(--br);
@@ -36,7 +37,7 @@
   }
 
   & + & {
-    margin-top: 1rem;
+    margin-top: calc(var(--vr) / 2);
 
     @media (--bp-tablet) {
       margin-top: 0;
@@ -112,6 +113,11 @@
   &--fullwidth {
     min-width: 100%;
     text-align: center;
+
+    & + & {
+      margin-top: calc(var(--vr) / 2);
+      margin-left: 0;
+    }
   }
 
   &--center {
