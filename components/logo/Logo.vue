@@ -1,5 +1,6 @@
 <template>
   <a
+    class="logo__link"
     href="https://www.unimelb.edu.au">
     <img
       :height="height"

@@ -1,0 +1,5 @@
+.logo {
+  &__link {
+    line-height: 0;
+  }
+}
