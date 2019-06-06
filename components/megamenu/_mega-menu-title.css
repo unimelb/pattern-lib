@@ -26,6 +26,10 @@
   }
 
   @media (--bp-tablet) {
+    margin-left: 1.25rem;
+  }
+
+  @media (--bp-tablet) {
     line-height: 1.25rem;
   }
 

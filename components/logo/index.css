@@ -13,6 +13,7 @@
     display: block;
     width: 66px;
     height: 66px;
+    margin-left: -6px;
 
     @media (--bp-tablet) {
       height: 96px;
@@ -24,10 +25,12 @@
     display: block;
     width: 66px;
     height: 66px;
+    margin-left: -10px;
 
     @media (--bp-tablet) {
       height: 148px;
       width: 148px;
+      margin-left: -16px;
     }
   }
 }

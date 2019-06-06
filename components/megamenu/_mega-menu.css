@@ -588,7 +588,8 @@
     }
 
     @media (--bp-tablet) {
-      height: 6.4375rem;
+      height: 100%;
+      padding-left: 1rem;
     }
   }
 
