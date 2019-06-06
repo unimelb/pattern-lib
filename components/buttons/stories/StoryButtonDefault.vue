@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ButtonIcon href="www.google.com">I am a button with an icon</ButtonIcon>
+    <ButtonDefault/>
     <div class="grid">
       <div class="cell cell--tab-1of4">
         <ButtonIcon
@@ -18,7 +18,10 @@
 </template>
 
 <script>
+import ButtonDefault from './ButtonDefault.vue';
+
 export default {
+  components: { ButtonDefault },
   readme: { source: true, html: true },
 };
 </script>
