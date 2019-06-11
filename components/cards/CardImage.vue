@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import ButtonLink from '../buttons/stories/ButtonLink.vue';
+import ButtonLink from '../buttons/ButtonLink.vue';
 
 export default {
   name: 'CardImage',
