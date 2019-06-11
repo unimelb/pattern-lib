@@ -1,5 +1,5 @@
 <template>
-  <table-responsive>
+  <table-compacted>
     <table
       id="statstable"
       class="table table--striped">
@@ -255,14 +255,14 @@
         </tr>
       </tbody>
     </table>
-  </table-responsive>
+  </table-compacted>
 </template>
 
 <script>
-import TableResponsive from '../TableResponsive.vue';
+import TableCompacted from '../TableCompacted.vue';
 
 export default {
-  components: { TableResponsive },
+  components: { TableCompacted },
   readme: { html: true, source: false },
 };
 </script>

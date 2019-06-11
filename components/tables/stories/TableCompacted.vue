@@ -1,6 +1,6 @@
 <template>
-  <table-responsive>
-    <table class="table table--striped">
+  <table-compacted>
+    <table class="table table--striped table--is-compacted">
       <thead>
         <tr class="table__row--inverted">
           <th>Heading 1</th>
@@ -44,14 +44,14 @@
         </tr>
       </tbody>
     </table>
-  </table-responsive>
+  </table-compacted>
 </template>
 
 <script>
-import TableResponsive from '../TableResponsive.vue';
+import TableCompacted from '../TableCompacted.vue';
 
 export default {
-  components: { TableResponsive },
+  components: { TableCompacted },
   readme: { html: true, source: false },
 };
 </script>
