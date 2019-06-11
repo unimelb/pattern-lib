@@ -1,5 +1,5 @@
 <template>
-  <table-compacted>
+  <TableCompacted>
     <table class="table table--striped table--is-compacted">
       <thead>
         <tr class="table__row--inverted">
@@ -44,7 +44,7 @@
         </tr>
       </tbody>
     </table>
-  </table-compacted>
+  </TableCompacted>
 </template>
 
 <script>

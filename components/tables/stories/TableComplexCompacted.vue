@@ -1,5 +1,5 @@
 <template>
-  <table-compacted>
+  <TableCompacted>
     <table
       id="statstable"
       class="table table--striped">
@@ -255,7 +255,7 @@
         </tr>
       </tbody>
     </table>
-  </table-compacted>
+  </TableCompacted>
 </template>
 
 <script>
