@@ -184,43 +184,31 @@
   .table-responsive {
     position: relative;
     overflow: hidden;
+    margin-bottom: 1rem;
 
-    &--inner {
+    &--start {
+      &::before {
+        left: -50px;
+        border-radius: 0 10px 10px 0/0 50% 50% 0;
+        box-shadow: 5px 0 10px rgba(0, 0, 0, .25);
+      }
+    }
+
+    &--end {
+      &::after {
+        left: 100%;
+        border-radius: 10px 0 0 10px/50% 0 0 50%;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, .25);
+      }
+    }
+
+    &__inner {
       overflow-x: scroll;
 
       table {
         width: 600px;
         table-layout: auto;
         margin-bottom: 0;
-        position: relative;
-        margin-left: 10px;
-        margin-right: 10px;
-
-        &::before {
-          content: '';
-          display: block;
-          background: white;
-          width: 10px;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: -10px;
-          z-index: 3;
-          border-right: 1px solid rgba(0, 0, 0, .05);
-        }
-
-        &::after {
-          content: '';
-          display: block;
-          background: white;
-          width: 10px;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          right: -10px;
-          z-index: 3;
-          border-left: 1px solid rgba(0, 0, 0, .05);
-        }
       }
     }
 
@@ -236,18 +224,6 @@
       transition-property: margin-left;
       transition-duration: .1s;
       z-index: 2;
-    }
-
-    &::before {
-      left: -50px;
-      border-radius: 0 10px 10px 0/0 50% 50% 0;
-      box-shadow: 5px 0 10px rgba(0, 0, 0, .25);
-    }
-
-    &::after {
-      left: 100%;
-      border-radius: 10px 0 0 10px/50% 0 0 50%;
-      box-shadow: -5px 0 10px rgba(0, 0, 0, .25);
     }
 
     &.force .table-responsive--inner table {
