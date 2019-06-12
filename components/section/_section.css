@@ -13,6 +13,10 @@
     margin-left: auto;
     padding: calc(2 * var(--vr)) var(--vr);
 
+    .card-focus {
+      display: unset;
+    }
+
     .layout--left .layout__main &,
     .layout--right .layout__main & {
       max-width: calc(var(--w-mid) - var(--panel-width));

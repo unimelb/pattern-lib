@@ -8,9 +8,7 @@
     >
       <h2>Header</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
-      <a
-        href="https://www.unimelb.edu.au"
-        class="btn btn--icon btn--icon--chevron-right">Call to Action</a>
+      <button-icon href="https://www.unimelb.edu.au">Call to Action</button-icon>
     </CardFocusBox>
   </SectionWrap>
 </template>
