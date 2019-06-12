@@ -5,7 +5,7 @@
   >
     <header class="page-header">
       <div class="page-header__inner max">
-        <logo/>
+        <Logo/>
       </div>
       <div class="section__inner section__inner--xsml">
         <CardPathfinder

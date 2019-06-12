@@ -1,7 +1,7 @@
 <template>
   <SectionWrap bg-color="white">
-    <h1>Default = Large</h1>
-    <Logo/>
+    <h1>Small</h1>
+    <Logo small/>
   </SectionWrap>
 
 </template>

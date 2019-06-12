@@ -1,13 +1,15 @@
 <template>
-  <a
-    class="logo__link"
-    href="https://www.unimelb.edu.au">
-    <img
-      :class="classes"
-      alt="The University of Melbourne homepage"
-      src="../shared/logov2.svg"
-    >
-  </a>
+  <div class="logo">
+    <a
+      class="logo__link"
+      href="https://www.unimelb.edu.au">
+      <img
+        :class="classes"
+        alt="The University of Melbourne homepage"
+        src="../shared/logov2.svg"
+      >
+    </a>
+  </div>
 </template>
 
 <script>
