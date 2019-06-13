@@ -8,7 +8,6 @@
       @scroll="handleScroll">
       <slot />
     </div>
-    {{ isAtEndOfTable }}
   </div>
 </template>
 
@@ -16,13 +15,14 @@
 export default {
   data() {
     return {
+      isAtStartOfTable: true,
       isAtEndOfTable: false,
     };
   },
   computed: {
     classes() {
       return {
-        'table-responsive--start': this.isAtEndOfTable,
+        'table-responsive--start': !this.isAtStartOfTable,
         'table-responsive--end': !this.isAtEndOfTable,
       };
     },
@@ -30,9 +30,19 @@ export default {
   methods: {
     handleScroll(elem) {
       this.isAtEndOfTable = this.checkAtEndOfTable(elem);
+      this.isAtStartOfTable = this.checkAtStartOfTable(elem);
     },
     checkAtEndOfTable(elem) {
-      return elem.target.scrollLeft + window.innerWidth >= this.$refs.table.querySelector('table').getBoundingClientRect().width;
+      const tableWidth = this.$refs.table.querySelector('table').getBoundingClientRect().width;
+      const scrollLeftPosition = elem.target.scrollLeft;
+      const windowWidth = window.innerWidth;
+
+      return scrollLeftPosition + windowWidth >= tableWidth;
+    },
+    checkAtStartOfTable(elem) {
+      const scrollLeftPosition = elem.target.scrollLeft;
+
+      return scrollLeftPosition === 0;
     },
   },
 };
