@@ -1,7 +1,8 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
+const isMinified = process.env.MINIFIED === 'true';
 
-module.exports = {
+module.exports = ({ file, options, env }) => ({
   plugins: {
     'postcss-import': {},
     'postcss-url': {},
@@ -21,5 +22,6 @@ module.exports = {
     'postcss-reporter': {
       throwError: !isDev,
     },
+    cssnano: isMinified ? options.cssnano : false,
   },
-};
+});
