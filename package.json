@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "prebuild": "rm -Rf .out/docs",
-    "prebuild:lib:standard": "rm -Rf .out/lib",
+    "prebuild:lib": "rm -Rf .out/lib",
     "build": "build-storybook -c .storybook -o .out/docs",
     "build:lib": "run-p build:lib:standard build:lib:minify",
     "build:lib:standard": "cross-env NODE_ENV=production webpack --config targets/lib/webpack.config.js",
