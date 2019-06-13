@@ -33,11 +33,11 @@ export default {
       this.isAtStartOfTable = this.checkAtStartOfTable(elem);
     },
     checkAtEndOfTable(elem) {
+      const containerWidth = this.$refs.table.getBoundingClientRect().width;
       const tableWidth = this.$refs.table.querySelector('table').getBoundingClientRect().width;
       const scrollLeftPosition = elem.target.scrollLeft;
-      const windowWidth = window.innerWidth;
 
-      return scrollLeftPosition + windowWidth >= tableWidth;
+      return scrollLeftPosition + containerWidth >= tableWidth;
     },
     checkAtStartOfTable(elem) {
       const scrollLeftPosition = elem.target.scrollLeft;
