@@ -131,6 +131,9 @@
     }
 
     tbody {
+      display: flex;
+      flex-direction: column;
+
       tr {
         td {
           display: flex;
@@ -153,6 +156,10 @@
             padding: 1rem;
           }
         }
+      }
+
+      @media (--bp-x-tablet) {
+        display: table-row-group;
       }
     }
   }
