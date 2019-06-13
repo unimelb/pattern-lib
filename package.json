@@ -22,7 +22,7 @@
     "build": "build-storybook -c .storybook -o .out/docs",
     "build:lib": "run-p build:lib:standard build:lib:minify",
     "build:lib:standard": "cross-env NODE_ENV=production webpack --config targets/lib/webpack.config.js",
-    "build:lib:minify": "cross-env NODE_ENV=production MINIFIED=true webpack --config targets/lib/webpack.minify.config.js",
+    "build:lib:minify": "cross-env NODE_ENV=production TO_MINIFY=true webpack --config targets/lib/webpack.minify.config.js",
     "build:vue": "cross-env NODE_ENV=production webpack --config targets/vue/webpack.config.js",
     "dev": "start-storybook -p 7002 -c .storybook",
     "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
