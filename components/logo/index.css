@@ -1,35 +1,35 @@
 .logo {
+  display: flex;
+
   &__link {
     line-height: 0;
   }
 
-  &--small {
+  &__image {
     display: block;
     height: 66px;
     width: 66px;
-  }
 
-  &--medium {
-    display: block;
-    width: 66px;
-    height: 66px;
+    &--medium {
+      @media (--bp-tablet) {
+        height: 96px;
+        width: 96px;
+      }
+    }
 
-    @media (--bp-tablet) {
-      height: 96px;
-      width: 96px;
+    &--large {
+      @media (--bp-tablet) {
+        height: 148px;
+        width: 148px;
+      }
     }
   }
 
-  &--large {
-    display: block;
-    width: 66px;
-    height: 66px;
-    margin-left: -10px;
+  &--negative-margin {
+    margin: -10px;
 
     @media (--bp-tablet) {
-      height: 148px;
-      width: 148px;
-      margin-left: -16px;
+      margin: -16px;
     }
   }
 }

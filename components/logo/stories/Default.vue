@@ -1,9 +1,5 @@
 <template>
-  <SectionWrap bg-color="white">
-    <h1>Default = Large</h1>
-    <Logo/>
-  </SectionWrap>
-
+  <Logo/>
 </template>
 
 <script>

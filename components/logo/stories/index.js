@@ -11,7 +11,7 @@ import Medium from './Medium.vue';
 import Large from './Large.vue';
 
 storiesOf('Logo', module)
-  .add('Default', createStory(Default))
+  .add('Default (Large)', createStory(Default))
   .add('Small', createStory(Small))
   .add('Medium', createStory(Medium))
   .add('Large', createStory(Large));

@@ -5,6 +5,7 @@
       href="https://www.unimelb.edu.au">
       <img
         :class="classes"
+        class="logo__image"
         alt="The University of Melbourne homepage"
         src="../shared/logov2.svg"
       >
@@ -31,12 +32,12 @@ export default {
   computed: {
     classes() {
       if ((this.small || this.medium || this.large) === false) {
-        return 'logo--large';
+        return 'logo__image--large logo--negative-margin';
       } return [
         {
-          'logo--small': this.small,
-          'logo--medium': this.medium,
-          'logo--large': this.large,
+          logo__image: this.small,
+          'logo__image--medium': this.medium,
+          'logo__image--large logo--negative-margin': this.large,
         },
       ];
     },
