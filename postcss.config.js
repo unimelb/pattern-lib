@@ -2,7 +2,7 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
 const isMinified = process.env.MINIFIED === 'true';
 
-module.exports = ({ file, options, env }) => ({
+module.exports = ({ options }) => ({
   plugins: {
     'postcss-import': {},
     'postcss-url': {},
