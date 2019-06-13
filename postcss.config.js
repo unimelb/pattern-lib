@@ -1,6 +1,6 @@
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
-const isMinified = process.env.TO_MINIFY === 'true';
+const isMinified = process.env.MINIFY_CSS === 'true';
 
 module.exports = ({ options }) => ({
   plugins: {
