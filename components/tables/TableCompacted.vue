@@ -1,7 +1,7 @@
 <template>
   <div
     ref="table"
-    class="table--compacted">
+    class="table-compacted">
     <slot />
   </div>
 </template>

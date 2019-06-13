@@ -169,11 +169,17 @@ new Vue({
     const tableElements = document.querySelectorAll('table');
     const elem = [].slice.call(tableElements);
 
-    elem.forEach((e) => {
-      const wrapper = document.createElement('table-responsive');
+    elem.forEach((el) => {
+      let wrapper;
 
-      e.parentNode.insertBefore(wrapper, e);
-      wrapper.appendChild(e);
+      if (el.classList.contains('table--compacted')) {
+        wrapper = document.createElement('table-compacted');
+      } else {
+        wrapper = document.createElement('table-responsive');
+      }
+
+      el.parentNode.insertBefore(wrapper, el);
+      wrapper.appendChild(el);
     });
   },
 });
