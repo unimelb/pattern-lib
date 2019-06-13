@@ -4,10 +4,7 @@
       v-model="query"
       type="text"
       placeholder="search"
-      @change="onClickButton(filteredData, $event)">
-    <h1
-      v-for="(item, index) in filteredData"
-      :key="index">{{ item.name }}</h1>
+      @input="emitEvent">
   </div>
 </template>
 
@@ -29,8 +26,16 @@ export default {
   computed: {
     filteredData() {
       return this.data.filter(
-        data => data.name.match(new RegExp(this.query, 'i'))
+        data => data.value.match(new RegExp(this.query, 'i'))
       );
+    },
+  },
+  mounted() {
+    this.$emit('event-testing', this.filteredData);
+  },
+  methods: {
+    emitEvent() {
+      this.$emit('event-testing', this.filteredData);
     },
   },
 };

@@ -1,15 +1,15 @@
 <template>
   <section-wrap bg-color="white">
-    <breadth :data="data"/>
+    <filterBreadth :data="data"/>
   </section-wrap>
 </template>
 
 <script>
-import Breadth from '../Breadth.vue';
+import filterBreadth from '../filterBreadth.vue';
 import breadthDoc from './breadth.md';
 
 export default {
-  components: { Breadth },
+  components: { filterBreadth },
   readme: { custom: breadthDoc, source: true, html: true },
   data() {
     return {
