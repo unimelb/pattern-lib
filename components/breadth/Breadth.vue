@@ -23,9 +23,13 @@
       </label>
     </div>
 
-    <button
-      aria-label="Reset all"
-      @click="resetChecked">Reset all</button>
+    <section>
+
+      <button
+        aria-label="Reset all"
+        @click="resetChecked">Reset all</button>
+    </section>
+
     <div
       v-for="(item, index) in filteredData"
       :key="index">

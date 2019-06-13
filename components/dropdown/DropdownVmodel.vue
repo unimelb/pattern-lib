@@ -6,6 +6,10 @@
       @input="event => { $emit('input', event.target.value)}"
     >
       <option
+        selected
+        value=""
+      >Show all</option>
+      <option
         v-for="(value, index) in values"
         :key="index"
         :value="value.value || value"
