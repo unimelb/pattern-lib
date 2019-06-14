@@ -19,6 +19,7 @@
       class="card__footer">
       <ButtonIcon
         :href="href"
+        :aria-label="`Read more about ` + title"
         class="btn--fullwidth">Read More</ButtonIcon>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <template>
-  <ButtonIcon width="xwide">I am a button with no icon</ButtonIcon>
+  <ButtonIcon width="wide">I'm a wide button</ButtonIcon>
 </template>
 
 <script>

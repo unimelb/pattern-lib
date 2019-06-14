@@ -1,7 +1,7 @@
 {
   "name": "@unimelb/pattern-lib-vue",
   "description": "A complete design system for the University of Melbourne.",
-  "version": "4.8.0",
+  "version": "4.9.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/unimelb/pattern-lib.git"
@@ -20,7 +20,9 @@
     "prebuild": "rm -Rf .out/docs",
     "prebuild:lib": "rm -Rf .out/lib",
     "build": "build-storybook -c .storybook -o .out/docs",
-    "build:lib": "cross-env NODE_ENV=production webpack --config targets/lib/webpack.config.js",
+    "build:lib": "run-p build:lib:standard build:lib:minify",
+    "build:lib:standard": "cross-env NODE_ENV=production webpack --config targets/lib/webpack.config.js",
+    "build:lib:minify": "cross-env NODE_ENV=production MINIFY_CSS=true webpack --config targets/lib/webpack.minify.config.js",
     "build:vue": "cross-env NODE_ENV=production webpack --config targets/vue/webpack.config.js",
     "dev": "start-storybook -p 7002 -c .storybook",
     "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
@@ -79,6 +81,7 @@
     "jest-axe": "^3.1.0",
     "jest-serializer-vue": "^2.0.2",
     "normalize.css": "^8.0.0",
+    "npm-run-all": "^4.1.5",
     "plop": "^2.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.1.0",

@@ -52,7 +52,14 @@ module.exports = {
         'svg-fill-loader/encodeSharp', // https://github.com/kisenka/svg-fill-loader#using-with-css-loader
         {
           loader: 'postcss-loader',
-          options: { sourceMap: isDev },
+          options: {
+            config: {
+              ctx: {
+                cssnano: {},
+              },
+            },
+            sourceMap: isDev,
+          },
         },
         ],
       }),
