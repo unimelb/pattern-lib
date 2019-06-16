@@ -5,7 +5,7 @@
   >
     <header class="page-header page-header--l2">
       <div class="page-header__inner max">
-        <Logo/>
+        <Logo negative-margin/>
       </div>
       <div class="page-header--center">
         <div class="max max--xsml text-center shim-pb2">

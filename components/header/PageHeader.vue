@@ -1,7 +1,7 @@
 <template>
   <header :class="`page-header page-header--l${level}`">
     <div class="page-header__inner max">
-      <Logo/>
+      <Logo negative-margin/>
       <div
         v-if="entity"
         class="page-header__entity">

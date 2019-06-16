@@ -28,16 +28,25 @@ export default {
       type: Boolean,
       default: false,
     },
+    negativeMargin: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {
       if ((this.small || this.medium || this.large) === false) {
-        return 'logo__image--large logo--negative-margin';
+        return [
+          'logo__image--large',
+          {
+            'logo--negative-margin': this.negativeMargin,
+          }];
       } return [
         {
           logo__image: this.small,
           'logo__image--medium': this.medium,
-          'logo__image--large logo--negative-margin': this.large,
+          'logo__image--large': this.large,
+          'logo--negative-margin': this.negativeMargin,
         },
       ];
     },

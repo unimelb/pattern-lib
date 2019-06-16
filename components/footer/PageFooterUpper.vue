@@ -2,7 +2,7 @@
   <div class="page-footer__top">
     <div class="page-footer__inner max">
       <div class="page-footer__header">
-        <Logo/>
+        <Logo negative-margin/>
         <div class="page-footer__header__search">
           <form
             id="search"

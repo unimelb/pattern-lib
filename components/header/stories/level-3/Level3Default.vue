@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <PageHeaderMin/>
     <PageBreadcrumbs :items="items"/>
   </div>
