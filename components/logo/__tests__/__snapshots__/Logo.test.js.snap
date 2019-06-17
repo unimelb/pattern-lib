@@ -10,7 +10,7 @@ exports[`Logo should match snapshot 1`] = `
   >
     <img
       alt="The University of Melbourne homepage"
-      class="logo__image logo__image--large"
+      class="logo__image logo__image--lg"
       src="../shared/logov2.svg"
     />
   </a>

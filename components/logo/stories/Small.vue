@@ -1,5 +1,5 @@
 <template>
-  <Logo small/>
+  <Logo size="sm"/>
 </template>
 
 <script>

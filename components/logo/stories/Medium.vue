@@ -1,5 +1,5 @@
 <template>
-  <Logo medium/>
+  <Logo size="md"/>
 </template>
 
 <script>

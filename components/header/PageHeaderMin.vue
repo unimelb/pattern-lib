@@ -7,7 +7,7 @@
     />
     <div class="page-header__inner max">
       <logo
-        medium
+        size="md"
         negative-margin/>
     </div>
   </header>

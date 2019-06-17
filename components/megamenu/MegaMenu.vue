@@ -6,7 +6,7 @@
   >
     <div class="page-header__inner">
       <logo
-        medium
+        size="md"
         negative-margin/>
       <MegaMenuTitle
         v-if="facultyName"

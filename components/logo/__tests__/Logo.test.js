@@ -15,23 +15,15 @@ describe('Logo', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types small/medium/large/negativeMargin', () => {
+  it('should have default props and correct types size / negativeMargin', () => {
     const wrapper = shallow(Logo);
     const {
-      small,
-      medium,
-      large,
+      size,
       negativeMargin,
     } = wrapper.vm.$options.props;
 
-    expect(small.type).toEqual(Boolean);
-    expect(wrapper.props().small).toBe(false);
-
-    expect(medium.type).toBe(Boolean);
-    expect(wrapper.props().medium).toBe(false);
-
-    expect(large.type).toBe(Boolean);
-    expect(wrapper.props().large).toBe(false);
+    expect(size.type).toEqual(String);
+    expect(wrapper.props().size).toBe('lg');
 
     expect(negativeMargin.type).toBe(Boolean);
     expect(wrapper.props().negativeMargin).toBe(false);
@@ -44,62 +36,62 @@ describe('Logo', () => {
       },
     });
 
-    expect(wrapper.find('img').element.className).toBe('logo__image logo__image--large');
+    expect(wrapper.find('img').element.className).toBe('logo__image logo__image--lg');
   });
 
   it('should render small logo', () => {
-    const small = true;
+    const size = 'sm';
     const wrapper = shallow(Logo, {
       propsData: {
-        small,
+        size,
       },
     });
 
-    expect(typeof wrapper.props().small).toBe('boolean');
-    expect(wrapper.props().small).toBe(small);
-    expect(wrapper.find('.logo__image').attributes().src).toContain('logov2.svg');
+    expect(typeof wrapper.props().size).toBe('string');
+    expect(wrapper.props().size).toBe(size);
+    expect(wrapper.find('img').element.className).toContain('logo__image--sm');
   });
 
   it('should render medium logo', () => {
-    const medium = true;
+    const size = 'md';
     const wrapper = shallow(Logo, {
       propsData: {
-        medium,
+        size,
       },
     });
 
-    expect(typeof wrapper.props().medium).toBe('boolean');
-    expect(wrapper.props().medium).toBe(medium);
-    expect(wrapper.find('.logo__image--medium').attributes().src).toContain('logov2.svg');
+    expect(typeof wrapper.props().size).toBe('string');
+    expect(wrapper.props().size).toBe(size);
+    expect(wrapper.find('img').element.className).toContain('logo__image--md');
   });
 
   it('should render large logo', () => {
-    const large = true;
+    const size = 'lg';
     const wrapper = shallow(Logo, {
       propsData: {
-        large,
+        size,
       },
     });
 
-    expect(typeof wrapper.props().large).toBe('boolean');
-    expect(wrapper.props().large).toBe(large);
-    expect(wrapper.find('.logo__image--large').attributes().src).toContain('logov2.svg');
+    expect(typeof wrapper.props().size).toBe('string');
+    expect(wrapper.props().size).toBe(size);
+    expect(wrapper.find('img').element.className).toContain('logo__image--lg');
   });
 
   it('should render large logo with negative margin', () => {
-    const large = true;
+    const size = 'lg';
     const negativeMargin = true;
     const wrapper = shallow(Logo, {
       propsData: {
-        large,
+        size,
         negativeMargin,
       },
     });
 
-    expect(typeof wrapper.props().large).toBe('boolean');
+    expect(typeof wrapper.props().size).toBe('string');
     expect(typeof wrapper.props().negativeMargin).toBe('boolean');
-    expect(wrapper.props().large).toBe(large);
+    expect(wrapper.props().size).toBe(size);
     expect(wrapper.props().negativeMargin).toBe(negativeMargin);
-    expect(wrapper.find('.logo__image--large').attributes().class).toContain('logo--negative-margin');
+    expect(wrapper.find('.logo__image--lg').attributes().class).toContain('logo--negative-margin');
   });
 });

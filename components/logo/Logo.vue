@@ -4,7 +4,7 @@
       class="logo__link"
       href="https://www.unimelb.edu.au">
       <img
-        :class="classes"
+        :class="['logo__image--' + size, negativeMargin ? 'logo--negative-margin-' + size: '']"
         class="logo__image"
         alt="The University of Melbourne homepage"
         src="../shared/logov2.svg"
@@ -16,40 +16,14 @@
 <script>
 export default {
   props: {
-    small: {
-      type: Boolean,
-      default: false,
-    },
-    medium: {
-      type: Boolean,
-      default: false,
-    },
-    large: {
-      type: Boolean,
-      default: false,
+    size: {
+      type: String,
+      default: 'lg',
+      validator: value => ['sm', 'md', 'lg'].indexOf(value) !== -1,
     },
     negativeMargin: {
       type: Boolean,
       default: false,
-    },
-  },
-  computed: {
-    classes() {
-      if (!this.small && !this.medium && !this.large) {
-        return [
-          'logo__image--large',
-          {
-            'logo--negative-margin-large': this.negativeMargin,
-          }];
-      } return [
-        {
-          logo__image: this.small,
-          'logo__image--medium': this.medium,
-          'logo__image--large': this.large,
-          'logo--negative-margin-large': this.negativeMargin && this.large,
-          'logo--negative-margin-small': this.negativeMargin && (this.small || this.medium),
-        },
-      ];
     },
   },
 };

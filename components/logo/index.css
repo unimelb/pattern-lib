@@ -10,14 +10,14 @@
     height: 66px;
     width: 66px;
 
-    &--medium {
+    &--md {
       @media (--bp-tablet) {
         height: 96px;
         width: 96px;
       }
     }
 
-    &--large {
+    &--lg {
       @media (--bp-tablet) {
         height: 148px;
         width: 148px;
@@ -26,10 +26,13 @@
   }
 
   &--negative-margin {
-    &-small {
+    &-sm {
       margin: -6px;
     }
-    &-large {
+    &-md {
+      margin: -6px;
+    }
+    &-lg {
       margin: -10px;
 
       @media (--bp-tablet) {
