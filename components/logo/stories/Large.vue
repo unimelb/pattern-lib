@@ -4,9 +4,10 @@
 
 <script>
 import Logo from '../Logo.vue';
+import logo from './logo.md';
 
 export default {
   components: { Logo },
-  readme: { source: true, html: true },
+  readme: { custom: logo, source: true, html: true },
 };
 </script>

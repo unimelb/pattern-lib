@@ -232,6 +232,11 @@
       display: flex;
       position: relative;
       align-items: center;
+      height: 5rem;
+
+      @media (--bp-tablet) {
+        height: 6.6875rem;
+      }
     }
 
     .page-header__logo {

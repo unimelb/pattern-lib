@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo should match snapshot 1`] = `
+<div
+  class="logo"
+>
+  <a
+    class="logo__link"
+    href="https://www.unimelb.edu.au"
+  >
+    <img
+      alt="The University of Melbourne homepage"
+      class="logo__image logo__image--large"
+      src="../shared/logov2.svg"
+    />
+  </a>
+</div>
+`;

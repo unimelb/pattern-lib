@@ -39,7 +39,7 @@ export default {
         return [
           'logo__image--large',
           {
-            'logo--negative-margin-larger': this.negativeMargin,
+            'logo--negative-margin-large': this.negativeMargin,
           }];
       } return [
         {
