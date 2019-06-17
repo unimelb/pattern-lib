@@ -25,15 +25,16 @@
     }
   }
 
-  &--negative-margin-large {
-    margin: -10px;
-
-    @media (--bp-tablet) {
-      margin: -16px;
+  &--negative-margin {
+    &-small {
+      margin: -6px;
     }
-  }
+    &-large {
+      margin: -10px;
 
-  &--negative-margin-small {
-    margin: -6px;
+      @media (--bp-tablet) {
+        margin: -16px;
+      }
+    }
   }
 }

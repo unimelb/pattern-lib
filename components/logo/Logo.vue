@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     classes() {
-      if ((this.small || this.medium || this.large) === false) {
+      if (!this.small && !this.medium && !this.large) {
         return [
           'logo__image--large',
           {
