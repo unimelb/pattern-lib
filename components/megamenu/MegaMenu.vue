@@ -5,7 +5,9 @@
     class="page-header page-header--l3 page-header--study"
   >
     <div class="page-header__inner">
-      <logo medium/>
+      <logo
+        medium
+        negative-margin/>
       <MegaMenuTitle
         v-if="facultyName"
         :title="facultyName"

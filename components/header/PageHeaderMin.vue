@@ -6,7 +6,9 @@
       class="page-header__shape"
     />
     <div class="page-header__inner max">
-      <logo medium/>
+      <logo
+        medium
+        negative-margin/>
     </div>
   </header>
 </template>

@@ -39,14 +39,15 @@ export default {
         return [
           'logo__image--large',
           {
-            'logo--negative-margin': this.negativeMargin,
+            'logo--negative-margin-larger': this.negativeMargin,
           }];
       } return [
         {
           logo__image: this.small,
           'logo__image--medium': this.medium,
           'logo__image--large': this.large,
-          'logo--negative-margin': this.negativeMargin,
+          'logo--negative-margin-large': this.negativeMargin && this.large,
+          'logo--negative-margin-small': this.negativeMargin && (this.small || this.medium),
         },
       ];
     },

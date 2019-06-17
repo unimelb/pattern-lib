@@ -232,10 +232,6 @@
       display: flex;
       position: relative;
       align-items: center;
-
-      .logo {
-        margin-left: -6px;
-      }
     }
 
     .page-header__logo {

@@ -25,11 +25,15 @@
     }
   }
 
-  &--negative-margin {
+  &--negative-margin-large {
     margin: -10px;
 
     @media (--bp-tablet) {
       margin: -16px;
     }
+  }
+
+  &--negative-margin-small {
+    margin-left: -6px;
   }
 }
