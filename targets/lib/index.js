@@ -8,6 +8,8 @@ import {
   version,
 } from '../../package.json';
 
+import BootstrapCMSTables from '../../components/tables/BootstrapCMSTables';
+
 import ToggleBlock from '../../components/toggle/ToggleBlock.vue';
 import ToggleGroup from '../../components/toggle/ToggleGroup.vue';
 import ToggleBlockMobile from '../../components/toggle/ToggleBlockMobile.vue';
@@ -166,20 +168,6 @@ Vue.component('page-header-campaign', PageHeaderCampaign);
 new Vue({
   el: '#ui',
   beforeCreate() {
-    const tableElements = document.querySelectorAll('table');
-    const elem = [].slice.call(tableElements);
-
-    elem.forEach((el) => {
-      let wrapper;
-
-      if (el.classList.contains('table--compacted')) {
-        wrapper = document.createElement('table-compacted');
-      } else {
-        wrapper = document.createElement('table-responsive');
-      }
-
-      el.parentNode.insertBefore(wrapper, el);
-      wrapper.appendChild(el);
-    });
+    BootstrapCMSTables(); // Add responsive classes to CMS tables.
   },
 });
