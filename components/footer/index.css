@@ -20,7 +20,16 @@
   /* logo wrapper */
   &__header__logo {
     margin-bottom: 2.25rem;
-    text-align: center;
+    justify-content: center;
+
+    .logo__image {
+      height: 148px;
+      width: 148px;
+    }
+
+    @media (--bp-tablet) {
+      justify-content: flex-start;
+    }
   }
 
   /* list of user groups */
