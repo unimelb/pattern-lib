@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import InputFilter from '../InputFilter.vue';
+import InputFilter from '../base/InputFilter.vue';
 
 export default {
   components: { InputFilter },

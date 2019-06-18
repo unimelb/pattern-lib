@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import DropdownVmodel from '../DropdownVmodel.vue';
+import DropdownVmodel from '../base/DropdownVmodel.vue';
 
 export default {
   components: {

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import CheckboxFilter from '../CheckboxFilter.vue';
+import CheckboxFilter from '../base/CheckboxFilter';
 
 export default {
   components: {
