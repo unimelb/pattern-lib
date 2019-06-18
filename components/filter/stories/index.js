@@ -8,8 +8,12 @@ import {
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
 import Story3 from './Story3.vue';
+import Story4 from './Story4.vue';
 
-storiesOf('Filter', module)
-  .add('Default', createStory(Story1))
-  .add('Story2', createStory(Story2))
-  .add('Story3', createStory(Story3));
+storiesOf('Filter / Components', module)
+  .add('Breadth', createStory(Story1));
+
+storiesOf('Filter / Elements', module)
+  .add('Input', createStory(Story2))
+  .add('Dropdown', createStory(Story3))
+  .add('Checkbox', createStory(Story4));
