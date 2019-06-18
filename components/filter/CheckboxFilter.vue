@@ -1,10 +1,15 @@
 <template>
   <div class="search">
-    <input
-      v-model="query"
-      type="text"
-      placeholder="search"
-      @input="emitEvent">
+    <div
+      v-for="(item, index) in data"
+      :key="index">
+      <label>{{ item }}</label>
+      <input
+        :value="item"
+        v-model="query"
+        type="checkbox"
+        @change="emitEvent">
+    </div>
   </div>
 </template>
 
@@ -19,14 +24,14 @@ export default {
 
   data() {
     return {
-      query: '',
+      query: [],
     };
   },
 
   computed: {
     filteredData() {
       return this.data.filter(
-        data => data.value.match(new RegExp(this.query, 'i'))
+        data => data.match(new RegExp(this.query, 'i'))
       );
     },
   },

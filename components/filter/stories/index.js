@@ -5,15 +5,15 @@ import {
   createStory,
 } from '../../../.storybook/utils';
 
-import Story1 from './Story1.vue';
-import Story2 from './Story2.vue';
-import Story3 from './Story3.vue';
-import Story4 from './Story4.vue';
+import BreadthStory from './BreadthStory.vue';
+import InputStory from './InputStory.vue';
+import DropdownStory from './DropdownStory.vue';
+import CheckboxStory from './CheckboxStory.vue';
 
 storiesOf('Filter / Components', module)
-  .add('Breadth', createStory(Story1));
+  .add('Breadth', createStory(BreadthStory));
 
 storiesOf('Filter / Elements', module)
-  .add('Input', createStory(Story2))
-  .add('Dropdown', createStory(Story3))
-  .add('Checkbox', createStory(Story4));
+  .add('Input', createStory(InputStory))
+  .add('Checkbox', createStory(CheckboxStory))
+  .add('Dropdown', createStory(DropdownStory));
