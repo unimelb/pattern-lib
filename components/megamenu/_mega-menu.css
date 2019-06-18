@@ -589,6 +589,7 @@
 
     @media (--bp-tablet) {
       height: 100%;
+      min-height: 6rem;
       padding-left: 1rem;
     }
   }
