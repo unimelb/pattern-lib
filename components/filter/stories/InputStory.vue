@@ -1,17 +1,18 @@
 <template>
-  <section-wrap bg-color="white">
-    <InputFilter
-      :data="data"
-      @event-data-filtered="test"
-    />
+  <div>
+    <section-wrap bg-color="white">
+      <InputFilter
+        :data="data"
+        @event-data-filtered="test"/>
+    </section-wrap>
     <h1
       v-for="(item, index) in filteredData"
       :key="index">{{ item.value }}</h1>
-  </section-wrap>
+  </div>
 </template>
 
 <script>
-import InputFilter from '../base/InputFilter.vue';
+import InputFilter from '../InputFilter.vue';
 
 export default {
   components: { InputFilter },
@@ -21,10 +22,10 @@ export default {
       filteredData: [],
       data: [
         {
-          value: 'arts',
+          value: 'Arts',
         },
         {
-          value: 'science',
+          value: 'Science',
         },
       ],
     };

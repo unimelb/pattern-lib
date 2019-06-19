@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import filterBreadth from '../filterBreadth.vue';
+import filterBreadth from '../breadth/filterBreadth.vue';
 import breadthDoc from './breadth.md';
 
 export default {

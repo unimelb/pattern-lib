@@ -2,15 +2,19 @@
   <div>
     <CheckboxFilter
       :data="data"
+      title="School"
       @event-data-filtered="test"/>
-    <li
-      v-for="(item, index) in filteredData"
-      :key="index">{{ item }}</li>
+    <sectionWrap>
+      <h1>Filter results:</h1>
+      <li
+        v-for="(item, index) in filteredData"
+        :key="index">{{ item }}</li>
+    </sectionWrap>
   </div>
 </template>
 
 <script>
-import CheckboxFilter from '../base/CheckboxFilter';
+import CheckboxFilter from '../CheckboxFilter';
 
 export default {
   components: {
@@ -20,7 +24,7 @@ export default {
   data() {
     return {
       filteredData: [],
-      data: ['test1', 'test2', 'test3'],
+      data: ['Test1', 'Test2', 'Test3'],
     };
   },
   methods: {

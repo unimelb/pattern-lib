@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--   <InputFilter :data="data.title" @event-data-filtered="getInputFilterData"/> -->
     <div class="form form--inline__row form--inline__row--center">
       <input
         v-model="searchData"
@@ -40,12 +41,10 @@
           :dates="item.start_time"
           :disciplines="item.disciplines"
           :locations="item.location"
-        />-->
+      />-->
     </div>
     <div class="resultsContainer">
-      <p class="results">
-        {{ filteredData.length }} results
-      </p>
+      <p class="results">{{ filteredData.length }} results</p>
       <p
         v-if="searchData.length > 0"
         class="filtersApplied">(Filters applied)</p>
@@ -86,10 +85,12 @@
   </div>
 </template>
 <script>
-import FilterDetails from './FilterDetails.vue';
+import InputFilter from '../InputFilter.vue';
 import GenericCard from '../../cards/GenericCard.vue';
+// import FilterDetails from './FilterDetails.vue';
+
 export default {
-  components: { FilterDetails, GenericCard },
+  components: { InputFilter, GenericCard },
   props: {
     data: {
       type: Array,
@@ -99,7 +100,8 @@ export default {
   data() {
     return {
       searchData: '',
-      showDetails: false,
+      inputData: [],
+      // showDetails: false,
     };
   },
   computed: {
@@ -111,9 +113,12 @@ export default {
     },
   },
   methods: {
-    handleFilterDetails() {
-      this.showDetails = !this.showDetails;
+    getInputFilterData(dataFromParent) {
+      this.searchData = dataFromParent;
     },
+    /* handleFilterDetails() {
+      this.showDetails = !this.showDetails;
+    }, */
   },
 };
 </script>

@@ -76,8 +76,8 @@
 </template>
 
 <script>
-import Accordion from '../accordion/Accordion.vue';
-import DropdownVmodel from '../dropdown/DropdownVmodel.vue';
+import Accordion from '../../accordion/Accordion.vue';
+import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
 
 export default {
   components: {

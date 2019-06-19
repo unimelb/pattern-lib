@@ -1,14 +1,16 @@
 <template>
-  <div class="search">
+  <div class="checkbox-filter">
+    <h3 class="checkbox-filter__title">{{ title }}</h3>
     <div
       v-for="(item, index) in data"
       :key="index">
-      <label>{{ item }}</label>
       <input
         :value="item"
         v-model="query"
         type="checkbox"
+        class="checkbox-filter__box"
         @change="emitEvent">
+      <label class="checkbox-filter__label">{{ item }}</label>
     </div>
   </div>
 </template>
@@ -16,6 +18,10 @@
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      default: '',
+    },
     data: {
       type: Array,
       default: () => [],

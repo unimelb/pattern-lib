@@ -10,7 +10,7 @@
   font-size: 25px;
   color: #000;
   letter-spacing: 0;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
 
 .filtersApplied {
