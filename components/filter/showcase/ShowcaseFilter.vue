@@ -1,23 +1,22 @@
 <template>
   <div>
-    <SectionWrap bg-color="inverted">
-      <div class="form form--inline__row form--inline__row--center">
-        <input
-          v-model="searchData"
-          aria-label="Card title"
-          class="form--inline__search"
-          type="search"
-          placeholder="Type to search title or description"
-        >
-        <button
-          class="form--inline__button form--inline__button--alt"
-          aria-label="Search">
-          <SvgIcon
-            class="form--inline__svg"
-            name="search"/>
-          <span class="form--inline__button-label">Search</span>
-        </button>
-        <button
+    <div class="form form--inline__row form--inline__row--center">
+      <input
+        v-model="searchData"
+        aria-label="Card title"
+        class="form--inline__search"
+        type="search"
+        placeholder="Type to search title or description"
+      >
+      <button
+        class="form--inline__button form--inline__button--alt"
+        aria-label="Search">
+        <SvgIcon
+          class="form--inline__svg"
+          name="search"/>
+        <span class="form--inline__button-label">Search</span>
+      </button>
+      <!--         <button
           class="form--inline__button form--inline__button-border form--inline__button--alt test"
           aria-label="Filters"
           @click="handleFilterDetails"
@@ -41,9 +40,16 @@
           :dates="item.start_time"
           :disciplines="item.disciplines"
           :locations="item.location"
-        />
-      </div>
-    </SectionWrap>
+        />-->
+    </div>
+    <div class="resultsContainer">
+      <p class="results">
+        {{ filteredData.length }} results
+      </p>
+      <p
+        v-if="searchData.length > 0"
+        class="filtersApplied">(Filters applied)</p>
+    </div>
 
     <SectionWrap class="bg-alt">
       <div class="grid grid--3col">
@@ -111,12 +117,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.test {
-  margin-left: 30px;
-}
-.form--inline__button-border {
-  border-radius: 3px 3px 3px 3px;
-}
-</style>

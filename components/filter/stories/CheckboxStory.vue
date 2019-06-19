@@ -2,7 +2,7 @@
   <div>
     <CheckboxFilter
       :data="data"
-      @event-testing="test"/>
+      @event-data-filtered="test"/>
     <li
       v-for="(item, index) in filteredData"
       :key="index">{{ item }}</li>

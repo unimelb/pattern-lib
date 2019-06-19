@@ -3,7 +3,7 @@
     <input
       v-model="query"
       type="text"
-      placeholder="search"
+      placeholder="Search"
       @input="emitEvent">
   </div>
 </template>
@@ -31,11 +31,11 @@ export default {
     },
   },
   mounted() {
-    this.$emit('event-testing', this.filteredData);
+    this.$emit('event-data-filtered', this.filteredData);
   },
   methods: {
     emitEvent() {
-      this.$emit('event-testing', this.filteredData);
+      this.$emit('event-data-filtered', this.filteredData);
     },
   },
 };

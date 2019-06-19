@@ -1,0 +1,23 @@
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 154px;
+}
+
+.results {
+  font-size: 25px;
+  color: #000;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.filtersApplied {
+  font-size: 14px;
+  color: #575756;
+  letter-spacing: 0;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: underline;
+}

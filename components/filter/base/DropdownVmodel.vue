@@ -40,11 +40,11 @@ export default {
     },
   },
   mounted() {
-    this.$emit('event-testing', this.filteredData);
+    this.$emit('event-data-filtered', this.filteredData);
   },
   methods: {
     emitEvent() {
-      this.$emit('event-testing', this.filteredData);
+      this.$emit('event-data-filtered', this.filteredData);
     },
   },
 };

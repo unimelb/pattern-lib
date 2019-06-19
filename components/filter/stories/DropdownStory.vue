@@ -5,7 +5,7 @@
       <DropdownVmodel
         v-model="selectedValue"
         :values="data"
-        @event-testing="test"/>
+        @event-data-filtered="test"/>
     </label>
     <h1
       v-for="(item, index) in filteredData"
