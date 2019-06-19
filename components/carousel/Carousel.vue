@@ -31,7 +31,7 @@
         class="carousel--panel__progress-bar"/>
       <div class="carousel--panel__container">
         <div class="carousel--panel__left">
-          <div>
+          <div class="carousel--panel--story">
             <div class="carousel--panel--title">
               {{ selectedItem.title }}
             </div>
@@ -122,8 +122,6 @@
 import { slider, slideritem } from 'vue-concise-slider';
 import SvgIcon from '../icons/SvgIcon.vue';
 
-const autoplay = 5000;
-
 export default {
   components: {
     slider,
@@ -134,9 +132,20 @@ export default {
     stories: {
       type: Array,
       default: () => [{}],
+      validator: stories => stories.length <= 3,
+    },
+    timing: {
+      type: String,
+      default: 'short',
     },
   },
   data() {
+    const timing = {
+      medium: 16000,
+      long: 20000,
+      def: 12000,
+    };
+    const autoplay = this.timing && timing[this.timing] ? timing[this.timing] : timing.def;
     return {
       selectedItem: this.stories && this.stories[0] ? this.stories[0] : {},
       selectedIndex: 0,
@@ -145,7 +154,9 @@ export default {
       countTime: 0,
       interval: null,
       paused: false,
+      autoplay,
       options: {
+        effect: 'fade',
         currentPage: 0,
         pagination: false,
         thresholdDistance: 0, // Sliding distance threshold
@@ -168,6 +179,7 @@ export default {
           isActive: index === this.selectedIndex,
         });
       });
+      data.length = 3;
       return data;
     },
   },
@@ -185,12 +197,12 @@ export default {
       this.paused = true;
     },
     startSliding() {
-      this.$refs.slider.$emit('autoplayStart', autoplay - this.countTime);
+      this.$refs.slider.$emit('autoplayStart', this.autoplay - this.countTime);
       this.paused = false;
       this.actionProgressBar();
     },
     frame() {
-      this.progressBarWidth = (this.countTime / autoplay * 100) + 5;
+      this.progressBarWidth = (this.countTime / this.autoplay * 100) + 5;
       this.countTime += 200;
     },
     actionProgressBar() {
@@ -201,7 +213,7 @@ export default {
     clearFrame() {
       if (!this.paused) {
         this.$refs.slider.$emit('autoplayStop');
-        this.$refs.slider.$emit('autoplayStart', autoplay);
+        this.$refs.slider.$emit('autoplayStart', this.autoplay);
       }
       this.progressBarWidth = 0;
       this.countTime = 0;

@@ -10,10 +10,11 @@
 
   &--slider {
     height: 548px;
+    width: 100%;
 
     &__image {
       height: 100%;
-      object-fit: contain;
+      width: 100%;
     }
   }
 
@@ -45,6 +46,10 @@
       flex-direction: column;
       justify-content: space-around;
       margin-left: 1rem;
+    }
+
+    &--story {
+      overflow: scroll;
     }
 
     &--title {
@@ -120,4 +125,8 @@
       }
     }
   }
+}
+
+.slider-container {
+  overflow: auto !important;
 }
