@@ -17,30 +17,30 @@
             World ranking
           </th>
         </tr>
-        <tr class="table__row--white">
-          <th>
-            <a>Times Higher Education World University Rankings 2016&nbsp;– 2017</a>
-          </th>
-          <th>
-            1
-          </th>
-          <th>
-            33
-          </th>
-        </tr>
-        <tr class="table__row--white">
-          <th>
-            <a>Academic Ranking of World Universities</a>
-          </th>
-          <th>
-            1
-          </th>
-          <th>
-            40
-          </th>
-        </tr>
       </thead>
       <tbody>
+        <tr class="table__row--white">
+          <td>
+            <a>Times Higher Education World University Rankings 2016&nbsp;– 2017</a>
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            33
+          </td>
+        </tr>
+        <tr class="table__row--white">
+          <td>
+            <a>Academic Ranking of World Universities</a>
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            40
+          </td>
+        </tr>
         <tr class="table__row--info">
           <td
             id="qs-world-heading"

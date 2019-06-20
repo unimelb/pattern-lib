@@ -25,6 +25,8 @@ describe('Responsive Table', () => {
 
     expect(document.querySelectorAll('table-responsive')).toHaveLength(1);
   });
+
+  // test data-label
 });
 
 describe('Compacted Table', () => {
