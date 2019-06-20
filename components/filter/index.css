@@ -24,9 +24,11 @@
 
 .input-filter {
   display: flex;
+  flex-direction: column;
 
   &__input {
     width: 100%;
+    height: 2.875rem;
     border: 1px solid rgb(221, 223, 223);
     border-radius: 3px;
     background-color: rgb(247, 247, 247);
@@ -38,7 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 3px;
     background-color: rgb(198, 200, 202);
     max-height: 2.875rem;
     font-weight: var(--fw-semibold);
@@ -56,5 +58,13 @@
       font-weight: var(--fw-semibold);
       margin: .625rem 1.25rem .625rem .625rem;
     }
+
+    @media (--bp-tablet) {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  @media (--bp-tablet) {
+    flex-direction: row;
   }
 }

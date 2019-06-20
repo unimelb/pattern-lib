@@ -1,7 +1,7 @@
 <template>
   <div class="input-filter">
     <input
-      v-model="query"
+      v-model="userInputData"
       type="search"
       placeholder="Search"
       class="input-filter__input">
@@ -28,21 +28,21 @@ export default {
 
   data() {
     return {
-      query: '',
+      userInputData: '',
     };
   },
 
   computed: {
     filteredData() {
-      return this.data.filter(data => data.value.match(new RegExp(this.query, 'i')));
+      return this.data.filter(data => data.value.match(new RegExp(this.userInputData, 'i')));
     },
   },
   mounted() {
-    this.$emit('event-data-filtered', this.filteredData);
+    this.$emit('event-data-input', this.data);
   },
   methods: {
     emitEvent() {
-      this.$emit('event-data-filtered', this.filteredData);
+      this.$emit('event-data-input', this.filteredData);
     },
   },
 };

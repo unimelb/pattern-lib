@@ -3,7 +3,7 @@
     <section-wrap bg-color="white">
       <InputFilter
         :data="data"
-        @event-data-filtered="test"/>
+        @event-data-input="test"/>
     </section-wrap>
     <h1
       v-for="(item, index) in filteredData"
