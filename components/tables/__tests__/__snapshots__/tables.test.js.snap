@@ -2,7 +2,7 @@
 
 exports[`Compacted Table should match snapshot 1`] = `
 <div
-  class="table-compacted"
+  class="table-compacted table-compacted--headings"
 />
 `;
 

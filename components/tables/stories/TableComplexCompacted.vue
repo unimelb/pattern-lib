@@ -1,256 +1,123 @@
 <template>
   <TableCompacted>
-    <table
-      id="statstable"
-      class="table table--striped">
+    <table class="table--compacted table table--striped">
       <thead>
-        <tr
-          class="table__row--inverted"
-          scope="col">
-          <th id="header-rankings">
-            Independently published global and program rankings
+        <tr class=" table__row--inverted">
+          <th scope="col">
+            Day/Date
           </th>
-          <th id="header-aus-ranking">
-            Australia ranking
-          </th>
-          <th id="header-world-ranking">
-            World ranking
+          <th scope="col">
+            Activity
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr class="table__row--white">
-          <td>
-            <a>Times Higher Education World University Rankings 2016&nbsp;– 2017</a>
-          </td>
-          <td>
-            1
-          </td>
-          <td>
-            33
-          </td>
+        <tr class="header table__row--info">
+          <th colspan="2">
+            January using th
+          </th>
         </tr>
-        <tr class="table__row--white">
+        <tr>
           <td>
-            <a>Academic Ranking of World Universities</a>
+            Monday 6 January to Sunday 2 March
           </td>
           <td>
-            1
+            Summer Term (8 weeks)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Wednesday 22 January
           </td>
           <td>
-            40
-          </td>
-        </tr>
-        <tr class="table__row--info">
-          <td
-            id="qs-world-heading"
-            colspan="3">
-            <a>QS World University Rankings</a>
+            Academic Advice Day 1
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-heading">
-            Academic reputation
+          <td>
+            Monday 27 January
           </td>
-          <td headers="header-aus-ranking qs-world-heading">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-heading">
-            17
+          <td>
+            University holiday for Australia Day
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-heading">
-            Employer reputation
+          <td>
+            Friday 31 January
           </td>
-          <td headers="header-aus-ranking qs-world-heading">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-heading">
-            11
+          <td>
+            Council Planning Day
           </td>
         </tr>
-        <tr class="table__row--info">
-          <td
-            id="qs-world-subjects"
-            colspan="3">
-            <a>QS World University Rankings (by subject)</a>
+        <tr class="header table__row--info">
+          <td colspan="2">
+            February
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Linguistics
+          <td>
+            Wednesday 12 February to Friday 14 February
           </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            24
+          <td>
+            Conference of Deans and Heads of Departments
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Performing Arts
+          <td>
+            Thursday 20 February
           </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            26
+          <td>
+            Academic Advice Day 2
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Computer Science and Information Systems
+          <td>
+            Tuesday 25 February to Friday 28 February
           </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
+          <td>
+            Week O: Orientation for all students
           </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            14
+        </tr>
+        <tr class="header table__row--info">
+          <td colspan="2">
+            March
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Electrical Engineering
+          <td>
+            Monday 3 March to Sunday 1 June
           </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            35
+          <td>
+            Semester 1 (12 teaching weeks)
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Mechanical Engineering
+          <td>
+            Monday 10 March
           </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
+          <td>
+            Labour Day (not a University Holiday)
           </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            44
+        </tr>
+        <tr class="header table__row--info">
+          <td colspan="2">
+            April
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Biological Sciences
+          <td>
+            Good Friday 18 April to Sunday 27 April
           </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            23
+          <td>
+            Easter Non Teaching Period &amp; UA (previously AVCC) Common Week
           </td>
         </tr>
         <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Dentistry
+          <td>
+            Friday 25 April
           </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            28
-          </td>
-        </tr>
-        <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Chemistry
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            45
-          </td>
-        </tr>
-        <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Physics
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            48
-          </td>
-        </tr>
-        <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Business and Management Studies
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            22
-          </td>
-        </tr>
-        <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Education
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            5
-          </td>
-        </tr>
-        <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Law
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            11
-          </td>
-        </tr>
-        <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Economics and Econometrics
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            25
-          </td>
-        </tr>
-        <tr>
-          <td headers="header-rankings qs-world-subjects">
-            Statistics and Operational Research
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            30
-          </td>
-        </tr>
-        <tr class="table__row--highlight">
-          <td headers="header-rankings qs-world-subjects">
-            Times Higher Education World Reputation Rankings 2016
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            49
-          </td>
-        </tr>
-        <tr class="table__row--highlight">
-          <td headers="header-rankings qs-world-subjects">
-            US News Best Global Universities
-          </td>
-          <td headers="header-aus-ranking qs-world-subjects">
-            1
-          </td>
-          <td headers="header-world-ranking qs-world-subjects">
-            36
+          <td>
+            Anzac Day – University Holiday
           </td>
         </tr>
       </tbody>
