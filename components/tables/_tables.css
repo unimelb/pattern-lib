@@ -3,6 +3,7 @@
   table-layout: fixed;
   border-spacing: 0;
   border-collapse: collapse;
+  border: 0 solid rgba(0, 0, 0, 0);
 
   a {
     &,
@@ -48,9 +49,9 @@
     }
   }
 
-  thead tr {
+  /* thead tr {
     border: 0;
-  }
+  } */
 
   &--tight td,
   &--tight th {
@@ -117,6 +118,7 @@
     &--inverted {
       background-color: rgb(var(--col-brand));
       color: rgb(var(--col-background-primary-white));
+      border: 0 solid rgba(0, 0, 0, 0);
     }
 
     &--white {
