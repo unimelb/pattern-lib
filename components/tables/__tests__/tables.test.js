@@ -26,6 +26,18 @@ describe('Responsive Table', () => {
     expect(document.querySelectorAll('table-responsive')).toHaveLength(1);
   });
 
+  it('should render not a responsive table', () => {
+    const template = `<div>
+      <table class="table--is-not-responsive"></table>
+    </div>`;
+
+    document.body.innerHTML = template;
+
+    BootstrapCMSTables();
+
+    expect(document.querySelectorAll('table-responsive')).toHaveLength(0);
+  });
+
   // test data-label
 });
 

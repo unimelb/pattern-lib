@@ -8,7 +8,7 @@ exports[`Compacted Table should match snapshot 1`] = `
 
 exports[`Responsive Table should match snapshot 1`] = `
 <div
-  class="table-responsive table-responsive--end"
+  class="table-responsive"
 >
   <div
     class="table-responsive__inner"

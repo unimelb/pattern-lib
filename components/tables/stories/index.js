@@ -3,6 +3,7 @@ import { createStory } from '../../../.storybook/utils';
 
 import TableDefault from './TableDefault.vue';
 import TableCompacted from './TableCompacted.vue';
+import TableDefaultNotResponsive from './TableDefaultNotResponsive.vue';
 import TableComplex from './TableComplex.vue';
 import TableComplexCompacted from './TableComplexCompacted.vue';
 import TableCentered from './TableCentered.vue';
@@ -13,6 +14,7 @@ import TableStatsWrapped from './TableStatsWrapped.vue';
 
 storiesOf('Tables', module)
   .add('Default', createStory(TableDefault))
+  .add('Default (Not Responsive)', createStory(TableDefaultNotResponsive))
   .add('Default (Compacted)', createStory(TableCompacted))
   .add('Complex', createStory(TableComplex))
   .add('Complex (Compacted)', createStory(TableComplexCompacted))

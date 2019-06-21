@@ -8,6 +8,10 @@ export default () => {
     if (el.classList.contains('table--compacted')) {
       wrapper = document.createElement('table-compacted');
     } else {
+      if (el.classList.contains('table--is-not-responsive')) {
+        return;
+      }
+
       wrapper = document.createElement('table-responsive');
     }
 
