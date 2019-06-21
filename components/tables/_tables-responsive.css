@@ -49,10 +49,6 @@
     }
   }
 
-  &.force .table-responsive--inner table {
-    width: 600px !important;
-  }
-
   @media (--bp-max-x-mobile) {
     position: relative;
     overflow: hidden;
