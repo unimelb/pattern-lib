@@ -17,20 +17,33 @@ export default {
     return {
       isAtStartOfTable: true,
       isAtEndOfTable: false,
+      isTableWiderThanWindow: false,
     };
   },
   computed: {
     classes() {
       return {
         'table-responsive--start': !this.isAtStartOfTable,
-        'table-responsive--end': !this.isAtEndOfTable,
+        'table-responsive--end': !this.isAtEndOfTable && this.isTableWiderThanWindow,
       };
     },
+  },
+  mounted() {
+    this.isTableWiderThanWindow = this.checkTableWidth();
   },
   methods: {
     handleScroll(elem) {
       this.isAtEndOfTable = this.checkAtEndOfTable(elem);
       this.isAtStartOfTable = this.checkAtStartOfTable(elem);
+    },
+    checkTableWidth() {
+      // Delay a bit so the table can expand to it's full width.
+      return setTimeout(() => {
+        const containerWidth = this.$refs.table.getBoundingClientRect().width;
+        const tableWidth = this.$refs.table.querySelector('table').getBoundingClientRect().width;
+
+        return tableWidth > containerWidth;
+      }, 50);
     },
     checkAtEndOfTable(elem) {
       const containerWidth = this.$refs.table.getBoundingClientRect().width;
