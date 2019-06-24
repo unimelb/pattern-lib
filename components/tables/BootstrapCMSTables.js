@@ -1,5 +1,5 @@
 const isTableParentAComponent = (element) => {
-  const componentsToCompare = ['table-responsive', 'table-compacted'];
+  const componentsToCompare = ['responsive-table', 'compacted-table'];
   const parentName = element.parentElement.tagName.toLowerCase();
 
   return componentsToCompare.includes(parentName);
@@ -9,7 +9,7 @@ const createElement = elementName => document.createElement(elementName);
 
 const hasClass = (element, classToCheck) => element.classList.contains(classToCheck);
 
-const isCompactedTable = element => hasClass(element, 'table--compacted');
+const isCompactedTable = element => hasClass(element, 'table--is-compacted');
 
 const isNormalTable = element => hasClass(element, 'table--is-not-responsive');
 
