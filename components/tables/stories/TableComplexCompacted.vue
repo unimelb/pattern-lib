@@ -1,8 +1,8 @@
 <template>
   <TableCompacted>
-    <table class="table--compacted table table--striped">
+    <table class="table table--striped">
       <thead>
-        <tr class=" table__row--inverted">
+        <tr class="table__row--inverted">
           <th scope="col">
             Day/Date
           </th>
@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="header table__row--info">
+        <tr class="table__row--info table__row--header">
           <th colspan="2">
             January using th
           </th>
@@ -49,7 +49,7 @@
             Council Planning Day
           </td>
         </tr>
-        <tr class="header table__row--info">
+        <tr class="table__row--info table__row--header">
           <td colspan="2">
             February
           </td>
@@ -78,7 +78,7 @@
             Week O: Orientation for all students
           </td>
         </tr>
-        <tr class="header table__row--info">
+        <tr class="table__row--info table__row--header">
           <td colspan="2">
             March
           </td>
@@ -99,7 +99,7 @@
             Labour Day (not a University Holiday)
           </td>
         </tr>
-        <tr class="header table__row--info">
+        <tr class="table__row--info table__row--header">
           <td colspan="2">
             April
           </td>
@@ -127,9 +127,10 @@
 
 <script>
 import TableCompacted from '../TableCompacted.vue';
+import TableCompactedDoc from './table-compacted-complex.md';
 
 export default {
   components: { TableCompacted },
-  readme: { html: true, source: false },
+  readme: { custom: TableCompactedDoc, source: false, html: true },
 };
 </script>

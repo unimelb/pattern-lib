@@ -46,10 +46,9 @@
 </template>
 
 <script>
-import TableResponsive from '../TableResponsive.vue';
+import TableNotResponsiveDoc from './table-not-responsive.md';
 
 export default {
-  components: { TableResponsive },
-  readme: { html: true, source: false },
+  readme: { custom: TableNotResponsiveDoc, source: false, html: true },
 };
 </script>

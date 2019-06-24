@@ -1,7 +1,6 @@
 <template>
   <TableResponsive>
     <table
-      id="statstable"
       class="table table--striped table--hover">
       <thead>
         <tr class="table__row--inverted">
@@ -254,9 +253,10 @@
 
 <script>
 import TableResponsive from '../TableResponsive.vue';
+import TableHoverDoc from './table-hover.md';
 
 export default {
   components: { TableResponsive },
-  readme: { html: true, source: false },
+  readme: { custom: TableHoverDoc, source: false, html: true },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <table-responsive>
+  <TableResponsive>
     <table class="table table--striped">
       <thead>
         <tr class="table__row--inverted">
@@ -44,14 +44,15 @@
         </tr>
       </tbody>
     </table>
-  </table-responsive>
+  </TableResponsive>
 </template>
 
 <script>
 import TableResponsive from '../TableResponsive.vue';
+import TableResponsiveDoc from './table-responsive.md';
 
 export default {
   components: { TableResponsive },
-  readme: { html: true, source: false },
+  readme: { custom: TableResponsiveDoc, source: false, html: true },
 };
 </script>

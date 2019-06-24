@@ -1,7 +1,6 @@
 <template>
   <TableResponsive>
     <table
-      id="statstable"
       class="table table--striped table--tight">
       <thead>
         <tr class="table__row--inverted">
@@ -255,9 +254,10 @@
 
 <script>
 import TableResponsive from '../TableResponsive.vue';
+import TableTightDoc from './table-tight.md';
 
 export default {
   components: { TableResponsive },
-  readme: { html: true, source: false },
+  readme: { custom: TableTightDoc, source: false, html: true },
 };
 </script>

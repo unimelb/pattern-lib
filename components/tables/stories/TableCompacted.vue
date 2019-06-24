@@ -54,9 +54,10 @@
 
 <script>
 import TableCompacted from '../TableCompacted.vue';
+import TableCompactedDoc from './table-compacted.md';
 
 export default {
   components: { TableCompacted },
-  readme: { html: true, source: false },
+  readme: { custom: TableCompactedDoc, source: false, html: true },
 };
 </script>
