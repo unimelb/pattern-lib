@@ -314,4 +314,4 @@ export {
 export {
   default as CompactedTable,
 }
-  from '../../components/tables/ComptactedTable.vue';
+  from '../../components/tables/CompactedTable.vue';
