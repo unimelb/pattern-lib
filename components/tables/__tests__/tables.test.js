@@ -1,17 +1,19 @@
-
-import { shallow, mount } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+  mount,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import ResponsiveTable from '../ResponsiveTable.vue';
 import CompactedTable from '../CompactedTable.vue';
-import FigureWrap from '../../figure/FigureWrap.vue';
-
 import BootstrapCMSTables from '../BootstrapCMSTables';
 
 expect.extend(toHaveNoViolations);
 
 describe('Bootstrap CMS Tables', () => {
   it('should render a responsive table', () => {
-    const template = `<table></table>`;
+    const template = '<table></table>';
 
     document.body.innerHTML = template;
 
@@ -21,7 +23,7 @@ describe('Bootstrap CMS Tables', () => {
   });
 
   it('should not render a responsive table', () => {
-    const template = `<table class="table--is-not-responsive"></table>`;
+    const template = '<table class="table--is-not-responsive"></table>';
 
     document.body.innerHTML = template;
 
@@ -31,7 +33,7 @@ describe('Bootstrap CMS Tables', () => {
   });
 
   it('should render a compacted table', () => {
-    const template = `<table class="table--is-compacted"></table>`;
+    const template = '<table class="table--is-compacted"></table>';
 
     document.body.innerHTML = template;
 
@@ -94,7 +96,7 @@ describe('Compacted Table', () => {
         default: '<table></table>',
       },
     });
-    
+
     expect(wrapper.find('table').exists()).toBe(true);
   });
 
