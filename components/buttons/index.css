@@ -87,11 +87,11 @@
     color: rgb(var(--col-brand));
   }
 
-  &--sml {
+  &--sm {
     padding: calc(var(--vr) / 2) 1.25em;
   }
 
-  &--xsml {
+  &--xs {
     padding: calc(var(--vr) / 3) 1.25em;
   }
 

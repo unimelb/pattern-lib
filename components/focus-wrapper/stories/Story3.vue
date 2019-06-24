@@ -1,21 +1,21 @@
 <template>
-  <SectionWrap small>
+  <SectionWrap sm>
     <FocusWrapper
-      size="small"
+      size="sm"
       padded
       class="bg-white"/>
 
     <br>
 
     <FocusWrapper
-      size="medium"
+      size="md"
       padded
       class="bg-white"/>
 
     <br>
 
     <FocusWrapper
-      size="large"
+      size="lg"
       padded
       class="bg-white"/>
   </SectionWrap>

@@ -1,5 +1,10 @@
-import { shallow, mount } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+  mount,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import VideoEmbed from '../VideoEmbed.vue';
 
 expect.extend(toHaveNoViolations);
@@ -17,7 +22,14 @@ describe('GenericCard', () => {
   it('should have default props and correct types src/ratio/inset/left/right/large/medium/small', () => {
     const wrapper = shallow(VideoEmbed);
     const {
-      src, ratio, inset, left, right, large, medium, small,
+      src,
+      ratio,
+      inset,
+      left,
+      right,
+      large,
+      medium,
+      small,
     } = wrapper.vm.$options.props;
 
     expect(src.type).toBe(String);
@@ -47,7 +59,9 @@ describe('GenericCard', () => {
 
   it('should accept only valid ration', () => {
     const wrapper = shallow(VideoEmbed);
-    const { ratio } = wrapper.vm.$options.props;
+    const {
+      ratio,
+    } = wrapper.vm.$options.props;
 
     expect(ratio.validator && ratio.validator('')).toBe(true);
     expect(ratio.validator && ratio.validator(4)).toBeFalsy();
@@ -113,7 +127,7 @@ describe('GenericCard', () => {
         large: true,
       },
     });
-    expect(wrapper.classes().indexOf('embed--inset--lge')).toBeGreaterThan(0);
+    expect(wrapper.classes().indexOf('embed--inset--lg')).toBeGreaterThan(0);
   });
 
   it('should render medium class', () => {
@@ -122,7 +136,7 @@ describe('GenericCard', () => {
         medium: true,
       },
     });
-    expect(wrapper.classes().indexOf('embed--inset--med')).toBeGreaterThan(0);
+    expect(wrapper.classes().indexOf('embed--inset--md')).toBeGreaterThan(0);
   });
 
   it('should render small class', () => {
@@ -131,6 +145,6 @@ describe('GenericCard', () => {
         small: true,
       },
     });
-    expect(wrapper.classes().indexOf('embed--inset--sml')).toBeGreaterThan(0);
+    expect(wrapper.classes().indexOf('embed--inset--sm')).toBeGreaterThan(0);
   });
 });

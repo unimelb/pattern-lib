@@ -17,7 +17,7 @@
           >
         </a>
       </div>
-      <div class="section__inner section__inner--xsml">
+      <div class="section__inner section__inner--xs">
         <CardPathfinder
           titleonly
           title="Talent for every<br>possible outcome"/>

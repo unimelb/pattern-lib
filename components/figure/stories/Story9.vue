@@ -1,7 +1,7 @@
 <template>
   <main>
     <section-wrap
-      small
+      sm
       short
       bg-color="white">
       <div>
@@ -22,7 +22,7 @@
       </div>
     </section-wrap>
     <section-wrap
-      small
+      sm
       short
       bg-color="white">
       <div>
@@ -41,7 +41,7 @@
       </div>
     </section-wrap>
     <section-wrap
-      small
+      sm
       short
       bg-color="white">
       <div>

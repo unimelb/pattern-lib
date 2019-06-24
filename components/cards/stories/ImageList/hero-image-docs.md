@@ -2,7 +2,7 @@ For the progressive image loader to work with this component, use the custom com
 
 ```html
 <section class="section bg-inverted" style="background-image: url(&quot;https://about-us-unimelb.netlify.com/images/UoM-soft-3.png&quot;);">
-  <div class="section__inner section__inner--sml">
+  <div class="section__inner section__inner--sm">
     <div class="card card--image-focus">
       <h3 class="text-italic heading-section">Postera crescam laude</h3>
       <progressive-background src="https://about-us-unimelb.netlify.com/images/history.jpg" class="card__thumb card__thumb--full" />

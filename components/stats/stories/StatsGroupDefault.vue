@@ -25,7 +25,7 @@ export default {
   components: { StatsGroup, StatsItem },
   data: () => ({ icons }),
   decorator: ContentBlock,
-  decoratorProps: { size: 'sml' },
+  decoratorProps: { size: 'sm' },
   readme: { source: true, html: true },
 };
 </script>

@@ -6,7 +6,7 @@
   background-position: center;
 
   &__inner {
-    max-width: calc(var(--w-mid) + 2 * var(--vr));
+    max-width: calc(var(--w-md) + 2 * var(--vr));
 
     /* account for padding */
     margin-right: auto;
@@ -15,17 +15,17 @@
 
     .layout--left .layout__main &,
     .layout--right .layout__main & {
-      max-width: calc(var(--w-mid) - var(--panel-width));
+      max-width: calc(var(--w-md) - var(--panel-width));
 
       /* account for side nav */
     }
 
-    &--sml {
-      max-width: calc(var(--w-sml) + 2 * var(--vr));
+    &--sm {
+      max-width: calc(var(--w-sm) + 2 * var(--vr));
     }
 
-    &--xsml {
-      max-width: calc(var(--w-xsml) + 2 * var(--vr));
+    &--xs {
+      max-width: calc(var(--w-xs) + 2 * var(--vr));
     }
 
     &--short {

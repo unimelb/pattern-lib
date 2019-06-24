@@ -1,6 +1,6 @@
 .timeline {
   position: relative;
-  max-width: var(--w-mid);
+  max-width: var(--w-md);
   margin: 0 auto;
   padding-bottom: 0;
   font-size: 1em;

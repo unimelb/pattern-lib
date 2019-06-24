@@ -17,11 +17,12 @@
           >
         </a>
       </div>
-      <div class="page-header--baseline max max--xsml shim-pb2">
+      <div class="page-header--baseline max max--xs shim-pb2">
         <a
           class="btn btn--center btn--cta"
           href>
-          <span class="push-icon">Call to action
+          <span class="push-icon">
+            Call to action
             <svg
               width="15px"
               height="15px"

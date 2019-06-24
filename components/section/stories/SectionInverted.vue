@@ -1,6 +1,6 @@
 <template>
   <section class="section section--centred bg-inverted">
-    <div class="section__inner section__inner--sml">
+    <div class="section__inner section__inner--sm">
       <div>
         <slot/>
       </div>

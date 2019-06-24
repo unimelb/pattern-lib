@@ -14,6 +14,6 @@ export default {
   components: { BlockQuotation },
   readme: { source: true, html: true },
   decorator: ContentBlock,
-  decoratorProps: { size: 'sml', bg: 'inverted' },
+  decoratorProps: { size: 'sm', bg: 'inverted' },
 };
 </script>

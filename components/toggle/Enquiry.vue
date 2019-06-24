@@ -2,7 +2,7 @@
   <ToggleBlock class="enquiry">
     <template slot="default">
       <slot name="trigger">
-        <span class="btn btn--cta btn--sml">{{ title }}</span>
+        <span class="btn btn--cta btn--sm">{{ title }}</span>
       </slot>
     </template>
     <template slot="hidden">

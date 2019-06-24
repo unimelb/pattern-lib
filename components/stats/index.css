@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: var(--w-sml);
+    max-width: var(--w-sm);
     margin-right: auto;
     margin-bottom: calc(0 - var(--vr) / 4);
 

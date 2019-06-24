@@ -36,7 +36,7 @@ export default {
   name: 'Testimonials',
   components: { BlockQuotation, FocusWrapper },
   decorator: ContentBlock,
-  decoratorProps: { size: 'sml' },
+  decoratorProps: { size: 'sm' },
   props: {
     thumb: {
       type: String,

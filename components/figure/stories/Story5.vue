@@ -1,6 +1,6 @@
 <template>
   <section-wrap
-    small
+    sm
     bg-color="white">
     <div>
       <h2>Heading</h2>

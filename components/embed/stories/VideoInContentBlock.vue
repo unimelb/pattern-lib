@@ -9,7 +9,7 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 export default {
   components: { VideoEmbed },
   decorator: ContentBlock,
-  decoratorProps: { bg: 'inverted', size: 'sml' },
+  decoratorProps: { bg: 'inverted', size: 'sm' },
   readme: { decorated: true, source: true, html: true },
 };
 </script>

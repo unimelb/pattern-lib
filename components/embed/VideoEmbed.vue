@@ -1,13 +1,11 @@
 <template>
-  <div
-    :class="classes">
+  <div :class="classes">
     <iframe
       :src="src"
       width="560"
       height="315"
       frameborder="0"
-      allowfullscreen
-    />
+      allowfullscreen/>
   </div>
 </template>
 
@@ -57,9 +55,9 @@ export default {
         'embed--inset': this.inset,
         'embed--inset-left': this.left,
         'embed--inset-right': this.right,
-        'embed--inset--lge': this.large,
-        'embed--inset--med': this.medium,
-        'embed--inset--sml': this.small,
+        'embed--inset--lg': this.large,
+        'embed--inset--md': this.medium,
+        'embed--inset--sm': this.small,
       };
     },
   },

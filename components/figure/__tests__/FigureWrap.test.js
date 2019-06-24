@@ -1,5 +1,10 @@
-import { shallow, mount } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+  mount,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import FigureWrap from '../FigureWrap.vue';
 
 expect.extend(toHaveNoViolations);
@@ -17,7 +22,14 @@ describe('GenericCard', () => {
   it('should have default props and correct types caption/inset/left/right/large/medium/small/fill', () => {
     const wrapper = shallow(FigureWrap);
     const {
-      caption, inset, left, right, large, medium, small, fill,
+      caption,
+      inset,
+      left,
+      right,
+      large,
+      medium,
+      small,
+      fill,
     } = wrapper.vm.$options.props;
 
     expect(caption.type).toEqual([Boolean, String]);
@@ -105,7 +117,7 @@ describe('GenericCard', () => {
         large: true,
       },
     });
-    expect(wrapper.classes().indexOf('figure--lge')).toBeGreaterThan(0);
+    expect(wrapper.classes().indexOf('figure--lg')).toBeGreaterThan(0);
   });
 
   it('should render medium class', () => {
@@ -114,7 +126,7 @@ describe('GenericCard', () => {
         medium: true,
       },
     });
-    expect(wrapper.classes().indexOf('figure--med')).toBeGreaterThan(0);
+    expect(wrapper.classes().indexOf('figure--md')).toBeGreaterThan(0);
   });
 
   it('should render small class', () => {
@@ -123,7 +135,7 @@ describe('GenericCard', () => {
         small: true,
       },
     });
-    expect(wrapper.classes().indexOf('figure--sml')).toBeGreaterThan(0);
+    expect(wrapper.classes().indexOf('figure--sm')).toBeGreaterThan(0);
   });
 
   it('should render fill class', () => {

@@ -1,5 +1,5 @@
 <template>
-  <SectionWrap small>
+  <SectionWrap sm>
     <FocusWrapper>
       <div class="placeholder"/>
     </FocusWrapper>

@@ -58,7 +58,7 @@
         margin-left: auto;
         float: right;
 
-        .figure--inset-lge & {
+        .figure--inset-lg & {
           margin-right: -10rem;
         }
 
@@ -76,7 +76,7 @@
         margin-left: -5rem;
         float: left;
 
-        .figure--inset-lge & {
+        .figure--inset-lg & {
           margin-left: -10rem;
         }
 
@@ -92,19 +92,19 @@
     }
   }
 
-  &--lge {
+  &--lg {
     @media (--bp-desktop) {
       width: 75%;
     }
   }
 
-  &--med {
+  &--md {
     @media (--bp-desktop) {
       width: 50%;
     }
   }
 
-  &--sml {
+  &--sm {
     @media (--bp-desktop) {
       width: 35%;
     }

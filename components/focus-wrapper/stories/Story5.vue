@@ -1,5 +1,5 @@
 <template>
-  <SectionWrap small>
+  <SectionWrap sm>
     <FocusWrapper
       semi-opaque
       padded

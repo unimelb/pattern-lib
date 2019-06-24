@@ -1,7 +1,7 @@
 <template>
   <main>
     <section-wrap
-      small
+      sm
       nopad
       bg-color="white">
       <div>
@@ -21,7 +21,7 @@
       </div>
     </section-wrap>
     <section-wrap
-      small
+      sm
       nopad
       bg-color="white">
       <div>
@@ -39,7 +39,7 @@
       </div>
     </section-wrap>
     <section-wrap
-      small
+      sm
       nopad
       bg-color="white">
       <div>

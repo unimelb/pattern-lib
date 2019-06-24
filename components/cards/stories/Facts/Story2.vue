@@ -15,14 +15,14 @@
         title="Building"/></ListItem>
       <ListItem><CardFact
         :icon="carbonIcon"
-        sml-header
+        sm-header
         title="Carbon Reduction Pathways"
-        meta="the header has card__header--sml class" /></ListItem>
+        meta="the header has card__header--sm class" /></ListItem>
       <ListItem><CardFact
         :icon="citationIcon"
-        sml-header
+        sm-header
         title="Citation"
-        meta="the header has card__header--sml class" /></ListItem>
+        meta="the header has card__header--sm class" /></ListItem>
       <ListItem><CardFact
         :icon="facilityIcon"
         title="Facility Funding" /></ListItem>
@@ -31,14 +31,14 @@
         title="Grants" /></ListItem>
       <ListItem><CardFact
         :icon="groupIcon"
-        sml-header
+        sm-header
         title="Group"
-        meta="the header has card__header--sml class" /></ListItem>
+        meta="the header has card__header--sm class" /></ListItem>
       <ListItem><CardFact
         :icon="internationalIcon"
-        sml-header
+        sm-header
         title="International Students"
-        meta="the header has card__header--sml class" /></ListItem>
+        meta="the header has card__header--sm class" /></ListItem>
       <ListItem><CardFact
         :icon="medalIcon"
         title="Medal" /></ListItem>
@@ -47,14 +47,14 @@
         title="PhD Completions" /></ListItem>
       <ListItem><CardFact
         :icon="socialMediaIcon"
-        sml-header
+        sm-header
         title="Social Media"
-        meta="the header has card__header--sml class" /></ListItem>
+        meta="the header has card__header--sm class" /></ListItem>
       <ListItem><CardFact
         :icon="solarPowerIcon"
-        sml-header
+        sm-header
         title="Solar Power"
-        meta="the header has card__header--sml class" /></ListItem>
+        meta="the header has card__header--sm class" /></ListItem>
     </div>
   </SectionWrap>
 </template>

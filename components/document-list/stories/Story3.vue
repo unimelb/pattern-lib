@@ -1,5 +1,5 @@
 <template>
-  <section-wrap small>
+  <section-wrap sm>
     <ul class="grid grid--2col document-list document-list--thumbs">
       <li class="cell">
         <a href="annualreport.pdf">

@@ -1,5 +1,5 @@
 <template>
-  <ContentBlock size="sml">
+  <ContentBlock size="sm">
     <h2>Example Title</h2>
     <p
       class="lead"

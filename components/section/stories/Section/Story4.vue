@@ -1,6 +1,6 @@
 <template>
   <SectionWrap
-    small
+    sm
     bg-color="white">
     <h2>Section Heading</h2>
     <p>
@@ -8,7 +8,7 @@
       <a href>consectetur adipisicing</a> elit. Adipisci fugiat odio cupiditate ad nisi exercitationem incidunt reprehenderit nemo repellendus ea, eveniet, nostrum sunt earum similique quaerat maxime, iure recusandae inventore.
     </p>
     <div>
-      <ButtonIcon size="sml">Button Example</ButtonIcon>
+      <ButtonIcon size="sm">Button Example</ButtonIcon>
     </div>
   </SectionWrap>
 </template>

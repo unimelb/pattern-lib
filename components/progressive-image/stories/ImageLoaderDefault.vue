@@ -11,7 +11,7 @@ import progressiveImgDocs from './progressive-img-docs.md';
 
 export default {
   decorator: ContentBlock,
-  decoratorProps: { size: 'sml' },
+  decoratorProps: { size: 'sm' },
   readme: {
     custom: progressiveImgDocs,
     html: true,

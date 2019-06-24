@@ -9,8 +9,8 @@
   >
     <div
       :class="{
-        'section__inner--sml': small,
-        'section__inner--mid': mid,
+        'section__inner--sm': sm,
+        'section__inner--md': md,
         'section__inner--short': short,
         'section__inner--nopad': nopad
       }"
@@ -36,11 +36,11 @@ export default {
       type: Boolean,
       default: false,
     },
-    small: {
+    sm: {
       type: Boolean,
       default: false,
     },
-    mid: {
+    md: {
       type: Boolean,
       default: false,
     },

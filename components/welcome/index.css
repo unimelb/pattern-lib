@@ -8,7 +8,7 @@
     margin-right: auto;
     margin-left: 0;
 
-    .section__inner--sml & {
+    .section__inner--sm & {
       margin-top: calc(var(--vr) * 3);
     }
 
@@ -16,7 +16,7 @@
       width: 50%;
       padding-right: var(--vr);
 
-      .section__inner--sml & {
+      .section__inner--sm & {
         margin-top: 0;
       }
     }
@@ -25,7 +25,7 @@
       width: 66.66%;
       padding-right: calc(var(--vr) * 2);
 
-      .section__inner--sml & {
+      .section__inner--sm & {
         width: calc(50% - (var(--vr) * 2));
         padding-right: var(--vr);
       }
@@ -110,7 +110,7 @@
     @media (--bp-x-desktop) {
       width: calc(33.3% - (var(--vr) * 2));
 
-      .section__inner--sml & {
+      .section__inner--sm & {
         width: calc(50% - (var(--vr) * 2));
         margin-right: var(--vr);
         margin-left: var(--vr);

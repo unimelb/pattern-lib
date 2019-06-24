@@ -9,7 +9,7 @@
     font-size: 2.6rem;
     font-weight: bold;
 
-    &--sml {
+    &--sm {
       font-size: 1.7rem;
     }
   }

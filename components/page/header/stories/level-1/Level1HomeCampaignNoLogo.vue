@@ -5,15 +5,17 @@
   >
     <header class="page-header page-header--l1 page-header--no-logo">
       <div class="page-header--center">
-        <div class="max max--xsml text-center shim-pb2">
-          <h1 class="shim-mb1">Talent for every
+        <div class="max max--xs text-center shim-pb2">
+          <h1 class="shim-mb1">
+            Talent for every
             <br>possible outcome
           </h1>
           <h3 class="shim-mb2">Further details about this amazing campaign.</h3>
           <a
             class="btn btn--inverted"
             href>
-            <span class="push-icon">Call to action
+            <span class="push-icon">
+              Call to action
               <svg
                 width="15px"
                 height="15px"

@@ -1,6 +1,6 @@
 <template>
   <section-wrap
-    small
+    sm
     class="bg-white">
     <welcome
       name="Professor Glynn Davis"

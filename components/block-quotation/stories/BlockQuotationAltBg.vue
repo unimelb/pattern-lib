@@ -10,6 +10,6 @@ export default {
   components: { BlockQuotation },
   readme: { source: true, html: true },
   decorator: ContentBlock,
-  decoratorProps: { size: 'sml', bg: 'alt' },
+  decoratorProps: { size: 'sm', bg: 'alt' },
 };
 </script>

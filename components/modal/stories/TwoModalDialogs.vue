@@ -35,7 +35,7 @@
       title="Another modal dialog"
       trigger="Another modal dialog">
       <p>This one just has straight content, no forms to be had.</p>
-      <ButtonIcon size="xsml">But it does have a child component</ButtonIcon>
+      <ButtonIcon size="xs">But it does have a child component</ButtonIcon>
       <p class="shim-pt1">So there is that.</p>
     </ModalDialog>
   </div>

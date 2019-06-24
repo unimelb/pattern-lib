@@ -3,7 +3,7 @@
   <div>
     <CardFact
       title="With Small Header"
-      sml-header />
+      sm-header />
     <CardFact title="Without small header" />
   </div>
 </template>

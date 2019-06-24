@@ -1,6 +1,6 @@
 <template>
   <section-wrap
-    small
+    sm
     short
     bg-color="white">
     <div>

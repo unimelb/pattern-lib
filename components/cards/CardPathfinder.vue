@@ -63,7 +63,7 @@ export default {
     classes() {
       return {
         'btn-owner card card--focus-box bg-inverted card--pathfinder': true,
-        'card--pathfinder--sml': this.compact || this.titleonly,
+        'card--pathfinder--sm': this.compact || this.titleonly,
       };
     },
   },

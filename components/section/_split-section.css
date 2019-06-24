@@ -90,7 +90,7 @@
     }
 
     &__inner {
-      max-width: calc(var(--w-mid) / 2 + var(--vr)); /* account for either left or right padding */
+      max-width: calc(var(--w-md) / 2 + var(--vr)); /* account for either left or right padding */
       padding-top: calc(4 * var(--vr));
       padding-bottom: calc(4 * var(--vr));
     }

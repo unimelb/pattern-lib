@@ -118,7 +118,7 @@
           width: 30%;
           float: right;
 
-          .section__inner--sml & {
+          .section__inner--sm & {
             width: 40%;
             height: 300px;
 

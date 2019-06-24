@@ -80,7 +80,7 @@
  */
 
 .max {
-  max-width: calc(var(--w-mid) + 2 * var(--vr));
+  max-width: calc(var(--w-md) + 2 * var(--vr));
 
   /* account for padding */
   margin-right: auto;
@@ -88,20 +88,20 @@
   padding-right: var(--vr);
   padding-left: var(--vr);
 
-  &--xxsml {
-    max-width: calc(var(--w-xxsml) + 2 * var(--vr));
+  &--xxs {
+    max-width: calc(var(--w-xxs) + 2 * var(--vr));
   }
 
-  &--xsml {
-    max-width: calc(var(--w-xsml) + 2 * var(--vr));
+  &--xs {
+    max-width: calc(var(--w-xs) + 2 * var(--vr));
   }
 
-  &--sml {
-    max-width: calc(var(--w-sml) + 2 * var(--vr));
+  &--sm {
+    max-width: calc(var(--w-sm) + 2 * var(--vr));
   }
 
-  &--lge {
-    max-width: calc(var(--w-lge) + 2 * var(--vr));
+  &--lg {
+    max-width: calc(var(--w-lg) + 2 * var(--vr));
   }
 }
 

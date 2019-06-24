@@ -19,7 +19,7 @@ import ContentBlock from '../../content-block/ContentBlock.vue';
 export default {
   components: { CheckList },
   decorator: ContentBlock,
-  decoratorProps: { size: 'sml' },
+  decoratorProps: { size: 'sm' },
   readme: { html: true, source: false },
 };
 </script>

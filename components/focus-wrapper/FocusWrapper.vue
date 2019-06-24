@@ -21,7 +21,6 @@
     >
       <path d="m112 0-32 32v48h-48l-32 32h112v-112z"/>
     </SvgIcon>
-
   </div>
 </template>
 
@@ -37,7 +36,17 @@ export default {
     color: {
       type: String,
       default: '',
-      validator: color => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].indexOf(color) > -1,
+      validator: color => [
+        '',
+        'navy',
+        'teal',
+        'yellow',
+        'emerald',
+        'orange',
+        'green',
+        'purple',
+        'pink',
+      ].indexOf(color) > -1,
     },
     semiOpaque: {
       type: Boolean,
@@ -45,8 +54,8 @@ export default {
     },
     size: {
       type: String,
-      default: 'medium',
-      validator: size => ['small', 'medium', 'large'].indexOf(size) > -1,
+      default: 'md',
+      validator: size => ['sm', 'md', 'lg'].indexOf(size) > -1,
     },
     padded: {
       type: Boolean,
@@ -56,9 +65,9 @@ export default {
   computed: {
     normalizeSize() {
       const sizes = {
-        small: 48,
-        medium: 72,
-        large: 96,
+        sm: 48,
+        md: 72,
+        lg: 96,
       };
       return sizes[this.size] || sizes.medium;
     },

@@ -49,9 +49,9 @@ export default {
         'figure--inset': this.inset,
         'figure--inset-left': this.left,
         'figure--inset-right': this.right,
-        'figure--lge': this.large,
-        'figure--med': this.medium,
-        'figure--sml': this.small,
+        'figure--lg': this.large,
+        'figure--md': this.medium,
+        'figure--sm': this.small,
         'figure--fill': this.fill,
       };
     },
