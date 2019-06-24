@@ -35,10 +35,10 @@
   }
 
   &--left {
-    padding-left: calc((100% - var(--w-mid)) / 2);
+    padding-left: calc((100% - var(--w-md)) / 2);
 
     @media (--bp-xx-wide) {
-      padding-left: calc(((100% - var(--w-mid)) / 2) - calc(var(--panel-width) / 2));
+      padding-left: calc(((100% - var(--w-md)) / 2) - calc(var(--panel-width) / 2));
     }
   }
 

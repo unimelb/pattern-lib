@@ -6,22 +6,29 @@
 
   /* remove default bottom margin of last child (typically `p`), and */
   /* compensate for difference in font-size with first child (typically `h2`) */
-  & > *:last-child {
-    margin-bottom: calc(var(--hlsp) * (1.75rem - 1rem)); /* half line spacing * (font-size of `h2` - font-size of `p) */
+  &>*:last-child {
+    margin-bottom: calc(var(--hlsp) * (1.75rem - 1rem));
+    /* half line spacing * (font-size of `h2` - font-size of `p) */
   }
 
-  & > * {
-    max-width: var(--w-mid);
+  &>* {
+    max-width: var(--w-md);
     margin-right: auto;
     margin-left: auto;
 
     .layout--right .layout__main & {
-      max-width: calc((var(--w-mid) - (var(--vr) * 2) ) - var(--panel-width)); /* account for side nav */
+      max-width: calc((var(--w-md) - (var(--vr) * 2)) - var(--panel-width));
+      /* account for side nav */
     }
   }
 
-  &--sml > * { max-width: var(--w-sml); }
-  &--lge > * { max-width: var(--w-lge); }
+  &--sml>* {
+    max-width: var(--w-sm);
+  }
+
+  &--lge>* {
+    max-width: var(--w-lg);
+  }
 
   &--short {
     padding-top: var(--vr);
