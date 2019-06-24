@@ -49,7 +49,7 @@ describe('Compacted Table', () => {
 
   it('should render a compacted table', () => {
     const template = `<div>
-      <table class="table--compacted"></table>
+      <table class="table--is-compacted"></table>
     </div>`;
 
     document.body.innerHTML = template;
