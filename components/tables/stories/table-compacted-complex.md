@@ -21,7 +21,7 @@ By default the first column becomes the header when viewing the table on mobile 
 ### Becomes
 
 ```
-<table-compacted>
+<compacted-table>
   <table>
     <thead>...</thead>
     <tbody>
@@ -31,19 +31,19 @@ By default the first column becomes the header when viewing the table on mobile 
       ...
     </tbody>
   </table>
-</table-compacted>
+</compacted-table>
 ```
 
 ## (SPA) Vue Example
 
-Manually wrap the `<table>` using `<TableCompacted>` component.
+Manually wrap the `<table>` using `<CompactedTable>`.
 
 ### Example:
 
 ```
-<TableCompacted>
+<CompactedTable>
   <table>
   ...
   </table>
-</TableCompacted>
+</CompactedTable>
 ```

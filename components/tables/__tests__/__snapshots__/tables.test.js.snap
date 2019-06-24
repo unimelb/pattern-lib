@@ -2,16 +2,16 @@
 
 exports[`Compacted Table should match snapshot 1`] = `
 <div
-  class="table-compacted table-compacted--headings"
+  class="compacted-table compacted-table--headings"
 />
 `;
 
 exports[`Responsive Table should match snapshot 1`] = `
 <div
-  class="table-responsive"
+  class="responsive-table"
 >
   <div
-    class="table-responsive__inner"
+    class="responsive-table__inner"
   />
 </div>
 `;

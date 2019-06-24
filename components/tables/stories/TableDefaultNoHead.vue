@@ -1,5 +1,5 @@
 <template>
-  <table-responsive>
+  <ResponsiveTable>
     <table class="table table--striped">
       <tbody>
         <tr>
@@ -38,14 +38,14 @@
         </tr>
       </tbody>
     </table>
-  </table-responsive>
+  </ResponsiveTable>
 </template>
 
 <script>
-import TableResponsive from '../TableResponsive.vue';
+import ResponsiveTable from '../ResponsiveTable.vue';
 
 export default {
-  components: { TableResponsive },
+  components: { ResponsiveTable },
   readme: { html: true, source: false },
 };
 </script>

@@ -1,8 +1,8 @@
 
 import { shallow } from 'vue-test-utils';
 import { toHaveNoViolations } from 'jest-axe';
-import TableResponsive from '../TableResponsive.vue';
-import TableCompacted from '../TableCompacted.vue';
+import ResponsiveTable from '../ResponsiveTable.vue';
+import CompactedTable from '../CompactedTable.vue';
 
 import BootstrapCMSTables from '../BootstrapCMSTables';
 
@@ -10,7 +10,7 @@ expect.extend(toHaveNoViolations);
 
 describe('Responsive Table', () => {
   it('should match snapshot', () => {
-    const result = shallow(TableResponsive).element;
+    const result = shallow(ResponsiveTable).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -23,7 +23,7 @@ describe('Responsive Table', () => {
 
     BootstrapCMSTables();
 
-    expect(document.querySelectorAll('table-responsive')).toHaveLength(1);
+    expect(document.querySelectorAll('responsive-table')).toHaveLength(1);
   });
 
   it('should render not a responsive table', () => {
@@ -35,7 +35,7 @@ describe('Responsive Table', () => {
 
     BootstrapCMSTables();
 
-    expect(document.querySelectorAll('table-responsive')).toHaveLength(0);
+    expect(document.querySelectorAll('responsive-table')).toHaveLength(0);
   });
 
   // test data-label
@@ -43,7 +43,7 @@ describe('Responsive Table', () => {
 
 describe('Compacted Table', () => {
   it('should match snapshot', () => {
-    const result = shallow(TableCompacted).element;
+    const result = shallow(CompactedTable).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -56,6 +56,6 @@ describe('Compacted Table', () => {
 
     BootstrapCMSTables();
 
-    expect(document.querySelectorAll('table-compacted')).toHaveLength(1);
+    expect(document.querySelectorAll('compacted-table')).toHaveLength(1);
   });
 });

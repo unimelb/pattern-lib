@@ -1,5 +1,5 @@
 <template>
-  <TableCompacted>
+  <CompactedTable>
     <table class="table table--striped">
       <thead>
         <tr class="table__row--inverted">
@@ -122,15 +122,15 @@
         </tr>
       </tbody>
     </table>
-  </TableCompacted>
+  </CompactedTable>
 </template>
 
 <script>
-import TableCompacted from '../TableCompacted.vue';
+import CompactedTable from '../CompactedTable.vue';
 import TableCompactedDoc from './table-compacted-complex.md';
 
 export default {
-  components: { TableCompacted },
+  components: { CompactedTable },
   readme: { custom: TableCompactedDoc, source: false, html: true },
 };
 </script>

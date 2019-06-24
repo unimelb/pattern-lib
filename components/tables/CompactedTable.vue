@@ -2,7 +2,7 @@
   <div
     ref="table"
     :class="classes"
-    class="table-compacted">
+    class="compacted-table">
     <slot />
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
   computed: {
     classes() {
       return [{
-        'table-compacted--headings': !this.hasInfoHeadings,
+        'compacted-table--headings': !this.hasInfoHeadings,
       }];
     },
   },

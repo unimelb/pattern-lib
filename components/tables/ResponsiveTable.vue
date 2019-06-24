@@ -2,9 +2,9 @@
   <div
     ref="table"
     :class="classes"
-    class="table-responsive">
+    class="responsive-table">
     <div
-      class="table-responsive__inner"
+      class="responsive-table__inner"
       @scroll="handleScroll">
       <slot />
     </div>
@@ -23,8 +23,8 @@ export default {
   computed: {
     classes() {
       return {
-        'table-responsive--start': !this.isAtStartOfTable,
-        'table-responsive--end': !this.isAtEndOfTable && this.isTableWiderThanWindow,
+        'responsive-table--start': !this.isAtStartOfTable,
+        'responsive-table--end': !this.isAtEndOfTable && this.isTableWiderThanWindow,
       };
     },
   },

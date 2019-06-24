@@ -1,9 +1,9 @@
-.table-compacted {
+.compacted-table {
   display: block;
   width: 100%;
   overflow-x: auto;
 
-  &:not(.table-compacted--headings) {
+  &:not(.compacted-table--headings) {
     tbody {
       tr {
         &::before {

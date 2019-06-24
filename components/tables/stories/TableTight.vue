@@ -1,5 +1,5 @@
 <template>
-  <TableResponsive>
+  <ResponsiveTable>
     <table
       class="table table--striped table--tight">
       <thead>
@@ -248,16 +248,16 @@
         </tr>
       </tbody>
     </table>
-  </TableResponsive>
+  </ResponsiveTable>
 </template>
 
 
 <script>
-import TableResponsive from '../TableResponsive.vue';
+import ResponsiveTable from '../ResponsiveTable.vue';
 import TableTightDoc from './table-tight.md';
 
 export default {
-  components: { TableResponsive },
+  components: { ResponsiveTable },
   readme: { custom: TableTightDoc, source: false, html: true },
 };
 </script>

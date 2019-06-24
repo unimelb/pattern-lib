@@ -306,3 +306,12 @@ export {
   default as PageHeaderCampaign,
 }
   from '../../components/campaign/PageHeaderCampaign.vue';
+
+export {
+  default as ResponsiveTable,
+}
+  from '../../components/tables/ResponsiveTable.vue';
+export {
+  default as CompactedTable,
+}
+  from '../../components/tables/ComptactedTable.vue';

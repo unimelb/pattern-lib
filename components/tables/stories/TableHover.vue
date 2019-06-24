@@ -1,5 +1,5 @@
 <template>
-  <TableResponsive>
+  <ResponsiveTable>
     <table
       class="table table--striped table--hover">
       <thead>
@@ -248,15 +248,15 @@
         </tr>
       </tbody>
     </table>
-  </TableResponsive>
+  </ResponsiveTable>
 </template>
 
 <script>
-import TableResponsive from '../TableResponsive.vue';
+import ResponsiveTable from '../ResponsiveTable.vue';
 import TableHoverDoc from './table-hover.md';
 
 export default {
-  components: { TableResponsive },
+  components: { ResponsiveTable },
   readme: { custom: TableHoverDoc, source: false, html: true },
 };
 </script>

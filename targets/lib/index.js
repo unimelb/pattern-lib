@@ -77,8 +77,8 @@ import Heading6 from '../../components/typography/headings/Heading6.vue';
 import SocialMediaBar from '../../components/page/social-media-bar/SocialMediaBar.vue';
 import Testimonials from '../../components/testimonials/Testimonials.vue';
 import InfoPanel from '../../components/info-panel/InfoPanel.vue';
-import TableCompacted from '../../components/tables/TableCompacted.vue';
-import TableResponsive from '../../components/tables/TableResponsive.vue';
+import CompactedTable from '../../components/tables/CompactedTable.vue';
+import ResponsiveTable from '../../components/tables/ResponsiveTable.vue';
 import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 
 import '../../components';
@@ -160,8 +160,8 @@ Vue.component('social-media-bar', SocialMediaBar);
 Vue.component('alumni-profiles', AlumniProfiles);
 Vue.component('testimonials', Testimonials);
 Vue.component('info-panel', InfoPanel);
-Vue.component('table-compacted', TableCompacted);
-Vue.component('table-responsive', TableResponsive);
+Vue.component('compacted-table', CompactedTable);
+Vue.component('responsive-table', ResponsiveTable);
 Vue.component('page-header-campaign', PageHeaderCampaign);
 
 // Create Vue instance

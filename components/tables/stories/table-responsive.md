@@ -13,23 +13,23 @@ By default all tables are transformed into responsive tables at runtime.  Please
 ### Becomes
 
 ```
-<table-responsive>
+<responsive-table>
   <table>
   ...
   </table>
-</table-responsive>
+</responsive-table>
 ```
 
 ## (SPA) Vue Example
 
-Manually wrap the `<table>` using `<TableResponsive>` component.
+Manually wrap the `<table>` using `<ResponsiveTable>` component.
 
 ### Example:
 
 ```
-<TableResponsive>
+<ResponsiveTable>
   <table>
   ...
   </table>
-</TableResponsive>
+</ResponsiveTable>
 ```

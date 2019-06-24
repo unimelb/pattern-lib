@@ -34,9 +34,9 @@ const BootstrapCMSTables = () => {
     }
 
     if (isACompactedTable) {
-      wrapper = createElement('table-compacted');
+      wrapper = createElement('compacted-table');
     } else {
-      wrapper = createElement('table-responsive');
+      wrapper = createElement('responsive-table');
     }
 
     el.parentNode.insertBefore(wrapper, el);

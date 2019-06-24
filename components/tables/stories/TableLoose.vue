@@ -1,5 +1,5 @@
 <template>
-  <TableResponsive>
+  <ResponsiveTable>
     <table
       class="table table--striped table--loose">
       <thead>
@@ -248,15 +248,15 @@
         </tr>
       </tbody>
     </table>
-  </TableResponsive>
+  </ResponsiveTable>
 </template>
 
 <script>
-import TableResponsive from '../TableResponsive.vue';
+import ResponsiveTable from '../ResponsiveTable.vue';
 import TableLooseDoc from './table-loose.md';
 
 export default {
-  components: { TableResponsive },
+  components: { ResponsiveTable },
   readme: { custom: TableLooseDoc, source: false, html: true },
 };
 </script>
