@@ -1,16 +1,19 @@
 <template>
   <div>
-    <section-wrap>
+    <section-wrap bg-color="white">
       <input-filter
-        v-if="dataToInput.length > 0"
-        :data="dataToInput"
+        v-if="inputData.length > 0"
+        :data="inputData"
         @event-data-input="resultFromInput"
       />
       <checkbox-filter
-        v-if="dataForCheckbox.length > 0"
-        :data="dataForCheckbox"/>
+        v-if="checkboxData.length > 0"
+        :data="checkboxData"
+        @event-data-checkbox="resultFromCheckbox"
+      />
+      <button @click="resetButton">Clear All button</button>
     </section-wrap>
-    <filter-results :data="dataFromInput"/>
+    <filter-results :data="dataToFilterResults"/>
   </div>
 </template>
 
@@ -34,27 +37,33 @@ export default {
   data() {
     return {
       dataFromInput: [],
+      dataFromCheckbox: [],
+      inputData: [],
+      checkboxData: [],
     };
   },
   computed: {
-    dataToInput() {
-      return [
-        {
-          value: 'Arts',
-        },
-        {
-          value: 'Science',
-        },
-      ];
+    dataToFilterResults() {
+      return this.dataFromInput;
     },
-    dataForCheckbox() {
-      return '';
-    },
+  },
+  beforeMount() {
+    this.data.forEach((element) => {
+      if (element.type === 'input') {
+        this.inputData.push(element);
+      } else if (element.type === 'checkbox') {
+        this.checkboxData.push(element);
+      }
+    });
   },
   methods: {
     resultFromInput(dataFromInput) {
       this.dataFromInput = dataFromInput;
     },
+    resultFromCheckbox(dataFromCheckbox) {
+      this.dataFromCheckbox = dataFromCheckbox;
+    },
+    resetButton() {},
   },
 };
 </script>

@@ -5,12 +5,13 @@
       v-for="(item, index) in data"
       :key="index">
       <input
-        :value="item"
-        v-model="query"
+        :value="item.value"
+        v-model="userInputData"
         type="checkbox"
         class="checkbox-filter__box"
-        @change="emitEvent">
-      <label class="checkbox-filter__label">{{ item }}</label>
+        @change="emitEvent"
+      >
+      <label class="checkbox-filter__label">{{ item.value }}</label>
     </div>
   </div>
 </template>
@@ -30,15 +31,13 @@ export default {
 
   data() {
     return {
-      query: [],
+      userInputData: [],
     };
   },
 
   computed: {
     filteredData() {
-      return this.data.filter(
-        data => data.match(new RegExp(this.query, 'i'))
-      );
+      return this.data.filter(data => data.value.match(new RegExp(this.userInputData, 'i')));
     },
   },
   mounted() {
