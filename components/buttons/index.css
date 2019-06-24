@@ -152,51 +152,52 @@
 
     &--chevron-right {
       &::after {
-        background-image: url('~icons/chevron-right.svg?fill=#074482');
+        background-image: url('~icons/chevron-right.svg');
       }
 
       &-inverted::after {
-        background-image: url('~icons/chevron-right.svg?fill=#fff');
+        background-image: url('~icons/chevron-right.svg');
+        fill: pink;
       }
     }
 
     &--chevron-left {
       &::after {
-        background-image: url('~icons/chevron-left.svg?fill=#074482');
+        background-image: url('~icons/chevron-left.svg');
       }
 
       &-inverted::after {
-        background-image: url('~icons/chevron-left.svg?fill=#fff');
+        background-image: url('~icons/chevron-left.svg');
       }
     }
 
     &--download {
       &::after {
-        background-image: url('~icons/download.svg?fill=#074482');
+        background-image: url('~icons/download.svg');
       }
 
       &-inverted::after {
-        background-image: url('~icons/download.svg?fill=#fff');
+        background-image: url('~icons/download.svg');
       }
     }
 
     &--search {
       &::after {
-        background-image: url('~icons/search.svg?fill=#074482');
+        background-image: url('~icons/search.svg');
       }
 
       &-inverted::after {
-        background-image: url('~icons/search.svg?fill=#fff');
+        background-image: url('~icons/search.svg');
       }
     }
 
     &--twitter {
       &::after {
-        background-image: url('~icons/twitter.svg?fill=#074482');
+        background-image: url('~icons/twitter.svg');
       }
 
       &-inverted::after {
-        background-image: url('~icons/twitter.svg?fill=#fff');
+        background-image: url('~icons/twitter.svg');
       }
     }
   }

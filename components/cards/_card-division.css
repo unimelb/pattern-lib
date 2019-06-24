@@ -66,13 +66,13 @@
       &::before {
         top: 0;
         left: 0;
-        background-image: url('~icons/focus-top-left.svg?fill=#074482');
+        background-image: url('~icons/focus-top-left.svg');
       }
 
       &::after {
         right: 0;
         bottom: 0;
-        background-image: url('~icons/focus-bottom-right.svg?fill=#074482');
+        background-image: url('~icons/focus-bottom-right.svg');
       }
     }
 

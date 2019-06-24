@@ -13,6 +13,20 @@
 .bg-inverted {
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-background-primary-white));
+
+  a[target='_blank'] {
+    &:not(.link-icon--disable) {
+      &::after {
+        content: '';
+        display: inline-block;
+        width: .875em;
+        height: .875em;
+        margin-left: .25em;
+        vertical-align: -.1em;
+        background-image: url('~icons/external.svg?fill=#fff');
+      }
+    }
+  }
 }
 
 .bg-inverted-dark {
@@ -176,8 +190,8 @@ a[target='_blank'] {
       width: .875em;
       height: .875em;
       margin-left: .25em;
-      background-image: url('~icons/external.svg?fill=#09707E');
       vertical-align: -.1em;
+      background-image: url('~icons/external.svg?fill=#074482');
     }
   }
 }

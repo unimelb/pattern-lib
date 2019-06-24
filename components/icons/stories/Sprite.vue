@@ -1,9 +1,21 @@
 <template>
   <div>
-    <SvgIcon
-      v-for="n in names"
-      :key="n"
-      :name="n"/>
+    <section-wrap bg-color="white">
+      <div>
+        <SvgIcon
+          v-for="n in names"
+          :key="n"
+          :name="n"/>
+      </div>
+    </section-wrap>
+    <section-wrap bg-color="inverted">
+      <div>
+        <SvgIcon
+          v-for="n in names"
+          :key="n"
+          :name="n"/>
+      </div>
+    </section-wrap>
   </div>
 </template>
 

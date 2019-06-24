@@ -67,20 +67,31 @@
 
   &--col-brand {
     .card__thumb {
-      &::before { background-image: url('~icons/focus-top-left.svg?fill=#074482'); }
-      &::after { background-image: url('~icons/focus-bottom-right.svg?fill=#074482'); }
+      &::before {
+        background-image: url('~icons/focus-top-left.svg');
+      }
+
+      &::after {
+        background-image: url('~icons/focus-bottom-right.svg');
+      }
     }
   }
 
   &--col-white {
     .card__thumb {
-      &::before { background-image: url('~icons/focus-top-left.svg?fill=#FFF'); }
-      &::after { background-image: url('~icons/focus-bottom-right.svg?fill=#FFF'); }
+      &::before {
+        background-image: url('~icons/focus-top-left.svg');
+      }
+
+      &::after {
+        background-image: url('~icons/focus-bottom-right.svg');
+      }
     }
   }
 
   &.btn-owner:hover {
     .card__thumb {
+
       &::before,
       &::after {
         opacity: .7;
@@ -88,9 +99,11 @@
     }
 
     .card__inner {
+
       h2,
       h3,
-      h4 { /* stylelint-disable-line */
+      h4 {
+        /* stylelint-disable-line */
         text-decoration: underline;
       }
     }

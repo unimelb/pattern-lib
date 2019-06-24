@@ -172,9 +172,16 @@ button:not([disabled]) {
   cursor: pointer;
 }
 
+.bg-inverted {
+  svg {
+    display: block;
+    fill: #fff;
+  }
+}
+
 svg {
   display: block;
-  fill: currentColor;
+  fill: #074482;
 }
 
 /* revert to dotted bottom border for abbreviations */

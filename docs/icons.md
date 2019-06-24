@@ -20,7 +20,7 @@ Because CMS editors can't add SVG code inside WYSIWYG blocks, some icons should 
 
 ```css
 /* USAGE */
-background-image: url('~icons/chevron-right.svg?fill=#fff');
+background-image: url('~icons/chevron-right.svg');
 
 /* OUTPUT */
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='7 3 14 14'%3E %3Cpath d='m8,7.42l4.58,4.58l-4.58,4.59l1.41,1.41l6,-6l-6,-6l-1.41,1.42z' fill='%23f00' /%3E %3C/svg%3E")

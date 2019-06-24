@@ -38,8 +38,8 @@
     }
   }
 
-  &__date::before { background-image: url('~icons/calendar.svg?fill=#074482'); }
-  &__time::before { background-image: url('~icons/clock.svg?fill=#074482'); }
+  &__date::before { background-image: url('~icons/calendar.svg'); }
+  &__time::before { background-image: url('~icons/clock.svg'); }
 
   &__link {
     display: block;
