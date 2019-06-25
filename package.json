@@ -102,6 +102,7 @@
     "svg-fill-loader": "^0.0.8",
     "svg-sprite-loader": "^3.8.0",
     "svg-url-loader": "^2.3.2",
+    "vue-axe": "^1.0.7",
     "vue-html-loader": "^1.2.4",
     "vue-jest": "^2.6.0",
     "vue-loader": "^15.2.6",
