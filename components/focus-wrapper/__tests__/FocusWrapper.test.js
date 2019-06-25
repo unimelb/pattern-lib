@@ -1,5 +1,9 @@
-import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import {
+  shallow,
+} from 'vue-test-utils';
+import {
+  toHaveNoViolations,
+} from 'jest-axe';
 import FocusWrapper from '../FocusWrapper.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 
@@ -43,7 +47,7 @@ describe('FocusWrapper', () => {
     const wrapper = shallow(FocusWrapper);
     expect(wrapper.props().color).toBe('');
     expect(wrapper.props().semiOpaque).toBe(false);
-    expect(wrapper.props().size).toBe('medium');
+    expect(wrapper.props().size).toBe('md');
     expect(wrapper.vm.normalizeSize).toBe(72);
     expect(wrapper.props().padded).toBe(false);
     expect(wrapper.classes().includes('card-focus--padded')).toBe(false);
@@ -55,7 +59,9 @@ describe('FocusWrapper', () => {
         color: 'black',
       },
     });
-    const { color } = wrapper.vm.$options.props;
+    const {
+      color,
+    } = wrapper.vm.$options.props;
     expect(color.type).toBe(String);
     expect(color.validator && color.validator('black')).toBeFalsy();
   });
@@ -76,7 +82,9 @@ describe('FocusWrapper', () => {
         size: 72,
       },
     });
-    const { size } = wrapper.vm.$options.props;
+    const {
+      size,
+    } = wrapper.vm.$options.props;
     expect(size.type).toBe(String);
     expect(size.validator && size.validator(72)).toBeFalsy();
   });
@@ -84,30 +92,30 @@ describe('FocusWrapper', () => {
   it('should render small size', () => {
     const wrapper = shallow(FocusWrapper, {
       propsData: {
-        size: 'small',
+        size: 'sm',
       },
     });
-    expect(wrapper.props().size).toBe('small');
+    expect(wrapper.props().size).toBe('sm');
     expect(wrapper.vm.normalizeSize).toBe(48);
   });
 
   it('should render medium size', () => {
     const wrapper = shallow(FocusWrapper, {
       propsData: {
-        size: 'medium',
+        size: 'md',
       },
     });
-    expect(wrapper.props().size).toBe('medium');
+    expect(wrapper.props().size).toBe('md');
     expect(wrapper.vm.normalizeSize).toBe(72);
   });
 
   it('should render large size', () => {
     const wrapper = shallow(FocusWrapper, {
       propsData: {
-        size: 'large',
+        size: 'lg',
       },
     });
-    expect(wrapper.props().size).toBe('large');
+    expect(wrapper.props().size).toBe('lg');
     expect(wrapper.vm.normalizeSize).toBe(96);
   });
 

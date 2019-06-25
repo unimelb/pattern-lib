@@ -1,7 +1,7 @@
 <template>
   <FocusWrapper
     :color="color"
-    size="large">
+    size="lg">
     <div :class="classes">
       <div class="card__inner">
         <h3 class="card-header__heading">

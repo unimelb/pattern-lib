@@ -38,8 +38,8 @@ export default {
     },
     size: {
       type: String,
-      default: 'medium',
-      validator: (size) => ['small', 'medium', 'large'].includes(size),
+      default: 'md',
+      validator: (size) => ['sm', 'md', 'lg'].includes(size),
     },
     padded: {
       type: Boolean,
@@ -49,9 +49,9 @@ export default {
   computed: {
     normalizeSize() {
       const sizes = {
-        small: 48,
-        medium: 72,
-        large: 96,
+        sm: 48,
+        md: 72,
+        lg: 96,
       };
       return sizes[this.size] || sizes.medium;
     },

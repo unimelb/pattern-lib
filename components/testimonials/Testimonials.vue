@@ -9,7 +9,8 @@
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="name"
           class="testimonials__img"
-          role="img" />
+          role="img"
+        />
         <div class="testimonials__info">
           <BlockQuotation
             :author="author"
@@ -27,7 +28,6 @@
 
 
 <script>
-
 import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 import ContentBlock from '../content-block/ContentBlock.vue';
@@ -66,7 +66,7 @@ export default {
   },
   data() {
     return {
-      size: 'large',
+      size: 'lg',
     };
   },
   computed: {
@@ -87,9 +87,9 @@ export default {
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
       if (this.windowWidth < WIDTH_599) {
-        this.size = 'small';
+        this.size = 'sm';
       } else {
-        this.size = 'large';
+        this.size = 'lg';
       }
     },
   },

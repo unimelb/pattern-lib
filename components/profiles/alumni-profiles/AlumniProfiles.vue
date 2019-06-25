@@ -9,7 +9,8 @@
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="name"
           class="alumni__img"
-          role="img" />
+          role="img"
+        />
         <div class="alumni__info">
           <p class="alumni__title">
             {{ title }}
@@ -61,7 +62,7 @@ export default {
   },
   data() {
     return {
-      size: 'large',
+      size: 'lg',
     };
   },
   mounted() {
@@ -77,9 +78,9 @@ export default {
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
       if (this.windowWidth < WIDTH_599) {
-        this.size = 'small';
+        this.size = 'sm';
       } else {
-        this.size = 'large';
+        this.size = 'lg';
       }
     },
   },

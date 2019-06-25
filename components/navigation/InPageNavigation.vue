@@ -71,7 +71,7 @@ export default {
       isFixed: false,
       selectedItem: false,
       autoSelect: true,
-      size: 'medium',
+      size: 'md',
     };
   },
   computed: {
@@ -183,9 +183,9 @@ export default {
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
       if (this.windowWidth < WIDTH_481) {
-        this.size = 'small';
+        this.size = 'sm';
       } else {
-        this.size = 'medium';
+        this.size = 'md';
       }
     },
   },

@@ -58,7 +58,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'large',
+      default: 'lg',
     },
   },
   computed: {

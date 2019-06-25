@@ -3,7 +3,7 @@
     <div class="grid grid--3col">
       <FocusWrapper
         color="green"
-        size="large"
+        size="lg"
         semi-opaque
         padded>
         <StatsItem
