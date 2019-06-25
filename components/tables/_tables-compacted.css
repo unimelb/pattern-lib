@@ -106,6 +106,7 @@
         }
 
         @media (--bp-max-x-mobile) {
+          display: inherit;
           border-right: 0;
         }
 
