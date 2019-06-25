@@ -24,11 +24,11 @@
     }
   }
 
-  &--sml > * {
+  &--sm > * {
     max-width: var(--w-sm);
   }
 
-  &--lge > * {
+  &--lg > * {
     max-width: var(--w-lg);
   }
 

@@ -10,7 +10,7 @@ export default {
     size: {
       type: String,
       default: '',
-      validator: (value) => ['', 'sml', 'lge'].includes(value),
+      validator: (value) => ['', 'sm', 'lg'].includes(value),
     },
     short: {
       type: Boolean,
