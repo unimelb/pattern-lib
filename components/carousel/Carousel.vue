@@ -32,9 +32,11 @@
       <div class="carousel--panel__container">
         <div class="carousel--panel__left">
           <div class="carousel--panel--story">
-            <div class="carousel--panel--title">
+            <a
+              :href="selectedItem.buttonHref"
+              class="carousel--panel--title">
               {{ selectedItem.title }}
-            </div>
+            </a>
             <div class="carousel--panel--description">
               {{ selectedItem.description }}
             </div>

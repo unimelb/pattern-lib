@@ -9,8 +9,12 @@
   position: relative;
 
   &--slider {
-    height: 548px;
+    height: 180px;
     width: 100%;
+
+    @media (--bp-desktop) {
+      height: 548px;
+    }
 
     &__image {
       height: 100%;
@@ -19,19 +23,29 @@
   }
 
   &--footer {
-    height: 115px;
-    width: 100%;
-    background: rgb(var(--col-background-primary-navy));
+    display: none;
+    @media (--bp-desktop) {
+      display: block;
+      height: 115px;
+      width: 100%;
+      background: rgb(var(--col-background-primary-navy));
+    }
   }
 
   &--panel {
-    width: 75%;
-    margin: auto;
     background: #f2f5f9;
+    overflow: hidden;
+    width: 100%;
+
+  @media (--bp-desktop) {
+    width: 75%;
     height: 249px;
     position: absolute;
     z-index: 2;
     bottom: 3rem;
+    margin: auto;
+  }
+
 
     &__left {
       display: flex;
@@ -41,11 +55,13 @@
     }
 
     &__right {
-      flex-basis: 30%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      margin-left: 1rem;
+      @media (--bp-desktop) {
+        flex-basis: 30%;
+        margin-left: 1rem;
+      }
     }
 
     &--story {
@@ -58,12 +74,14 @@
       font-size: 1.35rem;
       line-height: 27px;
       margin-bottom: 1rem;
+      display: block;
     }
 
     &--description {
       color: #000;
       font-size: 1rem;
       line-height: 24px;
+      margin-bottom: 16px;
     }
 
     &--cta {
@@ -80,6 +98,10 @@
       display: flex;
       padding: 16px 24px;
       height: 100%;
+      flex-direction: column-reverse;
+      @media (--bp-desktop) {
+        flex-direction: row;
+      }
     }
 
     &__progress-bar {
@@ -91,8 +113,10 @@
     &--controls {
       display: flex;
       color: #000;
-      justify-content: flex-end;
-
+      justify-content: center;
+      @media (--bp-desktop) {
+        justify-content: flex-end;
+      }
       &__control {
         cursor: pointer;
         color: rgb(var(--col-background-primary-navy));
@@ -100,10 +124,17 @@
     }
 
     &--stop-pause {
-      margin: 0 1rem;
+      margin: 0 2rem;
+      @media (--bp-desktop) {
+        margin: 0 1rem;
+      }
     }
 
     &--stories-menu {
+      display: none;
+      @media (--bp-desktop) {
+        display: block;
+      }
       &--item {
         list-style-type: none;
         border-bottom: 1px solid #99a2aa;
