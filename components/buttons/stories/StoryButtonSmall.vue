@@ -1,7 +1,5 @@
 <template>
-  <ButtonIcon size="sml">
-    I'm a small button
-  </ButtonIcon>
+  <ButtonIcon size="sm">I'm a small button</ButtonIcon>
 </template>
 
 <script>

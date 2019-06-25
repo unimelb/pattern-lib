@@ -41,6 +41,7 @@ export default {
     size: {
       type: String,
       default: '',
+      validator: value => ['xs', 'sm'].indexOf(value) !== -1,
     },
     width: {
       type: String,
@@ -82,8 +83,10 @@ export default {
       return [
         'btn',
         {
-          [`btn--${this.size}`]: ['sml', 'xsml'].includes(this.size),
-          [`btn--${this.width}`]: ['wide', 'xwide', 'fullwidth'].includes(this.width),
+          [`btn--${this.size}`]: ['sm', 'xs'].includes(this.size),
+          [`btn--${this.width}`]: ['wide', 'xwide', 'fullwidth'].includes(
+            this.width
+          ),
           'btn--inverted': this.inverted,
           'btn--disabled': this.disabled,
         },

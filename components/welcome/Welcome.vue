@@ -4,7 +4,7 @@
       <figure>
         <div
           :style="`background-image: url('${img}')`"
-          class="welcome__thumb-img" />
+          class="welcome__thumb-img"/>
         <figcaption>
           <strong class="welcome__caption-title">{{ name }}</strong>
         </figcaption>
@@ -17,11 +17,11 @@
       <ButtonIcon
         v-if="btnText && btnText.length"
         icon="chevron-right"
-        class="btn--xsml">
+        class="btn--xs">
         {{ btnText }}
       </ButtonIcon>
     </div>
-    <div class="welcome__inner ">
+    <div class="welcome__inner">
       <slot />
       <img
         :src="signature"
@@ -41,7 +41,8 @@ export default {
   props: {
     img: {
       type: String,
-      default: '//about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg',
+      default:
+        '//about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg',
     },
     name: {
       type: String,
@@ -61,7 +62,8 @@ export default {
     },
     signature: {
       type: String,
-      default: '//about-us-unimelb.netlify.com/images/leadership/office-of-the-vice-chancellor/signature.png',
+      default:
+        '//about-us-unimelb.netlify.com/images/leadership/office-of-the-vice-chancellor/signature.png',
     },
     small: {
       type: Boolean,

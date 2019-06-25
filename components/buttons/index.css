@@ -213,13 +213,12 @@
     }
   }
 
-  /* Sizes */
-  &--sml {
-    padding: .5rem 1rem;
+  &--sm {
+    padding: calc(var(--vr) / 2) 1.25em;
   }
 
-  &--xsml {
-    padding: .375rem 1rem;
+  &--xs {
+    padding: calc(var(--vr) / 3) 1.25em;
   }
 
   &--wide {

@@ -132,7 +132,7 @@
   vertical-align: bottom;
 
   /* fix unwanted inline-block space */
-  &>img {
+  & > img {
     display: block;
   }
 }
@@ -210,7 +210,7 @@ a[target='_blank'] {
 
 /* with white chevron markers */
 
-.list-chevrons>li {
+.list-chevrons > li {
   &::before {
     content: '';
     display: inline-block;
@@ -232,19 +232,19 @@ a[target='_blank'] {
 
 .list-def {
 
-  &>dt,
-  &>dd {
+  & > dt,
+  & > dd {
     display: block;
   }
 
-  &>dt {
+  & > dt {
     margin-right: 1ch;
     float: left;
     clear: left;
     font-weight: var(--fw-semibold);
   }
 
-  &>dd {
+  & > dd {
     margin-bottom: .25rem;
     margin-left: 0;
 
@@ -264,7 +264,7 @@ a[target='_blank'] {
   }
 
   /* force `dd` to fall below `dt` when too long (must be combined with `clearfix`) */
-  &--wrap>dd {
+  &--wrap > dd {
     float: left;
   }
 }
@@ -326,12 +326,12 @@ a[target='_blank'] {
  */
 
 .box {
-  &>*:last-child {
+  & > *:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
   }
 
-  &>*:first-child {
+  & > *:first-child {
     margin-top: 0;
     padding-top: 0;
   }
