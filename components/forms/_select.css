@@ -24,14 +24,14 @@
 
 .styled-select {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-default);
   background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
 
   select {
     display: block;
     position: relative;
-    z-index: 2;
+    z-index: (var(--z-default) + 1);
     width: 100%;
     margin-bottom: .5rem;
     padding: .5rem 2.875rem .5rem .75rem;
@@ -49,7 +49,8 @@
     }
 
     &::-ms-expand {
-      display: none; /* stylelint-disable-line property-no-vendor-prefix */
+      display: none;
+      /* stylelint-disable-line property-no-vendor-prefix */
     }
   }
 

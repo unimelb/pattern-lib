@@ -44,7 +44,7 @@
   /* Entity identifier */
   &__entity {
     position: relative;
-    z-index: 1;
+    z-index: var(--z-default);
     width: 45%;
     margin-top: calc(var(--vr) * 2);
 
@@ -79,7 +79,7 @@
 
   &__heading {
     position: relative;
-    z-index: 1;
+    z-index: var(--z-default);
     width: 50%;
     max-width: calc(64rem * .4);
     padding-right: 3rem;

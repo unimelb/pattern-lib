@@ -137,6 +137,9 @@
   --h4-fs: calc(var(--h5-fs) * var(--fs));
   --h5-fs: calc(var(--h6-fs) * var(--fs));
   --h6-fs: calc(1rem * var(--fs));
+
+  /* Z-index variables */
+  --z-default: 1;
 }
 
 /**

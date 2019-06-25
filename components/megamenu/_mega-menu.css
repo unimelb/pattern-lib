@@ -64,7 +64,7 @@
 
     @media (--bp-x-desktop) {
       display: none;
-      z-index: 2;
+      z-index: (var(--z-default) + 1);
       top: 100%;
       left: 0;
       height: auto;
