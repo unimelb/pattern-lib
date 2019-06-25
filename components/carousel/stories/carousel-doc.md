@@ -29,7 +29,7 @@ Usage:
 
 ```html
 <carousel
- s  stories="[
+  stories="[
       {
           src: 'test1',
           altText: 'test',

@@ -30,30 +30,37 @@
         :style="{ width: progressBarWidth + '%'}"
         class="carousel--panel__progress-bar"/>
       <div class="carousel--panel__container">
-        <div class="carousel--panel__left">
-          <div class="carousel--panel--story">
-            <a
-              :href="selectedItem.buttonHref"
-              class="carousel--panel--title">
-              {{ selectedItem.title }}
-            </a>
-            <div class="carousel--panel--description">
-              {{ selectedItem.description }}
-            </div>
+        <div
+          class="carousel--panel__right"
+          role="navigation"
+          area-label="Stories"
+        >
+          <div class="carousel--panel--stories-menu">
+            <li
+              v-for="(story, index) in storiesData"
+              :key="index"
+              tabindex="0"
+              class="carousel--panel--stories-menu--item"
+              @click="moveToStory(index)"
+              @keydown.13="moveToStory(index)"
+              @keydown.32="moveToStory(index)"
+            >
+              <div
+                :class="{ 'carousel--panel--stories-menu__active': story.isActive }"
+                class="carousel--panel--stories-menu--text">{{ story.title }}</div>
+            </li>
           </div>
-          <ButtonIcon
-            :href="selectedItem.buttonHref"
-            width="wide"
-            class="carousel--panel--cta"
-          >{{ selectedItem.buttonText }}</ButtonIcon>
-        </div>
-        <div class="carousel--panel__right">
           <div class="carousel--panel--controls">
             <div
+              :area-label="'Previous: ' + prevTitle"
               class="carousel--panel--controls__control"
               tabindex="0"
+              role="button"
               @click="prevStory"
               @keydown.13="prevStory"
+              @keydown.32="prevStory"
+              @focusin="stopSliding"
+              @focusout="startSliding"
             >
               <SvgIcon
                 name="chevron-left"
@@ -65,8 +72,10 @@
               v-if="!paused"
               tabindex="0"
               class="carousel--panel--stop-pause carousel--panel--controls__control"
+              data-message="Play"
               @click="stopSliding"
               @keydown.13="stopSliding"
+              @keydown.32="stopSliding"
             >
               <SvgIcon
                 name="pause"
@@ -78,8 +87,10 @@
               v-if="paused"
               tabindex="0"
               class="carousel--panel--stop-pause carousel--panel--controls__control"
+              data-message="Pause"
               @click="startSliding"
               @keydown.13="startSliding"
+              @keydown.32="startSliding"
             >
               <SvgIcon
                 name="play"
@@ -88,10 +99,15 @@
               />
             </div>
             <div
+              :area-label="'Next: ' + nextTitle"
               class="carousel--panel--controls__control"
               tabindex="0"
+              role="button"
               @click="nextStory"
               @keydown.13="nextStory"
+              @keydown.32="nextStory"
+              @focusin="stopSliding"
+              @focusout="startSliding"
             >
               <SvgIcon
                 name="chevron-right"
@@ -100,20 +116,26 @@
               />
             </div>
           </div>
-          <div class="carousel--panel--stories-menu">
-            <li
-              v-for="(story, index) in storiesData"
-              :key="index"
-              tabindex="0"
-              class="carousel--panel--stories-menu--item"
-              @click="moveToStory(index)"
-              @keydown.13="moveToStory(index)"
-            >
-              <div
-                :class="{ 'carousel--panel--stories-menu__active': story.isActive }"
-                class="carousel--panel--stories-menu--text">{{ story.title }}</div>
-            </li>
+        </div>
+        <div
+          class="carousel--panel__left"
+          role="navigation"
+          area-label="Stories">
+          <div class="carousel--panel--story">
+            <h2
+              class="carousel--panel--title">
+              <a :href="selectedItem.buttonHref">{{ selectedItem.title }}</a>
+            </h2>
+            <p class="carousel--panel--description">
+              {{ selectedItem.description }}
+            </p>
           </div>
+          <ButtonIcon
+            :href="selectedItem.buttonHref"
+            width="wide"
+            class="carousel--panel--cta"
+            role="button"
+          >{{ selectedItem.buttonText }}</ButtonIcon>
         </div>
       </div>
     </div>
@@ -149,6 +171,8 @@ export default {
     };
     const autoplay = this.timing && timing[this.timing] ? timing[this.timing] : timing.def;
     return {
+      prevTitle: this.stories[this.stories.length - 1].title,
+      nextTitle: this.stories[1].title,
       selectedItem: this.stories && this.stories[0] ? this.stories[0] : {},
       selectedIndex: 0,
       openState: false,
@@ -190,6 +214,8 @@ export default {
       if (this.stories[slide.currentPage]) {
         this.selectedItem = this.stories[slide.currentPage];
         this.selectedIndex = slide.currentPage;
+        this.prevTitle = this.stories[this.selectedIndex - 1] ? this.stories[this.selectedIndex - 1].title : this.stories[this.stories.length - 1].title;
+        this.nextTitle = this.stories[this.selectedIndex + 1] ? this.stories[this.selectedIndex + 1].title : this.stories[0].title;
       }
       this.clearFrame();
     },
@@ -234,6 +260,7 @@ export default {
       this.selectedItem = this.stories[storyIndex];
       this.selectedIndex = storyIndex;
       this.$refs.slider.$emit('slideTo', storyIndex);
+      document.querySelector('.carousel--panel--cta').focus();
     },
   },
 };
