@@ -1,5 +1,8 @@
 <template>
-  <div class="carousel">
+  <section
+    class="carousel"
+    aria-roledescription="carousel"
+    aria-label="Stories and events">
     <div
       v-if="stories.length"
       class="carousel--slider"
@@ -35,20 +38,25 @@
           role="navigation"
           area-label="Stories"
         >
-          <div class="carousel--panel--stories-menu">
-            <li
+          <div
+            class="carousel--panel--stories-menu"
+            role="menu">
+            <a
               v-for="(story, index) in storiesData"
               :key="index"
-              tabindex="0"
               class="carousel--panel--stories-menu--item"
+              href="javascript: void(0);"
+              role="menuitem"
               @click="moveToStory(index)"
               @keydown.13="moveToStory(index)"
               @keydown.32="moveToStory(index)"
             >
-              <div
+              <span
                 :class="{ 'carousel--panel--stories-menu__active': story.isActive }"
-                class="carousel--panel--stories-menu--text">{{ story.title }}</div>
-            </li>
+                class="carousel--panel--stories-menu--text">
+                {{ story.title }}
+              </span>
+            </a>
           </div>
           <div class="carousel--panel--controls">
             <div
@@ -66,6 +74,7 @@
                 name="chevron-left"
                 width="16"
                 height="16"
+                aria-hidden="true"
               />
             </div>
             <div
@@ -73,6 +82,7 @@
               tabindex="0"
               class="carousel--panel--stop-pause carousel--panel--controls__control"
               data-message="Play"
+              role="button"
               @click="stopSliding"
               @keydown.13="stopSliding"
               @keydown.32="stopSliding"
@@ -81,6 +91,7 @@
                 name="pause"
                 width="16"
                 height="16"
+                aria-hidden="true"
               />
             </div>
             <div
@@ -88,6 +99,7 @@
               tabindex="0"
               class="carousel--panel--stop-pause carousel--panel--controls__control"
               data-message="Pause"
+              role="button"
               @click="startSliding"
               @keydown.13="startSliding"
               @keydown.32="startSliding"
@@ -96,6 +108,7 @@
                 name="play"
                 width="16"
                 height="16"
+                aria-hidden="true"
               />
             </div>
             <div
@@ -113,33 +126,50 @@
                 name="chevron-right"
                 width="16"
                 height="16"
+                aria-hidden="true"
               />
             </div>
           </div>
         </div>
         <div
+          :aria-live="!paused ? 'off' : 'polite'"
           class="carousel--panel__left"
           role="navigation"
           area-label="Stories">
           <div class="carousel--panel--story">
             <h2
               class="carousel--panel--title">
-              <a :href="selectedItem.buttonHref">{{ selectedItem.title }}</a>
+              <a
+                :href="selectedItem.buttonHref"
+                @focusin="stopSliding"
+                @focusout="startSliding"
+              >
+                {{ selectedItem.title }}
+              </a>
             </h2>
             <p class="carousel--panel--description">
               {{ selectedItem.description }}
             </p>
           </div>
-          <ButtonIcon
-            :href="selectedItem.buttonHref"
-            width="wide"
-            class="carousel--panel--cta"
-            role="button"
-          >{{ selectedItem.buttonText }}</ButtonIcon>
+          <div
+            tabindex="0"
+            @focusin="stopSliding"
+            @focusout="startSliding"
+          >
+            <ButtonIcon
+              :href="selectedItem.buttonHref"
+              width="wide"
+              class="carousel--panel--cta"
+              role="button"
+            >
+              {{ selectedItem.buttonText }}
+            </ButtonIcon>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
