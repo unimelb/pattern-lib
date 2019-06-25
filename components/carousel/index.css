@@ -46,6 +46,11 @@
     margin: auto;
   }
 
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    display: block;
+    left: 10vw;
+  }
+
 
     &__left {
       display: flex;
@@ -105,9 +110,14 @@
       padding: 16px 24px;
       height: 100%;
       flex-direction: column;
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        display: block;
+      }
       @media (--bp-desktop) {
         flex-direction: row-reverse;
+        display: flex;
       }
+
     }
 
     &__progress-bar {
@@ -170,4 +180,8 @@
 
 .slider-container {
   overflow: auto !important;
+}
+
+.swiper-container-horizontal>*>.slider-wrapper, .swiper-container-vertical>*>.slider-wrapper{
+  display: block!important;
 }
