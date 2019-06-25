@@ -1,7 +1,7 @@
 .page-footer {
   /* default stacking */
   position: relative;
-  z-index: 3;
+  z-index: (var(--z-default) + 2);
   padding: 0;
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-background-primary-white));
@@ -249,7 +249,7 @@
 .liveagent {
   display: block;
   position: fixed;
-  z-index: 99999;
+  z-index: var(--z-liveagent);
   right: 15px;
   bottom: 15px;
   width: 168px;
@@ -290,7 +290,7 @@
 
   &__icon-mask {
     position: absolute;
-    z-index: 4;
+    z-index: (var(--z-default) + 3);
     top: 50%;
     left: 0;
     width: 22px;

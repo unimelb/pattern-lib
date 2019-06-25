@@ -6,7 +6,7 @@
 
 .megamenu {
   position: fixed;
-  z-index: 102;
+  z-index: (var(--z-default) + 101);
   top: 0;
   right: -100%;
   width: 100%;
@@ -183,7 +183,7 @@
 
       &::after {
         content: '\203a';
-        z-index: 9;
+        z-index: (var(--z-default) + 8);
         float: right;
         font-size: 1.5rem;
         font-weight: normal;
@@ -481,7 +481,7 @@
       &__section .menu__item[tabindex='0']:focus {
         .inner {
           display: flex;
-          z-index: 3;
+          z-index: (var(--z-default) + 2);
           box-shadow: 1px 6px 12px -3px rgba(0, 0, 0, .6);
         }
 
@@ -614,7 +614,7 @@
 
 .page-header {
   &.active {
-    z-index: 101;
+    z-index: (var(--z-default) + 100);
     overflow: visible;
   }
 
@@ -632,7 +632,7 @@
   /* Hack to not target IE11 as focus-within breaks menu */
   @supports (display: flex) {
     &:focus-within {
-      z-index: 101;
+      z-index: (var(--z-default) + 100);
       overflow: visible;
     }
   }

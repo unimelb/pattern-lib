@@ -1,7 +1,7 @@
 .blanket {
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: (var(--z-default) + 99);
   top: 0;
   left: 0;
   width: 100%;
@@ -16,7 +16,7 @@
 
   &.white {
     display: block;
-    z-index: 100;
+    z-index: (var(--z-default) + 99);
     margin-top: 3.75rem;
     animation: fadeIn .2s backwards;
     opacity: .95;

@@ -140,6 +140,7 @@
 
   /* Z-index variables */
   --z-default: 1;
+  --z-liveagent: 99999;
 }
 
 /**

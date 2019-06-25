@@ -1,6 +1,6 @@
 .header-tools {
   position: absolute;
-  z-index: 101;
+  z-index: (var(--z-default) + 100);
   top: .4em;
   right: 0;
   margin: .1em 1em 1em;
@@ -56,7 +56,7 @@
 .page-header-search {
   display: none;
   position: fixed;
-  z-index: 3;
+  z-index: (var(--z-default) + 2);
   top: 0;
   left: 0;
   width: 100%;
