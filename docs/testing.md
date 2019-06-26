@@ -81,7 +81,7 @@ expect(mount(PageFooter).element).toMatchSnapshot();
 
 ### `find(ChildComponent)`
 
-There's a weird behaviour where `elem.find(ChildComponent)` returns a `ChildComponent` instance even if that child is set to not render with `<ChildComponent v-if="false" />`. The work-around I found (cf. `components/page/breadcrumbs/__tests__/PageBreadcrumbs.test.js`) is to request the child component's rendered HTML and look for a known element - e.g. `expect(elem.find(ChildComponent).html()).not.toContain('<some-selector>')`. That's because the rendered HTML ends up being `<!---->` when `v-if` evaluates to `false`.
+There's a weird behaviour where `elem.find(ChildComponent)` returns a `ChildComponent` instance even if that child is set to not render with `<ChildComponent v-if="false" />`. The work-around I found (cf. `components/breadcrumbs/__tests__/PageBreadcrumbs.test.js`) is to request the child component's rendered HTML and look for a known element - e.g. `expect(elem.find(ChildComponent).html()).not.toContain('<some-selector>')`. That's because the rendered HTML ends up being `<!---->` when `v-if` evaluates to `false`.
 
 ### Shallow rendering
 vue documentation: https://vue-test-utils.vuejs.org/api/#shallowmount
