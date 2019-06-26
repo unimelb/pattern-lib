@@ -11,7 +11,7 @@ import Lists from './Lists.vue';
 import MaxWidthWrapper from './MaxWidthWrapper.vue';
 import Texts from './Texts.vue';
 
-storiesOf('Helper', module)
+storiesOf('Helpers', module)
   .add('Backgrounds', createStory(Backgrounds))
   .add('Boxes', createStory(Boxes))
   .add('Clearfix', createStory(Clearfix))
