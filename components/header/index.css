@@ -148,25 +148,30 @@
       position: absolute;
       right: 0;
       left: 0;
-      background-color: inherit;
 
       /* inherit from shape and header */
     }
 
     /* triangle in top left-hand corner */
     &::before {
-      top: 0;
-      height: 60%;
-      transform: skewY(-30deg);
-      transform-origin: top left;
+      width: 0;
+      height: 0;
+      border-top: 52px solid rgb(var(--col-background-primary-navy));
+      border-right: 90px solid transparent;
+      top: 29px;
+
+      @media (--bp-tablet) {
+        top: 36px;
+      }
     }
 
     /* triangle in bottom left-hand corner */
     &::after {
-      bottom: 0;
-      height: 40%;
-      transform: skewY(60deg);
-      transform-origin: bottom left;
+      width: 0;
+      top: 39px;
+      height: 0;
+      border-bottom: 100px solid rgb(var(--col-background-primary-navy));
+      border-right: 64px solid transparent;
     }
   }
 
