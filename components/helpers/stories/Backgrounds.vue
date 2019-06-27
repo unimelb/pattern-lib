@@ -1,7 +1,7 @@
 <template>
   <div>
     <section-wrap>
-      <h1>Backgrounds:</h1>
+      <h1>Backgrounds helpers classes:</h1>
       <h1 class="bg-inverted">Class: bg-inverted</h1>
       <h1 class="bg-inverted-dark">Class: bg-inverted-dark</h1>
       <h1 class="bg-inverted-darker">Class: bg-inverted-darker</h1>
