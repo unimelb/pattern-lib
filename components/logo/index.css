@@ -19,13 +19,8 @@
     }
 
     &--lg {
-      height: 96px;
-      width: 96px;
-
-      @media (--bp-tablet) {
-        height: 148px;
-        width: 148px;
-      }
+      height: 148px;
+      width: 148px;
     }
   }
 
