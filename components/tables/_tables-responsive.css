@@ -1,0 +1,57 @@
+.responsive-table {
+  &--start {
+    &::before {
+      @media (--bp-max-x-mobile) {
+        left: -50px;
+        border-radius: 0 10px 10px 0/0 50% 50% 0;
+        box-shadow: 5px 0 10px rgba(0, 0, 0, .25);
+      }
+    }
+  }
+
+  &--end {
+    &::after {
+      @media (--bp-max-x-mobile) {
+        left: 100%;
+        border-radius: 10px 0 0 10px/50% 0 0 50%;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, .25);
+      }
+    }
+  }
+
+  &__inner {
+    table {
+      @media (--bp-max-x-mobile) {
+        width: 600px;
+        table-layout: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (--bp-max-x-mobile) {
+      overflow-x: scroll;
+    }
+  }
+
+  &::before,
+  &::after {
+    @media (--bp-max-x-mobile) {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      margin-left: 0;
+      width: 50px;
+      height: 100%;
+      transition-property: margin-left;
+      transition-duration: .1s;
+      z-index: 2;
+    }
+  }
+
+  @media (--bp-max-x-mobile) {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+}
