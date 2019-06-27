@@ -2097,7 +2097,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bezier-easing@^2.0.3:
+bezier-easing@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
   integrity sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY=
@@ -12531,17 +12531,17 @@ vue-loader@^15.2.6:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-progressive-image@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/vue-progressive-image/-/vue-progressive-image-3.1.0.tgz#4f0257701d0c7bb816e7054c2fe7e49e48f1c3fc"
-  integrity sha512-Gs3NYAu8RCdY/YDvYNJ/ku5fjgzRO4FESE51ne9JaFzOkOrsXnGBZC4reJ4ingSkH9Gyxwt2Ru05oFqH2JlmcQ==
+vue-progressive-image@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vue-progressive-image/-/vue-progressive-image-3.2.0.tgz#a6443f78bda87846f94e900b119e7ed0b6f3365f"
+  integrity sha512-D1DSBOIw2nAJHTDT2aVn2lDROKGd4XvCIIH5JY2t5yjNcDppRXzqXRqrGYRFcRbtA+6XV17s55VszFFItiNLcg==
 
-vue-scrollto@^2.11.0:
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/vue-scrollto/-/vue-scrollto-2.13.0.tgz#fe23c9e5d684271c48154e8d504370cd40a8d6fd"
-  integrity sha512-ZjvWhY2LbEGqbtvDrBBm04AvgNfYGySJnakyHXxgv4UNlM0hRpkN1UKjKqB8J8U96YOEra+WjxmhujrBGeshbA==
+vue-scrollto@^2.15.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/vue-scrollto/-/vue-scrollto-2.15.0.tgz#e6e4645dfd2efc0d960123f607c2ab448b81670a"
+  integrity sha512-FmJncIrXvsqvyVAN55Trc2CQWVDyxuMgdQQp1Q9I9bhoEi7XXpvXXQonhbFBktzNggJf1rpfHpVqa8KLhPeePQ==
   dependencies:
-    bezier-easing "^2.0.3"
+    bezier-easing "2.1.0"
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
@@ -12571,10 +12571,10 @@ vue-test-utils@^1.0.0-beta.11:
   dependencies:
     lodash "^4.17.4"
 
-vue@2.5.16:
-  version "2.5.16"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
-  integrity sha512-/ffmsiVuPC8PsWcFkZngdpas19ABm5mh2wA7iDqcltyCTwlgZjHGeJYOXkBMo422iPwIcviOtrTCUpSfXmToLQ==
+vue@2.6.10:
+  version "2.6.10"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
+  integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"
