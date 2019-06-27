@@ -28,6 +28,7 @@
     }
 
     @media (--bp-tablet) {
+      margin-bottom: 0;
       justify-content: flex-start;
     }
   }

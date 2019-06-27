@@ -8,7 +8,7 @@
     <div class="page-header__inner max">
       <logo
         size="md"
-        negative-margin/>
+        no-padding/>
     </div>
   </header>
 </template>

@@ -29,7 +29,7 @@
     }
   }
 
-  &--negative-margin {
+  &--no-padding {
     &-sm {
       margin: -6px;
     }

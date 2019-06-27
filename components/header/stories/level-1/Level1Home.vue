@@ -5,7 +5,7 @@
   >
     <header class="page-header">
       <div class="page-header__inner max">
-        <Logo negative-margin/>
+        <Logo no-padding/>
       </div>
       <div class="section__inner section__inner--xsml">
         <CardPathfinder

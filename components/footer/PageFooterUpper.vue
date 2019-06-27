@@ -4,7 +4,7 @@
       <div class="page-footer__header">
         <Logo
           class="page-footer__header__logo"
-          negative-margin/>
+          no-padding/>
         <div class="page-footer__header__search">
           <form
             id="search"
