@@ -51,7 +51,7 @@
       <CardFocusBox
         element="div"
         compact
-        color="blue"
+        color="navy"
         class="card--image-focus--col-brand bg-white"
         title="Learning and teaching"
       >
