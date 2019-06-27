@@ -1,0 +1,332 @@
+.page-header {
+  position: relative;
+  padding: 2rem 0 0;
+  overflow: hidden;
+  background-color: rgb(var(--col-brand));
+  color: rgb(var(--col-background-primary-white));
+
+  &__logomat {
+    margin-top: -1rem;
+    margin-left: -1rem;
+    padding: 1rem;
+    background-color: rgb(var(--col-brand));
+  }
+
+  &__logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    @media (--bp-tablet) {
+      width: 117px;
+      height: 117px;
+    }
+  }
+
+  .logo-mask {
+    padding: calc(var(--vr) / 3);
+
+    @media (--bp-tablet) {
+      padding: 0;
+    }
+  }
+
+  &--no-logo {
+    .page-header--center {
+      min-height: 80vh;
+    }
+
+    &.page-header--l2 .page-header--center {
+      min-height: 60vh;
+    }
+  }
+
+  /* Entity identifier */
+  &__entity {
+    position: relative;
+    z-index: 1;
+    width: 45%;
+    margin-top: calc(var(--vr) * 2);
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -.75em;
+      left: 0;
+      width: 1rem;
+      border-top: 1px solid #fff;
+    }
+
+    &__main,
+    &__sub {
+      margin-bottom: 0;
+    }
+
+    &__main {
+      font-weight: var(--fw-semibold);
+    }
+
+    &__sub {
+      margin-top: .25rem;
+      font-size: .875em;
+    }
+
+    @media (--bp-max-x-mobile) {
+      width: 90%;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    max-width: calc(64rem * .4);
+    padding-right: 3rem;
+
+    @media (--bp-max-x-mobile) {
+      width: 80%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    max-width: 55rem;
+    background-color: rgb(var(--col-navy-mid-2));
+    background-position: center bottom;
+    background-size: cover;
+
+    @media (--bp-max-x-mobile) {
+      position: relative;
+      width: calc(.86 * 20rem);
+
+      /* `aperture.svg` viewbox ratio * height */
+      height: 20rem;
+      margin-top: -8rem;
+      margin-left: auto;
+    }
+  }
+
+  /* Aperture with focus mark for level-1 and 2 headers */
+  &__aperture::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+
+    /* (1) fix subtle border artefact on some browser/viewport combinations */
+    right: 0;
+    bottom: 0;
+    left: -1px;
+
+    /* (1) */
+    background: url('../shared/aperture.svg') left center / cover;
+  }
+
+  /* Aperture without focus mark for level-3 header */
+  &__shape {
+    position: absolute;
+    top: -35%;
+
+    /* MAGIC NUMBER account for slight rotation */
+    right: 0;
+    bottom: 0;
+    left: 27%;
+    transform: rotate(.25deg);
+
+    /* rotate slightly */
+    background-color: inherit;
+
+    /* pass on background colour to pseudo-elements */
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      background-color: inherit;
+
+      /* inherit from shape and header */
+    }
+
+    /* triangle in top left-hand corner */
+    &::before {
+      top: 0;
+      height: 60%;
+      transform: skewY(-30deg);
+      transform-origin: top left;
+    }
+
+    /* triangle in bottom left-hand corner */
+    &::after {
+      bottom: 0;
+      height: 40%;
+      transform: skewY(60deg);
+      transform-origin: bottom left;
+    }
+  }
+
+  /* Level-1 header */
+  &--l1 {
+    .page-header__heading {
+      margin: calc(var(--vr) * 3) 0;
+    }
+
+    /* less space when heading follows entity identifier */
+    .page-header__entity + .page-header__heading {
+      margin-top: calc(var(--vr) * 2);
+      margin-bottom: calc(var(--vr) * 2.5);
+    }
+
+    @media (--bp-desktop) {
+      .page-header__heading {
+        margin: calc(var(--vr) * 4) 0;
+      }
+
+      .page-header__entity + .page-header__heading {
+        margin-top: calc(var(--vr) * 3);
+        margin-bottom: calc(var(--vr) * 3.5);
+      }
+    }
+  }
+
+  /* Level-2 header */
+  &--l2 {
+    .page-header--campaign &.page-header {
+      min-height: 60vh;
+    }
+
+    .page-header__heading {
+      margin-top: calc(var(--vr) * 2);
+      font-size: 1.75rem;
+    }
+
+    .page-header__entity + .page-header__heading {
+      margin-top: calc(var(--vr) * 1.5);
+
+      /* less when following entity identifier */
+    }
+
+    .page-header--center {
+      min-height: calc(60vh - 10.333rem);
+    }
+
+    @media (--bp-desktop) {
+      .page-header__heading {
+        margin-bottom: calc(var(--vr) * 2);
+      }
+    }
+  }
+
+  /* Level-3 header (i.e. `PageHeaderMin`) */
+  &--l3 {
+    z-index: 0;
+    padding: 0;
+
+    .page-header__inner {
+      display: flex;
+      position: relative;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .page-header__logo {
+      font-size: .875rem;
+
+      /* fix wrapping of `alt` text */
+
+      @media (--bp-tablet) {
+        width: 85px;
+        height: 71px;
+      }
+    }
+
+    .bg-pattern {
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: 100% 100%;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &--baseline {
+    display: flex;
+    align-items: flex-end;
+
+    @media screen {
+      min-height: calc(80vh - 10.333rem);
+
+      /* IE9 interprets vh as # of pages in print-mode */
+    }
+  }
+
+  &--center {
+    display: table;
+    width: 100%;
+
+    > *:first-child {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    @media screen {
+      min-height: calc(80vh - 10.333rem);
+    }
+  }
+
+  &--campaign {
+    background-position: 50%;
+    background-size: cover;
+
+    .page-header {
+      background-color: transparent;
+    }
+
+    @media screen {
+      min-height: 80vh;
+
+      .page-header {
+        min-height: 80vh;
+      }
+    }
+  }
+
+  &__darken {
+    &--o25 .page-header {
+      background-color: rgba(0, 0, 0, .25);
+
+      .btn {
+        background-color: rgba(0, 0, 0, .5);
+      }
+    }
+
+    &--o50 .page-header {
+      background-color: rgba(0, 0, 0, .5);
+
+      .btn {
+        background-color: rgba(0, 0, 0, .5);
+      }
+    }
+
+    &--o75 .page-header {
+      background-color: rgba(0, 0, 0, .75);
+    }
+
+    &--o25,
+    &--o50,
+    &--o75 {
+      background-position: 50%;
+      background-size: cover;
+    }
+  }
+}
