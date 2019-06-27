@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Compacted Table should match snapshot 1`] = `
+<div
+  class="compacted-table compacted-table--headings"
+/>
+`;
+
+exports[`Responsive Table should match snapshot 1`] = `
+<div
+  class="responsive-table"
+>
+  <div
+    class="responsive-table__inner"
+  />
+</div>
+`;

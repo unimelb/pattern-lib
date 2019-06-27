@@ -1,10 +1,11 @@
 <template>
-  <ResponsiveTable>
-    <table class="table table--striped">
+  <CompactedTable>
+    <table class="table table--striped table--is-compacted">
       <thead>
         <tr class="table__row--inverted">
           <th>Heading 1</th>
           <th>A really really long Heading</th>
+          <th>Another heading</th>
         </tr>
       </thead>
       <tbody>
@@ -15,6 +16,7 @@
           <td>
             Professor Julie Willis
           </td>
+          <td>Loreum Ipsum</td>
         </tr>
         <tr>
           <td>
@@ -23,6 +25,7 @@
           <td>
             Professor Mark Considine
           </td>
+          <td>Loreum Ipsum</td>
         </tr>
         <tr>
           <td>
@@ -33,6 +36,7 @@
             Professor Zeger Degraeve
             (Dean Melbourne Business School)
           </td>
+          <td>Loreum Ipsum</td>
         </tr>
         <tr>
           <td>
@@ -41,18 +45,19 @@
           <td>
             Professor Shitij Kapur
           </td>
+          <td>Loreum Ipsum</td>
         </tr>
       </tbody>
     </table>
-  </ResponsiveTable>
+  </CompactedTable>
 </template>
 
 <script>
-import ResponsiveTable from '../ResponsiveTable.vue';
-import TableResponsiveDoc from './table-responsive.md';
+import CompactedTable from '../CompactedTable.vue';
+import TableCompactedDoc from './table-compacted.md';
 
 export default {
-  components: { ResponsiveTable },
-  readme: { custom: TableResponsiveDoc, source: false, html: true },
+  components: { CompactedTable },
+  readme: { custom: TableCompactedDoc, source: false, html: true },
 };
 </script>

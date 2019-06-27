@@ -1,12 +1,6 @@
 <template>
   <ResponsiveTable>
     <table class="table table--striped">
-      <thead>
-        <tr class="table__row--inverted">
-          <th>Heading 1</th>
-          <th>A really really long Heading</th>
-        </tr>
-      </thead>
       <tbody>
         <tr>
           <td>
@@ -49,10 +43,9 @@
 
 <script>
 import ResponsiveTable from '../ResponsiveTable.vue';
-import TableResponsiveDoc from './table-responsive.md';
 
 export default {
   components: { ResponsiveTable },
-  readme: { custom: TableResponsiveDoc, source: false, html: true },
+  readme: { html: true, source: false },
 };
 </script>

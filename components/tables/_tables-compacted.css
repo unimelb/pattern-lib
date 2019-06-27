@@ -1,0 +1,124 @@
+.compacted-table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+
+  &:not(.compacted-table--headings) {
+    tbody {
+      tr {
+        &::before {
+          content: none !important;
+        }
+      }
+    }
+  }
+
+  .table {
+    table-layout: auto;
+  }
+
+  tr.table__row--header {
+    td {
+      &::before {
+        content: none;
+      }
+    }
+
+    &:nth-child(n+2) {
+      margin-top: .5rem;
+    }
+
+    @media (--bp-max-x-mobile) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-weight: var(--fw-bold);
+      font-size: 1.15rem;
+      background: rgb(var(--col-background-primary-navy));
+      color: #fff;
+    }
+  }
+
+  thead {
+    display: none;
+
+    @media (--bp-x-tablet) {
+      display: table-header-group;
+    }
+  }
+
+  tbody {
+    display: flex;
+    flex-direction: column;
+
+    tr {
+      padding-bottom: .5rem;
+
+      &::before {
+        display: block;
+        content: '';
+        margin-bottom: .5rem;
+
+        @media (--bp-x-tablet) {
+          content: none;
+        }
+      }
+
+      &:not(.table__row--header) {
+        &::before {
+          content: attr(data-mobile-heading);
+          display: flex;
+          background: rgb(var(--col-background-primary-navy));
+          color: #fff;
+          padding: 1rem;
+          font-weight: var(--fw-bold);
+          font-size: 1.15rem;
+          margin-bottom: .5rem;
+
+          @media (--bp-x-tablet) {
+            content: none;
+          }
+        }
+
+        &:nth-child(n+2) {
+          padding-top: .5rem;
+        }
+      }
+
+      th {
+        @media (--bp-max-x-mobile) {
+          padding: 0 1rem;
+        }
+      }
+
+      td {
+        display: flex;
+        width: auto;
+        padding: 0 1rem;
+
+        &::before {
+          content: attr(data-label);
+          font-weight: var(--fw-bold);
+          margin-right: .5rem;
+
+          @media (--bp-x-tablet) {
+            display: none;
+          }
+        }
+
+        @media (--bp-max-x-mobile) {
+          display: inherit;
+          border-right: 0;
+        }
+
+        @media (--bp-x-tablet) {
+          display: table-cell;
+          padding: 1rem;
+        }
+      }
+    }
+
+    @media (--bp-x-tablet) {
+      display: table-row-group;
+    }
+  }
+}
