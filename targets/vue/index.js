@@ -315,3 +315,7 @@ export {
   default as CompactedTable,
 }
   from '../../components/tables/CompactedTable.vue';
+export {
+  default as Carousel,
+}
+  from '../../components/carousel/Carousel.vue';

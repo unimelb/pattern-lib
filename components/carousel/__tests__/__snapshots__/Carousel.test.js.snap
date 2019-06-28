@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should match snapshot 1`] = `
+<div
+  class="carousel"
+>
+  <div
+    class="carousel--slider"
+  >
+    <!---->
+  </div>
+   
+  <div
+    class="carousel--footer"
+  />
+   
+  <div
+    class="carousel--panel"
+  >
+    <div
+      class="carousel--panel__progress-bar"
+      style="width: 0%;"
+    />
+     
+    <div
+      class="carousel--panel__container"
+    >
+      <div
+        class="carousel--panel__left"
+      >
+        <div>
+          <div
+            class="carousel--panel--title"
+          >
+            
+            
+          
+          </div>
+           
+          <div
+            class="carousel--panel--description"
+          >
+            
+            
+          
+          </div>
+        </div>
+         
+        <buttonicon
+          class="carousel--panel--cta"
+          width="wide"
+        >
+          
+        </buttonicon>
+      </div>
+       
+      <div
+        class="carousel--panel__right"
+      >
+        <div
+          class="carousel--panel--controls"
+        >
+          <div
+            class="carousel--panel--controls__control"
+            tabindex="0"
+          >
+            <!---->
+          </div>
+           
+          <div
+            class="carousel--panel--stop-pause carousel--panel--controls__control"
+            tabindex="0"
+          >
+            <!---->
+          </div>
+           
+          <!---->
+           
+          <div
+            class="carousel--panel--controls__control"
+            tabindex="0"
+          >
+            <!---->
+          </div>
+        </div>
+         
+        <div
+          class="carousel--panel--stories-menu"
+        >
+          <li
+            class="carousel--panel--stories-menu--item"
+            tabindex="0"
+          >
+            <div
+              class="carousel--panel--stories-menu--text carousel--panel--stories-menu__active"
+            >
+              
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
