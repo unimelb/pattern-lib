@@ -12,13 +12,13 @@
     height: 180px;
     width: 100%;
 
-    @media (--bp-desktop) {
-      height: 548px;
-    }
-
     &__image {
       height: 100%;
       width: 100%;
+    }
+
+    @media (--bp-desktop) {
+      height: 548px;
     }
   }
 
@@ -36,21 +36,6 @@
     background: rgb(var(--col-navy-light));
     overflow: hidden;
     width: 100%;
-
-  @media (--bp-desktop) {
-    width: 75%;
-    height: 249px;
-    position: absolute;
-    z-index: 2;
-    bottom: 3rem;
-    margin: auto;
-  }
-
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    display: block;
-    left: 10vw;
-  }
-
 
     &--left {
       display: flex;
@@ -95,9 +80,6 @@
       background: rgb(var(--col-background-primary-white));
       border-color: rgb(var(--col-background-secondary-grey));
       position: relative;
-      @media (--bp-desktop) {
-        margin-top: 1rem;
-      }
 
       span {
         color: rgb(var(--col-black-dark));
@@ -108,6 +90,9 @@
           position: absolute;
           right: 1rem;
         }
+      }
+      @media (--bp-desktop) {
+        margin-top: 1rem;
       }
     }
 
@@ -123,7 +108,6 @@
         flex-direction: row-reverse;
         display: flex;
       }
-
     }
 
     &__progress-bar {
@@ -137,12 +121,12 @@
       color: rgb(var(--col-black-dark));
       justify-content: center;
       margin-bottom: 1em;
-      @media (--bp-desktop) {
-        justify-content: flex-end;
-      }
       &__control {
         cursor: pointer;
         color: rgb(var(--col-background-primary-navy));
+      }
+      @media (--bp-desktop) {
+        justify-content: flex-end;
       }
     }
 
@@ -155,9 +139,6 @@
 
     &--stories-menu {
       display: none;
-      @media (--bp-desktop) {
-        display: block;
-      }
       &--item {
         list-style-type: none;
         border-bottom: 2px solid rgb(var(--col-black-mid-2));
@@ -181,6 +162,23 @@
         background: rgb(var(--col-background-primary-navy));
         color: rgb(var(--col-background-primary-white));
       }
+      @media (--bp-desktop) {
+        display: block;
+      }
+    }
+
+    @media (--bp-desktop) {
+      width: 75%;
+      height: 249px;
+      position: absolute;
+      z-index: 2;
+      bottom: 3rem;
+      margin: auto;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display: block;
+      left: 10vw;
     }
   }
 }
@@ -189,6 +187,7 @@
   overflow: auto !important;
 }
 
-.swiper-container-horizontal>*>.slider-wrapper, .swiper-container-vertical>*>.slider-wrapper{
-  display: block!important;
+.swiper-container-horizontal > * > .slider-wrapper,
+.swiper-container-vertical > * > .slider-wrapper {
+  display: block !important;
 }

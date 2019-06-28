@@ -62,7 +62,7 @@ describe('Carousel', () => {
       },
     });
     expect(wrapper.props().stories.length).toBe(2);
-    expect(wrapper.find('.carousel--slider img').attributes().src).toBe('test1');
+    expect(wrapper.find('.carousel__slider img').attributes().src).toBe('test1');
   });
 
   it('should set active to first story as default', () => {
@@ -72,7 +72,7 @@ describe('Carousel', () => {
       },
     });
     expect(wrapper.vm.selectedIndex).toBe(0);
-    expect(wrapper.find('.carousel--slider img').exists()).toBe(true);
+    expect(wrapper.find('.carousel__slider img').exists()).toBe(true);
   });
 
   it('should render default story title and description', () => {
@@ -81,8 +81,8 @@ describe('Carousel', () => {
         stories: storiesMock,
       },
     });
-    expect(wrapper.find('.carousel--panel--title').text()).toBe('Story 1');
-    expect(wrapper.find('.carousel--panel--description').text()).toBe('Story 2 description');
+    expect(wrapper.find('.carousel__panel__title').text()).toBe('Story 1');
+    expect(wrapper.find('.carousel__panel__description').text()).toBe('Story 2 description');
   });
 
   it('should render stories titles menu', () => {
@@ -91,8 +91,8 @@ describe('Carousel', () => {
         stories: storiesMock,
       },
     });
-    expect(wrapper.findAll('.carousel--panel--stories-menu--text').at(0).text()).toBe('Story 1');
-    expect(wrapper.findAll('.carousel--panel--stories-menu--text').at(1).text()).toBe('Story 2');
+    expect(wrapper.findAll('.carousel__panel--stories-menu__text').at(0).text()).toBe('Story 1');
+    expect(wrapper.findAll('.carousel__panel--stories-menu__text').at(1).text()).toBe('Story 2');
   });
 
   it('should have click/enter event on stories menu title', () => {
@@ -106,9 +106,9 @@ describe('Carousel', () => {
     wrapper.setMethods({
       moveToStory,
     });
-    wrapper.find('.carousel--panel--stories-menu--item').trigger('click');
+    wrapper.find('.carousel__panel--stories-menu__item').trigger('click');
     expect(moveToStory.called).toBe(true);
-    wrapper.find('.carousel--panel--stories-menu--item').trigger('keydown.enter');
+    wrapper.find('.carousel__panel--stories-menu__item').trigger('keydown.enter');
     expect(moveToStory.called).toBe(true);
   });
 
@@ -119,7 +119,7 @@ describe('Carousel', () => {
       },
     });
 
-    wrapper.findAll('.carousel--panel--stories-menu--item').at(1).trigger('click');
+    wrapper.findAll('.carousel__panel--stories-menu--item').at(1).trigger('click');
     expect(wrapper.vm.selectedIndex).toBe(1);
   });
 
@@ -131,7 +131,7 @@ describe('Carousel', () => {
     });
 
     expect(wrapper.vm.storiesData[0].isActive).toBe(true);
-    expect(wrapper.find('.carousel--panel--stories-menu--text').classes()).toContain('carousel--panel--stories-menu__active');
+    expect(wrapper.find('.carousel__panel--stories-menu__text').classes()).toContain('carousel__panel--stories-menu__active');
   });
 
   it('should set "active" state to story on menu title click', () => {
@@ -141,9 +141,9 @@ describe('Carousel', () => {
       },
     });
 
-    wrapper.findAll('.carousel--panel--stories-menu--item').at(1).trigger('click');
+    wrapper.findAll('.carousel__panel--stories-menu--item').at(1).trigger('click');
     expect(wrapper.vm.storiesData[1].isActive).toBe(true);
-    expect(wrapper.findAll('.carousel--panel--stories-menu--text').at(1).classes()).toContain('carousel--panel--stories-menu__active');
+    expect(wrapper.findAll('.carousel__panel--stories-menu--text').at(1).classes()).toContain('carousel__panel--stories-menu__active');
   });
 
   it('should have click/enter event on stop/pause control', () => {
@@ -160,7 +160,7 @@ describe('Carousel', () => {
       startSliding,
     });
 
-    const pauseStop = wrapper.find('.carousel--panel--stop-pause');
+    const pauseStop = wrapper.find('.carousel__panel--stop-pause');
 
     pauseStop.trigger('click');
     expect(stopSliding.called).toBe(true);
@@ -190,8 +190,8 @@ describe('Carousel', () => {
       nextStory,
     });
 
-    const prev = wrapper.findAll('.carousel--panel--controls__control').at(0);
-    const next = wrapper.findAll('.carousel--panel--controls__control').at(2);
+    const prev = wrapper.findAll('.carousel__panel--controls__control').at(0);
+    const next = wrapper.findAll('.carousel__panel--controls__control').at(2);
 
     prev.trigger('click');
     expect(prevStory.called).toBe(true);
@@ -217,8 +217,8 @@ describe('Carousel', () => {
       slide,
     });
 
-    const prev = wrapper.findAll('.carousel--panel--controls__control').at(0);
-    const next = wrapper.findAll('.carousel--panel--controls__control').at(2);
+    const prev = wrapper.findAll('.carousel__panel--controls__control').at(0);
+    const next = wrapper.findAll('.carousel__panel--controls__control').at(2);
 
     prev.trigger('click');
     expect(slide.called).toBe(true);
