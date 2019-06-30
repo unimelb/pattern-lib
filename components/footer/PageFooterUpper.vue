@@ -164,9 +164,9 @@
 </template>
 
 <script>
-import SocialList from '../../social-list/SocialList.vue';
-import SvgIcon from '../../icons/SvgIcon.vue';
-import Logo from '../../logo/Logo.vue';
+import SocialList from '../social-list/SocialList.vue';
+import SvgIcon from '../icons/SvgIcon.vue';
+import Logo from '../logo/Logo.vue';
 
 export default {
   components: {

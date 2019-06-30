@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import CardPathfinder from '../../../../cards/CardPathfinder.vue';
-import Logo from '../../../../logo/Logo.vue';
+import CardPathfinder from '../../../cards/CardPathfinder.vue';
+import Logo from '../../../logo/Logo.vue';
 
 export default {
   components: { CardPathfinder, Logo },

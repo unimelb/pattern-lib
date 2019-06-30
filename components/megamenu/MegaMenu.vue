@@ -192,7 +192,7 @@ import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
-import Logo from '../../logo/Logo.vue';
+import Logo from '../logo/Logo.vue';
 
 export default {
   components: {

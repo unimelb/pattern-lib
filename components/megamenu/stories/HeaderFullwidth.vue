@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Logo from '../../../logo/Logo.vue';
+import Logo from '../../logo/Logo.vue';
 import PageBreadcrumbs from '../../breadcrumbs/PageBreadcrumbs.vue';
 
 export default {
