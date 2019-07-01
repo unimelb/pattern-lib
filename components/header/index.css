@@ -232,14 +232,15 @@
       display: flex;
       position: relative;
       align-items: center;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      height: 5rem;
+
+      @media (--bp-tablet) {
+        height: 6.6875rem;
+      }
     }
 
     .page-header__logo {
       font-size: .875rem;
-
-      /* fix wrapping of `alt` text */
 
       @media (--bp-tablet) {
         width: 85px;
