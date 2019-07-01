@@ -128,19 +128,14 @@
   /* Aperture without focus mark for level-3 header */
   &__shape {
     position: absolute;
-    top: -35%;
-
-    /* MAGIC NUMBER account for slight rotation */
+    overflow: hidden;
+    top: 0;
     right: 0;
-    bottom: 0;
     left: 27%;
-    transform: rotate(.25deg);
-
-    /* rotate slightly */
+    height: 100%;
     background-color: inherit;
 
     /* pass on background colour to pseudo-elements */
-
     &::before,
     &::after {
       content: '';
@@ -150,33 +145,26 @@
       left: 0;
 
       /* inherit from shape and header */
+      background-color: inherit;
     }
 
     /* triangle in top left-hand corner */
     &::before {
-      width: 0;
-      height: 0;
-      border-top: 52px solid rgb(var(--col-background-primary-navy));
-      border-right: 90px solid transparent;
-      top: 29px;
-
-      @media (--bp-tablet) {
-        top: 36px;
-      }
+      top: 0;
+      height: 45%;
+      transform: skewY(-30deg);
+      transform-origin: top left;
     }
 
     /* triangle in bottom left-hand corner */
     &::after {
-      width: 0;
-      top: 39px;
-      height: 0;
-      border-bottom: 100px solid rgb(var(--col-background-primary-navy));
-      border-right: 64px solid transparent;
+      bottom: 0;
+      height: 55%;
+      transform: skewY(60deg);
+      transform-origin: bottom left;
     }
 
     @media (--bp-x-wide) {
-      top: -27%;
-      bottom: 11px;
       left: 35%;
     }
   }
@@ -241,11 +229,8 @@
       display: flex;
       position: relative;
       align-items: center;
-      height: 5rem;
-
-      @media (--bp-tablet) {
-        height: 6.6875rem;
-      }
+      padding-top: .65rem;
+      padding-bottom: .65rem;
     }
 
     .page-header__logo {
