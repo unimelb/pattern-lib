@@ -581,12 +581,6 @@
     padding-top: 0;
     padding-bottom: 0;
 
-    .link-img {
-      margin: -.75rem;
-      padding: .75rem;
-      border-radius: var(--br);
-    }
-
     @media (--bp-tablet) {
       height: 100%;
       min-height: 6rem;
