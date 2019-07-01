@@ -319,3 +319,7 @@ export {
   default as Carousel,
 }
   from '../../components/carousel/Carousel.vue';
+export {
+  default as Logo,
+}
+  from '../../components/logo/Logo.vue';

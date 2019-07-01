@@ -3,7 +3,7 @@
   flex-direction: column;
   flex: 1 0 auto;
   position: relative;
-  margin: 5px 1.25rem 0;
+  margin: .3125rem 1.25rem 0 .625rem;
   text-decoration: none;
   line-height: 1rem;
   color: rgb(var(--col-background-primary-white));
@@ -23,6 +23,10 @@
   .megamenu & {
     padding: 20px 0;
     width: auto !important;
+  }
+
+  @media (--bp-tablet) {
+    margin-left: 1.25rem;
   }
 
   @media (--bp-tablet) {
