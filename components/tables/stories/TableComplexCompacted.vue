@@ -12,7 +12,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="table__row--info table__row--header">
+        <tr class="table__row--info table__header">
           <th colspan="2">
             January using th
           </th>
@@ -49,7 +49,7 @@
             Council Planning Day
           </td>
         </tr>
-        <tr class="table__row--info table__row--header">
+        <tr class="table__row--info table__header">
           <td colspan="2">
             February
           </td>
@@ -78,7 +78,7 @@
             Week O: Orientation for all students
           </td>
         </tr>
-        <tr class="table__row--info table__row--header">
+        <tr class="table__row--info table__header">
           <td colspan="2">
             March
           </td>
@@ -99,7 +99,7 @@
             Labour Day (not a University Holiday)
           </td>
         </tr>
-        <tr class="table__row--info table__row--header">
+        <tr class="table__row--info table__header">
           <td colspan="2">
             April
           </td>
