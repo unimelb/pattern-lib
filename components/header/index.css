@@ -44,7 +44,6 @@
   /* Entity identifier */
   &__entity {
     position: relative;
-    z-index: var(--z-default);
     width: 45%;
     margin-top: calc(var(--vr) * 2);
 
@@ -79,7 +78,6 @@
 
   &__heading {
     position: relative;
-    z-index: var(--z-default);
     width: 50%;
     max-width: calc(64rem * .4);
     padding-right: 3rem;
@@ -225,7 +223,6 @@
 
   /* Level-3 header (i.e. `PageHeaderMin`) */
   &--l3 {
-    z-index: (var(--z-default) - 1);
     padding: 0;
 
     .page-header__inner {

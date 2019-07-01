@@ -139,8 +139,12 @@
   --h6-fs: calc(1rem * var(--fs));
 
   /* Z-index variables */
+  --z-below: -1;
   --z-default: 1;
-  --z-liveagent: 99999;
+  --z-navigation: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+  --z-liveagent: 10000;
 }
 
 /**

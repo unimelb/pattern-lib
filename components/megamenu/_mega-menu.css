@@ -6,7 +6,7 @@
 
 .megamenu {
   position: fixed;
-  z-index: (var(--z-default) + 101);
+  z-index: calc(var(--z-navigation) + 101);
   top: 0;
   right: -100%;
   width: 100%;
@@ -64,7 +64,6 @@
 
     @media (--bp-x-desktop) {
       display: none;
-      z-index: (var(--z-default) + 1);
       top: 100%;
       left: 0;
       height: auto;
@@ -173,22 +172,6 @@
     &__link[href='#'] {
       opacity: .2;
       cursor: not-allowed;
-    }
-
-    &__link--nested {
-      width: 100%;
-      font-weight: var(--fw-semibold);
-      text-align: left;
-      cursor: pointer;
-
-      &::after {
-        content: '\203a';
-        z-index: (var(--z-default) + 8);
-        float: right;
-        font-size: 1.5rem;
-        font-weight: normal;
-        line-height: .85;
-      }
     }
 
     &__nested-parent {
@@ -481,7 +464,6 @@
       &__section .menu__item[tabindex='0']:focus {
         .inner {
           display: flex;
-          z-index: (var(--z-default) + 2);
           box-shadow: 1px 6px 12px -3px rgba(0, 0, 0, .6);
         }
 
@@ -614,7 +596,7 @@
 
 .page-header {
   &.active {
-    z-index: (var(--z-default) + 100);
+    z-index: calc(var(--z-default) + 100);
     overflow: visible;
   }
 
@@ -632,7 +614,7 @@
   /* Hack to not target IE11 as focus-within breaks menu */
   @supports (display: flex) {
     &:focus-within {
-      z-index: (var(--z-default) + 100);
+      z-index: calc(var(--z-default) + 100);
       overflow: visible;
     }
   }

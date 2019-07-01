@@ -9,7 +9,7 @@
   &__top-left,
   &__bottom-right {
     position: absolute;
-    z-index: (var(--z-default) + 89);
+    z-index: calc(var(--z-default) + 1);
     top: 0;
     left: 0;
     fill: rgb(var(--col-blue-mid-2));
