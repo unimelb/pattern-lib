@@ -2,7 +2,7 @@
 
 Add the class `table--is-compacted` to the `<table>` to define it as a Compacted Table.
 
-By default the first column becomes the header when viewing the table on mobile viewport. This can be overridden by adding the class `table__row--header` to a `<tr>`.
+By default the first column becomes the header when viewing the table on mobile viewport. This can be overridden by adding the class `table__header` to a `<tr>`.
 
 ### Example:
 
@@ -10,7 +10,7 @@ By default the first column becomes the header when viewing the table on mobile 
 <table class="table--is-compacted">
   <thead>...</thead>
   <tbody>
-    <tr class="table__row--info table__row--header">
+    <tr class="table__header">
       <th>This becomes mobile heading</th>
     </tr>
     ...
@@ -25,7 +25,7 @@ By default the first column becomes the header when viewing the table on mobile 
   <table>
     <thead>...</thead>
     <tbody>
-      <tr class="table__row--info table__row--header">
+      <tr class="table__header">
         <th>This becomes mobile heading</th>
       </tr>
       ...

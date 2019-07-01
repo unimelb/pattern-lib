@@ -7,7 +7,7 @@ body > div[aria-hidden='true']:not(#sitemap) {
 .modal-dialog {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: var(--z-modal);
   top: 0;
   left: 0;
   width: 100%;

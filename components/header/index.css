@@ -44,7 +44,6 @@
   /* Entity identifier */
   &__entity {
     position: relative;
-    z-index: 1;
     width: 45%;
     margin-top: calc(var(--vr) * 2);
 
@@ -79,10 +78,10 @@
 
   &__heading {
     position: relative;
-    z-index: 1;
     width: 50%;
     max-width: calc(64rem * .4);
     padding-right: 3rem;
+    z-index: var(--z-default);
 
     @media (--bp-max-x-mobile) {
       width: 80%;
@@ -225,21 +224,21 @@
 
   /* Level-3 header (i.e. `PageHeaderMin`) */
   &--l3 {
-    z-index: 0;
     padding: 0;
 
     .page-header__inner {
       display: flex;
       position: relative;
       align-items: center;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      height: 5rem;
+
+      @media (--bp-tablet) {
+        height: 6.6875rem;
+      }
     }
 
     .page-header__logo {
       font-size: .875rem;
-
-      /* fix wrapping of `alt` text */
 
       @media (--bp-tablet) {
         width: 85px;
