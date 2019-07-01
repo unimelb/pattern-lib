@@ -17,19 +17,20 @@
     background-color: rgb(var(--col-background-secondary-navy));
   }
 
-  /* logo wrapper */
-  &__header__logo {
-    margin-bottom: 2.25rem;
-    justify-content: center;
+  &__header {
+    display: flex;
+    flex-direction: column;
 
-    .logo__image {
-      height: 148px;
-      width: 148px;
-    }
+    &-logo {
+      margin-bottom: 2.25rem;
+      justify-content: center;
+      flex: 1;
+      align-self: center;
 
-    @media (--bp-tablet) {
-      margin-bottom: 0;
-      justify-content: flex-start;
+      @media (--bp-tablet) {
+        margin-bottom: 0;
+        justify-content: flex-start;
+      }
     }
   }
 
@@ -160,20 +161,10 @@
 
     /* footer header with logo and search form */
     &__header {
-      display: table;
-      width: 100%;
+      flex-direction: row;
 
-      &__logo,
-      &__search {
-        display: table-cell;
-        vertical-align: bottom;
-      }
-
-      &__logo {
-        text-align: left;
-      }
-
-      &__search {
+      &-search {
+        align-self: flex-end;
         width: 50%;
         padding-left: .5rem;
       }

@@ -2,11 +2,12 @@
   <div class="page-footer__top">
     <div class="page-footer__inner max">
       <div class="page-footer__header">
-        <Logo
-          class="page-footer__header__logo"
-          size="lg"
-          no-padding/>
-        <div class="page-footer__header__search">
+        <div class="page-footer__header-logo">
+          <Logo
+            size="lg"
+            no-padding/>
+        </div>
+        <div class="page-footer__header-search">
           <form
             id="search"
             aria-hidden="true"
