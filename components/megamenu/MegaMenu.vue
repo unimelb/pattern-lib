@@ -5,20 +5,9 @@
     class="page-header page-header--l3 page-header--study"
   >
     <div class="page-header__inner">
-      <a
-        tabindex="0"
-        class="link-img link-reset"
-        href="https://www.unimelb.edu.au/">
-        <div class="logo-mask">
-          <img
-            class="page-header__logo"
-            src="../shared/logo.svg"
-            width="117"
-            height="117"
-            alt="The University of Melbourne homepage"
-          >
-        </div>
-      </a>
+      <logo
+        size="md"
+        no-padding/>
       <MegaMenuTitle
         v-if="facultyName"
         :title="facultyName"
@@ -203,6 +192,7 @@ import PageSearch from '../search/PageSearch.vue';
 import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
+import Logo from '../logo/Logo.vue';
 
 export default {
   components: {
@@ -211,6 +201,7 @@ export default {
     PageSearchForm,
     MegaMenuTitle,
     MegaMenuTopNavigation,
+    Logo,
   },
   props: {
     items: {

@@ -559,18 +559,14 @@
 
   .page-header__inner {
     height: 4.5rem;
-    padding-left: 1rem;
+    padding-left: .625rem;
     padding-top: 0;
     padding-bottom: 0;
 
-    .link-img {
-      margin: -.75rem;
-      padding: .75rem;
-      border-radius: var(--br);
-    }
-
     @media (--bp-tablet) {
-      height: 6.4375rem;
+      height: 100%;
+      min-height: 6rem;
+      padding-left: 1rem;
     }
   }
 
