@@ -173,6 +173,12 @@
       border-bottom: 100px solid rgb(var(--col-background-primary-navy));
       border-right: 64px solid transparent;
     }
+
+    @media (--bp-x-wide) {
+      top: -27%;
+      bottom: 11px;
+      left: 35%;
+    }
   }
 
   /* Level-1 header */
