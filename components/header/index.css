@@ -229,8 +229,13 @@
       display: flex;
       position: relative;
       align-items: center;
-      padding-top: .65rem;
-      padding-bottom: .65rem;
+      padding-top: .85rem;
+      padding-bottom: .85rem;
+
+      @media (--bp-tablet) {
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+      }
     }
 
     .page-header__logo {
