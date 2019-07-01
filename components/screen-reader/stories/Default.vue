@@ -1,29 +1,40 @@
 <template>
   <div>
-    <ScreenReader></ScreenReader>
-      <MegaMenu
-    :items="items"
-    :top-menu="topMenu"
-    active="/random-link"
-    faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
-    faculty-link="/faculty-link"
-    faculty-width="25.5%"
-  />
+    <ScreenReader/>
+    <MegaMenu
+      :items="items"
+      :top-menu="topMenu"
+      active="/random-link"
+      faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
+      faculty-link="/faculty-link"
+      faculty-width="25.5%"
+    />
+    <div id="main">
+      <section-wrap bg-color="white">
+        <h1>Main content</h1>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+      </section-wrap>
+    </div>
   </div>
 </template>
 
 <script>
-import MegaMenu from '../../page/megamenu/MegaMenu.vue';
-import sample from '../../page/megamenu/sample';
+import MegaMenu from '../../megamenu/MegaMenu.vue';
+import sample from '../../megamenu/sample';
 import ScreenReader from '../ScreenReader.vue';
+import screenReaderMd from './screenReaderMd.md';
 
-  export default {
-    components: {
-      MegaMenu,
-      ScreenReader
-    },
+export default {
+  readme: { custom: screenReaderMd, html: true, source: false },
+  components: {
+    MegaMenu,
+    ScreenReader,
+  },
 
-      data() {
+  data() {
     return {
       items: [
         {
@@ -132,5 +143,5 @@ import ScreenReader from '../ScreenReader.vue';
       topMenu: sample.topMenu,
     };
   },
-  }
+};
 </script>

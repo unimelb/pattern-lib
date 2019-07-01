@@ -1,31 +1,27 @@
 .screen-reader {
+  &__container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(var(--col-background-primary-navy));
+  }
   &__skippy {
     display: block;
-    padding: 1em;
-    color: $white;
-    text-align: center;
-    background-color: navy;
+    margin: 1rem !important;
+    color: white;
     outline: 0;
-  
-    @include hover {
-      color: $white;
-    }
   }
-  
+
   &__skippy-text {
     padding: .5em;
-    outline: 1px dotted;
+    outline: 5px dotted;
   }
 
   &__sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
-    padding: 0;
     overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0;
+    clip: rect(0, 0, 0, 0);
   }
 
   &__sr-only-focusable {
@@ -38,4 +34,5 @@
       clip: auto;
       white-space: normal;
     }
-  }}
+  }
+}
