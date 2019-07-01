@@ -81,6 +81,7 @@
     width: 50%;
     max-width: calc(64rem * .4);
     padding-right: 3rem;
+    z-index: var(--z-default);
 
     @media (--bp-max-x-mobile) {
       width: 80%;

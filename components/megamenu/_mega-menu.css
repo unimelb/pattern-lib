@@ -6,7 +6,7 @@
 
 .megamenu {
   position: fixed;
-  z-index: calc(var(--z-navigation) + 101);
+  z-index: var(--z-navigation);
   top: 0;
   right: -100%;
   width: 100%;
