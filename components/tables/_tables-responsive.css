@@ -22,7 +22,7 @@
   &__inner {
     table {
       @media (--bp-max-x-mobile) {
-        width: 600px;
+        width: 600px !important;
         table-layout: auto;
         margin-bottom: 0;
       }
