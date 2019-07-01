@@ -11,7 +11,7 @@ page-nav {
 
 .sitenav {
   position: fixed;
-  z-index: 101;
+  z-index: calc(var(--z-navigation) + 1);
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-background-primary-white));
 
@@ -43,7 +43,7 @@ page-nav {
 
     /* hide sidebar of parent panels */
     &--nested-open {
-      z-index: 102;
+      z-index: calc(var(--z-navigation) + 2);
       overflow: hidden;
     }
 
@@ -83,7 +83,7 @@ page-nav {
   &__nested-trigger {
     &::after {
       content: '\203a';
-      z-index: 9;
+      z-index: calc(var(--z-default) + 8);
       float: right;
       font-size: 1.5rem;
       font-weight: normal;
