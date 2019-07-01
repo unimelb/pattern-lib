@@ -12,6 +12,25 @@
     background-color: rgb(var(--col-brand));
   }
 
+  &__logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    @media (--bp-tablet) {
+      width: 117px;
+      height: 117px;
+    }
+  }
+
+  .logo-mask {
+    padding: calc(var(--vr) / 3);
+
+    @media (--bp-tablet) {
+      padding: 0;
+    }
+  }
+
   &--no-logo {
     .page-header--center {
       min-height: 80vh;
@@ -217,6 +236,15 @@
 
       @media (--bp-tablet) {
         height: 6.6875rem;
+      }
+    }
+
+    .page-header__logo {
+      font-size: .875rem;
+
+      @media (--bp-tablet) {
+        width: 85px;
+        height: 71px;
       }
     }
 
