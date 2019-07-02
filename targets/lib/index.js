@@ -4,9 +4,7 @@ import 'babel-polyfill';
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 import Ike from 'ike.js';
-import {
-  version,
-} from '../../package.json';
+import { version } from '../../package.json';
 
 import BootstrapCMSTables from '../../components/tables/BootstrapCMSTables';
 
@@ -81,12 +79,15 @@ import CompactedTable from '../../components/tables/CompactedTable.vue';
 import ResponsiveTable from '../../components/tables/ResponsiveTable.vue';
 import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 import Logo from '../../components/logo/Logo.vue';
+import ShowcaseFilter from '../../components/filter/showcase/ShowcaseFilter.vue';
 
 import '../../components';
 
 // Inject SVG sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
-const publicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${version}/` : '';
+const publicPath = loadExternalAssets
+  ? `${process.env.CDN_URL}/v${version}/`
+  : '';
 new Ike(`${publicPath}sprite.svg`, version);
 
 // Load shared SVG assets
@@ -165,6 +166,7 @@ Vue.component('compacted-table', CompactedTable);
 Vue.component('responsive-table', ResponsiveTable);
 Vue.component('page-header-campaign', PageHeaderCampaign);
 Vue.component('logo', Logo);
+Vue.component('showcase-filter', ShowcaseFilter);
 
 // Create Vue instance
 new Vue({

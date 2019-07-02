@@ -25,6 +25,8 @@
 .input-filter {
   display: flex;
   flex-direction: column;
+  padding: 24px 34px 24px 34px;
+  background-color: rgb(var(--col-background-primary-navy));
 
   &__input {
     width: 100%;

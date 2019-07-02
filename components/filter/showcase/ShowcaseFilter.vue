@@ -1,30 +1,32 @@
 <template>
   <div>
-    <div class="form form--inline__row form--inline__row--center">
-      <input
-        v-model="searchData"
-        aria-label="Card title"
-        class="form--inline__search"
-        type="search"
-        placeholder="Type to search title or description"
-      >
-      <button
-        class="form--inline__button form--inline__button--alt"
-        aria-label="Search"
-        @click="filterDataButton"
-      >
-        <SvgIcon
-          class="form--inline__svg"
-          name="search" />
-        <span class="form--inline__button-label">Search</span>
-      </button>
-    </div>
-    <div class="resultsContainer">
-      <p class="results">{{ dataFiltered.length }} results</p>
-      <p class="filtersApplied">(Filters applied)</p>
-      <button @click="resetSearch">Clear results</button>
-    </div>
+    <section-wrap bg-color="white">
+      <div class="input-filter">
+        <input
+          v-model="searchData"
+          type="search"
+          placeholder="Type to search title or description"
+          class="input-filter__input"
+        >
+        <button
+          aria-label="Search"
+          class="input-filter__search-button"
+          @click="filterDataButton">
+          <SvgIcon
+            class="input-filter__search-button--icon"
+            name="search" />
+          <span class="input-filter__search-button--text">Search</span>
+        </button>
+      </div>
 
+      <div class="showcase-filter__container">
+        <p class="showcase-filter__results">{{ dataFiltered.length }} results</p>
+        <p class="showcase-filter__filters-applied">(Filters applied)</p>
+        <button
+          class="showcase-filter__button"
+          @click="resetSearch">Clear results</button>
+      </div>
+    </section-wrap>
     <SectionWrap class="bg-alt">
       <div class="grid grid--3col">
         <ListItem
@@ -40,9 +42,18 @@
             <div
               slot="sub-title-1"
               class="sub-title">
+              <SvgIcon name="info" />
               <span
                 v-for="(item, index) in item.performance"
-                :key="index">{{ item }}</span>
+                :key="index">
+                <span v-if="index > 0">
+                  {{ ', ' }}
+                </span>
+                <span>
+                  {{ item }}
+                </span>
+
+              </span>
             </div>
             <div
               slot="sub-title-2"
@@ -60,11 +71,10 @@
   </div>
 </template>
 <script>
-import InputFilter from '../InputFilter.vue';
 import GenericCard from '../../cards/GenericCard.vue';
 
 export default {
-  components: { InputFilter, GenericCard },
+  components: { GenericCard },
   props: {
     data: {
       type: Array,

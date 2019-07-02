@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import filterData from '../filterData';
+import filterData from '../filterParent/filterData';
 import FilterParent from '../filterParent/FilterParent.vue';
 
 export default {
