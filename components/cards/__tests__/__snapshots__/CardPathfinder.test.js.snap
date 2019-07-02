@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardPathfinder should match snapshot 1`] = `
+<a
+  aria-label=""
+  class="btn-owner card card--focus-box bg-inverted card--pathfinder"
+  href="http://www.google.com.au"
+>
+  <svgicon
+    class="card--focus-box__cnr card--focus-box__cnr--top-left"
+    height="54"
+    name="focus-top-left"
+    width="54"
+  />
+   
+  <svgicon
+    class="card--focus-box__cnr card--focus-box__cnr--btm-right"
+    height="54"
+    name="focus-bottom-right"
+    width="54"
+  />
+   
+  <h3
+    class="card__header heading-section"
+  />
+   
+  <div
+    class="card__inner"
+  >
+    <!---->
+     
+    <p />
+  </div>
+   
+  <div
+    class="card__footer"
+  >
+    <buttonicon
+      class="btn--inverted btn--fullwidth"
+      element="span"
+      icon="chevron-right"
+    >
+      Find out more
+    </buttonicon>
+  </div>
+</a>
+`;

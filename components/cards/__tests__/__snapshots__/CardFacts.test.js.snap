@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardFacts should match snapshot 1`] = `
+<div
+  class="card card--fact card--bdr bg-white text-center"
+>
+  <!---->
+   
+  <div
+    class="card__inner"
+  >
+    <div
+      class="card__header"
+    >
+      42
+    </div>
+     
+    <div
+      class="card__meta"
+    >
+      Million students
+    </div>
+     
+    <p>
+      Completed something or rather
+    </p>
+  </div>
+</div>
+`;

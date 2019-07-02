@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalDialog should match snapshot 1`] = `
+<div>
+  <button
+    aria-controls="modal-dialog-10"
+    class="btn modal-dialog__open"
+  >
+    <span
+      class="push-icon"
+    />
+  </button>
+   
+</div>
+`;
