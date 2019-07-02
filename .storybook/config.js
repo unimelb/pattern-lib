@@ -51,5 +51,6 @@ if (process.env.NODE_ENV !== 'production') {
         { id: 'label-title-only', enabled: true },
       ],
     },
+    clearConsoleOnUpdate: false,
   });
 }
