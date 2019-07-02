@@ -128,19 +128,14 @@
   /* Aperture without focus mark for level-3 header */
   &__shape {
     position: absolute;
-    top: -35%;
-
-    /* MAGIC NUMBER account for slight rotation */
+    overflow: hidden;
+    top: 0;
     right: 0;
-    bottom: 0;
     left: 27%;
-    transform: rotate(.25deg);
-
-    /* rotate slightly */
+    height: 100%;
     background-color: inherit;
 
     /* pass on background colour to pseudo-elements */
-
     &::before,
     &::after {
       content: '';
@@ -148,15 +143,15 @@
       position: absolute;
       right: 0;
       left: 0;
-      background-color: inherit;
 
       /* inherit from shape and header */
+      background-color: inherit;
     }
 
     /* triangle in top left-hand corner */
     &::before {
       top: 0;
-      height: 60%;
+      height: 45%;
       transform: skewY(-30deg);
       transform-origin: top left;
     }
@@ -164,9 +159,13 @@
     /* triangle in bottom left-hand corner */
     &::after {
       bottom: 0;
-      height: 40%;
+      height: 55%;
       transform: skewY(60deg);
       transform-origin: bottom left;
+    }
+
+    @media (--bp-x-wide) {
+      left: 35%;
     }
   }
 
@@ -230,10 +229,12 @@
       display: flex;
       position: relative;
       align-items: center;
-      height: 5rem;
+      padding-top: .85rem;
+      padding-bottom: .85rem;
 
       @media (--bp-tablet) {
-        height: 6.6875rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
       }
     }
 
