@@ -1,10 +1,11 @@
 <template>
   <div>
-    <filter-parent :data="filterData"/>
+    <filter-parent :data="filterData" />
   </div>
 </template>
 
 <script>
+import filterData from '../filterData';
 import FilterParent from '../filterParent/FilterParent.vue';
 
 export default {
@@ -13,28 +14,7 @@ export default {
   },
   data() {
     return {
-      filterData: [
-        {
-          type: 'input',
-          value: 'Arts',
-        },
-        {
-          type: 'input',
-          value: 'Science',
-        },
-        {
-          type: 'checkbox',
-          value: 'Test1',
-        },
-        {
-          type: 'checkbox',
-          value: 'Test2',
-        },
-        {
-          type: 'checkbox',
-          value: 'Test3',
-        },
-      ],
+      filterData,
     };
   },
 };

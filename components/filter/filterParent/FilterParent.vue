@@ -9,11 +9,14 @@
       <checkbox-filter
         v-if="checkboxData.length > 0"
         :data="checkboxData"
+        title="Select School"
         @event-data-checkbox="resultFromCheckbox"
       />
       <button @click="resetButton">Clear All button</button>
     </section-wrap>
-    <filter-results :data="dataToFilterResults"/>
+    <filter-results
+      :input="dataFromInput"
+      :checkbox="dataFromCheckbox" />
   </div>
 </template>
 
@@ -42,17 +45,12 @@ export default {
       checkboxData: [],
     };
   },
-  computed: {
-    dataToFilterResults() {
-      return this.dataFromInput;
-    },
-  },
   beforeMount() {
     this.data.forEach((element) => {
       if (element.type === 'input') {
-        this.inputData.push(element);
-      } else if (element.type === 'checkbox') {
-        this.checkboxData.push(element);
+        this.inputData.push(...element.values);
+      } else if (element.type === 'multi-select') {
+        this.checkboxData.push(...element.values);
       }
     });
   },

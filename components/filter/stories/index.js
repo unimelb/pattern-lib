@@ -1,9 +1,5 @@
-import {
-  storiesOf,
-} from '@storybook/vue';
-import {
-  createStory,
-} from '../../../.storybook/utils';
+import { storiesOf } from '@storybook/vue';
+import { createStory } from '../../../.storybook/utils';
 
 import BreadthStory from './BreadthStory.vue';
 import InputStory from './InputStory.vue';

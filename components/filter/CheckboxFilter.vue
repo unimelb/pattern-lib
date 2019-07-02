@@ -24,7 +24,7 @@ export default {
       default: '',
     },
     data: {
-      type: Array,
+      type: [Array, Object],
       default: () => [],
     },
   },
@@ -41,7 +41,7 @@ export default {
     },
   },
   mounted() {
-    this.$emit('event-data-filtered', this.filteredData);
+    this.$emit('event-data-filtered', this.data);
   },
   methods: {
     emitEvent() {

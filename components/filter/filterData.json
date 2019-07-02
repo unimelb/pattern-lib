@@ -1,0 +1,40 @@
+[{
+        "filterName": "school",
+        "type": "multi-select",
+        "values": [{
+                "id": "VCA",
+                "value": "Victorian College of the Arts"
+            },
+            {
+                "id": "VA",
+                "value": "Victorian Arts"
+            }
+        ]
+    },
+    {
+        "filterName": "disciplines",
+        "type": "input",
+        "values": [{
+                "id": "1",
+                "value": "Arts"
+            },
+            {
+                "id": "2",
+                "value": "Science"
+            },
+            {
+                "id": "3",
+                "value": "Engineer"
+            }
+        ]
+    },
+    {
+        "filterName": "keyword",
+        "type": "keyword"
+    },
+    {
+        "filterName": "location",
+        "type": "single-select"
+    }
+
+]
