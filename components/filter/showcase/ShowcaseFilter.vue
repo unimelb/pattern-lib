@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!--   <InputFilter :data="data.title" @event-data-filtered="getInputFilterData"/> -->
     <div class="form form--inline__row form--inline__row--center">
       <input
         v-model="searchData"
@@ -11,49 +10,25 @@
       >
       <button
         class="form--inline__button form--inline__button--alt"
-        aria-label="Search">
+        aria-label="Search"
+        @click="filterDataButton"
+      >
         <SvgIcon
           class="form--inline__svg"
-          name="search"/>
+          name="search" />
         <span class="form--inline__button-label">Search</span>
       </button>
-      <!--         <button
-          class="form--inline__button form--inline__button-border form--inline__button--alt test"
-          aria-label="Filters"
-          @click="handleFilterDetails"
-        >
-          <SvgIcon
-            class="form--inline__svg"
-            name="external"/>
-          <span class="form--inline__button-label">Filters</span>
-          <SvgIcon
-            class="form--inline__svg"
-            name="chevron-down"/>
-        </button>
-      </div>
-      <div
-        v-for="(item, index) in data"
-        :key="index">
-        <FilterDetails
-          v-if="showDetails"
-          :schools="item.school"
-          :perfomances="item.performance"
-          :dates="item.start_time"
-          :disciplines="item.disciplines"
-          :locations="item.location"
-      />-->
     </div>
     <div class="resultsContainer">
-      <p class="results">{{ filteredData.length }} results</p>
-      <p
-        v-if="searchData.length > 0"
-        class="filtersApplied">(Filters applied)</p>
+      <p class="results">{{ dataFiltered.length }} results</p>
+      <p class="filtersApplied">(Filters applied)</p>
+      <button @click="resetSearch">Clear results</button>
     </div>
 
     <SectionWrap class="bg-alt">
       <div class="grid grid--3col">
         <ListItem
-          v-for="(item, index) in filteredData"
+          v-for="(item, index) in dataFiltered"
           :key="index">
           <GenericCard
             :cols="3"
@@ -72,7 +47,7 @@
             <div
               slot="sub-title-2"
               class="sub-title">
-              <SvgIcon name="calendar"/>
+              <SvgIcon name="calendar" />
               <span>{{ item.start_time }}</span>
             </div>
             <template slot="links">
@@ -87,7 +62,6 @@
 <script>
 import InputFilter from '../InputFilter.vue';
 import GenericCard from '../../cards/GenericCard.vue';
-// import FilterDetails from './FilterDetails.vue';
 
 export default {
   components: { InputFilter, GenericCard },
@@ -100,8 +74,7 @@ export default {
   data() {
     return {
       searchData: '',
-      inputData: [],
-      // showDetails: false,
+      dataFiltered: this.data,
     };
   },
   computed: {
@@ -113,12 +86,13 @@ export default {
     },
   },
   methods: {
-    getInputFilterData(dataFromParent) {
-      this.searchData = dataFromParent;
+    filterDataButton() {
+      this.dataFiltered = this.filteredData;
     },
-    /* handleFilterDetails() {
-      this.showDetails = !this.showDetails;
-    }, */
+    resetSearch() {
+      this.dataFiltered = this.data;
+      this.searchData = '';
+    },
   },
 };
 </script>
