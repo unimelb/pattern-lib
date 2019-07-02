@@ -1,10 +1,12 @@
 <template>
-  <ShowcaseFilter :data="cardsData"/>
+  <ShowcaseFilter :data="cardsData" />
 </template>
 
 <script>
 import ShowcaseFilter from '../showcase/ShowcaseFilter.vue';
 import cardsData from '../showcase/data.json';
+import readmeShowcase from './readmeShowcase.md';
+
 export default {
   components: { ShowcaseFilter },
   data() {
@@ -12,6 +14,6 @@ export default {
       cardsData,
     };
   },
-  readme: { html: true, source: false },
+  readme: { custom: readmeShowcase, html: false, source: false },
 };
 </script>
