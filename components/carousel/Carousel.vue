@@ -38,26 +38,31 @@
           role="navigation"
           aria-label="Stories"
         >
-          <div
+          <ul
             class="carousel__panel--stories-menu"
             role="menu">
-            <a
+            <li
               v-for="(story, index) in storiesData"
               :key="index"
-              class="carousel__panel--stories-menu--item"
-              href="javascript: void(0);"
+              class="list-reset"
               role="menuitem"
-              @click="moveToStory(index)"
-              @keydown.13="moveToStory(index)"
-              @keydown.32="moveToStory(index)"
             >
-              <span
-                :class="{ 'carousel__panel--stories-menu__active': story.isActive }"
-                class="carousel__panel--stories-menu__text">
-                {{ story.title }}
-              </span>
-            </a>
-          </div>
+              <a
+                class="carousel__panel--stories-menu--item"
+                href="javascript: void(0);"
+
+                @click="moveToStory(index)"
+                @keydown.13="moveToStory(index)"
+                @keydown.32="moveToStory(index)"
+              >
+                <span
+                  :class="{ 'carousel__panel--stories-menu__active': story.isActive }"
+                  class="carousel__panel--stories-menu__text">
+                  {{ story.title }}
+                </span>
+              </a>
+            </li>
+          </ul>
           <div class="carousel__panel--controls">
             <div
               :aria-label="'Previous: ' + prevTitle"
@@ -83,6 +88,7 @@
               class="carousel__panel--stop-pause carousel__panel--controls__control"
               data-message="Play"
               role="button"
+              aria-label="Stop carousel"
               @click="stopSliding"
               @keydown.13="stopSliding"
               @keydown.32="stopSliding"
@@ -100,6 +106,7 @@
               class="carousel__panel--stop-pause carousel__panel--controls__control"
               data-message="Pause"
               role="button"
+              aria-label="Play carousel"
               @click="startSliding"
               @keydown.13="startSliding"
               @keydown.32="startSliding"
@@ -161,6 +168,7 @@
               width="wide"
               class="carousel__panel--cta"
               role="button"
+              size="sml"
             >
               {{ selectedItem.buttonText }}
             </ButtonIcon>

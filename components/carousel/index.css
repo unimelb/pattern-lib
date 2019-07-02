@@ -126,6 +126,7 @@
         color: rgb(var(--col-background-primary-navy));
       }
       @media (--bp-desktop) {
+        margin-bottom: 0;
         justify-content: flex-end;
       }
     }

@@ -30,7 +30,11 @@ const storiesMock = [{
 
 describe('Carousel', () => {
   it('should match snapshot', () => {
-    const result = shallow(Carousel).element;
+    const result = shallow(Carousel, {
+      propsData: {
+        stories: storiesMock,
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
