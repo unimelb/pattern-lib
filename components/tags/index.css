@@ -10,11 +10,17 @@
     background-color: rgb(var(--col-blue-light));
     border-radius: .25rem;
     font-size: .875rem;
-    color: rgb(var(--col-black-dark));
     letter-spacing: 0;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
     margin-right: .625rem;
     margin-top: .25rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: rgb(var(--col-background-primary-navy));
+      color: rgb(var(--col-background-primary-grey));
+    }
   }
 }
