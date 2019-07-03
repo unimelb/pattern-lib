@@ -1,11 +1,12 @@
 <template>
   <div class="tags">
-    <span
+    <a
       v-for="item in data"
       :key="item.id"
+      :href="item.href"
       class="tags__item">
-      {{ item }}
-    </span>
+      {{ item.value }}
+    </a>
   </div>
 </template>
 
