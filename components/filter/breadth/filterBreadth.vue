@@ -1,34 +1,36 @@
 <template>
   <div>
-    <div class="breadth search-box">
-      <label class="label">
-        Discipline
-        <DropdownVmodel
-          v-model="selectedDiscipline"
-          :values="filteredDisciplines"/>
-      </label>
+    <section-wrap bg-color="inverted">
 
-      <label class="label">
-        Location
-        <DropdownVmodel
-          v-model="selectedLocation"
-          :values="filteredLocations"/>
-      </label>
+      <div class="breadth-filter__search-box">
+        <label class="breadth-filter__label">
+          Discipline
+          <DropdownVmodel
+            v-model="selectedDiscipline"
+            :values="filteredDisciplines"/>
+        </label>
 
-      <label class="label">
-        Audition Requirement
-        <DropdownVmodel
-          v-model="selectedAudition"
-          :values="filteredAuditions"/>
-      </label>
-    </div>
+        <label class="breadth-filter__label">
+          Location
+          <DropdownVmodel
+            v-model="selectedLocation"
+            :values="filteredLocations"/>
+        </label>
 
-    <section>
+        <label class="breadth-filter__label">
+          Audition Requirement
+          <DropdownVmodel
+            v-model="selectedAudition"
+            :values="filteredAuditions"/>
+        </label>
+      </div>
 
-      <button
-        aria-label="Reset all"
-        @click="resetChecked">Reset all</button>
-    </section>
+      <div class="breadth-filter__container">
+        <button
+          class="breadth-filter__button"
+          @click="resetChecked">Reset all</button>
+      </div>
+    </section-wrap>
 
     <div
       v-for="(item, index) in filteredData"

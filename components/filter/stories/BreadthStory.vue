@@ -10,7 +10,7 @@ import breadthDoc from './breadth.md';
 
 export default {
   components: { filterBreadth },
-  readme: { custom: breadthDoc, source: true, html: true },
+  readme: { custom: breadthDoc, source: false, html: false },
   data() {
     return {
       data: [

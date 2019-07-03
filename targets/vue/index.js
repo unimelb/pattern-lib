@@ -188,3 +188,6 @@ export { default as Logo } from '../../components/logo/Logo.vue';
 export {
   default as ShowcaseFilter,
 } from '../../components/filter/showcase/ShowcaseFilter.vue';
+export {
+  default as filterBreadth,
+} from '../../components/filter/breadth/filterBreadth.vue';
