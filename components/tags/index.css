@@ -1,0 +1,20 @@
+.tags {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  flex-wrap: wrap;
+
+  &__item {
+    padding: 4px;
+    background-color: #cde6ff;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #000;
+    letter-spacing: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+}

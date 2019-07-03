@@ -1,0 +1,26 @@
+.card-news-tag {
+  color: rgb(var(--col-brand));
+
+  .card__title {
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+  }
+
+  .card__sub-titles {
+    border-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 0;
+    font-style: italic;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (--bp-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
