@@ -65,6 +65,10 @@
     flex: 1 1 auto;
   }
 
+  .card__tags {
+    margin-bottom: 30px;
+  }
+
   .card__links {
     display: flex;
     flex-direction: column;

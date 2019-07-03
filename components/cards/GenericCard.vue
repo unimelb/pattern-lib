@@ -22,6 +22,10 @@
         <slot name="sub-title-3"/>
       </div>
       <div class="card__excerpt">{{ excerpt }}</div>
+      <Tags
+        v-if="tags"
+        :data="tags"
+        class="card__tags"/>
       <div class="card__links">
         <slot name="links"/>
       </div>
@@ -30,10 +34,14 @@
 </template>
 
 <script>
+import Tags from '../tags/Tags.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 
 export default {
   name: 'GenericCard',
+  components: {
+    Tags,
+  },
   props: {
     thumb: {
       type: String,
@@ -59,6 +67,10 @@ export default {
     className: {
       type: String,
       default: '',
+    },
+    tags: {
+      type: Array,
+      default: () => [],
     },
   },
   computed: {

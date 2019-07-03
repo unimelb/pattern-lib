@@ -84,6 +84,7 @@ import Carousel from '../../components/carousel/Carousel.vue';
 import Logo from '../../components/logo/Logo.vue';
 import CardsFilter from '../../components/filter/cards/CardsFilter.vue';
 import AccordionFilter from '../../components/filter/accordion/AccordionFilter.vue';
+import Tags from '../../components/tags/Tags.vue';
 
 import '../../components';
 
@@ -171,6 +172,7 @@ Vue.component('carousel', Carousel);
 Vue.component('logo', Logo);
 Vue.component('cards-filter', CardsFilter);
 Vue.component('accordion-filter', AccordionFilter);
+Vue.component('tags', Tags);
 
 // Create Vue instance
 new Vue({
