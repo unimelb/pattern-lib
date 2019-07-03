@@ -8,7 +8,33 @@ The component props are
   > The `thumb` and `title` will be clickable pointing to this href.
 - excerpt
 - tags
-  > An array eg: `['tag1', 'tag2', 'tag3']`
+  > An array of href and value eg: 
+```json 
+  [{
+    href: 'https://www.unimelb.edu.au/',
+    value: 'tag1',
+  },
+  {
+    href: 'https://www.unimelb.edu.au/',
+    value: 'tag2',
+  },
+  {
+    href: 'https://www.unimelb.edu.au/',
+    value: 'tag3',
+  },
+  {
+    href: 'https://www.unimelb.edu.au/',
+    value: 'tag4',
+  },
+  {
+    href: 'https://www.unimelb.edu.au/',
+    value: 'tag5',
+  },
+  {
+    href: 'https://www.unimelb.edu.au/',
+    value: 'tag super hiper ultra mega long',
+  }]
+```
 
 You can add up to 3 sub-titles via slots
 
