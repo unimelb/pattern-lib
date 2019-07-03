@@ -323,3 +323,7 @@ export {
   default as Logo,
 }
   from '../../components/logo/Logo.vue';
+export {
+  default as Tags,
+}
+  from '../../components/tags/Tags.vue';
