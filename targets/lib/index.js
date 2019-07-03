@@ -83,6 +83,7 @@ import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue
 import Carousel from '../../components/carousel/Carousel.vue';
 import Logo from '../../components/logo/Logo.vue';
 import Tags from '../../components/tags/Tags.vue';
+import CardNewsTag from '../../components/cards/CardNewsTag.vue';
 
 import '../../components';
 
@@ -169,6 +170,7 @@ Vue.component('page-header-campaign', PageHeaderCampaign);
 Vue.component('carousel', Carousel);
 Vue.component('logo', Logo);
 Vue.component('tags', Tags);
+Vue.component('card-news-tag', CardNewsTag);
 
 // Create Vue instance
 new Vue({
