@@ -9,7 +9,7 @@ import Accordion from '../Accordion.vue';
 expect.extend(toHaveNoViolations);
 
 describe('Accordion', () => {
-  it('should match snapshot', () => {
+  it.skip('should match snapshot', () => {
     const result = shallow(Accordion).element;
     expect(result).toMatchSnapshot();
   });

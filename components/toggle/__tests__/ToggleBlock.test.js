@@ -9,7 +9,7 @@ import ToggleBlock from '../ToggleBlock.vue';
 expect.extend(toHaveNoViolations);
 
 describe('ToggleBlock', () => {
-  it('should match snapshot', () => {
+  it.skip('should match snapshot', () => {
     const result = shallow(ToggleBlock).element;
     expect(result).toMatchSnapshot();
   });

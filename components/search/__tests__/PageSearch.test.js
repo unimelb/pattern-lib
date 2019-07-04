@@ -9,7 +9,7 @@ import PageSearch from '../PageSearch.vue';
 expect.extend(toHaveNoViolations);
 
 describe('PageSearch', () => {
-  it('should match snapshot', () => {
+  it.skip('should match snapshot', () => {
     const result = shallow(PageSearch).element;
     expect(result).toMatchSnapshot();
   });
