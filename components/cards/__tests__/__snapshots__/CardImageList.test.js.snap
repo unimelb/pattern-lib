@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardImageList should match snapshot 1`] = `
+<a
+  class="btn-owner card card--imagelisting btn-owner card--bdr card card--imagelisting"
+  href="#"
+>
+  <div
+    aria-label="Test title"
+    class="card__thumb"
+    style="background-image: url(https://via.placeholder.com/400x200);"
+  />
+   
+  <div
+    class="card__inner"
+  >
+    <h3
+      class="card__header"
+    >
+      Test title
+    </h3>
+     
+    <p
+      class="card__meta"
+    >
+      Test title
+    </p>
+  </div>
+</a>
+`;
