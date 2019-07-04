@@ -20,7 +20,7 @@
           <img
             :src="slide.src"
             :alt="slide.altText"
-            class="carousel__slider__image"
+            class="carousel__image"
           >
         </slideritem>
       </slider>
@@ -34,14 +34,14 @@
           :style="{ width: progressBarWidth + '%'}"
           class="carousel__progress-bar-status"/>
       </div>
-      <div class="carousel__panel__container">
+      <div class="carousel__panel-container">
         <div
-          class="carousel__panel--right"
+          class="carousel__aside"
           role="navigation"
           aria-label="Stories"
         >
           <ul
-            class="carousel__panel--stories-menu"
+            class="carousel__navigation"
             role="menu">
             <li
               v-for="(story, index) in storiesData"
@@ -50,7 +50,7 @@
               role="menuitem"
             >
               <a
-                class="carousel__panel--stories-menu--item"
+                class="carousel__navigation-item"
                 href="javascript: void(0);"
 
                 @click="moveToStory(index)"
@@ -58,17 +58,17 @@
                 @keydown.32="moveToStory(index)"
               >
                 <span
-                  :class="{ 'carousel__panel--stories-menu__active': story.isActive }"
-                  class="carousel__panel--stories-menu__text">
+                  :class="{ 'carousel__navigation-text--active': story.isActive }"
+                  class="carousel__navigation-text">
                   {{ story.title }}
                 </span>
               </a>
             </li>
           </ul>
-          <div class="carousel__panel--controls">
+          <div class="carousel__controls">
             <div
               :aria-label="'Previous: ' + prevTitle"
-              class="carousel__panel--controls__control"
+              class="carousel__controls-item"
               tabindex="0"
               role="button"
               @click="prevStory"
@@ -87,7 +87,7 @@
             <div
               v-if="!paused"
               tabindex="0"
-              class="carousel__panel--stop-pause carousel__panel--controls__control"
+              class="carousel__controls-item carousel__controls-stop-pause"
               data-message="Play"
               role="button"
               aria-label="Stop carousel"
@@ -105,7 +105,7 @@
             <div
               v-if="paused"
               tabindex="0"
-              class="carousel__panel--stop-pause carousel__panel--controls__control"
+              class="carousel__controls-item carousel__controls-stop-pause"
               data-message="Pause"
               role="button"
               aria-label="Play carousel"
@@ -122,7 +122,7 @@
             </div>
             <div
               :aria-label="'Next: ' + nextTitle"
-              class="carousel__panel--controls__control"
+              class="carousel__controls-item"
               tabindex="0"
               role="button"
               @click="nextStory"
@@ -142,12 +142,12 @@
         </div>
         <div
           :aria-live="!paused ? 'off' : 'polite'"
-          class="carousel__panel--left"
+          class="carousel__content"
           role="navigation"
           aria-label="Stories">
-          <div class="carousel__panel__story">
+          <div class="carousel__story">
             <h2
-              class="carousel__panel__title">
+              class="carousel__title">
               <a
                 :href="selectedItem.buttonHref"
                 @focusin="stopSliding"
@@ -156,7 +156,7 @@
                 {{ selectedItem.title }}
               </a>
             </h2>
-            <p class="carousel__panel__description">
+            <p class="carousel__description">
               {{ selectedItem.description }}
             </p>
           </div>
@@ -168,7 +168,7 @@
             <ButtonIcon
               :href="selectedItem.buttonHref"
               width="wide"
-              class="carousel__panel--cta"
+              class="carousel__cta"
               role="button"
               size="sml"
             >
@@ -303,7 +303,7 @@ export default {
       this.selectedItem = this.stories[storyIndex];
       this.selectedIndex = storyIndex;
       this.$refs.slider.$emit('slideTo', storyIndex);
-      document.querySelector('.carousel__panel--cta').focus();
+      document.querySelector('.carousel__cta').focus();
     },
   },
 };

@@ -90,8 +90,8 @@ describe('Carousel', () => {
         stories: storiesMock,
       },
     });
-    expect(wrapper.find('.carousel__panel__title').text()).toBe('Story 1');
-    expect(wrapper.find('.carousel__panel__description').text()).toBe('Story 2 description');
+    expect(wrapper.find('.carousel__title').text()).toBe('Story 1');
+    expect(wrapper.find('.carousel__description').text()).toBe('Story 2 description');
   });
 
   it('should render stories titles menu', () => {
@@ -100,8 +100,8 @@ describe('Carousel', () => {
         stories: storiesMock,
       },
     });
-    expect(wrapper.findAll('.carousel__panel--stories-menu__text').at(0).text()).toBe('Story 1');
-    expect(wrapper.findAll('.carousel__panel--stories-menu__text').at(1).text()).toBe('Story 2');
+    expect(wrapper.findAll('.carousel__navigation-text').at(0).text()).toBe('Story 1');
+    expect(wrapper.findAll('.carousel__navigation-text').at(1).text()).toBe('Story 2');
   });
 
   it('should have click/enter event on stories menu title', () => {
@@ -115,9 +115,9 @@ describe('Carousel', () => {
     wrapper.setMethods({
       moveToStory,
     });
-    wrapper.find('.carousel__panel--stories-menu--item').trigger('click');
+    wrapper.find('.carousel__navigation-item').trigger('click');
     expect(moveToStory.called).toBe(true);
-    wrapper.find('.carousel__panel--stories-menu--item').trigger('keydown.enter');
+    wrapper.find('.carousel__navigation-item').trigger('keydown.enter');
     expect(moveToStory.called).toBe(true);
   });
 
@@ -129,7 +129,7 @@ describe('Carousel', () => {
       attachToDocument: true,
     });
 
-    wrapper.findAll('.carousel__panel--stories-menu--item').at(1).trigger('click');
+    wrapper.findAll('.carousel__navigation-item').at(1).trigger('click');
     expect(wrapper.vm.selectedIndex).toBe(1);
   });
 
@@ -141,7 +141,7 @@ describe('Carousel', () => {
     });
 
     expect(wrapper.vm.storiesData[0].isActive).toBe(true);
-    expect(wrapper.find('.carousel__panel--stories-menu__text').classes()).toContain('carousel__panel--stories-menu__active');
+    expect(wrapper.find('.carousel__navigation-text').classes()).toContain('carousel__navigation-text--active');
   });
 
   it('should set "active" state to story on menu title click', () => {
@@ -152,9 +152,9 @@ describe('Carousel', () => {
       attachToDocument: true,
     });
 
-    wrapper.findAll('.carousel__panel--stories-menu--item').at(1).trigger('click');
+    wrapper.findAll('.carousel__navigation-item').at(1).trigger('click');
     expect(wrapper.vm.storiesData[1].isActive).toBe(true);
-    expect(wrapper.findAll('.carousel__panel--stories-menu__text').at(1).classes()).toContain('carousel__panel--stories-menu__active');
+    expect(wrapper.findAll('.carousel__navigation-text').at(1).classes()).toContain('carousel__navigation-text--active');
   });
 
   it('should have click/enter event on stop/pause control', () => {
@@ -171,7 +171,7 @@ describe('Carousel', () => {
       startSliding,
     });
 
-    const pauseStop = wrapper.find('.carousel__panel--stop-pause');
+    const pauseStop = wrapper.find('.carousel__controls-stop-pause');
 
     pauseStop.trigger('click');
     expect(stopSliding.called).toBe(true);
@@ -201,8 +201,8 @@ describe('Carousel', () => {
       nextStory,
     });
 
-    const prev = wrapper.findAll('.carousel__panel--controls__control').at(0);
-    const next = wrapper.findAll('.carousel__panel--controls__control').at(2);
+    const prev = wrapper.findAll('.carousel__controls-item').at(0);
+    const next = wrapper.findAll('.carousel__controls-item').at(2);
 
     prev.trigger('click');
     expect(prevStory.called).toBe(true);
@@ -228,8 +228,8 @@ describe('Carousel', () => {
       slide,
     });
 
-    const prev = wrapper.findAll('.carousel__panel--controls__control').at(0);
-    const next = wrapper.findAll('.carousel__panel--controls__control').at(2);
+    const prev = wrapper.findAll('.carousel__controls-item').at(0);
+    const next = wrapper.findAll('.carousel__controls-item').at(2);
 
     prev.trigger('click');
     expect(slide.called).toBe(true);

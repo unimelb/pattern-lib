@@ -29,15 +29,15 @@ exports[`Carousel should match snapshot 1`] = `
     </div>
      
     <div
-      class="carousel__panel__container"
+      class="carousel__panel-container"
     >
       <div
         aria-label="Stories"
-        class="carousel__panel--right"
+        class="carousel__aside"
         role="navigation"
       >
         <ul
-          class="carousel__panel--stories-menu"
+          class="carousel__navigation"
           role="menu"
         >
           <li
@@ -45,11 +45,11 @@ exports[`Carousel should match snapshot 1`] = `
             role="menuitem"
           >
             <a
-              class="carousel__panel--stories-menu--item"
+              class="carousel__navigation-item"
               href="javascript: void(0);"
             >
               <span
-                class="carousel__panel--stories-menu__text carousel__panel--stories-menu__active"
+                class="carousel__navigation-text carousel__navigation-text--active"
               >
                 
                 Story 1
@@ -62,11 +62,11 @@ exports[`Carousel should match snapshot 1`] = `
             role="menuitem"
           >
             <a
-              class="carousel__panel--stories-menu--item"
+              class="carousel__navigation-item"
               href="javascript: void(0);"
             >
               <span
-                class="carousel__panel--stories-menu__text"
+                class="carousel__navigation-text"
               >
                 
                 Story 2
@@ -77,11 +77,11 @@ exports[`Carousel should match snapshot 1`] = `
         </ul>
          
         <div
-          class="carousel__panel--controls"
+          class="carousel__controls"
         >
           <div
             aria-label="Previous: Story 2"
-            class="carousel__panel--controls__control"
+            class="carousel__controls-item"
             role="button"
             tabindex="0"
           >
@@ -90,7 +90,7 @@ exports[`Carousel should match snapshot 1`] = `
            
           <div
             aria-label="Stop carousel"
-            class="carousel__panel--stop-pause carousel__panel--controls__control"
+            class="carousel__controls-item carousel__controls-stop-pause"
             data-message="Play"
             role="button"
             tabindex="0"
@@ -102,7 +102,7 @@ exports[`Carousel should match snapshot 1`] = `
            
           <div
             aria-label="Next: Story 2"
-            class="carousel__panel--controls__control"
+            class="carousel__controls-item"
             role="button"
             tabindex="0"
           >
@@ -114,14 +114,14 @@ exports[`Carousel should match snapshot 1`] = `
       <div
         aria-label="Stories"
         aria-live="off"
-        class="carousel__panel--left"
+        class="carousel__content"
         role="navigation"
       >
         <div
-          class="carousel__panel__story"
+          class="carousel__story"
         >
           <h2
-            class="carousel__panel__title"
+            class="carousel__title"
           >
             <a
               href="google.com"
@@ -133,7 +133,7 @@ exports[`Carousel should match snapshot 1`] = `
           </h2>
            
           <p
-            class="carousel__panel__description"
+            class="carousel__description"
           >
             
             Story 2 description
@@ -145,7 +145,7 @@ exports[`Carousel should match snapshot 1`] = `
           tabindex="0"
         >
           <buttonicon
-            class="carousel__panel--cta"
+            class="carousel__cta"
             href="google.com"
             role="button"
             size="sml"
