@@ -11,7 +11,11 @@ expect.extend(toHaveNoViolations);
 
 describe('InPageNavigation', () => {
   it('should match snapshot', () => {
-    const result = shallow(InPageNavigation).element;
+    const result = shallow(InPageNavigation, {
+      propsData: {
+        headingLevel: 'h2',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

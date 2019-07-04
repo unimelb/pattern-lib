@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleWrap should match snapshot 1`] = `
+<article
+  class="article-wrap max article-wrap--column max--sml"
+>
+  <h1
+    class="article-wrap__header"
+  >
+    
+  </h1>
+   
+  <div
+    class="article-wrap__main"
+  />
+   
+  <footer
+    class="article-wrap__aside"
+    role="contentinfo"
+  >
+    <div
+      class="article-wrap__aside-box"
+    >
+      <time>
+        
+      </time>
+       | 
+      <span
+        class="article-wrap__type"
+      >
+        
+      </span>
+    </div>
+     
+    <!---->
+     
+    <div
+      class="article-wrap__aside-box"
+    >
+      <!---->
+    </div>
+     
+    <div
+      class="article-wrap__aside-box article-wrap__social"
+    >
+      <p
+        class="article-wrap__social-heading"
+      >
+        Share
+      </p>
+       
+      <!---->
+    </div>
+  </footer>
+</article>
+`;

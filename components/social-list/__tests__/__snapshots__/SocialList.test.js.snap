@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialList should match snapshot 1`] = `
+<ul
+  class="social-list list-reset links-reset"
+>
+  <li
+    class="col-facebook"
+  >
+    <a
+      class="social-list__link"
+      href="https://www.facebook.com/unimelb"
+    >
+      <!---->
+       
+      <span
+        class="screenreaders-only"
+      >
+        Facebook
+      </span>
+    </a>
+  </li>
+   
+  <li
+    class="col-twitter"
+  >
+    <a
+      class="social-list__link"
+      href="https://twitter.com/unimelb"
+    >
+      <!---->
+       
+      <span
+        class="screenreaders-only"
+      >
+        Twitter
+      </span>
+    </a>
+  </li>
+   
+  <li
+    class="col-linkedin"
+  >
+    <a
+      class="social-list__link"
+      href="https://www.linkedin.com/school/university-of-melbourne"
+    >
+      <!---->
+       
+      <span
+        class="screenreaders-only"
+      >
+        LinkedIn
+      </span>
+    </a>
+  </li>
+</ul>
+`;

@@ -12,7 +12,12 @@ expect.extend(toHaveNoViolations);
 
 describe('InfoPanel', () => {
   it('should match snapshot', () => {
-    const result = shallow(InfoPanel).element;
+    const result = shallow(InfoPanel, {
+      propsData: {
+        title: '',
+      },
+    }).element;
+
     expect(result).toMatchSnapshot();
   });
 
