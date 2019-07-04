@@ -30,18 +30,27 @@ const storiesMock = [{
 
 describe('Carousel', () => {
   it('should match snapshot', () => {
-    const result = shallow(Carousel).element;
+    const result = shallow(Carousel, {
+      propsData: {
+        stories: storiesMock,
+      },
+    }).element;
+
     expect(result).toMatchSnapshot();
   });
 
   it('should have default props and correct types stories', () => {
-    const wrapper = shallow(Carousel);
+    const wrapper = shallow(Carousel, {
+      propsData: {
+        stories: [],
+      },
+    });
     const {
       stories,
     } = wrapper.vm.$options.props;
 
     expect(stories.type).toBe(Array);
-    expect(wrapper.props().stories).toEqual([{}]);
+    expect(wrapper.props().stories).toEqual([]);
   });
 
   it('should accept stories prop with correct type', () => {
@@ -106,9 +115,9 @@ describe('Carousel', () => {
     wrapper.setMethods({
       moveToStory,
     });
-    wrapper.find('.carousel__panel--stories-menu__item').trigger('click');
+    wrapper.find('.carousel__panel--stories-menu--item').trigger('click');
     expect(moveToStory.called).toBe(true);
-    wrapper.find('.carousel__panel--stories-menu__item').trigger('keydown.enter');
+    wrapper.find('.carousel__panel--stories-menu--item').trigger('keydown.enter');
     expect(moveToStory.called).toBe(true);
   });
 
@@ -117,6 +126,7 @@ describe('Carousel', () => {
       propsData: {
         stories: storiesMock,
       },
+      attachToDocument: true,
     });
 
     wrapper.findAll('.carousel__panel--stories-menu--item').at(1).trigger('click');
@@ -139,11 +149,12 @@ describe('Carousel', () => {
       propsData: {
         stories: storiesMock,
       },
+      attachToDocument: true,
     });
 
     wrapper.findAll('.carousel__panel--stories-menu--item').at(1).trigger('click');
     expect(wrapper.vm.storiesData[1].isActive).toBe(true);
-    expect(wrapper.findAll('.carousel__panel--stories-menu--text').at(1).classes()).toContain('carousel__panel--stories-menu__active');
+    expect(wrapper.findAll('.carousel__panel--stories-menu__text').at(1).classes()).toContain('carousel__panel--stories-menu__active');
   });
 
   it('should have click/enter event on stop/pause control', () => {

@@ -185,8 +185,9 @@ export default {
   props: {
     stories: {
       type: Array,
-      default: () => [{}],
+      default: () => [],
       validator: stories => stories.length <= 3,
+      required: true,
     },
     timing: {
       type: String,
@@ -200,9 +201,10 @@ export default {
       def: 12000,
     };
     const autoplay = this.timing && timing[this.timing] ? timing[this.timing] : timing.def;
+
     return {
-      prevTitle: this.stories[this.stories.length - 1].title,
-      nextTitle: this.stories[1].title,
+      prevTitle: this.stories && this.stories[0] ? this.stories[this.stories.length - 1].title : {},
+      nextTitle: this.stories && this.stories[1] ? this.stories[1].title : {},
       selectedItem: this.stories && this.stories[0] ? this.stories[0] : {},
       selectedIndex: 0,
       openState: false,
@@ -229,13 +231,14 @@ export default {
   computed: {
     storiesData() {
       const data = [];
+
       this.stories.forEach((item, index) => {
         data.push({
           ...item,
           isActive: index === this.selectedIndex,
         });
       });
-      data.length = 3;
+
       return data;
     },
   },

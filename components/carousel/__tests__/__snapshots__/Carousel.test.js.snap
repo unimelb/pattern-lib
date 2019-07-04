@@ -1,74 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Carousel should match snapshot 1`] = `
-<div
+<section
+  aria-label="Stories and events"
+  aria-roledescription="carousel"
   class="carousel"
 >
   <div
-    class="carousel--slider"
+    class="carousel__slider"
   >
     <!---->
   </div>
    
   <div
-    class="carousel--footer"
+    class="carousel__footer"
   />
    
   <div
-    class="carousel--panel"
+    class="carousel__panel"
   >
     <div
-      class="carousel--panel__progress-bar"
+      class="carousel__panel__progress-bar"
       style="width: 0%;"
     />
      
     <div
-      class="carousel--panel__container"
+      class="carousel__panel__container"
     >
       <div
-        class="carousel--panel__left"
-      >
-        <div>
-          <div
-            class="carousel--panel--title"
-          >
-            
-            
-          
-          </div>
-           
-          <div
-            class="carousel--panel--description"
-          >
-            
-            
-          
-          </div>
-        </div>
-         
-        <buttonicon
-          class="carousel--panel--cta"
-          width="wide"
-        >
-          
-        </buttonicon>
-      </div>
-       
-      <div
-        class="carousel--panel__right"
+        aria-label="Stories"
+        class="carousel__panel--right"
+        role="navigation"
       >
         <div
-          class="carousel--panel--controls"
+          class="carousel__panel--stories-menu"
+          role="menu"
+        >
+          <a
+            class="carousel__panel--stories-menu--item"
+            href="javascript: void(0);"
+            role="menuitem"
+          >
+            <span
+              class="carousel__panel--stories-menu__text carousel__panel--stories-menu__active"
+            >
+              
+              Story 1
+            
+            </span>
+          </a>
+          <a
+            class="carousel__panel--stories-menu--item"
+            href="javascript: void(0);"
+            role="menuitem"
+          >
+            <span
+              class="carousel__panel--stories-menu__text"
+            >
+              
+              Story 2
+            
+            </span>
+          </a>
+        </div>
+         
+        <div
+          class="carousel__panel--controls"
         >
           <div
-            class="carousel--panel--controls__control"
+            aria-label="Previous: Story 2"
+            class="carousel__panel--controls__control"
+            role="button"
             tabindex="0"
           >
             <!---->
           </div>
            
           <div
-            class="carousel--panel--stop-pause carousel--panel--controls__control"
+            class="carousel__panel--stop-pause carousel__panel--controls__control"
+            data-message="Play"
+            role="button"
             tabindex="0"
           >
             <!---->
@@ -77,29 +88,62 @@ exports[`Carousel should match snapshot 1`] = `
           <!---->
            
           <div
-            class="carousel--panel--controls__control"
+            aria-label="Next: Story 2"
+            class="carousel__panel--controls__control"
+            role="button"
             tabindex="0"
           >
             <!---->
           </div>
         </div>
-         
+      </div>
+       
+      <div
+        aria-label="Stories"
+        aria-live="off"
+        class="carousel__panel--left"
+        role="navigation"
+      >
         <div
-          class="carousel--panel--stories-menu"
+          class="carousel__panel__story"
         >
-          <li
-            class="carousel--panel--stories-menu--item"
-            tabindex="0"
+          <h2
+            class="carousel__panel__title"
           >
-            <div
-              class="carousel--panel--stories-menu--text carousel--panel--stories-menu__active"
+            <a
+              href="google.com"
             >
               
-            </div>
-          </li>
+              Story 1
+            
+            </a>
+          </h2>
+           
+          <p
+            class="carousel__panel__description"
+          >
+            
+            Story 2 description
+          
+          </p>
+        </div>
+         
+        <div
+          tabindex="0"
+        >
+          <buttonicon
+            class="carousel__panel--cta"
+            href="google.com"
+            role="button"
+            width="wide"
+          >
+            
+            Register
+          
+          </buttonicon>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 `;
