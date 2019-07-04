@@ -29,9 +29,11 @@
     <div
       class="carousel__panel"
     >
-      <div
-        :style="{ width: progressBarWidth + '%'}"
-        class="carousel__panel__progress-bar"/>
+      <div class="carousel__progress-bar">
+        <div
+          :style="{ width: progressBarWidth + '%'}"
+          class="carousel__progress-bar-status"/>
+      </div>
       <div class="carousel__panel__container">
         <div
           class="carousel__panel--right"

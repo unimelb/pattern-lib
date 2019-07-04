@@ -32,6 +32,17 @@
     }
   }
 
+  &__progress-bar {
+    display: flex;
+    height: 4px;
+    background: rgb(var(--col-background-primary-white));
+
+    &-status {
+      background: rgb(var(--col-background-primary-navy));
+      transition: width 200ms linear;
+    }
+  }
+
   &__panel {
     background: rgb(var(--col-navy-light));
     overflow: hidden;
@@ -108,12 +119,6 @@
         flex-direction: row-reverse;
         display: flex;
       }
-    }
-
-    &__progress-bar {
-      height: 4px;
-      background: rgb(var(--col-background-primary-navy));
-      transition: width 200ms linear;
     }
 
     &--controls {

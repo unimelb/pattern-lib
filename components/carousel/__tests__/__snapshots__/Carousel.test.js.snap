@@ -20,9 +20,13 @@ exports[`Carousel should match snapshot 1`] = `
     class="carousel__panel"
   >
     <div
-      class="carousel__panel__progress-bar"
-      style="width: 0%;"
-    />
+      class="carousel__progress-bar"
+    >
+      <div
+        class="carousel__progress-bar-status"
+        style="width: 0%;"
+      />
+    </div>
      
     <div
       class="carousel__panel__container"
