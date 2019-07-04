@@ -17,7 +17,7 @@
     table-layout: auto;
   }
 
-  tr.table__row--header {
+  tr.table__header {
     td {
       &::before {
         content: none;
@@ -63,7 +63,7 @@
         }
       }
 
-      &:not(.table__row--header) {
+      &:not(.table__header) {
         &::before {
           content: attr(data-mobile-heading);
           display: flex;

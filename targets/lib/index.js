@@ -81,6 +81,7 @@ import CompactedTable from '../../components/tables/CompactedTable.vue';
 import ResponsiveTable from '../../components/tables/ResponsiveTable.vue';
 import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 import Carousel from '../../components/carousel/Carousel.vue';
+import Logo from '../../components/logo/Logo.vue';
 
 import '../../components';
 
@@ -165,6 +166,7 @@ Vue.component('compacted-table', CompactedTable);
 Vue.component('responsive-table', ResponsiveTable);
 Vue.component('page-header-campaign', PageHeaderCampaign);
 Vue.component('carousel', Carousel);
+Vue.component('logo', Logo);
 
 // Create Vue instance
 new Vue({

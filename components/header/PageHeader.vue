@@ -1,17 +1,7 @@
 <template>
   <header :class="`page-header page-header--l${level}`">
     <div class="page-header__inner max">
-      <a
-        class="link-img link-reset"
-        href="https://www.unimelb.edu.au/">
-        <img
-          class="page-header__logo"
-          src="../shared/logo.svg"
-          width="117"
-          height="117"
-          alt="The University of Melbourne homepage"
-        >
-      </a>
+      <Logo no-padding/>
       <div
         v-if="entity"
         class="page-header__entity">
@@ -33,7 +23,12 @@
 </template>
 
 <script>
+import Logo from '../logo/Logo.vue';
+
 export default {
+  components: {
+    Logo,
+  },
   props: {
     level: {
       type: Number,
@@ -46,11 +41,11 @@ export default {
       required: true,
     },
     entity: {
-      type: String, /* raw HTML (line breaks allowed) */
+      type: String /* raw HTML (line breaks allowed) */,
       default: '',
     },
     entitySub: {
-      type: String, /* raw HTML (line breaks allowed) */
+      type: String /* raw HTML (line breaks allowed) */,
       default: '',
     },
     img: {
