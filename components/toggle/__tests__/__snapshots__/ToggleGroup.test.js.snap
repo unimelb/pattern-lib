@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleGroup should match snapshot 1`] = `
+<div
+  aria-multiselectable="true"
+  class="togglegroup"
+/>
+`;

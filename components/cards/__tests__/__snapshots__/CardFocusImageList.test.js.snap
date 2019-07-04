@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardFocusImageList should match snapshot 1`] = `
+<a
+  class="card card--image-focus btn-owner"
+  href="#"
+>
+  <!---->
+   
+  <div
+    class="card__thumb"
+  >
+    <img
+      alt=""
+      class="card__thumb"
+      src=""
+    />
+  </div>
+   
+  <!---->
+   
+  <div
+    class="card__inner"
+  >
+    <h3>
+      Test title
+    </h3>
+      
+    <buttonicon
+      class="btn--fullwidth"
+      element="span"
+    >
+      Test title
+    </buttonicon>
+  </div>
+</a>
+`;

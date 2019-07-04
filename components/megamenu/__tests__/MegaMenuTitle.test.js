@@ -6,7 +6,12 @@ expect.extend(toHaveNoViolations);
 
 describe('MegaMenuTitle', () => {
   it('should match snapshot', () => {
-    const result = shallow(MegaMenuTitle).element;
+    const result = shallow(MegaMenuTitle, {
+      propsData: {
+        href: '',
+      },
+    }).element;
+
     expect(result).toMatchSnapshot();
   });
 

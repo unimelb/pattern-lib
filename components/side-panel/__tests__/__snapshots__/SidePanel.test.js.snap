@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SidePanel should match snapshot 1`] = `
+<nav
+  class="side-panel"
+>
+  <div
+    class="side-panel__inner"
+  >
+    <h5
+      class="side-panel__title"
+    >
+      
+      
+      <button
+        class="side-panel__trigger"
+      >
+        <svgicon
+          height="10"
+          name="close"
+          width="10"
+        />
+      </button>
+    </h5>
+     
+    <ul
+      class="side-panel__nav"
+    />
+  </div>
+</nav>
+`;
