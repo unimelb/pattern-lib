@@ -15,7 +15,7 @@ describe('SectionDivider', () => {
         title: '',
       },
     }).element;
-    
+
     expect(result).toMatchSnapshot();
   });
 });
