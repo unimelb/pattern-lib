@@ -55,7 +55,7 @@
     }
 
     &__story {
-      overflow: scroll;
+      overflow: hidden;
     }
 
     &__title {
