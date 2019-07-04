@@ -32,37 +32,45 @@ exports[`Carousel should match snapshot 1`] = `
         class="carousel__panel--right"
         role="navigation"
       >
-        <div
+        <ul
           class="carousel__panel--stories-menu"
           role="menu"
         >
-          <a
-            class="carousel__panel--stories-menu--item"
-            href="javascript: void(0);"
+          <li
+            class="list-reset"
             role="menuitem"
           >
-            <span
-              class="carousel__panel--stories-menu__text carousel__panel--stories-menu__active"
+            <a
+              class="carousel__panel--stories-menu--item"
+              href="javascript: void(0);"
             >
+              <span
+                class="carousel__panel--stories-menu__text carousel__panel--stories-menu__active"
+              >
+                
+                Story 1
               
-              Story 1
-            
-            </span>
-          </a>
-          <a
-            class="carousel__panel--stories-menu--item"
-            href="javascript: void(0);"
+              </span>
+            </a>
+          </li>
+          <li
+            class="list-reset"
             role="menuitem"
           >
-            <span
-              class="carousel__panel--stories-menu__text"
+            <a
+              class="carousel__panel--stories-menu--item"
+              href="javascript: void(0);"
             >
+              <span
+                class="carousel__panel--stories-menu__text"
+              >
+                
+                Story 2
               
-              Story 2
-            
-            </span>
-          </a>
-        </div>
+              </span>
+            </a>
+          </li>
+        </ul>
          
         <div
           class="carousel__panel--controls"
@@ -77,6 +85,7 @@ exports[`Carousel should match snapshot 1`] = `
           </div>
            
           <div
+            aria-label="Stop carousel"
             class="carousel__panel--stop-pause carousel__panel--controls__control"
             data-message="Play"
             role="button"
@@ -135,6 +144,7 @@ exports[`Carousel should match snapshot 1`] = `
             class="carousel__panel--cta"
             href="google.com"
             role="button"
+            size="sml"
             width="wide"
           >
             
