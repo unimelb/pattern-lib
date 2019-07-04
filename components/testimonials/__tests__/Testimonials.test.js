@@ -10,7 +10,14 @@ expect.extend(toHaveNoViolations);
 
 describe('Testimonials', () => {
   it('should match snapshot', () => {
-    const result = shallow(Testimonials).element;
+    const result = shallow(Testimonials, {
+      propsData: {
+        name: '',
+        year: '',
+        testimonials: '',
+      },
+    }).element;
+
     expect(result).toMatchSnapshot();
   });
 });

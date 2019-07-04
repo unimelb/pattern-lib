@@ -3,7 +3,7 @@
 exports[`DownloadBlock should match snapshot 1`] = `
 <a
   class="download-block btn-owner"
-  href="#"
+  href=""
 >
   <div
     class="download-block__thumb"

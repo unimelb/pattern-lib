@@ -10,7 +10,12 @@ expect.extend(toHaveNoViolations);
 
 describe('SectionDivider', () => {
   it('should match snapshot', () => {
-    const result = shallow(SectionDivider).element;
+    const result = shallow(SectionDivider, {
+      propsData: {
+        title: '',
+      },
+    }).element;
+    
     expect(result).toMatchSnapshot();
   });
 });

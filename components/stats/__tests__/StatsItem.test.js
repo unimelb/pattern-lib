@@ -10,7 +10,14 @@ expect.extend(toHaveNoViolations);
 
 describe('StatsItem', () => {
   it('should match snapshot', () => {
-    const result = shallow(StatsItem).element;
+    const result = shallow(StatsItem, {
+      propsData: {
+        number: '',
+        meta: '',
+        icon: '',
+      },
+    }).element;
+
     expect(result).toMatchSnapshot();
   });
 });

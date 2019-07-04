@@ -10,7 +10,12 @@ expect.extend(toHaveNoViolations);
 
 describe('PageHeader', () => {
   it('should match snapshot', () => {
-    const result = shallow(PageHeader).element;
+    const result = shallow(PageHeader, {
+      propsData: {
+        title: '',
+        img: '',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 });

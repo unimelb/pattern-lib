@@ -20,7 +20,7 @@ exports[`PageHeader should match snapshot 1`] = `
    
   <div
     class="page-header__img page-header__aperture"
-    style="background-image: url(undefined);"
+    style="background-image: url();"
   />
 </header>
 `;
