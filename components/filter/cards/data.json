@@ -1,630 +1,663 @@
-[{
-    "title": "Masters Exhibition 2018",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
-    "description": "Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts",
-    "performance": [
-        "Exhibition"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Visual Art"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76743/varieties/thumb.jpg",
-    "start_time": "2018-12-01",
-    "location": "Margaret Lawrence Gallery and The Stables"
-},
 {
-    "title": "Wilin Jams 2018",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
-    "description": "Wilin Centre for Indigenous Arts and Culture event Wilin Jams",
-    "performance": [
-        "Event"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Indigenous Arts and Culture"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76373/varieties/thumb.jpg",
-    "start_time": "2018-11-29",
-    "location": "Performing Arts Building"
-},
-{
-    "title": "Production Graduates",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-graduates",
-    "description": "Production Graduates from the Bachelor of Fine Arts Production at the VCA",
-    "performance": [
-        "Season",
-        "Other"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Production"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0033/76785/varieties/thumb.jpg",
-    "start_time": "2018-11-01",
-    "location": "Production"
-},
-{
-    "title": "Acting Company 2018",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-company-2018",
-    "description": "Theatre Acting Company students from the VCA",
-    "performance": [
-        "Season",
-        "Other"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76370/varieties/thumb.jpg",
-    "start_time": "2018-11-01",
-    "location": ""
-},
-{
-    "title": "Production Exhibition 2018",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-exhibition-2018",
-    "description": "Production Exhibition of graduates at the VCA celebrating the final year of Bachelor of Fine Arts Production",
-    "performance": [
-        "Exhibition",
-        "Graduation Show"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Production"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76756/varieties/thumb.jpg",
-    "start_time": "2018-11-01",
-    "location": "Martyn Myer Arena, The Stables"
-},
-{
-    "title": "Music Theatre Company 2018",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018",
-    "description": "Music Theatre company students from the VCA",
-    "performance": [
-        "Season",
-        "Other"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018/Into_the_Woods-7.jpg/thumb.jpg",
-    "start_time": "2018-11-01",
-    "location": ""
-},
-{
-    "title": "Music Theatre Showcase",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-showcase",
-    "description": "The VCA Music Theatre Showcase at Grant Street Theatre",
-    "performance": [
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0018/76131/varieties/thumb.jpg",
-    "start_time": "2018-10-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "Acting Showcase",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-showcase",
-    "description": "Acting Showcase Performance by VCA students",
-    "performance": [
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0024/76218/varieties/thumb.jpg",
-    "start_time": "2018-10-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "Asia Orchestra Tour",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/asia-orchestra-tour",
-    "description": "The 2018 Asia Tour marks the very first time in its long history that the University of Melbourne Symphony Orchestra has toured internationally",
-    "performance": [
-        "Concert",
-        "Event"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/74801/varieties/medium.jpg",
-    "start_time": "2018-09-25",
-    "location": "Esplanade Concert Hall, Singapore and Shanghai Symphony Concert Hall, Shanghai"
-},
-{
-    "title": "The Drowsy Chaperone",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-drowsy-chaperone",
-    "description": "Music Theatre performance of the Drowsy Chaperone by VCA students",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre",
-        "Production",
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/76528/Drowsy_Chaperone-Header.jpg",
-    "start_time": "2018-09-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "The Skin of Our Teeth",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-skin-of-our-teeth",
-    "description": "Theatre performance of The Skin of Our Teeth by VCA Students",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Theatre",
-        "Production"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76313/varieties/thumb.jpg",
-    "start_time": "2018-09-01",
-    "location": "Martyn Myer Arena, The Stables"
-},
-{
-    "title": "Carmelites",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/carmelites",
-    "description": "Music Opera performance of the Reign of Terror during the French revolution in 1794 fictionalising the martyrdom of the Carmelite nuns",
-    "performance": [
-        "Performance"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/74803/varieties/thumb.jpg",
-    "start_time": "2018-08-30",
-    "location": "Rosina Auditorium, Abbotsford Convent"
-},
-{
-    "title": "Jazz Ensemble",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-ensemble",
-    "description": "Small and large student ensembles live at the historical Kelvin Club",
-    "performance": [
-        "Concert",
-        "Performance"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Jazz and Improvisation"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0017/76022/varieties/thumb.jpg",
-    "start_time": "2018-08-01",
-    "location": "Kelvin Club, Melbourne"
-},
-{
-    "title": "Murdoch Travelling Fellowship 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/murdoch-travelling-fellowship-2017",
-    "description": "Fellowship awarded biennially to theatre, music and visual arts graduates of the VCA and conservatorium",
-    "performance": [
-        "Exhibition",
-        "Other"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Visual Art"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0030/76494/varieties/thumb.jpg",
-    "start_time": "2018-07-01",
-    "location": "Margaret Lawrence Gallery"
-},
-{
-    "title": "Dance 40th Anniversary Party",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/dance-40th-anniversary-party",
-    "description": "Celebrating 40 years of Dance at the Victorian College of Arts",
-    "performance": [
-        "Event"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Dance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0019/76123/varieties/thumb.jpg",
-    "start_time": "2018-06-10",
-    "location": "Dance Building and forecourt"
-},
-{
-    "title": "MIFLAS An Afternoon at the Opera",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/miflas-an-afternoon-at-the-opera",
-    "description": "Conservatorium benefit concert in support of the Melbourne International Festival of Lieder and Art Song",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0014/76010/varieties/thumb.jpg",
-    "start_time": "2018-06-03",
-    "location": "Melba Hall, Melbourne Conservatorium of Music"
-},
-{
-    "title": "Music Ensemble",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-ensemble",
-    "description": "World Music Choir and the Chinese Music Ensemble rehearsing at Melba Hall",
-    "performance": [
-        "Concert",
-        "Performance"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/82657/varieties/thumb.jpg",
-    "start_time": "2018-06-02",
-    "location": "Melba Hall, Melbourne Conservatorium of Music"
-},
-{
-    "title": "A Chorus Line",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/a-chorus-line",
-    "description": "The VCA performance of A Chorus Line presented by Music Theatre Company and Production students",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0025/76165/varieties/thumb.jpg",
-    "start_time": "2018-06-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "The Crucible",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-crucible",
-    "description": "Theatre performance of The Crucible by VCA students",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Theatre",
-        "Production"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76288/varieties/thumb.jpg",
-    "start_time": "2018-06-01",
-    "location": "Space 28, Theatre Building"
-},
-{
-    "title": "Peter Pan",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/peter-pan",
-    "description": "Theatre performance of Peter Pan by VCA Students",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Theatre",
-        "Production"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/76258/varieties/thumb.jpg",
-    "start_time": "2018-06-01",
-    "location": "Martyn Myer Arena, The Stables"
-},
-{
-    "title": "Wind Symphony Day",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wind-symphony-day",
-    "description": "Three Conservatorium concerts presented in the beautiful surrounds of the Melbourne Recital Centre",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76061/varieties/thumb.jpg",
-    "start_time": "2018-05-19",
-    "location": "Melbourne Recital Centre"
-},
-{
-    "title": "University of Melbourne Symphony Orchestra",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra",
-    "description": "The University of Melbourne Symphony Orchestra at the Melbourne Recital Centre",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0018/76032/varieties/thumb.jpg",
-    "start_time": "2018-05-01",
-    "location": "Melbourne Recital Centre"
-},
-{
-    "title": "Mongrel 2018",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2018",
-    "description": "Graduating Music Theatre and Interactive Composition students bring together their creative talents to forge new directions for music theatre works",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre",
-        "Interactive Composition",
-        "Design and production"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0029/76088/varieties/thumb.jpg",
-    "start_time": "2018-05-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "Gloria",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/gloria",
-    "description": "Music Opera performance of Gloria, Vivaldi's most beautiful and moving choral work",
-    "performance": [
-        "Performance"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0036/75996/varieties/thumb.jpg",
-    "start_time": "2018-05-01",
-    "location": "St Paul's Cathedral, Melbourne"
-},
-{
-    "title": "On View Opening Night",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/on-view-opening-night",
-    "description": "Exhibition of Sue Healy's work at the Margaret Lawrence Gallery. Event was part of the Dance 40 program, celebrating 40 years of Dance at VCA",
-    "performance": [
-        "Exhibition"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Dance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0033/75993/varieties/thumb.jpg",
-    "start_time": "2018-04-01",
-    "location": "Margaret Lawrence Gallery"
-},
-{
-    "title": "MILFAS The Enamoured Soul",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/milfas-the-enamoured-soul",
-    "description": "Conservatorium concert performance about the Enamoured Soul - the Glory of Handel",
-    "performance": [
-        "Concert",
-        "Performance"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0021/76017/varieties/thumb.jpg",
-    "start_time": "2018-04-01",
-    "location": "Melba Hall, Melbourne Conservatorium of Music"
-},
-{
-    "title": "Andrew Byrne Masterclass",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/andrew-byrne-masterclass",
-    "description": "New York based voice teacher Andrew Byrne visited the VCA to run performance masterclass with Music Theatre students",
-    "performance": [
-        "Other"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0016/76102/varieties/thumb.jpg",
-    "start_time": "2018-04-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "Morning Melodies",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/morning-melodies",
-    "description": "The VCA Music Theatre Performance at the Arts Centre in Melbourne",
-    "performance": [
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76109/varieties/thumb.jpg",
-    "start_time": "2018-02-01",
-    "location": "Arts Centre Melbourne"
-},
-{
-    "title": "Film and Television Awards 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/film-and-television-awards-2017",
-    "description": "A night to celebrating film and the achievement of VCA Film and Television graduates",
-    "performance": [
-        "Event",
-        "Screening"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Film and Television"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/77188/varieties/thumb.jpg",
-    "start_time": "2017-12-01",
-    "location": "Australian Centre for the Moving Image (ACMI)"
-},
-{
-    "title": "Masters Exhibition Opening 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-opening-2017",
-    "description": "Masters Exhibition 2017 by Visual and Contemporary Art Postgraduates at the Victorian College of the Arts",
-    "performance": [
-        "Exhibition"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Visual Art"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76511/Masters_exhibition-Header.jpg",
-    "start_time": "2017-12-01",
-    "location": "Margaret Lawrence Gallery"
-},
-{
-    "title": "Student Showcase Guitar",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/student-showcase-guitar",
-    "description": "Melbourne Conservatorium of Music student guitar performance",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76580/varieties/thumb.jpg",
-    "start_time": "2017-10-01",
-    "location": "Melba Hall, Melbourne Conservatorium of Music"
-},
-{
-    "title": "Melbourne Symphony Orchestra Sep 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-september-2017",
-    "description": "Conservatorium students and Associate Professor Richard Davis perform at the Melbourne Symphony Orchestra",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76608/varieties/thumb.jpg",
-    "start_time": "2017-09-21",
-    "location": "Hamer Hall, The Arts Centre Melbourne"
-},
-{
-    "title": "Melbourne Cello Festival 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/melbourne-cello-festival-2017",
-    "description": "Melbourne Cello Festival at the Conservatorium of Music is a celebration of cello music and brings cellists from around the world to Melbourne",
-    "performance": [
-        "Concert",
-        "Season",
-        "Event"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0019/77131/varieties/thumb.jpg",
-    "start_time": "2017-09-01",
-    "location": "Melba Hall, Melbourne Conservatorium of Music"
-},
-{
-    "title": "The Tale of Orpheus",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-tale-of-orpheus",
-    "description": "Early music Conservatorium students performance of the Tale of Orpheus",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Early Music"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0032/76595/DSC_7292.jpg",
-    "start_time": "2017-09-01",
-    "location": "The Meat Market, North Melbourne"
-},
-{
-    "title": "Music Theatre Company Showcase 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-showcase-2017",
-    "description": "VCA Music Theatre students showcase performance",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0024/76560/varieties/thumb.jpg",
-    "start_time": "2017-06-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "Melbourne Symphony Orchestra May 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-may-2017",
-    "description": "Conservatorium students and Associate Professor Richard Davis perform at the Melbourne Symphony Orchestra",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Performance"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76622/varieties/thumb.jpg",
-    "start_time": "2017-05-21",
-    "location": "Melbourne Recital Centre"
-},
-{
-    "title": "Jazz and Improvisation Large Ensemble Showcase 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-and-improvisation-large-ensemble-showcase-2017",
-    "description": "Jazz and Improvisation students from the Conservatoium showcasing their talent",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Jazz and Improvisation"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/76414/varieties/thumb.jpg",
-    "start_time": "2017-05-01",
-    "location": "Lionel's Lounge and Grant Street Theatre"
-},
-{
-    "title": "IC: Love Remixed",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/ic-love-remixed",
-    "description": "Conservatorium and VCA students collaborate to create an immersive interactive composition event of sound, music and vision",
-    "performance": [
-        "Concert"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Interactive Composition"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76396/varieties/thumb.jpg",
-    "start_time": "2017-05-01",
-    "location": "Lionel's Lounge and Grant Street Theatre"
-},
-{
-    "title": "Mongrel 2017",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2017",
-    "description": "Music Theatre production of the Mongrel by VCA students",
-    "performance": [
-        "Season",
-        "Performance"
-    ],
-    "school": "Victorian College of the Arts",
-    "disciplines": [
-        "Music Theatre",
-        "Production",
-        "Interactive Composition"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0025/76552/varieties/thumb.jpg",
-    "start_time": "2017-05-01",
-    "location": "Grant Street Theatre"
-},
-{
-    "title": "Music Therapy at the NGV",
-    "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-therapy-at-the-ngv",
-    "description": "Music Therapy workshop at the National Gallery of Victoria",
-    "performance": [
-        "Event"
-    ],
-    "school": "Melbourne Conservatorium of Music",
-    "disciplines": [
-        "Music Therapy"
-    ],
-    "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76427/varieties/thumb.jpg",
-    "start_time": "2017-05-01",
-    "location": "National Gallery of Victoria (NGV)"
+    "data": [{
+            "title": "Masters Exhibition 2018",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
+            "description": "Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts",
+            "performance": [
+                "Exhibition"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Visual Art"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76743/varieties/thumb.jpg",
+            "start_time": "2018-12-01",
+            "location": "Margaret Lawrence Gallery and The Stables"
+        },
+        {
+            "title": "Wilin Jams 2018",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
+            "description": "Wilin Centre for Indigenous Arts and Culture event Wilin Jams",
+            "performance": [
+                "Event"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Indigenous Arts and Culture"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76373/varieties/thumb.jpg",
+            "start_time": "2018-11-29",
+            "location": "Performing Arts Building"
+        },
+        {
+            "title": "Production Graduates",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-graduates",
+            "description": "Production Graduates from the Bachelor of Fine Arts Production at the VCA",
+            "performance": [
+                "Season",
+                "Other"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Production"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0033/76785/varieties/thumb.jpg",
+            "start_time": "2018-11-01",
+            "location": "Production"
+        },
+        {
+            "title": "Acting Company 2018",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-company-2018",
+            "description": "Theatre Acting Company students from the VCA",
+            "performance": [
+                "Season",
+                "Other"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76370/varieties/thumb.jpg",
+            "start_time": "2018-11-01",
+            "location": ""
+        },
+        {
+            "title": "Production Exhibition 2018",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-exhibition-2018",
+            "description": "Production Exhibition of graduates at the VCA celebrating the final year of Bachelor of Fine Arts Production",
+            "performance": [
+                "Exhibition",
+                "Graduation Show"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Production"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76756/varieties/thumb.jpg",
+            "start_time": "2018-11-01",
+            "location": "Martyn Myer Arena, The Stables"
+        },
+        {
+            "title": "Music Theatre Company 2018",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018",
+            "description": "Music Theatre company students from the VCA",
+            "performance": [
+                "Season",
+                "Other"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018/Into_the_Woods-7.jpg/thumb.jpg",
+            "start_time": "2018-11-01",
+            "location": ""
+        },
+        {
+            "title": "Music Theatre Showcase",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-showcase",
+            "description": "The VCA Music Theatre Showcase at Grant Street Theatre",
+            "performance": [
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0018/76131/varieties/thumb.jpg",
+            "start_time": "2018-10-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "Acting Showcase",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-showcase",
+            "description": "Acting Showcase Performance by VCA students",
+            "performance": [
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0024/76218/varieties/thumb.jpg",
+            "start_time": "2018-10-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "Asia Orchestra Tour",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/asia-orchestra-tour",
+            "description": "The 2018 Asia Tour marks the very first time in its long history that the University of Melbourne Symphony Orchestra has toured internationally",
+            "performance": [
+                "Concert",
+                "Event"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/74801/varieties/medium.jpg",
+            "start_time": "2018-09-25",
+            "location": "Esplanade Concert Hall, Singapore and Shanghai Symphony Concert Hall, Shanghai"
+        },
+        {
+            "title": "The Drowsy Chaperone",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-drowsy-chaperone",
+            "description": "Music Theatre performance of the Drowsy Chaperone by VCA students",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre",
+                "Production",
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/76528/Drowsy_Chaperone-Header.jpg",
+            "start_time": "2018-09-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "The Skin of Our Teeth",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-skin-of-our-teeth",
+            "description": "Theatre performance of The Skin of Our Teeth by VCA Students",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Theatre",
+                "Production"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76313/varieties/thumb.jpg",
+            "start_time": "2018-09-01",
+            "location": "Martyn Myer Arena, The Stables"
+        },
+        {
+            "title": "Carmelites",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/carmelites",
+            "description": "Music Opera performance of the Reign of Terror during the French revolution in 1794 fictionalising the martyrdom of the Carmelite nuns",
+            "performance": [
+                "Performance"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/74803/varieties/thumb.jpg",
+            "start_time": "2018-08-30",
+            "location": "Rosina Auditorium, Abbotsford Convent"
+        },
+        {
+            "title": "Jazz Ensemble",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-ensemble",
+            "description": "Small and large student ensembles live at the historical Kelvin Club",
+            "performance": [
+                "Concert",
+                "Performance"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Jazz and Improvisation"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0017/76022/varieties/thumb.jpg",
+            "start_time": "2018-08-01",
+            "location": "Kelvin Club, Melbourne"
+        },
+        {
+            "title": "Murdoch Travelling Fellowship 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/murdoch-travelling-fellowship-2017",
+            "description": "Fellowship awarded biennially to theatre, music and visual arts graduates of the VCA and conservatorium",
+            "performance": [
+                "Exhibition",
+                "Other"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Visual Art"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0030/76494/varieties/thumb.jpg",
+            "start_time": "2018-07-01",
+            "location": "Margaret Lawrence Gallery"
+        },
+        {
+            "title": "Dance 40th Anniversary Party",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/dance-40th-anniversary-party",
+            "description": "Celebrating 40 years of Dance at the Victorian College of Arts",
+            "performance": [
+                "Event"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Dance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0019/76123/varieties/thumb.jpg",
+            "start_time": "2018-06-10",
+            "location": "Dance Building and forecourt"
+        },
+        {
+            "title": "MIFLAS An Afternoon at the Opera",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/miflas-an-afternoon-at-the-opera",
+            "description": "Conservatorium benefit concert in support of the Melbourne International Festival of Lieder and Art Song",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0014/76010/varieties/thumb.jpg",
+            "start_time": "2018-06-03",
+            "location": "Melba Hall, Melbourne Conservatorium of Music"
+        },
+        {
+            "title": "Music Ensemble",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-ensemble",
+            "description": "World Music Choir and the Chinese Music Ensemble rehearsing at Melba Hall",
+            "performance": [
+                "Concert",
+                "Performance"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/82657/varieties/thumb.jpg",
+            "start_time": "2018-06-02",
+            "location": "Melba Hall, Melbourne Conservatorium of Music"
+        },
+        {
+            "title": "A Chorus Line",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/a-chorus-line",
+            "description": "The VCA performance of A Chorus Line presented by Music Theatre Company and Production students",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0025/76165/varieties/thumb.jpg",
+            "start_time": "2018-06-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "The Crucible",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-crucible",
+            "description": "Theatre performance of The Crucible by VCA students",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Theatre",
+                "Production"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76288/varieties/thumb.jpg",
+            "start_time": "2018-06-01",
+            "location": "Space 28, Theatre Building"
+        },
+        {
+            "title": "Peter Pan",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/peter-pan",
+            "description": "Theatre performance of Peter Pan by VCA Students",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Theatre",
+                "Production"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/76258/varieties/thumb.jpg",
+            "start_time": "2018-06-01",
+            "location": "Martyn Myer Arena, The Stables"
+        },
+        {
+            "title": "Wind Symphony Day",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wind-symphony-day",
+            "description": "Three Conservatorium concerts presented in the beautiful surrounds of the Melbourne Recital Centre",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76061/varieties/thumb.jpg",
+            "start_time": "2018-05-19",
+            "location": "Melbourne Recital Centre"
+        },
+        {
+            "title": "University of Melbourne Symphony Orchestra",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra",
+            "description": "The University of Melbourne Symphony Orchestra at the Melbourne Recital Centre",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0018/76032/varieties/thumb.jpg",
+            "start_time": "2018-05-01",
+            "location": "Melbourne Recital Centre"
+        },
+        {
+            "title": "Mongrel 2018",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2018",
+            "description": "Graduating Music Theatre and Interactive Composition students bring together their creative talents to forge new directions for music theatre works",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre",
+                "Interactive Composition",
+                "Design and production"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0029/76088/varieties/thumb.jpg",
+            "start_time": "2018-05-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "Gloria",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/gloria",
+            "description": "Music Opera performance of Gloria, Vivaldi's most beautiful and moving choral work",
+            "performance": [
+                "Performance"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0036/75996/varieties/thumb.jpg",
+            "start_time": "2018-05-01",
+            "location": "St Paul's Cathedral, Melbourne"
+        },
+        {
+            "title": "On View Opening Night",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/on-view-opening-night",
+            "description": "Exhibition of Sue Healy's work at the Margaret Lawrence Gallery. Event was part of the Dance 40 program, celebrating 40 years of Dance at VCA",
+            "performance": [
+                "Exhibition"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Dance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0033/75993/varieties/thumb.jpg",
+            "start_time": "2018-04-01",
+            "location": "Margaret Lawrence Gallery"
+        },
+        {
+            "title": "MILFAS The Enamoured Soul",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/milfas-the-enamoured-soul",
+            "description": "Conservatorium concert performance about the Enamoured Soul - the Glory of Handel",
+            "performance": [
+                "Concert",
+                "Performance"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0021/76017/varieties/thumb.jpg",
+            "start_time": "2018-04-01",
+            "location": "Melba Hall, Melbourne Conservatorium of Music"
+        },
+        {
+            "title": "Andrew Byrne Masterclass",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/andrew-byrne-masterclass",
+            "description": "New York based voice teacher Andrew Byrne visited the VCA to run performance masterclass with Music Theatre students",
+            "performance": [
+                "Other"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0016/76102/varieties/thumb.jpg",
+            "start_time": "2018-04-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "Morning Melodies",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/morning-melodies",
+            "description": "The VCA Music Theatre Performance at the Arts Centre in Melbourne",
+            "performance": [
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76109/varieties/thumb.jpg",
+            "start_time": "2018-02-01",
+            "location": "Arts Centre Melbourne"
+        },
+        {
+            "title": "Film and Television Awards 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/film-and-television-awards-2017",
+            "description": "A night to celebrating film and the achievement of VCA Film and Television graduates",
+            "performance": [
+                "Event",
+                "Screening"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Film and Television"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/77188/varieties/thumb.jpg",
+            "start_time": "2017-12-01",
+            "location": "Australian Centre for the Moving Image (ACMI)"
+        },
+        {
+            "title": "Masters Exhibition Opening 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-opening-2017",
+            "description": "Masters Exhibition 2017 by Visual and Contemporary Art Postgraduates at the Victorian College of the Arts",
+            "performance": [
+                "Exhibition"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Visual Art"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76511/Masters_exhibition-Header.jpg",
+            "start_time": "2017-12-01",
+            "location": "Margaret Lawrence Gallery"
+        },
+        {
+            "title": "Student Showcase Guitar",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/student-showcase-guitar",
+            "description": "Melbourne Conservatorium of Music student guitar performance",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76580/varieties/thumb.jpg",
+            "start_time": "2017-10-01",
+            "location": "Melba Hall, Melbourne Conservatorium of Music"
+        },
+        {
+            "title": "Melbourne Symphony Orchestra Sep 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-september-2017",
+            "description": "Conservatorium students and Associate Professor Richard Davis perform at the Melbourne Symphony Orchestra",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76608/varieties/thumb.jpg",
+            "start_time": "2017-09-21",
+            "location": "Hamer Hall, The Arts Centre Melbourne"
+        },
+        {
+            "title": "Melbourne Cello Festival 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/melbourne-cello-festival-2017",
+            "description": "Melbourne Cello Festival at the Conservatorium of Music is a celebration of cello music and brings cellists from around the world to Melbourne",
+            "performance": [
+                "Concert",
+                "Season",
+                "Event"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0019/77131/varieties/thumb.jpg",
+            "start_time": "2017-09-01",
+            "location": "Melba Hall, Melbourne Conservatorium of Music"
+        },
+        {
+            "title": "The Tale of Orpheus",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-tale-of-orpheus",
+            "description": "Early music Conservatorium students performance of the Tale of Orpheus",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Early Music"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0032/76595/DSC_7292.jpg",
+            "start_time": "2017-09-01",
+            "location": "The Meat Market, North Melbourne"
+        },
+        {
+            "title": "Music Theatre Company Showcase 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-showcase-2017",
+            "description": "VCA Music Theatre students showcase performance",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0024/76560/varieties/thumb.jpg",
+            "start_time": "2017-06-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "Melbourne Symphony Orchestra May 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-may-2017",
+            "description": "Conservatorium students and Associate Professor Richard Davis perform at the Melbourne Symphony Orchestra",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Performance"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76622/varieties/thumb.jpg",
+            "start_time": "2017-05-21",
+            "location": "Melbourne Recital Centre"
+        },
+        {
+            "title": "Jazz and Improvisation Large Ensemble Showcase 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-and-improvisation-large-ensemble-showcase-2017",
+            "description": "Jazz and Improvisation students from the Conservatoium showcasing their talent",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Jazz and Improvisation"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/76414/varieties/thumb.jpg",
+            "start_time": "2017-05-01",
+            "location": "Lionel's Lounge and Grant Street Theatre"
+        },
+        {
+            "title": "IC: Love Remixed",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/ic-love-remixed",
+            "description": "Conservatorium and VCA students collaborate to create an immersive interactive composition event of sound, music and vision",
+            "performance": [
+                "Concert"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Interactive Composition"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76396/varieties/thumb.jpg",
+            "start_time": "2017-05-01",
+            "location": "Lionel's Lounge and Grant Street Theatre"
+        },
+        {
+            "title": "Mongrel 2017",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2017",
+            "description": "Music Theatre production of the Mongrel by VCA students",
+            "performance": [
+                "Season",
+                "Performance"
+            ],
+            "school": "Victorian College of the Arts",
+            "disciplines": [
+                "Music Theatre",
+                "Production",
+                "Interactive Composition"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0025/76552/varieties/thumb.jpg",
+            "start_time": "2017-05-01",
+            "location": "Grant Street Theatre"
+        },
+        {
+            "title": "Music Therapy at the NGV",
+            "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-therapy-at-the-ngv",
+            "description": "Music Therapy workshop at the National Gallery of Victoria",
+            "performance": [
+                "Event"
+            ],
+            "school": "Melbourne Conservatorium of Music",
+            "disciplines": [
+                "Music Therapy"
+            ],
+            "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76427/varieties/thumb.jpg",
+            "start_time": "2017-05-01",
+            "location": "National Gallery of Victoria (NGV)"
+        }
+    ],
+    "filterOn": [{
+            "filterName": "school",
+            "type": "multi-select",
+            "values": [{
+                    "id": "VCA",
+                    "value": "Victorian College of the Arts"
+                },
+                {
+                    "id": "MCM",
+                    "value": "Melbourne Conservatorium of Music"
+                }
+            ]
+        },
+        {
+            "filterName": "disciplines",
+            "type": "input",
+            "values": [{
+                    "id": "1",
+                    "value": "Music Therapy"
+                },
+                {
+                    "id": "2",
+                    "value": "Production"
+                },
+                {
+                    "id": "3",
+                    "value": "Interactive Composition"
+                }
+            ]
+        }
+    ]
 }
-]

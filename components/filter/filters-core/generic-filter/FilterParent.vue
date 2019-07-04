@@ -9,14 +9,13 @@
       <checkbox-filter
         v-if="checkboxData.length > 0"
         :data="checkboxData"
-        title="Select School"
-        @event-data-checkbox="resultFromCheckbox"
-      />
-      <button @click="resetButton">Clear All button</button>
+        title="Select School" />
     </section-wrap>
-    <filter-results
+    <!--
+      <button @click="resetButton">Clear All button</button>
+           <filter-results
       :input="dataFromInput"
-      :checkbox="dataFromCheckbox" />
+    :checkbox="dataFromCheckbox" />-->
   </div>
 </template>
 
@@ -57,11 +56,16 @@ export default {
   methods: {
     resultFromInput(dataFromInput) {
       this.dataFromInput = dataFromInput;
+      this.sendDataToParent(dataFromInput);
     },
     resultFromCheckbox(dataFromCheckbox) {
       this.dataFromCheckbox = dataFromCheckbox;
+      this.sendDataToParent(dataFromCheckbox);
     },
     resetButton() {},
+    sendDataToParent(d) {
+      this.$emit('event-data', d);
+    },
   },
 };
 </script>

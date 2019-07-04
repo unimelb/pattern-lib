@@ -1,5 +1,7 @@
 <template>
-  <CardsFilter :data="cardsData.data" />
+  <CardsFilter
+    :data="cardsData.data"
+    :filter-on="cardsData.filterOn" />
 </template>
 
 <script>
