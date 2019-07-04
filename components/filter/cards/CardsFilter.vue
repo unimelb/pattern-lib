@@ -19,11 +19,11 @@
         </button>
       </div>
 
-      <div class="showcase-filter__container">
-        <p class="showcase-filter__results">{{ dataFiltered.length }} results</p>
-        <p class="showcase-filter__filters-applied">(Filters applied)</p>
+      <div class="cards-filter__container">
+        <p class="cards-filter__results">{{ dataFiltered.length }} results</p>
+        <p class="cards-filter__filters-applied">(Filters applied)</p>
         <button
-          class="showcase-filter__button"
+          class="cards-filter__button"
           @click="resetSearch">Clear results</button>
       </div>
     </section-wrap>

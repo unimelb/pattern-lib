@@ -186,8 +186,8 @@ export {
 } from '../../components/tables/CompactedTable.vue';
 export { default as Logo } from '../../components/logo/Logo.vue';
 export {
-  default as ShowcaseFilter,
-} from '../../components/filter/showcase/ShowcaseFilter.vue';
+  default as CardsFilter,
+} from '../../components/filter/cards/CardsFilter.vue';
 export {
   default as filterBreadth,
 } from '../../components/filter/breadth/filterBreadth.vue';

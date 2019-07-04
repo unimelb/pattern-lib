@@ -1,9 +1,9 @@
-## Showcase Filter component
+## Cards Filter component
 
 ### Example
 
 ```javascript
-<showcase-filter
+<cards-filter
     data="[{
     "title": "Masters Exhibition 2018",
     "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
@@ -34,5 +34,5 @@
     "start_time": "2018-11-29",
     "location": "Performing Arts Building"
 }]"
-></showcase-filter>
+></cards-filter>
 ```

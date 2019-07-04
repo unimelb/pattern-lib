@@ -79,7 +79,7 @@ import CompactedTable from '../../components/tables/CompactedTable.vue';
 import ResponsiveTable from '../../components/tables/ResponsiveTable.vue';
 import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 import Logo from '../../components/logo/Logo.vue';
-import ShowcaseFilter from '../../components/filter/showcase/ShowcaseFilter.vue';
+import CardsFilter from '../../components/filter/cards/CardsFilter.vue';
 import filterBreadth from '../../components/filter/breadth/filterBreadth.vue';
 
 import '../../components';
@@ -167,7 +167,7 @@ Vue.component('compacted-table', CompactedTable);
 Vue.component('responsive-table', ResponsiveTable);
 Vue.component('page-header-campaign', PageHeaderCampaign);
 Vue.component('logo', Logo);
-Vue.component('showcase-filter', ShowcaseFilter);
+Vue.component('cards-filter', CardsFilter);
 Vue.component('filter-breadth', filterBreadth);
 
 // Create Vue instance
