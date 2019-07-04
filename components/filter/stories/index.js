@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue';
 import { createStory } from '../../../.storybook/utils';
 
-import BreadthStory from './BreadthStory.vue';
+import AccordionFilterStory from './AccordionFilterStory.vue';
 import InputStory from './InputStory.vue';
 import DropdownStory from './DropdownStory.vue';
 import CheckboxStory from './CheckboxStory.vue';
@@ -10,7 +10,7 @@ import FilterStory from './FilterStory.vue';
 
 storiesOf('Filter / Components', module)
   .add('Filter Default', createStory(FilterStory))
-  .add('Breadth (Accordion)', createStory(BreadthStory))
+  .add('Accordion Filter', createStory(AccordionFilterStory))
   .add('Cards Filter', createStory(CardsFilterStory));
 
 storiesOf('Filter / Elements (Dev Only)', module)

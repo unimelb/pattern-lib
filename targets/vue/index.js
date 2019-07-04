@@ -189,5 +189,5 @@ export {
   default as CardsFilter,
 } from '../../components/filter/cards/CardsFilter.vue';
 export {
-  default as filterBreadth,
-} from '../../components/filter/breadth/filterBreadth.vue';
+  default as AccordionFilter,
+} from '../../components/filter/accordion/AccordionFilter.vue';

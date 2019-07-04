@@ -6,23 +6,6 @@
     align-items: center;
   }
 
-  &__filters-applied {
-    font-size: 14px;
-    color: #575756;
-    letter-spacing: 0;
-    font-style: italic;
-    font-weight: 600;
-    text-decoration: underline;
-  }
-
-  &__results {
-    margin: 48px 0 0 0;
-    font-size: 25px;
-    color: #000;
-    letter-spacing: 0;
-    font-weight: var(--fw-bold);
-  }
-
   &__button {
     padding: 1.2rem;
     font-weight: 600;

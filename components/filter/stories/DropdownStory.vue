@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import DropdownVmodel from '../DropdownVmodel.vue';
+import DropdownVmodel from '../filters-core/dropdown/DropdownVmodel.vue';
 
 export default {
   components: {

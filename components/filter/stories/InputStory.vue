@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import InputFilter from '../InputFilter.vue';
+import InputFilter from '../filters-core/input/InputFilter.vue';
 
 export default {
   components: { InputFilter },

@@ -2,22 +2,22 @@
   <div>
     <section-wrap bg-color="inverted">
 
-      <div class="breadth-filter__search-box">
-        <label class="breadth-filter__label">
+      <div class="accordion-filter__search-box">
+        <label class="accordion-filter__label">
           Discipline
           <DropdownVmodel
             v-model="selectedDiscipline"
             :values="filteredDisciplines"/>
         </label>
 
-        <label class="breadth-filter__label">
+        <label class="accordion-filter__label">
           Location
           <DropdownVmodel
             v-model="selectedLocation"
             :values="filteredLocations"/>
         </label>
 
-        <label class="breadth-filter__label">
+        <label class="accordion-filter__label">
           Audition Requirement
           <DropdownVmodel
             v-model="selectedAudition"
@@ -25,9 +25,9 @@
         </label>
       </div>
 
-      <div class="breadth-filter__container">
+      <div class="accordion-filter__container">
         <button
-          class="breadth-filter__button"
+          class="accordion-filter__button"
           @click="resetChecked">Reset all</button>
       </div>
     </section-wrap>

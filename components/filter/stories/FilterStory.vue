@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import filterData from '../filterParent/filterData';
-import FilterParent from '../filterParent/FilterParent.vue';
+import filterData from '../filters-core/generic-filter/filterData';
+import FilterParent from '../filters-core/generic-filter/FilterParent.vue';
 
 export default {
   components: {

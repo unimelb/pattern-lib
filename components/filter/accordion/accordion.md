@@ -1,9 +1,9 @@
-## Breadth filter
+## Accordion filter
 
 
 ### Usage:
 ```javascript
-<filter-breadth 
+<accordion-filter 
   data="[
         {
           name: "arts",
@@ -30,5 +30,5 @@
           buttonText: "Handbook Link"
         }
       ]">
-</filter-breadth>
+</accordion-filter>
 ```

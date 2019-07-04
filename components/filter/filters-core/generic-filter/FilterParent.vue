@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import InputFilter from '../InputFilter.vue';
-import CheckboxFilter from '../CheckboxFilter.vue';
-import FilterResults from './FilterResults.vue';
+import InputFilter from '../input/InputFilter.vue';
+import CheckboxFilter from '../checkbox/CheckboxFilter';
+import FilterResults from '../results/FilterResults.vue';
 
 export default {
   components: {

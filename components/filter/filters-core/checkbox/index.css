@@ -1,0 +1,23 @@
+.checkbox-filter {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 1.125rem;
+    color: rgb(var(--col-navy-dark));
+    letter-spacing: 0;
+    font-weight: var(--fw-semibold);
+    border-bottom: 1px solid rgb(var(--col-black-mid-1));
+  }
+
+  &__box {
+    margin-bottom: .25rem;
+  }
+
+  &__label {
+    font-size: 1rem;
+    color: rgb(87, 87, 86);
+    letter-spacing: 0;
+    font-weight: var(--fw-regular);
+  }
+}

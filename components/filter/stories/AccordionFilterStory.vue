@@ -1,16 +1,16 @@
 <template>
   <section-wrap bg-color="white">
-    <filterBreadth :data="data"/>
+    <AccordionFilter :data="data"/>
   </section-wrap>
 </template>
 
 <script>
-import filterBreadth from '../breadth/filterBreadth.vue';
-import breadthDoc from './breadth.md';
+import AccordionFilter from '../accordion/AccordionFilter.vue';
+import accordion from '../accordion/accordion.md';
 
 export default {
-  components: { filterBreadth },
-  readme: { custom: breadthDoc, source: false, html: false },
+  components: { AccordionFilter },
+  readme: { custom: accordion, source: false, html: false },
   data() {
     return {
       data: [

@@ -20,8 +20,7 @@
       </div>
 
       <div class="cards-filter__container">
-        <p class="cards-filter__results">{{ dataFiltered.length }} results</p>
-        <p class="cards-filter__filters-applied">(Filters applied)</p>
+        <FilterResultsCount :data="dataFiltered.length"/>
         <button
           class="cards-filter__button"
           @click="resetSearch">Clear results</button>
@@ -72,9 +71,10 @@
 </template>
 <script>
 import GenericCard from '../../cards/GenericCard.vue';
+import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
 
 export default {
-  components: { GenericCard },
+  components: { GenericCard, FilterResultsCount },
   props: {
     data: {
       type: Array,

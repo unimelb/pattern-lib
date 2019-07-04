@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import CheckboxFilter from '../CheckboxFilter';
+import CheckboxFilter from '../filters-core/checkbox/CheckboxFilter.vue';
 
 export default {
   components: {
