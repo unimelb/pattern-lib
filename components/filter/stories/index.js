@@ -8,8 +8,10 @@ import CheckboxStory from './CheckboxStory.vue';
 import CardsFilterStory from './CardsFilterStory.vue';
 import CardsFilterStory2 from './CardsFilterStory2.vue';
 import FilterStory from './FilterStory.vue';
+import FilterResultsStory from './FilterResultsStory.vue';
 
 storiesOf('Filter / Components', module)
+  .add('Filter Results', createStory(FilterResultsStory))
   .add('Filter Default', createStory(FilterStory))
   .add('Accordion Filter', createStory(AccordionFilterStory))
   .add('Cards Filter', createStory(CardsFilterStory))
