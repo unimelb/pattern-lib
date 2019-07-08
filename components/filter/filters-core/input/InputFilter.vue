@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     emitEvent() {
-      this.$emit('event-data-input', this.filteredData);
+      this.$emit('event-data-input', {'filterOn': data.filterOn , 'value': this.userInputData});
     },
   },
 };
