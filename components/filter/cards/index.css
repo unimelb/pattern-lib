@@ -1,0 +1,16 @@
+.cards-filter {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 1.2rem;
+    font-weight: 600;
+    border: 2px solid rgb(var(--col-background-primary-navy));
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
