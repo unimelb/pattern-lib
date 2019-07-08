@@ -1,12 +1,13 @@
 <template>
   <CardsFilter
-    :data="cardsData.data"
-    :filter-on="cardsData.filterOn" />
+    :data="cardsData"
+    :filter-on="filterOn" />
 </template>
 
 <script>
 import CardsFilter from '../cards/CardsFilter.vue';
 import cardsData from '../cards/data.json';
+import filterOn from '../cards/filterOn.json';
 import cardsFilterReadme from '../cards/cardsFilterReadme.md';
 
 export default {
@@ -14,6 +15,7 @@ export default {
   data() {
     return {
       cardsData,
+      filterOn,
     };
   },
   readme: { custom: cardsFilterReadme, html: false, source: false },

@@ -1,0 +1,49 @@
+[{
+            "filterName": "school",
+            "type": "multi-select-1",
+            "values": [
+                {
+                    "id": "CBA",
+                    "value": "ABC"
+                },
+                {
+                    "id": "VCA",
+                    "value": "Victorian College of the Arts"
+                },
+                {
+                    "id": "MCM",
+                    "value": "Melbourne Conservatorium of Music"
+                }
+            ]
+        },
+        {
+            "filterName": "schoool",
+            "type": "multi-select-2",
+            "values": [{
+                    "id": "AVC",
+                    "value": "Arts"
+                },
+                {
+                    "id": "CMM",
+                    "value": "Music"
+                }
+            ]
+        },
+        {
+            "filterName": "disciplines",
+            "type": "input",
+            "values": [{
+                    "id": "1",
+                    "value": "Music Therapy"
+                },
+                {
+                    "id": "2",
+                    "value": "Production"
+                },
+                {
+                    "id": "3",
+                    "value": "Interactive Composition"
+                }
+            ]
+        }
+    ]

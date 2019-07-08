@@ -1,5 +1,4 @@
-{
-    "data": [{
+[{
             "title": "Masters Exhibition 2018",
             "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
             "description": "Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts",
@@ -100,7 +99,7 @@
             "performance": [
                 "Performance"
             ],
-            "school": "Victorian College of the Arts",
+            "school": "ABC",
             "disciplines": [
                 "Music Theatre"
             ],
@@ -628,36 +627,4 @@
             "start_time": "2017-05-01",
             "location": "National Gallery of Victoria (NGV)"
         }
-    ],
-    "filterOn": [{
-            "filterName": "school",
-            "type": "multi-select",
-            "values": [{
-                    "id": "VCA",
-                    "value": "Victorian College of the Arts"
-                },
-                {
-                    "id": "MCM",
-                    "value": "Melbourne Conservatorium of Music"
-                }
-            ]
-        },
-        {
-            "filterName": "disciplines",
-            "type": "input",
-            "values": [{
-                    "id": "1",
-                    "value": "Music Therapy"
-                },
-                {
-                    "id": "2",
-                    "value": "Production"
-                },
-                {
-                    "id": "3",
-                    "value": "Interactive Composition"
-                }
-            ]
-        }
     ]
-}

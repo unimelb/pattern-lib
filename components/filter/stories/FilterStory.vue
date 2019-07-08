@@ -1,11 +1,14 @@
 <template>
   <div>
-    <filter-parent :data="filterData" />
+    <filter-parent
+      :data="data"
+      :filter-on="filterOn" />
   </div>
 </template>
 
 <script>
-import filterData from '../filters-core/generic-filter/filterData';
+import filterOn from '../cards/filterOn';
+import data from '../cards/data';
 import FilterParent from '../filters-core/generic-filter/FilterParent.vue';
 
 export default {
@@ -14,7 +17,8 @@ export default {
   },
   data() {
     return {
-      filterData,
+      filterOn,
+      data,
     };
   },
 };
