@@ -82,11 +82,9 @@
   &__title {
     margin-bottom: 1rem;
     font-size: 1.35rem;
-    a {
-      color: rgb(var(--col-navy-dark));
-      font-weight: var(--fw-bold);
-      line-height: 1;
-    }
+    color: rgb(var(--col-navy-dark));
+    font-weight: var(--fw-bold);
+    line-height: 1;
   }
 
   &__description {

@@ -54,6 +54,7 @@
                 href="javascript: void(0);"
 
                 @click="moveToStory(index)"
+                @focusin="stopSliding"
                 @keydown.13="moveToStory(index)"
                 @keydown.32="moveToStory(index)"
               >
@@ -110,6 +111,7 @@
               role="button"
               aria-label="Play carousel"
               @click="startSliding"
+              @focusin="stopSliding"
               @keydown.13="startSliding"
               @keydown.32="startSliding"
             >
@@ -146,10 +148,10 @@
           role="navigation"
           aria-label="Stories">
           <div class="carousel__story">
-            <h2
-              class="carousel__title">
+            <h2>
               <a
                 :href="selectedItem.buttonHref"
+                class="carousel__title"
                 @focusin="stopSliding"
                 @focusout="startSliding"
               >
@@ -161,7 +163,6 @@
             </p>
           </div>
           <div
-            tabindex="0"
             @focusin="stopSliding"
             @focusout="startSliding"
           >
@@ -303,7 +304,7 @@ export default {
       this.selectedItem = this.stories[storyIndex];
       this.selectedIndex = storyIndex;
       this.$refs.slider.$emit('slideTo', storyIndex);
-      document.querySelector('.carousel__cta').focus();
+      document.querySelector('.carousel__title').focus();
     },
   },
 };
