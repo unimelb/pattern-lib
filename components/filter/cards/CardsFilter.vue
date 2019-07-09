@@ -1,29 +1,16 @@
 <template>
   <div>
     <section-wrap bg-color="white">
-      <div class="input-filter">
-        <input
-          v-model="searchData"
-          type="search"
-          placeholder="Type to search title or description"
-          class="input-filter__input"
-        >
-        <button
-          aria-label="Search"
-          class="input-filter__search-button"
-          @click="filterDataButton">
-          <SvgIcon
-            class="input-filter__search-button--icon"
-            name="search" />
-          <span class="input-filter__search-button--text">Search</span>
-        </button>
-      </div>
+      <FilterParent
+        :data="data"
+        :filter-on="filterOn"
+        @event-data="eventWithFilteredData"/>
 
       <div class="cards-filter__container">
         <FilterResultsCount :data="dataFiltered.length" />
         <button
           class="cards-filter__button"
-          @click="resetSearch">Clear results</button>
+        >Clear results</button>
       </div>
     </section-wrap>
     <SectionWrap class="bg-alt">
@@ -65,11 +52,12 @@
   </div>
 </template>
 <script>
-import GenericCard from '../../cards/GenericCard.vue';
+import FilterParent from '../filters-core/generic-filter/FilterParent.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
+import GenericCard from '../../cards/GenericCard.vue';
 
 export default {
-  components: { GenericCard, FilterResultsCount },
+  components: { FilterParent, GenericCard, FilterResultsCount },
   props: {
     data: {
       type: Array,
@@ -84,24 +72,11 @@ export default {
     return {
       searchData: '',
       dataFiltered: this.data,
-      dataFiltered2: [],
     };
   },
-  computed: {
-    filteredData() {
-      return this.data.filter(
-        data => data.title.match(new RegExp(this.searchData, 'i'))
-          || data.description.match(new RegExp(this.searchData, 'i'))
-      );
-    },
-  },
   methods: {
-    filterDataButton() {
-      this.dataFiltered = this.filteredData;
-    },
-    resetSearch() {
-      this.dataFiltered = this.data;
-      this.searchData = '';
+    eventWithFilteredData(obj) {
+      console.log("from filter parent", obj);
     },
   },
 };

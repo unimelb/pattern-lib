@@ -31,6 +31,7 @@
         },
         {
             "filterName": "disciplines",
+            "filterOn": ["title", "description"],
             "type": "input",
             "values": [{
                     "id": "1",

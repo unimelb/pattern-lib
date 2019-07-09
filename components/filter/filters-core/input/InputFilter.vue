@@ -31,18 +31,9 @@ export default {
       userInputData: '',
     };
   },
-
-  computed: {
-    filteredData() {
-      return this.data.filter(data => data.value.match(new RegExp(this.userInputData, 'i')));
-    },
-  },
-  mounted() {
-    this.$emit('event-data-input', this.data);
-  },
   methods: {
     emitEvent() {
-      this.$emit('event-data-input', {'filterOn': data.filterOn , 'value': this.userInputData});
+      this.$emit('event-data-input', { filterOn: this.data, value: this.userInputData });
     },
   },
 };

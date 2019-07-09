@@ -4,93 +4,21 @@
       <input-filter
         v-if="inputData.length > 0"
         :data="inputData"
-        @event-data-input="resultFromInput"
+        @event-data-input="resultFromField"
       />
-
-      <div>
-        <checkbox-filter
-          v-if="checkboxData1.length > 0"
-          :data="checkboxData1"
-          title="Select School"
-          @event-data-input="resultFromCheckbox" />
-        <checkbox-filter
-          v-if="checkboxData2.length > 0"
-          :data="checkboxData2"
-          title="Select School"
-          @event-data-input="resultFromCheckbox" />
-      </div>
     </section-wrap>
-    <!--
-testing purposes
-    -->
-
-    <section-wrap bg-color="inverted">
-
-      <div>
-        <h1>filter results of input: {{ dataFromInput }}</h1>
-        <h1
-          v-for="(item, index) in dataFromInput"
-          :key="index">{{ item.value }}</h1>
-      </div>
-      <div>
-        <h1>filter results of checkbox: checkbox 1{{ checkboxData1 }} checkbox 2 {{ checkboxData2 }}</h1>
-        <li
-          v-for="(item, index) in dataFromCheckbox"
-          :key="index">{{ item }}</li>
-      </div>
-    </section-wrap>
-    <SectionWrap class="bg-alt">
-      <div class="grid grid--3col">
-        <ListItem
-          v-for="(item, index) in dataFiltered"
-          :key="index">
-          <GenericCard
-            :cols="3"
-            :thumb="item.img_url"
-            :title="item.title"
-            :href="item.link"
-            :excerpt="item.description"
-          >
-            <div
-              slot="sub-title-1"
-              class="sub-title">
-              <SvgIcon name="info" />
-              <span
-                v-for="(item, index) in item.performance"
-                :key="index">
-                <span v-if="index > 0">{{ ', ' }}</span>
-                <span>{{ item }}</span>
-              </span>
-            </div>
-            <div
-              slot="sub-title-2"
-              class="sub-title">
-              <SvgIcon name="calendar" />
-              <span>{{ item.start_time }}</span>
-            </div>
-            <template slot="links">
-              <a :href="item.link">View showcase ></a>
-            </template>
-          </GenericCard>
-        </ListItem>
-      </div>
-    </SectionWrap>
-
   </div>
 </template>
 
 <script>
-import GenericCard from '../../../cards/GenericCard.vue';
 import InputFilter from '../input/InputFilter.vue';
 import CheckboxFilter from '../checkbox/CheckboxFilter';
-import FilterResults from '../results/FilterResults.vue';
+const _ = require('lodash');
 
 export default {
   components: {
     InputFilter,
     CheckboxFilter,
-    FilterResults,
-    GenericCard,
   },
   props: {
     data: {
@@ -104,60 +32,67 @@ export default {
   },
   data() {
     return {
-      dataFromInput: [],
-      dataFromCheckbox: [],
       inputData: [],
-      checkboxData1: [],
-      checkboxData2: [],
-      fullData: [],
       dataFiltered: [],
       filtersToApply: [],
+      fullData: this.data,
     };
   },
   beforeMount() {
     this.filterOn.forEach((element) => {
       if (element.type === 'input') {
-        this.inputData.push(...element.values);
-      } else if (element.type === 'multi-select-1') {
-        this.checkboxData1.push(...element.values);
-      } else if (element.type === 'multi-select-2') {
-        this.checkboxData2.push(...element.values);
+        this.inputData.push(...element.filterOn);
       }
     });
-    this.dataFiltered = this.data;
   },
   methods: {
     resultFromField(obj) {
-      // this.data.filter(data => data.[filterOn])
-
+      console.log('input event:', obj);
+      
       this.filtersToApply.push(obj);
 
+      console.log("filters to apply", this.filtersToApply);
       this.applyFilters();
-
-    // filteredData() {
-    //   return this.data.filter(data => data.title.match(new RegExp(this.userInputData, 'i')));
-    // },
-
-    //   this.dataFromInput = dataFromInput;
-    //   this.sendDataToParent(dataFromInput);
     },
-    resultFromCheckbox(dataFromCheckbox) {
-      this.dataFiltered = this.data.filter(data => dataFromCheckbox.includes(data.school));
-      if (this.dataFromCheckbox.includes(...dataFromCheckbox) === false) {
-        this.dataFromCheckbox.push(...dataFromCheckbox);
-        this.fullData.push(...dataFromCheckbox);
-      } else {
-        this.dataFromCheckbox = [];
-        this.dataFromCheckbox.push(...dataFromCheckbox);
-      }
-      this.sendDataToParent(dataFromCheckbox);
-    },
+
     applyFilters() {
-      // do filtering with lodash
 
-      // emit event to parent with filtered data
+      var useConditions = search => a => Object.keys(search).every(k => 
+        a[k] === search[k] ||
+        Array.isArray(search[k]) && search[k].includes(a[k]) ||
+        typeof search[k] === 'object' && +search[k].min <= a[k] &&  a[k] <= +search[k].max ||
+        typeof search[k] === 'function' && search[k](a[k])
+    );
+console.log("new", this.fullData.filter(useConditions(this.filtersToApply)));
+
+
+      this.dataFiltered = _.filter(this.fullData, (record) => {
+        let hasValue = false;
+
+        console.log("full data", this.fullData);
+
+        // Go through each filter and filter on value.
+        _.forEach(this.filtersToApply, (value) => {
+          const keysToCheck = _.pick(record, value.filterOn);
+          // const valuesToCheck = _.values(keysToCheck);
+
+          console.log("test", _.find(keysToCheck, value.value));
+          console.log("test2", _.includes(keysToCheck, value.value));
+
+          hasValue = _.includes(keysToCheck, value.value);
+
+          console.log("value value", value.value);
+
+          // If one value is found then display the record and exit.
+          if (hasValue) {
+            return false;
+          }
+        });
+
+        return hasValue;
+      });
+      console.log('filtered data', this.dataFiltered);
     },
-    resetButton() {},
     sendDataToParent(d) {
       this.$emit('event-data', d);
     },
