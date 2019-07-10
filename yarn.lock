@@ -12664,6 +12664,13 @@ vue-eslint-parser@^2.0.3:
     esquery "^1.0.0"
     lodash "^4.17.4"
 
+vue-fuse@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-2.1.0.tgz#a8e785cbb80d216d99cf652f32d3cdad243a15df"
+  integrity sha512-hx4QZkeIATmFlKyq6QSWcFFHPJC0vmsusnZP1GkBSEXh1eH7WV8Pde9O0XFvXWIzCH4Dr+Dox25EKu+iAy4bSg==
+  dependencies:
+    fuse.js "^3.2.0"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"

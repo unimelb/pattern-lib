@@ -3,7 +3,7 @@
     <input
       v-model="userInputData"
       type="search"
-      placeholder="Search"
+      placeholder="Search Title or Description"
       class="input-filter__input">
     <button
       aria-label="Search"

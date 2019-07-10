@@ -10,6 +10,7 @@
         <FilterResultsCount :data="dataFiltered.length" />
         <button
           class="cards-filter__button"
+          @click="clearAllData()"
         >Clear results</button>
       </div>
     </section-wrap>
@@ -70,13 +71,17 @@ export default {
   },
   data() {
     return {
-      searchData: '',
       dataFiltered: this.data,
     };
   },
   methods: {
     eventWithFilteredData(obj) {
-      console.log("from filter parent", obj);
+      this.dataFiltered = obj;
+      // console.log('from filter parent', obj);
+    },
+    clearAllData() {
+      // still need to delete the selections or input text
+      this.dataFiltered = this.data;
     },
   },
 };

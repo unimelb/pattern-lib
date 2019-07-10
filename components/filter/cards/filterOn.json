@@ -1,50 +1,70 @@
 [{
             "filterName": "school",
+            "filterOn": ["school"],
             "type": "multi-select-1",
             "values": [
                 {
-                    "id": "CBA",
-                    "value": "ABC"
-                },
-                {
-                    "id": "VCA",
+                    "id": "1",
                     "value": "Victorian College of the Arts"
                 },
                 {
-                    "id": "MCM",
+                    "id": "2",
                     "value": "Melbourne Conservatorium of Music"
+                },
+                {
+                    "id": "3",
+                    "value": "Testing"
                 }
             ]
         },
         {
-            "filterName": "schoool",
+            "filterName": "performance",
+            "filterOn": ["performance"],
             "type": "multi-select-2",
-            "values": [{
-                    "id": "AVC",
-                    "value": "Arts"
+            "values": [
+                {
+                    "id": "1",
+                    "value": "Exhibition"
                 },
                 {
-                    "id": "CMM",
-                    "value": "Music"
+                    "id": "2",
+                    "value": "Season"
+                },
+                {
+                    "id": "3",
+                    "value": "Concert"
+                },
+                {
+                    "id": "4",
+                    "value": "Gui"
                 }
             ]
         },
         {
             "filterName": "disciplines",
-            "filterOn": ["title", "description"],
-            "type": "input",
-            "values": [{
+            "filterOn": ["disciplines"],
+            "type": "multi-select-3",
+            "values": [
+                {
                     "id": "1",
-                    "value": "Music Therapy"
+                    "value": "Visual Art"
                 },
                 {
                     "id": "2",
-                    "value": "Production"
+                    "value": "Indigenous Arts and Culture"
                 },
                 {
                     "id": "3",
-                    "value": "Interactive Composition"
+                    "value": "Production"
+                },
+                {
+                    "id": "4",
+                    "value": "Gui"
                 }
             ]
+        },
+        {
+            "filterOn": ["title", "description"],
+            "type": "input"
         }
     ]

@@ -463,7 +463,7 @@
             "performance": [
                 "Exhibition"
             ],
-            "school": "Victorian College of the Arts",
+            "school": "Testing",
             "disciplines": [
                 "Visual Art"
             ],
@@ -472,13 +472,13 @@
             "location": "Margaret Lawrence Gallery"
         },
         {
-            "title": "Student Showcase Guitar",
+            "title": "Gui",
             "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/student-showcase-guitar",
             "description": "Melbourne Conservatorium of Music student guitar performance",
             "performance": [
                 "Concert"
             ],
-            "school": "Melbourne Conservatorium of Music",
+            "school": "Testing",
             "disciplines": [
                 "Music Performance"
             ],
@@ -489,7 +489,7 @@
         {
             "title": "Melbourne Symphony Orchestra Sep 2017",
             "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-september-2017",
-            "description": "Conservatorium students and Associate Professor Richard Davis perform at the Melbourne Symphony Orchestra",
+            "description": "Gui",
             "performance": [
                 "Concert"
             ],
@@ -523,7 +523,7 @@
             "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-tale-of-orpheus",
             "description": "Early music Conservatorium students performance of the Tale of Orpheus",
             "performance": [
-                "Concert"
+                "Gui"
             ],
             "school": "Melbourne Conservatorium of Music",
             "disciplines": [

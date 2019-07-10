@@ -1,15 +1,7 @@
 <template>
   <div>
     <CheckboxFilter
-      :data="data"
-      title="School"
-      @event-data-filtered="test"/>
-    <sectionWrap>
-      <h1>Filter results:</h1>
-      <li
-        v-for="(item, index) in filteredData"
-        :key="index">{{ item }}</li>
-    </sectionWrap>
+      :data="data"/>
   </div>
 </template>
 
@@ -23,14 +15,26 @@ export default {
   readme: { source: true, html: true },
   data() {
     return {
-      filteredData: [],
-      data: ['Test1', 'Test2', 'Test3'],
+      data: [{
+        filterName: 'school',
+        filterOn: ['school'],
+        type: 'multi-select-1',
+        values: [
+          {
+            id: '1',
+            value: 'Victorian College of the Arts',
+          },
+          {
+            id: '2',
+            value: 'Melbourne Conservatorium of Music',
+          },
+          {
+            id: '3',
+            value: 'Testing',
+          },
+        ],
+      }],
     };
-  },
-  methods: {
-    test(dataFromParent) {
-      this.filteredData = dataFromParent;
-    },
   },
 };
 </script>

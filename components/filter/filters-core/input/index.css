@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 24px 34px 24px 34px;
   background-color: rgb(var(--col-background-primary-navy));
+  flex: 1;
 
   &__input {
     width: 100%;

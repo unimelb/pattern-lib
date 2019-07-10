@@ -39,6 +39,7 @@
     "semver": "^5.6.0",
     "smoothscroll-polyfill": "^0.4.4",
     "vue": "2.5.16",
+    "vue-fuse": "^2.1.0",
     "vue-progressive-image": "3.1.0",
     "vue-scrollto": "^2.11.0"
   },
