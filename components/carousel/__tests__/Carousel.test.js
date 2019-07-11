@@ -71,7 +71,8 @@ describe('Carousel', () => {
       },
     });
     expect(wrapper.props().stories.length).toBe(2);
-    expect(wrapper.find('.carousel__slider img').attributes().src).toBe('test1');
+
+    expect(wrapper.find('.carousel__image').attributes().style).toBe('background-image: url(test1);');
   });
 
   it('should set active to first story as default', () => {
@@ -81,7 +82,7 @@ describe('Carousel', () => {
       },
     });
     expect(wrapper.vm.selectedIndex).toBe(0);
-    expect(wrapper.find('.carousel__slider img').exists()).toBe(true);
+    expect(wrapper.find('.carousel__image').exists()).toBe(true);
   });
 
   it('should render default story title and description', () => {
@@ -100,8 +101,8 @@ describe('Carousel', () => {
         stories: storiesMock,
       },
     });
-    expect(wrapper.findAll('.carousel__navigation-text').at(0).text()).toBe('Story 1');
-    expect(wrapper.findAll('.carousel__navigation-text').at(1).text()).toBe('Story 2');
+    expect(wrapper.findAll('.carousel__navigation-link').at(0).text()).toBe('Story 1');
+    expect(wrapper.findAll('.carousel__navigation-link').at(1).text()).toBe('Story 2');
   });
 
   it('should have click/enter event on stories menu title', () => {
@@ -115,9 +116,9 @@ describe('Carousel', () => {
     wrapper.setMethods({
       moveToStory,
     });
-    wrapper.find('.carousel__navigation-item').trigger('click');
+    wrapper.find('.carousel__navigation-link').trigger('click');
     expect(moveToStory.called).toBe(true);
-    wrapper.find('.carousel__navigation-item').trigger('keydown.enter');
+    wrapper.find('.carousel__navigation-link').trigger('keydown.enter');
     expect(moveToStory.called).toBe(true);
   });
 
@@ -129,7 +130,7 @@ describe('Carousel', () => {
       attachToDocument: true,
     });
 
-    wrapper.findAll('.carousel__navigation-item').at(1).trigger('click');
+    wrapper.findAll('.carousel__navigation-link').at(1).trigger('click');
     expect(wrapper.vm.selectedIndex).toBe(1);
   });
 
@@ -141,7 +142,7 @@ describe('Carousel', () => {
     });
 
     expect(wrapper.vm.storiesData[0].isActive).toBe(true);
-    expect(wrapper.find('.carousel__navigation-text').classes()).toContain('carousel__navigation-text--active');
+    expect(wrapper.find('.carousel__navigation-link').classes()).toContain('carousel__navigation-link--active');
   });
 
   it('should set "active" state to story on menu title click', () => {
@@ -152,9 +153,9 @@ describe('Carousel', () => {
       attachToDocument: true,
     });
 
-    wrapper.findAll('.carousel__navigation-item').at(1).trigger('click');
+    wrapper.findAll('.carousel__navigation-link').at(1).trigger('click');
     expect(wrapper.vm.storiesData[1].isActive).toBe(true);
-    expect(wrapper.findAll('.carousel__navigation-text').at(1).classes()).toContain('carousel__navigation-text--active');
+    expect(wrapper.findAll('.carousel__navigation-link').at(1).classes()).toContain('carousel__navigation-link--active');
   });
 
   it('should have click/enter event on stop/pause control', () => {

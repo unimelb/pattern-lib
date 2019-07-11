@@ -41,37 +41,29 @@ exports[`Carousel should match snapshot 1`] = `
           role="menu"
         >
           <li
-            class="list-reset"
+            class="carousel__navigation-item list-reset"
             role="menuitem"
           >
             <a
-              class="carousel__navigation-item"
+              class="carousel__navigation-link carousel__navigation-link--active"
               href="javascript: void(0);"
             >
-              <span
-                class="carousel__navigation-text carousel__navigation-text--active"
-              >
-                
-                Story 1
               
-              </span>
+              Story 1
+            
             </a>
           </li>
           <li
-            class="list-reset"
+            class="carousel__navigation-item list-reset"
             role="menuitem"
           >
             <a
-              class="carousel__navigation-item"
+              class="carousel__navigation-link"
               href="javascript: void(0);"
             >
-              <span
-                class="carousel__navigation-text"
-              >
-                
-                Story 2
               
-              </span>
+              Story 2
+            
             </a>
           </li>
         </ul>
@@ -120,9 +112,11 @@ exports[`Carousel should match snapshot 1`] = `
         <div
           class="carousel__story"
         >
-          <h2>
+          <h2
+            class="carousel__title"
+          >
             <a
-              class="carousel__title"
+              class="carousel__title-link"
               href="google.com"
             >
               

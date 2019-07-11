@@ -17,11 +17,10 @@
           v-for="(slide, index) in stories"
           :key="index"
         >
-          <img
-            :src="slide.src"
-            :alt="slide.altText"
-            class="carousel__image"
-          >
+          <div
+            :style="`background-image: url('${slide.src}');`"
+            :aria-label="slide.altText"
+            class="carousel__image" />
         </slideritem>
       </slider>
     </div>
@@ -46,11 +45,12 @@
             <li
               v-for="(story, index) in storiesData"
               :key="index"
-              class="list-reset"
+              class="carousel__navigation-item list-reset"
               role="menuitem"
             >
               <a
-                class="carousel__navigation-item"
+                :class="{ 'carousel__navigation-link--active': story.isActive }"
+                class="carousel__navigation-link"
                 href="javascript: void(0);"
 
                 @click="moveToStory(index)"
@@ -58,11 +58,7 @@
                 @keydown.13="moveToStory(index)"
                 @keydown.32="moveToStory(index)"
               >
-                <span
-                  :class="{ 'carousel__navigation-text--active': story.isActive }"
-                  class="carousel__navigation-text">
-                  {{ story.title }}
-                </span>
+                {{ story.title }}
               </a>
             </li>
           </ul>
@@ -148,10 +144,10 @@
           role="navigation"
           aria-label="Stories">
           <div class="carousel__story">
-            <h2>
+            <h2 class="carousel__title">
               <a
                 :href="selectedItem.buttonHref"
-                class="carousel__title"
+                class="carousel__title-link"
                 @focusin="stopSliding"
                 @focusout="startSliding"
               >
