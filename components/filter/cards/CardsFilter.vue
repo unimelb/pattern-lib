@@ -1,60 +1,68 @@
 <template>
   <div>
-    <section-wrap bg-color="white">
-      <div class="input-filter">
-        <div class="input-filter__container">
-          <input
-            v-model="searchData"
-            type="search"
-            placeholder="Type to search title or description"
-            class="input-filter__input"
-          >
-          <button
-            aria-label="Search"
-            class="input-filter__search-button"
-            @click="filterDataButton">
-            <SvgIcon
-              class="input-filter__search-button--icon"
-              name="search" />
-            <span class="input-filter__search-button--text">Search</span>
-          </button>
-        </div>
-        <div class="accordion-filter__search-box">
-          <label class="accordion-filter__label">
+    <section-wrap bg-color="inverted">
+      <div class="filter-input-container">
+        <label
+          for="input-search"
+          hidden> Title </label>
+        <input
+          id="input-search"
+          v-model="searchText"
+          class="filter__input"
+          type="search"
+          placeholder="Type to search title"
+        >
+      </div>
+      <div class="grid">
+        <div class="cell cell--tab-1of3">
+          <label class="filter__label">
             School
             <DropdownVmodel
               v-model="selectedSchool"
-              :values="filteredSchools"/>
+              :values="filteredSchools"
+              class="filter__dropdown"/>
           </label>
-          <label class="accordion-filter__label">
-            Disciplines
+        </div>
+        <div class="cell cell--tab-1of3">
+          <label class="filter__label">
+            Discipline
             <DropdownVmodel
               v-model="selectedDiscipline"
-              :values="filteredDisciplines"/>
+              :values="filteredDisciplines"
+              class="filter__dropdown"/>
           </label>
-          <label class="accordion-filter__label">
-            Location
-            <DropdownVmodel
-              v-model="selectedLocation"
-              :values="filteredLocations"/>
-          </label>
-
-          <label class="accordion-filter__label">
+        </div>
+        <div class="cell cell--tab-1of3">
+          <label class="filter__label">
             Performance type
             <DropdownVmodel
               v-model="selectedPerformance"
-              :values="filteredPerformances"/>
+              :values="filteredPerformances"
+              class="filter__dropdown"/>
           </label>
         </div>
       </div>
 
-      <div class="cards-filter__container">
-        <FilterResultsCount :data="dataFiltered.length" />
+      <div class="filter-button-container">
         <button
-          class="cards-filter__button"
-          @click="resetSearch">Clear results</button>
+          class="filter-button-container__search-button"
+          aria-label="Search"
+          @click="filterDataButton">
+          <SvgIcon
+            class="filter-button-container__search-button--icon"
+            name="search" />
+          <span>Search</span>
+        </button>
+        <button
+          class="filter-button-container__search-button"
+          @click="resetSearch"
+        >Reset all</button>
       </div>
     </section-wrap>
+    <FilterResultsCount
+      :data="dataFiltered.length"
+      class="filter__results" />
+
     <SectionWrap class="bg-alt">
       <div class="grid grid--3col">
         <ListItem
@@ -111,10 +119,9 @@ export default {
   },
   data() {
     return {
-      searchData: '',
+      searchText: '',
       selectedSchool: '',
       selectedDiscipline: '',
-      selectedLocation: '',
       selectedPerformance: '',
       dataFiltered: this.data,
     };
@@ -122,39 +129,35 @@ export default {
   computed: {
     filteredData() {
       return this.data.filter(
-        data => (data.title.match(new RegExp(this.searchData, 'i'))
-          || data.description.match(new RegExp(this.searchData, 'i')))
-          && data.school.match(new RegExp(this.selectedSchool, 'i'))
-          && data.disciplines.match(new RegExp(this.selectedDiscipline, 'i'))
-          && data.location.match(new RegExp(this.selectedLocation, 'i'))
-          && data.performance.match(new RegExp(this.selectedPerformance, 'i'))
+        data => (data.disciplines.includes(this.selectedDiscipline)
+          || data.performance.includes(this.selectedPerformance)
+          || data.school.match(new RegExp(this.selectedSchool, 'i')))
       );
     },
     filteredSchools() {
       const schools = [];
       this.data.forEach((element) => {
-        schools.push(element.school);
+        if (!schools.includes(element.school)) {
+          schools.push(element.school);
+        }
       });
       return schools;
     },
     filteredDisciplines() {
       const disciplines = [];
       this.data.forEach((element) => {
-        disciplines.push(element.disciplines);
+        if (!disciplines.includes(...element.disciplines)) {
+          disciplines.push(...element.disciplines);
+        }
       });
       return disciplines;
-    },
-    filteredLocations() {
-      const locations = [];
-      this.data.forEach((element) => {
-        locations.push(element.location);
-      });
-      return locations;
     },
     filteredPerformances() {
       const performances = [];
       this.data.forEach((element) => {
-        performances.push(element.performances);
+        if (!performances.includes(...element.performance)) {
+          performances.push(...element.performance);
+        }
       });
       return performances;
     },
@@ -165,10 +168,9 @@ export default {
     },
     resetSearch() {
       this.dataFiltered = this.data;
-      this.searchData = '';
+      this.searchText = '';
       this.selectedSchool = '';
       this.selectedDiscipline = '';
-      this.selectedLocation = '';
       this.selectedPerformance = '';
     },
   },

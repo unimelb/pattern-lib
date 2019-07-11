@@ -1,8 +1,7 @@
 <template>
-  <div class="dropdown">
+  <div class="styled-select">
     <select
       v-model="selectedOption"
-      class="select"
       @input="event => { $emit('input', event.target.value)}"
     >
       <option
