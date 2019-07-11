@@ -141,17 +141,7 @@ exports[`Carousel should match snapshot 1`] = `
         </div>
          
         <div>
-          <buttonicon
-            class="carousel__cta"
-            href="google.com"
-            role="button"
-            size="sml"
-            width="wide"
-          >
-            
-            Register
-          
-          </buttonicon>
+          <!---->
         </div>
       </div>
     </div>
