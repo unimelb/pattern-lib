@@ -17,6 +17,6 @@ export default {
       stories: sample,
     };
   },
-  readme: { custom: CarouselDoc, source: true, html: true },
+  readme: { custom: CarouselDoc, source: false, html: false },
 };
 </script>
