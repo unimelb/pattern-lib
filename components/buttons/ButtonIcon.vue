@@ -14,7 +14,8 @@
         :name="icon"
         class="push-icon__icon"
         width="15px"
-        height="15px" />
+        height="15px"
+        aria-hidden="true" />
     </span>
     <slot v-if="noIcon"/>
   </component>

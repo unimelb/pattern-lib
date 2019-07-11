@@ -316,6 +316,10 @@ export {
 }
   from '../../components/tables/CompactedTable.vue';
 export {
+  default as Carousel,
+}
+  from '../../components/carousel/Carousel.vue';
+export {
   default as Logo,
 }
   from '../../components/logo/Logo.vue';

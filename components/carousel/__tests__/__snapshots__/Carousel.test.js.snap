@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel should match snapshot 1`] = `
+<section
+  aria-label="Stories and events"
+  aria-roledescription="carousel"
+  class="carousel"
+>
+  <div
+    class="carousel__slider"
+  >
+    <!---->
+  </div>
+   
+  <div
+    class="carousel__footer"
+  />
+   
+  <div
+    class="carousel__panel"
+  >
+    <div
+      class="carousel__progress-bar"
+    >
+      <div
+        class="carousel__progress-bar-status"
+        style="width: 0%;"
+      />
+    </div>
+     
+    <div
+      class="carousel__panel-container"
+    >
+      <div
+        aria-label="Stories"
+        class="carousel__aside"
+        role="navigation"
+      >
+        <ul
+          class="carousel__navigation"
+          role="menu"
+        >
+          <li
+            class="carousel__navigation-item list-reset"
+            role="menuitem"
+          >
+            <a
+              class="carousel__navigation-link carousel__navigation-link--active"
+              href="javascript: void(0);"
+            >
+              
+              Story 1
+            
+            </a>
+          </li>
+          <li
+            class="carousel__navigation-item list-reset"
+            role="menuitem"
+          >
+            <a
+              class="carousel__navigation-link"
+              href="javascript: void(0);"
+            >
+              
+              Story 2
+            
+            </a>
+          </li>
+        </ul>
+         
+        <div
+          class="carousel__controls"
+        >
+          <div
+            aria-label="Previous: Story 2"
+            class="carousel__controls-item"
+            role="button"
+            tabindex="0"
+          >
+            <!---->
+          </div>
+           
+          <div
+            aria-label="Stop carousel"
+            class="carousel__controls-item carousel__controls-stop-pause"
+            data-message="Play"
+            role="button"
+            tabindex="0"
+          >
+            <!---->
+          </div>
+           
+          <!---->
+           
+          <div
+            aria-label="Next: Story 2"
+            class="carousel__controls-item"
+            role="button"
+            tabindex="0"
+          >
+            <!---->
+          </div>
+        </div>
+      </div>
+       
+      <div
+        aria-label="Stories"
+        aria-live="off"
+        class="carousel__content"
+        role="navigation"
+      >
+        <div
+          class="carousel__story"
+        >
+          <h2
+            class="carousel__title"
+          >
+            <a
+              class="carousel__title-link"
+              href="google.com"
+            >
+              
+              Story 1
+            
+            </a>
+          </h2>
+           
+          <p
+            class="carousel__description"
+          >
+            
+            Story 2 description
+          
+          </p>
+        </div>
+         
+        <div>
+          <!---->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
