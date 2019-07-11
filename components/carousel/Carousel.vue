@@ -186,12 +186,14 @@
 <script>
 import { slider, slideritem } from 'vue-concise-slider';
 import SvgIcon from '../icons/SvgIcon.vue';
+import ButtonIcon from '../buttons/ButtonIcon.vue';
 
 export default {
   components: {
     slider,
     slideritem,
     SvgIcon,
+    ButtonIcon,
   },
   props: {
     stories: {
