@@ -1,6 +1,14 @@
 @import 'filters-core/results-count/index.css';
 
 .filter {
+  border-radius: 4px;
+  background-color: rgb(var(--col-background-primary-navy));
+  padding: 40px;
+
+  .section-inner {
+    padding: 0;
+  }
+
   &-input-container {
     display: flex;
     margin-bottom: 20px;
@@ -14,6 +22,10 @@
     background-color: rgb(247, 247, 247);
     font-size: 1.25rem;
     font-weight: var(--fw-light);
+
+    &::placeholder {
+      padding-left: 10px;
+    }
   }
 
   &__label {
@@ -32,8 +44,7 @@
   &-button-container {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-top: 10px;
 
     &__search-button {
@@ -51,6 +62,10 @@
       font-weight: var(--fw-semibold);
       cursor: pointer;
       max-width: 140px;
+
+      &:first-child {
+        margin-left: 16px;
+      }
 
       &--icon {
         width: 1.25rem;

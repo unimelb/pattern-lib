@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section-wrap bg-color="inverted">
+    <div class="filter">
       <div class="filter-input-container">
         <label
           for="input-search"
@@ -58,7 +58,7 @@
           @click="resetChecked"
         >Reset all</button>
       </div>
-    </section-wrap>
+    </div>
     <FilterResultsCount
       :data="dataFiltered.length"
       class="filter__results" />
@@ -174,7 +174,6 @@ export default {
   methods: {
     filterDataButton() {
       this.dataFiltered = this.filteredData;
-      document.querySelector('.accordion').focus();
     },
     resetChecked() {
       this.dataFiltered = this.data;

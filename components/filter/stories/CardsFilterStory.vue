@@ -1,6 +1,8 @@
 
 <template>
-  <CardsFilter :data="cardsData" />
+  <section-wrap bg-color="white">
+    <CardsFilter :data="cardsData" />
+  </section-wrap>
 </template>
 
 <script>

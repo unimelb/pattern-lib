@@ -26,6 +26,7 @@
   position: relative;
   background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
+  border-radius: 4px;
 
   select {
     display: block;
@@ -52,11 +53,19 @@
     }
   }
 
+  &::before {
+    content: '';
+    position: absolute;
+    right: 2.8rem;
+    height: 40px;
+    border-right: 1px solid rgb(var(--col-black-mid-1));
+  }
+
   &::after {
     content: '';
     position: absolute;
     top: 1rem;
-    right: .75rem;
+    right: 1rem;
     width: .5rem;
     height: .5rem;
     transform: rotate(45deg);

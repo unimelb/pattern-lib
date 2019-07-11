@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section-wrap bg-color="inverted">
+    <div class="filter">
       <div class="filter-input-container">
         <label
           for="input-search"
@@ -58,7 +58,7 @@
           @click="resetSearch"
         >Reset all</button>
       </div>
-    </section-wrap>
+    </div>
     <FilterResultsCount
       :data="dataFiltered.length"
       class="filter__results" />
@@ -129,9 +129,10 @@ export default {
   computed: {
     filteredData() {
       return this.data.filter(
-        data => (data.disciplines.includes(this.selectedDiscipline)
-          || data.performance.includes(this.selectedPerformance)
-          || data.school.match(new RegExp(this.selectedSchool, 'i')))
+        data => (this.selectedDiscipline === '' || data.disciplines.includes(this.selectedDiscipline))
+          && (this.selectedPerformance === '' || data.performance.includes(this.selectedPerformance))
+          && data.school.match(new RegExp(this.selectedSchool, 'i'))
+          && data.title.match(new RegExp(this.searchText, 'i'))
       );
     },
     filteredSchools() {
