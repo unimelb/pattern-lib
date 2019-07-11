@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SplitSectionQuote should match snapshot 1`] = `
+<div
+  class="card card--focus-box bg-white"
+>
+  <svg
+    class="card--focus-box__cnr card--focus-box__cnr--top-left"
+    focusable="false"
+    height="54"
+    role="presentation"
+    width="54"
+  >
+    <use
+      xlink:href="#icon-focus-top-left"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    />
+  </svg>
+   
+  <svg
+    class="card--focus-box__cnr card--focus-box__cnr--btm-right"
+    focusable="false"
+    height="54"
+    role="presentation"
+    width="54"
+  >
+    <use
+      xlink:href="#icon-focus-bottom-right"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    />
+  </svg>
+   
+  <div
+    class="card__inner"
+  >
+    <p
+      class="split-section__quote"
+    >
+      
+      
+    
+    </p>
+     
+    <!---->
+  </div>
+</div>
+`;

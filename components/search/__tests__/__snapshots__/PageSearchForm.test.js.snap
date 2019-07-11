@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageSearchForm should match snapshot 1`] = `
+<form
+  action="https://search.unimelb.edu.au"
+  class="page-header-search__form"
+  method="get"
+>
+  <input
+    aria-label="Search the University of Melbourne"
+    class="page-header-search__input"
+    name="q"
+    placeholder="Search the University"
+    type="search"
+  />
+  <button
+    class="page-header-search__submit"
+    type="submit"
+  >
+    <!---->
+     
+    <span
+      class="screenreaders-only"
+    >
+      Go
+    </span>
+  </button>
+   
+</form>
+`;

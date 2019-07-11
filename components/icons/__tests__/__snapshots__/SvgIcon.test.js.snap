@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SvgIcon should match snapshot 1`] = `
+<svg
+  focusable="false"
+  role="img"
+>
+  <use
+    xlink:href="#icon-undefined"
+  />
+   
+  <title>
+    
+  </title>
+   
+</svg>
+`;

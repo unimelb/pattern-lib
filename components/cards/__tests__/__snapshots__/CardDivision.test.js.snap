@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardDivision should match snapshot 1`] = `
+<a
+  class="btn-owner card card--division card--bdr bg-white"
+  href="#"
+>
+  <div
+    class="card__title bg-inverted"
+  >
+    
+  </div>
+   
+  <div
+    class="card__inner"
+  >
+    <div
+      class="card__subheader"
+    >
+      <h3
+        class="card__header"
+      >
+        
+      </h3>
+       
+      <p
+        class="card__meta"
+      >
+        
+      </p>
+    </div>
+     
+    <hr />
+     
+    <p>
+      
+    </p>
+  </div>
+   
+  <div
+    class="card__footer"
+  >
+    <buttonicon
+      class="btn--fullwidth"
+      element="span"
+    >
+      Contacts and bio
+    </buttonicon>
+  </div>
+</a>
+`;

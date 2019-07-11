@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickLinksMenuItem should match snapshot 1`] = `
+<a
+  class="ql-menu__link"
+  href="#"
+>
+  <span
+    class="push-icon"
+  >
+    <span
+      class=""
+    >
+      
+    </span>
+     
+    <svgicon
+      class="push-icon__icon"
+      height="16"
+      name="chevron-right"
+      width="16"
+    />
+  </span>
+</a>
+`;
