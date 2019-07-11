@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="filter">
-      <div class="filter-input-container">
+      <div class="filter__input-container">
         <label
           for="input-search"
           hidden> Title </label>
@@ -43,18 +43,19 @@
         </div>
       </div>
 
-      <div class="filter-button-container">
+      <div class="filter__button-container">
         <button
-          class="filter-button-container__search-button"
+          :class="animationclass"
+          class="filter__button"
           aria-label="Search"
           @click="filterDataButton">
           <SvgIcon
-            class="filter-button-container__search-button--icon"
+            class="filter__button--icon"
             name="search" />
           <span>Search</span>
         </button>
         <button
-          class="filter-button-container__search-button"
+          class="filter__button"
           @click="resetSearch"
         >Reset all</button>
       </div>
@@ -161,6 +162,12 @@ export default {
         }
       });
       return performances;
+    },
+    animationclass() {
+      if (this.searchText || this.selectedDiscipline || this.selectedLocation || this.selectedAudition) {
+        return 'filter__button--animated';
+      }
+      return '';
     },
   },
   methods: {

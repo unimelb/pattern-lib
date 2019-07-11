@@ -1,18 +1,9 @@
-.filter-results-count {
-  &__results {
-    margin: 48px 0 0 0;
-    font-size: 25px;
+.filter-results {
+  &__count {
+    margin: 3rem 0 3rem 0;
+    font-size: 1.5625rem;
     color: #000;
     letter-spacing: 0;
     font-weight: var(--fw-bold);
-  }
-
-  &__filters-applied {
-    font-size: 14px;
-    color: #575756;
-    letter-spacing: 0;
-    font-style: italic;
-    font-weight: 600;
-    text-decoration: underline;
   }
 }

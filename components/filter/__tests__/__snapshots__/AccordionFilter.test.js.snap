@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionFilter should match snapshot 1`] = `
+<div>
+  <div
+    class="filter"
+  >
+    <div
+      class="filter__input-container"
+    >
+      <label
+        for="input-search"
+        hidden="hidden"
+      >
+         Title 
+      </label>
+       
+      <input
+        class="filter__input"
+        id="input-search"
+        placeholder="Type to search title"
+        type="search"
+      />
+    </div>
+     
+    <div
+      class="grid"
+    >
+      <div
+        class="cell cell--tab-1of3"
+      >
+        <label
+          class="filter__label"
+        >
+          
+          Location
+          
+          <div
+            class="styled-select filter__dropdown"
+          >
+            <select>
+              <option
+                selected="selected"
+                value=""
+              >
+                Show all
+              </option>
+               
+              <option
+                value="location 1"
+              >
+                location 1
+              </option>
+              <option
+                value="location 2"
+              >
+                location 2
+              </option>
+            </select>
+          </div>
+        </label>
+      </div>
+       
+      <div
+        class="cell cell--tab-1of3"
+      >
+        <label
+          class="filter__label"
+        >
+          
+          Discipline
+          
+          <div
+            class="styled-select filter__dropdown"
+          >
+            <select>
+              <option
+                selected="selected"
+                value=""
+              >
+                Show all
+              </option>
+               
+              <option
+                value="discipline 1"
+              >
+                discipline 1
+              </option>
+              <option
+                value="discipline 2"
+              >
+                discipline 2
+              </option>
+            </select>
+          </div>
+        </label>
+      </div>
+       
+      <div
+        class="cell cell--tab-1of3"
+      >
+        <label
+          class="filter__label"
+        >
+          
+          Audition Requirement
+          
+          <div
+            class="styled-select filter__dropdown"
+          >
+            <select>
+              <option
+                selected="selected"
+                value=""
+              >
+                Show all
+              </option>
+               
+              <option
+                value="audition 1"
+              >
+                audition 1
+              </option>
+              <option
+                value="audition 2"
+              >
+                audition 2
+              </option>
+            </select>
+          </div>
+        </label>
+      </div>
+    </div>
+     
+    <div
+      class="filter__button-container"
+    >
+      <button
+        aria-label="Search"
+        class="filter__button"
+      >
+        <svgicon
+          class="filter__button--icon"
+          name="search"
+        />
+         
+        <span>
+          Search
+        </span>
+      </button>
+       
+      <button
+        class="filter__button"
+      >
+        Reset all
+      </button>
+    </div>
+  </div>
+   
+  <p
+    class="filter-results__count filter__results"
+  >
+    2 results
+  </p>
+   
+  <div
+    class="accordion-list"
+  >
+    <div
+      class="accordion toggleblock"
+    >
+      <div
+        aria-controls="ui-toggle-6-panel-1"
+        class="toggleblock__default"
+        id="ui-toggle-6-header-1"
+        tabindex="0"
+      >
+        <h2
+          class="toggle__trigger"
+        >
+          arts
+        </h2>
+         
+      </div>
+       
+      <div
+        aria-hidden="true"
+        aria-labelledby="ui-toggle-6-header-1"
+        class="toggleblock__hidden"
+        id="ui-toggle-6-panel-1"
+        role="region"
+        tabindex="-1"
+      >
+        <div
+          class="toggleblock__hidden-inner"
+        >
+          <table
+            class="table table--striped"
+          >
+            <tr>
+              <td>
+                <strong>
+                  Location
+                </strong>
+                 
+                <br />
+                
+            location 1
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Points
+                </strong>
+                 
+                <br />
+                
+            points 1
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Discipline
+                </strong>
+                 
+                <br />
+                
+            discipline 1
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Audition requirement
+                </strong>
+                 
+                <br />
+                
+            audition 1
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Study Abroad
+                </strong>
+                 
+                <br />
+                
+            abrod 1
+          
+              </td>
+            </tr>
+             
+            <tr>
+              <td
+                colspan="5"
+              >
+                
+            Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+            
+                <br />
+                 
+                <button-icon
+                  size="xsml"
+                >
+                  Handbook Link
+                </button-icon>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="accordion-list"
+  >
+    <div
+      class="accordion toggleblock"
+    >
+      <div
+        aria-controls="ui-toggle-8-panel-1"
+        class="toggleblock__default"
+        id="ui-toggle-8-header-1"
+        tabindex="0"
+      >
+        <h2
+          class="toggle__trigger"
+        >
+          science
+        </h2>
+         
+      </div>
+       
+      <div
+        aria-hidden="true"
+        aria-labelledby="ui-toggle-8-header-1"
+        class="toggleblock__hidden"
+        id="ui-toggle-8-panel-1"
+        role="region"
+        tabindex="-1"
+      >
+        <div
+          class="toggleblock__hidden-inner"
+        >
+          <table
+            class="table table--striped"
+          >
+            <tr>
+              <td>
+                <strong>
+                  Location
+                </strong>
+                 
+                <br />
+                
+            location 2
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Points
+                </strong>
+                 
+                <br />
+                
+            points 2
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Discipline
+                </strong>
+                 
+                <br />
+                
+            discipline 2
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Audition requirement
+                </strong>
+                 
+                <br />
+                
+            audition 2
+          
+              </td>
+               
+              <td>
+                <strong>
+                  Study Abroad
+                </strong>
+                 
+                <br />
+                
+            abrod 2
+          
+              </td>
+            </tr>
+             
+            <tr>
+              <td
+                colspan="5"
+              >
+                
+            Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+            
+                <br />
+                 
+                <button-icon
+                  size="xsml"
+                >
+                  Handbook Link
+                </button-icon>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
