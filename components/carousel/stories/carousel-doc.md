@@ -10,22 +10,22 @@ Usage:
 
 ```html
 <carousel
-  stories="[
+  :stories="[
       {
-          src: 'test1',
-          altText: 'test',
+          src: 'path/to/img',
+          altText: 'Image Alt text goes here',
           title: 'Story 1',
           description: 'Story 2 description',
           buttonText: 'Register',
-          buttonHref: 'google.com',
+          buttonHref: 'unimelb.com.au',
         },
         {
-          src: 'test2',
-          altText: 'test',
+          src: 'path/to/img',
+          altText: 'Image Alt text goes here',
           title: 'Story 2',
           description: 'Story 2 description',
           buttonText: 'Login',
-          buttonHref: 'google.com',
+          buttonHref: 'unimelb.com.au',
         }
     ]"
     timing="long"
