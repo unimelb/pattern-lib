@@ -2,21 +2,50 @@
   <div>
     <section-wrap bg-color="white">
       <div class="input-filter">
-        <input
-          v-model="searchData"
-          type="search"
-          placeholder="Type to search title or description"
-          class="input-filter__input"
-        >
-        <button
-          aria-label="Search"
-          class="input-filter__search-button"
-          @click="filterDataButton">
-          <SvgIcon
-            class="input-filter__search-button--icon"
-            name="search" />
-          <span class="input-filter__search-button--text">Search</span>
-        </button>
+        <div class="input-filter__container">
+          <input
+            v-model="searchData"
+            type="search"
+            placeholder="Type to search title or description"
+            class="input-filter__input"
+          >
+          <button
+            aria-label="Search"
+            class="input-filter__search-button"
+            @click="filterDataButton">
+            <SvgIcon
+              class="input-filter__search-button--icon"
+              name="search" />
+            <span class="input-filter__search-button--text">Search</span>
+          </button>
+        </div>
+        <div class="accordion-filter__search-box">
+          <label class="accordion-filter__label">
+            School
+            <DropdownVmodel
+              v-model="selectedSchool"
+              :values="filteredSchools"/>
+          </label>
+          <label class="accordion-filter__label">
+            Disciplines
+            <DropdownVmodel
+              v-model="selectedDiscipline"
+              :values="filteredDisciplines"/>
+          </label>
+          <label class="accordion-filter__label">
+            Location
+            <DropdownVmodel
+              v-model="selectedLocation"
+              :values="filteredLocations"/>
+          </label>
+
+          <label class="accordion-filter__label">
+            Performance type
+            <DropdownVmodel
+              v-model="selectedPerformance"
+              :values="filteredPerformances"/>
+          </label>
+        </div>
       </div>
 
       <div class="cards-filter__container">
@@ -66,9 +95,10 @@
 </template>
 <script>
 import GenericCard from '../../cards/GenericCard.vue';
+import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
 export default {
-  components: { GenericCard, FilterResultsCount },
+  components: { GenericCard, DropdownVmodel, FilterResultsCount },
   props: {
     data: {
       type: Array,
@@ -82,16 +112,51 @@ export default {
   data() {
     return {
       searchData: '',
+      selectedSchool: '',
+      selectedDiscipline: '',
+      selectedLocation: '',
+      selectedPerformance: '',
       dataFiltered: this.data,
-      dataFiltered2: [],
     };
   },
   computed: {
     filteredData() {
       return this.data.filter(
-        data => data.title.match(new RegExp(this.searchData, 'i'))
-          || data.description.match(new RegExp(this.searchData, 'i'))
+        data => (data.title.match(new RegExp(this.searchData, 'i'))
+          || data.description.match(new RegExp(this.searchData, 'i')))
+          && data.school.match(new RegExp(this.selectedSchool, 'i'))
+          && data.disciplines.match(new RegExp(this.selectedDiscipline, 'i'))
+          && data.location.match(new RegExp(this.selectedLocation, 'i'))
+          && data.performance.match(new RegExp(this.selectedPerformance, 'i'))
       );
+    },
+    filteredSchools() {
+      const schools = [];
+      this.data.forEach((element) => {
+        schools.push(element.school);
+      });
+      return schools;
+    },
+    filteredDisciplines() {
+      const disciplines = [];
+      this.data.forEach((element) => {
+        disciplines.push(element.disciplines);
+      });
+      return disciplines;
+    },
+    filteredLocations() {
+      const locations = [];
+      this.data.forEach((element) => {
+        locations.push(element.location);
+      });
+      return locations;
+    },
+    filteredPerformances() {
+      const performances = [];
+      this.data.forEach((element) => {
+        performances.push(element.performances);
+      });
+      return performances;
     },
   },
   methods: {
@@ -101,6 +166,10 @@ export default {
     resetSearch() {
       this.dataFiltered = this.data;
       this.searchData = '';
+      this.selectedSchool = '';
+      this.selectedDiscipline = '';
+      this.selectedLocation = '';
+      this.selectedPerformance = '';
     },
   },
 };

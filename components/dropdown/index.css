@@ -1,7 +1,41 @@
 .dropdown {
   .select {
-    border: 2px solid #094183;
-    height: 2.5rem;
-    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 1.4063rem;
+    font-weight: normal;
+    color: #094183;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    max-width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+    border-radius: .25rem;
+    appearance: none;
+    background: blue url("data:image/svg+xml;utf8,<svg viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'><g><path d='M1.18 1.92L5 5.72l3.83-3.8L10 3.08l-5 5-5-5z'/></g></svg>") no-repeat;
+    background-color: #fff;
+    background-repeat: no-repeat, repeat;
+    background-size: .65em auto, 100%;
+    border: none;
+    background-position: right 5px top 50%;
+  }
+
+  .select::-ms-expand {
+    display: none;
+  }
+
+  .select:hover {
+    border-color: #888;
+  }
+
+  .select:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px #094183;
+    color: #222;
+    outline: none;
+  }
+
+  .select-css option {
+    font-weight: normal;
   }
 }

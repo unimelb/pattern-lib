@@ -5,10 +5,11 @@
   &__search-box {
     display: flex;
     justify-content: space-between;
-    margin: 0 80px;
+    margin-top: 30px;
   }
 
   &__label {
+    color: white;
     font-size: 17px;
     letter-spacing: -.25px;
     font-weight: 600;

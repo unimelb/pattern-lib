@@ -42,7 +42,7 @@
     }
   }
 
-  @media (--bp-tablet) {
-    flex-direction: row;
+  &__container {
+    display: flex;
   }
 }
