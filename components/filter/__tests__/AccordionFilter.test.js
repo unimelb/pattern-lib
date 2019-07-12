@@ -58,7 +58,7 @@ describe('AccordionFilter', () => {
     expect(wrapper.find('.accordion-list').exists()).toBe(true);
   });
 
-  it('should render no results', () => {
+  it('should render nothing', () => {
     const wrapper = shallow(AccordionFilter, {
       propsData: {
         data: [],
@@ -68,22 +68,21 @@ describe('AccordionFilter', () => {
     expect(wrapper.find('.accordion-list').exists()).toBe(false);
   });
 
-  it.skip('should render arts accordion', () => {
-    const wrapper = shallow(AccordionFilter, {
+  it('should render arts accordion', () => {
+    const wrapper = mount(AccordionFilter, {
       propsData: {
         data: mockData,
       },
-      data() {
-        return {
-          searchtext: 'arts',
-        };
-      },
     });
-    expect(wrapper.vm.searchtext).toBe('arts');
-    expect(wrapper.find('.toggle__trigger').text()).toBe('arts');
+    const input = wrapper.find('input[type="search"]');
+    input.element.value = 'arts';
+    input.trigger('input');
+    wrapper.find('button').trigger('click');
+
+    expect(wrapper.vm.dataFiltered.length).toBe(1);
   });
 
-  it.skip('should render location 1 accordion', () => {
+  it('should render location 1 accordion', () => {
     const wrapper = shallow(AccordionFilter, {
       propsData: {
         data: mockData,
@@ -94,17 +93,102 @@ describe('AccordionFilter', () => {
         };
       },
     });
+    const dropdown = wrapper.find('option');
+    dropdown.setValue = 'location 1';
+    wrapper.find('button').trigger('click');
+
+
     expect(wrapper.vm.selectedLocation).toBe('location 1');
-    expect(wrapper.find('.table').text()).toContain('location 1');
+    expect(wrapper.vm.dataFiltered.length).toBe(1);
   });
 
-  it.skip('should render location 2 accordion', () => {
+  it('should render discipline 1 accordion', () => {
     const wrapper = shallow(AccordionFilter, {
       propsData: {
         data: mockData,
       },
+      data() {
+        return {
+          selectedDiscipline: 'discipline 1',
+        };
+      },
     });
+    const dropdown = wrapper.find('option');
+    dropdown.setValue = 'discipline 1';
+    wrapper.find('button').trigger('click');
+
+
+    expect(wrapper.vm.selectedDiscipline).toBe('discipline 1');
+    expect(wrapper.vm.dataFiltered.length).toBe(1);
+  });
+
+  it('should render audition 1 accordion', () => {
+    const wrapper = shallow(AccordionFilter, {
+      propsData: {
+        data: mockData,
+      },
+      data() {
+        return {
+          selectedAudition: 'audition 1',
+        };
+      },
+    });
+    const dropdown = wrapper.find('option');
+    dropdown.setValue = 'audition 1';
+    wrapper.find('button').trigger('click');
+
+
+    expect(wrapper.vm.selectedAudition).toBe('audition 1');
+    expect(wrapper.vm.dataFiltered.length).toBe(1);
+  });
+
+  it('should render arts filtered through input arts and location 1', () => {
+    const wrapper = shallow(AccordionFilter, {
+      propsData: {
+        data: mockData,
+      },
+      data() {
+        return {
+          selectedLocation: 'location 1',
+        };
+      },
+    });
+    const input = wrapper.find('input[type="search"]');
+    input.element.value = 'arts';
+    input.trigger('input');
+
+    const dropdown = wrapper.find('option');
+    dropdown.setValue = 'location 1';
+
+    wrapper.find('button').trigger('click');
+
     expect(wrapper.vm.selectedLocation).toBe('location 1');
-    expect(wrapper.find('.table').text()).toContain('location 1');
+    expect(wrapper.vm.searchText).toBe('arts');
+    expect(wrapper.vm.dataFiltered.length).toBe(1);
+  });
+
+  it('should render science filtered through input discipline 2 and audtion requirement 2', () => {
+    const wrapper = shallow(AccordionFilter, {
+      propsData: {
+        data: mockData,
+      },
+      data() {
+        return {
+          selectedDiscipline: 'discipline 2',
+          selectedAudition: 'audition 2',
+        };
+      },
+    });
+    const dropdown = wrapper.find('option');
+    dropdown.setValue = 'discipline 2';
+    wrapper.find('button').trigger('click');
+
+    const dropdown2 = wrapper.find('option');
+    dropdown2.setValue = 'audition 2';
+    wrapper.find('button').trigger('click');
+
+    expect(wrapper.vm.selectedDiscipline).toBe('discipline 2');
+    expect(wrapper.vm.selectedAudition).toBe('audition 2');
+    expect(wrapper.vm.dataFiltered.length).toBe(1);
   });
 });

@@ -113,10 +113,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    filterOn: {
-      type: Array,
-      default: () => [],
-    },
   },
   data() {
     return {
@@ -164,7 +160,7 @@ export default {
       return performances;
     },
     animationclass() {
-      if (this.searchText || this.selectedDiscipline || this.selectedLocation || this.selectedAudition) {
+      if (this.searchText || this.selectedSchool || this.selectedDiscipline || this.selectedPerformance) {
         return 'filter__button--animated';
       }
       return '';

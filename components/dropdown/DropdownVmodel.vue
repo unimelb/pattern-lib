@@ -2,7 +2,7 @@
   <div class="styled-select">
     <select
       v-model="selectedOption"
-      @input="event => { $emit('input', event.target.value)}"
+      @change="emitEvent"
     >
       <option
         selected
@@ -40,6 +40,11 @@ export default {
   },
   mounted() {
     this.selectedOption = this.value;
+  },
+  methods: {
+    emitEvent(event) {
+      this.$emit('input', event.target.value);
+    },
   },
 };
 </script>
