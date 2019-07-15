@@ -6,21 +6,23 @@
   flex-wrap: wrap;
 
   &__item {
-    padding: .25rem;
+    padding: .125rem .25rem;
     background-color: rgb(var(--col-blue-light));
     border-radius: .25rem;
-    font-size: .875rem;
+    font-size: .8125rem;
+    line-height: 1.0625rem;
+    color: #000 !important;
     letter-spacing: 0;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
-    margin-right: .625rem;
+    margin-right: .5rem;
     margin-top: .25rem;
     text-decoration: none;
 
     &:hover,
     &:focus {
       background-color: rgb(var(--col-background-primary-navy));
-      color: rgb(var(--col-background-primary-grey));
+      color: #fff !important;
     }
   }
 }
