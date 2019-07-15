@@ -18,6 +18,9 @@
   }
 
   .card__title {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+    font-weight: var(--fw-bold);
     text-decoration: none;
     color: rgb(var(--col-background-primary-navy));
 
@@ -30,17 +33,24 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding-bottom: 1rem;
+    padding: 1rem;
+
+    @media (--bp-desktop) {
+      padding: 1.25rem;
+    }
   }
 
   .card__sub-titles {
     border-top: 1px solid rgb(var(--col-black-mid-1));
-    padding-top: 1rem;
+    padding-top: .5rem;
     font-weight: var(--fw-semibold);
+    font-size: .8125rem;
+    line-height: 1.0625rem;
+    color: #575756;
 
     svg {
-      width: 18px;
-      height: 18px;
+      width: 13px;
+      height: 13px;
     }
   }
 
@@ -60,9 +70,12 @@
 
   .card__excerpt {
     border-top: 1px solid rgb(var(--col-black-mid-1));
-    padding-top: 1rem;
-    margin: 1rem 0;
+    padding-top: .75rem;
+    margin: .5rem 0;
     flex: 1 1 auto;
+    font-size: .8125rem;
+    line-height: 1.0625rem;
+    color: #575756;
   }
 
   .card__tags {
