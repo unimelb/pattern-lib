@@ -67,12 +67,18 @@
 
   .card__tags {
     margin-bottom: 1.875rem;
+
+    @media (--bp-desktop) {
+      margin-bottom: -1.375rem;
+      margin-right: 6rem;
+    }
   }
 
   .card__links {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    align-self: flex-end;
 
     a {
       font-weight: var(--fw-semibold);
