@@ -163,229 +163,234 @@ exports[`AccordionFilter should match snapshot 1`] = `
     2 results
   </p>
    
-  <div
-    class="accordion-list"
+  <span
+    name="fade"
+    tag="div"
   >
     <div
-      class="accordion toggleblock"
+      class="accordion-list"
     >
       <div
-        aria-controls="ui-toggle-6-panel-1"
-        class="toggleblock__default"
-        id="ui-toggle-6-header-1"
-        tabindex="0"
-      >
-        <h2
-          class="toggle__trigger"
-        >
-          arts
-        </h2>
-         
-      </div>
-       
-      <div
-        aria-hidden="true"
-        aria-labelledby="ui-toggle-6-header-1"
-        class="toggleblock__hidden"
-        id="ui-toggle-6-panel-1"
-        role="region"
-        tabindex="-1"
+        class="accordion toggleblock"
       >
         <div
-          class="toggleblock__hidden-inner"
+          aria-controls="ui-toggle-7-panel-1"
+          class="toggleblock__default"
+          id="ui-toggle-7-header-1"
+          tabindex="0"
         >
-          <table
-            class="table table--striped"
+          <h2
+            class="toggle__trigger"
           >
-            <tr>
-              <td>
-                <strong>
-                  Location
-                </strong>
-                 
-                <br />
-                
-            location 1
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Points
-                </strong>
-                 
-                <br />
-                
-            points 1
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Discipline
-                </strong>
-                 
-                <br />
-                
-            discipline 1
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Audition requirement
-                </strong>
-                 
-                <br />
-                
-            audition 1
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Study Abroad
-                </strong>
-                 
-                <br />
-                
-            abrod 1
-          
-              </td>
-            </tr>
-             
-            <tr>
-              <td
-                colspan="5"
-              >
-                
-            Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+            arts
+          </h2>
+           
+        </div>
+         
+        <div
+          aria-hidden="true"
+          aria-labelledby="ui-toggle-7-header-1"
+          class="toggleblock__hidden"
+          id="ui-toggle-7-panel-1"
+          role="region"
+          tabindex="-1"
+        >
+          <div
+            class="toggleblock__hidden-inner"
+          >
+            <table
+              class="table table--striped"
+            >
+              <tr>
+                <td>
+                  <strong>
+                    Location
+                  </strong>
+                   
+                  <br />
+                  
+              location 1
             
-                <br />
+                </td>
                  
-                <button-icon
-                  size="xsml"
+                <td>
+                  <strong>
+                    Points
+                  </strong>
+                   
+                  <br />
+                  
+              points 1
+            
+                </td>
+                 
+                <td>
+                  <strong>
+                    Discipline
+                  </strong>
+                   
+                  <br />
+                  
+              discipline 1
+            
+                </td>
+                 
+                <td>
+                  <strong>
+                    Audition requirement
+                  </strong>
+                   
+                  <br />
+                  
+              audition 1
+            
+                </td>
+                 
+                <td>
+                  <strong>
+                    Study Abroad
+                  </strong>
+                   
+                  <br />
+                  
+              abrod 1
+            
+                </td>
+              </tr>
+               
+              <tr>
+                <td
+                  colspan="5"
                 >
-                  Handbook Link
-                </button-icon>
-              </td>
-            </tr>
-          </table>
+                  
+              Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+              
+                  <br />
+                   
+                  <button-icon
+                    size="xsml"
+                  >
+                    Handbook Link
+                  </button-icon>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="accordion-list"
-  >
     <div
-      class="accordion toggleblock"
+      class="accordion-list"
     >
       <div
-        aria-controls="ui-toggle-8-panel-1"
-        class="toggleblock__default"
-        id="ui-toggle-8-header-1"
-        tabindex="0"
-      >
-        <h2
-          class="toggle__trigger"
-        >
-          science
-        </h2>
-         
-      </div>
-       
-      <div
-        aria-hidden="true"
-        aria-labelledby="ui-toggle-8-header-1"
-        class="toggleblock__hidden"
-        id="ui-toggle-8-panel-1"
-        role="region"
-        tabindex="-1"
+        class="accordion toggleblock"
       >
         <div
-          class="toggleblock__hidden-inner"
+          aria-controls="ui-toggle-9-panel-1"
+          class="toggleblock__default"
+          id="ui-toggle-9-header-1"
+          tabindex="0"
         >
-          <table
-            class="table table--striped"
+          <h2
+            class="toggle__trigger"
           >
-            <tr>
-              <td>
-                <strong>
-                  Location
-                </strong>
-                 
-                <br />
-                
-            location 2
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Points
-                </strong>
-                 
-                <br />
-                
-            points 2
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Discipline
-                </strong>
-                 
-                <br />
-                
-            discipline 2
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Audition requirement
-                </strong>
-                 
-                <br />
-                
-            audition 2
-          
-              </td>
-               
-              <td>
-                <strong>
-                  Study Abroad
-                </strong>
-                 
-                <br />
-                
-            abrod 2
-          
-              </td>
-            </tr>
-             
-            <tr>
-              <td
-                colspan="5"
-              >
-                
-            Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+            science
+          </h2>
+           
+        </div>
+         
+        <div
+          aria-hidden="true"
+          aria-labelledby="ui-toggle-9-header-1"
+          class="toggleblock__hidden"
+          id="ui-toggle-9-panel-1"
+          role="region"
+          tabindex="-1"
+        >
+          <div
+            class="toggleblock__hidden-inner"
+          >
+            <table
+              class="table table--striped"
+            >
+              <tr>
+                <td>
+                  <strong>
+                    Location
+                  </strong>
+                   
+                  <br />
+                  
+              location 2
             
-                <br />
+                </td>
                  
-                <button-icon
-                  size="xsml"
+                <td>
+                  <strong>
+                    Points
+                  </strong>
+                   
+                  <br />
+                  
+              points 2
+            
+                </td>
+                 
+                <td>
+                  <strong>
+                    Discipline
+                  </strong>
+                   
+                  <br />
+                  
+              discipline 2
+            
+                </td>
+                 
+                <td>
+                  <strong>
+                    Audition requirement
+                  </strong>
+                   
+                  <br />
+                  
+              audition 2
+            
+                </td>
+                 
+                <td>
+                  <strong>
+                    Study Abroad
+                  </strong>
+                   
+                  <br />
+                  
+              abrod 2
+            
+                </td>
+              </tr>
+               
+              <tr>
+                <td
+                  colspan="5"
                 >
-                  Handbook Link
-                </button-icon>
-              </td>
-            </tr>
-          </table>
+                  
+              Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+              
+                  <br />
+                   
+                  <button-icon
+                    size="xsml"
+                  >
+                    Handbook Link
+                  </button-icon>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </span>
 </div>
 `;

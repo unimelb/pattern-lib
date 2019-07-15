@@ -64,49 +64,53 @@
       :data="dataFiltered.length"
       class="filter__results" />
 
-    <div
-      v-for="(item, index) in dataFiltered"
-      :key="index"
-      class="accordion-list">
-      <accordion :name="item.name">
-        <table class="table table--striped">
-          <tr>
-            <td>
-              <strong>Location</strong>
-              <br>
-              {{ item.location }}
-            </td>
-            <td>
-              <strong>Points</strong>
-              <br>
-              {{ item.points }}
-            </td>
-            <td>
-              <strong>Discipline</strong>
-              <br>
-              {{ item.discipline }}
-            </td>
-            <td>
-              <strong>Audition requirement</strong>
-              <br>
-              {{ item.audition }}
-            </td>
-            <td>
-              <strong>Study Abroad</strong>
-              <br>
-              {{ item.abrod }}
-            </td>
-          </tr>
-          <tr>
-            <td colspan="5">
-              {{ item.overview }}
-              <br>
-              <button-icon size="xsml">{{ item.buttonText }}</button-icon>
-            </td>
-          </tr>
-        </table>
-      </accordion>
-    </div>
+    <transition-group
+      name="fade"
+      tag="div">
+      <div
+        v-for="(item, index) in dataFiltered"
+        :key="index"
+        class="accordion-list">
+        <accordion :name="item.name">
+          <table class="table table--striped">
+            <tr>
+              <td>
+                <strong>Location</strong>
+                <br>
+                {{ item.location }}
+              </td>
+              <td>
+                <strong>Points</strong>
+                <br>
+                {{ item.points }}
+              </td>
+              <td>
+                <strong>Discipline</strong>
+                <br>
+                {{ item.discipline }}
+              </td>
+              <td>
+                <strong>Audition requirement</strong>
+                <br>
+                {{ item.audition }}
+              </td>
+              <td>
+                <strong>Study Abroad</strong>
+                <br>
+                {{ item.abrod }}
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5">
+                {{ item.overview }}
+                <br>
+                <button-icon size="xsml">{{ item.buttonText }}</button-icon>
+              </td>
+            </tr>
+          </table>
+        </accordion>
+      </div>
+    </transition-group>
   </div>
 </template>
 
