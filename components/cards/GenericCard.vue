@@ -23,7 +23,7 @@
       </div>
       <div class="card__excerpt">{{ excerpt }}</div>
       <Tags
-        v-if="tags"
+        v-if="tags.length"
         :data="tags"
         class="card__tags"/>
       <div class="card__links">

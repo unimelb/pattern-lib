@@ -33,9 +33,7 @@ exports[`CardEvents should match snapshot 1`] = `
       
     </div>
      
-    <div
-      class="tags card__tags"
-    />
+    <!---->
      
     <div
       class="card__links"
