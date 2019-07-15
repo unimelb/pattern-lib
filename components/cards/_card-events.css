@@ -1,20 +1,14 @@
 .card--events {
   color: rgb(var(--col-brand));
 
-  .card__title {
-    font-size: 1.25rem;
-    font-weight: var(--fw-bold);
-    text-decoration: none;
-  }
-
   .card__sub-titles {
     margin-bottom: .25rem;
     border-bottom: 0;
     padding: .5rem 0;
 
     svg {
-      width: 18px;
-      height: 18px;
+      width: 13px;
+      height: 13px;
     }
   }
 
