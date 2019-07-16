@@ -52,10 +52,9 @@ describe('AccordionFilter', () => {
     const wrapper = mount(AccordionFilter, {
       propsData: {
         data: mockData,
-        showSSR: false,
       },
     });
-    
+
     expect(wrapper.props().data.length).toBe(2);
     expect(wrapper.find('.accordion-list').exists()).toBe(true);
   });
