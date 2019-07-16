@@ -1,6 +1,10 @@
 <template>
   <section-wrap bg-color="white">
-    <AccordionFilter :data="data"/>
+    <AccordionFilter
+      :data="data"
+      show-ssr>
+      <p>Accordion SSR from matrix goes here.</p>
+    </AccordionFilter>
   </section-wrap>
 </template>
 

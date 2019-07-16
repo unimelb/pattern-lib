@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="filter">
-      <div class="filter__input-container">
+      <div class="filter__container">
         <label
           for="input-search"
           hidden> Title </label>
@@ -13,37 +13,40 @@
           placeholder="Type to search title"
         >
       </div>
-      <div class="grid">
-        <div class="cell cell--tab-1of3">
-          <label class="filter__label">
-            School
+
+      <div class="filter__container">
+        <div class="grid">
+          <div class="cell cell--tab-1of3">
+            <label
+              class="filter__label"
+              for="school">School</label>
             <DropdownVmodel
+              id="school"
               v-model="selectedSchool"
-              :values="filters.schools"
-              class="filter__dropdown"/>
-          </label>
-        </div>
-        <div class="cell cell--tab-1of3">
-          <label class="filter__label">
-            Discipline
+              :values="filters.schools"/>
+          </div>
+          <div class="cell cell--tab-1of3">
+            <label
+              class="filter__label"
+              for="disciplines">Discipline</label>
             <DropdownVmodel
+              id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"
-              class="filter__dropdown"/>
-          </label>
-        </div>
-        <div class="cell cell--tab-1of3">
-          <label class="filter__label">
-            Performance type
+              :values="filters.disciplines"/>
+          </div>
+          <div class="cell cell--tab-1of3">
+            <label
+              class="filter__label"
+              for="performances">Performance type</label>
             <DropdownVmodel
+              id="performances"
               v-model="selectedPerformance"
-              :values="filters.performances"
-              class="filter__dropdown"/>
-          </label>
+              :values="filters.performances"/>
+          </div>
         </div>
       </div>
 
-      <div class="filter__button-container">
+      <div class="filter__container filter__container--centered">
         <button
           :class="animationclass"
           class="filter__button"
@@ -60,51 +63,58 @@
         >Reset all</button>
       </div>
     </div>
+
     <FilterResultsCount
       :data="dataFiltered.length"
       class="filter__results" />
 
-    <div class="grid grid--3col">
-      <ListItem
-        v-for="(item, index) in dataFiltered"
-        :key="index">
-        <GenericCard
-          :cols="3"
-          :thumb="item.img_url"
-          :title="item.title"
-          :href="item.link"
-          :excerpt="item.description"
-        >
-          <div
-            slot="sub-title-1"
-            class="sub-title">
-            <SvgIcon name="info" />
-            <span
-              v-for="(item, index) in item.performance"
-              :key="index">
-              <span v-if="index > 0">{{ ', ' }}</span>
-              <span>{{ item }}</span>
-            </span>
-          </div>
-          <div
-            slot="sub-title-2"
-            class="sub-title">
-            <SvgIcon name="calendar" />
-            <span>{{ item.start_time }}</span>
-          </div>
-          <template slot="links">
-            <a :href="item.link">
-              View showcase
-              <SvgIcon
-                class="link-icon"
-                name="chevron-right"
-                width="10"
-                height="10"/>
-            </a>
-          </template>
-        </GenericCard>
-      </ListItem>
-    </div>
+    <FilterResults :show="showSSRCode">
+      <slot />
+    </FilterResults>
+
+    <FilterResults :show="!showSSRCode">
+      <div class="grid grid--3col">
+        <ListItem
+          v-for="(item, index) in dataFiltered"
+          :key="index">
+          <GenericCard
+            :cols="3"
+            :thumb="item.img_url"
+            :title="item.title"
+            :href="item.link"
+            :excerpt="item.description"
+          >
+            <div
+              slot="sub-title-1"
+              class="sub-title">
+              <SvgIcon name="info" />
+              <span
+                v-for="(item, index) in item.performance"
+                :key="index">
+                <span v-if="index > 0">{{ ', ' }}</span>
+                <span>{{ item }}</span>
+              </span>
+            </div>
+            <div
+              slot="sub-title-2"
+              class="sub-title">
+              <SvgIcon name="calendar" />
+              <span>{{ item.start_time }}</span>
+            </div>
+            <template slot="links">
+              <a :href="item.link">
+                View showcase
+                <SvgIcon
+                  class="link-icon"
+                  name="chevron-right"
+                  width="10"
+                  height="10"/>
+              </a>
+            </template>
+          </GenericCard>
+        </ListItem>
+      </div>
+    </FilterResults>
   </div>
 </template>
 <script>
@@ -113,6 +123,7 @@ import SvgIcon from '../../icons/SvgIcon.vue';
 import GenericCard from '../../cards/GenericCard.vue';
 import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
+import FilterResults from '../filters-core/results/FilterResults.vue';
 
 export default {
   components: {
@@ -121,11 +132,16 @@ export default {
     GenericCard,
     DropdownVmodel,
     FilterResultsCount,
+    FilterResults,
   },
   props: {
     data: {
       type: Array,
       default: () => [],
+    },
+    showSsr: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -140,6 +156,7 @@ export default {
         disciplines: [],
         performances: [],
       },
+      showSSRCode: this.showSsr,
     };
   },
   computed: {
@@ -164,6 +181,8 @@ export default {
   methods: {
     filterDataButton() {
       this.dataFiltered = this.filteredData;
+
+      this.showSSRCode = false;
     },
     resetSearch() {
       this.dataFiltered = this.data;

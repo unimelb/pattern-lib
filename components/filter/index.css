@@ -5,9 +5,14 @@
   background-color: rgb(var(--col-background-primary-navy));
   padding: 2.5rem;
 
-  &__input-container {
-    display: flex;
+  &__container {
     margin-bottom: 1.25rem;
+
+    &--centered {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
   }
 
   &__input {
@@ -23,18 +28,13 @@
   }
 
   &__label {
+    display: flex;
     flex: 1;
     font-size: 1.125rem;
     color: #fff;
     letter-spacing: 0;
     font-weight: var(--fw-semibold);
-  }
-
-  &__button-container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    padding-top: .625rem;
+    margin-bottom: .5rem;
   }
 
   &__button {
@@ -73,9 +73,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  &__dropdown {
-    margin-top: .5rem;
   }
 }

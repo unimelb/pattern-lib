@@ -49,17 +49,19 @@ describe('AccordionFilter', () => {
   });
 
   it('should render accordion list', () => {
-    const wrapper = shallow(AccordionFilter, {
+    const wrapper = mount(AccordionFilter, {
       propsData: {
         data: mockData,
+        showSSR: false,
       },
     });
+    
     expect(wrapper.props().data.length).toBe(2);
     expect(wrapper.find('.accordion-list').exists()).toBe(true);
   });
 
   it('should render nothing', () => {
-    const wrapper = shallow(AccordionFilter, {
+    const wrapper = mount(AccordionFilter, {
       propsData: {
         data: [],
       },

@@ -1,6 +1,7 @@
 <template>
   <div class="styled-select">
     <select
+      :id="id"
       v-model="selectedOption"
       @change="emitEvent"
     >
@@ -20,6 +21,10 @@
 <script>
 export default {
   props: {
+    id: {
+      type: [String, Boolean],
+      default: () => false,
+    },
     value: {
       default: null,
     },

@@ -1,7 +1,24 @@
 
 <template>
   <section-wrap bg-color="white">
-    <CardsFilter :data="cardsData" />
+    <CardsFilter
+      :data="cardsData"
+      show-ssr>
+      <div class="grid grid--3col">
+        <ListItem>
+          <div class="a">test</div>
+        </ListItem>
+        <ListItem>
+          <div class="a">test</div>
+        </ListItem>
+        <ListItem>
+          <div class="a">test</div>
+        </ListItem>
+        <ListItem>
+          <div class="a">test</div>
+        </ListItem>
+      </div>
+    </CardsFilter>
   </section-wrap>
 </template>
 

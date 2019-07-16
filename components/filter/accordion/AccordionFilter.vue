@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="filter">
-      <div class="filter__input-container">
+      <div class="filter__container">
         <label
           for="input-search"
           hidden> Title </label>
@@ -13,37 +13,40 @@
           placeholder="Type to search title"
         >
       </div>
-      <div class="grid">
-        <div class="cell cell--tab-1of3">
-          <label class="filter__label">
-            Location
+
+      <div class="filter__container">
+        <div class="grid">
+          <div class="cell cell--tab-1of3">
+            <label
+              class="filter__label"
+              for="locations">Location</label>
             <DropdownVmodel
+              id="locations"
               v-model="selectedLocation"
-              :values="filters.locations"
-              class="filter__dropdown"/>
-          </label>
-        </div>
-        <div class="cell cell--tab-1of3">
-          <label class="filter__label">
-            Discipline
+              :values="filters.locations"/>
+          </div>
+          <div class="cell cell--tab-1of3">
+            <label
+              class="filter__label"
+              for="disciplines">Discipline</label>
             <DropdownVmodel
+              id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"
-              class="filter__dropdown"/>
-          </label>
-        </div>
-        <div class="cell cell--tab-1of3">
-          <label class="filter__label">
-            Audition Requirement
+              :values="filters.disciplines"/>
+          </div>
+          <div class="cell cell--tab-1of3">
+            <label
+              class="filter__label"
+              for="auditions">Audition Requirement</label>
             <DropdownVmodel
+              id="auditions"
               v-model="selectedAudition"
-              :values="filters.auditions"
-              class="filter__dropdown"/>
-          </label>
+              :values="filters.auditions"/>
+          </div>
         </div>
       </div>
 
-      <div class="filter__button-container">
+      <div class="filter__container filter__container--centered">
         <button
           :class="animationclass"
           class="filter__button"
@@ -64,53 +67,59 @@
       :data="dataFiltered.length"
       class="filter__results" />
 
-    <transition-group
-      name="fade"
-      tag="div">
-      <div
-        v-for="(item, index) in dataFiltered"
-        :key="index"
-        class="accordion-list">
-        <accordion :name="item.name">
-          <table class="table table--striped">
-            <tr>
-              <td>
-                <strong>Location</strong>
-                <br>
-                {{ item.location }}
-              </td>
-              <td>
-                <strong>Points</strong>
-                <br>
-                {{ item.points }}
-              </td>
-              <td>
-                <strong>Discipline</strong>
-                <br>
-                {{ item.discipline }}
-              </td>
-              <td>
-                <strong>Audition requirement</strong>
-                <br>
-                {{ item.audition }}
-              </td>
-              <td>
-                <strong>Study Abroad</strong>
-                <br>
-                {{ item.abrod }}
-              </td>
-            </tr>
-            <tr>
-              <td colspan="5">
-                {{ item.overview }}
-                <br>
-                <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
-              </td>
-            </tr>
-          </table>
-        </accordion>
-      </div>
-    </transition-group>
+    <FilterResults :show="showSSRCode">
+      <slot />
+    </FilterResults>
+
+    <FilterResults :show="!showSSRCode">
+      <transition-group
+        name="fade"
+        tag="div">
+        <div
+          v-for="(item, index) in dataFiltered"
+          :key="index"
+          class="accordion-list">
+          <accordion :name="item.name">
+            <table class="table table--striped">
+              <tr>
+                <td>
+                  <strong>Location</strong>
+                  <br>
+                  {{ item.location }}
+                </td>
+                <td>
+                  <strong>Points</strong>
+                  <br>
+                  {{ item.points }}
+                </td>
+                <td>
+                  <strong>Discipline</strong>
+                  <br>
+                  {{ item.discipline }}
+                </td>
+                <td>
+                  <strong>Audition requirement</strong>
+                  <br>
+                  {{ item.audition }}
+                </td>
+                <td>
+                  <strong>Study Abroad</strong>
+                  <br>
+                  {{ item.abrod }}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="5">
+                  {{ item.overview }}
+                  <br>
+                  <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
+                </td>
+              </tr>
+            </table>
+          </accordion>
+        </div>
+      </transition-group>
+    </FilterResults>
   </div>
 </template>
 
@@ -120,6 +129,7 @@ import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
 import ButtonIcon from '../../buttons/ButtonIcon.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
+import FilterResults from '../filters-core/results/FilterResults.vue';
 
 export default {
   components: {
@@ -128,11 +138,16 @@ export default {
     FilterResultsCount,
     ButtonIcon,
     SvgIcon,
+    FilterResults,
   },
   props: {
     data: {
       type: Array,
       default: () => [],
+    },
+    showSsr: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -147,6 +162,7 @@ export default {
         locations: [],
         auditions: [],
       },
+      showSSRCode: this.showSsr,
     };
   },
   computed: {
@@ -171,6 +187,8 @@ export default {
   methods: {
     filterDataButton() {
       this.dataFiltered = this.filteredData;
+
+      this.showSSRCode = false;
     },
     resetSearch() {
       this.dataFiltered = this.data;

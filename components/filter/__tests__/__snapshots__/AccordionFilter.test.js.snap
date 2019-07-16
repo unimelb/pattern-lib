@@ -6,7 +6,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
     class="filter"
   >
     <div
-      class="filter__input-container"
+      class="filter__container"
     >
       <label
         for="input-search"
@@ -24,21 +24,27 @@ exports[`AccordionFilter should match snapshot 1`] = `
     </div>
      
     <div
-      class="grid"
+      class="filter__container"
     >
       <div
-        class="cell cell--tab-1of3"
+        class="grid"
       >
-        <label
-          class="filter__label"
+        <div
+          class="cell cell--tab-1of3"
         >
-          
-          Location
-          
-          <div
-            class="styled-select filter__dropdown"
+          <label
+            class="filter__label"
+            for="locations"
           >
-            <select>
+            Location
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="locations"
+            >
               <option
                 selected="selected"
                 value=""
@@ -48,22 +54,24 @@ exports[`AccordionFilter should match snapshot 1`] = `
                
             </select>
           </div>
-        </label>
-      </div>
-       
-      <div
-        class="cell cell--tab-1of3"
-      >
-        <label
-          class="filter__label"
+        </div>
+         
+        <div
+          class="cell cell--tab-1of3"
         >
-          
-          Discipline
-          
-          <div
-            class="styled-select filter__dropdown"
+          <label
+            class="filter__label"
+            for="disciplines"
           >
-            <select>
+            Discipline
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="disciplines"
+            >
               <option
                 selected="selected"
                 value=""
@@ -73,22 +81,24 @@ exports[`AccordionFilter should match snapshot 1`] = `
                
             </select>
           </div>
-        </label>
-      </div>
-       
-      <div
-        class="cell cell--tab-1of3"
-      >
-        <label
-          class="filter__label"
+        </div>
+         
+        <div
+          class="cell cell--tab-1of3"
         >
-          
-          Audition Requirement
-          
-          <div
-            class="styled-select filter__dropdown"
+          <label
+            class="filter__label"
+            for="auditions"
           >
-            <select>
+            Audition Requirement
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="auditions"
+            >
               <option
                 selected="selected"
                 value=""
@@ -98,12 +108,12 @@ exports[`AccordionFilter should match snapshot 1`] = `
                
             </select>
           </div>
-        </label>
+        </div>
       </div>
     </div>
      
     <div
-      class="filter__button-container"
+      class="filter__container filter__container--centered"
     >
       <button
         aria-label="Search"
@@ -144,286 +154,290 @@ exports[`AccordionFilter should match snapshot 1`] = `
     2 results
   </p>
    
-  <span
-    name="fade"
-    tag="div"
-  >
-    <div
-      class="accordion-list"
+  <!---->
+   
+  <div>
+    <span
+      name="fade"
+      tag="div"
     >
       <div
-        class="accordion toggleblock"
+        class="accordion-list"
       >
         <div
-          aria-controls="ui-toggle-8-panel-1"
-          class="toggleblock__default"
-          id="ui-toggle-8-header-1"
-          tabindex="0"
-        >
-          <h2
-            class="toggle__trigger"
-          >
-            arts
-          </h2>
-           
-        </div>
-         
-        <div
-          aria-hidden="true"
-          aria-labelledby="ui-toggle-8-header-1"
-          class="toggleblock__hidden"
-          id="ui-toggle-8-panel-1"
-          role="region"
-          tabindex="-1"
+          class="accordion toggleblock"
         >
           <div
-            class="toggleblock__hidden-inner"
+            aria-controls="ui-toggle-10-panel-1"
+            class="toggleblock__default"
+            id="ui-toggle-10-header-1"
+            tabindex="0"
           >
-            <table
-              class="table table--striped"
+            <h2
+              class="toggle__trigger"
             >
-              <tr>
-                <td>
-                  <strong>
-                    Location
-                  </strong>
-                   
-                  <br />
-                  
-              location 1
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Points
-                  </strong>
-                   
-                  <br />
-                  
-              points 1
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Discipline
-                  </strong>
-                   
-                  <br />
-                  
-              discipline 1
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Audition requirement
-                  </strong>
-                   
-                  <br />
-                  
-              audition 1
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Study Abroad
-                  </strong>
-                   
-                  <br />
-                  
-              abrod 1
-            
-                </td>
-              </tr>
-               
-              <tr>
-                <td
-                  colspan="5"
-                >
-                  
-              Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
-              
-                  <br />
-                   
-                  <a
-                    class="btn btn--xsml"
-                    href="#"
-                    tabindex="-1"
-                  >
-                    <span
-                      class="push-icon"
-                    >
-                      Handbook Link 
-                      <svg
-                        aria-hidden="true"
-                        aria-label="chevron-right"
-                        class="push-icon__icon"
-                        focusable="false"
-                        height="15px"
-                        role="img"
-                        width="15px"
-                      >
-                        <use
-                          xlink:href="#icon-chevron-right"
-                        />
-                         
-                        <title>
-                          Chevron-right
-                        </title>
-                         
-                      </svg>
-                    </span>
+              arts
+            </h2>
+             
+          </div>
+           
+          <div
+            aria-hidden="true"
+            aria-labelledby="ui-toggle-10-header-1"
+            class="toggleblock__hidden"
+            id="ui-toggle-10-panel-1"
+            role="region"
+            tabindex="-1"
+          >
+            <div
+              class="toggleblock__hidden-inner"
+            >
+              <table
+                class="table table--striped"
+              >
+                <tr>
+                  <td>
+                    <strong>
+                      Location
+                    </strong>
                      
-                    <!---->
-                  </a>
-                </td>
-              </tr>
-            </table>
+                    <br />
+                    
+                location 1
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Points
+                    </strong>
+                     
+                    <br />
+                    
+                points 1
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Discipline
+                    </strong>
+                     
+                    <br />
+                    
+                discipline 1
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Audition requirement
+                    </strong>
+                     
+                    <br />
+                    
+                audition 1
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Study Abroad
+                    </strong>
+                     
+                    <br />
+                    
+                abrod 1
+              
+                  </td>
+                </tr>
+                 
+                <tr>
+                  <td
+                    colspan="5"
+                  >
+                    
+                Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+                
+                    <br />
+                     
+                    <a
+                      class="btn btn--xsml"
+                      href="#"
+                      tabindex="-1"
+                    >
+                      <span
+                        class="push-icon"
+                      >
+                        Handbook Link 
+                        <svg
+                          aria-hidden="true"
+                          aria-label="chevron-right"
+                          class="push-icon__icon"
+                          focusable="false"
+                          height="15px"
+                          role="img"
+                          width="15px"
+                        >
+                          <use
+                            xlink:href="#icon-chevron-right"
+                          />
+                           
+                          <title>
+                            Chevron-right
+                          </title>
+                           
+                        </svg>
+                      </span>
+                       
+                      <!---->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="accordion-list"
-    >
       <div
-        class="accordion toggleblock"
+        class="accordion-list"
       >
         <div
-          aria-controls="ui-toggle-12-panel-1"
-          class="toggleblock__default"
-          id="ui-toggle-12-header-1"
-          tabindex="0"
-        >
-          <h2
-            class="toggle__trigger"
-          >
-            science
-          </h2>
-           
-        </div>
-         
-        <div
-          aria-hidden="true"
-          aria-labelledby="ui-toggle-12-header-1"
-          class="toggleblock__hidden"
-          id="ui-toggle-12-panel-1"
-          role="region"
-          tabindex="-1"
+          class="accordion toggleblock"
         >
           <div
-            class="toggleblock__hidden-inner"
+            aria-controls="ui-toggle-14-panel-1"
+            class="toggleblock__default"
+            id="ui-toggle-14-header-1"
+            tabindex="0"
           >
-            <table
-              class="table table--striped"
+            <h2
+              class="toggle__trigger"
             >
-              <tr>
-                <td>
-                  <strong>
-                    Location
-                  </strong>
-                   
-                  <br />
-                  
-              location 2
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Points
-                  </strong>
-                   
-                  <br />
-                  
-              points 2
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Discipline
-                  </strong>
-                   
-                  <br />
-                  
-              discipline 2
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Audition requirement
-                  </strong>
-                   
-                  <br />
-                  
-              audition 2
-            
-                </td>
-                 
-                <td>
-                  <strong>
-                    Study Abroad
-                  </strong>
-                   
-                  <br />
-                  
-              abrod 2
-            
-                </td>
-              </tr>
-               
-              <tr>
-                <td
-                  colspan="5"
-                >
-                  
-              Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
-              
-                  <br />
-                   
-                  <a
-                    class="btn btn--xsml"
-                    href="#"
-                    tabindex="-1"
-                  >
-                    <span
-                      class="push-icon"
-                    >
-                      Handbook Link 
-                      <svg
-                        aria-hidden="true"
-                        aria-label="chevron-right"
-                        class="push-icon__icon"
-                        focusable="false"
-                        height="15px"
-                        role="img"
-                        width="15px"
-                      >
-                        <use
-                          xlink:href="#icon-chevron-right"
-                        />
-                         
-                        <title>
-                          Chevron-right
-                        </title>
-                         
-                      </svg>
-                    </span>
+              science
+            </h2>
+             
+          </div>
+           
+          <div
+            aria-hidden="true"
+            aria-labelledby="ui-toggle-14-header-1"
+            class="toggleblock__hidden"
+            id="ui-toggle-14-panel-1"
+            role="region"
+            tabindex="-1"
+          >
+            <div
+              class="toggleblock__hidden-inner"
+            >
+              <table
+                class="table table--striped"
+              >
+                <tr>
+                  <td>
+                    <strong>
+                      Location
+                    </strong>
                      
-                    <!---->
-                  </a>
-                </td>
-              </tr>
-            </table>
+                    <br />
+                    
+                location 2
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Points
+                    </strong>
+                     
+                    <br />
+                    
+                points 2
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Discipline
+                    </strong>
+                     
+                    <br />
+                    
+                discipline 2
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Audition requirement
+                    </strong>
+                     
+                    <br />
+                    
+                audition 2
+              
+                  </td>
+                   
+                  <td>
+                    <strong>
+                      Study Abroad
+                    </strong>
+                     
+                    <br />
+                    
+                abrod 2
+              
+                  </td>
+                </tr>
+                 
+                <tr>
+                  <td
+                    colspan="5"
+                  >
+                    
+                Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+                
+                    <br />
+                     
+                    <a
+                      class="btn btn--xsml"
+                      href="#"
+                      tabindex="-1"
+                    >
+                      <span
+                        class="push-icon"
+                      >
+                        Handbook Link 
+                        <svg
+                          aria-hidden="true"
+                          aria-label="chevron-right"
+                          class="push-icon__icon"
+                          focusable="false"
+                          height="15px"
+                          role="img"
+                          width="15px"
+                        >
+                          <use
+                            xlink:href="#icon-chevron-right"
+                          />
+                           
+                          <title>
+                            Chevron-right
+                          </title>
+                           
+                        </svg>
+                      </span>
+                       
+                      <!---->
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </span>
+    </span>
+  </div>
 </div>
 `;
