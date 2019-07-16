@@ -19,7 +19,7 @@
             School
             <DropdownVmodel
               v-model="selectedSchool"
-              :values="filteredSchools"
+              :values="filters.schools"
               class="filter__dropdown"/>
           </label>
         </div>
@@ -28,7 +28,7 @@
             Discipline
             <DropdownVmodel
               v-model="selectedDiscipline"
-              :values="filteredDisciplines"
+              :values="filters.disciplines"
               class="filter__dropdown"/>
           </label>
         </div>
@@ -37,7 +37,7 @@
             Performance type
             <DropdownVmodel
               v-model="selectedPerformance"
-              :values="filteredPerformances"
+              :values="filters.performances"
               class="filter__dropdown"/>
           </label>
         </div>
@@ -108,11 +108,20 @@
   </div>
 </template>
 <script>
+import ListItem from '../../listing/ListItem.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
 import GenericCard from '../../cards/GenericCard.vue';
 import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
+
 export default {
-  components: { GenericCard, DropdownVmodel, FilterResultsCount },
+  components: {
+    ListItem,
+    SvgIcon,
+    GenericCard,
+    DropdownVmodel,
+    FilterResultsCount,
+  },
   props: {
     data: {
       type: Array,
@@ -126,6 +135,11 @@ export default {
       selectedDiscipline: '',
       selectedPerformance: '',
       dataFiltered: this.data,
+      filters: {
+        schools: [],
+        disciplines: [],
+        performances: [],
+      },
     };
   },
   computed: {
@@ -137,39 +151,15 @@ export default {
           && data.title.match(new RegExp(this.searchText, 'i'))
       );
     },
-    filteredSchools() {
-      const schools = [];
-      this.data.forEach((element) => {
-        if (!schools.includes(element.school)) {
-          schools.push(element.school);
-        }
-      });
-      return schools;
-    },
-    filteredDisciplines() {
-      const disciplines = [];
-      this.data.forEach((element) => {
-        if (!disciplines.includes(...element.disciplines)) {
-          disciplines.push(...element.disciplines);
-        }
-      });
-      return disciplines;
-    },
-    filteredPerformances() {
-      const performances = [];
-      this.data.forEach((element) => {
-        if (!performances.includes(...element.performance)) {
-          performances.push(...element.performance);
-        }
-      });
-      return performances;
-    },
     animationclass() {
       if (this.searchText || this.selectedSchool || this.selectedDiscipline || this.selectedPerformance) {
         return 'filter__button--animated';
       }
       return '';
     },
+  },
+  mounted() {
+    this.filters = this.getFilters();
   },
   methods: {
     filterDataButton() {
@@ -181,6 +171,29 @@ export default {
       this.selectedSchool = '';
       this.selectedDiscipline = '';
       this.selectedPerformance = '';
+    },
+    getFilters() {
+      const filters = {
+        schools: [],
+        disciplines: [],
+        performances: [],
+      };
+
+      this.data.forEach((element) => {
+        if (!filters.schools.includes(element.school)) {
+          filters.schools.push(element.school);
+        }
+
+        if (!filters.disciplines.includes(...element.disciplines)) {
+          filters.disciplines.push(...element.disciplines);
+        }
+
+        if (!filters.performances.includes(...element.performance)) {
+          filters.performances.push(...element.performance);
+        }
+      });
+
+      return filters;
     },
   },
 };

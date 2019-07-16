@@ -46,16 +46,6 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 Show all
               </option>
                
-              <option
-                value="location 1"
-              >
-                location 1
-              </option>
-              <option
-                value="location 2"
-              >
-                location 2
-              </option>
             </select>
           </div>
         </label>
@@ -81,16 +71,6 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 Show all
               </option>
                
-              <option
-                value="discipline 1"
-              >
-                discipline 1
-              </option>
-              <option
-                value="discipline 2"
-              >
-                discipline 2
-              </option>
             </select>
           </div>
         </label>
@@ -116,16 +96,6 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 Show all
               </option>
                
-              <option
-                value="audition 1"
-              >
-                audition 1
-              </option>
-              <option
-                value="audition 2"
-              >
-                audition 2
-              </option>
             </select>
           </div>
         </label>
@@ -139,10 +109,21 @@ exports[`AccordionFilter should match snapshot 1`] = `
         aria-label="Search"
         class="filter__button"
       >
-        <svgicon
+        <svg
+          aria-label="search"
           class="filter__button--icon"
-          name="search"
-        />
+          focusable="false"
+          role="img"
+        >
+          <use
+            xlink:href="#icon-search"
+          />
+           
+          <title>
+            Search
+          </title>
+           
+        </svg>
          
         <span>
           Search
@@ -174,9 +155,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
         class="accordion toggleblock"
       >
         <div
-          aria-controls="ui-toggle-7-panel-1"
+          aria-controls="ui-toggle-8-panel-1"
           class="toggleblock__default"
-          id="ui-toggle-7-header-1"
+          id="ui-toggle-8-header-1"
           tabindex="0"
         >
           <h2
@@ -189,9 +170,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
          
         <div
           aria-hidden="true"
-          aria-labelledby="ui-toggle-7-header-1"
+          aria-labelledby="ui-toggle-8-header-1"
           class="toggleblock__hidden"
-          id="ui-toggle-7-panel-1"
+          id="ui-toggle-8-panel-1"
           role="region"
           tabindex="-1"
         >
@@ -267,11 +248,37 @@ exports[`AccordionFilter should match snapshot 1`] = `
               
                   <br />
                    
-                  <button-icon
-                    size="xsml"
+                  <a
+                    class="btn btn--xsml"
+                    href="#"
+                    tabindex="-1"
                   >
-                    Handbook Link
-                  </button-icon>
+                    <span
+                      class="push-icon"
+                    >
+                      Handbook Link 
+                      <svg
+                        aria-hidden="true"
+                        aria-label="chevron-right"
+                        class="push-icon__icon"
+                        focusable="false"
+                        height="15px"
+                        role="img"
+                        width="15px"
+                      >
+                        <use
+                          xlink:href="#icon-chevron-right"
+                        />
+                         
+                        <title>
+                          Chevron-right
+                        </title>
+                         
+                      </svg>
+                    </span>
+                     
+                    <!---->
+                  </a>
                 </td>
               </tr>
             </table>
@@ -286,9 +293,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
         class="accordion toggleblock"
       >
         <div
-          aria-controls="ui-toggle-9-panel-1"
+          aria-controls="ui-toggle-12-panel-1"
           class="toggleblock__default"
-          id="ui-toggle-9-header-1"
+          id="ui-toggle-12-header-1"
           tabindex="0"
         >
           <h2
@@ -301,9 +308,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
          
         <div
           aria-hidden="true"
-          aria-labelledby="ui-toggle-9-header-1"
+          aria-labelledby="ui-toggle-12-header-1"
           class="toggleblock__hidden"
-          id="ui-toggle-9-panel-1"
+          id="ui-toggle-12-panel-1"
           role="region"
           tabindex="-1"
         >
@@ -379,11 +386,37 @@ exports[`AccordionFilter should match snapshot 1`] = `
               
                   <br />
                    
-                  <button-icon
-                    size="xsml"
+                  <a
+                    class="btn btn--xsml"
+                    href="#"
+                    tabindex="-1"
                   >
-                    Handbook Link
-                  </button-icon>
+                    <span
+                      class="push-icon"
+                    >
+                      Handbook Link 
+                      <svg
+                        aria-hidden="true"
+                        aria-label="chevron-right"
+                        class="push-icon__icon"
+                        focusable="false"
+                        height="15px"
+                        role="img"
+                        width="15px"
+                      >
+                        <use
+                          xlink:href="#icon-chevron-right"
+                        />
+                         
+                        <title>
+                          Chevron-right
+                        </title>
+                         
+                      </svg>
+                    </span>
+                     
+                    <!---->
+                  </a>
                 </td>
               </tr>
             </table>

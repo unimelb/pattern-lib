@@ -19,7 +19,7 @@
             Location
             <DropdownVmodel
               v-model="selectedLocation"
-              :values="filteredLocations"
+              :values="filters.locations"
               class="filter__dropdown"/>
           </label>
         </div>
@@ -28,7 +28,7 @@
             Discipline
             <DropdownVmodel
               v-model="selectedDiscipline"
-              :values="filteredDisciplines"
+              :values="filters.disciplines"
               class="filter__dropdown"/>
           </label>
         </div>
@@ -37,7 +37,7 @@
             Audition Requirement
             <DropdownVmodel
               v-model="selectedAudition"
-              :values="filteredAuditions"
+              :values="filters.auditions"
               class="filter__dropdown"/>
           </label>
         </div>
@@ -104,7 +104,7 @@
               <td colspan="5">
                 {{ item.overview }}
                 <br>
-                <button-icon size="xsml">{{ item.buttonText }}</button-icon>
+                <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
               </td>
             </tr>
           </table>
@@ -118,12 +118,16 @@
 import Accordion from '../../accordion/Accordion.vue';
 import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
+import ButtonIcon from '../../buttons/ButtonIcon.vue';
+import SvgIcon from '../../icons/SvgIcon.vue';
 
 export default {
   components: {
     Accordion,
     DropdownVmodel,
     FilterResultsCount,
+    ButtonIcon,
+    SvgIcon,
   },
   props: {
     data: {
@@ -138,6 +142,11 @@ export default {
       selectedLocation: '',
       selectedAudition: '',
       dataFiltered: this.data,
+      filters: {
+        disciplines: [],
+        locations: [],
+        auditions: [],
+      },
     };
   },
   computed: {
@@ -149,39 +158,15 @@ export default {
           && data.name.match(new RegExp(this.searchText, 'i'))
       );
     },
-    filteredDisciplines() {
-      const disciplines = [];
-      this.data.forEach((element) => {
-        if (!disciplines.includes(element.discipline)) {
-          disciplines.push(element.discipline);
-        }
-      });
-      return disciplines;
-    },
-    filteredLocations() {
-      const locations = [];
-      this.data.forEach((element) => {
-        if (!locations.includes(element.location)) {
-          locations.push(element.location);
-        }
-      });
-      return locations;
-    },
-    filteredAuditions() {
-      const auditions = [];
-      this.data.forEach((element) => {
-        if (!auditions.includes(element.audition)) {
-          auditions.push(element.audition);
-        }
-      });
-      return auditions;
-    },
     animationclass() {
       if (this.searchText || this.selectedDiscipline || this.selectedLocation || this.selectedAudition) {
         return 'filter__button--animated';
       }
       return '';
     },
+  },
+  mounted() {
+    this.filters = this.getFilters();
   },
   methods: {
     filterDataButton() {
@@ -193,6 +178,29 @@ export default {
       this.selectedLocation = '';
       this.selectedAudition = '';
       this.searchText = '';
+    },
+    getFilters() {
+      const filters = {
+        disciplines: [],
+        locations: [],
+        auditions: [],
+      };
+
+      this.data.forEach((element) => {
+        if (!filters.disciplines.includes(element.discipline)) {
+          filters.disciplines.push(element.discipline);
+        }
+
+        if (!filters.locations.includes(element.location)) {
+          filters.locations.push(element.location);
+        }
+
+        if (!filters.auditions.includes(element.audition)) {
+          filters.auditions.push(element.audition);
+        }
+      });
+
+      return filters;
     },
   },
 };
