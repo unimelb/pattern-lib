@@ -9,25 +9,26 @@ import {
   version,
 } from '../../package.json';
 
+import BootstrapCMSTables from '../../components/tables/BootstrapCMSTables';
 
 import ToggleBlock from '../../components/toggle/ToggleBlock.vue';
 import ToggleGroup from '../../components/toggle/ToggleGroup.vue';
 import ToggleBlockMobile from '../../components/toggle/ToggleBlockMobile.vue';
 import Accordion from '../../components/accordion/Accordion.vue';
+import AlumniProfiles from '../../components/alumni-profiles/AlumniProfiles.vue';
 import AccordionGroup from '../../components/accordion/AccordionGroup.vue';
 import CheckList from '../../components/check-list';
-import MegaMenu from '../../components/page/megamenu';
-import MegaMenuTitle from '../../components/page/megamenu/MegaMenuTitle.vue';
+import MegaMenu from '../../components/megamenu';
+import MegaMenuTitle from '../../components/megamenu/MegaMenuTitle.vue';
 import ModalDialog from '../../components/modal';
-import PageNav from '../../components/page/nav';
-import PageSearch from '../../components/page/search';
-import PageSearchForm from '../../components/page/search/PageSearchForm.vue';
-import PageFooter from '../../components/page/footer';
+import PageNav from '../../components/nav';
+import PageSearch from '../../components/search';
+import PageSearchForm from '../../components/search/PageSearchForm.vue';
+import PageFooter from '../../components/footer';
 import Tabs from '../../components/tabs/Tabs.vue';
 import Tab from '../../components/tabs/Tab.vue';
 import PhotoGallery from '../../components/photo-gallery';
-import InPageNavigation from '../../components/page/navigation/InPageNavigation.vue';
-import OutPageNavigation from '../../components/page/navigation/OutPageNavigation.vue';
+import InPageNavigation from '../../components/navigation/InPageNavigation.vue';
 import FocusWrapper from '../../components/focus-wrapper/FocusWrapper.vue';
 import SvgIcon from '../../components/icons/SvgIcon.vue';
 import ListingWrap from '../../components/listing/ListingWrap.vue';
@@ -43,9 +44,9 @@ import VideoEmbed from '../../components/embed/VideoEmbed.vue';
 import SoundcloudEmbed from '../../components/embed/SoundcloudEmbed.vue';
 import FigureWrap from '../../components/figure/FigureWrap.vue';
 import Notice from '../../components/notice/Notice.vue';
-import PageBreadcrumbs from '../../components/page/breadcrumbs/PageBreadcrumbs.vue';
-import PageHeader from '../../components/page/header/PageHeader.vue';
-import PageHeaderMin from '../../components/page/header/PageHeaderMin.vue';
+import PageBreadcrumbs from '../../components/breadcrumbs/PageBreadcrumbs.vue';
+import PageHeader from '../../components/header/PageHeader.vue';
+import PageHeaderMin from '../../components/header/PageHeaderMin.vue';
 import Pathfinder from '../../components/pathfinder/Pathfinder.vue';
 import SectionDivider from '../../components/section/SectionDivider.vue';
 import SectionTwoCol from '../../components/section/SectionTwoCol.vue';
@@ -76,6 +77,14 @@ import Heading3 from '../../components/typography/headings/Heading3.vue';
 import Heading4 from '../../components/typography/headings/Heading4.vue';
 import Heading5 from '../../components/typography/headings/Heading5.vue';
 import Heading6 from '../../components/typography/headings/Heading6.vue';
+import SocialMediaBar from '../../components/social-media-bar/SocialMediaBar.vue';
+import Testimonials from '../../components/testimonials/Testimonials.vue';
+import InfoPanel from '../../components/info-panel/InfoPanel.vue';
+import CompactedTable from '../../components/tables/CompactedTable.vue';
+import ResponsiveTable from '../../components/tables/ResponsiveTable.vue';
+import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
+import Carousel from '../../components/carousel/Carousel.vue';
+import Logo from '../../components/logo/Logo.vue';
 
 import '../../components';
 
@@ -106,7 +115,6 @@ Vue.component('tabs', Tabs);
 Vue.component('tab', Tab);
 Vue.component('photo-gallery', PhotoGallery);
 Vue.component('in-page-navigation', InPageNavigation);
-Vue.component('out-page-navigation', OutPageNavigation);
 Vue.component('focus-wrapper', FocusWrapper);
 Vue.component('svg-icon', SvgIcon);
 Vue.component('listing-wrap', ListingWrap);
@@ -155,8 +163,20 @@ Vue.component('heading3', Heading3);
 Vue.component('heading4', Heading4);
 Vue.component('heading5', Heading5);
 Vue.component('heading6', Heading6);
+Vue.component('social-media-bar', SocialMediaBar);
+Vue.component('alumni-profiles', AlumniProfiles);
+Vue.component('testimonials', Testimonials);
+Vue.component('info-panel', InfoPanel);
+Vue.component('compacted-table', CompactedTable);
+Vue.component('responsive-table', ResponsiveTable);
+Vue.component('page-header-campaign', PageHeaderCampaign);
+Vue.component('carousel', Carousel);
+Vue.component('logo', Logo);
 
 // Create Vue instance
 new Vue({
   el: '#ui',
+  beforeCreate() {
+    BootstrapCMSTables(); // Add responsive classes to CMS tables.
+  },
 });

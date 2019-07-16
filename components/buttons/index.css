@@ -4,8 +4,9 @@
 .btn {
   display: inline-block;
   padding: calc(var(--vr) * .8);
+  width: 100%;
   transition: border-color .2s;
-  border: 2px solid color(rgb(var(--col-brand)) alpha(70%));
+  border: 2px solid rgb(var(--col-brand));
   border-radius: var(--br);
   color: rgb(var(--col-brand));
   font-weight: var(--fw-semibold);
@@ -13,6 +14,10 @@
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   &:focus,
   &:hover,
@@ -27,6 +32,20 @@
   &-owner:active .btn {
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
+    text-decoration: none;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & + & {
+    margin-top: var(--vr);
+
+    @media (--bp-tablet) {
+      margin-top: 0;
+      margin-left: var(--vr);
+    }
   }
 
   &--inverted,
@@ -38,13 +57,18 @@
   }
 
   &--cta.btn {
-    border-color: rgb(var(--col-brand));
+    border-color: rgb(var(--col-navy-mid-3));
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
 
     &:hover {
-      border-color: rgb(var(--col-background-primary-white));
       color: rgb(var(--col-background-primary-white));
+    }
+
+    &:active {
+      border-color: rgb(var(--col-brand));
+      background-color: rgb(var(--col-background-primary-white));
+      color: rgb(var(--col-brand));
     }
   }
 
@@ -92,6 +116,11 @@
   &--fullwidth {
     min-width: 100%;
     text-align: center;
+
+    & + & {
+      margin-top: var(--vr);
+      margin-left: 0;
+    }
   }
 
   &--center {
@@ -198,5 +227,9 @@
   &--disabled {
     opacity: .5;
     pointer-events: none;
+  }
+
+  @media (--bp-tablet) {
+    width: auto;
   }
 }

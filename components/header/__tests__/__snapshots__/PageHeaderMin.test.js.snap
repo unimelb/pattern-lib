@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeaderMin should match snapshot 1`] = `
+<header
+  class="page-header page-header--l3"
+>
+  <div
+    class="page-header__shape bg-saw-tooth"
+  />
+   
+  <div
+    class="page-header__inner max"
+  >
+    <!---->
+  </div>
+</header>
+`;

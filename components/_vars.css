@@ -14,6 +14,7 @@
   /* Primary palette */
   /* Note - Navy Dark is UoM Navy */
   --col-navy-dark: 9, 65, 131;
+  --col-navy-mid-3: 83, 122, 168;
   --col-navy-mid-2: 93, 130, 173;
   --col-navy-mid-1: 171, 190, 213;
 
@@ -125,6 +126,25 @@
 
   /* Box shadow */
   --col-box-shadow: 0, 0, 0, .12;
+
+  /* Font size variable for calculation */
+  --fs: 1.15;
+
+  /* Font sizes */
+  --h1-fs: calc(var(--h2-fs) * var(--fs));
+  --h2-fs: calc(var(--h3-fs) * var(--fs));
+  --h3-fs: calc(var(--h4-fs) * var(--fs));
+  --h4-fs: calc(var(--h5-fs) * var(--fs));
+  --h5-fs: calc(var(--h6-fs) * var(--fs));
+  --h6-fs: calc(1rem * var(--fs));
+
+  /* Z-index variables */
+  --z-below: -1;
+  --z-default: 1;
+  --z-navigation: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+  --z-liveagent: 10000;
 }
 
 /**

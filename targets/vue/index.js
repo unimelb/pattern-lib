@@ -7,6 +7,10 @@ export {
 }
   from '../../components/accordion/AccordionGroup.vue';
 export {
+  default as AlumniProfiles,
+}
+  from '../../components/alumni-profiles/AlumniProfiles.vue';
+export {
   default as ArticleWrap,
 }
   from '../../components/article-wrap/ArticleWrap.vue';
@@ -133,11 +137,11 @@ export {
 export {
   default as MegaMenu,
 }
-  from '../../components/page/megamenu/MegaMenu.vue';
+  from '../../components/megamenu/MegaMenu.vue';
 export {
   default as MegaMenuTitle,
 }
-  from '../../components/page/megamenu/MegaMenuTitle.vue';
+  from '../../components/megamenu/MegaMenuTitle.vue';
 export {
   default as ModalDialog,
 }
@@ -149,31 +153,31 @@ export {
 export {
   default as PageBreadcrumbs,
 }
-  from '../../components/page/breadcrumbs/PageBreadcrumbs.vue';
+  from '../../components/breadcrumbs/PageBreadcrumbs.vue';
 export {
   default as PageFooter,
 }
-  from '../../components/page/footer/PageFooter.vue';
+  from '../../components/footer/PageFooter.vue';
 export {
   default as PageHeader,
 }
-  from '../../components/page/header/PageHeader.vue';
+  from '../../components/header/PageHeader.vue';
 export {
   default as PageHeaderMin,
 }
-  from '../../components/page/header/PageHeaderMin.vue';
+  from '../../components/header/PageHeaderMin.vue';
 export {
   default as PageNav,
 }
-  from '../../components/page/nav/PageNav.vue';
+  from '../../components/nav/PageNav.vue';
 export {
   default as PageSearch,
 }
-  from '../../components/page/search/PageSearch.vue';
+  from '../../components/search/PageSearch.vue';
 export {
   default as PageSearchForm,
 }
-  from '../../components/page/search/PageSearchForm.vue';
+  from '../../components/search/PageSearchForm.vue';
 export {
   default as Pathfinder,
 }
@@ -257,11 +261,7 @@ export {
 export {
   default as InPageNavigation,
 }
-  from '../../components/page/navigation/InPageNavigation.vue';
-export {
-  default as OutPageNavigation,
-}
-  from '../../components/page/navigation/OutPageNavigation.vue';
+  from '../../components/navigation/InPageNavigation.vue';
 export {
   default as Dropdown,
 }
@@ -298,3 +298,36 @@ export {
   default as Heading6,
 }
   from '../../components/typography/headings/Heading6.vue';
+export {
+  default as Testimonials,
+}
+  from '../../components/testimonials/Testimonials.vue';
+export {
+  default as SocialMediaBar,
+}
+  from '../../components/social-media-bar/SocialMediaBar.vue';
+export {
+  default as InfoPanel,
+}
+  from '../../components/info-panel/InfoPanel.vue';
+export {
+  default as PageHeaderCampaign,
+}
+  from '../../components/campaign/PageHeaderCampaign.vue';
+
+export {
+  default as ResponsiveTable,
+}
+  from '../../components/tables/ResponsiveTable.vue';
+export {
+  default as CompactedTable,
+}
+  from '../../components/tables/CompactedTable.vue';
+export {
+  default as Carousel,
+}
+  from '../../components/carousel/Carousel.vue';
+export {
+  default as Logo,
+}
+  from '../../components/logo/Logo.vue';

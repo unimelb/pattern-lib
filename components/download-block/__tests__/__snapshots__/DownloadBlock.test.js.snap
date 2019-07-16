@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DownloadBlock should match snapshot 1`] = `
+<a
+  class="download-block btn-owner"
+  href=""
+>
+  <div
+    class="download-block__thumb"
+  >
+    <img
+      alt=""
+      class="download-block__img"
+      src=""
+    />
+  </div>
+   
+  <div
+    class="download-block__inner"
+  >
+    <h3>
+      
+    </h3>
+     
+    <buttonicon
+      icon="download"
+    >
+      Download
+    </buttonicon>
+     
+    <p
+      class="metadata"
+    >
+      <!---->
+      
+       | 
+    
+    </p>
+  </div>
+</a>
+`;

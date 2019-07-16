@@ -3,13 +3,13 @@
   position: relative;
 
   &--padded {
-    padding: 65px 54px 72px 95px;
+    padding: 3rem;
   }
 
   &__top-left,
   &__bottom-right {
     position: absolute;
-    z-index: 90;
+    z-index: calc(var(--z-default) + 1);
     top: 0;
     left: 0;
     fill: rgb(var(--col-blue-mid-2));

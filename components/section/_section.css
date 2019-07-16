@@ -60,7 +60,7 @@
       bottom: 0;
       left: 0;
       opacity: .2;
-      background-color: var(--col-black-dark);
+      background-color: rgb(var(--col-black-dark));
     }
   }
 

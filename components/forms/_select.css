@@ -24,14 +24,12 @@
 
 .styled-select {
   position: relative;
-  z-index: 1;
   background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
 
   select {
     display: block;
     position: relative;
-    z-index: 2;
     width: 100%;
     margin-bottom: .5rem;
     padding: .5rem 2.875rem .5rem .75rem;
@@ -45,11 +43,12 @@
     -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
 
     option {
-      color: var(--col-black-dark);
+      color: rgb(var(--col-black-dark));
     }
 
     &::-ms-expand {
-      display: none; /* stylelint-disable-line property-no-vendor-prefix */
+      display: none;
+      /* stylelint-disable-line property-no-vendor-prefix */
     }
   }
 
@@ -71,7 +70,7 @@
 
   &--blue {
     position: relative;
-    background-color: #5081bd;
+    background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
 
     select {

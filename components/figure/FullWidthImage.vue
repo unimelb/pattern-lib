@@ -1,6 +1,8 @@
 <template>
   <div
+    :aria-label="ariaLabel"
     :style="styleObject"
+    role="img"
     class="full-width-image"/>
 </template>
 
@@ -10,6 +12,10 @@ export default {
     imageUrl: {
       type: String,
       default: '',
+    },
+    ariaLabel: {
+      type: String,
+      default: 'Full Width Image',
     },
   },
   computed: {

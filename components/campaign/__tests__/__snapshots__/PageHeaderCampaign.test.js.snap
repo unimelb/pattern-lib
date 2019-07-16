@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeaderCampaign should match snapshot 1`] = `
+<div
+  class="page-campaign"
+  style="background-image: url(); background-position-x: 50%; background-position-y: 50%;"
+>
+  <div
+    class="page-campaign__container"
+  >
+    <!---->
+     
+    <!---->
+  </div>
+</div>
+`;

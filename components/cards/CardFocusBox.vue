@@ -3,7 +3,7 @@
     :semi-opaque="semiOpaque"
     :color="color"
     :class="classes"
-    size="large"
+    :size="size"
     class="card card--focus-box"
   >
     <div class="card__inner">
@@ -38,6 +38,7 @@ export default {
     color: {
       type: String,
       default: '',
+      validator: color => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].indexOf(color) > -1,
     },
     href: {
       type: String,
@@ -55,6 +56,10 @@ export default {
     semiOpaque: {
       type: Boolean,
       default: false,
+    },
+    size: {
+      type: String,
+      default: 'large',
     },
   },
   computed: {

@@ -2,7 +2,9 @@
 
 exports[`FullWidthImage should match snapshot 1`] = `
 <div
+  aria-label="Full Width Image"
   class="full-width-image"
+  role="img"
   style="background-image: url();"
 />
 `;

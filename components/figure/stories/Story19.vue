@@ -1,6 +1,7 @@
 <template>
   <FullWidthImage
-    image-url="https://www.telltalesonline.com/wp-content/uploads/2018/03/popular-marvel-characters-750x375.jpg"
+    image-url="http://lorempixel.com/1500/700/people"
+    aria-label="People"
   />
 </template>
 
@@ -8,5 +9,6 @@
 import FullWidthImage from '../FullWidthImage.vue';
 export default {
   components: { FullWidthImage },
+  readme: { html: true, source: true },
 };
 </script>

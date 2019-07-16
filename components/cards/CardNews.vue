@@ -1,5 +1,5 @@
 <template>
-  <div class="btn-owner card card--news card--bdr">
+  <div class="card card--news card--bdr">
     <a
       v-if="cols !== 1"
       :href="href"
@@ -19,6 +19,7 @@
       class="card__footer">
       <ButtonIcon
         :href="href"
+        :aria-label="`Read more about ` + title"
         class="btn--fullwidth">Read More</ButtonIcon>
     </div>
   </div>

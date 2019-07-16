@@ -1,0 +1,43 @@
+.page-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  position: relative;
+  margin: .3125rem 1.25rem 0 .625rem;
+  text-decoration: none;
+  line-height: 1rem;
+  color: rgb(var(--col-background-primary-white));
+
+  &:visited {
+    color: rgb(var(--col-background-primary-white));
+  }
+
+  &::before {
+    position: relative;
+    content: '';
+    width: 1.25rem;
+    border: 1px solid rgb(var(--col-background-primary-white));
+    margin-bottom: .75rem;
+  }
+
+  .megamenu & {
+    padding: 20px 0;
+    width: auto !important;
+  }
+
+  @media (--bp-tablet) {
+    margin-left: 1.25rem;
+  }
+
+  @media (--bp-tablet) {
+    line-height: 1.25rem;
+  }
+
+  @media (--bp-x-desktop) {
+    font-size: 1.1rem;
+  }
+
+  @media (--bp-wide) {
+    font-size: 1.25rem;
+  }
+}

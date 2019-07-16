@@ -4,7 +4,7 @@
       <ListItem>
         <GenericCard
           :cols="2"
-          thumb="https://via.placeholder.com/400x200"
+          thumb
           title="Test 1"
           href="#"
           excerpt="Lorem ipsum dolor sit amet, consectetur."
@@ -26,8 +26,12 @@
             <span>Theme: Lorem ipsum.</span>
           </div>
           <template slot="links">
-            <a href="/">View generic details ></a>
-            <a href="/">View generic staff ></a>
+            <a
+              href="/"
+              aria-label="View details of the event name">View generic details ></a>
+            <a
+              href="/"
+              aria-label="View details of the staff name">View generic staff ></a>
           </template>
         </GenericCard>
       </ListItem>

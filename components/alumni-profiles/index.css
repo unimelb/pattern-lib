@@ -1,0 +1,63 @@
+.alumni {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.1875rem;
+  width: 100%;
+
+  &__img {
+    width: 100%;
+    height: 20rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 133%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (--bp-desktop) {
+      width: 33%;
+      margin-bottom: 0;
+      padding-bottom: 44%;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (--bp-desktop) {
+      width: 65%;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 0 0 .3125rem 0;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  &__line {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border: 0;
+    width: 2.5rem;
+    border-bottom: 2px solid rgb(var(--col-navy-mid-1));
+
+    .bg-inverted & {
+      border-bottom-color: rgb(var(--col-background-primary-white));
+    }
+  }
+
+  @media (--bp-desktop) {
+    flex-direction: row;
+    padding: 4.375rem;
+  }
+}
