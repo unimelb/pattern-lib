@@ -24,7 +24,6 @@
         </slideritem>
       </slider>
     </div>
-    <div class="carousel__footer" />
     <div
       class="carousel__panel"
     >
@@ -164,6 +163,7 @@
           >
             <ButtonIcon
               :href="selectedItem.buttonHref"
+              inverted
               width="wide"
               class="carousel__cta"
               role="button"
