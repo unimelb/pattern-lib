@@ -57,7 +57,7 @@
                 @keydown.13="moveToStory(index)"
                 @keydown.32="moveToStory(index)"
               >
-                {{ story.title }}
+                {{ story.title | truncate(46) }}
               </a>
             </li>
           </ul>
@@ -150,29 +150,28 @@
                 @focusin="stopSliding"
                 @focusout="startSliding"
               >
-                {{ selectedItem.title }}
+                {{ selectedItem.title | truncate(46) }}
               </a>
             </h2>
             <p class="carousel__description">
               {{ selectedItem.description }}
             </p>
-          </div>
-          <div
-            @focusin="stopSliding"
-            @focusout="startSliding"
-          >
-            <ButtonIcon
-              :href="selectedItem.buttonHref"
-              inverted
-              width="wide"
-              class="carousel__cta"
-              role="button"
-              size="sml"
+            <div
+              @focusin="stopSliding"
+              @focusout="startSliding"
             >
-              {{ selectedItem.buttonText }}
-            </ButtonIcon>
+              <ButtonIcon
+                :href="selectedItem.buttonHref"
+                inverted
+                width="wide"
+                class="carousel__cta"
+                role="button"
+                size="sml"
+              >
+                {{ selectedItem.buttonText }}
+              </ButtonIcon>
+            </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -190,6 +189,14 @@ export default {
     slideritem,
     SvgIcon,
     ButtonIcon,
+  },
+  filters: {
+    truncate(value, limit) {
+      return value.substring(0, limit);
+    },
+    tailing(value, tail) {
+      return value + tail;
+    },
   },
   props: {
     stories: {
