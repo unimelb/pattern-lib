@@ -102,11 +102,6 @@
     font-size: 1rem;
     line-height: 1.375rem;
     font-weight: var(--fw-regular);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box; /* stylelint-disable-line */
-    -webkit-box-orient: vertical; /* stylelint-disable-line */
-    -webkit-line-clamp: 4;
     max-height: calc(1.375rem * 4); /* fallback */
 
     @media (--bp-desktop) {
