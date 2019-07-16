@@ -192,7 +192,11 @@ export default {
   },
   filters: {
     truncate(value, limit) {
-      return value.substring(0, limit);
+      if (value) {
+        return value.substring(0, limit);
+      }
+
+      return value;
     },
     tailing(value, tail) {
       return value + tail;
