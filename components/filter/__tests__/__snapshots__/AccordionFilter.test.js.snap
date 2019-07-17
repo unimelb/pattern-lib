@@ -149,7 +149,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
   </div>
    
   <p
-    class="filter-results__count filter__results"
+    class="filter-results__count"
   >
     2 results
   </p>

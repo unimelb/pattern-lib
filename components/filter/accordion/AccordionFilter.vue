@@ -64,8 +64,7 @@
       </div>
     </div>
     <FilterResultsCount
-      :data="dataFiltered.length"
-      class="filter__results" />
+      :data="dataFiltered.length" />
 
     <FilterResults :show="showSSRCode">
       <slot />
