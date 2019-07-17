@@ -154,7 +154,7 @@
               </a>
             </h2>
             <p class="carousel__description">
-              {{ selectedItem.description }}
+              {{ selectedItem.description | truncate(400, '...') }}
             </p>
             <div
               @focusin="stopSliding"
@@ -191,8 +191,16 @@ export default {
     ButtonIcon,
   },
   filters: {
-    truncate(value, limit) {
-      return value.substring(0, limit);
+    truncate(value, limit, ellipsis = '') {
+      if (!value) {
+        return '';
+      }
+
+      if (value.length < limit) {
+        return value;
+      }
+
+      return `${value.substring(0, limit)}${ellipsis}`;
     },
   },
   props: {
