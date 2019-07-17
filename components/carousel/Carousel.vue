@@ -154,7 +154,7 @@
               </a>
             </h2>
             <p class="carousel__description">
-              {{ selectedItem.description | truncate(300, '...') }}
+              {{ selectedItem.description | truncate(240, '...') }}
             </p>
             <div
               @focusin="stopSliding"

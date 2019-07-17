@@ -5,6 +5,7 @@
   align-items: center;
   width: 100%;
   position: relative;
+  background: rgb(var(--col-background-primary-navy));
 
   &__slider {
     height: 38vw;
@@ -26,14 +27,6 @@
       background: rgb(var(--col-navy-mid-2));
       transition: width 200ms linear;
     }
-
-    @media (--bp-x-desktop) {
-      margin: 0 7.125rem;
-    }
-
-    @media (--bp-wide) {
-      margin: 0 14.25rem;
-    }
   }
 
   &__panel {
@@ -54,15 +47,16 @@
       @media (--bp-desktop) {
         flex-direction: row-reverse;
         display: flex;
+        padding: 1.5rem 1.5rem;
       }
 
-      @media (--bp-x-desktop) {
-        padding: 1.5rem 7.125rem;
+      @media (--bp-x-wide) {
+        padding: 1.5rem 0;
       }
+    }
 
-      @media (--bp-wide) {
-        padding: 1.5rem 14.25rem 0 14.25rem;
-      }
+    @media (--bp-x-wide) {
+      width: 63rem;
     }
 
     @media (--bp-desktop) {
@@ -182,7 +176,7 @@
     justify-content: center;
 
     @media (--bp-desktop) {
-      flex-basis: 40%;
+      flex-basis: 36%;
       margin-left: 1rem;
       flex-direction: column-reverse;
       justify-content: flex-end;
