@@ -61,8 +61,7 @@
       </div>
     </div>
     <FilterResultsCount
-      :data="dataFiltered.length"
-      class="filter__results" />
+      :data="dataFiltered.length"/>
 
     <div class="grid grid--3col">
       <ListItem

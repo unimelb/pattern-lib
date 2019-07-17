@@ -68,13 +68,6 @@
     }
   }
 
-  &__results {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   &__dropdown {
     margin-top: .5rem;
   }
