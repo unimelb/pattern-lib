@@ -10,7 +10,7 @@
   {
     "src": "https://source.unsplash.com/random/2000x1000",
     "altText": "test",
-    "title": "Story 2",
+    "title": "Story 2 A long title to flow onto two lines and be truncated to one line",
     "description": "Story 2 description",
     "buttonText": "Login",
     "buttonHref": "google.com"
@@ -18,7 +18,7 @@
   {
     "src": "https://source.unsplash.com/random/2000x1000",
     "altText": "test",
-    "title": "A long title to flow onto two lines",
+    "title": "A long title to flow onto two lines A long title to flow onto two lines and be truncated to one line",
     "description": "Story 3 description",
     "buttonText": "Read",
     "buttonHref": "google.com"

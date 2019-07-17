@@ -57,7 +57,7 @@
                 @keydown.13="moveToStory(index)"
                 @keydown.32="moveToStory(index)"
               >
-                {{ story.title | truncate(46) }}
+                {{ story.title | truncate(48) }}
               </a>
             </li>
           </ul>
@@ -150,11 +150,11 @@
                 @focusin="stopSliding"
                 @focusout="startSliding"
               >
-                {{ selectedItem.title | truncate(46) }}
+                {{ selectedItem.title | truncate(48) }}
               </a>
             </h2>
             <p class="carousel__description">
-              {{ selectedItem.description | truncate(400, '...') }}
+              {{ selectedItem.description | truncate(300, '...') }}
             </p>
             <div
               @focusin="stopSliding"
