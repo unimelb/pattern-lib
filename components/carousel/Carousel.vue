@@ -194,9 +194,6 @@ export default {
     truncate(value, limit) {
       return value.substring(0, limit);
     },
-    tailing(value, tail) {
-      return value + tail;
-    },
   },
   props: {
     stories: {
