@@ -19,7 +19,7 @@
 
   .card__title {
     font-size: 1.25rem;
-    line-height: 1.5625rem;
+    line-height: 1.5625;
     font-weight: var(--fw-bold);
     text-decoration: none;
     color: rgb(var(--col-background-primary-navy));
@@ -45,7 +45,7 @@
     padding-top: .5rem;
     font-weight: var(--fw-semibold);
     font-size: .8125rem;
-    line-height: 1.0625rem;
+    line-height: 1.0625;
     color: #575756;
 
     svg {
@@ -74,15 +74,19 @@
     margin: .5rem 0;
     flex: 1 1 auto;
     font-size: .8125rem;
-    line-height: 1.0625rem;
+    line-height: 1.0625;
     color: #575756;
   }
 
   .card__footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0;
+  }
+
+  .card__tags {
+    display: flex;
   }
 
   .card__links {
