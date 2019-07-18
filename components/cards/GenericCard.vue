@@ -23,12 +23,13 @@
       </div>
       <div class="card__excerpt">{{ excerpt }}</div>
       <div class="card__footer">
-      <Tags
-        v-if="tags.length"
-        :data="tags"/>
-      <div class="card__links">
-        <slot name="links"/>
-      </div>
+        <Tags
+          v-if="tags.length"
+          :data="tags"
+          class="card__tags"/>
+        <div class="card__links">
+          <slot name="links"/>
+        </div>
       </div>
     </div>
   </div>
