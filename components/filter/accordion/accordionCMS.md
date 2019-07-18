@@ -1,8 +1,12 @@
 ## Accordion filter
 
+The prop `show-ssr` can be used to show server side code from another source (ie, CMS).  This is useful for SEO purposes.  
+
+Once a user clicks on `Search` the array in the `:data` prop will be used for client-side filtering.
+
  ### Usage:
 ```javascript
-<AccordionFilter 
+<accordion-filter 
   :data='[{
           name: "arts",
           semester: "january",
@@ -26,5 +30,8 @@
           overview:
             "Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.",
           buttonText: "Handbook Link"
-        }]' />
+        }]'
+  show-ssr>
+  <div>Server-side code goes here</div>
+</accordion-filter>
 ```

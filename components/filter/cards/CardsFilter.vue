@@ -20,7 +20,7 @@
             <label
               class="filter__label"
               for="school">School</label>
-            <DropdownVmodel
+            <DropdownFilter
               id="school"
               v-model="selectedSchool"
               :values="filters.schools"/>
@@ -29,7 +29,7 @@
             <label
               class="filter__label"
               for="disciplines">Discipline</label>
-            <DropdownVmodel
+            <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
               :values="filters.disciplines"/>
@@ -38,7 +38,7 @@
             <label
               class="filter__label"
               for="performances">Performance type</label>
-            <DropdownVmodel
+            <DropdownFilter
               id="performances"
               v-model="selectedPerformance"
               :values="filters.performances"/>
@@ -116,11 +116,12 @@
     </FilterResults>
   </div>
 </template>
+
 <script>
 import ListItem from '../../listing/ListItem.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 import GenericCard from '../../cards/GenericCard.vue';
-import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
+import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
 
@@ -129,7 +130,7 @@ export default {
     ListItem,
     SvgIcon,
     GenericCard,
-    DropdownVmodel,
+    DropdownFilter,
     FilterResultsCount,
     FilterResults,
   },

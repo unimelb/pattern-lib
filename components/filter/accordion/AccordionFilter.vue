@@ -20,7 +20,7 @@
             <label
               class="filter__label"
               for="locations">Location</label>
-            <DropdownVmodel
+            <DropdownFilter
               id="locations"
               v-model="selectedLocation"
               :values="filters.locations"/>
@@ -29,7 +29,7 @@
             <label
               class="filter__label"
               for="disciplines">Discipline</label>
-            <DropdownVmodel
+            <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
               :values="filters.disciplines"/>
@@ -38,7 +38,7 @@
             <label
               class="filter__label"
               for="auditions">Audition Requirement</label>
-            <DropdownVmodel
+            <DropdownFilter
               id="auditions"
               v-model="selectedAudition"
               :values="filters.auditions"/>
@@ -63,6 +63,7 @@
         >Reset all</button>
       </div>
     </div>
+
     <FilterResultsCount
       :data="dataFiltered.length" />
 
@@ -124,7 +125,7 @@
 
 <script>
 import Accordion from '../../accordion/Accordion.vue';
-import DropdownVmodel from '../../dropdown/DropdownVmodel.vue';
+import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
 import ButtonIcon from '../../buttons/ButtonIcon.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
@@ -133,7 +134,7 @@ import FilterResults from '../filters-core/results/FilterResults.vue';
 export default {
   components: {
     Accordion,
-    DropdownVmodel,
+    DropdownFilter,
     FilterResultsCount,
     ButtonIcon,
     SvgIcon,
