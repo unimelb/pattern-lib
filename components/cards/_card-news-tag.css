@@ -10,6 +10,25 @@
     }
   }
 
+  .card__inner {
+    .card__footer {
+      flex-direction: column;
+
+      .card__tags {
+        margin-bottom: 1.875rem;
+
+        @media (--bp-desktop) {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (--bp-desktop) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
   @media (--bp-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
