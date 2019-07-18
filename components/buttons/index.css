@@ -5,7 +5,7 @@
   display: inline-block;
   padding: calc(var(--vr) * .8);
   width: 100%;
-  transition: border-color .2s;
+  transition: all .2s;
   border: 2px solid rgb(var(--col-brand));
   border-radius: var(--br);
   color: rgb(var(--col-brand));
@@ -51,7 +51,7 @@
   &--inverted,
   &--inverted:visited,
   &--inverted:focus {
-    border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
+    border-color: rgb(var(--col-background-primary-white));
     background-color: transparent;
     color: rgb(var(--col-background-primary-white));
   }
