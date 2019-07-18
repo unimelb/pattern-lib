@@ -164,7 +164,6 @@
                 :href="selectedItem.buttonHref"
                 inverted
                 width="wide"
-                class="carousel__cta"
                 role="button"
                 size="sml"
               >
