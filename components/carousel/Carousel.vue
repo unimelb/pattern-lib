@@ -12,7 +12,6 @@
         ref="slider"
         :options="options"
         @slide="slide"
-        @init="actionProgressBar"
       >
         <slideritem
           v-for="(slide, index) in stories"
@@ -72,7 +71,6 @@
               @keydown.13="prevStory"
               @keydown.32="prevStory"
               @focusin="stopSliding"
-              @focusout="startSliding"
             >
               <SvgIcon
                 name="chevron-left"
@@ -127,7 +125,6 @@
               @keydown.13="nextStory"
               @keydown.32="nextStory"
               @focusin="stopSliding"
-              @focusout="startSliding"
             >
               <SvgIcon
                 name="chevron-right"
@@ -149,7 +146,6 @@
                 :href="selectedItem.buttonHref"
                 class="carousel__title-link"
                 @focusin="stopSliding"
-                @focusout="startSliding"
               >
                 {{ selectedItem.title | truncate(48) }}
               </a>
@@ -159,7 +155,6 @@
             </p>
             <div
               @focusin="stopSliding"
-              @focusout="startSliding"
             >
               <ButtonIcon
                 :href="selectedItem.buttonHref"
@@ -262,6 +257,9 @@ export default {
 
       return data;
     },
+  },
+  mounted() {
+    this.actionProgressBar();
   },
   methods: {
     slide(slide) {
