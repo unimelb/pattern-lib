@@ -8,8 +8,18 @@
   background: rgb(var(--col-background-primary-navy));
 
   &__slider {
+    position: relative;
     height: 38vw;
     width: 100%;
+  }
+
+  &__prevent-click {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: var(--z-navigation);
   }
 
   &__image {
@@ -36,7 +46,7 @@
 
     &-container {
       display: flex;
-      padding: 1.5rem;
+      padding: 1.5rem 1.5rem 2rem 1.5rem;
       height: 100%;
       flex-direction: column;
 
@@ -47,11 +57,11 @@
       @media (--bp-desktop) {
         flex-direction: row-reverse;
         display: flex;
-        padding: 1.5rem 1.5rem;
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
       }
 
       @media (--bp-x-wide) {
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 2rem 0;
       }
     }
 
@@ -116,17 +126,15 @@
   &__controls {
     display: flex;
     justify-content: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 
     &-item {
       cursor: pointer;
       color: #fff;
-    }
+      padding: 0 .625rem;
 
-    &-stop-pause {
-      margin: 0 2rem;
       @media (--bp-desktop) {
-        margin: 0 2.5rem;
+        padding: 0 1.125rem;
       }
     }
 
@@ -163,7 +171,6 @@
 
     @media (--bp-desktop) {
       display: block;
-      margin-bottom: 1rem;
     }
   }
 

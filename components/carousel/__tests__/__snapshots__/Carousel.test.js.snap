@@ -9,6 +9,10 @@ exports[`Carousel should match snapshot 1`] = `
   <div
     class="carousel__slider"
   >
+    <div
+      class="carousel__prevent-click"
+    />
+     
     <!---->
   </div>
    

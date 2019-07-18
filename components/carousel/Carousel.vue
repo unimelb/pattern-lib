@@ -7,6 +7,7 @@
       v-if="stories.length"
       class="carousel__slider"
     >
+      <div class="carousel__prevent-click"/>
       <slider
         ref="slider"
         :options="options"
@@ -101,7 +102,7 @@
             <div
               v-if="paused"
               tabindex="0"
-              class="carousel__controls-item carousel__controls-stop-pause"
+              class="carousel__controls-item"
               data-message="Pause"
               role="button"
               aria-label="Play carousel"
