@@ -11,6 +11,7 @@ import StoryButtonExtraWide from './StoryButtonExtraWide.vue';
 import StoryButtonFullWidth from './StoryButtonFullWidth.vue';
 import StoryButtonElement from './StoryButtonElement.vue';
 import StoryButtonCMSIcons from './StoryButtonCMSIcons.vue';
+import StoryButtonCMSIconsInverted from './StoryButtonCMSIconsInverted.vue';
 import StoryButtonInverted from './StoryButtonInverted.vue';
 import StoryButtonCMSIconsInverse from './StoryButtonCMSIconsInverse.vue';
 import StoryButtonsPrevNext from './StoryButtonsPrevNext.vue';
@@ -49,4 +50,5 @@ storiesOf('Buttons/Sizes', module)
 
 storiesOf('Buttons/CMS', module)
   .add('Default (btn--icon)', createStory(StoryButtonCMSIcons))
+  .add('Inverted', createStory(StoryButtonCMSIconsInverted))
   .add('Inverse (btn--icon-before)', createStory(StoryButtonCMSIconsInverse));

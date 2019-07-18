@@ -1,7 +1,7 @@
 <template>
-  <SectionWrap class="bg-inverted">
+  <div class="bg-inverted">
     <ButtonIcon inverted>I am an inverted button</ButtonIcon>
-  </SectionWrap>
+  </div>
 </template>
 
 <script>

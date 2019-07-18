@@ -6,7 +6,7 @@
   padding: calc(var(--vr) * .8);
   width: 100%;
   transition: all .2s;
-  border: 2px solid rgb(var(--col-brand));
+  border: 2px solid color(rgb(var(--col-brand)) alpha(30%));
   border-radius: var(--br);
   color: rgb(var(--col-brand));
   font-weight: var(--fw-semibold);
@@ -30,6 +30,7 @@
 
   &:active,
   &-owner:active .btn {
+    border-color: rgb(var(--col-background-primary-white));
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
     text-decoration: none;
@@ -48,21 +49,35 @@
     }
   }
 
-  &--inverted,
-  &--inverted:visited,
-  &--inverted:focus {
-    border-color: rgb(var(--col-background-primary-white));
-    background-color: transparent;
-    color: rgb(var(--col-background-primary-white));
+  &--inverted {
+    &,
+    &:visited,
+    &:focus {
+      border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
+      background-color: transparent;
+      color: rgb(var(--col-background-primary-white));
+    }
+
+    &:hover {
+      border-color: rgb(var(--col-background-primary-white));
+      color: rgb(var(--col-background-primary-white));
+    }
+
+    &:active {
+      background-color: rgb(var(--col-background-primary-white));
+      border-color: rgb(var(--col-brand));
+      color: rgb(var(--col-brand));
+    }
   }
 
   &--cta.btn {
-    border-color: rgb(var(--col-navy-mid-3));
+    border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
 
     &:hover {
       color: rgb(var(--col-background-primary-white));
+      border-color: rgb(var(--col-background-primary-white));
     }
 
     &:active {
@@ -72,15 +87,12 @@
     }
   }
 
-  &--inverted:focus,
-  &--inverted:hover,
   &-owner:focus .btn--inverted,
   &-owner:hover .btn--inverted {
     border-color: rgb(var(--col-background-primary-white));
     color: rgb(var(--col-background-primary-white));
   }
 
-  &--inverted:active,
   &-owner:active .btn--inverted,
   &--hard {
     background-color: rgb(var(--col-background-primary-white));
@@ -152,51 +164,121 @@
 
     &--chevron-right {
       &::after {
-        background-image: url('~icons/chevron-right.svg?fill=#074482');
+        background-image: url('~icons/chevron-right.svg?fill=#094183');
       }
 
-      &-inverted::after {
-        background-image: url('~icons/chevron-right.svg?fill=#fff');
+      &:active {
+        &::after {
+          background-image: url('~icons/chevron-right.svg?fill=#fff');
+        }
+      }
+
+      &-inverted {
+        &::after {
+          background-image: url('~icons/chevron-right.svg?fill=#fff');
+        }
+
+        &:active {
+          &::after {
+            background-image: url('~icons/chevron-right.svg?fill=#094183');
+          }
+        }
       }
     }
 
     &--chevron-left {
       &::after {
-        background-image: url('~icons/chevron-left.svg?fill=#074482');
+        background-image: url('~icons/chevron-left.svg?fill=#094183');
       }
 
-      &-inverted::after {
-        background-image: url('~icons/chevron-left.svg?fill=#fff');
+      &:active {
+        &::after {
+          background-image: url('~icons/chevron-left.svg?fill=#fff');
+        }
+      }
+
+      &-inverted {
+        &::after {
+          background-image: url('~icons/chevron-left.svg?fill=#fff');
+        }
+
+        &:active {
+          &::after {
+            background-image: url('~icons/chevron-left.svg?fill=#094183');
+          }
+        }
       }
     }
 
     &--download {
       &::after {
-        background-image: url('~icons/download.svg?fill=#074482');
+        background-image: url('~icons/download.svg?fill=#094183');
       }
 
-      &-inverted::after {
-        background-image: url('~icons/download.svg?fill=#fff');
+      &:active {
+        &::after {
+          background-image: url('~icons/download.svg?fill=#fff');
+        }
+      }
+
+      &-inverted {
+        &::after {
+          background-image: url('~icons/download.svg?fill=#fff');
+        }
+
+        &:active {
+          &::after {
+            background-image: url('~icons/download.svg?fill=#094183');
+          }
+        }
       }
     }
 
     &--search {
       &::after {
-        background-image: url('~icons/search.svg?fill=#074482');
+        background-image: url('~icons/search.svg?fill=#094183');
       }
 
-      &-inverted::after {
-        background-image: url('~icons/search.svg?fill=#fff');
+      &:active {
+        &::after {
+          background-image: url('~icons/search.svg?fill=#fff');
+        }
+      }
+
+      &-inverted {
+        &::after {
+          background-image: url('~icons/search.svg?fill=#fff');
+        }
+
+        &:active {
+          &::after {
+            background-image: url('~icons/search.svg?fill=#094183');
+          }
+        }
       }
     }
 
     &--twitter {
       &::after {
-        background-image: url('~icons/twitter.svg?fill=#074482');
+        background-image: url('~icons/twitter.svg?fill=#094183');
       }
 
-      &-inverted::after {
-        background-image: url('~icons/twitter.svg?fill=#fff');
+      &:active {
+        &::after {
+          background-image: url('~icons/twitter.svg?fill=#fff');
+        }
+      }
+
+      &-inverted {
+        &::after {
+          background-image: url('~icons/twitter.svg?fill=#fff');
+        }
+
+        &:active {
+          &::after {
+            background-image: url('~icons/twitter.svg?fill=#094183');
+          }
+        }
       }
     }
   }
