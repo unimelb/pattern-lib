@@ -86,6 +86,8 @@ import Tags from '../../components/tags/Tags.vue';
 import CardNewsTag from '../../components/cards/CardNewsTag.vue';
 import CardsFilter from '../../components/filter/cards/CardsFilter.vue';
 import AccordionFilter from '../../components/filter/accordion/AccordionFilter.vue';
+import Tags from '../../components/tags/Tags.vue';
+import CardNewsTag from '../../components/cards/CardNewsTag.vue';
 
 import '../../components';
 
@@ -175,6 +177,8 @@ Vue.component('tags', Tags);
 Vue.component('card-news-tag', CardNewsTag);
 Vue.component('cards-filter', CardsFilter);
 Vue.component('accordion-filter', AccordionFilter);
+Vue.component('tags', Tags);
+Vue.component('card-news-tag', CardNewsTag);
 
 // Create Vue instance
 new Vue({
