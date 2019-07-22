@@ -46,7 +46,7 @@
     padding-top: .5rem;
     font-weight: var(--fw-semibold);
     font-size: .8125rem;
-    line-height: 1.0625;
+    line-height: 1.0625rem;
     color: #575756;
 
     svg {
@@ -75,7 +75,7 @@
     margin: .5rem 0;
     flex: 1 1 auto;
     font-size: .8125rem;
-    line-height: 1.0625;
+    line-height: 1.0625rem;
     color: #575756;
   }
 
