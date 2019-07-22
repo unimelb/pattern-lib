@@ -72,7 +72,7 @@
   .card__excerpt {
     border-top: 1px solid rgb(var(--col-black-mid-1));
     padding-top: .75rem;
-    margin: .5rem 0;
+    margin: .5rem 0 1rem 0;
     flex: 1 1 auto;
     font-size: .8125rem;
     line-height: 1.0625rem;
@@ -99,6 +99,7 @@
     a {
       font-weight: var(--fw-semibold);
       color: rgb(var(--col-background-primary-navy));
+      width: max-content;
 
       &:hover {
         text-decoration: none;
