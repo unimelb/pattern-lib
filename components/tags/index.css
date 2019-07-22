@@ -5,7 +5,19 @@
   white-space: nowrap;
   flex-wrap: wrap;
 
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
   &__item {
+    float: left;
+  }
+
+  &__link {
+    display: block;
     padding: .125rem .25rem;
     background-color: rgb(var(--col-blue-light));
     border-radius: .25rem;

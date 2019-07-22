@@ -1,12 +1,18 @@
 <template>
   <div class="tags">
-    <a
-      v-for="item in data"
-      :key="item.id"
-      :href="item.href"
-      class="tags__item">
-      {{ item.value }}
-    </a>
+    <ul class="tags__list">
+      <li
+        v-for="item in data"
+        :key="item.id"
+        class="tags__item list-reset"
+      >
+        <a
+          :href="item.href"
+          class="tags__link">
+          {{ item.value }}
+        </a>
+      </li>
+    </ul>
   </div>
 </template>
 
