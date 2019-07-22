@@ -325,8 +325,7 @@ export {
   from '../../components/logo/Logo.vue';
 export {
   default as CardsFilter,
-}
-  from '../../components/filter/cards/CardsFilter.vue';
+} from '../../components/filter/cards/CardsFilter.vue';
 export {
   default as AccordionFilter,
 } from '../../components/filter/accordion/AccordionFilter.vue';
