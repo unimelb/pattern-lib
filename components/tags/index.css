@@ -1,19 +1,21 @@
 .tags {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  white-space: nowrap;
-  flex-wrap: wrap;
-
   &__list {
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
   }
 
   &__item {
-    float: left;
+    margin-bottom: .25rem;
+
+    @media (--bp-x-desktop) {
+      margin-bottom: 0;
+    }
   }
 
   &__link {
@@ -28,7 +30,6 @@
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
     margin-right: .5rem;
-    margin-top: .25rem;
     text-decoration: none;
 
     &:hover,

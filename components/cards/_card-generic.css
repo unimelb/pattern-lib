@@ -81,13 +81,22 @@
 
   .card__footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-end;
     padding: 0;
+
+    @media (--bp-desktop) {
+      flex-direction: row;
+    }
   }
 
   .card__tags {
-    display: flex;
+    flex: 1;
+    margin-bottom: 1.875rem;
+
+    @media (--bp-desktop) {
+      margin-bottom: 0;
+    }
   }
 
   .card__links {
@@ -119,5 +128,10 @@
         width: 70%;
       }
     }
+  }
+
+  @media (--bp-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

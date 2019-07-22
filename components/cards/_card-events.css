@@ -17,9 +17,4 @@
       display: none;
     }
   }
-
-  @media (--bp-tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 }
