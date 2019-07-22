@@ -7,11 +7,11 @@
       v-if="stories.length"
       class="carousel__slider"
     >
+      <div class="carousel__prevent-click"/>
       <slider
         ref="slider"
         :options="options"
         @slide="slide"
-        @init="actionProgressBar"
       >
         <slideritem
           v-for="(slide, index) in stories"
@@ -24,7 +24,6 @@
         </slideritem>
       </slider>
     </div>
-    <div class="carousel__footer" />
     <div
       class="carousel__panel"
     >
@@ -58,7 +57,7 @@
                 @keydown.13="moveToStory(index)"
                 @keydown.32="moveToStory(index)"
               >
-                {{ story.title }}
+                {{ story.title | truncate(48) }}
               </a>
             </li>
           </ul>
@@ -72,7 +71,6 @@
               @keydown.13="prevStory"
               @keydown.32="prevStory"
               @focusin="stopSliding"
-              @focusout="startSliding"
             >
               <SvgIcon
                 name="chevron-left"
@@ -102,7 +100,7 @@
             <div
               v-if="paused"
               tabindex="0"
-              class="carousel__controls-item carousel__controls-stop-pause"
+              class="carousel__controls-item"
               data-message="Pause"
               role="button"
               aria-label="Play carousel"
@@ -127,7 +125,6 @@
               @keydown.13="nextStory"
               @keydown.32="nextStory"
               @focusin="stopSliding"
-              @focusout="startSliding"
             >
               <SvgIcon
                 name="chevron-right"
@@ -149,30 +146,27 @@
                 :href="selectedItem.buttonHref"
                 class="carousel__title-link"
                 @focusin="stopSliding"
-                @focusout="startSliding"
               >
-                {{ selectedItem.title }}
+                {{ selectedItem.title | truncate(48) }}
               </a>
             </h2>
             <p class="carousel__description">
-              {{ selectedItem.description }}
+              {{ selectedItem.description | truncate(240, '...') }}
             </p>
-          </div>
-          <div
-            @focusin="stopSliding"
-            @focusout="startSliding"
-          >
-            <ButtonIcon
-              :href="selectedItem.buttonHref"
-              width="wide"
-              class="carousel__cta"
-              role="button"
-              size="sml"
+            <div
+              @focusin="stopSliding"
             >
-              {{ selectedItem.buttonText }}
-            </ButtonIcon>
+              <ButtonIcon
+                :href="selectedItem.buttonHref"
+                inverted
+                width="wide"
+                role="button"
+                size="sml"
+              >
+                {{ selectedItem.buttonText }}
+              </ButtonIcon>
+            </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -190,6 +184,19 @@ export default {
     slideritem,
     SvgIcon,
     ButtonIcon,
+  },
+  filters: {
+    truncate(value, limit, ellipsis = '') {
+      if (!value) {
+        return '';
+      }
+
+      if (value.length < limit) {
+        return value;
+      }
+
+      return `${value.substring(0, limit)}${ellipsis}`;
+    },
   },
   props: {
     stories: {
@@ -250,6 +257,9 @@ export default {
 
       return data;
     },
+  },
+  mounted() {
+    this.actionProgressBar();
   },
   methods: {
     slide(slide) {
