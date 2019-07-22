@@ -3,5 +3,9 @@
 exports[`Tags should match snapshot 1`] = `
 <div
   class="tags"
-/>
+>
+  <ul
+    class="tags__list"
+  />
+</div>
 `;
