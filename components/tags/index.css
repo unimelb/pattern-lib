@@ -29,7 +29,7 @@
     letter-spacing: 0;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
-    margin-right: .5rem;
+    margin: .25rem .5rem .25rem 0;
     text-decoration: none;
 
     &:hover,
