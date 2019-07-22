@@ -16,12 +16,12 @@
   --col-navy-dark: 9, 65, 131;
   --col-navy-mid-3: 83, 122, 168;
   --col-navy-mid-2: 93, 130, 173;
-  --col-navy-mid-1: 171, 190, 213;
 
   /* #ABBED5 */
-  --col-navy-light: 242, 245, 249;
+  --col-navy-mid-1: 171, 190, 213;
 
   /* #F2F5F9 */
+  --col-navy-light: 242, 245, 249;
 
   /* Supporting palette */
   --col-black-dark: 0, 0, 0;
