@@ -34,6 +34,7 @@
     flex-direction: column;
     flex: 1 1 auto;
     padding: 1rem;
+    margin-right: 0 !important;
 
     @media (--bp-desktop) {
       padding: 1.25rem;
