@@ -447,3 +447,12 @@ a[target='_blank'] {
     transform: translateY(-100%);
   }
 }
+
+@keyframes searchPulse {
+  from {
+    box-shadow: 0 0 9px rgb(var(--col-blue-light));
+  }
+  to {
+    box-shadow: 0 0 18px rgb(var(--col-blue-light));
+  }
+}
