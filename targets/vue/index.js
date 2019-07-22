@@ -324,6 +324,13 @@ export {
 }
   from '../../components/logo/Logo.vue';
 export {
+  default as CardsFilter,
+}
+  from '../../components/filter/cards/CardsFilter.vue';
+export {
+  default as AccordionFilter,
+} from '../../components/filter/accordion/AccordionFilter.vue';
+export {
   default as Tags,
 }
   from '../../components/tags/Tags.vue';
@@ -331,10 +338,3 @@ export {
   default as CardNewsTag,
 }
   from '../../components/cards/CardNewsTag.vue';
-export {
-  default as CardsFilter,
-}
-  from '../../components/filter/cards/CardsFilter.vue';
-export {
-  default as AccordionFilter,
-} from '../../components/filter/accordion/AccordionFilter.vue';

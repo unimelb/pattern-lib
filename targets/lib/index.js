@@ -82,10 +82,10 @@ import ResponsiveTable from '../../components/tables/ResponsiveTable.vue';
 import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 import Carousel from '../../components/carousel/Carousel.vue';
 import Logo from '../../components/logo/Logo.vue';
-import Tags from '../../components/tags/Tags.vue';
-import CardNewsTag from '../../components/cards/CardNewsTag.vue';
 import CardsFilter from '../../components/filter/cards/CardsFilter.vue';
 import AccordionFilter from '../../components/filter/accordion/AccordionFilter.vue';
+import Tags from '../../components/tags/Tags.vue';
+import CardNewsTag from '../../components/cards/CardNewsTag.vue';
 
 import '../../components';
 
@@ -171,10 +171,10 @@ Vue.component('responsive-table', ResponsiveTable);
 Vue.component('page-header-campaign', PageHeaderCampaign);
 Vue.component('carousel', Carousel);
 Vue.component('logo', Logo);
-Vue.component('tags', Tags);
-Vue.component('card-news-tag', CardNewsTag);
 Vue.component('cards-filter', CardsFilter);
 Vue.component('accordion-filter', AccordionFilter);
+Vue.component('tags', Tags);
+Vue.component('card-news-tag', CardNewsTag);
 
 // Create Vue instance
 new Vue({
