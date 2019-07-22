@@ -15,7 +15,7 @@
       flex-direction: column;
 
       .card__tags {
-        margin-bottom: 1.875rem;
+        margin-bottom: .75rem;
 
         @media (--bp-desktop) {
           margin-bottom: 0;
