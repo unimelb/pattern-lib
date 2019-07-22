@@ -175,8 +175,6 @@ Vue.component('tags', Tags);
 Vue.component('card-news-tag', CardNewsTag);
 Vue.component('cards-filter', CardsFilter);
 Vue.component('accordion-filter', AccordionFilter);
-Vue.component('tags', Tags);
-Vue.component('card-news-tag', CardNewsTag);
 
 // Create Vue instance
 new Vue({
