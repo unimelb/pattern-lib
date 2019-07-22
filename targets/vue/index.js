@@ -333,7 +333,7 @@ export {
   from '../../components/cards/CardNewsTag.vue';
 export {
   default as CardsFilter,
-} 
+}
   from '../../components/filter/cards/CardsFilter.vue';
 export {
   default as AccordionFilter,
