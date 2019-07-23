@@ -18,6 +18,9 @@
   }
 
   .card__title {
+    font-size: 1.25rem;
+    line-height: 1.5625;
+    font-weight: var(--fw-bold);
     text-decoration: none;
     color: rgb(var(--col-background-primary-navy));
 
@@ -30,17 +33,25 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    padding-bottom: 1rem;
+    padding: 1rem;
+    margin-right: 0 !important;
+
+    @media (--bp-desktop) {
+      padding: 1.25rem;
+    }
   }
 
   .card__sub-titles {
     border-top: 1px solid rgb(var(--col-black-mid-1));
-    padding-top: 1rem;
+    padding-top: .5rem;
     font-weight: var(--fw-semibold);
+    font-size: .8125rem;
+    line-height: 1.0625rem;
+    color: #575756;
 
     svg {
-      width: 18px;
-      height: 18px;
+      width: 13px;
+      height: 13px;
     }
   }
 
@@ -60,19 +71,45 @@
 
   .card__excerpt {
     border-top: 1px solid rgb(var(--col-black-mid-1));
-    padding-top: 1rem;
-    margin: 1rem 0;
+    padding-top: .75rem;
+    margin: .5rem 0 1rem 0;
     flex: 1 1 auto;
+    font-size: .8125rem;
+    line-height: 1.0625rem;
+    color: #575756;
+  }
+
+  .card__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+
+    @media (--bp-desktop) {
+      flex-direction: row;
+    }
+  }
+
+  .card__tags {
+    flex: 1;
+    margin-bottom: 1.875rem;
+
+    @media (--bp-desktop) {
+      margin-bottom: 0;
+    }
   }
 
   .card__links {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    align-self: flex-end;
+    margin-top: auto; /* temp so older version of component doesn't break */
 
     a {
       font-weight: var(--fw-semibold);
       color: rgb(var(--col-background-primary-navy));
+      width: max-content;
 
       &:hover {
         text-decoration: none;
@@ -93,5 +130,10 @@
         width: 70%;
       }
     }
+  }
+
+  @media (--bp-tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
