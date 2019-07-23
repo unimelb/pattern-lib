@@ -28,10 +28,19 @@
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">View generic details ></a>
+              aria-label="View details of the event name">View generic details               <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10"/></a>
             <a
               href="/"
-              aria-label="View details of the staff name">View generic staff ></a>
+              aria-label="View details of the staff name">View generic staff
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10"/></a>
           </template>
         </GenericCard>
       </ListItem>

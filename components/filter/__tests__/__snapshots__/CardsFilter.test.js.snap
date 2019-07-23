@@ -249,32 +249,38 @@ exports[`CardsFilter should match snapshot 1`] = `
             </div>
              
             <div
-              class="card__links"
+              class="card__footer"
             >
-              <a
-                href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018"
+              <!---->
+               
+              <div
+                class="card__links"
               >
-                
+                <a
+                  href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018"
+                >
+                  
               View showcase
               
-                <svg
-                  aria-label="chevron-right"
-                  class="link-icon"
-                  focusable="false"
-                  height="10"
-                  role="img"
-                  width="10"
-                >
-                  <use
-                    xlink:href="#icon-chevron-right"
-                  />
-                   
-                  <title>
-                    Chevron-right
-                  </title>
-                   
-                </svg>
-              </a>
+                  <svg
+                    aria-label="chevron-right"
+                    class="link-icon"
+                    focusable="false"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <use
+                      xlink:href="#icon-chevron-right"
+                    />
+                     
+                    <title>
+                      Chevron-right
+                    </title>
+                     
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -368,32 +374,38 @@ exports[`CardsFilter should match snapshot 1`] = `
             </div>
              
             <div
-              class="card__links"
+              class="card__footer"
             >
-              <a
-                href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018"
+              <!---->
+               
+              <div
+                class="card__links"
               >
-                
+                <a
+                  href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018"
+                >
+                  
               View showcase
               
-                <svg
-                  aria-label="chevron-right"
-                  class="link-icon"
-                  focusable="false"
-                  height="10"
-                  role="img"
-                  width="10"
-                >
-                  <use
-                    xlink:href="#icon-chevron-right"
-                  />
-                   
-                  <title>
-                    Chevron-right
-                  </title>
-                   
-                </svg>
-              </a>
+                  <svg
+                    aria-label="chevron-right"
+                    class="link-icon"
+                    focusable="false"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <use
+                      xlink:href="#icon-chevron-right"
+                    />
+                     
+                    <title>
+                      Chevron-right
+                    </title>
+                     
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
