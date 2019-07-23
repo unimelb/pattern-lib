@@ -303,23 +303,45 @@
 
   &__darken {
     &--o25 .page-header {
-      background-color: rgba(0, 0, 0, .25);
+      background-color: rgba(var(--col-black-dark), .25);
 
       .btn {
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(var(--col-background-tertiary-navy), .8);
+
+        &:hover {
+          background-color: rgba(var(--col-background-secondary-navy), .7);
+          border-color: rgba(var(--col-link-active-on-dark), .7);
+        }
+
+        &:active {
+          border-color: rgb(var(--col-brand));
+          background-color: rgba(var(--col-link-active-on-dark), .85);
+          color: rgb(var(--col-brand));
+        }
       }
     }
 
     &--o50 .page-header {
-      background-color: rgba(0, 0, 0, .5);
+      background-color: rgba(var(--col-black-dark), .5);
 
       .btn {
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(var(--col-background-tertiary-navy), .8);
+
+        &:hover {
+          background-color: rgba(var(--col-background-secondary-navy), .7);
+          border-color: rgba(var(--col-link-active-on-dark), .7);
+        }
+
+        &:active {
+          border-color: rgb(var(--col-brand));
+          background-color: rgba(var(--col-link-active-on-dark), .85);
+          color: rgb(var(--col-brand));
+        }
       }
     }
 
     &--o75 .page-header {
-      background-color: rgba(0, 0, 0, .75);
+      background-color: rgba(var(--col-black-dark), .75);
     }
 
     &--o25,

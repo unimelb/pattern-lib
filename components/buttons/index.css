@@ -9,7 +9,7 @@
   border: 2px solid color(rgb(var(--col-brand)) alpha(30%));
   border-radius: var(--br);
   color: rgb(var(--col-brand));
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -97,6 +97,17 @@
   &--hard {
     background-color: rgb(var(--col-background-primary-white));
     color: rgb(var(--col-brand));
+
+    &:hover {
+      background-color: rgb(var(--col-blue-light));
+      border-color: rgb(var(--col-background-primary-white));
+    }
+
+    &:active {
+      border-color: rgb(var(--col-brand));
+      background-color: rgb(var(--col-background-tertiary-navy));
+      color: rgb(var(--col-background-primary-white));
+    }
   }
 
   &--sml {
