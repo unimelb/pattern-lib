@@ -5,14 +5,7 @@ exports[`CardDivisionHead should match snapshot 1`] = `
   class="btn-owner card card--division card--division--head card--bdr bg-white"
   href="#"
 >
-  <div
-    class="card__thumb"
-  >
-    <div
-      class="card__thumb-img"
-      style="background-image: url();"
-    />
-  </div>
+  <!---->
    
   <div
     class="card__inner"

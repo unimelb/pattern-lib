@@ -3,11 +3,13 @@
     :href="href"
     :class="{'card--division--head-compact': compact}"
     class="btn-owner card card--division card--division--head card--bdr bg-white">
-    <div class="card__thumb">
-      <div
-        :style="`background-image: url('${thumb}')`"
-        class="card__thumb-img" />
-    </div>
+    <FocusWrapper>
+      <div class="card__thumb">
+        <div
+          :style="`background-image: url('${thumb}')`"
+          class="card__thumb-img" />
+      </div>
+    </FocusWrapper>
     <div class="card__inner">
       <div class="card__subheader">
         <h3 class="card__header">{{ name }}</h3>
@@ -30,7 +32,14 @@
 </template>
 
 <script>
+import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
+
 export default {
+
+  components: {
+    FocusWrapper,
+  },
+
   props: {
     thumb: {
       type: String,

@@ -50,30 +50,6 @@
           object-fit: cover;
         }
       }
-
-      &::before,
-      &::after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        width: 5rem;
-        height: 5rem;
-        margin-top: .05rem;
-        opacity: .6;
-        background-size: cover;
-      }
-
-      &::before {
-        top: 0;
-        left: 0;
-        background-image: url('~icons/focus-top-left.svg?fill=#074482');
-      }
-
-      &::after {
-        right: 0;
-        bottom: 0;
-        background-image: url('~icons/focus-bottom-right.svg?fill=#074482');
-      }
     }
 
     &-compact {
