@@ -82,6 +82,8 @@ import ResponsiveTable from '../../components/tables/ResponsiveTable.vue';
 import PageHeaderCampaign from '../../components/campaign/PageHeaderCampaign.vue';
 import Carousel from '../../components/carousel/Carousel.vue';
 import Logo from '../../components/logo/Logo.vue';
+import CardsFilter from '../../components/filter/cards/CardsFilter.vue';
+import AccordionFilter from '../../components/filter/accordion/AccordionFilter.vue';
 
 import '../../components';
 
@@ -167,6 +169,8 @@ Vue.component('responsive-table', ResponsiveTable);
 Vue.component('page-header-campaign', PageHeaderCampaign);
 Vue.component('carousel', Carousel);
 Vue.component('logo', Logo);
+Vue.component('cards-filter', CardsFilter);
+Vue.component('accordion-filter', AccordionFilter);
 
 // Create Vue instance
 new Vue({
