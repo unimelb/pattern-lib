@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tags should match snapshot 1`] = `
+<div
+  class="tags"
+>
+  <ul
+    class="tags__list"
+  />
+</div>
+`;

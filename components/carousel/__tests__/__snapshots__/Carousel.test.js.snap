@@ -9,12 +9,12 @@ exports[`Carousel should match snapshot 1`] = `
   <div
     class="carousel__slider"
   >
+    <div
+      class="carousel__prevent-click"
+    />
+     
     <!---->
   </div>
-   
-  <div
-    class="carousel__footer"
-  />
    
   <div
     class="carousel__panel"
@@ -132,10 +132,10 @@ exports[`Carousel should match snapshot 1`] = `
             Story 2 description
           
           </p>
-        </div>
-         
-        <div>
-          <!---->
+           
+          <div>
+            <!---->
+          </div>
         </div>
       </div>
     </div>
