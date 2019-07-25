@@ -308,7 +308,8 @@
       .btn {
         background-color: rgba(var(--col-background-tertiary-navy), .8);
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: rgba(var(--col-background-secondary-navy), .7);
           border-color: rgba(var(--col-link-active-on-dark), .7);
         }
@@ -333,7 +334,8 @@
       .btn {
         background-color: rgba(var(--col-background-tertiary-navy), .8);
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: rgba(var(--col-background-secondary-navy), .7);
           border-color: rgba(var(--col-link-active-on-dark), .7);
         }

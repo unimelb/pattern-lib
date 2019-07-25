@@ -3,7 +3,7 @@
  */
 .btn {
   display: inline-block;
-  padding: calc(var(--vr) * .8);
+  padding: .625rem 1rem .625rem 1.25rem;
   width: 100%;
   transition: all .2s;
   border: 2px solid color(rgb(var(--col-brand)) alpha(30%));
@@ -17,15 +17,12 @@
 
   &:focus,
   &:hover,
-  &:visited,
-  &-owner:focus .btn,
-  &-owner:hover .btn {
+  &:visited {
     border-color: rgb(var(--col-brand));
     color: rgb(var(--col-brand));
   }
 
-  &:active,
-  &-owner:active .btn {
+  &:active {
     border-color: rgb(var(--col-brand));
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
@@ -47,14 +44,14 @@
 
   &--inverted {
     &,
-    &:visited,
-    &:focus {
+    &:visited {
       border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
       background-color: transparent;
       color: rgb(var(--col-background-primary-white));
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: rgb(var(--col-background-primary-white));
       color: rgb(var(--col-background-primary-white));
     }
@@ -74,14 +71,14 @@
 
   &--campaign {
     &,
-    &:visited,
-    &:focus {
+    &:visited {
       border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
       background-color: rgba(var(--col-background-tertiary-navy), .8);
       color: rgb(var(--col-background-primary-white));
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: rgba(var(--col-background-secondary-navy), .7);
       border-color: rgba(var(--col-link-active-on-dark), .7);
       color: rgb(var(--col-background-primary-white));
@@ -126,19 +123,15 @@
     }
   }
 
-  &-owner:focus .btn--inverted,
-  &-owner:hover .btn--inverted {
-    border-color: rgb(var(--col-background-primary-white));
-    color: rgb(var(--col-background-primary-white));
-  }
-
-  &-owner:active .btn--inverted,
   &--hard,
   &--secondary {
+    border-color: rgb(var(--col-background-primary-white));
     background-color: rgb(var(--col-background-primary-white));
     color: rgb(var(--col-brand));
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:visited {
       background-color: rgb(var(--col-blue-light));
       border-color: rgb(var(--col-blue-light));
     }
