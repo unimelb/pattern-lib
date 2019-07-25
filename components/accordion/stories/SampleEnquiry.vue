@@ -12,7 +12,7 @@
         <template slot="trigger">
           <ButtonIcon
             element="span"
-            class="btn--hard">Enquire within!</ButtonIcon>
+            class="btn--secondary">Enquire within!</ButtonIcon>
         </template>
         <MceForm />
       </Enquiry>
@@ -34,7 +34,7 @@ const markup = codeBlock(`
 
 <enquiry>
   <template slot="trigger">
-    <span class="btn--hard btn">
+    <span class="btn--secondary btn">
       <span class="push-icon">Enquire within! <svg width="15px" height="15px" focusable="false" role="presentation" class="push-icon__icon"><use xlink:href="#icon-chevron-right"></use></svg></span>
     </span>        
   </template>
