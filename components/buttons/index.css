@@ -3,7 +3,7 @@
  */
 .btn {
   display: inline-block;
-  padding: .625rem 1rem .625rem 1.25rem;
+  padding: .625rem 1rem;
   width: 100%;
   transition: all .2s;
   border: 2px solid color(rgb(var(--col-brand)) alpha(30%));
@@ -193,6 +193,7 @@
 
   &--icon {
     position: relative;
+    padding-left: calc(var(--vr * .83));
     padding-right: calc(var(--vr) * 2);
     text-align: left;
 
@@ -337,6 +338,7 @@
   &--icon-before {
     position: relative;
     padding-left: calc(var(--vr) * 2);
+    padding-right: calc(var(--vr * .83));
     text-align: left;
 
     &::after {
@@ -363,6 +365,10 @@
     border-color: color(rgb(var(--col-navy-mid-1)) alpha(50%));
     pointer-events: none;
     cursor: not-allowed;
+  }
+
+  .push-icon {
+    padding-left: .25rem;
   }
 
   @media (--bp-tablet) {
