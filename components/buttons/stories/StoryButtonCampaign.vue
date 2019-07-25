@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ButtonIcon class="btn--campaign">Call to Action</ButtonIcon>
+    <ButtonIcon class="btn--campaign">Campaign Button</ButtonIcon>
     <ButtonIcon
       class="btn--campaign"
       href="www.google.com"

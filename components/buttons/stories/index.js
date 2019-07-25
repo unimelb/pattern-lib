@@ -18,7 +18,7 @@ import StoryButtonsPrevNext from './StoryButtonsPrevNext.vue';
 import StoryButtonCTA from './StoryButtonCTA.vue';
 import StoryButtonAdjacent from './StoryButtonAdjacent.vue';
 import StoryButtonAdjacentFullWidth from './StoryButtonAdjacentFullWidth.vue';
-import StoryButtonHard from './StoryButtonHard.vue';
+import StoryButtonSecondary from './StoryButtonSecondary.vue';
 import StoryButtonCampaign from './StoryButtonCampaign.vue';
 
 import ButtonDefault from './ButtonDefault.vue';
@@ -29,13 +29,12 @@ storiesOf('Buttons', module)
   .add('Default', createStory(StoryButtonDefault))
   .add('No Icon', createStory(StoryButtonNoIcon))
   .add('Icons', createStory(StoryButtonIcons))
-  // .add('Adjacent Buttons', createStory(StoryButtonAdjacent))
   .add('Button as <button> element', createStory(StoryButtonElement))
+  .add('Secondary Button', createStory(StoryButtonSecondary))
   .add('Inverted button', createStory(StoryButtonInverted))
   .add('Prev/Next aligned buttons', createStory(StoryButtonsPrevNext))
-  .add('CTA variant', createStory(StoryButtonCTA))
-  .add('Campaign Button', createStory(StoryButtonCampaign))
-  .add('Button White', createStory(StoryButtonHard));
+  .add('CTA Button', createStory(StoryButtonCTA))
+  .add('Campaign Button', createStory(StoryButtonCampaign));
 
 storiesOf('Buttons/Adjacent', module)
   .add('Default', createStory(StoryButtonAdjacent))
