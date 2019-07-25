@@ -8,7 +8,7 @@ exports[`SocialMediaBar should match snapshot 1`] = `
     class="social-media-bar__inner"
   >
     <div
-      class="social-media-bar__container-top"
+      class="social-media-bar__col"
     >
       <h4
         class="social-media-bar__title"
@@ -26,16 +26,16 @@ exports[`SocialMediaBar should match snapshot 1`] = `
     </div>
      
     <div
-      class="social-media-bar__container-bottom"
+      class="social-media-bar__col"
     >
       <h4
-        class="social-media-bar__follow-us"
+        class="social-media-bar__title social-media-bar__title--secondary"
       >
         Follow us
       </h4>
        
       <div
-        class="social-media-bar__social"
+        class="social-media-bar__links social-media-bar__links--social"
       >
         <!---->
          
