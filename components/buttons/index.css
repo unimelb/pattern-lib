@@ -15,10 +15,6 @@
   vertical-align: middle;
   cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
-  }
-
   &:focus,
   &:hover,
   &:visited,
@@ -65,25 +61,65 @@
 
     &:active {
       background-color: rgb(var(--col-background-primary-white));
-      border-color: rgb(var(--col-brand));
+      border-color: rgb(var(--col-background-primary-white));
       color: rgb(var(--col-brand));
+    }
+
+    &.btn--disabled {
+      color: color(rgb(var(--col-background-primary-white)) alpha(50%));
+      border-color: color(rgb(var(--col-background-primary-white)) alpha(15%));
+    }
+  }
+
+  &--tertiary {
+    &,
+    &:visited,
+    &:focus {
+      border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
+      background-color: rgba(var(--col-background-tertiary-navy), .8);
+      color: rgb(var(--col-background-primary-white));
+    }
+
+    &:hover {
+      background-color: rgba(var(--col-background-secondary-navy), .7);
+      border-color: rgba(var(--col-link-active-on-dark), .7);
+      color: rgb(var(--col-background-primary-white));
+    }
+
+    &:active {
+      border-color: rgb(var(--col-brand));
+      background-color: rgba(var(--col-link-active-on-dark), .85);
+      color: rgb(var(--col-brand));
+    }
+
+    &.btn--disabled {
+      color: color(rgb(var(--col-background-primary-white)) alpha(50%));
+      border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
+      background-color: color(rgb(var(--col-black-mid-2)) alpha(70%));
     }
   }
 
   &--cta.btn {
-    border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
+    border-color: rgb(var(--col-brand));
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
 
     &:hover {
       color: rgb(var(--col-background-primary-white));
-      border-color: rgb(var(--col-background-primary-white));
+      border-color: rgb(var(--col-blue-dark));
+      background-color: rgb(var(--col-blue-dark));
     }
 
     &:active {
-      border-color: rgb(var(--col-brand));
-      background-color: rgb(var(--col-background-primary-white));
+      border-color: rgb(var(--col-navy-mid-1));
+      background-color: rgb(var(--col-navy-mid-1));
       color: rgb(var(--col-brand));
+    }
+
+    &.btn--disabled {
+      color: color(rgb(var(--col-background-primary-white)) alpha(50%));
+      border-color: color(rgb(var(--col-navy-dark)) alpha(0%));
+      background-color: color(rgb(var(--col-navy-dark)) alpha(50%));
     }
   }
 
@@ -100,13 +136,19 @@
 
     &:hover {
       background-color: rgb(var(--col-blue-light));
-      border-color: rgb(var(--col-background-primary-white));
+      border-color: rgb(var(--col-blue-light));
     }
 
     &:active {
       border-color: rgb(var(--col-brand));
       background-color: rgb(var(--col-background-tertiary-navy));
       color: rgb(var(--col-background-primary-white));
+    }
+
+    &.btn--disabled {
+      color: color(rgb(var(--col-navy-dark)) alpha(50%));
+      border-color: color(rgb(var(--col-background-primary-white)) alpha(50%));
+      background-color: color(rgb(var(--col-background-primary-white)) alpha(50%));
     }
   }
 
@@ -318,8 +360,10 @@
   }
 
   &--disabled {
-    opacity: .5;
+    color: color(rgb(var(--col-navy-dark)) alpha(50%));
+    border-color: color(rgb(var(--col-navy-mid-1)) alpha(50%));
     pointer-events: none;
+    cursor: not-allowed;
   }
 
   @media (--bp-tablet) {
