@@ -141,6 +141,18 @@ a {
   &:focus {
     text-decoration: none;
   }
+
+  .bg-inverted &,
+  .bg-inverted-dark &,
+  .bg-inverted-darker & {
+    &:not(.btn) {
+      color: rgb(var(--col-link-on-dark));
+
+      &:visited {
+        color: rgb(var(--col-link-visited-on-dark));
+      }
+    }
+  }
 }
 
 button,
