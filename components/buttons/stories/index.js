@@ -19,7 +19,7 @@ import StoryButtonCTA from './StoryButtonCTA.vue';
 import StoryButtonAdjacent from './StoryButtonAdjacent.vue';
 import StoryButtonAdjacentFullWidth from './StoryButtonAdjacentFullWidth.vue';
 import StoryButtonHard from './StoryButtonHard.vue';
-import StoryButtonDark from './StoryButtonDark.vue';
+import StoryButtonCampaign from './StoryButtonCampaign.vue';
 
 import ButtonDefault from './ButtonDefault.vue';
 /* ##Import story component here */
@@ -34,7 +34,7 @@ storiesOf('Buttons', module)
   .add('Inverted button', createStory(StoryButtonInverted))
   .add('Prev/Next aligned buttons', createStory(StoryButtonsPrevNext))
   .add('CTA variant', createStory(StoryButtonCTA))
-  .add('Button Dark', createStory(StoryButtonDark))
+  .add('Campaign Button', createStory(StoryButtonCampaign))
   .add('Button White', createStory(StoryButtonHard));
 
 storiesOf('Buttons/Adjacent', module)
