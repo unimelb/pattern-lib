@@ -32,17 +32,17 @@ describe('MediaGallery Common', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types media, inPage, popOver, columns, displayCaption', () => {
+  it('should have default props and correct types media, inPage, overlay, columns, displayCaption', () => {
     const wrapper = shallow(MediaGallery);
     const {
-      media, inPage, popOver, columns, displayCaption,
+      media, inPage, overlay, columns, displayCaption,
     } = wrapper.vm.$options.props;
 
     expect(columns.type).toBe(String);
     expect(wrapper.props().columns).toBe('1');
     expect(media.type).toBe(Array);
     expect(inPage.type).toBe(Boolean);
-    expect(popOver.type).toBe(Boolean);
+    expect(overlay.type).toBe(Boolean);
     expect(displayCaption.type).toBe(Boolean);
     expect(wrapper.props().media).toEqual([]);
   });
@@ -230,40 +230,40 @@ describe('MediaGallery InPage', () => {
   });
 });
 
-describe('MediaGallery Pop-over', () => {
-  it('should have pop-over classes', () => {
+describe('MediaGallery overlay', () => {
+  it('should have overlay classes', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
         media: mediaMock,
-        popOver: true,
+        overlay: true,
       },
     });
 
-    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--pop-over');
-    expect(wrapper.find('.media-gallery--pop-over__media-count').exists()).toBe(true);
-    expect(wrapper.find('.media-gallery--pop-over__close').exists()).toBe(true);
-    expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery--pop-over__slider');
-    expect(wrapper.find('.media-gallery__container').classes()).toContain('media-gallery--pop-over__container');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--overlay');
+    expect(wrapper.find('.media-gallery--overlay__media-count').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery--overlay__close').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery--overlay__slider');
+    expect(wrapper.find('.media-gallery__container').classes()).toContain('media-gallery--overlay__container');
   });
 
   it('should render current media number', () => {
     const wrapper = shallow(MediaGallery, {
       propsData: {
         media: mediaMock,
-        popOver: true,
+        overlay: true,
       },
     });
 
-    expect(wrapper.find('.media-gallery--pop-over__media-count').text()).toBe('1 / 2');
+    expect(wrapper.find('.media-gallery--overlay__media-count').text()).toBe('1 / 2');
     wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
-    expect(wrapper.find('.media-gallery--pop-over__media-count').text()).toBe('2 / 2');
+    expect(wrapper.find('.media-gallery--overlay__media-count').text()).toBe('2 / 2');
   });
 
   it('should have thumbnails component', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
         media: mediaMock,
-        popOver: true,
+        overlay: true,
       },
     });
 
@@ -275,7 +275,7 @@ describe('MediaGallery Pop-over', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
         media: mediaMock,
-        popOver: true,
+        overlay: true,
       },
     });
 
@@ -290,12 +290,12 @@ describe('MediaGallery Pop-over', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
         media: mediaMock,
-        popOver: true,
+        overlay: true,
       },
     });
 
     wrapper.find('.thumbnails__item div').trigger('click');
     expect(wrapper.vm.openState).toBe(true);
-    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--pop-over__open');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--overlay__open');
   });
 });

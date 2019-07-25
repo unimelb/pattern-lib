@@ -3,7 +3,7 @@
     <MediaGallery
       :media="media"
       columns="3"
-      pop-over
+      overlay
     />
   </SectionWrap>
 </template>

@@ -4,7 +4,7 @@
       :media="media"
       display-caption
       columns="3"
-      pop-over
+      overlay
     />
   </SectionWrap>
 </template>

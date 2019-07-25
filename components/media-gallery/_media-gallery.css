@@ -112,12 +112,13 @@
 
   &__title {
     width: 90%;
-    margin: 18px auto;
+    margin: 1.125rem auto;
     font-size: 1.125rem;
     font-weight: var(--fw-semibold);
     line-height: 1.3889;
 
     @media (--bp-desktop) {
+      text-align: center;
       width: 80%;
     }
   }
@@ -125,10 +126,12 @@
   &__description {
     width: 90%;
     margin: auto;
-    font-size: 1rem;
-    line-height: 1.3889;
+    font-size: .9375rem;
+    line-height: 1.5625;
+    color: rgb(var(--col-black-mid-1));
 
     @media (--bp-desktop) {
+      text-align: center;
       width: 80%;
     }
   }
@@ -137,7 +140,7 @@
     display: none;
     @media (--bp-desktop) {
       display: block;
-      padding: .625rem;
+      padding: 2rem;
     }
   }
 }

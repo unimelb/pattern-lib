@@ -2,11 +2,11 @@
   <div>
     <div :class="classes">
       <div
-        v-if="popOver"
-        class="media-gallery--pop-over__media-count">
+        v-if="overlay"
+        class="media-gallery--overlay__media-count">
         {{ selectedIndex + 1 }} / {{ media.length }}
         <div
-          class="media-gallery--pop-over__close"
+          class="media-gallery--overlay__close"
           tabindex="0"
           title="Close (Esc)"
           @click="openStateToggle()"
@@ -106,12 +106,12 @@
         >{{ selectedIndex + 1 }} / {{ media.length }}</div>
         <figcaption
           :id="'caption' + selectedIndex"
-          :class="titleClasses">{{ selectedItem.title }}</figcaption>
-        <div :class="descriptionClasses">{{ selectedItem.description }}</div>
+          class="media-gallery__title">{{ selectedItem.title }}</figcaption>
+        <div class="media-gallery__description">{{ selectedItem.description }}</div>
       </figure>
     </div>
     <ThumbnailGallery
-      v-if="popOver"
+      v-if="overlay"
       :media="media"
       :callback="openThumb"
       :display-caption="displayCaption"
@@ -147,7 +147,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    popOver: {
+    overlay: {
       type: Boolean,
       default: false,
     },
@@ -178,38 +178,26 @@ export default {
     classes() {
       return {
         'media-gallery': true,
-        'media-gallery--pop-over': this.popOver,
-        'media-gallery--pop-over__open': this.openState,
+        'media-gallery--overlay': this.overlay,
+        'media-gallery--overlay__open': this.openState,
       };
     },
     sliderClasses() {
       return {
         'media-gallery__slider': true,
-        'media-gallery--pop-over__slider': this.popOver,
+        'media-gallery--overlay__slider': this.overlay,
       };
     },
     containerClasses() {
       return {
         'media-gallery__container': true,
-        'media-gallery--pop-over__container': this.popOver,
+        'media-gallery--overlay__container': this.overlay,
       };
     },
     thumbClasses() {
       return {
         'media-gallery__thumbnails': true,
-        'media-gallery--pop-over__thumbnails': this.popOver,
-      };
-    },
-    titleClasses() {
-      return {
-        'media-gallery__title': true,
-        'media-gallery--pop-over__title': this.popOver,
-      };
-    },
-    descriptionClasses() {
-      return {
-        'media-gallery__description': true,
-        'media-gallery--pop-over__description': this.popOver,
+        'media-gallery--overlay__thumbnails': this.overlay,
       };
     },
   },
