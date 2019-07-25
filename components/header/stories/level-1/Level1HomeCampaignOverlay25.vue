@@ -14,7 +14,6 @@
             <br>possible outcome
           </h1>
           <h3 class="shim-mb2">Further details about this amazing campaign.</h3>
-          
           <ButtonIcon class="btn--campaign">Call to Action</ButtonIcon>
         </div>
       </div>
