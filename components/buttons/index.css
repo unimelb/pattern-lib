@@ -26,7 +26,7 @@
 
   &:active,
   &-owner:active .btn {
-    border-color: rgb(var(--col-background-primary-white));
+    border-color: rgb(var(--col-brand));
     background-color: rgb(var(--col-brand));
     color: rgb(var(--col-background-primary-white));
     text-decoration: none;
