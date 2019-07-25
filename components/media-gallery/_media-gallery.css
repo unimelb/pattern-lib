@@ -66,6 +66,7 @@
       &.active {
         opacity: 1;
         fill: rgba(153, 162, 170, .25);
+        border: .125rem solid rgb(var(--col-background-primary-white));
       }
     }
 

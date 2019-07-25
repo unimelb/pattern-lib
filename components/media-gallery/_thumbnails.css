@@ -18,6 +18,12 @@
       font-weight: var(--fw-semibold);
       text-align: center;
       font-style: normal;
+      cursor: default;
+    }
+
+    &--prevent-click {
+      outline: none;
+      cursor: default;
     }
   }
 

@@ -9,11 +9,12 @@
       >
         <FigureWrap
           :caption="displayCaption && item.title"
-          class="thumbnails__item"
+          :class="{'thumbnails__item': true, 'thumbnails__item--prevent-click': !overlay}"
           tabindex="0"
         >
           <div
-            @click="callback(index)"
+            :class="{'thumbnails__item--prevent-click': !overlay}"
+            @click="overlay === true && callback(index)"
             @keydown.13="callback(index)">
             <img
               v-if="item.type === 'image'"
@@ -98,6 +99,10 @@ export default {
       default: () => {},
     },
     displayCaption: {
+      type: Boolean,
+      default: false,
+    },
+    overlay: {
       type: Boolean,
       default: false,
     },

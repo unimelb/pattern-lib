@@ -112,6 +112,7 @@
     </div>
     <ThumbnailGallery
       v-if="overlay"
+      :overlay="overlay"
       :media="media"
       :callback="openThumb"
       :display-caption="displayCaption"
@@ -167,10 +168,9 @@ export default {
         thresholdDistance: 100, // Sliding distance threshold
         thresholdTime: 300, // Sliding time threshold decision
         grabCursor: true, // Scratch style
-        speed: 300, // Sliding speed
-        // timingFunction: 'ease', // Sliding mode
-        // loop: false, // Infinite loop
-        // autoplay: 0 // Auto play[ms]
+        speed: 500, // Sliding speed
+        timingFunction: 'ease', // Sliding mode
+        itemAnimation: true,
       },
     };
   },

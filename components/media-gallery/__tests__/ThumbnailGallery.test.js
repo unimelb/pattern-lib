@@ -28,13 +28,14 @@ describe('ThumbnailGallery', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types images/callback/columns/displayCaption', () => {
+  it('should have default props and correct types images/callback/columns/displayCaption/overlay', () => {
     const wrapper = shallow(ThumbnailGallery);
     const {
       media,
       callback,
       columns,
       displayCaption,
+      overlay,
     } = wrapper.vm.$options.props;
 
     expect(columns.type).toBe(String);
@@ -42,6 +43,7 @@ describe('ThumbnailGallery', () => {
     expect(media.type).toBe(Array);
     expect(callback.type).toBe(Function);
     expect(displayCaption.type).toBe(Boolean);
+    expect(overlay.type).toBe(Boolean);
     expect(wrapper.props().media).toEqual([{}]);
   });
 
@@ -93,6 +95,7 @@ describe('ThumbnailGallery', () => {
       propsData: {
         media: mediaMock,
         callback,
+        overlay: true,
       },
     });
     wrapper.find('.thumbnails__item div').trigger('click');
