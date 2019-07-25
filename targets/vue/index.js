@@ -329,3 +329,11 @@ export {
 export {
   default as AccordionFilter,
 } from '../../components/filter/accordion/AccordionFilter.vue';
+export {
+  default as Tags,
+}
+  from '../../components/tags/Tags.vue';
+export {
+  default as CardNewsTag,
+}
+  from '../../components/cards/CardNewsTag.vue';
