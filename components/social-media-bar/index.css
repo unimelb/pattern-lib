@@ -35,7 +35,7 @@
   &__links {
     display: flex;
     flex-direction: column;
-    line-height: 2.5;
+    line-height: 1.06;
     margin-bottom: 1.5rem;
 
     &--social {
@@ -58,6 +58,7 @@
     font-size: 1rem;
     font-weight: var(--fw-semibold);
     color: #fff;
+    margin-bottom: 1rem;
 
     &:visited {
       color: #fff;
@@ -70,7 +71,6 @@
         }
       }
     }
-
     &--social {
       padding: 0 .75rem;
     }
