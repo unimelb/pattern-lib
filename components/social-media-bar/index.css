@@ -29,7 +29,7 @@
   }
 
   &__links {
-    line-height: 2.5;
+    line-height: 1.06;
 
     @media (--bp-desktop) {
       display: flex;
@@ -44,6 +44,7 @@
     font-size: 1rem;
     font-weight: var(--fw-semibold);
     color: #fff;
+    margin-bottom: 1rem;
 
     &:visited {
       color: #fff;
@@ -58,6 +59,8 @@
     }
 
     @media (--bp-desktop) {
+      margin-bottom: 0;
+
       &:last-child {
         margin-left: 4.375rem;
       }
