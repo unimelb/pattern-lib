@@ -215,6 +215,9 @@ export default {
       this.selectedIndex = index;
       if (this.$refs.slider) {
         this.$refs.slider.$emit('slideTo', index);
+        if (this.$refs.thumbnailContainer.childNodes[index].querySelector('iframe')) {
+          this.stopVideo();
+        }
       }
     },
     openThumb(index) {
@@ -237,11 +240,23 @@ export default {
       if (this.$refs.slider) {
         this.$refs.slider.$emit('slideTo', nextIndex);
         this.scrollToView(nextIndex);
+        if (this.$refs.thumbnailContainer.childNodes[current].querySelector('iframe')) {
+          this.stopVideo();
+        }
       }
     },
     // Scroll active thumbnail into view
     scrollToView(nextIndex) {
       this.$refs.thumbnailContainer.childNodes[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    },
+    stopVideo() {
+      const iframe = document.querySelectorAll('iframe');
+      if (iframe.length > 0) {
+        iframe.forEach((element) => {
+          const iframeSrc = element.src;
+          element.src = iframeSrc;
+        });
+      }
     },
     slide(slide) {
       this.selectedItem = this.media[slide.currentPage];
