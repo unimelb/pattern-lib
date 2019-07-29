@@ -1,32 +1,50 @@
 .social-media-bar {
-  display: flex;
-  align-items: center;
-  min-height: 82px;
-  background: rgba(var(--col-background-primary-navy));
+  background: rgba(var(--col-background-tertiary-navy));
 
   &__inner {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     width: 100%;
     max-width: 63rem;
     margin-right: auto;
     margin-left: auto;
     padding: 1.5rem;
-    flex-direction: column;
 
     @media (--bp-desktop) {
       flex-direction: row;
     }
   }
 
+  &__title {
+    font-size: 1.125rem;
+    color: #fff;
+    letter-spacing: 0;
+    font-weight: var(--fw-bold);
+
+    &--secondary {
+      font-weight: var(--fw-semibold);
+      display: none;
+
+      @media (--bp-desktop) {
+        display: block;
+      }
+    }
+  }
+
   &__links {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    width: 100%;
-    line-height: 2.5;
-    margin-bottom: 1rem;
+    line-height: 1.06;
+    margin-bottom: 1.5rem;
+
+    &--social {
+      flex-direction: row;
+      justify-content: center;
+      margin-left: -.75rem;
+      margin-right: -.75rem;
+      margin-bottom: 0;
+    }
 
     @media (--bp-desktop) {
       flex-direction: row;
@@ -37,47 +55,30 @@
   &__link {
     display: flex;
     align-items: center;
-    margin-right: 3rem;
     font-size: 1rem;
     font-weight: var(--fw-semibold);
     color: #fff;
+    margin-bottom: 1rem;
 
     &:visited {
       color: #fff;
     }
 
+    &--content {
+      @media (--bp-desktop) {
+        margin-bottom: 0;
+
+        &:last-child {
+          margin-left: 4.375rem;
+        }
+      }
+    }
     &--social {
-      display: flex;
-      align-items: flex-start;
-      width: 100%;
-      flex: .5;
-      margin-right: 1.5rem;
-      color: #fff;
-
-      &:visited {
-        color: #fff;
-      }
-
-      @media (--bp-desktop) {
-        margin-right: 0;
-        margin-left: 1.5rem;
-      }
-
-      @media (--bp-desktop) {
-        align-items: center;
-        justify-content: flex-end;
-      }
+      padding: 0 .75rem;
     }
   }
 
   &__icon {
-    color: #fff;
     margin-right: .8rem;
-  }
-
-  &__social {
-    display: flex;
-    width: 100%;
-    flex: .5;
   }
 }
