@@ -8,27 +8,47 @@ exports[`SocialMediaBar should match snapshot 1`] = `
     class="social-media-bar__inner"
   >
     <div
-      class="social-media-bar__links"
+      class="social-media-bar__col"
     >
-      <!---->
+      <h4
+        class="social-media-bar__title"
+      >
+        
+      </h4>
        
-      <!---->
+      <div
+        class="social-media-bar__links"
+      >
+        <!---->
+         
+        <!---->
+      </div>
     </div>
      
     <div
-      class="social-media-bar__social"
+      class="social-media-bar__col"
     >
-      <!---->
+      <h4
+        class="social-media-bar__title social-media-bar__title--secondary"
+      >
+        Follow us
+      </h4>
        
-      <!---->
-       
-      <!---->
-       
-      <!---->
-       
-      <!---->
-       
-      <!---->
+      <div
+        class="social-media-bar__links social-media-bar__links--social"
+      >
+        <!---->
+         
+        <!---->
+         
+        <!---->
+         
+        <!---->
+         
+        <!---->
+         
+        <!---->
+      </div>
     </div>
   </div>
 </div>
