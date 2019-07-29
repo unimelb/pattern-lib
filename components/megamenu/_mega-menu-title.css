@@ -34,10 +34,6 @@
   }
 
   @media (--bp-x-desktop) {
-    font-size: 1.1rem;
-  }
-
-  @media (--bp-wide) {
-    font-size: 1.25rem;
+    font-size: 1.11rem;
   }
 }
