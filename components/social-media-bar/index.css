@@ -2,23 +2,18 @@
   background: rgba(var(--col-background-tertiary-navy));
 
   &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
     max-width: 63rem;
     margin-right: auto;
     margin-left: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    padding: 1.5rem;
 
     @media (--bp-desktop) {
       flex-direction: row;
     }
-  }
-
-  &__container-top {
-    display: flex;
-    padding: 1.5rem;
-    flex-direction: column;
   }
 
   &__title {
@@ -26,13 +21,32 @@
     color: #fff;
     letter-spacing: 0;
     font-weight: var(--fw-bold);
+
+    &--secondary {
+      font-weight: var(--fw-semibold);
+      display: none;
+
+      @media (--bp-desktop) {
+        display: block;
+      }
+    }
   }
 
   &__links {
+    display: flex;
+    flex-direction: column;
     line-height: 1.06;
+    margin-bottom: 1.5rem;
+
+    &--social {
+      flex-direction: row;
+      justify-content: center;
+      margin-left: -.75rem;
+      margin-right: -.75rem;
+      margin-bottom: 0;
+    }
 
     @media (--bp-desktop) {
-      display: flex;
       flex-direction: row;
       margin-bottom: 0;
     }
@@ -50,53 +64,19 @@
       color: #fff;
     }
 
-    &--social {
-      padding: 0 .75rem;
-
-      &:visited {
-        color: #fff;
+    &--content {
+      @media (--bp-desktop) {
+        &:last-child {
+          margin-left: 4.375rem;
+        }
       }
     }
-
-    @media (--bp-desktop) {
-      margin-bottom: 0;
-
-      &:last-child {
-        margin-left: 4.375rem;
-      }
+    &--social {
+      padding: 0 .75rem;
     }
   }
 
   &__icon {
-    color: #fff;
     margin-right: .8rem;
-  }
-
-  &__container-bottom {
-    display: flex;
-    justify-content: center;
-    padding: 0 1.5rem 1.5rem 1.5rem;
-
-    @media (--bp-desktop) {
-      padding: 1.5rem;
-      flex-direction: column;
-    }
-  }
-
-  &__social {
-    display: flex;
-  }
-
-  &__follow-us {
-    display: none;
-    font-size: 1.125rem;
-    color: #fff;
-    letter-spacing: 0;
-    font-weight: var(--fw-semibold);
-    padding-left: .75rem;
-
-    @media (--bp-desktop) {
-      display: block;
-    }
   }
 }
