@@ -66,6 +66,8 @@
 
     &--content {
       @media (--bp-desktop) {
+        margin-bottom: 0;
+
         &:last-child {
           margin-left: 4.375rem;
         }
