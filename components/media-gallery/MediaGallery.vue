@@ -74,7 +74,9 @@
         </div>
       </div>
       <figure v-if="media.length">
-        <div :class="thumbClasses">
+        <div
+          ref="thumbnailContainer"
+          :class="thumbClasses">
           <div
             v-for="(item, index) in media"
             :key="item.id"
@@ -234,7 +236,12 @@ export default {
       this.selectedIndex = nextIndex;
       if (this.$refs.slider) {
         this.$refs.slider.$emit('slideTo', nextIndex);
+        this.scrollToView(nextIndex);
       }
+    },
+    // Scroll active thumbnail into view
+    scrollToView(nextIndex) {
+      this.$refs.thumbnailContainer.childNodes[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     },
     slide(slide) {
       this.selectedItem = this.media[slide.currentPage];

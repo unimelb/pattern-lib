@@ -165,13 +165,13 @@ describe('MediaGallery Common', () => {
 
 describe('MediaGallery InPage', () => {
   it('should render current media number', () => {
-    const wrapper = shallow(MediaGallery, {
+    const wrapper = mount(MediaGallery, {
       propsData: {
         media: mediaMock,
         inPage: true,
       },
     });
-
+    Element.prototype.scrollIntoView = jest.fn();
     expect(wrapper.find('.media-gallery__media-count').text()).toBe('1 / 2');
     wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     expect(wrapper.find('.media-gallery__media-count').text()).toBe('2 / 2');
