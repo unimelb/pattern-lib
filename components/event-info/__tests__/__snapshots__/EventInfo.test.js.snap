@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventInfo should match snapshot 1`] = `
+<div
+  class="event-info"
+>
+  <h3
+    class="event-info__title"
+  >
+    <svgicon
+      class="event-info__title--icon"
+      height="16px"
+      name=""
+      width="16px"
+    />
+    
+    
+  </h3>
+   
+  <buttonicon
+    class="event-info__button"
+    no-icon=""
+    size="sml"
+  >
+    
+  </buttonicon>
+   
+  <ul
+    class="event-info-list"
+  />
+</div>
+`;
