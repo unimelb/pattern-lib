@@ -22,7 +22,7 @@ Usage:
 <carousel
   :stories="[
   {
-    "src": "https://finearts-music.unimelb.edu.au/about-us/margaret-lawrence-gallery/FC-Jack-Door-Banner-Crop-min.jpg",
+    "src": "https://source.unsplash.com/random/2000x1000",
     "imagePosition": "center",
     "altText": "test",
     "title": "Story 1 A long title to flow onto two lines and be truncated to one line",
@@ -31,7 +31,7 @@ Usage:
     "buttonHref": "google.com"
   },
   {
-    "src": "https://finearts-music.unimelb.edu.au/about-us/margaret-lawrence-gallery/UOM_PRIYANKA_Web_Banner_2000x1200px-min.jpg",
+    "src": "https://source.unsplash.com/random/2000x1001",
     "imagePosition": "top",
     "altText": "test",
     "title": "Story 2",
@@ -40,7 +40,7 @@ Usage:
     "buttonHref": "google.com"
   },
   {
-    "src": "https://finearts-music.unimelb.edu.au/about-us/margaret-lawrence-gallery/3-min.jpg",
+    "src": "https://source.unsplash.com/random/2000x1002",
     "imagePosition": "top",
     "altText": "test",
     "title": "Story 3",
