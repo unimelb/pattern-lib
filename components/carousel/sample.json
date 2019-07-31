@@ -1,6 +1,7 @@
 [
   {
-    "src": "https://source.unsplash.com/random/2000x1000",
+    "src": "https://finearts-music.unimelb.edu.au/about-us/margaret-lawrence-gallery/FC-Jack-Door-Banner-Crop-min.jpg",
+    "imagePosition": "center",
     "altText": "test",
     "title": "Story 1 A long title to flow onto two lines and be truncated to one line",
     "description": "Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna dolore eiusmod amet dolor laborum consequat enim occaecat magna.",
@@ -8,7 +9,8 @@
     "buttonHref": "google.com"
   },
   {
-    "src": "https://source.unsplash.com/random/2000x1001",
+    "src": "https://finearts-music.unimelb.edu.au/about-us/margaret-lawrence-gallery/UOM_PRIYANKA_Web_Banner_2000x1200px-min.jpg",
+    "imagePosition": "top",
     "altText": "test",
     "title": "Story 2",
     "description": "Story 2 description",
@@ -16,7 +18,8 @@
     "buttonHref": "google.com"
   },
   {
-    "src": "https://source.unsplash.com/random/2000x1002",
+    "src": "https://finearts-music.unimelb.edu.au/about-us/margaret-lawrence-gallery/3-min.jpg",
+    "imagePosition": "top",
     "altText": "test",
     "title": "Story 3",
     "description": "Story 3 description",
