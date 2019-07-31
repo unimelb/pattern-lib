@@ -3,83 +3,89 @@
     :class="className"
     class="social-media-bar">
     <div class="social-media-bar__inner">
-      <div class="social-media-bar__links">
-        <a
-          v-if="newsletterLink"
-          :href="newsletterLink"
-          class="social-media-bar__link">
-          <SvgIcon
-            name="envelope"
-            width="25"
-            height="25"
-            class="social-media-bar__icon"/>Sign up for e-news
-        </a>
-        <a
-          v-if="blogLink"
-          :href="blogLink"
-          class="social-media-bar__link">
-          <SvgIcon
-            name="newspaper"
-            width="25"
-            height="25"
-            class="social-media-bar__icon"/>Read our blog
-        </a>
+      <div class="social-media-bar__col">
+        <h4 class="social-media-bar__title">{{ title }}</h4>
+        <div class="social-media-bar__links">
+          <a
+            v-if="newsletterLink"
+            :href="newsletterLink"
+            class="social-media-bar__link social-media-bar__link--content">
+            <SvgIcon
+              name="envelope"
+              width="25"
+              height="25"
+              class="social-media-bar__icon"/>Sign up for e-news
+          </a>
+          <a
+            v-if="blogLink"
+            :href="blogLink"
+            class="social-media-bar__link social-media-bar__link--content">
+            <SvgIcon
+              name="newspaper"
+              width="25"
+              height="25"
+              class="social-media-bar__icon"/>Read our blog
+          </a>
+        </div>
       </div>
-      <div class="social-media-bar__social">
-        <a
-          v-if="facebookLink"
-          :href="facebookLink"
-          class="social-media-bar__link--social">
-          <SvgIcon
-            name="facebook"
-            width="30"
-            height="30"/>
-        </a>
-        <a
-          v-if="twitterLink"
-          :href="twitterLink"
-          class="social-media-bar__link--social">
-          <SvgIcon
-            name="twitter"
-            width="30"
-            height="30"/>
-        </a>
-        <a
-          v-if="linkedinLink"
-          :href="linkedinLink"
-          class="social-media-bar__link--social">
-          <SvgIcon
-            name="linkedin"
-            width="30"
-            height="30"/>
-        </a>
-        <a
-          v-if="instagramLink"
-          :href="instagramLink"
-          class="social-media-bar__link--social">
-          <SvgIcon
-            name="instagram"
-            width="30"
-            height="30"/>
-        </a>
-        <a
-          v-if="vimeoLink"
-          :href="vimeoLink"
-          class="social-media-bar__link--social">
-          <SvgIcon
-            name="vimeo"
-            width="30"
-            height="30"/>
-        </a>
-        <a
-          v-if="youtubeLink"
-          :href="youtubeLink"
-          class="social-media-bar__link--social">
-          <SvgIcon
-            name="youtube"
-            width="30"
-            height="30"/>
-        </a>
+      <div class="social-media-bar__col">
+        <h4 class="social-media-bar__title social-media-bar__title--secondary">Follow us</h4>
+        <div class="social-media-bar__links social-media-bar__links--social">
+          <a
+            v-if="facebookLink"
+            :href="facebookLink"
+            class="social-media-bar__link social-media-bar__link--social">
+            <SvgIcon
+              name="facebook"
+              width="30"
+              height="30"/>
+          </a>
+          <a
+            v-if="twitterLink"
+            :href="twitterLink"
+            class="social-media-bar__link social-media-bar__link--social">
+            <SvgIcon
+              name="twitter"
+              width="30"
+              height="30"/>
+          </a>
+          <a
+            v-if="linkedinLink"
+            :href="linkedinLink"
+            class="social-media-bar__link social-media-bar__link--social">
+            <SvgIcon
+              name="linkedin"
+              width="30"
+              height="30"/>
+          </a>
+          <a
+            v-if="instagramLink"
+            :href="instagramLink"
+            class="social-media-bar__link social-media-bar__link--social">
+            <SvgIcon
+              name="instagram"
+              width="30"
+              height="30"/>
+          </a>
+          <a
+            v-if="vimeoLink"
+            :href="vimeoLink"
+            class="social-media-bar__link social-media-bar__link--social">
+            <SvgIcon
+              name="vimeo"
+              width="30"
+              height="30"/>
+          </a>
+          <a
+            v-if="youtubeLink"
+            :href="youtubeLink"
+            class="social-media-bar__link social-media-bar__link--social">
+            <SvgIcon
+              name="youtube"
+              width="30"
+              height="30"/>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -88,6 +94,10 @@
 <script>
 export default {
   props: {
+    title: {
+      type: String,
+      default: '',
+    },
     className: {
       type: String,
       default: '',
