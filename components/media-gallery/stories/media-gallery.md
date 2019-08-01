@@ -34,23 +34,7 @@ Usage:
 ```html
 <media-gallery
     in-page
-    media="[
-      {
-        'id': 1,
-        'src': 'http://pandaznaet.ru/wp-content/uploads/2015/11/kak-budut-vyglyadet-supergeroi-na-pensii-3.jpg',
-        'title': 'Image 1',
-        'description': 'Lorem ipsum dolor sit amet.',
-        'size': '1of2',
-        'type': 'Image'
-      },
-      {
-        'id': 2,
-        'src': 'http://pandaznaet.ru/wp-content/uploads/2015/11/kak-budut-vyglyadet-supergeroi-na-pensii-4.jpg',
-        'title': 'Image 2',
-        'description': 'Lorem ipsum dolor sit amet.',
-        'size': '1of2',
-        'type': 'Video'
-      }]"
+    :media="mediaData"
   >
 </media-gallery>
 <media-gallery

@@ -159,7 +159,7 @@ Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
 Vue.component('card-features-panel', CardFeaturesPanel);
 Vue.component('media-gallery', MediaGallery);
-Vue.component('thumbnail-gallery', ThumbnailGallery);
+Vue.component('thumbnails', ThumbnailGallery);
 Vue.component('card-news', CardNews);
 Vue.component('heading1', Heading1);
 Vue.component('heading2', Heading2);

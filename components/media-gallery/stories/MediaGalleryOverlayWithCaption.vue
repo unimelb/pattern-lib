@@ -21,6 +21,6 @@ export default {
       media: sample,
     };
   },
-  readme: { custom: MediaGalleryDocs, source: true, html: true },
+  readme: { custom: MediaGalleryDocs, source: true, html: false },
 };
 </script>
