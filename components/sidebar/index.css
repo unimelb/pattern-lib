@@ -23,7 +23,7 @@
     margin: 0 1rem;
     background-color: rgb(var(--col-green-dark));
     color: #fff;
-    font-size: 0.875rem;
+    font-size: .875rem;
     font-weight: var(--fw-bold);
     border-color: rgba(var(--col-link-active-on-dark), .3);
 
@@ -59,21 +59,21 @@
     }
 
     &--sub-title {
-      font-size: 0.875rem;
+      font-size: .875rem;
       color: rgb(var(--col-black-dark));
       letter-spacing: 0;
       font-weight: var(--fw-regular);
     }
 
     &--link {
-      font-size: 0.875rem;
+      font-size: .875rem;
       color: rgb(var(--col-navy-dark));
       letter-spacing: 0;
       font-weight: var(--fw-semibold);
     }
 
     &--email {
-      font-size: 0.875rem;
+      font-size: .875rem;
       color: rgb(var(--col-navy-dark));
     }
   }
