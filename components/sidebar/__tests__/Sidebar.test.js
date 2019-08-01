@@ -1,13 +1,13 @@
 import { shallow } from 'vue-test-utils';
 import { toHaveNoViolations } from 'jest-axe';
-import EventInfo from '../EventInfo.vue';
+import Sidebar from '../Sidebar.vue';
 
 expect.extend(toHaveNoViolations);
 
 
-describe('EventInfo', () => {
+describe('Sidebar', () => {
   it('should match snapshot', () => {
-    const result = shallow(EventInfo).element;
+    const result = shallow(Sidebar).element;
     expect(result).toMatchSnapshot();
   });
 });

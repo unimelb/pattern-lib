@@ -1,4 +1,4 @@
-## Event Info Component
+## Sidebar Component
 
 The component props are:
 
@@ -97,5 +97,5 @@ The component props are:
 ## Usage Example
 
 ```html
-  <event-info title="Event information" title-icon="info" button-text="Book tickets" items="[{items object}]"></event-info>
+  <sidebar title="Event information" title-icon="info" button-text="Book tickets" items="[{items object}]"></sidebar>
 ```

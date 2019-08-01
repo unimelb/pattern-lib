@@ -1,6 +1,6 @@
 <template>
   <section-wrap>
-    <EventInfo
+    <Sidebar
       :items="items"
       title="Event information"
       title-icon="info"
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import EventInfo from '../EventInfo.vue';
+import Sidebar from '../Sidebar.vue';
 import sample from '../sample.json';
-import eventInfo from '../event-info.md';
+import sidebar from '../sidebar.md';
 
 export default {
-  components: { EventInfo },
-  readme: { custom: eventInfo, source: true, html: false },
+  components: { Sidebar },
+  readme: { custom: sidebar, source: true, html: false },
   data() {
     return {
       items: sample,
