@@ -18,7 +18,7 @@
           :key="index"
         >
           <div
-            :style="`background-image: url('${slide.src}'); background-position: ${slide.imagePosition};`"
+            :style="`background-image: url('${slide.src}'); background-position: ${slide.imagePosition ? slide.imagePosition : 'center'};`"
             :aria-label="slide.altText"
             class="carousel__image" />
         </slideritem>
