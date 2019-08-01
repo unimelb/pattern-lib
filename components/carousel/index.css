@@ -113,6 +113,7 @@
   &__story {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
   }
 
   &__content {
