@@ -21,66 +21,6 @@ The component props are:
                 "href": "https://mlg.finearts-music.unimelb.edu.au/"
             }
         ]
-    },
-    {
-        "icon": "location",
-        "title": "Location",
-        "subTitles": [
-            {
-                "email": "20 Nov 19"
-            },
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "text": "20 Nov 19"
-            }
-        ]
-    },
-    {
-        "icon": "envelope",
-        "title": "Entry requirements",
-        "subTitles": [
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "text": "20 Nov 19"
-            }
-        ]
-    },
-    {
-        "icon": "phone",
-        "title": "Contact information",
-        "subTitles": [
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "text": "20 Nov 19"
-            }
-        ]
-    },
-    {
-        "icon": "info",
-        "title": "Further information",
-        "subTitles": [
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "email": "20 Nov 19"
-            }
-        ]
     }
 ]
 ```

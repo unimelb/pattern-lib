@@ -20,13 +20,14 @@
         "title": "Location",
         "subTitles": [
             {
-                "email": "20 Nov 19"
+                "email": "unimelb@unimelb.edu.au"
             },
             {
                 "text": "20 Nov 19"
             },
             {
-                "text": "20 Nov 19"
+                "link": "Margaret Lawrence Gallery",
+                "href": "https://mlg.finearts-music.unimelb.edu.au/"
             }
         ]
     },
@@ -35,13 +36,14 @@
         "title": "Entry requirements",
         "subTitles": [
             {
-                "text": "20 Nov 19"
+                "email": "unimelb@unimelb.edu.au"
             },
             {
                 "text": "20 Nov 19"
             },
             {
-                "text": "20 Nov 19"
+                "link": "Margaret Lawrence Gallery",
+                "href": "https://mlg.finearts-music.unimelb.edu.au/"
             }
         ]
     },
@@ -50,13 +52,14 @@
         "title": "Contact information",
         "subTitles": [
             {
-                "text": "20 Nov 19"
+                "email": "unimelb@unimelb.edu.au"
             },
             {
                 "text": "20 Nov 19"
             },
             {
-                "text": "20 Nov 19"
+                "link": "Margaret Lawrence Gallery",
+                "href": "https://mlg.finearts-music.unimelb.edu.au/"
             }
         ]
     },
@@ -65,13 +68,14 @@
         "title": "Further information",
         "subTitles": [
             {
-                "text": "20 Nov 19"
+                "email": "unimelb@unimelb.edu.au"
             },
             {
                 "text": "20 Nov 19"
             },
             {
-                "email": "20 Nov 19"
+                "link": "Margaret Lawrence Gallery",
+                "href": "https://mlg.finearts-music.unimelb.edu.au/"
             }
         ]
     }

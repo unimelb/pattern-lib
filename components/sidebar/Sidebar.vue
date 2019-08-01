@@ -28,10 +28,13 @@
             v-for="(subTitle, index) in item.subTitles"
             :key="index">
             <div class="sidebar-list--sub-title">{{ subTitle.text }}</div>
-            <a :href="'mailto:' + subTitle.email">{{ subTitle.email }}</a>
+            <a
+              :href="'mailto:' + subTitle.email"
+              class="sidebar-list--email">{{ subTitle.email }}</a>
             <a
               v-if="subTitle.href"
               :href="subTitle.href"
+              class="sidebar-list--link"
               target="_blank">{{ subTitle.link }}</a>
           </div>
         </div>
