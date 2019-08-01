@@ -19,7 +19,6 @@
   },
   {
     "src": "https://source.unsplash.com/random/2000x1002",
-    "imagePosition": "top",
     "altText": "test",
     "title": "Story 3",
     "description": "Story 3 description",

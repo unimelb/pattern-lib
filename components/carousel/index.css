@@ -163,10 +163,26 @@
       font-weight: var(--fw-bold);
       font-size: 1.2rem;
       line-height: 1.5625;
+      transition: all .1s ease;
 
       &--active {
         background: rgb(var(--col-background-primary-white));
         color: rgb(var(--col-background-primary-navy));
+
+        &:hover {
+          background: rgb(var(--col-navy-light)) !important;
+          color: rgb(var(--col-navy-dark)) !important;
+        }
+      }
+
+      &:active {
+        background: rgb(var(--col-navy-light));
+        color: rgb(var(--col-navy-dark));
+      }
+
+      &:hover {
+        background: rgb(var(--col-background-secondary-navy));
+        color: rgb(var(--col-background-primary-white));
       }
     }
 
@@ -184,6 +200,7 @@
       margin-left: 1rem;
       flex-direction: column-reverse;
       justify-content: flex-end;
+      margin-bottom: .5rem;
     }
   }
 
