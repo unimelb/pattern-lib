@@ -20,7 +20,7 @@ exports[`EventInfo should match snapshot 1`] = `
   <buttonicon
     class="event-info__button"
     no-icon=""
-    size="sml"
+    size="xsml"
   >
     
   </buttonicon>

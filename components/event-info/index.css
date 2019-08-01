@@ -26,6 +26,15 @@
     font-size: 14px;
     font-weight: var(--fw-bold);
     border-color: rgba(255, 255, 255, .3);
+
+    &.btn:hover {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    a:visited {
+      color: #fff;
+    }
   }
 
   &-list {
@@ -54,10 +63,6 @@
       color: #000;
       letter-spacing: 0;
       font-weight: var(--fw-regular);
-
-      &:last-child {
-        margin-bottom: 1rem;
-      }
     }
   }
 }

@@ -9,7 +9,7 @@
       {{ title }}</h3>
     <ButtonIcon
       class="event-info__button"
-      size="sml"
+      size="xsml"
       no-icon>{{ buttonText }}</ButtonIcon>
     <ul class="event-info-list">
       <li
@@ -24,11 +24,16 @@
         <div>
           <h4 class="event-info-list--title">
             {{ item.title }}</h4>
-          <div class="event-info-list--sub-title">{{ item.subtitle1 }}</div>
-          <div class="event-info-list--sub-title">{{ item.subtitle2 }}</div>
-          <div class="event-info-list--sub-title">{{ item.subtitle3 }}</div>
-          <div class="event-info-list--sub-title">{{ item.subtitle4 }}</div>
-          <div class="event-info-list--sub-title">{{ item.subtitle5 }}</div>
+          <div
+            v-for="(subTitle, index) in item.subTitles"
+            :key="index">
+            <div class="event-info-list--sub-title">{{ subTitle.text }}</div>
+            <a :href="'mailto:' + subTitle.email">{{ subTitle.email }}</a>
+            <a
+              v-if="subTitle.href"
+              :href="subTitle.href"
+              target="_blank">{{ subTitle.link }}</a>
+          </div>
         </div>
       </li>
     </ul>
@@ -55,6 +60,5 @@ export default {
       default: () => [],
     },
   },
-
 };
 </script>
