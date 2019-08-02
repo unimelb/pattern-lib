@@ -20,7 +20,7 @@ Usage:
 
 ```json
 <carousel
-  :stories="[
+  :stories='[
   {
     "src": "https://source.unsplash.com/random/2000x1000",
     "imagePosition": "center",
@@ -48,7 +48,7 @@ Usage:
     "buttonText": "Read",
     "buttonHref": "google.com"
   }
-]"
+]'
     timing="long"
   >
 </carousel>
