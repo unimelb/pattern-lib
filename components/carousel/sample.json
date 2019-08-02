@@ -1,6 +1,7 @@
 [
   {
     "src": "https://source.unsplash.com/random/2000x1000",
+    "imagePosition": "center",
     "altText": "test",
     "title": "Story 1 A long title to flow onto two lines and be truncated to one line",
     "description": "Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna dolore eiusmod amet dolor laborum consequat enim occaecat magna.",
@@ -9,6 +10,7 @@
   },
   {
     "src": "https://source.unsplash.com/random/2000x1001",
+    "imagePosition": "top",
     "altText": "test",
     "title": "Story 2",
     "description": "Story 2 description",
