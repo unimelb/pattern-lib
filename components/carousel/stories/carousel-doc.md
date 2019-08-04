@@ -10,28 +10,45 @@ The component has limitation for title and description:
 - The title can be a maximum of 48 characters.
 - Description maximum of 240 characters otherwise will be cut and added an ellipsis.
 
+The component has image positioning attribute. 
+  - you can choose inside of the story object how you wanna the position of the image to be. The options are:
+    -  top 
+    -  center
+    -  bottom
+
 Usage:
 
-```html
+```json
 <carousel
-  :stories="[
-      {
-          src: 'path/to/img',
-          altText: 'Image Alt text goes here',
-          title: 'Story 1',
-          description: 'Story 2 description',
-          buttonText: 'Register',
-          buttonHref: 'unimelb.com.au',
-        },
-        {
-          src: 'path/to/img',
-          altText: 'Image Alt text goes here',
-          title: 'Story 2',
-          description: 'Story 2 description',
-          buttonText: 'Login',
-          buttonHref: 'unimelb.com.au',
-        }
-    ]"
+  :stories='[
+  {
+    "src": "https://source.unsplash.com/random/2000x1000",
+    "imagePosition": "center",
+    "altText": "test",
+    "title": "Story 1 A long title to flow onto two lines and be truncated to one line",
+    "description": "Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna dolore eiusmod amet dolor laborum consequat enim occaecat magna.",
+    "buttonText": "Register",
+    "buttonHref": "google.com"
+  },
+  {
+    "src": "https://source.unsplash.com/random/2000x1001",
+    "imagePosition": "top",
+    "altText": "test",
+    "title": "Story 2",
+    "description": "Story 2 description",
+    "buttonText": "Login",
+    "buttonHref": "google.com"
+  },
+  {
+    "src": "https://source.unsplash.com/random/2000x1002",
+    "imagePosition": "top",
+    "altText": "test",
+    "title": "Story 3",
+    "description": "Story 3 description",
+    "buttonText": "Read",
+    "buttonHref": "google.com"
+  }
+]'
     timing="long"
   >
 </carousel>
