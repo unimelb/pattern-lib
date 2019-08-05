@@ -231,18 +231,22 @@
 
   &--green {
     background-color: rgb(var(--col-green-dark));
-    color: #fff;
     font-size: .875rem;
     font-weight: var(--fw-bold);
-    border-color: rgba(var(--col-link-active-on-dark), .3);
+    border: none;
+    border-radius: .125rem;
+    transition: all .15s ease;
 
-    &.btn:hover {
-      border-color: #fff;
+    &.btn {
       color: #fff;
     }
 
-    a:visited {
-      color: #fff;
+    &.btn:hover {
+      background-color: #35659e;
+    }
+
+    &.btn:active {
+      background-color: #094183;
     }
   }
 

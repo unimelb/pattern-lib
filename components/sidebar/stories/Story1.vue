@@ -1,13 +1,11 @@
 <template>
   <section-wrap>
     <div class="grid">
-      <div class="cell cell--tab-1of3">
-        <Sidebar
-          :items="items"
-          title="Event information"
-          title-icon="info"
-          button-text="Book tickets"/>
-      </div>
+      <Sidebar
+        :items="items"
+        title="Event information"
+        title-icon="info"
+        button-text="Book tickets"/>
     </div>
   </section-wrap>
 </template>
