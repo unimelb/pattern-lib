@@ -45,7 +45,6 @@
   &__video {
     display: flex;
     align-items: center;
-    height: 15.625rem;
 
     ::before {
       width: 100%;
@@ -54,6 +53,10 @@
       top: 0;
       left: 0;
       z-index: 2;
+    }
+
+    @media (--bp-desktop) {
+      height: 15.625rem;
     }
   }
 
