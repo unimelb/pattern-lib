@@ -21,7 +21,7 @@
     background-color: rgb(var(--col-background-primary-grey));
     box-shadow: inset 0 1px 3px color(rgb(var(--col-black-dark)) alpha(10%));
     font-size: 1.25rem;
-    font-weight: var(--fw-light);
+    font-weight: var(--fw-regular);
 
     &:hover:not([disabled]) {
       border-color: rgb(var(--col-black-mid-2));
