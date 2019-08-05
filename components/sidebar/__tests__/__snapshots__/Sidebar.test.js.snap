@@ -4,29 +4,38 @@ exports[`Sidebar should match snapshot 1`] = `
 <div
   class="sidebar"
 >
-  <h3
-    class="sidebar__title"
+  <div
+    class="sidebar__header"
   >
-    <svgicon
-      class="sidebar__title--icon"
-      height="16px"
-      name=""
-      width="16px"
+    <h3
+      class="sidebar__title"
+    >
+      <svgicon
+        class="sidebar__title-icon"
+        height="16px"
+        name=""
+        width="16px"
+      />
+      
+    
+    </h3>
+  </div>
+   
+  <div
+    class="sidebar__inner"
+  >
+    <buttonicon
+      class="btn--green"
+      no-icon=""
+      size="xsml"
+      width="fullwidth"
+    >
+      
+    </buttonicon>
+     
+    <ul
+      class="sidebar__list"
     />
-    
-    
-  </h3>
-   
-  <buttonicon
-    class="sidebar__button"
-    no-icon=""
-    size="xsml"
-  >
-    
-  </buttonicon>
-   
-  <ul
-    class="sidebar-list"
-  />
+  </div>
 </div>
 `;

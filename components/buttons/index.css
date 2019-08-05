@@ -229,6 +229,23 @@
     pointer-events: none;
   }
 
+  &--green {
+    background-color: rgb(var(--col-green-dark));
+    color: #fff;
+    font-size: .875rem;
+    font-weight: var(--fw-bold);
+    border-color: rgba(var(--col-link-active-on-dark), .3);
+
+    &.btn:hover {
+      border-color: #fff;
+      color: #fff;
+    }
+
+    a:visited {
+      color: #fff;
+    }
+  }
+
   @media (--bp-tablet) {
     width: auto;
   }

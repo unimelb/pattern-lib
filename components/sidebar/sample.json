@@ -4,14 +4,13 @@
         "title": "Dates and Times",
         "subTitles": [
             {
-                "email": "unimelb@unimelb.edu.au"
+                "text": "20 Nov 19 - 25 Nov 19"
             },
             {
-                "text": "20 Nov 19"
+                "text": "Tue-Fri 7pm-9pm"
             },
             {
-                "link": "Margaret Lawrence Gallery",
-                "href": "https://mlg.finearts-music.unimelb.edu.au/"
+                "text": "Sun-Sat 6pm-10pm"
             }
         ]
     },
@@ -20,10 +19,16 @@
         "title": "Location",
         "subTitles": [
             {
-                "email": "unimelb@unimelb.edu.au"
+                "text": "Margaret Lawrence Gallery"
             },
             {
-                "text": "20 Nov 19"
+                "text": "40 Dodds Street"
+            },
+            {
+                "text": "Southbank"
+            },
+            {
+                "text": "VIC 3006"
             },
             {
                 "link": "Margaret Lawrence Gallery",
@@ -36,14 +41,10 @@
         "title": "Entry requirements",
         "subTitles": [
             {
-                "email": "unimelb@unimelb.edu.au"
+                "text": "No booking required."
             },
             {
-                "text": "20 Nov 19"
-            },
-            {
-                "link": "Margaret Lawrence Gallery",
-                "href": "https://mlg.finearts-music.unimelb.edu.au/"
+                "text": "This event is free."
             }
         ]
     },
@@ -52,15 +53,13 @@
         "title": "Contact information",
         "subTitles": [
             {
-                "email": "unimelb@unimelb.edu.au"
+                "text": "Julia Juliasson"
             },
             {
-                "text": "20 Nov 19"
+                "text": "+61 48963 7654"
             },
             {
-                "link": "Margaret Lawrence Gallery",
-                "href": "https://mlg.finearts-music.unimelb.edu.au/"
-            }
+                "email": "fineartsmusic-er@unimelb.edu.au"            }
         ]
     },
     {
@@ -68,14 +67,7 @@
         "title": "Further information",
         "subTitles": [
             {
-                "email": "unimelb@unimelb.edu.au"
-            },
-            {
-                "text": "20 Nov 19"
-            },
-            {
-                "link": "Margaret Lawrence Gallery",
-                "href": "https://mlg.finearts-music.unimelb.edu.au/"
+                "text": "Suitable for all ages."
             }
         ]
     }
