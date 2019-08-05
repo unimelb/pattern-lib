@@ -1,0 +1,66 @@
+.page-header-text {
+  background-color: rgb(var(--col-navy-light));
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    max-width: 61.5rem;
+  }
+
+  &__header {
+    font-size: 1rem;
+    color: #575756;
+    letter-spacing: .0938rem;
+    line-height: 1.75;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    padding: 0 2.25rem;
+    font-size: 2.4875rem;
+    color: rgb(var(--col-navy-dark));
+    text-align: center;
+    line-height: 1.26;
+    font-weight: var(--fw-bold);
+  }
+
+  &__sub-title {
+    font-size: 1rem;
+    color: rgb(var(--col-black-dark));
+    letter-spacing: .0938rem;
+    text-align: center;
+    line-height: 2.1875;
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: rgb(var(--col-blue-dark));
+    letter-spacing: .0831rem;
+    line-height: 1.875;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__button {
+    margin-bottom: 1.25rem;
+  }
+}
