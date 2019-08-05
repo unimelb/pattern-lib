@@ -38,14 +38,6 @@
     line-height: 1.06;
     margin-bottom: 1.5rem;
 
-    &--social {
-      flex-direction: row;
-      justify-content: center;
-      margin-left: -.75rem;
-      margin-right: -.75rem;
-      margin-bottom: 0;
-    }
-
     @media (--bp-desktop) {
       flex-direction: row;
       margin-bottom: 0;
@@ -73,9 +65,12 @@
         }
       }
     }
-    &--social {
-      padding: 0 .75rem;
-    }
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: center;
+    color: #fff;
   }
 
   &__icon {
