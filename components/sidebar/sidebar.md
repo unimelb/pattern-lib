@@ -1,4 +1,4 @@
-## Sidebar Component
+## Vue Example
 
 The component props are:
 
@@ -34,8 +34,10 @@ The component props are:
  > Text of the button that will be rendered
 
 
-## Usage Example
+### Usage
 
 ```html
   <sidebar title="Event information" title-icon="info" button-text="Book tickets" items="[{items object}]"></sidebar>
 ```
+
+## CMS Example
