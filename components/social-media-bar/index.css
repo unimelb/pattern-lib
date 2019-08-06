@@ -71,6 +71,10 @@
     display: flex;
     justify-content: center;
     color: #fff;
+
+    .social-list__link {
+      padding: 0 .75rem;
+    }
   }
 
   &__icon {
