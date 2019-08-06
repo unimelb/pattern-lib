@@ -35,7 +35,11 @@
       </div>
       <div class="article-wrap__aside-box article-wrap__social">
         <p class="article-wrap__social-heading">Share</p>
-        <SocialList />
+        <SocialListGeneric
+          facebook-link="https://www.facebook.com/unimelb"
+          twitter-link="https://twitter.com/unimelb"
+          linkedin-link="https://www.linkedin.com/school/university-of-melbourne/"
+        />
       </div>
     </footer>
   </article>
@@ -43,10 +47,10 @@
 
 <script>
 import ContactList from '../contact-list/ContactList.vue';
-import SocialList from '../social-list/SocialList.vue';
+import SocialListGeneric from '../social-list/SocialListGeneric.vue';
 
 export default {
-  components: { ContactList, SocialList },
+  components: { ContactList, SocialListGeneric },
   props: {
     title: {
       type: String,
