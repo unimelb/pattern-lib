@@ -11,21 +11,29 @@
       </div>
       <div class="page-header-text__footer">
         <ButtonIcon
-          v-if="buttonLink"
           :href="buttonLink"
-          class="page-header-text__button">{{ buttonText }}</ButtonIcon>
-        <SocialList class="page-header-text__social-list"/>
-        <span>{{ socialList }}</span>
+          class="page-header-text__button btn--green"
+          size="xsml"
+          width="fullwidth"
+          no-icon>{{ buttonText }}</ButtonIcon>
+        <SocialListGeneric
+          facebook-link="www.unimelb.edu.au"
+          twitter-link="www.unimelb.edu.au"
+          linkedin-link="www.unimelb.edu.au"
+          instagram-link="www.unimelb.edu.au"
+          vimeo-link="www.unimelb.edu.au"
+          youtube-link="www.unimelb.edu.au"
+          class="page-header-text__social-list"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import SocialList from '../social-list/SocialList.vue';
+import SocialListGeneric from '../social-list/SocialListGeneric.vue';
 export default {
   components: {
-    SocialList,
+    SocialListGeneric,
   },
   props: {
     headerText: {
@@ -55,10 +63,6 @@ export default {
     buttonLink: {
       type: String,
       default: '',
-    },
-    socialList: {
-      type: Array,
-      default: () => [],
     },
   },
 };
