@@ -64,7 +64,7 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur.',
+      default: '',
     },
     className: {
       type: String,
