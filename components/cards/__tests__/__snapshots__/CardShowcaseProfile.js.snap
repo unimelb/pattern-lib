@@ -13,23 +13,25 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
   <div
     class="card__inner"
   >
-    <h6
-      class="card__title"
-    >
-      
-    </h6>
-     
-    <p
-      class="card__sub-title"
-    >
-      
-    </p>
-     
     <div
-      class="card__dash"
-    />
+      class="card__titles"
+    >
+      <h6
+        class="card__title"
+      >
+        
+      </h6>
+       
+      <p
+        class="card__sub-title"
+      >
+        
+      </p>
+    </div>
      
-    <!---->
+    <div>
+      <!---->
+    </div>
   </div>
    
   <div

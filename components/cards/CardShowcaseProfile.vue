@@ -1,28 +1,28 @@
 <template>
   <div class="card card--bdr card--showcase-profile">
     <div
-      v-if="thumb && thumb.length > 0"
+      v-show="thumb && thumb.length > 0 && isHidden"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"
       aria-label="Profile Image"
     />
-    <div class="card__inner">
-      <h6 class="card__title">{{ title }}</h6>
-      <p class="card__sub-title">{{ subTitle }}</p>
-      <div class="card__dash"/>
-      <button
-        v-if="bio"
-        class="card__button"
-        @click="[(isHidden = !isHidden), buttonLabel]">
-        {{ label }}
+    <div
+      class="card__inner"
+      @click="(isHidden = !isHidden)">
+      <div class="card__titles">
+        <h6 class="card__title">{{ title }}</h6>
+        <p class="card__sub-title">{{ subTitle }}</p>
+      </div>
+      <div>
         <SvgIcon
+          v-if="bio"
           :name="iconName"
           aria-label="chevron"
           class="card__icon"
           width="10px"
           height="10px"
         />
-      </button>
+      </div>
     </div>
 
     <transition name="slide-fade">
@@ -71,31 +71,12 @@ export default {
   data() {
     return {
       isHidden: true,
-      label: 'Show bio',
-      iconName: 'chevron-down',
+      iconName: 'chevron-up',
     };
   },
-  computed: {
-    buttonLabel() {
-      if (!this.isHidden) {
-        this.setLabelHide();
-        this.setIconUp();
-      } else {
-        this.setLabelShow();
-        this.setIconDown();
-      }
-      return this.label;
-    },
-  },
   methods: {
-    setLabelHide() {
-      this.label = 'Hide bio';
-    },
     setIconUp() {
       this.iconName = 'chevron-up';
-    },
-    setLabelShow() {
-      this.label = 'Show bio';
     },
     setIconDown() {
       this.iconName = 'chevron-down';

@@ -1,19 +1,25 @@
 .card--showcase-profile {
   background-color: #fff;
+  max-height: 373px;
+  overflow: scroll;
 
   .card__inner {
-    padding: .5rem 0 0 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    background-color: #094183;
+    color: #fff;
   }
 
   .card__thumb {
     padding-top: 56.25%;
     min-height: auto;
+    height: 307px;
+  }
 
-    @media (--bp-tablet) {
-      width: 128px;
-      height: 128px;
-      padding-top: 0;
-    }
+  .card__titles {
+    flex: 1;
   }
 
   .card__title {
@@ -24,30 +30,8 @@
     margin: 0;
   }
 
-  .card__dash {
-    height: 4px;
-    width: 37px;
-    background: rgb(9, 65, 131);
-    margin: .5rem 0 .5rem 0;
-  }
-
-  .card__button {
-    font-weight: 600;
-    text-decoration: underline;
-    margin-bottom: .5rem;
-
-    &:hover {
-      text-decoration: none;
-    }
-
-    @media (--bp-desktop) {
-      margin: 0;
-    }
-  }
-
   .card__icon {
-    display: initial;
-    margin-left: 4px;
+    color: red;
   }
 
   .card__bio {
@@ -71,10 +55,5 @@
   .slide-fade-leave-to {
     transform: translate(10px);
     opacity: 0;
-  }
-
-  @media (--bp-tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 }
