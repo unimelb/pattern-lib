@@ -32,12 +32,13 @@ The component props are:
  > Icon on top of the card, the options are: [Icons](https://pattern-lib-unimelb.netlify.com/?selectedKind=Icons&selectedStory=Spritesheet&full=0&addons=1&stories=1&panelRight=0&addonPanel=REACT_STORYBOOK%2Freadme%2Fpanel)
 - button-text
  > Text of the button that will be rendered
-
+- button-link
+ > anchor link of the button
 
 ### Usage
 
 ```html
-  <sidebar title="Event information" title-icon="info" button-text="Book tickets" items="[{items object}]"></sidebar>
+  <sidebar title="Event information" title-icon="info" button-text="Book tickets" button-link="www.unimelb.edu.au" items="[{items object}]"></sidebar>
 ```
 
 ## CMS Example

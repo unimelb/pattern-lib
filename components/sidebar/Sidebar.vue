@@ -11,6 +11,8 @@
     </div>
     <div class="sidebar__inner">
       <ButtonIcon
+        v-if="buttonLink"
+        :href="buttonLink"
         class="btn--green"
         size="xsml"
         width="fullwidth"
@@ -60,6 +62,10 @@ export default {
       default: '',
     },
     buttonText: {
+      type: String,
+      default: '',
+    },
+    buttonLink: {
       type: String,
       default: '',
     },

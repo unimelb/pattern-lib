@@ -24,14 +24,7 @@ exports[`Sidebar should match snapshot 1`] = `
   <div
     class="sidebar__inner"
   >
-    <buttonicon
-      class="btn--green"
-      no-icon=""
-      size="xsml"
-      width="fullwidth"
-    >
-      
-    </buttonicon>
+    <!---->
      
     <ul
       class="sidebar__list"

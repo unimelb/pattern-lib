@@ -5,7 +5,8 @@
         :items="items"
         title="Event information"
         title-icon="info"
-        button-text="Book tickets"/>
+        button-text="Book tickets"
+        button-link="www.unimelb.edu.au"/>
     </div>
   </section-wrap>
 </template>
