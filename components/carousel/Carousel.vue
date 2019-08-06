@@ -242,21 +242,16 @@ export default {
         autoplay, // Auto play[ms]
         freeze: true,
       },
+      storiesData: [],
     };
   },
-  computed: {
-    storiesData() {
-      const data = [];
-
-      this.stories.forEach((item, index) => {
-        data.push({
-          ...item,
-          isActive: index === this.selectedIndex,
-        });
+  created() {
+    this.stories.forEach((item, index) => {
+      this.storiesData.push({
+        ...item,
+        isActive: index === this.selectedIndex,
       });
-
-      return data;
-    },
+    });
   },
   mounted() {
     this.actionProgressBar();
