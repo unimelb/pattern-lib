@@ -1,18 +1,13 @@
 .card--showcase-profile {
-  background-color: #fff;
+  background-color: rgb(var(--col-navy-light));
   max-height: 23.3125rem;
-  overflow: scroll;
 
   .card__container {
     display: flex;
     cursor: pointer;
     background-color: rgb(var(--col-background-primary-navy));
     color: #fff;
-
-    &--fixed {
-      z-index: var(--z-default);
-      position: fixed;
-    }
+    min-height: 4.125rem;
   }
 
   .card__inner {
@@ -31,8 +26,9 @@
   .card__thumb--inner {
     background-size: cover;
     background-position: center;
-    height: 4.375rem;
-    width: 4rem;
+    height: 100%;
+    min-width: 4rem;
+    max-width: 4rem;
   }
 
   .card__titles {
@@ -44,6 +40,7 @@
     letter-spacing: 0;
     font-weight: var(--fw-bold);
     line-height: 1.2;
+    margin-bottom: .125rem;
   }
 
   .card__sub-title {
@@ -56,7 +53,7 @@
   .card__bio {
     padding: 1rem;
     max-width: 100%;
-    background-color: rgb(var(--col-navy-light));
+    overflow: scroll;
 
     &--text {
       font-size: .8125rem;
@@ -65,20 +62,5 @@
       font-weight: var(--fw-regular);
       margin-top: 1rem;
     }
-  }
-
-  /* Enter and leave animations can use different */
-  /* durations and timing functions.              */
-  .slide-fade-enter-active {
-    transition: all .4s ease-in-out;
-  }
-
-  .slide-fade-leave-active {
-    transition: all .3s ease-in-out;
-  }
-
-  .slide-fade-enter,
-  .slide-fade-leave-to {
-    opacity: 0;
   }
 }

@@ -7,7 +7,6 @@
       aria-label="Profile Image"
     />
     <div
-      :class="classes"
       class="card__container"
       @click="changeIcon">
       <div
@@ -33,7 +32,7 @@
       </div>
     </div>
 
-    <transition name="slide-fade">
+    <transition name="slide">
       <div
         v-show="!isHidden"
         class="card__bio">
@@ -80,21 +79,12 @@ export default {
     return {
       isHidden: true,
       iconName: 'chevron-up',
-      isFixed: false,
     };
-  },
-  computed: {
-    classes() {
-      return {
-        'card__container--fixed': this.isFixed,
-      };
-    },
   },
   methods: {
     changeIcon() {
       if (this.bio !== '') {
         this.isHidden = !this.isHidden;
-        this.isFixed = !this.isFixed;
         if (this.iconName === 'chevron-up') {
           this.setIconDown();
         } else {
