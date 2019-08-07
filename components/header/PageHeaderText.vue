@@ -12,7 +12,7 @@
       <div class="page-header-text__footer">
         <ButtonIcon
           :href="buttonLink"
-          class="page-header-text__button btn--green"
+          class="page-header-text__button btn--event"
           size="xsml"
           width="fullwidth"
           no-icon>{{ buttonText }}</ButtonIcon>
