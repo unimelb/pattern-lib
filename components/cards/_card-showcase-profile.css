@@ -60,7 +60,7 @@
 
     &--text {
       font-size: .8125rem;
-      color: rgb(var(--col-grey-dark));
+      color: #575757;
       line-height: 1.25;
       font-weight: var(--fw-regular);
       margin-top: 1rem;
