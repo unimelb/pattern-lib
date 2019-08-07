@@ -39,19 +39,19 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 400px;
+    height: 25rem;
     margin: auto;
     background: rgb(var(--col-black-dark));
 
     @media (--bp-desktop) {
       width: 80%;
-      height: 600px;
+      height: 37.5rem;
     }
   }
 
   &__thumbnails {
     display: flex;
-    height: 74px;
+    height: 4.625rem;
     width: 80%;
     margin: auto;
     overflow-x: auto;
@@ -65,7 +65,7 @@
 
       &.active {
         opacity: 1;
-        fill: rgba(153, 162, 170, .25);
+        fill: rgba(var(--col-black-mid-2), .25);
         border: .125rem solid rgb(var(--col-background-primary-white));
       }
     }
@@ -73,7 +73,7 @@
     .embed {
       &--video {
         position: relative;
-        width: 100px;
+        width: 6.25rem;
         height: 100%;
 
         .embed {
@@ -87,7 +87,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: calc(var(--z-default) + 1);
       }
     }
 

@@ -2,7 +2,7 @@
   display: none;
   background: rgba(0, 0, 0, .9);
   position: relative;
-  z-index: 3;
+  z-index: calc(var(--z-default) + 2);
 
   &__open {
     display: flex;
