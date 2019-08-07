@@ -229,24 +229,22 @@
     pointer-events: none;
   }
 
-  &--green {
+  &--event {
     background-color: rgb(var(--col-green-dark));
     font-size: .875rem;
     font-weight: var(--fw-bold);
+    color: #fff;
     border: none;
     border-radius: .125rem;
     transition: all .15s ease;
 
-    &.btn {
+    &.btn:hover {
+      background-color: rgb(var(--col-blue-dark));
       color: #fff;
     }
 
-    &.btn:hover {
-      background-color: #35659e;
-    }
-
     &.btn:active {
-      background-color: #094183;
+      background-color: rgb(var(--col-navy-dark));
     }
   }
 

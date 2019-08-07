@@ -1,5 +1,5 @@
 <template>
-  <ButtonIcon class="btn--green">Call to Action</ButtonIcon>
+  <ButtonIcon class="btn--event">Call to Action</ButtonIcon>
 </template>
 
 <script>

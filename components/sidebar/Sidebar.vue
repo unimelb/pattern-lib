@@ -13,7 +13,7 @@
       <ButtonIcon
         v-if="buttonLink"
         :href="buttonLink"
-        class="btn--green"
+        class="btn--event"
         size="xsml"
         width="fullwidth"
         no-icon>{{ buttonText }}</ButtonIcon>
@@ -35,6 +35,7 @@
               :key="index">
               <div class="sidebar__list-sub-title">{{ subTitle.text }}</div>
               <a
+                v-if="subTitle.email"
                 :href="'mailto:' + subTitle.email"
                 class="sidebar__list-email">{{ subTitle.email }}</a>
               <a
