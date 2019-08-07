@@ -18,7 +18,7 @@ import sidebar from '../sidebar.md';
 
 export default {
   components: { Sidebar },
-  readme: { custom: sidebar, source: true, html: false },
+  readme: { custom: sidebar, source: false, html: false },
   data() {
     return {
       items: sample,
