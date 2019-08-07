@@ -1,21 +1,38 @@
 .card--showcase-profile {
   background-color: #fff;
-  max-height: 373px;
+  max-height: 23.3125rem;
   overflow: scroll;
+
+  .card__container {
+    display: flex;
+    cursor: pointer;
+    background-color: rgb(var(--col-background-primary-navy));
+    color: #fff;
+
+    &--fixed {
+      z-index: var(--z-default);
+      position: fixed;
+    }
+  }
 
   .card__inner {
     display: flex;
+    flex: auto;
     align-items: center;
     padding: .75rem 1rem;
-    cursor: pointer;
-    background-color: #094183;
-    color: #fff;
   }
 
   .card__thumb {
     padding-top: 56.25%;
     min-height: auto;
-    height: 307px;
+    height: 19.1875rem;
+  }
+
+  .card__thumb--inner {
+    background-size: cover;
+    background-position: center;
+    height: 4.375rem;
+    width: 4rem;
   }
 
   .card__titles {
@@ -23,37 +40,45 @@
   }
 
   .card__title {
-    font-weight: var(--fw-semibold);
+    font-size: 1.125rem;
+    letter-spacing: 0;
+    font-weight: var(--fw-bold);
+    line-height: 1.2;
   }
 
   .card__sub-title {
+    font-size: .8125rem;
+    letter-spacing: 0;
+    font-weight: var(--fw-semibold);
     margin: 0;
-  }
-
-  .card__icon {
-    color: red;
   }
 
   .card__bio {
-    padding: 12px 16px 12px 16px;
-    margin: 0;
+    padding: 1rem;
     max-width: 100%;
     background-color: rgb(var(--col-navy-light));
+
+    &--text {
+      font-size: .8125rem;
+      color: rgb(var(--col-grey-dark));
+      line-height: 1.25;
+      font-weight: var(--fw-regular);
+      margin-top: 1rem;
+    }
   }
 
   /* Enter and leave animations can use different */
   /* durations and timing functions.              */
   .slide-fade-enter-active {
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
   }
 
   .slide-fade-leave-active {
-    transition: all .8s ease-in-out;
+    transition: all .3s ease-in-out;
   }
 
   .slide-fade-enter,
   .slide-fade-leave-to {
-    transform: translate(10px);
     opacity: 0;
   }
 }

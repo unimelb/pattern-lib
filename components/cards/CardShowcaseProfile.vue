@@ -7,21 +7,29 @@
       aria-label="Profile Image"
     />
     <div
-      class="card__inner"
-      @click="(isHidden = !isHidden)">
-      <div class="card__titles">
-        <h6 class="card__title">{{ title }}</h6>
-        <p class="card__sub-title">{{ subTitle }}</p>
-      </div>
-      <div>
-        <SvgIcon
-          v-if="bio"
-          :name="iconName"
-          aria-label="chevron"
-          class="card__icon"
-          width="10px"
-          height="10px"
-        />
+      :class="classes"
+      class="card__container"
+      @click="changeIcon">
+      <div
+        v-if="!isHidden && thumb"
+        :style="{ backgroundImage: `url(${thumb})` }"
+        class="card__thumb--inner"
+        aria-label="Profile Image"
+      />
+      <div class="card__inner">
+        <div class="card__titles">
+          <h6 class="card__title">{{ title }}</h6>
+          <p class="card__sub-title">{{ subTitle }}</p>
+        </div>
+        <div>
+          <SvgIcon
+            v-if="bio"
+            :name="iconName"
+            aria-label="chevron"
+            width="14px"
+            height="14px"
+          />
+        </div>
       </div>
     </div>
 
@@ -32,7 +40,7 @@
         <VideoEmbed
           v-if="video"
           :src="video"/>
-        <p>{{ bio }}</p>
+        <p class="card__bio--text">{{ bio }}</p>
       </div>
     </transition>
   </div>
@@ -72,9 +80,28 @@ export default {
     return {
       isHidden: true,
       iconName: 'chevron-up',
+      isFixed: false,
     };
   },
+  computed: {
+    classes() {
+      return {
+        'card__container--fixed': this.isFixed,
+      };
+    },
+  },
   methods: {
+    changeIcon() {
+      if (this.bio !== '') {
+        this.isHidden = !this.isHidden;
+        this.isFixed = !this.isFixed;
+        if (this.iconName === 'chevron-up') {
+          this.setIconDown();
+        } else {
+          this.setIconUp();
+        }
+      }
+    },
     setIconUp() {
       this.iconName = 'chevron-up';
     },
