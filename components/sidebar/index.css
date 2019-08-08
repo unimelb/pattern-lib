@@ -21,6 +21,7 @@
     align-items: center;
     color: #fff;
     margin-bottom: 0;
+    line-height: 1.25;
 
     &-icon {
       margin-right: 1rem;
@@ -34,6 +35,10 @@
       display: flex;
       border-bottom: 1px solid rgb(var(--col-background-secondary-grey));
       padding: 1rem 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
     }
 
     &-title {
