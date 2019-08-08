@@ -238,12 +238,13 @@
     border-radius: .125rem;
     transition: all .15s ease;
 
-    &.btn:hover {
+    &:hover,
+    &:focus {
       background-color: rgb(var(--col-blue-dark));
       color: #fff;
     }
 
-    &.btn:active {
+    &:active {
       background-color: rgb(var(--col-navy-dark));
     }
   }
