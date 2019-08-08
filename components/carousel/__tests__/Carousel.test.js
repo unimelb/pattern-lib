@@ -72,7 +72,7 @@ describe('Carousel', () => {
     });
     expect(wrapper.props().stories.length).toBe(2);
 
-    expect(wrapper.find('.carousel__image').attributes().style).toBe('background-image: url(test1);');
+    expect(wrapper.find('.carousel__image').attributes().style).toBe('background-image: url(test1); background-position: center;');
   });
 
   it('should set active to first story as default', () => {

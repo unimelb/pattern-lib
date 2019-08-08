@@ -4,13 +4,13 @@ import {
 import {
   toHaveNoViolations,
 } from 'jest-axe';
-import SocialList from '../SocialList.vue';
+import SocialListGeneric from '../SocialListGeneric.vue';
 
 expect.extend(toHaveNoViolations);
 
-describe('SocialList', () => {
+describe('Social List Generic', () => {
   it('should match snapshot', () => {
-    const result = shallow(SocialList).element;
+    const result = shallow(SocialListGeneric).element;
     expect(result).toMatchSnapshot();
   });
 });

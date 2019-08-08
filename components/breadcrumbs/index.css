@@ -3,8 +3,8 @@
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 0;
-  padding-top: var(--vr);
-  padding-bottom: var(--vr);
+  padding-top: .75rem;
+  padding-bottom: .75rem;
   list-style-type: none;
 
   &__item {

@@ -337,3 +337,7 @@ export {
   default as CardNewsTag,
 }
   from '../../components/cards/CardNewsTag.vue';
+export {
+  default as Sidebar,
+}
+  from '../../components/sidebar/Sidebar.vue';
