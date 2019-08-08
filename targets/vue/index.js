@@ -337,3 +337,7 @@ export {
   default as CardNewsTag,
 }
   from '../../components/cards/CardNewsTag.vue';
+export {
+  default as PageHeaderEvent,
+}
+  from '../../components/header/PageHeaderEvent.vue';

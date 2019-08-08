@@ -1,5 +1,5 @@
 <template>
-  <PageHeaderText
+  <PageHeaderEvent
     header-text="Exhibition"
     title-text="2019 Victorian College of the Arts Graduate Exhibition"
     sub-title-text="Margaret Lawrence Gallery"
@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import PageHeaderText from '../../PageHeaderText.vue';
+import PageHeaderEvent from '../../PageHeaderEvent.vue';
 
 export default {
-  components: { PageHeaderText },
+  components: { PageHeaderEvent },
   readme: { source: true, html: false },
 };
 </script>
