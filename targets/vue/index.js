@@ -163,6 +163,10 @@ export {
 }
   from '../../components/header/PageHeader.vue';
 export {
+  default as PageHeaderEvent,
+}
+  from '../../components/header/PageHeaderEvent.vue';
+export {
   default as PageHeaderMin,
 }
   from '../../components/header/PageHeaderMin.vue';
@@ -306,7 +310,6 @@ export {
   default as PageHeaderCampaign,
 }
   from '../../components/campaign/PageHeaderCampaign.vue';
-
 export {
   default as ResponsiveTable,
 }
@@ -338,6 +341,6 @@ export {
 }
   from '../../components/cards/CardNewsTag.vue';
 export {
-  default as PageHeaderEvent,
+  default as Sidebar,
 }
-  from '../../components/header/PageHeaderEvent.vue';
+  from '../../components/sidebar/Sidebar.vue';
