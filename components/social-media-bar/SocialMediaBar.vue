@@ -37,8 +37,8 @@
           :instagram-link="instagramLink"
           :vimeo-link="vimeoLink"
           :youtube-link="youtubeLink"
+          :icon-size="30"
           class="social-media-bar__social-list"
-          icon-size="30"
         />
 
       </div>
