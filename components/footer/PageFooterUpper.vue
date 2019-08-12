@@ -122,8 +122,8 @@
         <div class="page-footer__main__contacts cell cell--wide-1of4">
           <p class="screenreaders-only">Follow us on:</p>
           <SocialListGeneric
+            :icon-size="22"
             class="page-footer__social"
-            icon-size="22"
             facebook-link="https://www.facebook.com/unimelb"
             twitter-link="https://twitter.com/unimelb"
             linkedin-link="https://www.linkedin.com/school/university-of-melbourne/"

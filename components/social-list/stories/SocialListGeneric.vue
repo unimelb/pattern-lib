@@ -1,6 +1,6 @@
 <template>
   <SocialListGeneric
-    icon-size="50"
+    :icon-size="50"
     facebook-link="https://google.com"
     twitter-link="https://google.com"
     linkedin-link="https://google.com"

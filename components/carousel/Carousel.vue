@@ -18,7 +18,7 @@
           :key="index"
         >
           <div
-            :style="`background-image: url('${slide.src}'); background-position: ${slide.imagePosition ? slide.imagePosition : 'center'};`"
+            :style="image[index]"
             :aria-label="slide.altText"
             class="carousel__image" />
         </slideritem>
@@ -175,6 +175,7 @@
 
 <script>
 import { slider, slideritem } from 'vue-concise-slider';
+import { setTimeout } from 'timers';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
 
@@ -242,6 +243,7 @@ export default {
         autoplay, // Auto play[ms]
         freeze: true,
       },
+      image: {},
     };
   },
   computed: {
@@ -258,10 +260,29 @@ export default {
       return data;
     },
   },
+  created() {
+    this.displayImage(0);
+  },
   mounted() {
-    this.actionProgressBar();
+    this.loadImg();
+    setTimeout(() => {
+      this.actionProgressBar();
+    }, 1100);
   },
   methods: {
+    displayImage(index) {
+      this.image[index] = {
+        backgroundImage: `url(${this.stories[index].src})`,
+        backgroundPosition: `${this.stories[index].imagePosition ? this.stories[index].imagePosition : 'center'}`,
+      };
+    },
+    loadImg() {
+      setTimeout(() => {
+        for (let i = 1; i < this.stories.length; i += 1) {
+          this.displayImage(i);
+        }
+      }, 1100);
+    },
     slide(slide) {
       if (this.stories[slide.currentPage]) {
         this.selectedItem = this.stories[slide.currentPage];
@@ -309,6 +330,7 @@ export default {
       this.countTime = 0;
     },
     moveToStory(storyIndex) {
+      this.displayImage(storyIndex);
       this.selectedItem = this.stories[storyIndex];
       this.selectedIndex = storyIndex;
       this.$refs.slider.$emit('slideTo', storyIndex);
