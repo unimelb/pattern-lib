@@ -6,6 +6,7 @@
     :excerpt="excerpt"
     :tags="tags"
     :cols="1"
+    class="card-news-tag"
   >
     <slot
       v-for="(_, name) in $slots"
