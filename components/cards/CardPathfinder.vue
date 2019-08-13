@@ -39,8 +39,13 @@
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
+
 export default {
   name: 'CardPathfinder',
+  components: {
+    SvgIcon,
+  },
   props: {
     title: {
       type: String,
