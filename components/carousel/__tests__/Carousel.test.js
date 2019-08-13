@@ -12,6 +12,7 @@ expect.extend(toHaveNoViolations);
 
 const storiesMock = [{
   src: 'test1',
+  imagePosition: 'center',
   altText: 'test',
   title: 'Story 1',
   description: 'Story 2 description',
@@ -20,6 +21,7 @@ const storiesMock = [{
 },
 {
   src: 'test2',
+  imagePosition: 'center',
   altText: 'test',
   title: 'Story 2',
   description: 'Story 2 description',
@@ -42,7 +44,7 @@ describe('Carousel', () => {
   it('should have default props and correct types stories', () => {
     const wrapper = shallow(Carousel, {
       propsData: {
-        stories: [],
+        stories: storiesMock,
       },
     });
     const {
@@ -50,7 +52,7 @@ describe('Carousel', () => {
     } = wrapper.vm.$options.props;
 
     expect(stories.type).toBe(Array);
-    expect(wrapper.props().stories).toEqual([]);
+    expect(wrapper.props().stories).toEqual(storiesMock);
   });
 
   it('should accept stories prop with correct type', () => {
