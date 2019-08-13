@@ -3,9 +3,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 38vw;
-
-  @media (--bp-tablet) {
-    height: 28vw;
-  }
+  height: 54vw;
+  max-height: 50vh;
 }
