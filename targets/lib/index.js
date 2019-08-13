@@ -89,6 +89,8 @@ import CardsFilter from '../../components/filter/cards/CardsFilter.vue';
 import AccordionFilter from '../../components/filter/accordion/AccordionFilter.vue';
 import Tags from '../../components/tags/Tags.vue';
 import CardNewsTag from '../../components/cards/CardNewsTag.vue';
+import PageHeaderEvent from '../../components/header/PageHeaderEvent.vue';
+import Sidebar from '../../components/sidebar/Sidebar.vue';
 
 import '../../components';
 
@@ -138,6 +140,7 @@ Vue.component('notice', Notice);
 Vue.component('page-breadcrumbs', PageBreadcrumbs);
 Vue.component('page-header', PageHeader);
 Vue.component('page-header-min', PageHeaderMin);
+Vue.component('page-header-event', PageHeaderEvent);
 Vue.component('pathfinder', Pathfinder);
 Vue.component('section-divider', SectionDivider);
 Vue.component('section-two-col', SectionTwoCol);
@@ -180,6 +183,7 @@ Vue.component('cards-filter', CardsFilter);
 Vue.component('accordion-filter', AccordionFilter);
 Vue.component('tags', Tags);
 Vue.component('card-news-tag', CardNewsTag);
+Vue.component('sidebar', Sidebar);
 
 // Create Vue instance
 new Vue({
