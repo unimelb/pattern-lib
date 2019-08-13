@@ -175,7 +175,6 @@
 
 <script>
 import { slider, slideritem } from 'vue-concise-slider';
-import { setTimeout } from 'timers';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
 
@@ -273,7 +272,7 @@ export default {
     displayImage(index) {
       this.image[index] = {
         backgroundImage: `url(${this.stories[index].src})`,
-        backgroundPosition: `${this.stories[index].imagePosition ? this.stories[index].imagePosition : 'center'}`,
+        backgroundPosition: this.stories[index].imagePosition ? this.stories[index].imagePosition : 'center',
       };
     },
     loadImg() {
