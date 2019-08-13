@@ -115,7 +115,7 @@ describe('MediaGallery Common', () => {
     wrapper.setMethods({
       open,
     });
-    wrapper.find('.media-gallery__thumbnails--image').trigger('click');
+    wrapper.find('.media-gallery-thumbnails__image').trigger('click');
     expect(open.called).toBe(true);
   });
 
@@ -184,26 +184,10 @@ describe('MediaGallery InPage', () => {
         inPage: true,
       },
     });
-    wrapper.findAll('.media-gallery__thumbnails--thumb').at(1).trigger('click');
-    expect(wrapper.findAll('.media-gallery__thumbnails--thumb').at(1).classes()).toContain('active');
+    wrapper.findAll('.media-gallery-thumbnails__thumb').at(1).trigger('click');
+    expect(wrapper.findAll('.media-gallery-thumbnails__thumb').at(1).classes()).toContain('active');
     expect(wrapper.vm.selectedIndex).toBe(1);
     expect(wrapper.vm.selectedItem.id).toBe(2);
-  });
-
-  it('should have enter event on thumb', () => {
-    const open = sinon.stub();
-    const wrapper = shallow(MediaGallery, {
-      propsData: {
-        media: mediaMock,
-        inPage: true,
-      },
-    });
-
-    wrapper.setMethods({
-      open,
-    });
-    wrapper.find('.media-gallery__thumbnails--image').trigger('keydown.enter');
-    expect(open.called).toBe(true);
   });
 
   it('should render embed if image type', () => {
@@ -215,7 +199,7 @@ describe('MediaGallery InPage', () => {
     });
     wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
     wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
-    expect(wrapper.find('.media-gallery__thumbnails--image').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery-thumbnails__image').exists()).toBe(true);
   });
 
   it('should render embed if video type', () => {
@@ -239,11 +223,11 @@ describe('MediaGallery overlay', () => {
       },
     });
 
-    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--overlay');
-    expect(wrapper.find('.media-gallery--overlay__media-count').exists()).toBe(true);
-    expect(wrapper.find('.media-gallery--overlay__close').exists()).toBe(true);
-    expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery--overlay__slider');
-    expect(wrapper.find('.media-gallery__container').classes()).toContain('media-gallery--overlay__container');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay');
+    expect(wrapper.find('.media-gallery-overlay__media-count').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery-overlay__close').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery-slider').classes()).toContain('media-gallery-overlay__slider');
+    expect(wrapper.find('.media-gallery__container').classes()).toContain('media-gallery-overlay__container');
   });
 
   it('should render current media number', () => {
@@ -254,9 +238,9 @@ describe('MediaGallery overlay', () => {
       },
     });
 
-    expect(wrapper.find('.media-gallery--overlay__media-count').text()).toBe('1 / 2');
+    expect(wrapper.find('.media-gallery-overlay__media-count').text()).toBe('1 / 2');
     wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
-    expect(wrapper.find('.media-gallery--overlay__media-count').text()).toBe('2 / 2');
+    expect(wrapper.find('.media-gallery-overlay__media-count').text()).toBe('2 / 2');
   });
 
   it('should have thumbnails component', () => {
@@ -296,6 +280,6 @@ describe('MediaGallery overlay', () => {
 
     wrapper.find('.thumbnails__item div').trigger('click');
     expect(wrapper.vm.openState).toBe(true);
-    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--overlay__open');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay__open');
   });
 });

@@ -3,14 +3,15 @@
     <div :class="classes">
       <div
         v-if="overlay"
-        class="media-gallery--overlay__media-count">
+        class="media-gallery-overlay__media-count">
         {{ selectedIndex + 1 }} / {{ media.length }}
         <div
-          class="media-gallery--overlay__close"
+          class="media-gallery-overlay__close"
           tabindex="0"
           title="Close (Esc)"
           @click="openStateToggle()"
           @keydown.13="openStateToggle()"
+          @keydown.32="openStateToggle()"
         >
           <SvgIcon
             name="close"
@@ -26,6 +27,7 @@
           title="Previous (arrow left)"
           @click="move('prev')"
           @keydown.13="move('prev')"
+          @keydown.32="move('prev')"
         >
           <SvgIcon
             class="media-gallery__chevron"
@@ -50,7 +52,7 @@
                 v-if="slide.type === 'image'"
                 :src="slide.src"
                 :alt="slide.altText"
-                class="media-gallery__slider-image"
+                class="media-gallery-slider__image"
               >
               <VideoEmbed
                 v-if="slide.type === 'video'"
@@ -65,6 +67,7 @@
           title="Next (arrow right)"
           @click="move('next')"
           @keydown.13="move('next')"
+          @keydown.32="move('next')"
         >
           <SvgIcon
             class="media-gallery__chevron"
@@ -82,17 +85,16 @@
             :key="item.id"
             :class="{ active: index === selectedIndex}"
             :aria-describedby="'caption' + selectedIndex"
-            class="media-gallery__thumbnails--thumb"
+            class="media-gallery-thumbnails__thumb"
             tabindex="0"
             role="button"
             @click="open(index)"
-            @keydown.13="open(index)"
           >
             <img
               v-if="item.type === 'image'"
               :src="item.src"
               :alt="item.altText"
-              class="media-gallery__thumbnails--image"
+              class="media-gallery-thumbnails__image"
             >
             <div
               v-if="item.type === 'video'"
@@ -180,26 +182,26 @@ export default {
     classes() {
       return {
         'media-gallery': true,
-        'media-gallery--overlay': this.overlay,
-        'media-gallery--overlay__open': this.openState,
+        'media-gallery-overlay': this.overlay,
+        'media-gallery-overlay__open': this.openState,
       };
     },
     sliderClasses() {
       return {
-        'media-gallery__slider': true,
-        'media-gallery--overlay__slider': this.overlay,
+        'media-gallery-slider': true,
+        'media-gallery-overlay__slider': this.overlay,
       };
     },
     containerClasses() {
       return {
         'media-gallery__container': true,
-        'media-gallery--overlay__container': this.overlay,
+        'media-gallery-overlay__container': this.overlay,
       };
     },
     thumbClasses() {
       return {
-        'media-gallery__thumbnails': true,
-        'media-gallery--overlay__thumbnails': this.overlay,
+        'media-gallery-thumbnails': true,
+        'media-gallery-overlay__thumbnails': this.overlay,
       };
     },
   },

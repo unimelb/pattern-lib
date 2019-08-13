@@ -8,7 +8,7 @@ exports[`MediaGallery Common should match snapshot 1`] = `
     <!---->
      
     <div
-      class="media-gallery__slider"
+      class="media-gallery-slider"
     >
       <div
         class="media-gallery__arrow-wrapper"

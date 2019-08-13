@@ -3,12 +3,12 @@
   background: rgb(var(--col-black-dark));
   padding-bottom: 2rem;
 
-  &__slider {
+  &-slider {
     display: flex;
     align-items: center;
     margin-bottom: .313rem;
 
-    &-image {
+    &__image {
       width: 100%;
       object-fit: contain;
       height: 100%;
@@ -49,7 +49,7 @@
     }
   }
 
-  &__thumbnails {
+  &-thumbnails {
     display: flex;
     height: 4.625rem;
     width: 80%;
@@ -57,7 +57,7 @@
     overflow-x: auto;
     overflow-y: hidden;
 
-    &--thumb {
+    &__thumb {
       cursor: pointer;
       margin-right: .313rem;
       opacity: .7;
@@ -91,7 +91,7 @@
       }
     }
 
-    &--image {
+    &__image {
       height: 100%;
     }
 
