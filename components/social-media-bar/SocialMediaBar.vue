@@ -47,10 +47,12 @@
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
 import SocialListGeneric from '../social-list/SocialListGeneric.vue';
 
 export default {
   components: {
+    SvgIcon,
     SocialListGeneric,
   },
   props: {
