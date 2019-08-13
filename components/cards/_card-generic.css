@@ -45,8 +45,8 @@
     border-top: 1px solid rgb(var(--col-black-mid-1));
     padding-top: .5rem;
     font-weight: var(--fw-semibold);
-    font-size: .8125rem;
-    line-height: 1.0625rem;
+    font-size: .9375rem;
+    line-height: 1.5;
     color: #575756;
 
     svg {
@@ -74,8 +74,8 @@
     padding-top: .75rem;
     margin: .5rem 0 1rem 0;
     flex: 1 1 auto;
-    font-size: .8125rem;
-    line-height: 1.0625rem;
+    font-size: .9375rem;
+    line-height: 1.5;
     color: #575756;
   }
 
