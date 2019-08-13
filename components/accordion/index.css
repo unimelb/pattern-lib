@@ -11,6 +11,7 @@
       margin-bottom: 0;
       font-size: 1.25rem;
       line-height: 1.25;
+      letter-spacing: inherit; /* in case accordion is nested inside .content-block */
     }
 
     &::after {
