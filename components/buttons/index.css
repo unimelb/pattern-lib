@@ -194,7 +194,7 @@
   &--icon {
     position: relative;
     padding-left: calc(var(--vr * .83));
-    padding-right: calc(var(--vr) * 2);
+    padding-right: 2.5rem;
     text-align: left;
 
     &::after {
@@ -202,7 +202,7 @@
       display: inline-block;
       position: absolute;
       top: calc(50% - (.75em / 2));
-      right: 1.25rem;
+      right: 1rem;
       width: .75em;
       height: .75em;
       margin-top: .05rem;
@@ -337,7 +337,7 @@
 
   &--icon-before {
     position: relative;
-    padding-left: calc(var(--vr) * 2);
+    padding-left: 2.5rem;
     padding-right: calc(var(--vr * .83));
     text-align: left;
 
@@ -346,7 +346,7 @@
       display: inline-block;
       position: absolute;
       top: calc(50% - (.75em / 2));
-      left: 1.25rem;
+      left: 1rem;
       width: .75em;
       height: .75em;
       margin-top: .05rem;
