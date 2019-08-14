@@ -85,7 +85,12 @@
                 <td>
                   <strong>Location</strong>
                   <br>
-                  {{ item.location }}
+                  <span
+                    v-for="(item, index) in item.location"
+                    :key="index">
+                    <span v-if="index > 0">{{ ', ' }}</span>
+                    {{ item }}
+                  </span>
                 </td>
                 <td>
                   <strong>Points</strong>
@@ -168,8 +173,8 @@ export default {
   computed: {
     filteredData() {
       return this.data.filter(
-        data => data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
-          && data.location.match(new RegExp(this.selectedLocation, 'i'))
+        data => (this.selectedLocation === '' || data.location.includes(this.selectedLocation))
+          && data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
           && data.audition.match(new RegExp(this.selectedAudition, 'i'))
           && data.name.match(new RegExp(this.searchText, 'i'))
       );
@@ -209,8 +214,8 @@ export default {
           filters.disciplines.push(element.discipline);
         }
 
-        if (!filters.locations.includes(element.location)) {
-          filters.locations.push(element.location);
+        if (!filters.locations.includes(...element.location)) {
+          filters.locations.push(...element.location);
         }
 
         if (!filters.auditions.includes(element.audition)) {
