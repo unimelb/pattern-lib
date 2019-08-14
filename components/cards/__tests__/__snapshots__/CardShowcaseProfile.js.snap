@@ -2,7 +2,7 @@
 
 exports[`CardShowcaseProfile should match snapshot 1`] = `
 <div
-  class="card card--bdr card--showcase-profile"
+  class="card card--showcase-profile"
 >
   <div
     aria-label="Profile Image"
