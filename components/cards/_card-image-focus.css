@@ -45,7 +45,7 @@
     &::after {
       content: '';
       position: absolute;
-      z-index: 2;
+      z-index: calc(var(--z-default) + 1);
       width: 5rem;
       height: 5rem;
       opacity: .6;

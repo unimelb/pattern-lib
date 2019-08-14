@@ -20,6 +20,7 @@ export default {
       'download',
       'external',
       'play',
+      'pause',
       'home',
       'search',
       'calendar',

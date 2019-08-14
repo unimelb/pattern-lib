@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsGroup should match snapshot 1`] = `
+<div
+  class="stats-group"
+>
+  <ul
+    class="stats-group__list list-reset"
+  />
+   
+  <!---->
+</div>
+`;

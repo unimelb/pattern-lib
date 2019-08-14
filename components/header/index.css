@@ -1,3 +1,5 @@
+@import 'page-header-event.css';
+
 .page-header {
   position: relative;
   padding: 2rem 0 0;
@@ -44,7 +46,6 @@
   /* Entity identifier */
   &__entity {
     position: relative;
-    z-index: 1;
     width: 45%;
     margin-top: calc(var(--vr) * 2);
 
@@ -79,10 +80,10 @@
 
   &__heading {
     position: relative;
-    z-index: 1;
     width: 50%;
     max-width: calc(64rem * .4);
     padding-right: 3rem;
+    z-index: var(--z-default);
 
     @media (--bp-max-x-mobile) {
       width: 80%;
@@ -129,19 +130,14 @@
   /* Aperture without focus mark for level-3 header */
   &__shape {
     position: absolute;
-    top: -35%;
-
-    /* MAGIC NUMBER account for slight rotation */
+    overflow: hidden;
+    top: 0;
     right: 0;
-    bottom: 0;
     left: 27%;
-    transform: rotate(.25deg);
-
-    /* rotate slightly */
+    height: 100%;
     background-color: inherit;
 
     /* pass on background colour to pseudo-elements */
-
     &::before,
     &::after {
       content: '';
@@ -149,15 +145,15 @@
       position: absolute;
       right: 0;
       left: 0;
-      background-color: inherit;
 
       /* inherit from shape and header */
+      background-color: inherit;
     }
 
     /* triangle in top left-hand corner */
     &::before {
       top: 0;
-      height: 60%;
+      height: 45%;
       transform: skewY(-30deg);
       transform-origin: top left;
     }
@@ -165,9 +161,13 @@
     /* triangle in bottom left-hand corner */
     &::after {
       bottom: 0;
-      height: 40%;
+      height: 55%;
       transform: skewY(60deg);
       transform-origin: bottom left;
+    }
+
+    @media (--bp-x-wide) {
+      left: 35%;
     }
   }
 
@@ -225,21 +225,23 @@
 
   /* Level-3 header (i.e. `PageHeaderMin`) */
   &--l3 {
-    z-index: 0;
     padding: 0;
 
     .page-header__inner {
       display: flex;
       position: relative;
       align-items: center;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: .85rem;
+      padding-bottom: .85rem;
+
+      @media (--bp-tablet) {
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+      }
     }
 
     .page-header__logo {
       font-size: .875rem;
-
-      /* fix wrapping of `alt` text */
 
       @media (--bp-tablet) {
         width: 85px;

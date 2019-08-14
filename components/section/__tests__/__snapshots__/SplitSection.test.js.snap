@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SplitSection should match snapshot 1`] = `
+<section
+  class="split-section"
+>
+  <div
+    class="split-section__side"
+  >
+    <!---->
+     
+    <!---->
+  </div>
+   
+  <div
+    class="split-section__side"
+  >
+    <!---->
+     
+    <!---->
+  </div>
+</section>
+`;

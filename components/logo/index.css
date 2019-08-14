@@ -1,0 +1,42 @@
+.logo {
+  display: flex;
+
+  &__link {
+    color: rgb(var(--col-background-primary-white));
+    line-height: 0;
+  }
+
+  &__image {
+    display: block;
+    height: 66px;
+    width: 66px;
+
+    &--md {
+      @media (--bp-tablet) {
+        height: 96px;
+        width: 96px;
+      }
+    }
+
+    &--lg {
+      height: 148px;
+      width: 148px;
+    }
+  }
+
+  &--no-padding {
+    &-sm {
+      margin: -6px;
+    }
+    &-md {
+      margin: -6px;
+    }
+    &-lg {
+      margin: -10px;
+
+      @media (--bp-tablet) {
+        margin: -16px;
+      }
+    }
+  }
+}

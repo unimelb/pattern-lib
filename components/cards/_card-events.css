@@ -1,31 +1,20 @@
 .card--events {
   color: rgb(var(--col-brand));
 
-  .card__title {
-    font-size: 1.25rem;
-    font-weight: var(--fw-bold);
-    text-decoration: none;
+  .card__thumb {
+    min-height: 200px;
+    height: 100%;
   }
 
   .card__sub-titles {
     margin-bottom: .25rem;
     border-bottom: 0;
     padding: .5rem 0;
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
   }
 
   .card__excerpt {
     @media (--bp-desktop) {
       display: none;
     }
-  }
-
-  @media (--bp-tablet) {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 }

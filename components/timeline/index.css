@@ -45,7 +45,6 @@
       content: '';
       display: block;
       position: absolute;
-      z-index: 2;
       top: 6px; /* match horizontal dimension */
       left: -6px; /* half of width, rounded up */
       width: 11px;

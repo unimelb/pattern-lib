@@ -3,7 +3,7 @@
   flex-direction: column;
   flex: 1 0 auto;
   position: relative;
-  margin: 5px 1.25rem 0;
+  margin: .3125rem 1.25rem 0 .625rem;
   text-decoration: none;
   line-height: 1rem;
   color: rgb(var(--col-background-primary-white));
@@ -26,14 +26,14 @@
   }
 
   @media (--bp-tablet) {
+    margin-left: 1.25rem;
+  }
+
+  @media (--bp-tablet) {
     line-height: 1.25rem;
   }
 
   @media (--bp-x-desktop) {
-    font-size: 1.1rem;
-  }
-
-  @media (--bp-wide) {
-    font-size: 1.25rem;
+    font-size: 1.11rem;
   }
 }

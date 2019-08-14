@@ -16,12 +16,12 @@
   --col-navy-dark: 9, 65, 131;
   --col-navy-mid-3: 83, 122, 168;
   --col-navy-mid-2: 93, 130, 173;
-  --col-navy-mid-1: 171, 190, 213;
 
   /* #ABBED5 */
-  --col-navy-light: 242, 245, 249;
+  --col-navy-mid-1: 171, 190, 213;
 
   /* #F2F5F9 */
+  --col-navy-light: 242, 245, 249;
 
   /* Supporting palette */
   --col-black-dark: 0, 0, 0;
@@ -118,7 +118,7 @@
   --fw-regular: 400;
 
   /* Border radius */
-  --br: 3px;
+  --br: 4px;
   --br-cards: 4px;
 
   /* Side nav width */
@@ -137,6 +137,14 @@
   --h4-fs: calc(var(--h5-fs) * var(--fs));
   --h5-fs: calc(var(--h6-fs) * var(--fs));
   --h6-fs: calc(1rem * var(--fs));
+
+  /* Z-index variables */
+  --z-below: -1;
+  --z-default: 1;
+  --z-navigation: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+  --z-liveagent: 10000;
 }
 
 /**

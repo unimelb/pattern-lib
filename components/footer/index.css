@@ -1,7 +1,7 @@
 .page-footer {
   /* default stacking */
   position: relative;
-  z-index: 3;
+  z-index: calc(var(--z-default) + 2);
   padding: 0;
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-background-primary-white));
@@ -17,10 +17,21 @@
     background-color: rgb(var(--col-background-secondary-navy));
   }
 
-  /* logo wrapper */
-  &__header__logo {
-    margin-bottom: 2.25rem;
-    text-align: center;
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    &-logo {
+      margin-bottom: 2.25rem;
+      justify-content: center;
+      flex: 1;
+      align-self: center;
+
+      @media (--bp-tablet) {
+        margin-bottom: 0;
+        justify-content: flex-start;
+      }
+    }
   }
 
   /* list of user groups */
@@ -150,20 +161,10 @@
 
     /* footer header with logo and search form */
     &__header {
-      display: table;
-      width: 100%;
+      flex-direction: row;
 
-      &__logo,
-      &__search {
-        display: table-cell;
-        vertical-align: bottom;
-      }
-
-      &__logo {
-        text-align: left;
-      }
-
-      &__search {
+      &-search {
+        align-self: flex-end;
         width: 50%;
         padding-left: .5rem;
       }
@@ -249,7 +250,7 @@
 .liveagent {
   display: block;
   position: fixed;
-  z-index: 99999;
+  z-index: var(--z-liveagent);
   right: 15px;
   bottom: 15px;
   width: 168px;
@@ -286,16 +287,6 @@
 
   &__submit {
     color: rgb(var(--col-background-primary-white));
-  }
-
-  &__icon-mask {
-    position: absolute;
-    z-index: 4;
-    top: 50%;
-    left: 0;
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
   }
 
   &__input {

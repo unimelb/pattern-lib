@@ -415,7 +415,7 @@ a[target='_blank'] {
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
-&.screenreaders-only-focusable {
+.screenreaders-only-focusable {
   &:active,
   &:focus {
     position: static !important;
@@ -457,5 +457,14 @@ a[target='_blank'] {
 @keyframes slideFromTop {
   from {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes searchPulse {
+  from {
+    box-shadow: 0 0 9px rgb(var(--col-blue-light));
+  }
+  to {
+    box-shadow: 0 0 18px rgb(var(--col-blue-light));
   }
 }

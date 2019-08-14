@@ -52,5 +52,10 @@
 @import 'social-media-bar/index.css';
 @import 'info-panel/index.css';
 @import 'screen-reader/index.css';
+@import 'carousel/index.css';
+@import 'logo/index.css';
+@import 'filter/index.css';
+@import 'tags/index.css';
+@import 'sidebar/index.css';
 
 /*** Add new component below */

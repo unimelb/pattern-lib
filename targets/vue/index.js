@@ -163,6 +163,10 @@ export {
 }
   from '../../components/header/PageHeader.vue';
 export {
+  default as PageHeaderEvent,
+}
+  from '../../components/header/PageHeaderEvent.vue';
+export {
   default as PageHeaderMin,
 }
   from '../../components/header/PageHeaderMin.vue';
@@ -306,7 +310,6 @@ export {
   default as PageHeaderCampaign,
 }
   from '../../components/campaign/PageHeaderCampaign.vue';
-
 export {
   default as ResponsiveTable,
 }
@@ -315,3 +318,29 @@ export {
   default as CompactedTable,
 }
   from '../../components/tables/CompactedTable.vue';
+export {
+  default as Carousel,
+}
+  from '../../components/carousel/Carousel.vue';
+export {
+  default as Logo,
+}
+  from '../../components/logo/Logo.vue';
+export {
+  default as CardsFilter,
+} from '../../components/filter/cards/CardsFilter.vue';
+export {
+  default as AccordionFilter,
+} from '../../components/filter/accordion/AccordionFilter.vue';
+export {
+  default as Tags,
+}
+  from '../../components/tags/Tags.vue';
+export {
+  default as CardNewsTag,
+}
+  from '../../components/cards/CardNewsTag.vue';
+export {
+  default as Sidebar,
+}
+  from '../../components/sidebar/Sidebar.vue';

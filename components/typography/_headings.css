@@ -14,6 +14,7 @@ h1,
   font-family: var(--ff-lead);
   font-size: 2rem;
   line-height: 1.3;
+  letter-spacing: -.125rem;
 }
 
 .heading-page-sub {
@@ -36,6 +37,7 @@ h2,
   margin-bottom: var(--vr);
   font-family: var(--ff-lead);
   font-size: 1.75rem;
+  letter-spacing: -.125rem;
 }
 
 h3,

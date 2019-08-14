@@ -29,3 +29,4 @@ import './instagram.svg';
 import './vimeo.svg';
 import './youtube.svg';
 import './info.svg';
+import './pause.svg';

@@ -6,7 +6,7 @@
 
 .megamenu {
   position: fixed;
-  z-index: 102;
+  z-index: var(--z-navigation);
   top: 0;
   right: -100%;
   width: 100%;
@@ -64,14 +64,13 @@
 
     @media (--bp-x-desktop) {
       display: none;
-      z-index: 2;
       top: 100%;
       left: 0;
       height: auto;
       margin-top: 0;
       margin-bottom: 0;
       padding: 2.5rem 1.5rem;
-      background-color: #083c79;
+      background-color: rgb(var(--col-background-secondary-navy));
     }
 
     @media (--bp-wide) {
@@ -173,22 +172,6 @@
     &__link[href='#'] {
       opacity: .2;
       cursor: not-allowed;
-    }
-
-    &__link--nested {
-      width: 100%;
-      font-weight: var(--fw-semibold);
-      text-align: left;
-      cursor: pointer;
-
-      &::after {
-        content: '\203a';
-        z-index: 9;
-        float: right;
-        font-size: 1.5rem;
-        font-weight: normal;
-        line-height: .85;
-      }
     }
 
     &__nested-parent {
@@ -481,7 +464,6 @@
       &__section .menu__item[tabindex='0']:focus {
         .inner {
           display: flex;
-          z-index: 3;
           box-shadow: 1px 6px 12px -3px rgba(0, 0, 0, .6);
         }
 
@@ -577,18 +559,14 @@
 
   .page-header__inner {
     height: 4.5rem;
-    padding-left: 1rem;
+    padding-left: .625rem;
     padding-top: 0;
     padding-bottom: 0;
 
-    .link-img {
-      margin: -.75rem;
-      padding: .75rem;
-      border-radius: var(--br);
-    }
-
     @media (--bp-tablet) {
-      height: 6.4375rem;
+      height: 100%;
+      min-height: 6rem;
+      padding-left: 1rem;
     }
   }
 
@@ -614,7 +592,7 @@
 
 .page-header {
   &.active {
-    z-index: 101;
+    z-index: calc(var(--z-default) + 100);
     overflow: visible;
   }
 
@@ -632,7 +610,7 @@
   /* Hack to not target IE11 as focus-within breaks menu */
   @supports (display: flex) {
     &:focus-within {
-      z-index: 101;
+      z-index: calc(var(--z-default) + 100);
       overflow: visible;
     }
   }

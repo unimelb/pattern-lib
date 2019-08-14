@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome should match snapshot 1`] = `
+<div
+  class="welcome"
+>
+  <div
+    class="welcome__thumb"
+  >
+    <figure>
+      <div
+        class="welcome__thumb-img"
+        style="background-image: url(//about-us-unimelb.netlify.com/images/leadership/senior-leadership/Glyn-Davis.jpg);"
+      />
+       
+      <figcaption>
+        <strong
+          class="welcome__caption-title"
+        >
+          
+        </strong>
+      </figcaption>
+    </figure>
+     
+    <!---->
+     
+    <!---->
+  </div>
+   
+  <div
+    class="welcome__inner "
+  >
+     
+    <img
+      alt="signature"
+      class="welcome__signature"
+      src="//about-us-unimelb.netlify.com/images/leadership/office-of-the-vice-chancellor/signature.png"
+    />
+     
+    <p>
+      <strong>
+        
+      </strong>
+       
+      <br />
+      
+      
+    
+    </p>
+  </div>
+</div>
+`;

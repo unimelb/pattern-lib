@@ -12,6 +12,7 @@
           <div
             slot="sub-title-1"
             class="sub-title">
+            <SvgIcon name="calendar"/>
             <span>Sub-title 1</span>
           </div>
           <div
@@ -23,6 +24,7 @@
           <div
             slot="sub-title-3"
             class="sub-title">
+            <SvgIcon name="calendar"/>
             <span>Theme: Lorem ipsum.</span>
           </div>
           <template slot="links">

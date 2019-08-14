@@ -1,5 +1,6 @@
 <template>
   <SocialMediaBar
+    title="Faculty of Medicine, Dentistry and Health Sciences"
     newsletter-link="https://google.com"
     blog-link="https://google.com"
     facebook-link="https://google.com"

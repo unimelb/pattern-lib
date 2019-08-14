@@ -30,12 +30,18 @@ exports[`GenericCard should match snapshot 1`] = `
     <div
       class="card__excerpt"
     >
-      Lorem ipsum dolor sit amet, consectetur.
+      
     </div>
      
     <div
-      class="card__links"
-    />
+      class="card__footer"
+    >
+      <!---->
+       
+      <div
+        class="card__links"
+      />
+    </div>
   </div>
 </div>
 `;
