@@ -1,12 +1,16 @@
 .card--showcase-profile {
   background-color: rgb(var(--col-navy-light));
+  padding-bottom: 1rem;
+
+  .embed {
+    margin-bottom: 1rem;
+  }
 
   .card__container {
     display: flex;
     cursor: pointer;
     background-color: rgb(var(--col-background-primary-navy));
     color: #fff;
-    min-height: 4.125rem;
   }
 
   .card__inner {
@@ -59,7 +63,6 @@
       color: #575757;
       line-height: 1.25;
       font-weight: var(--fw-regular);
-      margin-top: 1rem;
     }
   }
 

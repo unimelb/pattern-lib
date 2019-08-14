@@ -1,5 +1,5 @@
 <template>
-  <div class="card card--bdr card--showcase-profile">
+  <div class="card card--showcase-profile">
     <div
       v-show="thumb && thumb.length > 0 && isHidden"
       :style="{ backgroundImage: `url(${thumb})` }"
