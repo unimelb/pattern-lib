@@ -415,6 +415,18 @@ a[target='_blank'] {
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
+&.screenreaders-only-focusable {
+  &:active,
+  &:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+  }
+}
+
 /**
  * Download metadata
  */

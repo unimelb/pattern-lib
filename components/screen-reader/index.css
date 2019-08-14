@@ -1,9 +1,8 @@
 .screen-reader {
-  &__container {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(var(--col-background-primary-navy));
-  }
+  display: flex;
+  justify-content: center;
+  background-color: rgb(var(--col-background-primary-navy));
+
   &__skippy {
     display: block;
     margin: 1rem !important;
@@ -14,25 +13,5 @@
   &__skippy-text {
     padding: .5em;
     outline: 5px dotted;
-  }
-
-  &__sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-  }
-
-  &__sr-only-focusable {
-    &:active,
-    &:focus {
-      position: static;
-      width: auto;
-      height: auto;
-      overflow: visible;
-      clip: auto;
-      white-space: normal;
-    }
   }
 }
