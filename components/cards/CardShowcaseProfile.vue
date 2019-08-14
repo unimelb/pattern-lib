@@ -23,7 +23,8 @@
         <div>
           <SvgIcon
             v-if="bio"
-            :name="iconName"
+            :class="className"
+            name="chevron-up"
             aria-label="chevron"
             width="14px"
             height="14px"
@@ -78,26 +79,21 @@ export default {
   data() {
     return {
       isHidden: true,
-      iconName: 'chevron-up',
+      className: 'chevron',
     };
   },
   methods: {
     changeIcon() {
       if (this.bio !== '') {
         this.isHidden = !this.isHidden;
-        if (this.iconName === 'chevron-up') {
-          this.setIconDown();
+        if (this.className === 'chevron down') {
+          this.className = 'chevron up';
         } else {
-          this.setIconUp();
+          this.className = 'chevron down';
         }
       }
     },
-    setIconUp() {
-      this.iconName = 'chevron-up';
-    },
-    setIconDown() {
-      this.iconName = 'chevron-down';
-    },
+
   },
 };
 </script>

@@ -63,6 +63,18 @@
     }
   }
 
+  .chevron {
+    transition: .8s all ease;
+  }
+
+  .up {
+    transform: rotate(0deg);
+  }
+
+  .down {
+    transform: rotate(180deg);
+  }
+
   @media (--bp-desktop) {
     max-height: 23.3125rem;
   }
