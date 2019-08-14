@@ -371,6 +371,26 @@
     padding-left: .25rem;
   }
 
+  &--event {
+    background-color: rgb(var(--col-green-dark));
+    font-size: .875rem;
+    font-weight: var(--fw-bold);
+    color: #fff;
+    border: none;
+    border-radius: .125rem;
+    transition: all .15s ease;
+
+    &:hover,
+    &:focus {
+      background-color: rgb(var(--col-blue-dark));
+      color: #fff;
+    }
+
+    &:active {
+      background-color: rgb(var(--col-navy-dark));
+    }
+  }
+
   @media (--bp-tablet) {
     width: auto;
   }

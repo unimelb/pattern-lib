@@ -30,69 +30,31 @@
       </div>
       <div class="social-media-bar__col">
         <h4 class="social-media-bar__title social-media-bar__title--secondary">Follow us</h4>
-        <div class="social-media-bar__links social-media-bar__links--social">
-          <a
-            v-if="facebookLink"
-            :href="facebookLink"
-            class="social-media-bar__link social-media-bar__link--social">
-            <SvgIcon
-              name="facebook"
-              width="30"
-              height="30"/>
-          </a>
-          <a
-            v-if="twitterLink"
-            :href="twitterLink"
-            class="social-media-bar__link social-media-bar__link--social">
-            <SvgIcon
-              name="twitter"
-              width="30"
-              height="30"/>
-          </a>
-          <a
-            v-if="linkedinLink"
-            :href="linkedinLink"
-            class="social-media-bar__link social-media-bar__link--social">
-            <SvgIcon
-              name="linkedin"
-              width="30"
-              height="30"/>
-          </a>
-          <a
-            v-if="instagramLink"
-            :href="instagramLink"
-            class="social-media-bar__link social-media-bar__link--social">
-            <SvgIcon
-              name="instagram"
-              width="30"
-              height="30"/>
-          </a>
-          <a
-            v-if="vimeoLink"
-            :href="vimeoLink"
-            class="social-media-bar__link social-media-bar__link--social">
-            <SvgIcon
-              name="vimeo"
-              width="30"
-              height="30"/>
-          </a>
-          <a
-            v-if="youtubeLink"
-            :href="youtubeLink"
-            class="social-media-bar__link social-media-bar__link--social">
-            <SvgIcon
-              name="youtube"
-              width="30"
-              height="30"/>
-          </a>
-        </div>
+        <SocialListGeneric
+          :facebook-link="facebookLink"
+          :twitter-link="twitterLink"
+          :linkedin-link="linkedinLink"
+          :instagram-link="instagramLink"
+          :vimeo-link="vimeoLink"
+          :youtube-link="youtubeLink"
+          :icon-size="30"
+          class="social-media-bar__social-list"
+        />
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
+import SocialListGeneric from '../social-list/SocialListGeneric.vue';
+
 export default {
+  components: {
+    SvgIcon,
+    SocialListGeneric,
+  },
   props: {
     title: {
       type: String,

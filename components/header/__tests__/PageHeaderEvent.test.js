@@ -4,13 +4,13 @@ import {
 import {
   toHaveNoViolations,
 } from 'jest-axe';
-import SocialListGeneric from '../SocialListGeneric.vue';
+import PageHeaderEvent from '../PageHeaderEvent.vue';
 
 expect.extend(toHaveNoViolations);
 
-describe('Social List Generic', () => {
+describe('PageHeaderEvent', () => {
   it('should match snapshot', () => {
-    const result = shallow(SocialListGeneric).element;
+    const result = shallow(PageHeaderEvent).element;
     expect(result).toMatchSnapshot();
   });
 });
