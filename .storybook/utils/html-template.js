@@ -1,5 +1,5 @@
 import pretty from 'pretty';
-import vnodeToElement from '../../components/shared/utils/vnode-to-element';
+import vnodeToElement from 'components/shared/utils/vnode-to-element';
 
 /**
  * Reverse-engineer the HTML template of a Vue component instance.

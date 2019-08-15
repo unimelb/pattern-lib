@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import PadDecorator from '../../../.storybook/decorators/PadDecorator.vue';
-import { codeBlock } from '../../../.storybook/utils';
+import PadDecorator from 'storybook/decorators/PadDecorator.vue';
+import { codeBlock } from 'storybook/utils';
 import { version } from '../../../package.json';
 
 const assetsUrl = `${process.env.CDN_URL}/v${version}`;

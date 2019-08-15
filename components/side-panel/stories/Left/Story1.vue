@@ -25,7 +25,7 @@
 <script>
 import SidePanel from '../../SidePanel.vue';
 import SidePanelNavItem from '../../SidePanelNavItem.vue';
-import PageDecorator from '../../../../.storybook/decorators/PageDecorator.vue';
+import PageDecorator from 'storybook/decorators/PageDecorator.vue';
 
 export default {
   components: { SidePanel, SidePanelNavItem },

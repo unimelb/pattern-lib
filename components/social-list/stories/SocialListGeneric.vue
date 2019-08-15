@@ -11,8 +11,8 @@
 </template>
 
 <script>
+import PadDecorator from 'storybook/decorators/PadDecorator.vue';
 import SocialListGeneric from '../SocialListGeneric.vue';
-import PadDecorator from '../../../.storybook/decorators/PadDecorator.vue';
 
 export default {
   components: { SocialListGeneric },
