@@ -25,22 +25,23 @@ import StoryButtonEvent from './StoryButtonEvent.vue';
 import ButtonDefault from './ButtonDefault.vue';
 /* ##Import story component here */
 
-/* Section - Focus  */
-storiesOf('Buttons', module)
-  .add('Default (Primary)', createStory(StoryButtonDefault))
+storiesOf('Buttons/Types', module)
+  .add('Primary (default)', createStory(StoryButtonDefault))
+  .add('Secondary', createStory(StoryButtonSecondary))
+  .add('Inverted', createStory(StoryButtonInverted))
+  .add('CTA', createStory(StoryButtonCTA))
+  .add('Campaign', createStory(StoryButtonCampaign))
+  .add('Event', createStory(StoryButtonEvent))
+  .add('<button> element', createStory(StoryButtonElement));
+
+storiesOf('Buttons/Icons', module)
   .add('No Icon', createStory(StoryButtonNoIcon))
-  .add('Icons', createStory(StoryButtonIcons))
-  .add('Button as <button> element', createStory(StoryButtonElement))
-  .add('Secondary Button', createStory(StoryButtonSecondary))
-  .add('Inverted button', createStory(StoryButtonInverted))
-  .add('Prev/Next aligned buttons', createStory(StoryButtonsPrevNext))
-  .add('CTA Button', createStory(StoryButtonCTA))
-  .add('Campaign Button', createStory(StoryButtonCampaign))
-  .add('Event', createStory(StoryButtonEvent));
+  .add('Icons', createStory(StoryButtonIcons));
 
 storiesOf('Buttons/Adjacent', module)
   .add('Default', createStory(StoryButtonAdjacent))
-  .add('Full Width', createStory(StoryButtonAdjacentFullWidth));
+  .add('Full Width', createStory(StoryButtonAdjacentFullWidth))
+  .add('Prev/Next aligned buttons', createStory(StoryButtonsPrevNext));
 
 storiesOf('Buttons/Width', module)
   .add('Default', createStory(ButtonDefault))
