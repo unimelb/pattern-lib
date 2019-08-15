@@ -132,20 +132,20 @@
     &:hover,
     &:focus,
     &:visited {
-      background-color: rgb(var(--col-blue-light));
       border-color: rgb(var(--col-blue-light));
+      background-color: rgb(var(--col-blue-light));
     }
 
     &:active {
-      border-color: rgb(var(--col-brand));
+      border-color: rgb(var(--col-background-tertiary-navy));
       background-color: rgb(var(--col-background-tertiary-navy));
       color: rgb(var(--col-background-primary-white));
     }
 
     &.btn--disabled,
     &:disabled {
-      color: color(rgb(var(--col-navy-dark)) alpha(50%));
       border-color: color(rgb(var(--col-background-primary-white)) alpha(50%));
+      color: color(rgb(var(--col-navy-dark)) alpha(50%));
       background-color: color(rgb(var(--col-background-primary-white)) alpha(50%));
     }
   }
