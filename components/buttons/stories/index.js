@@ -27,7 +27,7 @@ import ButtonDefault from './ButtonDefault.vue';
 
 /* Section - Focus  */
 storiesOf('Buttons', module)
-  .add('Default', createStory(StoryButtonDefault))
+  .add('Default (Primary)', createStory(StoryButtonDefault))
   .add('No Icon', createStory(StoryButtonNoIcon))
   .add('Icons', createStory(StoryButtonIcons))
   .add('Button as <button> element', createStory(StoryButtonElement))
@@ -36,7 +36,6 @@ storiesOf('Buttons', module)
   .add('Prev/Next aligned buttons', createStory(StoryButtonsPrevNext))
   .add('CTA Button', createStory(StoryButtonCTA))
   .add('Campaign Button', createStory(StoryButtonCampaign))
-  .add('CTA variant', createStory(StoryButtonCTA))
   .add('Event', createStory(StoryButtonEvent));
 
 storiesOf('Buttons/Adjacent', module)
