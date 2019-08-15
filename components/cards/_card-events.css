@@ -1,6 +1,11 @@
 .card--events {
   color: rgb(var(--col-brand));
 
+  .card__thumb {
+    min-height: 200px;
+    height: 100%;
+  }
+
   .card__sub-titles {
     margin-bottom: .25rem;
     border-bottom: 0;
