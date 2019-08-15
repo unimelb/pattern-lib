@@ -577,11 +577,6 @@
     .link-icon--vertical {
       padding: .5rem 1rem;
       border-radius: var(--br);
-
-      &:hover {
-        background: rgba(255, 255, 255, .15);
-        color: rgb(var(--col-background-primary-white));
-      }
     }
 
     @media (--bp-x-desktop) {
@@ -630,11 +625,6 @@
     .link-icon--vertical {
       margin-top: 1.25rem;
       margin-bottom: .75rem;
-
-      &:hover {
-        background: rgba(255, 255, 255, .15);
-        color: rgb(var(--col-background-primary-white));
-      }
     }
   }
 
