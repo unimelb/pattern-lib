@@ -37,8 +37,8 @@
           :instagram-link="instagramLink"
           :vimeo-link="vimeoLink"
           :youtube-link="youtubeLink"
+          :icon-size="30"
           class="social-media-bar__social-list"
-          icon-size="30"
         />
 
       </div>
@@ -47,10 +47,12 @@
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
 import SocialListGeneric from '../social-list/SocialListGeneric.vue';
 
 export default {
   components: {
+    SvgIcon,
     SocialListGeneric,
   },
   props: {
