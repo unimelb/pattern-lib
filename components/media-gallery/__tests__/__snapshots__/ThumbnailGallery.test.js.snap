@@ -4,6 +4,12 @@ exports[`ThumbnailGallery should match snapshot 1`] = `
 <div
   class="thumbnails"
 >
-  <!---->
+  <div
+    class="thumbnails__container thumbnails__container--1-col"
+  >
+    <!---->
+     
+    <!---->
+  </div>
 </div>
 `;

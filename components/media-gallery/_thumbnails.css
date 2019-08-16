@@ -1,4 +1,30 @@
 .thumbnails {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+    padding-right: .75rem;
+    padding-left: .75rem;
+
+    &--2-col {
+      width: 50%;
+    }
+
+    &--3-col {
+      width: 33.333%;
+    }
+
+    &--4-col {
+      width: 25%;
+    }
+  }
+
   &__item {
     display: flex;
     justify-content: center;
@@ -23,12 +49,6 @@
       outline: none;
       cursor: default;
     }
-  }
-
-  &__item-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   &__image {
@@ -64,20 +84,5 @@
     font-style: italic;
     color: rgb(var(--col-grey-dark));
   }
-
-  &__invisible {
-    opacity: 0;
-  }
-
-  &__anim-reveal {
-    animation: reveal 1s backwards;
-    height: 100%;
-  }
 }
 
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    transform: scale(.95);
-  }
-}
