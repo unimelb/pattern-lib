@@ -1,7 +1,5 @@
 ## Carousel
 
-**Please note:** This component is **only** available for usage in the CMS.  It is **not** availiable in `pattern-lib-vue`.
-
 The Carousel component receives an Array called `stories` to build the stories slider and story title with description. 
 
 The component has timing option. 
