@@ -8,10 +8,10 @@ exports[`MediaGallery Common should match snapshot 1`] = `
     <!---->
      
     <div
-      class="media-gallery-slider"
+      class="media-gallery__slider"
     >
       <div
-        class="media-gallery__arrow-wrapper"
+        class="media-gallery__button"
         role="button"
         tabindex="0"
         title="Previous (arrow left)"
@@ -22,7 +22,7 @@ exports[`MediaGallery Common should match snapshot 1`] = `
       <!---->
        
       <div
-        class="media-gallery__arrow-wrapper"
+        class="media-gallery__button"
         role="button"
         tabindex="0"
         title="Next (arrow right)"

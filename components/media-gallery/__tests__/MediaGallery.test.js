@@ -100,7 +100,7 @@ describe('MediaGallery Common', () => {
     wrapper.setMethods({
       move,
     });
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__button').trigger('click');
     expect(move.called).toBe(true);
   });
 
@@ -115,7 +115,7 @@ describe('MediaGallery Common', () => {
     wrapper.setMethods({
       open,
     });
-    wrapper.find('.media-gallery-thumbnails__image').trigger('click');
+    wrapper.find('.media-gallery__thumb-image').trigger('click');
     expect(open.called).toBe(true);
   });
 
@@ -126,7 +126,7 @@ describe('MediaGallery Common', () => {
       },
     });
 
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__button').trigger('click');
     expect(wrapper.vm.selectedIndex).toBe(1);
     expect(wrapper.vm.selectedItem.id).toBe(2);
   });
@@ -142,7 +142,7 @@ describe('MediaGallery Common', () => {
     wrapper.setMethods({
       move,
     });
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('keydown.enter');
+    wrapper.find('.media-gallery__button').trigger('keydown.enter');
     expect(move.called).toBe(true);
   });
 
@@ -157,7 +157,7 @@ describe('MediaGallery Common', () => {
     expect(wrapper.vm.selectedItem.id).toBe(1);
     expect(wrapper.find('.media-gallery__title').text()).toBe('test1');
     expect(wrapper.find('.media-gallery__description').text()).toBe('test1');
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__button').trigger('click');
     expect(wrapper.find('.media-gallery__title').text()).toBe('test2');
     expect(wrapper.find('.media-gallery__description').text()).toBe('test2');
   });
@@ -172,9 +172,9 @@ describe('MediaGallery InPage', () => {
       },
     });
     Element.prototype.scrollIntoView = jest.fn();
-    expect(wrapper.find('.media-gallery__media-count').text()).toBe('1 / 2');
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
-    expect(wrapper.find('.media-gallery__media-count').text()).toBe('2 / 2');
+    expect(wrapper.find('.media-gallery__count').text()).toBe('1 / 2');
+    wrapper.find('.media-gallery__button').trigger('click');
+    expect(wrapper.find('.media-gallery__count').text()).toBe('2 / 2');
   });
 
   it('should change image on thumb click', () => {
@@ -184,8 +184,8 @@ describe('MediaGallery InPage', () => {
         inPage: true,
       },
     });
-    wrapper.findAll('.media-gallery-thumbnails__thumb').at(1).trigger('click');
-    expect(wrapper.findAll('.media-gallery-thumbnails__thumb').at(1).classes()).toContain('active');
+    wrapper.findAll('.media-gallery__thumb').at(1).trigger('click');
+    expect(wrapper.findAll('.media-gallery__thumb').at(1).classes()).toContain('active');
     expect(wrapper.vm.selectedIndex).toBe(1);
     expect(wrapper.vm.selectedItem.id).toBe(2);
   });
@@ -197,9 +197,9 @@ describe('MediaGallery InPage', () => {
         inPage: true,
       },
     });
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
-    expect(wrapper.find('.media-gallery-thumbnails__image').exists()).toBe(true);
+    wrapper.find('.media-gallery__button').trigger('click');
+    wrapper.find('.media-gallery__button').trigger('click');
+    expect(wrapper.find('.media-gallery__thumb-image').exists()).toBe(true);
   });
 
   it('should render embed if video type', () => {
@@ -209,7 +209,7 @@ describe('MediaGallery InPage', () => {
         inPage: true,
       },
     });
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__button').trigger('click');
     expect(wrapper.find('.embed').exists()).toBe(true);
   });
 });
@@ -226,7 +226,7 @@ describe('MediaGallery overlay', () => {
     expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay');
     expect(wrapper.find('.media-gallery-overlay__media-count').exists()).toBe(true);
     expect(wrapper.find('.media-gallery-overlay__close').exists()).toBe(true);
-    expect(wrapper.find('.media-gallery-slider').classes()).toContain('media-gallery-overlay__slider');
+    expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery-overlay__slider');
     expect(wrapper.find('.media-gallery__container').classes()).toContain('media-gallery-overlay__container');
   });
 
@@ -239,7 +239,7 @@ describe('MediaGallery overlay', () => {
     });
 
     expect(wrapper.find('.media-gallery-overlay__media-count').text()).toBe('1 / 2');
-    wrapper.find('.media-gallery__arrow-wrapper').trigger('click');
+    wrapper.find('.media-gallery__button').trigger('click');
     expect(wrapper.find('.media-gallery-overlay__media-count').text()).toBe('2 / 2');
   });
 

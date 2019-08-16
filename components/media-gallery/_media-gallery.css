@@ -1,38 +1,25 @@
 .media-gallery {
   color: #fff;
   background: rgb(var(--col-black-dark));
-  padding-bottom: 2rem;
 
-  &-slider {
+  &__slider {
     display: flex;
     align-items: center;
     margin-bottom: .313rem;
-
-    &__image {
-      width: 100%;
-      object-fit: contain;
-      height: 100%;
-    }
   }
 
-  &__figure {
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    display: flex;
+  &__item {
+    cursor: auto;
+  }
+
+  &__image {
     width: 100%;
+    object-fit: contain;
     height: 100%;
-
-    .embed {
-      width: 100%;
-      height: 100%;
-      flex: 1;
-    }
   }
 
-  &__chevron {
-    color: #fff;
-    cursor: pointer;
+  &__embed {
+    width: 100%;
   }
 
   &__container {
@@ -49,7 +36,11 @@
     }
   }
 
-  &-thumbnails {
+  &__footer {
+    padding-bottom: 2rem;
+  }
+
+  &__thumbnails {
     display: flex;
     height: 4.625rem;
     width: 80%;
@@ -57,31 +48,45 @@
     overflow-x: auto;
     overflow-y: hidden;
 
-    &__thumb {
-      cursor: pointer;
-      margin-right: .313rem;
-      opacity: .7;
-      height: 100%;
+    @media (--bp-desktop) {
+      width: auto;
+    }
+  }
 
-      &.active {
-        opacity: 1;
-        fill: rgba(var(--col-black-mid-2), .25);
-        border: .125rem solid rgb(var(--col-background-primary-white));
-      }
+  &__count {
+    width: 90%;
+    margin: auto;
+    padding-top: .6875rem;
+    font-size: 1rem;
+
+    @media (--bp-desktop) {
+      width: 80%;
+    }
+  }
+
+  &__thumb {
+    cursor: pointer;
+    margin-right: .313rem;
+    opacity: .7;
+    height: 100%;
+
+    &.active {
+      opacity: 1;
+      fill: rgba(var(--col-black-mid-2), .25);
+      border: .125rem solid rgb(var(--col-background-primary-white));
     }
 
-    .embed {
-      &--video {
-        position: relative;
-        width: 6.25rem;
-        height: 100%;
+    &-image {
+      height: 100%;
+    }
 
-        .embed {
-          height: 100%;
-        }
-      }
+    &-embed {
+      position: relative;
+      width: 6.25rem;
+      height: 100%;
 
-      &--cover {
+      &::before {
+        content: '';
         width: 100%;
         height: 100%;
         position: absolute;
@@ -91,23 +96,8 @@
       }
     }
 
-    &__image {
+    &-video {
       height: 100%;
-    }
-
-    @media (--bp-desktop) {
-      width: auto;
-    }
-  }
-
-  &__media-count {
-    width: 90%;
-    margin: auto;
-    padding-top: .6875rem;
-    font-size: 1rem;
-
-    @media (--bp-desktop) {
-      width: 80%;
     }
   }
 
@@ -137,11 +127,13 @@
     }
   }
 
-  &__arrow-wrapper {
+  &__button {
     display: none;
+
     @media (--bp-desktop) {
       display: block;
       padding: 2rem;
+      cursor: pointer;
     }
   }
 }

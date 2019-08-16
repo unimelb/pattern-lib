@@ -21,7 +21,7 @@
       </div>
       <div :class="sliderClasses">
         <div
-          class="media-gallery__arrow-wrapper"
+          class="media-gallery__button"
           role="button"
           tabindex="0"
           title="Previous (arrow left)"
@@ -30,7 +30,6 @@
           @keydown.32="move('prev')"
         >
           <SvgIcon
-            class="media-gallery__chevron"
             name="chevron-left"
             width="30"
             height="30"/>
@@ -47,21 +46,22 @@
             <slideritem
               v-for="(slide, index) in media"
               :key="index"
-              class="media-gallery__figure">
+              class="media-gallery__item">
               <img
                 v-if="slide.type === 'image'"
                 :src="slide.src"
                 :alt="slide.altText"
-                class="media-gallery-slider__image"
+                class="media-gallery__image"
               >
               <VideoEmbed
                 v-if="slide.type === 'video'"
-                :src="slide.src"/>
+                :src="slide.src"
+                class="media-gallery__embed" />
             </slideritem>
           </slider>
         </div>
         <div
-          class="media-gallery__arrow-wrapper"
+          class="media-gallery__button"
           tabindex="0"
           role="button"
           title="Next (arrow right)"
@@ -70,13 +70,14 @@
           @keydown.32="move('next')"
         >
           <SvgIcon
-            class="media-gallery__chevron"
             name="chevron-right"
             width="30"
             height="30"/>
         </div>
       </div>
-      <figure v-if="media.length">
+      <div
+        v-if="media.length"
+        class="media-gallery__footer">
         <div
           ref="thumbnailContainer"
           :class="thumbClasses">
@@ -85,7 +86,7 @@
             :key="item.id"
             :class="{ active: index === selectedIndex}"
             :aria-describedby="'caption' + selectedIndex"
-            class="media-gallery-thumbnails__thumb"
+            class="media-gallery__thumb"
             tabindex="0"
             role="button"
             @click="open(index)"
@@ -94,25 +95,26 @@
               v-if="item.type === 'image'"
               :src="item.src"
               :alt="item.altText"
-              class="media-gallery-thumbnails__image"
+              class="media-gallery__thumb-image"
             >
             <div
               v-if="item.type === 'video'"
-              class="embed--video">
-              <div class="embed--cover"/>
-              <VideoEmbed :src="item.src"/>
+              class="media-gallery__thumb-embed">
+              <VideoEmbed
+                :src="item.src"
+                class="media-gallery__thumb-video" />
             </div>
           </div>
         </div>
         <div
           v-if="inPage"
-          class="media-gallery__media-count"
+          class="media-gallery__count"
         >{{ selectedIndex + 1 }} / {{ media.length }}</div>
-        <figcaption
+        <div
           :id="'caption' + selectedIndex"
-          class="media-gallery__title">{{ selectedItem.title }}</figcaption>
+          class="media-gallery__title">{{ selectedItem.title }}</div>
         <div class="media-gallery__description">{{ selectedItem.description }}</div>
-      </figure>
+      </div>
     </div>
     <ThumbnailGallery
       v-if="overlay"
@@ -188,7 +190,7 @@ export default {
     },
     sliderClasses() {
       return {
-        'media-gallery-slider': true,
+        'media-gallery__slider': true,
         'media-gallery-overlay__slider': this.overlay,
       };
     },
@@ -200,7 +202,7 @@ export default {
     },
     thumbClasses() {
       return {
-        'media-gallery-thumbnails': true,
+        'media-gallery__thumbnails': true,
         'media-gallery-overlay__thumbnails': this.overlay,
       };
     },
