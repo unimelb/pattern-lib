@@ -10,7 +10,7 @@
     display: flex;
     cursor: pointer;
     background-color: rgb(var(--col-background-primary-navy));
-    color: #fff;
+    color: rgb(var(--col-white));
   }
 
   .card__inner {
@@ -60,7 +60,7 @@
 
     &--text {
       font-size: .8125rem;
-      color: #575757;
+      color: rgb(var(--col-grey-dark));
       line-height: 1.25;
       font-weight: var(--fw-regular);
     }
