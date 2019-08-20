@@ -185,6 +185,7 @@ export default {
         speed: 500, // Sliding speed
         timingFunction: 'ease', // Sliding mode
         itemAnimation: true,
+        loop: true,
       },
     };
   },
