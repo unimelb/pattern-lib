@@ -1,7 +1,7 @@
 <template>
   <div class="card card--showcase-profile">
     <div
-      v-show="thumb && thumb.length > 0 && isHidden"
+      v-show="showThumb"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"
       aria-label="Profile Image"
@@ -81,6 +81,11 @@ export default {
       isHidden: true,
       className: 'chevron',
     };
+  },
+  computed: {
+    showThumb() {
+      return this.thumb && this.thumb.length > 0 && this.isHidden;
+    },
   },
   methods: {
     changeIcon() {
