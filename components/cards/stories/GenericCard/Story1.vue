@@ -75,11 +75,12 @@
 </template>
 
 <script>
+import SvgIcon from '../../../icons/SvgIcon.vue';
 import GenericCard from '../../GenericCard.vue';
 import genericCardDocs from './generic-card-docs.md';
 
 export default {
-  components: { GenericCard },
+  components: { GenericCard, SvgIcon },
   readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>

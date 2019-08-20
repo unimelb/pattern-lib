@@ -110,11 +110,12 @@
 </template>
 
 <script>
+import SvgIcon from '../../../icons/SvgIcon.vue';
 import GenericCard from '../../GenericCard.vue';
 import verticalCard from './vertical-card-docs.md';
 
 export default {
-  components: { GenericCard },
+  components: { GenericCard, SvgIcon },
   readme: { custom: verticalCard, source: true, html: true },
 };
 </script>
