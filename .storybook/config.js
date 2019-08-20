@@ -15,8 +15,8 @@ import { version, repository } from '../package.json';
 import './index.css';
 
 // Import components
-import 'components/index.css';
-import 'components/index.js';
+import '../components/index.css';
+import '../components/index.js';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
