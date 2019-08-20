@@ -25,7 +25,7 @@
 
 <script>
 
-import FocusWrapper from 'components/focus-wrapper/FocusWrapper.vue';
+import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 
 export default {

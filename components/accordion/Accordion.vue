@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import ToggleBlock from 'components/toggle/ToggleBlock.vue';
+import ToggleBlock from '../toggle/ToggleBlock.vue';
 
 export default {
   name: 'Accordion',
