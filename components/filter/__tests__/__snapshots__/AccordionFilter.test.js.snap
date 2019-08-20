@@ -204,82 +204,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <br />
                      
                     <span>
-                      <!---->
-                      
-                  l
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  o
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  c
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  a
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  t
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  i
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  o
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  n
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                   
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  1
-                
+                      location 1, location 2
                     </span>
                   </td>
                    
@@ -323,7 +248,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                      
                     <br />
                     
-                abrod 1
+                abroad 1
               
                   </td>
                 </tr>
@@ -418,82 +343,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <br />
                      
                     <span>
-                      <!---->
-                      
-                  l
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  o
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  c
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  a
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  t
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  i
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  o
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  n
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                   
-                
-                    </span>
-                    <span>
-                      <span>
-                        , 
-                      </span>
-                      
-                  2
-                
+                      location 2
                     </span>
                   </td>
                    
@@ -537,7 +387,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                      
                     <br />
                     
-                abrod 2
+                abroad 2
               
                   </td>
                 </tr>

@@ -85,12 +85,7 @@
                 <td>
                   <strong>Location</strong>
                   <br>
-                  <span
-                    v-for="(item, index) in item.location"
-                    :key="index">
-                    <span v-if="index > 0">{{ ', ' }}</span>
-                    {{ item }}
-                  </span>
+                  <span>{{ item.location.join(', ') }}</span>
                 </td>
                 <td>
                   <strong>Points</strong>
@@ -110,7 +105,7 @@
                 <td>
                   <strong>Study Abroad</strong>
                   <br>
-                  {{ item.abrod }}
+                  {{ item.abroad }}
                 </td>
               </tr>
               <tr>
