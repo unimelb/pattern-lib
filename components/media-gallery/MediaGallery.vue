@@ -14,6 +14,7 @@
           @keydown.32="openStateToggle()"
         >
           <SvgIcon
+            aria-hidden="true"
             name="close"
             width="32"
             height="32"/>
@@ -30,6 +31,7 @@
           @keydown.32="move('prev')"
         >
           <SvgIcon
+            aria-hidden="true"
             name="chevron-left"
             width="30"
             height="30"/>
@@ -70,6 +72,7 @@
           @keydown.32="move('next')"
         >
           <SvgIcon
+            aria-hidden="true"
             name="chevron-right"
             width="30"
             height="30"/>
