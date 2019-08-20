@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div :class="classes">
+    <div
+      :class="classes"
+      role="region"
+      aria-roledescription="Media gallery">
       <div
         v-if="overlay"
         class="media-gallery-overlay__media-count">
@@ -88,7 +91,7 @@
             v-for="(item, index) in media"
             :key="item.id"
             :class="{ active: index === selectedIndex}"
-            :aria-describedby="'caption' + selectedIndex"
+            :aria-label="item.title + '. ' + item.description"
             class="media-gallery__thumb"
             tabindex="0"
             role="button"
@@ -98,10 +101,12 @@
               v-if="item.type === 'image'"
               :src="item.src"
               :alt="item.altText"
+              aria-hidden="true"
               class="media-gallery__thumb-image"
             >
             <div
               v-if="item.type === 'video'"
+              aria-hidden="true"
               class="media-gallery__thumb-embed">
               <VideoEmbed
                 :src="item.src"

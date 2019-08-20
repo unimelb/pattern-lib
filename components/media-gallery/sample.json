@@ -19,7 +19,7 @@
     "id": 3,
     "src": "https://source.unsplash.com/random/2000x501",
     "title": "Image 5",
-    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.",
+    "description": "Description",
     "type": "image",
     "altText": "alt text"
   },
