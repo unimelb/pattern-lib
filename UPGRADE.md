@@ -1,5 +1,13 @@
 # Upgrade Instructions
 
+## v4.15.0
+
+Level 1 & Level 2 Header buttons using the classes `page-header--campaign`, `page-header__darken--o50`, `page-header__darken--o25` have been changed from `btn btn--inverted` to `btn btn--campaign`.
+
+```html
+<a href="#" class="btn--campaign btn"><span class="push-icon">Call to Action <svg width="15px" height="15px" aria-label="chevron-right" focusable="false" role="img" aria-hidden="true" class="push-icon__icon"><use xlink:href="#icon-chevron-right"></use> <title>Chevron-right</title> </svg></span></a>
+```
+
 ## v4.10.0
 
 Logo has been mirgrated to it's own component - https://pattern-lib-unimelb.netlify.com?selectedKind=Logo

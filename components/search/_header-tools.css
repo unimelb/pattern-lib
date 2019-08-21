@@ -46,8 +46,8 @@
 
     &:hover {
       transition: all linear .1s;
-      background: rgba(255, 255, 255, .15);
-      color: rgb(var(--col-background-primary-white));
+      background: rgb(var(--col-background-primary-white));
+      color: rgb(var(--col-navy-dark));
       text-decoration: none;
     }
   }

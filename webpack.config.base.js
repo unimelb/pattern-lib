@@ -55,7 +55,9 @@ module.exports = {
           options: {
             config: {
               ctx: {
-                cssnano: {},
+                cssnano: {
+                  reduceIdents: false,
+                },
               },
             },
             sourceMap: isDev,
