@@ -43,12 +43,11 @@
   &__thumbnails {
     display: flex;
     height: 4.625rem;
-    width: 80%;
-    margin: auto;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: scroll;
 
     @media (--bp-desktop) {
+      margin: auto;
       width: auto;
     }
   }
