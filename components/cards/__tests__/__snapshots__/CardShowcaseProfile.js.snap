@@ -2,33 +2,33 @@
 
 exports[`CardShowcaseProfile should match snapshot 1`] = `
 <div
-  class="card card--showcase-profile"
+  class="showcase-profile"
 >
   <div
     aria-label="Profile Image"
-    class="card__thumb"
+    class="showcase-profile__thumb"
     style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
   />
    
   <div
-    class="card__container"
+    class="showcase-profile__container"
   >
     <!---->
      
     <div
-      class="card__inner"
+      class="showcase-profile__inner"
     >
       <div
-        class="card__titles"
+        class="showcase-profile__titles"
       >
         <h6
-          class="card__title"
+          class="showcase-profile__title"
         >
           
         </h6>
          
         <p
-          class="card__sub-title"
+          class="showcase-profile__sub-title"
         >
           
         </p>
@@ -41,14 +41,14 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
   </div>
    
   <div
-    class="card__bio"
+    class="showcase-profile__bio"
     name="slide"
     style="display: none;"
   >
     <!---->
      
     <p
-      class="card__bio--text"
+      class="showcase-profile__bio--text"
     >
       
     </p>

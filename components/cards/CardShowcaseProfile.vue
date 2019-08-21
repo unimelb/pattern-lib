@@ -1,29 +1,30 @@
 <template>
-  <div class="card card--showcase-profile">
+  <div class="showcase-profile">
     <div
       v-show="showThumb"
       :style="{ backgroundImage: `url(${thumb})` }"
-      class="card__thumb"
+      class="showcase-profile__thumb"
       aria-label="Profile Image"
     />
     <div
-      class="card__container"
+      class="showcase-profile__container"
       @click="changeIcon">
       <div
         v-if="!isHidden && thumb"
         :style="{ backgroundImage: `url(${thumb})` }"
-        class="card__thumb--inner"
+        class="showcase-profile__thumb--inner"
         aria-label="Profile Image"
       />
-      <div class="card__inner">
-        <div class="card__titles">
-          <h6 class="card__title">{{ title }}</h6>
-          <p class="card__sub-title">{{ subTitle }}</p>
+      <div class="showcase-profile__inner">
+        <div class="showcase-profile__titles">
+          <h6 class="showcase-profile__title">{{ title }}</h6>
+          <p class="showcase-profile__sub-title">{{ subTitle }}</p>
         </div>
         <div>
           <SvgIcon
             v-if="bio"
             :class="className"
+            class="showcase-profile__icon"
             name="chevron-up"
             aria-label="chevron"
             width="14px"
@@ -36,11 +37,12 @@
     <transition name="slide">
       <div
         v-show="!isHidden"
-        class="card__bio">
+        class="showcase-profile__bio">
         <VideoEmbed
           v-if="video"
-          :src="video"/>
-        <p class="card__bio--text">{{ bio }}</p>
+          :src="video"
+          class="showcase-profile__embed"/>
+        <p class="showcase-profile__bio--text">{{ bio }}</p>
       </div>
     </transition>
   </div>
@@ -79,26 +81,22 @@ export default {
   data() {
     return {
       isHidden: true,
-      className: 'chevron',
     };
   },
   computed: {
     showThumb() {
       return this.thumb && this.thumb.length > 0 && this.isHidden;
     },
+    className() {
+      return (this.isHidden) ? '' : 'showcase-profile__icon--active';
+    },
   },
   methods: {
     changeIcon() {
       if (this.bio !== '') {
         this.isHidden = !this.isHidden;
-        if (this.className === 'chevron down') {
-          this.className = 'chevron up';
-        } else {
-          this.className = 'chevron down';
-        }
       }
     },
-
   },
 };
 </script>

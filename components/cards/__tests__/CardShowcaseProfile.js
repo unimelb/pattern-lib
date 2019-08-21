@@ -54,7 +54,7 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().thumb).toBe('string');
     expect(wrapper.props().thumb).toBe(thumb);
-    expect(wrapper.find('.card__thumb').attributes().style).toBe('background-image: url(http://);');
+    expect(wrapper.find('.showcase-profile__thumb').attributes().style).toBe('background-image: url(http://);');
   });
 
   it('should render title from prop with correct type', () => {
@@ -80,7 +80,7 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().subTitle).toBe('string');
     expect(wrapper.props().subTitle).toBe(subTitle);
-    expect(wrapper.find('.card__sub-title').text()).toBe(subTitle);
+    expect(wrapper.find('.showcase-profile__sub-title').text()).toBe(subTitle);
   });
 
   it('should render bio prop with correct type', () => {
@@ -93,6 +93,6 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().bio).toBe('string');
     expect(wrapper.props().bio).toBe(bio);
-    expect(wrapper.find('.card__bio').text()).toBe(bio);
+    expect(wrapper.find('.showcase-profile__bio').text()).toBe(bio);
   });
 });
