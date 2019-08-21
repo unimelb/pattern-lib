@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ButtonIcon class="btn--event">Call to Action</ButtonIcon>
+    <ButtonIcon class="btn--campaign">Campaign Button</ButtonIcon>
     <ButtonIcon
-      class="btn--event"
+      class="btn--campaign"
       href="www.google.com"
       disabled
     >I am a disabled button</ButtonIcon>
