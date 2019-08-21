@@ -1,0 +1,35 @@
+.split-section-header {
+  display: flex;
+  min-height: 28vw;
+  background-position: center;
+  background-size: cover;
+
+  &__inner {
+    padding: 2rem 1.5rem;
+    background-color: rgb(var(--col-background-tertiary-navy), .92);
+
+    @media (--bp-desktop) {
+      padding: 4rem;
+      width: 60%;
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    }
+  }
+
+  &__title {
+    font-size: 2.4875rem;
+    letter-spacing: -.1181rem;
+    line-height: 1.19;
+    font-weight: var(--fw-bold);
+    color: rgb(var(--col-white));
+    margin-bottom: 1rem;
+  }
+
+  &__sub-title {
+    font-size: 1rem;
+    letter-spacing: -.015rem;
+    line-height: 1.5625;
+    font-weight: var(--fw-regular);
+    color: rgb(var(--col-white));
+    margin-bottom: 2.5rem;
+  }
+}

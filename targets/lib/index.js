@@ -86,9 +86,8 @@ import CardNewsTag from 'components/cards/CardNewsTag.vue';
 import PageHeaderEvent from 'components/header/PageHeaderEvent.vue';
 import Sidebar from 'components/sidebar/Sidebar.vue';
 import SocialListGeneric from 'components/social-list/SocialListGeneric.vue';
-import {
-  version,
-} from '../../package.json';
+import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
+import { version } from '../../package.json';
 
 import 'components';
 
@@ -181,6 +180,7 @@ Vue.component('tags', Tags);
 Vue.component('card-news-tag', CardNewsTag);
 Vue.component('sidebar', Sidebar);
 Vue.component('social-list-generic', SocialListGeneric);
+Vue.component('split-section-header', SplitSectionHeader);
 
 // Create Vue instance
 new Vue({
