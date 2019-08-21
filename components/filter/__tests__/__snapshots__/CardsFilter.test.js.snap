@@ -209,11 +209,7 @@ exports[`CardsFilter should match snapshot 1`] = `
                 </svg>
                  
                 <span>
-                  <!---->
-                   
-                  <span>
-                    Exhibition
-                  </span>
+                  Exhibition
                 </span>
               </div>
                
@@ -334,11 +330,7 @@ exports[`CardsFilter should match snapshot 1`] = `
                 </svg>
                  
                 <span>
-                  <!---->
-                   
-                  <span>
-                    Event
-                  </span>
+                  Event
                 </span>
               </div>
                

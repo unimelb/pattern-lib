@@ -202,9 +202,10 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     </strong>
                      
                     <br />
-                    
-                location 1
-              
+                     
+                    <span>
+                      location 1, location 2
+                    </span>
                   </td>
                    
                   <td>
@@ -247,7 +248,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                      
                     <br />
                     
-                abrod 1
+                abroad 1
               
                   </td>
                 </tr>
@@ -340,9 +341,10 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     </strong>
                      
                     <br />
-                    
-                location 2
-              
+                     
+                    <span>
+                      location 2
+                    </span>
                   </td>
                    
                   <td>
@@ -385,7 +387,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                      
                     <br />
                     
-                abrod 2
+                abroad 2
               
                   </td>
                 </tr>
