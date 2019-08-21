@@ -12,7 +12,7 @@
       <button-icon
         v-if="link && buttonText"
         :href="link"
-        :class="[bgDark ? '' : 'btn--cta', 'page-campaign__btn', 'page-campaign__btn--dark']"
+        :class="[bgDark ? '' : 'btn--cta']"
         :inverted="bgDark"
       >{{ buttonText }}</button-icon>
     </div>
