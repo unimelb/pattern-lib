@@ -9,12 +9,7 @@ exports[`SublinkMenuItem should match snapshot 1`] = `
     class="push-icon"
   >
      
-    <svgicon
-      class="push-icon__icon"
-      height="16"
-      name="chevron-right"
-      width="16"
-    />
+    <!---->
   </span>
 </a>
 `;

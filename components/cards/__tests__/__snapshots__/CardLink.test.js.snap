@@ -22,11 +22,7 @@ exports[`CardLink should match snapshot 1`] = `
       Test title
     </span>
      
-    <svgicon
-      height="15px"
-      name="chevron-right"
-      width="15px"
-    />
+    <!---->
   </div>
 </a>
 `;
