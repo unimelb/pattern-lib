@@ -28,7 +28,8 @@
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">View generic details               <SvgIcon
+              aria-label="View details of the event name">View generic details
+              <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"

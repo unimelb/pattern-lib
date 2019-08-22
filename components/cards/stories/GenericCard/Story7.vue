@@ -8,14 +8,16 @@
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">View generic details               <SvgIcon
+              aria-label="View details of the event name">View generic details
+              <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
                 height="10"/></a>
             <a
               href="/"
-              aria-label="View details of the staff name">View generic staff               <SvgIcon
+              aria-label="View details of the staff name">View generic staff
+              <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
@@ -32,14 +34,16 @@
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">View generic details               <SvgIcon
+              aria-label="View details of the event name">View generic details
+              <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
                 height="10"/></a>
             <a
               href="/"
-              aria-label="View details of the staff name">View generic staff               <SvgIcon
+              aria-label="View details of the staff name">View generic staff
+              <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
