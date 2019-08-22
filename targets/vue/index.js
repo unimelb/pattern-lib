@@ -340,3 +340,7 @@ export {
   default as Sidebar,
 }
   from 'components/sidebar/Sidebar.vue';
+export {
+  default as SocialListGeneric,
+}
+  from 'components/social-list/SocialListGeneric.vue';
