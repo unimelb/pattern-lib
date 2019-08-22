@@ -15,11 +15,7 @@ exports[`SidePanel should match snapshot 1`] = `
       <button
         class="side-panel__trigger"
       >
-        <svgicon
-          height="10"
-          name="close"
-          width="10"
-        />
+        <!---->
       </button>
     </h5>
      
