@@ -3,16 +3,46 @@
   min-height: 28vw;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
+
+  &__container {
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
 
   &__inner {
-    padding: 2rem 1.5rem;
-    background-color: rgb(var(--col-background-tertiary-navy), .92);
+    padding: 2rem 0;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: rgb(var(--col-background-tertiary-navy), .92);
+      width: 100vw;
+      height: 115vw;
+      top: 0;
+      left: -25px;
+
+      @media (--bp-desktop) {
+        transform: rotate(15deg);
+        transform-origin: top right;
+        top: -80px;
+        right: 0;
+        left: unset;
+      }
+    }
 
     @media (--bp-desktop) {
-      padding: 4rem;
-      width: 60%;
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      width: calc(100% / (3 / 2));
+      padding: 4rem 13vw 4rem 0;
     }
+  }
+
+  &-content {
+    position: relative;
   }
 
   &__title {

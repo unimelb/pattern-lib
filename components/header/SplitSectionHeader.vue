@@ -1,15 +1,19 @@
 <template>
   <div
     :style="{ backgroundImage: `url(${img})` }"
-    class="split-section-header" >
-    <div class="split-section-header__inner">
-      <h1 class="split-section-header__title">{{ title }}</h1>
-      <p class="split-section-header__sub-title">{{ subTitle }}</p>
-      <ButtonIcon
-        v-if="buttonLink"
-        :href="buttonLink"
-        inverted
-        class="split-section-header__button">{{ buttonText }}</ButtonIcon>
+    class="split-section-header">
+    <div class="split-section-header__container">
+      <div class="split-section-header__inner">
+        <div class="split-section-header-content">
+          <h1 class="split-section-header__title">{{ title }}</h1>
+          <p class="split-section-header__sub-title">{{ subTitle }}</p>
+          <ButtonIcon
+            v-if="buttonLink"
+            :href="buttonLink"
+            inverted
+            class="split-section-header__button">{{ buttonText }}</ButtonIcon>
+        </div>
+      </div>
     </div>
   </div>
 </template>

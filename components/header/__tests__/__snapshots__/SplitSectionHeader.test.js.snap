@@ -6,21 +6,29 @@ exports[`SplitSectionHeader should match snapshot 1`] = `
   style="background-image: url();"
 >
   <div
-    class="split-section-header__inner"
+    class="split-section-header__container"
   >
-    <h1
-      class="split-section-header__title"
+    <div
+      class="split-section-header__inner"
     >
-      
-    </h1>
-     
-    <p
-      class="split-section-header__sub-title"
-    >
-      
-    </p>
-     
-    <!---->
+      <div
+        class="split-section-header-content"
+      >
+        <h1
+          class="split-section-header__title"
+        >
+          
+        </h1>
+         
+        <p
+          class="split-section-header__sub-title"
+        >
+          
+        </p>
+         
+        <!---->
+      </div>
+    </div>
   </div>
 </div>
 `;
