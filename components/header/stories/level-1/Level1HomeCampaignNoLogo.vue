@@ -10,23 +10,19 @@
             <br>possible outcome
           </h1>
           <h3 class="shim-mb2">Further details about this amazing campaign.</h3>
-          <a
-            class="btn btn--inverted"
-            href>
-            <span class="push-icon">Call to action
-              <svg
-                width="15px"
-                height="15px"
-                focusable="false"
-                role="presentation"
-                class="push-icon__icon"
-              >
-                <use xlink:href="#icon-chevron-right"/>
-              </svg>
-            </span>
-          </a>
+          <ButtonIcon class="btn--campaign">Call to Action</ButtonIcon>
         </div>
       </div>
     </header>
   </div>
 </template>
+
+<script>
+import ButtonIcon from '../../../buttons/ButtonIcon.vue';
+
+export default {
+  components: {
+    ButtonIcon,
+  },
+};
+</script>

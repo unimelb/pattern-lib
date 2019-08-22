@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import Level2Default from './Level2Default.vue';
 import Level2Entity from './Level2Entity.vue';

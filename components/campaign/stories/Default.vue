@@ -11,8 +11,8 @@
 </template>
 
 <script>
+import BgImage from 'storybook/placeholders/campaign-banner.png';
 import PageHeaderCampaign from '../PageHeaderCampaign.vue';
-import BgImage from '../../../.storybook/placeholders/campaign-banner.png';
 
 export default {
   components: { PageHeaderCampaign },

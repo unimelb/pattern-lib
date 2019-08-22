@@ -61,6 +61,7 @@
   --col-pink-mid-2: 238, 136, 137;
   --col-pink-mid-1: 255, 189, 204;
   --col-pink-light: 255, 223, 230;
+  --col-white: 255, 255, 255;
 
   /* Colours that are outside of the brand palette */
   --col-orange-mid-0: 255, 182, 145;
@@ -69,6 +70,7 @@
   --col-grey-dark: 87, 87, 87;
   --col-brand: var(--col-navy-dark);
   --col-brand-light-2: 218, 227, 237;
+  --col-green-dark-tint: 47, 79, 48;
 
   /* Rotating colours */
   --col-1: var(--col-black-mid-2);
