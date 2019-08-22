@@ -27,7 +27,7 @@
   }
 
   &__close {
-    color: #fff;
+    color: rgb(var(--col-white));
     position: absolute;
     top: -.5rem;
     right: .5rem;
@@ -74,7 +74,7 @@
     width: 100%;
     object-fit: contain;
     height: 100%;
-    max-height: 560px;
+    max-height: 35.75rem;
   }
 
   &__embed {
@@ -83,7 +83,7 @@
 
   &__thumbnails {
     display: flex;
-    height: 75px;
+    height: 4.6875rem;
     overflow-x: auto;
     overflow-y: scroll;
     margin-bottom: 1.5rem;
@@ -137,10 +137,10 @@
 
   &__description {
     font-size: .875rem;
-    line-height: 20px;
+    line-height: 1.45;
 
     @media (--bp-desktop) {
-      line-height: 25px;
+      line-height: 1.6;
     }
   }
 
@@ -148,11 +148,13 @@
     display: none;
 
     &--next {
-      right: -95px;
+      right: 0;
+      transform: translateX(100%);
     }
 
     &--prev {
-      left: -95px;
+      left: 0;
+      transform: translateX(-100%);
     }
 
     @media (--bp-desktop) {

@@ -200,7 +200,7 @@ export default {
       return {
         'media-gallery': true,
         'media-gallery-overlay': this.overlay,
-        'media-gallery-overlay__open': this.openState,
+        'media-gallery-overlay--open': this.openState,
       };
     },
     sliderClasses() {

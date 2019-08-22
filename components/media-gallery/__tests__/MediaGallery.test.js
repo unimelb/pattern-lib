@@ -280,6 +280,6 @@ describe('MediaGallery overlay', () => {
 
     wrapper.find('.thumbnails__item div').trigger('click');
     expect(wrapper.vm.openState).toBe(true);
-    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay__open');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay--open');
   });
 });
