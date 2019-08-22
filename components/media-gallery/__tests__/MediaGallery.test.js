@@ -224,10 +224,10 @@ describe('MediaGallery overlay', () => {
     });
 
     expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay');
-    expect(wrapper.find('.media-gallery-overlay__media-count').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery__count').exists()).toBe(true);
     expect(wrapper.find('.media-gallery-overlay__close').exists()).toBe(true);
-    expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery-overlay__slider');
-    expect(wrapper.find('.media-gallery__container').classes()).toContain('media-gallery-overlay__container');
+    expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery__slider--overlay');
+    expect(wrapper.find('.media-gallery-overlay__container').exists()).toBe(true);
   });
 
   it('should render current media number', () => {
@@ -238,9 +238,9 @@ describe('MediaGallery overlay', () => {
       },
     });
 
-    expect(wrapper.find('.media-gallery-overlay__media-count').text()).toBe('1 / 2');
+    expect(wrapper.find('.media-gallery__count').text()).toBe('1 / 2');
     wrapper.find('.media-gallery__button').trigger('click');
-    expect(wrapper.find('.media-gallery-overlay__media-count').text()).toBe('2 / 2');
+    expect(wrapper.find('.media-gallery__count').text()).toBe('2 / 2');
   });
 
   it('should have thumbnails component', () => {

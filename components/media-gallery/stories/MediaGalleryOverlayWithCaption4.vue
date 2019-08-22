@@ -2,7 +2,9 @@
   <div class="bg-inverted">
     <MediaGallery
       :media="media"
-      in-page
+      display-caption
+      columns="4"
+      overlay
     />
   </div>
 </template>

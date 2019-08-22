@@ -7,33 +7,39 @@ exports[`MediaGallery Common should match snapshot 1`] = `
     class="media-gallery"
     role="region"
   >
-    <!---->
-     
     <div
-      class="media-gallery__slider"
+      class=""
     >
+      <!---->
+       
       <div
-        class="media-gallery__button"
-        role="button"
-        tabindex="0"
-        title="Previous (arrow left)"
+        class="media-gallery__slider"
       >
+        <div
+          class="media-gallery__button media-gallery__button--prev"
+          role="button"
+          tabindex="0"
+          title="Previous (arrow left)"
+        >
+          <!---->
+        </div>
+         
         <!---->
+         
+        <div
+          class="media-gallery__button media-gallery__button--next"
+          role="button"
+          tabindex="0"
+          title="Next (arrow right)"
+        >
+          <!---->
+        </div>
       </div>
        
       <!---->
        
-      <div
-        class="media-gallery__button"
-        role="button"
-        tabindex="0"
-        title="Next (arrow right)"
-      >
-        <!---->
-      </div>
+      <!---->
     </div>
-     
-    <!---->
   </div>
    
   <!---->

@@ -1,12 +1,12 @@
 <template>
-  <SectionWrap>
+  <div class="bg-alt">
     <MediaGallery
       :media="media"
       display-caption
-      columns="3"
+      columns="2"
       overlay
     />
-  </SectionWrap>
+  </div>
 </template>
 
 <script>

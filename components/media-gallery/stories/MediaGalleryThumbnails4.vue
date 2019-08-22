@@ -1,19 +1,20 @@
 <template>
-  <div class="bg-inverted">
-    <MediaGallery
+  <SectionWrap>
+    <ThumbnailGallery
       :media="media"
-      in-page
+      display-caption
+      columns="4"
     />
-  </div>
+  </SectionWrap>
 </template>
 
 <script>
-import MediaGallery from '../MediaGallery.vue';
+import ThumbnailGallery from '../ThumbnailGallery.vue';
 import sample from '../sample.json';
 import MediaGalleryDocs from './media-gallery.md';
 
 export default {
-  components: { MediaGallery },
+  components: { ThumbnailGallery },
   data() {
     return {
       media: sample,

@@ -1,8 +1,9 @@
 <template>
-  <div class="bg-inverted">
+  <div class="bg-alt">
     <MediaGallery
       :media="media"
-      in-page
+      columns="3"
+      overlay
     />
   </div>
 </template>

@@ -1,49 +1,56 @@
 .thumbnails {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
 
   &__container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media (--bp-desktop) {
+      margin-left: -.75rem;
+      margin-right: -.75rem;
+    }
+  }
+
+  &__col {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-top: .75rem;
     margin-bottom: .75rem;
     padding-right: .75rem;
     padding-left: .75rem;
 
     &--2-col {
-      width: 50%;
+      @media (--bp-desktop) {
+        width: 50%;
+      }
     }
 
     &--3-col {
-      width: 33.333%;
+      @media (--bp-desktop) {
+        width: 33.333%;
+      }
     }
 
     &--4-col {
-      width: 25%;
+      @media (--bp-desktop) {
+        width: 25%;
+      }
+    }
+
+    &--no-caption {
+      justify-content: center;
     }
   }
 
   &__item {
     display: flex;
     justify-content: center;
-    padding: 0;
     margin: 0;
     flex-direction: column;
     cursor: pointer;
-    position: relative;
-    width: 100%;
-
-    figcaption {
-      color: rgb(var(--col-black-dark));
-      font-size: 1rem;
-      margin: 1rem 0 .5rem 0;
-      font-weight: var(--fw-semibold);
-      text-align: center;
-      font-style: normal;
-      cursor: default;
-    }
 
     &--prevent-click {
       outline: none;
@@ -51,12 +58,19 @@
     }
   }
 
+  &__caption {
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 1rem;
+  }
+
   &__image {
     object-fit: contain;
     width: 100%;
 
-    @media (--bp-desktop) {
-      height: 15.625rem;
+    &--with-caption {
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -73,15 +87,19 @@
       z-index: calc(var(--z-default) + 1);
     }
 
-    @media (--bp-desktop) {
-      height: 15.625rem;
+    &-embed {
+      width: 100%;
+    }
+
+    &--with-caption {
+      margin-bottom: 1.5rem;
     }
   }
 
-  &__description {
-    font-size: .875rem;
-    text-align: center;
-    font-style: italic;
-    color: rgb(var(--col-grey-dark));
+  @media (--bp-desktop) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }

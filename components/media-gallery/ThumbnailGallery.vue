@@ -1,47 +1,49 @@
 <template>
   <div class="thumbnails">
-    <div
-      v-for="(item, index) in media"
-      :key="item.id"
-      :class="thumbnailColumnClass"
-      class="thumbnails__container">
-      <FigureWrap
-        :caption="displayCaption && item.title"
-        :class="{'thumbnails__item': true, 'thumbnails__item--prevent-click': !overlay}"
-        tabindex="0"
-      >
-        <div
-          :class="{'thumbnails__item--prevent-click': !overlay}"
+    <div class="thumbnails__container">
+      <div
+        v-for="(item, index) in media"
+        :key="item.id"
+        :class="thumbnailColumnClass"
+        class="thumbnails__col">
+        <figure
+          :caption="displayCaption && item.title"
+          :class="{'thumbnails__item': true, 'thumbnails__item--prevent-click': !overlay}"
+          tabindex="0"
           @click="overlay === true && callback(index)"
-          @keydown.13="callback(index)">
+          @keydown.13="callback(index)"
+        >
           <img
             v-if="item.type === 'image'"
             :src="item.src"
             :alt="item.altText"
+            :class="{'thumbnails__image--with-caption': displayCaption}"
             class="thumbnails__image"
           >
           <div
             v-if="item.type === 'video'"
+            :class="{'thumbnails__video--with-caption': displayCaption}"
             class="thumbnails__video"
           >
-            <VideoEmbed :src="item.src"/>
+            <VideoEmbed
+              :src="item.src"
+              class="thumbnails__video-embed" />
           </div>
-        </div>
-      </FigureWrap>
-      <div
-        v-if="displayCaption"
-        class="thumbnails__description">{{ item.description }}</div>
+          <figcaption v-if="displayCaption">
+            <div class="thumbnails__caption">{{ item.title }}</div>
+            <p class="thumbnails__description">{{ item.description }}</p>
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import FigureWrap from '../figure/FigureWrap.vue';
 import VideoEmbed from '../embed/VideoEmbed.vue';
 
 export default {
   components: {
-    FigureWrap,
     VideoEmbed,
   },
   props: {
@@ -70,7 +72,10 @@ export default {
     thumbnailColumnClass() {
       const { columns } = this;
 
-      return `thumbnails__container--${columns}-col`;
+      return {
+        [`thumbnails__col--${columns}-col`]: true,
+        'thumbnails__col--no-caption': !this.displayCaption,
+      };
     },
   },
 };

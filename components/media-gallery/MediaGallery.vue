@@ -4,87 +4,89 @@
       :class="classes"
       role="region"
       aria-roledescription="Media gallery">
-      <div
-        v-if="overlay"
-        class="media-gallery-overlay__media-count">
-        {{ selectedIndex + 1 }} / {{ media.length }}
+      <div :class="containerClasses">
         <div
-          class="media-gallery-overlay__close"
-          tabindex="0"
-          title="Close (Esc)"
-          @click="openStateToggle()"
-          @keydown.13="openStateToggle()"
-          @keydown.32="openStateToggle()"
-        >
-          <SvgIcon
-            aria-hidden="true"
-            name="close"
-            width="32"
-            height="32"/>
+          v-if="overlay"
+          class="media-gallery__header">
+          <div class="media-gallery__count">
+            {{ selectedIndex + 1 }} / {{ media.length }}
+          </div>
+          <div
+            class="media-gallery-overlay__close"
+            tabindex="0"
+            title="Close (Esc)"
+            @click="openStateToggle()"
+            @keydown.13="openStateToggle()"
+            @keydown.32="openStateToggle()"
+          >
+            <SvgIcon
+              aria-hidden="true"
+              name="close"
+              width="26"
+              height="26"/>
+          </div>
         </div>
-      </div>
-      <div :class="sliderClasses">
-        <div
-          class="media-gallery__button"
-          role="button"
-          tabindex="0"
-          title="Previous (arrow left)"
-          @click="move('prev')"
-          @keydown.13="move('prev')"
-          @keydown.32="move('prev')"
-        >
-          <SvgIcon
-            aria-hidden="true"
-            name="chevron-left"
-            width="30"
-            height="30"/>
+        <div :class="sliderClasses">
+          <div
+            class="media-gallery__button media-gallery__button--prev"
+            role="button"
+            tabindex="0"
+            title="Previous (arrow left)"
+            @click="move('prev')"
+            @keydown.13="move('prev')"
+            @keydown.32="move('prev')"
+          >
+            <SvgIcon
+              aria-hidden="true"
+              name="chevron-left"
+              width="30"
+              height="30"/>
+          </div>
+          <div
+            v-if="media.length"
+            class="media-gallery__slider-container">
+            <slider
+              v-if="inPage || openState"
+              ref="slider"
+              :options="options"
+              @slide="slide"
+            >
+              <slideritem
+                v-for="(slide, index) in media"
+                :key="index"
+                class="media-gallery__item">
+                <img
+                  v-if="slide.type === 'image'"
+                  :src="slide.src"
+                  :alt="slide.altText"
+                  class="media-gallery__image"
+                >
+                <VideoEmbed
+                  v-if="slide.type === 'video'"
+                  :src="slide.src"
+                  class="media-gallery__embed" />
+              </slideritem>
+            </slider>
+          </div>
+          <div
+            class="media-gallery__button media-gallery__button--next"
+            tabindex="0"
+            role="button"
+            title="Next (arrow right)"
+            @click="move('next')"
+            @keydown.13="move('next')"
+            @keydown.32="move('next')"
+          >
+            <SvgIcon
+              aria-hidden="true"
+              name="chevron-right"
+              width="30"
+              height="30"/>
+          </div>
         </div>
+
         <div
           v-if="media.length"
-          :class="containerClasses">
-          <slider
-            v-if="inPage || openState"
-            ref="slider"
-            :options="options"
-            @slide="slide"
-          >
-            <slideritem
-              v-for="(slide, index) in media"
-              :key="index"
-              class="media-gallery__item">
-              <img
-                v-if="slide.type === 'image'"
-                :src="slide.src"
-                :alt="slide.altText"
-                class="media-gallery__image"
-              >
-              <VideoEmbed
-                v-if="slide.type === 'video'"
-                :src="slide.src"
-                class="media-gallery__embed" />
-            </slideritem>
-          </slider>
-        </div>
-        <div
-          class="media-gallery__button"
-          tabindex="0"
-          role="button"
-          title="Next (arrow right)"
-          @click="move('next')"
-          @keydown.13="move('next')"
-          @keydown.32="move('next')"
-        >
-          <SvgIcon
-            aria-hidden="true"
-            name="chevron-right"
-            width="30"
-            height="30"/>
-        </div>
-      </div>
-      <div
-        v-if="media.length"
-        class="media-gallery__footer">
-        <div
           ref="thumbnailContainer"
           :class="thumbClasses">
           <div
@@ -114,14 +116,19 @@
             </div>
           </div>
         </div>
+
         <div
-          v-if="inPage"
-          class="media-gallery__count"
-        >{{ selectedIndex + 1 }} / {{ media.length }}</div>
-        <div
-          :id="'caption' + selectedIndex"
-          class="media-gallery__title">{{ selectedItem.title }}</div>
-        <div class="media-gallery__description">{{ selectedItem.description }}</div>
+          v-if="media.length"
+          class="media-gallery__footer">
+          <div
+            v-if="inPage"
+            class="media-gallery__count media-gallery__count--footer"
+          >{{ selectedIndex + 1 }} / {{ media.length }}</div>
+          <div
+            :id="'caption' + selectedIndex"
+            class="media-gallery__title">{{ selectedItem.title }}</div>
+          <div class="media-gallery__description">{{ selectedItem.description }}</div>
+        </div>
       </div>
     </div>
     <ThumbnailGallery
@@ -199,12 +206,11 @@ export default {
     sliderClasses() {
       return {
         'media-gallery__slider': true,
-        'media-gallery-overlay__slider': this.overlay,
+        'media-gallery__slider--overlay': this.overlay,
       };
     },
     containerClasses() {
       return {
-        'media-gallery__container': true,
         'media-gallery-overlay__container': this.overlay,
       };
     },
