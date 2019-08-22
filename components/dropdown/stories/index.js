@@ -3,7 +3,7 @@ import {
 } from '@storybook/vue';
 import {
   createStory,
-} from '../../../.storybook/utils';
+} from 'storybook/utils';
 
 import DropdownDefault from './DropdownDefault.vue';
 

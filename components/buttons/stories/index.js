@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import StoryButtonDefault from './StoryButtonDefault.vue';
 import StoryButtonNoIcon from './StoryButtonNoIcon.vue';

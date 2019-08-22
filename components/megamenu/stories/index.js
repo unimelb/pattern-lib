@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue';
 
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import HybridMenu from './HybridMenu.vue';
 import HybridMenuProp from './HybridMenuProp.vue';
