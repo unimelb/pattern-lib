@@ -3,7 +3,7 @@ import {
 } from '@storybook/vue';
 import {
   createStory,
-} from '../../../.storybook/utils';
+} from 'storybook/utils';
 
 import HeadingElements from './HeadingElements.vue';
 import HeadingClasses from './HeadingClasses.vue';

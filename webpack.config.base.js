@@ -18,6 +18,7 @@ module.exports = {
       '.storybook': path.resolve(__dirname, '.storybook/'),
       storybook: path.resolve(__dirname, '.storybook/'),
       icons: path.resolve(__dirname, 'components/icons/sprite/'),
+      components: path.resolve(__dirname, './components/'),
     },
   },
   module: {

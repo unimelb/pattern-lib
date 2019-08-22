@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ToggleBlockMobile from '../../toggle/ToggleBlockMobile.vue';
+import ToggleBlockMobile from 'components/toggle/ToggleBlockMobile.vue';
 
 export default {
   components: { ToggleBlockMobile },

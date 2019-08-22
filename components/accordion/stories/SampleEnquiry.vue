@@ -21,9 +21,9 @@
 </template>
 
 <script>
-import Enquiry from '../../toggle/Enquiry.vue';
-import MceForm from '../../forms/stories/MceForm.vue';
-import { codeBlock } from '../../../.storybook/utils';
+import Enquiry from 'components/toggle/Enquiry.vue';
+import MceForm from 'components/forms/stories/MceForm.vue';
+import { codeBlock } from 'storybook/utils';
 
 const markup = codeBlock(`
 <enquiry>
