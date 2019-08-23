@@ -225,7 +225,7 @@ describe('MediaGallery overlay', () => {
 
     expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay');
     expect(wrapper.find('.media-gallery__count').exists()).toBe(true);
-    expect(wrapper.find('.media-gallery-overlay__close').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery__close').exists()).toBe(true);
     expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery__slider--overlay');
     expect(wrapper.find('.media-gallery-overlay__container').exists()).toBe(true);
   });

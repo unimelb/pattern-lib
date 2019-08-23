@@ -5,21 +5,21 @@ exports[`ThumbnailGallery should match snapshot 1`] = `
   class="thumbnails"
 >
   <div
-    class="thumbnails__container"
+    class="thumbnails__container thumbnails__container--1-col"
   >
     <div
-      class="thumbnails__col thumbnails__col--1-col thumbnails__col--no-caption"
+      class="thumbnails__item thumbnails__item--no-caption"
     >
-      <figure
-        class="thumbnails__item thumbnails__item--prevent-click"
+      <div
+        class=""
         tabindex="0"
       >
         <!---->
          
         <!---->
-         
-        <!---->
-      </figure>
+      </div>
+       
+      <!---->
     </div>
   </div>
 </div>

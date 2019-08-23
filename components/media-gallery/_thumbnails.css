@@ -1,4 +1,5 @@
 .thumbnails {
+  width: 100%;
   max-width: 63rem;
   margin-right: auto;
   margin-left: auto;
@@ -8,53 +9,61 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    &--2-col {
+      .thumbnails__item {
+        width: 100%;
+
+        @media (--bp-tablet) {
+          width: calc(100% / 2);
+        }
+      }
+    }
+
+    &--3-col {
+      .thumbnails__item {
+        width: 100%;
+
+        @media (--bp-tablet) {
+          width: calc(100% / 2);
+        }
+
+        @media (--bp-desktop) {
+          width: calc(100% / 3);
+        }
+      }
+    }
+
+    &--4-col {
+      .thumbnails__item {
+        width: 100%;
+
+        @media (--bp-tablet) {
+          width: calc(100% / 2);
+        }
+
+        @media (--bp-desktop) {
+          width: calc(100% / 4);
+        }
+      }
+    }
+
     @media (--bp-desktop) {
       margin-left: -.75rem;
       margin-right: -.75rem;
     }
   }
 
-  &__col {
+  &__item {
     display: flex;
     flex-direction: column;
     margin-top: .75rem;
     margin-bottom: .75rem;
     padding-right: .75rem;
     padding-left: .75rem;
-
-    &--2-col {
-      @media (--bp-desktop) {
-        width: 50%;
-      }
-    }
-
-    &--3-col {
-      @media (--bp-desktop) {
-        width: 33.333%;
-      }
-    }
-
-    &--4-col {
-      @media (--bp-desktop) {
-        width: 25%;
-      }
-    }
+    width: 100%;
 
     &--no-caption {
       justify-content: center;
-    }
-  }
-
-  &__item {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    flex-direction: column;
-    cursor: pointer;
-
-    &--prevent-click {
-      outline: none;
-      cursor: default;
     }
   }
 
@@ -62,16 +71,19 @@
     font-weight: var(--fw-bold);
     font-size: 18px;
     line-height: 21px;
+    margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
 
-  &__image {
-    object-fit: contain;
-    width: 100%;
+  &__open-overlay {
+    cursor: pointer;
+  }
 
-    &--with-caption {
-      margin-bottom: 1.5rem;
-    }
+  &__image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 56.25%;
   }
 
   &__video {
@@ -89,10 +101,6 @@
 
     &-embed {
       width: 100%;
-    }
-
-    &--with-caption {
-      margin-bottom: 1.5rem;
     }
   }
 

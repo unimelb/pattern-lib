@@ -27,15 +27,7 @@
   }
 
   &__close {
-    color: rgb(var(--col-white));
-    position: absolute;
-    top: -.5rem;
-    right: .5rem;
     cursor: pointer;
-
-    @media (--bp-desktop) {
-      right: -5.5rem;
-    }
   }
 
   &__count {

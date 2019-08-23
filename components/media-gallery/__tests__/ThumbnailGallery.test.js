@@ -66,7 +66,7 @@ describe('ThumbnailGallery', () => {
       },
     });
     expect(wrapper.props().media.length).toBe(2);
-    expect(wrapper.find('img').attributes().src).toBe('test');
+    expect(wrapper.find('.thumbnails__image').attributes().style).toBe('background-image: url(test);');
   });
 
   it('should render video from prop', () => {

@@ -1,39 +1,39 @@
 <template>
   <div class="thumbnails">
-    <div class="thumbnails__container">
+    <div
+      :class="thumbnailColumnClass"
+      class="thumbnails__container">
       <div
         v-for="(item, index) in media"
         :key="item.id"
-        :class="thumbnailColumnClass"
-        class="thumbnails__col">
-        <figure
-          :caption="displayCaption && item.title"
-          :class="{'thumbnails__item': true, 'thumbnails__item--prevent-click': !overlay}"
+        :class="thumbnailClass"
+        class="thumbnails__item">
+
+        <div
+          :class="thumbnailOpenClass"
           tabindex="0"
-          @click="overlay === true && callback(index)"
-          @keydown.13="callback(index)"
-        >
-          <img
+          @click="overlay && callback(index)"
+          @keydown.13="callback(index)">
+          <div
             v-if="item.type === 'image'"
-            :src="item.src"
-            :alt="item.altText"
-            :class="{'thumbnails__image--with-caption': displayCaption}"
-            class="thumbnails__image"
-          >
+            :aria-label="item.altText"
+            :style="{ backgroundImage: `url(${item.src})` }"
+            class="thumbnails__image" />
+
           <div
             v-if="item.type === 'video'"
-            :class="{'thumbnails__video--with-caption': displayCaption}"
             class="thumbnails__video"
           >
             <VideoEmbed
               :src="item.src"
               class="thumbnails__video-embed" />
           </div>
-          <figcaption v-if="displayCaption">
-            <div class="thumbnails__caption">{{ item.title }}</div>
-            <p class="thumbnails__description">{{ item.description }}</p>
-          </figcaption>
-        </figure>
+        </div>
+
+        <div v-if="displayCaption">
+          <div class="thumbnails__caption">{{ item.title }}</div>
+          <p class="thumbnails__description">{{ item.description }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -73,8 +73,17 @@ export default {
       const { columns } = this;
 
       return {
-        [`thumbnails__col--${columns}-col`]: true,
-        'thumbnails__col--no-caption': !this.displayCaption,
+        [`thumbnails__container--${columns}-col`]: true,
+      };
+    },
+    thumbnailClass() {
+      return {
+        'thumbnails__item--no-caption': !this.displayCaption,
+      };
+    },
+    thumbnailOpenClass() {
+      return {
+        'thumbnails__open-overlay': this.overlay,
       };
     },
   },

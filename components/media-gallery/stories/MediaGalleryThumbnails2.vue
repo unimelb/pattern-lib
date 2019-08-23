@@ -10,14 +10,14 @@
 
 <script>
 import ThumbnailGallery from '../ThumbnailGallery.vue';
-import sample from '../sample.json';
+import thumbnails from '../thumbnails-sample.json';
 import MediaGalleryDocs from './media-gallery.md';
 
 export default {
   components: { ThumbnailGallery },
   data() {
     return {
-      media: sample,
+      media: thumbnails,
     };
   },
   readme: { custom: MediaGalleryDocs, source: true, html: false },

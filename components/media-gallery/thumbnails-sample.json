@@ -19,7 +19,7 @@
     "id": 3,
     "src": "https://images.unsplash.com/photo-1565063224932-227c9e83f020?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=960&ixlib=rb-1.2.1&q=80&w=960",
     "title": "Small Title",
-    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
     "type": "image",
     "altText": "alt text goes here"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "src": "https://images.unsplash.com/photo-1565041308215-2e081c32211c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=540&ixlib=rb-1.2.1&q=80&w=960",
     "title": "Title Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
     "type": "image",
     "altText": "alt text goes here"
   },

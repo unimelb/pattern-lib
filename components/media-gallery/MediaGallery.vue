@@ -12,7 +12,7 @@
             {{ selectedIndex + 1 }} / {{ media.length }}
           </div>
           <div
-            class="media-gallery-overlay__close"
+            class="media-gallery__close"
             tabindex="0"
             title="Close (Esc)"
             @click="openStateToggle()"
