@@ -199,8 +199,8 @@ export default {
     classes() {
       return {
         'media-gallery': true,
-        'media-gallery-overlay': this.overlay,
-        'media-gallery-overlay--open': this.openState,
+        'media-gallery--hide': this.overlay && !this.openState,
+        'media-gallery--show': this.openState,
       };
     },
     sliderClasses() {
@@ -211,13 +211,14 @@ export default {
     },
     containerClasses() {
       return {
-        'media-gallery-overlay__container': this.overlay,
+        'media-gallery__container': true,
+        'media-gallery__container--overlay': this.overlay,
       };
     },
     thumbClasses() {
       return {
         'media-gallery__thumbnails': true,
-        'media-gallery-overlay__thumbnails': this.overlay,
+        'media-gallery__thumbnails--overlay': this.overlay,
       };
     },
   },

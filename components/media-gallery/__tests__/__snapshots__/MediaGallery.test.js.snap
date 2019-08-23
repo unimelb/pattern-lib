@@ -8,7 +8,7 @@ exports[`MediaGallery Common should match snapshot 1`] = `
     role="region"
   >
     <div
-      class=""
+      class="media-gallery__container"
     >
       <!---->
        

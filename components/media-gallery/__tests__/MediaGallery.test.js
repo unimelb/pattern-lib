@@ -223,11 +223,11 @@ describe('MediaGallery overlay', () => {
       },
     });
 
-    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--hide');
     expect(wrapper.find('.media-gallery__count').exists()).toBe(true);
     expect(wrapper.find('.media-gallery__close').exists()).toBe(true);
     expect(wrapper.find('.media-gallery__slider').classes()).toContain('media-gallery__slider--overlay');
-    expect(wrapper.find('.media-gallery-overlay__container').exists()).toBe(true);
+    expect(wrapper.find('.media-gallery__container--overlay').exists()).toBe(true);
   });
 
   it('should render current media number', () => {
@@ -280,6 +280,6 @@ describe('MediaGallery overlay', () => {
 
     wrapper.find('.thumbnails__item div').trigger('click');
     expect(wrapper.vm.openState).toBe(true);
-    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery-overlay--open');
+    expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--show');
   });
 });
