@@ -4,7 +4,7 @@
     class="split-section-header">
     <div class="split-section-header__container">
       <div class="split-section-header__inner">
-        <div class="split-section-header-content">
+        <div class="split-section-header__content">
           <h1 class="split-section-header__title">{{ title }}</h1>
           <p class="split-section-header__sub-title">{{ subTitle }}</p>
           <ButtonIcon

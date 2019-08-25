@@ -24,12 +24,12 @@
       width: 100vw;
       height: 115vw;
       top: 0;
-      left: -25px;
+      left: -1.5625rem;
 
       @media (--bp-desktop) {
         transform: rotate(15deg);
         transform-origin: top right;
-        top: -80px;
+        top: -5rem;
         right: 0;
         left: unset;
       }
@@ -41,7 +41,7 @@
     }
   }
 
-  &-content {
+  &__content {
     position: relative;
   }
 
