@@ -12,9 +12,12 @@
 
   &__container {
     display: flex;
-    cursor: pointer;
     background-color: rgb(var(--col-background-primary-navy));
     color: rgb(var(--col-white));
+
+    &--bio {
+      cursor: pointer;
+    }
   }
 
   &__inner {

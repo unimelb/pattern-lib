@@ -7,10 +7,11 @@
       aria-label="Profile Image"
     />
     <div
+      :class="containBio"
       class="showcase-profile__container"
       @click="changeIcon">
       <div
-        v-if="!isHidden && thumb"
+        v-show="!isHidden && thumb"
         :style="{ backgroundImage: `url(${thumb})` }"
         class="showcase-profile__thumb--inner"
         aria-label="Profile Image"
@@ -89,6 +90,9 @@ export default {
     },
     className() {
       return (this.isHidden) ? '' : 'showcase-profile__icon--active';
+    },
+    containBio() {
+      return (this.bio) ? 'showcase-profile__container--bio' : '';
     },
   },
   methods: {
