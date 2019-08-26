@@ -87,11 +87,12 @@
 </template>
 
 <script>
+import SvgIcon from '../../../icons/SvgIcon.vue';
 import CardNewsTag from '../../CardNewsTag.vue';
 import news from './news.md';
 
 export default {
-  components: { CardNewsTag },
+  components: { CardNewsTag, SvgIcon },
   readme: { custom: news, source: true, html: true },
   data() {
     return {

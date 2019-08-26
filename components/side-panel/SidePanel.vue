@@ -21,8 +21,12 @@
 
 <script>
 // side-panel-toggle-open
+import SvgIcon from '../icons/SvgIcon.vue';
 
 export default {
+  components: {
+    SvgIcon,
+  },
   props: {
     right: {
       type: Boolean,

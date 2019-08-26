@@ -122,11 +122,12 @@
 </template>
 
 <script>
+import SvgIcon from '../../../icons/SvgIcon.vue';
 import CardEvents from '../../CardEvents.vue';
 import eventsCardDocs from './events-card-docs.md';
 
 export default {
-  components: { CardEvents },
+  components: { CardEvents, SvgIcon },
   readme: { custom: eventsCardDocs, source: true, html: true },
 };
 </script>
