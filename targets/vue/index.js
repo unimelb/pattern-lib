@@ -352,3 +352,7 @@ export {
   default as SocialListGeneric,
 }
   from 'components/social-list/SocialListGeneric.vue';
+export {
+  default as SplitSectionHeader,
+}
+  from 'components/header/SplitSectionHeader.vue';
