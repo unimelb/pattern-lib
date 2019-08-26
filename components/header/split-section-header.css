@@ -21,8 +21,8 @@
       position: absolute;
       content: '';
       background-color: rgb(var(--col-background-tertiary-navy), .92);
-      width: 100vw;
-      height: 115vw;
+      width: 200vw;
+      height: 315vw;
       top: 0;
       left: -1.5625rem;
 
@@ -37,7 +37,11 @@
 
     @media (--bp-desktop) {
       width: calc(100% / (3 / 2));
-      padding: 4rem 13vw 4rem 0;
+      padding: 4rem 18vw 4rem 0;
+    }
+
+    @media (--bp-x-desktop) {
+      padding-right: 13vw;
     }
   }
 
