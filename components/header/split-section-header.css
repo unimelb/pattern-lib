@@ -31,7 +31,7 @@
         transform-origin: top right;
         top: -5rem;
         right: 0;
-        left: unset;
+        left: auto;
       }
     }
 
