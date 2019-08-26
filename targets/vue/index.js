@@ -348,3 +348,7 @@ export {
   default as LogoFarm,
 }
   from 'components/logo-farm/LogoFarm.vue';
+export {
+  default as SplitSectionHeader,
+}
+  from 'components/header/SplitSectionHeader.vue';
