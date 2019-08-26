@@ -62,9 +62,10 @@
   }
 
   &__bio {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     max-width: 100%;
     overflow: scroll;
+    margin-top: 1rem;
 
     &--text {
       font-size: .8125rem;
