@@ -344,3 +344,7 @@ export {
   default as SocialListGeneric,
 }
   from 'components/social-list/SocialListGeneric.vue';
+export {
+  default as Slider,
+}
+  from 'components/slider/Slider.vue';
