@@ -310,6 +310,8 @@ export default {
     slide(slide) {
       const { currentPage } = slide;
 
+      this.scrollToView(currentPage);
+
       this.setSelectedItem(this.media[currentPage]);
       this.setSelectedIndex(currentPage);
     },
