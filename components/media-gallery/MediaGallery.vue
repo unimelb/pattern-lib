@@ -245,6 +245,8 @@ export default {
     },
     openStateToggle() {
       this.openState = !this.openState;
+
+      this.toggleNoScroll();
     },
     move(direction) {
       const len = this.media.length;
@@ -291,6 +293,9 @@ export default {
       if (e.keyCode === 27) {
         this.openState = false;
       }
+    },
+    toggleNoScroll() {
+      document.documentElement.classList.toggle('no-body-scroll');
     },
   },
 };
