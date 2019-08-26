@@ -87,6 +87,18 @@
     }
   }
 
+  .slide-fade-enter-active {
+    transition: all .8s ease-in-out;
+  }
+
+  .slide-fade-enter {
+    opacity: 0;
+  }
+
+  .slide-fade-leave-to {
+    opacity: .7;
+  }
+
   @media (--bp-desktop) {
     max-height: 23.3125rem;
   }

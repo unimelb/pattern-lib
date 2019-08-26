@@ -7,6 +7,7 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
   <div
     aria-label="Profile Image"
     class="showcase-profile__thumb"
+    name="slide-fade"
     style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
   />
    
@@ -16,6 +17,7 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
     <div
       aria-label="Profile Image"
       class="showcase-profile__thumb--inner"
+      name="slide-fade"
       style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png); display: none;"
     />
      
@@ -46,7 +48,6 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
    
   <div
     class="showcase-profile__bio"
-    name="slide"
     style="display: none;"
   >
     <!---->

@@ -1,21 +1,25 @@
 <template>
   <div class="showcase-profile">
-    <div
-      v-show="showThumb"
-      :style="{ backgroundImage: `url(${thumb})` }"
-      class="showcase-profile__thumb"
-      aria-label="Profile Image"
-    />
+    <transition name="slide-fade">
+      <div
+        v-show="showThumb"
+        :style="{ backgroundImage: `url(${thumb})` }"
+        class="showcase-profile__thumb"
+        aria-label="Profile Image"
+      />
+    </transition>
     <div
       :class="containBio"
       class="showcase-profile__container"
       @click="changeIcon">
-      <div
-        v-show="!isHidden && thumb"
-        :style="{ backgroundImage: `url(${thumb})` }"
-        class="showcase-profile__thumb--inner"
-        aria-label="Profile Image"
-      />
+      <transition name="slide-fade">
+        <div
+          v-show="!isHidden && thumb"
+          :style="{ backgroundImage: `url(${thumb})` }"
+          class="showcase-profile__thumb--inner"
+          aria-label="Profile Image"
+        />
+      </transition>
       <div class="showcase-profile__inner">
         <div class="showcase-profile__titles">
           <h6 class="showcase-profile__title">{{ title }}</h6>
@@ -34,18 +38,15 @@
         </div>
       </div>
     </div>
-
-    <transition name="slide">
-      <div
-        v-show="!isHidden"
-        class="showcase-profile__bio">
-        <VideoEmbed
-          v-if="video"
-          :src="video"
-          class="showcase-profile__embed"/>
-        <p class="showcase-profile__bio--text">{{ bio }}</p>
-      </div>
-    </transition>
+    <div
+      v-show="!isHidden"
+      class="showcase-profile__bio">
+      <VideoEmbed
+        v-if="video"
+        :src="video"
+        class="showcase-profile__embed"/>
+      <p class="showcase-profile__bio--text">{{ bio }}</p>
+    </div>
   </div>
 </template>
 
