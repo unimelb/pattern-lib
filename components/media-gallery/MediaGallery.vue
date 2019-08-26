@@ -230,10 +230,15 @@ export default {
   },
   methods: {
     open(index) {
-      this.selectedItem = this.media[index];
-      this.selectedIndex = index;
+      this.setSelectedItem(this.media[index]);
+
+      this.setSelectedIndex(index);
+
       if (this.$refs.slider) {
-        this.$refs.slider.$emit('slideTo', index);
+        this.slideTo(index);
+
+        this.scrollToView(index);
+
         if (this.$refs.thumbnailContainer.childNodes[index].querySelector('iframe')) {
           this.stopVideo();
         }
@@ -249,22 +254,45 @@ export default {
       this.toggleNoScroll();
     },
     move(direction) {
-      const len = this.media.length;
-      const current = this.selectedIndex;
-      const directions = {
-        prev: (current + len - 1) % len,
-        next: (current + 1) % len,
-      };
-      const nextIndex = directions[direction];
-      this.selectedItem = this.media[nextIndex];
-      this.selectedIndex = nextIndex;
+      const currentIndex = this.getSelectedIndex();
+      const nextIndex = this.getNextIndex(direction);
+      const items = this.media;
+      const nextItem = items[nextIndex];
+
+      this.setSelectedItem(nextItem);
+
+      this.setSelectedIndex(nextIndex);
+
       if (this.$refs.slider) {
-        this.$refs.slider.$emit('slideTo', nextIndex);
+        this.slideTo(nextIndex);
+
         this.scrollToView(nextIndex);
-        if (this.$refs.thumbnailContainer.childNodes[current].querySelector('iframe')) {
+
+        if (this.$refs.thumbnailContainer.childNodes[currentIndex].querySelector('iframe')) {
           this.stopVideo();
         }
       }
+    },
+    getNextIndex(direction) {
+      const mediaLength = this.media.length;
+      const currentIndex = this.getSelectedIndex();
+      const directions = {
+        prev: (currentIndex + mediaLength - 1) % mediaLength,
+        next: (currentIndex + 1) % mediaLength,
+      };
+
+      const nextIndex = directions[direction];
+
+      return nextIndex;
+    },
+    setSelectedItem(index) {
+      this.selectedItem = index;
+    },
+    setSelectedIndex(index) {
+      this.selectedIndex = index;
+    },
+    getSelectedIndex() {
+      return this.selectedIndex;
     },
     // Scroll active thumbnail into view
     scrollToView(nextIndex) {
@@ -280,8 +308,13 @@ export default {
       }
     },
     slide(slide) {
-      this.selectedItem = this.media[slide.currentPage];
-      this.selectedIndex = slide.currentPage;
+      const { currentPage } = slide;
+
+      this.setSelectedItem(this.media[currentPage]);
+      this.setSelectedIndex(currentPage);
+    },
+    slideTo(index) {
+      this.$refs.slider.$emit('slideTo', index);
     },
     keyBoardActions(e) {
       if (e.keyCode === 37) {
