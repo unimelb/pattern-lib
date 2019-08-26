@@ -1,6 +1,6 @@
 # Upgrade Instructions
 
-## v4.15.0
+## v4.16.0
 
 Level 1 & Level 2 Header buttons using the classes `page-header--campaign`, `page-header__darken--o50`, `page-header__darken--o25` have been changed from `btn btn--inverted` to `btn btn--campaign`.
 
