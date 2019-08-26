@@ -55,12 +55,11 @@
                 v-for="(slide, index) in media"
                 :key="index"
                 class="media-gallery__item">
-                <img
+                <div
                   v-if="slide.type === 'image'"
-                  :src="slide.src"
-                  :alt="slide.altText"
-                  class="media-gallery__image"
-                >
+                  :aria-label="slide.altText"
+                  :style="{ backgroundImage: `url(${slide.src})` }"
+                  class="media-gallery__image" />
                 <VideoEmbed
                   v-if="slide.type === 'video'"
                   :src="slide.src"
@@ -199,6 +198,7 @@ export default {
     classes() {
       return {
         'media-gallery': true,
+        'media-gallery--overlay': this.overlay,
         'media-gallery--hide': this.overlay && !this.openState,
         'media-gallery--show': this.openState,
       };

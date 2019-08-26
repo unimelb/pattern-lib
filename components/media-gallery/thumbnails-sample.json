@@ -8,14 +8,6 @@
     "altText": "alt text goes here"
   },
   {
-    "id": 2,
-    "src": "https://www.youtube.com/embed/nlF7qp5GNPI",
-    "title": "Video 1",
-    "description": "Lorem ipsum dolor sit amet.",
-    "type": "video",
-    "altText": "alt text goes here"
-  },
-  {
     "id": 3,
     "src": "https://images.unsplash.com/photo-1565063224932-227c9e83f020?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=960&ixlib=rb-1.2.1&q=80&w=960",
     "title": "Small Title",

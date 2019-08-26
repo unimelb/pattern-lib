@@ -6,6 +6,14 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 
+  @media (--bp-desktop) {
+    padding: 2rem 1.5rem;
+  }
+
+  &--overlay {
+    padding: 0;
+  }
+
   &--hide {
     display: none;
   }
@@ -24,6 +32,7 @@
     background: rgba(var(--col-black-dark), .9);
     z-index: calc(var(--z-default) + 2);
     max-width: none;
+    overflow-y: scroll;
 
     @media (--bp-desktop) {
       justify-content: center;
@@ -35,7 +44,9 @@
       width: 100%;
 
       @media (--bp-desktop) {
-        width: 63rem;
+        max-width: 63rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
     }
   }
@@ -76,7 +87,7 @@
     &--footer {
       margin-bottom: 1rem;
 
-      @media (--bp-desktop) {
+      @media (--bp-wide) {
         margin-bottom: 2rem;
       }
     }
@@ -86,10 +97,20 @@
     display: flex;
     align-items: center;
     position: relative;
-    margin-bottom: .313rem;
+    margin-bottom: .125rem;
+
+    @media (--bp-x-desktop) {
+      margin-bottom: .3125rem;
+    }
 
     &--overlay {
-      margin-bottom: 2rem;
+      @media (--bp-desktop) {
+        margin-bottom: 1rem;
+      }
+
+      @media (--bp-wide) {
+        margin-bottom: 2rem;
+      }
     }
 
     &-container {
@@ -103,11 +124,23 @@
     cursor: auto;
   }
 
-  &__image {
+  &__image2 {
     width: 100%;
     object-fit: contain;
     height: 100%;
-    max-height: 35.75rem;
+    max-height: 33vh;
+
+    @media (--bp-wide) {
+      max-height: 638px;
+    }
+  }
+
+  &__image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 56.25%;
+    width: 100%;
   }
 
   &__embed {
@@ -118,7 +151,7 @@
     display: flex;
     height: 4.6875rem;
     overflow-x: auto;
-    overflow-y: scroll;
+    overflow-y: hidden;
     margin-bottom: 1.5rem;
 
     &--overlay {
@@ -198,16 +231,11 @@
       transform: translateX(-100%);
     }
 
-    @media (--bp-desktop) {
+    @media (--bp-wide) {
       display: block;
       position: absolute;
       padding: 2rem;
       cursor: pointer;
     }
-  }
-
-  @media (--bp-desktop) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 }
