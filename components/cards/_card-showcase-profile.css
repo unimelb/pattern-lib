@@ -32,9 +32,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 56.25%;
-    min-height: auto;
-    height: 19.1875rem;
+    flex-basis: 19.1875rem;
+    transition: all ease .25s;
+
+    &--transition {
+      flex-basis: 0;
+    }
 
     &--inner {
       background-size: cover;
@@ -65,10 +68,17 @@
   }
 
   &__bio {
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 0 1rem;
     max-width: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
+    min-height: 0;
+    transition: all ease .25s;
+    flex-basis: 100%;
     margin-top: 1rem;
+
+    &--transition {
+      flex-basis: 0;
+    }
 
     &--text {
       font-size: .8125rem;
@@ -85,18 +95,6 @@
     &--active {
       transform: rotate(180deg);
     }
-  }
-
-  .slide-fade-enter-active {
-    transition: all .8s ease-in-out;
-  }
-
-  .slide-fade-enter {
-    opacity: 0;
-  }
-
-  .slide-fade-leave-to {
-    opacity: .7;
   }
 
   @media (--bp-desktop) {

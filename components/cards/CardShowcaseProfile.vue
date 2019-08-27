@@ -1,25 +1,22 @@
 <template>
   <div class="showcase-profile">
-    <transition name="slide-fade">
-      <div
-        v-show="showThumb"
-        :style="{ backgroundImage: `url(${thumb})` }"
-        class="showcase-profile__thumb"
-        aria-label="Profile Image"
-      />
-    </transition>
+    <div
+      v-show="showThumb"
+      :style="{ backgroundImage: `url(${thumb})` }"
+      :class="thumbClass"
+      class="showcase-profile__thumb"
+      aria-label="Profile Image"
+    />
     <div
       :class="containBio"
       class="showcase-profile__container"
       @click="changeIcon">
-      <transition name="slide-fade">
-        <div
-          v-show="!isHidden && thumb"
-          :style="{ backgroundImage: `url(${thumb})` }"
-          class="showcase-profile__thumb--inner"
-          aria-label="Profile Image"
-        />
-      </transition>
+      <div
+        v-show="!isHidden && thumb"
+        :style="{ backgroundImage: `url(${thumb})` }"
+        class="showcase-profile__thumb--inner"
+        aria-label="Profile Image"
+      />
       <div class="showcase-profile__inner">
         <div class="showcase-profile__titles">
           <h6 class="showcase-profile__title">{{ title }}</h6>
@@ -40,6 +37,7 @@
     </div>
     <div
       v-show="!isHidden"
+      :class="bioClass"
       class="showcase-profile__bio">
       <VideoEmbed
         v-if="video"
@@ -89,11 +87,17 @@ export default {
     showThumb() {
       return this.thumb && this.thumb.length > 0 && this.isHidden;
     },
+    thumbClass() {
+      return (this.isHidden) ? '' : 'showcase-profile__thumb--transition';
+    },
     className() {
       return (this.isHidden) ? '' : 'showcase-profile__icon--active';
     },
     containBio() {
       return (this.bio) ? 'showcase-profile__container--bio' : '';
+    },
+    bioClass() {
+      return (this.isHidden) ? 'showcase-profile__bio--transition' : '';
     },
   },
   methods: {
