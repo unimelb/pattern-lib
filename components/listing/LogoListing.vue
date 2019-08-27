@@ -1,15 +1,15 @@
 <template>
   <section-wrap>
-    <div class="logo-farm">
+    <div class="logo-listing">
       <a
         v-for="(item, index) in data"
         :key="index"
         :href="item.url"
-        class="logo-farm__link">
+        class="logo-listing__link">
         <img
           :alt="item.alt"
           :src="item.src"
-          class="logo-farm__image"
+          class="logo-listing__image"
         >
       </a>
     </div>

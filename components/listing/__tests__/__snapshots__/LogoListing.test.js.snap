@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LogoFarm should match snapshot 1`] = `
+exports[`LogoListing should match snapshot 1`] = `
 <section-wrap>
   <div
-    class="logo-farm"
+    class="logo-listing"
   />
 </section-wrap>
 `;

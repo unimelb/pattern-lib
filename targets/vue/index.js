@@ -345,9 +345,9 @@ export {
 }
   from 'components/social-list/SocialListGeneric.vue';
 export {
-  default as LogoFarm,
+  default as LogoListing,
 }
-  from 'components/logo-farm/LogoFarm.vue';
+  from 'components/listing/LogoListing.vue';
 export {
   default as SplitSectionHeader,
 }

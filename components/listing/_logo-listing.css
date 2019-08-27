@@ -1,4 +1,4 @@
-.logo-farm {
+.logo-listing {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -6,8 +6,8 @@
   align-self: center;
 
   &__link {
-    width: 64%;
-    padding: 26px;
+    width: 50%;
+    padding: 1rem;
 
     @media (--bp-tablet) {
       width: 36%;
@@ -32,6 +32,7 @@
 
   &__image {
     max-width: 100%;
+    max-height: 7.5rem;
     height: auto;
   }
 }

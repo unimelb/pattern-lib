@@ -4,14 +4,14 @@ import {
 import {
   toHaveNoViolations,
 } from 'jest-axe';
-import LogoFarm from '../LogoFarm.vue';
+import LogoListing from '../LogoListing.vue';
 
 
 expect.extend(toHaveNoViolations);
 
-describe('LogoFarm', () => {
+describe('LogoListing', () => {
   it('should match snapshot', () => {
-    const result = shallow(LogoFarm).element;
+    const result = shallow(LogoListing).element;
     expect(result).toMatchSnapshot();
   });
 });

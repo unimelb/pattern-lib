@@ -1,13 +1,13 @@
 <template>
-  <LogoFarm :data="sample"/>
+  <LogoListing :data="sample"/>
 </template>
 
 <script>
-import LogoFarm from '../LogoFarm.vue';
-import sample from '../sample.json';
+import LogoListing from '../../LogoListing.vue';
+import sample from '../../sample.json';
 
 export default {
-  components: { LogoFarm },
+  components: { LogoListing },
   readme: { source: true, html: false },
   data() {
     return {
