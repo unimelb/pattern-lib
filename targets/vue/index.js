@@ -271,14 +271,6 @@ export {
 }
   from 'components/dropdown/Dropdown.vue';
 export {
-  default as MediaGallery,
-}
-  from '../../components/media-gallery/MediaGallery.vue';
-export {
-  default as Thumbnails,
-}
-  from '../../components/media-gallery/ThumbnailGallery.vue';
-export {
   default as Heading1,
 }
   from 'components/typography/headings/Heading1.vue';
