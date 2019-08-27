@@ -79,7 +79,7 @@
   }
 
   &__icon {
-    transition: .8s all ease;
+    transition: .25s all ease-in-out;
     transform: rotate(0deg);
 
     &--active {
