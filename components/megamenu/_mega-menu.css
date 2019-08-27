@@ -18,6 +18,10 @@
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-background-primary-white));
 
+  &__logo {
+    display: inline-block !important;
+  }
+
   &.active {
     top: 0;
     min-height: 100%;
