@@ -168,7 +168,6 @@
     margin-right: .313rem;
     opacity: .7;
     height: 100%;
-    width: 100%;
 
     &.active {
       opacity: 1;
