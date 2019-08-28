@@ -149,7 +149,6 @@
     overflow-x: auto;
     overflow-y: hidden;
     margin-bottom: 1.5rem;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
 
     &--overlay {
       display: flex;
