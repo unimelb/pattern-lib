@@ -102,18 +102,6 @@ export default {
     changeIcon() {
       if (this.bio !== '') {
         this.isHidden = !this.isHidden;
-        if (this.video !== '') {
-          this.stopVideo();
-        }
-      }
-    },
-    stopVideo() {
-      const iframe = document.querySelectorAll('iframe');
-      if (iframe.length > 0) {
-        iframe.forEach((element) => {
-          const iframeSrc = element.src;
-          element.src = iframeSrc;
-        });
       }
     },
   },
