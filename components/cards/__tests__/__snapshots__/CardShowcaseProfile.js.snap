@@ -46,7 +46,6 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
    
   <div
     class="showcase-profile__bio showcase-profile__bio--transition"
-    style="display: none;"
   >
     <!---->
      

@@ -42,7 +42,6 @@
     &--inner {
       background-size: cover;
       background-position: center;
-      height: 100%;
       min-width: 4rem;
       max-width: 4rem;
     }

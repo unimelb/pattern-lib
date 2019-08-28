@@ -1,7 +1,6 @@
 <template>
   <div class="showcase-profile">
     <div
-      v-show="showThumb"
       :style="{ backgroundImage: `url(${thumb})` }"
       :class="thumbClass"
       class="showcase-profile__thumb"
@@ -36,7 +35,6 @@
       </div>
     </div>
     <div
-      v-show="!isHidden"
       :class="bioClass"
       class="showcase-profile__bio">
       <VideoEmbed
