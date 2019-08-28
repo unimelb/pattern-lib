@@ -5,7 +5,7 @@
     :href="href"
     :excerpt="excerpt"
     :tags="tags"
-    :cols="1"
+    :cols="cols"
     class="card-news-tag"
   >
     <slot
@@ -44,6 +44,11 @@ export default {
     tags: {
       type: Array,
       default: () => [],
+    },
+    cols: {
+      type: Number,
+      default: 1,
+      validator: value => value && value <= 3,
     },
   },
 };
