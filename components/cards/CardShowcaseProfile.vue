@@ -11,8 +11,8 @@
       class="showcase-profile__container"
       @click="changeIcon">
       <div
-        v-show="!isHidden && thumb"
         :style="{ backgroundImage: `url(${thumb})` }"
+        :class="smallThumbClass"
         class="showcase-profile__thumb--inner"
         aria-label="Profile Image"
       />
@@ -82,11 +82,11 @@ export default {
     };
   },
   computed: {
-    showThumb() {
-      return this.thumb && this.thumb.length > 0 && this.isHidden;
-    },
     thumbClass() {
       return (this.isHidden) ? '' : 'showcase-profile__thumb--transition';
+    },
+    smallThumbClass() {
+      return (this.isHidden) ? '' : 'showcase-profile__thumb--inner--transition';
     },
     className() {
       return (this.isHidden) ? '' : 'showcase-profile__icon--active';

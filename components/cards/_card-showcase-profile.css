@@ -14,6 +14,9 @@
     display: flex;
     background-color: rgb(var(--col-background-primary-navy));
     color: rgb(var(--col-white));
+    overflow: hidden;
+    flex-basis: content;
+    flex-shrink: 0;
 
     &--bio {
       cursor: pointer;
@@ -25,6 +28,7 @@
     flex: auto;
     align-items: center;
     padding: .75rem 1rem;
+    flex-basis: content;
   }
 
   &__thumb {
@@ -34,6 +38,7 @@
     background-size: cover;
     flex-basis: 19.1875rem;
     transition: all ease .25s;
+    flex-shrink: 3;
 
     &--transition {
       flex-basis: 0;
@@ -44,6 +49,13 @@
       background-position: center;
       min-width: 4rem;
       max-width: 4rem;
+      margin-left: -4rem;
+      position: relative;
+      transition: all ease .25s;
+
+      &--transition {
+        margin-left: 0;
+      }
     }
   }
 
@@ -69,7 +81,7 @@
   &__bio {
     padding: 0 1rem 0 1rem;
     max-width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     min-height: 0;
     transition: all ease .25s;
     flex-basis: 100%;
