@@ -2,7 +2,6 @@
   &__list {
     display: flex;
     justify-content: flex-start;
-    white-space: nowrap;
     flex-wrap: wrap;
     align-items: center;
     list-style-type: none;
