@@ -157,7 +157,7 @@
     opacity: .7;
     height: 4.6875rem;
 
-    /* Hack to not target IE11 as focus-within breaks menu */
+    /* Hack to not target IE11 */
     @supports (display: flex) {
       flex: 1;
     }
@@ -174,7 +174,7 @@
       &::before {
         content: '';
         position: absolute;
-        box-shadow: inset 0 0 0 .125rem rgb(var(--col-background-primary-white));;
+        box-shadow: inset 0 0 0 .125rem rgb(var(--col-background-primary-white));
         width: 100%;
         height: 100%;
       }

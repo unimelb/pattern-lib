@@ -9,7 +9,7 @@
 
 <script>
 import MediaGallery from '../MediaGallery.vue';
-import sample from '../sample.json';
+import sample from '../inpage-sample.json';
 import MediaGalleryDocs from './media-gallery.md';
 
 export default {
