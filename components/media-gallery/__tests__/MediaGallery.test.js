@@ -10,19 +10,19 @@ import MediaGallery from '../MediaGallery.vue';
 
 expect.extend(toHaveNoViolations);
 
-const mediaMock = [{
-  id: 1,
+const itemsMock = [{
   src: 'test',
   title: 'test1',
   description: 'test1',
   type: 'image',
+  altText: 'alt text 1',
 },
 {
-  id: 2,
   src: 'test2',
   title: 'test2',
   description: 'test2',
   type: 'video',
+  altText: 'alt text 2',
 },
 ];
 
@@ -32,19 +32,18 @@ describe('MediaGallery Common', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should have default props and correct types media, inPage, overlay, columns, displayCaption', () => {
+  it('should have default props and correct types items, useOverlay, columns, displayCaption', () => {
     const wrapper = shallow(MediaGallery);
     const {
-      media, inPage, overlay, columns, displayCaption,
+      items, useOverlay, columns, displayCaption,
     } = wrapper.vm.$options.props;
 
     expect(columns.type).toBe(String);
-    expect(wrapper.props().columns).toBe('1');
-    expect(media.type).toBe(Array);
-    expect(inPage.type).toBe(Boolean);
-    expect(overlay.type).toBe(Boolean);
+    expect(wrapper.props().columns).toBe('4');
+    expect(items.type).toBe(Array);
+    expect(useOverlay.type).toBe(Boolean);
     expect(displayCaption.type).toBe(Boolean);
-    expect(wrapper.props().media).toEqual([]);
+    expect(wrapper.props().items).toEqual([]);
   });
 
   it('should accept cols prop with correct type', () => {
@@ -62,38 +61,37 @@ describe('MediaGallery Common', () => {
   it('should render media image in slider from prop', () => {
     const wrapper = shallow(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
-    expect(wrapper.props().media.length).toBe(2);
+    expect(wrapper.props().items.length).toBe(2);
     expect(wrapper.find('img').attributes().src).toBe('test');
   });
 
   it('should render media video in slider from prop', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
-    expect(wrapper.props().media.length).toBe(2);
+    expect(wrapper.props().items.length).toBe(2);
     expect(wrapper.find('iframe').exists()).toBe(true);
   });
 
   it('should set active to first media as default', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
     expect(wrapper.vm.selectedIndex).toBe(0);
-    expect(wrapper.vm.selectedItem.id).toBe(1);
   });
 
   it('should have click event on arrows', () => {
     const move = sinon.stub();
     const wrapper = shallow(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
 
@@ -108,7 +106,7 @@ describe('MediaGallery Common', () => {
     const open = sinon.stub();
     const wrapper = shallow(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
 
@@ -122,20 +120,19 @@ describe('MediaGallery Common', () => {
   it('should change media on arrow click', () => {
     const wrapper = shallow(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
 
     wrapper.find('.media-gallery__button').trigger('click');
     expect(wrapper.vm.selectedIndex).toBe(1);
-    expect(wrapper.vm.selectedItem.id).toBe(2);
   });
 
   it('should have click event on arrows', () => {
     const move = sinon.stub();
     const wrapper = shallow(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
 
@@ -149,12 +146,11 @@ describe('MediaGallery Common', () => {
   it('should render current image title/description', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
 
     expect(wrapper.vm.selectedIndex).toBe(0);
-    expect(wrapper.vm.selectedItem.id).toBe(1);
     expect(wrapper.find('.media-gallery__title').text()).toBe('test1');
     expect(wrapper.find('.media-gallery__description').text()).toBe('test1');
     wrapper.find('.media-gallery__button').trigger('click');
@@ -167,8 +163,7 @@ describe('MediaGallery InPage', () => {
   it('should render current media number', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        inPage: true,
+        items: itemsMock,
       },
     });
     Element.prototype.scrollIntoView = jest.fn();
@@ -180,21 +175,18 @@ describe('MediaGallery InPage', () => {
   it('should change image on thumb click', () => {
     const wrapper = shallow(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        inPage: true,
+        items: itemsMock,
       },
     });
     wrapper.findAll('.media-gallery__thumb').at(1).trigger('click');
     expect(wrapper.findAll('.media-gallery__thumb').at(1).classes()).toContain('active');
     expect(wrapper.vm.selectedIndex).toBe(1);
-    expect(wrapper.vm.selectedItem.id).toBe(2);
   });
 
   it('should render embed if image type', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        inPage: true,
+        items: itemsMock,
       },
     });
     wrapper.find('.media-gallery__button').trigger('click');
@@ -205,8 +197,7 @@ describe('MediaGallery InPage', () => {
   it('should render embed if video type', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        inPage: true,
+        items: itemsMock,
       },
     });
     wrapper.find('.media-gallery__button').trigger('click');
@@ -218,8 +209,8 @@ describe('MediaGallery overlay', () => {
   it('should have overlay classes', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        overlay: true,
+        items: itemsMock,
+        useOverlay: true,
       },
     });
 
@@ -233,8 +224,8 @@ describe('MediaGallery overlay', () => {
   it('should render current media number', () => {
     const wrapper = shallow(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        overlay: true,
+        items: itemsMock,
+        useOverlay: true,
       },
     });
 
@@ -246,8 +237,8 @@ describe('MediaGallery overlay', () => {
   it('should have thumbnails component', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        overlay: true,
+        items: itemsMock,
+        useOverlay: true,
       },
     });
 
@@ -258,8 +249,8 @@ describe('MediaGallery overlay', () => {
     const openThumb = sinon.stub();
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        overlay: true,
+        items: itemsMock,
+        useOverlay: true,
       },
     });
 
@@ -273,8 +264,8 @@ describe('MediaGallery overlay', () => {
   it('should open slider pop over on thumb click', () => {
     const wrapper = mount(MediaGallery, {
       propsData: {
-        media: mediaMock,
-        overlay: true,
+        items: itemsMock,
+        useOverlay: true,
       },
     });
 

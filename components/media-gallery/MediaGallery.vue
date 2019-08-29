@@ -90,7 +90,7 @@
           :class="thumbClasses">
           <div
             v-for="(item, index) in items"
-            :key="item.id"
+            :key="index"
             :class="{ active: index === selectedIndex}"
             :aria-label="item.title + '. ' + item.description"
             class="media-gallery__thumb"
@@ -158,7 +158,7 @@ export default {
   props: {
     columns: {
       type: String,
-      default: '1',
+      default: '4',
     },
     items: {
       type: Array,

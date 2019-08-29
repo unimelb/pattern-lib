@@ -5,7 +5,7 @@
       class="thumbnails__container">
       <div
         v-for="(item, index) in items"
-        :key="item.id"
+        :key="index"
         :class="thumbnailClass"
         class="thumbnails__item">
 

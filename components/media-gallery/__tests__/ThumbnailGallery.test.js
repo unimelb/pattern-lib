@@ -5,16 +5,14 @@ import ThumbnailGallery from '../ThumbnailGallery.vue';
 
 expect.extend(toHaveNoViolations);
 
-const mediaMock = [
+const itemsMock = [
   {
-    id: 1,
     src: 'test',
     title: 'test1',
     description: 'test1',
     type: 'image',
   },
   {
-    id: 2,
     src: 'test2',
     title: 'test2',
     description: 'test2',
@@ -31,20 +29,20 @@ describe('ThumbnailGallery', () => {
   it('should have default props and correct types images/callback/columns/displayCaption/overlay', () => {
     const wrapper = shallow(ThumbnailGallery);
     const {
-      media,
+      items,
       callback,
       columns,
       displayCaption,
-      overlay,
+      useOverlay,
     } = wrapper.vm.$options.props;
 
     expect(columns.type).toBe(String);
     expect(wrapper.props().columns).toBe('1');
-    expect(media.type).toBe(Array);
+    expect(items.type).toBe(Array);
     expect(callback.type).toBe(Function);
     expect(displayCaption.type).toBe(Boolean);
-    expect(overlay.type).toBe(Boolean);
-    expect(wrapper.props().media).toEqual([{}]);
+    expect(useOverlay.type).toBe(Boolean);
+    expect(wrapper.props().items).toEqual([{}]);
   });
 
   it('should accept columns prop with correct type', () => {
@@ -62,20 +60,20 @@ describe('ThumbnailGallery', () => {
   it('should render images from prop', () => {
     const wrapper = mount(ThumbnailGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
-    expect(wrapper.props().media.length).toBe(2);
+    expect(wrapper.props().items.length).toBe(2);
     expect(wrapper.find('.thumbnails__image').attributes().style).toBe('background-image: url(test);');
   });
 
   it('should render video from prop', () => {
     const wrapper = mount(ThumbnailGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
       },
     });
-    expect(wrapper.props().media.length).toBe(2);
+    expect(wrapper.props().items.length).toBe(2);
     expect(wrapper.find('.embed').exists()).toBe(true);
   });
 
@@ -93,9 +91,9 @@ describe('ThumbnailGallery', () => {
     const callback = sinon.spy();
     const wrapper = mount(ThumbnailGallery, {
       propsData: {
-        media: mediaMock,
+        items: itemsMock,
         callback,
-        overlay: true,
+        useOverlay: true,
       },
     });
     wrapper.find('.thumbnails__item div').trigger('click');
