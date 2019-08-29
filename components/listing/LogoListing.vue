@@ -1,17 +1,19 @@
 <template>
   <section-wrap>
     <div class="logo-listing">
-      <a
+      <div
         v-for="(item, index) in data"
         :key="index"
-        :href="item.url"
-        class="logo-listing__link">
-        <img
-          :alt="item.alt"
-          :src="item.src"
-          class="logo-listing__image"
-        >
-      </a>
+        class="logo-listing__item">
+        <a
+          :href="item.url">
+          <img
+            :alt="item.alt"
+            :src="item.src"
+            class="logo-listing__image"
+          >
+        </a>
+      </div>
     </div>
   </section-wrap>
 </template>

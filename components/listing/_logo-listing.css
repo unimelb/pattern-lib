@@ -3,10 +3,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-self: center;
-
-  &__link {
-    text-align: center;
+  text-align: center;
+  &__item {
     width: 50%;
     padding: 1rem;
 
