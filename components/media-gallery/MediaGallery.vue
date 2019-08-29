@@ -6,10 +6,10 @@
       aria-roledescription="Media gallery">
       <div :class="containerClasses">
         <div
-          v-if="overlay"
+          v-if="useOverlay"
           class="media-gallery__header">
           <div class="media-gallery__count">
-            {{ selectedIndex + 1 }} / {{ media.length }}
+            {{ selectedIndex + 1 }} / {{ items.length }}
           </div>
           <div
             class="media-gallery__close"
@@ -43,16 +43,16 @@
               height="30"/>
           </div>
           <div
-            v-if="media.length"
+            v-if="items.length"
             class="media-gallery__slider-container">
             <slider
-              v-if="inPage || openState"
+              v-if="!useOverlay || openState"
               ref="slider"
               :options="options"
               @slide="slide"
             >
               <slideritem
-                v-for="(slide, index) in media"
+                v-for="(slide, index) in items"
                 :key="index"
                 class="media-gallery__item">
                 <div
@@ -85,11 +85,11 @@
         </div>
 
         <div
-          v-if="media.length"
+          v-if="items.length"
           ref="thumbnailContainer"
           :class="thumbClasses">
           <div
-            v-for="(item, index) in media"
+            v-for="(item, index) in items"
             :key="item.id"
             :class="{ active: index === selectedIndex}"
             :aria-label="item.title + '. ' + item.description"
@@ -117,12 +117,12 @@
         </div>
 
         <div
-          v-if="media.length"
+          v-if="items.length"
           class="media-gallery__footer">
           <div
-            v-if="inPage"
+            v-if="!useOverlay"
             class="media-gallery__count media-gallery__count--footer"
-          >{{ selectedIndex + 1 }} / {{ media.length }}</div>
+          >{{ selectedIndex + 1 }} / {{ items.length }}</div>
           <div
             :id="'caption' + selectedIndex"
             class="media-gallery__title">{{ selectedItem.title }}</div>
@@ -131,9 +131,9 @@
       </div>
     </div>
     <ThumbnailGallery
-      v-if="overlay"
-      :overlay="overlay"
-      :media="media"
+      v-if="useOverlay"
+      :use-overlay="useOverlay"
+      :items="items"
       :callback="openThumb"
       :display-caption="displayCaption"
       :columns="columns"
@@ -160,15 +160,11 @@ export default {
       type: String,
       default: '1',
     },
-    media: {
+    items: {
       type: Array,
       default: () => [],
     },
-    inPage: {
-      type: Boolean,
-      default: false,
-    },
-    overlay: {
+    useOverlay: {
       type: Boolean,
       default: false,
     },
@@ -179,7 +175,7 @@ export default {
   },
   data() {
     return {
-      selectedItem: this.media ? this.media[0] : {},
+      selectedItem: this.items ? this.items[0] : {},
       selectedIndex: 0,
       openState: false,
       options: {
@@ -198,27 +194,27 @@ export default {
     classes() {
       return {
         'media-gallery': true,
-        'media-gallery--overlay': this.overlay,
-        'media-gallery--hide': this.overlay && !this.openState,
+        'media-gallery--overlay': this.useOverlay,
+        'media-gallery--hide': this.useOverlay && !this.openState,
         'media-gallery--show': this.openState,
       };
     },
     sliderClasses() {
       return {
         'media-gallery__slider': true,
-        'media-gallery__slider--overlay': this.overlay,
+        'media-gallery__slider--overlay': this.useOverlay,
       };
     },
     containerClasses() {
       return {
         'media-gallery__container': true,
-        'media-gallery__container--overlay': this.overlay,
+        'media-gallery__container--overlay': this.useOverlay,
       };
     },
     thumbClasses() {
       return {
         'media-gallery__thumbnails': true,
-        'media-gallery__thumbnails--overlay': this.overlay,
+        'media-gallery__thumbnails--overlay': this.useOverlay,
       };
     },
   },
@@ -230,7 +226,7 @@ export default {
   },
   methods: {
     open(index) {
-      this.setSelectedItem(this.media[index]);
+      this.setSelectedItem(this.items[index]);
 
       this.setSelectedIndex(index);
 
@@ -254,9 +250,9 @@ export default {
       this.toggleNoScroll();
     },
     move(direction) {
+      const { items } = this;
       const currentIndex = this.getSelectedIndex();
       const nextIndex = this.getNextIndex(direction);
-      const items = this.media;
       const nextItem = items[nextIndex];
 
       this.setSelectedItem(nextItem);
@@ -274,11 +270,11 @@ export default {
       }
     },
     getNextIndex(direction) {
-      const mediaLength = this.media.length;
+      const itemsLength = this.items.length;
       const currentIndex = this.getSelectedIndex();
       const directions = {
-        prev: (currentIndex + mediaLength - 1) % mediaLength,
-        next: (currentIndex + 1) % mediaLength,
+        prev: (currentIndex + itemsLength - 1) % itemsLength,
+        next: (currentIndex + 1) % itemsLength,
       };
 
       const nextIndex = directions[direction];
@@ -312,7 +308,7 @@ export default {
 
       this.scrollToView(currentPage);
 
-      this.setSelectedItem(this.media[currentPage]);
+      this.setSelectedItem(this.items[currentPage]);
       this.setSelectedIndex(currentPage);
     },
     slideTo(index) {

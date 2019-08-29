@@ -17,8 +17,8 @@ import MediaGalleryThumbnails3 from './MediaGalleryThumbnails3.vue';
 import MediaGalleryThumbnails4 from './MediaGalleryThumbnails4.vue';
 /* ##Import story component here */
 
-storiesOf('Media Gallery', module)
-  .add('In page', createStory(MediaGalleryInPage));
+storiesOf('Media Gallery/In Page', module)
+  .add('Default', createStory(MediaGalleryInPage));
 
 storiesOf('Media Gallery/Overlay', module)
   .add('2 col', createStory(MediaGalleryOverlay2))

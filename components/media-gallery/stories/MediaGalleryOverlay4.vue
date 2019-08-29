@@ -1,9 +1,9 @@
 <template>
   <div class="bg-white">
     <MediaGallery
-      :media="media"
+      :items="items"
       columns="4"
-      overlay
+      use-overlay
     />
   </div>
 </template>
@@ -11,15 +11,15 @@
 <script>
 import MediaGallery from '../MediaGallery.vue';
 import sample from '../sample.json';
-import MediaGalleryDocs from './media-gallery.md';
+import MediaGalleryDocs from './media-gallery-overlay.md';
 
 export default {
   components: { MediaGallery },
   data() {
     return {
-      media: sample,
+      items: sample,
     };
   },
-  readme: { custom: MediaGalleryDocs, source: true, html: false },
+  readme: { custom: MediaGalleryDocs, source: false, html: false },
 };
 </script>

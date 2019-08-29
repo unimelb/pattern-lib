@@ -22,10 +22,10 @@
     "altText": "alt text goes here"
   },
   {
-    "src": "https://images.unsplash.com/photo-1566183486164-7d80a2a51978?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=540&ixlib=rb-1.2.1&q=80&w=960",
-    "title": "Image 2",
-    "description": "Lorem ipsum dolor sit amet.",
-    "type": "image",
+    "src": "https://www.youtube.com/embed/GW2umRZc9Vw",
+    "title": "Title Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    "description": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+    "type": "video",
     "altText": "alt text goes here"
   },
   {

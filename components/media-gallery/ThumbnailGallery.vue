@@ -4,7 +4,7 @@
       :class="thumbnailColumnClass"
       class="thumbnails__container">
       <div
-        v-for="(item, index) in media"
+        v-for="(item, index) in items"
         :key="item.id"
         :class="thumbnailClass"
         class="thumbnails__item">
@@ -12,7 +12,7 @@
         <div
           :class="thumbnailOpenClass"
           tabindex="0"
-          @click="overlay && callback(index)"
+          @click="useOverlay && callback(index)"
           @keydown.13="callback(index)">
           <div
             v-if="item.type === 'image'"
@@ -51,7 +51,7 @@ export default {
       type: String,
       default: '1',
     },
-    media: {
+    items: {
       type: Array,
       default: () => [{}],
     },
@@ -63,7 +63,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    overlay: {
+    useOverlay: {
       type: Boolean,
       default: false,
     },
@@ -83,7 +83,7 @@ export default {
     },
     thumbnailOpenClass() {
       return {
-        'thumbnails__open-overlay': this.overlay,
+        'thumbnails__open-overlay': this.useOverlay,
       };
     },
   },

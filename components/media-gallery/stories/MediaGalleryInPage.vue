@@ -1,8 +1,7 @@
 <template>
   <div class="bg-inverted">
     <MediaGallery
-      :media="media"
-      in-page
+      :items="items"
     />
   </div>
 </template>
@@ -16,9 +15,9 @@ export default {
   components: { MediaGallery },
   data() {
     return {
-      media: sample,
+      items: sample,
     };
   },
-  readme: { custom: MediaGalleryDocs, source: true, html: false },
+  readme: { custom: MediaGalleryDocs, source: false, html: false },
 };
 </script>
