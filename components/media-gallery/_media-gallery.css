@@ -1,0 +1,243 @@
+.media-gallery {
+  position: relative;
+  max-width: 63rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media (--bp-desktop) {
+    padding: 2rem 1.5rem;
+  }
+
+  &--overlay {
+    padding: 0;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgb(var(--col-white));
+    background: rgba(var(--col-black-dark), .9);
+    z-index: calc(var(--z-default) + 2);
+    max-width: none;
+    overflow-y: scroll;
+
+    @media (--bp-desktop) {
+      justify-content: center;
+    }
+  }
+
+  &__container {
+    &--overlay {
+      width: 100%;
+
+      @media (--bp-desktop) {
+        max-width: 63rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    @media (--bp-desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__footer {
+    padding: 0 1.5rem;
+
+    @media (--bp-desktop) {
+      padding: 0;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+
+    @media (--bp-desktop) {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  &__count {
+    font-weight: var(--fw-semibold);
+
+    &--footer {
+      margin-bottom: 1rem;
+
+      @media (--bp-wide) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: .3125rem;
+
+    &--overlay {
+      @media (--bp-desktop) {
+        margin-bottom: 1rem;
+      }
+
+      @media (--bp-wide) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    cursor: auto;
+  }
+
+  &__image {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 56.25%;
+    width: 100%;
+  }
+
+  &__embed {
+    width: 100%;
+  }
+
+  &__thumbnails {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 1.5rem;
+
+    @media (--bp-desktop) {
+      margin-bottom: 1rem;
+    }
+
+    &--overlay {
+      display: flex;
+
+      @media (--bp-desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__thumb {
+    cursor: pointer;
+    margin-right: .313rem;
+    opacity: .7;
+    height: 4.6875rem;
+
+    /* Hack to not target IE11 */
+    @supports (display: flex) {
+      flex: 1;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.active {
+      position: relative;
+      opacity: 1;
+      fill: rgba(var(--col-black-mid-2), .25);
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: calc(var(--z-default) + 2);
+        box-shadow: inset 0 0 0 .125rem rgb(var(--col-background-primary-white));
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-image {
+      height: 100%;
+    }
+
+    &-embed {
+      position: relative;
+      width: 6.25rem;
+      height: 100%;
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: calc(var(--z-default) + 1);
+      }
+    }
+
+    &-video {
+      height: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.125rem;
+    font-weight: var(--fw-semibold);
+  }
+
+  &__description {
+    font-size: .875rem;
+    line-height: 1.45;
+
+    @media (--bp-desktop) {
+      line-height: 1.6;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media (--bp-wide) {
+      display: block;
+      position: absolute;
+      padding: 2rem;
+      cursor: pointer;
+    }
+
+    &--next {
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    &--prev {
+      left: 0;
+      transform: translateX(-100%);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThumbnailGallery should match snapshot 1`] = `
+<div
+  class="thumbnails"
+>
+  <div
+    class="thumbnails__container thumbnails__container--1-col"
+  >
+    <div
+      class="thumbnails__item thumbnails__item--no-caption"
+    >
+      <div
+        class=""
+        tabindex="0"
+      >
+        <!---->
+         
+        <!---->
+      </div>
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaGallery Common should match snapshot 1`] = `
+<div>
+  <div
+    aria-roledescription="Media gallery"
+    class="media-gallery"
+    role="region"
+  >
+    <div
+      class="media-gallery__container"
+    >
+      <!---->
+       
+      <div
+        class="media-gallery__slider"
+      >
+        <div
+          class="media-gallery__button media-gallery__button--prev"
+          role="button"
+          tabindex="0"
+          title="Previous (arrow left)"
+        >
+          <!---->
+        </div>
+         
+        <!---->
+         
+        <div
+          class="media-gallery__button media-gallery__button--next"
+          role="button"
+          tabindex="0"
+          title="Next (arrow right)"
+        >
+          <!---->
+        </div>
+      </div>
+       
+      <!---->
+       
+      <!---->
+    </div>
+  </div>
+   
+  <!---->
+</div>
+`;
