@@ -19,7 +19,9 @@
   color: rgb(var(--col-background-primary-white));
 
   &__logo {
-    display: inline-block !important;
+    @media (--bp-x-desktop) {
+      flex: 1 0 auto;
+    }
   }
 
   &.active {
