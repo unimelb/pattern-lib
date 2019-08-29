@@ -26,6 +26,7 @@
           >
             <VideoEmbed
               :src="item.src"
+              :class="embedClass"
               class="thumbnails__video-embed" />
           </div>
         </div>
@@ -84,6 +85,11 @@ export default {
     thumbnailOpenClass() {
       return {
         'thumbnails__open-overlay': this.useOverlay,
+      };
+    },
+    embedClass() {
+      return {
+        'thumbnails__video-embed--overlay': this.useOverlay,
       };
     },
   },
