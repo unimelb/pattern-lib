@@ -124,6 +124,8 @@ describe('MediaGallery Common', () => {
       },
     });
 
+    Element.prototype.scrollIntoView = jest.fn();
+
     wrapper.find('.media-gallery__button').trigger('click');
     expect(wrapper.vm.selectedIndex).toBe(1);
   });
@@ -150,6 +152,8 @@ describe('MediaGallery Common', () => {
       },
     });
 
+    Element.prototype.scrollIntoView = jest.fn();
+
     expect(wrapper.vm.selectedIndex).toBe(0);
     expect(wrapper.find('.media-gallery__title').text()).toBe('test1');
     expect(wrapper.find('.media-gallery__description').text()).toBe('test1');
@@ -166,7 +170,9 @@ describe('MediaGallery InPage', () => {
         items: itemsMock,
       },
     });
+
     Element.prototype.scrollIntoView = jest.fn();
+
     expect(wrapper.find('.media-gallery__count').text()).toBe('1 / 2');
     wrapper.find('.media-gallery__button').trigger('click');
     expect(wrapper.find('.media-gallery__count').text()).toBe('2 / 2');
