@@ -6,6 +6,7 @@
   >
     <div class="page-header__inner">
       <logo
+        class="megamenu__logo"
         size="md"
         no-padding/>
       <MegaMenuTitle

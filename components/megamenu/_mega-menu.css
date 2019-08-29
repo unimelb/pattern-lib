@@ -18,6 +18,12 @@
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-background-primary-white));
 
+  &__logo {
+    @media (--bp-x-desktop) {
+      flex: 1 0 auto;
+    }
+  }
+
   &.active {
     top: 0;
     min-height: 100%;
