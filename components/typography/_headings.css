@@ -45,6 +45,7 @@ h3,
 .lead {
   margin-bottom: calc(var(--vr) / 2);
   font-size: 1.25rem; /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
+  letter-spacing: normal;
 }
 
 .heading-card,
@@ -57,6 +58,7 @@ h4 {
   margin-bottom: calc(var(--vr) / 2);
   font-size: 1.125rem;
   font-weight: var(--fw-semibold);
+  letter-spacing: normal;
 }
 
 h5 {
@@ -64,10 +66,12 @@ h5 {
   font-size: .875rem;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: normal;
 }
 
 h6 {
   margin-bottom: 0;
   font-size: .875rem;
   font-weight: bold;
+  letter-spacing: normal;
 }
