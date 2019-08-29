@@ -196,13 +196,15 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 class="table table--striped table--tight table--is-compacted"
               >
                 <tbody>
-                  <col
-                    width="30%"
-                  />
-                   
-                  <col
-                    width="70%"
-                  />
+                  <colgroup>
+                    <col
+                      width="30%"
+                    />
+                     
+                    <col
+                      width="70%"
+                    />
+                  </colgroup>
                    
                   <tr>
                     <th
@@ -354,13 +356,15 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 class="table table--striped table--tight table--is-compacted"
               >
                 <tbody>
-                  <col
-                    width="30%"
-                  />
-                   
-                  <col
-                    width="70%"
-                  />
+                  <colgroup>
+                    <col
+                      width="30%"
+                    />
+                     
+                    <col
+                      width="70%"
+                    />
+                  </colgroup>
                    
                   <tr>
                     <th

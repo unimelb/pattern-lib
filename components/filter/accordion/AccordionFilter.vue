@@ -82,8 +82,10 @@
           <accordion :name="item.name">
             <table class="table table--striped table--tight table--is-compacted">
               <tbody>
-                <col width="30%">
-                <col width="70%">
+                <colgroup>
+                  <col width="30%">
+                  <col width="70%">
+                </colgroup>
                 <tr>
                   <th scope="row">Location</th>
                   <td>{{ item.location.join(', ') }}</td>
