@@ -30,8 +30,5 @@ export default {
     LeadContent,
   },
   readme: { source: true, html: true },
-  data: () => ({
-    classes: ['heading-page', 'heading-page-sub', 'heading-section', 'heading-card'],
-  }),
 };
 </script>
