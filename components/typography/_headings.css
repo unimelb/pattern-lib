@@ -6,6 +6,7 @@
   display: block;
   font-weight: bold;
   text-transform: none;
+  letter-spacing: normal;
 }
 
 h1,
@@ -52,6 +53,7 @@ h3,
 .lead {
   font-family: var(--ff-normal);
   font-weight: var(--fw-semibold);
+  letter-spacing: normal;
 }
 
 h4 {
