@@ -1,20 +1,21 @@
 <template>
-  <SectionWrap>
-    <ThumbnailGallery
+  <div class="bg-alt">
+    <MediaGallery
       :items="items"
       display-caption
       columns="3"
+      show-thumbnails
     />
-  </SectionWrap>
+  </div>
 </template>
 
 <script>
-import ThumbnailGallery from '../ThumbnailGallery.vue';
+import MediaGallery from '../MediaGallery.vue';
 import thumbnails from '../thumbnails-sample.json';
 import ThumbnailsDocs from './thumbnails.md';
 
 export default {
-  components: { ThumbnailGallery },
+  components: { MediaGallery },
   data() {
     return {
       items: thumbnails,
