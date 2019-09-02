@@ -64,6 +64,7 @@ import CardStat from 'components/cards/CardStat.vue';
 import CardShowcaseProfile from 'components/cards/CardShowcaseProfile.vue';
 import CardEvents from 'components/cards/CardEvents.vue';
 import CardFeaturesPanel from 'components/cards/CardFeaturesPanel.vue';
+import MediaGallery from 'components/media-gallery/MediaGallery.vue';
 import CardNews from 'components/cards/CardNews.vue';
 import Heading1 from 'components/typography/headings/Heading1.vue';
 import Heading2 from 'components/typography/headings/Heading2.vue';
@@ -86,6 +87,7 @@ import CardNewsTag from 'components/cards/CardNewsTag.vue';
 import PageHeaderEvent from 'components/header/PageHeaderEvent.vue';
 import Sidebar from 'components/sidebar/Sidebar.vue';
 import SocialListGeneric from 'components/social-list/SocialListGeneric.vue';
+import LogoListing from 'components/listing/LogoListing.vue';
 import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
 import { version } from '../../package.json';
 
@@ -158,6 +160,7 @@ Vue.component('card-stat', CardStat);
 Vue.component('card-showcase-profile', CardShowcaseProfile);
 Vue.component('card-events', CardEvents);
 Vue.component('card-features-panel', CardFeaturesPanel);
+Vue.component('media-gallery', MediaGallery);
 Vue.component('card-news', CardNews);
 Vue.component('heading1', Heading1);
 Vue.component('heading2', Heading2);
@@ -180,6 +183,7 @@ Vue.component('tags', Tags);
 Vue.component('card-news-tag', CardNewsTag);
 Vue.component('sidebar', Sidebar);
 Vue.component('social-list-generic', SocialListGeneric);
+Vue.component('logo-listing', LogoListing);
 Vue.component('split-section-header', SplitSectionHeader);
 
 // Create Vue instance
