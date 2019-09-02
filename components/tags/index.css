@@ -10,14 +10,6 @@
   }
 
   &__item {
-    margin-bottom: .25rem;
-
-    @media (--bp-x-desktop) {
-      margin-bottom: 0;
-    }
-  }
-
-  &__link {
     display: block;
     padding: .125rem .25rem;
     background-color: rgb(var(--col-blue-light));
@@ -34,6 +26,17 @@
     &:hover,
     &:focus {
       background-color: rgb(var(--col-background-primary-navy));
+      color: #fff !important;
+    }
+  }
+
+  &__link {
+    padding: .125rem .25rem;
+    color: rgb(var(--col-black-dark)) !important;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
       color: #fff !important;
     }
   }
