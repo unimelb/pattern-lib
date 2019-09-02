@@ -30,6 +30,6 @@ Usage:
   ]' 
   columns="4"
   display-caption
-  thumbnails>
+  show-thumbnails>
   </media-gallery>
 ```

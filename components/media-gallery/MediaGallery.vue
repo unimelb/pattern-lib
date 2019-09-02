@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      v-if="!thumbnails"
+      v-if="!showThumbnails"
       :class="classes"
       role="region"
       aria-roledescription="Media gallery">
@@ -132,7 +132,7 @@
       </div>
     </div>
     <ThumbnailGallery
-      v-if="useOverlay || thumbnails"
+      v-if="useOverlay || showThumbnails"
       :use-overlay="useOverlay"
       :items="items"
       :callback="openThumb"
@@ -173,7 +173,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    thumbnails: {
+    showThumbnails: {
       type: Boolean,
       default: false,
     },
