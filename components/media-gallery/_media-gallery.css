@@ -157,11 +157,6 @@
     opacity: .7;
     height: 4.6875rem;
 
-    /* Hack to not target IE11 */
-    @supports (display: flex) {
-      flex: 1;
-    }
-
     &:focus {
       outline: none;
     }
