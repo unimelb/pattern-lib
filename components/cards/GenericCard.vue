@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['btn-owner', 'card', 'card--generic', cols === 1 && 'card--generic--full-width' , className]"
+    :class="['card', 'card--generic', cols === 1 && 'card--generic--full-width' , className]"
   >
     <a
       :href="href"
@@ -23,7 +23,9 @@
         <slot name="sub-title-3"/>
       </div>
       <div class="card__excerpt">{{ excerpt }}</div>
-      <div class="card__footer">
+      <div
+        :class="[cols !== 1 ? 'card__footer--column' : '']"
+        class="card__footer">
         <Tags
           v-if="tags.length"
           :data="tags"
