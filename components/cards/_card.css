@@ -59,12 +59,21 @@
         background: inherit;
       }
     }
+
+    &--full-height {
+      height: 100%;
+    }
   }
 
   &__footer {
     margin-top: auto;
     margin-bottom: 0;
     padding: var(--vr);
+  }
+
+  &__tags {
+    flex: 1;
+    margin-bottom: 1.875rem;
   }
 
   /* One column */

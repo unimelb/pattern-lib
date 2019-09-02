@@ -3,21 +3,10 @@
     min-height: 200px;
   }
 
-  &.card--generic--full-width {
-    .card__thumb {
-      height: 100%;
-    }
-  }
-
   .card__footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 0;
-  }
-
-  .card__tags {
-    flex: 1;
-    margin-bottom: 1.875rem;
   }
 }

@@ -6,7 +6,7 @@ exports[`CardEvents should match snapshot 1`] = `
 >
   <a
     aria-label="Image for"
-    class="card__thumb"
+    class="card__thumb card__thumb--full-height"
     href="#"
     style="background-image: url(https://via.placeholder.com/400x200);"
   />

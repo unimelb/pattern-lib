@@ -6,6 +6,7 @@
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="'Image for' + title"
+      :class="[cols === 1 ? 'card__thumb--full-height' : '']"
       class="card__thumb"
     />
     <div class="card__inner">
