@@ -80,42 +80,42 @@
           :key="index"
           class="accordion-list">
           <accordion :name="item.name">
-            <table class="table table--striped">
-              <tr>
-                <td>
-                  <strong>Location</strong>
-                  <br>
-                  {{ item.location }}
-                </td>
-                <td>
-                  <strong>Points</strong>
-                  <br>
-                  {{ item.points }}
-                </td>
-                <td>
-                  <strong>Discipline</strong>
-                  <br>
-                  {{ item.discipline }}
-                </td>
-                <td>
-                  <strong>Audition requirement</strong>
-                  <br>
-                  {{ item.audition }}
-                </td>
-                <td>
-                  <strong>Study Abroad</strong>
-                  <br>
-                  {{ item.abrod }}
-                </td>
-              </tr>
-              <tr>
-                <td colspan="5">
-                  {{ item.overview }}
-                  <br>
-                  <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
-                </td>
-              </tr>
+            <table class="table table--striped table--tight table--is-compacted">
+              <tbody>
+                <colgroup>
+                  <col width="30%">
+                  <col width="70%">
+                </colgroup>
+                <tr>
+                  <th scope="row">Location</th>
+                  <td>{{ item.location.join(', ') }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Semester</th>
+                  <td>{{ item.semester.join(', ') }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Points</th>
+                  <td>{{ item.points }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Discipline</th>
+                  <td>{{ item.discipline }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Audition requirement</th>
+                  <td>{{ item.audition }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Study Abroad</th>
+                  <td>{{ item.abroad }}</td>
+                </tr>
+              </tbody>
             </table>
+            <p>
+              {{ item.overview }}
+            </p>
+            <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
           </accordion>
         </div>
       </transition-group>
@@ -168,8 +168,8 @@ export default {
   computed: {
     filteredData() {
       return this.data.filter(
-        data => data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
-          && data.location.match(new RegExp(this.selectedLocation, 'i'))
+        data => (this.selectedLocation === '' || data.location.includes(this.selectedLocation))
+          && data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
           && data.audition.match(new RegExp(this.selectedAudition, 'i'))
           && data.name.match(new RegExp(this.searchText, 'i'))
       );
@@ -209,8 +209,8 @@ export default {
           filters.disciplines.push(element.discipline);
         }
 
-        if (!filters.locations.includes(element.location)) {
-          filters.locations.push(element.location);
+        if (!filters.locations.includes(...element.location)) {
+          filters.locations.push(...element.location);
         }
 
         if (!filters.auditions.includes(element.audition)) {

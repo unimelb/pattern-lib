@@ -87,12 +87,7 @@
               slot="sub-title-1"
               class="sub-title">
               <SvgIcon name="info" />
-              <span
-                v-for="(item, index) in item.performance"
-                :key="index">
-                <span v-if="index > 0">{{ ', ' }}</span>
-                <span>{{ item }}</span>
-              </span>
+              <span>{{ item.performance.join(', ') }}</span>
             </div>
             <div
               slot="sub-title-2"

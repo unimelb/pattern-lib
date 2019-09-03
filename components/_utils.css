@@ -439,6 +439,13 @@ a[target='_blank'] {
 }
 
 /**
+ * No Scroll for body - useful for modals/overlays.
+ */
+.no-body-scroll {
+  overflow: hidden;
+}
+
+/**
  * Animations
  */
 

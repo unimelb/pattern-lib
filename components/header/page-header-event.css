@@ -18,6 +18,7 @@
     line-height: 1.75;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   &__body {
@@ -28,11 +29,13 @@
 
   &__title {
     padding: 0 2.25rem;
+    margin: .5rem 0;
     font-size: 2.4875rem;
     color: rgb(var(--col-navy-dark));
     text-align: center;
     line-height: 1.26;
     font-weight: var(--fw-bold);
+    letter-spacing: -.05rem;
   }
 
   &__sub-title {
@@ -43,6 +46,7 @@
     line-height: 2.1875;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   &__description {
@@ -52,6 +56,7 @@
     line-height: 1.875;
     font-weight: var(--fw-bold);
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   &__footer {
@@ -61,6 +66,10 @@
   }
 
   &__button {
-    margin-bottom: 1.25rem;
+    margin: 1.25rem 0;
+
+    @media (--bp-desktop) {
+      display: none;
+    }
   }
 }

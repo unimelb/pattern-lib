@@ -1,6 +1,10 @@
 <template>
   <div>
     <ButtonDefault/>
+    <ButtonIcon
+      href="www.google.com"
+      disabled
+    >I am a disabled button</ButtonIcon>
     <div class="grid">
       <div class="cell cell--tab-1of4">
         <ButtonIcon

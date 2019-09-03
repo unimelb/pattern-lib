@@ -13,7 +13,6 @@ export default {
   data() {
     return {
       tags: [{
-        href: 'https://www.unimelb.edu.au/',
         value: 'tag1',
       },
       {
@@ -25,7 +24,6 @@ export default {
         value: 'tag3',
       },
       {
-        href: 'https://www.unimelb.edu.au/',
         value: 'tag4',
       },
       {

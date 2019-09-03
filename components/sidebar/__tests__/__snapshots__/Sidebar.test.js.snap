@@ -10,12 +10,7 @@ exports[`Sidebar should match snapshot 1`] = `
     <h3
       class="sidebar__title"
     >
-      <svgicon
-        class="sidebar__title-icon"
-        height="16px"
-        name=""
-        width="16px"
-      />
+      <!---->
       
       
     </h3>
