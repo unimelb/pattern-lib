@@ -88,14 +88,9 @@
     @media (--bp-desktop) {
       flex-direction: row;
     }
-  }
 
-  .card__tags {
-    flex: 1;
-    margin-bottom: 1.875rem;
-
-    @media (--bp-desktop) {
-      margin-bottom: 0;
+    &--column {
+      flex-direction: column;
     }
   }
 
