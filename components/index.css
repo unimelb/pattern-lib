@@ -26,14 +26,14 @@
 @import 'listing/index.css';
 @import 'modal/index.css';
 @import 'nav-bar/index.css';
-@import 'page/breadcrumbs/index.css';
-@import 'page/header/index.css';
+@import 'breadcrumbs/index.css';
+@import 'header/index.css';
 @import 'campaign/index.css';
-@import 'page/footer/index.css';
-@import 'page/megamenu/index.css';
-@import 'page/nav/index.css';
-@import 'page/search/index.css';
-@import 'page/navigation/index.css';
+@import 'footer/index.css';
+@import 'megamenu/index.css';
+@import 'nav/index.css';
+@import 'search/index.css';
+@import 'navigation/index.css';
 @import 'photo-gallery/index.css';
 @import 'progressive-image/index.css';
 @import 'quick-links-menu/index.css';
@@ -48,8 +48,14 @@
 @import 'toggle/index.css';
 @import 'typography/index.css';
 @import 'welcome/index.css';
+@import 'media-gallery/index.css';
 @import 'dropdown/index.css';
-@import 'page/social-media-bar/index.css';
+@import 'social-media-bar/index.css';
 @import 'info-panel/index.css';
+@import 'carousel/index.css';
+@import 'logo/index.css';
+@import 'filter/index.css';
+@import 'tags/index.css';
+@import 'sidebar/index.css';
 
 /*** Add new component below */

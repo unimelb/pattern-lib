@@ -31,3 +31,12 @@
     </form>
   </SectionWrap>
 </template>
+
+<script>
+import SvgIcon from '../../icons/SvgIcon.vue';
+export default {
+  components: {
+    SvgIcon,
+  },
+};
+</script>

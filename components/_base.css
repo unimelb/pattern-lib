@@ -34,6 +34,13 @@ body {
   /* make fonts look a bit thiner */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* IE Srollbar Styling */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-scrollbar-face-color: rgb(var(--col-navy-mid-1));
+  -ms-scrollbar-arrow-color: rgb(var(--col-navy-dark));
+  -ms-scrollbar-track-color: rgb(var(--col-navy-light));
+  -ms-scrollbar-shadow-color: rgb(var(--col-navy-light));
 }
 
 main {
@@ -145,10 +152,12 @@ a {
   .bg-inverted &,
   .bg-inverted-dark &,
   .bg-inverted-darker & {
-    color: rgb(var(--col-link-on-dark));
+    &:not(.btn) {
+      color: rgb(var(--col-link-on-dark));
 
-    &:visited {
-      color: rgb(var(--col-link-visited-on-dark));
+      &:visited {
+        color: rgb(var(--col-link-visited-on-dark));
+      }
     }
   }
 }

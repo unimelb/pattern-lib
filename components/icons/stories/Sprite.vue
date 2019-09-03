@@ -8,9 +8,13 @@
 </template>
 
 <script>
+import SvgIcon from '../SvgIcon.vue';
 import docs from './docs.md';
 
 export default {
+  components: {
+    SvgIcon,
+  },
   data: () => ({
     names: [
       'chevron-right',
@@ -20,6 +24,7 @@ export default {
       'download',
       'external',
       'play',
+      'pause',
       'home',
       'search',
       'calendar',

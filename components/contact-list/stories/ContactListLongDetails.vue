@@ -7,8 +7,8 @@
 </template>
 
 <script>
+import MaxWidthDecorator from 'storybook/decorators/MaxWidthDecorator.vue';
 import ContactList from '../ContactList.vue';
-import MaxWidthDecorator from '../../../.storybook/decorators/MaxWidthDecorator.vue';
 
 export default {
   components: { ContactList },

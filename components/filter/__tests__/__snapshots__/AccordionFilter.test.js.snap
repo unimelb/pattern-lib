@@ -1,0 +1,487 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionFilter should match snapshot 1`] = `
+<div>
+  <div
+    class="filter"
+  >
+    <div
+      class="filter__container"
+    >
+      <label
+        for="input-search"
+        hidden="hidden"
+      >
+         Title 
+      </label>
+       
+      <input
+        class="filter__input"
+        id="input-search"
+        placeholder="Type to search title"
+        type="search"
+      />
+    </div>
+     
+    <div
+      class="filter__container"
+    >
+      <div
+        class="grid"
+      >
+        <div
+          class="cell cell--tab-1of3"
+        >
+          <label
+            class="filter__label"
+            for="locations"
+          >
+            Location
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="locations"
+            >
+              <option
+                selected="selected"
+                value=""
+              >
+                Show all
+              </option>
+               
+            </select>
+          </div>
+        </div>
+         
+        <div
+          class="cell cell--tab-1of3"
+        >
+          <label
+            class="filter__label"
+            for="disciplines"
+          >
+            Discipline
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="disciplines"
+            >
+              <option
+                selected="selected"
+                value=""
+              >
+                Show all
+              </option>
+               
+            </select>
+          </div>
+        </div>
+         
+        <div
+          class="cell cell--tab-1of3"
+        >
+          <label
+            class="filter__label"
+            for="auditions"
+          >
+            Audition Requirement
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="auditions"
+            >
+              <option
+                selected="selected"
+                value=""
+              >
+                Show all
+              </option>
+               
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="filter__container filter__container--centered"
+    >
+      <button
+        aria-label="Search"
+        class="filter__button"
+      >
+        <svg
+          aria-label="search"
+          class="filter__button--icon"
+          focusable="false"
+          role="img"
+        >
+          <use
+            xlink:href="#icon-search"
+          />
+           
+          <title>
+            Search
+          </title>
+           
+        </svg>
+         
+        <span>
+          Search
+        </span>
+      </button>
+       
+      <button
+        class="filter__button"
+      >
+        Reset all
+      </button>
+    </div>
+  </div>
+   
+  <p
+    class="filter-results__count"
+  >
+    2 results
+  </p>
+   
+  <!---->
+   
+  <div>
+    <span
+      name="fade"
+      tag="div"
+    >
+      <div
+        class="accordion-list"
+      >
+        <div
+          class="accordion toggleblock"
+        >
+          <div
+            aria-controls="ui-toggle-10-panel-1"
+            class="toggleblock__default"
+            id="ui-toggle-10-header-1"
+            tabindex="0"
+          >
+            <h2
+              class="toggle__trigger"
+            >
+              arts
+            </h2>
+             
+          </div>
+           
+          <div
+            aria-hidden="true"
+            aria-labelledby="ui-toggle-10-header-1"
+            class="toggleblock__hidden"
+            id="ui-toggle-10-panel-1"
+            role="region"
+            tabindex="-1"
+          >
+            <div
+              class="toggleblock__hidden-inner"
+            >
+              <table
+                class="table table--striped table--tight table--is-compacted"
+              >
+                <tbody>
+                  <colgroup>
+                    <col
+                      width="30%"
+                    />
+                     
+                    <col
+                      width="70%"
+                    />
+                  </colgroup>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Location
+                    </th>
+                     
+                    <td>
+                      location 1, location 2
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Semester
+                    </th>
+                     
+                    <td>
+                      january
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Points
+                    </th>
+                     
+                    <td>
+                      points 1
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Discipline
+                    </th>
+                     
+                    <td>
+                      discipline 1
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Audition requirement
+                    </th>
+                     
+                    <td>
+                      audition 1
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Study Abroad
+                    </th>
+                     
+                    <td>
+                      abroad 1
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+               
+              <p>
+                
+            Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+          
+              </p>
+               
+              <a
+                class="btn btn--xsml"
+                href="#"
+                tabindex="-1"
+              >
+                <span
+                  class="push-icon"
+                >
+                  Handbook Link 
+                  <svg
+                    aria-hidden="true"
+                    aria-label="chevron-right"
+                    class="push-icon__icon"
+                    focusable="false"
+                    height="15px"
+                    role="img"
+                    width="15px"
+                  >
+                    <use
+                      xlink:href="#icon-chevron-right"
+                    />
+                     
+                    <title>
+                      Chevron-right
+                    </title>
+                     
+                  </svg>
+                </span>
+                 
+                <!---->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="accordion-list"
+      >
+        <div
+          class="accordion toggleblock"
+        >
+          <div
+            aria-controls="ui-toggle-14-panel-1"
+            class="toggleblock__default"
+            id="ui-toggle-14-header-1"
+            tabindex="0"
+          >
+            <h2
+              class="toggle__trigger"
+            >
+              science
+            </h2>
+             
+          </div>
+           
+          <div
+            aria-hidden="true"
+            aria-labelledby="ui-toggle-14-header-1"
+            class="toggleblock__hidden"
+            id="ui-toggle-14-panel-1"
+            role="region"
+            tabindex="-1"
+          >
+            <div
+              class="toggleblock__hidden-inner"
+            >
+              <table
+                class="table table--striped table--tight table--is-compacted"
+              >
+                <tbody>
+                  <colgroup>
+                    <col
+                      width="30%"
+                    />
+                     
+                    <col
+                      width="70%"
+                    />
+                  </colgroup>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Location
+                    </th>
+                     
+                    <td>
+                      location 2
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Semester
+                    </th>
+                     
+                    <td>
+                      february, march
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Points
+                    </th>
+                     
+                    <td>
+                      points 2
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Discipline
+                    </th>
+                     
+                    <td>
+                      discipline 2
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Audition requirement
+                    </th>
+                     
+                    <td>
+                      audition 2
+                    </td>
+                  </tr>
+                   
+                  <tr>
+                    <th
+                      scope="row"
+                    >
+                      Study Abroad
+                    </th>
+                     
+                    <td>
+                      abroad 2
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+               
+              <p>
+                
+            Exercitation quis sunt fugiat aute adipisicing nulla pariatur ad et fugiat commodo mollit proident. Esse reprehenderit duis ea fugiat reprehenderit amet proident. Labore consequat dolore incididunt enim qui aute nulla ad magna occaecat ullamco. Ipsum consequat commodo ut ullamco sunt ea aliqua magna elit ea aliquip id quis ex. Voluptate voluptate mollit eu irure ipsum labore laborum sunt dolor dolore est. Nostrud tempor non duis excepteur nulla excepteur cupidatat excepteur et laborum tempor. Sit est sit exercitation deserunt sint incididunt.
+          
+              </p>
+               
+              <a
+                class="btn btn--xsml"
+                href="#"
+                tabindex="-1"
+              >
+                <span
+                  class="push-icon"
+                >
+                  Handbook Link 
+                  <svg
+                    aria-hidden="true"
+                    aria-label="chevron-right"
+                    class="push-icon__icon"
+                    focusable="false"
+                    height="15px"
+                    role="img"
+                    width="15px"
+                  >
+                    <use
+                      xlink:href="#icon-chevron-right"
+                    />
+                     
+                    <title>
+                      Chevron-right
+                    </title>
+                     
+                  </svg>
+                </span>
+                 
+                <!---->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+`;

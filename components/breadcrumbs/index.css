@@ -1,0 +1,82 @@
+.page-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  list-style-type: none;
+
+  &__item {
+    display: none;
+    margin-right: .25rem;
+    margin-bottom: 0;
+
+    &:first-child,
+    &:nth-last-child(2) {
+      display: block;
+    }
+
+    &:nth-last-child(2) {
+      &:not(:first-child) {
+        font-weight: var(--fw-semibold);
+      }
+
+      /* hide last chevron in case it is provided (e.g. in CMS) */
+      .page-breadcrumbs__chevron {
+        display: none;
+      }
+    }
+
+    /* hide site name on mobile */
+    @media (--bp-max-mobile) {
+      &:first-child:not(:last-child):not(:nth-last-child(2)) .page-breadcrumbs__name {
+        display: none;
+      }
+    }
+
+    @media (--bp-desktop) {
+      display: block;
+
+      &:nth-last-child(2) {
+        &:not(:first-child) {
+          font-weight: normal;
+        }
+
+        .page-breadcrumbs__chevron {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        font-weight: var(--fw-semibold);
+
+        .page-breadcrumbs__chevron {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__home {
+    width: 1.125em;
+    height: 1.125em;
+    margin-right: .25em;
+    margin-bottom: .125em;
+    margin-left: .25em;
+  }
+
+  &__name {
+    padding: 0 .25rem;
+  }
+
+  &__chevron {
+    margin-top: .125em;
+    margin-left: .125em;
+  }
+}

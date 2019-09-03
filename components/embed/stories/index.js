@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import Video16By9 from './Video16By9.vue';
 import Video21By9 from './Video21By9.vue';

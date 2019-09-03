@@ -3,7 +3,7 @@ import {
 } from '@storybook/vue';
 import {
   createStory,
-} from '../../../../.storybook/utils';
+} from 'storybook/utils';
 
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';

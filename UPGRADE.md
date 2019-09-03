@@ -1,5 +1,37 @@
 # Upgrade Instructions
 
+## v4.16.0
+
+Level 1 & Level 2 Header buttons using the classes `page-header--campaign`, `page-header__darken--o50`, `page-header__darken--o25` have been changed from `btn btn--inverted` to `btn btn--campaign`.
+
+```html
+<a href="#" class="btn--campaign btn"><span class="push-icon">Call to Action <svg width="15px" height="15px" aria-label="chevron-right" focusable="false" role="img" aria-hidden="true" class="push-icon__icon"><use xlink:href="#icon-chevron-right"></use> <title>Chevron-right</title> </svg></span></a>
+```
+
+## v4.10.0
+
+Logo has been mirgrated to it's own component - https://pattern-lib-unimelb.netlify.com?selectedKind=Logo
+
+ The following code sample will change from:
+
+```html
+<a class="link-img link-reset" href="https://www.unimelb.edu.au/">	
+  <img	
+    class="page-header__logo"	
+    src="../shared/logo.svg"	
+    alt="The University of Melbourne homepage"	
+  >	
+</a>
+```
+
+to:
+
+```html
+<div class="logo"><a href="https://www.unimelb.edu.au" class="logo__link"><img alt="The University of Melbourne homepage" src="/logo-with-padding.svg" class="logo__image logo__image--lg logo--no-padding-lg"></a></div>
+```
+
+Please note:  If the logo is `sm` then no-padding will also be `sm`.  For example, `logo__image--sm logo-no-padding-sm`
+
 ## v3.5.0
 ## v3.4.0
 

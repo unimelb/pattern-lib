@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import PageHeader from '../../components/page/header/PageHeader.vue';
-import PageFooter from '../../components/page/footer/PageFooter.vue';
-import PageBreadcrumbs from '../../components/page/breadcrumbs/PageBreadcrumbs.vue';
+import PageHeader from 'components/header/PageHeader.vue';
+import PageFooter from 'components/footer/PageFooter.vue';
+import PageBreadcrumbs from 'components/breadcrumbs/PageBreadcrumbs.vue';
 
 export default {
   components: { PageHeader, PageFooter, PageBreadcrumbs },

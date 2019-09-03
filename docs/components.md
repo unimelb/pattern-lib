@@ -51,13 +51,13 @@
 
   - Steps to add a component to deploy in `target > lib` for being used in CMS:
   1. Open `/targets/lib/index.js` and import the component.
-    `import MyNewComponent from '../../components/my-new-component/MyNewComponent.vue';`
+    `import MyNewComponent from 'components/my-new-component/MyNewComponent.vue';`
   2. Register the Vue components:
     `Vue.component('my-new-component', MyNewComponent);`
 
   - Steps to add a component to deploy in `target > vue` for being used in CMS:
   1. Open `/targets/vue/index.js` and export the component.
-    `export { default as MyNewComponent } from '../../components/my-new-component/MyNewComponent.vue';`
+    `export { default as MyNewComponent } from 'components/my-new-component/MyNewComponent.vue';`
 
 
 ## Component implentation guidelines:
@@ -75,5 +75,5 @@
 ## Notes for specific components:
 
 - PageFooter
-  - Path: `./components/page/footer/PageFooter.vue`
+  - Path: `components/footer/PageFooter.vue`
   - Notes: PageFooter has an empty div named `<div id="liveagent"/>`. This div was added for injecting a chat widget dinamically by Tealium (tag management) managed by christopher (`christopher.mason@unimelb.edu.au`) from Digital Online Channels team. This div should not be removed.

@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeaderEvent should match snapshot 1`] = `
+<div
+  class="page-header-event"
+>
+  <div
+    class="page-header-event__inner"
+  >
+    <!---->
+     
+    <div
+      class="page-header-event__body"
+    >
+      <h2
+        class="page-header-event__title"
+      >
+        
+      </h2>
+       
+      <!---->
+       
+      <!---->
+    </div>
+     
+    <div
+      class="page-header-event__footer"
+    >
+      <!---->
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;

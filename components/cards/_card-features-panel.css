@@ -1,9 +1,7 @@
 .card--features-panel {
   .card__title {
     font-size: 1.5rem;
-    font-weight: var(--fw-bold);
     text-align: center;
-    text-transform: none;
     margin-bottom: var(--vr);
   }
 

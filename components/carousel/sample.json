@@ -1,0 +1,28 @@
+[
+  {
+    "src": "https://source.unsplash.com/random/2000x1000",
+    "imagePosition": "center",
+    "altText": "test",
+    "title": "Story 1 A long title to flow onto two lines and be truncated to one line",
+    "description": "Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna. Quis consequat dolore eiusmod amet dolor laborum consequat enim occaecat magna dolore eiusmod amet dolor laborum consequat enim occaecat magna.",
+    "buttonText": "Register",
+    "buttonHref": "google.com"
+  },
+  {
+    "src": "https://source.unsplash.com/random/2000x1001",
+    "imagePosition": "top",
+    "altText": "test",
+    "title": "Story 2",
+    "description": "Story 2 description",
+    "buttonText": "Login",
+    "buttonHref": "google.com"
+  },
+  {
+    "src": "https://source.unsplash.com/random/2000x1002",
+    "altText": "test",
+    "title": "Story 3",
+    "description": "Story 3 description",
+    "buttonText": "Read",
+    "buttonHref": "google.com"
+  }
+]
