@@ -47,7 +47,7 @@
     font-weight: var(--fw-semibold);
     font-size: .9375rem;
     line-height: 1.5;
-    color: #575756;
+    color: rgb(var(--col-grey-dark));
 
     svg {
       width: 13px;
@@ -76,7 +76,7 @@
     flex: 1 1 auto;
     font-size: .9375rem;
     line-height: 1.5;
-    color: #575756;
+    color: rgb(var(--col-grey-dark));
   }
 
   .card__footer {
@@ -88,14 +88,9 @@
     @media (--bp-desktop) {
       flex-direction: row;
     }
-  }
 
-  .card__tags {
-    flex: 1;
-    margin-bottom: 1.875rem;
-
-    @media (--bp-desktop) {
-      margin-bottom: 0;
+    &--column {
+      flex-direction: column;
     }
   }
 

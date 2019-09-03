@@ -345,6 +345,10 @@ export {
 }
   from 'components/social-list/SocialListGeneric.vue';
 export {
+  default as LogoListing,
+}
+  from 'components/listing/LogoListing.vue';
+export {
   default as SplitSectionHeader,
 }
   from 'components/header/SplitSectionHeader.vue';
