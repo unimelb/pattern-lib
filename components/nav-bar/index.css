@@ -33,7 +33,7 @@
     &--current::after {
       content: '';
       position: absolute;
-      z-index: var(--z-overlay);
+      z-index: var(--z-navigation);
       bottom: calc(50% - .625rem);
       left: 0;
       width: 0;
