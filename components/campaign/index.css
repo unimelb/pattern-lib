@@ -33,7 +33,7 @@
     line-height: 1.6875rem;
     text-shadow: 0 0 .125rem rgba(239, 239, 239, .8);
     text-align: center;
-    margin: 0;
+    margin-bottom: 2rem;
 
     @media (--bp-x-tablet) {
       font-size: 48px;
@@ -57,14 +57,6 @@
   &--dark {
     color: rgb(var(--col-link-active-on-dark));
     text-shadow: 0 0 3px rgb(var(--col-black-dark));
-  }
-
-  &__btn {
-    margin-top: 2rem;
-
-    &--dark {
-      color: rgb(var(--col-link-on-dark));
-    }
   }
 
   @media (--bp-x-tablet) {

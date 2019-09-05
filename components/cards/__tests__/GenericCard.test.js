@@ -37,7 +37,7 @@ describe('GenericCard', () => {
     expect(wrapper.props().href).toBe('#');
 
     expect(excerpt.type).toBe(String);
-    expect(wrapper.props().excerpt).toBe('Lorem ipsum dolor sit amet, consectetur.');
+    expect(wrapper.props().excerpt).toBe('');
   });
 
   it('should render title from prop with correct type', () => {

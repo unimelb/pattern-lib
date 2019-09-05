@@ -14,12 +14,7 @@ exports[`QuickLinksMenuItem should match snapshot 1`] = `
       
     </span>
      
-    <svgicon
-      class="push-icon__icon"
-      height="16"
-      name="chevron-right"
-      width="16"
-    />
+    <!---->
   </span>
 </a>
 `;

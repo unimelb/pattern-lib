@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import OnLightBackground from './OnLightBackground';
 import OnDarkBackground from './OnDarkBackground';

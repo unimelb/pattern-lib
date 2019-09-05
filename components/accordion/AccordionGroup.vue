@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import ToggleGroup from '../toggle/ToggleGroup.vue';
+import ToggleGroup from 'components/toggle/ToggleGroup.vue';
 
 export default {
   name: 'AccordionGroup',

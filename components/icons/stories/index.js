@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import Sprite from './Sprite.vue';
 import FindACourseSpritesheet from './FindACourseSpritesheet.vue';

@@ -79,6 +79,15 @@
   </div>
 </template>
 
+<script>
+import SvgIcon from '../SvgIcon.vue';
+export default {
+  components: {
+    SvgIcon,
+  },
+};
+</script>
+
 <style scoped>
   svg {
     display: inline-block;

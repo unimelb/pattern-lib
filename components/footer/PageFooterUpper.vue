@@ -121,10 +121,13 @@
         </div>
         <div class="page-footer__main__contacts cell cell--wide-1of4">
           <p class="screenreaders-only">Follow us on:</p>
-          <SocialList
-            :with-colors="false"
+          <SocialListGeneric
             :icon-size="22"
-            class="page-footer__social"/>
+            class="page-footer__social"
+            facebook-link="https://www.facebook.com/unimelb"
+            twitter-link="https://twitter.com/unimelb"
+            linkedin-link="https://www.linkedin.com/school/university-of-melbourne/"
+          />
           <dl class="page-footer__contact list-def list-def--wrap">
             <dt>Phone:</dt>
             <dd>
@@ -165,13 +168,13 @@
 </template>
 
 <script>
-import SocialList from '../social-list/SocialList.vue';
+import SocialListGeneric from '../social-list/SocialListGeneric.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 import Logo from '../logo/Logo.vue';
 
 export default {
   components: {
-    SocialList,
+    SocialListGeneric,
     SvgIcon,
     Logo,
   },

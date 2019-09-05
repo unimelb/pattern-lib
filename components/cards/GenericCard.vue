@@ -1,11 +1,12 @@
 <template>
   <div
-    :class="['btn-owner', 'card', 'card--generic', cols === 1 && 'card--generic--full-width' , className]"
+    :class="['card', 'card--generic', cols === 1 && 'card--generic--full-width' , className]"
   >
     <a
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="'Image for' + title"
+      :class="[cols === 1 ? 'card__thumb--full-height' : '']"
       class="card__thumb"
     />
     <div class="card__inner">
@@ -22,7 +23,9 @@
         <slot name="sub-title-3"/>
       </div>
       <div class="card__excerpt">{{ excerpt }}</div>
-      <div class="card__footer">
+      <div
+        :class="[cols !== 1 ? 'card__footer--column' : '']"
+        class="card__footer">
         <Tags
           v-if="tags.length"
           :data="tags"
@@ -64,7 +67,7 @@ export default {
     },
     excerpt: {
       type: String,
-      default: 'Lorem ipsum dolor sit amet, consectetur.',
+      default: '',
     },
     className: {
       type: String,

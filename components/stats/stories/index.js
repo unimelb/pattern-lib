@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import StatsGroupDefault from './StatsGroupDefault.vue';
 import StatsGroupInverted from './StatsGroupInverted.vue';

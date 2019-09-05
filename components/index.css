@@ -48,6 +48,7 @@
 @import 'toggle/index.css';
 @import 'typography/index.css';
 @import 'welcome/index.css';
+@import 'media-gallery/index.css';
 @import 'dropdown/index.css';
 @import 'social-media-bar/index.css';
 @import 'info-panel/index.css';
@@ -55,5 +56,6 @@
 @import 'logo/index.css';
 @import 'filter/index.css';
 @import 'tags/index.css';
+@import 'sidebar/index.css';
 
 /*** Add new component below */

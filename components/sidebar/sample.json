@@ -1,0 +1,74 @@
+[
+    {
+        "icon": "calendar",
+        "title": "Dates and Times",
+        "subTitles": [
+            {
+                "text": "20 Nov 19 - 25 Nov 19"
+            },
+            {
+                "text": "Tue-Fri 7pm-9pm"
+            },
+            {
+                "text": "Sun-Sat 6pm-10pm"
+            }
+        ]
+    },
+    {
+        "icon": "location",
+        "title": "Location",
+        "subTitles": [
+            {
+                "text": "Margaret Lawrence Gallery"
+            },
+            {
+                "text": "40 Dodds Street"
+            },
+            {
+                "text": "Southbank"
+            },
+            {
+                "text": "VIC 3006"
+            },
+            {
+                "link": "Margaret Lawrence Gallery",
+                "href": "https://mlg.finearts-music.unimelb.edu.au/"
+            }
+        ]
+    },
+    {
+        "icon": "envelope",
+        "title": "Entry requirements",
+        "subTitles": [
+            {
+                "text": "No booking required."
+            },
+            {
+                "text": "This event is free."
+            }
+        ]
+    },
+    {
+        "icon": "phone",
+        "title": "Contact information",
+        "subTitles": [
+            {
+                "text": "Julia Juliasson"
+            },
+            {
+                "text": "+61 48963 7654"
+            },
+            {
+                "email": "fineartsmusic-er@unimelb.edu.au"            }
+        ]
+    },
+    {
+        "icon": "info",
+        "title": "Further information",
+        "subTitles": [
+            {
+                "text": "Suitable for all ages."
+            }
+        ]
+    }
+]

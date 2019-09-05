@@ -45,9 +45,9 @@
     border-top: 1px solid rgb(var(--col-black-mid-1));
     padding-top: .5rem;
     font-weight: var(--fw-semibold);
-    font-size: .8125rem;
-    line-height: 1.0625rem;
-    color: #575756;
+    font-size: .9375rem;
+    line-height: 1.5;
+    color: rgb(var(--col-grey-dark));
 
     svg {
       width: 13px;
@@ -74,9 +74,9 @@
     padding-top: .75rem;
     margin: .5rem 0 1rem 0;
     flex: 1 1 auto;
-    font-size: .8125rem;
-    line-height: 1.0625rem;
-    color: #575756;
+    font-size: .9375rem;
+    line-height: 1.5;
+    color: rgb(var(--col-grey-dark));
   }
 
   .card__footer {
@@ -88,14 +88,9 @@
     @media (--bp-desktop) {
       flex-direction: row;
     }
-  }
 
-  .card__tags {
-    flex: 1;
-    margin-bottom: 1.875rem;
-
-    @media (--bp-desktop) {
-      margin-bottom: 0;
+    &--column {
+      flex-direction: column;
     }
   }
 
@@ -133,7 +128,6 @@
   }
 
   @media (--bp-tablet) {
-    flex-direction: row;
     flex-wrap: wrap;
   }
 }

@@ -5,12 +5,7 @@ exports[`QuickLinksSecondaryItem should match snapshot 1`] = `
   class="ql-menu__secondary-link"
   href="#"
 >
-  <svgicon
-    class="ql-menu__secondary-icon"
-    height="16"
-    name="chevron-right"
-    width="16"
-  />
+  <!---->
    
   <span
     class="ql-menu__secondary-text"

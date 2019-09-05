@@ -164,7 +164,7 @@ exports[`CardsFilter should match snapshot 1`] = `
         class="cell"
       >
         <div
-          class="btn-owner card card--generic"
+          class="card card--generic"
         >
           <a
             aria-label="Image forMasters Exhibition 2018"
@@ -209,11 +209,7 @@ exports[`CardsFilter should match snapshot 1`] = `
                 </svg>
                  
                 <span>
-                  <!---->
-                   
-                  <span>
-                    Exhibition
-                  </span>
+                  Exhibition
                 </span>
               </div>
                
@@ -249,7 +245,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             </div>
              
             <div
-              class="card__footer"
+              class="card__footer card__footer--column"
             >
               <!---->
                
@@ -289,7 +285,7 @@ exports[`CardsFilter should match snapshot 1`] = `
         class="cell"
       >
         <div
-          class="btn-owner card card--generic"
+          class="card card--generic"
         >
           <a
             aria-label="Image foraaaaaa"
@@ -334,11 +330,7 @@ exports[`CardsFilter should match snapshot 1`] = `
                 </svg>
                  
                 <span>
-                  <!---->
-                   
-                  <span>
-                    Event
-                  </span>
+                  Event
                 </span>
               </div>
                
@@ -374,7 +366,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             </div>
              
             <div
-              class="card__footer"
+              class="card__footer card__footer--column"
             >
               <!---->
                

@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
@@ -12,5 +12,5 @@ storiesOf('Cards/News', module)
   .add('3 Column', createStory(Story1))
   .add('1 Column', createStory(Story2))
   .add('Buttons Underneath', createStory(Story3))
-  .add('News Card with Tags', createStory(Story4));
+  .add('Buttons Underneath (Deprecated)', createStory(Story4));
 /* ##Story goes here */
