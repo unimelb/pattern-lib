@@ -115,7 +115,9 @@
             <p>
               {{ item.overview }}
             </p>
-            <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
+            <ButtonIcon
+              :href="item.buttonLink"
+              size="xsml">{{ item.buttonText }}</ButtonIcon>
           </accordion>
         </div>
       </transition-group>
