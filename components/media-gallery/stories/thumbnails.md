@@ -11,7 +11,7 @@ You can display captions underneath the thumbnails by using `display-caption`.
 Usage:
 
 ```html
-<thumbnails 
+<media-gallery 
   :items='[
   {
       "src": "",
@@ -29,5 +29,7 @@ Usage:
     },
   ]' 
   columns="4"
-  display-caption></thumbnails>
+  display-caption
+  show-thumbnails>
+  </media-gallery>
 ```
