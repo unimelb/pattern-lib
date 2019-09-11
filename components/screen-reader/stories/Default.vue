@@ -1,6 +1,8 @@
 <template>
   <div>
-    <ScreenReader/>
+    <ScreenReader
+      button-text="Skip to main content"
+      button-href="#main"/>
     <MegaMenu
       :items="items"
       :top-menu="topMenu"
@@ -9,7 +11,10 @@
       faculty-link="/faculty-link"
       faculty-width="25.5%"
     />
-    <div id="main">
+    <div
+      id="main"
+      tabindex="-1"
+    >
       <section-wrap bg-color="white">
         <h1>Main content</h1>
         <a href="#">Link 1</a>
