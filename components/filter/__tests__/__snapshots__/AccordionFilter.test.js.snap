@@ -288,7 +288,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                
               <a
                 class="btn btn--xsml"
-                href="#"
+                href="www.unimelb.edu.au"
                 tabindex="-1"
               >
                 <span
@@ -448,7 +448,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                
               <a
                 class="btn btn--xsml"
-                href="#"
+                href="www.unimelb.edu.au"
                 tabindex="-1"
               >
                 <span

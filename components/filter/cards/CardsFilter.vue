@@ -113,6 +113,7 @@
 </template>
 
 <script>
+import escapeRegExp from 'lodash.escaperegexp';
 import ListItem from '../../listing/ListItem.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 import GenericCard from '../../cards/GenericCard.vue';
@@ -156,12 +157,29 @@ export default {
   },
   computed: {
     filteredData() {
-      return this.data.filter(
-        data => (this.selectedDiscipline === '' || data.disciplines.includes(this.selectedDiscipline))
-          && (this.selectedPerformance === '' || data.performance.includes(this.selectedPerformance))
-          && data.school.match(new RegExp(this.selectedSchool, 'i'))
-          && data.title.match(new RegExp(this.searchText, 'i'))
-      );
+      const {
+        selectedDiscipline,
+        selectedPerformance,
+        selectedSchool,
+        searchText,
+      } = this;
+
+      const schoolRegex = new RegExp(`^${escapeRegExp(selectedSchool)}$`, 'i');
+      const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
+
+      return this.data.filter((data) => {
+        const {
+          disciplines,
+          performance,
+          school,
+          title,
+        } = data;
+
+        return (selectedDiscipline === '' || disciplines.includes(selectedDiscipline))
+        && (selectedPerformance === '' || performance.includes(selectedPerformance))
+        && (selectedSchool === '' || school.match(schoolRegex))
+        && (searchText === '' || title.match(searchTextRegex));
+      });
     },
     animationclass() {
       if (this.searchText || this.selectedSchool || this.selectedDiscipline || this.selectedPerformance) {
@@ -194,18 +212,29 @@ export default {
       };
 
       this.data.forEach((element) => {
-        if (!filters.schools.includes(element.school)) {
-          filters.schools.push(element.school);
+        const { school, disciplines, performance } = element;
+
+        if (!filters.schools.includes(school)) {
+          filters.schools.push(school);
         }
 
-        if (!filters.disciplines.includes(...element.disciplines)) {
-          filters.disciplines.push(...element.disciplines);
-        }
+        disciplines.forEach((dis) => {
+          if (!filters.disciplines.includes(dis)) {
+            filters.disciplines.push(dis);
+          }
+        });
 
-        if (!filters.performances.includes(...element.performance)) {
-          filters.performances.push(...element.performance);
-        }
+        performance.forEach((per) => {
+          if (!filters.performances.includes(per)) {
+            filters.performances.push(per);
+          }
+        });
       });
+
+      // Sort filters.
+      filters.schools.sort();
+      filters.disciplines.sort();
+      filters.performances.sort();
 
       return filters;
     },
