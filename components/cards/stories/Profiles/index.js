@@ -11,5 +11,5 @@ import Story1 from './Story1.vue';
 
 /* News Listing Cards */
 storiesOf('Cards/Profiles', module)
-  .add('Showcase Performer Profile', createStory(Story1));
+  .add('Accordion Profile', createStory(Story1));
 /* ##Story goes here */

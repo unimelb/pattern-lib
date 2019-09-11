@@ -1,31 +1,31 @@
 <template>
-  <div class="showcase-profile">
+  <div class="accordion-profile">
     <div
       :style="{ backgroundImage: `url(${thumb})` }"
       :class="thumbClass"
-      class="showcase-profile__thumb"
+      class="accordion-profile__thumb"
       aria-label="Profile Image"
     />
     <div
-      :class="containBio"
-      class="showcase-profile__container"
+      :class="containBioClass"
+      class="accordion-profile__container"
       @click="changeIcon">
       <div
         :style="{ backgroundImage: `url(${thumb})` }"
         :class="smallThumbClass"
-        class="showcase-profile__thumb--inner"
+        class="accordion-profile__thumb--inner"
         aria-label="Profile Image"
       />
-      <div class="showcase-profile__inner">
-        <div class="showcase-profile__titles">
-          <h6 class="showcase-profile__title">{{ title }}</h6>
-          <p class="showcase-profile__sub-title">{{ subTitle }}</p>
+      <div class="accordion-profile__inner">
+        <div class="accordion-profile__titles">
+          <h6 class="accordion-profile__title">{{ title }}</h6>
+          <p class="accordion-profile__sub-title">{{ subTitle }}</p>
         </div>
         <div>
           <SvgIcon
             v-if="bio"
             :class="className"
-            class="showcase-profile__icon"
+            class="accordion-profile__icon"
             name="chevron-up"
             aria-label="chevron"
             width="14px"
@@ -36,12 +36,12 @@
     </div>
     <div
       :class="bioClass"
-      class="showcase-profile__bio">
+      class="accordion-profile__bio">
       <VideoEmbed
         v-if="video"
         :src="video"
-        class="showcase-profile__embed"/>
-      <p class="showcase-profile__bio--text">{{ bio }}</p>
+        class="accordion-profile__embed"/>
+      <p class="accordion-profile__bio--text">{{ bio }}</p>
     </div>
   </div>
 </template>
@@ -83,19 +83,19 @@ export default {
   },
   computed: {
     thumbClass() {
-      return (this.isHidden) ? '' : 'showcase-profile__thumb--transition';
+      return (this.isHidden) ? '' : 'accordion-profile__thumb--transition';
     },
     smallThumbClass() {
-      return (this.isHidden) ? '' : 'showcase-profile__thumb--inner--transition';
+      return (this.isHidden) ? '' : 'accordion-profile__thumb--inner--transition';
     },
     className() {
-      return (this.isHidden) ? '' : 'showcase-profile__icon--active';
+      return (this.isHidden) ? '' : 'accordion-profile__icon--active';
     },
-    containBio() {
-      return (this.bio) ? 'showcase-profile__container--bio' : '';
+    containBioClass() {
+      return (this.bio) ? 'accordion-profile__container--bio' : '';
     },
     bioClass() {
-      return (this.isHidden) ? 'showcase-profile__bio--transition' : '';
+      return (this.isHidden) ? 'accordion-profile__bio--transition' : '';
     },
   },
   methods: {

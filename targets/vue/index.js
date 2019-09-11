@@ -79,9 +79,9 @@ export {
 }
   from 'components/cards/CardStat.vue';
 export {
-  default as CardShowcaseProfile,
+  default as CardAccordionProfile,
 }
-  from 'components/cards/CardShowcaseProfile.vue';
+  from 'components/cards/CardAccordionProfile.vue';
 export {
   default as CardEvents,
 }

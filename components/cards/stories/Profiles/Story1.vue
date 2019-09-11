@@ -2,7 +2,7 @@
   <SectionWrap class="bg-alt">
     <div class="grid grid--3col">
       <ListItem>
-        <CardShowcaseProfile
+        <CardAccordionProfile
           thumb="https://source.unsplash.com/1600x900/?portrait,person"
           title="Student Name"
           sub-title="Study Program"
@@ -11,7 +11,7 @@
         />
       </ListItem>
       <ListItem>
-        <CardShowcaseProfile
+        <CardAccordionProfile
           thumb="https://source.unsplash.com/1600x900/?portrait,person"
           title="Student Name"
           sub-title="Study Program"
@@ -20,7 +20,7 @@
         />
       </ListItem>
       <ListItem>
-        <CardShowcaseProfile
+        <CardAccordionProfile
           thumb="https://source.unsplash.com/1600x900/?portrait,person"
           title="Really big Student Name to see how the card works"
           sub-title="Really big Study Program to see how the card works"
@@ -28,7 +28,7 @@
         />
       </ListItem>
       <ListItem>
-        <CardShowcaseProfile
+        <CardAccordionProfile
           thumb="https://source.unsplash.com/1600x900/?portrait,person"
           title="Student Name"
           sub-title="Study Program"
@@ -36,7 +36,7 @@
         />
       </ListItem>
       <ListItem>
-        <CardShowcaseProfile
+        <CardAccordionProfile
           thumb="https://source.unsplash.com/1600x900/?portrait,person"
           title="Student Name"
           sub-title="Study Program"/>
@@ -46,10 +46,10 @@
 </template>
 
 <script>
-import CardShowcaseProfile from '../../CardShowcaseProfile.vue';
+import CardAccordionProfile from '../../CardAccordionProfile.vue';
 
 export default {
-  components: { CardShowcaseProfile },
+  components: { CardAccordionProfile },
   readme: { html: true, source: true },
 };
 </script>
