@@ -115,7 +115,9 @@
             <p>
               {{ item.overview }}
             </p>
-            <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
+            <ButtonIcon
+              :href="item.buttonLink"
+              size="xsml">{{ item.buttonText }}</ButtonIcon>
           </accordion>
         </div>
       </transition-group>
@@ -124,6 +126,7 @@
 </template>
 
 <script>
+import escapeRegExp from 'lodash.escaperegexp';
 import Accordion from '../../accordion/Accordion.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
@@ -167,12 +170,31 @@ export default {
   },
   computed: {
     filteredData() {
-      return this.data.filter(
-        data => (this.selectedLocation === '' || data.location.includes(this.selectedLocation))
-          && data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
-          && data.audition.match(new RegExp(this.selectedAudition, 'i'))
-          && data.name.match(new RegExp(this.searchText, 'i'))
-      );
+      const {
+        selectedLocation,
+        selectedDiscipline,
+        selectedAudition,
+        searchText,
+      } = this;
+
+      const disciplineRegex = new RegExp(`^${escapeRegExp(selectedDiscipline)}$`, 'i');
+      const auditionRegex = new RegExp(`^${escapeRegExp(selectedAudition)}$`, 'i');
+      const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
+
+
+      return this.data.filter((data) => {
+        const {
+          location,
+          discipline,
+          audition,
+          name,
+        } = data;
+
+        return (selectedLocation === '' || location.includes(selectedLocation))
+        && (selectedDiscipline === '' || discipline.match(disciplineRegex))
+        && (selectedAudition === '' || audition.match(auditionRegex))
+        && (searchText === '' || name.match(searchTextRegex));
+      });
     },
     animationclass() {
       if (this.searchText || this.selectedDiscipline || this.selectedLocation || this.selectedAudition) {
@@ -205,18 +227,27 @@ export default {
       };
 
       this.data.forEach((element) => {
-        if (!filters.disciplines.includes(element.discipline)) {
-          filters.disciplines.push(element.discipline);
+        const { discipline, location, audition } = element;
+
+        if (!filters.disciplines.includes(discipline)) {
+          filters.disciplines.push(discipline);
         }
 
-        if (!filters.locations.includes(...element.location)) {
-          filters.locations.push(...element.location);
-        }
+        location.forEach((loc) => {
+          if (!filters.locations.includes(loc)) {
+            filters.locations.push(loc);
+          }
+        });
 
-        if (!filters.auditions.includes(element.audition)) {
-          filters.auditions.push(element.audition);
+        if (!filters.auditions.includes(audition)) {
+          filters.auditions.push(audition);
         }
       });
+
+      // Sort filters.
+      filters.disciplines.sort();
+      filters.locations.sort();
+      filters.auditions.sort();
 
       return filters;
     },
