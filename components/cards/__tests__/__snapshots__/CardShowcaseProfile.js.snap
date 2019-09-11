@@ -15,7 +15,7 @@ exports[`CardAccordionProfile should match snapshot 1`] = `
   >
     <div
       aria-label="Profile Image"
-      class="accordion-profile__thumb--inner"
+      class="accordion-profile__thumb-inner"
       style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
     />
      
@@ -50,7 +50,7 @@ exports[`CardAccordionProfile should match snapshot 1`] = `
     <!---->
      
     <p
-      class="accordion-profile__bio--text"
+      class="accordion-profile__bio-text"
     >
       
     </p>

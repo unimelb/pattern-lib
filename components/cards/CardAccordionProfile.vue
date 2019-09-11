@@ -13,7 +13,7 @@
       <div
         :style="{ backgroundImage: `url(${thumb})` }"
         :class="smallThumbClass"
-        class="accordion-profile__thumb--inner"
+        class="accordion-profile__thumb-inner"
         aria-label="Profile Image"
       />
       <div class="accordion-profile__inner">
@@ -24,7 +24,7 @@
         <div>
           <SvgIcon
             v-if="bio"
-            :class="className"
+            :class="iconClassName"
             class="accordion-profile__icon"
             name="chevron-up"
             aria-label="chevron"
@@ -41,7 +41,7 @@
         v-if="video"
         :src="video"
         class="accordion-profile__embed"/>
-      <p class="accordion-profile__bio--text">{{ bio }}</p>
+      <p class="accordion-profile__bio-text">{{ bio }}</p>
     </div>
   </div>
 </template>
@@ -86,9 +86,9 @@ export default {
       return (this.isHidden) ? '' : 'accordion-profile__thumb--transition';
     },
     smallThumbClass() {
-      return (this.isHidden) ? '' : 'accordion-profile__thumb--inner--transition';
+      return (this.isHidden) ? '' : 'accordion-profile__thumb-inner--transition';
     },
-    className() {
+    iconClassName() {
       return (this.isHidden) ? '' : 'accordion-profile__icon--active';
     },
     containBioClass() {

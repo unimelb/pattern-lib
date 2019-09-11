@@ -44,7 +44,7 @@
       flex-basis: 0;
     }
 
-    &--inner {
+    &-inner {
       background-size: cover;
       background-position: center;
       min-width: 4rem;
@@ -91,7 +91,7 @@
       flex-basis: 0;
     }
 
-    &--text {
+    &-text {
       font-size: .8125rem;
       color: rgb(var(--col-grey-dark));
       line-height: 1.25;
