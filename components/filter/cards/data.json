@@ -6,7 +6,7 @@
         "performance": [
             "Exhibition"
         ],
-        "school": "ABC",
+        "school": "ABC [next to subway]",
         "disciplines": [
             "Visual Art"
         ],
@@ -15,7 +15,7 @@
         "location": "Margaret Lawrence Gallery and The Stables"
     },
     {
-        "title": "aaaaaa",
+        "title": "Master of Coin",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
         "description": "Wilin Centre for Indigenous Arts and Culture event Wilin Jams",
         "performance": [
@@ -55,7 +55,7 @@
         ],
         "school": "Victorian College of the Arts",
         "disciplines": [
-            "Theatre"
+            "Theatre (Level 1)"
         ],
         "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76370/varieties/thumb.jpg",
         "start_time": "2018-11-01",

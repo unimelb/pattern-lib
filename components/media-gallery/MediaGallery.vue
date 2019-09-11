@@ -144,6 +144,7 @@
 
 <script>
 import { slider, slideritem } from 'vue-concise-slider';
+import debounce from 'lodash.debounce';
 import VideoEmbed from '../embed/VideoEmbed.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ThumbnailGallery from './ThumbnailGallery.vue';
@@ -193,6 +194,7 @@ export default {
         timingFunction: 'ease', // Sliding mode
         itemAnimation: true,
       },
+      isInViewport: false,
     };
   },
   computed: {
@@ -223,11 +225,15 @@ export default {
       };
     },
   },
-  created() {
+  mounted() {
     window.addEventListener('keyup', this.keyBoardActions);
+
+    this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, 100);
+    window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
   },
   beforeDestroy() {
     window.removeEventListener('keyup', this.keyBoardActions);
+    window.removeEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
   },
   methods: {
     open(index) {
@@ -297,7 +303,12 @@ export default {
     },
     // Scroll active thumbnail into view
     scrollToView(nextIndex) {
-      this.$refs.thumbnailContainer.childNodes[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      const elementToScrollTo = this.$refs.thumbnailContainer.childNodes[nextIndex];
+
+      // Only scroll element if component is in viewport.
+      if (this.isInViewport) {
+        elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     },
     stopVideo() {
       const iframe = document.querySelectorAll('iframe');
@@ -320,18 +331,38 @@ export default {
       this.$refs.slider.$emit('slideTo', index);
     },
     keyBoardActions(e) {
-      if (e.keyCode === 37) {
-        this.move('prev');
-      }
-      if (e.keyCode === 39) {
-        this.move('next');
-      }
-      if (e.keyCode === 27) {
-        this.openState = false;
+      // Only if component is in viewport.
+      if (this.isInViewport) {
+        if (e.keyCode === 37) {
+          this.move('prev');
+        }
+        if (e.keyCode === 39) {
+          this.move('next');
+        }
+        if (e.keyCode === 27) {
+          this.openState = false;
+        }
       }
     },
     toggleNoScroll() {
       document.documentElement.classList.toggle('no-body-scroll');
+    },
+    checkInViewport() {
+      const elementToCheck = this.$el;
+      const isInViewport = this.isAnyPartOfElementInViewport(elementToCheck);
+
+      this.isInViewport = isInViewport;
+    },
+    isAnyPartOfElementInViewport(el) {
+      const elementRect = el.getBoundingClientRect();
+
+      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+      const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= 0);
+      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= 0);
+
+      return (vertInView && horInView);
     },
   },
 };
