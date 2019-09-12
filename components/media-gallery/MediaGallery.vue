@@ -143,6 +143,7 @@
 </template>
 
 <script>
+import validator from 'is-my-json-valid';
 import { slider, slideritem } from 'vue-concise-slider';
 import debounce from 'lodash.debounce';
 import VideoEmbed from '../embed/VideoEmbed.vue';
@@ -230,12 +231,53 @@ export default {
 
     this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, 100);
     window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
+
+    this.validateJSON();
   },
   beforeDestroy() {
     window.removeEventListener('keyup', this.keyBoardActions);
     window.removeEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
   },
   methods: {
+    validateJSON() {
+      const validate = validator({
+        required: true,
+        type: 'object',
+        properties: {
+          src: {
+            required: true,
+            type: 'string',
+          },
+          title: {
+            required: true,
+            type: 'string',
+          },
+          description: {
+            required: true,
+            type: 'string',
+          },
+          type: {
+            required: true,
+            type: 'string',
+          },
+          altText: {
+            required: true,
+            type: 'string',
+          },
+        },
+        greedy: true,
+      });
+
+      const { items } = this;
+
+      items.forEach((item) => {
+        console.log('should be valid', validate(item, {
+          verbose: true,
+        }));
+
+        console.log(validate.errors);
+      });
+    },
     open(index) {
       this.setSelectedItem(this.items[index]);
 
