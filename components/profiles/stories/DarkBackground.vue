@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import AlumniProfiles from '../AlumniProfiles.vue';
+import AlumniProfiles from '../alumni-profiles/AlumniProfiles';
 
 export default {
   components: { AlumniProfiles },

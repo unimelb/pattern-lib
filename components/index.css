@@ -8,7 +8,7 @@
 
 /* Components - Alphabetically ordered */
 @import 'accordion/index.css';
-@import 'alumni-profiles/index.css';
+@import 'profiles/alumni-profiles/index.css';
 @import 'testimonials/index.css';
 @import 'notice/index.css';
 @import 'article-wrap/index.css';
@@ -57,5 +57,6 @@
 @import 'filter/index.css';
 @import 'tags/index.css';
 @import 'sidebar/index.css';
+@import 'profiles/accordion-profile/index.css';
 
 /*** Add new component below */

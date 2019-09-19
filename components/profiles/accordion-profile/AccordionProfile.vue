@@ -47,9 +47,9 @@
 </template>
 
 <script>
-import SvgIcon from '../icons/SvgIcon.vue';
-import VideoEmbed from '../embed/VideoEmbed.vue';
-import { IMAGE_PLACEHOLDER_SHORT } from '../../utils/placeholders';
+import SvgIcon from '../../icons/SvgIcon.vue';
+import VideoEmbed from '../../embed/VideoEmbed.vue';
+import { IMAGE_PLACEHOLDER_SHORT } from '../../../utils/placeholders';
 
 export default {
   name: 'Showcase',
