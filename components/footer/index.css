@@ -245,40 +245,6 @@
 }
 
 /**
- * liveagent do not delete
- */
-.liveagent {
-  display: block;
-  position: fixed;
-  z-index: var(--z-liveagent);
-  right: 15px;
-  bottom: 15px;
-  width: 168px;
-  height: 121px;
-}
-
-.liveagent img {
-  width: 100%;
-}
-
-.embeddedServiceHelpButton .helpButton .uiButton {
-  background-color: rgb(var(--col-navy-dark)) !important;
-  font-family: 'Salesforce Sans', sans-serif !important;
-}
-.embeddedServiceHelpButton .helpButton .uiButton:focus {
-  outline: 1px solid rgb(var(--col-navy-dark)) !important;
-}
-@font-face {
-  font-family: 'Salesforce Sans';
-  src:
-    url('http://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.woff') format('woff'),
-    url('http://www.sfdcstatic.com/system/shared/common/assets/fonts/SalesforceSans/SalesforceSans-Regular.ttf') format('truetype');
-}
-.agentAvatarsContainer.fade.fade-4x.embeddedServiceLiveAgentStateChatHeaderAvatars {
-  display: none;
-}
-
-/**
  * Search form
  */
 .page-footer-search {
