@@ -245,23 +245,6 @@
 }
 
 /**
- * liveagent do not delete
- */
-.liveagent {
-  display: block;
-  position: fixed;
-  z-index: var(--z-liveagent);
-  right: 15px;
-  bottom: 15px;
-  width: 168px;
-  height: 121px;
-}
-
-.liveagent img {
-  width: 100%;
-}
-
-/**
  * Search form
  */
 .page-footer-search {

@@ -58,4 +58,5 @@
 @import 'tags/index.css';
 @import 'sidebar/index.css';
 
-/*** Add new component below */
+/* Third party - Alphabetically ordered */
+@import '../third-party/salesforce.css';
