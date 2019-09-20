@@ -40,6 +40,7 @@
       <VideoEmbed
         v-if="videoApi"
         :src="videoApi"
+        :video-label="videoLabel"
         class="accordion-profile__embed"/>
       <p class="accordion-profile__bio-text">{{ bio }}</p>
     </div>
@@ -68,6 +69,10 @@ export default {
       default: '',
     },
     video: {
+      type: String,
+      default: '',
+    },
+    videoLabel: {
       type: String,
       default: '',
     },

@@ -3,10 +3,12 @@
     :class="classes">
     <iframe
       :src="src"
+      :aria-label="videoLabel"
       width="560"
       height="315"
       frameborder="0"
       allowfullscreen
+
     />
   </div>
 </template>
@@ -18,6 +20,10 @@ export default {
       type: String,
       default: '',
       required: true,
+    },
+    videoLabel: {
+      type: String,
+      default: 'Video',
     },
     ratio: {
       type: String,
