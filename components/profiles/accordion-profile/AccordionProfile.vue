@@ -38,8 +38,8 @@
       :class="bioClass"
       class="accordion-profile__bio">
       <VideoEmbed
-        v-if="video"
-        :src="video"
+        v-if="videoApi"
+        :src="videoApi"
         class="accordion-profile__embed"/>
       <p class="accordion-profile__bio-text">{{ bio }}</p>
     </div>
@@ -97,12 +97,26 @@ export default {
     bioClass() {
       return (this.isHidden) ? 'accordion-profile__bio--transition' : '';
     },
+    // enable js api for youtube video be able to pause.
+    videoApi() {
+      return `${this.video}?enablejsapi=1`;
+    },
   },
   methods: {
     changeIcon() {
+      this.pauseVideo();
       if (this.bio !== '') {
         this.isHidden = !this.isHidden;
       }
+    },
+    pauseVideo() {
+      const iframes = document.querySelectorAll('iframe');
+      Array.prototype.forEach.call(iframes, (iframe) => {
+        iframe.contentWindow.postMessage(JSON.stringify({
+          event: 'command',
+          func: 'pauseVideo',
+        }), '*');
+      });
     },
   },
 };
