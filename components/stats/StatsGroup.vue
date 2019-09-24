@@ -1,11 +1,14 @@
 <template>
   <div :class="['stats-group', { 'stats-group--inverted': inverted }]">
     <ul class="stats-group__list list-reset">
-      <slot/>
+      <slot />
     </ul>
     <p
       v-if="attribution"
-      class="stats-group__attribution">{{ attribution }}</p>
+      class="stats-group__attribution"
+    >
+      {{ attribution }}
+    </p>
   </div>
 </template>
 

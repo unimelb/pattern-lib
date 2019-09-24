@@ -2,7 +2,8 @@
   <SectionWrap
     :style="{ backgroundImage: 'url(https://about-us-unimelb.netlify.com/images/UoM-soft-3.png)' }"
     small
-    bg-color="inverted">
+    bg-color="inverted"
+  >
     <CardFocusImageList
       element="div"
       color="white"

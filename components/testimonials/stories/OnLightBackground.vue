@@ -1,7 +1,8 @@
 <template>
   <section-wrap
     long
-    bg-color="alt">
+    bg-color="alt"
+  >
     <Testimonials
       name="Hannah Kerber"
       year="2019"

@@ -11,7 +11,8 @@
         <li>
           <a
             class="link-reset"
-            href="https://study.unimelb.edu.au/find">Find a course</a>
+            href="https://study.unimelb.edu.au/find"
+          >Find a course</a>
         </li>
         <li>
           <a
@@ -28,19 +29,22 @@
         <li>
           <a
             class="link-reset"
-            href="https://www.unimelb.edu.au/campustour">Campus tour</a>
+            href="https://www.unimelb.edu.au/campustour"
+          >Campus tour</a>
         </li>
         <li>
           <a
             class="link-reset"
-            href="https://study.unimelb.edu.au/connect-with-us/">Connect with us</a>
+            href="https://study.unimelb.edu.au/connect-with-us/"
+          >Connect with us</a>
         </li>
       </ul>
     </div>
     <div class="cell cell--tab-1of2 cell--desk-1of3">
       <a
         class="page-footer__sitemap-heading"
-        href="https://about.unimelb.edu.au/">About us</a>
+        href="https://about.unimelb.edu.au/"
+      >About us</a>
       <ul
         class="page-footer__sitemap-pages page-footer__sitemap-pages--minor list-reset list-chevrons"
       >
@@ -65,7 +69,8 @@
         <li>
           <a
             class="link-reset"
-            href="https://maps.unimelb.edu.au">Campuses and facilities</a>
+            href="https://maps.unimelb.edu.au"
+          >Campuses and facilities</a>
         </li>
         <li>
           <a
@@ -82,7 +87,8 @@
         <li>
           <a
             class="link-reset"
-            href="https://about.unimelb.edu.au/careers">Careers at Melbourne</a>
+            href="https://about.unimelb.edu.au/careers"
+          >Careers at Melbourne</a>
         </li>
       </ul>
     </div>
@@ -97,23 +103,27 @@
         <li>
           <a
             class="link-reset"
-            href="https://ask.unimelb.edu.au/app/ask">Enquiries</a>
+            href="https://ask.unimelb.edu.au/app/ask"
+          >Enquiries</a>
         </li>
         <li>
           <a
             data-notsecure
             class="link-reset"
-            href="http://newsroom.melbourne.edu/">Media</a>
+            href="http://newsroom.melbourne.edu/"
+          >Media</a>
         </li>
         <li>
           <a
             class="link-reset"
-            href="https://findanexpert.unimelb.edu.au/">Find an expert</a>
+            href="https://findanexpert.unimelb.edu.au/"
+          >Find an expert</a>
         </li>
         <li>
           <a
             class="link-reset"
-            href="https://maps.unimelb.edu.au/">Campus maps</a>
+            href="https://maps.unimelb.edu.au/"
+          >Campus maps</a>
         </li>
         <li>
           <a
@@ -147,24 +157,28 @@
         <li>
           <a
             class="link-reset"
-            href="https://www.alumni.unimelb.edu.au/give/">Give</a>
+            href="https://www.alumni.unimelb.edu.au/give/"
+          >Give</a>
         </li>
         <li>
           <a
             class="link-reset"
-            href="https://www.alumni.unimelb.edu.au/volunteer">Volunteer</a>
+            href="https://www.alumni.unimelb.edu.au/volunteer"
+          >Volunteer</a>
         </li>
         <li>
           <a
             class="link-reset"
-            href="https://mag.alumni.unimelb.edu.au/?sl=1">3010: alumni magazine</a>
+            href="https://mag.alumni.unimelb.edu.au/?sl=1"
+          >3010: alumni magazine</a>
         </li>
       </ul>
     </div>
     <div class="cell cell--tab-1of2 cell--desk-1of3 cell--tab-clear">
       <a
         class="page-footer__sitemap-heading"
-        href="https://research.unimelb.edu.au/">Research</a>
+        href="https://research.unimelb.edu.au/"
+      >Research</a>
       <ul
         class="page-footer__sitemap-pages page-footer__sitemap-pages--minor list-reset list-chevrons"
       >
@@ -183,7 +197,8 @@
         <li>
           <a
             class="link-reset"
-            href="https://gradresearch.unimelb.edu.au/">Graduate researchers</a>
+            href="https://gradresearch.unimelb.edu.au/"
+          >Graduate researchers</a>
         </li>
         <li>
           <a
@@ -196,14 +211,16 @@
     <div class="cell cell--tab-1of2 cell--desk-1of3">
       <a
         class="page-footer__sitemap-heading"
-        href="https://engagement.unimelb.edu.au/">Engagement</a>
+        href="https://engagement.unimelb.edu.au/"
+      >Engagement</a>
       <ul
         class="page-footer__sitemap-pages page-footer__sitemap-pages--minor list-reset list-chevrons"
       >
         <li>
           <a
             class="link-reset"
-            href="https://events.unimelb.edu.au/">Events</a>
+            href="https://events.unimelb.edu.au/"
+          >Events</a>
         </li>
         <li>
           <a
@@ -215,7 +232,8 @@
         <li>
           <a
             class="link-reset"
-            href="https://shop.unimelb.edu.au/">Shop</a>
+            href="https://shop.unimelb.edu.au/"
+          >Shop</a>
         </li>
       </ul>
     </div>

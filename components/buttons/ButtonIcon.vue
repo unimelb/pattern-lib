@@ -8,16 +8,18 @@
   >
     <span
       v-if="!noIcon"
-      :class="`push-icon${top ? ' push-icon--top' : ''}`">
-      <slot/>
+      :class="`push-icon${top ? ' push-icon--top' : ''}`"
+    >
+      <slot />
       <SvgIcon
         :name="icon"
         class="push-icon__icon"
         width="15px"
         height="15px"
-        aria-hidden="true" />
+        aria-hidden="true"
+      />
     </span>
-    <slot v-if="noIcon"/>
+    <slot v-if="noIcon" />
   </component>
 </template>
 

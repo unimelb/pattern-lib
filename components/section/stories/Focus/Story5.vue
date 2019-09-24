@@ -5,7 +5,8 @@
   >
     <CardFocusBox
       class="card--image-focus--col-brand bg-white"
-      title="Learning and teaching">
+      title="Learning and teaching"
+    >
       <h2>Header</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
       <a

@@ -1,7 +1,8 @@
 <template>
   <a
     :href="href"
-    class="btn-owner card card--division card--bdr bg-white">
+    class="btn-owner card card--division card--bdr bg-white"
+  >
     <div class="card__title bg-inverted">{{ title }}</div>
     <div class="card__inner">
       <div class="card__subheader">
@@ -14,7 +15,8 @@
     <div class="card__footer">
       <ButtonIcon
         element="span"
-        class="btn--fullwidth">Contacts and bio</ButtonIcon>
+        class="btn--fullwidth"
+      >Contacts and bio</ButtonIcon>
     </div>
   </a>
 </template>

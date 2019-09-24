@@ -2,17 +2,19 @@
   <SectionWrap>
     <PhotoGallery
       captions
-      no-popup>
+      no-popup
+    >
       <img
         v-for="image in images"
+        :key="image.id"
         :src="image.src"
         :alt="image.title"
         :width="image.w"
-        :key="image.id"
         :height="image.h"
         :data-title="image.title"
         :data-thumb="image.msrc"
-        :data-size="image.size">
+        :data-size="image.size"
+      >
     </PhotoGallery>
   </SectionWrap>
 </template>

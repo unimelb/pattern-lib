@@ -13,25 +13,31 @@
       <h3 class="card__header">
         <a
           :href="href"
-          class="card__title">{{ title }}</a>
+          class="card__title"
+        >{{ title }}</a>
       </h3>
       <div
         v-if="hasSubTitleSlots"
-        class="card__sub-titles">
-        <slot name="sub-title-1"/>
-        <slot name="sub-title-2"/>
-        <slot name="sub-title-3"/>
+        class="card__sub-titles"
+      >
+        <slot name="sub-title-1" />
+        <slot name="sub-title-2" />
+        <slot name="sub-title-3" />
       </div>
-      <div class="card__excerpt">{{ excerpt }}</div>
+      <div class="card__excerpt">
+        {{ excerpt }}
+      </div>
       <div
         :class="[cols !== 1 ? 'card__footer--column' : '']"
-        class="card__footer">
+        class="card__footer"
+      >
         <Tags
           v-if="tags.length"
           :data="tags"
-          class="card__tags"/>
+          class="card__tags"
+        />
         <div class="card__links">
-          <slot name="links"/>
+          <slot name="links" />
         </div>
       </div>
     </div>

@@ -3,13 +3,15 @@
     <section-wrap
       small
       short
-      bg-color="white">
+      bg-color="white"
+    >
       <div>
         <h2>Heading</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.</p>
         <figure-wrap
           large
-          caption="embed test">
+          caption="embed test"
+        >
           <progressive-img
             src="https://picsum.photos/800/400?random&gravity=center"
             alt="alt text goes here"

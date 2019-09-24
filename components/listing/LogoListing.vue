@@ -4,9 +4,11 @@
       <div
         v-for="(item, index) in data"
         :key="index"
-        class="logo-listing__item">
+        class="logo-listing__item"
+      >
         <a
-          :href="item.url">
+          :href="item.url"
+        >
           <img
             :alt="item.alt"
             :src="item.src"

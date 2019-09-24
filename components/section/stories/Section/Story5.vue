@@ -2,7 +2,8 @@
   <main>
     <SectionWrap
       short
-      bg-color="white">
+      bg-color="white"
+    >
       <h2>Section Heading</h2>
       <p>
         Lorem ipsum dolor sit amet,
@@ -11,14 +12,17 @@
     </SectionWrap>
     <SectionWrap
       short
-      bg-color="alt">
+      bg-color="alt"
+    >
       <p>
         Lorem ipsum dolor sit amet,
         <a href>consectetur adipisicing</a> elit. Adipisci fugiat odio cupiditate ad nisi exercitationem incidunt reprehenderit nemo repellendus ea, eveniet, nostrum sunt earum similique quaerat maxime, iure recusandae inventore.
       </p>
       <p>Ut rem expedita dolore cupiditate laudantium blanditiis voluptatem laborum impedit.</p>
       <div>
-        <ButtonIcon size="sml">Button Example</ButtonIcon>
+        <ButtonIcon size="sml">
+          Button Example
+        </ButtonIcon>
       </div>
     </SectionWrap>
   </main>

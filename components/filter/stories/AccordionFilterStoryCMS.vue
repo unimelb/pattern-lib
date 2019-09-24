@@ -2,7 +2,8 @@
   <section-wrap bg-color="white">
     <AccordionFilter
       :data="accordionData"
-      show-ssr>
+      show-ssr
+    >
       <p>Server-side Code is rended on page load.  Click on Search to filter on data object.</p>
     </AccordionFilter>
   </section-wrap>

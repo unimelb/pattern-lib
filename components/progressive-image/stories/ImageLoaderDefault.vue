@@ -2,7 +2,8 @@
   <progressive-img
     alt="alt test goes here"
     src="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg"
-    placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg" />
+    placeholder="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Starsinthesky.jpg/220px-Starsinthesky.jpg"
+  />
 </template>
 
 <script>

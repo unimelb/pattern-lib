@@ -13,7 +13,8 @@
         class="link-icon__icon svg"
         role="presentation"
         focusable="false"
-        viewBox="10 10 26 28">
+        viewBox="10 10 26 28"
+      >
         <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
       </svg>
       <span class="link-icon__text">Menu</span>
@@ -22,16 +23,21 @@
       id="sitemap"
       ref="sitemap"
       class="sitenav sitenav__panel"
-      role="navigation">
+      role="navigation"
+    >
       <button
         class="sitenav__back-btn button-ui"
         aria-label="Close"
         type="button"
-        @click.prevent="dismissMenu">Close</button>
+        @click.prevent="dismissMenu"
+      >
+        Close
+      </button>
       <h2
         ref="navtitle"
-        v-html="title"/>
-      <slot/>
+        v-html="title"
+      />
+      <slot />
     </div>
   </div>
 </template>

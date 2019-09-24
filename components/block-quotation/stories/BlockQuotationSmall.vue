@@ -1,7 +1,10 @@
 <template>
   <BlockQuotation
     author="Steve Wozniak"
-    small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sit harum dolorem sapiente, ab possimus molestias impedit nostrum quidem modi suscipit saepe ullam quas nemo inventore animi eaque, similique velit.</BlockQuotation>
+    small
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sit harum dolorem sapiente, ab possimus molestias impedit nostrum quidem modi suscipit saepe ullam quas nemo inventore animi eaque, similique velit.
+  </BlockQuotation>
 </template>
 
 <script>

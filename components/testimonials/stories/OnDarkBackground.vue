@@ -1,7 +1,8 @@
 <template>
   <section-wrap
     long
-    bg-color="inverted">
+    bg-color="inverted"
+  >
     <Testimonials
       name="Hannah Kerber"
       year="2016"

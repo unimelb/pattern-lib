@@ -8,7 +8,10 @@
     <div>
       <ButtonIcon
         inverted
-        size="sml">Button Example</ButtonIcon>
+        size="sml"
+      >
+        Button Example
+      </ButtonIcon>
     </div>
   </SectionWrap>
 </template>

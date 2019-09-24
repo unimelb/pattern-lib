@@ -8,7 +8,8 @@
       <logo
         class="megamenu__logo"
         size="md"
-        no-padding/>
+        no-padding
+      />
       <MegaMenuTitle
         v-if="facultyName"
         :title="facultyName"
@@ -38,10 +39,13 @@
             aria-label="Close"
             class="menu__back-btn"
             @click="dismissMobileMenu"
-          >Close</div>
+          >
+            Close
+          </div>
           <PageSearchForm
             v-if="isMobileOpen"
-            aria-hidden="true"/>
+            aria-hidden="true"
+          />
           <MegaMenuTitle
             v-if="facultyName && isMobileOpen"
             :title="facultyName"
@@ -50,7 +54,8 @@
           />
           <ul
             class="menu__section"
-            role="menu">
+            role="menu"
+          >
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -71,25 +76,32 @@
                 <SvgIcon
                   v-if="isMobileOpen"
                   name="chevron-right"
-                  class="icon"/>
+                  class="icon"
+                />
               </a>
               <div
                 v-if="rootitem.items"
-                class="inner inner--fade">
+                class="inner inner--fade"
+              >
                 <div
                   role="button"
                   class="menu__back-btn"
-                  @click="closeInner">Back</div>
+                  @click="closeInner"
+                >
+                  Back
+                </div>
                 <div class="menu__block">
                   <div>
                     <a
                       :href="rootitem.href"
-                      class="menu__nested-parent">{{ rootitem.title }}</a>
+                      class="menu__nested-parent"
+                    >{{ rootitem.title }}</a>
                   </div>
                   <ul
                     :class="isColColumns(rootindex)"
                     class="menu__section"
-                    role="menu">
+                    role="menu"
+                  >
                     <li
                       v-for="(menuitem, menuindex) in rootitem.items"
                       :key="`menuitem-${menuindex}`"
@@ -98,20 +110,22 @@
                       <a
                         :href="menuitem.href"
                         class="menu__link"
-                        role="menuitem">
+                        role="menuitem"
+                      >
                         {{ menuitem.title }}
                         <SvgIcon
                           v-if="!isMobileOpen"
                           name="chevron-right"
-                          class="icon"/>
+                          class="icon"
+                        />
                       </a>
                     </li>
                   </ul>
                 </div>
                 <div class="menu__aside">
                   <component
-                    v-if="rootitem.feature"
                     :is="rootitem.feature.link ? 'a' : 'div'"
+                    v-if="rootitem.feature"
                     :href="rootitem.feature.link"
                     class="menu__campaign"
                   >
@@ -124,21 +138,27 @@
                   </component>
                   <div
                     v-if="rootitem.feature"
-                    class="menu__aside-info">
+                    class="menu__aside-info"
+                  >
                     <p
                       v-if="rootitem.feature.text"
                       class="menu__aside-info__text"
-                    >{{ rootitem.feature.text }}</p>
+                    >
+                      {{ rootitem.feature.text }}
+                    </p>
                     <div
                       v-if="rootitem.feature.link"
-                      class="menu__aside-info__link">
+                      class="menu__aside-info__link"
+                    >
                       <a
                         :href="rootitem.feature.link"
-                        class="link">
+                        class="link"
+                      >
                         View more details
                         <SvgIcon
                           name="chevron-right"
-                          class="icon"/>
+                          class="icon"
+                        />
                       </a>
                     </div>
                   </div>
@@ -148,10 +168,11 @@
           </ul>
           <MegaMenuTopNavigation
             v-if="isMobileOpen"
-            :items="topMenu"/>
+            :items="topMenu"
+          />
         </nav>
       </div>
-      <PageSearch/>
+      <PageSearch />
       <div class="header-tools__menu">
         <button
           id="sitemapbutton"
@@ -170,11 +191,12 @@
             aria-labelledby="icon-menu"
             viewBox="10 10 26 28"
           >
-            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/>
+            <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
           </svg>
           <span
             id="icon-menu"
-            class="link-icon__text">Menu</span>
+            class="link-icon__text"
+          >Menu</span>
         </button>
       </div>
     </div>

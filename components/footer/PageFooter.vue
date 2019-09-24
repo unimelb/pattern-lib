@@ -1,8 +1,9 @@
 <template>
   <footer
     id="page-footer"
-    class="page-footer">
-    <PageFooterUpper/>
+    class="page-footer"
+  >
+    <PageFooterUpper />
     <div class="page-footer__bottom">
       <div class="page-footer__inner max">
         <div class="grid">
@@ -12,7 +13,7 @@
                 <h2>Site Map</h2>
               </template>
               <template slot="hidden">
-                <PageFooterSitemap/>
+                <PageFooterSitemap />
               </template>
             </ToggleBlockMobile>
           </div>
@@ -28,8 +29,9 @@
     <!-- START LIVEAGENT (DO NOT DELETE)-->
     <div
       id="liveagent"
-      class="liveagent"/>
-      <!-- END LIVEAGENT (DO NOT DELETE)-->
+      class="liveagent"
+    />
+    <!-- END LIVEAGENT (DO NOT DELETE)-->
   </footer>
 </template>
 

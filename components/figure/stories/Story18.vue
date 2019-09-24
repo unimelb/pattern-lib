@@ -1,7 +1,8 @@
 <template>
   <section-wrap
     small
-    bg-color="white">
+    bg-color="white"
+  >
     <div>
       <h2>Heading</h2>
       <p>

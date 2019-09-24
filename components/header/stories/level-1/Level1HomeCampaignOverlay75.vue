@@ -5,7 +5,7 @@
   >
     <header class="page-header page-header--l1">
       <div class="page-header__inner max">
-        <Logo no-padding/>
+        <Logo no-padding />
       </div>
       <div class="page-header--center">
         <div class="max max--xsml text-center shim-pb2">
@@ -13,10 +13,13 @@
             Talent for every
             <br>possible outcome
           </h1>
-          <h3 class="shim-mb2">Further details about this amazing campaign.</h3>
+          <h3 class="shim-mb2">
+            Further details about this amazing campaign.
+          </h3>
           <a
             class="btn btn--inverted"
-            href>
+            href
+          >
             <span class="push-icon">
               Call to action
               <svg
@@ -26,7 +29,7 @@
                 role="presentation"
                 class="push-icon__icon"
               >
-                <use xlink:href="#icon-chevron-right"/>
+                <use xlink:href="#icon-chevron-right" />
               </svg>
             </span>
           </a>

@@ -14,12 +14,14 @@
     />
     <div
       :class="card_header_classes"
-      class="card__header">
+      class="card__header"
+    >
       <span :class="{'title-inverted': !inverted}">{{ title }}</span>
       <SvgIcon
         width="15px"
         height="15px"
-        name="chevron-right"/>
+        name="chevron-right"
+      />
     </div>
   </a>
 </template>

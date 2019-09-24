@@ -1,7 +1,8 @@
 <template>
   <ResponsiveTable>
     <table
-      class="table table--striped table--hover">
+      class="table table--striped table--hover"
+    >
       <thead>
         <tr class="table__row--inverted">
           <th>
@@ -206,10 +207,10 @@
           <td>
             Economics and Econometrics
           </td>
-          <td >
+          <td>
             1
           </td>
-          <td >
+          <td>
             25
           </td>
         </tr>
@@ -217,10 +218,10 @@
           <td>
             Statistics and Operational Research
           </td>
-          <td >
+          <td>
             1
           </td>
-          <td >
+          <td>
             30
           </td>
         </tr>
@@ -228,10 +229,10 @@
           <td>
             Times Higher Education World Reputation Rankings 2016
           </td>
-          <td >
+          <td>
             1
           </td>
-          <td >
+          <td>
             49
           </td>
         </tr>
@@ -239,10 +240,10 @@
           <td>
             US News Best Global Universities
           </td>
-          <td >
+          <td>
             1
           </td>
-          <td >
+          <td>
             36
           </td>
         </tr>

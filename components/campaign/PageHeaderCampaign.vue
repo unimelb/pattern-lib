@@ -8,13 +8,17 @@
         v-if="title"
         :style="`max-width: ${titleWidth};`"
         :class="['page-campaign__title', bgDark ? 'page-campaign--dark': '']"
-      >{{ title }}</h2>
+      >
+        {{ title }}
+      </h2>
       <button-icon
         v-if="link && buttonText"
         :href="link"
         :class="[bgDark ? '' : 'btn--cta']"
         :inverted="bgDark"
-      >{{ buttonText }}</button-icon>
+      >
+        {{ buttonText }}
+      </button-icon>
     </div>
   </div>
 </template>

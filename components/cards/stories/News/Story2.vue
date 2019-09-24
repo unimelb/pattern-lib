@@ -11,19 +11,22 @@
         >
           <div
             slot="sub-title-1"
-            class="sub-title">
+            class="sub-title"
+          >
             <span>Sub-title 1</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View article">
+              aria-label="View article"
+            >
               View article
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
           </template>
         </CardNewsTag>
@@ -38,19 +41,22 @@
         >
           <div
             slot="sub-title-1"
-            class="sub-title">
+            class="sub-title"
+          >
             <span>Sub-title 1</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View article">
+              aria-label="View article"
+            >
               View article
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
           </template>
         </CardNewsTag>
@@ -65,19 +71,22 @@
         >
           <div
             slot="sub-title-1"
-            class="sub-title">
+            class="sub-title"
+          >
             <span>Sub-title 1</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View article">
+              aria-label="View article"
+            >
               View article
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
           </template>
         </CardNewsTag>

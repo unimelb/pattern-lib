@@ -2,7 +2,8 @@
   <div class="logo">
     <a
       class="logo__link"
-      href="https://www.unimelb.edu.au">
+      href="https://www.unimelb.edu.au"
+    >
       <img
         :class="['logo__image--' + size, noPadding ? 'logo--no-padding-' + size: '']"
         class="logo__image"

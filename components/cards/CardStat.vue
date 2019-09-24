@@ -1,10 +1,13 @@
 <template>
   <FocusWrapper
     :color="color"
-    size="large">
+    size="large"
+  >
     <div :class="classes">
       <div class="card__inner">
-        <h3 class="card-header__heading">{{ stat }}</h3>
+        <h3 class="card-header__heading">
+          {{ stat }}
+        </h3>
         <p>{{ excerpt }}</p>
       </div>
     </div>

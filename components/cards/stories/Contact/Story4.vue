@@ -1,7 +1,8 @@
 <template>
   <ContactCard
     :columns="3"
-    with-map />
+    with-map
+  />
 </template>
 
 <script>

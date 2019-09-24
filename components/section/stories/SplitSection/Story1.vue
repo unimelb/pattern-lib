@@ -2,7 +2,8 @@
   <main class="bg-white">
     <SplitSection
       image-left
-      bg-image="https://images.unsplash.com/photo-1495100793874-7f94aecae1fb?dpr=1&auto=compress,format&fit=crop&w=600&h=&q=80&cs=tinysrgb&crop=">
+      bg-image="https://images.unsplash.com/photo-1495100793874-7f94aecae1fb?dpr=1&auto=compress,format&fit=crop&w=600&h=&q=80&cs=tinysrgb&crop="
+    >
       <h3 class="heading-section">
         This is a header
       </h3>
@@ -11,7 +12,8 @@
       </p>
       <a
         href="https://www.unimelb.edu.au"
-        class="btn btn--icon btn--icon--chevron-right">
+        class="btn btn--icon btn--icon--chevron-right"
+      >
         Call to Action
       </a>
     </SplitSection>

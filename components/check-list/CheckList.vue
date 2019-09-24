@@ -4,23 +4,29 @@
       <li
         v-for="(item, index) in items"
         :key="item.id"
-        class="check-list__item">
+        class="check-list__item"
+      >
         <input
           :id="`${namespace}-${index}`"
           :checked="checkedItems[index]"
           class="check-list__checkbox"
           type="checkbox"
-          @change="toggle(index, $event)">
+          @change="toggle(index, $event)"
+        >
         <label
           :for="`${namespace}-${index}`"
           class="check-list__label"
-          v-html="content[index].innerHTML"/>
+          v-html="content[index].innerHTML"
+        />
       </li>
     </ol>
     <ButtonIcon
       :href="btnHref"
       :disabled="!itemsAllChecked"
-      :icon="btnIcon">{{ btnText }}</ButtonIcon>
+      :icon="btnIcon"
+    >
+      {{ btnText }}
+    </ButtonIcon>
   </div>
 </template>
 

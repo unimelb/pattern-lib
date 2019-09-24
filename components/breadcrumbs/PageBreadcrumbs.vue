@@ -15,12 +15,14 @@
       >
         <meta
           :content="index + 1"
-          itemprop="position">
+          itemprop="position"
+        >
         <a
           :href="item.href"
           :aria-current="index === items.length -1"
           class="page-breadcrumbs__link"
-          itemprop="item">
+          itemprop="item"
+        >
           <SvgIcon
             v-if="index === 0"
             class="page-breadcrumbs__home"
@@ -30,7 +32,8 @@
           />
           <span
             class="page-breadcrumbs__name"
-            itemprop="name">{{ item.text }}</span>
+            itemprop="name"
+          >{{ item.text }}</span>
           <SvgIcon
             v-if="index < items.length - 1"
             class="page-breadcrumbs__chevron"

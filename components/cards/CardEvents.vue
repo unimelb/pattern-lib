@@ -9,8 +9,9 @@
   >
     <slot
       v-for="(_, name) in $slots"
+      :slot="name"
       :name="name"
-      :slot="name"/>
+    />
   </GenericCard>
 </template>
 

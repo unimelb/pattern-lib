@@ -1,31 +1,32 @@
 <template>
   <component
     :is="container"
-    :class="`toggleblock${isActive ? ' toggleblock--active': ''}`">
+    :class="`toggleblock${isActive ? ' toggleblock--active': ''}`"
+  >
     <component
-      ref="header"
       :is="element"
-      :class="`toggleblock__default${isActive ? ' toggleblock__default--active': ''}`"
       :id="`${namespace}-header-${index + 1}`"
+      ref="header"
+      :class="`toggleblock__default${isActive ? ' toggleblock__default--active': ''}`"
       :aria-controls="`${namespace}-panel-${index + 1}`"
       :aria-selected="isActive"
       tabindex="0"
       @keydown="group ? group.handleKey($event) : handleKey($event)"
     >
-      <slot/>
+      <slot />
     </component>
     <component
-      ref="panel"
       :is="element"
-      :class="`toggleblock__hidden${isActive ? ' toggleblock__hidden--active': ''}`"
       :id="`${namespace}-panel-${index + 1}`"
+      ref="panel"
+      :class="`toggleblock__hidden${isActive ? ' toggleblock__hidden--active': ''}`"
       :aria-labelledby="`${namespace}-header-${index + 1}`"
       :tabindex="isActive ? 0 : -1"
       :aria-expanded="isActive"
       :aria-hidden="!isActive"
       role="region"
     >
-      <slot name="hidden"/>
+      <slot name="hidden" />
     </component>
   </component>
 </template>

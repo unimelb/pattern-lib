@@ -10,14 +10,18 @@
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="name"
           class="testimonials__img"
-          role="img" />
+          role="img"
+        />
         <div class="testimonials__info">
           <BlockQuotation
             :author="author"
             :sub-cite="post"
             small
             large-quotes
-            class="testimonials__quotation">{{ testimonials }}</BlockQuotation>
+            class="testimonials__quotation"
+          >
+            {{ testimonials }}
+          </BlockQuotation>
         </div>
       </div>
     </FocusWrapper>

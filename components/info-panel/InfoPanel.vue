@@ -9,8 +9,10 @@
       height="20px"
     />
     <div class="info-panel__inner">
-      <h4 class="title--xxs info-panel__title">{{ title }}</h4>
-      <slot/>
+      <h4 class="title--xxs info-panel__title">
+        {{ title }}
+      </h4>
+      <slot />
     </div>
   </div>
 </template>

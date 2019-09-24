@@ -16,7 +16,7 @@
       }"
       class="section__inner"
     >
-      <slot/>
+      <slot />
     </div>
   </component>
 </template>

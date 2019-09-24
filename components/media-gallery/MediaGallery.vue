@@ -4,11 +4,13 @@
       v-if="!showThumbnails"
       :class="classes"
       role="region"
-      aria-roledescription="Media gallery">
+      aria-roledescription="Media gallery"
+    >
       <div :class="containerClasses">
         <div
           v-if="useOverlay"
-          class="media-gallery__header">
+          class="media-gallery__header"
+        >
           <div class="media-gallery__count">
             {{ selectedIndex + 1 }} / {{ items.length }}
           </div>
@@ -24,7 +26,8 @@
               aria-hidden="true"
               name="close"
               width="26"
-              height="26"/>
+              height="26"
+            />
           </div>
         </div>
         <div :class="sliderClasses">
@@ -41,11 +44,13 @@
               aria-hidden="true"
               name="chevron-left"
               width="30"
-              height="30"/>
+              height="30"
+            />
           </div>
           <div
             v-if="items.length"
-            class="media-gallery__slider-container">
+            class="media-gallery__slider-container"
+          >
             <slider
               v-if="!useOverlay || openState"
               ref="slider"
@@ -55,16 +60,19 @@
               <slideritem
                 v-for="(slide, index) in items"
                 :key="index"
-                class="media-gallery__item">
+                class="media-gallery__item"
+              >
                 <div
                   v-if="slide.type === 'image'"
                   :aria-label="slide.altText"
                   :style="{ backgroundImage: `url(${slide.src})` }"
-                  class="media-gallery__image" />
+                  class="media-gallery__image"
+                />
                 <VideoEmbed
                   v-if="slide.type === 'video'"
                   :src="slide.src"
-                  class="media-gallery__embed" />
+                  class="media-gallery__embed"
+                />
               </slideritem>
             </slider>
           </div>
@@ -81,14 +89,16 @@
               aria-hidden="true"
               name="chevron-right"
               width="30"
-              height="30"/>
+              height="30"
+            />
           </div>
         </div>
 
         <div
           v-if="items.length"
           ref="thumbnailContainer"
-          :class="thumbClasses">
+          :class="thumbClasses"
+        >
           <div
             v-for="(item, index) in items"
             :key="index"
@@ -109,25 +119,35 @@
             <div
               v-if="item.type === 'video'"
               aria-hidden="true"
-              class="media-gallery__thumb-embed">
+              class="media-gallery__thumb-embed"
+            >
               <VideoEmbed
                 :src="item.src"
-                class="media-gallery__thumb-video" />
+                class="media-gallery__thumb-video"
+              />
             </div>
           </div>
         </div>
 
         <div
           v-if="items.length"
-          class="media-gallery__footer">
+          class="media-gallery__footer"
+        >
           <div
             v-if="!useOverlay"
             class="media-gallery__count media-gallery__count--footer"
-          >{{ selectedIndex + 1 }} / {{ items.length }}</div>
+          >
+            {{ selectedIndex + 1 }} / {{ items.length }}
+          </div>
           <div
             :id="'caption' + selectedIndex"
-            class="media-gallery__title">{{ selectedItem.title }}</div>
-          <div class="media-gallery__description">{{ selectedItem.description }}</div>
+            class="media-gallery__title"
+          >
+            {{ selectedItem.title }}
+          </div>
+          <div class="media-gallery__description">
+            {{ selectedItem.description }}
+          </div>
         </div>
       </div>
     </div>

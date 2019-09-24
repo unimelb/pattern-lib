@@ -7,9 +7,9 @@
     focusable="false"
     role="img"
   >
-    <use :xlink:href="'#icon-' + name"/>
+    <use :xlink:href="'#icon-' + name" />
     <title>{{ name | capitalize }}</title>
-    <slot/>
+    <slot />
   </svg>
 </template>
 

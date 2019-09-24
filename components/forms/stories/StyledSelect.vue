@@ -14,7 +14,8 @@
       <label for="f_q1">Type</label>
       <StyledSelect
         id="f_q1"
-        blue>
+        blue
+      >
         <option>Undergraduate</option>
         <option>Postgraduate</option>
         <option>Reasearch</option>
@@ -28,7 +29,8 @@
         <label for="f_q2">Type</label>
         <StyledSelect
           id="f_q2"
-          blue>
+          blue
+        >
           <option>Undergraduate</option>
           <option>Postgraduate</option>
           <option>Reasearch</option>
@@ -36,13 +38,16 @@
         </StyledSelect>
       </div>
 
-      <h2 class="shim-pt2 shim-mb05">Grid</h2>
+      <h2 class="shim-pt2 shim-mb05">
+        Grid
+      </h2>
       <div class="grid">
         <div class="cell cell--tab-1of3">
           <label for="f_q3">Type</label>
           <StyledSelect
             id="f_q3"
-            blue>
+            blue
+          >
             <option>Undergraduate</option>
             <option>Postgraduate</option>
             <option>Reasearch</option>
@@ -53,7 +58,8 @@
           <label for="f_q4">Type</label>
           <StyledSelect
             id="f_q4"
-            blue>
+            blue
+          >
             <option>Undergraduate</option>
             <option>Postgraduate</option>
             <option>Reasearch</option>

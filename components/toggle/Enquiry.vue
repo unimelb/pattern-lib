@@ -7,7 +7,7 @@
     </template>
     <template slot="hidden">
       <hr>
-      <slot/>
+      <slot />
     </template>
   </ToggleBlock>
 </template>

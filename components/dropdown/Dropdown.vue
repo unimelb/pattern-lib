@@ -9,7 +9,9 @@
         v-for="(value, index) in values"
         :key="index"
         :value="value.value || value"
-      >{{ value.label || value }}</option>
+      >
+        {{ value.label || value }}
+      </option>
     </select>
   </div>
 </template>

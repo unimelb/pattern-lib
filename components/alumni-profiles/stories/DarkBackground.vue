@@ -1,7 +1,8 @@
 <template>
   <section-wrap
     long
-    bg-color="inverted">
+    bg-color="inverted"
+  >
     <AlumniProfiles
       thumb="https://source.unsplash.com/featured/?portrait"
       name="Julia Gillard AC"

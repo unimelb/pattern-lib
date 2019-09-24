@@ -2,11 +2,13 @@
   <ResponsiveTable>
     <table
       id="statstable"
-      class="table table--striped">
+      class="table table--striped"
+    >
       <thead>
         <tr
           class="table__row--inverted"
-          scope="col">
+          scope="col"
+        >
           <th id="header-rankings">
             Independently published global and program rankings
           </th>
@@ -44,7 +46,8 @@
         <tr class="table__row--info">
           <td
             id="qs-world-heading"
-            colspan="3">
+            colspan="3"
+          >
             <a>QS World University Rankings</a>
           </td>
         </tr>
@@ -73,7 +76,8 @@
         <tr class="table__row--info">
           <td
             id="qs-world-subjects"
-            colspan="3">
+            colspan="3"
+          >
             <a>QS World University Rankings (by subject)</a>
           </td>
         </tr>

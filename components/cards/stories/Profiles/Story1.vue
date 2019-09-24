@@ -35,7 +35,8 @@
       <ListItem no-padding="mobile">
         <CardShowcaseProfile
           title="Student Name"
-          sub-title="Study Program"/>
+          sub-title="Study Program"
+        />
       </ListItem>
     </SectionWrap>
   </div>

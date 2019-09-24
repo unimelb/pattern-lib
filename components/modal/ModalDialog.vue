@@ -4,35 +4,43 @@
       ref="trigger"
       :aria-controls="`modal-dialog-1${_uid}`"
       class="btn modal-dialog__open"
-      @click="openDialog">
+      @click="openDialog"
+    >
       <span
         class="push-icon"
-        v-html="trigger"/>
+        v-html="trigger"
+      />
     </button>
     <div
-      ref="container"
       :id="`modal-dialog-1${_uid}`"
+      ref="container"
       class="modal-dialog"
       aria-hidden="true"
       @click="closeContainer"
       @keypress.27="closeDialog"
-      @keypress.9="inputTrap">
+      @keypress.9="inputTrap"
+    >
       <div
         ref="modal"
         :aria-labelledby="`modal-dialog-title-1${_uid}`"
         class="modal-dialog__modal"
-        role="dialog">
+        role="dialog"
+      >
         <div role="document">
           <h2
             :id="`modal-dialog-title-1${_uid}`"
-            v-html="title"/>
-          <slot/>
+            v-html="title"
+          />
+          <slot />
           <br>
           <button
             class="modal-dialog__close"
             aria-label="Close Dialog"
             type="button"
-            @click="closeDialog">&#x2715;</button>
+            @click="closeDialog"
+          >
+            &#x2715;
+          </button>
         </div>
       </div>
     </div>

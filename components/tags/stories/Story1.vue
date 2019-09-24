@@ -1,5 +1,5 @@
 <template>
-  <Tags :data="tags"/>
+  <Tags :data="tags" />
 </template>
 
 <script>

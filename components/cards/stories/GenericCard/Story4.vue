@@ -4,11 +4,13 @@
       <ListItem>
         <GenericCard
           :cols="2"
-          title="Test 1">
+          title="Test 1"
+        >
           <div
             slot="sub-title-1"
-            class="sub-title">
-            <SvgIcon name="calendar"/>
+            class="sub-title"
+          >
+            <SvgIcon name="calendar" />
             <span>Lorem ipsum</span>
           </div>
         </GenericCard>

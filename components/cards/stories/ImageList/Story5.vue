@@ -3,7 +3,8 @@
     <div class="grid grid--4col">
       <ListItem
         v-for="item in items"
-        :key="item.title">
+        :key="item.title"
+      >
         <CardImageList
           :border="false"
           :title="item.title"

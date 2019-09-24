@@ -2,14 +2,19 @@
   <div class="card card--division card--division--head card--bdr">
     <div
       :style="{'background-image': `url(${thumb})`}"
-      class="card__thumb"/>
+      class="card__thumb"
+    />
     <div class="card__inner ">
       <div class="card__subheader">
-        <h3 class="card__header">{{ name }}</h3>
-        <p class="card__meta"> {{ title }}</p>
+        <h3 class="card__header">
+          {{ name }}
+        </h3>
+        <p class="card__meta">
+          {{ title }}
+        </p>
       </div>
       <hr>
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>

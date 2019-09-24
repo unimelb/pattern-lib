@@ -3,7 +3,8 @@
     <FocusWrapper
       semi-opaque
       padded
-      class="bg-white"/>
+      class="bg-white"
+    />
   </SectionWrap>
 </template>
 

@@ -1,86 +1,104 @@
 <template>
   <ul class="social-list list-reset links-reset">
     <li
-      v-if="facebookLink">
+      v-if="facebookLink"
+    >
       <a
         :href="facebookLink"
-        class="social-list__link">
+        class="social-list__link"
+      >
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="Facebook"
           class="social-list__icon"
-          name="facebook" />
+          name="facebook"
+        />
         <span class="screenreaders-only">Facebook</span>
       </a>
     </li>
     <li
-      v-if="twitterLink">
+      v-if="twitterLink"
+    >
       <a
         :href="twitterLink"
-        class="social-list__link">
+        class="social-list__link"
+      >
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="Twitter"
           class="social-list__icon"
-          name="twitter" />
+          name="twitter"
+        />
         <span class="screenreaders-only">Twitter</span>
       </a>
     </li>
     <li
-      v-if="linkedinLink">
+      v-if="linkedinLink"
+    >
       <a
         :href="linkedinLink"
-        class="social-list__link">
+        class="social-list__link"
+      >
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="LinkedIn"
           class="social-list__icon"
-          name="linkedin" />
+          name="linkedin"
+        />
         <span class="screenreaders-only">LinkedIn</span>
       </a>
     </li>
     <li
-      v-if="instagramLink">
+      v-if="instagramLink"
+    >
       <a
         :href="instagramLink"
-        class="social-list__link">
+        class="social-list__link"
+      >
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="Instagram"
           class="social-list__icon"
-          name="instagram" />
+          name="instagram"
+        />
         <span class="screenreaders-only">Instagram</span>
       </a>
     </li>
     <li
-      v-if="vimeoLink">
+      v-if="vimeoLink"
+    >
       <a
         :href="vimeoLink"
-        class="social-list__link">
+        class="social-list__link"
+      >
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="Vimeo"
           class="social-list__icon"
-          name="vimeo" />
+          name="vimeo"
+        />
         <span class="screenreaders-only">Vimeo</span>
       </a>
     </li>
     <li
-      v-if="youtubeLink">
+      v-if="youtubeLink"
+    >
       <a
         :href="youtubeLink"
-        class="social-list__link">
+        class="social-list__link"
+      >
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="Youtube"
           class="social-list__icon"
-          name="youtube" />
+          name="youtube"
+        />
         <span class="screenreaders-only">Youtube</span>
       </a>
     </li>

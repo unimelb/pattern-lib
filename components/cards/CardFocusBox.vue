@@ -15,7 +15,7 @@
         height="100%"
         v-html="icon"
       />
-      <slot/>
+      <slot />
     </div>
   </FocusWrapper>
 </template>

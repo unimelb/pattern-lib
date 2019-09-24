@@ -3,9 +3,11 @@
     :class="useColumnLayout ? ['article-wrap--column', 'max--sml'] : []"
     class="article-wrap max"
   >
-    <h1 class="article-wrap__header">{{ title }}</h1>
+    <h1 class="article-wrap__header">
+      {{ title }}
+    </h1>
     <div class="article-wrap__main">
-      <slot/>
+      <slot />
     </div>
     <footer
       v-if="hasMetadata"
@@ -17,24 +19,32 @@
       </div>
       <div
         v-if="categories && categories.length > 0"
-        class="article-wrap__aside-box article-wrap__categories">
-        <p class="article-wrap__categories-heading">Categories</p>
+        class="article-wrap__aside-box article-wrap__categories"
+      >
+        <p class="article-wrap__categories-heading">
+          Categories
+        </p>
         <a
           v-for="category in categories"
           :key="`cat-${category}`"
-          :href="`cat-${category}`">
+          :href="`cat-${category}`"
+        >
           {{ category }}
         </a>
       </div>
       <div
         v-if="contact"
-        class="article-wrap__aside-box">
+        class="article-wrap__aside-box"
+      >
         <ContactList
           v-bind="contact"
-          class="article-wrap__contact-list" />
+          class="article-wrap__contact-list"
+        />
       </div>
       <div class="article-wrap__aside-box article-wrap__social">
-        <p class="article-wrap__social-heading">Share</p>
+        <p class="article-wrap__social-heading">
+          Share
+        </p>
         <SocialListGeneric
           facebook-link="https://www.facebook.com/unimelb"
           twitter-link="https://twitter.com/unimelb"

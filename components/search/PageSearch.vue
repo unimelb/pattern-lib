@@ -7,12 +7,14 @@
     >
       <SvgIcon
         class="link-icon__icon svg"
-        name="search" />
+        name="search"
+      />
       <span class="link-icon__text">Search</span>
     </button>
     <div
       ref="search"
-      class="page-header-search">
+      class="page-header-search"
+    >
       <PageSearchForm ref="form">
         <a
           class="page-header-icon link-icon--close"
@@ -23,7 +25,8 @@
         >
           <SvgIcon
             class="page-header-search__icon--close"
-            name="close" />
+            name="close"
+          />
           Close
         </a>
       </PageSearchForm>

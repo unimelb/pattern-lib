@@ -2,7 +2,8 @@
   <form
     action="https://search.unimelb.edu.au"
     method="get"
-    class="page-header-search__form">
+    class="page-header-search__form"
+  >
     <input
       ref="input"
       class="page-header-search__input"
@@ -12,13 +13,15 @@
       aria-label="Search the University of Melbourne"
     ><button
       class="page-header-search__submit"
-      type="submit">
+      type="submit"
+    >
       <SvgIcon
         class="page-header-search__icon"
-        name="search" />
+        name="search"
+      />
       <span class="screenreaders-only">Go</span>
     </button>
-    <slot/>
+    <slot />
   </form>
 </template>
 

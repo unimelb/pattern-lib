@@ -1,6 +1,7 @@
 <template>
   <div
-    :class="classes">
+    :class="classes"
+  >
     <iframe
       :src="src"
       width="560"

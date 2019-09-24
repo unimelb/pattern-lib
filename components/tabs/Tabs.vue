@@ -1,11 +1,13 @@
 <template>
   <div
     :class="alt ? 'tabs--alt' : false"
-    class="tabs section">
+    class="tabs section"
+  >
     <div class="tabs__section">
       <div
         v-if="!min"
-        class="styled-select tabs__tablist--mobile">
+        class="styled-select tabs__tablist--mobile"
+      >
         <select
           ref="selector"
           aria-label="titles"
@@ -17,7 +19,9 @@
             :key="`ui-tab-${_uid}-mob-${index + 1}`"
             :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
             :selected="tab.isActive ? 'selected' : null"
-          >{{ tab.title }}</option>
+          >
+            {{ tab.title }}
+          </option>
         </select>
       </div>
       <div
@@ -28,11 +32,11 @@
       >
         <a
           v-for="(tab, index) in panels"
+          :id="`ui-tab-${_uid}-${index + 1}`"
           ref="tabs"
+          :key="`ui-tab-${_uid}-desk-${index + 1}`"
           :tabindex="tab.isActive ? 0 : -1"
           :aria-selected="tab.isActive"
-          :key="`ui-tab-${_uid}-desk-${index + 1}`"
-          :id="`ui-tab-${_uid}-${index + 1}`"
           :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
           :href="`#ui-tab-${_uid}-panel-${index + 1}`"
           class="tabs__tab"
@@ -43,8 +47,9 @@
     </div>
     <div
       tabindex="0"
-      class="tabs__section">
-      <slot/>
+      class="tabs__section"
+    >
+      <slot />
     </div>
   </div>
 </template>

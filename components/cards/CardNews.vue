@@ -8,7 +8,9 @@
       class="card__thumb card__thumb--zoom"
     />
     <div class="card__inner">
-      <p class="card__meta">{{ meta }}</p>
+      <p class="card__meta">
+        {{ meta }}
+      </p>
       <a :href="href">
         <h3 class="card__header">{{ title }}</h3>
       </a>
@@ -16,11 +18,15 @@
     </div>
     <div
       v-if="cols !== 1"
-      class="card__footer">
+      class="card__footer"
+    >
       <ButtonIcon
         :href="href"
         :aria-label="`Read more about ` + title"
-        class="btn--fullwidth">Read More</ButtonIcon>
+        class="btn--fullwidth"
+      >
+        Read More
+      </ButtonIcon>
     </div>
   </div>
 </template>

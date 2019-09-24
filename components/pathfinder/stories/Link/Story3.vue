@@ -4,7 +4,8 @@
       <ListItem>
         <card-link
           inverted
-          title="Test 1"/>
+          title="Test 1"
+        />
       </ListItem>
       <ListItem>
         <card-link
@@ -15,7 +16,8 @@
       <ListItem>
         <card-link
           inverted
-          title="This is a Longer title over two lines"/>
+          title="This is a Longer title over two lines"
+        />
       </ListItem>
     </div>
   </SectionWrap>

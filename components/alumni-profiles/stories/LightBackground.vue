@@ -1,7 +1,8 @@
 <template>
   <section-wrap
     long
-    bg-color="alt">
+    bg-color="alt"
+  >
     <AlumniProfiles
       name="Julia Gillard AC"
       thumb="https://source.unsplash.com/featured/?portrait"

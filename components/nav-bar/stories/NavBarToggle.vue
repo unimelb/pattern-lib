@@ -4,7 +4,9 @@
     class="nav--toggle"
   >
     <template slot="default">
-      <h3 id="navigation">Navigation</h3>
+      <h3 id="navigation">
+        Navigation
+      </h3>
       <svg
         focusable="false"
         role="presentation"
@@ -12,7 +14,8 @@
       >
         <use
           xmlns:xlink="http://www.w3.org/1999/xlink"
-          xlink:href="#icon-chevron-down" />
+          xlink:href="#icon-chevron-down"
+        />
       </svg>
     </template>
     <template slot="hidden">
@@ -22,16 +25,20 @@
       >
         <a
           class="nav__link"
-          href="">The first link</a>
+          href=""
+        >The first link</a>
         <a
           class="nav__link nav__link--current"
-          href="">Another one</a>
+          href=""
+        >Another one</a>
         <a
           class="nav__link"
-          href="">A different link</a>
+          href=""
+        >A different link</a>
         <a
           class="nav__link"
-          href="">The fourth item</a>
+          href=""
+        >The fourth item</a>
       </nav>
     </template>
   </ToggleBlock>

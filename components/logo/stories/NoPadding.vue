@@ -1,6 +1,6 @@
 <template>
   <div>
-    <logo no-padding/>
+    <logo no-padding />
   </div>
 </template>
 

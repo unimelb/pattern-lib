@@ -2,11 +2,15 @@
   <FocusWrapper
     :color="color"
     :size="size"
-    padded>
+    padded
+  >
     <div
       ref="inPageNavigation"
-      class="in-page-navigation">
-      <h2 class="in-page-navigation__title">{{ title }}:</h2>
+      class="in-page-navigation"
+    >
+      <h2 class="in-page-navigation__title">
+        {{ title }}:
+      </h2>
       <hr class="in-page-navigation__line">
       <div class="in-page-navigation__container">
         <li
@@ -17,18 +21,21 @@
           <a
             :href="`#${data.id}`"
             class="in-page-navigation__link"
-            @click="scrollOnClick">
+            @click="scrollOnClick"
+          >
             {{ data.label }}
             <SvgIcon
               name="chevron-right"
-              class="in-page-navigation__icon"/>
+              class="in-page-navigation__icon"
+            />
           </a>
         </li>
       </div>
       <div
         ref="dropdown"
         :class="classes"
-        class="in-page-navigation__collapsed">
+        class="in-page-navigation__collapsed"
+      >
         <Dropdown
           :values="sections"
           :callback="scrollOnSelect"

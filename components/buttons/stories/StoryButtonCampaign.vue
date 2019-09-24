@@ -1,11 +1,15 @@
 <template>
   <div>
-    <ButtonIcon class="btn--campaign">Campaign Button</ButtonIcon>
+    <ButtonIcon class="btn--campaign">
+      Campaign Button
+    </ButtonIcon>
     <ButtonIcon
       class="btn--campaign"
       href="www.google.com"
       disabled
-    >I am a disabled button</ButtonIcon>
+    >
+      I am a disabled button
+    </ButtonIcon>
   </div>
 </template>
 

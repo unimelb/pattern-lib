@@ -12,7 +12,6 @@
     <Headings />
 
     <LeadContent />
-
   </ContentBlock>
 </template>
 

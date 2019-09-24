@@ -4,7 +4,7 @@
     :aria-multiselectable="solo === 'false' ? 'true' : 'false'"
     class="togglegroup"
   >
-    <slot/>
+    <slot />
   </component>
 </template>
 

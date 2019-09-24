@@ -10,35 +10,41 @@
         >
           <div
             slot="sub-title-1"
-            class="sub-title">
+            class="sub-title"
+          >
             <span>Sub-title 1</span>
           </div>
           <div
             slot="sub-title-2"
-            class="sub-title">
-            <SvgIcon name="calendar"/>
+            class="sub-title"
+          >
+            <SvgIcon name="calendar" />
             <span>March 31 1992</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">
+              aria-label="View details of the event name"
+            >
               View generic details
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
             <a
               href="/"
-              aria-label="View details of the staff name">
+              aria-label="View details of the staff name"
+            >
               View generic staff
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
           </template>
         </CardEvents>
@@ -52,35 +58,41 @@
         >
           <div
             slot="sub-title-1"
-            class="sub-title">
+            class="sub-title"
+          >
             <span>Sub-title 1</span>
           </div>
           <div
             slot="sub-title-2"
-            class="sub-title">
-            <SvgIcon name="calendar"/>
+            class="sub-title"
+          >
+            <SvgIcon name="calendar" />
             <span>March 31 1992</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">
+              aria-label="View details of the event name"
+            >
               View generic details
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
             <a
               href="/"
-              aria-label="View details of the staff name">
+              aria-label="View details of the staff name"
+            >
               View generic staff
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
           </template>
         </CardEvents>
@@ -94,25 +106,29 @@
         >
           <div
             slot="sub-title-1"
-            class="sub-title">
+            class="sub-title"
+          >
             <span>Sub-title 1</span>
           </div>
           <div
             slot="sub-title-2"
-            class="sub-title">
-            <SvgIcon name="calendar"/>
+            class="sub-title"
+          >
+            <SvgIcon name="calendar" />
             <span>March 31 1992</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">
+              aria-label="View details of the event name"
+            >
               View generic details
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10"
+              />
             </a>
           </template>
         </CardEvents>

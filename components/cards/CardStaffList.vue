@@ -12,16 +12,21 @@
         :href="href"
         title="profile link"
         aria-label="Profile position"
-        class="card__header">
+        class="card__header"
+      >
         <h3 class="card__position">{{ position }}</h3>
         <h4 class="card__name">{{ name }}</h4>
       </a>
       <div
         v-if="excerpt"
-        class="card__excerpt">{{ excerpt }}</div>
+        class="card__excerpt"
+      >
+        {{ excerpt }}
+      </div>
       <div
         v-if="renderFooter"
-        class="card__footer">
+        class="card__footer"
+      >
         <a
           v-if="phone"
           :href="'tel:' + phone"
@@ -32,7 +37,8 @@
           <SvgIcon
             name="phone"
             width="15px"
-            height="15px"/>
+            height="15px"
+          />
           {{ phone }}
         </a>
         <a
@@ -45,7 +51,8 @@
           <SvgIcon
             name="envelope"
             width="15px"
-            height="15px"/>
+            height="15px"
+          />
           {{ email }}
         </a>
       </div>

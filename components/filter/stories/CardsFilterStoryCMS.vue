@@ -3,7 +3,8 @@
   <section-wrap bg-color="white">
     <CardsFilter
       :data="cardsData"
-      show-ssr>
+      show-ssr
+    >
       <p>Server-side Code is rended on page load.  Click on Search to filter on data object.</p>
     </CardsFilter>
   </section-wrap>

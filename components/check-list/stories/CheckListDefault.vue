@@ -8,7 +8,8 @@
     </ol>
     <a
       slot="btn"
-      href="/">Continue</a>
+      href="/"
+    >Continue</a>
   </CheckList>
 </template>
 

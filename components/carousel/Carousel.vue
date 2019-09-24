@@ -2,12 +2,13 @@
   <section
     class="carousel"
     aria-roledescription="carousel"
-    aria-label="Stories and events">
+    aria-label="Stories and events"
+  >
     <div
       v-if="stories.length"
       class="carousel__slider"
     >
-      <div class="carousel__prevent-click"/>
+      <div class="carousel__prevent-click" />
       <slider
         ref="slider"
         :options="options"
@@ -20,7 +21,8 @@
           <div
             :style="image[index]"
             :aria-label="slide.altText"
-            class="carousel__image" />
+            class="carousel__image"
+          />
         </slideritem>
       </slider>
     </div>
@@ -30,7 +32,8 @@
       <div class="carousel__progress-bar">
         <div
           :style="{ width: progressBarWidth + '%'}"
-          class="carousel__progress-bar-status"/>
+          class="carousel__progress-bar-status"
+        />
       </div>
       <div class="carousel__panel-container">
         <div
@@ -40,7 +43,8 @@
         >
           <ul
             class="carousel__navigation"
-            role="menu">
+            role="menu"
+          >
             <li
               v-for="(story, index) in storiesData"
               :key="index"
@@ -139,7 +143,8 @@
           :aria-live="!paused ? 'off' : 'polite'"
           class="carousel__content"
           role="navigation"
-          aria-label="Stories">
+          aria-label="Stories"
+        >
           <div class="carousel__story">
             <h2 class="carousel__title">
               <a

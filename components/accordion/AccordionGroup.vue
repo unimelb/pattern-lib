@@ -4,7 +4,7 @@
     :solo="solo"
     :open="open"
   >
-    <slot/>
+    <slot />
   </ToggleGroup>
 </template>
 

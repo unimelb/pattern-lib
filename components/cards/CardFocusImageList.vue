@@ -3,35 +3,42 @@
     :is="element"
     :href="element === 'a' ? href : false"
     :class="classes"
-    class="card card--image-focus">
+    class="card card--image-focus"
+  >
     <h3
       v-if="titleabove === true"
-      :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
+      :class="{'text-italic': hero, 'heading-section': hero}"
+    >{{ title }}</h3>
     <div
       v-if="!progressive"
       :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"
-      class="card__thumb">
+      class="card__thumb"
+    >
       <img
         :src="img"
         :placeholder="progressive ? placeholder : false"
         class="card__thumb"
-        alt="">
+        alt=""
+      >
     </div>
     <progressive-img
       v-if="progressive"
       :src="img"
       :placeholder="progressive ? placeholder : false"
       :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"
-      class="card__thumb"/>
+      class="card__thumb"
+    />
     <div
       :class="{'card__inner--tight': tight}"
-      class="card__inner">
+      class="card__inner"
+    >
       <h3 v-if="titleabove === false">{{ title }}</h3>
-      <slot/>
+      <slot />
       <ButtonIcon
         v-if="element === 'a'"
         element="span"
-        class="btn--fullwidth">{{ title }}</ButtonIcon>
+        class="btn--fullwidth"
+      >{{ title }}</ButtonIcon>
     </div>
   </a>
 </template>

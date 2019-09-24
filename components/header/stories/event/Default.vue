@@ -5,7 +5,8 @@
     sub-title-text="Margaret Lawrence Gallery"
     description-text="20 Nov 10 - 25 Nov 19"
     button-text="Book tickets"
-    button-link="www.unimelb.edu.au"/>
+    button-link="www.unimelb.edu.au"
+  />
 </template>
 
 <script>

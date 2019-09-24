@@ -4,7 +4,8 @@
       <div class="filter__container">
         <label
           for="input-search"
-          hidden> Title </label>
+          hidden
+        > Title </label>
         <input
           id="input-search"
           v-model="searchText"
@@ -19,29 +20,35 @@
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="locations">Location</label>
+              for="locations"
+            >Location</label>
             <DropdownFilter
               id="locations"
               v-model="selectedLocation"
-              :values="filters.locations"/>
+              :values="filters.locations"
+            />
           </div>
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="disciplines">Discipline</label>
+              for="disciplines"
+            >Discipline</label>
             <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"/>
+              :values="filters.disciplines"
+            />
           </div>
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="auditions">Audition Requirement</label>
+              for="auditions"
+            >Audition Requirement</label>
             <DropdownFilter
               id="auditions"
               v-model="selectedAudition"
-              :values="filters.auditions"/>
+              :values="filters.auditions"
+            />
           </div>
         </div>
       </div>
@@ -51,21 +58,26 @@
           :class="animationclass"
           class="filter__button"
           aria-label="Search"
-          @click="filterDataButton">
+          @click="filterDataButton"
+        >
           <SvgIcon
             class="filter__button--icon"
-            name="search" />
+            name="search"
+          />
           <span>Search</span>
         </button>
         <button
           class="filter__button"
           @click="resetSearch"
-        >Reset all</button>
+        >
+          Reset all
+        </button>
       </div>
     </div>
 
     <FilterResultsCount
-      :data="dataFiltered.length" />
+      :data="dataFiltered.length"
+    />
 
     <FilterResults :show="showSSRCode">
       <slot />
@@ -74,11 +86,13 @@
     <FilterResults :show="!showSSRCode">
       <transition-group
         name="fade"
-        tag="div">
+        tag="div"
+      >
         <div
           v-for="(item, index) in dataFiltered"
           :key="index"
-          class="accordion-list">
+          class="accordion-list"
+        >
           <accordion :name="item.name">
             <table class="table table--striped table--tight table--is-compacted">
               <tbody>
@@ -87,27 +101,39 @@
                   <col width="70%">
                 </colgroup>
                 <tr>
-                  <th scope="row">Location</th>
+                  <th scope="row">
+                    Location
+                  </th>
                   <td>{{ item.location.join(', ') }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Semester</th>
+                  <th scope="row">
+                    Semester
+                  </th>
                   <td>{{ item.semester.join(', ') }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Points</th>
+                  <th scope="row">
+                    Points
+                  </th>
                   <td>{{ item.points }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Discipline</th>
+                  <th scope="row">
+                    Discipline
+                  </th>
                   <td>{{ item.discipline }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Audition requirement</th>
+                  <th scope="row">
+                    Audition requirement
+                  </th>
                   <td>{{ item.audition }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Study Abroad</th>
+                  <th scope="row">
+                    Study Abroad
+                  </th>
                   <td>{{ item.abroad }}</td>
                 </tr>
               </tbody>
@@ -117,7 +143,10 @@
             </p>
             <ButtonIcon
               :href="item.buttonLink"
-              size="xsml">{{ item.buttonText }}</ButtonIcon>
+              size="xsml"
+            >
+              {{ item.buttonText }}
+            </ButtonIcon>
           </accordion>
         </div>
       </transition-group>

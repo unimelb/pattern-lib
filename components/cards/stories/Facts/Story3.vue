@@ -2,9 +2,12 @@
 <template>
   <SectionWrap>
     <div class="grid grid--center grid--1col">
-      <ListItem><CardFact
-        :icon="socialMediaIcon"
-        title="Social media reach" /></ListItem>
+      <ListItem>
+        <CardFact
+          :icon="socialMediaIcon"
+          title="Social media reach"
+        />
+      </ListItem>
     </div>
   </SectionWrap>
 </template>

@@ -8,7 +8,8 @@
     <a
       slot="btn"
       class="download"
-      href="/">Download</a>
+      href="/"
+    >Download</a>
   </CheckList>
 </template>
 

@@ -3,8 +3,10 @@
     <div class="section__inner">
       <div class="grid">
         <div class="cell cell--desk-2of3">
-          <h3 class="heading-lead shim-pb1">Featured news</h3>
-          <ContentBlockNews/>
+          <h3 class="heading-lead shim-pb1">
+            Featured news
+          </h3>
+          <ContentBlockNews />
           <a href>View more news
             <svg
               width="15px"
@@ -15,13 +17,16 @@
             >
               <use
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="#icon-chevron-right"/>
+                xlink:href="#icon-chevron-right"
+              />
             </svg>
           </a>
         </div>
         <div class="cell cell--desk-1of3">
-          <h3 class="heading-lead shim-pb1">Upcoming events</h3>
-          <ContentBlockEvent class="bg-alt-darker"/>
+          <h3 class="heading-lead shim-pb1">
+            Upcoming events
+          </h3>
+          <ContentBlockEvent class="bg-alt-darker" />
           <a href>View more events
             <svg
               width="15px"
@@ -32,7 +37,8 @@
             >
               <use
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="#icon-chevron-right"/>
+                xlink:href="#icon-chevron-right"
+              />
             </svg>
           </a>
         </div>

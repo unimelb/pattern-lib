@@ -3,15 +3,18 @@
     <StatsItem
       :icon="icons[0]"
       number="1"
-      meta="in Australia"/>
+      meta="in Australia"
+    />
     <StatsItem
       :icon="icons[1]"
       number="33"
-      meta="in the world"/>
+      meta="in the world"
+    />
     <StatsItem
       :icon="icons[2]"
       number="11"
-      meta="Graduate employability worldwide"/>
+      meta="Graduate employability worldwide"
+    />
   </StatsGroup>
 </template>
 
