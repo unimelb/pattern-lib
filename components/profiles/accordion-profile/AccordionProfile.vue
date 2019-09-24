@@ -38,9 +38,10 @@
       :class="bioClass"
       class="accordion-profile__bio">
       <VideoEmbed
-        v-if="videoApi"
-        :src="videoApi"
+        v-if="video"
+        :src="video"
         :video-label="videoLabel"
+        video-api
         class="accordion-profile__embed"/>
       <p class="accordion-profile__bio-text">{{ bio }}</p>
     </div>
@@ -101,10 +102,6 @@ export default {
     },
     bioClass() {
       return (this.isHidden) ? 'accordion-profile__bio--transition' : '';
-    },
-    // enable js api for youtube video be able to pause.
-    videoApi() {
-      return `${this.video}?enablejsapi=1`;
     },
   },
   methods: {

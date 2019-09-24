@@ -2,7 +2,7 @@
   <div
     :class="classes">
     <iframe
-      :src="src"
+      :src="returnVideoUrlApi"
       :aria-label="videoLabel"
       width="560"
       height="315"
@@ -54,6 +54,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    videoApi: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {
@@ -67,6 +71,12 @@ export default {
         'embed--inset--med': this.medium,
         'embed--inset--sml': this.small,
       };
+    },
+    returnVideoUrlApi() {
+      if (this.videoApi) {
+        return `${this.src}?enablejsapi=1`;
+      }
+      return this.src;
     },
   },
 };
