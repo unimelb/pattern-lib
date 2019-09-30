@@ -69,7 +69,6 @@
     "vue/return-in-computed-property": "error",
     "vue/v-bind-style": "error",
     "vue/v-on-style": "error",
-    "vue/require-default-prop": "off",
     "vue/no-v-html": "off",
     "vue/html-closing-bracket-newline": ["error", {
       "multiline": "never"
