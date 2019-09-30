@@ -12,11 +12,11 @@
         :options="options"
         @slide="slide">
         <slideritem
-          v-for="(slide, index) in stories"
+          v-for="(slideItem, index) in stories"
           :key="index">
           <div
             :style="image[index]"
-            :aria-label="slide.altText"
+            :aria-label="slideItem.altText"
             class="carousel__image" />
         </slideritem>
       </slider>

@@ -50,17 +50,17 @@
               :options="options"
               @slide="slide">
               <slideritem
-                v-for="(slide, index) in items"
+                v-for="(item, index) in items"
                 :key="index"
                 class="media-gallery__item">
                 <div
-                  v-if="slide.type === 'image'"
-                  :aria-label="slide.altText"
-                  :style="{ backgroundImage: `url(${slide.src})` }"
+                  v-if="item.type === 'image'"
+                  :aria-label="item.altText"
+                  :style="{ backgroundImage: `url(${item.src})` }"
                   class="media-gallery__image" />
                 <VideoEmbed
-                  v-if="slide.type === 'video'"
-                  :src="slide.src"
+                  v-if="item.type === 'video'"
+                  :src="item.src"
                   class="media-gallery__embed" />
               </slideritem>
             </slider>

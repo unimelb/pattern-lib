@@ -35,8 +35,8 @@
               {{ item.title }}
             </h4>
             <div
-              v-for="(subTitle, index) in item.subTitles"
-              :key="index">
+              v-for="(subTitle, subIndex) in item.subTitles"
+              :key="subIndex">
               <div class="sidebar__list-sub-title">
                 {{ subTitle.text }}
               </div>
