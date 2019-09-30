@@ -8,6 +8,8 @@ exports[`ArticleWrap should match snapshot 1`] = `
     class="article-wrap__header"
   >
     
+    
+  
   </h1>
    
   <div
@@ -46,7 +48,9 @@ exports[`ArticleWrap should match snapshot 1`] = `
       <p
         class="article-wrap__social-heading"
       >
+        
         Share
+      
       </p>
        
       <!---->

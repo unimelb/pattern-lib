@@ -19,12 +19,16 @@ exports[`CardBioHeader should match snapshot 1`] = `
         class="card__header"
       >
         
+        
+      
       </h3>
        
       <p
         class="card__meta"
       >
-         
+        
+        
+      
       </p>
     </div>
      
