@@ -20,11 +20,10 @@
 <script>
 import StatsGroup from '../StatsGroup.vue';
 import StatsItem from '../StatsItem.vue';
-import SectionWrap from '../../section/SectionWrap.vue';
 import icons from './icons';
 
 export default {
-  components: { SectionWrap, StatsGroup, StatsItem },
+  components: { StatsGroup, StatsItem },
   data: () => ({ icons }),
   decorator: SectionWrap,
   decoratorProps: { bgColor: 'inverted' },

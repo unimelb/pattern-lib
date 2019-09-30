@@ -13,11 +13,10 @@
 
 <script>
 import SocialMediaBar from '../SocialMediaBar.vue';
-import SvgIcon from '../../icons/SvgIcon.vue';
 import SocialMediaBarDoc from './social-media-bar-docs.md';
 
 export default {
-  components: { SocialMediaBar, SvgIcon },
+  components: { SocialMediaBar },
   readme: { custom: SocialMediaBarDoc, source: true, html: true },
 };
 </script>

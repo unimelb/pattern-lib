@@ -16,9 +16,8 @@
 
 <script>
 import SectionTwoCol from '../../SectionTwoCol.vue';
-import FigureWrap from '../../../figure/FigureWrap.vue';
 export default {
-  components: { SectionTwoCol, FigureWrap },
+  components: { SectionTwoCol },
   readme: { source: true, html: true },
 };
 </script>

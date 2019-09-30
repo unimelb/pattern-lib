@@ -21,12 +21,10 @@
 </template>
 
 <script>
-import CardPathfinder from '../../../cards/CardPathfinder.vue';
 import ButtonIcon from '../../../buttons/ButtonIcon.vue';
 
 export default {
   components: {
-    CardPathfinder,
     ButtonIcon,
   },
 };

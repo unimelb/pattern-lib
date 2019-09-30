@@ -4,11 +4,10 @@
 
 <script>
 import Tags from '../Tags.vue';
-import SectionWrap from '../../section/SectionWrap.vue';
 import tags from './tags.md';
 
 export default {
-  components: { Tags, SectionWrap },
+  components: { Tags },
   readme: { custom: tags, source: true, html: false },
   data() {
     return {
