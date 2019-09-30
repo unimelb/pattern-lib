@@ -1,8 +1,7 @@
 <template>
   <SectionWrap
     small
-    bg-color="white"
-  >
+    bg-color="white">
     <h2>Section Heading</h2>
     <p>
       Lorem ipsum dolor sit amet,

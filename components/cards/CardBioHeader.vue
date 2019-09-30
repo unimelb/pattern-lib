@@ -2,8 +2,7 @@
   <div class="card card--division card--division--head card--bdr">
     <div
       :style="{'background-image': `url(${thumb})`}"
-      class="card__thumb"
-    />
+      class="card__thumb" />
     <div class="card__inner ">
       <div class="card__subheader">
         <h3 class="card__header">

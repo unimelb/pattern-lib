@@ -8,8 +8,7 @@
     <div>
       <ButtonIcon
         inverted
-        size="sml"
-      >
+        size="sml">
         Button Example
       </ButtonIcon>
     </div>

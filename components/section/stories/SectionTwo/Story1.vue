@@ -19,8 +19,7 @@
       <FigureWrap>
         <img
           src="https://dummyimage.com/300x200.jpg"
-          alt="alt text goes here"
-        >
+          alt="alt text goes here">
       </FigureWrap>
       <p>Qui rerum laudantium quis hic tempora. Quia suscipit placeat est illo omnis nemo fuga. Nobis suscipit sint odit quidem sit et sed deleniti.</p>
     </div>

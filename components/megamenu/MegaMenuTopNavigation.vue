@@ -2,17 +2,14 @@
   <nav>
     <ul
       class="mega-top"
-      role="menu"
-    >
+      role="menu">
       <li
         v-for="(item, index) in items"
-        :key="index"
-      >
+        :key="index">
         <a
           :href="item.href"
           role="menuitem"
-          class="menu-top__item"
-        >
+          class="menu-top__item">
           {{ item.title }}
         </a>
       </li>

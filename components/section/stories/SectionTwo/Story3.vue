@@ -1,8 +1,7 @@
 <template>
   <SectionTwoCol
     small
-    direction="left"
-  >
+    direction="left">
     <div slot="main">
       <h3 class="heading-section">
         Doloribus in mollitia.
@@ -14,8 +13,7 @@
       <FigureWrap>
         <img
           src="https://dummyimage.com/300x200.jpg"
-          alt="alt text goes here"
-        >
+          alt="alt text goes here">
       </FigureWrap>
     </div>
   </SectionTwoCol>

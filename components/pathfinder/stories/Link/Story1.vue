@@ -4,20 +4,17 @@
       <ListItem>
         <card-link
           inverted
-          title="Ranking and Statistics"
-        />
+          title="Ranking and Statistics" />
       </ListItem>
       <ListItem>
         <card-link
           inverted
-          title="Study"
-        />
+          title="Study" />
       </ListItem>
       <ListItem>
         <card-link
           inverted
-          title="Facts and figures"
-        />
+          title="Facts and figures" />
       </ListItem>
     </div>
   </SectionWrap>

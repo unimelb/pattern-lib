@@ -1,8 +1,7 @@
 <template>
   <Carousel
     :stories="stories"
-    timing="long"
-  />
+    timing="long" />
 </template>
 
 <script>

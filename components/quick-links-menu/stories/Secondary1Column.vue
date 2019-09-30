@@ -3,8 +3,7 @@
     <QuickLinks
       :menu-links="menuLinks"
       :secondary-links="secondaryLinks"
-      :secondary-cols="1"
-    >
+      :secondary-cols="1">
       <div slot="content">
         <h2>Australia's leading university</h2>
         <p class="lead">

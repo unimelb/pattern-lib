@@ -2,55 +2,46 @@
   <ul class="social-list list-reset links-reset">
     <li
       v-if="facebook"
-      :class="{ 'col-facebook': withColors }"
-    >
+      :class="{ 'col-facebook': withColors }">
       <a
         class="social-list__link"
-        href="https://www.facebook.com/unimelb"
-      >
+        href="https://www.facebook.com/unimelb">
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="Facebook"
           class="social-list__icon"
-          name="facebook"
-        />
+          name="facebook" />
         <span class="screenreaders-only">Facebook</span>
       </a>
     </li>
     <li
       v-if="twitter"
-      :class="{ 'col-twitter': withColors }"
-    >
+      :class="{ 'col-twitter': withColors }">
       <a
         class="social-list__link"
-        href="https://twitter.com/unimelb"
-      >
+        href="https://twitter.com/unimelb">
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="Twitter"
           class="social-list__icon"
-          name="twitter"
-        />
+          name="twitter" />
         <span class="screenreaders-only">Twitter</span>
       </a>
     </li>
     <li
       v-if="linkedin"
-      :class="{ 'col-linkedin': withColors }"
-    >
+      :class="{ 'col-linkedin': withColors }">
       <a
         class="social-list__link"
-        href="https://www.linkedin.com/school/university-of-melbourne"
-      >
+        href="https://www.linkedin.com/school/university-of-melbourne">
         <SvgIcon
           :width="iconSize"
           :height="iconSize"
           aria-label="LinkedIn"
           class="social-list__icon"
-          name="linkedin"
-        />
+          name="linkedin" />
         <span class="screenreaders-only">LinkedIn</span>
       </a>
     </li>

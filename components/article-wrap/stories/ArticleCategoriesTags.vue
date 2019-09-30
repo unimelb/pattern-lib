@@ -4,8 +4,7 @@
     :contact="contact"
     :categories="['Sustainability','Tim Flannery', 'Melbourne Sustainable Society', 'Institute']"
     title="MGSE Professoriate Planning Day"
-    type="speech"
-  >
+    type="speech">
     <h2 class="heading-card">
       Opening remarks by Vice-Chancellor Glyn Davis
     </h2>
@@ -15,8 +14,7 @@
     <BlockQuotation
       author="Steve Wozniak"
       border-top
-      border-bottom
-    >
+      border-bottom>
       Never trust a computer you can’t throw out a window.
     </BlockQuotation>
     <p>More recently, through courses including the Master of Clinical Teaching, the clinical teaching model has begun reaching a generation of practising teaching professionals and leaders, as well as helping shape new teachers who are just beginning their classroom careers.</p>

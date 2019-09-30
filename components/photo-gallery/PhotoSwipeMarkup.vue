@@ -4,8 +4,7 @@
     class="pswp"
     tabindex="-1"
     role="dialog"
-    aria-hidden="true"
-  >
+    aria-hidden="true">
     <div class="pswp__bg" />
     <div class="pswp__scroll-wrap">
       <div class="pswp__container">
@@ -18,20 +17,16 @@
           <div class="pswp__counter" />
           <button
             class="pswp__button pswp__button--close"
-            title="Close (Esc)"
-          />
+            title="Close (Esc)" />
           <button
             class="pswp__button pswp__button--share"
-            title="Share"
-          />
+            title="Share" />
           <button
             class="pswp__button pswp__button--fs"
-            title="Toggle fullscreen"
-          />
+            title="Toggle fullscreen" />
           <button
             class="pswp__button pswp__button--zoom"
-            title="Zoom in/out"
-          />
+            title="Zoom in/out" />
           <div class="pswp__preloader">
             <div class="pswp__preloader__icn">
               <div class="pswp__preloader__cut">
@@ -45,12 +40,10 @@
         </div>
         <button
           class="pswp__button pswp__button--arrow--left"
-          title="Previous (arrow left)"
-        />
+          title="Previous (arrow left)" />
         <button
           class="pswp__button pswp__button--arrow--right"
-          title="Next (arrow right)"
-        />
+          title="Next (arrow right)" />
         <div class="pswp__caption">
           <div class="pswp__caption__center" />
         </div>

@@ -1,8 +1,7 @@
 <template>
   <component
     :is="container"
-    :class="`toggleblock${isActive ? ' toggleblock--active': ''}`"
-  >
+    :class="`toggleblock${isActive ? ' toggleblock--active': ''}`">
     <component
       :is="element"
       :id="`${namespace}-header-${index + 1}`"
@@ -11,8 +10,7 @@
       :aria-controls="`${namespace}-panel-${index + 1}`"
       :aria-selected="isActive"
       tabindex="0"
-      @keydown="group ? group.handleKey($event) : handleKey($event)"
-    >
+      @keydown="group ? group.handleKey($event) : handleKey($event)">
       <slot />
     </component>
     <component
@@ -24,8 +22,7 @@
       :tabindex="isActive ? 0 : -1"
       :aria-expanded="isActive"
       :aria-hidden="!isActive"
-      role="region"
-    >
+      role="region">
       <slot name="hidden" />
     </component>
   </component>

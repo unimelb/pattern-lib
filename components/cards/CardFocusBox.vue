@@ -4,8 +4,7 @@
     :color="color"
     :class="classes"
     :size="size"
-    class="card card--focus-box"
-  >
+    class="card card--focus-box">
     <div class="card__inner">
       <svg
         v-if="icon"
@@ -13,8 +12,7 @@
         viewBox="20 0 150 150"
         width="100%"
         height="100%"
-        v-html="icon"
-      />
+        v-html="icon" />
       <slot />
     </div>
   </FocusWrapper>

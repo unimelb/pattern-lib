@@ -1,8 +1,7 @@
 <template>
   <div
     class="page-header__darken--o75 page-header--campaign"
-    style="background-image: url(https://placeimg.com/990/530/arch/1)"
-  >
+    style="background-image: url(https://placeimg.com/990/530/arch/1)">
     <header class="page-header page-header--l1">
       <div class="page-header__inner max">
         <Logo no-padding />
@@ -18,8 +17,7 @@
           </h3>
           <a
             class="btn btn--inverted"
-            href
-          >
+            href>
             <span class="push-icon">
               Call to action
               <svg
@@ -27,8 +25,7 @@
                 height="15px"
                 focusable="false"
                 role="presentation"
-                class="push-icon__icon"
-              >
+                class="push-icon__icon">
                 <use xlink:href="#icon-chevron-right" />
               </svg>
             </span>

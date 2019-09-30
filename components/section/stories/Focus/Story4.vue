@@ -2,14 +2,12 @@
   <main>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop=">
       <CardFocusBox
         element="div"
         compact
         class="card--image-focus--col-brand bg-white"
-        title="Learning and teaching"
-      >
+        title="Learning and teaching">
         <h2 class="text-left">
           Header
         </h2>
@@ -18,15 +16,13 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop=">
       <CardFocusBox
         element="div"
         compact
         color="green"
         class="card--image-focus--col-brand bg-white"
-        title="Learning and teaching"
-      >
+        title="Learning and teaching">
         <h2 class="text-left">
           Header
         </h2>
@@ -35,15 +31,13 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop=">
       <CardFocusBox
         element="div"
         compact
         color="yellow"
         class="card--image-focus--col-brand bg-white"
-        title="Learning and teaching"
-      >
+        title="Learning and teaching">
         <h2 class="text-left">
           Header
         </h2>
@@ -52,15 +46,13 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop=">
       <CardFocusBox
         element="div"
         compact
         color="navy"
         class="card--image-focus--col-brand bg-white"
-        title="Learning and teaching"
-      >
+        title="Learning and teaching">
         <h2 class="text-left">
           Header
         </h2>
@@ -69,15 +61,13 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop=">
       <CardFocusBox
         element="div"
         compact
         color="emerald"
         class="card--image-focus--col-brand bg-white"
-        title="Learning and teaching"
-      >
+        title="Learning and teaching">
         <h2 class="text-left">
           Header
         </h2>

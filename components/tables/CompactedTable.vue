@@ -2,8 +2,7 @@
   <div
     ref="table"
     :class="classes"
-    class="compacted-table"
-  >
+    class="compacted-table">
     <slot />
   </div>
 </template>

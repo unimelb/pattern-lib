@@ -3,8 +3,7 @@
     <in-page-navigation
       color="navy"
       title="on this page"
-      heading-level="h1"
-    />
+      heading-level="h1" />
     <div style="height: 500px;">
       <h1 id="navigation-test1">
         Section1
@@ -17,15 +16,13 @@
     </div>
     <div style="height: 500px;">
       <h1
-        id="navigation-test3"
-      >
+        id="navigation-test3">
         Section3 with a really really really really really really long heading
       </h1>
     </div>
     <div style="height: 500px;">
       <h1
-        id="navigation-test4"
-      >
+        id="navigation-test4">
         Section4 with a really really really really really really really really really really really really long heading
       </h1>
     </div>

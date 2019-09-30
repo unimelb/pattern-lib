@@ -4,23 +4,20 @@
       <figure>
         <div
           :style="`background-image: url('${img}')`"
-          class="welcome__thumb-img"
-        />
+          class="welcome__thumb-img" />
         <figcaption>
           <strong class="welcome__caption-title">{{ name }}</strong>
         </figcaption>
       </figure>
       <p
         v-if="captionText && captionText.length > 0"
-        class="welcome__caption-text"
-      >
+        class="welcome__caption-text">
         {{ captionText }}
       </p>
       <ButtonIcon
         v-if="btnText && btnText.length > 0"
         icon="chevron-right"
-        class="btn--xsml"
-      >
+        class="btn--xsml">
         {{ btnText }}
       </ButtonIcon>
     </div>
@@ -29,8 +26,7 @@
       <img
         :src="signature"
         class="welcome__signature"
-        alt="signature"
-      >
+        alt="signature">
       <p>
         <strong>{{ name }}</strong>
         <br>

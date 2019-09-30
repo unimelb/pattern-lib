@@ -5,8 +5,7 @@
     </ul>
     <p
       v-if="attribution"
-      class="stats-group__attribution"
-    >
+      class="stats-group__attribution">
       {{ attribution }}
     </p>
   </div>

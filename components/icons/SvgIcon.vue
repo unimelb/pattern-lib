@@ -5,8 +5,7 @@
     :viewBox="viewBox"
     :aria-label="name"
     focusable="false"
-    role="img"
-  >
+    role="img">
     <use :xlink:href="'#icon-' + name" />
     <title>{{ name | capitalize }}</title>
     <slot />

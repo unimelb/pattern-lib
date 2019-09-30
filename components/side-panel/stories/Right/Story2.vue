@@ -14,20 +14,17 @@
     <div class="layout__main">
       <div
         id="section1"
-        class="bg-white content-block"
-      >
+        class="bg-white content-block">
         <h2>test content</h2>
       </div>
       <section-wrap
         id="section2"
-        class="bg-alt"
-      >
+        class="bg-alt">
         test content
       </section-wrap>
       <section-wrap
         id="section3"
-        class="bg-white"
-      >
+        class="bg-white">
         test content
       </section-wrap>
     </div>

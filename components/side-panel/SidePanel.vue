@@ -5,19 +5,16 @@
         {{ title }}
         <button
           class="side-panel__trigger"
-          @click="toggleOpen"
-        >
+          @click="toggleOpen">
           <SvgIcon
             width="10"
             height="10"
-            name="close"
-          />
+            name="close" />
         </button>
       </h5>
       <ul
         :class="{'side-panel__nav--closed' : !open}"
-        class="side-panel__nav"
-      >
+        class="side-panel__nav">
         <slot />
       </ul>
     </div>

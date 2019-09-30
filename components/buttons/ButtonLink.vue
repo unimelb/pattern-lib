@@ -2,12 +2,10 @@
   <a
     v-if="element === 'a'"
     :href="href"
-    class="btn"
-  ><slot /></a>
+    class="btn"><slot /></a>
   <button
     v-else-if="element === 'button'"
-    class="btn"
-  >
+    class="btn">
     <slot />
   </button>
 </template>

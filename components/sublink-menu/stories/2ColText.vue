@@ -2,32 +2,27 @@
   <SectionWrap bg-color="white">
     <ListingWrap
       cols="2"
-      center
-    >
+      center>
       <ListItem>
         <SublinkMenu class="sublink-menu--pad">
           <SublinkMenuItem
             slot="menuitems"
-            link="#"
-          >
+            link="#">
             Find an expert or supervisor
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Apply for graduate research
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Graduate research scholarships
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Information for graduate researchers
           </SublinkMenuItem>
         </SublinkMenu>
@@ -40,23 +35,19 @@
           <div class="cell cell--col-1">
             <a
               href="#"
-              class="btn-owner card card--news card--bdr card--bdr-thin"
-            >
+              class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
               <strong
-                class="card__header shim-mt0 shim-pb1"
-              >Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
+                class="card__header shim-mt0 shim-pb1">Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
             </a>
           </div>
           <div class="cell cell--col-2">
             <a
               href="#"
-              class="btn-owner card card--news card--bdr card--bdr-thin"
-            >
+              class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
               <strong
-                class="card__header shim-mt0 shim-pb1"
-              >Growing girls’ interest in STEM for the workforce of the future</strong>
+                class="card__header shim-mt0 shim-pb1">Growing girls’ interest in STEM for the workforce of the future</strong>
             </a>
           </div>
         </div>
@@ -67,23 +58,19 @@
           <div class="cell cell--col-3">
             <a
               href="#"
-              class="btn-owner card card--news card--bdr card--bdr-thin"
-            >
+              class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
               <strong
-                class="card__header shim-mt0 shim-pb1"
-              >Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
+                class="card__header shim-mt0 shim-pb1">Call for submissions for 2018 Science Gallery Melbourne exhibition</strong>
             </a>
           </div>
           <div class="cell cell--col-4">
             <a
               href="#"
-              class="btn-owner card card--news card--bdr card--bdr-thin"
-            >
+              class="btn-owner card card--news card--bdr card--bdr-thin">
               <p class="card__meta shim-mb0">03 Apr 2017</p>
               <strong
-                class="card__header shim-mt0 shim-pb1"
-              >Growing girls’ interest in STEM for the workforce of the future</strong>
+                class="card__header shim-mt0 shim-pb1">Growing girls’ interest in STEM for the workforce of the future</strong>
             </a>
           </div>
         </div>

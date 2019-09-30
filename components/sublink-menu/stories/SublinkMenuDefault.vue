@@ -5,31 +5,26 @@
         <SublinkMenu
           title="A consistent strategy"
           icon="faculty"
-          icon-color="blue"
-        >
+          icon-color="blue">
           a consistent look and feel in our communications
           <SublinkMenuItem
             slot="menuitems"
-            link="#"
-          >
+            link="#">
             Our Brand Story
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
         </SublinkMenu>
@@ -38,31 +33,26 @@
         <SublinkMenu
           title="A consistent tone"
           icon="library"
-          icon-color="green"
-        >
+          icon-color="green">
           a consistent look and feel in our communications
           <SublinkMenuItem
             slot="menuitems"
-            link="#"
-          >
+            link="#">
             Our Brand Story
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
         </SublinkMenu>
@@ -71,25 +61,21 @@
         <SublinkMenu
           title="A consistent look and feel"
           icon="location"
-          icon-color="red"
-        >
+          icon-color="red">
           a consistent look and feel in our communications
           <SublinkMenuItem
             slot="menuitems"
-            link="#"
-          >
+            link="#">
             Our Brand Story
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
-            link="#something"
-          >
+            link="#something">
             Something else
           </SublinkMenuItem>
         </SublinkMenu>

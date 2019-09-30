@@ -3,30 +3,25 @@
     <button
       class="link-icon--vertical link-reset"
       @click.prevent="open"
-      @keypress.13="open"
-    >
+      @keypress.13="open">
       <SvgIcon
         class="link-icon__icon svg"
-        name="search"
-      />
+        name="search" />
       <span class="link-icon__text">Search</span>
     </button>
     <div
       ref="search"
-      class="page-header-search"
-    >
+      class="page-header-search">
       <PageSearchForm ref="form">
         <a
           class="page-header-icon link-icon--close"
           role="button"
           href="#"
           tabindex="0"
-          @click.prevent="close"
-        >
+          @click.prevent="close">
           <SvgIcon
             class="page-header-search__icon--close"
-            name="close"
-          />
+            name="close" />
           Close
         </a>
       </PageSearchForm>

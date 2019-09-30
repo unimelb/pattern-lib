@@ -5,13 +5,11 @@
         color="green"
         size="large"
         semi-opaque
-        padded
-      >
+        padded>
         <StatsItem
           :icon="icon"
           number="11"
-          meta="Graduate employability worldwide"
-        />
+          meta="Graduate employability worldwide" />
       </FocusWrapper>
     </div>
   </SectionWrap>

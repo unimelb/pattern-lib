@@ -3,8 +3,7 @@
     <PageSearch />
     <PageNav
       title="Site Navigation"
-      root="/about"
-    >
+      root="/about">
       <ul>
         <li>
           <a href="/leadership">Leadership</a>

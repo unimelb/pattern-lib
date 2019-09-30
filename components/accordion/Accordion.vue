@@ -1,13 +1,11 @@
 <template>
   <ToggleBlock
     ref="comp"
-    class="accordion"
-  >
+    class="accordion">
     <template slot="default">
       <h2
         class="toggle__trigger"
-        v-html="name"
-      />
+        v-html="name" />
     </template>
     <template slot="hidden">
       <div class="toggleblock__hidden-inner">

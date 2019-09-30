@@ -4,8 +4,7 @@
       v-if="thumb && thumb.length > 0"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"
-      aria-label="Profile Image"
-    />
+      aria-label="Profile Image" />
     <div class="card__inner">
       <h6 class="card__title">
         {{ title }}
@@ -17,28 +16,24 @@
       <button
         v-if="bio"
         class="card__button"
-        @click="[(isHidden = !isHidden), buttonLabel]"
-      >
+        @click="[(isHidden = !isHidden), buttonLabel]">
         {{ label }}
         <SvgIcon
           :name="iconName"
           aria-label="chevron"
           class="card__icon"
           width="10px"
-          height="10px"
-        />
+          height="10px" />
       </button>
     </div>
 
     <transition name="slide-fade">
       <div
         v-show="!isHidden"
-        class="card__bio"
-      >
+        class="card__bio">
         <VideoEmbed
           v-if="video"
-          :src="video"
-        />
+          :src="video" />
         <p>{{ bio }}</p>
       </div>
     </transition>

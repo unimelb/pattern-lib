@@ -1,22 +1,19 @@
 <template>
   <div
     :style="`background-image: url(${img}); background-position-x: ${xPosition}%; background-position-y: ${yPosition}%;`"
-    class="page-campaign"
-  >
+    class="page-campaign">
     <div class="page-campaign__container">
       <h2
         v-if="title"
         :style="`max-width: ${titleWidth};`"
-        :class="['page-campaign__title', bgDark ? 'page-campaign--dark': '']"
-      >
+        :class="['page-campaign__title', bgDark ? 'page-campaign--dark': '']">
         {{ title }}
       </h2>
       <button-icon
         v-if="link && buttonText"
         :href="link"
         :class="[bgDark ? '' : 'btn--cta']"
-        :inverted="bgDark"
-      >
+        :inverted="bgDark">
         {{ buttonText }}
       </button-icon>
     </div>

@@ -8,8 +8,7 @@
     linkedin-link="https://google.com"
     instagram-link="https://google.com"
     vimeo-link="https://google.com"
-    youtube-link="https://google.com"
-  />
+    youtube-link="https://google.com" />
 </template>
 
 <script>

@@ -4,8 +4,7 @@
     enctype="multipart/form-data"
     onsubmit="return false"
     action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form"
-    method="post"
-  >
+    method="post">
     <fieldset class="sq-form-section">
       <legend class="sq-form-section-title">
         Date only
@@ -15,21 +14,18 @@
           <legend class="sq-form-question-title">
             Select a date <abbr
               class="sq-form-required-field"
-              title="required"
-            >*</abbr>
+              title="required">*</abbr>
           </legend>
           <div class="sq-form-question-answer">
             <input
               type="hidden"
               name="q1861725_q1_show"
-              value="dmy"
-            >
+              value="dmy">
             <label for="q1861725_q1_value_d">Day</label>
             <select
               id="q1861725_q1_value_d"
               name="q1861725_q1_value[d]"
-              class="sq-form-field"
-            >
+              class="sq-form-field">
               <option value="--" />
               <option value="1">
                 1
@@ -129,8 +125,7 @@
             <select
               id="q1861725_q1_value_m"
               name="q1861725_q1_value[m]"
-              class="sq-form-field"
-            >
+              class="sq-form-field">
               <option value="--" />
               <option value="1">
                 Jan
@@ -173,8 +168,7 @@
             <select
               id="q1861725_q1_value_y"
               name="q1861725_q1_value[y]"
-              class="sq-form-field"
-            >
+              class="sq-form-field">
               <option value="--" />
               <option value="1900">
                 1900
@@ -780,18 +774,15 @@
             <input
               type="hidden"
               name="q1861725_q1_value[h]"
-              value=""
-            >
+              value="">
             <input
               type="hidden"
               name="q1861725_q1_value[i]"
-              value=""
-            >
+              value="">
             <input
               type="hidden"
               name="q1861725_q1_value[s]"
-              value=""
-            >
+              value="">
           </div>
         </fieldset>
       </div>
@@ -801,8 +792,7 @@
       type="submit"
       name="form_email_1698962_submit"
       value="Submit"
-      class="sq-form-submit"
-    >
+      class="sq-form-submit">
   </form>
 </template>
 

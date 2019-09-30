@@ -2,32 +2,25 @@
   <div>
     <Heading1
       size="xxl"
-      text="Heading1"
-    />
+      text="Heading1" />
     <Heading1
       size="xl"
-      text="Heading1"
-    />
+      text="Heading1" />
     <Heading2
       size="lg"
-      text="Heading2"
-    />
+      text="Heading2" />
     <Heading3
       size="md"
-      text="Heading3"
-    />
+      text="Heading3" />
     <Heading4
       size="sm"
-      text="Heading4"
-    />
+      text="Heading4" />
     <Heading5
       size="xs"
-      text="Heading5"
-    />
+      text="Heading5" />
     <Heading6
       size="xxs"
-      text="Heading6"
-    />
+      text="Heading6" />
   </div>
 </template>
 

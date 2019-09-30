@@ -1,8 +1,7 @@
 <template>
   <div
     :class="className"
-    class="social-media-bar"
-  >
+    class="social-media-bar">
     <div class="social-media-bar__inner">
       <div class="social-media-bar__col">
         <h4 class="social-media-bar__title">
@@ -12,26 +11,22 @@
           <a
             v-if="newsletterLink"
             :href="newsletterLink"
-            class="social-media-bar__link social-media-bar__link--content"
-          >
+            class="social-media-bar__link social-media-bar__link--content">
             <SvgIcon
               name="envelope"
               width="25"
               height="25"
-              class="social-media-bar__icon"
-            />Sign up for e-news
+              class="social-media-bar__icon" />Sign up for e-news
           </a>
           <a
             v-if="blogLink"
             :href="blogLink"
-            class="social-media-bar__link social-media-bar__link--content"
-          >
+            class="social-media-bar__link social-media-bar__link--content">
             <SvgIcon
               name="newspaper"
               width="25"
               height="25"
-              class="social-media-bar__icon"
-            />Read our blog
+              class="social-media-bar__icon" />Read our blog
           </a>
         </div>
       </div>
@@ -47,8 +42,7 @@
           :vimeo-link="vimeoLink"
           :youtube-link="youtubeLink"
           :icon-size="30"
-          class="social-media-bar__social-list"
-        />
+          class="social-media-bar__social-list" />
       </div>
     </div>
   </div>

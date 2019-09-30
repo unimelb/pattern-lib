@@ -1,8 +1,7 @@
 <template>
   <ResponsiveTable>
     <table
-      class="table table--striped table--centered"
-    >
+      class="table table--striped table--centered">
       <thead>
         <tr class="table__row--inverted">
           <th>

@@ -3,8 +3,7 @@
     <div class="page-header-event__inner">
       <h4
         v-if="headerText"
-        class="page-header-event__header"
-      >
+        class="page-header-event__header">
         {{ headerText }}
       </h4>
       <div class="page-header-event__body">
@@ -13,14 +12,12 @@
         </h2>
         <h4
           v-if="subTitleText"
-          class="page-header-event__sub-title"
-        >
+          class="page-header-event__sub-title">
           {{ subTitleText }}
         </h4>
         <p
           v-if="descriptionText"
-          class="page-header-event__description"
-        >
+          class="page-header-event__description">
           {{ descriptionText }}
         </p>
       </div>
@@ -31,8 +28,7 @@
           class="page-header-event__button btn--event"
           size="xsml"
           width="fullwidth"
-          no-icon
-        >
+          no-icon>
           {{ buttonText }}
         </ButtonIcon>
         <SocialListGeneric
@@ -41,8 +37,7 @@
           linkedin-link="www.unimelb.edu.au"
           instagram-link="www.unimelb.edu.au"
           vimeo-link="www.unimelb.edu.au"
-          youtube-link="www.unimelb.edu.au"
-        />
+          youtube-link="www.unimelb.edu.au" />
       </div>
     </div>
   </div>

@@ -15,8 +15,7 @@
         <ButtonIcon
           icon="chevron-right"
           style="margin-top: 1.5rem;"
-          class="btn--xwide"
-        >
+          class="btn--xwide">
           Welcome from the Vice-Chancellor
         </ButtonIcon>
       </div>

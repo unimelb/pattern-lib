@@ -1,8 +1,7 @@
 <template>
   <ListingWrap
     class="listing--links"
-    cols="3"
-  >
+    cols="3">
     <ListItem>
       <a href="https://coursesearch.unimelb.edu.au/undergrad">
         <h3>Undergraduate courses</h3>

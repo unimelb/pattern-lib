@@ -4,8 +4,7 @@
     active="/random-link"
     faculty-name="This is a Faculty name"
     faculty-link="/faculty-link"
-    faculty-width="25.5%"
-  />
+    faculty-width="25.5%" />
 </template>
 
 <script>

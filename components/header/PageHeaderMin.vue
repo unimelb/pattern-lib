@@ -3,13 +3,11 @@
     <div
       :style="{ backgroundImage: image}"
       :class="{'bg-saw-tooth': !image, 'bg-pattern': image}"
-      class="page-header__shape"
-    />
+      class="page-header__shape" />
     <div class="page-header__inner max">
       <logo
         size="md"
-        no-padding
-      />
+        no-padding />
     </div>
   </header>
 </template>

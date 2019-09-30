@@ -5,38 +5,33 @@
       'ql-menu--pad': pad,
       'ql-menu--condensed': condensed
     }"
-    class="grid ql-menu"
-  >
+    class="grid ql-menu">
     <div class="cell cell--desk-2of3 ql-menu__content">
       <slot name="content" />
       <div
         v-if="secondaryLinks && secondaryLinks.length > 0"
         :class="{[`ql-menu__secondary--2col`]: secondaryCols === 2}"
-        class="ql-menu__secondary"
-      >
+        class="ql-menu__secondary">
         <QuickLinksSecondaryItem
           v-for="item in secondaryLinks"
           :key="item.id"
           :href="item.href"
           :icon="item.icon"
           :title="item.title"
-          class="cell"
-        />
+          class="cell" />
       </div>
     </div>
     <div class="cell cell--desk-1of3">
       <nav
         v-if="menuLinks.length > 0"
-        class="ql-menu__nav"
-      >
+        class="ql-menu__nav">
         <slot name="menu-header" />
         <QuickLinksMenuItem
           v-for="item in menuLinks"
           :key="item.id"
           :href="item.href"
           :title="item.title"
-          :truncate="item.truncate"
-        />
+          :truncate="item.truncate" />
       </nav>
     </div>
   </div>

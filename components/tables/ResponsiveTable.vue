@@ -2,12 +2,10 @@
   <div
     ref="table"
     :class="classes"
-    class="responsive-table"
-  >
+    class="responsive-table">
     <div
       class="responsive-table__inner"
-      @scroll="handleScroll"
-    >
+      @scroll="handleScroll">
       <slot />
     </div>
   </div>

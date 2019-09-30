@@ -1,8 +1,7 @@
 <template>
   <div
     class="page-header__darken--o50 page-header--campaign"
-    style="background-image: url(https://placeimg.com/990/530/arch/1)"
-  >
+    style="background-image: url(https://placeimg.com/990/530/arch/1)">
     <header class="page-header page-header--l1 page-header--no-logo">
       <div class="page-header--center">
         <div class="max max--xsml text-center shim-pb2">

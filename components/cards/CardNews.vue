@@ -5,8 +5,7 @@
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="title"
-      class="card__thumb card__thumb--zoom"
-    />
+      class="card__thumb card__thumb--zoom" />
     <div class="card__inner">
       <p class="card__meta">
         {{ meta }}
@@ -18,13 +17,11 @@
     </div>
     <div
       v-if="cols !== 1"
-      class="card__footer"
-    >
+      class="card__footer">
       <ButtonIcon
         :href="href"
         :aria-label="`Read more about ` + title"
-        class="btn--fullwidth"
-      >
+        class="btn--fullwidth">
         Read More
       </ButtonIcon>
     </div>

@@ -11,8 +11,7 @@
         :data-title="image.title"
         :data-thumb="image.msrc"
         :data-size="image.size"
-        :data-thumb-height="image.thumbHeight"
-      >
+        :data-thumb-height="image.thumbHeight">
     </PhotoGallery>
   </SectionWrap>
 </template>

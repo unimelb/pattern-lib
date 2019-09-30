@@ -4,40 +4,35 @@
       <ListItem>
         <CardImage
           compact
-          title="Growing esteem"
-        >
+          title="Growing esteem">
           Find out about our strategic journey and where we're headed.
         </CardImage>
       </ListItem>
       <ListItem>
         <CardImage
           compact
-          title="Melbourne model"
-        >
+          title="Melbourne model">
           Check out how our degrees are structured to give our students flexibility and focus.
         </CardImage>
       </ListItem>
       <ListItem>
         <CardImage
           compact
-          title="Our structure"
-        >
+          title="Our structure">
           this is a test of the content
         </CardImage>
       </ListItem>
       <ListItem>
         <CardImage
           compact
-          title="Governance"
-        >
+          title="Governance">
           this is a test of the content
         </CardImage>
       </ListItem>
       <ListItem>
         <CardImage
           compact
-          title="Annual reports"
-        >
+          title="Annual reports">
           See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management.
         </CardImage>
       </ListItem>

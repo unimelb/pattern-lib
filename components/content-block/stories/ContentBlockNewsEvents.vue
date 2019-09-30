@@ -13,12 +13,10 @@
               height="15px"
               focusable="false"
               role="presentation"
-              class="push-icon__icon"
-            >
+              class="push-icon__icon">
               <use
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="#icon-chevron-right"
-              />
+                xlink:href="#icon-chevron-right" />
             </svg>
           </a>
         </div>
@@ -33,12 +31,10 @@
               height="15px"
               focusable="false"
               role="presentation"
-              class="push-icon__icon"
-            >
+              class="push-icon__icon">
               <use
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                xlink:href="#icon-chevron-right"
-              />
+                xlink:href="#icon-chevron-right" />
             </svg>
           </a>
         </div>

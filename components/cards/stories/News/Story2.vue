@@ -7,26 +7,22 @@
           thumb="https://via.placeholder.com/400x200"
           title="Test 1"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
-            class="sub-title"
-          >
+            class="sub-title">
             <span>Sub-title 1</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View article"
-            >
+              aria-label="View article">
               View article
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"
-              />
+                height="10" />
             </a>
           </template>
         </CardNewsTag>
@@ -37,26 +33,22 @@
           thumb="https://via.placeholder.com/800x400"
           title="Lorem ipsum dolor sit amet, consectetur"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
-            class="sub-title"
-          >
+            class="sub-title">
             <span>Sub-title 1</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View article"
-            >
+              aria-label="View article">
               View article
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"
-              />
+                height="10" />
             </a>
           </template>
         </CardNewsTag>
@@ -67,26 +59,22 @@
           thumb="https://via.placeholder.com/800x600"
           title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magni natus quas placeat adipisci optio libero quibusdam vitae nobis."
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
-            class="sub-title"
-          >
+            class="sub-title">
             <span>Sub-title 1</span>
           </div>
           <template slot="links">
             <a
               href="/"
-              aria-label="View article"
-            >
+              aria-label="View article">
               View article
               <SvgIcon
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"
-              />
+                height="10" />
             </a>
           </template>
         </CardNewsTag>

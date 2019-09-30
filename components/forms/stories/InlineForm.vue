@@ -6,17 +6,14 @@
         <input
           id="f_q0"
           type="search"
-          placeholder="Don't use the placeholder as a label!"
-        >
+          placeholder="Don't use the placeholder as a label!">
       </span>
       <button
         class="form--inline__button"
-        aria-label="Search"
-      >
+        aria-label="Search">
         <SvgIcon
           class="form--inline__svg"
-          name="search"
-        />
+          name="search" />
       </button>
     </div>
     <label for="f_eml0">Email</label>
@@ -26,13 +23,11 @@
           id="f_eml0"
           aria-label="Email"
           type="email"
-          placeholder="jane@example.com"
-        >
+          placeholder="jane@example.com">
       </span>
       <button
         class="form--inline__button form--inline__button--text"
-        aria-label="Submit"
-      >
+        aria-label="Submit">
         Submit!
       </button>
     </div>

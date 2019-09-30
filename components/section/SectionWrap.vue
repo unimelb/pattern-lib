@@ -5,8 +5,7 @@
     :src="progressive ? bgImage : false"
     :class="classes"
     :style="{ backgroundImage: bgImage && !progressive ? `url(${bgImage})` : '' }"
-    class="section"
-  >
+    class="section">
     <div
       :class="{
         'section__inner--sml': small,
@@ -14,8 +13,7 @@
         'section__inner--short': short,
         'section__inner--nopad': nopad
       }"
-      class="section__inner"
-    >
+      class="section__inner">
       <slot />
     </div>
   </component>

@@ -1,8 +1,7 @@
 <template>
   <div
     class="page-header__darken--o50"
-    style="background-image: url(https://placeimg.com/990/530/arch/1)"
-  >
+    style="background-image: url(https://placeimg.com/990/530/arch/1)">
     <header class="page-header page-header--l2">
       <div class="page-header__inner max">
         <Logo no-padding />

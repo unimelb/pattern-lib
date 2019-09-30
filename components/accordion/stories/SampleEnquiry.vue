@@ -14,8 +14,7 @@
         <template slot="trigger">
           <ButtonIcon
             element="span"
-            class="btn--secondary"
-          >
+            class="btn--secondary">
             Enquire within!
           </ButtonIcon>
         </template>

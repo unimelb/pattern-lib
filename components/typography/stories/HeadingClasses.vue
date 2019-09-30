@@ -2,8 +2,7 @@
   <div>
     <div
       v-for="c in classes"
-      :key="c"
-    >
+      :key="c">
       <h1 :class="c">
         "{{ c }}" on &lt;h1&gt;
       </h1>

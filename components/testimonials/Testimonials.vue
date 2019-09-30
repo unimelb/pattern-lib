@@ -3,23 +3,20 @@
     <FocusWrapper
       :size="size"
       color="navy"
-      semi-opaque
-    >
+      semi-opaque>
       <div class="testimonials">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="name"
           class="testimonials__img"
-          role="img"
-        />
+          role="img" />
         <div class="testimonials__info">
           <BlockQuotation
             :author="author"
             :sub-cite="post"
             small
             large-quotes
-            class="testimonials__quotation"
-          >
+            class="testimonials__quotation">
             {{ testimonials }}
           </BlockQuotation>
         </div>

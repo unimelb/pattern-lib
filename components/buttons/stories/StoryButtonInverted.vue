@@ -6,8 +6,7 @@
     <ButtonIcon
       href="www.google.com"
       inverted
-      disabled
-    >
+      disabled>
       I am a disabled button
     </ButtonIcon>
   </div>

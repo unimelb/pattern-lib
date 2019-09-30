@@ -2,8 +2,7 @@
   <div>
     <ModalDialog
       title="Register your details"
-      trigger="Enter the competition"
-    >
+      trigger="Enter the competition">
       <form class="form">
         <label>
           E-mail
@@ -12,8 +11,7 @@
               tabindex="1"
               type="email"
               name="f[email]"
-              placeholder="jane@example.com"
-            >
+              placeholder="jane@example.com">
           </div>
         </label>
         <fieldset>
@@ -23,22 +21,19 @@
                 tabindex="2"
                 type="checkbox"
                 name="f[acceptance]"
-                value="y"
-              >
+                value="y">
               I agree with the <a href="/tandc">terms &amp; conditions.</a>
             </label>
           </p>
         </fieldset>
         <input
           tabindex="3"
-          type="submit"
-        >
+          type="submit">
       </form>
     </ModalDialog>
     <ModalDialog
       title="Another modal dialog"
-      trigger="Another modal dialog"
-    >
+      trigger="Another modal dialog">
       <p>This one just has straight content, no forms to be had.</p>
       <ButtonIcon size="xsml">
         But it does have a child component

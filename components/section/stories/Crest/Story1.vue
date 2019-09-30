@@ -2,8 +2,7 @@
   <SectionWrap
     class="text-center"
     bg-color="inverted"
-    bg-image="https://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png"
-  >
+    bg-image="https://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png">
     <h3 class="heading-section">
       Our Vision
     </h3>

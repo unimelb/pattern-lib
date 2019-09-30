@@ -1,8 +1,7 @@
 <template>
   <ToggleBlock
     ref="container"
-    class="toggleblock--mobile"
-  >
+    class="toggleblock--mobile">
     <template slot="default">
       <slot />
     </template>
@@ -10,8 +9,7 @@
       <slot name="hidden" />
       <a
         class="toggleblock__footer"
-        @click="toggle"
-      >Close panel</a>
+        @click="toggle">Close panel</a>
     </template>
   </ToggleBlock>
 </template>

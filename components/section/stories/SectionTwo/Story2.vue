@@ -11,8 +11,7 @@
       <FigureWrap>
         <img
           src="https://dummyimage.com/300x200.jpg"
-          alt="test"
-        >
+          alt="test">
       </FigureWrap>
     </div>
   </SectionTwoCol>

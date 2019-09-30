@@ -1,14 +1,12 @@
 <template>
   <transition
     name="fade"
-    mode="out-in"
-  >
+    mode="out-in">
     <div
       v-show="isActive"
       :id="`${namespace}-panel-${index + 1}`"
       class="tabs__panel max"
-      role="tabpanel"
-    >
+      role="tabpanel">
       <slot />
     </div>
   </transition>

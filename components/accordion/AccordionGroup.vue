@@ -2,8 +2,7 @@
   <ToggleGroup
     ref="toggle"
     :solo="solo"
-    :open="open"
-  >
+    :open="open">
     <slot />
   </ToggleGroup>
 </template>

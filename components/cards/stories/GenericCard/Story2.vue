@@ -4,20 +4,17 @@
       <ListItem>
         <GenericCard
           :cols="3"
-          title="Test 1"
-        />
+          title="Test 1" />
       </ListItem>
       <ListItem>
         <GenericCard
           :cols="3"
-          title="Test 1"
-        />
+          title="Test 1" />
       </ListItem>
       <ListItem>
         <GenericCard
           :cols="3"
-          title="Test 1"
-        />
+          title="Test 1" />
       </ListItem>
     </div>
   </SectionWrap>

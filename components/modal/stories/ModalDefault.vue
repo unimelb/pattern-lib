@@ -1,8 +1,7 @@
 <template>
   <ModalDialog
     title="Register your details"
-    trigger="Enter the competition"
-  >
+    trigger="Enter the competition">
     <form class="form">
       <label>
         E-mail
@@ -11,8 +10,7 @@
             tabindex="1"
             type="email"
             name="f[email]"
-            placeholder="jane@example.com"
-          >
+            placeholder="jane@example.com">
         </div>
       </label>
       <label>
@@ -22,8 +20,7 @@
             tabindex="2"
             type="text"
             name="f[text1]"
-            placeholder="Jane"
-          >
+            placeholder="Jane">
         </div>
       </label>
       <label>
@@ -33,8 +30,7 @@
             tabindex="3"
             type="text"
             name="f[text2]"
-            placeholder="Example"
-          >
+            placeholder="Example">
         </div>
       </label>
       <p>
@@ -43,15 +39,13 @@
             tabindex="4"
             type="checkbox"
             name="f[acceptance]"
-            value="y"
-          >
+            value="y">
           I agree with the <a href="/tandc">terms &amp; conditions.</a>
         </label>
       </p>
       <input
         tabindex="5"
-        type="submit"
-      >
+        type="submit">
     </form>
   </ModalDialog>
 </template>

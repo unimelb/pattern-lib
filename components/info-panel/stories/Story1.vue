@@ -5,8 +5,7 @@
         <ListItem>
           <InfoPanel
             icon-name="calendar"
-            title="When"
-          >
+            title="When">
             <p class="info-panel__text">
               19th May 2018
             </p>
@@ -15,12 +14,10 @@
         <ListItem>
           <InfoPanel
             icon-name="jobs"
-            title="Further information"
-          >
+            title="Further information">
             <a
               href="/"
-              target="_blank"
-            >
+              target="_blank">
               Melbourne Recital Centre
             </a>
           </InfoPanel>
@@ -28,8 +25,7 @@
         <ListItem>
           <InfoPanel
             icon-name="location"
-            title="Location"
-          >
+            title="Location">
             <p class="info-panel__text">
               Type: Concert
             </p>
@@ -48,8 +44,7 @@
         <ListItem>
           <InfoPanel
             icon-name="calendar"
-            title="When"
-          >
+            title="When">
             <p class="info-panel__text">
               19th May 2018
             </p>
@@ -58,12 +53,10 @@
         <ListItem>
           <InfoPanel
             icon-name="jobs"
-            title="Further information"
-          >
+            title="Further information">
             <a
               href="/"
-              target="_blank"
-            >
+              target="_blank">
               Melbourne Recital Centre
             </a>
           </InfoPanel>
@@ -71,8 +64,7 @@
         <ListItem>
           <InfoPanel
             icon-name="location"
-            title="Location"
-          >
+            title="Location">
             <p class="info-panel__text">
               Type: Concert
             </p>
@@ -87,8 +79,7 @@
         <ListItem>
           <InfoPanel
             icon-name="location"
-            title="Location"
-          >
+            title="Location">
             <p class="info-panel__text">
               Type: Concert
             </p>

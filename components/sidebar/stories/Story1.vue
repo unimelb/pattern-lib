@@ -6,8 +6,7 @@
         title="Event information"
         title-icon="info"
         button-text="Book tickets"
-        button-link="www.unimelb.edu.au"
-      />
+        button-link="www.unimelb.edu.au" />
     </div>
   </section-wrap>
 </template>

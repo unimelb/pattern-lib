@@ -3,19 +3,16 @@
     <select
       :id="id"
       v-model="selectedOption"
-      @change="emitEvent"
-    >
+      @change="emitEvent">
       <option
         selected
-        value=""
-      >
+        value="">
         Show all
       </option>
       <option
         v-for="(value, index) in values"
         :key="index"
-        :value="value.value || value"
-      >
+        :value="value.value || value">
         {{ value.label || value }}
       </option>
     </select>

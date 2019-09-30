@@ -1,8 +1,7 @@
 <template>
   <BlockQuotation
     author="Steve Wozniak"
-    sub-cite="Lorem Ipsum"
-  >
+    sub-cite="Lorem Ipsum">
     Never trust a computer you can’t throw out a small window.
   </BlockQuotation>
 </template>

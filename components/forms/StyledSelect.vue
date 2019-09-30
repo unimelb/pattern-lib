@@ -2,8 +2,7 @@
   <div :id="null">
     <select
       :id="id"
-      :class="extraclasses"
-    >
+      :class="extraclasses">
       <slot />
     </select>
   </div>

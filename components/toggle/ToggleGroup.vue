@@ -2,8 +2,7 @@
   <component
     :is="container"
     :aria-multiselectable="solo === 'false' ? 'true' : 'false'"
-    class="togglegroup"
-  >
+    class="togglegroup">
     <slot />
   </component>
 </template>

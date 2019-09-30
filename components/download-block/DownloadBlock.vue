@@ -1,14 +1,12 @@
 <template>
   <a
     :href="href"
-    class="download-block btn-owner"
-  >
+    class="download-block btn-owner">
     <div class="download-block__thumb">
       <img
         :src="img"
         class="download-block__img"
-        alt=""
-      >
+        alt="">
     </div>
     <div class="download-block__inner">
       <h3>{{ header }}</h3>

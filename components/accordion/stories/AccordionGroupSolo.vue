@@ -18,8 +18,7 @@
       <Accordion name="Magic">
         <ButtonIcon
           size="xsml"
-          class="shim-mb1"
-        >
+          class="shim-mb1">
           I am a child component
         </ButtonIcon>
         <h3>As one of the world’s leading universities, we aspire to build on our distinguished traditions and create an innovative future.</h3>

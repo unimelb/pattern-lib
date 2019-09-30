@@ -3,15 +3,13 @@
     <FocusWrapper
       :size="size"
       color="navy"
-      semi-opaque
-    >
+      semi-opaque>
       <div class="alumni">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="name"
           class="alumni__img"
-          role="img"
-        />
+          role="img" />
         <div class="alumni__info">
           <p class="alumni__title">
             Alumni profile

@@ -4,17 +4,14 @@
       <Logo no-padding />
       <div
         v-if="entity"
-        class="page-header__entity"
-      >
+        class="page-header__entity">
         <p
           class="page-header__entity__main"
-          v-html="entity"
-        />
+          v-html="entity" />
         <p
           v-if="entitySub"
           class="page-header__entity__sub"
-          v-html="entitySub"
-        />
+          v-html="entitySub" />
       </div>
       <h1 class="page-header__heading">
         {{ title }}
@@ -22,8 +19,7 @@
     </div>
     <div
       :style="{ backgroundImage: `url(${img})` }"
-      class="page-header__img page-header__aperture"
-    />
+      class="page-header__img page-header__aperture" />
   </header>
 </template>
 

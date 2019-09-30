@@ -2,36 +2,30 @@
   <div class="thumbnails">
     <div
       :class="thumbnailColumnClass"
-      class="thumbnails__container"
-    >
+      class="thumbnails__container">
       <div
         v-for="(item, index) in items"
         :key="index"
         :class="thumbnailClass"
-        class="thumbnails__item"
-      >
+        class="thumbnails__item">
         <div
           :class="thumbnailOpenClass"
           tabindex="0"
           @click="useOverlay && callback(index)"
-          @keydown.13="callback(index)"
-        >
+          @keydown.13="callback(index)">
           <div
             v-if="item.type === 'image'"
             :aria-label="item.altText"
             :style="{ backgroundImage: `url(${item.src})` }"
-            class="thumbnails__image"
-          />
+            class="thumbnails__image" />
 
           <div
             v-if="item.type === 'video'"
-            class="thumbnails__video"
-          >
+            class="thumbnails__video">
             <VideoEmbed
               :src="item.src"
               :class="embedClass"
-              class="thumbnails__video-embed"
-            />
+              class="thumbnails__video-embed" />
           </div>
         </div>
 

@@ -5,8 +5,7 @@
       <ListItem>
         <CardFact
           :icon="socialMediaIcon"
-          title="Social media reach"
-        />
+          title="Social media reach" />
       </ListItem>
     </div>
   </SectionWrap>

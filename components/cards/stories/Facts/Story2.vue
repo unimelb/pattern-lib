@@ -5,94 +5,81 @@
       <ListItem>
         <CardFact
           :icon="accomodationIcon"
-          title="Accomodation"
-        />
+          title="Accomodation" />
       </ListItem>
     </div>
     <div class="grid grid--center grid--2col">
       <ListItem>
         <CardFact
           :icon="bioDiversityIcon"
-          title="Biodiversity"
-        />
+          title="Biodiversity" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="buildingIcon"
-          title="Building"
-        />
+          title="Building" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="carbonIcon"
           sml-header
           title="Carbon Reduction Pathways"
-          meta="the header has card__header--sml class"
-        />
+          meta="the header has card__header--sml class" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="citationIcon"
           sml-header
           title="Citation"
-          meta="the header has card__header--sml class"
-        />
+          meta="the header has card__header--sml class" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="facilityIcon"
-          title="Facility Funding"
-        />
+          title="Facility Funding" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="grantsIcon"
-          title="Grants"
-        />
+          title="Grants" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="groupIcon"
           sml-header
           title="Group"
-          meta="the header has card__header--sml class"
-        />
+          meta="the header has card__header--sml class" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="internationalIcon"
           sml-header
           title="International Students"
-          meta="the header has card__header--sml class"
-        />
+          meta="the header has card__header--sml class" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="medalIcon"
-          title="Medal"
-        />
+          title="Medal" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="phdIcon"
-          title="PhD Completions"
-        />
+          title="PhD Completions" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="socialMediaIcon"
           sml-header
           title="Social Media"
-          meta="the header has card__header--sml class"
-        />
+          meta="the header has card__header--sml class" />
       </ListItem>
       <ListItem>
         <CardFact
           :icon="solarPowerIcon"
           sml-header
           title="Solar Power"
-          meta="the header has card__header--sml class"
-        />
+          meta="the header has card__header--sml class" />
       </ListItem>
     </div>
   </SectionWrap>

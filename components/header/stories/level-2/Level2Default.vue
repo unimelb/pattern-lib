@@ -2,8 +2,7 @@
   <PageHeader
     :level="2"
     title="Strategy and governance"
-    img="https://placeimg.com/990/530/arch/1"
-  />
+    img="https://placeimg.com/990/530/arch/1" />
 </template>
 
 <script>

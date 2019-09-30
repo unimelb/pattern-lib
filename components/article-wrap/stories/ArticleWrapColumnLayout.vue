@@ -4,11 +4,9 @@
     :contact="contact"
     title="MGSE Professoriate Planning Day"
     type="speech"
-    column-layout
-  >
+    column-layout>
     <p
-      class="lead"
-    >
+      class="lead">
       Thank you Johanna. It is a great pleasure to be here, and I am honoured to ask to start off a day of serious discussions.
     </p>
     <p>I’m conscious of what an important time this is with the departure of an outstanding leader in Professor Field Rickards. His contribution in 13 years as Dean (and indeed 43 years at the University) includes the transformation of the Faculty of Education into the MGSE and the reorganisation of professional teacher education at Melbourne, which has resulted in the school achieving stellar international rankings.</p>
@@ -16,8 +14,7 @@
     <BlockQuotation
       author="Steve Wozniak"
       border-top
-      border-bottom
-    >
+      border-bottom>
       Never trust a computer you can’t throw out a window.
     </BlockQuotation>
     <p>More recently, through courses including the Master of Clinical Teaching, the clinical teaching model has begun reaching a generation of practising teaching professionals and leaders, as well as helping shape new teachers who are just beginning their classroom careers.</p>

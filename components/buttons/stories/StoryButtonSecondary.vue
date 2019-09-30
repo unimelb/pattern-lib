@@ -6,8 +6,7 @@
     <ButtonIcon
       class="btn--secondary"
       href="www.google.com"
-      disabled
-    >
+      disabled>
       I am a disabled button
     </ButtonIcon>
   </div>

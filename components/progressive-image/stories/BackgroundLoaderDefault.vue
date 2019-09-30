@@ -2,8 +2,7 @@
   <SectionWrap
     small
     progressive
-    bg-image="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg"
-  >
+    bg-image="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg">
     <CardFocusBox>
       <h3 class="heading-section">
         Heading

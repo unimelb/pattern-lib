@@ -4,15 +4,13 @@
       <div class="filter__container">
         <label
           for="input-search"
-          hidden
-        > Title </label>
+          hidden> Title </label>
         <input
           id="input-search"
           v-model="searchText"
           class="filter__input"
           type="search"
-          placeholder="Type to search title"
-        >
+          placeholder="Type to search title">
       </div>
 
       <div class="filter__container">
@@ -20,35 +18,29 @@
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="school"
-            >School</label>
+              for="school">School</label>
             <DropdownFilter
               id="school"
               v-model="selectedSchool"
-              :values="filters.schools"
-            />
+              :values="filters.schools" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="disciplines"
-            >Discipline</label>
+              for="disciplines">Discipline</label>
             <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"
-            />
+              :values="filters.disciplines" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="performances"
-            >Performance type</label>
+              for="performances">Performance type</label>
             <DropdownFilter
               id="performances"
               v-model="selectedPerformance"
-              :values="filters.performances"
-            />
+              :values="filters.performances" />
           </div>
         </div>
       </div>
@@ -58,26 +50,22 @@
           :class="animationclass"
           class="filter__button"
           aria-label="Search"
-          @click="filterDataButton"
-        >
+          @click="filterDataButton">
           <SvgIcon
             class="filter__button--icon"
-            name="search"
-          />
+            name="search" />
           <span>Search</span>
         </button>
         <button
           class="filter__button"
-          @click="resetSearch"
-        >
+          @click="resetSearch">
           Reset all
         </button>
       </div>
     </div>
 
     <FilterResultsCount
-      :data="dataFiltered.length"
-    />
+      :data="dataFiltered.length" />
 
     <FilterResults :show="showSSRCode">
       <slot />
@@ -87,26 +75,22 @@
       <div class="grid grid--3col">
         <ListItem
           v-for="(item, index) in dataFiltered"
-          :key="index"
-        >
+          :key="index">
           <GenericCard
             :cols="3"
             :thumb="item.img_url"
             :title="item.title"
             :href="item.link"
-            :excerpt="item.description"
-          >
+            :excerpt="item.description">
             <div
               slot="sub-title-1"
-              class="sub-title"
-            >
+              class="sub-title">
               <SvgIcon name="info" />
               <span>{{ item.performance.join(', ') }}</span>
             </div>
             <div
               slot="sub-title-2"
-              class="sub-title"
-            >
+              class="sub-title">
               <SvgIcon name="calendar" />
               <span>{{ item.start_time }}</span>
             </div>
@@ -117,8 +101,7 @@
                   class="link-icon"
                   name="chevron-right"
                   width="10"
-                  height="10"
-                />
+                  height="10" />
               </a>
             </template>
           </GenericCard>

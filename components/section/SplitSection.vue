@@ -1,39 +1,32 @@
 <template>
   <section
     :class="{ 'split-section--withquote': quote }"
-    class="split-section"
-  >
+    class="split-section">
     <div
       :class="{ 'split-section__side--with-image': imageLeft }"
       :style="{ backgroundImage: imageLeft ? `url(${bgImage})` : '' }"
-      class="split-section__side"
-    >
+      class="split-section__side">
       <SplitSectionQuote
         v-if="quote && imageLeft"
         :quote="quote"
-        :cite="cite"
-      />
+        :cite="cite" />
       <div
         v-if="imageRight"
-        class="split-section__inner"
-      >
+        class="split-section__inner">
         <slot>default left text</slot>
       </div>
     </div>
     <div
       :class="{ 'split-section__side--with-image': imageRight }"
       :style="{ backgroundImage: imageRight ? `url(${bgImage})` : '' }"
-      class="split-section__side"
-    >
+      class="split-section__side">
       <SplitSectionQuote
         v-if="quote && imageRight"
         :quote="quote"
-        :cite="cite"
-      />
+        :cite="cite" />
       <div
         v-if="imageLeft"
-        class="split-section__inner"
-      >
+        class="split-section__inner">
         <slot>default right text</slot>
       </div>
     </div>

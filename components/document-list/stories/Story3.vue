@@ -6,8 +6,7 @@
           <figure>
             <img
               src="https://picsum.photos/300/400?gravity=center"
-              alt="alt text goes here"
-            >
+              alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
         </a>
@@ -17,8 +16,7 @@
           <figure>
             <img
               src="https://picsum.photos/300/400?gravity=center"
-              alt="alt text goes here"
-            >
+              alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
         </a>
@@ -28,8 +26,7 @@
           <figure>
             <img
               src="https://picsum.photos/300/400?gravity=center"
-              alt="alt text goes here"
-            >
+              alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
         </a>

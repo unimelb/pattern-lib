@@ -5,8 +5,7 @@
       <input
         id="t1"
         type="text"
-        placeholder="Text…"
-      >
+        placeholder="Text…">
     </div>
 
     <label>

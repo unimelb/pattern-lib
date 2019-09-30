@@ -2,25 +2,21 @@
   <section-wrap
     small
     short
-    bg-color="white"
-  >
+    bg-color="white">
     <div>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.</p>
       <figure-wrap caption="embed test">
         <img
           src="https://picsum.photos/800/400?random&gravity=center"
-          alt="alt text goes here"
-        >
+          alt="alt text goes here">
       </figure-wrap>
       <p>Molestiae accusantium ducimus tempora delectus minima mollitia quia dicta alias. Fugiat magnam consequatur voluptatem sunt. Nesciunt est occaecati possimus quis iure architecto sunt.</p>
       <figure-wrap
         fill
-        caption="embed test"
-      >
+        caption="embed test">
         <img
           src="https://picsum.photos/820/400?random&gravity=center"
-          alt="alt text goes here"
-        >
+          alt="alt text goes here">
       </figure-wrap>
       <p>
         The example above uses the

@@ -2,60 +2,50 @@
   <div
     ref="headerroot"
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
-    class="page-header page-header--l3 page-header--study"
-  >
+    class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
       <logo
         class="megamenu__logo"
         size="md"
-        no-padding
-      />
+        no-padding />
       <MegaMenuTitle
         v-if="facultyName"
         :title="facultyName"
         :href="facultyLink"
-        :width="facultyWidth"
-      />
+        :width="facultyWidth" />
       <div
         ref="blanket"
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
-        @keypress.27="dismissMobileMenu"
-      >
+        @keypress.27="dismissMobileMenu">
         <MegaMenuTopNavigation
           v-if="isShowTopMenu && isMobileOpen === false"
           :items="topMenu"
-          class="megamenu--show-on-desktop"
-        />
+          class="megamenu--show-on-desktop" />
         <nav
           id="sitemapmenu"
           ref="rootmenu"
           :class="['megamenu', isShowTopMenu && 'megamenu__with-top-menu']"
           aria-label="Site"
-          @mouseleave="dismissMenu"
-        >
+          @mouseleave="dismissMenu">
           <div
             role="button"
             aria-label="Close"
             class="menu__back-btn"
-            @click="dismissMobileMenu"
-          >
+            @click="dismissMobileMenu">
             Close
           </div>
           <PageSearchForm
             v-if="isMobileOpen"
-            aria-hidden="true"
-          />
+            aria-hidden="true" />
           <MegaMenuTitle
             v-if="facultyName && isMobileOpen"
             :title="facultyName"
             :href="facultyLink"
-            :width="facultyWidth"
-          />
+            :width="facultyWidth" />
           <ul
             class="menu__section"
-            role="menu"
-          >
+            role="menu">
             <li
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
@@ -64,60 +54,50 @@
               class="menu__item"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
-              @keydown="handleKey"
-            >
+              @keydown="handleKey">
               <a
                 :role="rootitem.items ? 'button' : 'menuitem'"
                 :href="rootitem.href"
                 class="menu__link"
-                @click="openInner"
-              >
+                @click="openInner">
                 {{ rootitem.title }}
                 <SvgIcon
                   v-if="isMobileOpen"
                   name="chevron-right"
-                  class="icon"
-                />
+                  class="icon" />
               </a>
               <div
                 v-if="rootitem.items"
-                class="inner inner--fade"
-              >
+                class="inner inner--fade">
                 <div
                   role="button"
                   class="menu__back-btn"
-                  @click="closeInner"
-                >
+                  @click="closeInner">
                   Back
                 </div>
                 <div class="menu__block">
                   <div>
                     <a
                       :href="rootitem.href"
-                      class="menu__nested-parent"
-                    >{{ rootitem.title }}</a>
+                      class="menu__nested-parent">{{ rootitem.title }}</a>
                   </div>
                   <ul
                     :class="isColColumns(rootindex)"
                     class="menu__section"
-                    role="menu"
-                  >
+                    role="menu">
                     <li
                       v-for="(menuitem, menuindex) in rootitem.items"
                       :key="`menuitem-${menuindex}`"
-                      class="menu__item"
-                    >
+                      class="menu__item">
                       <a
                         :href="menuitem.href"
                         class="menu__link"
-                        role="menuitem"
-                      >
+                        role="menuitem">
                         {{ menuitem.title }}
                         <SvgIcon
                           v-if="!isMobileOpen"
                           name="chevron-right"
-                          class="icon"
-                        />
+                          class="icon" />
                       </a>
                     </li>
                   </ul>
@@ -127,38 +107,31 @@
                     :is="rootitem.feature.link ? 'a' : 'div'"
                     v-if="rootitem.feature"
                     :href="rootitem.feature.link"
-                    class="menu__campaign"
-                  >
+                    class="menu__campaign">
                     <img
                       v-if="rootitem.feature.img"
                       :src="rootitem.feature.img"
                       :alt="rootitem.feature.alt"
-                      class="menu__campaign--img"
-                    >
+                      class="menu__campaign--img">
                   </component>
                   <div
                     v-if="rootitem.feature"
-                    class="menu__aside-info"
-                  >
+                    class="menu__aside-info">
                     <p
                       v-if="rootitem.feature.text"
-                      class="menu__aside-info__text"
-                    >
+                      class="menu__aside-info__text">
                       {{ rootitem.feature.text }}
                     </p>
                     <div
                       v-if="rootitem.feature.link"
-                      class="menu__aside-info__link"
-                    >
+                      class="menu__aside-info__link">
                       <a
                         :href="rootitem.feature.link"
-                        class="link"
-                      >
+                        class="link">
                         View more details
                         <SvgIcon
                           name="chevron-right"
-                          class="icon"
-                        />
+                          class="icon" />
                       </a>
                     </div>
                   </div>
@@ -168,8 +141,7 @@
           </ul>
           <MegaMenuTopNavigation
             v-if="isMobileOpen"
-            :items="topMenu"
-          />
+            :items="topMenu" />
         </nav>
       </div>
       <PageSearch />
@@ -182,21 +154,18 @@
           href="#sitemapmenu"
           class="link-icon--vertical link-reset"
           @click.prevent="activateMobileMenu"
-          @keydown.13="activeMobileMenu"
-        >
+          @keydown.13="activeMobileMenu">
           <svg
             class="link-icon__icon svg"
             role="presentation"
             focusable="false"
             aria-labelledby="icon-menu"
-            viewBox="10 10 26 28"
-          >
+            viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
           </svg>
           <span
             id="icon-menu"
-            class="link-icon__text"
-          >Menu</span>
+            class="link-icon__text">Menu</span>
         </button>
       </div>
     </div>

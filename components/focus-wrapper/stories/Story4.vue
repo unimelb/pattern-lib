@@ -2,8 +2,7 @@
   <SectionWrap small>
     <FocusWrapper
       padded
-      class="bg-white"
-    >
+      class="bg-white">
       <p>Padded Content</p>
     </FocusWrapper>
   </SectionWrap>

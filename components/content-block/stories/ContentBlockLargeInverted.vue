@@ -1,8 +1,7 @@
 <template>
   <ContentBlock
     size="lge"
-    bg="inverted"
-  >
+    bg="inverted">
     <h2>Example Title</h2>
     <p class="lead">
       This is a lead paragraph.

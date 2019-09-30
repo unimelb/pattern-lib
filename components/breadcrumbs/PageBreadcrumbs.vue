@@ -3,44 +3,37 @@
     <ol
       class="page-breadcrumbs max links-reset"
       itemscope
-      itemtype="http://schema.org/BreadcrumbList"
-    >
+      itemtype="http://schema.org/BreadcrumbList">
       <li
         v-for="(item, index) in items"
         :key="item.href"
         class="page-breadcrumbs__item"
         itemprop="itemListElement"
         itemscope
-        itemtype="http://schema.org/ListItem"
-      >
+        itemtype="http://schema.org/ListItem">
         <meta
           :content="index + 1"
-          itemprop="position"
-        >
+          itemprop="position">
         <a
           :href="item.href"
           :aria-current="index === items.length -1"
           class="page-breadcrumbs__link"
-          itemprop="item"
-        >
+          itemprop="item">
           <SvgIcon
             v-if="index === 0"
             class="page-breadcrumbs__home"
             name="home"
             width="18"
-            height="18"
-          />
+            height="18" />
           <span
             class="page-breadcrumbs__name"
-            itemprop="name"
-          >{{ item.text }}</span>
+            itemprop="name">{{ item.text }}</span>
           <SvgIcon
             v-if="index < items.length - 1"
             class="page-breadcrumbs__chevron"
             name="chevron-right"
             width="12"
-            height="12"
-          />
+            height="12" />
         </a>
       </li>
     </ol>

@@ -4,15 +4,13 @@
       <div class="filter__container">
         <label
           for="input-search"
-          hidden
-        > Title </label>
+          hidden> Title </label>
         <input
           id="input-search"
           v-model="searchText"
           class="filter__input"
           type="search"
-          placeholder="Type to search title"
-        >
+          placeholder="Type to search title">
       </div>
 
       <div class="filter__container">
@@ -20,35 +18,29 @@
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="locations"
-            >Location</label>
+              for="locations">Location</label>
             <DropdownFilter
               id="locations"
               v-model="selectedLocation"
-              :values="filters.locations"
-            />
+              :values="filters.locations" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="disciplines"
-            >Discipline</label>
+              for="disciplines">Discipline</label>
             <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"
-            />
+              :values="filters.disciplines" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
               class="filter__label"
-              for="auditions"
-            >Audition Requirement</label>
+              for="auditions">Audition Requirement</label>
             <DropdownFilter
               id="auditions"
               v-model="selectedAudition"
-              :values="filters.auditions"
-            />
+              :values="filters.auditions" />
           </div>
         </div>
       </div>
@@ -58,26 +50,22 @@
           :class="animationclass"
           class="filter__button"
           aria-label="Search"
-          @click="filterDataButton"
-        >
+          @click="filterDataButton">
           <SvgIcon
             class="filter__button--icon"
-            name="search"
-          />
+            name="search" />
           <span>Search</span>
         </button>
         <button
           class="filter__button"
-          @click="resetSearch"
-        >
+          @click="resetSearch">
           Reset all
         </button>
       </div>
     </div>
 
     <FilterResultsCount
-      :data="dataFiltered.length"
-    />
+      :data="dataFiltered.length" />
 
     <FilterResults :show="showSSRCode">
       <slot />
@@ -86,13 +74,11 @@
     <FilterResults :show="!showSSRCode">
       <transition-group
         name="fade"
-        tag="div"
-      >
+        tag="div">
         <div
           v-for="(item, index) in dataFiltered"
           :key="index"
-          class="accordion-list"
-        >
+          class="accordion-list">
           <accordion :name="item.name">
             <table class="table table--striped table--tight table--is-compacted">
               <tbody>
@@ -143,8 +129,7 @@
             </p>
             <ButtonIcon
               :href="item.buttonLink"
-              size="xsml"
-            >
+              size="xsml">
               {{ item.buttonText }}
             </ButtonIcon>
           </accordion>
