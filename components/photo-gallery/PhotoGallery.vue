@@ -3,15 +3,15 @@
     <ListingWrap class="photo-gallery preview-img-list">
       <ListItem
         v-for="(item, index) in slots"
-        :cols="item.size"
-        :key="item.id">
+        :key="item.id"
+        :cols="item.size">
         <FigureWrap
           :caption="captions && item.title"
           class="photo-gallery__figure">
           <div
             :class="{'preview-img-item': true, 'preview-img-item--nolink': noPopup }"
             :style="{'background-image': `url(${item.src})`, 'height': `${item.thumbHeight + 'px' || false}`}"
-            @click="noPopup === false && open(index, slots, options)"/>
+            @click="noPopup === false && open(index, slots, options)" />
         </FigureWrap>
       </ListItem>
     </ListingWrap>

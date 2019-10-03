@@ -31,6 +31,8 @@ exports[`CardEvents should match snapshot 1`] = `
       class="card__excerpt"
     >
       
+      
+    
     </div>
      
     <div

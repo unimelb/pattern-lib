@@ -2,26 +2,23 @@
   <div
     :class="[{'card-focus--padded': padded}]"
     class="card-focus">
-    <slot/>
+    <slot />
     <SvgIcon
       :class="['card-focus__top-left', color, {'semi-opaque': semiOpaque}]"
       :width="normalizeSize"
       :height="normalizeSize"
       view-box="0 0 112 112"
-      name="focus-top-left"
-    >
-      <path d="m0 0v112l32-32v-48h48l32-32h-112z"/>
+      name="focus-top-left">
+      <path d="m0 0v112l32-32v-48h48l32-32h-112z" />
     </SvgIcon>
     <SvgIcon
       :class="['card-focus__bottom-right', color, {'semi-opaque': semiOpaque}]"
       :width="normalizeSize"
       :height="normalizeSize"
       view-box="0 0 112 112"
-      name="focus-bottom-right"
-    >
-      <path d="m112 0-32 32v48h-48l-32 32h112v-112z"/>
+      name="focus-bottom-right">
+      <path d="m112 0-32 32v48h-48l-32 32h112v-112z" />
     </SvgIcon>
-
   </div>
 </template>
 

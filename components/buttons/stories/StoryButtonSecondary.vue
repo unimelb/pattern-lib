@@ -1,11 +1,14 @@
 <template>
   <div>
-    <ButtonIcon class="btn--secondary">Secondary Button</ButtonIcon>
+    <ButtonIcon class="btn--secondary">
+      Secondary Button
+    </ButtonIcon>
     <ButtonIcon
       class="btn--secondary"
       href="www.google.com"
-      disabled
-    >I am a disabled button</ButtonIcon>
+      disabled>
+      I am a disabled button
+    </ButtonIcon>
   </div>
 </template>
 

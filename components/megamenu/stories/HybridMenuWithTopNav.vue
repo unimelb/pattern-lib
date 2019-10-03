@@ -5,8 +5,7 @@
     active="/random-link"
     faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
     faculty-link="/faculty-link"
-    faculty-width="25.5%"
-  />
+    faculty-width="25.5%" />
 </template>
 
 <script>

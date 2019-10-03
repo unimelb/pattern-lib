@@ -1,8 +1,7 @@
 <template>
   <div class="bg-inverted">
     <MediaGallery
-      :items="items"
-    />
+      :items="items" />
   </div>
 </template>
 

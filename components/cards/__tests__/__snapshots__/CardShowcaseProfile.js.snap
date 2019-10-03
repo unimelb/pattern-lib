@@ -17,12 +17,16 @@ exports[`CardShowcaseProfile should match snapshot 1`] = `
       class="card__title"
     >
       
+      
+    
     </h6>
      
     <p
       class="card__sub-title"
     >
       
+      
+    
     </p>
      
     <div

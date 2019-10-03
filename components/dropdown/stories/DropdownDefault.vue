@@ -1,7 +1,6 @@
 <template>
   <Dropdown
-    :values="['Conservatorium Doctorade','Conservatorium Doctorade','Conservatorium Doctorade']"
-  />
+    :values="['Conservatorium Doctorade','Conservatorium Doctorade','Conservatorium Doctorade']" />
 </template>
 
 <script>

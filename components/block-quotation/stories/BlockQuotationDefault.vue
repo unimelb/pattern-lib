@@ -1,5 +1,7 @@
 <template>
-  <BlockQuotation author="Steve Wozniak">Lorem ipsum dolor sit amet consectetur.</BlockQuotation>
+  <BlockQuotation author="Steve Wozniak">
+    Lorem ipsum dolor sit amet consectetur.
+  </BlockQuotation>
 </template>
 
 <script>

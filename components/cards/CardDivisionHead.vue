@@ -13,8 +13,8 @@
         <h3 class="card__header">{{ name }}</h3>
         <p class="card__meta">{{ title }}</p>
       </div>
-      <hr v-if="!compact" >
-      <slot/>
+      <hr v-if="!compact">
+      <slot />
       <ButtonIcon
         v-if="cols === 1"
         class="btn--wide">Contacts and bio</ButtonIcon>

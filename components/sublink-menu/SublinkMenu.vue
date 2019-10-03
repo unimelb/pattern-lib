@@ -13,12 +13,16 @@
       alt="">
     <h3
       v-if="title"
-      class="sublink-menu__title"> {{ title }}</h3>
+      class="sublink-menu__title">
+      {{ title }}
+    </h3>
     <p
       v-if="$slots.default"
-      class="sublink-menu__excerpt"><slot/></p>
+      class="sublink-menu__excerpt">
+      <slot />
+    </p>
     <nav class="sublink-menu__nav">
-      <slot name="menuitems"/>
+      <slot name="menuitems" />
     </nav>
   </div>
 </template>

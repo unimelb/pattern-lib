@@ -5,8 +5,7 @@
       role="menu">
       <li
         v-for="(item, index) in items"
-        :key="index"
-      >
+        :key="index">
         <a
           :href="item.href"
           role="menuitem"

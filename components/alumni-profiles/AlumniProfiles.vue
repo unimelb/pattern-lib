@@ -3,8 +3,7 @@
     <FocusWrapper
       :size="size"
       color="navy"
-      semi-opaque
-    >
+      semi-opaque>
       <div class="alumni">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
@@ -12,10 +11,16 @@
           class="alumni__img"
           role="img" />
         <div class="alumni__info">
-          <p class="alumni__title">Alumni profile</p>
-          <h3 class="alumni__name">{{ name }}</h3>
+          <p class="alumni__title">
+            Alumni profile
+          </p>
+          <h3 class="alumni__name">
+            {{ name }}
+          </h3>
           <hr class="alumni__line">
-          <p class="alumni__short-text">{{ text }}</p>
+          <p class="alumni__short-text">
+            {{ text }}
+          </p>
         </div>
       </div>
     </FocusWrapper>

@@ -21,7 +21,7 @@
         xlink:href="#icon-focus-bottom-right" />
     </svg>
     <div class="card__inner">
-      <p class="split-section__quote" >
+      <p class="split-section__quote">
         {{ quote }}
       </p>
       <p

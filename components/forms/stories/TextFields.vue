@@ -145,7 +145,9 @@
     </div>
 
     <SectionWrap class="bg-white">
-      <h2 class="shim-pt2">Select</h2>
+      <h2 class="shim-pt2">
+        Select
+      </h2>
       <div class="grid">
         <div class="cell cell--tab-1of3">
           <label for="f_q3">Type</label>
@@ -167,6 +169,5 @@
         </div>
       </div>
     </SectionWrap>
-
   </form>
 </template>

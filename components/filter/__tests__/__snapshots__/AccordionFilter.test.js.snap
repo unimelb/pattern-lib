@@ -49,7 +49,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 selected="selected"
                 value=""
               >
-                Show all
+                
+      Show all
+    
               </option>
                
             </select>
@@ -76,7 +78,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 selected="selected"
                 value=""
               >
-                Show all
+                
+      Show all
+    
               </option>
                
             </select>
@@ -103,7 +107,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 selected="selected"
                 value=""
               >
-                Show all
+                
+      Show all
+    
               </option>
                
             </select>
@@ -143,7 +149,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
       <button
         class="filter__button"
       >
+        
         Reset all
+      
       </button>
     </div>
   </div>
@@ -151,7 +159,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
   <p
     class="filter-results__count"
   >
-    2 results
+    
+  2 results
+
   </p>
    
   <!---->
@@ -210,7 +220,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Location
+                      
+                  Location
+                
                     </th>
                      
                     <td>
@@ -222,7 +234,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Semester
+                      
+                  Semester
+                
                     </th>
                      
                     <td>
@@ -234,7 +248,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Points
+                      
+                  Points
+                
                     </th>
                      
                     <td>
@@ -246,7 +262,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Discipline
+                      
+                  Discipline
+                
                     </th>
                      
                     <td>
@@ -258,7 +276,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Audition requirement
+                      
+                  Audition requirement
+                
                     </th>
                      
                     <td>
@@ -270,7 +290,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Study Abroad
+                      
+                  Study Abroad
+                
                     </th>
                      
                     <td>
@@ -294,7 +316,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 <span
                   class="push-icon"
                 >
-                  Handbook Link 
+                  
+            Handbook Link
+           
                   <svg
                     aria-hidden="true"
                     aria-label="chevron-right"
@@ -370,7 +394,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Location
+                      
+                  Location
+                
                     </th>
                      
                     <td>
@@ -382,7 +408,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Semester
+                      
+                  Semester
+                
                     </th>
                      
                     <td>
@@ -394,7 +422,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Points
+                      
+                  Points
+                
                     </th>
                      
                     <td>
@@ -406,7 +436,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Discipline
+                      
+                  Discipline
+                
                     </th>
                      
                     <td>
@@ -418,7 +450,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Audition requirement
+                      
+                  Audition requirement
+                
                     </th>
                      
                     <td>
@@ -430,7 +464,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Study Abroad
+                      
+                  Study Abroad
+                
                     </th>
                      
                     <td>
@@ -454,7 +490,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 <span
                   class="push-icon"
                 >
-                  Handbook Link 
+                  
+            Handbook Link
+           
                   <svg
                     aria-hidden="true"
                     aria-label="chevron-right"

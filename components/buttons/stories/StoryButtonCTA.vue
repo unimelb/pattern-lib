@@ -1,11 +1,14 @@
 <template>
   <div>
-    <ButtonIcon class="btn--cta">Call to Action</ButtonIcon>
+    <ButtonIcon class="btn--cta">
+      Call to Action
+    </ButtonIcon>
     <ButtonIcon
       class="btn--cta"
       href="www.google.com"
-      disabled
-    >I am a disabled button</ButtonIcon>
+      disabled>
+      I am a disabled button
+    </ButtonIcon>
   </div>
 </template>
 

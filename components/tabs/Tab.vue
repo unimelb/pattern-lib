@@ -6,9 +6,8 @@
       v-show="isActive"
       :id="`${namespace}-panel-${index + 1}`"
       class="tabs__panel max"
-      role="tabpanel"
-    >
-      <slot/>
+      role="tabpanel">
+      <slot />
     </div>
   </transition>
 </template>

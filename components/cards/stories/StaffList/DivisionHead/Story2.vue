@@ -6,8 +6,7 @@
           :cols="1"
           thumb="https://randomuser.me/api/portraits/lego/0.jpg"
           name="John Smith"
-          title="Vice Principal Enterprise"
-        >
+          title="Vice Principal Enterprise">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure tenetur iste dolores, architecto mollitia, aut consectetur odio itaque neque et omnis eos cumque id asperiores voluptate. Qui aut aperiam adipisci.</p>
         </CardDivisionHead>
       </ListItem>

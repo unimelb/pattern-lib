@@ -14,13 +14,15 @@
         <label
           :for="`${namespace}-${index}`"
           class="check-list__label"
-          v-html="content[index].innerHTML"/>
+          v-html="content[index].innerHTML" />
       </li>
     </ol>
     <ButtonIcon
       :href="btnHref"
       :disabled="!itemsAllChecked"
-      :icon="btnIcon">{{ btnText }}</ButtonIcon>
+      :icon="btnIcon">
+      {{ btnText }}
+    </ButtonIcon>
   </div>
 </template>
 

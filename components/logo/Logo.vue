@@ -7,8 +7,7 @@
         :class="['logo__image--' + size, noPadding ? 'logo--no-padding-' + size: '']"
         class="logo__image"
         alt="The University of Melbourne homepage"
-        src="../shared/logo-with-padding.svg"
-      >
+        src="../shared/logo-with-padding.svg">
     </a>
   </div>
 </template>

@@ -7,12 +7,16 @@
     </SectionWrap>
 
     <SectionWrap bg-color="inverted">
-      <p class="text-center">This one uses custom markup for the "trigger" part:</p>
+      <p class="text-center">
+        This one uses custom markup for the "trigger" part:
+      </p>
       <Enquiry>
         <template slot="trigger">
           <ButtonIcon
             element="span"
-            class="btn--secondary">Enquire within!</ButtonIcon>
+            class="btn--secondary">
+            Enquire within!
+          </ButtonIcon>
         </template>
         <MceForm />
       </Enquiry>

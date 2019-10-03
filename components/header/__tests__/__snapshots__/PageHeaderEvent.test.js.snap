@@ -16,6 +16,8 @@ exports[`PageHeaderEvent should match snapshot 1`] = `
         class="page-header-event__title"
       >
         
+        
+      
       </h2>
        
       <!---->
