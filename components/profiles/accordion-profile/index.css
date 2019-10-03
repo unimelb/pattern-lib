@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 100%;
   background-color: rgb(var(--col-navy-light));
-  padding-bottom: 1rem;
+  max-height: 23.3125rem;
 
   &__embed {
     margin-bottom: 1rem;
@@ -79,15 +79,17 @@
   }
 
   &__bio {
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     max-width: 100%;
     overflow-y: auto;
     min-height: 0;
     transition: all ease .25s;
     flex-basis: 100%;
-    margin-top: 1rem;
+    margin: 1rem 0;
 
     &--transition {
+      padding: 0;
+      margin: 0;
       flex-basis: 0;
     }
 
@@ -106,9 +108,5 @@
     &--active {
       transform: rotate(180deg);
     }
-  }
-
-  @media (--bp-desktop) {
-    max-height: 23.3125rem;
   }
 }
