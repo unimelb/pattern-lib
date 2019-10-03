@@ -29,12 +29,16 @@ exports[`AccordionProfile should match snapshot 1`] = `
           class="accordion-profile__title"
         >
           
+          
+        
         </h6>
          
         <p
           class="accordion-profile__sub-title"
         >
           
+          
+        
         </p>
       </div>
        
@@ -53,6 +57,8 @@ exports[`AccordionProfile should match snapshot 1`] = `
       class="accordion-profile__bio-text"
     >
       
+      
+    
     </p>
   </div>
 </div>

@@ -4,8 +4,7 @@
       :style="{ backgroundImage: `url(${thumb})` }"
       :class="thumbClass"
       class="accordion-profile__thumb"
-      aria-label="Profile Image"
-    />
+      aria-label="Profile Image" />
     <div
       :class="containBioClass"
       class="accordion-profile__container"
@@ -14,12 +13,15 @@
         :style="{ backgroundImage: `url(${thumb})` }"
         :class="smallThumbClass"
         class="accordion-profile__thumb-inner"
-        aria-label="Profile Image"
-      />
+        aria-label="Profile Image" />
       <div class="accordion-profile__inner">
         <div class="accordion-profile__titles">
-          <h6 class="accordion-profile__title">{{ title }}</h6>
-          <p class="accordion-profile__sub-title">{{ subTitle }}</p>
+          <h6 class="accordion-profile__title">
+            {{ title }}
+          </h6>
+          <p class="accordion-profile__sub-title">
+            {{ subTitle }}
+          </p>
         </div>
         <div>
           <SvgIcon
@@ -29,8 +31,7 @@
             name="chevron-up"
             aria-label="chevron"
             width="14px"
-            height="14px"
-          />
+            height="14px" />
         </div>
       </div>
     </div>
@@ -42,8 +43,10 @@
         :src="video"
         :video-label="videoLabel"
         video-api
-        class="accordion-profile__embed"/>
-      <p class="accordion-profile__bio-text">{{ bio }}</p>
+        class="accordion-profile__embed" />
+      <p class="accordion-profile__bio-text">
+        {{ bio }}
+      </p>
     </div>
   </div>
 </template>
