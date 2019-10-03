@@ -5,8 +5,7 @@
       :width="size[0]"
       :height="size[1]"
       frameborder="0"
-      allowfullscreen
-    />
+      allowfullscreen />
   </div>
 </template>
 

@@ -15,7 +15,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/></a>
+                height="10" /></a>
             <a
               href="/"
               aria-label="View details of the staff name">View generic staff
@@ -23,7 +23,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/></a>
+                height="10" /></a>
           </template>
         </GenericCard>
       </ListItem>
@@ -40,7 +40,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/></a>
+                height="10" /></a>
             <a
               href="/"
               aria-label="View details of the staff name">View generic staff
@@ -48,7 +48,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/></a>
+                height="10" /></a>
           </template>
         </GenericCard>
       </ListItem>
@@ -64,7 +64,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/></a>
+                height="10" /></a>
             <a
               href="/"
               aria-label="View details of the staff name">View generic staff
@@ -72,7 +72,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/></a>
+                height="10" /></a>
           </template>
         </GenericCard>
       </ListItem>

@@ -5,7 +5,7 @@
       title="Strategy and governance"
       img="https://placeimg.com/990/530/arch/1" />
     <PageBreadcrumbs :items="breadcrumbsItems" />
-    <slot/>
+    <slot />
     <PageFooter />
   </div>
 </template>

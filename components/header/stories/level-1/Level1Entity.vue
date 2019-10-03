@@ -2,8 +2,7 @@
   <PageHeader
     title="About Us"
     entity="Faculty of Medicine, Dentistry and Health Science"
-    img="https://placeimg.com/990/530/arch/1"
-  />
+    img="https://placeimg.com/990/530/arch/1" />
 </template>
 
 <script>

@@ -49,7 +49,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                 selected="selected"
                 value=""
               >
-                Show all
+                
+      Show all
+    
               </option>
                
             </select>
@@ -76,7 +78,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                 selected="selected"
                 value=""
               >
-                Show all
+                
+      Show all
+    
               </option>
                
             </select>
@@ -103,7 +107,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                 selected="selected"
                 value=""
               >
-                Show all
+                
+      Show all
+    
               </option>
                
             </select>
@@ -143,7 +149,9 @@ exports[`CardsFilter should match snapshot 1`] = `
       <button
         class="filter__button"
       >
+        
         Reset all
+      
       </button>
     </div>
   </div>
@@ -151,7 +159,9 @@ exports[`CardsFilter should match snapshot 1`] = `
   <p
     class="filter-results__count"
   >
-    2 results
+    
+  2 results
+
   </p>
    
   <!---->
@@ -241,7 +251,9 @@ exports[`CardsFilter should match snapshot 1`] = `
             <div
               class="card__excerpt"
             >
-              Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts
+              
+      Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts
+    
             </div>
              
             <div
@@ -362,7 +374,9 @@ exports[`CardsFilter should match snapshot 1`] = `
             <div
               class="card__excerpt"
             >
-              Wilin Centre for Indigenous Arts and Culture event Wilin Jams
+              
+      Wilin Centre for Indigenous Arts and Culture event Wilin Jams
+    
             </div>
              
             <div

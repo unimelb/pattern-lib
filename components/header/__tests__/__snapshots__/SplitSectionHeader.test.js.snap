@@ -18,12 +18,16 @@ exports[`SplitSectionHeader should match snapshot 1`] = `
           class="split-section-header__title"
         >
           
+          
+        
         </h1>
          
         <p
           class="split-section-header__sub-title"
         >
           
+          
+        
         </p>
          
         <!---->

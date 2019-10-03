@@ -7,11 +7,11 @@
       @click="openDialog">
       <span
         class="push-icon"
-        v-html="trigger"/>
+        v-html="trigger" />
     </button>
     <div
-      ref="container"
       :id="`modal-dialog-1${_uid}`"
+      ref="container"
       class="modal-dialog"
       aria-hidden="true"
       @click="closeContainer"
@@ -25,14 +25,16 @@
         <div role="document">
           <h2
             :id="`modal-dialog-title-1${_uid}`"
-            v-html="title"/>
-          <slot/>
+            v-html="title" />
+          <slot />
           <br>
           <button
             class="modal-dialog__close"
             aria-label="Close Dialog"
             type="button"
-            @click="closeDialog">&#x2715;</button>
+            @click="closeDialog">
+            &#x2715;
+          </button>
         </div>
       </div>
     </div>

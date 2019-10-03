@@ -6,7 +6,9 @@ exports[`GenericCard should match snapshot 1`] = `
 >
    
   <figcaption>
+    
     test caption
+  
   </figcaption>
 </figure>
 `;

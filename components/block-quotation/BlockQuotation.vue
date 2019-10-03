@@ -1,12 +1,11 @@
 <template>
   <blockquote
     :class="{ 'block-quotation--bdr-top': borderTop, 'block-quotation--bdr-btm': borderBottom , 'block-quotation--small': small }"
-    class="block-quotation"
-  >
+    class="block-quotation">
     <p
       :class="{ 'block-quotation__content--large-quotes': largeQuotes }"
       class="block-quotation__content">
-      <slot/>
+      <slot />
     </p>
     <cite
       v-if="author"

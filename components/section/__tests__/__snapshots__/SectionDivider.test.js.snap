@@ -12,6 +12,8 @@ exports[`SectionDivider should match snapshot 1`] = `
       class="heading-section"
     >
       
+      
+    
     </h3>
      
     <!---->

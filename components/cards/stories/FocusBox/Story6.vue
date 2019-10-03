@@ -10,8 +10,7 @@
           class="card--image-focus--col-brand"
           vertical
           color="green"
-          excerpt="should not be repeated within the text of the card"
-        />
+          excerpt="should not be repeated within the text of the card" />
       </ListItem>
       <ListItem>
         <CardStat
@@ -22,8 +21,7 @@
           vertical
           color="teal"
           stat="123456"
-          excerpt="six characters is the most this heading can fit in a 3 column setup"
-        />
+          excerpt="six characters is the most this heading can fit in a 3 column setup" />
       </ListItem>
       <ListItem>
         <CardStat
@@ -34,8 +32,7 @@
           vertical
           color="yellow"
           stat="290%"
-          excerpt="this card should read like a sentence with the stat as the first word"
-        />
+          excerpt="this card should read like a sentence with the stat as the first word" />
       </ListItem>
     </div>
   </SectionWrap>

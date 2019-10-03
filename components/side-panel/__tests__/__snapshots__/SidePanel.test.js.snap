@@ -12,6 +12,7 @@ exports[`SidePanel should match snapshot 1`] = `
     >
       
       
+      
       <button
         class="side-panel__trigger"
       >

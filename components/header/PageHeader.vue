@@ -1,24 +1,25 @@
 <template>
   <header :class="`page-header page-header--l${level}`">
     <div class="page-header__inner max">
-      <Logo no-padding/>
+      <Logo no-padding />
       <div
         v-if="entity"
         class="page-header__entity">
         <p
           class="page-header__entity__main"
-          v-html="entity"/>
+          v-html="entity" />
         <p
           v-if="entitySub"
           class="page-header__entity__sub"
-          v-html="entitySub"/>
+          v-html="entitySub" />
       </div>
-      <h1 class="page-header__heading">{{ title }}</h1>
+      <h1 class="page-header__heading">
+        {{ title }}
+      </h1>
     </div>
     <div
       :style="{ backgroundImage: `url(${img})` }"
-      class="page-header__img page-header__aperture"
-    />
+      class="page-header__img page-header__aperture" />
   </header>
 </template>
 

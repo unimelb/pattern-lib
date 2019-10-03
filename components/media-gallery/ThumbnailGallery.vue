@@ -8,7 +8,6 @@
         :key="index"
         :class="thumbnailClass"
         class="thumbnails__item">
-
         <div
           :class="thumbnailOpenClass"
           tabindex="0"
@@ -22,8 +21,7 @@
 
           <div
             v-if="item.type === 'video'"
-            class="thumbnails__video"
-          >
+            class="thumbnails__video">
             <VideoEmbed
               :src="item.src"
               :class="embedClass"
@@ -32,8 +30,12 @@
         </div>
 
         <div v-if="displayCaption">
-          <div class="thumbnails__caption">{{ item.title }}</div>
-          <p class="thumbnails__description">{{ item.description }}</p>
+          <div class="thumbnails__caption">
+            {{ item.title }}
+          </div>
+          <p class="thumbnails__description">
+            {{ item.description }}
+          </p>
         </div>
       </div>
     </div>

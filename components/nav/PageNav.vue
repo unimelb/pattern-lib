@@ -7,8 +7,7 @@
       aria-controls="sitemapmenu"
       href="#sitemap"
       class="link-icon--vertical link-reset"
-      @click.prevent="activateMenu"
-    >
+      @click.prevent="activateMenu">
       <svg
         class="link-icon__icon svg"
         role="presentation"
@@ -27,11 +26,13 @@
         class="sitenav__back-btn button-ui"
         aria-label="Close"
         type="button"
-        @click.prevent="dismissMenu">Close</button>
+        @click.prevent="dismissMenu">
+        Close
+      </button>
       <h2
         ref="navtitle"
-        v-html="title"/>
-      <slot/>
+        v-html="title" />
+      <slot />
     </div>
   </div>
 </template>

@@ -8,8 +8,7 @@
           :border="false"
           :title="item.title"
           :meta="item.meta"
-          thumb="https://dummyimage.com/300x200.jpg"
-        >
+          thumb="https://dummyimage.com/300x200.jpg">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.
         </CardImageList>
       </ListItem>

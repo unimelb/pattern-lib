@@ -1,11 +1,10 @@
 <template>
   <div
     class="page-header__darken--o50"
-    style="background-image: url(https://placeimg.com/990/530/arch/1)"
-  >
+    style="background-image: url(https://placeimg.com/990/530/arch/1)">
     <header class="page-header page-header--l2">
       <div class="page-header__inner max">
-        <Logo no-padding/>
+        <Logo no-padding />
       </div>
       <div class="page-header--center">
         <div class="max max--xsml text-center shim-pb2">
@@ -13,8 +12,12 @@
             Talent for every
             <br>possible outcome
           </h1>
-          <h3 class="shim-mb2">Further details about this amazing campaign.</h3>
-          <ButtonIcon class="btn--campaign">Call to Action</ButtonIcon>
+          <h3 class="shim-mb2">
+            Further details about this amazing campaign.
+          </h3>
+          <ButtonIcon class="btn--campaign">
+            Call to Action
+          </ButtonIcon>
         </div>
       </div>
     </header>

@@ -5,15 +5,14 @@
         <div class="page-footer__header-logo">
           <Logo
             size="lg"
-            no-padding/>
+            no-padding />
         </div>
         <div class="page-footer__header-search">
           <form
             id="search"
             aria-hidden="true"
             action="https://search.unimelb.edu.au"
-            class="page-footer-search"
-          >
+            class="page-footer-search">
             <div class="page-footer-search__field">
               <label
                 class="page-footer-search__label"
@@ -23,18 +22,16 @@
                 class="page-footer-search__input"
                 name="q"
                 placeholder="Type to search"
-                type="search"
-              >
+                type="search">
               <button
                 type="submit"
                 class="page-footer-search__submit"
                 aria-label="Submit"
                 onclick="submit()"
-                href="#"
-              >
+                href="#">
                 <SvgIcon
                   class="page-footer-search__icon"
-                  name="search"/>
+                  name="search" />
               </button>
             </div>
           </form>
@@ -59,11 +56,10 @@
             <li>
               <a
                 class="link-icon"
-                href="https://about.unimelb.edu.au/strategy/our-structure/faculties-and-graduate-schools"
-              >
+                href="https://about.unimelb.edu.au/strategy/our-structure/faculties-and-graduate-schools">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="faculty"/>
+                  name="faculty" />
                 <span class="link-icon__text">Faculties &amp; graduate schools</span>
               </a>
             </li>
@@ -73,7 +69,7 @@
                 href="https://maps.unimelb.edu.au/">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="location"/>
+                  name="location" />
                 <span class="link-icon__text">Maps</span>
               </a>
             </li>
@@ -83,7 +79,7 @@
                 href="https://library.unimelb.edu.au/">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="library"/>
+                  name="library" />
                 <span class="link-icon__text">Library</span>
               </a>
             </li>
@@ -93,7 +89,7 @@
                 href="https://www.alumni.unimelb.edu.au/give">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="campaign"/>
+                  name="campaign" />
                 <span class="link-icon__text">Support the campaign</span>
               </a>
             </li>
@@ -103,7 +99,7 @@
                 href="https://www.unimelb.edu.au/contact/">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="phone"/>
+                  name="phone" />
                 <span class="link-icon__text">Contact us</span>
               </a>
             </li>
@@ -113,21 +109,22 @@
                 href="https://about.unimelb.edu.au/careers">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="jobs"/>
+                  name="jobs" />
                 <span class="link-icon__text">Jobs</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__main__contacts cell cell--wide-1of4">
-          <p class="screenreaders-only">Follow us on:</p>
+          <p class="screenreaders-only">
+            Follow us on:
+          </p>
           <SocialListGeneric
             :icon-size="22"
             class="page-footer__social"
             facebook-link="https://www.facebook.com/unimelb"
             twitter-link="https://twitter.com/unimelb"
-            linkedin-link="https://www.linkedin.com/school/university-of-melbourne/"
-          />
+            linkedin-link="https://www.linkedin.com/school/university-of-melbourne/" />
           <dl class="page-footer__contact list-def list-def--wrap">
             <dt>Phone:</dt>
             <dd>

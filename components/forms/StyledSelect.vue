@@ -3,7 +3,7 @@
     <select
       :id="id"
       :class="extraclasses">
-      <slot/>
+      <slot />
     </select>
   </div>
 </template>

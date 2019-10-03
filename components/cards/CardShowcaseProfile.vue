@@ -4,12 +4,15 @@
       v-if="thumb && thumb.length > 0"
       :style="{ backgroundImage: `url(${thumb})` }"
       class="card__thumb"
-      aria-label="Profile Image"
-    />
+      aria-label="Profile Image" />
     <div class="card__inner">
-      <h6 class="card__title">{{ title }}</h6>
-      <p class="card__sub-title">{{ subTitle }}</p>
-      <div class="card__dash"/>
+      <h6 class="card__title">
+        {{ title }}
+      </h6>
+      <p class="card__sub-title">
+        {{ subTitle }}
+      </p>
+      <div class="card__dash" />
       <button
         v-if="bio"
         class="card__button"
@@ -20,8 +23,7 @@
           aria-label="chevron"
           class="card__icon"
           width="10px"
-          height="10px"
-        />
+          height="10px" />
       </button>
     </div>
 
@@ -31,7 +33,7 @@
         class="card__bio">
         <VideoEmbed
           v-if="video"
-          :src="video"/>
+          :src="video" />
         <p>{{ bio }}</p>
       </div>
     </transition>

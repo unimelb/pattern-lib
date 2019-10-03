@@ -36,7 +36,9 @@
         </StyledSelect>
       </div>
 
-      <h2 class="shim-pt2 shim-mb05">Grid</h2>
+      <h2 class="shim-pt2 shim-mb05">
+        Grid
+      </h2>
       <div class="grid">
         <div class="cell cell--tab-1of3">
           <label for="f_q3">Type</label>

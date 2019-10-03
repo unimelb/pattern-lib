@@ -7,8 +7,7 @@
           element="div"
           class="card--image-focus--col-brand bg-white"
           vertical
-          semi-opaque
-        >
+          semi-opaque>
           <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus d
         </CardFocusBox>
       </ListItem>
@@ -18,8 +17,7 @@
           element="div"
           class="card--image-focus--col-brand bg-white"
           vertical
-          semi-opaque
-        >
+          semi-opaque>
           <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ex quibusdam omnis, vitae reiciendis et, sunt voluptate, dolores autem explicabo hic rerum vero numquam sed eos eius officiis aut tempore.
         </CardFocusBox>
       </ListItem>
@@ -29,8 +27,7 @@
           element="div"
           class="card--image-focus--col-brand bg-white"
           vertical
-          semi-opaque
-        >
+          semi-opaque>
           <h3>Learning and teaching</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quam culpa voluptatibus, nisi quisquam fuga modi consequatur harum, quas quos quia est, libero architecto minus neque doloremque voluptatem eum amet?
         </CardFocusBox>
       </ListItem>

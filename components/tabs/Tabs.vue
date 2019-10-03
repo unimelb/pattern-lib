@@ -10,41 +10,39 @@
           ref="selector"
           aria-label="titles"
           aria-hidden="true"
-          @change="setActive($refs.selector.selectedIndex)"
-        >
+          @change="setActive($refs.selector.selectedIndex)">
           <option
             v-for="(tab, index) in panels"
             :key="`ui-tab-${_uid}-mob-${index + 1}`"
             :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
-            :selected="tab.isActive ? 'selected' : null"
-          >{{ tab.title }}</option>
+            :selected="tab.isActive ? 'selected' : null">
+            {{ tab.title }}
+          </option>
         </select>
       </div>
       <div
         :class="min ? 'tabs__tablist--min' : false"
         class="tabs__tablist max"
         role="tablist"
-        @keyup="handleKey"
-      >
+        @keyup="handleKey">
         <a
           v-for="(tab, index) in panels"
+          :id="`ui-tab-${_uid}-${index + 1}`"
           ref="tabs"
+          :key="`ui-tab-${_uid}-desk-${index + 1}`"
           :tabindex="tab.isActive ? 0 : -1"
           :aria-selected="tab.isActive"
-          :key="`ui-tab-${_uid}-desk-${index + 1}`"
-          :id="`ui-tab-${_uid}-${index + 1}`"
           :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
           :href="`#ui-tab-${_uid}-panel-${index + 1}`"
           class="tabs__tab"
           role="tab"
-          @click.prevent="setActive(index)"
-        >{{ tab.title }}</a>
+          @click.prevent="setActive(index)">{{ tab.title }}</a>
       </div>
     </div>
     <div
       tabindex="0"
       class="tabs__section">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>

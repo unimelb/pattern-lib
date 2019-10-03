@@ -18,13 +18,12 @@
             title="Close (Esc)"
             @click="openStateToggle()"
             @keydown.13="openStateToggle()"
-            @keydown.32="openStateToggle()"
-          >
+            @keydown.32="openStateToggle()">
             <SvgIcon
               aria-hidden="true"
               name="close"
               width="26"
-              height="26"/>
+              height="26" />
           </div>
         </div>
         <div :class="sliderClasses">
@@ -35,13 +34,12 @@
             title="Previous (arrow left)"
             @click="move('prev')"
             @keydown.13="move('prev')"
-            @keydown.32="move('prev')"
-          >
+            @keydown.32="move('prev')">
             <SvgIcon
               aria-hidden="true"
               name="chevron-left"
               width="30"
-              height="30"/>
+              height="30" />
           </div>
           <div
             v-if="items.length"
@@ -50,20 +48,19 @@
               v-if="!useOverlay || openState"
               ref="slider"
               :options="options"
-              @slide="slide"
-            >
+              @slide="slide">
               <slideritem
-                v-for="(slide, index) in items"
+                v-for="(item, index) in items"
                 :key="index"
                 class="media-gallery__item">
                 <div
-                  v-if="slide.type === 'image'"
-                  :aria-label="slide.altText"
-                  :style="{ backgroundImage: `url(${slide.src})` }"
+                  v-if="item.type === 'image'"
+                  :aria-label="item.altText"
+                  :style="{ backgroundImage: `url(${item.src})` }"
                   class="media-gallery__image" />
                 <VideoEmbed
-                  v-if="slide.type === 'video'"
-                  :src="slide.src"
+                  v-if="item.type === 'video'"
+                  :src="item.src"
                   class="media-gallery__embed" />
               </slideritem>
             </slider>
@@ -75,13 +72,12 @@
             title="Next (arrow right)"
             @click="move('next')"
             @keydown.13="move('next')"
-            @keydown.32="move('next')"
-          >
+            @keydown.32="move('next')">
             <SvgIcon
               aria-hidden="true"
               name="chevron-right"
               width="30"
-              height="30"/>
+              height="30" />
           </div>
         </div>
 
@@ -97,15 +93,13 @@
             class="media-gallery__thumb"
             tabindex="0"
             role="button"
-            @click="open(index)"
-          >
+            @click="open(index)">
             <img
               v-if="item.type === 'image'"
               :src="item.src"
               :alt="item.altText"
               aria-hidden="true"
-              class="media-gallery__thumb-image"
-            >
+              class="media-gallery__thumb-image">
             <div
               v-if="item.type === 'video'"
               aria-hidden="true"
@@ -122,12 +116,17 @@
           class="media-gallery__footer">
           <div
             v-if="!useOverlay"
-            class="media-gallery__count media-gallery__count--footer"
-          >{{ selectedIndex + 1 }} / {{ items.length }}</div>
+            class="media-gallery__count media-gallery__count--footer">
+            {{ selectedIndex + 1 }} / {{ items.length }}
+          </div>
           <div
             :id="'caption' + selectedIndex"
-            class="media-gallery__title">{{ selectedItem.title }}</div>
-          <div class="media-gallery__description">{{ selectedItem.description }}</div>
+            class="media-gallery__title">
+            {{ selectedItem.title }}
+          </div>
+          <div class="media-gallery__description">
+            {{ selectedItem.description }}
+          </div>
         </div>
       </div>
     </div>
@@ -137,8 +136,7 @@
       :items="items"
       :callback="openThumb"
       :display-caption="displayCaption"
-      :columns="columns"
-    />
+      :columns="columns" />
   </div>
 </template>
 

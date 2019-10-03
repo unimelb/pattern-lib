@@ -11,14 +11,18 @@
       </figure>
       <p
         v-if="captionText && captionText.length > 0"
-        class="welcome__caption-text"> {{ captionText }}</p>
+        class="welcome__caption-text">
+        {{ captionText }}
+      </p>
       <ButtonIcon
         v-if="btnText && btnText.length > 0"
         icon="chevron-right"
-        class="btn--xsml">{{ btnText }}</ButtonIcon>
+        class="btn--xsml">
+        {{ btnText }}
+      </ButtonIcon>
     </div>
     <div class="welcome__inner ">
-      <slot/>
+      <slot />
       <img
         :src="signature"
         class="welcome__signature"

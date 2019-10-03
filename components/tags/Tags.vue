@@ -4,8 +4,7 @@
       <li
         v-for="item in data"
         :key="item.id"
-        class="tags__item list-reset"
-      >
+        class="tags__item list-reset">
         <a
           :href="item.href"
           class="tags__link">
