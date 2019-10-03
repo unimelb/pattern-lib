@@ -14,6 +14,8 @@ exports[`SocialMediaBar should match snapshot 1`] = `
         class="social-media-bar__title"
       >
         
+        
+      
       </h4>
        
       <div
@@ -31,7 +33,9 @@ exports[`SocialMediaBar should match snapshot 1`] = `
       <h4
         class="social-media-bar__title social-media-bar__title--secondary"
       >
+        
         Follow us
+      
       </h4>
        
       <!---->

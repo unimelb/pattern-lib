@@ -1,8 +1,7 @@
 <template>
   <FullWidthImage
     image-url="http://lorempixel.com/1500/700/people"
-    aria-label="People"
-  />
+    aria-label="People" />
 </template>
 
 <script>

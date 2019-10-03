@@ -1,5 +1,7 @@
 <template>
-  <p class="filter-results__count">{{ data }} results</p>
+  <p class="filter-results__count">
+    {{ data }} results
+  </p>
 </template>
 
 <script>

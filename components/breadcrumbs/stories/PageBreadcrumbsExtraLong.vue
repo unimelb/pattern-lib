@@ -1,5 +1,5 @@
 <template>
-  <PageBreadcrumbs :items="items"/>
+  <PageBreadcrumbs :items="items" />
 </template>
 
 <script>

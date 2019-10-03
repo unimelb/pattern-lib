@@ -16,7 +16,9 @@
       value="">
 
     <fieldset class="sq-form-section">
-      <legend class="sq-form-section-title">Details</legend>
+      <legend class="sq-form-section-title">
+        Details
+      </legend>
       <div class="sq-form-question sq-form-question-text ">
         <label
           class="sq-form-question-title"
@@ -64,18 +66,22 @@
             rows="10"
             onkeyup="if (this.value.length > 300) { this.value = this.value.substr(0,300); alert('This field can contain no more than 300 characters.'); this.focus()}"
             onblur="if (this.value.length > 300) { this.value = this.value.substr(0,300); alert('This field can contain no more than 300 characters.'); this.focus()}"
-            class="sq-form-field"/>
+            class="sq-form-field" />
         </div>
       </div>
     </fieldset>
 
     <fieldset class="sq-form-section">
-      <legend class="sq-form-section-title">Checkbox and radio buttons</legend>
+      <legend class="sq-form-section-title">
+        Checkbox and radio buttons
+      </legend>
       <div class="sq-form-question sq-form-question-tickbox-list ">
         <fieldset>
-          <legend class="sq-form-question-title">Select preferred option <abbr
-            class="sq-form-required-field"
-            title="required">*</abbr></legend>
+          <legend class="sq-form-question-title">
+            Select preferred option <abbr
+              class="sq-form-required-field"
+              title="required">*</abbr>
+          </legend>
           <div class="sq-form-question-answer">
             <ul>
               <li>
@@ -113,7 +119,9 @@
 
       <div class="sq-form-question sq-form-question-option-list ">
         <fieldset>
-          <legend class="sq-form-question-title">Make a selection (implicitly required)</legend>
+          <legend class="sq-form-question-title">
+            Make a selection (implicitly required)
+          </legend>
           <div class="sq-form-question-answer">
             <ul>
               <li>
@@ -150,7 +158,9 @@
     </fieldset>
 
     <fieldset class="sq-form-section">
-      <legend class="sq-form-section-title">File upload</legend>
+      <legend class="sq-form-section-title">
+        File upload
+      </legend>
       <div class="sq-form-question sq-form-question-file-upload ">
         <label
           class="sq-form-question-title"
@@ -166,7 +176,9 @@
     </fieldset>
 
     <fieldset class="sq-form-section">
-      <legend class="sq-form-section-title">Dropdowns</legend>
+      <legend class="sq-form-section-title">
+        Dropdowns
+      </legend>
       <div class="sq-form-question sq-form-question-select ">
         <label
           class="sq-form-question-title"
@@ -178,9 +190,15 @@
             class="sq-form-field">
             <option
               value="0"
-              selected="selected">Option 1</option>
-            <option value="1">Option 2</option>
-            <option value="2">Option 3</option>
+              selected="selected">
+              Option 1
+            </option>
+            <option value="1">
+              Option 2
+            </option>
+            <option value="2">
+              Option 3
+            </option>
           </select>
         </div>
       </div>

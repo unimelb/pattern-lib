@@ -10,8 +10,7 @@
           href="#"
           phone="+123456789"
           email="emailme@google.com"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        />
+          excerpt="Lorem ipsum dolor sit amet, consectetur." />
       </ListItem>
       <div class="cell">
         <CardStaffList
@@ -22,8 +21,7 @@
           href="#"
           phone="Phone: +123456789"
           email="Email: emailme@google.com"
-          excerpt="Lorem ipsum dolor sit Do laborum consectetur irure et mollit minim reprehenderit pariatur ullamco ut sint anim. Eu eu esse nisi pariatur non consequat. Voluptate nulla consectetur labore cillum qui ullamco sunt. Enim ut Lorem culpa dolor magna "
-        />
+          excerpt="Lorem ipsum dolor sit Do laborum consectetur irure et mollit minim reprehenderit pariatur ullamco ut sint anim. Eu eu esse nisi pariatur non consequat. Voluptate nulla consectetur labore cillum qui ullamco sunt. Enim ut Lorem culpa dolor magna " />
       </div>
       <ListItem>
         <CardStaffList
@@ -33,8 +31,7 @@
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           href="#"
           phone="+123456789"
-          excerpt="Lorem ipsum dolor sit amet, consectetur. Quis nostrud cillum velit aute. Duis aliquip ut amet non cupidatat ullamco voluptate dolor. Veniam irure duis sunt duis duis non adipisicing irure est."
-        />
+          excerpt="Lorem ipsum dolor sit amet, consectetur. Quis nostrud cillum velit aute. Duis aliquip ut amet non cupidatat ullamco voluptate dolor. Veniam irure duis sunt duis duis non adipisicing irure est." />
       </ListItem>
       <ListItem>
         <CardStaffList
@@ -44,8 +41,7 @@
           thumb="https://randomuser.me/api/portraits/lego/5.jpg"
           href="#"
           email="emailme@google.com"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        />
+          excerpt="Lorem ipsum dolor sit amet, consectetur." />
       </ListItem>
       <ListItem>
         <CardStaffList
@@ -53,8 +49,7 @@
           position="Provost"
           thumb="https://randomuser.me/api/portraits/lego/6.jpg"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        />
+          excerpt="Lorem ipsum dolor sit amet, consectetur." />
       </ListItem>
       <div class="cell">
         <CardStaffList
@@ -65,8 +60,7 @@
           href="#"
           phone="Phone: +123456789"
           email="Email: emailme@google.com"
-          excerpt="Lorem ipsum dolor sit Do laborum consectetur irure et mollit minim reprehenderit pariatur ullamco ut sint anim. Eu eu esse nisi pariatur non consequat. Voluptate nulla consectetur labore cillum qui ullamco sunt. Enim ut Lorem culpa dolor magna "
-        />
+          excerpt="Lorem ipsum dolor sit Do laborum consectetur irure et mollit minim reprehenderit pariatur ullamco ut sint anim. Eu eu esse nisi pariatur non consequat. Voluptate nulla consectetur labore cillum qui ullamco sunt. Enim ut Lorem culpa dolor magna " />
       </div>
     </div>
   </SectionWrap>

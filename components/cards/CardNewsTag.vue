@@ -6,12 +6,11 @@
     :excerpt="excerpt"
     :tags="tags"
     :cols="cols"
-    class="card-news-tag"
-  >
+    class="card-news-tag">
     <slot
       v-for="(_, name) in $slots"
-      :name="name"
-      :slot="name"/>
+      :slot="name"
+      :name="name" />
   </GenericCard>
 </template>
 

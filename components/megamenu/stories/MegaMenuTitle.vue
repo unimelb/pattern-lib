@@ -5,8 +5,7 @@
     active="/random-link"
     faculty-name="Faculty of Fine Arts and Music"
     faculty-link="/faculty-link"
-    faculty-width="25.5%"
-  />
+    faculty-width="25.5%" />
 </template>
 
 <script>

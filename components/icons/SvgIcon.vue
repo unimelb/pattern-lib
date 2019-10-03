@@ -5,11 +5,10 @@
     :viewBox="viewBox"
     :aria-label="name"
     focusable="false"
-    role="img"
-  >
-    <use :xlink:href="'#icon-' + name"/>
+    role="img">
+    <use :xlink:href="'#icon-' + name" />
     <title>{{ name | capitalize }}</title>
-    <slot/>
+    <slot />
   </svg>
 </template>
 

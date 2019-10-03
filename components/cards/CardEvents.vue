@@ -5,12 +5,11 @@
     :href="href"
     :excerpt="excerpt"
     :cols="1"
-    :class-name="'card--events ' + className"
-  >
+    :class-name="'card--events ' + className">
     <slot
       v-for="(_, name) in $slots"
-      :name="name"
-      :slot="name"/>
+      :slot="name"
+      :name="name" />
   </GenericCard>
 </template>
 

@@ -1,7 +1,6 @@
 <template>
   <Carousel
-    :stories="stories"
-  />
+    :stories="stories" />
 </template>
 
 <script>

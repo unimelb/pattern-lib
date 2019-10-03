@@ -2,7 +2,7 @@
   <ContactList
     name="John Smith"
     phone="+613 4234 2344"
-    email="john.smith@unimelb.edu.au"/>
+    email="john.smith@unimelb.edu.au" />
 </template>
 
 <script>

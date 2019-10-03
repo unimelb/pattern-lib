@@ -7,8 +7,7 @@
     link="google.com"
     x-position="87"
     y-position="0"
-    bg-dark
-  />
+    bg-dark />
 </template>
 
 <script>

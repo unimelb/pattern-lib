@@ -1,7 +1,9 @@
 <template>
   <figure :class="classes">
-    <slot/>
-    <figcaption v-if="caption">{{ caption }}</figcaption>
+    <slot />
+    <figcaption v-if="caption">
+      {{ caption }}
+    </figcaption>
   </figure>
 </template>
 

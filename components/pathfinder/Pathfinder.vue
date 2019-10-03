@@ -1,17 +1,17 @@
 <template>
   <section
     :style="{ backgroundImage: `url(${image})` }"
-    class="section section--image bg-inverted-dark"
-  >
-    <div class="section--image-mask"/>
+    class="section section--image bg-inverted-dark">
+    <div class="section--image-mask" />
     <div class="section__inner">
       <div class="listing listing--three listing--center">
         <ListItem
           v-for="box in boxes.split(',')"
           :key="box">
           <CardPathfinder
-            :title="box"
-          >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.</CardPathfinder>
+            :title="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.
+          </CardPathfinder>
         </ListItem>
       </div>
     </div>

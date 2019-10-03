@@ -1,7 +1,7 @@
 <template>
   <div>
-    <PageHeaderMin/>
-    <PageBreadcrumbs :items="items"/>
+    <PageHeaderMin />
+    <PageBreadcrumbs :items="items" />
   </div>
 </template>
 

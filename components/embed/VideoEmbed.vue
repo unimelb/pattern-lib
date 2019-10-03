@@ -7,9 +7,7 @@
       width="560"
       height="315"
       frameborder="0"
-      allowfullscreen
-
-    />
+      allowfullscreen />
   </div>
 </template>
 

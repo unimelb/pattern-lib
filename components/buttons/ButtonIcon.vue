@@ -4,12 +4,11 @@
     :class="classes"
     :href="isLink && href"
     :aria-disabled="isLink && disabled ? 'true': false"
-    :disabled="!isLink && disabled"
-  >
+    :disabled="!isLink && disabled">
     <span
       v-if="!noIcon"
       :class="`push-icon${top ? ' push-icon--top' : ''}`">
-      <slot/>
+      <slot />
       <SvgIcon
         :name="icon"
         class="push-icon__icon"
@@ -17,7 +16,7 @@
         height="15px"
         aria-hidden="true" />
     </span>
-    <slot v-if="noIcon"/>
+    <slot v-if="noIcon" />
   </component>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-  <p class="heading-card text-italic">See README panel</p>
+  <p class="heading-card text-italic">
+    See README panel
+  </p>
 </template>
 
 <script>

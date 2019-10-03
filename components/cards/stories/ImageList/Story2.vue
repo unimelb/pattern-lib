@@ -11,8 +11,7 @@
       hero
       titleabove
       img="https://about-us-unimelb.netlify.com/images/history.jpg"
-      title="Postera crescam laude"
-    >
+      title="Postera crescam laude">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ullam quisquam nihil. At ducimus explicabo quidem distinctio magnam voluptas totam, repudiandae voluptatem aliquid consequuntur cupiditate, voluptates! In quis ratione laborum?
     </CardFocusImageList>
   </SectionWrap>
