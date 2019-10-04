@@ -30,8 +30,8 @@
 
 <script>
 
-import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
-import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
+import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
+import { IMAGE_PLACEHOLDER_BIG } from '../../../utils/placeholders';
 
 export default {
   name: 'AlumniProfiles',
