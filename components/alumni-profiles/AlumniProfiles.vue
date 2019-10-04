@@ -12,15 +12,15 @@
           role="img" />
         <div class="alumni__info">
           <p class="alumni__title">
-            Alumni profile
+            {{ title }}
           </p>
           <h3 class="alumni__name">
             {{ name }}
           </h3>
           <hr class="alumni__line">
-          <p class="alumni__short-text">
-            {{ text }}
-          </p>
+          <p
+            class="alumni__short-text"
+            v-html="text" />
         </div>
       </div>
     </FocusWrapper>
@@ -40,6 +40,10 @@ export default {
     thumb: {
       type: String,
       default: IMAGE_PLACEHOLDER_BIG,
+    },
+    title: {
+      type: String,
+      default: 'Alumni profile',
     },
     name: {
       type: String,
