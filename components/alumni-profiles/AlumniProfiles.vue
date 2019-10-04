@@ -18,7 +18,7 @@
             {{ name }}
           </h3>
           <hr class="alumni__line">
-          <p
+          <div
             class="alumni__short-text"
             v-html="text" />
         </div>
