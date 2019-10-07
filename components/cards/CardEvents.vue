@@ -4,8 +4,7 @@
     :title="title"
     :href="href"
     :excerpt="excerpt"
-    :cols="1"
-    :class-name="'card--events ' + className">
+    :cols="1">
     <slot
       v-for="(_, name) in $slots"
       :slot="name"
@@ -32,10 +31,6 @@ export default {
       default: '#',
     },
     excerpt: {
-      type: String,
-      default: '',
-    },
-    className: {
       type: String,
       default: '',
     },
