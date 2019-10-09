@@ -2,9 +2,7 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import sinon from 'sinon';
 import MediaGallery from '../MediaGallery.vue';
 
@@ -278,5 +276,14 @@ describe('MediaGallery overlay', () => {
     wrapper.find('.thumbnails__item div').trigger('click');
     expect(wrapper.vm.openState).toBe(true);
     expect(wrapper.find('.media-gallery').classes()).toContain('media-gallery--show');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(MediaGallery).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

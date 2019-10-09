@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import ModalDialog from '../ModalDialog.vue';
 
 expect.extend(toHaveNoViolations);
@@ -22,5 +20,14 @@ describe('ModalDialog', () => {
     });
 
     expect(wrapper.find('input').exists()).toBe(true);
+  });
+  
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(ModalDialog).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

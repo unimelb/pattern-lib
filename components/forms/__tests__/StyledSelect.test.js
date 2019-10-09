@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import StyledSelect from '../StyledSelect.vue';
 
 expect.extend(toHaveNoViolations);
@@ -28,5 +26,14 @@ describe('StyledSelect', () => {
 
     expect(wrapper.find('.styled-select__label').text()).toBe('text');
     expect(wrapper.find('.styled-select__label').exists()).toBe(true);
+  });
+  
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(StyledSelect).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

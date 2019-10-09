@@ -2,9 +2,7 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import ResponsiveTable from '../ResponsiveTable.vue';
 import CompactedTable from '../CompactedTable.vue';
 import BootstrapCMSTables from '../BootstrapCMSTables';

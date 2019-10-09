@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import ToggleBlock from '../ToggleBlock.vue';
 
 expect.extend(toHaveNoViolations);

@@ -1,5 +1,5 @@
 import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import FocusWrapper from '../FocusWrapper.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 
@@ -120,5 +120,14 @@ describe('FocusWrapper', () => {
 
     expect(wrapper.props().padded).toBe(true);
     expect(wrapper.classes().includes('card-focus--padded')).toBe(true);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(FocusWrapper).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

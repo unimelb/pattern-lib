@@ -1,5 +1,5 @@
 import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import SocialMediaBar from '../SocialMediaBar.vue';
 
 expect.extend(toHaveNoViolations);

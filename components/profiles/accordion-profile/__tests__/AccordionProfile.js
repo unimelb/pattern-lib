@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import AccordionProfile from '../AccordionProfile.vue';
 import {
   IMAGE_PLACEHOLDER_SHORT,

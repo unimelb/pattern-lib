@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import Logo from '../Logo.vue';
 
 
@@ -93,5 +91,14 @@ describe('Logo', () => {
     expect(wrapper.props().size).toBe(size);
     expect(wrapper.props().noPadding).toBe(noPadding);
     expect(wrapper.find('.logo__image--lg').attributes().class).toContain('logo--no-padding');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(Logo).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

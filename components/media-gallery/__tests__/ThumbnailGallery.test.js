@@ -1,5 +1,5 @@
 import { shallow, mount } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import sinon from 'sinon';
 import ThumbnailGallery from '../ThumbnailGallery.vue';
 
@@ -98,5 +98,14 @@ describe('ThumbnailGallery', () => {
     });
     wrapper.find('.thumbnails__item div').trigger('click');
     expect(callback.called).toBe(true);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(ThumbnailGallery).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

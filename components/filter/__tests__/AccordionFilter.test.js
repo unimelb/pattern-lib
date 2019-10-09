@@ -1,6 +1,9 @@
 import { mount, shallow } from 'vue-test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import AccordionFilter from '../accordion/AccordionFilter.vue';
+
+expect.extend(toHaveNoViolations);
 
 const mockData = [
   {
@@ -193,5 +196,14 @@ describe('AccordionFilter', () => {
     expect(wrapper.vm.selectedDiscipline).toBe('discipline 2');
     expect(wrapper.vm.selectedAudition).toBe('audition 2');
     expect(wrapper.vm.dataFiltered.length).toBe(1);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(AccordionFilter).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

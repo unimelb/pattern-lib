@@ -1,5 +1,5 @@
 import { shallow, mount } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import FigureWrap from '../FigureWrap.vue';
 
 expect.extend(toHaveNoViolations);
@@ -133,5 +133,14 @@ describe('GenericCard', () => {
       },
     });
     expect(wrapper.classes().indexOf('figure--fill')).toBeGreaterThan(0);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(FigureWrap).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

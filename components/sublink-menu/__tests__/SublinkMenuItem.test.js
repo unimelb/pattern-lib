@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import SublinkMenuItem from '../SublinkMenuItem.vue';
 
 expect.extend(toHaveNoViolations);

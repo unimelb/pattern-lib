@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import InfoPanel from '../InfoPanel.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 
@@ -65,5 +63,14 @@ describe('InfoPanel', () => {
       },
     });
     expect(wrapper.find('p').exists()).toBe(true);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(InfoPanel).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

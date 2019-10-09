@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import QuickLinksMenuItem from '../QuickLinksMenuItem.vue';
 
 expect.extend(toHaveNoViolations);

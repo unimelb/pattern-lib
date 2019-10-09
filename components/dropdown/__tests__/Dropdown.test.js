@@ -1,6 +1,9 @@
 import { mount, shallow } from 'vue-test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import Dropdown from '../Dropdown.vue';
+
+expect.extend(toHaveNoViolations);
 
 describe('Dropdown', () => {
   it('should match snapshot', () => {
@@ -99,5 +102,14 @@ describe('Dropdown', () => {
     });
     wrapper.find('select').trigger('change');
     expect(wrapper.vm.callback).toHaveBeenCalledTimes(1);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(Dropdown).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });
