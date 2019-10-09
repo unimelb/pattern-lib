@@ -22,7 +22,7 @@
     line-height: 1.5625;
     font-weight: var(--fw-bold);
     text-decoration: none;
-    color: rgb(var(--col-background-primary-navy));
+    color: rgb(var(--col-background-primary-navy)) !important;
 
     &:hover {
       text-decoration: underline;
@@ -103,7 +103,7 @@
 
     a {
       font-weight: var(--fw-semibold);
-      color: rgb(var(--col-background-primary-navy));
+      color: rgb(var(--col-background-primary-navy)) !important;
       width: max-content;
 
       &:hover {
