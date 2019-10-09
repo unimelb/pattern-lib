@@ -8,7 +8,7 @@
         <a
           :href="item.href"
           class="tags__link">
-          {{ item.value }}
+          {{ item.value || item }}
         </a>
       </li>
     </ul>
