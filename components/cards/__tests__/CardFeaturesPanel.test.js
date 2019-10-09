@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import CardFeaturesPanel from '../CardFeaturesPanel.vue';
 
 expect.extend(toHaveNoViolations);
@@ -86,5 +84,14 @@ describe('CardFeaturesPanel', () => {
     expect(typeof wrapper.props().thumb).toBe('string');
     expect(wrapper.props().thumb).toBe(thumb);
     expect(wrapper.find('.card__thumb-img').attributes().style).toBe('background-image: url(http://);');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(CardFeaturesPanel).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

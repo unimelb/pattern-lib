@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import CardStat from '../CardStat.vue';
 
 expect.extend(toHaveNoViolations);
@@ -83,5 +81,14 @@ describe('CardStat', () => {
 
     expect(cols.validator && cols.validator(1)).toBeFalsy();
     expect(cols.validator && cols.validator(4)).toBeFalsy();
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(CardStat).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

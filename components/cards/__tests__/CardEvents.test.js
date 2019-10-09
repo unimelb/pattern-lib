@@ -2,9 +2,7 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import CardEvents from '../CardEvents.vue';
 
 expect.extend(toHaveNoViolations);
@@ -87,5 +85,14 @@ describe('CardEvents', () => {
     expect(typeof wrapper.props().excerpt).toBe('string');
     expect(wrapper.props().excerpt).toBe(excerpt);
     expect(wrapper.find('.card__excerpt').text()).toBe(excerpt);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(CardEvents).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

@@ -113,7 +113,12 @@ This is bad because we can't test the props or get a snapshot of the attributes 
 Example:
 
 ```js
-it('My Component throws no accessibillity violations', (done) => {
+import { axe, toHaveNoViolations } from 'jest-axe';
+
+expect.extend(toHaveNoViolations);
+
+
+it('My Component throws no accessibility violations', (done) => {
     const html = shallow(PageFooter).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {

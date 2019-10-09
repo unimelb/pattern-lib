@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import GenericCard from '../GenericCard.vue';
 
 expect.extend(toHaveNoViolations);
@@ -165,5 +163,14 @@ describe('GenericCard', () => {
       },
     });
     expect(wrapper.classes()).toContain('card--generic--full-width');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(GenericCard).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

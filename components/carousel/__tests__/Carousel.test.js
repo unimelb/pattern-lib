@@ -2,9 +2,7 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import sinon from 'sinon';
 import Carousel from '../Carousel.vue';
 
@@ -238,5 +236,14 @@ describe('Carousel', () => {
     expect(slide.called).toBe(true);
     next.trigger('click');
     expect(slide.called).toBe(true);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(Carousel).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });
