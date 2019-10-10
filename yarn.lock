@@ -542,10 +542,10 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.12.tgz#45dd1d0638e8c8f153e87d296907659296873916"
   integrity sha512-SOhuU4wNBxhhTHxYaiG5NY4HBhDIDnJF60GU+2LqHAdKKer86//e4yg69aENCtQ04n0ovz+tq2YPME5t5yp4pw==
 
-"@vue/component-compiler-utils@^2.5.1":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@vue/component-compiler-utils/-/component-compiler-utils-2.6.0.tgz#aa46d2a6f7647440b0b8932434d22f12371e543b"
-  integrity sha512-IHjxt7LsOFYc0DkTncB7OXJL7UzwOLPPQCfEUNyxL2qt+tF12THV+EO33O1G2Uk4feMSWua3iD39Itszx0f0bw==
+"@vue/component-compiler-utils@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@vue/component-compiler-utils/-/component-compiler-utils-3.0.0.tgz#d16fa26b836c06df5baaeb45f3d80afc47e35634"
+  integrity sha512-am+04/0UX7ektcmvhYmrf84BDVAD8afFOf4asZjN84q8xzxFclbk5x0MtxuKGfp+zjN5WWPJn3fjFAWtDdIGSw==
   dependencies:
     consolidate "^0.15.1"
     hash-sum "^1.0.2"
@@ -12720,10 +12720,10 @@ vue-axe@^1.0.7:
   dependencies:
     axe-core "^3.0.2"
 
-vue-concise-slider@^3.3.9:
-  version "3.4.1"
-  resolved "https://registry.npmjs.org/vue-concise-slider/-/vue-concise-slider-3.4.1.tgz#a770f7412eadf9f1e6f8bcff78c84623dcba4002"
-  integrity sha512-tf3XtcdDp3QZ9FCoY+ttaKRWBHQZZEXt45Wfgkrg7iEj9CZe3J7TsuUUkMvtPVlK2SHqoMufv+4LPmhRnj3FBA==
+vue-concise-slider@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/vue-concise-slider/-/vue-concise-slider-3.4.2.tgz#2efaa480391b133604ee9bca80f4bd49112ee7e1"
+  integrity sha512-2PioPanlkOiVp5xzfb30weWZuBIqPKUYyVOJ4IeB3QW9nsDy8aHolo+ia5EOTRuWlBss6m6ox3T0upDB4Y8/9A==
 
 vue-eslint-parser@^5.0.0:
   version "5.0.0"
@@ -12769,12 +12769,12 @@ vue-jest@^2.6.0:
     tsconfig "^7.0.0"
     vue-template-es2015-compiler "^1.6.0"
 
-vue-loader@^15.7.0:
-  version "15.7.0"
-  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.7.0.tgz#27275aa5a3ef4958c5379c006dd1436ad04b25b3"
-  integrity sha512-x+NZ4RIthQOxcFclEcs8sXGEWqnZHodL2J9Vq+hUz+TDZzBaDIh1j3d9M2IUlTjtrHTZy4uMuRdTi8BGws7jLA==
+vue-loader@^15.7.1:
+  version "15.7.1"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.7.1.tgz#6ccacd4122aa80f69baaac08ff295a62e3aefcfd"
+  integrity sha512-fwIKtA23Pl/rqfYP5TSGK7gkEuLhoTvRYW+TU7ER3q9GpNLt/PjG5NLv3XHRDiTg7OPM1JcckBgds+VnAc+HbA==
   dependencies:
-    "@vue/component-compiler-utils" "^2.5.1"
+    "@vue/component-compiler-utils" "^3.0.0"
     hash-sum "^1.0.2"
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
@@ -12785,10 +12785,10 @@ vue-progressive-image@3.2.0:
   resolved "https://registry.yarnpkg.com/vue-progressive-image/-/vue-progressive-image-3.2.0.tgz#a6443f78bda87846f94e900b119e7ed0b6f3365f"
   integrity sha512-D1DSBOIw2nAJHTDT2aVn2lDROKGd4XvCIIH5JY2t5yjNcDppRXzqXRqrGYRFcRbtA+6XV17s55VszFFItiNLcg==
 
-vue-scrollto@^2.15.0:
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/vue-scrollto/-/vue-scrollto-2.15.0.tgz#e6e4645dfd2efc0d960123f607c2ab448b81670a"
-  integrity sha512-FmJncIrXvsqvyVAN55Trc2CQWVDyxuMgdQQp1Q9I9bhoEi7XXpvXXQonhbFBktzNggJf1rpfHpVqa8KLhPeePQ==
+vue-scrollto@^2.17.1:
+  version "2.17.1"
+  resolved "https://registry.yarnpkg.com/vue-scrollto/-/vue-scrollto-2.17.1.tgz#cd62ee0b98cf7e2ba9fd94f029addcd093978a48"
+  integrity sha512-uxOJXg6cZL88B+hTXRHDJMR+gHGiaS70ZTNk55fE5Z2TdwyIx9K/IHoNeTrtBrM6u3FASAIymKjZaQLmDf8Ykg==
   dependencies:
     bezier-easing "2.1.0"
 
