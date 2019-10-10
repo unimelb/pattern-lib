@@ -204,29 +204,6 @@ exports[`CardsFilter should match snapshot 1`] = `
                 class="sub-title"
               >
                 <svg
-                  aria-label="info"
-                  focusable="false"
-                  role="img"
-                >
-                  <use
-                    xlink:href="#icon-info"
-                  />
-                   
-                  <title>
-                    Info
-                  </title>
-                   
-                </svg>
-                 
-                <span>
-                  Exhibition
-                </span>
-              </div>
-               
-              <div
-                class="sub-title"
-              >
-                <svg
                   aria-label="calendar"
                   focusable="false"
                   role="img"
@@ -245,7 +222,7 @@ exports[`CardsFilter should match snapshot 1`] = `
                   2018-12-01
                 </span>
               </div>
-               
+                
             </div>
              
             <div
@@ -259,7 +236,21 @@ exports[`CardsFilter should match snapshot 1`] = `
             <div
               class="card__footer card__footer--column"
             >
-              <!---->
+              <div
+                class="tags card__tags"
+              >
+                <ul
+                  class="tags__list"
+                >
+                  <li
+                    class="tags__item list-reset"
+                  >
+                    <span>
+                      Exhibition
+                    </span>
+                  </li>
+                </ul>
+              </div>
                
               <div
                 class="card__links"
@@ -327,29 +318,6 @@ exports[`CardsFilter should match snapshot 1`] = `
                 class="sub-title"
               >
                 <svg
-                  aria-label="info"
-                  focusable="false"
-                  role="img"
-                >
-                  <use
-                    xlink:href="#icon-info"
-                  />
-                   
-                  <title>
-                    Info
-                  </title>
-                   
-                </svg>
-                 
-                <span>
-                  Event
-                </span>
-              </div>
-               
-              <div
-                class="sub-title"
-              >
-                <svg
                   aria-label="calendar"
                   focusable="false"
                   role="img"
@@ -368,7 +336,7 @@ exports[`CardsFilter should match snapshot 1`] = `
                   2018-11-29
                 </span>
               </div>
-               
+                
             </div>
              
             <div
@@ -382,7 +350,21 @@ exports[`CardsFilter should match snapshot 1`] = `
             <div
               class="card__footer card__footer--column"
             >
-              <!---->
+              <div
+                class="tags card__tags"
+              >
+                <ul
+                  class="tags__list"
+                >
+                  <li
+                    class="tags__item list-reset"
+                  >
+                    <span>
+                      Event
+                    </span>
+                  </li>
+                </ul>
+              </div>
                
               <div
                 class="card__links"
