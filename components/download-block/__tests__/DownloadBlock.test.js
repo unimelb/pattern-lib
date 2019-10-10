@@ -21,7 +21,12 @@ describe('DownloadBlock', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(DownloadBlock).html();
+    const html = shallow(DownloadBlock, {
+      propsData: {
+        href: 'www.unimelb.edu.au',
+        header: 'mock header',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

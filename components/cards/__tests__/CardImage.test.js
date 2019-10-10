@@ -13,7 +13,12 @@ describe('CardImage', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(CardImage).html();
+    const html = shallow(CardImage, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

@@ -44,10 +44,12 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     href: {
       type: String,
-      default: 'http://www.google.com.au',
+      default: 'www.unimelb.edu.au',
+      required: true,
     },
     compact: {
       type: Boolean,

@@ -279,7 +279,11 @@ describe('MediaGallery overlay', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(MediaGallery).html();
+    const html = shallow(MediaGallery, {
+      propsData: {
+        items: itemsMock,
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

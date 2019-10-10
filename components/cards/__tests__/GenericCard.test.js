@@ -166,7 +166,12 @@ describe('GenericCard', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(GenericCard).html();
+    const html = shallow(GenericCard, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

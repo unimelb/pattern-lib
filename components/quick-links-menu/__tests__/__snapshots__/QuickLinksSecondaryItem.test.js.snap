@@ -3,7 +3,7 @@
 exports[`QuickLinksSecondaryItem should match snapshot 1`] = `
 <a
   class="ql-menu__secondary-link"
-  href="#"
+  href=""
 >
   <!---->
    

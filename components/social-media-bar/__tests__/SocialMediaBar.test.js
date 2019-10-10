@@ -79,7 +79,11 @@ describe('SocialMediaBar', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(SocialMediaBar).html();
+    const html = shallow(SocialMediaBar, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

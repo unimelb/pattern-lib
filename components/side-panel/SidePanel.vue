@@ -2,10 +2,10 @@
   <nav class="side-panel">
     <div class="side-panel__inner">
       <h5 class="side-panel__title">
-        {{ title }}
         <button
           class="side-panel__trigger"
           @click="toggleOpen">
+          {{ title }}
           <SvgIcon
             width="10"
             height="10"
@@ -37,6 +37,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     initialOpen: {
       type: Boolean,

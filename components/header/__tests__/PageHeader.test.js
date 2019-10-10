@@ -18,7 +18,11 @@ describe('PageHeader', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(PageHeader).html();
+    const html = shallow(PageHeader, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

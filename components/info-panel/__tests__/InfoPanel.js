@@ -66,7 +66,11 @@ describe('InfoPanel', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(InfoPanel).html();
+    const html = shallow(InfoPanel, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

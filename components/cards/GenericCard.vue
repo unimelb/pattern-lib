@@ -55,6 +55,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     cols: {
       type: Number,
@@ -67,7 +68,8 @@ export default {
     },
     href: {
       type: String,
-      default: '#',
+      default: '',
+      required: true,
     },
     excerpt: {
       type: String,

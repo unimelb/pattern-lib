@@ -13,7 +13,11 @@ describe('SidePanel', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(SidePanel).html();
+    const html = shallow(SidePanel, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

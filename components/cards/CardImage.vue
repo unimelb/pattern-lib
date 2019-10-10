@@ -37,7 +37,8 @@ export default {
     },
     href: {
       type: String,
-      default: '#',
+      default: '',
+      required: true,
     },
   },
 };

@@ -7,7 +7,7 @@ exports[`GenericCard should match snapshot 1`] = `
   <a
     aria-label="Image for"
     class="card__thumb"
-    href="#"
+    href=""
     style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png);"
   />
    
@@ -19,7 +19,7 @@ exports[`GenericCard should match snapshot 1`] = `
     >
       <a
         class="card__title"
-        href="#"
+        href=""
       >
         
       </a>

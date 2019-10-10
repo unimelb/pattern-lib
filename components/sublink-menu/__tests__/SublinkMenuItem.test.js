@@ -13,7 +13,14 @@ describe('SublinkMenuItem', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(SublinkMenuItem).html();
+    const html = shallow(SublinkMenuItem, {
+      propsData: {
+        link: 'www.unimelb.edu.au',
+      },
+      slots: {
+        default: 'mock slot',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

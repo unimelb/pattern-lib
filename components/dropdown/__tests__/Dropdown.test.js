@@ -105,7 +105,20 @@ describe('Dropdown', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(Dropdown).html();
+    const html = shallow(Dropdown, {
+      propsData: {
+        values: [{
+          label: 'label1',
+          value: 'value1',
+        },
+        {
+          label: 'label2',
+          value: 'value selected2',
+        }],
+        selectedItem: 'value1',
+        callback: jest.fn(),
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

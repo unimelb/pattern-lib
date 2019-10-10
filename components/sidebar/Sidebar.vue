@@ -68,6 +68,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     titleIcon: {
       type: String,

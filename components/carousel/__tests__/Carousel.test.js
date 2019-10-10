@@ -239,8 +239,11 @@ describe('Carousel', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(Carousel).html();
-    // pass anything that outputs html to axe
+    const html = shallow(Carousel, {
+      propsData: {
+        stories: storiesMock,
+      },
+    }).html();
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();
       done();

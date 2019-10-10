@@ -13,7 +13,14 @@ describe('SidePanelNavItem', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(SidePanelNavItem).html();
+    const html = shallow(SidePanelNavItem, {
+      propsData: {
+        target: 'www.unimelb.edu.au',
+      },
+      slots: {
+        default: 'section 1',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

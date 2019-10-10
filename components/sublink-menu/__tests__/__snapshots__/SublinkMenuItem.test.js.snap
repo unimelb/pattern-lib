@@ -3,6 +3,7 @@
 exports[`SublinkMenuItem should match snapshot 1`] = `
 <div
   class="sublink-menu__item"
+  href=""
 >
   <a
     class="sublink-menu__link"

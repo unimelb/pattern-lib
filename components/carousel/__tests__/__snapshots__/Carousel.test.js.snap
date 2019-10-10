@@ -2,8 +2,7 @@
 
 exports[`Carousel should match snapshot 1`] = `
 <section
-  aria-label="Stories and events"
-  aria-roledescription="carousel"
+  aria-label="Stories and events Carousel"
   class="carousel"
 >
   <div

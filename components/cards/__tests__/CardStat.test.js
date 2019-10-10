@@ -84,7 +84,11 @@ describe('CardStat', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(CardStat).html();
+    const html = shallow(CardStat, {
+      propsData: {
+
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

@@ -18,7 +18,11 @@ describe('SectionDivider', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(SectionDivider).html();
+    const html = shallow(SectionDivider, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

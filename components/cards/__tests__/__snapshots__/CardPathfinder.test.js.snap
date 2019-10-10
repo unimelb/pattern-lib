@@ -1,3 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardPathfinder should match snapshot 1`] = `<!---->`;
+exports[`CardPathfinder should match snapshot 1`] = `
+<a
+  aria-label=""
+  class="btn-owner card card--focus-box bg-inverted card--pathfinder"
+  href="www.unimelb.edu.au"
+>
+  <!---->
+   
+  <!---->
+   
+  <h3
+    class="card__header heading-section"
+  />
+   
+  <div
+    class="card__inner"
+  >
+    <!---->
+     
+    <p />
+  </div>
+   
+  <div
+    class="card__footer"
+  >
+    <buttonicon
+      class="btn--inverted btn--fullwidth"
+      element="span"
+      icon="chevron-right"
+    >
+      Find out more
+    </buttonicon>
+  </div>
+</a>
+`;

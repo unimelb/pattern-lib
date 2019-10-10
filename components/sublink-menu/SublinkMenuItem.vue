@@ -26,7 +26,8 @@ export default {
   props: {
     link: {
       type: String,
-      default: '#',
+      default: '',
+      required: true,
     },
   },
 };

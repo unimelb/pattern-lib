@@ -1,33 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`StatsItem should match snapshot 1`] = `
-<li
-  class="stats-group__item"
+<ul
+  class="list-reset"
 >
-  <div
-    class="stats-group__icon"
-  />
-   
-  <strong
-    class="stats-group__value"
+  <li
+    class="stats-group__item"
   >
-    <span
-      class="stats-group__value__hash"
+    <div
+      class="stats-group__icon"
+    />
+     
+    <strong
+      class="stats-group__value"
     >
-      #
-    </span>
+      <span
+        class="stats-group__value__hash"
+      >
+        #
+      </span>
+       
+      <span
+        class="stats-group__value__num"
+      >
+        
+      </span>
+    </strong>
      
     <span
-      class="stats-group__value__num"
+      class="stats-group__text"
     >
       
     </span>
-  </strong>
-   
-  <span
-    class="stats-group__text"
-  >
-    
-  </span>
-</li>
+  </li>
+</ul>
 `;

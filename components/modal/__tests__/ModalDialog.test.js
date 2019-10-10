@@ -23,7 +23,11 @@ describe('ModalDialog', () => {
   });
   
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(ModalDialog).html();
+    const html = shallow(ModalDialog, {
+      propsData: {
+        trigger: 'mock trigger',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

@@ -3,7 +3,7 @@
 exports[`CardImage should match snapshot 1`] = `
 <a
   class="btn-owner card card--image card--bdr bg-inverted"
-  href="#"
+  href=""
 >
   <!---->
    
