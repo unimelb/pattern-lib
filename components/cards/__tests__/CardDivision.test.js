@@ -12,7 +12,12 @@ describe('CardDivision', () => {
     expect(result).toMatchSnapshot();
   });
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(CardDivision).html();
+    const html = shallow(CardDivision, {
+      propsData: {
+        name: 'mock test',
+        href: 'www.unimelb.edu.au',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

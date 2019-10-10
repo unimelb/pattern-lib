@@ -13,7 +13,11 @@ describe('CardBioHeader', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(CardBioHeader).html();
+    const html = shallow(CardBioHeader, {
+      propsData: {
+        name: 'mock name',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

@@ -13,7 +13,12 @@ describe('CardDivisionHead', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(CardDivisionHead).html();
+    const html = shallow(CardDivisionHead, {
+      propsData: {
+        name: 'mock name',
+        href: 'www.unimelb.edu.au',
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();
