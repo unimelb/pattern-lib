@@ -81,15 +81,10 @@
             :thumb="item.img_url"
             :title="item.title"
             :href="item.link"
-            :excerpt="item.description">
+            :excerpt="item.description"
+            :tags="item.performance">
             <div
               slot="sub-title-1"
-              class="sub-title">
-              <SvgIcon name="info" />
-              <span>{{ item.performance.join(', ') }}</span>
-            </div>
-            <div
-              slot="sub-title-2"
               class="sub-title">
               <SvgIcon name="calendar" />
               <span>{{ item.start_time }}</span>
