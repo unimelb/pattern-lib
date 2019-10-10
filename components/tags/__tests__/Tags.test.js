@@ -10,4 +10,13 @@ describe('Tags', () => {
     const result = shallow(Tags).element;
     expect(result).toMatchSnapshot();
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(Tags).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

@@ -10,4 +10,13 @@ describe('Sidebar', () => {
     const result = shallow(Sidebar).element;
     expect(result).toMatchSnapshot();
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(Sidebar).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

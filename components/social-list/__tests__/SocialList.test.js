@@ -11,4 +11,13 @@ describe('Social List Generic', () => {
     const result = shallow(SocialListGeneric).element;
     expect(result).toMatchSnapshot();
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(SocialListGeneric).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

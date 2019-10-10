@@ -77,4 +77,13 @@ describe('SocialMediaBar', () => {
       expect(elem.exists()).toBe(true);
     });
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(SocialMediaBar).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

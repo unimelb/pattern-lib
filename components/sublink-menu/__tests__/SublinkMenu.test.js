@@ -11,4 +11,13 @@ describe('SublinkMenu', () => {
     const result = shallow(SublinkMenu).element;
     expect(result).toMatchSnapshot();
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(SublinkMenu).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

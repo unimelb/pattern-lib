@@ -18,4 +18,13 @@ describe('Testimonials', () => {
 
     expect(result).toMatchSnapshot();
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(Testimonials).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

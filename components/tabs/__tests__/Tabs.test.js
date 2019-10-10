@@ -26,4 +26,13 @@ describe('Tabs', () => {
 
     expect(wrapper.element).toMatchSnapshot();
   });
+  
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(Tabs).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

@@ -93,4 +93,13 @@ describe('AccordionProfile', () => {
     expect(wrapper.props().bio).toBe(bio);
     expect(wrapper.find('.accordion-profile__bio').text()).toBe(bio);
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(AccordionProfile).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });

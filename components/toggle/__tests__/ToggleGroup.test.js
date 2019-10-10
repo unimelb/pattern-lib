@@ -11,4 +11,13 @@ describe('ToggleGroup', () => {
     const result = shallow(ToggleGroup).element;
     expect(result).toMatchSnapshot();
   });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(ToggleGroup).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
 });
