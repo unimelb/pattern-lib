@@ -22,7 +22,7 @@
     line-height: 1.5625;
     font-weight: var(--fw-bold);
     text-decoration: none;
-    color: rgb(var(--col-background-primary-navy)) !important;
+    color: rgb(var(--col-background-primary-navy));
 
     &:hover {
       text-decoration: underline;
