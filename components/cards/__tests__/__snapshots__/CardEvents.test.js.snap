@@ -2,7 +2,7 @@
 
 exports[`CardEvents should match snapshot 1`] = `
 <div
-  class="card card--generic card--generic--full-width card--events "
+  class="card card--generic card--generic--full-width"
 >
   <a
     aria-label="Image for"
