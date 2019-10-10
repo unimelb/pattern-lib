@@ -245,13 +245,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                   <li
                     class="tags__item list-reset"
                   >
-                    <a
-                      class="tags__link"
-                    >
-                      
-        Exhibition
-      
-                    </a>
+                    <span>
+                      Exhibition
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -363,13 +359,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                   <li
                     class="tags__item list-reset"
                   >
-                    <a
-                      class="tags__link"
-                    >
-                      
-        Event
-      
-                    </a>
+                    <span>
+                      Event
+                    </span>
                   </li>
                 </ul>
               </div>
