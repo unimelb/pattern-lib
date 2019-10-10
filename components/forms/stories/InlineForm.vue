@@ -27,7 +27,19 @@
       </span>
       <button
         class="form--inline__button form--inline__button--text"
-        aria-label="Submit">Submit!</button>
+        aria-label="Submit">
+        Submit!
+      </button>
     </div>
   </form>
 </template>
+
+<script>
+import SvgIcon from '../../icons/SvgIcon.vue';
+
+export default {
+  components: {
+    SvgIcon,
+  },
+};
+</script>

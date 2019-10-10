@@ -1,7 +1,7 @@
 <template>
   <SectionWrap small>
     <FocusWrapper>
-      <div class="placeholder"/>
+      <div class="placeholder" />
     </FocusWrapper>
   </SectionWrap>
 </template>

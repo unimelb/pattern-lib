@@ -1,0 +1,37 @@
+.logo-listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &__item {
+    width: 50%;
+    padding: 1rem;
+
+    @media (--bp-tablet) {
+      width: 36%;
+    }
+
+    @media (--bp-x-tablet) {
+      width: 28%;
+    }
+
+    @media (--bp-desktop) {
+      width: 26%;
+    }
+
+    @media (--bp-x-desktop) {
+      width: 22%;
+    }
+
+    @media (--bp-wide) {
+      width: 20%;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 7.5rem;
+    height: auto;
+  }
+}

@@ -1,15 +1,15 @@
 <template>
   <ToggleBlock
     :active="true"
-    class="nav--toggle"
-  >
+    class="nav--toggle">
     <template slot="default">
-      <h3 id="navigation">Navigation</h3>
+      <h3 id="navigation">
+        Navigation
+      </h3>
       <svg
         focusable="false"
         role="presentation"
-        class="nav__svg"
-      >
+        class="nav__svg">
         <use
           xmlns:xlink="http://www.w3.org/1999/xlink"
           xlink:href="#icon-chevron-down" />
@@ -18,8 +18,7 @@
     <template slot="hidden">
       <nav
         class="nav--horizontal"
-        aria-label="Subject level"
-      >
+        aria-label="Subject level">
         <a
           class="nav__link"
           href="">The first link</a>

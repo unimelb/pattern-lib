@@ -4,8 +4,7 @@
     title="Strategy and governance"
     entity="School of Mathematics and Statistics"
     entity-sub="Statistical Consulting Centre"
-    img="https://placeimg.com/990/530/arch/1"
-  />
+    img="https://placeimg.com/990/530/arch/1" />
 </template>
 
 <script>

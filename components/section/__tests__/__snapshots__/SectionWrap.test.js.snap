@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionWrap should match snapshot 1`] = `
+<div
+  class="section"
+>
+  <div
+    class="section__inner"
+  />
+</div>
+`;

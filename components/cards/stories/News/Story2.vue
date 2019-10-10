@@ -2,54 +2,122 @@
   <SectionWrap class="bg-alt">
     <div class="grid grid--1col">
       <ListItem>
-        <CardNews
-          :cols="1"
-          thumb="https://via.placeholder.com/200x400"
-          title="Growing esteem"
-          excerpt="Find out about our strategic journey and where we're headed."
-        />
-      </ListItem>
-      <ListItem>
-        <CardNews
-          :cols="1"
+        <CardNewsTag
+          :tags="tags"
           thumb="https://via.placeholder.com/400x200"
-          title="Melbourne model"
-          excerpt="Check out how our degrees are structured to give our students flexibility and focus."
-        />
+          title="Test 1"
+          href="#"
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
+          <div
+            slot="sub-title-1"
+            class="sub-title">
+            <span>Sub-title 1</span>
+          </div>
+          <template slot="links">
+            <a
+              href="/"
+              aria-label="View article">
+              View article
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10" />
+            </a>
+          </template>
+        </CardNewsTag>
       </ListItem>
       <ListItem>
-        <CardNews
-          :cols="1"
-          thumb="https://via.placeholder.com/300x200"
-          title="Our structure"
-          excerpt="this is a test of the content"
-        />
+        <CardNewsTag
+          :tags="tags"
+          thumb="https://via.placeholder.com/800x400"
+          title="Lorem ipsum dolor sit amet, consectetur"
+          href="#"
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
+          <div
+            slot="sub-title-1"
+            class="sub-title">
+            <span>Sub-title 1</span>
+          </div>
+          <template slot="links">
+            <a
+              href="/"
+              aria-label="View article">
+              View article
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10" />
+            </a>
+          </template>
+        </CardNewsTag>
       </ListItem>
       <ListItem>
-        <CardNews
-          :cols="1"
-          thumb="https://via.placeholder.com/400x200"
-          title="Governance"
-          excerpt="this is a test of the content"
-        />
-      </ListItem>
-      <ListItem>
-        <CardNews
-          :cols="1"
-          thumb="https://via.placeholder.com/400x200"
-          title="Annual reports"
-          excerpt="See our governance details, including organisation and governance structures, regulatory framework, compliance obligations and risk management."
-        />
+        <CardNewsTag
+          :tags="tags"
+          thumb="https://via.placeholder.com/800x600"
+          title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magni natus quas placeat adipisci optio libero quibusdam vitae nobis."
+          href="#"
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
+          <div
+            slot="sub-title-1"
+            class="sub-title">
+            <span>Sub-title 1</span>
+          </div>
+          <template slot="links">
+            <a
+              href="/"
+              aria-label="View article">
+              View article
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10" />
+            </a>
+          </template>
+        </CardNewsTag>
       </ListItem>
     </div>
   </SectionWrap>
 </template>
 
 <script>
-import CardNews from '../../CardNews.vue';
+import SvgIcon from '../../../icons/SvgIcon.vue';
+import CardNewsTag from '../../CardNewsTag.vue';
+import news from './news.md';
 
 export default {
-  components: { CardNews },
-  readme: { html: true, source: true },
+  components: { CardNewsTag, SvgIcon },
+  readme: { custom: news, source: true, html: true },
+  data() {
+    return {
+      tags: [{
+        href: 'https://www.unimelb.edu.au/',
+        value: 'tag1',
+      },
+      {
+        href: 'https://www.unimelb.edu.au/',
+        value: 'tag2',
+      },
+      {
+        href: 'https://www.unimelb.edu.au/',
+        value: 'tag3',
+      },
+      {
+        href: 'https://www.unimelb.edu.au/',
+        value: 'tag4',
+      },
+      {
+        href: 'https://www.unimelb.edu.au/',
+        value: 'tag5',
+      },
+      {
+        href: 'https://www.unimelb.edu.au/',
+        value: 'tag super hiper ultra mega long',
+      }],
+    };
+  },
 };
 </script>

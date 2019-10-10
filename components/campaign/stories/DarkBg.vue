@@ -7,13 +7,12 @@
     link="google.com"
     x-position="87"
     y-position="0"
-    bg-dark
-  />
+    bg-dark />
 </template>
 
 <script>
+import BgImage from 'storybook/placeholders/campaign-banner-dark.png';
 import PageHeaderCampaign from '../PageHeaderCampaign.vue';
-import BgImage from '../../../.storybook/placeholders/campaign-banner-dark.png';
 
 export default {
   components: { PageHeaderCampaign },

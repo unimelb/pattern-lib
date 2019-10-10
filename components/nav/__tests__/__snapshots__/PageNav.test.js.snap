@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageNav should match snapshot 1`] = `
+<div
+  class="header-tools__menu"
+>
+  <a
+    aria-controls="sitemapmenu"
+    aria-haspopup="true"
+    class="link-icon--vertical link-reset"
+    href="#sitemap"
+    id="sitemapbutton"
+    role="button"
+  >
+    <svg
+      class="link-icon__icon svg"
+      focusable="false"
+      role="presentation"
+      viewBox="10 10 26 28"
+    >
+      <path
+        d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"
+      />
+    </svg>
+     
+    <span
+      class="link-icon__text"
+    >
+      Menu
+    </span>
+  </a>
+   
+  <div
+    aria-hidden="true"
+    class="sitenav sitenav__panel"
+    id="sitemap"
+    role="navigation"
+  >
+    <button
+      aria-label="Close"
+      class="sitenav__back-btn button-ui"
+      type="button"
+    >
+      
+      Close
+    
+    </button>
+     
+     
+    <ul
+      aria-labelledby="sitemapbutton"
+      class="sitenav__list"
+      id="sitemapmenu"
+      role="menu"
+    >
+      <li
+        class="home"
+        role="none"
+      >
+        <a
+          href="/"
+          role="menuitem"
+        >
+          Site Navigation
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

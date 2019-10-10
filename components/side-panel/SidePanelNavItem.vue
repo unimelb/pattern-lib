@@ -4,12 +4,12 @@
       v-scroll-to="target"
       href="#">
       <span v-if="right">
-        <slot/>
+        <slot />
       </span>
       <span
         v-if="!right"
         class="push-icon">
-        <slot/>
+        <slot />
         <SvgIcon
           class="push-icon__icon"
           name="chevron-right"
@@ -21,7 +21,12 @@
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
+
 export default {
+  components: {
+    SvgIcon,
+  },
   props: {
     target: {
       type: String,

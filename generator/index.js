@@ -14,27 +14,27 @@ module.exports = function generator(plop) {
     actions: [
       {
         type: 'add',
-        path: './../components/{{dashCase name}}/index.css',
+        path: 'components/{{dashCase name}}/index.css',
         templateFile: './component/index.css.hbs',
       },
       {
         type: 'add',
-        path: './../components/{{dashCase name}}/stories/index.js',
+        path: 'components/{{dashCase name}}/stories/index.js',
         templateFile: './component/stories/index.js.hbs',
       },
       {
         type: 'add',
-        path: './../components/{{dashCase name}}/stories/{{properCase name}}Default.vue',
+        path: 'components/{{dashCase name}}/stories/{{properCase name}}Default.vue',
         templateFile: './component/stories/Story.vue.hbs',
       },
       {
         type: 'add',
-        path: './../components/{{dashCase name}}/{{properCase name}}.vue',
+        path: 'components/{{dashCase name}}/{{properCase name}}.vue',
         templateFile: './component/Component.vue.hbs',
       },
       {
         type: 'modify',
-        path: './../components/index.css',
+        path: 'components/index.css',
         pattern: /\/\*\* GENERATOR \*\*\//g,
         templateFile: './component/import.css.hbs',
       },
@@ -50,7 +50,7 @@ module.exports = function generator(plop) {
       {
         type: 'directory',
         name: 'component',
-        basePath: './components',
+        basePath: 'components',
         message: 'Select component',
       },
       {
@@ -62,18 +62,18 @@ module.exports = function generator(plop) {
     actions: [
       {
         type: 'add',
-        path: './../components/{{dashCase component}}/stories/{{properCase story}}.vue',
+        path: 'components/{{dashCase component}}/stories/{{properCase story}}.vue',
         templateFile: './story/Story.vue.hbs',
       },
       {
         type: 'modify',
-        path: './../components/{{dashCase component}}/stories/index.js',
+        path: 'components/{{dashCase component}}/stories/index.js',
         pattern: /\/\*( ##Import).*?\*\//g,
         templateFile: './story/import.js.hbs',
       },
       {
         type: 'modify',
-        path: './../components/{{dashCase component}}/stories/index.js',
+        path: 'components/{{dashCase component}}/stories/index.js',
         pattern: /\/\*( ##Story).*?\*\//g,
         templateFile: './story/index.js.hbs',
       },

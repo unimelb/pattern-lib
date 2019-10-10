@@ -1,0 +1,11 @@
+.filter-results {
+  &__count {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+    font-size: 1.5625rem;
+    color: #000;
+    letter-spacing: 0;
+    font-weight: var(--fw-bold);
+  }
+}

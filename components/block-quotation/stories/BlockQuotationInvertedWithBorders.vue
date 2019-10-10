@@ -2,8 +2,9 @@
   <BlockQuotation
     author="Homer Simpson"
     border-top
-    border-bottom
-  >The Internet? Is that thing still around?</BlockQuotation>
+    border-bottom>
+    The Internet? Is that thing still around?
+  </BlockQuotation>
 </template>
 
 <script>

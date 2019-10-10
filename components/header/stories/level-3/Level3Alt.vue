@@ -1,5 +1,5 @@
 <template>
-  <PageHeaderMin :image="`url('${reconBG}')` "/>
+  <PageHeaderMin :image="`url('${reconBG}')` " />
 </template>
 
 <script>

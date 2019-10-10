@@ -3,21 +3,21 @@
     <FocusWrapper
       size="small"
       padded
-      class="bg-white"/>
+      class="bg-white" />
 
     <br>
 
     <FocusWrapper
       size="medium"
       padded
-      class="bg-white"/>
+      class="bg-white" />
 
     <br>
 
     <FocusWrapper
       size="large"
       padded
-      class="bg-white"/>
+      class="bg-white" />
   </SectionWrap>
 </template>
 

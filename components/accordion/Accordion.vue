@@ -5,11 +5,11 @@
     <template slot="default">
       <h2
         class="toggle__trigger"
-        v-html="name"/>
+        v-html="name" />
     </template>
     <template slot="hidden">
       <div class="toggleblock__hidden-inner">
-        <slot/>
+        <slot />
       </div>
     </template>
   </ToggleBlock>

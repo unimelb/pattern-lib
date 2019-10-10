@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickLinks should match snapshot 1`] = `
+<div
+  class="grid ql-menu ql-menu--l1"
+>
+  <div
+    class="cell cell--desk-2of3 ql-menu__content"
+  >
+     
+    <!---->
+  </div>
+   
+  <div
+    class="cell cell--desk-1of3"
+  >
+    <!---->
+  </div>
+</div>
+`;

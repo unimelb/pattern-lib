@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardBioHeader should match snapshot 1`] = `
+<div
+  class="card card--division card--division--head card--bdr"
+>
+  <div
+    class="card__thumb"
+    style="background-image: url();"
+  />
+   
+  <div
+    class="card__inner "
+  >
+    <div
+      class="card__subheader"
+    >
+      <h3
+        class="card__header"
+      >
+        
+        
+      
+      </h3>
+       
+      <p
+        class="card__meta"
+      >
+        
+        
+      
+      </p>
+    </div>
+     
+    <hr />
+     
+  </div>
+</div>
+`;

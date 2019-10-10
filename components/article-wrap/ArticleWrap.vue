@@ -1,24 +1,26 @@
 <template>
   <article
     :class="useColumnLayout ? ['article-wrap--column', 'max--sml'] : []"
-    class="article-wrap max"
-  >
-    <h1 class="article-wrap__header">{{ title }}</h1>
+    class="article-wrap max">
+    <h1 class="article-wrap__header">
+      {{ title }}
+    </h1>
     <div class="article-wrap__main">
-      <slot/>
+      <slot />
     </div>
     <footer
       v-if="hasMetadata"
       class="article-wrap__aside"
-      role="contentinfo"
-    >
+      role="contentinfo">
       <div class="article-wrap__aside-box">
         <time :datetime="date[0]">{{ date[1] }}</time> | <span class="article-wrap__type">{{ type }}</span>
       </div>
       <div
         v-if="categories && categories.length > 0"
         class="article-wrap__aside-box article-wrap__categories">
-        <p class="article-wrap__categories-heading">Categories</p>
+        <p class="article-wrap__categories-heading">
+          Categories
+        </p>
         <a
           v-for="category in categories"
           :key="`cat-${category}`"
@@ -34,8 +36,13 @@
           class="article-wrap__contact-list" />
       </div>
       <div class="article-wrap__aside-box article-wrap__social">
-        <p class="article-wrap__social-heading">Share</p>
-        <SocialList />
+        <p class="article-wrap__social-heading">
+          Share
+        </p>
+        <SocialListGeneric
+          facebook-link="https://www.facebook.com/unimelb"
+          twitter-link="https://twitter.com/unimelb"
+          linkedin-link="https://www.linkedin.com/school/university-of-melbourne/" />
       </div>
     </footer>
   </article>
@@ -43,10 +50,10 @@
 
 <script>
 import ContactList from '../contact-list/ContactList.vue';
-import SocialList from '../social-list/SocialList.vue';
+import SocialListGeneric from '../social-list/SocialListGeneric.vue';
 
 export default {
-  components: { ContactList, SocialList },
+  components: { ContactList, SocialListGeneric },
   props: {
     title: {
       type: String,

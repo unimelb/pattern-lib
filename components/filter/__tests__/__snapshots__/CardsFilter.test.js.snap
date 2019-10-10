@@ -1,0 +1,404 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardsFilter should match snapshot 1`] = `
+<div>
+  <div
+    class="filter"
+  >
+    <div
+      class="filter__container"
+    >
+      <label
+        for="input-search"
+        hidden="hidden"
+      >
+         Title 
+      </label>
+       
+      <input
+        class="filter__input"
+        id="input-search"
+        placeholder="Type to search title"
+        type="search"
+      />
+    </div>
+     
+    <div
+      class="filter__container"
+    >
+      <div
+        class="grid"
+      >
+        <div
+          class="cell cell--tab-1of3"
+        >
+          <label
+            class="filter__label"
+            for="school"
+          >
+            School
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="school"
+            >
+              <option
+                selected="selected"
+                value=""
+              >
+                
+      Show all
+    
+              </option>
+               
+            </select>
+          </div>
+        </div>
+         
+        <div
+          class="cell cell--tab-1of3"
+        >
+          <label
+            class="filter__label"
+            for="disciplines"
+          >
+            Discipline
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="disciplines"
+            >
+              <option
+                selected="selected"
+                value=""
+              >
+                
+      Show all
+    
+              </option>
+               
+            </select>
+          </div>
+        </div>
+         
+        <div
+          class="cell cell--tab-1of3"
+        >
+          <label
+            class="filter__label"
+            for="performances"
+          >
+            Performance type
+          </label>
+           
+          <div
+            class="styled-select"
+          >
+            <select
+              id="performances"
+            >
+              <option
+                selected="selected"
+                value=""
+              >
+                
+      Show all
+    
+              </option>
+               
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="filter__container filter__container--centered"
+    >
+      <button
+        aria-label="Search"
+        class="filter__button"
+      >
+        <svg
+          aria-label="search"
+          class="filter__button--icon"
+          focusable="false"
+          role="img"
+        >
+          <use
+            xlink:href="#icon-search"
+          />
+           
+          <title>
+            Search
+          </title>
+           
+        </svg>
+         
+        <span>
+          Search
+        </span>
+      </button>
+       
+      <button
+        class="filter__button"
+      >
+        
+        Reset all
+      
+      </button>
+    </div>
+  </div>
+   
+  <p
+    class="filter-results__count"
+  >
+    
+  2 results
+
+  </p>
+   
+  <!---->
+   
+  <div>
+    <div
+      class="grid grid--3col"
+    >
+      <div
+        class="cell"
+      >
+        <div
+          class="card card--generic"
+        >
+          <a
+            aria-label="Image forMasters Exhibition 2018"
+            class="card__thumb"
+            href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018"
+            style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76743/varieties/thumb.jpg);"
+          />
+           
+          <div
+            class="card__inner"
+          >
+            <h3
+              class="card__header"
+            >
+              <a
+                class="card__title"
+                href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018"
+              >
+                Masters Exhibition 2018
+              </a>
+            </h3>
+             
+            <div
+              class="card__sub-titles"
+            >
+              <div
+                class="sub-title"
+              >
+                <svg
+                  aria-label="calendar"
+                  focusable="false"
+                  role="img"
+                >
+                  <use
+                    xlink:href="#icon-calendar"
+                  />
+                   
+                  <title>
+                    Calendar
+                  </title>
+                   
+                </svg>
+                 
+                <span>
+                  2018-12-01
+                </span>
+              </div>
+                
+            </div>
+             
+            <div
+              class="card__excerpt"
+            >
+              
+      Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts
+    
+            </div>
+             
+            <div
+              class="card__footer card__footer--column"
+            >
+              <div
+                class="tags card__tags"
+              >
+                <ul
+                  class="tags__list"
+                >
+                  <li
+                    class="tags__item list-reset"
+                  >
+                    <span>
+                      Exhibition
+                    </span>
+                  </li>
+                </ul>
+              </div>
+               
+              <div
+                class="card__links"
+              >
+                <a
+                  href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018"
+                >
+                  
+              View showcase
+              
+                  <svg
+                    aria-label="chevron-right"
+                    class="link-icon"
+                    focusable="false"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <use
+                      xlink:href="#icon-chevron-right"
+                    />
+                     
+                    <title>
+                      Chevron-right
+                    </title>
+                     
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="cell"
+      >
+        <div
+          class="card card--generic"
+        >
+          <a
+            aria-label="Image foraaaaaa"
+            class="card__thumb"
+            href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018"
+            style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76373/varieties/thumb.jpg);"
+          />
+           
+          <div
+            class="card__inner"
+          >
+            <h3
+              class="card__header"
+            >
+              <a
+                class="card__title"
+                href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018"
+              >
+                aaaaaa
+              </a>
+            </h3>
+             
+            <div
+              class="card__sub-titles"
+            >
+              <div
+                class="sub-title"
+              >
+                <svg
+                  aria-label="calendar"
+                  focusable="false"
+                  role="img"
+                >
+                  <use
+                    xlink:href="#icon-calendar"
+                  />
+                   
+                  <title>
+                    Calendar
+                  </title>
+                   
+                </svg>
+                 
+                <span>
+                  2018-11-29
+                </span>
+              </div>
+                
+            </div>
+             
+            <div
+              class="card__excerpt"
+            >
+              
+      Wilin Centre for Indigenous Arts and Culture event Wilin Jams
+    
+            </div>
+             
+            <div
+              class="card__footer card__footer--column"
+            >
+              <div
+                class="tags card__tags"
+              >
+                <ul
+                  class="tags__list"
+                >
+                  <li
+                    class="tags__item list-reset"
+                  >
+                    <span>
+                      Event
+                    </span>
+                  </li>
+                </ul>
+              </div>
+               
+              <div
+                class="card__links"
+              >
+                <a
+                  href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018"
+                >
+                  
+              View showcase
+              
+                  <svg
+                    aria-label="chevron-right"
+                    class="link-icon"
+                    focusable="false"
+                    height="10"
+                    role="img"
+                    width="10"
+                  >
+                    <use
+                      xlink:href="#icon-chevron-right"
+                    />
+                     
+                    <title>
+                      Chevron-right
+                    </title>
+                     
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

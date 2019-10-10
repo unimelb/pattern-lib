@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardNews should match snapshot 1`] = `
+<div
+  class="card card--news card--bdr"
+>
+  <a
+    aria-label="Test title"
+    class="card__thumb card__thumb--zoom"
+    href="#"
+    style="background-image: url(https://via.placeholder.com/400x200);"
+  />
+   
+  <div
+    class="card__inner"
+  >
+    <p
+      class="card__meta"
+    >
+      
+      03 Apr 2017 | SPEECH
+    
+    </p>
+     
+    <a
+      href="#"
+    >
+      <h3
+        class="card__header"
+      >
+        Test title
+      </h3>
+    </a>
+     
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae doloribus, aliquid modi? Blanditiis quod, ullam aliquam provident, accusamus neque aut necessitatibus accusantium maxime voluptates sit consequatur illum tempora magnam.
+    </p>
+  </div>
+   
+  <div
+    class="card__footer"
+  >
+    <buttonicon
+      aria-label="Read more about Test title"
+      class="btn--fullwidth"
+      href="#"
+    >
+      
+      Read More
+    
+    </buttonicon>
+  </div>
+</div>
+`;

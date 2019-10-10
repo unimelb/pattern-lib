@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import TabsDefault from './TabsDefault.vue';
 import TabsAlt from './TabsAlt.vue';

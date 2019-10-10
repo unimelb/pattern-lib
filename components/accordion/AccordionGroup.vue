@@ -2,14 +2,13 @@
   <ToggleGroup
     ref="toggle"
     :solo="solo"
-    :open="open"
-  >
-    <slot/>
+    :open="open">
+    <slot />
   </ToggleGroup>
 </template>
 
 <script>
-import ToggleGroup from '../toggle/ToggleGroup.vue';
+import ToggleGroup from 'components/toggle/ToggleGroup.vue';
 
 export default {
   name: 'AccordionGroup',

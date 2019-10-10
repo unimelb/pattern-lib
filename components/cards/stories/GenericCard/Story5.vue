@@ -13,7 +13,7 @@
           <div
             slot="sub-title-2"
             class="sub-title">
-            <SvgIcon name="calendar"/>
+            <SvgIcon name="calendar" />
             <span>March 31 1992</span>
           </div>
           <div
@@ -28,11 +28,12 @@
 </template>
 
 <script>
+import SvgIcon from '../../../icons/SvgIcon.vue';
 import GenericCard from '../../GenericCard.vue';
 import genericCardDocs from './generic-card-docs.md';
 
 export default {
-  components: { GenericCard },
+  components: { GenericCard, SvgIcon },
   readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>

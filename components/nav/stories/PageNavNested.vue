@@ -41,13 +41,14 @@
                 <a href="/leadership/office-of-the-vice-chancellor">Office of the Vice-Chancellor</a>
                 <div class="inner">
                   <ul>
-                    <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches">News and speeches</a><div class="inner">
-                      <ul>
-                        <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/launch-of-educating-australia">Launch of Educating Australia</a></li>
-                        <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/mgse-professoriate-planning-day">MGSE Professoriate Planning Day</a></li>
-                        <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/university-wominjeka-welcome">University Wominjeka (Welcome)</a></li>
-                      </ul>
-                    </div>
+                    <li>
+                      <a href="/leadership/office-of-the-vice-chancellor/news-and-speeches">News and speeches</a><div class="inner">
+                        <ul>
+                          <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/launch-of-educating-australia">Launch of Educating Australia</a></li>
+                          <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/mgse-professoriate-planning-day">MGSE Professoriate Planning Day</a></li>
+                          <li><a href="/leadership/office-of-the-vice-chancellor/news-and-speeches/university-wominjeka-welcome">University Wominjeka (Welcome)</a></li>
+                        </ul>
+                      </div>
                     </li>
                     <li><a href="/leadership/office-of-the-vice-chancellor/past-vice-chancellors">Past Vice-Chancellors</a></li>
                   </ul>

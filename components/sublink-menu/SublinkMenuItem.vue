@@ -3,7 +3,7 @@
     :href="link"
     class="sublink-menu__item">
     <span class="push-icon">
-      <slot/>
+      <slot />
       <SvgIcon
         class="push-icon__icon"
         name="chevron-right"
@@ -14,7 +14,12 @@
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
+
 export default {
+  components: {
+    SvgIcon,
+  },
   props: {
     link: {
       type: String,

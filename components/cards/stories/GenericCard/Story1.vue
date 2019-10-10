@@ -7,8 +7,7 @@
           thumb
           title="Test 1"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -17,7 +16,7 @@
           <div
             slot="sub-title-2"
             class="sub-title">
-            <SvgIcon name="calendar"/>
+            <SvgIcon name="calendar" />
             <span>March 31 1992</span>
           </div>
           <div
@@ -28,10 +27,20 @@
           <template slot="links">
             <a
               href="/"
-              aria-label="View details of the event name">View generic details ></a>
+              aria-label="View details of the event name">View generic details
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10" /></a>
             <a
               href="/"
-              aria-label="View details of the staff name">View generic staff ></a>
+              aria-label="View details of the staff name">View generic staff
+              <SvgIcon
+                class="link-icon"
+                name="chevron-right"
+                width="10"
+                height="10" /></a>
           </template>
         </GenericCard>
       </ListItem>
@@ -41,8 +50,7 @@
           thumb="https://via.placeholder.com/400x200"
           title="Test 2"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -51,7 +59,7 @@
           <div
             slot="sub-title-2"
             class="sub-title">
-            <SvgIcon name="calendar"/>
+            <SvgIcon name="calendar" />
             <span>March 31 1992</span>
           </div>
           <div
@@ -66,11 +74,12 @@
 </template>
 
 <script>
+import SvgIcon from '../../../icons/SvgIcon.vue';
 import GenericCard from '../../GenericCard.vue';
 import genericCardDocs from './generic-card-docs.md';
 
 export default {
-  components: { GenericCard },
+  components: { GenericCard, SvgIcon },
   readme: { custom: genericCardDocs, source: true, html: true },
 };
 </script>

@@ -7,12 +7,16 @@
     </SectionWrap>
 
     <SectionWrap bg-color="inverted">
-      <p class="text-center">This one uses custom markup for the "trigger" part:</p>
+      <p class="text-center">
+        This one uses custom markup for the "trigger" part:
+      </p>
       <Enquiry>
         <template slot="trigger">
           <ButtonIcon
             element="span"
-            class="btn--hard">Enquire within!</ButtonIcon>
+            class="btn--secondary">
+            Enquire within!
+          </ButtonIcon>
         </template>
         <MceForm />
       </Enquiry>
@@ -21,9 +25,9 @@
 </template>
 
 <script>
-import Enquiry from '../../toggle/Enquiry.vue';
-import MceForm from '../../forms/stories/MceForm.vue';
-import { codeBlock } from '../../../.storybook/utils';
+import Enquiry from 'components/toggle/Enquiry.vue';
+import MceForm from 'components/forms/stories/MceForm.vue';
+import { codeBlock } from 'storybook/utils';
 
 const markup = codeBlock(`
 <enquiry>
@@ -34,7 +38,7 @@ const markup = codeBlock(`
 
 <enquiry>
   <template slot="trigger">
-    <span class="btn--hard btn">
+    <span class="btn--secondary btn">
       <span class="push-icon">Enquire within! <svg width="15px" height="15px" focusable="false" role="presentation" class="push-icon__icon"><use xlink:href="#icon-chevron-right"></use></svg></span>
     </span>        
   </template>

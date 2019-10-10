@@ -2,8 +2,8 @@
   <div>
     <header class="page-header page-header--l3 page-header--study">
       <div class="page-header__inner">
-        <Logo no-padding/>
-        <PageBreadcrumbs :items="items"/>
+        <Logo no-padding />
+        <PageBreadcrumbs :items="items" />
       </div>
     </header>
   </div>

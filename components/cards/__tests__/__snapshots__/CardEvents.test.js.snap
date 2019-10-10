@@ -2,11 +2,11 @@
 
 exports[`CardEvents should match snapshot 1`] = `
 <div
-  class="btn-owner card card--generic card--generic--full-width card--events "
+  class="card card--generic card--generic--full-width"
 >
   <a
     aria-label="Image for"
-    class="card__thumb"
+    class="card__thumb card__thumb--full-height"
     href="#"
     style="background-image: url(https://via.placeholder.com/400x200);"
   />
@@ -31,11 +31,19 @@ exports[`CardEvents should match snapshot 1`] = `
       class="card__excerpt"
     >
       
+      
+    
     </div>
      
     <div
-      class="card__links"
-    />
+      class="card__footer"
+    >
+      <!---->
+       
+      <div
+        class="card__links"
+      />
+    </div>
   </div>
 </div>
 `;

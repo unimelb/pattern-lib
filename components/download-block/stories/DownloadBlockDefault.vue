@@ -6,8 +6,7 @@
     btn-text="Download the 2017 Annual Report"
     filename="annual-report.pdf"
     size="2.2 MB"
-    format="PDF"
-  />
+    format="PDF" />
 </template>
 
 <script>

@@ -1,9 +1,15 @@
 <template>
   <main class="layout layout--left bg-light-blue">
     <SidePanel class="layout__pre bg-light-blue">
-      <SidePanelNavItem target="#section1">Section 1</SidePanelNavItem>
-      <SidePanelNavItem target="#section2">Section 2</SidePanelNavItem>
-      <SidePanelNavItem target="#section3">Section 3</SidePanelNavItem>
+      <SidePanelNavItem target="#section1">
+        Section 1
+      </SidePanelNavItem>
+      <SidePanelNavItem target="#section2">
+        Section 2
+      </SidePanelNavItem>
+      <SidePanelNavItem target="#section3">
+        Section 3
+      </SidePanelNavItem>
     </SidePanel>
     <div
       id="section1"
@@ -13,17 +19,21 @@
     </div>
     <SectionWrap
       id="section2"
-      class="bg-alt">test content</SectionWrap>
+      class="bg-alt">
+      test content
+    </SectionWrap>
     <SectionWrap
       id="section3"
-      class="bg-white">test content</SectionWrap>
+      class="bg-white">
+      test content
+    </SectionWrap>
   </main>
 </template>
 
 <script>
+import PageDecorator from 'storybook/decorators/PageDecorator.vue';
 import SidePanel from '../../SidePanel.vue';
 import SidePanelNavItem from '../../SidePanelNavItem.vue';
-import PageDecorator from '../../../../.storybook/decorators/PageDecorator.vue';
 
 export default {
   components: { SidePanel, SidePanelNavItem },

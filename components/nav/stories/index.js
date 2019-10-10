@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from '../../../.storybook/utils';
+import { createStory } from 'storybook/utils';
 
 import PageNavDefault from './PageNavDefault.vue';
 import PageNavNested from './PageNavNested.vue';

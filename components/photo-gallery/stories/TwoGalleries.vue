@@ -4,10 +4,10 @@
       <PhotoGallery>
         <img
           v-for="image in images"
+          :key="image.id"
           :src="image.src"
           :alt="image.title"
           :width="image.w"
-          :key="image.id"
           :height="image.h"
           :data-title="image.title"
           :data-thumb="image.msrc"
@@ -18,10 +18,10 @@
       <PhotoGallery>
         <img
           v-for="image in images"
+          :key="image.id"
           :src="image.src"
           :alt="image.title"
           :width="image.w"
-          :key="image.id"
           :height="image.h"
           :data-title="image.title"
           :data-thumb="image.msrc"

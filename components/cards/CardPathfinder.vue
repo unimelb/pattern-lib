@@ -16,7 +16,7 @@
     <h3
       v-if="!compact"
       class="card__header heading-section"
-      v-html="title"/>
+      v-html="title" />
     <div
       v-if="!titleonly"
       class="card__inner">
@@ -25,7 +25,7 @@
         element="span"
         icon="chevron-right"
         class="btn--inverted btn--fullwidth">{{ title }}</ButtonIcon>
-      <p><slot/></p>
+      <p><slot /></p>
     </div>
     <div
       v-if="!compact"
@@ -39,8 +39,13 @@
 </template>
 
 <script>
+import SvgIcon from '../icons/SvgIcon.vue';
+
 export default {
   name: 'CardPathfinder',
+  components: {
+    SvgIcon,
+  },
   props: {
     title: {
       type: String,

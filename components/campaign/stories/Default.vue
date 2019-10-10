@@ -6,13 +6,12 @@
     button-text="Call to action text"
     link="google.com"
     x-position="87"
-    y-position="0"
-  />
+    y-position="0" />
 </template>
 
 <script>
+import BgImage from 'storybook/placeholders/campaign-banner.png';
 import PageHeaderCampaign from '../PageHeaderCampaign.vue';
-import BgImage from '../../../.storybook/placeholders/campaign-banner.png';
 
 export default {
   components: { PageHeaderCampaign },
