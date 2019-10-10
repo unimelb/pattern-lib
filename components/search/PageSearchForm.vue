@@ -9,16 +9,15 @@
       name="q"
       type="search"
       placeholder="Search the University"
-      aria-label="Search the University of Melbourne"
-    ><button
-      class="page-header-search__submit"
-      type="submit">
-      <SvgIcon
-        class="page-header-search__icon"
-        name="search" />
-      <span class="screenreaders-only">Go</span>
-    </button>
-    <slot/>
+      aria-label="Search the University of Melbourne"><button
+        class="page-header-search__submit"
+        type="submit">
+        <SvgIcon
+          class="page-header-search__icon"
+          name="search" />
+        <span class="screenreaders-only">Go</span>
+      </button>
+    <slot />
   </form>
 </template>
 

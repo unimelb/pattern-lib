@@ -1,5 +1,7 @@
 <template>
-  <h4 :class="`title title--${size}`">{{ text }}</h4>
+  <h4 :class="`title title--${size}`">
+    {{ text }}
+  </h4>
 </template>
 
 <script>

@@ -10,8 +10,12 @@
     <div class="card__inner">
       <div
         :class="{'card__header--sml' : smlHeader}"
-        class="card__header">{{ title }}</div>
-      <div class="card__meta">{{ meta }}</div>
+        class="card__header">
+        {{ title }}
+      </div>
+      <div class="card__meta">
+        {{ meta }}
+      </div>
       <p>{{ excerpt }}</p>
     </div>
   </div>

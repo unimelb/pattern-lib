@@ -10,8 +10,7 @@
           v-model="searchText"
           class="filter__input"
           type="search"
-          placeholder="Type to search title"
-        >
+          placeholder="Type to search title">
       </div>
 
       <div class="filter__container">
@@ -23,7 +22,7 @@
             <DropdownFilter
               id="school"
               v-model="selectedSchool"
-              :values="filters.schools"/>
+              :values="filters.schools" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
@@ -32,7 +31,7 @@
             <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"/>
+              :values="filters.disciplines" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
@@ -41,7 +40,7 @@
             <DropdownFilter
               id="performances"
               v-model="selectedPerformance"
-              :values="filters.performances"/>
+              :values="filters.performances" />
           </div>
         </div>
       </div>
@@ -59,13 +58,14 @@
         </button>
         <button
           class="filter__button"
-          @click="resetSearch"
-        >Reset all</button>
+          @click="resetSearch">
+          Reset all
+        </button>
       </div>
     </div>
 
     <FilterResultsCount
-      :data="dataFiltered.length"/>
+      :data="dataFiltered.length" />
 
     <FilterResults :show="showSSRCode">
       <slot />
@@ -81,8 +81,7 @@
             :thumb="item.img_url"
             :title="item.title"
             :href="item.link"
-            :excerpt="item.description"
-          >
+            :excerpt="item.description">
             <div
               slot="sub-title-1"
               class="sub-title">
@@ -102,7 +101,7 @@
                   class="link-icon"
                   name="chevron-right"
                   width="10"
-                  height="10"/>
+                  height="10" />
               </a>
             </template>
           </GenericCard>

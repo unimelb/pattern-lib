@@ -3,7 +3,7 @@
     <SvgIcon
       v-for="n in names"
       :key="n"
-      :name="n"/>
+      :name="n" />
   </div>
 </template>
 

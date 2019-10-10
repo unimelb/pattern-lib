@@ -6,8 +6,9 @@
     <BlockQuotation
       author="Steve Wozniak"
       border-top
-      border-bottom
-    >Never trust a computer you can’t throw out a window.</BlockQuotation>
+      border-bottom>
+      Never trust a computer you can’t throw out a window.
+    </BlockQuotation>
     <p>More recently, through courses including the Master of Clinical Teaching, the clinical teaching model has begun reaching a generation of practising teaching professionals and leaders, as well as helping shape new teachers who are just beginning their classroom careers.</p>
     <p>It is important to note also that this School inherits a great tradition of education practice and scholarship, through 20 years of leadership by Dean and later Vice-Chancellor Professor Kwong Lee Dow. Since departing as dean Kwong has been a recognised leader of education debate and policy-making – embodying the idea of scholarly engagement in the community. He remains a role model for what a great engaged school and faculty of education can be.</p>
     <p>

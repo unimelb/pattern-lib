@@ -6,6 +6,7 @@ exports[`GenericCard should match snapshot 1`] = `
 >
   <iframe
     allowfullscreen="allowfullscreen"
+    aria-label="Video"
     frameborder="0"
     height="315"
     src="/"

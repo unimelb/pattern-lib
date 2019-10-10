@@ -9,7 +9,7 @@ export {
 export {
   default as AlumniProfiles,
 }
-  from 'components/alumni-profiles/AlumniProfiles.vue';
+  from 'components/profiles/alumni-profiles/AlumniProfiles.vue';
 export {
   default as ArticleWrap,
 }
@@ -79,9 +79,9 @@ export {
 }
   from 'components/cards/CardStat.vue';
 export {
-  default as CardShowcaseProfile,
+  default as AccordionProfile,
 }
-  from 'components/cards/CardShowcaseProfile.vue';
+  from 'components/profiles/accordion-profile/AccordionProfile.vue';
 export {
   default as CardEvents,
 }

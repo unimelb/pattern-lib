@@ -3,8 +3,7 @@
     <FocusWrapper
       :size="size"
       color="navy"
-      semi-opaque
-    >
+      semi-opaque>
       <div class="alumni">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
@@ -12,10 +11,16 @@
           class="alumni__img"
           role="img" />
         <div class="alumni__info">
-          <p class="alumni__title">Alumni profile</p>
-          <h3 class="alumni__name">{{ name }}</h3>
+          <p class="alumni__title">
+            {{ title }}
+          </p>
+          <h3 class="alumni__name">
+            {{ name }}
+          </h3>
           <hr class="alumni__line">
-          <p class="alumni__short-text">{{ text }}</p>
+          <div
+            class="alumni__short-text"
+            v-html="text" />
         </div>
       </div>
     </FocusWrapper>
@@ -25,8 +30,8 @@
 
 <script>
 
-import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
-import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
+import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
+import { IMAGE_PLACEHOLDER_BIG } from '../../../utils/placeholders';
 
 export default {
   name: 'AlumniProfiles',
@@ -35,6 +40,10 @@ export default {
     thumb: {
       type: String,
       default: IMAGE_PLACEHOLDER_BIG,
+    },
+    title: {
+      type: String,
+      default: 'Alumni profile',
     },
     name: {
       type: String,

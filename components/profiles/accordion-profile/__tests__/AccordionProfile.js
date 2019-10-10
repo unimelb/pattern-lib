@@ -4,22 +4,22 @@ import {
 import {
   toHaveNoViolations,
 } from 'jest-axe';
-import CardShowcaseProfile from '../CardShowcaseProfile.vue';
+import AccordionProfile from '../AccordionProfile.vue';
 import {
   IMAGE_PLACEHOLDER_SHORT,
-} from '../../../utils/placeholders';
+} from '../../../../utils/placeholders';
 
 
 expect.extend(toHaveNoViolations);
 
-describe('CardShowcaseProfile', () => {
+describe('AccordionProfile', () => {
   it('should match snapshot', () => {
-    const result = shallow(CardShowcaseProfile).element;
+    const result = shallow(AccordionProfile).element;
     expect(result).toMatchSnapshot();
   });
 
   it('should have default props and correct types thumb/title/subTitle/video/bio', () => {
-    const wrapper = shallow(CardShowcaseProfile);
+    const wrapper = shallow(AccordionProfile);
     const {
       thumb,
       title,
@@ -46,7 +46,7 @@ describe('CardShowcaseProfile', () => {
 
   it('should render thumb from prop with correct type', () => {
     const thumb = 'http://';
-    const wrapper = shallow(CardShowcaseProfile, {
+    const wrapper = shallow(AccordionProfile, {
       propsData: {
         thumb: 'http://',
       },
@@ -54,12 +54,12 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().thumb).toBe('string');
     expect(wrapper.props().thumb).toBe(thumb);
-    expect(wrapper.find('.card__thumb').attributes().style).toBe('background-image: url(http://);');
+    expect(wrapper.find('.accordion-profile__thumb').attributes().style).toBe('background-image: url(http://);');
   });
 
   it('should render title from prop with correct type', () => {
     const title = 'Test title';
-    const wrapper = shallow(CardShowcaseProfile, {
+    const wrapper = shallow(AccordionProfile, {
       propsData: {
         title: 'Test title',
       },
@@ -72,7 +72,7 @@ describe('CardShowcaseProfile', () => {
 
   it('should render subTitle from prop with correct type', () => {
     const subTitle = 'Test subTitle';
-    const wrapper = shallow(CardShowcaseProfile, {
+    const wrapper = shallow(AccordionProfile, {
       propsData: {
         subTitle: 'Test subTitle',
       },
@@ -80,12 +80,12 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().subTitle).toBe('string');
     expect(wrapper.props().subTitle).toBe(subTitle);
-    expect(wrapper.find('.card__sub-title').text()).toBe(subTitle);
+    expect(wrapper.find('.accordion-profile__sub-title').text()).toBe(subTitle);
   });
 
   it('should render bio prop with correct type', () => {
     const bio = 'Test bio';
-    const wrapper = shallow(CardShowcaseProfile, {
+    const wrapper = shallow(AccordionProfile, {
       propsData: {
         bio: 'Test bio',
       },
@@ -93,6 +93,6 @@ describe('CardShowcaseProfile', () => {
 
     expect(typeof wrapper.props().bio).toBe('string');
     expect(wrapper.props().bio).toBe(bio);
-    expect(wrapper.find('.card__bio').text()).toBe(bio);
+    expect(wrapper.find('.accordion-profile__bio').text()).toBe(bio);
   });
 });

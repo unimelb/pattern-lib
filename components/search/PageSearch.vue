@@ -3,8 +3,7 @@
     <button
       class="link-icon--vertical link-reset"
       @click.prevent="open"
-      @keypress.13="open"
-    >
+      @keypress.13="open">
       <SvgIcon
         class="link-icon__icon svg"
         name="search" />
@@ -19,8 +18,7 @@
           role="button"
           href="#"
           tabindex="0"
-          @click.prevent="close"
-        >
+          @click.prevent="close">
           <SvgIcon
             class="page-header-search__icon--close"
             name="close" />

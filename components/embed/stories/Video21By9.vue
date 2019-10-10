@@ -1,7 +1,7 @@
 <template>
   <VideoEmbed
     src="https://www.youtube.com/embed/nlF7qp5GNPI"
-    ratio="21_9"/>
+    ratio="21_9" />
 </template>
 
 <script>

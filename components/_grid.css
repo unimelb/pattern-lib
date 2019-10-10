@@ -19,6 +19,7 @@
     &--3col,
     &--4col {
       flex-direction: row;
+      justify-content: center;
 
       .cell {
         display: flex;

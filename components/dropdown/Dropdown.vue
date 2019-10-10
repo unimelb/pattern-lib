@@ -3,13 +3,13 @@
     <select
       :value="selected"
       class="select"
-      @change="callback"
-    >
+      @change="callback">
       <option
         v-for="(value, index) in values"
         :key="index"
-        :value="value.value || value"
-      >{{ value.label || value }}</option>
+        :value="value.value || value">
+        {{ value.label || value }}
+      </option>
     </select>
   </div>
 </template>

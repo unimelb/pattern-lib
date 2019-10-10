@@ -2,8 +2,7 @@
   <SectionWrap
     progressive
     small
-    bg-image="https://images.unsplash.com/photo-1495855720902-bb60e936d7ca?dpr=1&auto=compress,format&fit=crop&w=1498&h=&q=80&cs=tinysrgb&crop="
-  >
+    bg-image="https://images.unsplash.com/photo-1495855720902-bb60e936d7ca?dpr=1&auto=compress,format&fit=crop&w=1498&h=&q=80&cs=tinysrgb&crop=">
     <CardFocusBox
       class="card--image-focus--col-brand bg-white"
       title="Learning and teaching">

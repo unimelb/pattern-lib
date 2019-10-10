@@ -5,39 +5,34 @@
     aria-label="Stories and events">
     <div
       v-if="stories.length"
-      class="carousel__slider"
-    >
-      <div class="carousel__prevent-click"/>
+      class="carousel__slider">
+      <div class="carousel__prevent-click" />
       <slider
         ref="slider"
         :options="options"
-        @slide="slide"
-      >
+        @slide="slide">
         <slideritem
-          v-for="(slide, index) in stories"
-          :key="index"
-        >
+          v-for="(slideItem, index) in stories"
+          :key="index">
           <div
             :style="image[index]"
-            :aria-label="slide.altText"
+            :aria-label="slideItem.altText"
             class="carousel__image" />
         </slideritem>
       </slider>
     </div>
     <div
-      class="carousel__panel"
-    >
+      class="carousel__panel">
       <div class="carousel__progress-bar">
         <div
           :style="{ width: progressBarWidth + '%'}"
-          class="carousel__progress-bar-status"/>
+          class="carousel__progress-bar-status" />
       </div>
       <div class="carousel__panel-container">
         <div
           class="carousel__aside"
           role="navigation"
-          aria-label="Stories"
-        >
+          aria-label="Stories">
           <ul
             class="carousel__navigation"
             role="menu">
@@ -45,8 +40,7 @@
               v-for="(story, index) in storiesData"
               :key="index"
               class="carousel__navigation-item list-reset"
-              role="menuitem"
-            >
+              role="menuitem">
               <a
                 :class="{ 'carousel__navigation-link--active': story.isActive }"
                 class="carousel__navigation-link"
@@ -55,8 +49,7 @@
                 @click="moveToStory(index)"
                 @focusin="stopSliding"
                 @keydown.13="moveToStory(index)"
-                @keydown.32="moveToStory(index)"
-              >
+                @keydown.32="moveToStory(index)">
                 {{ story.title | truncate(48) }}
               </a>
             </li>
@@ -70,14 +63,12 @@
               @click="prevStory"
               @keydown.13="prevStory"
               @keydown.32="prevStory"
-              @focusin="stopSliding"
-            >
+              @focusin="stopSliding">
               <SvgIcon
                 name="chevron-left"
                 width="16"
                 height="16"
-                aria-hidden="true"
-              />
+                aria-hidden="true" />
             </div>
             <div
               v-if="!paused"
@@ -88,14 +79,12 @@
               aria-label="Stop carousel"
               @click="stopSliding"
               @keydown.13="stopSliding"
-              @keydown.32="stopSliding"
-            >
+              @keydown.32="stopSliding">
               <SvgIcon
                 name="pause"
                 width="16"
                 height="16"
-                aria-hidden="true"
-              />
+                aria-hidden="true" />
             </div>
             <div
               v-if="paused"
@@ -107,14 +96,12 @@
               @click="startSliding"
               @focusin="stopSliding"
               @keydown.13="startSliding"
-              @keydown.32="startSliding"
-            >
+              @keydown.32="startSliding">
               <SvgIcon
                 name="play"
                 width="16"
                 height="16"
-                aria-hidden="true"
-              />
+                aria-hidden="true" />
             </div>
             <div
               :aria-label="'Next: ' + nextTitle"
@@ -124,14 +111,12 @@
               @click="nextStory"
               @keydown.13="nextStory"
               @keydown.32="nextStory"
-              @focusin="stopSliding"
-            >
+              @focusin="stopSliding">
               <SvgIcon
                 name="chevron-right"
                 width="16"
                 height="16"
-                aria-hidden="true"
-              />
+                aria-hidden="true" />
             </div>
           </div>
         </div>
@@ -145,8 +130,7 @@
               <a
                 :href="selectedItem.buttonHref"
                 class="carousel__title-link"
-                @focusin="stopSliding"
-              >
+                @focusin="stopSliding">
                 {{ selectedItem.title | truncate(48) }}
               </a>
             </h2>
@@ -154,15 +138,13 @@
               {{ selectedItem.description | truncate(240, '...') }}
             </p>
             <div
-              @focusin="stopSliding"
-            >
+              @focusin="stopSliding">
               <ButtonIcon
                 :href="selectedItem.buttonHref"
                 inverted
                 width="wide"
                 role="button"
-                size="sml"
-              >
+                size="sml">
                 {{ selectedItem.buttonText }}
               </ButtonIcon>
             </div>

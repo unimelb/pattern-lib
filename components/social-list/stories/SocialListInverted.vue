@@ -1,5 +1,5 @@
 <template>
-  <SocialList :with-colors="false"/>
+  <SocialList :with-colors="false" />
 </template>
 
 <script>

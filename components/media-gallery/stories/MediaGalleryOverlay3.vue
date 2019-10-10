@@ -3,8 +3,7 @@
     <MediaGallery
       :items="items"
       columns="3"
-      use-overlay
-    />
+      use-overlay />
   </div>
 </template>
 
