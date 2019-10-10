@@ -103,7 +103,7 @@
 
     a {
       font-weight: var(--fw-semibold);
-      color: rgb(var(--col-background-primary-navy));
+      color: rgb(var(--col-background-primary-navy)) !important;
       width: max-content;
 
       &:hover {

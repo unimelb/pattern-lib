@@ -152,7 +152,7 @@ a {
   .bg-inverted &,
   .bg-inverted-dark &,
   .bg-inverted-darker & {
-    &:not(.btn) {
+    &:not([class]) {
       color: rgb(var(--col-link-on-dark));
 
       &:visited {
