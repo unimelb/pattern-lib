@@ -187,10 +187,6 @@ export {
 }
   from 'components/pathfinder/Pathfinder.vue';
 export {
-  default as PhotoGallery,
-}
-  from 'components/photo-gallery/PhotoGallery.vue';
-export {
   default as SectionDivider,
 }
   from 'components/section/SectionDivider.vue';
