@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion should match snapshot 1`] = `
+<div
+  class="accordion toggleblock"
+>
+  <div
+    aria-controls="ui-toggle-1-panel-1"
+    class="toggleblock__default"
+    id="ui-toggle-1-header-1"
+    tabindex="0"
+  >
+    <h2
+      class="toggle__trigger"
+    >
+      title
+    </h2>
+     
+  </div>
+   
+  <div
+    aria-hidden="true"
+    aria-labelledby="ui-toggle-1-header-1"
+    class="toggleblock__hidden"
+    id="ui-toggle-1-panel-1"
+    role="region"
+    tabindex="-1"
+  >
+    <div
+      class="toggleblock__hidden-inner"
+    />
+  </div>
+</div>
+`;
