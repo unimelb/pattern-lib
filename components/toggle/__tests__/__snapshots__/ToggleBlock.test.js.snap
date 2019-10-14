@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleBlock should match snapshot 1`] = `
+<div
+  class="toggleblock"
+>
+  <div
+    aria-controls="ui-toggle-0-panel-1"
+    class="toggleblock__default"
+    id="ui-toggle-0-header-1"
+    tabindex="0"
+  />
+   
+  <div
+    aria-hidden="true"
+    aria-labelledby="ui-toggle-0-header-1"
+    class="toggleblock__hidden"
+    id="ui-toggle-0-panel-1"
+    role="region"
+    tabindex="-1"
+  />
+</div>
+`;
