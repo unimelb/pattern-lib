@@ -6,13 +6,6 @@ import ToggleBlock from '../ToggleBlock.vue';
 
 expect.extend(toHaveNoViolations);
 
-const Parent = {
-  data: () => ({
-    val: true,
-  }),
-  template: '<h1> test </h1>',
-};
-
 describe('ToggleBlock', () => {
   it.skip('should match snapshot', () => {
     const result = shallow(ToggleBlock).element;
