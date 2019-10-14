@@ -3,7 +3,7 @@
 exports[`MediaGallery Common should match snapshot 1`] = `
 <div>
   <div
-    aria-roledescription="Media gallery"
+    aria-label="Media gallery"
     class="media-gallery"
     role="region"
   >

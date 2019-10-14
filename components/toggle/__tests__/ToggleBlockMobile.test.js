@@ -1,5 +1,5 @@
 import {
-  shallow,
+  shallow, mount,
 } from 'vue-test-utils';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import ToggleBlockMobile from '../ToggleBlockMobile.vue';
@@ -13,7 +13,7 @@ describe('ToggleBlockMobile', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(ToggleBlockMobile).html();
+    const html = mount(ToggleBlockMobile).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

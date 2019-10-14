@@ -26,10 +26,12 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     href: {
       type: String,
-      default: '#',
+      default: '',
+      required: true,
     },
     excerpt: {
       type: String,

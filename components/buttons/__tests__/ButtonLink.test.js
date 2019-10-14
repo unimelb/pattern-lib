@@ -12,10 +12,26 @@ describe('ButtonLink', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('Component throws no accessibility violations', (done) => {
+  it('Component throws no accessibility violations a tag', (done) => {
     const html = shallow(ButtonLink, {
       propsData: {
         href: 'www.unimelb.edu.au',
+      },
+      slots: {
+        default: '<h2>test</h2>',
+      },
+    }).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
+
+  it('Component throws no accessibility violations button', (done) => {
+    const html = shallow(ButtonLink, {
+      propsData: {
+        element: 'button',
       },
       slots: {
         default: '<h2>test</h2>',

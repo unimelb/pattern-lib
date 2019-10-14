@@ -1,5 +1,5 @@
 import {
-  shallow,
+  shallow, mount,
 } from 'vue-test-utils';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import Tabs from '../Tabs.vue';
@@ -28,7 +28,11 @@ describe('Tabs', () => {
   });
   
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(Tabs).html();
+    const html = mount(Tabs, {
+      data: {
+        panels: [],
+      },
+    }).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();

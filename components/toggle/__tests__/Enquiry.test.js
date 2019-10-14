@@ -1,5 +1,5 @@
 import {
-  shallow,
+  shallow, mount,
 } from 'vue-test-utils';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import Enquiry from '../Enquiry.vue';
@@ -13,7 +13,7 @@ describe('Enquiry', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(Enquiry).html();
+    const html = mount(Enquiry).html();
     // pass anything that outputs html to axe
     return axe(html).then((response) => {
       expect(response).toHaveNoViolations();
