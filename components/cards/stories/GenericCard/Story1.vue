@@ -6,7 +6,7 @@
           :cols="2"
           thumb
           title="Test 1"
-          href="#"
+          href="www.unimelb.edu.au"
           excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
@@ -49,7 +49,7 @@
           :cols="2"
           thumb="https://via.placeholder.com/400x200"
           title="Test 2"
-          href="#"
+          href="www.unimelb.edu.au"
           excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"

@@ -4,16 +4,19 @@
       <ListItem>
         <GenericCard
           :cols="3"
+          href="www.unimelb.edu.au"
           title="Test 1" />
       </ListItem>
       <ListItem>
         <GenericCard
           :cols="3"
+          href="www.unimelb.edu.au"
           title="Test 1" />
       </ListItem>
       <ListItem>
         <GenericCard
           :cols="3"
+          href="www.unimelb.edu.au"
           title="Test 1" />
       </ListItem>
     </div>

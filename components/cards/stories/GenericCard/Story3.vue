@@ -4,6 +4,7 @@
       <ListItem>
         <GenericCard
           :cols="3"
+          href="www.unimelb.edu.au"
           title="Test 1">
           <div
             slot="sub-title-1"

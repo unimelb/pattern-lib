@@ -32,7 +32,7 @@ describe('GenericCard', () => {
     expect(wrapper.props().cols).toBe(3);
 
     expect(href.type).toBe(String);
-    expect(wrapper.props().href).toBe('#');
+    expect(wrapper.props().href).toBe('');
 
     expect(excerpt.type).toBe(String);
     expect(wrapper.props().excerpt).toBe('');

@@ -1,6 +1,7 @@
 <template>
   <a
     :href="href"
+    :aria-label="title"
     class="btn-owner card card--image card--bdr bg-inverted">
     <div
       v-if="thumb && thumb.length"

@@ -3,7 +3,7 @@
 exports[`CardDivisionHead should match snapshot 1`] = `
 <a
   class="btn-owner card card--division card--division--head card--bdr bg-white"
-  href="#"
+  href=""
 >
   <div
     class="card__thumb"
