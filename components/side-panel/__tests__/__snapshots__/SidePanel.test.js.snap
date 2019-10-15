@@ -10,12 +10,13 @@ exports[`SidePanel should match snapshot 1`] = `
     <h5
       class="side-panel__title"
     >
+      
+      
+      
       <button
+        aria-label=""
         class="side-panel__trigger"
       >
-        
-        
-        
         <!---->
       </button>
     </h5>

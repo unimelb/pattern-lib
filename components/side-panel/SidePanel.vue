@@ -2,10 +2,11 @@
   <nav class="side-panel">
     <div class="side-panel__inner">
       <h5 class="side-panel__title">
+        {{ title }}
         <button
+          :aria-label="title"
           class="side-panel__trigger"
           @click="toggleOpen">
-          {{ title }}
           <SvgIcon
             width="10"
             height="10"

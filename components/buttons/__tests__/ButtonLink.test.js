@@ -18,7 +18,7 @@ describe('ButtonLink', () => {
         href: 'www.unimelb.edu.au',
       },
       slots: {
-        default: '<h2>test</h2>',
+        default: 'test',
       },
     }).html();
     // pass anything that outputs html to axe
@@ -34,7 +34,7 @@ describe('ButtonLink', () => {
         element: 'button',
       },
       slots: {
-        default: '<h2>test</h2>',
+        default: 'test',
       },
     }).html();
     // pass anything that outputs html to axe
