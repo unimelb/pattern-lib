@@ -1,7 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import { axe, toHaveNoViolations } from 'jest-axe';
+import { toHaveNoViolations } from 'jest-axe';
 import SidePanelNavItem from '../SidePanelNavItem.vue';
 
 expect.extend(toHaveNoViolations);
@@ -12,19 +12,7 @@ describe('SidePanelNavItem', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('Component throws no accessibility violations', (done) => {
-    const html = shallow(SidePanelNavItem, {
-      propsData: {
-        target: 'www.unimelb.edu.au',
-      },
-      slots: {
-        default: 'section 1',
-      },
-    }).html();
-    // pass anything that outputs html to axe
-    return axe(html).then((response) => {
-      expect(response).toHaveNoViolations();
-      done();
-    });
+  // Accessibility test for this component is done in the parent (SidePanel) as it depends on the <ul></ul> tag.
+  it.skip('Component throws no accessibility violations', () => {
   });
 });

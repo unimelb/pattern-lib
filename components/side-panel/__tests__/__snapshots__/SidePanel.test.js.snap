@@ -17,7 +17,22 @@ exports[`SidePanel should match snapshot 1`] = `
         aria-label=""
         class="side-panel__trigger"
       >
-        <!---->
+        <svg
+          aria-label="close"
+          focusable="false"
+          height="10"
+          role="img"
+          width="10"
+        >
+          <use
+            xlink:href="#icon-close"
+          />
+           
+          <title>
+            Close
+          </title>
+           
+        </svg>
       </button>
     </h5>
      

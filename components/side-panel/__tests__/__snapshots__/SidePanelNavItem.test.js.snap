@@ -1,24 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SidePanelNavItem should match snapshot 1`] = `
-<ul
-  class="list-reset"
+<li
+  class="side-panel__nav-item clearfix"
 >
-  <li
-    class="side-panel__nav-item clearfix"
+  <a
+    href=""
   >
-    <a
-      href=""
+    <!---->
+     
+    <span
+      class="push-icon"
     >
-      <!---->
        
-      <span
-        class="push-icon"
-      >
-         
-        <!---->
-      </span>
-    </a>
-  </li>
-</ul>
+      <!---->
+    </span>
+  </a>
+</li>
 `;
