@@ -6,7 +6,7 @@
       <h2
         v-if="title"
         :style="`max-width: ${titleWidth};`"
-        :class="['page-campaign__title', bgDark ? 'page-campaign--dark': '']">
+        :class="['page-campaign__title', bgDark ? 'page-campaign--dark' : '']">
         {{ title }}
       </h2>
       <button-icon

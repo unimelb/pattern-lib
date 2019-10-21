@@ -16,7 +16,7 @@
           itemprop="position">
         <a
           :href="item.href"
-          :aria-current="index === items.length -1"
+          :aria-current="index === items.length - 1"
           class="page-breadcrumbs__link"
           itemprop="item">
           <SvgIcon

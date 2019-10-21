@@ -79,7 +79,7 @@
           v-for="(item, index) in dataFiltered"
           :key="index"
           class="accordion-list">
-          <accordion :name="item.name">
+          <Accordion :name="item.name">
             <table class="table table--striped table--tight table--is-compacted">
               <tbody>
                 <colgroup>
@@ -132,7 +132,7 @@
               size="xsml">
               {{ item.buttonText }}
             </ButtonIcon>
-          </accordion>
+          </Accordion>
         </div>
       </transition-group>
     </FilterResults>
