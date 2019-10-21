@@ -20,6 +20,7 @@
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
     margin: .25rem .5rem .25rem 0;
+    padding: .125rem .25rem;
     text-decoration: none;
 
     &:hover,
@@ -30,7 +31,6 @@
   }
 
   &__link {
-    padding: .125rem .25rem;
     color: rgb(var(--col-black-dark)) !important;
     text-decoration: none;
 

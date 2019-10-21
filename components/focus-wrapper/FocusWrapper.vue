@@ -1,10 +1,10 @@
 <template>
   <div
-    :class="[{'card-focus--padded': padded}]"
+    :class="[{ 'card-focus--padded': padded }]"
     class="card-focus">
     <slot />
     <SvgIcon
-      :class="['card-focus__top-left', color, {'semi-opaque': semiOpaque}]"
+      :class="['card-focus__top-left', color, { 'semi-opaque': semiOpaque }]"
       :width="normalizeSize"
       :height="normalizeSize"
       view-box="0 0 112 112"
@@ -12,7 +12,7 @@
       <path d="m0 0v112l32-32v-48h48l32-32h-112z" />
     </SvgIcon>
     <SvgIcon
-      :class="['card-focus__bottom-right', color, {'semi-opaque': semiOpaque}]"
+      :class="['card-focus__bottom-right', color, { 'semi-opaque': semiOpaque }]"
       :width="normalizeSize"
       :height="normalizeSize"
       view-box="0 0 112 112"

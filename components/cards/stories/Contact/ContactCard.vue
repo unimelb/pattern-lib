@@ -11,10 +11,10 @@
     </iframe>
     <div class="contact-card__lower">
       <div
-        v-for="n in columns-0"
+        v-for="n in columns - 0"
         :key="n"
         class="contact-card__col1_3"
-        v-html="content[n-1]" />
+        v-html="content[n - 1]" />
     </div>
   </div>
 </template>

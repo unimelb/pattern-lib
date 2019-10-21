@@ -1,6 +1,6 @@
 <template>
   <SectionWrap bg-color="white">
-    <in-page-navigation
+    <InPageNavigation
       color="navy"
       title="on this page"
       heading-level="h1" />

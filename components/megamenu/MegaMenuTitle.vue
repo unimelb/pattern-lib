@@ -1,6 +1,6 @@
 <template>
   <a
-    :style="{'width': width && width || '50%'}"
+    :style="{ 'width': width && width || '50%' }"
     :aria-label="title"
     :href="href"
     class="page-title">{{ title }}</a>
