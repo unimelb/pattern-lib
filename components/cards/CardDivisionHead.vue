@@ -1,7 +1,7 @@
 <template>
   <a
     :href="href"
-    :class="{'card--division--head-compact': compact}"
+    :class="{ 'card--division--head-compact': compact }"
     class="btn-owner card card--division card--division--head card--bdr bg-white">
     <div class="card__thumb">
       <div

@@ -11,9 +11,9 @@
       :aria-label="title"
       class="card__thumb" />
     <div
-      :class="card_header_classes"
+      :class="cardHeaderClasses"
       class="card__header">
-      <span :class="{'title-inverted': !inverted}">{{ title }}</span>
+      <span :class="{ 'title-inverted': !inverted }">{{ title }}</span>
       <SvgIcon
         width="15px"
         height="15px"
@@ -61,7 +61,7 @@ export default {
         },
       ];
     },
-    card_header_classes() {
+    cardHeaderClasses() {
       return [
         {
           'cl-white': this.inverted,

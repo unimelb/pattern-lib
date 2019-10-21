@@ -3,7 +3,7 @@
     :is="element"
     :class="classes"
     :href="isLink && href"
-    :aria-disabled="isLink && disabled ? 'true': false"
+    :aria-disabled="isLink && disabled ? 'true' : false"
     :disabled="!isLink && disabled">
     <span
       v-if="!noIcon"

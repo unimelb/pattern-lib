@@ -2,17 +2,17 @@
   <SectionWrap>
     <div class="grid grid--4col grid--center">
       <ListItem>
-        <card-link
+        <CardLink
           inverted
           title="Ranking and Statistics" />
       </ListItem>
       <ListItem>
-        <card-link
+        <CardLink
           inverted
           title="Study" />
       </ListItem>
       <ListItem>
-        <card-link
+        <CardLink
           inverted
           title="Facts and figures" />
       </ListItem>
