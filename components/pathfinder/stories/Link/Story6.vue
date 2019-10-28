@@ -2,25 +2,25 @@
   <SectionWrap>
     <div class="grid grid--4col grid--center">
       <ListItem>
-        <card-link
+        <CardLink
           :thumb="false"
           :cols="4"
           title="Test 1" />
       </ListItem>
       <ListItem>
-        <card-link
+        <CardLink
           :thumb="false"
           :cols="4"
           title="Test 2" />
       </ListItem>
       <ListItem>
-        <card-link
+        <CardLink
           :thumb="false"
           :cols="4"
           title="This is a Longer title over two lines" />
       </ListItem>
       <ListItem>
-        <card-link
+        <CardLink
           :thumb="false"
           :cols="4"
           title="Ranking and Statistics" />

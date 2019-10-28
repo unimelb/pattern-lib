@@ -8,9 +8,9 @@
       :aria-label="title"
       class="card__thumb card__thumb--zoom" />
     <div class="card__inner">
-      <button-link
+      <ButtonLink
         class="btn--inverted btn--fullwidth"
-        element="span">{{ title }}</button-link>
+        element="span">{{ title }}</ButtonLink>
       <p>
         <slot />
       </p>

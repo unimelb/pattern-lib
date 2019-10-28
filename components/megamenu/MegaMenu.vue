@@ -4,7 +4,7 @@
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
     class="page-header page-header--l3 page-header--study">
     <div class="page-header__inner">
-      <logo
+      <Logo
         class="megamenu__logo"
         size="md"
         no-padding />

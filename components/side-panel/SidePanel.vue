@@ -13,7 +13,7 @@
         </button>
       </h5>
       <ul
-        :class="{'side-panel__nav--closed' : !open}"
+        :class="{ 'side-panel__nav--closed': !open }"
         class="side-panel__nav">
         <slot />
       </ul>
