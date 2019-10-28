@@ -6,14 +6,13 @@
   overflow: hidden;
 
   &__container {
-    max-width: 63rem;
     margin-right: auto;
     margin-left: auto;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 
     @media (--bp-desktop) {
-      max-width: 45rem;
+      min-width: 45rem;
     }
   }
 
@@ -25,7 +24,7 @@
       position: absolute;
       content: '';
       background-color: rgb(var(--col-background-tertiary-navy), .92);
-      width: 200vw;
+      width: 250vw;
       height: 315vw;
       top: 0;
       left: -15.625rem;
