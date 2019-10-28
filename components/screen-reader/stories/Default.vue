@@ -2,19 +2,17 @@
   <div>
     <ScreenReader
       button-text="Skip to main content"
-      button-href="#main"/>
+      button-href="#main" />
     <MegaMenu
       :items="items"
       :top-menu="topMenu"
       active="/random-link"
       faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
       faculty-link="/faculty-link"
-      faculty-width="25.5%"
-    />
+      faculty-width="25.5%" />
     <div
       id="main"
-      tabindex="-1"
-    >
+      tabindex="-1">
       <section-wrap bg-color="white">
         <h1>Main content</h1>
         <a href="#">Link 1</a>

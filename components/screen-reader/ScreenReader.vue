@@ -4,7 +4,9 @@
       :href="buttonHref"
       no-icon
       size="xsml"
-      class="screen-reader__skippy screenreaders-only screenreaders-only-focusable btn--inverted">{{ buttonText }}</ButtonIcon>
+      class="screen-reader__skippy screenreaders-only screenreaders-only-focusable btn--inverted">
+      {{ buttonText }}
+    </ButtonIcon>
   </div>
 </template>
 
