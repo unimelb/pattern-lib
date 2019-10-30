@@ -3,14 +3,14 @@
     :class="{
       [`ql-menu--l${level}`]: true,
       'ql-menu--pad': pad,
-      'ql-menu--condensed': condensed
+      'ql-menu--condensed': condensed,
     }"
     class="grid ql-menu">
     <div class="cell cell--desk-2of3 ql-menu__content">
       <slot name="content" />
       <div
         v-if="secondaryLinks && secondaryLinks.length > 0"
-        :class="{[`ql-menu__secondary--2col`]: secondaryCols === 2}"
+        :class="{ [`ql-menu__secondary--2col`]: secondaryCols === 2 }"
         class="ql-menu__secondary">
         <QuickLinksSecondaryItem
           v-for="item in secondaryLinks"
