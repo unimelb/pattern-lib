@@ -12,7 +12,9 @@
         <Tab title="Use">
           <p>We write using the conventions and principles of modern Australian English.</p>
           <p>Our style is simple and accessible, and often conversational in tone. We avoid archaic language, euphemisms and slang. Australian English is continuously evolving, so always refer to the latest edition of the Macquarie Dictionary (Macquarie Dictionary Publishers) and Style Manual: For Authors, Editors and Printers (John Wiley & Sons) for Australia’s most up-to-date spelling and grammar conventions.</p>
-          <ButtonIcon size="xs">I am a child component</ButtonIcon>
+          <ButtonIcon size="xs">
+            I am a child component
+          </ButtonIcon>
         </Tab>
         <Tab title="Inclusive language">
           <p>We always use inclusive language, avoiding stereotypical and offensive terms that unnecessarily categorise people by attributes such as race, gender or disability. For example, say ‘student’ rather than ‘Asian student’, ‘chairperson’ in place of ‘chairman’ and ‘person with a disability’ instead of ‘disabled person’.</p>
@@ -22,15 +24,13 @@
             id="form_email_1698962"
             enctype="multipart/form-data"
             action="https://resources.web.unimelb.edu.au/controlled-environment/help-guides/using-forms/default-form"
-            method="post"
-          >
+            method="post">
             <input
               id="SQ_FORM_1698962_PAGE"
               type="hidden"
               name="SQ_FORM_1698962_PAGE"
               value="1"
-              class="sq-form-field"
-            >
+              class="sq-form-field">
             <input
               type="hidden"
               name="form_email_1698962_referral_url"
@@ -54,8 +54,7 @@
                     value
                     size="30"
                     maxlength="300"
-                    class="sq-form-field"
-                  >
+                    class="sq-form-field">
                 </div>
               </div>
               <div class="sq-form-question sq-form-question-email-address">
@@ -75,8 +74,7 @@
                     value
                     size="30"
                     maxlength="300"
-                    class="sq-form-field"
-                  >
+                    class="sq-form-field">
                 </div>
               </div>
               <div class="sq-form-question sq-form-question-text">
@@ -84,8 +82,7 @@
                   class="sq-form-question-title"
                   for="q1698972_q3">Comments</label>
                 <em
-                  class="sq-form-question-note"
-                >This is a note that will be displayed next to the question.</em>
+                  class="sq-form-question-note">This is a note that will be displayed next to the question.</em>
                 <div class="sq-form-question-answer">
                   <textarea
                     id="q1698972_q3"
@@ -117,8 +114,7 @@
                           name="q1831802:q1[]"
                           value="0"
                           checked="checked"
-                          class="sq-form-field"
-                        >
+                          class="sq-form-field">
                         <label for="q1831802_q1_0">Option 1</label>
                       </li>
                       <li>
@@ -127,8 +123,7 @@
                           type="checkbox"
                           name="q1831802:q1[]"
                           value="1"
-                          class="sq-form-field"
-                        >
+                          class="sq-form-field">
                         <label for="q1831802_q1_1">Option 2</label>
                       </li>
                       <li>
@@ -137,8 +132,7 @@
                           type="checkbox"
                           name="q1831802:q1[]"
                           value="2"
-                          class="sq-form-field"
-                        >
+                          class="sq-form-field">
                         <label for="q1831802_q1_2">Option 3</label>
                       </li>
                     </ul>
@@ -158,8 +152,7 @@
                           type="radio"
                           name="q1831802:q2"
                           value="0"
-                          class="sq-form-field"
-                        >
+                          class="sq-form-field">
                         <label for="q1831802_q2_0">Yes</label>
                       </li>
                       <li>
@@ -168,8 +161,7 @@
                           type="radio"
                           name="q1831802:q2"
                           value="1"
-                          class="sq-form-field"
-                        >
+                          class="sq-form-field">
                         <label for="q1831802_q2_1">No</label>
                       </li>
                       <li>
@@ -178,8 +170,7 @@
                           type="radio"
                           name="q1831802:q2"
                           value="2"
-                          class="sq-form-field"
-                        >
+                          class="sq-form-field">
                         <label for="q1831802_q2_2">Maybe</label>
                       </li>
                     </ul>
@@ -233,17 +224,14 @@
               type="submit"
               name="form_email_1698962_submit"
               value="Submit"
-              class="sq-form-submit"
-            >
+              class="sq-form-submit">
             <hr class="spacer">
             <p class="form__subtext">
               The information on this form is being collected by the University of Melbourne for further communication regarding various courses, programs and events at the University in which you have expressed interest. Information collected will only be used by authorised staff for the purpose for which it was collected and will be protected against unauthorized access and use. You can access any personal information the University holds about you. Contact the
               <a
-                href="http://www.unimelb.edu.au/governance/compliance/privacy/contacts"
-              >Privacy Officer</a> to find out more. The
+                href="http://www.unimelb.edu.au/governance/compliance/privacy/contacts">Privacy Officer</a> to find out more. The
               <a
-                href="http://www.unimelb.edu.au/governance/compliance/privacy"
-              >University’s Privacy Policy</a> is available online.
+                href="http://www.unimelb.edu.au/governance/compliance/privacy">University’s Privacy Policy</a> is available online.
             </p>
           </form>
         </Tab>

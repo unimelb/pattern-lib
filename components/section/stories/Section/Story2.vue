@@ -8,7 +8,9 @@
     <div>
       <ButtonIcon
         inverted
-        size="sm">Button Example</ButtonIcon>
+        size="sm">
+        Button Example
+      </ButtonIcon>
     </div>
   </SectionWrap>
 </template>

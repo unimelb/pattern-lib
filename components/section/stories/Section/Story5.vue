@@ -18,7 +18,9 @@
       </p>
       <p>Ut rem expedita dolore cupiditate laudantium blanditiis voluptatem laborum impedit.</p>
       <div>
-        <ButtonIcon size="sm">Button Example</ButtonIcon>
+        <ButtonIcon size="sm">
+          Button Example
+        </ButtonIcon>
       </div>
     </SectionWrap>
   </main>

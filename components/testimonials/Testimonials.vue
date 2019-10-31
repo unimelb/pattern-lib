@@ -9,8 +9,7 @@
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="name"
           class="testimonials__img"
-          role="img"
-        />
+          role="img" />
         <div class="testimonials__info">
           <BlockQuotation
             :author="author"

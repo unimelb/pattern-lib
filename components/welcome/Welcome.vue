@@ -4,7 +4,7 @@
       <figure>
         <div
           :style="`background-image: url('${img}')`"
-          class="welcome__thumb-img"/>
+          class="welcome__thumb-img" />
         <figcaption>
           <strong class="welcome__caption-title">{{ name }}</strong>
         </figcaption>
