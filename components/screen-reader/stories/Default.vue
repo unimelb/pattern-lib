@@ -15,10 +15,18 @@
       tabindex="-1">
       <section-wrap bg-color="white">
         <h1>Main content</h1>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
       </section-wrap>
     </div>
   </div>
