@@ -322,7 +322,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
               </p>
                
               <a
-                class="btn btn--xsml"
+                class="btn"
                 href="www.unimelb.edu.au"
                 tabindex="-1"
               >
@@ -500,7 +500,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
               </p>
                
               <a
-                class="btn btn--xsml"
+                class="btn"
                 href="www.unimelb.edu.au"
                 tabindex="-1"
               >
