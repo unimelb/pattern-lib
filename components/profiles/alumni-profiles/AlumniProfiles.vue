@@ -9,8 +9,7 @@
           :style="{ backgroundImage: `url(${thumb})` }"
           :aria-label="name"
           class="alumni__img"
-          role="img"
-        />
+          role="img" />
         <div class="alumni__info">
           <p class="alumni__title">
             {{ title }}
