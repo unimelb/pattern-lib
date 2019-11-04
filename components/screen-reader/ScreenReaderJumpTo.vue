@@ -1,11 +1,11 @@
 <template>
-  <div class="screen-reader">
+  <div class="screen-reader-jump-to">
     <ButtonIcon
-      :href="buttonHref"
+      :href="toElement"
       no-icon
       size="xsml"
-      class="screen-reader__skippy screenreaders-only screenreaders-only-focusable btn--inverted">
-      {{ buttonText }}
+      class="screen-reader-jump-to__skippy screenreaders-only screenreaders-only-focusable btn--inverted">
+      {{ text }}
     </ButtonIcon>
   </div>
 </template>
@@ -13,18 +13,14 @@
 <script>
 export default {
   props: {
-    buttonText: {
+    text: {
       type: String,
       default: 'Skip to main content',
     },
-    buttonHref: {
+    toElement: {
       type: String,
       default: '#main',
     },
   },
 };
 </script>
-
-<style lang="scss" scoped>
-
-</style>

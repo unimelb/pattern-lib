@@ -5,5 +5,5 @@ import Default from './Default.vue';
 
 /* ##Import story component here */
 
-storiesOf('Screen reader', module)
+storiesOf('Screen reader Jump To', module)
   .add('Skip navigation', createStory(Default));

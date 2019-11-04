@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ScreenReader
-      button-text="Skip to main content"
-      button-href="#main" />
+    <ScreenReaderJumpTo
+      text="Skip to main content"
+      to-element="#main" />
     <MegaMenu
       :items="items"
       :top-menu="topMenu"
@@ -35,14 +35,14 @@
 <script>
 import MegaMenu from '../../megamenu/MegaMenu.vue';
 import sample from '../../megamenu/sample';
-import ScreenReader from '../ScreenReader.vue';
+import ScreenReaderJumpTo from '../ScreenReaderJumpTo.vue';
 import screenReaderMd from './screenReaderMd.md';
 
 export default {
   readme: { custom: screenReaderMd, html: true, source: false },
   components: {
     MegaMenu,
-    ScreenReader,
+    ScreenReaderJumpTo,
   },
 
   data() {

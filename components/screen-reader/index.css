@@ -1,4 +1,4 @@
-.screen-reader {
+.screen-reader-jump-to {
   display: flex;
   justify-content: center;
   background-color: rgb(var(--col-background-primary-navy));
