@@ -16,9 +16,9 @@
             class="media-gallery__close"
             tabindex="0"
             title="Close (Esc)"
-            @click="openStateToggle()"
-            @keydown.13="openStateToggle()"
-            @keydown.32="openStateToggle()">
+            @click="openStateToggle"
+            @keydown.13="openStateToggle"
+            @keydown.32="openStateToggle">
             <SvgIcon
               aria-hidden="true"
               name="close"
@@ -88,7 +88,7 @@
           <div
             v-for="(item, index) in items"
             :key="index"
-            :class="{ active: index === selectedIndex}"
+            :class="{ active: index === selectedIndex }"
             :aria-label="item.title + '. ' + item.description"
             class="media-gallery__thumb"
             tabindex="0"

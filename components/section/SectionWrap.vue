@@ -11,7 +11,7 @@
         'section__inner--sml': small,
         'section__inner--mid': mid,
         'section__inner--short': short,
-        'section__inner--nopad': nopad
+        'section__inner--nopad': nopad,
       }"
       class="section__inner">
       <slot />

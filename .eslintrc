@@ -72,6 +72,19 @@
     "vue/no-v-html": "off",
     "vue/html-closing-bracket-newline": ["error", {
       "multiline": "never"
-    }]
+    }],
+    "vue/v-on-function-call": "error",
+    "vue/space-unary-ops": "error",
+    "vue/array-bracket-spacing": "error",
+    "vue/arrow-spacing": "error",
+    "vue/block-spacing": "error",
+    "vue/brace-style": "error",
+    "vue/camelcase": "error",
+    "vue/comma-dangle": ["error", "always-multiline"],
+    "vue/component-name-in-template-casing": "error",
+    "vue/eqeqeq": "error",
+    "vue/key-spacing": "error",
+    "vue/space-infix-ops": "error",
+    "vue/object-curly-spacing": ["error","always"]
   }
 }
