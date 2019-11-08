@@ -4,14 +4,20 @@
       :href="toElement"
       no-icon
       size="xsml"
-      class="screen-reader-jump-to__skippy screenreaders-only screenreaders-only-focusable btn--inverted">
+      class="screen-reader-jump-to__skippy screenreaders-only screenreaders-only-focusable btn--inverted"
+      @click.prevent>
       {{ text }}
     </ButtonIcon>
   </div>
 </template>
 
 <script>
+import ButtonIcon from '../buttons/ButtonIcon.vue';
+
 export default {
+  components: {
+    ButtonIcon,
+  },
   props: {
     text: {
       type: String,
