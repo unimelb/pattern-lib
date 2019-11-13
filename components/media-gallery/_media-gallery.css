@@ -30,7 +30,7 @@
     justify-content: flex-start;
     color: rgb(var(--col-white));
     background: rgba(var(--col-black-dark), .9);
-    z-index: calc(var(--z-default) + 2);
+    z-index: var(--z-overlay);
     max-width: none;
     overflow-y: scroll;
 
