@@ -131,12 +131,16 @@
               13 MELB
               <small>
                 (
-                <a href="tel:136352">13 6352</a>)
+                <a
+                  href="tel:136352"
+                  rel="nofollow">13 6352</a>)
               </small>
             </dd>
             <dt>International:</dt>
             <dd>
-              <a href="tel:+61390355511">+61 3 9035 5511</a>
+              <a
+                href="tel:+61390355511"
+                rel="nofollow">+61 3 9035 5511</a>
             </dd>
             <dt>ABN:</dt>
             <dd>84 002 705 224</dd>
