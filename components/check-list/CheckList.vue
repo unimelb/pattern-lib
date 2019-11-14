@@ -56,12 +56,12 @@ export default {
   },
   beforeCreate() {
     const list = this.$slots.list[0];
-    this.items = list.children.filter(item => item.tag === 'li');
+    this.items = list.children.filter((item) => item.tag === 'li');
 
     this.content = [];
     this.items.forEach((item, index) => {
       this.content[index] = document.createElement('div');
-      item.children.forEach(node => this.content[index].appendChild(vnodeToElement(node)));
+      item.children.forEach((node) => this.content[index].appendChild(vnodeToElement(node)));
     });
 
     const btn = this.$slots.btn[0];

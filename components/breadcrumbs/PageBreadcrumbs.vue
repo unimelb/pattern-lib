@@ -49,9 +49,9 @@ export default {
     items: {
       type: Array,
       required: true,
-      validator: arr => (
+      validator: (arr) => (
         arr.length > 0
-        && arr.every(el => !!el.href && !!el.text)
+        && arr.every((el) => !!el.href && !!el.text)
       ),
     },
   },

@@ -46,7 +46,7 @@ export default {
     cols: {
       type: Number,
       default: 1,
-      validator: value => value && value <= 3,
+      validator: (value) => value && value <= 3,
     },
   },
 };

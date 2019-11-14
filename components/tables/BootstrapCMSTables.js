@@ -5,13 +5,13 @@ const isTableParentAComponent = (element) => {
   return componentsToCompare.includes(parentName);
 };
 
-const createElement = elementName => document.createElement(elementName);
+const createElement = (elementName) => document.createElement(elementName);
 
 const hasClass = (element, classToCheck) => element.classList.contains(classToCheck);
 
-const isCompactedTable = element => hasClass(element, 'table--is-compacted');
+const isCompactedTable = (element) => hasClass(element, 'table--is-compacted');
 
-const isNormalTable = element => hasClass(element, 'table--is-not-responsive');
+const isNormalTable = (element) => hasClass(element, 'table--is-not-responsive');
 
 const BootstrapCMSTables = () => {
   const tableElements = document.querySelectorAll('table');

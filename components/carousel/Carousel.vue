@@ -184,7 +184,7 @@ export default {
     stories: {
       type: Array,
       default: () => [],
-      validator: stories => stories.length <= 3,
+      validator: (stories) => stories.length <= 3,
       required: true,
     },
     timing: {
@@ -284,7 +284,7 @@ export default {
       this.actionProgressBar();
     },
     frame() {
-      this.progressBarWidth = (this.countTime / this.autoplay * 100) + 5;
+      this.progressBarWidth = Math.round((this.countTime / this.autoplay) * 100) + 5;
       this.countTime += 200;
     },
     actionProgressBar() {
