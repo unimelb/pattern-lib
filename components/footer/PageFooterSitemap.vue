@@ -47,7 +47,7 @@
         <li>
           <a
             class="link-reset"
-            href="https://about.unimelb.edu.au/strategy-and-leadership">Strategy and leadership</a>
+            href="https://about.unimelb.edu.au/strategy">Strategy and leadership</a>
         </li>
         <li>
           <a
