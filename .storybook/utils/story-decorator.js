@@ -23,6 +23,7 @@ export default function storyDecorator(storyFn) {
   return {
     render() {
       return (
+        // eslint-disable-next-line react/jsx-props-no-spreading
         <Decorator {...{ props: decoratorProps }}>
           <Story />
         </Decorator>

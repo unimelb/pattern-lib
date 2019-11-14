@@ -284,7 +284,7 @@ export default {
       this.actionProgressBar();
     },
     frame() {
-      this.progressBarWidth = (this.countTime / this.autoplay * 100) + 5;
+      this.progressBarWidth = Math.round((this.countTime / this.autoplay) * 100) + 5;
       this.countTime += 200;
     },
     actionProgressBar() {
