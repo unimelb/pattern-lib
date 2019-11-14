@@ -184,7 +184,7 @@ export default {
     stories: {
       type: Array,
       default: () => [],
-      validator: stories => stories.length <= 3,
+      validator: (stories) => stories.length <= 3,
       required: true,
     },
     timing: {

@@ -66,10 +66,10 @@ export default {
     },
     date: {
       type: Array, // e.g. ['1970-01-01', '1 Jan. 1970']
-      validator: arr => (
+      validator: (arr) => (
         arr.length === 0
         || (arr.length === 2
-        && arr.every(item => typeof item === 'string'))
+        && arr.every((item) => typeof item === 'string'))
       ),
       default: () => [],
     },
@@ -83,7 +83,7 @@ export default {
     },
     categories: {
       type: Array,
-      validator: arr => arr.length === 0 || arr.every(item => typeof item === 'string'),
+      validator: (arr) => arr.length === 0 || arr.every((item) => typeof item === 'string'),
       default: () => [],
     },
   },

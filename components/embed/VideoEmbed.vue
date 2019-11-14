@@ -26,7 +26,7 @@ export default {
     ratio: {
       type: String,
       default: '',
-      validator: value => ['', '21_9'].indexOf(value) !== -1,
+      validator: (value) => ['', '21_9'].indexOf(value) !== -1,
     },
     inset: {
       type: Boolean,

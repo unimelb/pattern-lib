@@ -49,7 +49,7 @@ export default {
     cols: {
       type: Number,
       default: 4,
-      validator: cols => cols && cols <= 4,
+      validator: (cols) => cols && cols <= 4,
     },
   },
   computed: {

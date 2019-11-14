@@ -35,12 +35,12 @@ export default {
     stat: {
       type: String,
       default: '123456',
-      validator: value => value.length > 0 && value.length <= 6,
+      validator: (value) => value.length > 0 && value.length <= 6,
     },
     cols: {
       type: Number,
       default: 3,
-      validator: value => value >= 2 && value <= 3,
+      validator: (value) => value >= 2 && value <= 3,
     },
     inverted: {
       type: Boolean,

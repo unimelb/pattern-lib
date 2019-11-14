@@ -57,7 +57,7 @@ export default {
     headingLevel: {
       type: String,
       required: true,
-      validator: value => ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(value) > -1,
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(value) > -1,
     },
     color: {
       type: String,
