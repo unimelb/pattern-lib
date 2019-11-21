@@ -46,6 +46,8 @@
 // modal-dialog-close-dialog
 // modal-dialog-close-container
 
+import focusableElements from '../../utils/focusable-elements';
+
 export default {
   name: 'ModalDialog',
   props: {
@@ -64,26 +66,12 @@ export default {
     };
   },
   mounted() {
-    const focusableSelectors = [
-      'a[href]',
-      'area[href]',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'button:not([disabled])',
-      'iframe',
-      'object',
-      'embed',
-      '[contenteditable]',
-      '[tabindex]:not([tabindex^="-"])',
-    ];
-
     // Move to end
     this.$refs.container.parentNode.removeChild(this.$refs.container);
     document.body.appendChild(this.$refs.container);
 
     // Create array of focusable elements in context
-    this.focusableElements = [].slice.call(this.$refs.modal.querySelectorAll(focusableSelectors.join()));
+    this.focusableElements = focusableElements(this.$refs.modal);
   },
   methods: {
     openDialog() {
