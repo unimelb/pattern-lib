@@ -32,6 +32,8 @@
 // toggle-block-set-active
 // toggle-block-toggle
 
+import focusableElements from '../../utils/focusable-elements';
+
 export default {
   name: 'ToggleBlock',
   props: {
@@ -84,21 +86,8 @@ export default {
     }
 
     // Create array of focusable elements in context
-    const focusableSelectors = [
-      'a[href]',
-      'area[href]',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'button:not([disabled])',
-      'iframe',
-      'object',
-      'embed',
-      '[contenteditable]',
-      '[tabindex]:not([tabindex^="-"])',
-    ];
+    this.focusableElements = focusableElements(this.$refs.panel);
 
-    this.focusableElements = [].slice.call(this.$refs.panel.querySelectorAll(focusableSelectors.join()));
     this.toggleFocusableElements();
   },
   methods: {
