@@ -348,3 +348,7 @@ export {
   default as SplitSectionHeader,
 }
   from 'components/header/SplitSectionHeader.vue';
+export {
+  default as ScreenReaderJumpTo,
+}
+  from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';

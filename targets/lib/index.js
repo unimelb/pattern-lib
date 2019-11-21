@@ -88,6 +88,7 @@ import Sidebar from 'components/sidebar/Sidebar.vue';
 import SocialListGeneric from 'components/social-list/SocialListGeneric.vue';
 import LogoListing from 'components/listing/LogoListing.vue';
 import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
+import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import { version } from '../../package.json';
 
 import 'components';
@@ -183,6 +184,7 @@ Vue.component('sidebar', Sidebar);
 Vue.component('social-list-generic', SocialListGeneric);
 Vue.component('logo-listing', LogoListing);
 Vue.component('split-section-header', SplitSectionHeader);
+Vue.component('screen-reader-jump-to', ScreenReaderJumpTo);
 
 // Create Vue instance
 new Vue({

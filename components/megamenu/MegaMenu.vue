@@ -317,7 +317,7 @@ export default {
       this.lastIndex = null;
     },
     dismissAllDesktopChildren() {
-      this.$refs.rootitems.forEach(item => item.classList.remove('menu__item--over'));
+      this.$refs.rootitems.forEach((item) => item.classList.remove('menu__item--over'));
 
       this.$refs.rootitems.forEach((item) => {
         if (

@@ -31,6 +31,11 @@
             class="link-reset"
             href="https://study.unimelb.edu.au/connect-with-us/">Connect with us</a>
         </li>
+        <li>
+          <a
+            class="link-reset"
+            href="https://study.unimelb.edu.au/your-experience/accommodation/">Accommodation</a>
+        </li>
       </ul>
     </div>
     <div class="cell cell--tab-1of2 cell--desk-1of3">
@@ -42,7 +47,7 @@
         <li>
           <a
             class="link-reset"
-            href="https://about.unimelb.edu.au/strategy-and-leadership">Strategy and leadership</a>
+            href="https://about.unimelb.edu.au/strategy">Strategy and governance</a>
         </li>
         <li>
           <a
