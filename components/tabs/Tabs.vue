@@ -45,7 +45,6 @@
       </div>
     </div>
     <div
-      ref="children"
       tabindex="0"
       class="tabs__section">
       <slot />
