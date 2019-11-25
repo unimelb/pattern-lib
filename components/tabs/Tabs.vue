@@ -6,9 +6,11 @@
       <div
         v-if="!min || useSelect"
         :class="classes">
-        <div 
-        class="tabs__select-title"
-        v-if="selectTitle">{{ selectTitle }}:</div>
+        <div
+          v-if="selectTitle"
+          class="tabs__select-title">
+          {{ selectTitle }}:
+        </div>
         <StyledSelect
           aria-label="titles"
           aria-hidden="true"
