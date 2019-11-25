@@ -2,7 +2,8 @@
   <div :id="null">
     <select
       :id="id"
-      :class="extraclasses">
+      :class="extraclasses"
+      @change="callback">
       <slot />
     </select>
     <div :class="iconClasses">

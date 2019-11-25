@@ -4,13 +4,12 @@
     class="tabs section">
     <div class="tabs__section">
       <div
-        v-if="!min"
-        class="styled-select tabs__tablist--mobile">
-        <select
-          ref="selector"
+        v-if="!min || useSelect"
+        :class="classes">
+        <StyledSelect
           aria-label="titles"
           aria-hidden="true"
-          @change="setActive($refs.selector.selectedIndex)">
+          :callback="selectActive">
           <option
             v-for="(tab, index) in panels"
             :key="`ui-tab-${_uid}-mob-${index + 1}`"
@@ -18,12 +17,13 @@
             :selected="tab.isActive ? 'selected' : null">
             {{ tab.title }}
           </option>
-        </select>
+        </StyledSelect>
       </div>
       <div
         :class="min ? 'tabs__tablist--min' : false"
         class="tabs__tablist max"
         role="tablist"
+        v-if="!useSelect"
         @keyup="handleKey">
         <a
           v-for="(tab, index) in panels"
@@ -50,13 +50,20 @@
 <script>
 // tabs-set-active
 
+import StyledSelect from '../forms/StyledSelect';
+
 export default {
+  components: { StyledSelect },
   props: {
     alt: {
       type: Boolean,
       default: false,
     },
     min: {
+      type: Boolean,
+      default: false,
+    },
+    useSelect: {
       type: Boolean,
       default: false,
     },
@@ -72,12 +79,31 @@ export default {
     });
 
     this.panels[0].isActive = true;
+
+    console.log('panels', this.panels);
+  },
+  computed: {
+    classes() {
+      return [
+        'styled-select',
+        {
+          'tabs__tablist--mobile': !this.useSelect,
+        },
+      ];
+    },
   },
   methods: {
+    selectActive(e) {
+      const index = e.target.selectedIndex;
+
+      this.setActive(index);
+    },
     setActive(index) {
+
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;
       });
+      console.log('sa');
       this.$emit('tabs-set-active', this.panels[index].title);
     },
     handleKey(e) {
