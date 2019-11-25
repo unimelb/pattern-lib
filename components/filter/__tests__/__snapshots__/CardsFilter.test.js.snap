@@ -43,6 +43,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="school"
             >
               <option
@@ -50,11 +51,32 @@ exports[`CardsFilter should match snapshot 1`] = `
                 value=""
               >
                 
-      Show all
-    
+    Show all
+  
               </option>
                
             </select>
+             
+            <div
+              class="styled-select__icon"
+            >
+              <svg
+                aria-label="chevron-down"
+                focusable="false"
+                height="15px"
+                role="img"
+                width="15px"
+              >
+                <use
+                  xlink:href="#icon-chevron-down"
+                />
+                 
+                <title>
+                  Chevron-down
+                </title>
+                 
+              </svg>
+            </div>
           </div>
         </div>
          
@@ -72,6 +94,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="disciplines"
             >
               <option
@@ -79,11 +102,32 @@ exports[`CardsFilter should match snapshot 1`] = `
                 value=""
               >
                 
-      Show all
-    
+    Show all
+  
               </option>
                
             </select>
+             
+            <div
+              class="styled-select__icon"
+            >
+              <svg
+                aria-label="chevron-down"
+                focusable="false"
+                height="15px"
+                role="img"
+                width="15px"
+              >
+                <use
+                  xlink:href="#icon-chevron-down"
+                />
+                 
+                <title>
+                  Chevron-down
+                </title>
+                 
+              </svg>
+            </div>
           </div>
         </div>
          
@@ -101,6 +145,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="performances"
             >
               <option
@@ -108,11 +153,32 @@ exports[`CardsFilter should match snapshot 1`] = `
                 value=""
               >
                 
-      Show all
-    
+    Show all
+  
               </option>
                
             </select>
+             
+            <div
+              class="styled-select__icon"
+            >
+              <svg
+                aria-label="chevron-down"
+                focusable="false"
+                height="15px"
+                role="img"
+                width="15px"
+              >
+                <use
+                  xlink:href="#icon-chevron-down"
+                />
+                 
+                <title>
+                  Chevron-down
+                </title>
+                 
+              </svg>
+            </div>
           </div>
         </div>
       </div>

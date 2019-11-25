@@ -2,15 +2,19 @@
   <div
     :class="alt ? 'tabs--alt' : false"
     class="tabs section">
-    <div class="tabs__section">
+    <div class="tabs__section max">
       <div
-        v-if="!min"
-        class="styled-select tabs__tablist--mobile">
-        <select
-          ref="selector"
+        v-if="!min || useSelect"
+        :class="classes">
+        <div
+          v-if="selectTitle"
+          class="tabs__select-title">
+          {{ selectTitle }}:
+        </div>
+        <StyledSelect
           aria-label="titles"
           aria-hidden="true"
-          @change="setActive($refs.selector.selectedIndex)">
+          :callback="selectActive">
           <option
             v-for="(tab, index) in panels"
             :key="`ui-tab-${_uid}-mob-${index + 1}`"
@@ -18,11 +22,12 @@
             :selected="tab.isActive ? 'selected' : null">
             {{ tab.title }}
           </option>
-        </select>
+        </StyledSelect>
       </div>
       <div
+        v-if="!useSelect"
         :class="min ? 'tabs__tablist--min' : false"
-        class="tabs__tablist max"
+        class="tabs__tablist"
         role="tablist"
         @keyup="handleKey">
         <a
@@ -50,8 +55,15 @@
 <script>
 // tabs-set-active
 
+import StyledSelect from '../forms/StyledSelect.vue';
+
 export default {
+  components: { StyledSelect },
   props: {
+    selectTitle: {
+      type: String,
+      default: '',
+    },
     alt: {
       type: Boolean,
       default: false,
@@ -60,20 +72,43 @@ export default {
       type: Boolean,
       default: false,
     },
+    useSelect: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     panels: [],
   }),
+  computed: {
+    classes() {
+      return [
+        'tabs__select',
+        {
+          'tabs__tablist--mobile': !this.useSelect,
+        },
+      ];
+    },
+  },
   mounted() {
-    this.panels = this.$children;
-    this.panels.forEach((tab, i) => {
+    // Only grab <Tab>
+    const children = this.$children.filter((child) => child.$vnode.tag.includes('Tab'));
+
+    children.forEach((tab, i) => {
       tab.namespace = `ui-tab-${this._uid}`;
       tab.index = i;
     });
 
-    this.panels[0].isActive = true;
+    children[0].isActive = true;
+
+    this.panels = children;
   },
   methods: {
+    selectActive(e) {
+      const index = e.target.selectedIndex;
+
+      this.setActive(index);
+    },
     setActive(index) {
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;

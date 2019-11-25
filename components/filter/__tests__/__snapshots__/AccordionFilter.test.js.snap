@@ -43,6 +43,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="locations"
             >
               <option
@@ -50,11 +51,32 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 value=""
               >
                 
-      Show all
-    
+    Show all
+  
               </option>
                
             </select>
+             
+            <div
+              class="styled-select__icon"
+            >
+              <svg
+                aria-label="chevron-down"
+                focusable="false"
+                height="15px"
+                role="img"
+                width="15px"
+              >
+                <use
+                  xlink:href="#icon-chevron-down"
+                />
+                 
+                <title>
+                  Chevron-down
+                </title>
+                 
+              </svg>
+            </div>
           </div>
         </div>
          
@@ -72,6 +94,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="disciplines"
             >
               <option
@@ -79,11 +102,32 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 value=""
               >
                 
-      Show all
-    
+    Show all
+  
               </option>
                
             </select>
+             
+            <div
+              class="styled-select__icon"
+            >
+              <svg
+                aria-label="chevron-down"
+                focusable="false"
+                height="15px"
+                role="img"
+                width="15px"
+              >
+                <use
+                  xlink:href="#icon-chevron-down"
+                />
+                 
+                <title>
+                  Chevron-down
+                </title>
+                 
+              </svg>
+            </div>
           </div>
         </div>
          
@@ -101,6 +145,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="auditions"
             >
               <option
@@ -108,11 +153,32 @@ exports[`AccordionFilter should match snapshot 1`] = `
                 value=""
               >
                 
-      Show all
-    
+    Show all
+  
               </option>
                
             </select>
+             
+            <div
+              class="styled-select__icon"
+            >
+              <svg
+                aria-label="chevron-down"
+                focusable="false"
+                height="15px"
+                role="img"
+                width="15px"
+              >
+                <use
+                  xlink:href="#icon-chevron-down"
+                />
+                 
+                <title>
+                  Chevron-down
+                </title>
+                 
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -178,9 +244,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
           class="accordion toggleblock"
         >
           <div
-            aria-controls="ui-toggle-10-panel-1"
+            aria-controls="ui-toggle-16-panel-1"
             class="toggleblock__default"
-            id="ui-toggle-10-header-1"
+            id="ui-toggle-16-header-1"
             tabindex="0"
           >
             <h2
@@ -193,9 +259,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
            
           <div
             aria-hidden="true"
-            aria-labelledby="ui-toggle-10-header-1"
+            aria-labelledby="ui-toggle-16-header-1"
             class="toggleblock__hidden"
-            id="ui-toggle-10-panel-1"
+            id="ui-toggle-16-panel-1"
             role="region"
             tabindex="-1"
           >
@@ -352,9 +418,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
           class="accordion toggleblock"
         >
           <div
-            aria-controls="ui-toggle-14-panel-1"
+            aria-controls="ui-toggle-20-panel-1"
             class="toggleblock__default"
-            id="ui-toggle-14-header-1"
+            id="ui-toggle-20-header-1"
             tabindex="0"
           >
             <h2
@@ -367,9 +433,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
            
           <div
             aria-hidden="true"
-            aria-labelledby="ui-toggle-14-header-1"
+            aria-labelledby="ui-toggle-20-header-1"
             class="toggleblock__hidden"
-            id="ui-toggle-14-panel-1"
+            id="ui-toggle-20-panel-1"
             role="region"
             tabindex="-1"
           >
