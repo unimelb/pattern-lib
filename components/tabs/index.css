@@ -16,7 +16,7 @@
     }
 
     &-title {
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: var(--fw-bold);
       margin-right: 1rem;
       margin-bottom: 2rem;
@@ -128,7 +128,6 @@
   }
 
   &__panel {
-    /* padding: 1.25rem; */
     background-color: rgb(var(--col-background-primary-white));
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
