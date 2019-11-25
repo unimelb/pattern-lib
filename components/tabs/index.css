@@ -128,7 +128,6 @@
   }
 
   &__panel {
-    background-color: rgb(var(--col-background-primary-white));
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 
