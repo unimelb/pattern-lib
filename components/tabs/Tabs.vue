@@ -2,10 +2,13 @@
   <div
     :class="alt ? 'tabs--alt' : false"
     class="tabs section">
-    <div class="tabs__section">
+    <div class="tabs__section max">
       <div
         v-if="!min || useSelect"
         :class="classes">
+        <div 
+        class="tabs__select-title"
+        v-if="selectTitle">{{ selectTitle }}:</div>
         <StyledSelect
           aria-label="titles"
           aria-hidden="true"
@@ -22,7 +25,7 @@
       <div
         v-if="!useSelect"
         :class="min ? 'tabs__tablist--min' : false"
-        class="tabs__tablist max"
+        class="tabs__tablist"
         role="tablist"
         @keyup="handleKey">
         <a
@@ -51,11 +54,15 @@
 <script>
 // tabs-set-active
 
-import StyledSelect from '../forms/StyledSelect';
+import StyledSelect from '../forms/StyledSelect.vue';
 
 export default {
   components: { StyledSelect },
   props: {
+    selectTitle: {
+      type: String,
+      default: '',
+    },
     alt: {
       type: Boolean,
       default: false,
@@ -75,7 +82,7 @@ export default {
   computed: {
     classes() {
       return [
-        'styled-select',
+        'tabs__select',
         {
           'tabs__tablist--mobile': !this.useSelect,
         },
