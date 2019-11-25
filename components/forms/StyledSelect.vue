@@ -40,10 +40,6 @@ export default {
     baseclass: 'styled-select',
     blueclass: 'styled-select--blue',
   }),
-  mounted() {
-    this.extraclasses = this.$el.className;
-    this.$el.className = `${this.baseclass}${this.blue ? ` ${this.blueclass}` : ''}`;
-  },
   computed: {
     iconClasses() {
       return [
@@ -53,6 +49,10 @@ export default {
         },
       ];
     },
+  },
+  mounted() {
+    this.extraclasses = this.$el.className;
+    this.$el.className = `${this.baseclass}${this.blue ? ` ${this.blueclass}` : ''}`;
   },
 };
 </script>

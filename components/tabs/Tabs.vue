@@ -20,10 +20,10 @@
         </StyledSelect>
       </div>
       <div
+        v-if="!useSelect"
         :class="min ? 'tabs__tablist--min' : false"
         class="tabs__tablist max"
         role="tablist"
-        v-if="!useSelect"
         @keyup="handleKey">
         <a
           v-for="(tab, index) in panels"
@@ -40,6 +40,7 @@
       </div>
     </div>
     <div
+      ref="children"
       tabindex="0"
       class="tabs__section">
       <slot />
@@ -71,17 +72,6 @@ export default {
   data: () => ({
     panels: [],
   }),
-  mounted() {
-    this.panels = this.$children;
-    this.panels.forEach((tab, i) => {
-      tab.namespace = `ui-tab-${this._uid}`;
-      tab.index = i;
-    });
-
-    this.panels[0].isActive = true;
-
-    console.log('panels', this.panels);
-  },
   computed: {
     classes() {
       return [
@@ -92,6 +82,19 @@ export default {
       ];
     },
   },
+  mounted() {
+    // Only grab <Tab>
+    const children = this.$children.filter((child) => child.$vnode.tag.includes('Tab'));
+
+    children.forEach((tab, i) => {
+      tab.namespace = `ui-tab-${this._uid}`;
+      tab.index = i;
+    });
+
+    children[0].isActive = true;
+
+    this.panels = children;
+  },
   methods: {
     selectActive(e) {
       const index = e.target.selectedIndex;
@@ -99,11 +102,9 @@ export default {
       this.setActive(index);
     },
     setActive(index) {
-
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;
       });
-      console.log('sa');
       this.$emit('tabs-set-active', this.panels[index].title);
     },
     handleKey(e) {
