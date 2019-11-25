@@ -33,12 +33,12 @@
   select {
     width: 100%;
     margin-bottom: 0;
-    padding: 9px 57px 9px 16px;
+    padding: .5625rem 3.5625rem .5625rem 1rem;
     border: 0;
     border-radius: 0;
     background-color: transparent;
     color: rgb(var(--col-brand));
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--fw-bold);
     -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
     -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: center;
     align-self: center;
-    width: 41px;
+    width: 2.5625rem;
     height: 100%;
     pointer-events: none;
     border-left: 1px solid rgb(var(--col-blue-mid-2));
