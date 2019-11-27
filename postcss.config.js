@@ -6,6 +6,7 @@ module.exports = ({ options }) => ({
   plugins: {
     'postcss-import': {},
     'postcss-url': {},
+    'postcss-inline-svg': {},
     'postcss-nested': {},
     'postcss-cssnext': {
       browsers: [
