@@ -352,3 +352,7 @@ export {
   default as ScreenReaderJumpTo,
 }
   from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
+export {
+  default as StyledSelect,
+}
+  from 'components/forms/StyledSelect.vue';
