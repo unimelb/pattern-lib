@@ -14,7 +14,8 @@
       <label for="f_q1">Type</label>
       <StyledSelect
         id="f_q1"
-        blue>
+        blue
+        icon>
         <option>Undergraduate</option>
         <option>Postgraduate</option>
         <option>Reasearch</option>

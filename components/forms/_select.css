@@ -30,6 +30,28 @@
   border: 1px solid rgb(var(--col-blue-mid-2));
   flex: 1;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 2.5625rem;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid rgb(var(--col-blue-mid-2));
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: width('~icons/chevron-down.svg');
+    height: height('~icons/chevron-down.svg');
+    pointer-events: none;
+    background-image: url('~icons/chevron-down.svg?fill=#000');
+    transform: translate(-50%, -50%);
+  }
+
   select {
     width: 100%;
     margin-bottom: 0;
@@ -40,8 +62,7 @@
     color: rgb(var(--col-brand));
     font-size: 1.125rem;
     font-weight: var(--fw-bold);
-    -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
-    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+    appearance: none;
 
     option {
       color: rgb(var(--col-black-dark));
@@ -64,17 +85,27 @@
     width: 2.5625rem;
     height: 100%;
     pointer-events: none;
-    border-left: 1px solid rgb(var(--col-blue-mid-2));
 
-    &--blue {
+    /* border-left: 1px solid rgb(var(--col-blue-mid-2)); */
+
+    /* &--blue {
       border-color: rgb(var(--col-background-primary-white));
-    }
+    } */
   }
 
   &--blue {
     background-color: rgb(var(--col-blue-mid-2));
     color: rgb(var(--col-background-primary-white));
     border-color: rgb(var(--col-background-primary-white));
+
+    &::before {
+      border-color: rgb(var(--col-background-primary-white));
+    }
+
+    &::after {
+      /* background-image: url('~icons/chevron-down.svg?fill=rgb(var(--col-background-primary-white))'); */
+      background: svg-load('../icons/sprite/chevron-down.svg', fill=#000, stroke=#fff);
+    }
 
     select {
       color: rgb(var(--col-background-primary-white));

@@ -6,7 +6,9 @@
       @change="callback">
       <slot />
     </select>
-    <div :class="iconClasses">
+    <div
+      v-if="icon"
+      :class="iconClasses">
       <SvgIcon
         width="15px"
         height="15px"
@@ -33,6 +35,10 @@ export default {
     callback: {
       type: Function,
       default: () => {},
+    },
+    icon: {
+      type: Boolean,
+      default: false,
     },
   },
   data: () => ({
