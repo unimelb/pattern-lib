@@ -79,6 +79,11 @@
             class="link-reset"
             href="https://about.unimelb.edu.au/careers">Careers at Melbourne</a>
         </li>
+        <li>
+          <a
+            class="link-reset"
+            href="https://about.unimelb.edu.au/strategy/governance/regulatory-framework/supplying-to-the-university">Supplying to the University</a>
+        </li>
       </ul>
     </div>
     <div class="cell cell--tab-1of2 cell--desk-1of3 cell--tab-clear">
