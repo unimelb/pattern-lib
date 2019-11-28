@@ -5,6 +5,7 @@ const isMinified = process.env.MINIFY_CSS === 'true';
 module.exports = ({ options }) => ({
   plugins: {
     'postcss-import': {},
+    'postcss-assets': {},
     'postcss-url': {},
     'postcss-inline-svg': {},
     'postcss-nested': {},
