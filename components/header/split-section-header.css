@@ -23,7 +23,7 @@
     &::before {
       position: absolute;
       content: '';
-      background-color: rgb(var(--col-background-tertiary-navy), .92);
+      background-color: rgba(var(--col-background-tertiary-navy), .92);
       width: 250vw;
       height: 315vw;
       top: 0;
