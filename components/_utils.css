@@ -49,7 +49,7 @@
 /* light-blue (used in side nav) */
 
 .bg-light-blue {
-  background-color: color(rgb(var(--col-brand)) tint(92%));
+  background-color: color-mod(rgb(var(--col-brand)) tint(92%));
 }
 
 /* white background */

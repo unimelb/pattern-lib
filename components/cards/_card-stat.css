@@ -10,7 +10,7 @@
       }
 
       &:hover {
-        background-color: color(rgb(var(--col-brand)) lightness(-2%));
+        background-color: color-mod(rgb(var(--col-brand)) lightness(-2%));
       }
     }
   }

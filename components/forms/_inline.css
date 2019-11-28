@@ -135,7 +135,7 @@
 
       &:focus,
       &:hover {
-        border-color: color(rgb(var(--col-background-primary-white)) alpha(60%));
+        border-color: color-mod(rgb(var(--col-background-primary-white)) alpha(60%));
       }
 
       &:active {
@@ -146,7 +146,7 @@
 
     .form--inline__search,
     .form--inline__select {
-      border: 1px solid color(rgb(var(--col-black-light)) lightness(-5%));
+      border: 1px solid color-mod(rgb(var(--col-black-light)) lightness(-5%));
     }
 
     .form--inline__select {

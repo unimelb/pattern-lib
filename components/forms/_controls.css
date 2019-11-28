@@ -23,7 +23,7 @@
 
     &:focus,
     &:hover {
-      border-color: color(#fff alpha(60%));
+      border-color: color-mod(#fff alpha(60%));
     }
 
     &:active {

@@ -39,10 +39,10 @@
   }
 
   .section--image-mask.bg-inverted & {
-    background-color: color(rgb(var(--col-brand)) alpha(-10%));
+    background-color: color-mod(rgb(var(--col-brand)) alpha(-10%));
 
     &:hover {
-      background-color: color(rgb(var(--col-brand)) alpha(-10%) lightness(-2%));
+      background-color: color-mod(rgb(var(--col-brand)) alpha(-10%) lightness(-2%));
     }
   }
 }
