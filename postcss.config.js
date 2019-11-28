@@ -18,18 +18,17 @@ module.exports = ({ options }) => ({
       paths: imagePaths,
     },
     'postcss-nested': {},
-    'postcss-cssnext': {
-      browsers: [
-        '> 1% in AU',
-        'last 2 versions',
-        'Firefox ESR',
-        'Firefox 45',
-        'not ie < 11',
-        'iOS >= 8.4',
-        'Safari >= 8',
-        'Android >= 4.4',
-      ],
+    'postcss-preset-env': {
+      stage: 1,
+      features: {
+        'custom-media-queries': true,
+        'color-mod-function': true,
+      },
+      importFrom: './components/_vars.css',
+      preserve: false,
     },
+    'postcss-calc': {},
+    // 'css-mqpacker': {},
     'postcss-reporter': {
       throwError: !isDev,
     },
