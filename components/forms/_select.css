@@ -30,6 +30,28 @@
   border: 1px solid rgb(var(--col-blue-mid-2));
   flex: 1;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 2.5625rem;
+    width: 1px;
+    height: 100%;
+    border-left: 1px solid rgb(var(--col-blue-mid-2));
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: calc(width('chevron-down.svg') * 2);
+    height: calc(height('chevron-down.svg') * 2);
+    pointer-events: none;
+    background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-blue-mid-2)));
+    transform: translate(-50%, -50%);
+  }
+
   select {
     width: 100%;
     margin-bottom: 0;
@@ -40,8 +62,7 @@
     color: rgb(var(--col-brand));
     font-size: 1.125rem;
     font-weight: var(--fw-bold);
-    -moz-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
-    -webkit-appearance: none; /* stylelint-disable-line property-no-vendor-prefix */
+    appearance: none;
 
     option {
       color: rgb(var(--col-black-dark));
@@ -53,28 +74,18 @@
     }
   }
 
-  &__icon {
-    top: 0;
-    position: absolute;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    width: 2.5625rem;
-    height: 100%;
-    pointer-events: none;
-    border-left: 1px solid rgb(var(--col-blue-mid-2));
-
-    &--blue {
-      border-color: rgb(var(--col-background-primary-white));
-    }
-  }
-
   &--blue {
     background-color: rgb(var(--col-blue-mid-2));
     color: rgb(var(--col-background-primary-white));
     border-color: rgb(var(--col-background-primary-white));
+
+    &::before {
+      border-color: rgb(var(--col-background-primary-white));
+    }
+
+    &::after {
+      background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-background-primary-white)));
+    }
 
     select {
       color: rgb(var(--col-background-primary-white));
