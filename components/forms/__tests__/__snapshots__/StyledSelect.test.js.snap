@@ -7,11 +7,5 @@ exports[`StyledSelect should match snapshot 1`] = `
   <select
     class=""
   />
-   
-  <div
-    class="styled-select__icon"
-  >
-    <!---->
-  </div>
 </div>
 `;
