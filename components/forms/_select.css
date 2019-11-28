@@ -45,10 +45,10 @@
     position: absolute;
     top: 50%;
     right: 0;
-    width: calc(width('../icons/sprite/chevron-down.svg') * 2);
-    height: calc(height('../icons/sprite/chevron-down.svg') * 2);
+    width: calc(width('chevron-down.svg') * 2);
+    height: calc(height('chevron-down.svg') * 2);
     pointer-events: none;
-    background-image: svg-load('../icons/sprite/chevron-down.svg', fill=rgb(var(--col-blue-mid-2)));
+    background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-blue-mid-2)));
     transform: translate(-50%, -50%);
   }
 
@@ -84,7 +84,7 @@
     }
 
     &::after {
-      background-image: svg-load('../icons/sprite/chevron-down.svg', fill=rgb(var(--col-background-primary-white)));
+      background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-background-primary-white)));
     }
 
     select {
