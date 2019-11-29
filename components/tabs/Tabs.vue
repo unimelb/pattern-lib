@@ -14,14 +14,15 @@
         <StyledSelect
           aria-label="titles"
           aria-hidden="true"
-          :callback="selectActive">
-          <option
+          :callback="selectActive"
+          :options="selectOptions">
+          <!-- <option
             v-for="(tab, index) in panels"
             :key="`ui-tab-${_uid}-mob-${index + 1}`"
             :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
             :selected="tab.isActive ? 'selected' : null">
             {{ tab.title }}
-          </option>
+          </option> -->
         </StyledSelect>
       </div>
       <div
@@ -53,8 +54,6 @@
 </template>
 
 <script>
-// tabs-set-active
-
 import StyledSelect from '../forms/StyledSelect.vue';
 
 export default {
@@ -89,6 +88,13 @@ export default {
         },
       ];
     },
+    selectOptions() {
+      const filterOptionTitles = (option) => option.map((value) => value.title);
+
+      const options = filterOptionTitles(this.panels);
+
+      return options;
+    },
   },
   mounted() {
     // Only grab <Tab>
@@ -113,7 +119,6 @@ export default {
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;
       });
-      this.$emit('tabs-set-active', this.panels[index].title);
     },
     handleKey(e) {
       let curr = -1;
