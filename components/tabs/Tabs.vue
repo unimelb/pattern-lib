@@ -4,29 +4,29 @@
     class="tabs section">
     <div class="tabs__section max">
       <div
-        v-if="!min || useSelect"
         :class="classes">
         <div
           v-if="selectTitle"
-          class="tabs__select-title">
+          class="tabs__dropdown-title">
           {{ selectTitle }}:
         </div>
-        <StyledSelect
-          aria-label="titles"
-          aria-hidden="true"
-          :callback="selectActive">
-          <option
-            v-for="(tab, index) in panels"
-            :key="`ui-tab-${_uid}-mob-${index + 1}`"
-            :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
-            :selected="tab.isActive ? 'selected' : null">
-            {{ tab.title }}
-          </option>
-        </StyledSelect>
+        <div class="tabs__dropdown-select">
+          <StyledSelect
+            v-model="selected"
+            aria-label="titles"
+            aria-hidden="true"
+            :callback="selectActive">
+            <option
+              v-for="(tab, index) in panels"
+              :key="index"
+              :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`">
+              {{ tab.title }}
+            </option>
+          </StyledSelect>
+        </div>
       </div>
       <div
         v-if="!useSelect"
-        :class="min ? 'tabs__tablist--min' : false"
         class="tabs__tablist"
         role="tablist"
         @keyup="handleKey">
@@ -53,8 +53,6 @@
 </template>
 
 <script>
-// tabs-set-active
-
 import StyledSelect from '../forms/StyledSelect.vue';
 
 export default {
@@ -68,10 +66,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    min: {
-      type: Boolean,
-      default: false,
-    },
     useSelect: {
       type: Boolean,
       default: false,
@@ -79,15 +73,23 @@ export default {
   },
   data: () => ({
     panels: [],
+    selected: '',
   }),
   computed: {
     classes() {
       return [
-        'tabs__select',
+        'tabs__dropdown',
         {
-          'tabs__tablist--mobile': !this.useSelect,
+          'tabs__dropdown--mobile': !this.useSelect,
         },
       ];
+    },
+    selectOptions() {
+      const filterOptionTitles = (option) => option.map((value) => value.title);
+
+      const options = filterOptionTitles(this.panels);
+
+      return options;
     },
   },
   mounted() {
@@ -102,6 +104,8 @@ export default {
     children[0].isActive = true;
 
     this.panels = children;
+
+    this.selected = children[0].title;
   },
   methods: {
     selectActive(e) {
@@ -113,7 +117,9 @@ export default {
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;
       });
-      this.$emit('tabs-set-active', this.panels[index].title);
+
+      // Update select if tab is set.
+      this.selected = this.panels[index].title;
     },
     handleKey(e) {
       let curr = -1;
