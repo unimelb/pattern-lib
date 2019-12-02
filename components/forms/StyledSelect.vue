@@ -8,9 +8,8 @@
       @change="callback">
       <slot />
       <option
-        v-for="(option, index) in optionz"
-        :key="`ui-option-${_uid}-mob-${index + 1}`"
-        :aria-controls="`ui-option-${_uid}-panel-${index + 1}`"
+        v-for="(option, index) in optionsList"
+        :key="index"
         :value="option.value">
         {{ option.label }}
       </option>
@@ -52,7 +51,7 @@ export default {
     content: '',
   }),
   computed: {
-    optionz() {
+    optionsList() {
       const { options } = this;
 
       // If options are not an object then convert them to label/value object
@@ -61,22 +60,23 @@ export default {
           return {
             label: option,
             value: option,
-          }
+          };
         }
-        
+
         return option;
       });
-
-      console.log('newOptions', newOptions);
 
       return newOptions;
     },
   },
   watch: {
     options(newOptions) {
-      console.log('optionz', newOptions);
       const [defaultOption] = newOptions;
+
       this.content = defaultOption;
+    },
+    value(newOptions) {
+      this.content = newOptions;
     },
   },
   mounted() {
@@ -101,7 +101,7 @@ export default {
         // Grab value of first item.
         const [defaultValue] = filterDefaultValue(children);
 
-        return defaultValue;
+        return defaultValue.trim();
       }
 
       return '';
