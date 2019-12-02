@@ -94,7 +94,7 @@ export default {
   },
   mounted() {
     // Only grab <Tab>
-    const children = this.$children.filter((child) => child.$vnode.tag.includes('Tab'));
+    const children = this.$children.filter((child) => child.title !== undefined);
 
     children.forEach((tab, i) => {
       tab.namespace = `ui-tab-${this._uid}`;
