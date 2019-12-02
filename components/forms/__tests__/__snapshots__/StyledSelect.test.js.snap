@@ -6,6 +6,8 @@ exports[`StyledSelect should match snapshot 1`] = `
 >
   <select
     class=""
-  />
+  >
+     
+  </select>
 </div>
 `;
