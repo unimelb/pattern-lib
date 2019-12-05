@@ -74,6 +74,18 @@
     }
   }
 
+  &__label {
+    position: absolute;
+    top: -1.125rem;
+    right: 3.125rem;
+    padding: .1875rem .625rem;
+    background: rgb(var(--col-background-primary-navy));
+    color: rgb(var(--col-white));
+    border-radius: 1.125rem;
+    font-size: .875rem;
+    font-weight: var(--fw-semibold);
+  }
+
   &--blue {
     background-color: rgb(var(--col-blue-mid-2));
     color: rgb(var(--col-background-primary-white));
