@@ -14,8 +14,10 @@
         {{ option.label }}
       </option>
     </select>
-    <div class="styled-select__label">
-      3 courses available
+    <div
+      v-if="label"
+      class="styled-select__label">
+      {{ label }}
     </div>
   </div>
 </template>
@@ -37,6 +39,10 @@ export default {
     blue: {
       type: Boolean,
       default: false,
+    },
+    label: {
+      type: String,
+      default: '',
     },
     options: {
       type: Array,
