@@ -10,7 +10,23 @@ expect.extend(toHaveNoViolations);
 
 describe('StyledSelect', () => {
   it('should match snapshot', () => {
-    const result = shallow(StyledSelect).element;
+    const result = shallow(StyledSelect, {
+      propsData: {
+        label: 'text',
+      },
+    }).element;
+
     expect(result).toMatchSnapshot();
+  });
+
+  it('should show label', () => {
+    const wrapper = shallow(StyledSelect, {
+      propsData: {
+        label: 'text',
+      },
+    });
+
+    expect(wrapper.find('.styled-select__label').text()).toBe('text');
+    expect(wrapper.find('.styled-select__label').exists()).toBe(true);
   });
 });
