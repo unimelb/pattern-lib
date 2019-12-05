@@ -14,6 +14,9 @@
         {{ option.label }}
       </option>
     </select>
+    <div class="styled-select__label">
+      3 courses available
+    </div>
   </div>
 </template>
 
