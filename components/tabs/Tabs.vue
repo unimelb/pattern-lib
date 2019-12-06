@@ -13,6 +13,7 @@
         <div class="tabs__dropdown-select">
           <StyledSelect
             v-model="selected"
+            :label="selectlabelz"
             aria-label="titles"
             aria-hidden="true"
             :callback="selectActive">
@@ -62,6 +63,14 @@ export default {
       type: String,
       default: '',
     },
+    selectLabel: {
+      type: String,
+      default: '',
+    },
+    selectCount: {
+      type: Boolean,
+      default: false,
+    },
     alt: {
       type: Boolean,
       default: false,
@@ -81,6 +90,7 @@ export default {
         'tabs__dropdown',
         {
           'tabs__dropdown--mobile': !this.useSelect,
+          'tabs__dropdown--has-label': this.selectLabel || this.selectCount,
         },
       ];
     },
@@ -90,6 +100,23 @@ export default {
       const options = filterOptionTitles(this.panels);
 
       return options;
+    },
+    selectlabelz() {
+      const { selectLabel, selectCount, selectOptions } = this;
+
+      if (selectCount) {
+        if (selectLabel) {
+          return `${selectOptions.length} ${selectLabel}`;
+        }
+
+        return selectOptions.length;
+      }
+
+      if (selectLabel) {
+        return selectLabel;
+      }
+
+      return '';
     },
   },
   mounted() {
