@@ -12,18 +12,11 @@
         </div>
         <div class="tabs__dropdown-select">
           <StyledSelect
-            v-model="selected"
             :label="labelText"
-            aria-label="titles"
+            aria-label="Choose an option"
             aria-hidden="true"
-            :callback="selectActive">
-            <option
-              v-for="(tab, index) in panels"
-              :key="index"
-              :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`">
-              {{ tab.title }}
-            </option>
-          </StyledSelect>
+            :options="selectOptions"
+            :callback="selectActive" />
         </div>
       </div>
       <div
@@ -131,8 +124,6 @@ export default {
     children[0].isActive = true;
 
     this.panels = children;
-
-    this.selected = children[0].title;
   },
   methods: {
     selectActive(e) {
@@ -144,9 +135,6 @@ export default {
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;
       });
-
-      // Update select if tab is set.
-      this.selected = this.panels[index].title;
     },
     handleKey(e) {
       let curr = -1;
