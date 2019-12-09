@@ -107,9 +107,8 @@ export default {
     children.forEach((tab, i) => {
       tab.namespace = `ui-tab-${this._uid}`;
       tab.index = i;
+      tab.isActive = i === 0;
     });
-
-    children[0].isActive = true;
 
     this.panels = children;
   },
