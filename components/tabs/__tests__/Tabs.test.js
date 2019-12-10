@@ -9,8 +9,23 @@ import Tabs from '../Tabs.vue';
 expect.extend(toHaveNoViolations);
 
 describe('Tabs', () => {
-  it.skip('should match snapshot', () => {
+  it('should match snapshot', () => {
     const result = shallow(Tabs).element;
     expect(result).toMatchSnapshot();
+  });
+
+  it('should be alternate tab with yellow border', () => {
+    const wrapper = shallow(Tabs, {
+      propsData: {
+        alt: '',
+        color: 'yellow',
+      },
+    });
+
+    expect(wrapper.find('.tabs--alt').exists()).toBe(true);
+    expect(wrapper.find('.tabs__tablist--alt').exists()).toBe(true);
+    expect(wrapper.find('.tabs__tablist--yellow').exists()).toBe(true);
+
+    expect(wrapper.element).toMatchSnapshot();
   });
 });
