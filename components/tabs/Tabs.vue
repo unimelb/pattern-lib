@@ -6,12 +6,13 @@
       <div
         :class="classes">
         <div
-          v-if="selectTitle"
+          v-if="title"
           class="tabs__dropdown-title">
-          {{ selectTitle }}:
+          {{ title }}:
         </div>
         <div class="tabs__dropdown-select">
           <StyledSelect
+            :label="labelText"
             aria-label="Choose an option"
             aria-hidden="true"
             :options="selectOptions"
@@ -53,9 +54,17 @@ import StyledSelect from '../forms/StyledSelect.vue';
 export default {
   components: { StyledSelect },
   props: {
-    selectTitle: {
+    title: {
       type: String,
       default: '',
+    },
+    label: {
+      type: String,
+      default: '',
+    },
+    showCount: {
+      type: Boolean,
+      default: false,
     },
     alt: {
       type: Boolean,
@@ -81,6 +90,7 @@ export default {
         'tabs__dropdown',
         {
           'tabs__dropdown--mobile': !this.useSelect,
+          'tabs__dropdown--has-label': this.label || this.showCount,
         },
       ];
     },
@@ -98,6 +108,23 @@ export default {
       const options = filterOptionTitles(this.panels);
 
       return options;
+    },
+    labelText() {
+      const { label, showCount, selectOptions } = this;
+
+      if (showCount) {
+        if (label) {
+          return `${selectOptions.length} ${label}`;
+        }
+
+        return selectOptions.length;
+      }
+
+      if (label) {
+        return label;
+      }
+
+      return '';
     },
   },
   mounted() {
