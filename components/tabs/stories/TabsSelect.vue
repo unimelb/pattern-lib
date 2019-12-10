@@ -1,7 +1,9 @@
 <template>
   <Tabs
+    title="Selector prefix"
+    label="options available"
     use-select
-    select-title="Selector prefix">
+    show-count>
     <Tab title="Use">
       <p>We write using the conventions and principles of modern Australian English.</p>
       <p> Our style is simple and accessible, and often conversational in tone. We avoid archaic language, euphemisms and slang. Australian English is continuously evolving, so always refer to the latest edition of the Macquarie Dictionary (Macquarie Dictionary Publishers) and Style Manual: For Authors, Editors and Printers (John Wiley & Sons) for Australia’s most up-to-date spelling and grammar conventions.</p>
@@ -230,9 +232,10 @@
 <script>
 import Tab from '../Tab.vue';
 import Tabs from '../Tabs.vue';
+import tabsReadme from './tabsSelect.md';
 
 export default {
   components: { Tab, Tabs },
-  readme: { html: true, source: false },
+  readme: { custom: tabsReadme, source: false, html: true },
 };
 </script>
