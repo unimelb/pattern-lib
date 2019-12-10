@@ -21,6 +21,7 @@
       </div>
       <div
         v-if="!useSelect"
+        :class="tabsListClasses"
         class="tabs__tablist"
         role="tablist"
         @keyup="handleKey">
@@ -33,6 +34,7 @@
           :aria-selected="tab.isActive"
           :aria-controls="`ui-tab-${_uid}-panel-${index + 1}`"
           :href="`#ui-tab-${_uid}-panel-${index + 1}`"
+          :class="alt ? 'tabs__tab--alt' : false"
           class="tabs__tab"
           role="tab"
           @click.prevent="setActive(index)">{{ tab.title }}</a>
@@ -72,6 +74,11 @@ export default {
       type: Boolean,
       default: false,
     },
+    color: {
+      type: String,
+      default: '',
+      validator: (color) => ['', 'navy', 'teal', 'yellow'].indexOf(color) > -1,
+    },
   },
   data: () => ({
     panels: [],
@@ -86,6 +93,14 @@ export default {
           'tabs__dropdown--has-label': this.label || this.showCount,
         },
       ];
+    },
+    tabsListClasses() {
+      const { alt, color } = this;
+
+      return {
+        'tabs__tablist--alt': alt,
+        [`tabs__tablist--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
+      };
     },
     selectOptions() {
       const filterOptionTitles = (option) => option.map((value) => value.title);
@@ -119,9 +134,8 @@ export default {
     children.forEach((tab, i) => {
       tab.namespace = `ui-tab-${this._uid}`;
       tab.index = i;
+      tab.isActive = i === 0;
     });
-
-    children[0].isActive = true;
 
     this.panels = children;
   },
