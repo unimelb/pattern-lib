@@ -2,8 +2,11 @@
   <div
     :class="alt ? 'tabs--alt' : false"
     class="tabs section">
-    <div class="tabs__section">
+    <div
+      class="tabs__section"
+      :class="isMobile ? '' : 'max'">
       <div
+        v-if="!isMobile"
         :aria-label="'Previous: '"
         class="tabs__arrow tabs__arrow-left"
         role="button"
@@ -37,6 +40,7 @@
           @click.prevent="setActive(index)">{{ tab.title }}</a>
       </div>
       <div
+        v-if="!isMobile"
         :aria-label="'Previous: '"
         class="tabs__arrow tabs__arrow-right"
         role="button"
@@ -79,6 +83,7 @@ export default {
   data: () => ({
     panels: [],
     selected: '',
+    isMobile: true,
   }),
   computed: {
     tabsListClasses() {
@@ -102,12 +107,26 @@ export default {
 
     this.panels = children;
   },
+  beforeUpdate() {
+    this.isMobile = this.checkTabsWidth();
+  },
+  updated() {
+
+  },
   methods: {
     rightClick() {
       this.$refs.tablist.scrollLeft += 110;
     },
     leftClick() {
       this.$refs.tablist.scrollLeft -= 110;
+    },
+    checkTabsWidth() {
+      const containerWidth = document.documentElement.clientWidth;
+      const tabsWithRef = this.$refs.tablist.clientWidth;
+      const tabsWidth = document.querySelector('.tabs__tablist').clientWidth;
+      console.log(tabsWidth);
+      console.log(tabsWithRef);
+      return tabsWidth > containerWidth;
     },
     selectActive(e) {
       const index = e.target.selectedIndex;
