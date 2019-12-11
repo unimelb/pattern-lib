@@ -12,8 +12,8 @@
         @keydown.32="leftClick">
         <SvgIcon
           name="chevron-left"
-          width="16"
-          height="16"
+          width="10"
+          height="10"
           aria-hidden="true" />
       </div>
       <div
@@ -45,8 +45,8 @@
         @keydown.32="rightClick">
         <SvgIcon
           name="chevron-right"
-          width="16"
-          height="16"
+          width="10"
+          height="10"
           aria-hidden="true" />
       </div>
     </div>
@@ -161,15 +161,15 @@ export default {
 }
 .tabs {
   &__tablist {
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
     display: flex;
   }
 
   &__arrow {
     cursor: pointer;
-    padding: 1rem;
-background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.835171568627451) 100%);
+    padding: 20px 8px;
 
     &-left {
     left: 0;
