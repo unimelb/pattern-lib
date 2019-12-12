@@ -4,6 +4,7 @@
     class="tabs section">
     <div class="tabs__section max">
       <div
+        v-if="selectOptions.length > 1"
         :class="classes">
         <div
           v-if="title"

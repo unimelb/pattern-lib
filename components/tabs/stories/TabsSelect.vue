@@ -1,7 +1,7 @@
 <template>
   <div>
     <Tabs
-      title="Selector prefix"
+      title="Selector with really big prefix"
       label="options available"
       use-select
       show-count>
@@ -226,23 +226,6 @@
             The information on this form is being collected by the University of Melbourne for further communication regarding various courses, programs and events at the University in which you have expressed interest. Information collected will only be used by authorised staff for the purpose for which it was collected and will be protected against unauthorized access and use. You can access any personal information the University holds about you. Contact the <a href="http://www.unimelb.edu.au/governance/compliance/privacy/contacts">Privacy Officer</a> to find out more. The <a href="http://www.unimelb.edu.au/governance/compliance/privacy">University’s Privacy Policy</a> is available online.
           </p>
         </form>
-      </Tab>
-    </Tabs>
-
-    <Tabs
-      title="Selector with really big prefix"
-      label="options available"
-      use-select
-      show-count>
-      <Tab title="Use">
-        <p>We write using the conventions and principles of modern Australian English.</p>
-        <p> Our style is simple and accessible, and often conversational in tone. We avoid archaic language, euphemisms and slang. Australian English is continuously evolving, so always refer to the latest edition of the Macquarie Dictionary (Macquarie Dictionary Publishers) and Style Manual: For Authors, Editors and Printers (John Wiley & Sons) for Australia’s most up-to-date spelling and grammar conventions.</p>
-        <ButtonIcon size="xsml">
-          I am a child component
-        </ButtonIcon>
-      </Tab>
-      <Tab title="Inclusive language">
-        <p>We always use inclusive language, avoiding stereotypical and offensive terms that unnecessarily categorise people by attributes such as race, gender or disability. For example, say ‘student’ rather than ‘Asian student’, ‘chairperson’ in place of ‘chairman’ and ‘person with a disability’ instead of ‘disabled person’.</p>
       </Tab>
     </Tabs>
   </div>
