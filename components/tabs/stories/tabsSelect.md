@@ -7,3 +7,7 @@ The following optional props are only usable with `use-select`:
 - `title` (title to show to the left of the select)
 - `label` (set label of 'bubble' above select)
 - `show-count` (counts tabs and displays accumulated count)
+
+### Note
+
+If only one tab is present then the select dropdown will be hidden.
