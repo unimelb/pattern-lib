@@ -183,7 +183,7 @@ export default {
       this.showControls = this.hasControls();
 
       window.addEventListener('resize', this.checkControls);
-    }, 1000);
+    }, 2000);
   },
   methods: {
     rightClick() {
@@ -200,15 +200,25 @@ export default {
       this.showControls = this.hasControls();
     },
     hasControls() {
-      const tabsList = this.$refs.tabsList.clientWidth;
+      const { tabsList } = this.$refs;
 
-      return this.tabsWidth > tabsList;
+      if (tabsList !== undefined) {
+        return this.tabsWidth > tabsList.clientWidth;
+      }
+
+      return 0;
     },
     calculateTabsWidth() {
-      const tabs = this.$refs.tabsList.querySelectorAll('.tabs__tab');
-      const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, 0);
+      const { tabsList } = this.$refs;
 
-      return tabsWidth;
+      if (tabsList !== undefined) {
+        const tabs = this.$refs.tabsList.querySelectorAll('.tabs__tab');
+        const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, 0);
+
+        return tabsWidth;
+      }
+
+      return 0;
     },
     selectActive(e) {
       const index = e.target.selectedIndex;

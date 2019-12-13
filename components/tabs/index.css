@@ -163,7 +163,7 @@
 
   &__controls {
     cursor: pointer;
-    padding: 20px 8px;
+    padding: 1.25rem .5rem;
 
     &--prev {
       left: 0;
