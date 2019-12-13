@@ -4,7 +4,7 @@
     class="tabs section">
     <div
       class="tabs__section"
-      :class="isMobile ? '' : 'max'">
+      :class="showControls ? '' : 'max'">
       <div
         v-if="useSelect"
         :class="classes">
@@ -23,7 +23,7 @@
         </div>
       </div>
       <div
-        v-if="isMobile"
+        v-if="showControls"
         aria-label="Go to previous tab"
         class="tabs__controls tabs__controls--prev"
         role="button"
@@ -58,7 +58,7 @@
           @click.prevent="setActive(index)">{{ tab.title }}</a>
       </div>
       <div
-        v-if="isMobile"
+        v-if="showControls"
         aria-label="Go to next tab"
         class="tabs__controls tabs__controls--next"
         role="button"
@@ -119,7 +119,7 @@ export default {
   data: () => ({
     panels: [],
     selected: '',
-    isMobile: false,
+    showControls: false,
     tabsWidth: 0,
   }),
   computed: {
@@ -180,9 +180,9 @@ export default {
     // Hack to get child components to properly load.
     setTimeout(() => {
       this.tabsWidth = this.calculateTabsWidth();
-      this.isMobile = this.checkControls();
+      this.showControls = this.showControls();
 
-      window.addEventListener('resize', this.checkTabControls);
+      window.addEventListener('resize', this.checkControls);
     }, 1000);
   },
   methods: {
@@ -196,10 +196,10 @@ export default {
 
       this.moveToTab(prev);
     },
-    checkTabControls() {
-      this.isMobile = this.checkControls();
-    },
     checkControls() {
+      this.showControls = this.showControls();
+    },
+    showControls() {
       const tabsList = this.$refs.tabsList.clientWidth;
 
       return this.tabsWidth > tabsList;
