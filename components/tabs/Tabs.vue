@@ -2,8 +2,11 @@
   <div
     :class="alt ? 'tabs--alt' : false"
     class="tabs section">
-    <div class="tabs__section max">
+    <div
+      class="tabs__section"
+      :class="isMobile ? '' : 'max'">
       <div
+        v-if="useSelect"
         :class="classes">
         <div
           v-if="title"
@@ -20,7 +23,22 @@
         </div>
       </div>
       <div
+        v-if="isMobile"
+        aria-label="Go to previous tab"
+        class="tabs__controls tabs__controls--prev"
+        role="button"
+        @click="leftClick"
+        @keydown.13="leftClick"
+        @keydown.32="leftClick">
+        <SvgIcon
+          name="chevron-left"
+          width="10"
+          height="10"
+          aria-hidden="true" />
+      </div>
+      <div
         v-if="!useSelect"
+        ref="tabsList"
         :class="tabsListClasses"
         class="tabs__tablist"
         role="tablist"
@@ -39,6 +57,20 @@
           role="tab"
           @click.prevent="setActive(index)">{{ tab.title }}</a>
       </div>
+      <div
+        v-if="isMobile"
+        aria-label="Go to next tab"
+        class="tabs__controls tabs__controls--next"
+        role="button"
+        @click="rightClick"
+        @keydown.13="rightClick"
+        @keydown.32="rightClick">
+        <SvgIcon
+          name="chevron-right"
+          width="10"
+          height="10"
+          aria-hidden="true" />
+      </div>
     </div>
     <div
       tabindex="0"
@@ -50,9 +82,13 @@
 
 <script>
 import StyledSelect from '../forms/StyledSelect.vue';
+import SvgIcon from '../icons/SvgIcon.vue';
 
 export default {
-  components: { StyledSelect },
+  components: {
+    StyledSelect,
+    SvgIcon,
+  },
   props: {
     title: {
       type: String,
@@ -83,6 +119,8 @@ export default {
   data: () => ({
     panels: [],
     selected: '',
+    isMobile: false,
+    tabsWidth: 0,
   }),
   computed: {
     classes() {
@@ -138,8 +176,40 @@ export default {
     });
 
     this.panels = children;
+
+    // Hack to get child components to properly load.
+    setTimeout(() => {
+      this.tabsWidth = this.calculateTabsWidth();
+      this.isMobile = this.checkControls();
+
+      window.addEventListener('resize', this.checkTabControls);
+    }, 1000);
   },
   methods: {
+    rightClick() {
+      const { next } = this.getTabSiblings();
+
+      this.moveToTab(next);
+    },
+    leftClick() {
+      const { prev } = this.getTabSiblings();
+
+      this.moveToTab(prev);
+    },
+    checkTabControls() {
+      this.isMobile = this.checkControls();
+    },
+    checkControls() {
+      const tabsList = this.$refs.tabsList.clientWidth;
+
+      return this.tabsWidth > tabsList;
+    },
+    calculateTabsWidth() {
+      const tabs = this.$refs.tabsList.querySelectorAll('.tabs__tab');
+      const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, 0);
+
+      return tabsWidth;
+    },
     selectActive(e) {
       const index = e.target.selectedIndex;
 
@@ -149,15 +219,12 @@ export default {
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;
       });
+
+      const elementToScrollTo = this.$refs.tabs[index];
+      elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     },
     handleKey(e) {
-      let curr = -1;
-      this.$refs.tabs.forEach((tab, index) => {
-        if (tab.getAttribute('tabindex') === '0') curr = index;
-      }, this);
-
-      const prev = curr - 1 < 0 ? this.$refs.tabs.length - 1 : curr - 1;
-      const next = curr + 1 > this.$refs.tabs.length - 1 ? 0 : curr + 1;
+      const { prev, next } = this.getTabSiblings();
 
       // Don't catch key events when ⌘ or Alt modifier is present
       if (e.metaKey || e.altKey) return;
@@ -166,18 +233,34 @@ export default {
         // left / up
         case 37:
         case 38:
-          this.setActive(prev);
-          this.$refs.tabs[prev].focus();
+          this.moveToTab(prev);
           break;
         // right / down
         case 39:
         case 40:
-          this.setActive(next);
-          this.$refs.tabs[next].focus();
+          this.moveToTab(next);
           break;
         default:
           break;
       }
+    },
+    getTabSiblings() {
+      let curr = -1;
+      this.$refs.tabs.forEach((tab, index) => {
+        if (tab.getAttribute('tabindex') === '0') curr = index;
+      }, this);
+
+      const prev = curr - 1 < 0 ? this.$refs.tabs.length - 1 : curr - 1;
+      const next = curr + 1 > this.$refs.tabs.length - 1 ? 0 : curr + 1;
+
+      return {
+        prev,
+        next,
+      };
+    },
+    moveToTab(toTab) {
+      this.setActive(toTab);
+      this.$refs.tabs[toTab].focus();
     },
   },
 };
