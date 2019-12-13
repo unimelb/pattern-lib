@@ -180,7 +180,7 @@ export default {
     // Hack to get child components to properly load.
     setTimeout(() => {
       this.tabsWidth = this.calculateTabsWidth();
-      this.showControls = this.showControls();
+      this.showControls = this.hasControls();
 
       window.addEventListener('resize', this.checkControls);
     }, 1000);
@@ -197,9 +197,9 @@ export default {
       this.moveToTab(prev);
     },
     checkControls() {
-      this.showControls = this.showControls();
+      this.showControls = this.hasControls();
     },
-    showControls() {
+    hasControls() {
       const tabsList = this.$refs.tabsList.clientWidth;
 
       return this.tabsWidth > tabsList;
