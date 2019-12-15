@@ -209,7 +209,7 @@ export default {
       const { tabsList } = this.$refs;
 
       if (tabsList !== undefined) {
-        const tabs = this.$refs.tabsList.querySelectorAll('.tabs__tab');
+        const tabs = this.$refs.tabsList.childNodes;
         const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, 0);
 
         return tabsWidth;
