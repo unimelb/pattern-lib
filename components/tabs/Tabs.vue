@@ -27,9 +27,9 @@
         aria-label="Go to previous tab"
         class="tabs__controls tabs__controls--prev"
         role="button"
-        @click="leftClick"
-        @keydown.13="leftClick"
-        @keydown.32="leftClick">
+        @click="prevClick"
+        @keydown.13="prevClick"
+        @keydown.32="prevClick">
         <SvgIcon
           name="chevron-left"
           width="10"
@@ -62,9 +62,9 @@
         aria-label="Go to next tab"
         class="tabs__controls tabs__controls--next"
         role="button"
-        @click="rightClick"
-        @keydown.13="rightClick"
-        @keydown.32="rightClick">
+        @click="nextClick"
+        @keydown.13="nextClick"
+        @keydown.32="nextClick">
         <SvgIcon
           name="chevron-right"
           width="10"
@@ -81,6 +81,7 @@
 </template>
 
 <script>
+import throttle from 'lodash.throttle';
 import StyledSelect from '../forms/StyledSelect.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 
@@ -166,32 +167,28 @@ export default {
     },
   },
   mounted() {
-    // Only grab <Tab>
-    const children = this.$children.filter((child) => child.title !== undefined);
-
-    children.forEach((tab, i) => {
-      tab.namespace = `ui-tab-${this._uid}`;
-      tab.index = i;
-      tab.isActive = i === 0;
-    });
-
-    this.panels = children;
+    this.panels = this.getTabs();
 
     // Hack to get child components to properly load.
     setTimeout(() => {
       this.tabsWidth = this.calculateTabsWidth();
       this.showControls = this.hasControls();
 
-      window.addEventListener('resize', this.checkControls);
+
+      this.throttledTabsScrollEvent = throttle(this.checkControls, 100);
+      window.addEventListener('resize', this.throttledTabsScrollEvent);
     }, 2000);
   },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.throttledTabsScrollEvent);
+  },
   methods: {
-    rightClick() {
+    nextClick() {
       const { next } = this.getTabSiblings();
 
       this.moveToTab(next);
     },
-    leftClick() {
+    prevClick() {
       const { prev } = this.getTabSiblings();
 
       this.moveToTab(prev);
@@ -253,6 +250,18 @@ export default {
         default:
           break;
       }
+    },
+    getTabs() {
+      // Only grab <Tab>
+      const children = this.$children.filter((child) => child.title !== undefined);
+
+      children.forEach((tab, i) => {
+        tab.namespace = `ui-tab-${this._uid}`;
+        tab.index = i;
+        tab.isActive = i === 0;
+      });
+
+      return children;
     },
     getTabSiblings() {
       let curr = -1;
