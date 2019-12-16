@@ -154,7 +154,6 @@ export default {
         if (label) {
           return `${selectOptions.length} ${label}`;
         }
-
         return selectOptions.length;
       }
 

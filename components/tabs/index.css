@@ -73,6 +73,20 @@
     &--yellow {
       border-color: rgb(var(--col-yellow-mid-2));
     }
+
+    &--alt {
+      padding-left: 0;
+      padding-right: 0;
+      border-color: rgb(var(--col-brand));
+    }
+
+    &--teal {
+      border-color: rgb(var(--col-teal-mid-2));
+    }
+
+    &--yellow {
+      border-color: rgb(var(--col-yellow-mid-2));
+    }
   }
 
   &__tab {
@@ -111,7 +125,6 @@
       border-left-color: rgb(var(--col-navy-mid-1));
       box-shadow: 1px -1px 4px 0 rgba(0, 0, 0, .1);
     }
-
     &--alt {
       background: transparent;
       margin-right: 0;
@@ -138,7 +151,6 @@
       display: none;
     }
   }
-
   &__controls {
     cursor: pointer;
     padding: 1.25rem .5rem;
