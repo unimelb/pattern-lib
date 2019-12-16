@@ -73,20 +73,6 @@
     &--yellow {
       border-color: rgb(var(--col-yellow-mid-2));
     }
-
-    &--alt {
-      padding-left: 0;
-      padding-right: 0;
-      border-color: rgb(var(--col-brand));
-    }
-
-    &--teal {
-      border-color: rgb(var(--col-teal-mid-2));
-    }
-
-    &--yellow {
-      border-color: rgb(var(--col-yellow-mid-2));
-    }
   }
 
   &__tab {
