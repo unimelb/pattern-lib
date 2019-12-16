@@ -55,7 +55,7 @@
           :class="alt ? 'tabs__tab--alt' : false"
           class="tabs__tab"
           role="tab"
-          @click.prevent="setActive(index)">{{ tab.title }}</a>
+          @click.prevent="moveToTab(index)">{{ tab.title }}</a>
       </div>
       <div
         v-if="showControls"
@@ -226,7 +226,8 @@ export default {
       this.panels.forEach((panel, j) => {
         panel.isActive = index === j;
       });
-
+    },
+    scrollTo(index) {
       const elementToScrollTo = this.$refs.tabs[index];
       elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     },
@@ -279,6 +280,7 @@ export default {
     },
     moveToTab(toTab) {
       this.setActive(toTab);
+      this.scrollTo(toTab);
       this.$refs.tabs[toTab].focus();
     },
   },
