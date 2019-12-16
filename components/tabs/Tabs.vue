@@ -164,18 +164,20 @@ export default {
       return '';
     },
   },
+  watch: {
+    panels() {
+      // Wait a bit before calculations.  For slower devices.
+      setTimeout(() => {
+        this.tabsWidth = this.calculateTabsWidth();
+        this.showControls = this.hasControls();
+      }, 2000);
+    },
+  },
   mounted() {
     this.panels = this.getTabs();
 
-    // Hack to get child components to properly load.
-    setTimeout(() => {
-      this.tabsWidth = this.calculateTabsWidth();
-      this.showControls = this.hasControls();
-
-
-      this.throttledTabsScrollEvent = throttle(this.checkControls, 100);
-      window.addEventListener('resize', this.throttledTabsScrollEvent);
-    }, 2000);
+    this.throttledTabsScrollEvent = throttle(this.checkControls, 100);
+    window.addEventListener('resize', this.throttledTabsScrollEvent);
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.throttledTabsScrollEvent);
@@ -201,7 +203,7 @@ export default {
         return this.tabsWidth > tabsList.clientWidth;
       }
 
-      return 0;
+      return false;
     },
     calculateTabsWidth() {
       const { tabsList } = this.$refs;
