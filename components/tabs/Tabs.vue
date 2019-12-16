@@ -6,7 +6,7 @@
       class="tabs__section"
       :class="showControls ? '' : 'max'">
       <div
-        v-if="useSelect"
+        v-if="useSelect && selectOptions.length > 1"
         :class="classes">
         <div
           v-if="title"
