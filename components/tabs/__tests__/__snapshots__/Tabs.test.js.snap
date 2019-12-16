@@ -9,14 +9,17 @@ exports[`Tabs should be alternate tab with yellow border 1`] = `
   >
     <!---->
      
+    <!---->
+     
     <div
       class="tabs__tablist tabs__tablist--alt tabs__tablist--yellow"
       role="tablist"
     />
+     
+    <!---->
   </div>
    
   <div
-    class="tabs__section"
     tabindex="0"
   />
 </div>
@@ -31,14 +34,17 @@ exports[`Tabs should match snapshot 1`] = `
   >
     <!---->
      
+    <!---->
+     
     <div
       class="tabs__tablist"
       role="tablist"
     />
+     
+    <!---->
   </div>
    
   <div
-    class="tabs__section"
     tabindex="0"
   />
 </div>
