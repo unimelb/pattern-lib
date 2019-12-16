@@ -20,7 +20,6 @@ exports[`Tabs should be alternate tab with yellow border 1`] = `
   </div>
    
   <div
-    class="tabs__section"
     tabindex="0"
   />
 </div>
@@ -46,7 +45,6 @@ exports[`Tabs should match snapshot 1`] = `
   </div>
    
   <div
-    class="tabs__section"
     tabindex="0"
   />
 </div>
