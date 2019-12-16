@@ -1,7 +1,7 @@
 {
   "name": "@unimelb/pattern-lib-vue",
   "description": "A complete design system for the University of Melbourne.",
-  "version": "5.4.0",
+  "version": "5.5.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/unimelb/pattern-lib.git"
@@ -37,6 +37,7 @@
     "ike.js": "^0.0.2",
     "lodash.debounce": "^4.0.8",
     "lodash.escaperegexp": "^4.1.2",
+    "lodash.throttle": "^4.1.1",
     "semver": "^5.6.0",
     "sinon": "^7.3.0",
     "smoothscroll-polyfill": "^0.4.4",

@@ -84,6 +84,7 @@
     border-radius: 1.125rem;
     font-size: .875rem;
     font-weight: var(--fw-semibold);
+    white-space: nowrap;
   }
 
   &--blue {
