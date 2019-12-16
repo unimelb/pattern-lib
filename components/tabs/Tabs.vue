@@ -72,9 +72,7 @@
           aria-hidden="true" />
       </div>
     </div>
-    <div
-      tabindex="0"
-      class="tabs__section">
+    <div tabindex="0">
       <slot />
     </div>
   </div>
