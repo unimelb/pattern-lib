@@ -6,7 +6,7 @@
       class="tabs__section"
       :class="showControls ? '' : 'max'">
       <div
-        v-if="useSelect && selectOptions.length > 1"
+        v-if="useSelect && showSelect"
         :class="classes">
         <div
           v-if="title"
@@ -120,6 +120,7 @@ export default {
     selected: '',
     showControls: false,
     tabsWidth: 0,
+    showSelect: true,
   }),
   computed: {
     classes() {
@@ -175,6 +176,7 @@ export default {
   },
   mounted() {
     this.panels = this.getTabs();
+    this.showSelect = this.selectOptions.length > 1;
 
     this.throttledTabsScrollEvent = throttle(this.checkControls, 100);
     window.addEventListener('resize', this.throttledTabsScrollEvent);
