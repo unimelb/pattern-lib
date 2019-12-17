@@ -148,5 +148,9 @@
     &--next {
       right: 0;
     }
+
+    &--disabled {
+      color: rgb(var(--col-navy-mid-1));
+    }
   }
 }

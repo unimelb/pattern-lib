@@ -26,6 +26,7 @@
         v-if="showControls"
         aria-label="Go to previous tab"
         class="tabs__controls tabs__controls--prev"
+        :class="edgePrev ? 'tabs__controls--disabled' : ''"
         role="button"
         @click="prevClick"
         @keydown.13="prevClick"
@@ -61,6 +62,7 @@
         v-if="showControls"
         aria-label="Go to next tab"
         class="tabs__controls tabs__controls--next"
+        :class="edgeNext ? 'tabs__controls--disabled' : ''"
         role="button"
         @click="nextClick"
         @keydown.13="nextClick"
@@ -121,6 +123,8 @@ export default {
     showControls: false,
     tabsWidth: 0,
     showSelect: true,
+    edgePrev: true,
+    edgeNext: false,
   }),
   computed: {
     classes() {
@@ -186,11 +190,25 @@ export default {
   methods: {
     nextClick() {
       const { next } = this.getTabSiblings();
+      this.edgePrev = false;
+
+      if (next !== this.$refs.tabs.length - 1) {
+        this.edgeNext = false;
+      } else {
+        this.edgeNext = true;
+      }
 
       this.moveToTab(next);
     },
     prevClick() {
       const { prev } = this.getTabSiblings();
+      this.edgeNext = false;
+
+      if (prev !== 0) {
+        this.edgePrev = false;
+      } else {
+        this.edgePrev = true;
+      }
 
       this.moveToTab(prev);
     },
