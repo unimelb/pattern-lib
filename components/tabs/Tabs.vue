@@ -271,8 +271,8 @@ export default {
         if (tab.getAttribute('tabindex') === '0') curr = index;
       }, this);
 
-      const prev = curr - 1 < 0 ? this.$refs.tabs.length - 1 : curr - 1;
-      const next = curr + 1 > this.$refs.tabs.length - 1 ? 0 : curr + 1;
+      const prev = curr - 1 < 0 ? 0 : curr - 1;
+      const next = curr + 1 > this.$refs.tabs.length - 1 ? this.$refs.tabs.length - 1 : curr + 1;
 
       return {
         prev,
