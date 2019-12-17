@@ -23,8 +23,8 @@ describe('Tabs', () => {
     });
 
     expect(wrapper.find('.tabs--alt').exists()).toBe(true);
-    expect(wrapper.find('.tabs__tablist--alt').exists()).toBe(true);
-    expect(wrapper.find('.tabs__tablist--yellow').exists()).toBe(true);
+    expect(wrapper.find('.tabs__section--alt').exists()).toBe(true);
+    expect(wrapper.find('.tabs__section--yellow').exists()).toBe(true);
 
     expect(wrapper.element).toMatchSnapshot();
   });

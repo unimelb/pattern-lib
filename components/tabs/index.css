@@ -4,6 +4,21 @@
 
   &__section {
     display: flex;
+    border-bottom: 1px solid rgb(var(--col-navy-mid-1));
+
+    &--alt {
+      padding-left: 0;
+      padding-right: 0;
+      border-color: rgb(var(--col-brand));
+    }
+
+    &--teal {
+      border-color: rgb(var(--col-teal-mid-2));
+    }
+
+    &--yellow {
+      border-color: rgb(var(--col-yellow-mid-2));
+    }
   }
 
   &__dropdown {
@@ -52,26 +67,10 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    border-bottom: 1px solid rgb(var(--col-navy-mid-1));
     width: 100%;
 
     @media (--bp-tablet) {
       padding-right: 1.5rem;
-      padding-left: 1.5rem;
-    }
-
-    &--alt {
-      padding-left: 0;
-      padding-right: 0;
-      border-color: rgb(var(--col-brand));
-    }
-
-    &--teal {
-      border-color: rgb(var(--col-teal-mid-2));
-    }
-
-    &--yellow {
-      border-color: rgb(var(--col-yellow-mid-2));
     }
   }
 
@@ -117,7 +116,7 @@
       border: 0;
       box-shadow: none;
       font-size: 1.125rem;
-      padding: .75rem 1rem;
+      padding: .75rem;
 
       &[tabindex='0'] {
         box-shadow: inset 0 -6px rgb(var(--col-navy-dark));

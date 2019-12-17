@@ -4,7 +4,7 @@
     class="tabs section">
     <div
       class="tabs__section"
-      :class="showControls ? '' : 'max'">
+      :class="[tabsListClasses, showControls ? '' : 'max']">
       <div
         v-if="useSelect && showSelect"
         :class="classes">
@@ -40,7 +40,6 @@
       <div
         v-if="!useSelect"
         ref="tabsList"
-        :class="tabsListClasses"
         class="tabs__tablist"
         role="tablist"
         @keyup="handleKey">
@@ -140,8 +139,8 @@ export default {
       const { alt, color } = this;
 
       return {
-        'tabs__tablist--alt': alt,
-        [`tabs__tablist--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
+        'tabs__section--alt': alt,
+        [`tabs__section--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
       };
     },
     selectOptions() {
