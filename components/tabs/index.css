@@ -103,7 +103,6 @@
     }
 
     &[tabindex='0'] {
-      background-color: rgb(var(--col-background-primary-white));
       border-top-color: rgb(var(--col-navy-mid-1));
       border-right-color: rgb(var(--col-navy-mid-1));
       border-bottom-color: transparent;

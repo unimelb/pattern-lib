@@ -189,27 +189,17 @@ export default {
   methods: {
     nextClick() {
       const { next } = this.getTabSiblings();
-      this.edgePrev = false;
-
-      if (next !== this.$refs.tabs.length - 1) {
-        this.edgeNext = false;
-      } else {
-        this.edgeNext = true;
-      }
-
       this.moveToTab(next);
     },
     prevClick() {
       const { prev } = this.getTabSiblings();
-      this.edgeNext = false;
-
-      if (prev !== 0) {
-        this.edgePrev = false;
-      } else {
-        this.edgePrev = true;
-      }
-
       this.moveToTab(prev);
+    },
+    checkControlIsDisabled(control, index) {
+      if (control === index) {
+        return true;
+      }
+      return false;
     },
     checkControls() {
       this.showControls = this.hasControls();
@@ -297,6 +287,11 @@ export default {
       };
     },
     moveToTab(toTab) {
+      const { length } = this.$refs.tabs;
+
+      this.edgeNext = this.checkControlIsDisabled(toTab, length - 1);
+      this.edgePrev = this.checkControlIsDisabled(toTab, 0);
+
       this.setActive(toTab);
       this.scrollTo(toTab);
       this.$refs.tabs[toTab].focus();
