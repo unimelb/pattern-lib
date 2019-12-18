@@ -4,7 +4,7 @@
     class="tabs section">
     <div
       class="tabs__section"
-      :class="[tabsListClasses, showControls ? '' : 'max']">
+      :class="showControls ? '' : 'max'">
       <div
         v-if="useSelect && showSelect"
         :class="classes">
@@ -26,7 +26,7 @@
         v-if="showControls"
         aria-label="Go to previous tab"
         class="tabs__controls tabs__controls--prev"
-        :class="edgePrev ? 'tabs__controls--disabled' : ''"
+        :class="[tabsControlClass, edgePrev ? 'tabs__controls--disabled' : '']"
         role="button"
         @click="prevClick"
         @keydown.13="prevClick"
@@ -41,6 +41,7 @@
         v-if="!useSelect"
         ref="tabsList"
         class="tabs__tablist"
+        :class="tabsListClasses"
         role="tablist"
         @keyup="handleKey">
         <a
@@ -61,7 +62,7 @@
         v-if="showControls"
         aria-label="Go to next tab"
         class="tabs__controls tabs__controls--next"
-        :class="edgeNext ? 'tabs__controls--disabled' : ''"
+        :class="[tabsControlClass, edgeNext ? 'tabs__controls--disabled' : '']"
         role="button"
         @click="nextClick"
         @keydown.13="nextClick"
@@ -139,8 +140,15 @@ export default {
       const { alt, color } = this;
 
       return {
-        'tabs__section--alt': alt,
-        [`tabs__section--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
+        'tabs__tablist--alt': alt,
+        [`tabs__tablist--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
+      };
+    },
+    tabsControlClass() {
+      const { color } = this;
+
+      return {
+        [`tabs__controls--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
       };
     },
     selectOptions() {
