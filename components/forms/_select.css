@@ -63,7 +63,7 @@
     font-size: 1.125rem;
     font-weight: var(--fw-bold);
     appearance: none;
-    line-height: 1.4375rem;
+    line-height: 1.278;
 
     option {
       color: rgb(var(--col-black-dark));
