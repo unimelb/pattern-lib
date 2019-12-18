@@ -44,9 +44,9 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: 0;
-    width: calc(width('chevron-down.svg') * 2);
-    height: calc(height('chevron-down.svg') * 2);
+    right: 0.3125rem;
+    width: 0.875rem;
+    height: 0.875rem;
     pointer-events: none;
     background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-blue-mid-2)));
     transform: translate(-65%, -50%);
@@ -63,6 +63,7 @@
     font-size: 1.125rem;
     font-weight: var(--fw-bold);
     appearance: none;
+    line-height: 1.4375rem;
 
     option {
       color: rgb(var(--col-black-dark));
