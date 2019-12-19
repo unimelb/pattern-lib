@@ -26,6 +26,7 @@
         v-if="showControls"
         aria-label="Go to previous tab"
         class="tabs__controls tabs__controls--prev"
+        :class="[tabsControlClass, edgePrev ? 'tabs__controls--disabled' : '']"
         role="button"
         @click="prevClick"
         @keydown.13="prevClick"
@@ -39,8 +40,8 @@
       <div
         v-if="!useSelect"
         ref="tabsList"
-        :class="tabsListClasses"
         class="tabs__tablist"
+        :class="tabsListClasses"
         role="tablist"
         @keyup="handleKey">
         <a
@@ -61,6 +62,7 @@
         v-if="showControls"
         aria-label="Go to next tab"
         class="tabs__controls tabs__controls--next"
+        :class="[tabsControlClass, edgeNext ? 'tabs__controls--disabled' : '']"
         role="button"
         @click="nextClick"
         @keydown.13="nextClick"
@@ -121,6 +123,8 @@ export default {
     showControls: false,
     tabsWidth: 0,
     showSelect: true,
+    edgePrev: true,
+    edgeNext: false,
   }),
   computed: {
     classes() {
@@ -138,6 +142,13 @@ export default {
       return {
         'tabs__tablist--alt': alt,
         [`tabs__tablist--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
+      };
+    },
+    tabsControlClass() {
+      const { color } = this;
+
+      return {
+        [`tabs__controls--${color}`]: ['navy', 'teal', 'yellow'].includes(color),
       };
     },
     selectOptions() {
@@ -186,13 +197,17 @@ export default {
   methods: {
     nextClick() {
       const { next } = this.getTabSiblings();
-
       this.moveToTab(next);
     },
     prevClick() {
       const { prev } = this.getTabSiblings();
-
       this.moveToTab(prev);
+    },
+    checkControlIsDisabled(control, index) {
+      if (control === index) {
+        return true;
+      }
+      return false;
     },
     checkControls() {
       this.showControls = this.hasControls();
@@ -271,8 +286,8 @@ export default {
         if (tab.getAttribute('tabindex') === '0') curr = index;
       }, this);
 
-      const prev = curr - 1 < 0 ? this.$refs.tabs.length - 1 : curr - 1;
-      const next = curr + 1 > this.$refs.tabs.length - 1 ? 0 : curr + 1;
+      const prev = curr - 1 < 0 ? 0 : curr - 1;
+      const next = curr + 1 > this.$refs.tabs.length - 1 ? this.$refs.tabs.length - 1 : curr + 1;
 
       return {
         prev,
@@ -280,6 +295,11 @@ export default {
       };
     },
     moveToTab(toTab) {
+      const { length } = this.$refs.tabs;
+
+      this.edgeNext = this.checkControlIsDisabled(toTab, length - 1);
+      this.edgePrev = this.checkControlIsDisabled(toTab, 0);
+
       this.setActive(toTab);
       this.scrollTo(toTab);
       this.$refs.tabs[toTab].focus();

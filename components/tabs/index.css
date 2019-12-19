@@ -104,7 +104,6 @@
     }
 
     &[tabindex='0'] {
-      background-color: rgb(var(--col-background-primary-white));
       border-top-color: rgb(var(--col-navy-mid-1));
       border-right-color: rgb(var(--col-navy-mid-1));
       border-bottom-color: transparent;
@@ -117,7 +116,7 @@
       border: 0;
       box-shadow: none;
       font-size: 1.125rem;
-      padding: .75rem 1rem;
+      padding: .75rem;
 
       &[tabindex='0'] {
         box-shadow: inset 0 -6px rgb(var(--col-navy-dark));
@@ -139,7 +138,16 @@
   }
   &__controls {
     cursor: pointer;
-    padding: 1.25rem .5rem;
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgb(var(--col-navy-mid-1));
+
+    &--teal {
+      border-color: rgb(var(--col-teal-mid-2));
+    }
+
+    &--yellow {
+      border-color: rgb(var(--col-yellow-mid-2));
+    }
 
     &--prev {
       left: 0;
@@ -147,6 +155,10 @@
 
     &--next {
       right: 0;
+    }
+
+    &--disabled {
+      color: rgb(var(--col-navy-mid-1));
     }
   }
 }
