@@ -104,12 +104,14 @@
     }
 
     &[tabindex='0'] {
+      background-color: rgb(var(--col-background-primary-white));
       border-top-color: rgb(var(--col-navy-mid-1));
       border-right-color: rgb(var(--col-navy-mid-1));
       border-bottom-color: transparent;
       border-left-color: rgb(var(--col-navy-mid-1));
       box-shadow: 1px -1px 4px 0 rgba(0, 0, 0, .1);
     }
+
     &--alt {
       background: transparent;
       margin-right: 0;
@@ -119,6 +121,7 @@
       padding: .75rem;
 
       &[tabindex='0'] {
+        background-color: transparent;
         box-shadow: inset 0 -6px rgb(var(--col-navy-dark));
       }
 
