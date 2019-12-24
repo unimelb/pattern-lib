@@ -2,22 +2,24 @@
  * Button + Button owner
  */
 .btn {
-  display: inline-block;
-  padding: .625rem 1rem;
-  width: 100%;
-  transition: all .2s;
-  border: 2px solid color-mod(rgb(var(--col-brand)) alpha(30%));
-  border-radius: var(--br);
-  color: rgb(var(--col-brand));
-  font-weight: var(--fw-bold);
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
+  &,
+  &:visited {
+    display: inline-block;
+    padding: .625rem 1rem;
+    width: 100%;
+    transition: all .2s;
+    border: 2px solid color-mod(rgb(var(--col-brand)) alpha(30%));
+    border-radius: var(--br);
+    color: rgb(var(--col-brand));
+    font-weight: var(--fw-bold);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+  }
 
   &:focus,
-  &:hover,
-  &:visited {
+  &:hover {
     border-color: rgb(var(--col-brand));
     color: rgb(var(--col-brand));
   }
@@ -125,13 +127,15 @@
 
   &--hard,
   &--secondary {
-    border-color: rgb(var(--col-background-primary-white));
-    background-color: rgb(var(--col-background-primary-white));
-    color: rgb(var(--col-brand));
+    &,
+    &:visited {
+      border-color: rgb(var(--col-background-primary-white));
+      background-color: rgb(var(--col-background-primary-white));
+      color: rgb(var(--col-brand));
+    }
 
     &:hover,
-    &:focus,
-    &:visited {
+    &:focus {
       border-color: rgb(var(--col-blue-light));
       background-color: rgb(var(--col-blue-light));
     }
@@ -151,13 +155,16 @@
   }
 
   &--event {
-    background-color: rgb(var(--col-green-dark-tint));
-    font-size: .875rem;
-    font-weight: var(--fw-bold);
-    color: rgb(var(--col-white));
-    border: 0;
-    border-radius: calc(var(--br) / 2);
-    transition: all .15s ease;
+    &,
+    &:visited {
+      background-color: rgb(var(--col-green-dark-tint));
+      font-size: .875rem;
+      font-weight: var(--fw-bold);
+      color: rgb(var(--col-white));
+      border: 0;
+      border-radius: calc(var(--br) / 2);
+      transition: all .15s ease;
+    }
 
     &:hover,
     &:focus {

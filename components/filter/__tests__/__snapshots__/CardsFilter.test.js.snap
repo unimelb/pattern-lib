@@ -54,8 +54,10 @@ exports[`CardsFilter should match snapshot 1`] = `
     Show all
   
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
          
@@ -84,8 +86,10 @@ exports[`CardsFilter should match snapshot 1`] = `
     Show all
   
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
          
@@ -114,8 +118,10 @@ exports[`CardsFilter should match snapshot 1`] = `
     Show all
   
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
       </div>

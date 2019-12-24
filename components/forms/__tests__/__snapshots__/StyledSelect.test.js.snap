@@ -6,6 +6,16 @@ exports[`StyledSelect should match snapshot 1`] = `
 >
   <select
     class=""
-  />
+  >
+     
+  </select>
+   
+  <div
+    class="styled-select__label"
+  >
+    
+    text
+  
+  </div>
 </div>
 `;

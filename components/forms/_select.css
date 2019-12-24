@@ -28,7 +28,7 @@
   color: rgb(var(--col-brand));
   border-radius: var(--br);
   border: 1px solid rgb(var(--col-blue-mid-2));
-  flex: 1;
+  margin-bottom: 1rem;
 
   &::before {
     content: '';
@@ -44,12 +44,12 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: 0;
-    width: calc(width('chevron-down.svg') * 2);
-    height: calc(height('chevron-down.svg') * 2);
+    right: 0.3125rem;
+    width: 0.875rem;
+    height: 0.875rem;
     pointer-events: none;
     background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-blue-mid-2)));
-    transform: translate(-50%, -50%);
+    transform: translate(-65%, -50%);
   }
 
   select {
@@ -63,6 +63,7 @@
     font-size: 1.125rem;
     font-weight: var(--fw-bold);
     appearance: none;
+    line-height: 1.278;
 
     option {
       color: rgb(var(--col-black-dark));
@@ -72,6 +73,19 @@
       display: none;
       /* stylelint-disable-line property-no-vendor-prefix */
     }
+  }
+
+  &__label {
+    position: absolute;
+    top: -1.125rem;
+    right: 3.125rem;
+    padding: .1875rem .625rem;
+    background: rgb(var(--col-background-primary-navy));
+    color: rgb(var(--col-white));
+    border-radius: 1.125rem;
+    font-size: .875rem;
+    font-weight: var(--fw-semibold);
+    white-space: nowrap;
   }
 
   &--blue {

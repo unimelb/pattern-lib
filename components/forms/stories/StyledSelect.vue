@@ -22,6 +22,19 @@
       </StyledSelect>
     </div>
 
+    <h2>With label</h2>
+    <div class="row">
+      <label for="f_q0">Type</label>
+      <StyledSelect
+        id="f_q0"
+        label="Lorem Ipsum">
+        <option>Undergraduate</option>
+        <option>Postgraduate</option>
+        <option>Reasearch</option>
+        <option>Non-award</option>
+      </StyledSelect>
+    </div>
+
     <SectionWrap class="bg-white">
       <h2>Enclosed in a section</h2>
       <div class="row">
