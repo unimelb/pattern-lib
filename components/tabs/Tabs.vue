@@ -181,6 +181,7 @@ export default {
       setTimeout(() => {
         this.tabsWidth = this.calculateTabsWidth();
         this.showControls = this.hasControls();
+        this.panels = this.filterTabs();
       }, 2000);
     },
   },
