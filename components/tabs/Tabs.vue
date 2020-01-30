@@ -211,6 +211,7 @@ export default {
     },
     checkControls() {
       this.showControls = this.hasControls();
+      this.panels = this.filterTabs();
     },
     hasControls() {
       const { tabsList } = this.$refs;
@@ -269,8 +270,7 @@ export default {
       }
     },
     getTabs() {
-      // Only grab <Tab>
-      const children = this.$children.filter((child) => child.title !== undefined);
+      const children = this.filterTabs();
 
       children.forEach((tab, i) => {
         tab.namespace = `ui-tab-${this._uid}`;
@@ -279,6 +279,14 @@ export default {
       });
 
       return children;
+    },
+    filterTabs() {
+      // Only grab <Tab>
+      if (this.useSelect || this.showControls) {
+        return this.$children.filter((child) => child.title !== undefined);
+      }
+
+      return this.$children;
     },
     getTabSiblings() {
       let curr = -1;
