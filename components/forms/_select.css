@@ -44,9 +44,9 @@
     content: '';
     position: absolute;
     top: 50%;
-    right: 0.3125rem;
-    width: 0.875rem;
-    height: 0.875rem;
+    right: .3125rem;
+    width: .875rem;
+    height: .875rem;
     pointer-events: none;
     background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-blue-mid-2)));
     transform: translate(-65%, -50%);
