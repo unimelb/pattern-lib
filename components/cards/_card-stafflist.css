@@ -4,6 +4,8 @@
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
+    border-left: 1px solid rgb(var(--col-navy-mid-1));
+    border-right: 1px solid rgb(var(--col-navy-mid-1));
   }
 
   .card__thumb {
