@@ -81,6 +81,7 @@ import Carousel from 'components/carousel/Carousel.vue';
 import Logo from 'components/logo/Logo.vue';
 import CardsFilter from 'components/filter/cards/CardsFilter.vue';
 import AccordionFilter from 'components/filter/accordion/AccordionFilter.vue';
+import FilterDropdown from 'components/filter-dropdown/FilterDropdown.vue';
 import Tags from 'components/tags/Tags.vue';
 import CardNewsTag from 'components/cards/CardNewsTag.vue';
 import PageHeaderEvent from 'components/header/PageHeaderEvent.vue';
@@ -90,6 +91,7 @@ import LogoListing from 'components/listing/LogoListing.vue';
 import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
 import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import StyledSelect from 'components/forms/StyledSelect.vue';
+import AppCheckbox from 'components/app-checkbox/AppCheckbox';
 import { version } from '../../package.json';
 
 import 'components';
@@ -179,6 +181,7 @@ Vue.component('carousel', Carousel);
 Vue.component('logo', Logo);
 Vue.component('cards-filter', CardsFilter);
 Vue.component('accordion-filter', AccordionFilter);
+Vue.component('filter-dropdown', FilterDropdown);
 Vue.component('tags', Tags);
 Vue.component('card-news-tag', CardNewsTag);
 Vue.component('sidebar', Sidebar);
@@ -187,6 +190,7 @@ Vue.component('logo-listing', LogoListing);
 Vue.component('split-section-header', SplitSectionHeader);
 Vue.component('screen-reader-jump-to', ScreenReaderJumpTo);
 Vue.component('styled-select', StyledSelect);
+Vue.component('app-checkbox', AppCheckbox);
 
 // Create Vue instance
 new Vue({

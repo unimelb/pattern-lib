@@ -325,6 +325,9 @@ export {
   default as AccordionFilter,
 } from 'components/filter/accordion/AccordionFilter.vue';
 export {
+  default as FilterDropdown,
+} from 'components/filter-dropdown/FilterDropdown.vue';
+export {
   default as Tags,
 }
   from 'components/tags/Tags.vue';
@@ -356,3 +359,6 @@ export {
   default as StyledSelect,
 }
   from 'components/forms/StyledSelect.vue';
+export {
+  default as AppCheckbox,
+} from 'components/app-checkbox';
