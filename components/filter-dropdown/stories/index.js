@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue';
-import { createStory } from './.storybook/utils';
+import { createStory } from '../../../.storybook/utils';
 
 import FilterDropdownDefault from './FilterDropdownDefault.vue';
 /* ##Import story component here */
