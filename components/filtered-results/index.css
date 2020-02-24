@@ -43,11 +43,17 @@
 	  display: block;
 	  text-transform: uppercase;
 	  font-size: 12px;
+	  text-decoration: none;
    	}
   	&-category {
 	 color: rgb(var(--col-background-primary-navy));
 	 font-weight: bold;
    	}
+   	&:hover {
+	  & .filtered-results__card-category {
+		text-decoration: underline;
+	  }
+	}
   }
 
   &__content {
