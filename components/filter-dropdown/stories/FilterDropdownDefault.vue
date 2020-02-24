@@ -1,7 +1,6 @@
 <template>
   <FilterDropdown
-    :options="options"
-    :parent-ids="[]" />
+    :options="options" />
 </template>
 
 <script>
