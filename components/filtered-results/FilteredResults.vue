@@ -1,17 +1,17 @@
 <template>
-  <div class="filter-results">
-    <div class="filter-results__inner">
-      <FilterResultsTitle
+  <div class="filtered-results">
+    <div class="filtered-results__inner">
+      <FilteredResultsTitle
         :items="items"
         :filters="filters" />
-      <div class="filter-results__content">
+      <div class="filtered-results__content">
         <div v-if="items.length">
-          <FilterResultsList
+          <FilteredResultsList
             :items="items" />
         </div>
         <div
           v-else
-          class="filter-results__no-items">
+          class="filtered-results__no-items">
           <h3>No results</h3>
         </div>
       </div>
@@ -20,13 +20,13 @@
 </template>
 
 <script>
-import FilterResultsTitle from './FilterResultsTitle.vue';
-import FilterResultsList from './FilterResultsList';
+import FilteredResultsTitle from './FilteredResultsTitle.vue';
+import FilteredResultsList from './FilteredResultsList';
 
 export default {
   components: {
-    FilterResultsList,
-    FilterResultsTitle,
+    FilteredResultsList,
+    FilteredResultsTitle,
   },
   props: {
     items: {

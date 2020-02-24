@@ -1,7 +1,7 @@
 <template>
-  <h4 class="filter-results__title">
+  <h4 class="filtered-results__title">
     {{ items.length }} results found with <strong>{{ filters.length }} filters</strong> applied.
-    <span class="filter-results__title-notice text-italic text-bold">
+    <span class="filtered-results__title-notice text-italic text-bold">
       Apply default filters for Domestic undergraduate?
     </span>
   </h4>

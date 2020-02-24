@@ -1,19 +1,19 @@
 <template>
-  <div class="filter-results__items">
+  <div class="filtered-results__items">
     <div
       v-for="item in items"
       :key="item.id"
-      class="filter-results__item">
-      <FilterCard :item="item" />
+      class="filtered-results__item">
+      <FilteredCard :item="item" />
     </div>
   </div>
 </template>
 
 <script>
-import FilterCard from './FilterCard';
+import FilteredCard from './FilteredCard';
 export default {
   components: {
-    FilterCard,
+    FilteredCard,
   },
   props: {
     items: {

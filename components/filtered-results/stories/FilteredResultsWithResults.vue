@@ -1,14 +1,14 @@
 <template>
-  <FilterResults
+  <FilteredResults
     :items="items"
     :filters="[]" />
 </template>
 
 <script>
-import FilterResults from '../FilterResults.vue';
+import FilteredResults from '../FilteredResults.vue';
 
 export default {
-  components: { FilterResults },
+  components: { FilteredResults },
   data() {
     return {
       items: [{
