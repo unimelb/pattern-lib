@@ -40,5 +40,13 @@ export default {
       required: true,
     },
   },
+  created() {
+    this.$on('change:category', this.changeCategory);
+  },
+  methods: {
+    changeCategory(value) {
+      console.log(value);
+    },
+  },
 };
 </script>

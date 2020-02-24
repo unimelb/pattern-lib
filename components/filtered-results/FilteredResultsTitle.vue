@@ -1,7 +1,9 @@
 <template>
   <h4 class="filtered-results__title">
     {{ items.length }} results found with <strong>{{ filters.length }} filters</strong> applied.
-    (<span class="filtered-results__title-notice text-italic text-bold">
+    (<span
+      class="filtered-results__title-notice text-italic text-bold"
+      @click="triggerClick">
       Apply default filters for Domestic undergraduate?
     </span>)
   </h4>
@@ -19,6 +21,11 @@ export default {
       type: Array,
       default: () => [],
       required: true,
+    },
+  },
+  methods: {
+    triggerClick() {
+      this.$parent.$emit('change:category', true);
     },
   },
 };
