@@ -11,7 +11,7 @@
 
   &__items {
 	display: flex;
-	padding: 16px 0;
+	padding: 25px 0 10px;
    	flex-direction: column;
 	@media(--bp-x-tablet) {
 	  justify-content: space-between;
