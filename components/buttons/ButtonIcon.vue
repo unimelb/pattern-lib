@@ -8,13 +8,15 @@
     <span
       v-if="!noIcon"
       :class="`push-icon${top ? ' push-icon--top' : ''}`">
-      <slot />
+      <slot v-if="!iconLeft" />
       <SvgIcon
         :name="icon"
         class="push-icon__icon"
+        :class="iconLeft ? 'push-icon__icon--left' : ''"
         width="15px"
         height="15px"
         aria-hidden="true" />
+      <slot v-if="iconLeft" />
     </span>
     <slot v-if="noIcon" />
   </component>
@@ -48,6 +50,10 @@ export default {
       default: false,
     },
     noIcon: {
+      type: Boolean,
+      default: false,
+    },
+    iconLeft: {
       type: Boolean,
       default: false,
     },
