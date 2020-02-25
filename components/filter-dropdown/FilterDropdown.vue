@@ -1,14 +1,16 @@
 <template>
   <div>
     <NestedCheckboxWrapper
-      :options="options"
-      :parent-ids="[]" />
+      :options="testOptions"
+      :parent-ids="[]"
+      @change="onChange" />
   </div>
 </template>
 
 <script>
 import NestedCheckboxWrapper from './NestedCheckboxWrapper.vue';
 import optionsValidator from './optionsValidator';
+import options from './stories/options';
 
 export default {
   components: { NestedCheckboxWrapper },
@@ -17,6 +19,16 @@ export default {
       type: Array,
       required: true,
       validator: optionsValidator,
+    },
+  },
+  data() {
+    return {
+      testOptions: options,
+    };
+  },
+  methods: {
+    onChange(newOptions) {
+      this.testOptions = newOptions;
     },
   },
 };
