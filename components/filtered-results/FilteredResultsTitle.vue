@@ -4,7 +4,7 @@
     (<span
       class="filtered-results__title-notice text-italic text-bold"
       @click="triggerClick">
-      Apply default filters for Domestic undergraduate?
+      {{ triggerFiltersMsg }}
     </span>)
   </h4>
 </template>
@@ -23,9 +23,41 @@ export default {
       required: true,
     },
   },
+  data() {
+    return {
+      triggerFiltersMsg: 'Apply filters to show you Domestic undergraduate options?',
+      keys: {
+        undergrad: 'undergraduate study',
+        postgrad: 'graduate study',
+        research: 'research study',
+      },
+    };
+  },
+  updated() {
+    this.updateMsg();
+  },
+  created() {
+    this.updateMsg();
+  },
   methods: {
     triggerClick() {
-      this.$parent.$emit('change:category', true);
+      const applyFilter = {
+        type: this.filters.length ? 'default' : 'custom',
+      };
+      this.$parent.$emit('change:filters', applyFilter);
+    },
+    getFiltersText() {
+      const text = [];
+      this.filters.forEach((f) => {
+        text.push(this.keys[f]);
+      });
+      return text;
+    },
+    updateMsg() {
+      const appliedFiltersText = this.getFiltersText().join(' and ');
+      this.triggerFiltersMsg = this.filters.length
+        ? `Filters applied to show you ${appliedFiltersText} options (change)`
+        : 'Apply filters to show you Domestic undergraduate options?';
     },
   },
 };

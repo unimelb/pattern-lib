@@ -41,7 +41,7 @@ export default {
     },
   },
   created() {
-    this.$on('change:category', this.changeCategory);
+    this.$on('change:filters', this.changeCategory);
   },
   methods: {
     changeCategory(value) {

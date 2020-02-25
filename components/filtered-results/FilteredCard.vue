@@ -1,9 +1,9 @@
 <template>
   <a
-    href="/"
+    :href="item.href"
     :class="['filtered-results__card', getCategoryClassName()]">
-    <span class="filtered-results__card-label">{{ item.category }}</span>
-    <span class="filtered-results__card-category">Category name</span>
+    <span class="filtered-results__card-label">{{ item.type }}</span>
+    <span class="filtered-results__card-category">{{ item.name }}</span>
   </a>
 </template>
 
@@ -17,7 +17,8 @@ export default {
   },
   methods: {
     getCategoryClassName() {
-      return this.item.category === 'major' ? 'filtered-results__card--major' : 'filtered-results__card--minor';
+      // todo: implement color scheme for different categories
+      return this.item.type === 'major' ? 'filtered-results__card--major' : 'filtered-results__card--minor';
     },
   },
 };

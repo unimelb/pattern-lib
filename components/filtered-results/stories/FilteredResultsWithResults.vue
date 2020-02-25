@@ -1,7 +1,7 @@
 <template>
   <FilteredResults
     :items="items"
-    :filters="[]" />
+    :filters="['undergrad']" />
 </template>
 
 <script>
@@ -13,22 +13,28 @@ export default {
     return {
       items: [{
         id: 'key1',
-        category: 'major',
+        type: 'major',
+        name: 'Some category name',
       }, {
         id: 'key2',
-        category: 'minor',
+        type: 'minor',
+        name: 'Some category name',
       }, {
         id: 'key3',
-        category: 'major',
+        type: 'major',
+        name: 'Some category name',
       }, {
         id: 'key4',
-        category: 'major',
+        type: 'major',
+        name: 'Some category name',
       }, {
         id: 'key5',
-        category: 'minor',
+        type: 'minor',
+        name: 'Some category name',
       }, {
         id: 'key6',
-        category: 'major',
+        type: 'major',
+        name: 'Some category name',
       }],
     };
   },
