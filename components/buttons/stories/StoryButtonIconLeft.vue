@@ -5,9 +5,6 @@
       icon="download">
       Call to Action
     </ButtonIcon>
-    <ButtonIcon icon="download">
-      Call to Action
-    </ButtonIcon>
   </div>
 </template>
 
