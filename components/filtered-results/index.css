@@ -36,6 +36,7 @@
 	border: 1px solid rgb(var(--col-purple-mid-2));
 	text-decoration: none;
 	border-left: 6px solid rgb(var(--col-purple-mid-2));
+   	cursor: pointer;
 	&--minor {
 	  border-color: rgb(var(--col-purple-mid-1));
    	}
