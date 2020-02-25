@@ -1,5 +1,5 @@
 <template>
-  <NestedCheckbox
+  <NestedCheckboxView
     :options="options"
     :parent-ids="[]"
     @change="onChange" />
@@ -7,12 +7,12 @@
 
 <script>
 import _ from 'lodash';
-import NestedCheckbox from './NestedCheckbox';
+import NestedCheckboxView from './NestedCheckboxView.vue';
 import optionsValidator from './optionsValidator';
 
 export default {
-  name: 'NestedCheckboxWrapper',
-  components: { NestedCheckbox },
+  name: 'NestedCheckbox',
+  components: { NestedCheckboxView },
   props: {
     options: {
       type: Array,

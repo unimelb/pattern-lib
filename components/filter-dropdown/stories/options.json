@@ -1,79 +1,52 @@
 [
   {
-    "id": "1",
     "label": "All (49)",
-    "isChecked": false,
-    "isIndeterminate": true,
     "options": [
       {
-        "id": "2",
         "label": "Undergraduate (7)",
-        "isChecked": false,
-        "isIndeterminate": true,
         "options": [
           {
-            "id": "3",
             "label": "Bachelor (6)",
-            "isChecked": true,
-            "isIndeterminate": false
+            "isChecked": true
           },
           {
-            "id": "4",
             "label": "Diploma (1)",
-            "isChecked": true,
-            "isIndeterminate": false
+            "isChecked": true
           },
           {
-            "id": "5",
             "label": "Honours (0)",
-            "isChecked": false,
-            "isIndeterminate": false
+            "isChecked": false
           }
         ]
       },
       {
-        "id": "6",
         "label": "Graduate (38)",
         "isChecked": false,
-        "isIndeterminate": false,
         "options": [
           {
-            "id": "7",
             "label": "Certificate (10)",
-            "isChecked": false,
-            "isIndeterminate": false
+            "isChecked": false
           },
           {
-            "id": "8",
             "label": "Diploma (6)",
-            "isChecked": false,
-            "isIndeterminate": false
+            "isChecked": false
           },
           {
-            "id": "9",
             "label": "Master (22)",
-            "isChecked": false,
-            "isIndeterminate": false
+            "isChecked": false
           }
         ]
       },
       {
-        "id": "10",
         "label": "Research (4)",
-        "isChecked": false,
-        "isIndeterminate": false,
         "options": [
           {
-            "id": "11",
             "label": "Master (2)",
-            "isChecked": false,
-            "isIndeterminate": false
+            "isChecked": false
           },
           {
-            "id": "12",
             "label": "PhD (2)",
-            "isChecked": false,
-            "isIndeterminate": false
+            "isChecked": false
           }
         ]
       }

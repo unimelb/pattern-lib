@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NestedCheckboxWrapper
+    <NestedCheckbox
       :options="testOptions"
       :parent-ids="[]"
       @change="onChange" />
@@ -8,17 +8,31 @@
 </template>
 
 <script>
-import NestedCheckboxWrapper from './NestedCheckboxWrapper.vue';
-import optionsValidator from './optionsValidator';
-import options from './stories/options';
+import _ from 'lodash';
+import NestedCheckbox from './components/NestedCheckbox';
+import options from './components/NestedCheckbox/nestedCheckboxOptions'; // TODO remove
 
 export default {
-  components: { NestedCheckboxWrapper },
+  components: { NestedCheckbox },
   props: {
     options: {
       type: Array,
       required: true,
-      validator: optionsValidator,
+      validator(value) {
+        if (!value.length) {
+          return false;
+        }
+
+        const validateOptions = (optionsToValidate) => _.every(
+          optionsToValidate,
+          (option) => !!option.label
+            && (option.options
+              ? validateOptions(option.options)
+              : typeof option.isChecked === 'boolean')
+        );
+
+        return validateOptions(value);
+      },
     },
   },
   data() {

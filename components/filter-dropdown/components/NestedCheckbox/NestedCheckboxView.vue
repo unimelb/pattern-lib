@@ -15,38 +15,22 @@
         :label="option.label"
         @change="onCheckboxChange" />
 
-      <NestedCheckbox
+      <NestedCheckboxView
         v-if="option.options"
         :options="option.options"
         :parent-ids="[...parentIds, option.id]"
-        @change="onNestedCheckBoxChange" />
+        @change="$emit('change', $event)" />
     </div>
   </div>
 </template>
 
 <script>
 import _ from 'lodash';
-import AppCheckbox from '../app-checkbox/AppCheckbox';
+import AppCheckbox from '../../../app-checkbox/AppCheckbox';
 import optionsValidator from './optionsValidator';
 
-/*
-const getOptionsById = (optionsToMap) => _.keyBy(
-  _.map(optionsToMap, (option) => {
-    if (option.options) {
-      return {
-        ...option,
-        options: getOptionsById(option.options),
-      };
-    }
-    return option;
-  }),
-  ({ id }) => id
-);
-*/
-
-
 export default {
-  name: 'NestedCheckbox',
+  name: 'NestedCheckboxView',
   components: { AppCheckbox },
   model: {
     event: 'change',
@@ -79,9 +63,6 @@ export default {
         isChecked,
         isIndeterminate,
       });
-    },
-    onNestedCheckBoxChange(payload) {
-      this.$emit('change', payload);
     },
   },
 };

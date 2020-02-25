@@ -1,0 +1,7 @@
+.nested-checkbox {
+  margin-left: 1rem;
+
+  &.is-first {
+    margin-left: 0;
+  }
+}
