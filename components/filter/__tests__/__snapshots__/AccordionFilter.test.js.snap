@@ -346,6 +346,8 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     </title>
                      
                   </svg>
+                   
+                  <!---->
                 </span>
                  
                 <!---->
@@ -520,6 +522,8 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     </title>
                      
                   </svg>
+                   
+                  <!---->
                 </span>
                  
                 <!---->
