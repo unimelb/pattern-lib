@@ -42,6 +42,7 @@ export default {
   methods: {
     changeCategory(value) {
       this.$emit('popup:event', value);
+      alert('It works!');
     },
   },
 };

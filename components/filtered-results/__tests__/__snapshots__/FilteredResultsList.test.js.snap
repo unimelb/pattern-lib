@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilteredResultsList Should match snapshot: has results 1`] = `
+<div
+  class="filtered-results__items"
+>
+  <div
+    class="filtered-results__item"
+  >
+    <a
+      class="filtered-results__card filtered-results__card--major"
+    >
+      <span
+        class="filtered-results__card-label"
+      >
+        major
+      </span>
+       
+      <span
+        class="filtered-results__card-category"
+      >
+        Some category name
+      </span>
+    </a>
+  </div>
+  <div
+    class="filtered-results__item"
+  >
+    <a
+      class="filtered-results__card filtered-results__card--minor"
+    >
+      <span
+        class="filtered-results__card-label"
+      >
+        minor
+      </span>
+       
+      <span
+        class="filtered-results__card-category"
+      >
+        Some category name
+      </span>
+    </a>
+  </div>
+  <div
+    class="filtered-results__item"
+  >
+    <a
+      class="filtered-results__card filtered-results__card--major"
+    >
+      <span
+        class="filtered-results__card-label"
+      >
+        major
+      </span>
+       
+      <span
+        class="filtered-results__card-category"
+      >
+        Some category name
+      </span>
+    </a>
+  </div>
+  <div
+    class="filtered-results__item"
+  >
+    <a
+      class="filtered-results__card filtered-results__card--major"
+    >
+      <span
+        class="filtered-results__card-label"
+      >
+        major
+      </span>
+       
+      <span
+        class="filtered-results__card-category"
+      >
+        Some category name
+      </span>
+    </a>
+  </div>
+  <div
+    class="filtered-results__item"
+  >
+    <a
+      class="filtered-results__card filtered-results__card--minor"
+    >
+      <span
+        class="filtered-results__card-label"
+      >
+        minor
+      </span>
+       
+      <span
+        class="filtered-results__card-category"
+      >
+        Some category name
+      </span>
+    </a>
+  </div>
+  <div
+    class="filtered-results__item"
+  >
+    <a
+      class="filtered-results__card filtered-results__card--major"
+    >
+      <span
+        class="filtered-results__card-label"
+      >
+        major
+      </span>
+       
+      <span
+        class="filtered-results__card-category"
+      >
+        Some category name
+      </span>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`FilteredResultsList Should match snapshot: no results 1`] = `
+<div
+  class="filtered-results__items"
+/>
+`;

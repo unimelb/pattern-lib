@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilteredResultsTitle Should match snapshot: has results 1`] = `
+<h4
+  class="filtered-results__title"
+>
+  
+  1 results found with 
+  <strong>
+    0 filters
+  </strong>
+   applied.
+  (
+  <span
+    class="filtered-results__title-notice text-italic text-bold"
+  >
+    
+    Apply filters to show you Domestic undergraduate options?
+  
+  </span>
+  )
+
+</h4>
+`;
+
+exports[`FilteredResultsTitle Should match snapshot: no results 1`] = `
+<h4
+  class="filtered-results__title"
+>
+  
+  0 results found with 
+  <strong>
+    0 filters
+  </strong>
+   applied.
+  (
+  <span
+    class="filtered-results__title-notice text-italic text-bold"
+  >
+    
+    Apply filters to show you Domestic undergraduate options?
+  
+  </span>
+  )
+
+</h4>
+`;
