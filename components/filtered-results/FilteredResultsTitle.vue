@@ -22,6 +22,11 @@ export default {
       default: () => [],
       required: true,
     },
+    callback: {
+      type: Function,
+      required: true,
+      default: () => false,
+    },
   },
   data() {
     return {
@@ -44,7 +49,7 @@ export default {
       const applyFilter = {
         type: this.filters.length ? 'default' : 'custom',
       };
-      this.$parent.$emit('change:filters', applyFilter);
+      this.callback(applyFilter);
     },
     getFiltersText() {
       const text = [];

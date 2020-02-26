@@ -1,7 +1,8 @@
 <template>
   <FilteredResults
     :items="items"
-    :filters="['undergrad']" />
+    :filters="['undergrad']"
+    :callback="changeCategory" />
 </template>
 
 <script>
@@ -37,6 +38,11 @@ export default {
         name: 'Some category name',
       }],
     };
+  },
+  methods: {
+    changeCategory(value) {
+      this.$emit('popup:event', value);
+    },
   },
 };
 </script>

@@ -3,7 +3,8 @@
     <div class="filtered-results__inner">
       <FilteredResultsTitle
         :items="items"
-        :filters="filters" />
+        :filters="filters"
+        :callback="callback" />
       <div class="filtered-results__content">
         <div v-if="items.length">
           <FilteredResultsList
@@ -39,13 +40,10 @@ export default {
       default: () => [],
       required: true,
     },
-  },
-  created() {
-    this.$on('change:filters', this.changeCategory);
-  },
-  methods: {
-    changeCategory(value) {
-      console.log(value);
+    callback: {
+      type: Function,
+      required: true,
+      default: () => false,
     },
   },
 };
