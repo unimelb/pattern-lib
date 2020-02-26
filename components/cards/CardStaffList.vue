@@ -3,8 +3,8 @@
     <a
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
-      :title="'profile of' + name"
-      :aria-label="'Photo of' + name"
+      :title="'profile of ' + name"
+      :aria-label="'Photo of ' + name"
       class="card__thumb" />
     <div class="card__inner">
       <a
