@@ -4,7 +4,7 @@
       v-for="checkbox in checkboxes"
       :key="checkbox.label">
       <AppCheckbox
-        :id="checkbox.id"
+        :name="checkbox.name"
         :label="checkbox.label"
         :is-checked="typeof checkbox.value === 'boolean' && checkbox.value"
         :is-indeterminate="checkbox.value === 'indeterminate'"
@@ -23,19 +23,19 @@ export default {
     return {
       checkboxes: [
         {
-          id: 'unchecked',
+          name: 'unchecked',
           value: false,
           label: 'Unchecked',
           ariaLabel: 'unchecked checkbox',
         },
         {
-          id: 'checked',
+          name: 'checked',
           value: true,
           label: 'Checked',
           ariaLabel: 'checked checkbox',
         },
         {
-          id: 'indeterminate',
+          name: 'indeterminate',
           value: 'indeterminate',
           label: 'Indeterminate',
           ariaLabel: 'indeterminate checkbox',
@@ -44,8 +44,8 @@ export default {
     };
   },
   methods: {
-    onCheckboxChange({ id, isChecked, isIndeterminate }) {
-      const checkboxToChange = this.checkboxes.find((checkbox) => checkbox.id === id);
+    onCheckboxChange({ name, isChecked, isIndeterminate }) {
+      const checkboxToChange = this.checkboxes.find((checkbox) => checkbox.name === name);
 
       if (checkboxToChange) {
         if (isChecked) {

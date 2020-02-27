@@ -27,7 +27,7 @@
 <script>
 import _ from 'lodash';
 import AppCheckbox from '../../../app-checkbox/AppCheckbox';
-import optionsValidator from './optionsValidator';
+// import optionsValidator from './optionsValidator';
 
 export default {
   name: 'NestedCheckboxView',
@@ -39,7 +39,7 @@ export default {
     options: {
       type: Array,
       required: true,
-      validator: optionsValidator,
+      // validator: optionsValidator,
     },
     parentNames: {
       type: Array,

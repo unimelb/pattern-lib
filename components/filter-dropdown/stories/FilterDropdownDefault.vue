@@ -1,6 +1,7 @@
 <template>
   <FilterDropdown
-    :options="options" />
+    :options="options"
+    @change="onChange" />
 </template>
 
 <script>
@@ -13,6 +14,11 @@ export default {
     return {
       options,
     };
+  },
+  methods: {
+    onChange(changedOptions) {
+      this.options = changedOptions;
+    },
   },
 };
 </script>

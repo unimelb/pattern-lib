@@ -1,8 +1,7 @@
 <template>
   <div>
     <NestedCheckbox
-      :options="testOptions"
-      :parent-ids="[]"
+      :options="optionsWithIndeterminateState"
       @change="onChange" />
   </div>
 </template>
@@ -10,7 +9,7 @@
 <script>
 import _ from 'lodash';
 import NestedCheckbox from './components/NestedCheckbox';
-import options from './components/NestedCheckbox/nestedCheckboxOptions'; // TODO remove
+import optionsValidator from './optionsValidator';
 
 export default {
   components: { NestedCheckbox },
@@ -18,31 +17,99 @@ export default {
     options: {
       type: Array,
       required: true,
-      validator(value) {
-        if (!value.length) {
-          return false;
-        }
-
-        const validateOptions = (optionsToValidate) => _.every(
-          optionsToValidate,
-          (option) => !!option.label
-            && (option.options
-              ? validateOptions(option.options)
-              : typeof option.isChecked === 'boolean')
-        );
-
-        return validateOptions(value);
-      },
+      validator: optionsValidator,
     },
   },
-  data() {
-    return {
-      testOptions: options,
-    };
+  computed: {
+    optionsWithIndeterminateState() {
+      return this.getOptionsWithIndeterminateState(this.options);
+    },
   },
   methods: {
     onChange(newOptions) {
-      this.testOptions = newOptions;
+      this.$emit('change', this.getUpdatedOptions(newOptions));
+    },
+    getUpdatedOptions(updatedOptionsWithIndeterminateState) {
+      return _.map(
+        updatedOptionsWithIndeterminateState,
+        (option) => {
+          if (option.options && option.options.length) {
+            const {
+              isChecked, isIndeterminate, options, ...restOption
+            } = option;
+
+            return {
+              ...restOption,
+              options: this.getUpdatedOptions(options),
+            };
+          }
+
+          const { isIndeterminate, options, ...restOption } = option;
+
+          return restOption;
+        }
+      );
+    },
+    getOptionsWithIndeterminateState(options) {
+      return _.map(options, (option) => {
+        if (option.options && option.options.length) {
+          const lastParentOption = this.getIsLastParentOption(option);
+
+          if (lastParentOption) {
+            // penultimate nesting
+            const updatedOptions = this.getOptionsWithIndeterminateState(option.options);
+            const { isChecked, isIndeterminate } = this.getCheckedAndIndeterminateState(updatedOptions);
+            return {
+              ...option,
+              isChecked,
+              isIndeterminate,
+              options: updatedOptions,
+            };
+          }
+
+          // rest nesting
+          const updatedOptions = this.getOptionsWithIndeterminateState(option.options);
+          const { isChecked, isIndeterminate } = this.getCheckedAndIndeterminateState(updatedOptions);
+
+          return {
+            ...option,
+            isChecked,
+            isIndeterminate,
+            options: updatedOptions,
+          };
+        }
+
+        // deepest nesting
+        return {
+          ...option,
+          isIndeterminate: false,
+        };
+      });
+    },
+    getIsLastParentOption(option) {
+      return _
+        .every(
+          option.options,
+          ({ isChecked }) => typeof isChecked === 'boolean'
+        );
+    },
+    getCheckedAndIndeterminateState(options) {
+      const checkedInnerOptions = _
+        .filter(
+          options,
+          ({ isChecked }) => isChecked
+        );
+      const indeterminateInnerOptions = _
+        .filter(
+          options,
+          ({ isIndeterminate }) => isIndeterminate
+        );
+
+
+      const isChecked = checkedInnerOptions.length === options.length;
+      const isIndeterminate = (!!indeterminateInnerOptions.length || !!checkedInnerOptions.length) && !isChecked;
+
+      return { isChecked, isIndeterminate };
     },
   },
 };
