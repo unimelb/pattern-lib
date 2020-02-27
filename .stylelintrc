@@ -33,6 +33,23 @@
     "selector-no-vendor-prefix": true,
     "string-quotes": "single",
     "value-keyword-case": "lower",
-    "value-no-vendor-prefix": true
+    "value-no-vendor-prefix": true,
+    "declaration-property-unit-whitelist": {
+      "font-size": ["rem"],
+      "/^margin/": ["rem"],
+      "/^padding/": ["rem"],
+      "letter-spacing": ["rem"],
+      "min-height": ["rem", "%", "vw", "vh"],
+      "max-height": ["rem", "%", "vw", "vh"],
+      "min-width": ["rem", "%", "vw", "vh"],
+      "max-width": ["rem", "%", "vw", "vh"],
+      "width": ["rem", "%", "vw", "vh"],
+      "height": ["rem", "%", "vw", "vh"],
+      "top": ["rem"],
+      "right": ["rem"],
+      "bottom": ["rem"],
+      "left": ["rem"],
+      "line-height": []
+    }
   }
 }
