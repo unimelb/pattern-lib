@@ -1,8 +1,9 @@
 .filtered-results {
 
   &__title {
-  	font-weight: normal;
-  	margin-bottom: 16px;
+  	margin-bottom: 1rem;
+   	font-size: 1rem;
+   	font-weight: var(--fw-regular);
   	&-notice {
 	  cursor: pointer;
 	  text-decoration: underline;
@@ -11,7 +12,7 @@
 
   &__items {
 	display: flex;
-	padding: 25px 0 10px;
+	padding: 1.5625rem 0 .625rem;
    	flex-direction: column;
 	@media(--bp-x-tablet) {
 	  justify-content: space-between;
@@ -23,7 +24,7 @@
   &__item {
 	 max-width: 100%;
 	 width: 100%;
-	 margin-bottom: 10px;
+	 margin-bottom: .625rem;
 	  @media(--bp-x-tablet) {
 	  	max-width: 49%;
 	  }
@@ -31,7 +32,7 @@
 
   &__card {
 	display: block;
-	padding: 8px 21px 8px 16px;
+	padding: .6rem 1.32rem .6rem 1rem;
 	position: relative;
 	border: 1px solid rgb(var(--col-purple-mid-2));
 	text-decoration: none;
@@ -43,12 +44,12 @@
   	&-label {
 	  display: block;
 	  text-transform: uppercase;
-	  font-size: 12px;
+	  font-size: .75rem;
 	  text-decoration: none;
    	}
   	&-category {
 	 color: rgb(var(--col-background-primary-navy));
-	 font-weight: bold;
+	 font-weight: var(--fw-bold);
    	}
    	&:hover {
 	  & .filtered-results__card-category {
@@ -58,11 +59,11 @@
   }
 
   &__content {
-	border-top: 1px solid rgba(var(--col-background-primary-navy), 0.5);
+	border-top: 1px solid rgb(var(--col-navy-mid-1));
   }
   
   &__no-items {
-	padding: 50px;
+	padding: 3.15rem;
 	text-align: center;
 	color: rgb(var(--col-black-dark));
   	margin: 0 auto;

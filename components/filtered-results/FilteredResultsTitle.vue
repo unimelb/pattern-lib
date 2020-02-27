@@ -1,6 +1,6 @@
 <template>
   <h4 class="filtered-results__title">
-    {{ items.length }} results found with <strong>{{ filters.length }} filters</strong> applied.
+    {{ items.length }} results found with <strong>{{ filters.length }} {{ getLabel() }}</strong> applied.
     (<span
       class="filtered-results__title-notice text-italic text-bold"
       @click="triggerClick">
@@ -63,6 +63,9 @@ export default {
       this.triggerFiltersMsg = this.filters.length
         ? `Filters applied to show you ${appliedFiltersText} options (change)`
         : 'Apply filters to show you Domestic undergraduate options?';
+    },
+    getLabel() {
+      return this.filters.length === 0 || this.filters.length > 1 ? 'filters' : 'filter';
     },
   },
 };
