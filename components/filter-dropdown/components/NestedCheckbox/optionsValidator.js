@@ -8,8 +8,8 @@ export default function (value) {
   const validateOptions = (options) => every(
     options,
     ({
-      id, label, isChecked, isIndeterminate, options: nestedOptions,
-    }) => !!id
+      name, label, isChecked, isIndeterminate, options: nestedOptions,
+    }) => !!name
       && !!label
       && typeof isChecked === 'boolean'
       && typeof isIndeterminate === 'boolean'

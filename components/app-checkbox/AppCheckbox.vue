@@ -30,7 +30,7 @@ export default {
     event: 'change',
   },
   props: {
-    id: {
+    name: {
       type: String,
       required: true,
     },
@@ -58,11 +58,11 @@ export default {
   },
   methods: {
     onClick() {
-      const { id, isChecked, isIndeterminate } = this;
+      const { name, isChecked, isIndeterminate } = this;
 
       // Current values emited
       this.$emit('change', {
-        id,
+        name,
         isChecked,
         isIndeterminate,
       });

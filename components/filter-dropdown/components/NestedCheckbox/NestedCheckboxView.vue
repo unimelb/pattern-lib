@@ -2,13 +2,13 @@
   <div>
     <div
       v-for="option in options"
-      :key="option.id"
+      :key="option.name"
       :class="[
         'nested-checkbox',
         { 'is-first': isFirstNested },
       ]">
       <AppCheckbox
-        :id="option.id"
+        :name="option.name"
         :area-label="option.areaLabel"
         :is-checked="option.isChecked"
         :is-indeterminate="option.isIndeterminate"
@@ -18,7 +18,7 @@
       <NestedCheckboxView
         v-if="option.options"
         :options="option.options"
-        :parent-ids="[...parentIds, option.id]"
+        :parent-names="[...parentNames, option.name]"
         @change="$emit('change', $event)" />
     </div>
   </div>
@@ -41,25 +41,25 @@ export default {
       required: true,
       validator: optionsValidator,
     },
-    parentIds: {
+    parentNames: {
       type: Array,
       required: true,
       validator(value) {
-        return _.every(value, (id) => !!id && typeof id === 'string');
+        return _.every(value, (name) => !!name && typeof name === 'string');
       },
     },
   },
   computed: {
     isFirstNested() {
-      return !this.parentIds.length;
+      return !this.parentNames.length;
     },
   },
   methods: {
-    onCheckboxChange({ id, isChecked, isIndeterminate }) {
-      const { parentIds } = this;
+    onCheckboxChange({ name, isChecked, isIndeterminate }) {
+      const { parentNames } = this;
 
       this.$emit('change', {
-        parentIds: [...parentIds, id],
+        parentNames: [...parentNames, name],
         isChecked,
         isIndeterminate,
       });

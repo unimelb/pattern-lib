@@ -1,7 +1,7 @@
 <template>
   <NestedCheckboxView
     :options="options"
-    :parent-ids="[]"
+    :parent-names="[]"
     @change="onChange" />
 </template>
 
@@ -23,26 +23,26 @@ export default {
   methods: {
     onChange(event) {
       const clonedOptions = _.cloneDeep(this.options);
-      const changedOption = this.findOption(clonedOptions, event.parentIds);
+      const changedOption = this.findOption(clonedOptions, event.parentNames);
 
       if (changedOption.options && changedOption.options.length) {
         const newOptionValue = !changedOption.isChecked;
 
         this.updateOption(changedOption, newOptionValue);
         this.updateNestedOptions(changedOption.options, newOptionValue);
-        this.updateParentOptions(clonedOptions, event.parentIds);
+        this.updateParentOptions(clonedOptions, event.parentNames);
       } else {
         this.updateOption(changedOption, !changedOption.isChecked);
-        this.updateParentOptions(clonedOptions, event.parentIds);
+        this.updateParentOptions(clonedOptions, event.parentNames);
       }
 
       this.$emit('change', clonedOptions);
     },
-    findOption(options, [firstId, ...restIds]) {
-      const foundOption = _.find(options, ({ id }) => id === firstId);
+    findOption(options, [firstName, ...restNames]) {
+      const foundOption = _.find(options, ({ name }) => name === firstName);
 
-      if (restIds.length) {
-        return this.findOption(foundOption.options, restIds);
+      if (restNames.length) {
+        return this.findOption(foundOption.options, restNames);
       }
 
       return foundOption;
@@ -75,11 +75,11 @@ export default {
         }
       });
     },
-    updateParentOptions(options, parentIds) {
-      const parentIdsWithoutLastOption = _.dropRight(parentIds);
+    updateParentOptions(options, parentNames) {
+      const parentNamesWithoutLastOption = _.dropRight(parentNames);
 
-      if (parentIdsWithoutLastOption.length) {
-        const foundParent = this.findOption(options, parentIdsWithoutLastOption);
+      if (parentNamesWithoutLastOption.length) {
+        const foundParent = this.findOption(options, parentNamesWithoutLastOption);
 
         const checkedOptions = _.filter(foundParent.options, ({ isChecked }) => isChecked);
         const indeterminateOptions = _.filter(foundParent.options, ({ isIndeterminate }) => isIndeterminate);
@@ -92,7 +92,7 @@ export default {
           this.updateOption(foundParent, false);
         }
 
-        this.updateParentOptions(options, parentIdsWithoutLastOption);
+        this.updateParentOptions(options, parentNamesWithoutLastOption);
       }
     },
   },
