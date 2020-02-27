@@ -21,6 +21,30 @@ describe('FilteredResultsTitle', () => {
     expect(result).toMatchSnapshot();
   });
 
+  it('Should match snapshot: has results with 1 filter', () => {
+    const result = mount(FilteredResultsTitle,
+      {
+        propsData: {
+          items: mockData,
+          callback: () => false,
+          filters: ['undergrad'],
+        },
+      }).element;
+    expect(result).toMatchSnapshot();
+  });
+
+  it('Should match snapshot: has results with > 1 filter', () => {
+    const result = mount(FilteredResultsTitle,
+      {
+        propsData: {
+          items: mockData,
+          callback: () => false,
+          filters: ['undergrad', 'postgrad'],
+        },
+      }).element;
+    expect(result).toMatchSnapshot();
+  });
+
   it('Should match snapshot: no results', () => {
     const result = mount(FilteredResultsTitle,
       {
