@@ -1,18 +1,19 @@
 <template>
-  <NestedCheckboxView
-    :options="options"
-    :parent-names="[]"
-    @change="onChange" />
+  <div>
+    <NestedCheckboxUpdateWrapper
+      :options="optionsWithIndeterminateState"
+      @change="onChange" />
+  </div>
 </template>
 
 <script>
 import _ from 'lodash';
-import NestedCheckboxView from './NestedCheckboxView.vue';
-import optionsValidator from './optionsValidator';
+import NestedCheckboxUpdateWrapper from './NestedCheckboxUpdateWrapper';
+import optionsValidator from '../../nestedCheckboxOptionsValidator';
 
 export default {
   name: 'NestedCheckbox',
-  components: { NestedCheckboxView },
+  components: { NestedCheckboxUpdateWrapper },
   props: {
     options: {
       type: Array,
@@ -20,80 +21,96 @@ export default {
       validator: optionsValidator,
     },
   },
+  computed: {
+    optionsWithIndeterminateState() {
+      return this.getOptionsWithIndeterminateState(this.options);
+    },
+  },
   methods: {
-    onChange(event) {
-      const clonedOptions = _.cloneDeep(this.options);
-      const changedOption = this.findOption(clonedOptions, event.parentNames);
-
-      if (changedOption.options && changedOption.options.length) {
-        const newOptionValue = !changedOption.isChecked;
-
-        this.updateOption(changedOption, newOptionValue);
-        this.updateNestedOptions(changedOption.options, newOptionValue);
-        this.updateParentOptions(clonedOptions, event.parentNames);
-      } else {
-        this.updateOption(changedOption, !changedOption.isChecked);
-        this.updateParentOptions(clonedOptions, event.parentNames);
-      }
-
-      this.$emit('change', clonedOptions);
+    onChange(newOptions) {
+      this.$emit('change', this.getUpdatedOptions(newOptions));
     },
-    findOption(options, [firstName, ...restNames]) {
-      const foundOption = _.find(options, ({ name }) => name === firstName);
+    getUpdatedOptions(updatedOptionsWithIndeterminateState) {
+      return _.map(
+        updatedOptionsWithIndeterminateState,
+        (option) => {
+          if (option.options && option.options.length) {
+            const {
+              isChecked, isIndeterminate, options, ...restOption
+            } = option;
 
-      if (restNames.length) {
-        return this.findOption(foundOption.options, restNames);
-      }
+            return {
+              ...restOption,
+              options: this.getUpdatedOptions(options),
+            };
+          }
 
-      return foundOption;
-    },
-    updateOption(option, newValue) {
-      const config = {
-        true: {
-          isChecked: true,
-          isIndeterminate: false,
-        },
-        false: {
-          isChecked: false,
-          isIndeterminate: false,
-        },
-        indeterminate: {
-          isChecked: false,
-          isIndeterminate: true,
-        },
-      };
+          const { isIndeterminate, options, ...restOption } = option;
 
-      _.assign(option, config[newValue]);
-    },
-    updateNestedOptions(options, newValue) {
-      _.each(options, (option) => {
-        option.isChecked = newValue;
-        option.isIndeterminate = false;
-
-        if (option.options && option.options.length) {
-          this.updateNestedOptions(option.options, newValue);
+          return restOption;
         }
+      );
+    },
+    getOptionsWithIndeterminateState(options) {
+      return _.map(options, (option) => {
+        if (option.options && option.options.length) {
+          const lastParentOption = this.getIsLastParentOption(option);
+
+          if (lastParentOption) {
+            // penultimate nesting
+            const updatedOptions = this.getOptionsWithIndeterminateState(option.options);
+            const { isChecked, isIndeterminate } = this.getCheckedAndIndeterminateState(updatedOptions);
+            return {
+              ...option,
+              isChecked,
+              isIndeterminate,
+              options: updatedOptions,
+            };
+          }
+
+          // rest nesting
+          const updatedOptions = this.getOptionsWithIndeterminateState(option.options);
+          const { isChecked, isIndeterminate } = this.getCheckedAndIndeterminateState(updatedOptions);
+
+          return {
+            ...option,
+            isChecked,
+            isIndeterminate,
+            options: updatedOptions,
+          };
+        }
+
+        // deepest nesting
+        return {
+          ...option,
+          isIndeterminate: false,
+        };
       });
     },
-    updateParentOptions(options, parentNames) {
-      const parentNamesWithoutLastOption = _.dropRight(parentNames);
+    getIsLastParentOption(option) {
+      return _
+        .every(
+          option.options,
+          ({ isChecked }) => typeof isChecked === 'boolean'
+        );
+    },
+    getCheckedAndIndeterminateState(options) {
+      const checkedInnerOptions = _
+        .filter(
+          options,
+          ({ isChecked }) => isChecked
+        );
+      const indeterminateInnerOptions = _
+        .filter(
+          options,
+          ({ isIndeterminate }) => isIndeterminate
+        );
 
-      if (parentNamesWithoutLastOption.length) {
-        const foundParent = this.findOption(options, parentNamesWithoutLastOption);
 
-        const checkedOptions = _.filter(foundParent.options, ({ isChecked }) => isChecked);
-        const indeterminateOptions = _.filter(foundParent.options, ({ isIndeterminate }) => isIndeterminate);
+      const isChecked = checkedInnerOptions.length === options.length;
+      const isIndeterminate = (!!indeterminateInnerOptions.length || !!checkedInnerOptions.length) && !isChecked;
 
-        if (checkedOptions.length === foundParent.options.length) {
-          this.updateOption(foundParent, true);
-        } else if (checkedOptions.length || indeterminateOptions.length) {
-          this.updateOption(foundParent, 'indeterminate');
-        } else {
-          this.updateOption(foundParent, false);
-        }
-
-        this.updateParentOptions(options, parentNamesWithoutLastOption);
-      }
+      return { isChecked, isIndeterminate };
     },
   },
 };

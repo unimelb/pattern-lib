@@ -1,7 +1,10 @@
 <template>
-  <FilterDropdown
-    :options="options"
-    @change="onChange" />
+  <div class="story-container">
+    <FilterDropdown
+      :options="options"
+      options-label="Course types to include:"
+      @change="onChange" />
+  </div>
 </template>
 
 <script>
@@ -22,3 +25,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+  .story-container {
+    width: 500px;
+    margin: 5rem auto 0;
+  }
+</style>

@@ -1,115 +1,108 @@
 <template>
-  <div>
-    <NestedCheckbox
-      :options="optionsWithIndeterminateState"
-      @change="onChange" />
+  <div :class="['filter-dropdown', { 'is-opened': isOpened }]">
+    <div
+      class="filter-dropdown__select"
+      @click="onClose">
+      <div class="filter-dropdown__label">
+        lorem
+      </div>
+
+      <div class="filter-dropdown__icon">
+        <SvgIcon
+          name="chevron-down"
+          class="push-icon__icon" />
+      </div>
+    </div>
+
+    <div
+      ref="body"
+      class="filter-dropdown__body">
+      <div
+        v-if="optionsLabel"
+        class="filter-dropdown__options-label">
+        {{ optionsLabel }}
+      </div>
+
+      <NestedCheckbox
+        :options="copiedOptions"
+        @change="onChange" />
+
+      <div class="filter-dropdown__actions">
+        <ButtonIcon
+          no-icon
+          width="fullwidth"
+          @click.native.prevent="onClearClick">
+          Clear filter
+        </ButtonIcon>
+
+        <ButtonIcon
+          no-icon
+          class="btn--cta"
+          width="fullwidth"
+          @click.native.prevent="onApplyClick">
+          Apply filter
+        </ButtonIcon>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import _ from 'lodash';
 import NestedCheckbox from './components/NestedCheckbox';
-import optionsValidator from './optionsValidator';
+import optionsValidator from './nestedCheckboxOptionsValidator';
+import SvgIcon from '../icons/SvgIcon';
 
 export default {
-  components: { NestedCheckbox },
+  components: { NestedCheckbox, SvgIcon },
   props: {
     options: {
       type: Array,
       required: true,
       validator: optionsValidator,
     },
+    defaultOptions: {
+      type: Array,
+      validator: optionsValidator,
+      default: null,
+    },
+    optionsLabel: {
+      type: String,
+      default: '',
+    },
   },
-  computed: {
-    optionsWithIndeterminateState() {
-      return this.getOptionsWithIndeterminateState(this.options);
+  data() {
+    return {
+      isOpened: true,
+      copiedOptions: _.cloneDeep(this.options),
+      defaultCopiedOptions: this.defaultOptions
+        ? this.defaultOptions
+        : _.cloneDeep(this.options),
+    };
+  },
+  watch: {
+    options(updatedOptions) {
+      this.copiedOptions = _.cloneDeep(updatedOptions);
+    },
+    isOpened() {
+      // console.log(this.$refs.body); // TODO
     },
   },
   methods: {
-    onChange(newOptions) {
-      this.$emit('change', this.getUpdatedOptions(newOptions));
+    onClose() {
+      this.isOpened = !this.isOpened;
+      this.copiedOptions = _.cloneDeep(this.options);
     },
-    getUpdatedOptions(updatedOptionsWithIndeterminateState) {
-      return _.map(
-        updatedOptionsWithIndeterminateState,
-        (option) => {
-          if (option.options && option.options.length) {
-            const {
-              isChecked, isIndeterminate, options, ...restOption
-            } = option;
-
-            return {
-              ...restOption,
-              options: this.getUpdatedOptions(options),
-            };
-          }
-
-          const { isIndeterminate, options, ...restOption } = option;
-
-          return restOption;
-        }
-      );
+    onChange(changedOptions) {
+      this.copiedOptions = changedOptions;
     },
-    getOptionsWithIndeterminateState(options) {
-      return _.map(options, (option) => {
-        if (option.options && option.options.length) {
-          const lastParentOption = this.getIsLastParentOption(option);
-
-          if (lastParentOption) {
-            // penultimate nesting
-            const updatedOptions = this.getOptionsWithIndeterminateState(option.options);
-            const { isChecked, isIndeterminate } = this.getCheckedAndIndeterminateState(updatedOptions);
-            return {
-              ...option,
-              isChecked,
-              isIndeterminate,
-              options: updatedOptions,
-            };
-          }
-
-          // rest nesting
-          const updatedOptions = this.getOptionsWithIndeterminateState(option.options);
-          const { isChecked, isIndeterminate } = this.getCheckedAndIndeterminateState(updatedOptions);
-
-          return {
-            ...option,
-            isChecked,
-            isIndeterminate,
-            options: updatedOptions,
-          };
-        }
-
-        // deepest nesting
-        return {
-          ...option,
-          isIndeterminate: false,
-        };
-      });
+    onClearClick() {
+      this.isOpened = !this.isOpened;
+      this.$emit('change', this.defaultCopiedOptions);
     },
-    getIsLastParentOption(option) {
-      return _
-        .every(
-          option.options,
-          ({ isChecked }) => typeof isChecked === 'boolean'
-        );
-    },
-    getCheckedAndIndeterminateState(options) {
-      const checkedInnerOptions = _
-        .filter(
-          options,
-          ({ isChecked }) => isChecked
-        );
-      const indeterminateInnerOptions = _
-        .filter(
-          options,
-          ({ isIndeterminate }) => isIndeterminate
-        );
-
-
-      const isChecked = checkedInnerOptions.length === options.length;
-      const isIndeterminate = (!!indeterminateInnerOptions.length || !!checkedInnerOptions.length) && !isChecked;
-
-      return { isChecked, isIndeterminate };
+    onApplyClick() {
+      this.isOpened = !this.isOpened;
+      this.$emit('change', this.copiedOptions);
     },
   },
 };
