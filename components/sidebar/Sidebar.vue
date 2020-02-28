@@ -30,7 +30,7 @@
             class="sidebar__list-icon"
             width="20px"
             height="20px" />
-          <div>
+          <div class="sidebar__list-info">
             <h4 class="sidebar__list-title">
               {{ item.title }}
             </h4>
