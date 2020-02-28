@@ -1,11 +1,11 @@
 <template>
   <h4 class="filtered-results__title">
     {{ items.length }} results found with <strong>{{ filters.length }} {{ getLabel() }}</strong> applied.
-    (<span
+    <span
       class="filtered-results__title-notice text-italic text-bold"
       @click="triggerClick">
       {{ triggerFiltersMsg }}
-    </span>)
+    </span>
   </h4>
 </template>
 
@@ -59,8 +59,8 @@ export default {
     updateMsg() {
       const appliedFiltersText = this.getFiltersText().join(' and ');
       this.triggerFiltersMsg = this.filters.length
-        ? `Filters applied to show you ${appliedFiltersText} options (change)`
-        : 'Apply filters to show you Domestic undergraduate options?';
+        ? `(Filters applied to show you ${appliedFiltersText} options (change))`
+        : '';
     },
     getLabel() {
       return this.filters.length === 0 || this.filters.length > 1 ? 'filters' : 'filter';
