@@ -6,9 +6,10 @@
         :filters="filters"
         :callback="callback" />
       <div class="filtered-results__content">
-        <div v-if="items.length">
-          <FilteredResultsList
-            :items="items" />
+        <div
+          v-if="items.length"
+          class="filtered-results__items">
+          <slot />
         </div>
         <div
           v-else
@@ -22,11 +23,9 @@
 
 <script>
 import FilteredResultsTitle from './FilteredResultsTitle.vue';
-import FilteredResultsList from './FilteredResultsList';
 
 export default {
   components: {
-    FilteredResultsList,
     FilteredResultsTitle,
   },
   props: {

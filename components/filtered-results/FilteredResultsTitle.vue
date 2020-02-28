@@ -30,7 +30,7 @@ export default {
   },
   data() {
     return {
-      triggerFiltersMsg: 'Apply filters to show you Domestic undergraduate options?',
+      triggerFiltersMsg: '',
       keys: {
         undergrad: 'undergraduate study',
         postgrad: 'graduate study',
@@ -53,9 +53,7 @@ export default {
     },
     getFiltersText() {
       const text = [];
-      this.filters.forEach((f) => {
-        text.push(this.keys[f]);
-      });
+      this.filters.map((f) => text.push(this.keys[f]));
       return text;
     },
     updateMsg() {
