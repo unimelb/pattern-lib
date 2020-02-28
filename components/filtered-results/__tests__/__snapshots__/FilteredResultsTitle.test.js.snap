@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilteredResultsTitle Should match snapshot: has results 1`] = `
+<h4
+  class="filtered-results__title"
+>
+  
+  1 results found with 
+  <strong>
+    0 filters
+  </strong>
+   applied.
+  
+  <span
+    class="filtered-results__title-notice text-italic text-bold"
+  >
+    
+    
+  
+  </span>
+</h4>
+`;
+
+exports[`FilteredResultsTitle Should match snapshot: has results with > 1 filter 1`] = `
+<h4
+  class="filtered-results__title"
+>
+  
+  1 results found with 
+  <strong>
+    2 filters
+  </strong>
+   applied.
+  
+  <span
+    class="filtered-results__title-notice text-italic text-bold"
+  >
+    
+    (Filters applied to show you undergraduate study and graduate study options (change))
+  
+  </span>
+</h4>
+`;
+
+exports[`FilteredResultsTitle Should match snapshot: has results with 1 filter 1`] = `
+<h4
+  class="filtered-results__title"
+>
+  
+  1 results found with 
+  <strong>
+    1 filter
+  </strong>
+   applied.
+  
+  <span
+    class="filtered-results__title-notice text-italic text-bold"
+  >
+    
+    (Filters applied to show you undergraduate study options (change))
+  
+  </span>
+</h4>
+`;
+
+exports[`FilteredResultsTitle Should match snapshot: no results 1`] = `
+<h4
+  class="filtered-results__title"
+>
+  
+  0 results found with 
+  <strong>
+    0 filters
+  </strong>
+   applied.
+  
+  <span
+    class="filtered-results__title-notice text-italic text-bold"
+  >
+    
+    
+  
+  </span>
+</h4>
+`;
