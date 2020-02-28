@@ -149,7 +149,7 @@
               00116K
               <small>
                 (
-                <a href="https://services.unimelb.edu.au/international/visas">visa information</a>)
+                <a href="https://students.unimelb.edu.au/student-support/international-student-support/visas">visa information</a>)
               </small>
             </dd>
           </dl>
