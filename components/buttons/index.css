@@ -185,9 +185,12 @@
     }
 
     &-alt {
-      color: rgb(var(--col-white));
-      background-color: rgb(var(--col-emerald-dark));
-      border: 2px solid rgb(var(--col-emerald-mid-2));
+      &,
+      &:visited {
+        color: rgb(var(--col-white));
+        background-color: rgb(var(--col-emerald-dark));
+        border: 2px solid rgb(var(--col-emerald-mid-2));
+      }
 
       &:hover,
       &:focus {
