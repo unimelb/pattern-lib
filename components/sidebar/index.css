@@ -41,6 +41,10 @@
       }
     }
 
+    &-info {
+      flex: 1;
+    }
+
     &-title {
       font-size: 1rem;
       color: rgb(var(--col-navy-dark));
