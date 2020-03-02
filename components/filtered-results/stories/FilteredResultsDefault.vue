@@ -1,7 +1,6 @@
 <template>
   <FilteredResults
-    :items="[]"
-    :filters="[]"
+    :items="0"
     :callback="() => false" />
 </template>
 

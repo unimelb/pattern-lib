@@ -1,7 +1,8 @@
 <template>
   <FilteredResults
-    :items="items"
-    :filters="['undergrad']"
+    :items="items.length"
+    :message="getMessage()"
+    :secondary-message="getSecondaryMessage()"
     :callback="changeCategory">
     <div class="grid grid--center grid--2col">
       <ListItem
@@ -58,6 +59,12 @@ export default {
     changeCategory(value) {
       this.$emit('popup:event', value);
       alert('It works!');
+    },
+    getMessage() {
+      return '6 results found with <strong>0 filters</strong> applied.';
+    },
+    getSecondaryMessage() {
+      return 'Some secondary message.';
     },
   },
 };

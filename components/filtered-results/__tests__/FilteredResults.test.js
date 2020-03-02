@@ -2,40 +2,25 @@ import { mount, shallow } from 'vue-test-utils';
 
 import FilteredResults from '../FilteredResults.vue';
 
-const mockData = [{
-  id: 'key1',
-  type: 'major',
-  name: 'Some category name',
-}, {
-  id: 'key2',
-  type: 'minor',
-  name: 'Some category name',
-}, {
-  id: 'key3',
-  type: 'major',
-  name: 'Some category name',
-}, {
-  id: 'key4',
-  type: 'major',
-  name: 'Some category name',
-}, {
-  id: 'key5',
-  type: 'minor',
-  name: 'Some category name',
-}, {
-  id: 'key6',
-  type: 'major',
-  name: 'Some category name',
-}];
-
 describe('FilteredResults', () => {
-  it('Should match snapshot: has results', () => {
+  it('Should match snapshot: has results, has only message prop', () => {
     const result = mount(FilteredResults,
       {
         propsData: {
-          items: mockData,
-          callback: () => false,
-          filters: [],
+          items: 10,
+          message: '10 results found with <strong>2</strong> filters applied.',
+        },
+      }).element;
+    expect(result).toMatchSnapshot();
+  });
+
+  it('Should match snapshot: has results, has message and secondary message props', () => {
+    const result = mount(FilteredResults,
+      {
+        propsData: {
+          items: 10,
+          message: '10 results found with <strong>2</strong> filters applied.',
+          secondaryMessage: 'Click here',
         },
       }).element;
     expect(result).toMatchSnapshot();
@@ -45,9 +30,8 @@ describe('FilteredResults', () => {
     const result = mount(FilteredResults,
       {
         propsData: {
-          items: [],
+          items: 0,
           callback: () => false,
-          filters: [],
         },
       }).element;
     expect(result).toMatchSnapshot();
@@ -57,12 +41,14 @@ describe('FilteredResults', () => {
     const result = shallow(FilteredResults);
     const {
       items,
-      filters,
+      message,
+      secondaryMessage,
       callback,
     } = result.vm.$options.props;
-    expect(items.type).toBe(Array);
-    expect(filters.type).toBe(Array);
+    expect(items.type).toBe(Number);
+    expect(message.type).toBe(String);
     expect(callback.type).toBe(Function);
+    expect(secondaryMessage.type).toBe(String);
   });
 
 });

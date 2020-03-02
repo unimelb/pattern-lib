@@ -2,20 +2,12 @@ import { mount, shallow } from 'vue-test-utils';
 
 import FilteredResultsTitle from '../FilteredResultsTitle.vue';
 
-const mockData = [{
-  id: 'key1',
-  type: 'major',
-  name: 'Some category name',
-}];
-
 describe('FilteredResultsTitle', () => {
   it('Should match snapshot: has results', () => {
     const result = mount(FilteredResultsTitle,
       {
         propsData: {
-          items: mockData,
-          callback: () => false,
-          filters: [],
+          message: '10 results found with <strong>2</strong> filters applied.',
         },
       }).element;
     expect(result).toMatchSnapshot();
@@ -25,21 +17,9 @@ describe('FilteredResultsTitle', () => {
     const result = mount(FilteredResultsTitle,
       {
         propsData: {
-          items: mockData,
           callback: () => false,
-          filters: ['undergrad'],
-        },
-      }).element;
-    expect(result).toMatchSnapshot();
-  });
-
-  it('Should match snapshot: has results with > 1 filter', () => {
-    const result = mount(FilteredResultsTitle,
-      {
-        propsData: {
-          items: mockData,
-          callback: () => false,
-          filters: ['undergrad', 'postgrad'],
+          message: '10 results found with <strong>1</strong> filter applied.',
+          secondaryMessage: 'Some secondary text',
         },
       }).element;
     expect(result).toMatchSnapshot();
@@ -49,9 +29,6 @@ describe('FilteredResultsTitle', () => {
     const result = mount(FilteredResultsTitle,
       {
         propsData: {
-          items: [],
-          callback: () => false,
-          filters: [],
         },
       }).element;
     expect(result).toMatchSnapshot();
@@ -60,22 +37,22 @@ describe('FilteredResultsTitle', () => {
   it('Should have default props and correct types', () => {
     const result = shallow(FilteredResultsTitle);
     const {
-      items,
-      filters,
+      message,
+      secondaryMessage,
       callback,
     } = result.vm.$options.props;
-    expect(items.type).toBe(Array);
-    expect(filters.type).toBe(Array);
+    expect(message.type).toBe(String);
     expect(callback.type).toBe(Function);
+    expect(secondaryMessage.type).toBe(String);
   });
 
   it('Should trigger callback function', () => {
     const wrapper = shallow(FilteredResultsTitle,
       {
         propsData: {
-          items: [],
           callback: jest.fn(),
-          filters: [],
+          message: 'Results found',
+          secondaryMessage: 'Text to click',
         },
       });
     wrapper.find('.filtered-results__title-notice').trigger('click', {});

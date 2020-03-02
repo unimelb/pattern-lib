@@ -2,12 +2,12 @@
   <div class="filtered-results">
     <div class="filtered-results__inner">
       <FilteredResultsTitle
-        :items="items"
-        :filters="filters"
+        :message="message"
+        :secondary-message="secondaryMessage"
         :callback="callback" />
       <div class="filtered-results__content">
         <div
-          v-if="items.length"
+          v-if="items > 0"
           class="filtered-results__items">
           <slot />
         </div>
@@ -30,19 +30,24 @@ export default {
   },
   props: {
     items: {
-      type: Array,
-      default: () => [],
+      type: Number,
+      default: () => 0,
       required: true,
     },
-    filters: {
-      type: Array,
-      default: () => [],
-      required: true,
+    message: {
+      type: String,
+      default: () => '',
+      required: false,
+    },
+    secondaryMessage: {
+      type: String,
+      default: () => '',
+      required: false,
     },
     callback: {
       type: Function,
-      required: true,
       default: () => false,
+      required: false,
     },
   },
 };
