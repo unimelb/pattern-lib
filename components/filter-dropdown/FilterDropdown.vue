@@ -1,6 +1,7 @@
 <template>
-  <div :class="['filter-dropdown', { 'is-opened': isOpened }]">
+  <div :class="['filter-dropdown', { 'is-opened': isOpened, 'is-open-up': isOpenUp }]">
     <div
+      ref="select"
       class="filter-dropdown__select"
       @click="onClose">
       <div class="filter-dropdown__label">
@@ -73,7 +74,8 @@ export default {
   },
   data() {
     return {
-      isOpened: true,
+      isOpened: false,
+      isOpenUp: false,
       copiedOptions: _.cloneDeep(this.options),
       defaultCopiedOptions: this.defaultOptions
         ? this.defaultOptions
@@ -84,11 +86,24 @@ export default {
     options(updatedOptions) {
       this.copiedOptions = _.cloneDeep(updatedOptions);
     },
-    isOpened() {
-      // console.log(this.$refs.body); // TODO
+    isOpened(value) {
+      if (value) {
+        this.checkDropdownDuration();
+      }
     },
   },
   methods: {
+    checkDropdownDuration() {
+      const { body, select } = this.$refs;
+
+      const selectRect = select.getBoundingClientRect();
+      const bodyRect = body.getBoundingClientRect();
+
+      const bodyHeight = bodyRect.bottom - bodyRect.top;
+      const bodyBottomLine = selectRect.bottom + bodyHeight;
+
+      this.isOpenUp = bodyBottomLine > window.innerHeight;
+    },
     onClose() {
       this.isOpened = !this.isOpened;
       this.copiedOptions = _.cloneDeep(this.options);

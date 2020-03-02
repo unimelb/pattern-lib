@@ -13,6 +13,10 @@
     .filter-dropdown.is-opened & {
       border-radius: var(--br) var(--br) 0 0;
     }
+
+    .filter-dropdown.is-opened.is-open-up & {
+      border-radius: 0 0 var(--br) var(--br);
+    }
   }
 
   &__label {
@@ -47,13 +51,25 @@
     right: 0;
     padding: 1.5rem;
     background-color: rgb(var(--col-background-primary-white));
-    display: none;
     border: 1px solid rgba(var(--col-blue-mid-2));
     border-top: none;
     border-radius: 0 0 var(--br) var(--br);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
 
     .filter-dropdown.is-opened & {
-      display: block;
+      pointer-events: auto;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .filter-dropdown.is-open-up & {
+      top: auto;
+      bottom: 100%;
+      border-top: 1px solid rgba(var(--col-blue-mid-2));
+      border-bottom: none;
+      border-radius: var(--br) var(--br) 0 0;
     }
   }
 
