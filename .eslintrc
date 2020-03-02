@@ -1,6 +1,7 @@
 {
   "extends": [
-    "eslint-config-airbnb",
+    "eslint:recommended",
+    "airbnb-base",
     "plugin:vue/recommended"
   ],
   "env": {
@@ -23,7 +24,6 @@
     "import/newline-after-import": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
-    "jsx-a11y/label-has-for": "off",
     "max-len": "off",
     "no-param-reassign": [
       "error",
@@ -49,9 +49,6 @@
         "variables": true
       }
     ],
-    "react/jsx-filename-extension": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/no-unknown-property": "off",
     "vue/attribute-hyphenation": "error",
     "vue/html-quotes": "error",
     "vue/html-self-closing": "error",
