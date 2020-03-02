@@ -13,8 +13,8 @@
         :name="icon"
         class="push-icon__icon"
         :class="iconLeft ? 'push-icon__icon--left' : ''"
-        width="15px"
-        height="15px"
+        :width="iconWidth ? iconWidth : '15px'"
+        :height="iconHeight ? iconHeight : '15px'"
         aria-hidden="true" />
       <slot v-if="iconLeft" />
     </span>
@@ -42,6 +42,14 @@ export default {
       default: '',
     },
     width: {
+      type: String,
+      default: '',
+    },
+    iconWidth: {
+      type: String,
+      default: '',
+    },
+    iconHeight: {
       type: String,
       default: '',
     },

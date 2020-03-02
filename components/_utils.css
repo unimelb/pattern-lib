@@ -285,8 +285,6 @@ a[target='_blank'] {
     flex-shrink: 0;
 
     /* prevent icon from shrinking */
-    width: .75em;
-    height: .75em;
     margin-left: 1em;
     vertical-align: middle;
 
