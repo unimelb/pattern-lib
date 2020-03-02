@@ -331,7 +331,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                   <svg
                     aria-hidden="true"
                     aria-label="chevron-right"
-                    class="push-icon__icon"
+                    class="push-icon__icon push-icon__icon--"
                     focusable="false"
                     height="15px"
                     role="img"
@@ -507,7 +507,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
                   <svg
                     aria-hidden="true"
                     aria-label="chevron-right"
-                    class="push-icon__icon"
+                    class="push-icon__icon push-icon__icon--"
                     focusable="false"
                     height="15px"
                     role="img"

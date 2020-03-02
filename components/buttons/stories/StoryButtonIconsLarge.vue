@@ -1,44 +1,37 @@
 <template>
   <div>
     <ButtonIcon
-      icon-width="50px"
-      icon-height="50px"
+      icon-size="lg"
       icon="chevron-right">
       I am a button with an icon
     </ButtonIcon>
     <ButtonIcon
-      icon-width="40px"
-      icon-height="40px"
+      icon-size="lg"
       icon="twitter">
       I am a button with an icon
     </ButtonIcon>
     <ButtonIcon
-      icon-width="30px"
-      icon-height="30px"
+      icon-size="lg"
       icon="close">
       I am a button with an icon
     </ButtonIcon>
     <ButtonIcon
-      icon-width="20px"
-      icon-height="20px"
+      icon-size="lg"
       icon="download">
       I am a button with an icon
     </ButtonIcon>
     <ButtonIcon
-      icon-width="15px"
-      icon-height="15px"
+      icon-size="lg"
       icon="microphone">
       I am a button with an icon
     </ButtonIcon>
     <ButtonIcon
-      icon-width="10px"
-      icon-height="10px"
+      icon-size="lg"
       icon="search">
       I am a button with an icon
     </ButtonIcon>
     <ButtonIcon
-      icon-width="5px"
-      icon-height="5px"
+      icon-size="lg"
       icon="chevron-down">
       I am a button with an icon
     </ButtonIcon>

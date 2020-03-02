@@ -12,9 +12,9 @@
       <SvgIcon
         :name="icon"
         class="push-icon__icon"
-        :class="iconLeft ? 'push-icon__icon--left' : ''"
-        :width="iconWidth ? iconWidth : '15px'"
-        :height="iconHeight ? iconHeight : '15px'"
+        :class="iconLeft ? `push-icon__icon--${iconSize} push-icon__icon--left` : `push-icon__icon--${iconSize}`"
+        width="15px"
+        height="15px"
         aria-hidden="true" />
       <slot v-if="iconLeft" />
     </span>
@@ -45,11 +45,7 @@ export default {
       type: String,
       default: '',
     },
-    iconWidth: {
-      type: String,
-      default: '',
-    },
-    iconHeight: {
+    iconSize: {
       type: String,
       default: '',
     },

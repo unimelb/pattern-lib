@@ -285,12 +285,19 @@ a[target='_blank'] {
     flex-shrink: 0;
 
     /* prevent icon from shrinking */
+    width: .75em;
+    height: .75em;
     margin-left: 1em;
     vertical-align: middle;
 
     &--left {
       margin-right: 1em;
       margin-left: 0;
+    }
+
+    &--lg {
+      width: 1.125rem;
+      height: 1.125rem;
     }
   }
 
