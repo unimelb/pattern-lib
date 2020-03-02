@@ -1,5 +1,7 @@
 <template>
-  <div :class="['filter-dropdown', { 'is-opened': isOpened, 'is-open-up': isOpenUp }]">
+  <div
+    :class="['filter-dropdown', { 'is-opened': isOpened, 'is-open-up': isOpenUp }]"
+    @click.stop>
     <div
       ref="select"
       class="filter-dropdown__select"
@@ -89,6 +91,9 @@ export default {
     isOpened(value) {
       if (value) {
         this.checkDropdownDuration();
+        window.addEventListener('click', this.closeDropdown);
+      } else {
+        window.removeEventListener('click', this.closeDropdown);
       }
     },
   },
@@ -103,6 +108,11 @@ export default {
       const bodyBottomLine = selectRect.bottom + bodyHeight;
 
       this.isOpenUp = bodyBottomLine > window.innerHeight;
+    },
+    closeDropdown() {
+      if (this.isOpened) {
+        this.isOpened = !this.isOpened;
+      }
     },
     onClose() {
       this.isOpened = !this.isOpened;

@@ -1,9 +1,13 @@
 <template>
   <div class="story-container">
     <FilterDropdown
+      v-if="isVisible"
       :options="options"
       options-label="Course types to include:"
       @change="onChange" />
+    <button @click="hideDropdown">
+      {{ isVisible ? 'hide' : 'show' }} dropdown
+    </button>
   </div>
 </template>
 
@@ -15,12 +19,16 @@ export default {
   components: { FilterDropdown },
   data() {
     return {
+      isVisible: true,
       options,
     };
   },
   methods: {
     onChange(changedOptions) {
       this.options = changedOptions;
+    },
+    hideDropdown() {
+      this.isVisible = !this.isVisible;
     },
   },
 };
