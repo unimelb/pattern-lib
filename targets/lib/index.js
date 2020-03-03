@@ -91,7 +91,7 @@ import LogoListing from 'components/listing/LogoListing.vue';
 import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
 import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import StyledSelect from 'components/forms/StyledSelect.vue';
-import AppCheckbox from 'components/app-checkbox/AppCheckbox';
+import AppCheckbox from 'components/app-checkbox/AppCheckbox.vue';
 import { version } from '../../package.json';
 
 import 'components';
