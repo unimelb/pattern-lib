@@ -52,6 +52,7 @@
       "right": ["px"],
       "bottom": ["px"],
       "left": ["px"]
-    }
+    },
+    "unit-blacklist": ["em"]
   }
 }
