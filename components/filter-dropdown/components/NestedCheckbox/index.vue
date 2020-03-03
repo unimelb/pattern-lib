@@ -8,7 +8,7 @@
 
 <script>
 import _ from 'lodash';
-import NestedCheckboxUpdateWrapper from './NestedCheckboxUpdateWrapper';
+import NestedCheckboxUpdateWrapper from './NestedCheckboxUpdateWrapper.vue';
 import optionsValidator from '../../nestedCheckboxOptionsValidator';
 
 export default {

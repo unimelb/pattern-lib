@@ -52,9 +52,9 @@
 
 <script>
 import _ from 'lodash';
-import NestedCheckbox from './components/NestedCheckbox';
+import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
-import SvgIcon from '../icons/SvgIcon';
+import SvgIcon from '../icons/SvgIcon.vue';
 
 export default {
   components: { NestedCheckbox, SvgIcon },

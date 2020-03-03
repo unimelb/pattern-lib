@@ -26,7 +26,7 @@
 
 <script>
 import _ from 'lodash';
-import AppCheckbox from '../../../app-checkbox/AppCheckbox';
+import AppCheckbox from '../../../app-checkbox/AppCheckbox.vue';
 // import optionsValidator from './optionsValidator';
 
 export default {

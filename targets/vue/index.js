@@ -361,4 +361,4 @@ export {
   from 'components/forms/StyledSelect.vue';
 export {
   default as AppCheckbox,
-} from 'components/app-checkbox';
+} from 'components/app-checkbox/AppCheckbox.vue';
