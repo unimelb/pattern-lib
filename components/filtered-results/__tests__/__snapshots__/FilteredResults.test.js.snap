@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilteredResults Should match snapshot: has results, has message and secondary message props 1`] = `
+exports[`FilteredResults Should match snapshot: has results, has items, filters and secondary message props 1`] = `
 <div
   class="filtered-results"
 >
@@ -14,9 +14,9 @@ exports[`FilteredResults Should match snapshot: has results, has message and sec
         <span>
           10 results found with 
           <strong>
-            2
+            2 filters
           </strong>
-           filters applied.
+           applied.
         </span>
          
         <span
@@ -38,7 +38,7 @@ exports[`FilteredResults Should match snapshot: has results, has message and sec
 </div>
 `;
 
-exports[`FilteredResults Should match snapshot: has results, has only message prop 1`] = `
+exports[`FilteredResults Should match snapshot: has results, has only items and filters props 1`] = `
 <div
   class="filtered-results"
 >
@@ -52,9 +52,9 @@ exports[`FilteredResults Should match snapshot: has results, has only message pr
         <span>
           10 results found with 
           <strong>
-            2
+            2 filters
           </strong>
-           filters applied.
+           applied.
         </span>
          
         <!---->
@@ -80,7 +80,19 @@ exports[`FilteredResults Should match snapshot: no results 1`] = `
     class="filtered-results__inner"
   >
     <div>
-      <!---->
+      <h4
+        class="filtered-results__title"
+      >
+        <span>
+          0 results found with 
+          <strong>
+            0 filters
+          </strong>
+           applied.
+        </span>
+         
+        <!---->
+      </h4>
     </div>
      
     <div

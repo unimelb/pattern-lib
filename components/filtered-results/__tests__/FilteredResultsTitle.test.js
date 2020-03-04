@@ -7,7 +7,8 @@ describe('FilteredResultsTitle', () => {
     const result = mount(FilteredResultsTitle,
       {
         propsData: {
-          message: '10 results found with <strong>2</strong> filters applied.',
+          items: 10,
+          filters: 0,
         },
       }).element;
     expect(result).toMatchSnapshot();
@@ -18,7 +19,8 @@ describe('FilteredResultsTitle', () => {
       {
         propsData: {
           callback: () => false,
-          message: '10 results found with <strong>1</strong> filter applied.',
+          items: 10,
+          filters: 1,
           secondaryMessage: 'Some secondary text',
         },
       }).element;
@@ -29,6 +31,8 @@ describe('FilteredResultsTitle', () => {
     const result = mount(FilteredResultsTitle,
       {
         propsData: {
+          items: 0,
+          filters: 0,
         },
       }).element;
     expect(result).toMatchSnapshot();
@@ -37,11 +41,13 @@ describe('FilteredResultsTitle', () => {
   it('Should have default props and correct types', () => {
     const result = shallow(FilteredResultsTitle);
     const {
-      message,
+      items,
+      filters,
       secondaryMessage,
       callback,
     } = result.vm.$options.props;
-    expect(message.type).toBe(String);
+    expect(items.type).toBe(Number);
+    expect(filters.type).toBe(Number);
     expect(callback.type).toBe(Function);
     expect(secondaryMessage.type).toBe(String);
   });
@@ -51,7 +57,8 @@ describe('FilteredResultsTitle', () => {
       {
         propsData: {
           callback: jest.fn(),
-          message: 'Results found',
+          items: 10,
+          filters: 1,
           secondaryMessage: 'Text to click',
         },
       });

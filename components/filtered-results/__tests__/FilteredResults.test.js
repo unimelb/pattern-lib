@@ -3,23 +3,23 @@ import { mount, shallow } from 'vue-test-utils';
 import FilteredResults from '../FilteredResults.vue';
 
 describe('FilteredResults', () => {
-  it('Should match snapshot: has results, has only message prop', () => {
+  it('Should match snapshot: has results, has only items and filters props', () => {
     const result = mount(FilteredResults,
       {
         propsData: {
           items: 10,
-          message: '10 results found with <strong>2</strong> filters applied.',
+          filters: 2,
         },
       }).element;
     expect(result).toMatchSnapshot();
   });
 
-  it('Should match snapshot: has results, has message and secondary message props', () => {
+  it('Should match snapshot: has results, has items, filters and secondary message props', () => {
     const result = mount(FilteredResults,
       {
         propsData: {
           items: 10,
-          message: '10 results found with <strong>2</strong> filters applied.',
+          filters: 2,
           secondaryMessage: 'Click here',
         },
       }).element;
@@ -31,6 +31,7 @@ describe('FilteredResults', () => {
       {
         propsData: {
           items: 0,
+          filters: 0,
           callback: () => false,
         },
       }).element;
@@ -41,12 +42,12 @@ describe('FilteredResults', () => {
     const result = shallow(FilteredResults);
     const {
       items,
-      message,
+      filters,
       secondaryMessage,
       callback,
     } = result.vm.$options.props;
     expect(items.type).toBe(Number);
-    expect(message.type).toBe(String);
+    expect(filters.type).toBe(Number);
     expect(callback.type).toBe(Function);
     expect(secondaryMessage.type).toBe(String);
   });

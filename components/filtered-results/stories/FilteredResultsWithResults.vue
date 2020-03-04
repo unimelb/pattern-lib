@@ -1,7 +1,7 @@
 <template>
   <FilteredResults
     :items="items.length"
-    :message="getMessage()"
+    :filters="filters.length"
     :secondary-message="getSecondaryMessage()"
     :callback="changeCategory">
     <div class="grid grid--center grid--2col">
@@ -53,15 +53,13 @@ export default {
         name: 'Some category name6',
         cols: 2,
       }],
+      filters: [],
     };
   },
   methods: {
     changeCategory(value) {
       this.$emit('popup:event', value);
       alert('It works!');
-    },
-    getMessage() {
-      return '6 results found with <strong>0 filters</strong> applied.';
     },
     getSecondaryMessage() {
       return 'Some secondary message.';

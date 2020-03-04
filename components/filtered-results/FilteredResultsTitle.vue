@@ -1,10 +1,9 @@
 <template>
   <div>
     <h4
-      v-if="message"
       class="filtered-results__title">
       <span
-        v-html="message" />
+        v-html="getMessage()" />
       <span
         v-if="secondaryMessage"
         class="filtered-results__title-notice text-italic text-bold"
@@ -17,10 +16,15 @@
 <script>
 export default {
   props: {
-    message: {
-      type: String,
-      default: () => '',
-      required: false,
+    items: {
+      type: Number,
+      default: () => 0,
+      required: true,
+    },
+    filters: {
+      type: Number,
+      default: () => 0,
+      required: true,
     },
     secondaryMessage: {
       type: String,
@@ -38,6 +42,12 @@ export default {
       if (typeof this.callback === 'function') {
         this.callback();
       }
+    },
+    getLabel() {
+      return this.filters === 0 || this.filters > 1 ? 's' : '';
+    },
+    getMessage() {
+      return `${this.items} results found with <strong>${this.filters} filter${this.getLabel()}</strong> applied.`;
     },
   },
 };

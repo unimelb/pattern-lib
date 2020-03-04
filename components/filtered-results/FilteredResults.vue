@@ -2,7 +2,8 @@
   <div class="filtered-results">
     <div class="filtered-results__inner">
       <FilteredResultsTitle
-        :message="message"
+        :items="items"
+        :filters="filters"
         :secondary-message="secondaryMessage"
         :callback="callback" />
       <div class="filtered-results__content">
@@ -34,10 +35,10 @@ export default {
       default: () => 0,
       required: true,
     },
-    message: {
-      type: String,
-      default: () => '',
-      required: false,
+    filters: {
+      type: Number,
+      default: () => 0,
+      required: true,
     },
     secondaryMessage: {
       type: String,
