@@ -43,20 +43,24 @@
         @change="onChange" />
 
       <div class="filter-dropdown__actions">
-        <ButtonIcon
-          no-icon
-          width="fullwidth"
-          @click.native.prevent="onClearClick">
-          Clear filter
-        </ButtonIcon>
+        <div class="filter-dropdown__action">
+          <ButtonIcon
+            no-icon
+            width="fullwidth"
+            @click.native.prevent="onClearClick">
+            Clear filter
+          </ButtonIcon>
+        </div>
 
-        <ButtonIcon
-          no-icon
-          class="btn--cta"
-          width="fullwidth"
-          @click.native.prevent="onApplyClick">
-          Apply filter
-        </ButtonIcon>
+        <div class="filter-dropdown__action">
+          <ButtonIcon
+            no-icon
+            class="btn--cta"
+            width="fullwidth"
+            @click.native.prevent="onApplyClick">
+            Apply filter
+          </ButtonIcon>
+        </div>
       </div>
     </div>
   </div>
@@ -80,6 +84,10 @@ export default {
       type: Array,
       validator: optionsValidator,
       default: null,
+    },
+    placeholderLabel: {
+      type: String,
+      required: true,
     },
     optionsLabel: {
       type: String,
@@ -110,6 +118,19 @@ export default {
     },
   },
   methods: {
+    getSelectedOptionLabels(options) {
+      return options.reduce((selectedLabels, option) => {
+        if (option.options && option.options.length) {
+          return this.getSelectedOptionLabels(option.options);
+        }
+
+        if (option.isChecked) {
+          selectedLabels.push(option.label);
+        }
+
+        return selectedLabels;
+      }, []);
+    },
     checkDropdownDuration() {
       const { body, select } = this.$refs;
 

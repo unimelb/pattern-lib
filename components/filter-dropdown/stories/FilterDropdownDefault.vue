@@ -3,6 +3,7 @@
     <FilterDropdown
       v-if="isVisible"
       :options="options"
+      placeholder-label="course types"
       options-label="Course types to include:"
       @change="onChange" />
     <button @click="hideDropdown">
@@ -36,7 +37,7 @@ export default {
 
 <style scoped>
   .story-container {
-    width: 500px;
+    max-width: 500px;
     margin: 5rem auto 0;
   }
 </style>

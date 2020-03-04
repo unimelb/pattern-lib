@@ -75,5 +75,15 @@
 
   &__actions {
     padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem -.5rem;
+  }
+
+  &__action {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 9rem;
+    padding: 0 .5rem .5rem;
   }
 }
