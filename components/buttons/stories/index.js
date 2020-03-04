@@ -39,10 +39,10 @@ storiesOf('Buttons/Types', module)
   .add('<button> element', createStory(StoryButtonElement));
 
 storiesOf('Buttons/Icons', module)
+  .add('Icons', createStory(StoryButtonIcons))
   .add('No Icon', createStory(StoryButtonNoIcon))
-  .add('Icon left', createStory(StoryButtonIconLeft))
-  .add('Icons Large', createStory(StoryButtonIconsLarge))
-  .add('Icons', createStory(StoryButtonIcons));
+  .add('Icon on left', createStory(StoryButtonIconLeft))
+  .add('Large Icon', createStory(StoryButtonIconsLarge));
 
 storiesOf('Buttons/Adjacent', module)
   .add('Default', createStory(StoryButtonAdjacent))
