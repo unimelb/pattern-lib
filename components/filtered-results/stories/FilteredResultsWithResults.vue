@@ -59,6 +59,7 @@ export default {
   methods: {
     changeCategory(value) {
       this.$emit('popup:event', value);
+      // eslint-disable-next-line no-alert
       alert('It works!');
     },
     getSecondaryMessage() {
