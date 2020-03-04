@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import _ from 'lodash';
 import NestedCheckboxUpdateWrapper from './NestedCheckboxUpdateWrapper.vue';
 import optionsValidator from '../../nestedCheckboxOptionsValidator';
 
@@ -31,28 +30,25 @@ export default {
       this.$emit('change', this.getUpdatedOptions(newOptions));
     },
     getUpdatedOptions(updatedOptionsWithIndeterminateState) {
-      return _.map(
-        updatedOptionsWithIndeterminateState,
-        (option) => {
-          if (option.options && option.options.length) {
-            const {
-              isChecked, isIndeterminate, options, ...restOption
-            } = option;
+      return updatedOptionsWithIndeterminateState.map((option) => {
+        if (option.options && option.options.length) {
+          const {
+            isChecked, isIndeterminate, options, ...restOption
+          } = option;
 
-            return {
-              ...restOption,
-              options: this.getUpdatedOptions(options),
-            };
-          }
-
-          const { isIndeterminate, options, ...restOption } = option;
-
-          return restOption;
+          return {
+            ...restOption,
+            options: this.getUpdatedOptions(options),
+          };
         }
-      );
+
+        const { isIndeterminate, options, ...restOption } = option;
+
+        return restOption;
+      });
     },
     getOptionsWithIndeterminateState(options) {
-      return _.map(options, (option) => {
+      return options.map((option) => {
         if (option.options && option.options.length) {
           const lastParentOption = this.getIsLastParentOption(option);
 
@@ -88,21 +84,15 @@ export default {
       });
     },
     getIsLastParentOption(option) {
-      return _
-        .every(
-          option.options,
-          ({ isChecked }) => typeof isChecked === 'boolean'
-        );
+      return option.options.every(({ isChecked }) => typeof isChecked === 'boolean');
     },
     getCheckedAndIndeterminateState(options) {
-      const checkedInnerOptions = _
+      const checkedInnerOptions = options
         .filter(
-          options,
           ({ isChecked }) => isChecked
         );
-      const indeterminateInnerOptions = _
+      const indeterminateInnerOptions = options
         .filter(
-          options,
           ({ isIndeterminate }) => isIndeterminate
         );
 

@@ -1,10 +1,16 @@
 <template>
   <div
-    :class="['filter-dropdown', { 'is-opened': isOpened, 'is-open-up': isOpenUp }]"
+    class="filter-dropdown"
     @click.stop>
     <div
       ref="select"
-      class="filter-dropdown__select"
+      :class="[
+        'filter-dropdown__select',
+        {
+          'filter-dropdown__select--is-opened': isOpened && !isOpenUp,
+          'filter-dropdown__select--is-opened-up': isOpened && isOpenUp,
+        },
+      ]"
       @click="onClose">
       <div class="filter-dropdown__label">
         lorem
@@ -19,7 +25,13 @@
 
     <div
       ref="body"
-      class="filter-dropdown__body">
+      :class="[
+        'filter-dropdown__body',
+        {
+          'filter-dropdown__body--is-opened': isOpened,
+          'filter-dropdown__body--is-open-up': isOpenUp,
+        },
+      ]">
       <div
         v-if="optionsLabel"
         class="filter-dropdown__options-label">
@@ -51,7 +63,7 @@
 </template>
 
 <script>
-import _ from 'lodash';
+import cloneDeep from 'lodash.clonedeep';
 import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
 import SvgIcon from '../icons/SvgIcon.vue';
@@ -78,15 +90,15 @@ export default {
     return {
       isOpened: false,
       isOpenUp: false,
-      copiedOptions: _.cloneDeep(this.options),
+      copiedOptions: cloneDeep(this.options),
       defaultCopiedOptions: this.defaultOptions
         ? this.defaultOptions
-        : _.cloneDeep(this.options),
+        : cloneDeep(this.options),
     };
   },
   watch: {
     options(updatedOptions) {
-      this.copiedOptions = _.cloneDeep(updatedOptions);
+      this.copiedOptions = cloneDeep(updatedOptions);
     },
     isOpened(value) {
       if (value) {
@@ -116,7 +128,7 @@ export default {
     },
     onClose() {
       this.isOpened = !this.isOpened;
-      this.copiedOptions = _.cloneDeep(this.options);
+      this.copiedOptions = cloneDeep(this.options);
     },
     onChange(changedOptions) {
       this.copiedOptions = changedOptions;

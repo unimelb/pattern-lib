@@ -28,7 +28,7 @@
     transform: translateX(-100%);
     opacity: 0;
 
-    .app-checkbox.is-checked & {
+    &--is-checked {
       transform: translateX(0);
       opacity: 1;
     }
@@ -58,7 +58,7 @@
     transform: translateX(100%);
     opacity: 0;
 
-    .app-checkbox.is-indeterminate & {
+    &--is-indeterminate {
       transform: translateX(0);
       opacity: 1;
     }

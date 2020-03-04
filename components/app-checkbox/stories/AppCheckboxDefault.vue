@@ -8,7 +8,7 @@
         :label="checkbox.label"
         :is-checked="typeof checkbox.value === 'boolean' && checkbox.value"
         :is-indeterminate="checkbox.value === 'indeterminate'"
-        :area-label="checkbox.ariaLabel"
+        :aria-label="checkbox.ariaLabel"
         @change="onCheckboxChange" />
     </div>
   </div>

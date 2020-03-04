@@ -1,10 +1,6 @@
 <template>
   <label
-    :class="[
-      'app-checkbox',
-      { 'is-checked': isInputChecked },
-      { 'is-indeterminate': isIndeterminate },
-    ]"
+    class="app-checkbox"
     @click.prevent="onClick">
     <input
       type="checkbox"
@@ -14,8 +10,8 @@
       :aria-label="areaLabel">
 
     <span class="app-checkbox__icon">
-      <span class="app-checkbox__icon-checked" />
-      <span class="app-checkbox__icon-indeterminate" />
+      <span :class="['app-checkbox__icon-checked', { 'app-checkbox__icon-checked--is-checked': isInputChecked }]" />
+      <span :class="['app-checkbox__icon-indeterminate', { 'app-checkbox__icon-indeterminate--is-indeterminate': isIndeterminate }]" />
     </span>
     <span
       v-if="!!label"

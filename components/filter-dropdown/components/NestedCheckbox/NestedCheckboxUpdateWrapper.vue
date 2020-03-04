@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import _ from 'lodash';
+import cloneDeep from 'lodash.clonedeep';
 import NestedCheckboxView from './NestedCheckboxView.vue';
 import updateWrapperOptionsValidator from './updateWrapperOptionsValidator';
 
@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     onChange(event) {
-      const clonedOptions = _.cloneDeep(this.options);
+      const clonedOptions = cloneDeep(this.options);
       const changedOption = this.findOption(clonedOptions, event.parentNames);
 
       if (changedOption.options && changedOption.options.length) {
@@ -39,7 +39,7 @@ export default {
       this.$emit('change', clonedOptions);
     },
     findOption(options, [firstName, ...restNames]) {
-      const foundOption = _.find(options, ({ name }) => name === firstName);
+      const foundOption = options.find(({ name }) => name === firstName);
 
       if (restNames.length) {
         return this.findOption(foundOption.options, restNames);
@@ -63,10 +63,10 @@ export default {
         },
       };
 
-      _.assign(option, config[newValue]);
+      Object.assign(option, config[newValue]);
     },
     updateNestedOptions(options, newValue) {
-      _.each(options, (option) => {
+      options.forEach((option) => {
         option.isChecked = newValue;
         option.isIndeterminate = false;
 
@@ -76,13 +76,13 @@ export default {
       });
     },
     updateParentOptions(options, parentNames) {
-      const parentNamesWithoutLastOption = _.dropRight(parentNames);
+      const parentNamesWithoutLastOption = parentNames.slice(0, parentNames.length - 1);
 
       if (parentNamesWithoutLastOption.length) {
         const foundParent = this.findOption(options, parentNamesWithoutLastOption);
 
-        const checkedOptions = _.filter(foundParent.options, ({ isChecked }) => isChecked);
-        const indeterminateOptions = _.filter(foundParent.options, ({ isIndeterminate }) => isIndeterminate);
+        const checkedOptions = foundParent.options.filter(({ isChecked }) => isChecked);
+        const indeterminateOptions = foundParent.options.filter(({ isIndeterminate }) => isIndeterminate);
 
         if (checkedOptions.length === foundParent.options.length) {
           this.updateOption(foundParent, true);

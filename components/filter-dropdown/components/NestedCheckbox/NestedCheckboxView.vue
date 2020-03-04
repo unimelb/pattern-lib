@@ -5,7 +5,7 @@
       :key="option.name"
       :class="[
         'nested-checkbox',
-        { 'is-first': isFirstNested },
+        { 'nested-checkbox--is-first': isFirstNested },
       ]">
       <AppCheckbox
         :name="option.name"
@@ -25,7 +25,6 @@
 </template>
 
 <script>
-import _ from 'lodash';
 import AppCheckbox from '../../../app-checkbox/AppCheckbox.vue';
 // import optionsValidator from './optionsValidator';
 
@@ -45,7 +44,7 @@ export default {
       type: Array,
       required: true,
       validator(value) {
-        return _.every(value, (name) => !!name && typeof name === 'string');
+        return value.every((name) => !!name && typeof name === 'string');
       },
     },
   },

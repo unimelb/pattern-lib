@@ -10,11 +10,11 @@
     display: flex;
     align-items: stretch;
 
-    .filter-dropdown.is-opened & {
+    &--is-opened {
       border-radius: var(--br) var(--br) 0 0;
     }
 
-    .filter-dropdown.is-opened.is-open-up & {
+    &--is-opened-up {
       border-radius: 0 0 var(--br) var(--br);
     }
   }
@@ -23,13 +23,13 @@
     font-size: 1.125rem;
     padding: .5625rem 1rem;
     font-weight: var(--fw-bold);
-    line-height: 1.25rem;
+    line-height: 1.25;
     flex: 1 1;
     user-select: none;
   }
 
   &__icon {
-    flex: 0 0 40px;
+    flex: 0 0 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,13 +58,13 @@
     opacity: 0;
     visibility: hidden;
 
-    .filter-dropdown.is-opened & {
+    &--is-opened {
       pointer-events: auto;
       opacity: 1;
       visibility: visible;
     }
 
-    .filter-dropdown.is-open-up & {
+    &--is-open-up {
       top: auto;
       bottom: 100%;
       border-top: 1px solid rgba(var(--col-blue-mid-2));
