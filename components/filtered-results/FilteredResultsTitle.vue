@@ -1,6 +1,7 @@
 <template>
   <div>
     <h4
+      v-if="items > -1"
       class="filtered-results__title">
       <span
         v-html="getMessage()" />
