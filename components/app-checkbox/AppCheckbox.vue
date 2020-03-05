@@ -10,8 +10,8 @@
       :aria-label="areaLabel">
 
     <span class="app-checkbox__icon">
-      <span :class="['app-checkbox__icon-checked', { 'app-checkbox__icon-checked--is-checked': isInputChecked }]" />
-      <span :class="['app-checkbox__icon-indeterminate', { 'app-checkbox__icon-indeterminate--is-indeterminate': isIndeterminate }]" />
+      <span :class="classIconChecked" />
+      <span :class="classIconIndeterminate" />
     </span>
     <span
       v-if="!!label"
@@ -50,6 +50,22 @@ export default {
   computed: {
     isInputChecked() {
       return !this.isIndeterminate && this.isChecked;
+    },
+    classIconChecked() {
+      return [
+        'app-checkbox__icon-checked',
+        {
+          'app-checkbox__icon-checked--is-checked': this.isInputChecked,
+        },
+      ];
+    },
+    classIconIndeterminate() {
+      return [
+        'app-checkbox__icon-indeterminate',
+        {
+          'app-checkbox__icon-indeterminate--is-indeterminate': this.isIndeterminate,
+        },
+      ];
     },
   },
   methods: {

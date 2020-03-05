@@ -26,7 +26,6 @@
 
 <script>
 import AppCheckbox from '../../../app-checkbox/AppCheckbox.vue';
-// import optionsValidator from './optionsValidator';
 
 export default {
   name: 'NestedCheckboxView',
@@ -38,7 +37,6 @@ export default {
     options: {
       type: Array,
       required: true,
-      // validator: optionsValidator,
     },
     parentNames: {
       type: Array,

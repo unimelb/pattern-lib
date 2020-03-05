@@ -4,13 +4,7 @@
     @click.stop>
     <div
       ref="select"
-      :class="[
-        'filter-dropdown__select',
-        {
-          'filter-dropdown__select--is-opened': isOpened && !isOpenUp,
-          'filter-dropdown__select--is-opened-up': isOpened && isOpenUp,
-        },
-      ]"
+      :class="classSelect"
       @click="onClose">
       <div class="filter-dropdown__label">
         lorem
@@ -25,13 +19,7 @@
 
     <div
       ref="body"
-      :class="[
-        'filter-dropdown__body',
-        {
-          'filter-dropdown__body--is-opened': isOpened,
-          'filter-dropdown__body--is-open-up': isOpenUp,
-        },
-      ]">
+      :class="classBody">
       <div
         v-if="optionsLabel"
         class="filter-dropdown__options-label">
@@ -103,6 +91,30 @@ export default {
         ? this.defaultOptions
         : cloneDeep(this.options),
     };
+  },
+  computed: {
+    classSelect() {
+      const { isOpened, isOpenUp } = this;
+
+      return [
+        'filter-dropdown__select',
+        {
+          'filter-dropdown__select--is-opened': isOpened && !isOpenUp,
+          'filter-dropdown__select--is-opened-up': isOpened && isOpenUp,
+        },
+      ];
+    },
+    classBody() {
+      const { isOpened, isOpenUp } = this;
+
+      return [
+        'filter-dropdown__body',
+        {
+          'filter-dropdown__body--is-opened': isOpened,
+          'filter-dropdown__body--is-open-up': isOpenUp,
+        },
+      ];
+    },
   },
   watch: {
     options(updatedOptions) {
