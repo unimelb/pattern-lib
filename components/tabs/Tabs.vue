@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import throttle from 'lodash.throttle';
+import { throttle } from 'throttle-debounce';
 import StyledSelect from '../forms/StyledSelect.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 
@@ -188,7 +188,7 @@ export default {
     this.panels = this.getTabs();
     this.showSelect = this.selectOptions.length > 1;
 
-    this.throttledTabsScrollEvent = throttle(this.checkControls, 100);
+    this.throttledTabsScrollEvent = throttle(100, this.checkControls);
     window.addEventListener('resize', this.throttledTabsScrollEvent);
   },
   beforeDestroy() {
