@@ -7,7 +7,7 @@
       :class="classSelect"
       @click="onClose">
       <div class="filter-dropdown__label">
-        lorem
+        {{ placeholderText }}
       </div>
 
       <div class="filter-dropdown__icon">
@@ -115,6 +115,22 @@ export default {
         },
       ];
     },
+    selectedOptionLabels() {
+      return this.getSelectedOptionLabels(this.options);
+    },
+    placeholderText() {
+      const lengthSelected = this.selectedOptionLabels.length;
+
+      if (!lengthSelected) {
+        return 'Please select';
+      }
+
+      if (lengthSelected === 1) {
+        return `${this.selectedOptionLabels[0]} selected`;
+      }
+
+      return `${lengthSelected} ${this.placeholderLabel} selected`;
+    },
   },
   watch: {
     options(updatedOptions) {
@@ -133,7 +149,8 @@ export default {
     getSelectedOptionLabels(options) {
       return options.reduce((selectedLabels, option) => {
         if (option.options && option.options.length) {
-          return this.getSelectedOptionLabels(option.options);
+          const nestedSelectedOptions = this.getSelectedOptionLabels(option.options);
+          return selectedLabels.concat(nestedSelectedOptions);
         }
 
         if (option.isChecked) {
