@@ -143,9 +143,4 @@
     },
     "transformIgnorePatterns": []
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "cross-env lint-staged"
-    }
-  }
 }
