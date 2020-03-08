@@ -314,6 +314,10 @@ a[target='_blank'] {
       margin-top: .25rem;
     }
   }
+
+  &--left {
+    justify-content: left;
+  }
 }
 
 /**
