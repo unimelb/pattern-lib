@@ -8,7 +8,7 @@
     <span
       v-if="!noIcon"
       class="push-icon"
-      :class="{ 'push-icon--top': top }">
+      :class="pushIconClasses">
       <slot v-if="!iconLeft" />
       <SvgIcon
         :name="icon"
@@ -93,6 +93,12 @@ export default {
       return {
         'push-icon__icon--left': this.iconLeft,
         'push-icon__icon--lg': this.iconSize === 'lg',
+      };
+    },
+    pushIconClasses() {
+      return {
+        'push-icon--top': this.top,
+        'push-icon--left': this.iconLeft,
       };
     },
     isLink() {
