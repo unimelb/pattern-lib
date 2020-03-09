@@ -5,7 +5,7 @@
   position: relative;
   margin: .3125rem 1.25rem 0 .625rem;
   text-decoration: none;
-  line-height: 1rem;
+  line-height: 1;
   color: rgb(var(--col-background-primary-white));
 
   &:visited {
@@ -31,7 +31,7 @@
   }
 
   @media (--bp-tablet) {
-    line-height: 1.25rem;
+    line-height: 1.25;
   }
 
   @media (--bp-x-desktop) {
