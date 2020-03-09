@@ -64,11 +64,11 @@
   }
 
   &__home {
-    width: 1.125em;
-    height: 1.125em;
-    margin-right: .25em;
-    margin-bottom: .125em;
-    margin-left: .25em;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: .25rem;
+    margin-bottom: .125rem;
+    margin-left: .25rem;
   }
 
   &__name {
@@ -76,7 +76,7 @@
   }
 
   &__chevron {
-    margin-top: .125em;
-    margin-left: .125em;
+    margin-top: .125rem;
+    margin-left: .125rem;
   }
 }
