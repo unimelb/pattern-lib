@@ -1,7 +1,7 @@
 {
   "name": "@unimelb/pattern-lib-vue",
   "description": "A complete design system for the University of Melbourne.",
-  "version": "5.5.4",
+  "version": "5.5.5",
   "repository": {
     "type": "git",
     "url": "https://github.com/unimelb/pattern-lib.git"
@@ -37,7 +37,6 @@
     "ike.js": "^0.0.2",
     "lodash.debounce": "^4.0.8",
     "lodash.escaperegexp": "^4.1.2",
-    "lodash.throttle": "^4.1.1",
     "semver": "^5.6.0",
     "sinon": "^7.3.0",
     "smoothscroll-polyfill": "^0.4.4",
@@ -74,13 +73,16 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-vue": "^6.0.1",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.9.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
     "inquirer-directory": "^2.1.0",
     "jest": "^23.4.1",
     "jest-axe": "^3.1.1",
     "jest-serializer-vue": "^2.0.2",
+    "lint-staged": "^10.0.8",
     "lodash.isplainobject": "^4.0.6",
     "normalize.css": "^8.0.0",
     "npm-run-all": "^4.1.5",
@@ -106,6 +108,7 @@
     "svg-fill-loader": "^0.0.8",
     "svg-sprite-loader": "^3.8.0",
     "svg-url-loader": "^2.3.3",
+    "throttle-debounce": "^2.1.0",
     "vue-axe": "^1.0.7",
     "vue-html-loader": "^1.2.4",
     "vue-jest": "^2.6.0",
@@ -139,5 +142,10 @@
       "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
     },
     "transformIgnorePatterns": []
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "cross-env lint-staged"
+    }
   }
 }
