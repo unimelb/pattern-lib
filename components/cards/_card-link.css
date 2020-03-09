@@ -62,7 +62,7 @@
     color: rgb(var(--col-black-dark));
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: 1.444rem;
+    line-height: 1.1555;
 
     svg {
       color: rgb(var(--col-black-dark));
