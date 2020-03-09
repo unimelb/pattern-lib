@@ -57,13 +57,13 @@ blockquote,
   }
 
   &--bdr-top {
-    padding-top: 1.8em;
+    padding-top: 1.8rem;
     border-top: 1px solid;
     border-color: rgb(var(--col-grey-mid-1));
   }
 
   &--bdr-btm {
-    padding-bottom: 1.8em;
+    padding-bottom: 1.8rem;
     border-bottom: 1px solid;
     border-color: rgb(var(--col-grey-mid-1));
   }
@@ -74,7 +74,7 @@ blockquote,
     margin-top: calc(var(--vr) / 2);
     float: left;
     color: var(--col-grey-mid-2);
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-style: normal;
     text-align: left;
     font-weight: var(--fw-bold);
