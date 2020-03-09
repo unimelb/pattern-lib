@@ -58,6 +58,7 @@
 @import 'tags/index.css';
 @import 'sidebar/index.css';
 @import 'profiles/accordion-profile/index.css';
+@import 'filtered-results/index.css';
 
 /* Third party - Alphabetically ordered */
 @import '../third-party/salesforce.css';
