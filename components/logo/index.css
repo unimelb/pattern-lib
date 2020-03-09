@@ -8,34 +8,34 @@
 
   &__image {
     display: block;
-    height: 66px;
-    width: 66px;
+    height: 3.666rem;
+    width: 3.666rem;
 
     &--md {
       @media (--bp-tablet) {
-        height: 96px;
-        width: 96px;
+        height: 5.333rem;
+        width: 5.333rem;
       }
     }
 
     &--lg {
-      height: 148px;
-      width: 148px;
+      height: 8.222rem;
+      width: 8.222rem;
     }
   }
 
   &--no-padding {
     &-sm {
-      margin: -6px;
+      margin: -.333rem;
     }
     &-md {
-      margin: -6px;
+      margin: -.333rem;
     }
     &-lg {
-      margin: -10px;
+      margin: -.555rem;
 
       @media (--bp-tablet) {
-        margin: -16px;
+        margin: -.888rem;
       }
     }
   }

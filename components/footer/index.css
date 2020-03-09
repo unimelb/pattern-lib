@@ -254,13 +254,13 @@
 
   &__label {
     font-size: .8em;
-    letter-spacing: 1px;
+    letter-spacing: .055rem;
     text-transform: uppercase;
   }
 
   &__icon {
     position: absolute;
-    top: calc(50% - 10px);
+    top: calc(50% - .555rem);
 
     /* vertical centring */
     left: 0;

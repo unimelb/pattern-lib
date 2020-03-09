@@ -29,14 +29,14 @@
     font-family: var(--ff-normal);
     font-size: 1.6875rem;
     font-weight: var(--fw-semibold);
-    letter-spacing: -.4px;
+    letter-spacing: -.222rem;
     line-height: 1.6875rem;
     text-shadow: 0 0 .125rem rgba(239, 239, 239, .8);
     text-align: center;
     margin-bottom: 2rem;
 
     @media (--bp-x-tablet) {
-      font-size: 48px;
+      font-size: 2.666rem;
       letter-spacing: -.0531rem;
       line-height: 4rem;
       text-shadow: 0 0 .1875rem #f4f4f4;

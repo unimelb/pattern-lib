@@ -16,7 +16,7 @@
 
   .card__thumb {
     width: auto;
-    max-height: 150px;
+    max-height: 8.333rem;
 
     & + .card__inner {
       padding-top: 0;

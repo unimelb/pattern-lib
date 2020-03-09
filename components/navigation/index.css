@@ -20,7 +20,7 @@
   }
 
   &__line {
-    width: 40px;
+    width: 2.222rem;
     margin: 0;
     border: 1px solid;
   }
@@ -34,9 +34,9 @@
 
   &__icon {
     display: inline;
-    width: 8px;
-    height: 8px;
-    margin-left: 6px;
+    width: .444rem;
+    height: .444rem;
+    margin-left: .333rem;
   }
 
   &__position {

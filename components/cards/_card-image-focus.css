@@ -5,12 +5,12 @@
 
   .card__thumb {
     position: relative;
-    height: 240px;
+    height: 13.333rem;
 
     &-img,
     img {
       width: 100%;
-      height: 240px;
+      height: 13.333rem;
     }
 
     &-img {
@@ -25,10 +25,10 @@
     }
 
     &--tall {
-      height: 360px;
+      height: 20rem;
 
       img {
-        height: 360px;
+        height: 20rem;
       }
     }
 

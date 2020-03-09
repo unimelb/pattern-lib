@@ -9,7 +9,7 @@
     width: 100%;
 
     @supports (object-fit: cover) {
-      height: 200px;
+      height: 11.111rem;
       object-fit: cover;
     }
   }

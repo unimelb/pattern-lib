@@ -92,8 +92,8 @@
 
   &__icon {
     width: 100%;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 11.111rem;
+    max-height: 11.111rem;
     margin-right: auto;
     margin-bottom: var(--vr);
     margin-left: auto;

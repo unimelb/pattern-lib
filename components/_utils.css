@@ -214,8 +214,8 @@ a[target='_blank'] {
   &::before {
     content: '';
     display: inline-block;
-    width: 4px;
-    height: 8px;
+    width: .222rem;
+    height: .444rem;
     margin-right: .5em;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjgiPgogIDxwYXRoIGQ9Ik0wIDB2Mi4yNUwxLjc1IDQgMCA1Ljc1VjhsNC00eiIgZmlsbD0iI2ZmZiIgLz4KPC9zdmc+');
     vertical-align: middle;
@@ -249,7 +249,7 @@ a[target='_blank'] {
     margin-left: 0;
 
     /* remove UA style */
-    padding: 0 1px;
+    padding: 0 .055rem;
 
     /* fix cropped focus outline caused by hidden overflow */
     overflow: hidden;
@@ -414,8 +414,8 @@ a[target='_blank'] {
 
 .screenreaders-only {
   position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
+  width: .055rem !important;
+  height: .055rem !important;
   overflow: hidden !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
