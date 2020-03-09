@@ -27,7 +27,7 @@
   }
 
   &__title {
-    min-height: 3em;
+    min-height: 3.75rem;
     margin-top: var(--vr);
     font-family: var(--ff-lead);
   }
