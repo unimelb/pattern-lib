@@ -398,6 +398,18 @@
         }
       }
     }
+
+    &--down {
+      &::after {
+        background-image: url('~icons/chevron-down.svg?fill=#094183');
+      }
+
+      &:active {
+        &::after {
+          background-image: url('~icons/chevron-down.svg?fill=#fff');
+        }
+      }
+    }
   }
 
   &--icon-before {
