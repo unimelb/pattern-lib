@@ -266,10 +266,10 @@
       content: '';
       display: inline-block;
       position: absolute;
-      top: calc(50% - (.75em / 2));
+      top: calc(50% - (.75rem / 2));
       right: 1rem;
-      width: .75em;
-      height: .75em;
+      width: .75rem;
+      height: .75rem;
       margin-top: .05rem;
       background-size: cover;
     }
@@ -410,10 +410,10 @@
       content: '';
       display: inline-block;
       position: absolute;
-      top: calc(50% - (.75em / 2));
+      top: calc(50% - (.75rem / 2));
       left: 1rem;
-      width: .75em;
-      height: .75em;
+      width: .75rem;
+      height: .75rem;
       margin-top: .05rem;
       background-size: cover;
     }
