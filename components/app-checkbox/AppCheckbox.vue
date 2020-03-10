@@ -3,19 +3,25 @@
     class="app-checkbox"
     @click.prevent="onClick">
     <input
-      type="checkbox"
-      class="app-checkbox__input"
-      :checked="isInputChecked"
       :aria-checked="isInputChecked"
-      :aria-label="areaLabel">
+      :aria-label="ariaLabel"
+      :checked="isInputChecked"
+      class="app-checkbox__input"
+      data-testid="app-checkbox-input"
+      type="checkbox">
 
     <span class="app-checkbox__icon">
-      <span :class="classIconChecked" />
-      <span :class="classIconIndeterminate" />
+      <span
+        :class="classIconChecked"
+        data-testid="app-checkbox-icon-checked" />
+      <span
+        :class="classIconIndeterminate"
+        data-testid="app-checkbox-icon-indeterminate" />
     </span>
     <span
       v-if="!!label"
-      class="app-checkbox__label">{{ label }}</span>
+      class="app-checkbox__label"
+      data-testid="app-checkbox-label">{{ label }}</span>
   </label>
 </template>
 
@@ -42,7 +48,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    areaLabel: {
+    ariaLabel: {
       type: String,
       default: '',
     },

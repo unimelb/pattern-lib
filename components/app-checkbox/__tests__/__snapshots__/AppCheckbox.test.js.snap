@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppCheckbox should match snapshot 1`] = `
+<label
+  class="app-checkbox"
+>
+  <input
+    aria-label="aria-label"
+    class="app-checkbox__input"
+    data-testid="app-checkbox-input"
+    type="checkbox"
+  />
+   
+  <span
+    class="app-checkbox__icon"
+  >
+    <span
+      class="app-checkbox__icon-checked"
+      data-testid="app-checkbox-icon-checked"
+    />
+     
+    <span
+      class="app-checkbox__icon-indeterminate"
+      data-testid="app-checkbox-icon-indeterminate"
+    />
+  </span>
+   
+  <span
+    class="app-checkbox__label"
+    data-testid="app-checkbox-label"
+  >
+    checkbox label
+  </span>
+</label>
+`;

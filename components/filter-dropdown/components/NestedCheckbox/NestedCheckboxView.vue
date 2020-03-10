@@ -9,7 +9,7 @@
       ]">
       <AppCheckbox
         :name="option.name"
-        :area-label="option.areaLabel"
+        :aria-label="option.ariaLabel"
         :is-checked="option.isChecked"
         :is-indeterminate="option.isIndeterminate"
         :label="option.label"
