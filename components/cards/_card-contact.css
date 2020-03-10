@@ -47,21 +47,21 @@
   &__title {
     display: block;
     margin-bottom: 1rem;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
   &__detail {
     display: block;
     margin-left: 0;
-    padding: 1em 0;
-    font-size: .9em;
+    padding: 1rem 0;
+    font-size: .9rem;
 
     &--inline {
       display: inline-block;
       margin-left: 0;
       padding-top: 0;
-      font-size: .9em;
+      font-size: .9rem;
     }
   }
 }
