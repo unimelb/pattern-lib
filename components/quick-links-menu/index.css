@@ -45,7 +45,7 @@
       margin-bottom: calc(var(--vr) / 2);
       padding-left: 0;
       color: rgb(var(--col-brand));
-      font-size: .9em;
+      font-size: .9rem;
       text-decoration: none;
 
       &:hover {
@@ -54,7 +54,7 @@
     }
 
     &-icon {
-      margin-top: .25em;
+      margin-top: .25rem;
       margin-right: calc(var(--vr) / 2);
     }
 

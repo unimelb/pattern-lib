@@ -51,7 +51,7 @@
       content: '';
       display: block;
       position: absolute;
-      top: -.75em;
+      top: -.75rem;
       left: 0;
       width: 1rem;
       border-top: 1px solid #fff;
@@ -68,7 +68,7 @@
 
     &__sub {
       margin-top: .25rem;
-      font-size: .875em;
+      font-size: .875rem;
     }
 
     @media (--bp-max-x-mobile) {

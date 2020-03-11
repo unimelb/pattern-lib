@@ -49,7 +49,7 @@
     float: right;
 
     svg {
-      margin-top: .5em;
+      margin-top: .5rem;
     }
 
     @media (--bp-x-desktop) {

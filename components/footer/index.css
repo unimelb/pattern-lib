@@ -39,7 +39,7 @@
     font-size: 1.125rem;
 
     a::before {
-      margin-right: .375em;
+      margin-right: .375rem;
       vertical-align: 6%;
 
       /* MAGIC NUMBER */
@@ -253,7 +253,7 @@
   }
 
   &__label {
-    font-size: .8em;
+    font-size: .8rem;
     letter-spacing: .055rem;
     text-transform: uppercase;
   }
