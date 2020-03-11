@@ -1,5 +1,6 @@
 <template>
   <label
+    :data-name="name"
     class="app-checkbox"
     @click.prevent="onClick">
     <input

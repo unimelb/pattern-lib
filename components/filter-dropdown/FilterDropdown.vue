@@ -5,7 +5,8 @@
     <div
       ref="select"
       :class="classSelect"
-      @click="onClose">
+      data-testid="filter-dropdown-select"
+      @click="onSelectClick">
       <div class="filter-dropdown__label">
         {{ placeholderText }}
       </div>
@@ -19,9 +20,11 @@
 
     <div
       ref="body"
+      data-testid="filter-dropdown-body"
       :class="classBody">
       <div
         v-if="optionsLabel"
+        data-testid="filter-dropdown-options-label"
         class="filter-dropdown__options-label">
         {{ optionsLabel }}
       </div>
@@ -34,6 +37,7 @@
         <div class="filter-dropdown__action">
           <ButtonIcon
             no-icon
+            data-testid="filter-dropdown-btn-clear"
             width="fullwidth"
             @click.native.prevent="onClearClick">
             Clear filter
@@ -43,6 +47,7 @@
         <div class="filter-dropdown__action">
           <ButtonIcon
             no-icon
+            data-testid="filter-dropdown-btn-apply"
             class="btn--cta"
             width="fullwidth"
             @click.native.prevent="onApplyClick">
@@ -176,7 +181,7 @@ export default {
         this.isOpened = !this.isOpened;
       }
     },
-    onClose() {
+    onSelectClick() {
       this.isOpened = !this.isOpened;
       this.copiedOptions = cloneDeep(this.options);
     },

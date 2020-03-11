@@ -1,0 +1,554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterDropdown should match spapshot 1`] = `
+<div
+  class="filter-dropdown"
+>
+  <div
+    class="filter-dropdown__select"
+    data-testid="filter-dropdown-select"
+  >
+    <div
+      class="filter-dropdown__label"
+    >
+      
+      2 course types selected
+    
+    </div>
+     
+    <div
+      class="filter-dropdown__icon"
+    >
+      <svg
+        aria-label="chevron-down"
+        class="push-icon__icon"
+        focusable="false"
+        role="img"
+      >
+        <use
+          xlink:href="#icon-chevron-down"
+        />
+         
+        <title>
+          Chevron-down
+        </title>
+         
+      </svg>
+    </div>
+  </div>
+   
+  <div
+    class="filter-dropdown__body"
+    data-testid="filter-dropdown-body"
+  >
+    <div
+      class="filter-dropdown__options-label"
+      data-testid="filter-dropdown-options-label"
+    >
+      
+      Course types to include:
+    
+    </div>
+     
+    <div>
+      <div>
+        <div
+          class="nested-checkbox nested-checkbox--is-first"
+        >
+          <label
+            class="app-checkbox"
+            data-name="all"
+          >
+            <input
+              aria-label=""
+              class="app-checkbox__input"
+              data-testid="app-checkbox-input"
+              type="checkbox"
+            />
+             
+            <span
+              class="app-checkbox__icon"
+            >
+              <span
+                class="app-checkbox__icon-checked"
+                data-testid="app-checkbox-icon-checked"
+              />
+               
+              <span
+                class="app-checkbox__icon-indeterminate app-checkbox__icon-indeterminate--is-indeterminate"
+                data-testid="app-checkbox-icon-indeterminate"
+              />
+            </span>
+             
+            <span
+              class="app-checkbox__label"
+              data-testid="app-checkbox-label"
+            >
+              All (49)
+            </span>
+          </label>
+           
+          <div>
+            <div
+              class="nested-checkbox"
+            >
+              <label
+                class="app-checkbox"
+                data-name="undergraduate"
+              >
+                <input
+                  aria-label=""
+                  class="app-checkbox__input"
+                  data-testid="app-checkbox-input"
+                  type="checkbox"
+                />
+                 
+                <span
+                  class="app-checkbox__icon"
+                >
+                  <span
+                    class="app-checkbox__icon-checked"
+                    data-testid="app-checkbox-icon-checked"
+                  />
+                   
+                  <span
+                    class="app-checkbox__icon-indeterminate app-checkbox__icon-indeterminate--is-indeterminate"
+                    data-testid="app-checkbox-icon-indeterminate"
+                  />
+                </span>
+                 
+                <span
+                  class="app-checkbox__label"
+                  data-testid="app-checkbox-label"
+                >
+                  Undergraduate (7)
+                </span>
+              </label>
+               
+              <div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="bachelor"
+                  >
+                    <input
+                      aria-checked="true"
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked app-checkbox__icon-checked--is-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      Bachelor (6)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="diploma"
+                  >
+                    <input
+                      aria-checked="true"
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked app-checkbox__icon-checked--is-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      Diploma (1)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="honours"
+                  >
+                    <input
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      Honours (0)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div
+              class="nested-checkbox"
+            >
+              <label
+                class="app-checkbox"
+                data-name="graduate"
+              >
+                <input
+                  aria-label=""
+                  class="app-checkbox__input"
+                  data-testid="app-checkbox-input"
+                  type="checkbox"
+                />
+                 
+                <span
+                  class="app-checkbox__icon"
+                >
+                  <span
+                    class="app-checkbox__icon-checked"
+                    data-testid="app-checkbox-icon-checked"
+                  />
+                   
+                  <span
+                    class="app-checkbox__icon-indeterminate"
+                    data-testid="app-checkbox-icon-indeterminate"
+                  />
+                </span>
+                 
+                <span
+                  class="app-checkbox__label"
+                  data-testid="app-checkbox-label"
+                >
+                  Graduate (38)
+                </span>
+              </label>
+               
+              <div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="certificate"
+                  >
+                    <input
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      Certificate (10)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="diploma"
+                  >
+                    <input
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      Diploma (6)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="master"
+                  >
+                    <input
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      Master (22)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div
+              class="nested-checkbox"
+            >
+              <label
+                class="app-checkbox"
+                data-name="research"
+              >
+                <input
+                  aria-label=""
+                  class="app-checkbox__input"
+                  data-testid="app-checkbox-input"
+                  type="checkbox"
+                />
+                 
+                <span
+                  class="app-checkbox__icon"
+                >
+                  <span
+                    class="app-checkbox__icon-checked"
+                    data-testid="app-checkbox-icon-checked"
+                  />
+                   
+                  <span
+                    class="app-checkbox__icon-indeterminate"
+                    data-testid="app-checkbox-icon-indeterminate"
+                  />
+                </span>
+                 
+                <span
+                  class="app-checkbox__label"
+                  data-testid="app-checkbox-label"
+                >
+                  Research (4)
+                </span>
+              </label>
+               
+              <div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="master"
+                  >
+                    <input
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      Master (2)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+                <div
+                  class="nested-checkbox"
+                >
+                  <label
+                    class="app-checkbox"
+                    data-name="phd"
+                  >
+                    <input
+                      aria-label=""
+                      class="app-checkbox__input"
+                      data-testid="app-checkbox-input"
+                      type="checkbox"
+                    />
+                     
+                    <span
+                      class="app-checkbox__icon"
+                    >
+                      <span
+                        class="app-checkbox__icon-checked"
+                        data-testid="app-checkbox-icon-checked"
+                      />
+                       
+                      <span
+                        class="app-checkbox__icon-indeterminate"
+                        data-testid="app-checkbox-icon-indeterminate"
+                      />
+                    </span>
+                     
+                    <span
+                      class="app-checkbox__label"
+                      data-testid="app-checkbox-label"
+                    >
+                      PhD (2)
+                    </span>
+                  </label>
+                   
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="filter-dropdown__actions"
+    >
+      <div
+        class="filter-dropdown__action"
+      >
+        <buttonicon
+          data-testid="filter-dropdown-btn-clear"
+          no-icon=""
+          width="fullwidth"
+        >
+          
+          Clear filter
+        
+        </buttonicon>
+      </div>
+       
+      <div
+        class="filter-dropdown__action"
+      >
+        <buttonicon
+          class="btn--cta"
+          data-testid="filter-dropdown-btn-apply"
+          no-icon=""
+          width="fullwidth"
+        >
+          
+          Apply filter
+        
+        </buttonicon>
+      </div>
+    </div>
+  </div>
+</div>
+`;

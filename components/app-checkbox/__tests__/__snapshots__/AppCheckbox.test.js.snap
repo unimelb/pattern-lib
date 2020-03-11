@@ -3,6 +3,7 @@
 exports[`AppCheckbox should match snapshot 1`] = `
 <label
   class="app-checkbox"
+  data-name="checkboxName"
 >
   <input
     aria-label="aria-label"
