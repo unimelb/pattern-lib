@@ -52,7 +52,6 @@
     "@storybook/addon-options": "^3.4.8",
     "@storybook/addons": "^3.4.8",
     "@storybook/vue": "^3.4.8",
-    "@types/jest": "^25.1.4",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
