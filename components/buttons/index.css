@@ -36,11 +36,11 @@
   }
 
   & + & {
-    margin-top: var(--vr);
+    margin-top: 1rem;
 
     @media (--bp-tablet) {
       margin-top: 0;
-      margin-left: var(--vr);
+      margin-left: 1rem;
     }
   }
 
@@ -245,7 +245,7 @@
     text-align: center;
 
     & + & {
-      margin-top: var(--vr);
+      margin-top: 1rem;
       margin-left: 0;
     }
   }
@@ -395,6 +395,18 @@
           &::after {
             background-image: url('~icons/twitter.svg?fill=#094183');
           }
+        }
+      }
+    }
+
+    &--down {
+      &::after {
+        background-image: url('~icons/chevron-down.svg?fill=#094183');
+      }
+
+      &:active {
+        &::after {
+          background-image: url('~icons/chevron-down.svg?fill=#fff');
         }
       }
     }
