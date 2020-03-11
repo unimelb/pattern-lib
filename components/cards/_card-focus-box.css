@@ -13,8 +13,8 @@
 
   &__cnr {
     position: absolute;
-    width: 6em;
-    height: 6em;
+    width: 6rem;
+    height: 6rem;
     opacity: .5;
     color: rgb(var(--col-emerald-mid-2));
 

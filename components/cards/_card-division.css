@@ -12,7 +12,7 @@
     margin: 0;
     padding: var(--vr);
     font-family: var(--ff-lead);
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-weight: var(--fw-semibold);
   }
 
