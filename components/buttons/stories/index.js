@@ -23,6 +23,7 @@ import StoryButtonCampaign from './StoryButtonCampaign.vue';
 import StoryButtonEvent from './StoryButtonEvent.vue';
 import StoryButtonEventAlt from './StoryButtonEventAlt.vue';
 import StoryButtonIconLeft from './StoryButtonIconLeft.vue';
+import StoryButtonIconsLarge from './StoryButtonIconsLarge.vue';
 
 import ButtonDefault from './ButtonDefault.vue';
 /* ##Import story component here */
@@ -38,9 +39,10 @@ storiesOf('Buttons/Types', module)
   .add('<button> element', createStory(StoryButtonElement));
 
 storiesOf('Buttons/Icons', module)
+  .add('Icons', createStory(StoryButtonIcons))
   .add('No Icon', createStory(StoryButtonNoIcon))
-  .add('Icon left', createStory(StoryButtonIconLeft))
-  .add('Icons', createStory(StoryButtonIcons));
+  .add('Icon on left', createStory(StoryButtonIconLeft))
+  .add('Large Icon', createStory(StoryButtonIconsLarge));
 
 storiesOf('Buttons/Adjacent', module)
   .add('Default', createStory(StoryButtonAdjacent))
