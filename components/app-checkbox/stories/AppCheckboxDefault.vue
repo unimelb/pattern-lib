@@ -16,8 +16,10 @@
 
 <script>
 import AppCheckbox from '../AppCheckbox.vue';
+import appCheckbox from './app-checkbox.md';
 
 export default {
+  readme: { custom: appCheckbox, source: false, html: true },
   components: { AppCheckbox },
   data() {
     return {
