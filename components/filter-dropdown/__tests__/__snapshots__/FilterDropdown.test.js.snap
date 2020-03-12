@@ -523,30 +523,31 @@ exports[`FilterDropdown should match spapshot 1`] = `
       <div
         class="filter-dropdown__action"
       >
-        <buttonicon
+        <a
+          class="btn btn--fullwidth"
           data-testid="filter-dropdown-btn-clear"
-          no-icon=""
-          width="fullwidth"
+          href="#"
         >
-          
+          <!---->
+           
           Clear filter
         
-        </buttonicon>
+        </a>
       </div>
        
       <div
         class="filter-dropdown__action"
       >
-        <buttonicon
-          class="btn--cta"
+        <a
+          class="btn--cta btn btn--fullwidth"
           data-testid="filter-dropdown-btn-apply"
-          no-icon=""
-          width="fullwidth"
+          href="#"
         >
-          
+          <!---->
+           
           Apply filter
         
-        </buttonicon>
+        </a>
       </div>
     </div>
   </div>

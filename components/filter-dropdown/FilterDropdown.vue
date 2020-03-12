@@ -64,9 +64,10 @@ import cloneDeep from 'lodash.clonedeep';
 import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
 import SvgIcon from '../icons/SvgIcon.vue';
+import ButtonIcon from '../buttons/ButtonIcon.vue';
 
 export default {
-  components: { NestedCheckbox, SvgIcon },
+  components: { NestedCheckbox, SvgIcon, ButtonIcon },
   props: {
     options: {
       type: Array,
