@@ -1,124 +1,144 @@
 import { mount } from 'vue-test-utils';
 import AppCheckbox from '../AppCheckbox.vue';
+import BaseCheckbox from '../../base/base-checkbox/BaseCheckbox';
 
 describe('AppCheckbox', () => {
-  it('should match snapshot', () => {
-    const result = mount(AppCheckbox,
-      {
-        propsData: {
-          name: 'checkboxName',
-          label: 'checkbox label',
-          ariaLabel: 'aria-label',
-        },
-      }).element;
-    expect(result).toMatchSnapshot();
-  });
+  describe('single modelValue', () => {
+    describe('should render BaseCheckbox: ', () => {
+      const cases = [
+        [
+          'all props',
+          {
+            name: 'app-checkbox',
+            modelValue: true,
+            label: 'App checkbox',
+            ariaLabel: 'ariaLabel',
+          },
+          {
+            name: 'app-checkbox',
+            label: 'App checkbox',
+            isChecked: true,
+            isIndeterminate: false,
+            ariaLabel: 'ariaLabel',
+          },
+        ],
+        [
+          'only required props',
+          {
+            modelValue: true,
+          },
+          {
+            name: '',
+            label: '',
+            isChecked: true,
+            isIndeterminate: false,
+            ariaLabel: '',
+          },
+        ],
+      ];
 
-  describe('label', () => {
-    const cases = [
-      ['should render label', 'checkbox label', true],
-      ['should not render label', undefined, false],
-    ];
+      it.each(cases)('%s', (description, propsData, expectedBaseProps) => {
+        const wrapper = mount(AppCheckbox, {
+          propsData,
+        });
 
-    it.each(cases)('%s', (description, label, result) => {
-      const wrapper = mount(AppCheckbox, {
-        propsData: {
-          name: 'checkboxName',
-          label,
-        },
+        const baseCheckbox = wrapper.find(BaseCheckbox);
+
+        expect(baseCheckbox.props()).toEqual(expectedBaseProps);
       });
+    });
 
-      expect(
-        wrapper.find('[data-testid="app-checkbox-label"]').exists()
-      ).toBe(result);
+    describe('should emit change event with a new value', () => {
+      const cases = [
+        [true],
+        [false],
+      ];
+
+      it.each(cases)('checkbox value: %s', (modelValue) => {
+        const propsData = {
+          name: 'app-checkbox',
+          modelValue,
+          label: 'App checkbox',
+          ariaLabel: 'ariaLabel',
+        };
+
+        const wrapper = mount(AppCheckbox, {
+          propsData,
+        });
+
+        wrapper.find(BaseCheckbox).vm.$emit('change', { isChecked: modelValue });
+
+        const emmitedChange = wrapper.emitted('change');
+        expect(emmitedChange.length).toEqual(1);
+        expect(emmitedChange[0].length).toEqual(1);
+        expect(emmitedChange[0][0]).toEqual(!modelValue);
+      });
     });
   });
 
-  it('should render checked checkbox', () => {
-    const wrapper = mount(AppCheckbox, {
-      propsData: {
-        name: 'checkboxName',
-        isChecked: true,
-      },
+  describe('modelValue - array of checked checkbox names', () => {
+    it('should throw an error if the name prop is not passed', () => {
+      let errorThrown = false;
+
+      try {
+        mount(AppCheckbox, {
+          propsData: {
+            modelValue: [],
+          },
+        });
+      } catch (e) {
+        errorThrown = true;
+      }
+
+      expect(errorThrown).toEqual(true);
     });
 
-    expect(
-      wrapper
-        .find('[data-testid="app-checkbox-input"]')
-        .element
-        .checked
-    ).toBe(true);
+    describe('checkbox state', () => {
+      const cases = [
+        ['should have checked state', ['checkbox1', 'appCheckbox'], true],
+        ['should have unchecked state', ['checkbox1'], false],
+      ];
 
-    expect(
-      wrapper
-        .find('[data-testid="app-checkbox-icon-checked"]')
-        .classes()
-        .find((className) => className.includes('--is-checked'))
-    ).not.toBe(undefined);
+      it.each(cases)('%s', (description, modelValue, expectedCheckedState) => {
+        const wrapper = mount(AppCheckbox, {
+          propsData: {
+            name: 'appCheckbox',
+            modelValue,
+          },
+        });
 
-    expect(
-      wrapper
-        .find('[data-testid="app-checkbox-icon-indeterminate"]')
-        .classes()
-        .find((className) => className.includes('--is-indeterminate'))
-    ).toBe(undefined);
-  });
-
-  describe('indeterminate state', () => {
-    it.each([
-      [true],
-      [false],
-    ])('should render indeterminate checkbox', (isChecked) => {
-      const wrapper = mount(AppCheckbox, {
-        propsData: {
-          name: 'checkboxName',
-          isChecked,
-          isIndeterminate: true,
-        },
+        expect(wrapper.find(BaseCheckbox).props().isChecked).toEqual(expectedCheckedState);
       });
-
-      expect(
-        wrapper
-          .find('[data-testid="app-checkbox-input"]')
-          .element
-          .checked
-      ).toBe(false);
-
-      expect(
-        wrapper
-          .find('[data-testid="app-checkbox-icon-checked"]')
-          .classes()
-          .find((className) => className.includes('--is-checked'))
-      ).toBe(undefined);
-
-      expect(
-        wrapper
-          .find('[data-testid="app-checkbox-icon-indeterminate"]')
-          .classes()
-          .find((className) => className.includes('--is-indeterminate'))
-      ).not.toBe(undefined);
     });
-  });
 
-  describe('ariaLabel', () => {
-    const cases = [
-      ['should render aria-label', 'ariaLabel', 'ariaLabel'],
-      ['should not render aria-label', undefined, ''],
-    ];
+    describe('should emit change event with a new value', () => {
+      const cases = [
+        [
+          'should add the checkbox name to a modelValue',
+          ['checkbox1'],
+          ['checkbox1', 'appCheckbox'],
+        ],
+        [
+          'should remove the checkbox name to a modelValue',
+          ['checkbox1', 'appCheckbox'],
+          ['checkbox1'],
+        ],
+      ];
 
-    it.each(cases)('%s', (description, ariaLabel, expectedAriaLabel) => {
-      const wrapper = mount(AppCheckbox, {
-        propsData: {
-          name: 'checkboxName',
-          ariaLabel,
-        },
+      it.each(cases)('%s', (description, modelValue, expectedChangedValue) => {
+        const wrapper = mount(AppCheckbox, {
+          propsData: {
+            name: 'appCheckbox',
+            modelValue,
+          },
+        });
+
+        wrapper.find(BaseCheckbox).vm.$emit('change', { isChecked: modelValue.includes('appCheckbox') });
+
+        const emmitedChange = wrapper.emitted('change');
+        expect(emmitedChange.length).toEqual(1);
+        expect(emmitedChange[0][0]).toEqual(expectedChangedValue);
       });
-
-      expect(
-        wrapper
-          .find('[data-testid="app-checkbox-input"]')
-          .attributes()['aria-label']
-      ).toBe(expectedAriaLabel);
     });
   });
 });

@@ -7,7 +7,7 @@
         'nested-checkbox',
         { 'nested-checkbox--is-first': isFirstNested },
       ]">
-      <AppCheckbox
+      <BaseCheckbox
         :name="option.name"
         :aria-label="option.ariaLabel"
         :is-checked="option.isChecked"
@@ -25,11 +25,11 @@
 </template>
 
 <script>
-import AppCheckbox from '../../../app-checkbox/AppCheckbox.vue';
+import BaseCheckbox from '../../../base/base-checkbox/BaseCheckbox.vue';
 
 export default {
   name: 'NestedCheckboxView',
-  components: { AppCheckbox },
+  components: { BaseCheckbox },
   model: {
     event: 'change',
   },

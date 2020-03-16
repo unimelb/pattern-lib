@@ -1,19 +1,66 @@
-AppCheckbox props:
+single AppCheckbox props:
 ```
-name: 'checkboxName', // string, required
 label: 'Undergraduate (7)', // string
-isChecked: false, // boolean, default: false
-isIndeterminate: true, // boolean, default: false
 ariaLabel: 'Undergraduate', // string
+modelValue: false // boolean
 ```
 
-AppCheckbox emits `change` event with a payload object:
-```
-{
-    name: 'checkboxName',
-    isChecked: false,
-    isIndeterminate: true,
+usage with `v-model`:
+```vue
+<template>
+  <AppCheckbox
+    v-model="isChecked"
+    label="Single checkbox" />
+</template>
+
+<script >
+export default {
+  data() {
+    return {
+      isChecked: true
+    };
+  }
 }
+</script>
 ```
 
-This is the current (unchanged) state of the checkbox. You must change it in the parent component to the desired state
+
+AppCheckbox list props:
+```
+label: 'Undergraduate (7)', // string
+ariaLabel: 'Undergraduate', // string
+name: 'checkboxName1', // string, required
+modelValue: ['checkedCheckboxName1', 'checkedCheckboxName2'] // array of checked checkbox names
+```
+
+usage with `v-model`:
+```vue
+<template>
+  <AppCheckbox
+    v-for="checkbox in checkboxes"
+    :key="checkbox.name"
+    :name="checkbox.name"
+    v-model="checkedCheckboxes"
+    label="Single checkbox" />
+</template>
+
+<script >
+export default {
+  data() {
+    return {
+      checkboxes: [
+        {
+          label: 'Checkbox1',
+          name: 'checkbox1'
+        },
+        {
+          label: 'Checkbox2',
+          name: 'checkbox2'
+        }
+      ],
+      checkedCheckboxes: ['checkbox1']
+    };
+  }
+}
+</script>
+```

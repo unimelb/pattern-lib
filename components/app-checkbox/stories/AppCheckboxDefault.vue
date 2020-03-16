@@ -1,15 +1,17 @@
 <template>
   <div>
+    <AppCheckbox
+      v-model="isSingleCheckboxChecked"
+      label="Single checkbox" />
+
+    <div>Checkboxes list:</div>
     <div
-      v-for="checkbox in checkboxes"
-      :key="checkbox.label">
+      v-for="checkbox in $options.checkboxes"
+      :key="checkbox.value">
       <AppCheckbox
-        :name="checkbox.name"
+        v-model="checkboxesGroup"
         :label="checkbox.label"
-        :is-checked="typeof checkbox.value === 'boolean' && checkbox.value"
-        :is-indeterminate="checkbox.value === 'indeterminate'"
-        :aria-label="checkbox.ariaLabel"
-        @change="onCheckboxChange" />
+        :name="checkbox.name" />
     </div>
   </div>
 </template>
@@ -19,46 +21,33 @@ import AppCheckbox from '../AppCheckbox.vue';
 import appCheckbox from './app-checkbox.md';
 
 export default {
-  readme: { custom: appCheckbox, source: false, html: true },
+  readme: { custom: appCheckbox, source: false, html: false },
+  name: 'AppCheckboxDefault',
+  checkboxes: [
+    {
+      label: 'Checkbox1',
+      name: 'checkbox1',
+    },
+    {
+      label: 'Checkbox2',
+      name: 'checkbox2',
+    },
+    {
+      label: 'Checkbox3',
+      name: 'checkbox3',
+    },
+    {
+      label: 'Checkbox4',
+      name: 'checkbox4',
+    },
+
+  ],
   components: { AppCheckbox },
   data() {
     return {
-      checkboxes: [
-        {
-          name: 'unchecked',
-          value: false,
-          label: 'Unchecked',
-          ariaLabel: 'unchecked checkbox',
-        },
-        {
-          name: 'checked',
-          value: true,
-          label: 'Checked',
-          ariaLabel: 'checked checkbox',
-        },
-        {
-          name: 'indeterminate',
-          value: 'indeterminate',
-          label: 'Indeterminate',
-          ariaLabel: 'indeterminate checkbox',
-        },
-      ],
+      isSingleCheckboxChecked: false,
+      checkboxesGroup: [],
     };
-  },
-  methods: {
-    onCheckboxChange({ name, isChecked, isIndeterminate }) {
-      const checkboxToChange = this.checkboxes.find((checkbox) => checkbox.name === name);
-
-      if (checkboxToChange) {
-        if (isChecked) {
-          checkboxToChange.value = 'indeterminate';
-        } else if (isIndeterminate) {
-          checkboxToChange.value = false;
-        } else {
-          checkboxToChange.value = true;
-        }
-      }
-    },
   },
 };
 </script>

@@ -8,7 +8,7 @@
 
 /* Components - Alphabetically ordered */
 @import 'accordion/index.css';
-@import 'app-checkbox/index.css';
+@import 'base/base-checkbox/index.css';
 @import 'profiles/alumni-profiles/index.css';
 @import 'testimonials/index.css';
 @import 'notice/index.css';
