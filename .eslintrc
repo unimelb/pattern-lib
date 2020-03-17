@@ -7,6 +7,10 @@
   "env": {
     "jest": true
   },
+  "globals": {
+    "cy": true,
+    "Cypress": true,
+  },
   "rules": {
     "comma-dangle": [
       "error",
