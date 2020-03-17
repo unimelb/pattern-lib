@@ -2,7 +2,7 @@ const category = 'Carousel';
 
 const stories = [
   'Default',
-  'long',
+  'Long',
 ];
 
 const viewports = Cypress.config('viewports');
