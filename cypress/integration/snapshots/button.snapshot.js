@@ -68,8 +68,6 @@ describe(mainCategory, () => {
       story.pages.forEach((page) => {
         viewports.forEach((vp) => {
           it(`${page} matches ${vp} snapshot`, () => {
-            // const { category } = story;
-
             cy.checkSnapshot(`${mainCategory}/${category}`, `${category}-${page}`, vp);
           });
         });
