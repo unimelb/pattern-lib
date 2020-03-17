@@ -30,7 +30,8 @@
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\" --fix",
     "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\" \"targets/**/*.js\" --fix",
     "test": "jest",
-    "test:e2e:snapshots": "cypress run",
+    "test:e2e:snapshots": "cypress run --config integrationFolder=cypress/integration/snapshots",
+    "test:e2e:updatesnapshots": "cypress run --env updateSnapshots=true --config integrationFolder=cypress/integration/snapshots",
     "generate": "plop --plopfile generator/index.js",
     "prepublish": "cross-env LOAD_EXTERNAL_ASSETS=true npm run build:vue"
   },
