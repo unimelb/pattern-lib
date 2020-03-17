@@ -22,5 +22,6 @@ Cypress.Commands.add('setDesktopViewPort', () => {
 addMatchImageSnapshotCommand({
   failureThreshold: 0.05, // threshold for entire image
   failureThresholdType: 'percent', // percent of image or number of pixels
+  customDiffDir: 'cypress/snapshots/__diff_output__',
   capture: 'fullPage', // capture viewport in screenshot
 });
