@@ -3774,11 +3774,6 @@ cyclist@~0.2.2:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-0.2.2.tgz#1b33792e11e914a2fd6d6ed6447464444e5fa640"
   integrity sha1-GzN5LhHpFKL9bW7WRHRkRE5fpkA=
 
-cypress-axe@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/cypress-axe/-/cypress-axe-0.5.3.tgz#420a0d12b9a514f3ca57dd828bd96ce17117f0d2"
-  integrity sha512-JBoFig7w9zF/80P+U0EyyR8O2uRveyJl1t4Wwndl9nhQwD59L+hEuqKK/kDByNQoyk6f3yzvyttnc8llaauqLQ==
-
 cypress-image-snapshot@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/cypress-image-snapshot/-/cypress-image-snapshot-3.1.1.tgz#cb7242d8086e0d4cbb7f333f927f71cdb5ff9971"
@@ -11755,7 +11750,7 @@ request@^2.87.0:
     tunnel-agent "^0.6.0"
     uuid "^3.3.2"
 
-"request@github:cypress-io/request#b5af0d1fa47eec97ba980cde90a13e69a2afcd16":
+request@cypress-io/request#b5af0d1fa47eec97ba980cde90a13e69a2afcd16:
   version "2.88.1"
   resolved "https://codeload.github.com/cypress-io/request/tar.gz/b5af0d1fa47eec97ba980cde90a13e69a2afcd16"
   dependencies:
