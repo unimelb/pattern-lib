@@ -30,7 +30,7 @@
     "lint": "run-s lint:js lint:css",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\" --fix",
     "lint:js": "eslint \"*.js\" \".storybook/**/*.{js,vue}\" \"components/**/*.{js,vue}\" \"targets/**/*.js\" --fix",
-    "start:cypress:snapshots": "cypress run --reporter cypress-image-snapshot/reporter --config integrationFolder=cypress/integration/snapshots",
+    "start:cypress:snapshots": "cypress run --config integrationFolder=cypress/integration/snapshots",
     "test": "jest",
     "test:e2e:snapshots": "run-s clean:snapshots start:cypress:snapshots",
     "test:e2e:updatesnapshots": "cypress run --env updateSnapshots=true --config integrationFolder=cypress/integration/snapshots",
