@@ -210,7 +210,7 @@ Recommended mobile devices for testing:
 
 ### Visual snapshot testing
 
-You can run visual snapshot testing against the development server (`yarn dev`) using `yarn test:e2e:snapshots`. This compares your changes against the latest visual snapshot.  Failed snapshot tests will show a visual diff comparason in `cypress/snapshots/__diff_output__`.
+You can run visual snapshot testing against the development server (`yarn dev`) using `yarn test:e2e:snapshots`. This compares your changes against the latest visual snapshot.  Failed snapshot tests will show a visual diff comparison in `cypress/snapshots/__diff_output__`.
 
 If you wish to update the snapshots with your changes run `yarn test:e2e:updatesnapshots`.
 
