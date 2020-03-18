@@ -208,6 +208,12 @@ Recommended mobile devices for testing:
 - iPad 2
 - Galaxy s5
 
+### Visual snapshot testing
+
+You can run visual snapshot testing against the development server (`yarn dev`) using `yarn test:e2e:snapshots`. This compares your changes against the latest visual snapshot.  Failed snapshot tests will show a visual diff comparison in `cypress/snapshots/__diff_output__`.
+
+If you wish to update the snapshots with your changes run `yarn test:e2e:updatesnapshots`.
+
 ## Developer documentation
 
 - [Documenting stories](docs/docs.md) - how to customise the content of the README panel for each story

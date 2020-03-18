@@ -7,12 +7,13 @@
     :disabled="!isLink && disabled">
     <span
       v-if="!noIcon"
-      :class="`push-icon${top ? ' push-icon--top' : ''}`">
+      class="push-icon"
+      :class="pushIconClasses">
       <slot v-if="!iconLeft" />
       <SvgIcon
         :name="icon"
+        :class="iconClasses"
         class="push-icon__icon"
-        :class="iconLeft ? 'push-icon__icon--left' : ''"
         width="15px"
         height="15px"
         aria-hidden="true" />
@@ -44,6 +45,11 @@ export default {
     width: {
       type: String,
       default: '',
+    },
+    iconSize: {
+      type: String,
+      default: 'md',
+      validator: (value) => ['md', 'lg'].indexOf(value) !== -1,
     },
     inverted: {
       type: Boolean,
@@ -82,6 +88,18 @@ export default {
           'btn--disabled': this.disabled,
         },
       ];
+    },
+    iconClasses() {
+      return {
+        'push-icon__icon--left': this.iconLeft,
+        'push-icon__icon--lg': this.iconSize === 'lg',
+      };
+    },
+    pushIconClasses() {
+      return {
+        'push-icon--top': this.top,
+        'push-icon--left': this.iconLeft,
+      };
     },
     isLink() {
       return this.element === 'a';

@@ -5,3 +5,8 @@ node_modules/
 npm-debug*.log
 yarn-error.log
 .idea
+
+#cypress
+/cypress/videos
+/cypress/screenshots
+/cypress/snapshots/**/__diff_output__/

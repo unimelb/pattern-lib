@@ -294,6 +294,11 @@ a[target='_blank'] {
       margin-right: 1em;
       margin-left: 0;
     }
+
+    &--lg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
   }
 
   &__text {
@@ -308,6 +313,10 @@ a[target='_blank'] {
     .push-icon__icon {
       margin-top: .25rem;
     }
+  }
+
+  &--left {
+    justify-content: left;
   }
 }
 
