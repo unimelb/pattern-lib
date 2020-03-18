@@ -16,7 +16,7 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://picsum.photos/seed/1/1200/540">
+      bg-image="https://picsum.photos/seed/2/1200/540">
       <CardFocusBox
         element="div"
         compact
@@ -31,7 +31,7 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://picsum.photos/seed/1/1200/540">
+      bg-image="https://picsum.photos/seed/3/1200/540">
       <CardFocusBox
         element="div"
         compact
@@ -46,7 +46,7 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://picsum.photos/seed/1/1200/540">
+      bg-image="https://picsum.photos/seed/4/1200/540">
       <CardFocusBox
         element="div"
         compact
@@ -61,7 +61,7 @@
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://picsum.photos/seed/1/1200/540">
+      bg-image="https://picsum.photos/seed/5/1200/540">
       <CardFocusBox
         element="div"
         compact
