@@ -8,9 +8,9 @@ Cypress.Commands.add('visitAndCheckSnapshot', ({
   const encodedUrl = encodeURIComponent(url);
   const encodedStory = encodeURIComponent(story);
 
-  cy.visit(`iframe.html?selectedKind=${encodedUrl}&selectedStory=${encodedStory}`);
-
   cy.viewport(vp);
+
+  cy.visit(`iframe.html?selectedKind=${encodedUrl}&selectedStory=${encodedStory}`);
 
   cy.checkSnapshot({
     category, story, vp,
@@ -29,9 +29,9 @@ Cypress.Commands.add('vistPage', ({
   const encodedUrl = encodeURIComponent(url);
   const encodedStory = encodeURIComponent(story);
 
-  cy.visit(`iframe.html?selectedKind=${encodedUrl}&selectedStory=${encodedStory}`);
-
   cy.viewport(vp);
+
+  cy.visit(`iframe.html?selectedKind=${encodedUrl}&selectedStory=${encodedStory}`);
 });
 
 Cypress.Commands.add('setMobileViewPort', () => {
