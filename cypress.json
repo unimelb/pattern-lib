@@ -6,8 +6,5 @@
   "viewports": [
     "iphone-5",
     "macbook-11"
-  ],
-  "env": {
-    "params": "&full=1&addons=1&stories=1&panelRight=0&addonPanel=REACT_STORYBOOK%2Freadme%2Fpanel"
-  }
+  ]
 }
