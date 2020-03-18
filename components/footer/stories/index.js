@@ -3,5 +3,5 @@ import { createStory } from 'storybook/utils';
 
 import PageFooterDefault from './PageFooterDefault.vue';
 
-storiesOf(' Footer', module)
+storiesOf('Footer', module)
   .add('Default', createStory(PageFooterDefault));
