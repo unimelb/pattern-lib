@@ -1,48 +1,25 @@
-const mainCategory = 'Buttons';
+const mainCategory = 'Listing';
 
 const stories = [
   {
-    category: 'Types',
+    category: 'Image Listing',
     pages: [
-      'Primary (default)',
-      'Secondary',
-      'Inverted',
-      'CTA',
-      'Campaign',
-      'Event',
-      'Event Alt',
-      '<button> element',
+      'Three Column',
+      'Two Column',
+      'Color variations',
+      'No Padding (Brand hub variation)',
+      'Hero Image',
     ],
   },
   {
-    category: 'Icons',
+    category: 'Container',
     pages: [
-      'Icons',
-      'No Icon',
-      'Icon on left',
-      'Large Icon',
-    ],
-  },
-  {
-    category: 'Adjacent',
-    pages: [
-      'Full Width',
-      'Prev/Next aligned buttons',
-    ],
-  },
-  {
-    category: 'Sizes',
-    pages: [
-      'Extra Small',
-      'Small',
-    ],
-  },
-  {
-    category: 'CMS',
-    pages: [
-      'Default (btn--icon)',
-      'Inverted',
-      'Inverse (btn--icon-before)',
+      '1 Column',
+      '2 Column',
+      '3 Column',
+      '4 Column',
+      'Link List',
+      'Logo Listing',
     ],
   },
 ];

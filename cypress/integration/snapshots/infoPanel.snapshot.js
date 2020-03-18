@@ -1,4 +1,4 @@
-const category = 'Carousel';
+const category = 'Info Panel';
 
 const stories = [
   'Default',

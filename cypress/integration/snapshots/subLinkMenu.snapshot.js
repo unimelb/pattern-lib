@@ -1,7 +1,9 @@
-const category = 'Carousel';
+const category = 'Sublink Menu';
 
 const stories = [
-  'Default',
+  '2 Columns',
+  '1of2 Columns',
+  'With Images',
 ];
 
 const viewports = Cypress.config('viewports');

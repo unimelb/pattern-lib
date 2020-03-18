@@ -1,7 +1,8 @@
-const category = 'Carousel';
+const category = 'Testimonials';
 
 const stories = [
-  'Default',
+  'On Light Background',
+  'On Dark Background',
 ];
 
 const viewports = Cypress.config('viewports');

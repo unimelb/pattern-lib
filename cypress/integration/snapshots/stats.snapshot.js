@@ -1,7 +1,9 @@
-const category = 'Carousel';
+const category = 'Stats';
 
 const stories = [
   'Default',
+  'Inverted',
+  'Inverted section with attribution',
 ];
 
 const viewports = Cypress.config('viewports');

@@ -1,7 +1,8 @@
-const category = 'Carousel';
+const category = 'Dropdown';
 
 const stories = [
   'Default',
+  'Change Data',
 ];
 
 const viewports = Cypress.config('viewports');

@@ -1,7 +1,7 @@
-const category = 'Carousel';
+const category = 'Timeline';
 
 const stories = [
-  'Default',
+  'Complex headers',
 ];
 
 const viewports = Cypress.config('viewports');

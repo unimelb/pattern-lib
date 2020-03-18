@@ -1,48 +1,45 @@
-const mainCategory = 'Buttons';
+const mainCategory = 'Section';
 
 const stories = [
   {
-    category: 'Types',
+    category: 'Crest',
     pages: [
-      'Primary (default)',
-      'Secondary',
-      'Inverted',
-      'CTA',
-      'Campaign',
-      'Event',
-      'Event Alt',
-      '<button> element',
+      'Small width',
+      'Divider',
+      'Divider - subtitle',
     ],
   },
   {
-    category: 'Icons',
+    category: 'Focus',
     pages: [
-      'Icons',
-      'No Icon',
-      'Icon on left',
-      'Large Icon',
+      'Default',
+      'With button',
     ],
   },
   {
-    category: 'Adjacent',
+    category: 'Section',
     pages: [
-      'Full Width',
-      'Prev/Next aligned buttons',
+      'BG - White',
+      'BG - Inverted',
+      'BG - Alt',
     ],
   },
   {
-    category: 'Sizes',
+    category: 'Two Column',
     pages: [
-      'Extra Small',
-      'Small',
+      'Left',
+      'Right',
+      'In small section',
+      'With text in sidebar',
     ],
   },
   {
-    category: 'CMS',
+    category: 'Split Section',
     pages: [
-      'Default (btn--icon)',
-      'Inverted',
-      'Inverse (btn--icon-before)',
+      'Left',
+      'Right',
+      'Quote Left',
+      'Quote Right',
     ],
   },
 ];

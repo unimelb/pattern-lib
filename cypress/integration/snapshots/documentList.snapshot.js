@@ -1,7 +1,10 @@
-const category = 'Carousel';
+const category = 'Document List';
 
 const stories = [
-  'Default',
+  'Document List',
+  'Document thumbnail list',
+  'Document thumbnail list - four col',
+  'Container document list (for CMS)',
 ];
 
 const viewports = Cypress.config('viewports');

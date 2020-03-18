@@ -1,48 +1,18 @@
-const mainCategory = 'Buttons';
+const mainCategory = 'Side Panel';
 
 const stories = [
   {
-    category: 'Types',
+    category: 'Left',
     pages: [
-      'Primary (default)',
-      'Secondary',
-      'Inverted',
-      'CTA',
-      'Campaign',
-      'Event',
-      'Event Alt',
-      '<button> element',
+      'With section',
+      'With content blocks',
     ],
   },
   {
-    category: 'Icons',
+    category: 'Right',
     pages: [
-      'Icons',
-      'No Icon',
-      'Icon on left',
-      'Large Icon',
-    ],
-  },
-  {
-    category: 'Adjacent',
-    pages: [
-      'Full Width',
-      'Prev/Next aligned buttons',
-    ],
-  },
-  {
-    category: 'Sizes',
-    pages: [
-      'Extra Small',
-      'Small',
-    ],
-  },
-  {
-    category: 'CMS',
-    pages: [
-      'Default (btn--icon)',
-      'Inverted',
-      'Inverse (btn--icon-before)',
+      'With section',
+      'With content blocks',
     ],
   },
 ];

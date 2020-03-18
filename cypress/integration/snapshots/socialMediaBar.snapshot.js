@@ -1,4 +1,4 @@
-const category = 'Carousel';
+const category = 'Social Media Bar';
 
 const stories = [
   'Default',

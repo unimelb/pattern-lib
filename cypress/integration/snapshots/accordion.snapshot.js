@@ -1,7 +1,10 @@
-const category = 'Carousel';
+const category = 'Accordion';
 
 const stories = [
-  'Default',
+  'Grouped accordions, first panel open',
+  'Mobile only toggle block',
+  'Empty title',
+  'Enquiry (toggle block)',
 ];
 
 const viewports = Cypress.config('viewports');

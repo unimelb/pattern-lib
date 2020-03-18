@@ -1,7 +1,14 @@
-const category = 'Carousel';
+const category = 'Forms';
 
 const stories = [
-  'Default',
+  'Text fields',
+  'Inline form',
+  'Inline search form',
+  'Inline search form (inverse)',
+  'Inline search form (min)',
+  'MCE form markup',
+  'MCE date selector',
+  'Styled select',
 ];
 
 const viewports = Cypress.config('viewports');

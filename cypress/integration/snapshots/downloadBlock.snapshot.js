@@ -1,4 +1,4 @@
-const category = 'Carousel';
+const category = 'Download Block';
 
 const stories = [
   'Default',

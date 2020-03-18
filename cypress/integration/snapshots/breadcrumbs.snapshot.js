@@ -1,7 +1,9 @@
-const category = 'Carousel';
+const category = 'Breadcrumbs';
 
 const stories = [
-  'Default',
+  'Level 1',
+  'Level 2',
+  'Extra long',
 ];
 
 const viewports = Cypress.config('viewports');

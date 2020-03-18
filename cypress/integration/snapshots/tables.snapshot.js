@@ -1,7 +1,15 @@
-const category = 'Carousel';
+const category = 'Tables';
 
 const stories = [
   'Default',
+  'Default no <thead>',
+  'Default (Not Responsive)',
+  'Default (Compacted)',
+  'Complex',
+  'Complex (Compacted)',
+  'Centered',
+  'Tight padded',
+  'Loose padded',
 ];
 
 const viewports = Cypress.config('viewports');

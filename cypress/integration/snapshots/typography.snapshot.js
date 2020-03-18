@@ -1,7 +1,19 @@
-const category = 'Carousel';
+const category = 'Typography';
 
 const stories = [
-  'Default',
+  'Titles',
+  'Heading Component',
+  'Long headings',
+  'Lead paragraph',
+  'Links',
+  'Links - external',
+  'Lists - ordered',
+  'Lists - ordered, giant',
+  'Lists - unordered',
+  'Lists - spaced for longer content',
+  'Lists - variant bullets',
+  'Lists - mixed',
+  'Preformatted text',
 ];
 
 const viewports = Cypress.config('viewports');

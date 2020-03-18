@@ -1,7 +1,8 @@
-const category = 'Carousel';
+const category = 'Mega menu';
 
 const stories = [
-  'Default',
+  'Menu / hamburger hybrid',
+  'Mega Menu with Top nav',
 ];
 
 const viewports = Cypress.config('viewports');

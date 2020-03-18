@@ -1,4 +1,4 @@
-const category = 'Carousel';
+const category = 'Welcome';
 
 const stories = [
   'Default',

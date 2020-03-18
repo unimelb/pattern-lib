@@ -1,7 +1,8 @@
-const category = 'Carousel';
+const category = 'Contact List';
 
 const stories = [
   'Default',
+  'Long details',
 ];
 
 const viewports = Cypress.config('viewports');

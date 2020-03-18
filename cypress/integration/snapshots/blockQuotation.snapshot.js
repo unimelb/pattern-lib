@@ -1,7 +1,16 @@
-const category = 'Carousel';
+const category = 'Block Quotation';
 
 const stories = [
   'Default',
+  'With Sub cite',
+  'Small',
+  'With large quote marks',
+  'With borders',
+  'Without author',
+  'Long',
+  'Inverted',
+  'Inverted with borders',
+  'Raw (no classes)',
 ];
 
 const viewports = Cypress.config('viewports');

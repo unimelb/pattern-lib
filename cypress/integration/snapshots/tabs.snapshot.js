@@ -1,7 +1,10 @@
-const category = 'Carousel';
+const category = 'Tabs';
 
 const stories = [
-  'Default',
+  'Tabs, isolated',
+  'Tabs, in context',
+  'Tabs (alt)',
+  'Tabs, using a select',
 ];
 
 const viewports = Cypress.config('viewports');

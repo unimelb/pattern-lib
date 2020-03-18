@@ -1,48 +1,26 @@
-const mainCategory = 'Buttons';
+const mainCategory = 'Media Gallery';
 
 const stories = [
   {
-    category: 'Types',
+    category: 'In Page',
     pages: [
-      'Primary (default)',
-      'Secondary',
-      'Inverted',
-      'CTA',
-      'Campaign',
-      'Event',
-      'Event Alt',
-      '<button> element',
+      'Default',
     ],
   },
   {
-    category: 'Icons',
+    category: 'Overlay',
     pages: [
-      'Icons',
-      'No Icon',
-      'Icon on left',
-      'Large Icon',
+      '2 col',
+      '3 col',
+      '4 col',
     ],
   },
   {
-    category: 'Adjacent',
+    category: 'Overlay with captions',
     pages: [
-      'Full Width',
-      'Prev/Next aligned buttons',
-    ],
-  },
-  {
-    category: 'Sizes',
-    pages: [
-      'Extra Small',
-      'Small',
-    ],
-  },
-  {
-    category: 'CMS',
-    pages: [
-      'Default (btn--icon)',
-      'Inverted',
-      'Inverse (btn--icon-before)',
+      '2 col',
+      '3 col',
+      '4 col',
     ],
   },
 ];

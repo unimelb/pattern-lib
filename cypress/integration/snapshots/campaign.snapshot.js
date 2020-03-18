@@ -1,7 +1,8 @@
-const category = 'Carousel';
+const category = 'Campaign';
 
 const stories = [
   'Default',
+  'Dark Background',
 ];
 
 const viewports = Cypress.config('viewports');

@@ -1,7 +1,11 @@
-const category = 'Carousel';
+const category = 'Logo';
 
 const stories = [
-  'Default',
+  'Default (Large)',
+  'Small',
+  'Medium',
+  'Large',
+  'No Padding',
 ];
 
 const viewports = Cypress.config('viewports');

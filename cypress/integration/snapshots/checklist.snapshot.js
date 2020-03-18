@@ -1,7 +1,7 @@
-const category = 'Carousel';
+const category = 'Check List';
 
 const stories = [
-  'Default',
+  'Pre-checked',
 ];
 
 const viewports = Cypress.config('viewports');

@@ -1,4 +1,4 @@
-const category = 'Carousel';
+const category = 'Modal';
 
 const stories = [
   'Default',
@@ -16,6 +16,10 @@ describe(category, () => {
           story,
           vp,
         };
+
+        cy.vistPage(params);
+
+        cy.get('.btn').eq(0).click();
 
         cy.visitAndCheckSnapshot(params);
       });

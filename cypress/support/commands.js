@@ -2,14 +2,36 @@ import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 
 Cypress.Commands.overwrite('log', (subject, message) => cy.task('log', message));
 
-Cypress.Commands.add('checkSnapshot', ({
+Cypress.Commands.add('visitAndCheckSnapshot', ({
   url, category, story, vp,
 }) => {
-  cy.visit(`iframe.html?selectedKind=${url}&selectedStory=${story}`);
+  const encodedUrl = encodeURIComponent(url);
+  const encodedStory = encodeURIComponent(story);
+
+  cy.visit(`iframe.html?selectedKind=${encodedUrl}&selectedStory=${encodedStory}`);
 
   cy.viewport(vp);
 
+  cy.checkSnapshot({
+    category, story, vp,
+  });
+});
+
+Cypress.Commands.add('checkSnapshot', ({
+  category, story, vp,
+}) => {
   cy.get('#root').matchImageSnapshot(`${category}-${story}.${vp}`);
+});
+
+Cypress.Commands.add('vistPage', ({
+  url, story, vp,
+}) => {
+  const encodedUrl = encodeURIComponent(url);
+  const encodedStory = encodeURIComponent(story);
+
+  cy.visit(`iframe.html?selectedKind=${encodedUrl}&selectedStory=${encodedStory}`);
+
+  cy.viewport(vp);
 });
 
 Cypress.Commands.add('setMobileViewPort', () => {

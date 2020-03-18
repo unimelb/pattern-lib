@@ -1,48 +1,43 @@
-const mainCategory = 'Buttons';
+const mainCategory = 'Header';
 
 const stories = [
   {
-    category: 'Types',
+    category: 'Event',
     pages: [
-      'Primary (default)',
-      'Secondary',
-      'Inverted',
-      'CTA',
-      'Campaign',
-      'Event',
-      'Event Alt',
-      '<button> element',
+      'Default',
     ],
   },
   {
-    category: 'Icons',
+    category: 'Level 1',
     pages: [
-      'Icons',
-      'No Icon',
-      'Icon on left',
-      'Large Icon',
+      'Default',
+      'Entity identifier',
+      'Dual entity identifier',
+      'Homepage campaign (card)',
+      'Homepage campaign (button)',
     ],
   },
   {
-    category: 'Adjacent',
+    category: 'Level 2',
     pages: [
-      'Full Width',
-      'Prev/Next aligned buttons',
+      'Default',
+      'Entity identifier',
+      'Dual entity identifier',
+      'Campaign banner',
+      'Campaign banner (no logo)',
     ],
   },
   {
-    category: 'Sizes',
+    category: 'Level 3',
     pages: [
-      'Extra Small',
-      'Small',
+      'Default',
+      'Alt',
     ],
   },
   {
-    category: 'CMS',
+    category: 'Split Section',
     pages: [
-      'Default (btn--icon)',
-      'Inverted',
-      'Inverse (btn--icon-before)',
+      'Default',
     ],
   },
 ];

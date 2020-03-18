@@ -1,7 +1,8 @@
-const category = 'Carousel';
+const category = 'Nav Bar';
 
 const stories = [
   'Default',
+  'With mobile toggle',
 ];
 
 const viewports = Cypress.config('viewports');

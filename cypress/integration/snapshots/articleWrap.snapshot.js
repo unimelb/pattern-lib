@@ -1,7 +1,10 @@
-const category = 'Carousel';
+const category = 'Article';
 
 const stories = [
   'Default',
+  'No metadata',
+  'News article with categories',
+  'News article with categories and tags',
 ];
 
 const viewports = Cypress.config('viewports');

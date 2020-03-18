@@ -1,7 +1,11 @@
-const category = 'Carousel';
+const category = 'Content Block';
 
 const stories = [
-  'Default',
+  'Default (medium)',
+  'Large + inverted',
+  'Headings',
+  'Short + light',
+  'Combination News & Events',
 ];
 
 const viewports = Cypress.config('viewports');

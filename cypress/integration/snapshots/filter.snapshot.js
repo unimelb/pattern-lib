@@ -1,7 +1,8 @@
-const category = 'Carousel';
+const category = 'Filter/Components';
 
 const stories = [
-  'Default',
+  'Accordion Filter',
+  'Cards Filter',
 ];
 
 const viewports = Cypress.config('viewports');

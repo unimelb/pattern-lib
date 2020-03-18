@@ -1,7 +1,7 @@
-const category = 'Carousel';
+const category = 'Navigation';
 
 const stories = [
-  'Default',
+  'In page Navigation',
 ];
 
 const viewports = Cypress.config('viewports');

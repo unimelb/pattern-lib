@@ -1,48 +1,29 @@
-const mainCategory = 'Buttons';
+const mainCategory = 'Pathfinder';
 
 const stories = [
   {
-    category: 'Types',
+    category: 'Focus',
     pages: [
-      'Primary (default)',
-      'Secondary',
-      'Inverted',
-      'CTA',
-      'Campaign',
-      'Event',
-      'Event Alt',
-      '<button> element',
+      'Focus pathfinder',
+      'Compact Focus pathfinder',
     ],
   },
   {
-    category: 'Icons',
+    category: 'Image card',
     pages: [
-      'Icons',
-      'No Icon',
-      'Icon on left',
-      'Large Icon',
+      'Image card',
+      'Image card (2 column)',
+      'No image',
+      'No image (2 column)',
     ],
   },
   {
-    category: 'Adjacent',
+    category: 'Contextual Link',
     pages: [
-      'Full Width',
-      'Prev/Next aligned buttons',
-    ],
-  },
-  {
-    category: 'Sizes',
-    pages: [
-      'Extra Small',
-      'Small',
-    ],
-  },
-  {
-    category: 'CMS',
-    pages: [
-      'Default (btn--icon)',
-      'Inverted',
-      'Inverse (btn--icon-before)',
+      'Longer titles',
+      'No Image',
+      'Legacy markup',
+      'No Image inverted',
     ],
   },
 ];
