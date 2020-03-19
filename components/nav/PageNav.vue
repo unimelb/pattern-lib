@@ -158,7 +158,7 @@ export default {
       trigger.addEventListener('click', this.openNestedPanel.bind(this, panel, true));
 
       // Inject button to close nested panel
-      const backBtn = document.createElement('button'); /* eslint-disable-line react/button-has-type */
+      const backBtn = document.createElement('button');
       backBtn.className = 'sitenav__back-btn button-ui';
       backBtn.textContent = 'Back';
       backBtn.setAttribute('type', 'button');

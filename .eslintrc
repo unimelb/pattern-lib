@@ -1,6 +1,7 @@
 {
   "extends": [
-    "eslint-config-airbnb",
+    "eslint:recommended",
+    "airbnb-base",
     "plugin:vue/recommended",
     "plugin:you-dont-need-lodash-underscore/compatible"
   ],
@@ -8,10 +9,12 @@
     "jest": true
   },
   "globals": {
-    "cy": true,
-    "Cypress": true,
+    "browser": true
   },
   "rules": {
+    "array-callback-return": "error",
+    "block-scoped-var": "error",
+    "camelcase": "error",
     "comma-dangle": [
       "error",
       {
@@ -22,20 +25,31 @@
         "functions": "never"
       }
     ],
+    "consistent-return": "error",
     "global-require": "off",
     "import/extensions": "off",
     "import/first": "off",
     "import/newline-after-import": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
-    "jsx-a11y/label-has-for": "off",
     "max-len": "off",
+    "no-caller": "error",
+    "no-eq-null": "error",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-lone-blocks": "error",
+    "no-mixed-operators": "error",
+    "no-multi-assign": "error",
+    "no-multi-str": "error",
     "no-param-reassign": [
       "error",
       {
         "props": false
       }
     ],
+    "no-restricted-globals": "error",
+    "no-script-url": "error",
+    "no-sequences": "error",
     "no-underscore-dangle": [
       "error",
       {
@@ -54,9 +68,10 @@
         "variables": true
       }
     ],
-    "react/jsx-filename-extension": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/no-unknown-property": "off",
+    "no-useless-concat": "error",
+    "no-case-declarations": "off",
+    "no-magic-numbers": "off",
+    "radix": "error",
     "vue/attribute-hyphenation": "error",
     "vue/html-quotes": "error",
     "vue/html-self-closing": "error",
