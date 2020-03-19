@@ -15,8 +15,8 @@
     &::after {
       content: '';
       display: inline-block;
-      width: .875rem;
-      height: .875rem;
+      width: .75rem;
+      height: .75rem;
       margin-left: .25rem;
       background-image: url('~icons/download.svg?fill=#09707E');
       vertical-align: -.175rem;
