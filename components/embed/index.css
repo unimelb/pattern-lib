@@ -34,7 +34,11 @@
   /* SoundCloud's "classic" embed (horizontal player) */
   &--soundcloud-classic > iframe {
     position: static;
-    height: 9.222rem;
+    height: 10.375rem;
+
+    @media (--bp-desktop) {
+      height: 9.222rem;
+    }
   }
 
   /* SoundCloud's "visual" embed (square with background image) */
