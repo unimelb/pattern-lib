@@ -25,7 +25,7 @@ Example:
     "feature": {
       "alt": "screen reader only",
       "text": "Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "img": "https://placeimg.com/360/200/nature",
+      "img": "https://source-to-image.com",
       "link": "http://google.com"
     },
     "items": [
@@ -46,7 +46,7 @@ Example:
     "feature": {
       "title": "Campaign title",
       "text": "Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "img": "https://placeimg.com/360/200/arch",
+      "img": "https://source-to-image.com",
       "link": "http://google.com"
     },
     "items": [
@@ -101,7 +101,7 @@ Example:
     "feature": {
       "alt": "screen reader only",
       "text": "Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "img": "https://placeimg.com/360/200/nature",
+      "img": "https://source-to-image.com",
       "link": "http://google.com"
     },
     "items": [

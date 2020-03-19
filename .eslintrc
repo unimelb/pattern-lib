@@ -9,8 +9,7 @@
     "jest": true
   },
   "globals": {
-    "cy": true,
-    "Cypress": true,
+    "browser": true
   },
   "rules": {
     "array-callback-return": "error",

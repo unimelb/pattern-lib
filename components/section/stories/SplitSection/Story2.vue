@@ -2,7 +2,7 @@
   <main class="bg-white">
     <SplitSection
       image-right
-      bg-image="https://images.unsplash.com/photo-1428509774491-cfac96e12253?dpr=1&auto=compress,format&fit=crop&w=600&h=&q=80&cs=tinysrgb&crop=">
+      bg-image="https://picsum.photos/seed/1/1200/540">
       <h3 class="heading-section">
         This is a header
       </h3>

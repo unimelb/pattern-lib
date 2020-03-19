@@ -24,7 +24,7 @@ Usage:
 <carousel
   :stories='[
   {
-    "src": "https://source.unsplash.com/random/2000x1000",
+    "src": "https://source-to-image.com",
     "imagePosition": "center",
     "altText": "test",
     "title": "Story 1 A long title to flow onto two lines and be truncated to one line",
@@ -33,7 +33,7 @@ Usage:
     "buttonHref": "google.com"
   },
   {
-    "src": "https://source.unsplash.com/random/2000x1001",
+    "src": "https://source-to-image.com",
     "imagePosition": "top",
     "altText": "test",
     "title": "Story 2",
@@ -42,7 +42,7 @@ Usage:
     "buttonHref": "google.com"
   },
   {
-    "src": "https://source.unsplash.com/random/2000x1002",
+    "src": "https://source-to-image.com",
     "imagePosition": "top",
     "altText": "test",
     "title": "Story 3",

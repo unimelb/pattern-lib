@@ -27,7 +27,7 @@ export default {
             alt: 'screen reader only',
             text:
               'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: 'https://placeimg.com/360/200/nature',
+            img: 'https://i.picsum.photos/id/1040/360/200.jpg',
             link: 'http://google.com',
           },
           items: [
@@ -49,7 +49,7 @@ export default {
             title: 'Campaign title',
             text:
               'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: 'https://placeimg.com/360/200/arch',
+            img: 'https://i.picsum.photos/id/1033/360/200.jpg',
             link: 'http://google.com',
           },
           items: [
@@ -107,7 +107,7 @@ export default {
             alt: 'screen reader only',
             text:
               'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: 'https://placeimg.com/360/200/nature',
+            img: 'https://i.picsum.photos/id/1040/360/200.jpg',
             link: 'http://google.com',
           },
           items: [

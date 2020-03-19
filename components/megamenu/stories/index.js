@@ -8,7 +8,7 @@ import MegaMenuTitle from './MegaMenuTitle.vue';
 import HybridMenuWithTopNav from './HybridMenuWithTopNav.vue';
 // import MegaMenuExpanded from './MegaMenuExpanded.vue';
 
-storiesOf(' Mega menu', module)
+storiesOf('Mega menu', module)
   .add('Menu / hamburger hybrid', createStory(HybridMenu))
   .add('Mega Menu, populated via prop', createStory(HybridMenuProp))
   .add('Mega Menu Title with Prop', createStory(MegaMenuTitle))
