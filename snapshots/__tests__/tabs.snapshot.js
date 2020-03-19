@@ -24,6 +24,9 @@ describe(category, () => {
         await page.setViewport(vp);
         await page.goto(url);
 
+        // Wait so vue mobile functions run.
+        await page.waitFor(1500);
+
         const image = await page.screenshot({ fullPage: true });
 
         expect(image).toMatchImageSnapshot();

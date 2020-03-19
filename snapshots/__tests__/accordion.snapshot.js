@@ -11,7 +11,7 @@ const stories = [
 describe(category, () => {
   stories.forEach((story) => {
     viewports.forEach((vp) => {
-      it(`${story} matches snapshot`, async () => {
+      it(`${story} matches ${vp.width} snapshot`, async () => {
         const params = {
           url: category,
           story,

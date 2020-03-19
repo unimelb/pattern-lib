@@ -1,6 +1,12 @@
 const viewports = [
-  { width: 1366, height: 768 },
-  // { width: 320, height: 568 },
+  {
+    width: 1366,
+    height: 768,
+  },
+  {
+    width: 320,
+    height: 568,
+  },
 ];
 
 const formatUrl = ({ url, story }) => {
