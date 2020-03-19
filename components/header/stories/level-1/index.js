@@ -10,12 +10,12 @@ import Level1HomeCampaignOverlay50 from './Level1HomeCampaignOverlay50.vue';
 import Level1HomeCampaignOverlay25 from './Level1HomeCampaignOverlay25.vue';
 import Level1HomeCampaignNoLogo from './Level1HomeCampaignNoLogo.vue';
 
-storiesOf('Header / Level 1', module)
+storiesOf('Header/Level 1', module)
   .add('Default', createStory(Level1Default))
   .add('Entity identifier', createStory(Level1Entity))
   .add('Dual entity identifier', createStory(Level1DualEntity))
   .add('Homepage campaign (card)', createStory(Level1Home))
   .add('Homepage campaign (button)', createStory(Level1HomeCampaignButton))
-  .add('Homepage campaign (overlay, 50% opacity)', createStory(Level1HomeCampaignOverlay50))
-  .add('Homepage campaign (overlay, 25% opacity)', createStory(Level1HomeCampaignOverlay25))
-  .add('Homepage campaign (overlay, 50% opacity, no logo)', createStory(Level1HomeCampaignNoLogo));
+  .add('Homepage campaign (overlay, .5 opacity)', createStory(Level1HomeCampaignOverlay50))
+  .add('Homepage campaign (overlay, .25 opacity)', createStory(Level1HomeCampaignOverlay25))
+  .add('Homepage campaign (overlay, .5 opacity, no logo)', createStory(Level1HomeCampaignNoLogo));

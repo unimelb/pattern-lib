@@ -1,7 +1,7 @@
 <template>
   <div
     class="page-header__darken--o50"
-    style="background-image: url(https://placeimg.com/990/530/arch/1)">
+    style="background-image: url('https://i.picsum.photos/id/1033/990/530.jpg');">
     <header class="page-header page-header--l2 page-header--no-logo">
       <div class="page-header--center">
         <div class="max max--xsml text-center shim-pb2">

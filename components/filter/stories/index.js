@@ -6,7 +6,7 @@ import AccordionFilterStoryCMS from './AccordionFilterStoryCMS.vue';
 import CardsFilterStory from './CardsFilterStory.vue';
 import CardsFilterStoryCMS from './CardsFilterStoryCMS.vue';
 
-storiesOf('Filter / Components', module)
+storiesOf('Filter/Components', module)
   .add('Accordion Filter', createStory(AccordionFilterStory))
   .add('Accordion Filter (CMS)', createStory(AccordionFilterStoryCMS))
   .add('Cards Filter', createStory(CardsFilterStory))
