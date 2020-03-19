@@ -7,6 +7,9 @@
   "env": {
     "jest": true
   },
+  "globals": {
+    "browser": true
+  },
   "rules": {
     "comma-dangle": [
       "error",
