@@ -9,8 +9,12 @@
     width: 100%;
 
     @supports (object-fit: cover) {
-      height: 11.111rem;
+      height: 12.5rem;
       object-fit: cover;
+
+      @media (--bp-desktop) {
+        height: 11.1112rem;
+      }
     }
   }
 
