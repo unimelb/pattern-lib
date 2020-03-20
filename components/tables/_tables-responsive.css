@@ -2,7 +2,7 @@
   &--start {
     &::before {
       @media (--bp-max-x-mobile) {
-        left: -2.777rem;
+        left: -3.125rem;
         border-radius: 0 10px 10px 0/0 50% 50% 0;
         box-shadow: 5px 0 10px rgba(0, 0, 0, .25);
       }
@@ -22,7 +22,7 @@
   &__inner {
     table {
       @media (--bp-max-x-mobile) {
-        width: 33.333rem !important;
+        width: 37.5rem !important;
         table-layout: auto;
         margin-bottom: 0;
       }
@@ -41,7 +41,7 @@
       position: absolute;
       top: 0;
       margin-left: 0;
-      width: 2.777rem;
+      width: 3.125rem;
       height: 100%;
       transition-property: margin-left;
       transition-duration: .1s;
