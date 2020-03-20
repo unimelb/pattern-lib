@@ -1,6 +1,6 @@
 <template>
   <SectionWrap
-    bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop=">
+    bg-image="https://picsum.photos/seed/1/1200/540">
     <CardFocusBox
       class="card--image-focus--col-brand bg-white"
       title="Learning and teaching">

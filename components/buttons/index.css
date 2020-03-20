@@ -36,11 +36,11 @@
   }
 
   & + & {
-    margin-top: var(--vr);
+    margin-top: 1rem;
 
     @media (--bp-tablet) {
       margin-top: 0;
-      margin-left: var(--vr);
+      margin-left: 1rem;
     }
   }
 
@@ -183,6 +183,34 @@
       border-color: color-mod(rgb(var(--col-background-primary-white)) alpha(30%));
       background-color: color-mod(rgb(var(--col-black-mid-2)) alpha(70%));
     }
+
+    &-alt {
+      &,
+      &:visited {
+        color: rgb(var(--col-white));
+        background-color: rgb(var(--col-emerald-dark));
+        border: 2px solid rgb(var(--col-emerald-mid-2));
+      }
+
+      &:hover,
+      &:focus {
+        border: 2px solid rgb(var(--col-emerald-mid-1));
+        color: rgb(var(--col-white));
+      }
+
+      &:active {
+        color: rgb(var(--col-emerald-dark));
+        background-color: rgb(var(--col-background-primary-white));
+        border: 2px solid rgb(var(--col-emerald-light));
+      }
+
+      &.btn--disabled,
+      &:disabled {
+        color: rgb(var(--col-emerald-dark));
+        background-color: rgb(var(--col-emerald-light));
+        border: 2px solid rgb(var(--col-emerald-mid-1));
+      }
+    }
   }
 
   /* Sizes */
@@ -217,7 +245,7 @@
     text-align: center;
 
     & + & {
-      margin-top: var(--vr);
+      margin-top: 1rem;
       margin-left: 0;
     }
   }
@@ -367,6 +395,18 @@
           &::after {
             background-image: url('~icons/twitter.svg?fill=#094183');
           }
+        }
+      }
+    }
+
+    &--down {
+      &::after {
+        background-image: url('~icons/chevron-down.svg?fill=#094183');
+      }
+
+      &:active {
+        &::after {
+          background-image: url('~icons/chevron-down.svg?fill=#fff');
         }
       }
     }
