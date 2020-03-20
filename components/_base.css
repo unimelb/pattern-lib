@@ -8,12 +8,16 @@ html {
   height: 100%;
   color: rgb(var(--col-brand));
   font-family: var(--ff-normal);
+  /* stylelint-disable */
   font-size: 16px;
+  /* stylelint-enable */
   line-height: var(--lh);
   text-rendering: optimizeLegibility;
 
   @media (--bp-xx-wide) {
+    /* stylelint-disable */
     font-size: 18px;
+    /* stylelint-enable */
   }
 }
 

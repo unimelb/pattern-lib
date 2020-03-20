@@ -13,8 +13,8 @@
 
   &__cnr {
     position: absolute;
-    width: 6em;
-    height: 6em;
+    width: 6rem;
+    height: 6rem;
     opacity: .5;
     color: rgb(var(--col-emerald-mid-2));
 
@@ -92,13 +92,18 @@
 
   &__icon {
     width: 100%;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 12.5rem;
+    max-height: 12.5rem;
     margin-right: auto;
     margin-bottom: var(--vr);
     margin-left: auto;
     padding: 0 var(--vr);
     stroke-width: 0;
+
+    @media (--bp-desktop) {
+      max-width: 11.111rem;
+      max-height: 11.111rem;
+    }
   }
 
   .card__inner {

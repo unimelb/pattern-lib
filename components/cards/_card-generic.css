@@ -50,8 +50,8 @@
     color: rgb(var(--col-grey-dark));
 
     svg {
-      width: 13px;
-      height: 13px;
+      width: .8125rem;
+      height: .8125rem;
     }
   }
 
@@ -61,7 +61,7 @@
     margin: 0;
 
     svg {
-      margin: 0 5px 0 0;
+      margin: 0 .3125rem 0 0;
     }
   }
 

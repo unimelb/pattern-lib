@@ -76,10 +76,14 @@
 
   &__caption {
     font-weight: var(--fw-bold);
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 1.125rem;
+    line-height: 1.167;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+
+    @media (--bp-desktop) {
+      font-size: 1rem;
+    }
   }
 
   &__open-overlay {

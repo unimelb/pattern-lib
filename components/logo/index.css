@@ -8,34 +8,61 @@
 
   &__image {
     display: block;
-    height: 66px;
-    width: 66px;
+    height: 4.125rem;
+    width: 4.125rem;
+
+    @media (--bp-desktop) {
+      height: 3.666rem;
+      width: 3.666rem;
+    }
 
     &--md {
       @media (--bp-tablet) {
-        height: 96px;
-        width: 96px;
+        height: 6rem;
+        width: 6rem;
+      }
+
+      @media (--bp-desktop) {
+        height: 5.333rem;
+        width: 5.333rem;
       }
     }
 
     &--lg {
-      height: 148px;
-      width: 148px;
+      height: 9.25rem;
+      width: 9.25rem;
+
+      @media (--bp-xx-wide) {
+        height: 8.222rem;
+        width: 8.222rem;
+      }
     }
   }
 
   &--no-padding {
     &-sm {
-      margin: -6px;
+      margin: -.375rem;
+
+      @media (--bp-desktop) {
+        margin: -.333rem;
+      }
     }
     &-md {
-      margin: -6px;
+      margin: -.375rem;
+
+      @media (--bp-desktop) {
+        margin: -.333rem;
+      }
     }
     &-lg {
-      margin: -10px;
+      margin: -.625rem;
 
       @media (--bp-tablet) {
-        margin: -16px;
+        margin: -1rem;
+      }
+
+      @media (--bp-xx-wide) {
+        margin: -.888rem;
       }
     }
   }
