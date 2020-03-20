@@ -198,6 +198,12 @@
     &:visited {
       color: inherit;
     }
+
+    .push-icon__icon {
+      width: 1rem;
+      height: 1rem;
+      margin-left: 1.25rem;
+    }
   }
 
   &--condensed {

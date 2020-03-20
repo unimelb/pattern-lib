@@ -38,10 +38,14 @@
 
   &__thumb {
     width: 100%;
-    height: 11.1112rem;
+    height: 12.5rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (--bp-desktop) {
+      height: 11.1112rem;
+    }
 
     &--zoom {
       position: relative;
