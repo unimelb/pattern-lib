@@ -254,18 +254,26 @@
 
   &__label {
     font-size: .8rem;
-    letter-spacing: .055rem;
+    letter-spacing: .0625rem;
     text-transform: uppercase;
+
+    @media (--bp-desktop) {
+      letter-spacing: .055rem;
+    }
   }
 
   &__icon {
     position: absolute;
-    top: calc(50% - .555rem);
+    top: calc(50% - .625rem);
 
     /* vertical centring */
     left: 0;
     width: 1.375rem;
     height: 1.375rem;
+
+    @media (--bp-desktop) {
+      top: calc(50% - .555rem);
+    }
   }
 
   &__submit {
