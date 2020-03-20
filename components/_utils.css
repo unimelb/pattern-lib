@@ -214,9 +214,9 @@ a[target='_blank'] {
   &::before {
     content: '';
     display: inline-block;
-    width: .222rem;
-    height: .444rem;
-    margin-right: .5rem;
+    width: .2223rem;
+    height: .4444rem;
+    margin-right: .5625rem;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjgiPgogIDxwYXRoIGQ9Ik0wIDB2Mi4yNUwxLjc1IDQgMCA1Ljc1VjhsNC00eiIgZmlsbD0iI2ZmZiIgLz4KPC9zdmc+');
     vertical-align: middle;
   }
