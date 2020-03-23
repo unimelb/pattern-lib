@@ -56,33 +56,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
           class="nested-checkbox nested-checkbox--is-first"
         >
           <label
-            class="app-checkbox"
+            class="base-checkbox"
             data-name="all"
           >
             <input
               aria-label=""
-              class="app-checkbox__input"
-              data-testid="app-checkbox-input"
+              class="base-checkbox__input"
+              data-testid="base-checkbox-input"
               type="checkbox"
             />
              
             <span
-              class="app-checkbox__icon"
+              class="base-checkbox__icon"
             >
               <span
-                class="app-checkbox__icon-checked"
-                data-testid="app-checkbox-icon-checked"
+                class="base-checkbox__icon-checked"
+                data-testid="base-checkbox-icon-checked"
               />
                
               <span
-                class="app-checkbox__icon-indeterminate app-checkbox__icon-indeterminate--is-indeterminate"
-                data-testid="app-checkbox-icon-indeterminate"
+                class="base-checkbox__icon-indeterminate base-checkbox__icon-indeterminate--is-indeterminate"
+                data-testid="base-checkbox-icon-indeterminate"
               />
             </span>
              
             <span
-              class="app-checkbox__label"
-              data-testid="app-checkbox-label"
+              class="base-checkbox__label"
+              data-testid="base-checkbox-label"
             >
               All (49)
             </span>
@@ -93,33 +93,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="app-checkbox"
+                class="base-checkbox"
                 data-name="undergraduate"
               >
                 <input
                   aria-label=""
-                  class="app-checkbox__input"
-                  data-testid="app-checkbox-input"
+                  class="base-checkbox__input"
+                  data-testid="base-checkbox-input"
                   type="checkbox"
                 />
                  
                 <span
-                  class="app-checkbox__icon"
+                  class="base-checkbox__icon"
                 >
                   <span
-                    class="app-checkbox__icon-checked"
-                    data-testid="app-checkbox-icon-checked"
+                    class="base-checkbox__icon-checked"
+                    data-testid="base-checkbox-icon-checked"
                   />
                    
                   <span
-                    class="app-checkbox__icon-indeterminate app-checkbox__icon-indeterminate--is-indeterminate"
-                    data-testid="app-checkbox-icon-indeterminate"
+                    class="base-checkbox__icon-indeterminate base-checkbox__icon-indeterminate--is-indeterminate"
+                    data-testid="base-checkbox-icon-indeterminate"
                   />
                 </span>
                  
                 <span
-                  class="app-checkbox__label"
-                  data-testid="app-checkbox-label"
+                  class="base-checkbox__label"
+                  data-testid="base-checkbox-label"
                 >
                   Undergraduate (7)
                 </span>
@@ -130,34 +130,34 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="bachelor"
                   >
                     <input
                       aria-checked="true"
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked app-checkbox__icon-checked--is-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked base-checkbox__icon-checked--is-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       Bachelor (6)
                     </span>
@@ -169,34 +169,34 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="diploma"
                   >
                     <input
                       aria-checked="true"
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked app-checkbox__icon-checked--is-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked base-checkbox__icon-checked--is-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       Diploma (1)
                     </span>
@@ -208,33 +208,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="honours"
                   >
                     <input
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       Honours (0)
                     </span>
@@ -248,33 +248,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="app-checkbox"
+                class="base-checkbox"
                 data-name="graduate"
               >
                 <input
                   aria-label=""
-                  class="app-checkbox__input"
-                  data-testid="app-checkbox-input"
+                  class="base-checkbox__input"
+                  data-testid="base-checkbox-input"
                   type="checkbox"
                 />
                  
                 <span
-                  class="app-checkbox__icon"
+                  class="base-checkbox__icon"
                 >
                   <span
-                    class="app-checkbox__icon-checked"
-                    data-testid="app-checkbox-icon-checked"
+                    class="base-checkbox__icon-checked"
+                    data-testid="base-checkbox-icon-checked"
                   />
                    
                   <span
-                    class="app-checkbox__icon-indeterminate"
-                    data-testid="app-checkbox-icon-indeterminate"
+                    class="base-checkbox__icon-indeterminate"
+                    data-testid="base-checkbox-icon-indeterminate"
                   />
                 </span>
                  
                 <span
-                  class="app-checkbox__label"
-                  data-testid="app-checkbox-label"
+                  class="base-checkbox__label"
+                  data-testid="base-checkbox-label"
                 >
                   Graduate (38)
                 </span>
@@ -285,33 +285,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="certificate"
                   >
                     <input
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       Certificate (10)
                     </span>
@@ -323,33 +323,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="diploma"
                   >
                     <input
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       Diploma (6)
                     </span>
@@ -361,33 +361,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="master"
                   >
                     <input
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       Master (22)
                     </span>
@@ -401,33 +401,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="app-checkbox"
+                class="base-checkbox"
                 data-name="research"
               >
                 <input
                   aria-label=""
-                  class="app-checkbox__input"
-                  data-testid="app-checkbox-input"
+                  class="base-checkbox__input"
+                  data-testid="base-checkbox-input"
                   type="checkbox"
                 />
                  
                 <span
-                  class="app-checkbox__icon"
+                  class="base-checkbox__icon"
                 >
                   <span
-                    class="app-checkbox__icon-checked"
-                    data-testid="app-checkbox-icon-checked"
+                    class="base-checkbox__icon-checked"
+                    data-testid="base-checkbox-icon-checked"
                   />
                    
                   <span
-                    class="app-checkbox__icon-indeterminate"
-                    data-testid="app-checkbox-icon-indeterminate"
+                    class="base-checkbox__icon-indeterminate"
+                    data-testid="base-checkbox-icon-indeterminate"
                   />
                 </span>
                  
                 <span
-                  class="app-checkbox__label"
-                  data-testid="app-checkbox-label"
+                  class="base-checkbox__label"
+                  data-testid="base-checkbox-label"
                 >
                   Research (4)
                 </span>
@@ -438,33 +438,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="master"
                   >
                     <input
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       Master (2)
                     </span>
@@ -476,33 +476,33 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="app-checkbox"
+                    class="base-checkbox"
                     data-name="phd"
                   >
                     <input
                       aria-label=""
-                      class="app-checkbox__input"
-                      data-testid="app-checkbox-input"
+                      class="base-checkbox__input"
+                      data-testid="base-checkbox-input"
                       type="checkbox"
                     />
                      
                     <span
-                      class="app-checkbox__icon"
+                      class="base-checkbox__icon"
                     >
                       <span
-                        class="app-checkbox__icon-checked"
-                        data-testid="app-checkbox-icon-checked"
+                        class="base-checkbox__icon-checked"
+                        data-testid="base-checkbox-icon-checked"
                       />
                        
                       <span
-                        class="app-checkbox__icon-indeterminate"
-                        data-testid="app-checkbox-icon-indeterminate"
+                        class="base-checkbox__icon-indeterminate"
+                        data-testid="base-checkbox-icon-indeterminate"
                       />
                     </span>
                      
                     <span
-                      class="app-checkbox__label"
-                      data-testid="app-checkbox-label"
+                      class="base-checkbox__label"
+                      data-testid="base-checkbox-label"
                     >
                       PhD (2)
                     </span>
