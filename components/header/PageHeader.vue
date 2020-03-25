@@ -34,7 +34,7 @@ export default {
     level: {
       type: Number,
       default: 1,
-      validator: (val) => [1, 2].indexOf(val) !== -1,
+      validator: (val) => [1, 2].includes(val),
     },
     title: {
       type: String,

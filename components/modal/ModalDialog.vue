@@ -83,7 +83,7 @@ export default {
 
       // Show container and focus the modal
       container.setAttribute('aria-hidden', false);
-      modal.setAttribute('tabindex', -1);
+      modal.setAttribute('tabindex', '-1');
 
       // Focus first element if exists, otherwise focus modal element
       if (this.focusableElements.length) {
@@ -118,6 +118,7 @@ export default {
       const focusedIndex = this.focusableElements.indexOf(document.activeElement);
 
       // First element is focused and shiftkey is in use
+      // eslint-disable-next-line no-magic-numbers
       if (e.shiftKey && (focusedIndex === 0 || focusedIndex === -1)) {
         // Loop back to last el
         this.focusableElements[this.focusableElements.length - 1].focus();

@@ -34,7 +34,7 @@ export default {
     color: {
       type: String,
       default: '',
-      validator: (color) => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].indexOf(color) > -1,
+      validator: (color) => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].includes(color),
     },
     semiOpaque: {
       type: Boolean,
@@ -43,7 +43,7 @@ export default {
     size: {
       type: String,
       default: 'medium',
-      validator: (size) => ['small', 'medium', 'large'].indexOf(size) > -1,
+      validator: (size) => ['small', 'medium', 'large'].includes(size),
     },
     padded: {
       type: Boolean,

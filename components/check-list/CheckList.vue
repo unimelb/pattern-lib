@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     itemsAllChecked() {
-      return this.checkedItems.indexOf(false) === -1;
+      return !this.checkedItems.includes(false);
     },
     namespace() {
       return `ui-checklist-${this._uid}`;

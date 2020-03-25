@@ -120,7 +120,7 @@ export default {
     color: {
       type: String,
       default: '',
-      validator: (color) => ['', 'navy', 'teal', 'yellow'].indexOf(color) > -1,
+      validator: (color) => ['', 'navy', 'teal', 'yellow'].includes(color),
     },
   },
   data: () => ({

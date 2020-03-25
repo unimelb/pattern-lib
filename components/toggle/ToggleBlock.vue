@@ -100,7 +100,7 @@ export default {
     getActive() { return this.isActive; },
     toggleFocusableElements() {
       this.focusableElements.forEach((el) => {
-        el.setAttribute('tabindex', this.isActive ? 0 : -1);
+        el.setAttribute('tabindex', this.isActive ? '0' : '-1');
       });
     },
     handleKey(e) {

@@ -168,10 +168,10 @@ export default {
     giveHeaderFocus() {
       // remove focusability from inactives
       this.panels.forEach((panel) => {
-        panel.header().setAttribute('tabindex', -1);
+        panel.header().setAttribute('tabindex', '-1');
       });
       // set active focus
-      this.panels[this.current].header().setAttribute('tabindex', 0);
+      this.panels[this.current].header().setAttribute('tabindex', '0');
       this.panels[this.current].header().focus();
     },
   },

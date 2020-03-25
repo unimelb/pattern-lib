@@ -299,6 +299,7 @@ export default {
       }
 
       if (
+        // eslint-disable-next-line no-magic-numbers
         rootindex !== -1
         && this.items[rootindex].items !== undefined
         && !this.isMobileOpen
@@ -485,6 +486,7 @@ export default {
       }
     },
     isSelected(index) {
+      // eslint-disable-next-line no-magic-numbers
       return index === this.current ? 0 : -1;
     },
   },
