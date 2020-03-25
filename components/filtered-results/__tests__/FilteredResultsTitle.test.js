@@ -65,5 +65,4 @@ describe('FilteredResultsTitle', () => {
     wrapper.find('.filtered-results__title-notice').trigger('click', {});
     expect(wrapper.vm.$props.callback).toHaveBeenCalled();
   });
-
 });

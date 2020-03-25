@@ -122,6 +122,7 @@
 
   /* Border radius */
   --br: 4px;
+  --br-checkbox: 3px;
   --br-cards: 4px;
 
   /* Side nav width */

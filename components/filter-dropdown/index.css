@@ -1,0 +1,89 @@
+@import './components/NestedCheckbox/index.css';
+
+.filter-dropdown {
+  position: relative;
+
+  &__select {
+    border: 1px solid rgba(var(--col-blue-mid-2));
+    border-radius: var(--br);
+    background-color: rgb(var(--col-background-primary-white));
+    display: flex;
+    align-items: stretch;
+
+    &--is-opened {
+      border-radius: var(--br) var(--br) 0 0;
+    }
+
+    &--is-opened-up {
+      border-radius: 0 0 var(--br) var(--br);
+    }
+  }
+
+  &__label {
+    font-size: 1.125rem;
+    padding: .5625rem 1rem;
+    font-weight: var(--fw-bold);
+    line-height: 1.25;
+    flex: 1 1;
+    user-select: none;
+  }
+
+  &__icon {
+    flex: 0 0 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgba(var(--col-blue-mid-2));
+
+    svg {
+      margin-left: 0;
+    }
+  }
+
+  &__options-label {
+    padding-bottom: 1.5rem;
+  }
+
+  &__body {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background-color: rgb(var(--col-background-primary-white));
+    border: 1px solid rgba(var(--col-blue-mid-2));
+    border-top: none;
+    border-radius: 0 0 var(--br) var(--br);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+
+    &--is-opened {
+      pointer-events: auto;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &--is-open-up {
+      top: auto;
+      bottom: 100%;
+      border-top: 1px solid rgba(var(--col-blue-mid-2));
+      border-bottom: none;
+      border-radius: var(--br) var(--br) 0 0;
+    }
+  }
+
+  &__actions {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem -.5rem;
+  }
+
+  &__action {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 9rem;
+    padding: 0 .5rem .5rem;
+  }
+}

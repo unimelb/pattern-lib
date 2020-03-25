@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BaseCheckbox should match snapshot 1`] = `
+<label
+  class="base-checkbox"
+  data-name="checkboxName"
+>
+  <input
+    aria-label="aria-label"
+    class="base-checkbox__input"
+    data-testid="base-checkbox-input"
+    type="checkbox"
+  />
+   
+  <span
+    class="base-checkbox__icon"
+  >
+    <span
+      class="base-checkbox__icon-checked"
+      data-testid="base-checkbox-icon-checked"
+    />
+     
+    <span
+      class="base-checkbox__icon-indeterminate"
+      data-testid="base-checkbox-icon-indeterminate"
+    />
+  </span>
+   
+  <span
+    class="base-checkbox__label"
+    data-testid="base-checkbox-label"
+  >
+    checkbox label
+  </span>
+</label>
+`;

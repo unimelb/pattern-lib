@@ -51,5 +51,4 @@ describe('FilteredResults', () => {
     expect(callback.type).toBe(Function);
     expect(secondaryMessage.type).toBe(String);
   });
-
 });
