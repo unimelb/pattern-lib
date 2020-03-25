@@ -185,6 +185,7 @@ import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 import Logo from '../logo/Logo.vue';
+import { WIDTH_900 } from '../../helpers/viewports';
 
 import {
   KEYCODE_TAB,
@@ -249,7 +250,7 @@ export default {
   computed: {
     isMobile() {
       return this.$refs.headerroot
-        ? this.$refs.headerroot.offsetWidth < 900
+        ? this.$refs.headerroot.offsetWidth < WIDTH_900
         : false;
     },
     isShowTopMenu() {
@@ -372,7 +373,7 @@ export default {
     openInner(e) {
       if (
         this.$refs.headerroot
-        && this.$refs.headerroot.offsetWidth < 900
+        && this.$refs.headerroot.offsetWidth < WIDTH_900
         && e.target.nextElementSibling
       ) {
         e.preventDefault();

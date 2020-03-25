@@ -46,6 +46,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import Dropdown from '../dropdown/Dropdown.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
+import { WIDTH_481 } from '../../helpers/viewports';
 
 export default {
   components: { FocusWrapper, Dropdown, SvgIcon },
@@ -181,7 +182,7 @@ export default {
     },
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
-      if (this.windowWidth < 481) {
+      if (this.windowWidth < WIDTH_481) {
         this.size = 'small';
       } else {
         this.size = 'medium';
