@@ -32,7 +32,7 @@
 
 import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../../utils/placeholders';
-import { WIDTH_599 } from '../../helpers/viewports';
+import { WIDTH_599 } from '../../../helpers/viewports';
 
 export default {
   name: 'AlumniProfiles',
