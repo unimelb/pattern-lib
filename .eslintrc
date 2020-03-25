@@ -70,7 +70,7 @@
     ],
     "no-useless-concat": "error",
     "no-case-declarations": "off",
-    "no-magic-numbers": "off",
+    "no-magic-numbers": "warn",
     "radix": "error",
     "vue/attribute-hyphenation": "error",
     "vue/html-quotes": "error",
