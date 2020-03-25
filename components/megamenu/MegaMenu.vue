@@ -263,8 +263,10 @@ export default {
   },
   methods: {
     isColColumns(rootindex) {
+      const oneColumnMaxLength = 5;
+
       if (this.isMobileOpen) return '';
-      if (this.items[rootindex].items.length <= 5) {
+      if (this.items[rootindex].items.length <= oneColumnMaxLength) {
         return 'cols-1';
       }
       return 'cols-2';
