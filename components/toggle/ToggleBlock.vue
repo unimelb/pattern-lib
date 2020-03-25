@@ -62,7 +62,9 @@ export default {
     trigger() {
       let t = this.$refs.header;
       this.$slots.default.forEach((el) => {
-        if (el.context && el.context.$refs && el.context.$refs.trigger) t = el.context.$refs.trigger;
+        if (el.context && el.context.$refs && el.context.$refs.trigger) {
+          t = el.context.$refs.trigger;
+        }
       });
       return t;
     },
@@ -91,9 +93,15 @@ export default {
     this.toggleFocusableElements();
   },
   methods: {
-    header() { return this.$refs.header; },
-    panel() { return this.$refs.panel; },
-    getActive() { return this.isActive; },
+    header() {
+      return this.$refs.header;
+    },
+    panel() {
+      return this.$refs.panel;
+    },
+    getActive() {
+      return this.isActive;
+    },
     toggleFocusableElements() {
       this.focusableElements.forEach((el) => {
         el.setAttribute('tabindex', this.isActive ? 0 : -1);
@@ -101,10 +109,14 @@ export default {
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) e.preventDefault();
+      if (e.keyCode !== 9) {
+        e.preventDefault();
+      }
 
       switch (e.keyCode) {
         // esc
@@ -119,7 +131,9 @@ export default {
         default: break;
       }
     },
-    setIndex(v) { this.index = v; },
+    setIndex(v) {
+      this.index = v;
+    },
     setActive(v) {
       this.isActive = v;
       this.toggleFocusableElements();

@@ -110,7 +110,9 @@ export default {
       this.$emit('modal-dialog-close-dialog');
     },
     closeContainer(e) {
-      if (e.target === this.$refs.container) this.closeDialog();
+      if (e.target === this.$refs.container) {
+        this.closeDialog();
+      }
       this.$emit('modal-dialog-close-container');
     },
     inputTrap(e) {
