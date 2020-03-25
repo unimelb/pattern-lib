@@ -64,7 +64,9 @@ export default {
     });
 
     this.hideAllPanels();
-    if (this.open === 'true') this.showCurrentPanel();
+    if (this.open === 'true') {
+      this.showCurrentPanel();
+    }
   },
   methods: {
     hideAllPanels() {
@@ -99,7 +101,9 @@ export default {
         return;
       }
 
-      if (this.solo === 'true') this.hideAllPanels();
+      if (this.solo === 'true') {
+        this.hideAllPanels();
+      }
 
       this.showCurrentPanel();
     },
@@ -108,10 +112,14 @@ export default {
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       // Allow tab to pass through
-      if (e.keyCode !== KEYCODE_TAB) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) {
+        e.preventDefault();
+      }
 
       this.getCurrent(e);
 
@@ -127,11 +135,15 @@ export default {
           break;
         // ctrl + pgdn
         case KEYCODE_PGDN:
-          if (e.ctrlKey) this.nextPanel();
+          if (e.ctrlKey) {
+            this.nextPanel();
+          }
           break;
         // ctrl + pgup
         case KEYCODE_PGUP:
-          if (e.ctrlKey) ;
+          if (e.ctrlKey) {
+            this.previousPanel();
+          }
           break;
         // end
         case KEYCODE_END:

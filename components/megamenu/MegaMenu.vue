@@ -265,21 +265,29 @@ export default {
     isColColumns(rootindex) {
       const oneColumnMaxLength = 5;
 
-      if (this.isMobileOpen) return '';
+      if (this.isMobileOpen) {
+        return '';
+      }
       if (this.items[rootindex].items.length <= oneColumnMaxLength) {
         return 'cols-1';
       }
       return 'cols-2';
     },
     rootOrChildrenActive(rootitem) {
-      if (!this.active) return false;
+      if (!this.active) {
+        return false;
+      }
 
       let displayActive = false;
 
-      if (this.active === rootitem.href) displayActive = true;
+      if (this.active === rootitem.href) {
+        displayActive = true;
+      }
       if (rootitem.items) {
         rootitem.items.forEach((item) => {
-          if (item.href === this.active) displayActive = true;
+          if (item.href === this.active) {
+            displayActive = true;
+          }
         });
       }
 
@@ -369,7 +377,9 @@ export default {
       }
     },
     dismissMobileMenuIfBlanket(e) {
-      if (e.target !== this.$refs.blanket) return;
+      if (e.target !== this.$refs.blanket) {
+        return;
+      }
 
       this.dismissMobileMenu();
     },
@@ -387,7 +397,9 @@ export default {
       e.target.parentElement.classList.remove('open');
     },
     closeMobileIfDesktop() {
-      if (this.isMobile) return;
+      if (this.isMobile) {
+        return;
+      }
       if (this.isMobileOpen) {
         this.dismissMobileMenu();
         this.$refs.panels.forEach((panel) => {
@@ -397,13 +409,19 @@ export default {
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       // Return on mobile
-      if (this.isMobile) return;
+      if (this.isMobile) {
+        return;
+      }
 
       // Allow tab to pass through
-      if (e.keyCode !== KEYCODE_TAB) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) {
+        e.preventDefault();
+      }
 
       let cycle;
       if (e.keyCode === KEYCODE_UP || e.keyCode === KEYCODE_DOWN) {

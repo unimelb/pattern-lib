@@ -18,7 +18,9 @@ export default function storyDecorator(storyFn) {
   const Story = storyFn();
   const { decorator: Decorator, decoratorProps = {} } = Story;
 
-  if (!Decorator) return Story;
+  if (!Decorator) {
+    return Story;
+  }
 
   return {
     render() {

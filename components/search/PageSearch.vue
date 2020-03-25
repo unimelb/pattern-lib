@@ -63,7 +63,9 @@ export default {
       this.$emit('page-search-close');
     },
     esc(e) {
-      if (e.keyCode === KEYCODE_ESC) this.close();
+      if (e.keyCode === KEYCODE_ESC) {
+        this.close();
+      }
     },
   },
 };

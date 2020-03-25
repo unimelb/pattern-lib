@@ -257,7 +257,9 @@ export default {
       const { prev, next } = this.getTabSiblings();
 
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       switch (e.keyCode) {
         // left / up
@@ -289,7 +291,9 @@ export default {
     getTabSiblings() {
       let curr = -1;
       this.$refs.tabs.forEach((tab, index) => {
-        if (tab.getAttribute('tabindex') === '0') curr = index;
+        if (tab.getAttribute('tabindex') === '0') {
+          curr = index;
+        }
       }, this);
 
       const prev = curr - 1 < 0 ? 0 : curr - 1;
