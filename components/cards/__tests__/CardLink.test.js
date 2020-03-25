@@ -88,6 +88,7 @@ describe('CardLink', () => {
     const { cols } = wrapper.vm.$options.props;
 
     expect(cols.validator && cols.validator(0)).toBeFalsy();
+    // eslint-disable-next-line no-magic-numbers
     expect(cols.validator && cols.validator(5)).toBeFalsy();
   });
 
