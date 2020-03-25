@@ -27,7 +27,9 @@ function initTracking() {
 
   utils.loadScript('https://tags.tiqcdn.com/utag/unimelb/main/prod/utag.js')
     .then(() => {
-      if (process.env.NODE_ENV !== 'production') return;
+      if (process.env.NODE_ENV !== 'production') {
+        return;
+      }
 
       // Set up tracking of Vue render errors in production
       Vue.config.errorHandler = (err) => {
@@ -37,7 +39,9 @@ function initTracking() {
 }
 
 function trackError(category, err) {
-  if (!window.utag) return;
+  if (!window.utag) {
+    return;
+  }
   window.utag.link({
     ga_EventCategory: category,
     ga_EventAction: 'error',

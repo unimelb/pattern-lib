@@ -61,7 +61,9 @@ export default {
       this.$emit('page-search-close');
     },
     esc(e) {
-      if (e.keyCode === 27) this.close();
+      if (e.keyCode === 27) {
+        this.close();
+      }
     },
   },
 };

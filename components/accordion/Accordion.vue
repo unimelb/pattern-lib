@@ -33,14 +33,26 @@ export default {
     },
   },
   mounted() {
-    if (this.$parent.namespace) this.$refs.comp.namespace = this.$parent.namespace;
+    if (this.$parent.namespace) {
+      this.$refs.comp.namespace = this.$parent.namespace;
+    }
   },
   methods: {
-    toggle() { this.$refs.comp.toggle(); },
-    setActive(v) { this.$refs.comp.setActive(v); },
-    setIndex(v) { this.$refs.comp.setIndex(v); },
-    getActive() { return this.$refs.comp.getActive(); },
-    header() { return this.$refs.comp.header(); },
+    toggle() {
+      this.$refs.comp.toggle();
+    },
+    setActive(v) {
+      this.$refs.comp.setActive(v);
+    },
+    setIndex(v) {
+      this.$refs.comp.setIndex(v);
+    },
+    getActive() {
+      return this.$refs.comp.getActive();
+    },
+    header() {
+      return this.$refs.comp.header();
+    },
   },
 };
 </script>

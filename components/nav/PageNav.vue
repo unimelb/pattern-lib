@@ -135,7 +135,10 @@ export default {
       // Look for nested panel and list
       let panel = item.querySelector('.inner');
       const list = item.querySelector('ul');
-      if (!list) return; // no nested list found
+      // no nested list found
+      if (!list) {
+        return;
+      }
 
       // If `inner` container is omitted, inject it (i.e. wrap nested list in panel)
       // Second condition is for when `inner` is omitted at current nesting level, but provided at deeper level
