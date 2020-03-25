@@ -85,6 +85,10 @@ import { throttle } from 'throttle-debounce';
 import StyledSelect from '../forms/StyledSelect.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 
+import {
+  KEYCODE_LEFT, KEYCODE_UP, KEYCODE_RIGHT, KEYCODE_DOWN,
+} from '../../constants/keycodes';
+
 export default {
   components: {
     StyledSelect,
@@ -255,13 +259,13 @@ export default {
 
       switch (e.keyCode) {
         // left / up
-        case 37:
-        case 38:
+        case KEYCODE_LEFT:
+        case KEYCODE_UP:
           this.moveToTab(prev);
           break;
         // right / down
-        case 39:
-        case 40:
+        case KEYCODE_RIGHT:
+        case KEYCODE_DOWN:
           this.moveToTab(next);
           break;
         default:

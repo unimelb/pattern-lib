@@ -11,6 +11,21 @@
 // toggle-group-hide-panel
 // toggle-group-show-current-panel
 
+import {
+  KEYCODE_TAB,
+  KEYCODE_ENTER,
+  KEYCODE_ESC,
+  KEYCODE_SPACE,
+  KEYCODE_PGDN,
+  KEYCODE_PGUP,
+  KEYCODE_END,
+  KEYCODE_HOME,
+  KEYCODE_LEFT,
+  KEYCODE_UP,
+  KEYCODE_RIGHT,
+  KEYCODE_DOWN,
+} from '../../constants/keycodes';
+
 export default {
   name: 'ToggleGroup',
   props: {
@@ -96,46 +111,46 @@ export default {
       if (e.metaKey || e.altKey) return;
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) e.preventDefault();
 
       this.getCurrent(e);
 
       switch (e.keyCode) {
         // esc
-        case 27:
+        case KEYCODE_ESC:
           this.hidePanel(this.current);
           break;
         // enter / space
-        case 13:
-        case 32:
+        case KEYCODE_ENTER:
+        case KEYCODE_SPACE:
           this.togglePanel(e);
           break;
         // ctrl + pgdn
-        case 34:
+        case KEYCODE_PGDN:
           if (e.ctrlKey) this.nextPanel();
           break;
         // ctrl + pgup
-        case 33:
+        case KEYCODE_PGUP:
           if (e.ctrlKey) ;
           break;
         // end
-        case 35:
+        case KEYCODE_END:
           this.current = this.panels.length - 1;
           this.giveHeaderFocus();
           break;
         // home
-        case 36:
+        case KEYCODE_HOME:
           this.current = 0;
           this.giveHeaderFocus();
           break;
         // left / up
-        case 37:
-        case 38:
+        case KEYCODE_LEFT:
+        case KEYCODE_UP:
           this.previousPanel();
           break;
         // right / down
-        case 39:
-        case 40:
+        case KEYCODE_RIGHT:
+        case KEYCODE_DOWN:
           this.nextPanel();
           break;
         default:

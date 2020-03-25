@@ -186,6 +186,17 @@ import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 import Logo from '../logo/Logo.vue';
 
+import {
+  KEYCODE_TAB,
+  KEYCODE_ENTER,
+  KEYCODE_ESC,
+  KEYCODE_SPACE,
+  KEYCODE_LEFT,
+  KEYCODE_UP,
+  KEYCODE_RIGHT,
+  KEYCODE_DOWN,
+} from '../../constants/keycodes';
+
 export default {
   components: {
     SvgIcon,
@@ -388,10 +399,10 @@ export default {
       if (this.isMobile) return;
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) e.preventDefault();
 
       let cycle;
-      if (e.keyCode === 38 || e.keyCode === 40) {
+      if (e.keyCode === KEYCODE_UP || e.keyCode === KEYCODE_DOWN) {
         cycle = this.$refs.rootitems[this.current].querySelectorAll(
           '.menu__aside a,.menu__section a'
         );
@@ -399,7 +410,7 @@ export default {
 
       switch (e.keyCode) {
         // esc
-        case 27:
+        case KEYCODE_ESC:
           this.pointer = 0;
 
           // Set current menu item focus.
@@ -410,8 +421,8 @@ export default {
           // this.dismissBlanket();
           break;
         // enter / space
-        case 13:
-        case 32:
+        case KEYCODE_ENTER:
+        case KEYCODE_SPACE:
           if (e.target.classList.contains('.menu__item')) {
             e.target.querySelector('.menu__link').click();
           } else {
@@ -419,15 +430,15 @@ export default {
           }
           break;
         // left
-        case 37:
+        case KEYCODE_LEFT:
           this.prevRootItem();
           break;
         // right
-        case 39:
+        case KEYCODE_RIGHT:
           this.nextRootItem();
           break;
         // up
-        case 38:
+        case KEYCODE_UP:
           if (cycle.length > 1) {
             this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
@@ -436,7 +447,7 @@ export default {
           }
           break;
         // down
-        case 40:
+        case KEYCODE_DOWN:
           if (cycle.length > 1) {
             this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
             cycle[this.pointer].focus();
