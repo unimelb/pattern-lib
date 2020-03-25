@@ -14,6 +14,7 @@
   "rules": {
     "array-callback-return": "error",
     "block-scoped-var": "error",
+    "brace-style": ["error", "1tbs"],
     "camelcase": "error",
     "comma-dangle": [
       "error",
@@ -26,6 +27,7 @@
       }
     ],
     "consistent-return": "error",
+    "curly": ["error", "all"],
     "global-require": "off",
     "import/extensions": "off",
     "import/first": "off",
