@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { TIMER_50 } from '../../constants/timers';
+
 export default {
   data() {
     return {
@@ -43,7 +45,7 @@ export default {
         const tableWidth = this.$refs.table.querySelector('table').getBoundingClientRect().width;
 
         return tableWidth > containerWidth;
-      }, 50);
+      }, TIMER_50);
     },
     checkAtEndOfTable(elem) {
       const containerWidth = this.$refs.table.getBoundingClientRect().width;

@@ -148,6 +148,7 @@ import SvgIcon from '../icons/SvgIcon.vue';
 import ThumbnailGallery from './ThumbnailGallery.vue';
 
 import { KEYCODE_ESC, KEYCODE_LEFT, KEYCODE_RIGHT } from '../../constants/keycodes';
+import { TIMER_100 } from '../../constants/timers';
 
 export default {
   components: {
@@ -228,7 +229,7 @@ export default {
   mounted() {
     window.addEventListener('keyup', this.keyBoardActions);
 
-    this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, 100);
+    this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, TIMER_100);
     window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
   },
   beforeDestroy() {

@@ -89,6 +89,8 @@ import {
   KEYCODE_LEFT, KEYCODE_UP, KEYCODE_RIGHT, KEYCODE_DOWN,
 } from '../../constants/keycodes';
 
+import { TIMER_100, TIMER_2000 } from '../../constants/timers';
+
 export default {
   components: {
     StyledSelect,
@@ -185,14 +187,14 @@ export default {
       setTimeout(() => {
         this.tabsWidth = this.calculateTabsWidth();
         this.showControls = this.hasControls();
-      }, 2000);
+      }, TIMER_2000);
     },
   },
   mounted() {
     this.panels = this.getTabs();
     this.showSelect = this.selectOptions.length > 1;
 
-    this.throttledTabsScrollEvent = throttle(100, this.checkControls);
+    this.throttledTabsScrollEvent = throttle(TIMER_100, this.checkControls);
     window.addEventListener('resize', this.throttledTabsScrollEvent);
   },
   beforeDestroy() {

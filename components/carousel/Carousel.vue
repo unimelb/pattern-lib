@@ -160,6 +160,8 @@ import { slider, slideritem } from 'vue-concise-slider';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
 
+import { TIMER_1100, TIMER_200 } from '../../constants/timers';
+
 export default {
   components: {
     slider,
@@ -248,7 +250,7 @@ export default {
     this.loadImg();
     setTimeout(() => {
       this.actionProgressBar();
-    }, 1100);
+    }, TIMER_1100);
   },
   methods: {
     displayImage(index) {
@@ -262,7 +264,7 @@ export default {
         for (let i = 1; i < this.stories.length; i += 1) {
           this.displayImage(i);
         }
-      }, 1100);
+      }, TIMER_1100);
     },
     slide(slide) {
       if (this.stories[slide.currentPage]) {
@@ -290,7 +292,7 @@ export default {
     actionProgressBar() {
       clearInterval(this.interval);
       this.interval = null;
-      this.interval = setInterval(() => this.frame(), 200);
+      this.interval = setInterval(() => this.frame(), TIMER_200);
     },
     clearFrame() {
       if (!this.paused) {
