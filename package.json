@@ -76,6 +76,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-loader": "~3.0.2",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-unicorn": "^17.2.0",
     "eslint-plugin-vue": "^6.0.1",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.9.0",
     "extract-text-webpack-plugin": "^3.0.2",

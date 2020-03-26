@@ -138,7 +138,7 @@ export default {
 
       if (this.sections.length) {
         return (
-          document.getElementById(elementToChange.id).getBoundingClientRect()
+          document.querySelector(`#${elementToChange.id}`).getBoundingClientRect()
             .top < Math.abs(inPageNavOffset.top)
         );
       }
@@ -155,7 +155,7 @@ export default {
     },
     scrollOnSelect(e) {
       const scrollToID = e.target.value;
-      const scrollToElem = document.getElementById(scrollToID);
+      const scrollToElem = document.querySelector(`#${scrollToID}`);
 
       this.scrollTo(scrollToElem);
     },
@@ -169,7 +169,7 @@ export default {
       let selectedItem = false;
 
       this.sections.forEach((item) => {
-        const elem = document.getElementById(item.id);
+        const elem = document.querySelector(`#${item.id}`);
         const offset = parseInt(elem.getBoundingClientRect().top, 10);
         const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height; // Add one pixel so it triggers the change
 
