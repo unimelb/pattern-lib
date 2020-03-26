@@ -96,7 +96,9 @@ export default {
   },
   computed: {
     renderFooter() {
-      return this.cols < 4 && (this.phone || this.email);
+      const maxColumns = 4;
+
+      return this.cols < maxColumns && (this.phone || this.email);
     },
   },
 };

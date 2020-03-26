@@ -66,11 +66,11 @@ export default {
     },
     date: {
       type: Array, // e.g. ['1970-01-01', '1 Jan. 1970']
-      validator: (arr) => (
-        !arr.length
-        || (arr.length === 2
-        && arr.every((item) => typeof item === 'string'))
-      ),
+      validator: (arr) => {
+        const maxDates = 2;
+
+        return (!arr.length || (arr.length === maxDates && arr.every((item) => typeof item === 'string')));
+      },
       default: () => [],
     },
     type: {

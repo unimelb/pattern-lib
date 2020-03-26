@@ -360,8 +360,11 @@ export default {
       const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
       const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
 
-      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= 0);
-      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= 0);
+      const offsetTop = 0;
+      const offsetLeft = 0;
+
+      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= offsetTop);
+      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= offsetLeft);
 
       return (vertInView && horInView);
     },

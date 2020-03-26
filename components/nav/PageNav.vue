@@ -182,7 +182,7 @@ export default {
       evt.preventDefault();
 
       // Retrieve parent panel (i.e. the panel that was last opened)
-      const parent = this.state.open[this.state.open.length - 1];
+      const parent = [...this.state.open].pop();
 
       // Hide parent sidebar (and scroll back to top to work around nested absolute positioning)
       parent.classList.add('sitenav__panel--nested-open');
@@ -205,7 +205,7 @@ export default {
       panel.scrollTop = 0;
 
       // Show parent sidebar (i.e. vertical overflow)
-      const parent = this.state.open[this.state.open.length - 1];
+      const parent = [...this.state.open].pop();
       parent.classList.remove('sitenav__panel--nested-open');
       this.$emit('page-nav-close-nested-panel');
     },

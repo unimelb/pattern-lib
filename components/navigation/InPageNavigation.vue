@@ -136,7 +136,7 @@ export default {
       const inPageNavOffset = this.$refs.inPageNavigation.getBoundingClientRect();
       const elementToChange = this.sections[0];
 
-      if (this.sections.length >= 1) {
+      if (this.sections.length) {
         return (
           document.getElementById(elementToChange.id).getBoundingClientRect()
             .top < Math.abs(inPageNavOffset.top)
@@ -170,10 +170,10 @@ export default {
 
       this.sections.forEach((item) => {
         const elem = document.getElementById(item.id);
-        const offset = elem.getBoundingClientRect();
-        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height + 1; // Add one pixel so it triggers the change
+        const offset = parseInt(elem.getBoundingClientRect().top, 10);
+        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height; // Add one pixel so it triggers the change
 
-        if (offset.top < scrollOffset) {
+        if (offset <= scrollOffset) {
           selectedItem = item;
         }
       });
