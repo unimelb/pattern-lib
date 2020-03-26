@@ -44,7 +44,6 @@ describe('FocusWrapper', () => {
     expect(wrapper.props().color).toBe('');
     expect(wrapper.props().semiOpaque).toBe(false);
     expect(wrapper.props().size).toBe('medium');
-    // eslint-disable-next-line no-magic-numbers
     expect(wrapper.vm.normalizeSize).toBe(72);
     expect(wrapper.props().padded).toBe(false);
     expect(wrapper.classes().includes('card-focus--padded')).toBe(false);
@@ -79,7 +78,6 @@ describe('FocusWrapper', () => {
     });
     const { size } = wrapper.vm.$options.props;
     expect(size.type).toBe(String);
-    // eslint-disable-next-line no-magic-numbers
     expect(size.validator && size.validator(72)).toBeFalsy();
   });
 
@@ -90,7 +88,6 @@ describe('FocusWrapper', () => {
       },
     });
     expect(wrapper.props().size).toBe('small');
-    // eslint-disable-next-line no-magic-numbers
     expect(wrapper.vm.normalizeSize).toBe(48);
   });
 
@@ -101,7 +98,6 @@ describe('FocusWrapper', () => {
       },
     });
     expect(wrapper.props().size).toBe('medium');
-    // eslint-disable-next-line no-magic-numbers
     expect(wrapper.vm.normalizeSize).toBe(72);
   });
 
@@ -112,7 +108,6 @@ describe('FocusWrapper', () => {
       },
     });
     expect(wrapper.props().size).toBe('large');
-    // eslint-disable-next-line no-magic-numbers
     expect(wrapper.vm.normalizeSize).toBe(96);
   });
 
