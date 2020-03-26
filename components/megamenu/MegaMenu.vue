@@ -306,13 +306,7 @@ export default {
         this.lastIndex = rootindex;
       }
 
-      if (
-        // eslint-disable-next-line no-magic-numbers
-        rootindex !== -1
-        && this.items[rootindex].items !== undefined
-        && !this.isMobileOpen
-        && !this.isMobile
-      ) {
+      if (this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         if (this.isAnimate) {

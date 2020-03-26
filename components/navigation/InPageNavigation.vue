@@ -171,7 +171,7 @@ export default {
       this.sections.forEach((item) => {
         const elem = document.querySelector(`#${item.id}`);
         const offset = parseInt(elem.getBoundingClientRect().top, 10);
-        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height; // Add one pixel so it triggers the change
+        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height;
 
         if (offset <= scrollOffset) {
           selectedItem = item;

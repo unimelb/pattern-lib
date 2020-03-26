@@ -9,7 +9,7 @@
     <div class="cell cell--desk-2of3 ql-menu__content">
       <slot name="content" />
       <div
-        v-if="secondaryLinks && secondaryLinks.length "
+        v-if="secondaryLinks && secondaryLinks.length"
         :class="{ [`ql-menu__secondary--2col`]: secondaryCols === 2 }"
         class="ql-menu__secondary">
         <QuickLinksSecondaryItem
