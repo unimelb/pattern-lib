@@ -75,8 +75,7 @@
     "no-magic-numbers": [
       "warn",
       { 
-        "ignoreArrayIndexes": true,
-        "ignore": [0, 1, 2, 3, 4] 
+        "ignoreArrayIndexes": true
       }
     ],
     "radix": "error",
@@ -114,5 +113,13 @@
     "vue/key-spacing": "error",
     "vue/space-infix-ops": "error",
     "vue/object-curly-spacing": ["error","always"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "rules": {
+        "no-magic-numbers": "off"
+      }
+    }
+  ]
 }
