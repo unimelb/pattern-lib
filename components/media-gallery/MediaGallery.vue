@@ -313,7 +313,7 @@ export default {
     },
     stopVideo() {
       const iframe = document.querySelectorAll('iframe');
-      if (iframe.length > 0) {
+      if (iframe.length) {
         iframe.forEach((element) => {
           const iframeSrc = element.src;
           element.src = iframeSrc;
