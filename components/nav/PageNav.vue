@@ -167,7 +167,7 @@ export default {
       backBtn.setAttribute('type', 'button');
       backBtn.setAttribute('aria-label', 'Back');
       backBtn.addEventListener('click', this.closeNestedPanel.bind(this, panel, false));
-      panel.insertBefore(backBtn, list);
+      list.before(backBtn);
 
       // Inject link to parent in child
       const insertParent = document.createElement('a');
@@ -175,7 +175,7 @@ export default {
       insertParent.textContent = trigger.textContent;
       insertParent.setAttribute('href', trigger.getAttribute('href'));
       insertParent.setAttribute('role', 'menuitem');
-      panel.insertBefore(insertParent, list);
+      list.before(insertParent);
     },
 
     openNestedPanel(panel, open, evt) {

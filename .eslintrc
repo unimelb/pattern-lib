@@ -5,6 +5,9 @@
     "plugin:vue/recommended",
     "plugin:you-dont-need-lodash-underscore/compatible"
   ],
+  "plugins": [
+    "unicorn"
+  ],
   "env": {
     "jest": true
   },
@@ -74,6 +77,13 @@
     "no-case-declarations": "off",
     "no-magic-numbers": "off",
     "radix": "error",
+    "unicorn/no-array-instanceof": "error",
+    "unicorn/no-for-loop": "error",
+    "unicorn/no-unused-properties": "error",
+    "unicorn/no-zero-fractions": "error",
+    "unicorn/prefer-modern-dom-apis": "error",
+    "unicorn/prefer-query-selector": "error",
+    "unicorn/prefer-spread": "error",
     "vue/attribute-hyphenation": "error",
     "vue/html-quotes": "error",
     "vue/html-self-closing": "error",
