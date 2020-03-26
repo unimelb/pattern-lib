@@ -462,7 +462,7 @@ export default {
         // up
         case KEYCODE_UP:
           if (cycle.length > 1) {
-            this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
+            this.pointer = this.pointer >= 1 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
           } else {
             // this.prevRootItem();
@@ -470,8 +470,10 @@ export default {
           break;
         // down
         case KEYCODE_DOWN:
+          const cycleStartIndex = 0;
+
           if (cycle.length > 1) {
-            this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
+            this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : cycleStartIndex;
             cycle[this.pointer].focus();
           } else {
             // this.nextRootItem();
@@ -483,7 +485,7 @@ export default {
     },
     prevRootItem() {
       this.pointer = 0;
-      this.current = this.current > 0 ? this.current - 1 : this.items.length - 1;
+      this.current = this.current >= 1 ? this.current - 1 : this.items.length - 1;
       this.dismissAllDesktopChildren();
       this.$refs.rootitems[this.current].focus();
       if (this.items[this.current].items) {
@@ -493,8 +495,10 @@ export default {
       }
     },
     nextRootItem() {
+      const itemsStartIndex = 0;
+
       this.pointer = 0;
-      this.current = this.current < this.items.length - 1 ? this.current + 1 : 0;
+      this.current = this.current < this.items.length - 1 ? this.current + 1 : itemsStartIndex;
       this.dismissAllDesktopChildren();
       this.$refs.rootitems[this.current].focus();
       if (this.items[this.current].items) {
@@ -502,10 +506,6 @@ export default {
       } else {
         this.dismissBlanket();
       }
-    },
-    isSelected(index) {
-      // eslint-disable-next-line no-magic-numbers
-      return index === this.current ? 0 : -1;
     },
   },
 };

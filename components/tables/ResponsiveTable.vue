@@ -56,8 +56,9 @@ export default {
     },
     checkAtStartOfTable(elem) {
       const scrollLeftPosition = elem.target.scrollLeft;
+      const startLeftPosition = 0;
 
-      return scrollLeftPosition === 0;
+      return scrollLeftPosition === startLeftPosition;
     },
   },
 };

@@ -34,7 +34,11 @@ export default {
     level: {
       type: Number,
       default: 1,
-      validator: (val) => [1, 2].includes(val),
+      validator: (val) => {
+        const validLevels = [1, 2]; // eslint-disable-line no-magic-numbers
+
+        return validLevels.includes(val);
+      },
     },
     title: {
       type: String,

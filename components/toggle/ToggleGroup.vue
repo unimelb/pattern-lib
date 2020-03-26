@@ -170,11 +170,15 @@ export default {
       }
     },
     previousPanel() {
-      this.current = this.current - 1 < 0 ? this.panels.length - 1 : this.current - 1;
+      const startPanelIndex = 0;
+
+      this.current = this.current - 1 < startPanelIndex ? this.panels.length - 1 : this.current - 1;
       this.giveHeaderFocus();
     },
     nextPanel() {
-      this.current = this.current + 1 > this.panels.length - 1 ? 0 : this.current + 1;
+      const startPanelIndex = 0;
+
+      this.current = this.current + 1 > this.panels.length - 1 ? startPanelIndex : this.current + 1;
       this.giveHeaderFocus();
     },
     giveHeaderFocus() {

@@ -171,6 +171,8 @@ export default {
   },
   filters: {
     truncate(value, limit, ellipsis = '') {
+      const startFromIndex = 0;
+
       if (!value) {
         return '';
       }
@@ -179,14 +181,18 @@ export default {
         return value;
       }
 
-      return `${value.substring(0, limit)}${ellipsis}`;
+      return `${value.substring(startFromIndex, limit)}${ellipsis}`;
     },
   },
   props: {
     stories: {
       type: Array,
       default: () => [],
-      validator: (stories) => stories.length <= 3,
+      validator: (stories) => {
+        const maxStories = 3;
+
+        return stories.length <= maxStories;
+      },
       required: true,
     },
     timing: {
@@ -244,7 +250,9 @@ export default {
     },
   },
   created() {
-    this.displayImage(0);
+    const startFromPositionIndex = 0;
+
+    this.displayImageAtPosition(startFromPositionIndex);
   },
   mounted() {
     this.loadImg();
@@ -253,7 +261,7 @@ export default {
     }, TIMER_1100);
   },
   methods: {
-    displayImage(index) {
+    displayImageAtPosition(index) {
       this.image[index] = {
         backgroundImage: `url(${this.stories[index].src})`,
         backgroundPosition: this.stories[index].imagePosition ? this.stories[index].imagePosition : 'center',
@@ -262,7 +270,7 @@ export default {
     loadImg() {
       setTimeout(() => {
         for (let i = 1; i < this.stories.length; i += 1) {
-          this.displayImage(i);
+          this.displayImageAtPosition(i);
         }
       }, TIMER_1100);
     },
@@ -316,7 +324,7 @@ export default {
       this.countTime = 0;
     },
     moveToStory(storyIndex) {
-      this.displayImage(storyIndex);
+      this.displayImageAtPosition(storyIndex);
       this.selectedItem = this.stories[storyIndex];
       this.selectedIndex = storyIndex;
       this.$refs.slider.$emit('slideTo', storyIndex);

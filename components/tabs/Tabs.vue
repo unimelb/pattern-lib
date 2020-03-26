@@ -229,15 +229,16 @@ export default {
     },
     calculateTabsWidth() {
       const { tabsList } = this.$refs;
+      const tabsWidthIntital = 0;
 
       if (tabsList !== undefined) {
         const tabs = this.$refs.tabsList.childNodes;
-        const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, 0);
+        const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, tabsWidthIntital);
 
         return tabsWidth;
       }
 
-      return 0;
+      return tabsWidthIntital;
     },
     selectActive(e) {
       const index = e.target.selectedIndex;
@@ -279,24 +280,27 @@ export default {
     getTabs() {
       // Only grab <Tab>
       const children = this.$children.filter((child) => child.title !== undefined);
+      const childrenActiveIndex = 0;
 
-      children.forEach((tab, i) => {
+      children.forEach((tab, index) => {
         tab.namespace = `ui-tab-${this._uid}`;
-        tab.index = i;
-        tab.isActive = i === 0;
+        tab.index = index;
+        tab.isActive = index === childrenActiveIndex;
       });
 
       return children;
     },
     getTabSiblings() {
       let curr = -1;
+      const startTabIndex = 0;
+
       this.$refs.tabs.forEach((tab, index) => {
         if (tab.getAttribute('tabindex') === '0') {
           curr = index;
         }
       }, this);
 
-      const prev = curr - 1 < 0 ? 0 : curr - 1;
+      const prev = curr - 1 < startTabIndex ? startTabIndex : curr - 1;
       const next = curr + 1 > this.$refs.tabs.length - 1 ? this.$refs.tabs.length - 1 : curr + 1;
 
       return {
@@ -306,9 +310,10 @@ export default {
     },
     moveToTab(toTab) {
       const { length } = this.$refs.tabs;
+      const startTabIndex = 0;
 
       this.edgeNext = this.checkControlIsDisabled(toTab, length - 1);
-      this.edgePrev = this.checkControlIsDisabled(toTab, 0);
+      this.edgePrev = this.checkControlIsDisabled(toTab, startTabIndex);
 
       this.setActive(toTab);
       this.scrollTo(toTab);
