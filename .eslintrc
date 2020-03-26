@@ -78,7 +78,8 @@
     "no-magic-numbers": [
       "warn",
       { 
-        "ignoreArrayIndexes": true
+        "ignoreArrayIndexes": true,
+        "ignore": [1]
       }
     ],
     "radix": "error",
