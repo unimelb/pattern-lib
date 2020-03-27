@@ -1,15 +1,15 @@
 /*  eslint-disable no-new */
 import Vue from 'vue';
 
-// Promise polyfill
-require('es6-promise').polyfill();
-
 import * as utils from './shared/utils';
 import { version } from '../package.json';
 
 // Auto-inject SVG icon sprite with `svg-sprite-loader`
 import './icons/sprite';
 import './side-panel';
+
+// Promise polyfill
+require('es6-promise').polyfill();
 
 // Expose JS utilities
 window.ui = { utils };

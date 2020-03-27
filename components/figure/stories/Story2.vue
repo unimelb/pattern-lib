@@ -19,6 +19,7 @@
 
 <script>
 import FigureWrap from '../FigureWrap.vue';
+
 export default {
   components: { FigureWrap },
   readme: { source: true, html: true },

@@ -10,14 +10,14 @@ import { storyDecorator } from './utils';
 
 import { version, repository } from '../package.json';
 
-const VueAxe = process.env.NODE_ENV !== 'production' ? require('vue-axe') : '';
-
 // Import documentation styles
 import './index.css';
 
 // Import components
 import 'components/index.css';
 import 'components/index';
+
+const VueAxe = process.env.NODE_ENV !== 'production' ? require('vue-axe') : '';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
