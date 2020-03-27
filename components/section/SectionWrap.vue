@@ -64,7 +64,7 @@ export default {
       return {
         [`bg-${this.bgColor}`]: !!this.bgColor,
         'section--centred': this.centred,
-        'section--image': this.bgImage && this.bgImage.length > 0,
+        'section--image': this.bgImage && this.bgImage.length,
       };
     },
   },

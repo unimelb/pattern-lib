@@ -7,7 +7,7 @@
       height="100"
       class="sublink-menu__icon" />
     <img
-      v-if="img && img.length > 0"
+      v-if="img && img.length"
       :src="img"
       class="sublink-menu__image"
       alt="">

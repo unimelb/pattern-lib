@@ -18,12 +18,15 @@ export default {
   name: 'SvgIcon',
   filters: {
     capitalize(value) {
+      const startFromCharIndex = 0;
+
       let capitalisation = value;
       if (!capitalisation) {
         return '';
       }
       capitalisation = capitalisation.toString();
-      return capitalisation.charAt(0).toUpperCase() + capitalisation.slice(1);
+
+      return capitalisation.charAt(startFromCharIndex).toUpperCase() + capitalisation.slice(1);
     },
   },
   props: ['name', 'width', 'height', 'viewBox'],

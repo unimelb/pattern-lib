@@ -6,7 +6,7 @@
       <h3 class="heading-section">
         {{ title }}
       </h3>
-      <p v-if="subtitle && subtitle.length > 0">
+      <p v-if="subtitle && subtitle.length">
         {{ subtitle }}
       </p>
     </div>

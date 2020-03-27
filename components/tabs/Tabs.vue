@@ -85,6 +85,12 @@ import { throttle } from 'throttle-debounce';
 import StyledSelect from '../forms/StyledSelect.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 
+import {
+  KEYCODE_LEFT, KEYCODE_UP, KEYCODE_RIGHT, KEYCODE_DOWN,
+} from '../../constants/keycodes';
+
+import { TIMER_100, TIMER_2000 } from '../../constants/timers';
+
 export default {
   components: {
     StyledSelect,
@@ -114,7 +120,7 @@ export default {
     color: {
       type: String,
       default: '',
-      validator: (color) => ['', 'navy', 'teal', 'yellow'].indexOf(color) > -1,
+      validator: (color) => ['', 'navy', 'teal', 'yellow'].includes(color),
     },
   },
   data: () => ({
@@ -181,14 +187,14 @@ export default {
       setTimeout(() => {
         this.tabsWidth = this.calculateTabsWidth();
         this.showControls = this.hasControls();
-      }, 2000);
+      }, TIMER_2000);
     },
   },
   mounted() {
     this.panels = this.getTabs();
     this.showSelect = this.selectOptions.length > 1;
 
-    this.throttledTabsScrollEvent = throttle(100, this.checkControls);
+    this.throttledTabsScrollEvent = throttle(TIMER_100, this.checkControls);
     window.addEventListener('resize', this.throttledTabsScrollEvent);
   },
   beforeDestroy() {
@@ -223,15 +229,16 @@ export default {
     },
     calculateTabsWidth() {
       const { tabsList } = this.$refs;
+      const tabsWidthIntital = 0;
 
       if (tabsList !== undefined) {
         const tabs = this.$refs.tabsList.childNodes;
-        const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, 0);
+        const tabsWidth = [...tabs].reduce((total, tab) => total + tab.clientWidth, tabsWidthIntital);
 
         return tabsWidth;
       }
 
-      return 0;
+      return tabsWidthIntital;
     },
     selectActive(e) {
       const index = e.target.selectedIndex;
@@ -257,13 +264,13 @@ export default {
 
       switch (e.keyCode) {
         // left / up
-        case 37:
-        case 38:
+        case KEYCODE_LEFT:
+        case KEYCODE_UP:
           this.moveToTab(prev);
           break;
         // right / down
-        case 39:
-        case 40:
+        case KEYCODE_RIGHT:
+        case KEYCODE_DOWN:
           this.moveToTab(next);
           break;
         default:
@@ -273,24 +280,27 @@ export default {
     getTabs() {
       // Only grab <Tab>
       const children = this.$children.filter((child) => child.title !== undefined);
+      const childrenActiveIndex = 0;
 
-      children.forEach((tab, i) => {
+      children.forEach((tab, index) => {
         tab.namespace = `ui-tab-${this._uid}`;
-        tab.index = i;
-        tab.isActive = i === 0;
+        tab.index = index;
+        tab.isActive = index === childrenActiveIndex;
       });
 
       return children;
     },
     getTabSiblings() {
       let curr = -1;
+      const startTabIndex = 0;
+
       this.$refs.tabs.forEach((tab, index) => {
         if (tab.getAttribute('tabindex') === '0') {
           curr = index;
         }
       }, this);
 
-      const prev = curr - 1 < 0 ? 0 : curr - 1;
+      const prev = curr - 1 < startTabIndex ? startTabIndex : curr - 1;
       const next = curr + 1 > this.$refs.tabs.length - 1 ? this.$refs.tabs.length - 1 : curr + 1;
 
       return {
@@ -300,9 +310,10 @@ export default {
     },
     moveToTab(toTab) {
       const { length } = this.$refs.tabs;
+      const startTabIndex = 0;
 
       this.edgeNext = this.checkControlIsDisabled(toTab, length - 1);
-      this.edgePrev = this.checkControlIsDisabled(toTab, 0);
+      this.edgePrev = this.checkControlIsDisabled(toTab, startTabIndex);
 
       this.setActive(toTab);
       this.scrollTo(toTab);

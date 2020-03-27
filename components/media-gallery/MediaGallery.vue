@@ -147,6 +147,9 @@ import VideoEmbed from '../embed/VideoEmbed.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ThumbnailGallery from './ThumbnailGallery.vue';
 
+import { KEYCODE_ESC, KEYCODE_LEFT, KEYCODE_RIGHT } from '../../constants/keycodes';
+import { TIMER_100 } from '../../constants/timers';
+
 export default {
   components: {
     VideoEmbed,
@@ -226,7 +229,7 @@ export default {
   mounted() {
     window.addEventListener('keyup', this.keyBoardActions);
 
-    this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, 100);
+    this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, TIMER_100);
     window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
   },
   beforeDestroy() {
@@ -310,7 +313,7 @@ export default {
     },
     stopVideo() {
       const iframe = document.querySelectorAll('iframe');
-      if (iframe.length > 0) {
+      if (iframe.length) {
         iframe.forEach((element) => {
           const iframeSrc = element.src;
           element.src = iframeSrc;
@@ -331,13 +334,13 @@ export default {
     keyBoardActions(e) {
       // Only if component is in viewport.
       if (this.isInViewport) {
-        if (e.keyCode === 37) {
+        if (e.keyCode === KEYCODE_LEFT) {
           this.move('prev');
         }
-        if (e.keyCode === 39) {
+        if (e.keyCode === KEYCODE_RIGHT) {
           this.move('next');
         }
-        if (e.keyCode === 27) {
+        if (e.keyCode === KEYCODE_ESC) {
           this.openState = false;
         }
       }
@@ -357,8 +360,11 @@ export default {
       const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
       const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
 
-      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= 0);
-      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= 0);
+      const offsetTop = 0;
+      const offsetLeft = 0;
+
+      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= offsetTop);
+      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= offsetLeft);
 
       return (vertInView && horInView);
     },
