@@ -10,6 +10,8 @@ import { storyDecorator } from './utils';
 
 import { version, repository } from '../package.json';
 
+const VueAxe = process.env.NODE_ENV !== 'production' ? require('vue-axe') : '';
+
 // Import documentation styles
 import './index.css';
 
@@ -41,7 +43,6 @@ function loadStories() {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  const VueAxe = require('vue-axe');
   Vue.use(VueAxe, {
     config: {
       rules: [
