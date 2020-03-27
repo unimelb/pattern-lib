@@ -17,7 +17,7 @@ import './index.css';
 
 // Import components
 import 'components/index.css';
-import 'components/index.js';
+import 'components/index';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
