@@ -36,7 +36,7 @@ export default {
     color: {
       type: String,
       default: '',
-      validator: (color) => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].indexOf(color) > -1,
+      validator: (color) => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].includes(color),
     },
     href: {
       type: String,

@@ -75,7 +75,13 @@
     ],
     "no-useless-concat": "error",
     "no-case-declarations": "off",
-    "no-magic-numbers": "off",
+    "no-magic-numbers": [
+      "warn",
+      { 
+        "ignoreArrayIndexes": true,
+        "ignore": [1]
+      }
+    ],
     "radix": "error",
     "unicorn/no-array-instanceof": "error",
     "unicorn/no-for-loop": "error",
@@ -118,5 +124,13 @@
     "vue/key-spacing": "error",
     "vue/space-infix-ops": "error",
     "vue/object-curly-spacing": ["error","always"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "rules": {
+        "no-magic-numbers": "off"
+      }
+    }
+  ]
 }

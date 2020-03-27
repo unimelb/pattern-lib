@@ -50,7 +50,7 @@ export default {
       type: Array,
       required: true,
       validator: (arr) => (
-        arr.length > 0
+        arr.length
         && arr.every((el) => !!el.href && !!el.text)
       ),
     },

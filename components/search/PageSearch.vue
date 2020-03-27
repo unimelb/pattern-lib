@@ -37,6 +37,8 @@ import SvgIcon from '../icons/SvgIcon.vue';
 import Blanket from './blanket';
 import PageSearchForm from './PageSearchForm.vue';
 
+import { KEYCODE_ESC } from '../../constants/keycodes';
+
 export default {
   name: 'PageSearch',
   components: { SvgIcon, PageSearchForm },
@@ -61,7 +63,7 @@ export default {
       this.$emit('page-search-close');
     },
     esc(e) {
-      if (e.keyCode === 27) {
+      if (e.keyCode === KEYCODE_ESC) {
         this.close();
       }
     },

@@ -34,6 +34,10 @@
 
 import focusableElements from '../../utils/focusable-elements';
 
+import {
+  KEYCODE_TAB, KEYCODE_ENTER, KEYCODE_ESC, KEYCODE_SPACE,
+} from '../../constants/keycodes';
+
 export default {
   name: 'ToggleBlock',
   props: {
@@ -104,7 +108,7 @@ export default {
     },
     toggleFocusableElements() {
       this.focusableElements.forEach((el) => {
-        el.setAttribute('tabindex', this.isActive ? 0 : -1);
+        el.setAttribute('tabindex', this.isActive ? '0' : '-1');
       });
     },
     handleKey(e) {
@@ -114,18 +118,18 @@ export default {
       }
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) {
+      if (e.keyCode !== KEYCODE_TAB) {
         e.preventDefault();
       }
 
       switch (e.keyCode) {
         // esc
-        case 27:
+        case KEYCODE_ESC:
           this.isActive = false;
           break;
         // enter / space
-        case 13:
-        case 32:
+        case KEYCODE_ENTER:
+        case KEYCODE_SPACE:
           this.toggle();
           break;
         default: break;

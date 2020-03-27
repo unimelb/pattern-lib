@@ -10,7 +10,7 @@ export default {
     size: {
       type: String,
       default: '',
-      validator: (value) => ['', 'sml', 'lge'].indexOf(value) !== -1,
+      validator: (value) => ['', 'sml', 'lge'].includes(value),
     },
     short: {
       type: Boolean,

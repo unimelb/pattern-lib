@@ -24,7 +24,7 @@ export default {
     mode: {
       type: String,
       default: 'classic',
-      validator: (value) => ['classic', 'visual'].indexOf(value) !== -1,
+      validator: (value) => ['classic', 'visual'].includes(value),
     },
   },
   computed: {

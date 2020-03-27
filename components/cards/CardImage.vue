@@ -3,7 +3,7 @@
     :href="href"
     class="btn-owner card card--image card--bdr bg-inverted">
     <div
-      v-if="thumb && thumb.length > 0"
+      v-if="thumb && thumb.length"
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="title"
       class="card__thumb card__thumb--zoom" />

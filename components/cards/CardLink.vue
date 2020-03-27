@@ -49,7 +49,11 @@ export default {
     cols: {
       type: Number,
       default: 4,
-      validator: (cols) => cols && cols <= 4,
+      validator: (cols) => {
+        const maxColumns = 4;
+
+        return cols && cols <= maxColumns;
+      },
     },
   },
   computed: {
