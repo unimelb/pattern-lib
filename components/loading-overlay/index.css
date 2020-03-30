@@ -12,17 +12,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity var(--transition-speed-normal);
+    transition-property: opacity, transform;
+    transition-duration: var(--transition-speed-normal);
     opacity: 0;
+    transform: translateY(-30px);
     z-index: 1;
 
     &--is-loading {
       opacity: 1;
+      transform: translateY(0);
       pointer-events: auto;
     }
   }
 
   &__spinner {
+    border-radius: var(--br);
     padding: 1.5rem;
     background-color: rgb(var(--col-background-primary-navy));
     display: flex;
