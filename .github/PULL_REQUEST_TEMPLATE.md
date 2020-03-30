@@ -15,10 +15,24 @@ Please delete options that are not relevant.
 
 # Checklist:
 
-- [ ] Make sure to do not repeat yourself
+- [ ] Make sure to do not repeat yourself (DRY)
+- [ ] Snapshots tested
+- [ ] A11y tested
+- [ ] CSS utilises BEM naming convention and structure
+- [ ] Code does not mutate variables/objects/arrays but instead uses `map`, `filter` etc to return a new array/object
 - [ ] Crossbrowser testing (IE11, Safari 8+, iOS 8.4+, Android 4.4+, Firefox ESR (v52.x), iPhone (4s,6), iPad 2, Galaxy s5) 
 - [ ] My changes generate no new warnings
 - [ ] I have added tests (e2e and unit) that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes
 - [ ] Any dependent changes have been merged and published in downstream modules
 - [ ] Added the new component to the index.js (Vue and Lib) export
+
+# Reviewer Checklist
+
+- [ ] Code is not repeated (DRY)
+- [ ] ES6+ code is used where possible
+- [ ] Code does not mutate variables/objects/arrays but instead uses `map`, `filter` etc to return a new array/object
+- [ ] CSS utilises BEM naming convention and structure
+- [ ] Snapshots tested against a copy of dev snapshots to check UI changes are intended
+- [ ] A11y tested
+- [ ] Crossbrowser tested in at least IE11
