@@ -97,7 +97,6 @@
     "vue/no-shared-component-data": "error",
     "vue/no-template-key": "error",
     "vue/order-in-components": "error",
-    "vue/require-prop-types": "warn",
     "vue/require-render-return": "error",
     "vue/require-valid-default-prop": "error",
     "vue/return-in-computed-property": "error",
