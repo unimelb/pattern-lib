@@ -80,7 +80,7 @@
     ],
     "no-useless-concat": "error",
     "no-magic-numbers": [
-      "warn",
+      "error",
       { 
         "ignoreArrayIndexes": true,
         "ignore": [1]
@@ -110,7 +110,7 @@
     "vue/return-in-computed-property": "error",
     "vue/v-bind-style": "error",
     "vue/v-on-style": "error",
-    "vue/no-v-html": "warn",
+    "vue/no-v-html": "error",
     "vue/html-closing-bracket-newline": ["error", {
       "multiline": "never"
     }],
