@@ -6,6 +6,7 @@
 
 <script>
 import SectionDivider from '../../SectionDivider.vue';
+
 export default {
   components: {
     SectionDivider,

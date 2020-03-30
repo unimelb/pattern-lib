@@ -6,6 +6,7 @@
     :size="size"
     class="card card--focus-box">
     <div class="card__inner">
+      <!-- eslint-disable vue/no-v-html -->
       <svg
         v-if="icon"
         class="card--focus-box__icon"
@@ -13,6 +14,7 @@
         width="100%"
         height="100%"
         v-html="icon" />
+      <!-- eslint-enable vue/no-v-html -->
       <slot />
     </div>
   </FocusWrapper>

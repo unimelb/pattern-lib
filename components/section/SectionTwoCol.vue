@@ -21,6 +21,7 @@
 
 <script>
 import ListingWrap from '../listing/ListingWrap.vue';
+
 export default {
   components: { ListingWrap },
   props: {

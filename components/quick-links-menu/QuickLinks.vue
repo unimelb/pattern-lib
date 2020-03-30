@@ -40,6 +40,7 @@
 <script>
 import QuickLinksMenuItem from './QuickLinksMenuItem.vue';
 import QuickLinksSecondaryItem from './QuickLinksSecondaryItem.vue';
+
 export default {
   components: { QuickLinksMenuItem, QuickLinksSecondaryItem },
   props: {

@@ -29,9 +29,11 @@
         @click.prevent="dismissMenu">
         Close
       </button>
+      <!-- eslint-disable vue/no-v-html -->
       <h2
         ref="navtitle"
         v-html="title" />
+      <!-- eslint-enable vue/no-v-html -->
       <slot />
     </div>
   </div>

@@ -5,9 +5,11 @@
       :aria-controls="`modal-dialog-1${_uid}`"
       class="btn modal-dialog__open"
       @click="openDialog">
+      <!-- eslint-disable vue/no-v-html -->
       <span
         class="push-icon"
         v-html="trigger" />
+      <!-- eslint-enable vue/no-v-html -->
     </button>
     <div
       :id="`modal-dialog-1${_uid}`"
@@ -23,9 +25,11 @@
         class="modal-dialog__modal"
         role="dialog">
         <div role="document">
+          <!-- eslint-disable vue/no-v-html -->
           <h2
             :id="`modal-dialog-title-1${_uid}`"
             v-html="title" />
+          <!-- eslint-enable vue/no-v-html -->
           <slot />
           <br>
           <button

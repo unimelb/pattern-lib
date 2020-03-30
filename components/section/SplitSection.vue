@@ -35,6 +35,7 @@
 
 <script>
 import SplitSectionQuote from './SplitSectionQuote.vue';
+
 export default {
   name: 'SplitSection',
   components: { SplitSectionQuote },

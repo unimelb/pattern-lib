@@ -50,7 +50,7 @@ export default {
       required: true,
     },
     year: {
-      ype: String,
+      type: String,
       default: '',
       required: true,
     },

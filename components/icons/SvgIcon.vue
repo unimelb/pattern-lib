@@ -2,7 +2,6 @@
   <svg
     :width="width"
     :height="height"
-    :viewBox="viewBox"
     :aria-label="name"
     focusable="false"
     role="img">
@@ -29,6 +28,19 @@ export default {
       return capitalisation.charAt(startFromCharIndex).toUpperCase() + capitalisation.slice(1);
     },
   },
-  props: ['name', 'width', 'height', 'viewBox'],
+  props: {
+    name: {
+      type: String,
+      default: '',
+    },
+    width: {
+      type: [String, Number],
+      default: '0',
+    },
+    height: {
+      type: [String, Number],
+      default: '0',
+    },
+  },
 };
 </script>
