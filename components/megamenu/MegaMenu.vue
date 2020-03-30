@@ -463,7 +463,7 @@ export default {
           }
           break;
         // down
-        case KEYCODE_DOWN:
+        case KEYCODE_DOWN: {
           const cycleStartIndex = 0;
 
           if (cycle.length > 1) {
@@ -473,6 +473,7 @@ export default {
             // this.nextRootItem();
           }
           break;
+        }
         default:
           break;
       }

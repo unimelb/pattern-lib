@@ -31,7 +31,7 @@
     ],
     "consistent-return": "error",
     "curly": ["error", "all"],
-    "import/no-extraneous-dependencies": "off",
+    "import/no-extraneous-dependencies": "warn",
     "import/no-unresolved": "off",
     "max-len": "off",
     "no-caller": "error",
@@ -70,7 +70,6 @@
       }
     ],
     "no-useless-concat": "error",
-    "no-case-declarations": "off",
     "no-magic-numbers": [
       "warn",
       { 
