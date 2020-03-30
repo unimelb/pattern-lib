@@ -6,15 +6,19 @@
       </div>
       <hr>
 
-      <div class="grid grid--2col">
-        <ListItem
-          v-for="(result, resultIndex) in results"
-          :key="resultIndex">
-          <GenericCard
-            :cols="2"
-            :title="result.name" />
-        </ListItem>
-      </div>
+      <LoadingOverlay
+        :is-loading="isLoading"
+        spinner-text="Fetching results">
+        <div class="grid grid--2col">
+          <ListItem
+            v-for="(result, resultIndex) in results"
+            :key="resultIndex">
+            <GenericCard
+              :cols="2"
+              :title="result.name" />
+          </ListItem>
+        </div>
+      </LoadingOverlay>
     </div>
     <div slot="side">
       <div class="bg-light-blue filter-block">
@@ -50,30 +54,37 @@ import filterDropdownOptions from '../../../filter-dropdown/stories/options';
 import ButtonIcon from '../../../buttons/ButtonIcon.vue';
 import ListItem from '../../../listing/ListItem.vue';
 import GenericCard from '../../../cards/GenericCard.vue';
+import LoadingOverlay from '../../../loading-overlay/LoadingOverlay.vue';
+import getResults from './mockResults.js';
 
 export default {
   name: 'MajorsAndSpecialisations',
   components: {
-    SectionTwoCol, FilterDropdown, ButtonIcon, ListItem, GenericCard,
+    SectionTwoCol, FilterDropdown, ButtonIcon, ListItem, GenericCard, LoadingOverlay,
   },
   data() {
     return {
       filterDropdownOptions,
-      results: [
-        {
-          type: 'major',
-          name: 'Ancient World Studies',
-        },
-        {
-          type: 'major',
-          name: 'Anthropology',
-        },
-      ],
+      results: [],
+      errors: [],
+      isLoading: false,
     };
+  },
+  mounted() {
+    this.init();
   },
   methods: {
     onChange(changedOptions) {
       this.filterDropdownOptions = changedOptions;
+    },
+    async init() {
+      this.isLoading = true;
+      try {
+        this.results = await getResults(this.filterDropdownOptions);
+      } catch (errors) {
+        this.errors = errors;
+      }
+      this.isLoading = false;
     },
   },
 };
