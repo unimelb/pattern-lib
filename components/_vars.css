@@ -149,6 +149,9 @@
   --z-overlay: 500;
   --z-modal: 1000;
   --z-liveagent: 10000;
+
+  /* Transitions */
+  --transition-speed-normal: 250ms;
 }
 
 /**
