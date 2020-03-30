@@ -15,6 +15,7 @@
 
 <script>
 import GenericCard from './GenericCard.vue';
+
 export default {
   name: 'CardNewsTag',
   components: { GenericCard },

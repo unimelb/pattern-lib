@@ -18,9 +18,11 @@
             {{ name }}
           </h3>
           <hr class="alumni__line">
+          <!-- eslint-disable vue/no-v-html -->
           <div
             class="alumni__short-text"
             v-html="text" />
+          <!-- eslint-enable vue/no-v-html -->
         </div>
       </div>
     </FocusWrapper>

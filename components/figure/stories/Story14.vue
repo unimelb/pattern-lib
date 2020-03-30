@@ -23,6 +23,7 @@
 <script>
 
 import VideoEmbed from '../../embed/VideoEmbed.vue';
+
 export default {
   components: { VideoEmbed },
 };

@@ -5,6 +5,7 @@
       <div
         v-if="entity"
         class="page-header__entity">
+        <!-- eslint-disable vue/no-v-html -->
         <p
           class="page-header__entity__main"
           v-html="entity" />
@@ -12,6 +13,7 @@
           v-if="entitySub"
           class="page-header__entity__sub"
           v-html="entitySub" />
+        <!-- eslint-enable vue/no-v-html -->
       </div>
       <h1 class="page-header__heading">
         {{ title }}

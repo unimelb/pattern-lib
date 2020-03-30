@@ -45,6 +45,7 @@
 
 <script>
 import SocialListGeneric from '../social-list/SocialListGeneric.vue';
+
 export default {
   components: {
     SocialListGeneric,
