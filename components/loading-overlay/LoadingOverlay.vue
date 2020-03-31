@@ -5,17 +5,9 @@
         'loading-overlay__overlay',
         { 'loading-overlay__overlay--is-loading': isLoading },
       ]">
-      <div
+      <Spinner
         v-if="isSpinnerVisible"
-        class="loading-overlay__spinner">
-        <div class="loading-overlay__spinner-cube" />
-
-        <div
-          v-if="spinnerText"
-          class="loading-overlay__spinner-text">
-          {{ spinnerText }}
-        </div>
-      </div>
+        :spinner-text="spinnerText" />
     </div>
 
     <div
@@ -29,8 +21,11 @@
 </template>
 
 <script>
+import Spinner from '../spinner/Spinner.vue';
+
 export default {
   name: 'LoadingOverlay',
+  components: { Spinner },
   props: {
     isLoading: {
       type: Boolean,

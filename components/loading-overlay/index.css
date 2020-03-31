@@ -25,28 +25,6 @@
     }
   }
 
-  &__spinner {
-    border-radius: var(--br);
-    padding: 1.5rem;
-    background-color: rgb(var(--col-background-primary-navy));
-    display: flex;
-    align-items: center;
-  }
-
-  &__spinner-cube {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: rgb(var(--col-background-primary-white));
-    animation: rotateplane 1.2s infinite ease-in-out;
-  }
-
-  &__spinner-text {
-    color: rgb(var(--col-white));
-    font-size: 1.25rem;
-    font-weight: var(--fw-semibold);
-    margin-left: 1.5rem;
-  }
-
   &__content {
     transition: opacity var(--transition-speed-normal);
 
