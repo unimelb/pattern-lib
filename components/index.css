@@ -56,6 +56,7 @@
 @import 'screen-reader-jump-to/index.css';
 @import 'carousel/index.css';
 @import 'logo/index.css';
+@import 'loader/index.css';
 @import 'loading-overlay/index.css';
 @import 'filter/index.css';
 @import 'filter-dropdown/index.css';
