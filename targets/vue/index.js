@@ -320,13 +320,20 @@ export {
   from 'components/logo/Logo.vue';
 export {
   default as CardsFilter,
-} from 'components/filter/cards/CardsFilter.vue';
+}
+  from 'components/filter/cards/CardsFilter.vue';
 export {
   default as AccordionFilter,
-} from 'components/filter/accordion/AccordionFilter.vue';
+}
+  from 'components/filter/accordion/AccordionFilter.vue';
 export {
   default as FilterDropdown,
-} from 'components/filter-dropdown/FilterDropdown.vue';
+}
+  from 'components/filters/filter-dropdown/FilterDropdown.vue';
+export {
+  default as FilterBox,
+}
+  from 'components/filters/filter-box/FilterBox.vue';
 export {
   default as Tags,
 }

@@ -4,5 +4,5 @@ import { createStory } from 'storybook/utils';
 import FilterDropdownDefault from './FilterDropdownDefault.vue';
 /* ##Import story component here */
 
-storiesOf('Filter Dropdown', module)
+storiesOf('filters/Filter Dropdown', module)
   .add('Default', createStory(FilterDropdownDefault));

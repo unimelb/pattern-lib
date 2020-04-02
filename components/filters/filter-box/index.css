@@ -1,0 +1,15 @@
+.filter-box {
+  padding: 1.5rem;
+
+  &__header {
+    font-weight: var(--fw-bold);
+  }
+
+  &__btns-wrapper {
+    margin-top: 1.5rem;
+
+    @media (--bp-tablet) {
+      display: flex;
+    }
+  }
+}

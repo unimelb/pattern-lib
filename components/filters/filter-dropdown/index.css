@@ -1,4 +1,4 @@
-@import './components/NestedCheckbox/index.css';
+@import 'components/NestedCheckbox/index.css';
 
 .filter-dropdown {
   position: relative;

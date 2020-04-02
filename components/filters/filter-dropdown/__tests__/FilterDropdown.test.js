@@ -2,7 +2,7 @@ import { mount, shallow } from 'vue-test-utils';
 import cloneDeep from 'lodash.clonedeep';
 import FilterDropdown from '../FilterDropdown.vue';
 import NestedCheckbox from '../components/NestedCheckbox/index.vue';
-import ButtonIcon from '../../buttons/ButtonIcon.vue';
+import ButtonIcon from '../../../buttons/ButtonIcon.vue';
 
 const options = [
   {

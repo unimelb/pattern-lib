@@ -57,12 +57,12 @@
 @import 'logo/index.css';
 @import 'loader/index.css';
 @import 'filter/index.css';
-@import 'filter-dropdown/index.css';
+@import 'filters/filter-dropdown/index.css';
+@import 'filters/filter-box/index.css';
 @import 'tags/index.css';
 @import 'sidebar/index.css';
 @import 'profiles/accordion-profile/index.css';
 @import 'filtered-results/index.css';
-@import 'pages/index.css';
 
 /* Third party - Alphabetically ordered */
 @import '../third-party/salesforce.css';

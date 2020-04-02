@@ -1,66 +1,63 @@
 <template>
-  <SectionTwoCol direction="right">
-    <div slot="main">
-      <div>
-        40 results found with 0 filters applied. Apply default filters for Domestic undergraduate?
-      </div>
-      <hr>
+  <Loader :is-loading="!isFetched && isLoading">
+    <ErrorBox
+      v-if="!isFetched"
+      :messages="errors" />
 
-      <LoadingOverlay
-        :is-loading="isLoading"
-        spinner-text="Fetching results">
-        <div class="grid grid--2col">
-          <ListItem
-            v-for="(result, resultIndex) in results"
-            :key="resultIndex">
-            <GenericCard
-              :cols="2"
-              :title="result.name" />
-          </ListItem>
+    <SectionTwoCol
+      v-else
+      direction="right">
+      <div slot="main">
+        <div>
+          40 results found with 0 filters applied. Apply default filters for Domestic undergraduate?
         </div>
-      </LoadingOverlay>
-    </div>
-    <div slot="side">
-      <div class="bg-light-blue filter-block">
-        <h4>Filter by</h4>
 
-        <p>Course types</p>
+        <hr>
 
-        <FilterDropdown
+        <LoadingOverlay
+          :is-loading="isLoading"
+          spinner-text="Fetching results">
+          <ErrorBox
+            :messages="errors" />
+
+          <div class="grid grid--2col">
+            <ListItem
+              v-for="(result, resultIndex) in results"
+              :key="resultIndex">
+              <GenericCard
+                :cols="2"
+                :title="result.name" />
+            </ListItem>
+          </div>
+        </LoadingOverlay>
+      </div>
+
+      <div slot="side">
+        <FilterBox
           :options="filterDropdownOptions"
-          options-label="Course types to include:"
+          filter-by="Course types"
           placeholder-label="course types"
-          @change="onChange" />
-
-        <div class="filter-block__btns-wrapper">
-          <ButtonIcon no-icon>
-            Clear filters
-          </ButtonIcon>
-
-          <ButtonIcon
-            no-icon>
-            Update results
-          </ButtonIcon>
-        </div>
+          options-label="Course types to include:" />
       </div>
-    </div>
-  </SectionTwoCol>
+    </SectionTwoCol>
+  </Loader>
 </template>
 
 <script>
+import Loader from '../../../loader/Loader.vue';
+import ErrorBox from '../../../error-box/ErrorBox.vue';
+import LoadingOverlay from '../../../loader/LoadingOverlay.vue';
 import SectionTwoCol from '../../../section/SectionTwoCol.vue';
-import FilterDropdown from '../../../filter-dropdown/FilterDropdown.vue';
-import filterDropdownOptions from '../../../filter-dropdown/stories/options';
-import ButtonIcon from '../../../buttons/ButtonIcon.vue';
+import FilterBox from '../../../filters/filter-box/FilterBox.vue';
+import filterDropdownOptions from '../../../filters/filter-dropdown/stories/options';
 import ListItem from '../../../listing/ListItem.vue';
 import GenericCard from '../../../cards/GenericCard.vue';
-import LoadingOverlay from '../../../loader/LoadingOverlay.vue';
 import getResults from './mockResults.js';
 
 export default {
   name: 'MajorsAndSpecialisations',
   components: {
-    SectionTwoCol, FilterDropdown, ButtonIcon, ListItem, GenericCard, LoadingOverlay,
+    ErrorBox, SectionTwoCol, FilterBox, ListItem, GenericCard, Loader, LoadingOverlay,
   },
   data() {
     return {
@@ -68,6 +65,7 @@ export default {
       results: [],
       errors: [],
       isLoading: false,
+      isFetched: false,
     };
   },
   mounted() {
@@ -81,6 +79,7 @@ export default {
       this.isLoading = true;
       try {
         this.results = await getResults(this.filterDropdownOptions);
+        this.isFetched = true;
       } catch (errors) {
         this.errors = errors;
       }
