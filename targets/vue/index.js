@@ -361,4 +361,17 @@ export {
   from 'components/forms/StyledSelect.vue';
 export {
   default as AppCheckbox,
-} from 'components/app-checkbox/AppCheckbox.vue';
+}
+  from 'components/app-checkbox/AppCheckbox.vue';
+export {
+  default as Spinner,
+}
+  from 'components/loader/Spinner.vue';
+export {
+  default as Loader,
+}
+  from 'components/loader/Loader.vue';
+export {
+  default as LoadingOverlay,
+}
+  from 'components/loader/LoadingOverlay.vue';

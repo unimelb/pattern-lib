@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import LoadingOverlay from '../LoadingOverlay.vue';
+import LoadingOverlay from '../../LoadingOverlay.vue';
 import StoryContent from './StoryContent.vue';
 
 export default {

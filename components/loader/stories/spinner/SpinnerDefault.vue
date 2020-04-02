@@ -1,9 +1,9 @@
 <template>
-  <Spinner spinner-text="Fetching results" />
+  <Spinner />
 </template>
 
 <script>
-import Spinner from '../Spinner.vue';
+import Spinner from '../../Spinner.vue';
 
 export default {
   name: 'SpinnerDefault',

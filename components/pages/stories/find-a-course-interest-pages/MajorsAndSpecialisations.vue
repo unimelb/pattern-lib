@@ -54,7 +54,7 @@ import filterDropdownOptions from '../../../filter-dropdown/stories/options';
 import ButtonIcon from '../../../buttons/ButtonIcon.vue';
 import ListItem from '../../../listing/ListItem.vue';
 import GenericCard from '../../../cards/GenericCard.vue';
-import LoadingOverlay from '../../../loading-overlay/LoadingOverlay.vue';
+import LoadingOverlay from '../../../loader/LoadingOverlay.vue';
 import getResults from './mockResults.js';
 
 export default {

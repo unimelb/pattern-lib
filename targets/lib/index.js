@@ -92,6 +92,9 @@ import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
 import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import StyledSelect from 'components/forms/StyledSelect.vue';
 import AppCheckbox from 'components/app-checkbox/AppCheckbox.vue';
+import Spinner from 'components/loader/Spinner.vue';
+import Loader from 'components/loader/Loader.vue';
+import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
 import { version } from '../../package.json';
 
 import 'components';
@@ -191,6 +194,9 @@ Vue.component('split-section-header', SplitSectionHeader);
 Vue.component('screen-reader-jump-to', ScreenReaderJumpTo);
 Vue.component('styled-select', StyledSelect);
 Vue.component('app-checkbox', AppCheckbox);
+Vue.component('spinner', Spinner);
+Vue.component('loader', Loader);
+Vue.component('loading-overlay', LoadingOverlay);
 
 // Create Vue instance
 new Vue({

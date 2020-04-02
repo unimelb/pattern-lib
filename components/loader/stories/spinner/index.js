@@ -4,6 +4,6 @@ import { createStory } from 'storybook/utils';
 import SpinnerDefault from './SpinnerDefault.vue';
 import SpinnerWithText from './SpinnerWithText.vue';
 
-storiesOf('Spinner', module)
+storiesOf('loader/Spinner', module)
   .add('Default', createStory(SpinnerDefault))
   .add('With Text', createStory(SpinnerWithText));

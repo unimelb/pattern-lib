@@ -42,7 +42,6 @@
 @import 'social-list/index.css';
 @import 'stats/index.css';
 @import 'sublink-menu/index.css';
-@import 'spinner/index.css';
 @import 'tables/index.css';
 @import 'tabs/index.css';
 @import 'timeline/index.css';
@@ -57,7 +56,6 @@
 @import 'carousel/index.css';
 @import 'logo/index.css';
 @import 'loader/index.css';
-@import 'loading-overlay/index.css';
 @import 'filter/index.css';
 @import 'filter-dropdown/index.css';
 @import 'tags/index.css';
