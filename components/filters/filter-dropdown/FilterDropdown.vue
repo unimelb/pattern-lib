@@ -87,6 +87,10 @@ export default {
       type: String,
       default: '',
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -173,9 +177,14 @@ export default {
       const bodyRect = body.getBoundingClientRect();
 
       const bodyHeight = bodyRect.bottom - bodyRect.top;
+
+      const bodyTopLine = selectRect.top - bodyHeight;
       const bodyBottomLine = selectRect.bottom + bodyHeight;
 
-      this.isOpenUp = bodyBottomLine > window.innerHeight;
+      const partiallyInvisibleOnBottom = bodyBottomLine > window.innerHeight;
+      const partiallyInvisibleOnTop = bodyTopLine < 0;
+
+      this.isOpenUp = partiallyInvisibleOnBottom && !partiallyInvisibleOnTop;
     },
     closeDropdown() {
       if (this.isOpened) {
@@ -183,6 +192,10 @@ export default {
       }
     },
     onSelectClick() {
+      if (this.disabled) {
+        return;
+      }
+
       this.isOpened = !this.isOpened;
       this.copiedOptions = cloneDeep(this.options);
     },

@@ -7,6 +7,7 @@
     <p>{{ filterBy }}</p>
 
     <FilterDropdown
+      :disabled="disabled"
       :options="options"
       :options-label="optionsLabel"
       :placeholder-label="placeholderLabel"
@@ -14,12 +15,14 @@
 
     <div class="filter-box__btns-wrapper">
       <ButtonIcon
+        :disabled="disabled"
         no-icon
         @click.native.prevent="onClearFilters">
         Clear filters
       </ButtonIcon>
 
       <ButtonIcon
+        :disabled="disabled"
         no-icon
         class="btn--cta"
         @click.native.prevent="onUpdateResults">
@@ -53,18 +56,20 @@ export default {
       type: String,
       default: '',
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     onChange(changedOptions) {
       this.$emit('change', changedOptions);
     },
     onClearFilters() {
-      // TODO
-      // console.log('onClearFilters');
+      this.$emit('clear');
     },
     onUpdateResults() {
-      // TODO
-      // console.log('onUpdateResults');
+      this.$emit('update');
     },
   },
 };
