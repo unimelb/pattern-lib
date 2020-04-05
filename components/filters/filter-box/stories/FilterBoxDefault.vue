@@ -8,7 +8,7 @@
 
 <script>
 import FilterBox from '../FilterBox.vue';
-import options from '../../filter-dropdown/stories/options.json';
+import options from '../../options.json';
 
 export default {
   name: 'FilterBoxDefault',

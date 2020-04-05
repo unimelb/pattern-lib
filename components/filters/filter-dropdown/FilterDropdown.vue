@@ -65,6 +65,7 @@ import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
 import SvgIcon from '../../icons/SvgIcon.vue';
 import ButtonIcon from '../../buttons/ButtonIcon.vue';
+import getSelectedOptionLabels from '../getSelectedOptionLabels.js';
 
 export default {
   components: { NestedCheckbox, SvgIcon, ButtonIcon },
@@ -73,11 +74,6 @@ export default {
       type: Array,
       required: true,
       validator: optionsValidator,
-    },
-    defaultOptions: {
-      type: Array,
-      validator: optionsValidator,
-      default: null,
     },
     placeholderLabel: {
       type: String,
@@ -97,9 +93,6 @@ export default {
       isOpened: false,
       isOpenUp: false,
       copiedOptions: cloneDeep(this.options),
-      defaultCopiedOptions: this.defaultOptions
-        ? this.defaultOptions
-        : cloneDeep(this.options),
     };
   },
   computed: {
@@ -126,7 +119,7 @@ export default {
       ];
     },
     selectedOptionLabels() {
-      return this.getSelectedOptionLabels(this.options);
+      return getSelectedOptionLabels(this.options);
     },
     placeholderText() {
       const lengthSelected = this.selectedOptionLabels.length;
@@ -156,20 +149,6 @@ export default {
     },
   },
   methods: {
-    getSelectedOptionLabels(options) {
-      return options.reduce((selectedLabels, option) => {
-        if (option.options && option.options.length) {
-          const nestedSelectedOptions = this.getSelectedOptionLabels(option.options);
-          return selectedLabels.concat(nestedSelectedOptions);
-        }
-
-        if (option.isChecked) {
-          selectedLabels.push(option.label);
-        }
-
-        return selectedLabels;
-      }, []);
-    },
     checkDropdownDuration() {
       const { body, select } = this.$refs;
 
@@ -204,7 +183,7 @@ export default {
     },
     onClearClick() {
       this.isOpened = !this.isOpened;
-      this.$emit('change', this.defaultCopiedOptions);
+      this.$emit('clear');
     },
     onApplyClick() {
       this.isOpened = !this.isOpened;

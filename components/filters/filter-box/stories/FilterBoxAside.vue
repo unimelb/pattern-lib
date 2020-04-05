@@ -17,7 +17,7 @@
 
 <script>
 import SectionTwoCol from '../../../section/SectionTwoCol.vue';
-import options from '../../filter-dropdown/stories/options.json';
+import options from '../../options.json';
 import FilterBox from '../FilterBox.vue';
 
 export default {

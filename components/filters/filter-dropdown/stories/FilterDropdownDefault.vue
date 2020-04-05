@@ -5,7 +5,8 @@
       :options="options"
       placeholder-label="course types"
       options-label="Course types to include:"
-      @change="onChange" />
+      @change="onChange"
+      @clear="onClear" />
     <button @click="hideDropdown">
       {{ isVisible ? 'hide' : 'show' }} dropdown
     </button>
@@ -13,8 +14,9 @@
 </template>
 
 <script>
+import cloneDeep from 'lodash.clonedeep';
 import FilterDropdown from '../FilterDropdown.vue';
-import options from './options';
+import options from '../../options';
 
 export default {
   components: { FilterDropdown },
@@ -30,6 +32,9 @@ export default {
     },
     hideDropdown() {
       this.isVisible = !this.isVisible;
+    },
+    onClear() {
+      this.options = cloneDeep(options);
     },
   },
 };

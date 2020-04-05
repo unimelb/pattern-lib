@@ -7,22 +7,21 @@
     <p>{{ filterBy }}</p>
 
     <FilterDropdown
-      :disabled="disabled"
       :options="options"
       :options-label="optionsLabel"
       :placeholder-label="placeholderLabel"
-      @change="onChange" />
+      @change="onChange"
+      @clear="onClearFilters" />
 
     <div class="filter-box__btns-wrapper">
       <ButtonIcon
-        :disabled="disabled"
+        :disabled="isClearDisabled"
         no-icon
         @click.native.prevent="onClearFilters">
         Clear filters
       </ButtonIcon>
 
       <ButtonIcon
-        :disabled="disabled"
         no-icon
         class="btn--cta"
         @click.native.prevent="onUpdateResults">
@@ -56,7 +55,7 @@ export default {
       type: String,
       default: '',
     },
-    disabled: {
+    isClearDisabled: {
       type: Boolean,
       default: false,
     },

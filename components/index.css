@@ -59,6 +59,7 @@
 @import 'filter/index.css';
 @import 'filters/filter-dropdown/index.css';
 @import 'filters/filter-box/index.css';
+@import 'filters/segmentation-notice/index.css';
 @import 'tags/index.css';
 @import 'sidebar/index.css';
 @import 'profiles/accordion-profile/index.css';

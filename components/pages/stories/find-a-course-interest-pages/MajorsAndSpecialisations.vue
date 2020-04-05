@@ -8,23 +8,17 @@
       v-else
       direction="right">
       <div slot="main">
-        <div>
-          {{ results.length }} results found with 0 filters applied.
-          <a
-            v-if="defaultFiltersApplied"
-            href="#"
-            @click.prevent="onClickWhenDefaultApplied">{{ messageDefaultFilters }}</a>
-          <a
-            v-else
-            href="#"
-            @click.prevent="onClickWhenCustomApplied">{{ messageCustomFilters }}</a>
-        </div>
-
-        <hr>
-
         <LoadingOverlay
           :is-loading="isLoading"
           spinner-text="Fetching results">
+          <SegmentationNotice
+            :options="filterDropdownOptions"
+            :is-default-filter-applied="isDefaultFilterApplied"
+            :results-length="results.length"
+            :user-qualification="userQualification"
+            @clear="onClear"
+            @change="segmentationChange" />
+
           <ErrorBox
             :messages="errors" />
 
@@ -41,14 +35,18 @@
       </div>
 
       <div slot="side">
-        <FilterBox
-          :disabled="isLoading"
-          :options="filterDropdownOptions"
-          filter-by="Course types"
-          placeholder-label="course types"
-          options-label="Course types to include:"
-          @change="onChange"
-          @clear="onClear" />
+        <LoadingOverlay
+          :is-loading="isLoading"
+          :is-spinner-visible="false">
+          <FilterBox
+            :is-clear-disabled="isDefaultFilterApplied"
+            :options="filterDropdownOptions"
+            filter-by="Course types"
+            placeholder-label="course types"
+            options-label="Course types to include:"
+            @change="onChange"
+            @clear="onClear" />
+        </LoadingOverlay>
       </div>
     </SectionTwoCol>
   </Loader>
@@ -60,6 +58,7 @@ import ErrorBox from '../../../error-box/ErrorBox.vue';
 import LoadingOverlay from '../../../loader/LoadingOverlay.vue';
 import SectionTwoCol from '../../../section/SectionTwoCol.vue';
 import FilterBox from '../../../filters/filter-box/FilterBox.vue';
+import SegmentationNotice from '../../../filters/segmentation-notice/SegmentationNotice.vue';
 import ListItem from '../../../listing/ListItem.vue';
 import GenericCard from '../../../cards/GenericCard.vue';
 import getResults from './mockResults.js';
@@ -73,46 +72,34 @@ const defaultOptions = {
   research,
 };
 
-const defaultLabels = {
-  undergrad: 'undergraduate study',
-  postgrad: 'graduate study',
-  research: 'research study',
-};
-
 export default {
   name: 'MajorsAndSpecialisations',
   components: {
-    ErrorBox, SectionTwoCol, FilterBox, ListItem, GenericCard, Loader, LoadingOverlay,
+    ErrorBox,
+    SegmentationNotice,
+    SectionTwoCol,
+    FilterBox,
+    ListItem,
+    GenericCard,
+    Loader,
+    LoadingOverlay,
   },
   data() {
     return {
       userQualification: 'undergrad',
       filterDropdownOptions: defaultOptions.undergrad,
-      defaultFiltersApplied: true,
+      isDefaultFilterApplied: true,
       results: [],
       errors: [],
       isLoading: false,
       isFetched: false,
     };
   },
-  computed: {
-    messageDefaultFilters() {
-      const qual = defaultLabels[this.userQualification];
-      return `Filters applied to show you ${qual} options (change)`;
-    },
-    messageCustomFilters() {
-      const qual = defaultLabels[this.userQualification];
-      return `Apply filters to show you ${qual} options?`;
-    },
-  },
   mounted() {
     this.init();
   },
   methods: {
-    onClickWhenDefaultApplied() {
-      // TODO
-    },
-    onClickWhenCustomApplied() {
+    segmentationChange() {
       // TODO
     },
     async init() {
@@ -130,6 +117,7 @@ export default {
       try {
         this.results = await getResults(changedOptions);
         this.filterDropdownOptions = changedOptions;
+        this.isDefaultFilterApplied = false;
       } catch (errors) {
         this.errors = errors;
       }
@@ -142,6 +130,7 @@ export default {
 
         this.results = await getResults(defaultOptionsForUserQual);
         this.filterDropdownOptions = defaultOptionsForUserQual;
+        this.isDefaultFilterApplied = true;
       } catch (errors) {
         this.errors = errors;
       }
