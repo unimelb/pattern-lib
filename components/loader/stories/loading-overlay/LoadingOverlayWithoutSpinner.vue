@@ -11,8 +11,10 @@
 <script>
 import LoadingOverlay from '../../LoadingOverlay.vue';
 import StoryContent from './StoryContent.vue';
+import loadingOverlayWithoutSpinner from './loadingOverlayWithoutSpinner.md';
 
 export default {
+  readme: { custom: loadingOverlayWithoutSpinner, source: false, html: false },
   name: 'LoadingOverlayDefault',
   components: { LoadingOverlay, StoryContent },
 };

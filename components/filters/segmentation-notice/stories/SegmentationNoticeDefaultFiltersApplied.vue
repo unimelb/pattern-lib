@@ -11,8 +11,10 @@
 <script>
 import options from '../../options.json';
 import SegmentationNotice from '../SegmentationNotice.vue';
+import segmentationNotice from './segmentation-notice.md';
 
 export default {
+  readme: { custom: segmentationNotice, source: true, html: false },
   name: 'SegmentationNoticeDefaultFiltersApplied',
   components: { SegmentationNotice },
   data() {

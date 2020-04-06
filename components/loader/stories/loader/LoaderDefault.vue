@@ -13,8 +13,10 @@
 
 <script>
 import Loader from '../../Loader.vue';
+import loader from './loader.md';
 
 export default {
+  readme: { custom: loader, source: false, html: false },
   name: 'LoaderDefault',
   components: { Loader },
   data() {

@@ -13,8 +13,10 @@
 <script>
 import LoadingOverlay from '../../LoadingOverlay.vue';
 import StoryContent from './StoryContent.vue';
+import loadingOverlayDefault from './loadingOverlayDefault.md';
 
 export default {
+  readme: { custom: loadingOverlayDefault, source: false, html: false },
   name: 'LoadingOverlayDefault',
   components: { LoadingOverlay, StoryContent },
   data() {
