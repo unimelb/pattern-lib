@@ -1,9 +1,0 @@
-.segmentation-notice {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgb(var(--col-navy-mid-1));
-  margin-bottom: 1.5rem;
-
-  &__filters-quantity {
-    font-weight: var(--fw-bold);
-  }
-}

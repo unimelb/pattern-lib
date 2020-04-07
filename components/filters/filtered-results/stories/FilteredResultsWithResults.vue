@@ -22,7 +22,7 @@
 
 <script>
 import FilteredResults from '../FilteredResults.vue';
-import GenericCard from '../../cards/GenericCard.vue';
+import GenericCard from '../../../cards/GenericCard.vue';
 
 export default {
   components: { FilteredResults, GenericCard },

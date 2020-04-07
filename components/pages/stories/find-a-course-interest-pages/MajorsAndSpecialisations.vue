@@ -11,26 +11,28 @@
         <LoadingOverlay
           :is-loading="isLoading"
           spinner-text="Fetching results">
-          <SegmentationNotice
-            :options="filterDropdownOptions"
-            :is-default-filter-applied="isDefaultFilterApplied"
-            :results-length="results.length"
-            :user-qualification="userQualification"
-            @clear="onClear"
-            @change="segmentationChange" />
-
           <ErrorBox
             :messages="errors" />
 
-          <div class="grid grid--2col">
-            <ListItem
-              v-for="(result, resultIndex) in results"
-              :key="resultIndex">
-              <GenericCard
-                :cols="2"
-                :title="result.name" />
-            </ListItem>
-          </div>
+          <FilteredResults
+            :items="results.length"
+            :filters="filtersApplied"
+            :secondary-message="secondaryMessage"
+            :callback="segmentationChange">
+            <div class="grid grid--center grid--2col">
+              <ListItem
+                v-for="item in results"
+                :key="item.id">
+                <GenericCard
+                  :thumb="item.thumb"
+                  :title="item.name"
+                  :href="item.href"
+                  :excerpt="item.excerpt"
+                  :tags="item.tags"
+                  :cols="item.cols" />
+              </ListItem>
+            </div>
+          </FilteredResults>
         </LoadingOverlay>
       </div>
 
@@ -58,13 +60,19 @@ import ErrorBox from '../../../error-box/ErrorBox.vue';
 import LoadingOverlay from '../../../loader/LoadingOverlay.vue';
 import SectionTwoCol from '../../../section/SectionTwoCol.vue';
 import FilterBox from '../../../filters/filter-box/FilterBox.vue';
-import SegmentationNotice from '../../../filters/segmentation-notice/SegmentationNotice.vue';
+import FilteredResults from '../../../filters/filtered-results/FilteredResults.vue';
 import ListItem from '../../../listing/ListItem.vue';
 import GenericCard from '../../../cards/GenericCard.vue';
 import getResults from './mockResults.js';
 import undergrad from './defaultOptions/undergrad.json';
 import postgrad from './defaultOptions/postgrad.json';
 import research from './defaultOptions/research.json';
+
+const defaultLabels = {
+  undergrad: 'undergraduate study',
+  postgrad: 'graduate study',
+  research: 'research study',
+};
 
 const defaultOptions = {
   undergrad,
@@ -76,7 +84,7 @@ export default {
   name: 'MajorsAndSpecialisations',
   components: {
     ErrorBox,
-    SegmentationNotice,
+    FilteredResults,
     SectionTwoCol,
     FilterBox,
     ListItem,
@@ -95,12 +103,48 @@ export default {
       isFetched: false,
     };
   },
+  computed: {
+    messageDefaultFilters() {
+      const qualificationLabel = defaultLabels[this.userQualification];
+      return `Filters applied to show you ${qualificationLabel} options (change)`;
+    },
+    messageCustomFilters() {
+      const qualificationLabel = defaultLabels[this.userQualification];
+      return `Apply filters to show you ${qualificationLabel} options?`;
+    },
+    secondaryMessage() {
+      return this.isDefaultFilterApplied
+        ? this.messageDefaultFilters
+        : this.messageCustomFilters;
+    },
+    filtersApplied() {
+      return this.getSelectedOptionLabels(this.filterDropdownOptions).length;
+    },
+  },
   mounted() {
     this.init();
   },
   methods: {
+    getSelectedOptionLabels(options) {
+      return options.reduce((selectedLabels, option) => {
+        if (option.options && option.options.length) {
+          const nestedSelectedOptions = this.getSelectedOptionLabels(option.options);
+          return selectedLabels.concat(nestedSelectedOptions);
+        }
+
+        if (option.isChecked) {
+          selectedLabels.push(option.label);
+        }
+
+        return selectedLabels;
+      }, []);
+    },
     segmentationChange() {
-      // TODO
+      if (this.isDefaultFilterApplied) {
+        // TODO
+      } else {
+        this.onClear();
+      }
     },
     async init() {
       this.isLoading = true;
