@@ -25,6 +25,7 @@ import FilteredResults from '../FilteredResults.vue';
 import GenericCard from '../../../cards/GenericCard.vue';
 
 export default {
+  readme: { source: true, html: false },
   components: { FilteredResults, GenericCard },
   data() {
     return {

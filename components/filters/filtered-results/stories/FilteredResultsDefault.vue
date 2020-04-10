@@ -10,5 +10,6 @@ import FilteredResults from '../FilteredResults.vue';
 
 export default {
   components: { FilteredResults },
+  readme: { source: true, html: false },
 };
 </script>

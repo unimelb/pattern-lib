@@ -20,7 +20,7 @@ import options from '../../options';
 import filterDropdown from './filter-dropdown.md';
 
 export default {
-  readme: { custom: filterDropdown, source: false, html: false },
+  readme: { custom: filterDropdown, source: true, html: false },
   components: { FilterDropdown },
   data() {
     return {

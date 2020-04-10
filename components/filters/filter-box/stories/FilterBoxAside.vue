@@ -22,7 +22,7 @@ import FilterBox from '../FilterBox.vue';
 import filterBox from './filter-box.md';
 
 export default {
-  readme: { custom: filterBox, source: false, html: false },
+  readme: { custom: filterBox, source: true, html: false },
   name: 'FilterBoxAside',
   components: { SectionTwoCol, FilterBox },
   data() {
