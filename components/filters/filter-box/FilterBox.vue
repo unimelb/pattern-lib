@@ -15,7 +15,6 @@
 
     <div class="filter-box__btns-wrapper">
       <ButtonIcon
-        :disabled="isClearDisabled"
         no-icon
         @click.native.prevent="onClearFilters">
         Clear filters
@@ -54,10 +53,6 @@ export default {
     optionsLabel: {
       type: String,
       default: '',
-    },
-    isClearDisabled: {
-      type: Boolean,
-      default: false,
     },
   },
   methods: {

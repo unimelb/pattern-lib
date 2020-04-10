@@ -41,13 +41,13 @@
           :is-loading="isLoading"
           :is-spinner-visible="false">
           <FilterBox
-            :is-clear-disabled="isDefaultFilterApplied"
             :options="filterDropdownOptions"
             filter-by="Course types"
             placeholder-label="course types"
             options-label="Course types to include:"
             @change="onChange"
-            @clear="onClear" />
+            @clear="onClear"
+            @update="onUpdate" />
         </LoadingOverlay>
       </div>
     </SectionTwoCol>
@@ -67,6 +67,7 @@ import getResults from './mockResults.js';
 import undergrad from './defaultOptions/undergrad.json';
 import postgrad from './defaultOptions/postgrad.json';
 import research from './defaultOptions/research.json';
+import all from './defaultOptions/all.json';
 
 const defaultLabels = {
   undergrad: 'undergraduate study',
@@ -143,7 +144,7 @@ export default {
       if (this.isDefaultFilterApplied) {
         // TODO
       } else {
-        this.onClear();
+        this.onResetToDefaultQualification();
       }
     },
     async init() {
@@ -170,11 +171,31 @@ export default {
     async onClear() {
       this.isLoading = true;
       try {
-        const defaultOptionsForUserQual = defaultOptions[this.userQualification];
+        this.results = await getResults(all);
+        this.filterDropdownOptions = all;
+        this.isDefaultFilterApplied = false;
+      } catch (errors) {
+        this.errors = errors;
+      }
+      this.isLoading = false;
+    },
+    async onResetToDefaultQualification() {
+      this.isLoading = true;
+      try {
+        const defaultOptionsForUserQualification = defaultOptions[this.userQualification];
 
-        this.results = await getResults(defaultOptionsForUserQual);
-        this.filterDropdownOptions = defaultOptionsForUserQual;
+        this.results = await getResults(defaultOptionsForUserQualification);
+        this.filterDropdownOptions = defaultOptionsForUserQualification;
         this.isDefaultFilterApplied = true;
+      } catch (errors) {
+        this.errors = errors;
+      }
+      this.isLoading = false;
+    },
+    async onUpdate() {
+      this.isLoading = true;
+      try {
+        this.results = await getResults(this.filterDropdownOptions);
       } catch (errors) {
         this.errors = errors;
       }

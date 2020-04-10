@@ -93,6 +93,7 @@ export default {
       isOpened: false,
       isOpenUp: false,
       copiedOptions: cloneDeep(this.options),
+      isChanged: false,
     };
   },
   computed: {
@@ -167,7 +168,11 @@ export default {
     },
     closeDropdown() {
       if (this.isOpened) {
-        this.isOpened = !this.isOpened;
+        this.isOpened = false;
+
+        if (this.isChanged) {
+          this.$emit('change', this.copiedOptions);
+        }
       }
     },
     onSelectClick() {
@@ -175,11 +180,21 @@ export default {
         return;
       }
 
-      this.isOpened = !this.isOpened;
-      this.copiedOptions = cloneDeep(this.options);
+      if (this.isOpened) {
+        this.isOpened = false;
+
+        if (this.isChanged) {
+          this.$emit('change', this.copiedOptions);
+        }
+      } else {
+        this.isOpened = true;
+        this.isChanged = false;
+        this.copiedOptions = cloneDeep(this.options);
+      }
     },
     onChange(changedOptions) {
       this.copiedOptions = changedOptions;
+      this.isChanged = true;
     },
     onClearClick() {
       this.isOpened = !this.isOpened;
