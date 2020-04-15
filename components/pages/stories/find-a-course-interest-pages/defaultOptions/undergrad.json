@@ -5,7 +5,7 @@
     "options": [
       {
         "label": "Undergraduate (7)",
-        "name": "undergraduate",
+        "name": "undergrad",
         "options": [
           {
             "label": "Bachelor (6)",
@@ -26,7 +26,7 @@
       },
       {
         "label": "Graduate (38)",
-        "name": "graduate",
+        "name": "postgrad",
         "options": [
           {
             "label": "Certificate (10)",
