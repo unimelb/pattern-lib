@@ -15,8 +15,8 @@
 
 <script>
 import cloneDeep from 'lodash.clonedeep';
-import FilterDropdown from '../FilterDropdown.vue';
 import options from '../../options';
+import FilterDropdown from '../FilterDropdown.vue';
 import filterDropdown from './filter-dropdown.md';
 
 export default {

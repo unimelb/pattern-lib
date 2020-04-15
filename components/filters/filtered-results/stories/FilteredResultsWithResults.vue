@@ -21,8 +21,8 @@
 </template>
 
 <script>
+import GenericCard from 'components/cards/GenericCard.vue';
 import FilteredResults from '../FilteredResults.vue';
-import GenericCard from '../../../cards/GenericCard.vue';
 
 export default {
   readme: { source: true, html: false },

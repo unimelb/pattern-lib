@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import SectionTwoCol from '../../../section/SectionTwoCol.vue';
+import SectionTwoCol from 'components/section/SectionTwoCol.vue';
 import options from '../../options.json';
 import FilterBox from '../FilterBox.vue';
 import filterBox from './filter-box.md';

@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import ButtonIcon from '../../buttons/ButtonIcon.vue';
+import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import FilterDropdown from '../filter-dropdown/FilterDropdown.vue';
 
 export default {

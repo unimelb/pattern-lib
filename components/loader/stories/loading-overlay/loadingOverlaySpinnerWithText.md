@@ -5,15 +5,6 @@ spinnerText: 'Fetching results', // string
 isSpinnerVisible: false, // boolean, true by default
 ```
 
-Spinner with custom text:
-```vue
-<LoadingOverlay
-  :is-loading="true"
-  spinner-text="Fetching results">
-  Content that should be disabled during loading
-</LoadingOverlay>
-```
-
 Source:
 ```html
 <div class="loading-overlay">

@@ -61,10 +61,10 @@
 
 <script>
 import cloneDeep from 'lodash.clonedeep';
+import SvgIcon from 'components/icons/SvgIcon.vue';
+import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
-import SvgIcon from '../../icons/SvgIcon.vue';
-import ButtonIcon from '../../buttons/ButtonIcon.vue';
 import getSelectedOptionLabels from '../getSelectedOptionLabels.js';
 
 export default {

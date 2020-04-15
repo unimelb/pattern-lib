@@ -16,7 +16,7 @@
     transition-duration: var(--transition-speed-normal);
     opacity: 0;
     transform: translateY(-30px);
-    z-index: 1;
+    z-index: var(--z-default);
 
     &--is-loading {
       opacity: 1;
