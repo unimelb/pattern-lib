@@ -23,9 +23,10 @@
 <script>
 import GenericCard from 'components/cards/GenericCard.vue';
 import FilteredResults from '../FilteredResults.vue';
+import filteredResultsWithResults from './filtered-results-with-results.md';
 
 export default {
-  readme: { source: true, html: false },
+  readme: { custom: filteredResultsWithResults, source: true, html: false },
   components: { FilteredResults, GenericCard },
   data() {
     return {

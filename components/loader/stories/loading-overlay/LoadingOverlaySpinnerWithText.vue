@@ -11,7 +11,7 @@
 <script>
 import LoadingOverlay from '../../LoadingOverlay.vue';
 import StoryContent from './StoryContent.vue';
-import loadingOverlaySpinnerWithText from './loadingOverlaySpinnerWithText.md';
+import loadingOverlaySpinnerWithText from './loading-overlay-spinner-with-text.md';
 
 export default {
   readme: { custom: loadingOverlaySpinnerWithText, source: false, html: true },

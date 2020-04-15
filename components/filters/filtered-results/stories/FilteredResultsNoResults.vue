@@ -1,15 +1,16 @@
 <template>
   <FilteredResults
-    :items="-1"
+    :items="0"
     :filters="0"
     :callback="() => false" />
 </template>
 
 <script>
 import FilteredResults from '../FilteredResults.vue';
+import filteredResultsNoResults from './filtered-results-no-results.md';
 
 export default {
   components: { FilteredResults },
-  readme: { source: true, html: false },
+  readme: { custom: filteredResultsNoResults, source: true, html: false },
 };
 </script>

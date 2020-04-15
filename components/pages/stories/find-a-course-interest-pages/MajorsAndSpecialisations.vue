@@ -24,12 +24,9 @@
                 v-for="item in results"
                 :key="item.id">
                 <GenericCard
-                  :thumb="item.thumb"
                   :title="item.name"
-                  :href="item.href"
                   :excerpt="item.excerpt"
-                  :tags="item.tags"
-                  :cols="item.cols" />
+                  :cols="2" />
               </ListItem>
             </div>
           </FilteredResults>
