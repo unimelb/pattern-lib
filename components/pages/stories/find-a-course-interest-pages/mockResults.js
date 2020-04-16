@@ -240,8 +240,61 @@ const mockResults = [
   },
 ];
 
-let chunkNum = 0;
-const quantityToReturn = 10;
+const groupedByStudyOption = groupBy(mockResults, 'studyOption');
+
+const groupedByExcerpt = Object.keys(groupedByStudyOption).reduce(
+  (groupedByStudyOptionByExcerpt, studyOption) => {
+    const resultsArray = groupedByStudyOption[studyOption];
+
+    groupedByStudyOptionByExcerpt[studyOption] = groupBy(resultsArray, 'excerpt');
+
+    return groupedByStudyOptionByExcerpt;
+  },
+  {}
+);
+
+// TODO calculate recursively
+const undergradQuantity = groupedByStudyOption.undergrad.length;
+const postgradQuantity = groupedByStudyOption.postgrad.length;
+const researchQuantity = groupedByStudyOption.research.length;
+
+const quantity = {
+  all: {
+    undergrad: {
+      quantity: undergradQuantity,
+      bachelor: groupedByExcerpt.undergrad.bachelor.length,
+      diploma: groupedByExcerpt.undergrad.diploma.length,
+    },
+    postgrad: {
+      quantity: postgradQuantity,
+      certificate: groupedByExcerpt.postgrad.certificate.length,
+      diploma: groupedByExcerpt.postgrad.diploma.length,
+      master: groupedByExcerpt.postgrad.master.length,
+    },
+    research: {
+      quantity: researchQuantity,
+      master: groupedByExcerpt.research.master.length,
+      phd: groupedByExcerpt.research.phd.length,
+    },
+    quantity: undergradQuantity + postgradQuantity + researchQuantity,
+  },
+};
+
+function groupBy(arrayOfItems, propToGroupBy) {
+  return arrayOfItems.reduce(
+    (accumulator, item) => {
+      if (accumulator[item[propToGroupBy]]) {
+        accumulator[item[propToGroupBy]].push(item);
+      } else {
+        accumulator[item[propToGroupBy]] = [item];
+      }
+
+      return accumulator;
+    },
+    {}
+  );
+}
+
 export default async () => {
   await new Promise((resolve) => {
     setTimeout(() => {
@@ -249,15 +302,8 @@ export default async () => {
     }, 1000);
   });
 
-  const begin = chunkNum * quantityToReturn;
-  const end = begin + 10;
-  const result = mockResults.slice(begin, end);
-
-  if (result.length) {
-    chunkNum += 1;
-
-    return result;
-  }
-  chunkNum = 0;
-  return mockResults.slice(0, quantityToReturn);
+  return {
+    results: [],
+    quantity,
+  };
 };

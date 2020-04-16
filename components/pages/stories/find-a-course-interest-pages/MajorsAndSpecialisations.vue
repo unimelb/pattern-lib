@@ -15,13 +15,13 @@
             :messages="errors" />
 
           <FilteredResults
-            :items="results.length"
+            :items="response.results.length"
             :filters="filtersApplied"
             :secondary-message="secondaryMessage"
             :callback="segmentationChange">
             <div class="grid grid--center grid--2col">
               <ListItem
-                v-for="item in results"
+                v-for="item in response.results"
                 :key="item.id">
                 <GenericCard
                   :title="item.name"
@@ -93,15 +93,23 @@ export default {
   data() {
     return {
       userQualification: 'undergrad',
-      filterDropdownOptions: defaultOptions.undergrad,
+      options: defaultOptions.undergrad,
+      response: {
+        results: [],
+        quantity: {},
+      },
       isDefaultFilterApplied: true,
-      results: [],
       errors: [],
       isLoading: false,
       isFetched: false,
     };
   },
   computed: {
+    filterDropdownOptions() {
+      const { options, response: { quantity } } = this;
+
+      return this.getFilterDropdownOptions(options, quantity);
+    },
     messageDefaultFilters() {
       const qualificationLabel = defaultLabels[this.userQualification];
       return `Filters applied to show you ${qualificationLabel} options (change)`;
@@ -123,6 +131,34 @@ export default {
     this.init();
   },
   methods: {
+    getFilterDropdownOptions(options, quantity) {
+      return options.map((option) => {
+        const { name, label } = option;
+
+        const currentOptionQuantityConfig = quantity[name] || 0;
+
+        const currentOptionQuantity = typeof currentOptionQuantityConfig === 'number'
+          ? currentOptionQuantityConfig
+          : currentOptionQuantityConfig.quantity;
+
+        const newLabel = `${label.replace(/ \([0-9]+\)$/g, '')} (${currentOptionQuantity})`;
+
+        if (option.options && option.options.length) {
+          return {
+            ...option,
+            label: newLabel,
+            options: this.getFilterDropdownOptions(
+              option.options,
+              currentOptionQuantityConfig
+            ),
+          };
+        }
+        return {
+          ...option,
+          label: newLabel,
+        };
+      });
+    },
     getSelectedOptionLabels(options) {
       return options.reduce((selectedLabels, option) => {
         if (option.options && option.options.length) {
@@ -147,7 +183,7 @@ export default {
     async init() {
       this.isLoading = true;
       try {
-        this.results = await getResults(this.filterDropdownOptions);
+        this.response = await getResults(this.filterDropdownOptions);
         this.isFetched = true;
       } catch (errors) {
         this.errors = errors;
@@ -157,8 +193,8 @@ export default {
     async onChange(changedOptions) {
       this.isLoading = true;
       try {
-        this.results = await getResults(changedOptions);
-        this.filterDropdownOptions = changedOptions;
+        this.response = await getResults(changedOptions);
+        this.options = changedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
         this.errors = errors;
@@ -168,8 +204,8 @@ export default {
     async onClear() {
       this.isLoading = true;
       try {
-        this.results = await getResults(all);
-        this.filterDropdownOptions = all;
+        this.response = await getResults(all);
+        this.options = all;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
         this.errors = errors;
@@ -181,8 +217,8 @@ export default {
       try {
         const defaultOptionsForUserQualification = defaultOptions[this.userQualification];
 
-        this.results = await getResults(defaultOptionsForUserQualification);
-        this.filterDropdownOptions = defaultOptionsForUserQualification;
+        this.response = await getResults(defaultOptionsForUserQualification);
+        this.options = defaultOptionsForUserQualification;
         this.isDefaultFilterApplied = true;
       } catch (errors) {
         this.errors = errors;
@@ -192,7 +228,7 @@ export default {
     async onUpdate() {
       this.isLoading = true;
       try {
-        this.results = await getResults(this.filterDropdownOptions);
+        this.response = await getResults(this.filterDropdownOptions);
       } catch (errors) {
         this.errors = errors;
       }
