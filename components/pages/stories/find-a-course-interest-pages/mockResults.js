@@ -242,16 +242,18 @@ const mockResults = [
 
 const groupedByStudyOption = groupBy(mockResults, 'studyOption');
 
-const groupedByExcerpt = Object.keys(groupedByStudyOption).reduce(
-  (groupedByStudyOptionByExcerpt, studyOption) => {
-    const resultsArray = groupedByStudyOption[studyOption];
+const groupedByExcerpt = {
+  all: Object.keys(groupedByStudyOption).reduce(
+    (groupedByStudyOptionByExcerpt, studyOption) => {
+      const resultsArray = groupedByStudyOption[studyOption];
 
-    groupedByStudyOptionByExcerpt[studyOption] = groupBy(resultsArray, 'excerpt');
+      groupedByStudyOptionByExcerpt[studyOption] = groupBy(resultsArray, 'excerpt');
 
-    return groupedByStudyOptionByExcerpt;
-  },
-  {}
-);
+      return groupedByStudyOptionByExcerpt;
+    },
+    {}
+  ),
+};
 
 // TODO calculate recursively
 const undergradQuantity = groupedByStudyOption.undergrad.length;
@@ -262,19 +264,19 @@ const quantity = {
   all: {
     undergrad: {
       quantity: undergradQuantity,
-      bachelor: groupedByExcerpt.undergrad.bachelor.length,
-      diploma: groupedByExcerpt.undergrad.diploma.length,
+      bachelor: groupedByExcerpt.all.undergrad.bachelor.length,
+      diploma: groupedByExcerpt.all.undergrad.diploma.length,
     },
     postgrad: {
       quantity: postgradQuantity,
-      certificate: groupedByExcerpt.postgrad.certificate.length,
-      diploma: groupedByExcerpt.postgrad.diploma.length,
-      master: groupedByExcerpt.postgrad.master.length,
+      certificate: groupedByExcerpt.all.postgrad.certificate.length,
+      diploma: groupedByExcerpt.all.postgrad.diploma.length,
+      master: groupedByExcerpt.all.postgrad.master.length,
     },
     research: {
       quantity: researchQuantity,
-      master: groupedByExcerpt.research.master.length,
-      phd: groupedByExcerpt.research.phd.length,
+      master: groupedByExcerpt.all.research.master.length,
+      phd: groupedByExcerpt.all.research.phd.length,
     },
     quantity: undergradQuantity + postgradQuantity + researchQuantity,
   },
@@ -295,15 +297,33 @@ function groupBy(arrayOfItems, propToGroupBy) {
   );
 }
 
-export default async () => {
+function pick(collection, [firstKey, ...restKeys]) {
+  const pickedCollection = collection[firstKey];
+
+  if (restKeys.length) {
+    return pick(pickedCollection, restKeys);
+  }
+
+  return pickedCollection;
+}
+
+export default async (selectedNames) => {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
     }, 1000);
   });
 
+  const results = [];
+  selectedNames.forEach((paths) => {
+    const items = pick(groupedByExcerpt, paths) || [];
+    results.push(
+      ...items
+    );
+  });
+
   return {
-    results: [],
+    results,
     quantity,
   };
 };

@@ -124,7 +124,7 @@ export default {
         : this.messageCustomFilters;
     },
     filtersApplied() {
-      return this.getSelectedOptionLabels(this.filterDropdownOptions).length;
+      return this.getSelectedNames(this.filterDropdownOptions).length;
     },
   },
   mounted() {
@@ -159,18 +159,21 @@ export default {
         };
       });
     },
-    getSelectedOptionLabels(options) {
-      return options.reduce((selectedLabels, option) => {
+    getSelectedNames(options, parentNames = []) {
+      return options.reduce((selectedNames, option) => {
         if (option.options && option.options.length) {
-          const nestedSelectedOptions = this.getSelectedOptionLabels(option.options);
-          return selectedLabels.concat(nestedSelectedOptions);
+          const nestedSelectedOptions = this.getSelectedNames(
+            option.options,
+            [...parentNames, option.name]
+          );
+          return selectedNames.concat(nestedSelectedOptions);
         }
 
         if (option.isChecked) {
-          selectedLabels.push(option.label);
+          selectedNames.push([...parentNames, option.name]);
         }
 
-        return selectedLabels;
+        return selectedNames;
       }, []);
     },
     segmentationChange() {
@@ -180,10 +183,15 @@ export default {
         this.onResetToDefaultQualification();
       }
     },
+    async getResults(options) {
+      return getResults(
+        this.getSelectedNames(options)
+      );
+    },
     async init() {
       this.isLoading = true;
       try {
-        this.response = await getResults(this.filterDropdownOptions);
+        this.response = await this.getResults(this.filterDropdownOptions);
         this.isFetched = true;
       } catch (errors) {
         this.errors = errors;
@@ -193,7 +201,7 @@ export default {
     async onChange(changedOptions) {
       this.isLoading = true;
       try {
-        this.response = await getResults(changedOptions);
+        this.response = await this.getResults(changedOptions);
         this.options = changedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
@@ -204,7 +212,7 @@ export default {
     async onClear() {
       this.isLoading = true;
       try {
-        this.response = await getResults(all);
+        this.response = await this.getResults(all);
         this.options = all;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
@@ -217,7 +225,7 @@ export default {
       try {
         const defaultOptionsForUserQualification = defaultOptions[this.userQualification];
 
-        this.response = await getResults(defaultOptionsForUserQualification);
+        this.response = await this.getResults(defaultOptionsForUserQualification);
         this.options = defaultOptionsForUserQualification;
         this.isDefaultFilterApplied = true;
       } catch (errors) {
@@ -228,7 +236,7 @@ export default {
     async onUpdate() {
       this.isLoading = true;
       try {
-        this.response = await getResults(this.filterDropdownOptions);
+        this.response = await this.getResults(this.filterDropdownOptions);
       } catch (errors) {
         this.errors = errors;
       }
