@@ -52,19 +52,18 @@
 </template>
 
 <script>
-import Loader from '../../../loader/Loader.vue';
-import ErrorBox from '../../../error-box/ErrorBox.vue';
-import LoadingOverlay from '../../../loader/LoadingOverlay.vue';
-import SectionTwoCol from '../../../section/SectionTwoCol.vue';
-import FilterBox from '../../../filters/filter-box/FilterBox.vue';
-import FilteredResults from '../../../filters/filtered-results/FilteredResults.vue';
-import ListItem from '../../../listing/ListItem.vue';
-import GenericCard from '../../../cards/GenericCard.vue';
-import getResults from './mockResults.js';
-import undergrad from './defaultOptions/undergrad.json';
-import postgrad from './defaultOptions/postgrad.json';
-import research from './defaultOptions/research.json';
-import all from './defaultOptions/all.json';
+import ErrorBox from 'components/error-box/ErrorBox.vue';
+import Loader from 'components/loader/Loader.vue';
+import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
+import SectionTwoCol from 'components/section/SectionTwoCol.vue';
+import FilterBox from 'components/filters/filter-box/FilterBox.vue';
+import FilteredResults from 'components/filters/filtered-results/FilteredResults.vue';
+import ListItem from 'components/listing/ListItem.vue';
+import GenericCard from 'components/cards/GenericCard.vue';
+import undergrad from '../defaultOptions/undergrad.json';
+import postgrad from '../defaultOptions/postgrad.json';
+import research from '../defaultOptions/research.json';
+import all from '../defaultOptions/all.json';
 
 const defaultLabels = {
   undergrad: 'undergraduate study',
@@ -89,6 +88,12 @@ export default {
     GenericCard,
     Loader,
     LoadingOverlay,
+  },
+  props: {
+    fetchData: {
+      type: Function,
+      required: true,
+    },
   },
   data() {
     return {
@@ -184,9 +189,12 @@ export default {
       }
     },
     async getResults(options) {
-      return getResults(
+      return this.fetchData(
         this.getSelectedNames(options)
       );
+    },
+    formatErrors(error) {
+      return [error.toString()];
     },
     async init() {
       this.isLoading = true;
@@ -194,34 +202,37 @@ export default {
         this.response = await this.getResults(this.filterDropdownOptions);
         this.isFetched = true;
       } catch (errors) {
-        this.errors = errors;
+        this.errors = this.formatErrors(errors);
       }
       this.isLoading = false;
     },
     async onChange(changedOptions) {
       this.isLoading = true;
+      this.errors = [];
       try {
         this.response = await this.getResults(changedOptions);
         this.options = changedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
-        this.errors = errors;
+        this.errors = this.formatErrors(errors);
       }
       this.isLoading = false;
     },
     async onClear() {
       this.isLoading = true;
+      this.errors = [];
       try {
         this.response = await this.getResults(all);
         this.options = all;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
-        this.errors = errors;
+        this.errors = this.formatErrors(errors);
       }
       this.isLoading = false;
     },
     async onResetToDefaultQualification() {
       this.isLoading = true;
+      this.errors = [];
       try {
         const defaultOptionsForUserQualification = defaultOptions[this.userQualification];
 
@@ -229,16 +240,17 @@ export default {
         this.options = defaultOptionsForUserQualification;
         this.isDefaultFilterApplied = true;
       } catch (errors) {
-        this.errors = errors;
+        this.errors = this.formatErrors(errors);
       }
       this.isLoading = false;
     },
     async onUpdate() {
       this.isLoading = true;
+      this.errors = [];
       try {
         this.response = await this.getResults(this.filterDropdownOptions);
       } catch (errors) {
-        this.errors = errors;
+        this.errors = this.formatErrors(errors);
       }
       this.isLoading = false;
     },

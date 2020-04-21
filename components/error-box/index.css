@@ -1,0 +1,8 @@
+.error-box {
+  color: rgb(var(--col-orange-dark));
+  background-color: rgb(var(--col-orange-light));
+  border: 1px solid rgb(var(--col-orange-mid-1));
+  padding: .5rem;
+  border-radius: var(--br);
+  margin-bottom: .5rem;
+}

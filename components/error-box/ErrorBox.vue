@@ -1,5 +1,7 @@
 <template>
-  <div v-if="messages.length">
+  <div
+    v-if="messages.length"
+    class="error-box">
     <div
       v-for="(message, messageIndex) in messages"
       :key="messageIndex">

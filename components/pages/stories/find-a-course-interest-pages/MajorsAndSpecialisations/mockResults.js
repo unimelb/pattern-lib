@@ -307,12 +307,16 @@ function pick(collection, [firstKey, ...restKeys]) {
   return pickedCollection;
 }
 
-export default async (selectedNames) => {
+export default async (selectedNames, throwError = false) => {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
     }, 1000);
   });
+
+  if (throwError) {
+    throw new Error('Something went wrong');
+  }
 
   const results = [];
   selectedNames.forEach((paths) => {
