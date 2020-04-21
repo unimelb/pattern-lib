@@ -6,6 +6,7 @@
 
 <script>
 import FullWidthImage from '../FullWidthImage.vue';
+
 export default {
   components: { FullWidthImage },
   readme: { html: true, source: true },

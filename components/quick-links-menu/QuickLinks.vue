@@ -9,7 +9,7 @@
     <div class="cell cell--desk-2of3 ql-menu__content">
       <slot name="content" />
       <div
-        v-if="secondaryLinks && secondaryLinks.length > 0"
+        v-if="secondaryLinks && secondaryLinks.length"
         :class="{ [`ql-menu__secondary--2col`]: secondaryCols === 2 }"
         class="ql-menu__secondary">
         <QuickLinksSecondaryItem
@@ -23,7 +23,7 @@
     </div>
     <div class="cell cell--desk-1of3">
       <nav
-        v-if="menuLinks.length > 0"
+        v-if="menuLinks.length"
         class="ql-menu__nav">
         <slot name="menu-header" />
         <QuickLinksMenuItem
@@ -40,6 +40,7 @@
 <script>
 import QuickLinksMenuItem from './QuickLinksMenuItem.vue';
 import QuickLinksSecondaryItem from './QuickLinksSecondaryItem.vue';
+
 export default {
   components: { QuickLinksMenuItem, QuickLinksSecondaryItem },
   props: {

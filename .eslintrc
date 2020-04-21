@@ -5,6 +5,9 @@
     "plugin:vue/recommended",
     "plugin:you-dont-need-lodash-underscore/compatible"
   ],
+  "plugins": [
+    "unicorn"
+  ],
   "env": {
     "jest": true
   },
@@ -14,6 +17,7 @@
   "rules": {
     "array-callback-return": "error",
     "block-scoped-var": "error",
+    "brace-style": ["error", "1tbs"],
     "camelcase": "error",
     "comma-dangle": [
       "error",
@@ -26,11 +30,17 @@
       }
     ],
     "consistent-return": "error",
-    "global-require": "off",
-    "import/extensions": "off",
-    "import/first": "off",
-    "import/newline-after-import": "off",
-    "import/no-extraneous-dependencies": "off",
+    "curly": ["error", "all"],
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": [
+          "**/__tests__/**",
+          ".storybook/**",
+          "**/stories/**",
+          "**/webpack.*"]
+      }
+    ],
     "import/no-unresolved": "off",
     "max-len": "off",
     "no-caller": "error",
@@ -69,9 +79,21 @@
       }
     ],
     "no-useless-concat": "error",
-    "no-case-declarations": "off",
-    "no-magic-numbers": "off",
+    "no-magic-numbers": [
+      "error",
+      { 
+        "ignoreArrayIndexes": true,
+        "ignore": [1]
+      }
+    ],
     "radix": "error",
+    "unicorn/no-array-instanceof": "error",
+    "unicorn/no-for-loop": "error",
+    "unicorn/no-unused-properties": "error",
+    "unicorn/no-zero-fractions": "error",
+    "unicorn/prefer-modern-dom-apis": "error",
+    "unicorn/prefer-query-selector": "error",
+    "unicorn/prefer-spread": "error",
     "vue/attribute-hyphenation": "error",
     "vue/html-quotes": "error",
     "vue/html-self-closing": "error",
@@ -83,13 +105,12 @@
     "vue/no-shared-component-data": "error",
     "vue/no-template-key": "error",
     "vue/order-in-components": "error",
-    "vue/require-prop-types": "off",
     "vue/require-render-return": "error",
     "vue/require-valid-default-prop": "error",
     "vue/return-in-computed-property": "error",
     "vue/v-bind-style": "error",
     "vue/v-on-style": "error",
-    "vue/no-v-html": "off",
+    "vue/no-v-html": "error",
     "vue/html-closing-bracket-newline": ["error", {
       "multiline": "never"
     }],
@@ -106,5 +127,13 @@
     "vue/key-spacing": "error",
     "vue/space-infix-ops": "error",
     "vue/object-curly-spacing": ["error","always"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.test.js"],
+      "rules": {
+        "no-magic-numbers": "off"
+      }
+    }
+  ]
 }

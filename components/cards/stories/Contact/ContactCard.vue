@@ -10,11 +10,13 @@
       <a href='https://maps.unimelb.edu.au/parkville/building/152'>Raymond Priestley</a>
     </iframe>
     <div class="contact-card__lower">
+      <!-- eslint-disable vue/no-v-html -->
       <div
         v-for="n in columns - 0"
         :key="n"
         class="contact-card__col1_3"
         v-html="content[n - 1]" />
+      <!-- eslint-enable vue/no-v-html -->
     </div>
   </div>
 </template>

@@ -79,7 +79,7 @@
     display: inline-block;
     width: auto;
     margin-right: .375rem;
-    margin-bottom: -1px;
+    margin-bottom: -.0556rem;
     padding: .75rem 1.5rem;
     background-color: rgb(var(--col-navy-light));
     color: rgb(var(--col-brand));

@@ -13,10 +13,12 @@
       name="focus-bottom-right"
       width="54"
       height="54" />
+    <!-- eslint-disable vue/no-v-html -->
     <h3
       v-if="!compact"
       class="card__header heading-section"
       v-html="title" />
+    <!-- eslint-enable vue/no-v-html -->
     <div
       v-if="!titleonly"
       class="card__inner">

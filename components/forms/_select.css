@@ -35,7 +35,7 @@
     position: absolute;
     top: 0;
     right: 2.5625rem;
-    width: 1px;
+    width: .055rem;
     height: 100%;
     border-left: 1px solid rgb(var(--col-blue-mid-2));
   }

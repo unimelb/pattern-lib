@@ -11,10 +11,12 @@
           class="check-list__checkbox"
           type="checkbox"
           @change="toggle(index, $event)">
+        <!-- eslint-disable vue/no-v-html -->
         <label
           :for="`${namespace}-${index}`"
           class="check-list__label"
           v-html="content[index].innerHTML" />
+        <!-- eslint-enable vue/no-v-html -->
       </li>
     </ol>
     <ButtonIcon
@@ -48,7 +50,7 @@ export default {
   },
   computed: {
     itemsAllChecked() {
-      return this.checkedItems.indexOf(false) === -1;
+      return !this.checkedItems.includes(false);
     },
     namespace() {
       return `ui-checklist-${this._uid}`;

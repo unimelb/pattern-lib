@@ -59,7 +59,11 @@ export default {
     cols: {
       type: Number,
       default: 3,
-      validator: (value) => value && value <= 3,
+      validator: (value) => {
+        const maxColumns = 3;
+
+        return value && value <= maxColumns;
+      },
     },
     href: {
       type: String,

@@ -6,6 +6,7 @@
     :size="size"
     class="card card--focus-box">
     <div class="card__inner">
+      <!-- eslint-disable vue/no-v-html -->
       <svg
         v-if="icon"
         class="card--focus-box__icon"
@@ -13,6 +14,7 @@
         width="100%"
         height="100%"
         v-html="icon" />
+      <!-- eslint-enable vue/no-v-html -->
       <slot />
     </div>
   </FocusWrapper>
@@ -36,7 +38,7 @@ export default {
     color: {
       type: String,
       default: '',
-      validator: (color) => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].indexOf(color) > -1,
+      validator: (color) => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].includes(color),
     },
     href: {
       type: String,

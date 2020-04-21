@@ -10,12 +10,12 @@
         </figcaption>
       </figure>
       <p
-        v-if="captionText && captionText.length > 0"
+        v-if="captionText && captionText.length"
         class="welcome__caption-text">
         {{ captionText }}
       </p>
       <ButtonIcon
-        v-if="btnText && btnText.length > 0"
+        v-if="btnText && btnText.length"
         icon="chevron-right"
         class="btn--xsml">
         {{ btnText }}

@@ -1,4 +1,5 @@
 const { configureToMatchImageSnapshot } = require('jest-image-snapshot');
+const { TIMER_90000 } = require('../constants/timers');
 
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
   customDiffConfig: { threshold: 0.5 },
@@ -8,4 +9,4 @@ const toMatchImageSnapshot = configureToMatchImageSnapshot({
 
 expect.extend({ toMatchImageSnapshot });
 
-jest.setTimeout(90000);
+jest.setTimeout(TIMER_90000);

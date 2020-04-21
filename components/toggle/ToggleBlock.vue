@@ -34,6 +34,10 @@
 
 import focusableElements from '../../utils/focusable-elements';
 
+import {
+  KEYCODE_TAB, KEYCODE_ENTER, KEYCODE_ESC, KEYCODE_SPACE,
+} from '../../constants/keycodes';
+
 export default {
   name: 'ToggleBlock',
   props: {
@@ -62,7 +66,9 @@ export default {
     trigger() {
       let t = this.$refs.header;
       this.$slots.default.forEach((el) => {
-        if (el.context && el.context.$refs && el.context.$refs.trigger) t = el.context.$refs.trigger;
+        if (el.context && el.context.$refs && el.context.$refs.trigger) {
+          t = el.context.$refs.trigger;
+        }
       });
       return t;
     },
@@ -91,35 +97,47 @@ export default {
     this.toggleFocusableElements();
   },
   methods: {
-    header() { return this.$refs.header; },
-    panel() { return this.$refs.panel; },
-    getActive() { return this.isActive; },
+    header() {
+      return this.$refs.header;
+    },
+    panel() {
+      return this.$refs.panel;
+    },
+    getActive() {
+      return this.isActive;
+    },
     toggleFocusableElements() {
       this.focusableElements.forEach((el) => {
-        el.setAttribute('tabindex', this.isActive ? 0 : -1);
+        el.setAttribute('tabindex', this.isActive ? '0' : '-1');
       });
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) {
+        e.preventDefault();
+      }
 
       switch (e.keyCode) {
         // esc
-        case 27:
+        case KEYCODE_ESC:
           this.isActive = false;
           break;
         // enter / space
-        case 13:
-        case 32:
+        case KEYCODE_ENTER:
+        case KEYCODE_SPACE:
           this.toggle();
           break;
         default: break;
       }
     },
-    setIndex(v) { this.index = v; },
+    setIndex(v) {
+      this.index = v;
+    },
     setActive(v) {
       this.isActive = v;
       this.toggleFocusableElements();

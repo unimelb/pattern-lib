@@ -138,7 +138,9 @@ exports[`CardsFilter should match snapshot 1`] = `
           aria-label="search"
           class="filter__button--icon"
           focusable="false"
+          height="0"
           role="img"
+          width="0"
         >
           <use
             xlink:href="#icon-search"
@@ -215,7 +217,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                 <svg
                   aria-label="calendar"
                   focusable="false"
+                  height="0"
                   role="img"
+                  width="0"
                 >
                   <use
                     xlink:href="#icon-calendar"
@@ -329,7 +333,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                 <svg
                   aria-label="calendar"
                   focusable="false"
+                  height="0"
                   role="img"
+                  width="0"
                 >
                   <use
                     xlink:href="#icon-calendar"

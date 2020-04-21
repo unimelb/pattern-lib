@@ -15,7 +15,9 @@ import './index.css';
 
 // Import components
 import 'components/index.css';
-import 'components/index.js';
+import 'components/index';
+
+const VueAxe = process.env.NODE_ENV !== 'production' ? require('vue-axe') : '';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
@@ -41,7 +43,6 @@ function loadStories() {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  const VueAxe = require('vue-axe');
   Vue.use(VueAxe, {
     config: {
       rules: [

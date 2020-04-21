@@ -16,6 +16,7 @@
 
 <script>
 import SectionTwoCol from '../../SectionTwoCol.vue';
+
 export default {
   components: { SectionTwoCol },
   readme: { source: true, html: true },

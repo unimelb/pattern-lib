@@ -20,7 +20,9 @@ import ToggleBlock from './ToggleBlock.vue';
 export default {
   components: { ToggleBlock },
   methods: {
-    toggle() { this.$refs.container.toggle(); },
+    toggle() {
+      this.$refs.container.toggle();
+    },
   },
 };
 </script>

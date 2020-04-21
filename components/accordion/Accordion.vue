@@ -3,9 +3,9 @@
     ref="comp"
     class="accordion">
     <template slot="default">
-      <h2
-        class="toggle__trigger"
-        v-html="name" />
+      <h2 class="toggle__trigger">
+        {{ name }}
+      </h2>
     </template>
     <template slot="hidden">
       <div class="toggleblock__hidden-inner">
@@ -33,14 +33,26 @@ export default {
     },
   },
   mounted() {
-    if (this.$parent.namespace) this.$refs.comp.namespace = this.$parent.namespace;
+    if (this.$parent.namespace) {
+      this.$refs.comp.namespace = this.$parent.namespace;
+    }
   },
   methods: {
-    toggle() { this.$refs.comp.toggle(); },
-    setActive(v) { this.$refs.comp.setActive(v); },
-    setIndex(v) { this.$refs.comp.setIndex(v); },
-    getActive() { return this.$refs.comp.getActive(); },
-    header() { return this.$refs.comp.header(); },
+    toggle() {
+      this.$refs.comp.toggle();
+    },
+    setActive(v) {
+      this.$refs.comp.setActive(v);
+    },
+    setIndex(v) {
+      this.$refs.comp.setIndex(v);
+    },
+    getActive() {
+      return this.$refs.comp.getActive();
+    },
+    header() {
+      return this.$refs.comp.header();
+    },
   },
 };
 </script>
