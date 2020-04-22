@@ -117,5 +117,6 @@
 .enquiry {
   .toggleblock__default {
     margin: auto;
+    justify-content: space-around;
   }
 }
