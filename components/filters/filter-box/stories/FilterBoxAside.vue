@@ -9,7 +9,10 @@
       <FilterBox
         :options="options"
         filter-by="Course types"
-        placeholder-label="course types"
+        :placeholder-label="{
+          plural: 'course types',
+          singular: 'course type',
+        }"
         options-label="Course types to include:" />
     </div>
   </SectionTwoCol>

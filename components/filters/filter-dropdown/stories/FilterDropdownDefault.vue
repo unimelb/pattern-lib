@@ -3,7 +3,10 @@
     <FilterDropdown
       v-if="isVisible"
       :options="options"
-      placeholder-label="course types"
+      :placeholder-label="{
+        plural: 'course types',
+        singular: 'course type',
+      }"
       options-label="Course types to include:"
       @change="onChange"
       @clear="onClear" />

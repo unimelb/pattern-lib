@@ -4,4 +4,12 @@
   &--is-first {
     margin-left: 0;
   }
+
+  &__checkbox {
+    margin-bottom: .75rem;
+
+    @media (--bp-xx-wide) {
+      margin-bottom: .6666rem;
+    }
+  }
 }

@@ -4,7 +4,9 @@
       Filter by
     </h4>
 
-    <p>{{ filterBy }}</p>
+    <p class="filter-box__sub-header">
+      {{ filterBy }}
+    </p>
 
     <FilterDropdown
       :options="options"
@@ -14,18 +16,24 @@
       @clear="onClearFilters" />
 
     <div class="filter-box__btns-wrapper">
-      <ButtonIcon
-        no-icon
-        @click.native.prevent="onClearFilters">
-        Clear filters
-      </ButtonIcon>
+      <div class="filter-box__btn">
+        <ButtonIcon
+          no-icon
+          width="fullwidth"
+          @click.native.prevent="onClearFilters">
+          Clear filters
+        </ButtonIcon>
+      </div>
 
-      <ButtonIcon
-        no-icon
-        class="btn--cta"
-        @click.native.prevent="onUpdateResults">
-        Update results
-      </ButtonIcon>
+      <div class="filter-box__btn">
+        <ButtonIcon
+          no-icon
+          class="btn--cta"
+          width="fullwidth"
+          @click.native.prevent="onUpdateResults">
+          Update results
+        </ButtonIcon>
+      </div>
     </div>
   </div>
 </template>
@@ -47,7 +55,7 @@ export default {
       required: true,
     },
     placeholderLabel: {
-      type: String,
+      type: Object,
       required: true,
     },
     optionsLabel: {

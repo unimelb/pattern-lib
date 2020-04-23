@@ -1,15 +1,51 @@
 .filter-box {
   padding: 1.5rem;
 
+  @media (--bp-xx-wide) {
+    padding: 1.3333rem;
+  }
+
   &__header {
     font-weight: var(--fw-bold);
+    margin-bottom: .75rem;
+
+    @media (--bp-xx-wide) {
+      margin-bottom: .6666rem;
+    }
+  }
+
+  &__sub-header {
+    margin-bottom: .5rem;
+
+    @media (--bp-xx-wide) {
+      margin-bottom: .4444rem;
+    }
   }
 
   &__btns-wrapper {
-    margin-top: 1.5rem;
+    margin: 1.5rem -.5rem -.5rem -.5rem;
+    display: flex;
+    flex-wrap: wrap;
 
-    @media (--bp-tablet) {
-      display: flex;
+    @media (--bp-xx-wide) {
+      margin: 1.3333rem -.4444rem -.4444rem -.4444rem;
+    }
+  }
+
+  &__btn {
+    margin-bottom: .5rem;
+    min-width: 10rem;
+    flex: 1 0 0%;
+    padding: 0 .5rem;
+
+    @media (--bp-xx-wide) {
+      margin-bottom: .4444rem;
+      min-width: 9rem;
+      padding: 0 .4444rem;
+    }
+
+    .btn {
+      margin: 0;
     }
   }
 }

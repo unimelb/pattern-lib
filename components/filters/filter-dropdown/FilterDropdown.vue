@@ -76,8 +76,11 @@ export default {
       validator: optionsValidator,
     },
     placeholderLabel: {
-      type: String,
+      type: Object,
       required: true,
+      validator(value) {
+        return value.plural && value.singular;
+      },
     },
     optionsLabel: {
       type: String,
@@ -129,11 +132,11 @@ export default {
         return 'Please select';
       }
 
-      if (lengthSelected === 1) {
-        return `${this.selectedOptionLabels[0]} selected`;
-      }
+      const placeholderLabel = lengthSelected === 1
+        ? this.placeholderLabel.singular
+        : this.placeholderLabel.plural;
 
-      return `${lengthSelected} ${this.placeholderLabel} selected`;
+      return `${lengthSelected} ${placeholderLabel} selected`;
     },
   },
   watch: {

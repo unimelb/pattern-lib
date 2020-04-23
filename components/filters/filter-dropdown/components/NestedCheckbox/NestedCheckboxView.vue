@@ -8,11 +8,13 @@
         { 'nested-checkbox--is-first': isFirstNested },
       ]">
       <BaseCheckbox
+        class="nested-checkbox__checkbox"
         :name="option.name"
         :aria-label="option.ariaLabel"
         :is-checked="option.isChecked"
         :is-indeterminate="option.isIndeterminate"
         :label="option.label"
+        display="block"
         @change="onCheckboxChange" />
 
       <NestedCheckboxView

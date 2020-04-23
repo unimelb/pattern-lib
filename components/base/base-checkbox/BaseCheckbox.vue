@@ -1,7 +1,7 @@
 <template>
   <label
     :data-name="name"
-    class="base-checkbox"
+    :class="classRoot"
     @click.prevent="onClick">
     <input
       :aria-checked="isInputChecked"
@@ -27,6 +27,11 @@
 </template>
 
 <script>
+const displayProp = {
+  inline: 'inline',
+  block: 'block',
+};
+
 export default {
   name: 'BaseCheckbox',
   model: {
@@ -53,10 +58,23 @@ export default {
       type: String,
       default: '',
     },
+    display: {
+      type: String,
+      default: displayProp.inline,
+      validator(value) {
+        return Object.values(displayProp).includes(value);
+      },
+    },
   },
   computed: {
     isInputChecked() {
       return !this.isIndeterminate && this.isChecked;
+    },
+    classRoot() {
+      return [
+        'base-checkbox',
+        `base-checkbox--${this.display}`,
+      ];
     },
     classIconChecked() {
       return [
