@@ -2,8 +2,7 @@
   <SectionWrap
     progressive
     small
-    bg-image="https://images.unsplash.com/photo-1495855720902-bb60e936d7ca?dpr=1&auto=compress,format&fit=crop&w=1498&h=&q=80&cs=tinysrgb&crop="
-  >
+    bg-image="https://picsum.photos/seed/1/1200/540">
     <FocusWrapper
       padded
       class="grid bg-white">
@@ -14,7 +13,7 @@
 </template>
 
 <script>
-import FocusWrapper from '../../../focus-wrapper/FocusWrapper.vue';
+import FocusWrapper from 'components/focus-wrapper/FocusWrapper.vue';
 
 export default {
   components: { FocusWrapper },

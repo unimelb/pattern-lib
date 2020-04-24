@@ -2,60 +2,65 @@
   <main>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://picsum.photos/seed/1/1200/540">
       <FocusWrapper
         padded
         class="grid bg-white">
-        <h2 class="text-left">Header</h2>
+        <h2 class="text-left">
+          Header
+        </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
       </FocusWrapper>
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://picsum.photos/seed/2/1200/540">
       <FocusWrapper
         padded
         class="grid bg-white"
         color="green">
-        <h2 class="text-left">Header</h2>
+        <h2 class="text-left">
+          Header
+        </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
       </FocusWrapper>
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://picsum.photos/seed/3/1200/540">
       <FocusWrapper
         padded
         class="grid bg-white"
         color="yellow">
-        <h2 class="text-left">Header</h2>
+        <h2 class="text-left">
+          Header
+        </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
       </FocusWrapper>
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://picsum.photos/seed/4/1200/540">
       <FocusWrapper
         padded
         class="grid bg-white"
         color="blue">
-        <h2 class="text-left">Header</h2>
+        <h2 class="text-left">
+          Header
+        </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
       </FocusWrapper>
     </SectionWrap>
     <SectionWrap
       small
-      bg-image="https://images.unsplash.com/photo-1505639594395-22cc30113a4e?dpr=1&auto=compress,format&fit=crop&w=1200&h=&q=80&cs=tinysrgb&crop="
-    >
+      bg-image="https://picsum.photos/seed/5/1200/540">
       <FocusWrapper
         padded
         class="grid bg-white"
         color="emerald">
-        <h2 class="text-left">Header</h2>
+        <h2 class="text-left">
+          Header
+        </h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus dolorum labore, odit libero maxime nam inventore neque ratione optio quos sapiente atque ex fuga blanditiis alias, ducimus ut? Voluptatibus.</p>
       </FocusWrapper>
     </SectionWrap>
@@ -63,7 +68,7 @@
 </template>
 
 <script>
-import FocusWrapper from '../../../focus-wrapper/FocusWrapper.vue';
+import FocusWrapper from 'components/focus-wrapper/FocusWrapper.vue';
 
 export default {
   components: { FocusWrapper },

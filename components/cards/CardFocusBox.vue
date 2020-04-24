@@ -5,17 +5,17 @@
     :class="classes"
     :size="size"
     padded
-    class="card card--focus-box"
-  >
+    class="card card--focus-box">
+    <!-- eslint-disable vue/no-v-html -->
     <svg
       v-if="icon"
       class="card--focus-box__icon"
       viewBox="20 0 150 150"
       width="100%"
       height="100%"
-      v-html="icon"
-    />
-    <slot/>
+      v-html="icon" />
+    <slot />
+    <!-- eslint-enable vue/no-v-html -->
   </FocusWrapper>
 </template>
 
