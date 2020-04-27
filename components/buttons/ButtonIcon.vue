@@ -41,7 +41,7 @@ export default {
     size: {
       type: String,
       default: '',
-      validator: value => ['xs', 'sm'].indexOf(value) !== -1,
+      validator: (value) => ['xs', 'sm'].includes(value),
     },
     width: {
       type: String,

@@ -10,7 +10,7 @@ export default {
     size: {
       type: String,
       default: '',
-      validator: value => ['', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'].indexOf(value) !== -1,
+      validator: (value) => ['', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'].includes(value),
     },
     text: {
       type: String,

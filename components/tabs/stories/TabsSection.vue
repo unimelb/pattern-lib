@@ -36,7 +36,9 @@
               name="form_email_1698962_referral_url"
               value>
             <fieldset class="sq-form-section">
-              <legend class="sq-form-section-title">Details</legend>
+              <legend class="sq-form-section-title">
+                Details
+              </legend>
               <div class="sq-form-question sq-form-question-text">
                 <label
                   class="sq-form-question-title"
@@ -96,7 +98,9 @@
               </div>
             </fieldset>
             <fieldset class="sq-form-section">
-              <legend class="sq-form-section-title">Checkbox and radio buttons</legend>
+              <legend class="sq-form-section-title">
+                Checkbox and radio buttons
+              </legend>
               <div class="sq-form-question sq-form-question-tickbox-list">
                 <fieldset>
                   <legend class="sq-form-question-title">
@@ -179,7 +183,9 @@
               </div>
             </fieldset>
             <fieldset class="sq-form-section">
-              <legend class="sq-form-section-title">File upload</legend>
+              <legend class="sq-form-section-title">
+                File upload
+              </legend>
               <div class="sq-form-question sq-form-question-file-upload">
                 <label
                   class="sq-form-question-title"
@@ -194,7 +200,9 @@
               </div>
             </fieldset>
             <fieldset class="sq-form-section">
-              <legend class="sq-form-section-title">Dropdowns</legend>
+              <legend class="sq-form-section-title">
+                Dropdowns
+              </legend>
               <div class="sq-form-question sq-form-question-select">
                 <label
                   class="sq-form-question-title"
