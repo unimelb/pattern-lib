@@ -15,7 +15,7 @@ import options from '../../options.json';
 import filterBox from './filter-box.md';
 
 export default {
-  readme: { custom: filterBox, source: true, html: false },
+  readme: { custom: filterBox, source: false, html: false },
   name: 'FilterBoxDefault',
   components: { FilterBox },
   data() {

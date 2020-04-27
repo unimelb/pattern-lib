@@ -7,9 +7,5 @@
 
   &__checkbox {
     margin-bottom: .75rem;
-
-    @media (--bp-xx-wide) {
-      margin-bottom: .6666rem;
-    }
   }
 }

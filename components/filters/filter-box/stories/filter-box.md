@@ -14,3 +14,6 @@ Usage:
     placeholder-label="course types"
     options-label="Course types to include:" />
 ```
+
+### Source:
+Can be used only as a Vue component

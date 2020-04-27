@@ -28,3 +28,6 @@ Usage:
   @change="onChange"
   @clear="onClear" />
 ```
+
+### Source:
+Can be used only as a Vue component
