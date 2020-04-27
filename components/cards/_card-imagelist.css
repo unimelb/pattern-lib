@@ -8,7 +8,11 @@
   }
 
   .card__thumb {
-    height: 200px;
+    height: 12.5rem;
+
+    @media (--bp-desktop) {
+      height: 11.1112rem;
+    }
   }
 
   .card__header {

@@ -3,8 +3,7 @@
     <button
       class="link-icon--vertical link-reset"
       @click.prevent="open"
-      @keypress.13="open"
-    >
+      @keypress.13="open">
       <SvgIcon
         class="link-icon__icon svg"
         name="search" />
@@ -19,8 +18,7 @@
           role="button"
           href="#"
           tabindex="0"
-          @click.prevent="close"
-        >
+          @click.prevent="close">
           <SvgIcon
             class="page-header-search__icon--close"
             name="close" />
@@ -38,6 +36,8 @@
 import SvgIcon from '../icons/SvgIcon.vue';
 import Blanket from './blanket';
 import PageSearchForm from './PageSearchForm.vue';
+
+import { KEYCODE_ESC } from '../../constants/keycodes';
 
 export default {
   name: 'PageSearch',
@@ -63,7 +63,9 @@ export default {
       this.$emit('page-search-close');
     },
     esc(e) {
-      if (e.keyCode === 27) this.close();
+      if (e.keyCode === KEYCODE_ESC) {
+        this.close();
+      }
     },
   },
 };

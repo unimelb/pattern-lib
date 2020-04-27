@@ -4,22 +4,20 @@
     :class="classes"
     tabindex="0"
     role="button"
-    class="btn-owner card card--link card--bdr"
-  >
+    class="btn-owner card card--link card--bdr">
     <div
       v-if="thumb"
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="title"
-      class="card__thumb"
-    />
+      class="card__thumb" />
     <div
-      :class="card_header_classes"
+      :class="cardHeaderClasses"
       class="card__header">
-      <span :class="{'title-inverted': !inverted}">{{ title }}</span>
+      <span :class="{ 'title-inverted': !inverted }">{{ title }}</span>
       <SvgIcon
         width="15px"
         height="15px"
-        name="chevron-right"/>
+        name="chevron-right" />
     </div>
   </a>
 </template>
@@ -51,7 +49,11 @@ export default {
     cols: {
       type: Number,
       default: 4,
-      validator: cols => cols && cols <= 4,
+      validator: (cols) => {
+        const maxColumns = 4;
+
+        return cols && cols <= maxColumns;
+      },
     },
   },
   computed: {
@@ -63,7 +65,7 @@ export default {
         },
       ];
     },
-    card_header_classes() {
+    cardHeaderClasses() {
       return [
         {
           'cl-white': this.inverted,

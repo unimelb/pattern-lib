@@ -3,8 +3,7 @@
     <FocusWrapper
       :size="size"
       color="navy"
-      semi-opaque
-    >
+      semi-opaque>
       <div class="testimonials">
         <div
           :style="{ backgroundImage: `url(${thumb})` }"
@@ -17,7 +16,9 @@
             :sub-cite="post"
             small
             large-quotes
-            class="testimonials__quotation">{{ testimonials }}</BlockQuotation>
+            class="testimonials__quotation">
+            {{ testimonials }}
+          </BlockQuotation>
         </div>
       </div>
     </FocusWrapper>
@@ -31,6 +32,7 @@ import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 import ContentBlock from '../content-block/ContentBlock.vue';
 import BlockQuotation from '../block-quotation/BlockQuotation.vue';
+import { WIDTH_599 } from '../../helpers/viewports';
 
 export default {
   name: 'Testimonials',
@@ -48,7 +50,7 @@ export default {
       required: true,
     },
     year: {
-      ype: String,
+      type: String,
       default: '',
       required: true,
     },
@@ -84,7 +86,7 @@ export default {
   methods: {
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
-      if (this.windowWidth < 599) {
+      if (this.windowWidth < WIDTH_599) {
         this.size = 'small';
       } else {
         this.size = 'large';

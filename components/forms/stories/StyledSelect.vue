@@ -22,6 +22,19 @@
       </StyledSelect>
     </div>
 
+    <h2>With label</h2>
+    <div class="row">
+      <label for="f_q0">Type</label>
+      <StyledSelect
+        id="f_q0"
+        label="Lorem Ipsum">
+        <option>Undergraduate</option>
+        <option>Postgraduate</option>
+        <option>Reasearch</option>
+        <option>Non-award</option>
+      </StyledSelect>
+    </div>
+
     <SectionWrap class="bg-white">
       <h2>Enclosed in a section</h2>
       <div class="row">
@@ -36,7 +49,9 @@
         </StyledSelect>
       </div>
 
-      <h2 class="shim-pt2 shim-mb05">Grid</h2>
+      <h2 class="shim-pt2 shim-mb05">
+        Grid
+      </h2>
       <div class="grid">
         <div class="cell cell--tab-1of3">
           <label for="f_q3">Type</label>

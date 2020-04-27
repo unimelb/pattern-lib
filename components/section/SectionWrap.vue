@@ -5,18 +5,16 @@
     :src="progressive ? bgImage : false"
     :class="classes"
     :style="{ backgroundImage: bgImage && !progressive ? `url(${bgImage})` : '' }"
-    class="section"
-  >
+    class="section">
     <div
       :class="{
         'section__inner--sml': small,
         'section__inner--mid': mid,
         'section__inner--short': short,
-        'section__inner--nopad': nopad
+        'section__inner--nopad': nopad,
       }"
-      class="section__inner"
-    >
-      <slot/>
+      class="section__inner">
+      <slot />
     </div>
   </component>
 </template>
@@ -66,7 +64,7 @@ export default {
       return {
         [`bg-${this.bgColor}`]: !!this.bgColor,
         'section--centred': this.centred,
-        'section--image': this.bgImage && this.bgImage.length > 0,
+        'section--image': this.bgImage && this.bgImage.length,
       };
     },
   },

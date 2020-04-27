@@ -16,15 +16,14 @@
             class="media-gallery__close"
             tabindex="0"
             title="Close (Esc)"
-            @click="openStateToggle()"
-            @keydown.13="openStateToggle()"
-            @keydown.32="openStateToggle()"
-          >
+            @click="openStateToggle"
+            @keydown.13="openStateToggle"
+            @keydown.32="openStateToggle">
             <SvgIcon
               aria-hidden="true"
               name="close"
               width="26"
-              height="26"/>
+              height="26" />
           </div>
         </div>
         <div :class="sliderClasses">
@@ -35,13 +34,12 @@
             title="Previous (arrow left)"
             @click="move('prev')"
             @keydown.13="move('prev')"
-            @keydown.32="move('prev')"
-          >
+            @keydown.32="move('prev')">
             <SvgIcon
               aria-hidden="true"
               name="chevron-left"
               width="30"
-              height="30"/>
+              height="30" />
           </div>
           <div
             v-if="items.length"
@@ -50,20 +48,19 @@
               v-if="!useOverlay || openState"
               ref="slider"
               :options="options"
-              @slide="slide"
-            >
+              @slide="slide">
               <slideritem
-                v-for="(slide, index) in items"
+                v-for="(item, index) in items"
                 :key="index"
                 class="media-gallery__item">
                 <div
-                  v-if="slide.type === 'image'"
-                  :aria-label="slide.altText"
-                  :style="{ backgroundImage: `url(${slide.src})` }"
+                  v-if="item.type === 'image'"
+                  :aria-label="item.altText"
+                  :style="{ backgroundImage: `url(${item.src})` }"
                   class="media-gallery__image" />
                 <VideoEmbed
-                  v-if="slide.type === 'video'"
-                  :src="slide.src"
+                  v-if="item.type === 'video'"
+                  :src="item.src"
                   class="media-gallery__embed" />
               </slideritem>
             </slider>
@@ -75,13 +72,12 @@
             title="Next (arrow right)"
             @click="move('next')"
             @keydown.13="move('next')"
-            @keydown.32="move('next')"
-          >
+            @keydown.32="move('next')">
             <SvgIcon
               aria-hidden="true"
               name="chevron-right"
               width="30"
-              height="30"/>
+              height="30" />
           </div>
         </div>
 
@@ -92,20 +88,18 @@
           <div
             v-for="(item, index) in items"
             :key="index"
-            :class="{ active: index === selectedIndex}"
+            :class="{ active: index === selectedIndex }"
             :aria-label="item.title + '. ' + item.description"
             class="media-gallery__thumb"
             tabindex="0"
             role="button"
-            @click="open(index)"
-          >
+            @click="open(index)">
             <img
               v-if="item.type === 'image'"
               :src="item.src"
               :alt="item.altText"
               aria-hidden="true"
-              class="media-gallery__thumb-image"
-            >
+              class="media-gallery__thumb-image">
             <div
               v-if="item.type === 'video'"
               aria-hidden="true"
@@ -122,12 +116,17 @@
           class="media-gallery__footer">
           <div
             v-if="!useOverlay"
-            class="media-gallery__count media-gallery__count--footer"
-          >{{ selectedIndex + 1 }} / {{ items.length }}</div>
+            class="media-gallery__count media-gallery__count--footer">
+            {{ selectedIndex + 1 }} / {{ items.length }}
+          </div>
           <div
             :id="'caption' + selectedIndex"
-            class="media-gallery__title">{{ selectedItem.title }}</div>
-          <div class="media-gallery__description">{{ selectedItem.description }}</div>
+            class="media-gallery__title">
+            {{ selectedItem.title }}
+          </div>
+          <div class="media-gallery__description">
+            {{ selectedItem.description }}
+          </div>
         </div>
       </div>
     </div>
@@ -137,16 +136,19 @@
       :items="items"
       :callback="openThumb"
       :display-caption="displayCaption"
-      :columns="columns"
-    />
+      :columns="columns" />
   </div>
 </template>
 
 <script>
 import { slider, slideritem } from 'vue-concise-slider';
+import debounce from 'lodash.debounce';
 import VideoEmbed from '../embed/VideoEmbed.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ThumbnailGallery from './ThumbnailGallery.vue';
+
+import { KEYCODE_ESC, KEYCODE_LEFT, KEYCODE_RIGHT } from '../../constants/keycodes';
+import { TIMER_100 } from '../../constants/timers';
 
 export default {
   components: {
@@ -193,6 +195,7 @@ export default {
         timingFunction: 'ease', // Sliding mode
         itemAnimation: true,
       },
+      isInViewport: false,
     };
   },
   computed: {
@@ -223,11 +226,15 @@ export default {
       };
     },
   },
-  created() {
+  mounted() {
     window.addEventListener('keyup', this.keyBoardActions);
+
+    this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, TIMER_100);
+    window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
   },
   beforeDestroy() {
     window.removeEventListener('keyup', this.keyBoardActions);
+    window.removeEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
   },
   methods: {
     open(index) {
@@ -297,11 +304,16 @@ export default {
     },
     // Scroll active thumbnail into view
     scrollToView(nextIndex) {
-      this.$refs.thumbnailContainer.childNodes[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      const elementToScrollTo = this.$refs.thumbnailContainer.childNodes[nextIndex];
+
+      // Only scroll element if component is in viewport.
+      if (this.isInViewport) {
+        elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     },
     stopVideo() {
       const iframe = document.querySelectorAll('iframe');
-      if (iframe.length > 0) {
+      if (iframe.length) {
         iframe.forEach((element) => {
           const iframeSrc = element.src;
           element.src = iframeSrc;
@@ -320,18 +332,41 @@ export default {
       this.$refs.slider.$emit('slideTo', index);
     },
     keyBoardActions(e) {
-      if (e.keyCode === 37) {
-        this.move('prev');
-      }
-      if (e.keyCode === 39) {
-        this.move('next');
-      }
-      if (e.keyCode === 27) {
-        this.openState = false;
+      // Only if component is in viewport.
+      if (this.isInViewport) {
+        if (e.keyCode === KEYCODE_LEFT) {
+          this.move('prev');
+        }
+        if (e.keyCode === KEYCODE_RIGHT) {
+          this.move('next');
+        }
+        if (e.keyCode === KEYCODE_ESC) {
+          this.openState = false;
+        }
       }
     },
     toggleNoScroll() {
       document.documentElement.classList.toggle('no-body-scroll');
+    },
+    checkInViewport() {
+      const elementToCheck = this.$el;
+      const isInViewport = this.isAnyPartOfElementInViewport(elementToCheck);
+
+      this.isInViewport = isInViewport;
+    },
+    isAnyPartOfElementInViewport(el) {
+      const elementRect = el.getBoundingClientRect();
+
+      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+      const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+      const offsetTop = 0;
+      const offsetLeft = 0;
+
+      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= offsetTop);
+      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= offsetLeft);
+
+      return (vertInView && horInView);
     },
   },
 };

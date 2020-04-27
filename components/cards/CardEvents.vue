@@ -4,18 +4,17 @@
     :title="title"
     :href="href"
     :excerpt="excerpt"
-    :cols="1"
-    :class-name="'card--events ' + className"
-  >
+    :cols="1">
     <slot
       v-for="(_, name) in $slots"
-      :name="name"
-      :slot="name"/>
+      :slot="name"
+      :name="name" />
   </GenericCard>
 </template>
 
 <script>
 import GenericCard from './GenericCard.vue';
+
 export default {
   name: 'CardEvents',
   components: { GenericCard },
@@ -33,10 +32,6 @@ export default {
       default: '#',
     },
     excerpt: {
-      type: String,
-      default: '',
-    },
-    className: {
       type: String,
       default: '',
     },

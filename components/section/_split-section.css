@@ -45,7 +45,7 @@
     .split-section__quote {
       margin-bottom: calc(var(--vr) * .75);
       font-family: var(--ff-lead);
-      font-size: 1.25em;
+      font-size: 1.25rem;
       font-style: italic;
 
       &::before {
@@ -61,7 +61,7 @@
       position: relative;
       margin: 0;
       padding: 0;
-      font-size: .9em;
+      font-size: .9rem;
       font-weight: var(--fw-semibold);
 
       &::before {
@@ -70,8 +70,8 @@
     }
 
     .card--focus-box__cnr {
-      width: 3em;
-      height: 3em;
+      width: 3rem;
+      height: 3rem;
     }
   }
 

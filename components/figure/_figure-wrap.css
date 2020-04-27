@@ -9,12 +9,12 @@
   }
 
   figcaption {
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
     margin-right: auto;
     margin-left: auto;
     caption-side: bottom;
     color: color(rgb(var(--col-black-mid-2)) shade(30%));
-    font-size: .9em;
+    font-size: .9rem;
     font-style: italic;
     text-align: center;
   }

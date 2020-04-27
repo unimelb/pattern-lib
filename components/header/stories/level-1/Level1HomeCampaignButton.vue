@@ -1,11 +1,10 @@
 <template>
   <div
     class="page-header--campaign"
-    style="background-image:url(https://placeimg.com/990/530/arch/1)"
-  >
+    style="background-image: url('https://i.picsum.photos/id/1033/990/530.jpg');">
     <header class="page-header">
       <div class="page-header__inner max">
-        <Logo no-padding/>
+        <Logo no-padding />
       </div>
       <div class="page-header--baseline max max--xsml shim-pb2">
         <a
@@ -18,9 +17,8 @@
               height="15px"
               focusable="false"
               role="presentation"
-              class="push-icon__icon"
-            >
-              <use xlink:href="#icon-chevron-right"/>
+              class="push-icon__icon">
+              <use xlink:href="#icon-chevron-right" />
             </svg>
           </span>
         </a>

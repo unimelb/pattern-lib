@@ -14,12 +14,12 @@
 
   &__logo {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 2.666rem;
+    height: 2.666rem;
 
     @media (--bp-tablet) {
-      width: 117px;
-      height: 117px;
+      width: 6.5rem;
+      height: 6.5rem;
     }
   }
 
@@ -51,7 +51,7 @@
       content: '';
       display: block;
       position: absolute;
-      top: -.75em;
+      top: -.75rem;
       left: 0;
       width: 1rem;
       border-top: 1px solid #fff;
@@ -68,7 +68,7 @@
 
     &__sub {
       margin-top: .25rem;
-      font-size: .875em;
+      font-size: .875rem;
     }
 
     @media (--bp-max-x-mobile) {
@@ -114,12 +114,12 @@
   &__aperture::before {
     content: '';
     position: absolute;
-    top: -1px;
+    top: -.055rem;
 
     /* (1) fix subtle border artefact on some browser/viewport combinations */
     right: 0;
     bottom: 0;
-    left: -1px;
+    left: -.055rem;
 
     /* (1) */
     background: url('../shared/aperture.svg') left center / cover;
@@ -242,8 +242,8 @@
       font-size: .875rem;
 
       @media (--bp-tablet) {
-        width: 85px;
-        height: 71px;
+        width: 4.722rem;
+        height: 3.944rem;
       }
     }
 

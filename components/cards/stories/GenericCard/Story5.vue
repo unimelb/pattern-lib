@@ -13,7 +13,7 @@
           <div
             slot="sub-title-2"
             class="sub-title">
-            <SvgIcon name="calendar"/>
+            <SvgIcon name="calendar" />
             <span>March 31 1992</span>
           </div>
           <div

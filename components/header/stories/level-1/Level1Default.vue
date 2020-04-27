@@ -1,7 +1,7 @@
 <template>
   <PageHeader
     title="About Us"
-    img="https://placeimg.com/990/530/arch/1"/>
+    img="https://i.picsum.photos/id/1033/990/530.jpg" />
 </template>
 
 <script>

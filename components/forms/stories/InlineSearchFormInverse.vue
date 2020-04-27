@@ -1,6 +1,8 @@
 <template>
   <SectionWrap>
-    <h2 class="text-center">Find a Course</h2>
+    <h2 class="text-center">
+      Find a Course
+    </h2>
     <form class="form form--inline form--inverse">
       <div class="form--inline__row form--inline__row--center form--inline__row--fill">
         <span class="form--inline__select">
@@ -34,6 +36,7 @@
 
 <script>
 import SvgIcon from '../../icons/SvgIcon.vue';
+
 export default {
   components: {
     SvgIcon,

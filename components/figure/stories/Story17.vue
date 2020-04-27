@@ -11,8 +11,7 @@
         src="https://www.youtube.com/embed/nlF7qp5GNPI"
         inset
         right
-        small
-      />
+        small />
       <p>
         Blanditiis exercitationem id sapiente voluptatem dolorum est sapiente. Qui explicabo voluptatem dolores perspiciatis laborum animi. Similique animi molestiae ipsam accusamus incidunt rerum. Et fugiat ut eum dolores id. Quaerat repudiandae facere voluptas fuga laboriosam quo illo adipisci. Doloremque autem cum ea voluptatem id.
       </p>
@@ -24,6 +23,7 @@
 <script>
 
 import VideoEmbed from '../../embed/VideoEmbed.vue';
+
 export default {
   components: { VideoEmbed },
 };

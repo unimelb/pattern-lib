@@ -1,27 +1,20 @@
 <template>
   <div
-    :class="[{'card-focus--padded': padded}]"
+    :class="[{ 'card-focus--padded': padded }]"
     class="card-focus">
-    <slot/>
+    <slot />
     <SvgIcon
-      :class="['card-focus__top-left', color, {'semi-opaque': semiOpaque}]"
+      :class="['card-focus__top-left', color, { 'semi-opaque': semiOpaque }]"
       :width="normalizeSize"
       :height="normalizeSize"
-      view-box="0 0 112 112"
-      name="focus-top-left"
-    >
-      <path d="m0 0v112l32-32v-48h48l32-32h-112z"/>
-    </SvgIcon>
+      icon="focus-top-left"
+      name="focus-top-left" />
     <SvgIcon
-      :class="['card-focus__bottom-right', color, {'semi-opaque': semiOpaque}]"
+      :class="['card-focus__bottom-right', color, { 'semi-opaque': semiOpaque }]"
       :width="normalizeSize"
       :height="normalizeSize"
-      view-box="0 0 112 112"
-      name="focus-bottom-right"
-    >
-      <path d="m112 0-32 32v48h-48l-32 32h112v-112z"/>
-    </SvgIcon>
-
+      icon="focus-bottom-right"
+      name="focus-bottom-right" />
   </div>
 </template>
 
@@ -37,7 +30,7 @@ export default {
     color: {
       type: String,
       default: '',
-      validator: color => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].indexOf(color) > -1,
+      validator: (color) => ['', 'navy', 'teal', 'yellow', 'emerald', 'orange', 'green', 'purple', 'pink'].includes(color),
     },
     semiOpaque: {
       type: Boolean,
@@ -46,7 +39,7 @@ export default {
     size: {
       type: String,
       default: 'medium',
-      validator: size => ['small', 'medium', 'large'].indexOf(size) > -1,
+      validator: (size) => ['small', 'medium', 'large'].includes(size),
     },
     padded: {
       type: Boolean,

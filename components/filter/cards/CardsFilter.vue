@@ -10,8 +10,7 @@
           v-model="searchText"
           class="filter__input"
           type="search"
-          placeholder="Type to search title"
-        >
+          placeholder="Type to search title">
       </div>
 
       <div class="filter__container">
@@ -23,7 +22,7 @@
             <DropdownFilter
               id="school"
               v-model="selectedSchool"
-              :values="filters.schools"/>
+              :values="filters.schools" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
@@ -32,7 +31,7 @@
             <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"/>
+              :values="filters.disciplines" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
@@ -41,7 +40,7 @@
             <DropdownFilter
               id="performances"
               v-model="selectedPerformance"
-              :values="filters.performances"/>
+              :values="filters.performances" />
           </div>
         </div>
       </div>
@@ -59,13 +58,14 @@
         </button>
         <button
           class="filter__button"
-          @click="resetSearch"
-        >Reset all</button>
+          @click="resetSearch">
+          Reset all
+        </button>
       </div>
     </div>
 
     <FilterResultsCount
-      :data="dataFiltered.length"/>
+      :data="dataFiltered.length" />
 
     <FilterResults :show="showSSRCode">
       <slot />
@@ -82,15 +82,9 @@
             :title="item.title"
             :href="item.link"
             :excerpt="item.description"
-          >
+            :tags="item.performance">
             <div
               slot="sub-title-1"
-              class="sub-title">
-              <SvgIcon name="info" />
-              <span>{{ item.performance.join(', ') }}</span>
-            </div>
-            <div
-              slot="sub-title-2"
               class="sub-title">
               <SvgIcon name="calendar" />
               <span>{{ item.start_time }}</span>
@@ -102,7 +96,7 @@
                   class="link-icon"
                   name="chevron-right"
                   width="10"
-                  height="10"/>
+                  height="10" />
               </a>
             </template>
           </GenericCard>
@@ -113,6 +107,7 @@
 </template>
 
 <script>
+import escapeRegExp from 'lodash.escaperegexp';
 import ListItem from '../../listing/ListItem.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 import GenericCard from '../../cards/GenericCard.vue';
@@ -156,12 +151,29 @@ export default {
   },
   computed: {
     filteredData() {
-      return this.data.filter(
-        data => (this.selectedDiscipline === '' || data.disciplines.includes(this.selectedDiscipline))
-          && (this.selectedPerformance === '' || data.performance.includes(this.selectedPerformance))
-          && data.school.match(new RegExp(this.selectedSchool, 'i'))
-          && data.title.match(new RegExp(this.searchText, 'i'))
-      );
+      const {
+        selectedDiscipline,
+        selectedPerformance,
+        selectedSchool,
+        searchText,
+      } = this;
+
+      const schoolRegex = new RegExp(`^${escapeRegExp(selectedSchool)}$`, 'i');
+      const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
+
+      return this.data.filter((data) => {
+        const {
+          disciplines,
+          performance,
+          school,
+          title,
+        } = data;
+
+        return (selectedDiscipline === '' || disciplines.includes(selectedDiscipline))
+        && (selectedPerformance === '' || performance.includes(selectedPerformance))
+        && (selectedSchool === '' || school.match(schoolRegex))
+        && (searchText === '' || title.match(searchTextRegex));
+      });
     },
     animationclass() {
       if (this.searchText || this.selectedSchool || this.selectedDiscipline || this.selectedPerformance) {
@@ -194,18 +206,29 @@ export default {
       };
 
       this.data.forEach((element) => {
-        if (!filters.schools.includes(element.school)) {
-          filters.schools.push(element.school);
+        const { school, disciplines, performance } = element;
+
+        if (!filters.schools.includes(school)) {
+          filters.schools.push(school);
         }
 
-        if (!filters.disciplines.includes(...element.disciplines)) {
-          filters.disciplines.push(...element.disciplines);
-        }
+        disciplines.forEach((dis) => {
+          if (!filters.disciplines.includes(dis)) {
+            filters.disciplines.push(dis);
+          }
+        });
 
-        if (!filters.performances.includes(...element.performance)) {
-          filters.performances.push(...element.performance);
-        }
+        performance.forEach((per) => {
+          if (!filters.performances.includes(per)) {
+            filters.performances.push(per);
+          }
+        });
       });
+
+      // Sort filters.
+      filters.schools.sort();
+      filters.disciplines.sort();
+      filters.performances.sort();
 
       return filters;
     },

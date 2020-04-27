@@ -3,17 +3,16 @@
     :href="href"
     class="btn-owner card card--image card--bdr bg-inverted">
     <div
-      v-if="thumb && thumb.length > 0"
+      v-if="thumb && thumb.length"
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="title"
-      class="card__thumb card__thumb--zoom"
-    />
+      class="card__thumb card__thumb--zoom" />
     <div class="card__inner">
-      <button-link
+      <ButtonLink
         class="btn--inverted btn--fullwidth"
-        element="span">{{ title }}</button-link>
+        element="span">{{ title }}</ButtonLink>
       <p>
-        <slot/>
+        <slot />
       </p>
     </div>
   </a>

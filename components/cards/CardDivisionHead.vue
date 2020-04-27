@@ -1,7 +1,7 @@
 <template>
   <a
     :href="href"
-    :class="{'card--division--head-compact': compact}"
+    :class="{ 'card--division--head-compact': compact }"
     class="btn-owner card card--division card--division--head card--bdr bg-white">
     <div class="card__thumb">
       <div
@@ -13,8 +13,8 @@
         <h3 class="card__header">{{ name }}</h3>
         <p class="card__meta">{{ title }}</p>
       </div>
-      <hr v-if="!compact" >
-      <slot/>
+      <hr v-if="!compact">
+      <slot />
       <ButtonIcon
         v-if="cols === 1"
         class="btn--wide">Contacts and bio</ButtonIcon>

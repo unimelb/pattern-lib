@@ -2,15 +2,29 @@
   <component
     :is="container"
     :aria-multiselectable="solo === 'false' ? 'true' : 'false'"
-    class="togglegroup"
-  >
-    <slot/>
+    class="togglegroup">
+    <slot />
   </component>
 </template>
 
 <script>
 // toggle-group-hide-panel
 // toggle-group-show-current-panel
+
+import {
+  KEYCODE_TAB,
+  KEYCODE_ENTER,
+  KEYCODE_ESC,
+  KEYCODE_SPACE,
+  KEYCODE_PGDN,
+  KEYCODE_PGUP,
+  KEYCODE_END,
+  KEYCODE_HOME,
+  KEYCODE_LEFT,
+  KEYCODE_UP,
+  KEYCODE_RIGHT,
+  KEYCODE_DOWN,
+} from '../../constants/keycodes';
 
 export default {
   name: 'ToggleGroup',
@@ -50,7 +64,9 @@ export default {
     });
 
     this.hideAllPanels();
-    if (this.open === 'true') this.showCurrentPanel();
+    if (this.open === 'true') {
+      this.showCurrentPanel();
+    }
   },
   methods: {
     hideAllPanels() {
@@ -85,7 +101,9 @@ export default {
         return;
       }
 
-      if (this.solo === 'true') this.hideAllPanels();
+      if (this.solo === 'true') {
+        this.hideAllPanels();
+      }
 
       this.showCurrentPanel();
     },
@@ -94,49 +112,57 @@ export default {
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) {
+        e.preventDefault();
+      }
 
       this.getCurrent(e);
 
       switch (e.keyCode) {
         // esc
-        case 27:
+        case KEYCODE_ESC:
           this.hidePanel(this.current);
           break;
         // enter / space
-        case 13:
-        case 32:
+        case KEYCODE_ENTER:
+        case KEYCODE_SPACE:
           this.togglePanel(e);
           break;
         // ctrl + pgdn
-        case 34:
-          if (e.ctrlKey) this.nextPanel();
+        case KEYCODE_PGDN:
+          if (e.ctrlKey) {
+            this.nextPanel();
+          }
           break;
         // ctrl + pgup
-        case 33:
-          if (e.ctrlKey) ;
+        case KEYCODE_PGUP:
+          if (e.ctrlKey) {
+            this.previousPanel();
+          }
           break;
         // end
-        case 35:
+        case KEYCODE_END:
           this.current = this.panels.length - 1;
           this.giveHeaderFocus();
           break;
         // home
-        case 36:
+        case KEYCODE_HOME:
           this.current = 0;
           this.giveHeaderFocus();
           break;
         // left / up
-        case 37:
-        case 38:
+        case KEYCODE_LEFT:
+        case KEYCODE_UP:
           this.previousPanel();
           break;
         // right / down
-        case 39:
-        case 40:
+        case KEYCODE_RIGHT:
+        case KEYCODE_DOWN:
           this.nextPanel();
           break;
         default:
@@ -144,20 +170,24 @@ export default {
       }
     },
     previousPanel() {
-      this.current = this.current - 1 < 0 ? this.panels.length - 1 : this.current - 1;
+      const startPanelIndex = 0;
+
+      this.current = this.current - 1 < startPanelIndex ? this.panels.length - 1 : this.current - 1;
       this.giveHeaderFocus();
     },
     nextPanel() {
-      this.current = this.current + 1 > this.panels.length - 1 ? 0 : this.current + 1;
+      const startPanelIndex = 0;
+
+      this.current = this.current + 1 > this.panels.length - 1 ? startPanelIndex : this.current + 1;
       this.giveHeaderFocus();
     },
     giveHeaderFocus() {
       // remove focusability from inactives
       this.panels.forEach((panel) => {
-        panel.header().setAttribute('tabindex', -1);
+        panel.header().setAttribute('tabindex', '-1');
       });
       // set active focus
-      this.panels[this.current].header().setAttribute('tabindex', 0);
+      this.panels[this.current].header().setAttribute('tabindex', '0');
       this.panels[this.current].header().focus();
     },
   },

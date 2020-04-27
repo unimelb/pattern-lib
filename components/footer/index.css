@@ -39,7 +39,7 @@
     font-size: 1.125rem;
 
     a::before {
-      margin-right: .375em;
+      margin-right: .375rem;
       vertical-align: 6%;
 
       /* MAGIC NUMBER */
@@ -245,23 +245,6 @@
 }
 
 /**
- * liveagent do not delete
- */
-.liveagent {
-  display: block;
-  position: fixed;
-  z-index: var(--z-liveagent);
-  right: 15px;
-  bottom: 15px;
-  width: 168px;
-  height: 121px;
-}
-
-.liveagent img {
-  width: 100%;
-}
-
-/**
  * Search form
  */
 .page-footer-search {
@@ -270,19 +253,27 @@
   }
 
   &__label {
-    font-size: .8em;
-    letter-spacing: 1px;
+    font-size: .8rem;
+    letter-spacing: .0625rem;
     text-transform: uppercase;
+
+    @media (--bp-desktop) {
+      letter-spacing: .055rem;
+    }
   }
 
   &__icon {
     position: absolute;
-    top: calc(50% - 10px);
+    top: calc(50% - .625rem);
 
     /* vertical centring */
     left: 0;
     width: 1.375rem;
     height: 1.375rem;
+
+    @media (--bp-desktop) {
+      top: calc(50% - .555rem);
+    }
   }
 
   &__submit {

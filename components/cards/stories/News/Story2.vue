@@ -4,11 +4,10 @@
       <ListItem>
         <CardNewsTag
           :tags="tags"
-          thumb="https://via.placeholder.com/400x200"
+          thumb="https://picsum.photos/seed/1/960/540"
           title="Test 1"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -23,7 +22,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10" />
             </a>
           </template>
         </CardNewsTag>
@@ -31,11 +30,10 @@
       <ListItem>
         <CardNewsTag
           :tags="tags"
-          thumb="https://via.placeholder.com/800x400"
+          thumb="https://picsum.photos/seed/2/960/540"
           title="Lorem ipsum dolor sit amet, consectetur"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -50,7 +48,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10" />
             </a>
           </template>
         </CardNewsTag>
@@ -58,11 +56,10 @@
       <ListItem>
         <CardNewsTag
           :tags="tags"
-          thumb="https://via.placeholder.com/800x600"
+          thumb="https://picsum.photos/seed/3/960/540"
           title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magni natus quas placeat adipisci optio libero quibusdam vitae nobis."
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -77,7 +74,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10" />
             </a>
           </template>
         </CardNewsTag>

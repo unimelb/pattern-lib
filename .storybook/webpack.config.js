@@ -4,7 +4,7 @@ const baseConfig = require('../webpack.config.base.js');
 
 module.exports = (storybookConfig, env, defaultConfig) => {
   // Keep only storybook's JS rule
-  defaultConfig.module.rules = defaultConfig.module.rules.filter(rule => rule.test.test('foo.js'));
+  defaultConfig.module.rules = defaultConfig.module.rules.filter((rule) => rule.test.test('foo.js'));
 
   const mergedConfig = merge(defaultConfig, baseConfig, {
     module: {

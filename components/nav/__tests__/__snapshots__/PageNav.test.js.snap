@@ -41,7 +41,9 @@ exports[`PageNav should match snapshot 1`] = `
       class="sitenav__back-btn button-ui"
       type="button"
     >
+      
       Close
+    
     </button>
      
      

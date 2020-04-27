@@ -5,18 +5,17 @@
     :href="href"
     :excerpt="excerpt"
     :tags="tags"
-    :cols="cols"
-    class="card-news-tag"
-  >
+    :cols="cols">
     <slot
       v-for="(_, name) in $slots"
-      :name="name"
-      :slot="name"/>
+      :slot="name"
+      :name="name" />
   </GenericCard>
 </template>
 
 <script>
 import GenericCard from './GenericCard.vue';
+
 export default {
   name: 'CardNewsTag',
   components: { GenericCard },
@@ -48,7 +47,11 @@ export default {
     cols: {
       type: Number,
       default: 1,
-      validator: value => value && value <= 3,
+      validator: (value) => {
+        const maxColumns = 3;
+
+        return value && value <= maxColumns;
+      },
     },
   },
 };

@@ -6,16 +6,17 @@
       width="100%"
       height="450"
       frameborder="0"
-      src="https://maps.unimelb.edu.au/parkville/building/152?SQ_DESIGN_NAME=plain&borderwidth=0"
-    >
+      src="https://maps.unimelb.edu.au/parkville/building/152?SQ_DESIGN_NAME=plain&borderwidth=0">
       <a href='https://maps.unimelb.edu.au/parkville/building/152'>Raymond Priestley</a>
     </iframe>
     <div class="contact-card__lower">
+      <!-- eslint-disable vue/no-v-html -->
       <div
-        v-for="n in columns-0"
+        v-for="n in columns - 0"
         :key="n"
         class="contact-card__col1_3"
-        v-html="content[n-1]"/>
+        v-html="content[n - 1]" />
+      <!-- eslint-enable vue/no-v-html -->
     </div>
   </div>
 </template>

@@ -2,11 +2,14 @@
 
 exports[`SvgIcon should match snapshot 1`] = `
 <svg
+  aria-label=""
   focusable="false"
+  height="0"
   role="img"
+  width="0"
 >
   <use
-    xlink:href="#icon-undefined"
+    xlink:href="#icon-"
   />
    
   <title>

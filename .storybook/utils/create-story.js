@@ -21,7 +21,7 @@ const readmeDefaults = {
  * @param {Object} opts - options for readme panel
  */
 export default function createStory(Story) {
-  const readmeOpts = Object.assign({}, readmeDefaults, Story.readme || {});
+  const readmeOpts = { ...readmeDefaults, ...Story.readme || {} };
   const readme = generateReadme(Story, readmeOpts);
   return withReadme(readme, () => Story);
 }
@@ -36,7 +36,9 @@ function generateReadme(Story, opts) {
   const readmeArr = [];
 
   // Start with custom documentation, if provided
-  if (opts.custom) readmeArr.push(opts.custom);
+  if (opts.custom) {
+    readmeArr.push(opts.custom);
+  }
 
   // Mount story and retrieve HTML source
   const vm = mount(Story);

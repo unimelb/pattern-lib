@@ -7,8 +7,7 @@
       aria-controls="sitemapmenu"
       href="#sitemap"
       class="link-icon--vertical link-reset"
-      @click.prevent="activateMenu"
-    >
+      @click.prevent="activateMenu">
       <svg
         class="link-icon__icon svg"
         role="presentation"
@@ -27,11 +26,15 @@
         class="sitenav__back-btn button-ui"
         aria-label="Close"
         type="button"
-        @click.prevent="dismissMenu">Close</button>
+        @click.prevent="dismissMenu">
+        Close
+      </button>
+      <!-- eslint-disable vue/no-v-html -->
       <h2
         ref="navtitle"
-        v-html="title"/>
-      <slot/>
+        v-html="title" />
+      <!-- eslint-enable vue/no-v-html -->
+      <slot />
     </div>
   </div>
 </template>
@@ -134,7 +137,10 @@ export default {
       // Look for nested panel and list
       let panel = item.querySelector('.inner');
       const list = item.querySelector('ul');
-      if (!list) return; // no nested list found
+      // no nested list found
+      if (!list) {
+        return;
+      }
 
       // If `inner` container is omitted, inject it (i.e. wrap nested list in panel)
       // Second condition is for when `inner` is omitted at current nesting level, but provided at deeper level
@@ -157,13 +163,13 @@ export default {
       trigger.addEventListener('click', this.openNestedPanel.bind(this, panel, true));
 
       // Inject button to close nested panel
-      const backBtn = document.createElement('button'); /* eslint-disable-line react/button-has-type */
+      const backBtn = document.createElement('button');
       backBtn.className = 'sitenav__back-btn button-ui';
       backBtn.textContent = 'Back';
       backBtn.setAttribute('type', 'button');
       backBtn.setAttribute('aria-label', 'Back');
       backBtn.addEventListener('click', this.closeNestedPanel.bind(this, panel, false));
-      panel.insertBefore(backBtn, list);
+      list.before(backBtn);
 
       // Inject link to parent in child
       const insertParent = document.createElement('a');
@@ -171,14 +177,14 @@ export default {
       insertParent.textContent = trigger.textContent;
       insertParent.setAttribute('href', trigger.getAttribute('href'));
       insertParent.setAttribute('role', 'menuitem');
-      panel.insertBefore(insertParent, list);
+      list.before(insertParent);
     },
 
     openNestedPanel(panel, open, evt) {
       evt.preventDefault();
 
       // Retrieve parent panel (i.e. the panel that was last opened)
-      const parent = this.state.open[this.state.open.length - 1];
+      const parent = [...this.state.open].pop();
 
       // Hide parent sidebar (and scroll back to top to work around nested absolute positioning)
       parent.classList.add('sitenav__panel--nested-open');
@@ -201,7 +207,7 @@ export default {
       panel.scrollTop = 0;
 
       // Show parent sidebar (i.e. vertical overflow)
-      const parent = this.state.open[this.state.open.length - 1];
+      const parent = [...this.state.open].pop();
       parent.classList.remove('sitenav__panel--nested-open');
       this.$emit('page-nav-close-nested-panel');
     },

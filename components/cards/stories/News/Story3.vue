@@ -5,11 +5,10 @@
         <CardNewsTag
           :tags="tags"
           :cols="3"
-          thumb="https://via.placeholder.com/400x200"
+          thumb="https://picsum.photos/seed/1/960/540"
           title="Test 1"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -24,7 +23,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10" />
             </a>
           </template>
         </CardNewsTag>
@@ -33,11 +32,10 @@
         <CardNewsTag
           :tags="tags"
           :cols="3"
-          thumb="https://via.placeholder.com/800x400"
+          thumb="https://picsum.photos/seed/2/960/540"
           title="Lorem ipsum dolor sit amet, consectetur"
           href="#"
-          excerpt="Lorem ipsum dolor sit amet, consectetur."
-        >
+          excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -52,7 +50,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10" />
             </a>
           </template>
         </CardNewsTag>
@@ -61,11 +59,10 @@
         <CardNewsTag
           :tags="tags"
           :cols="3"
-          thumb="https://via.placeholder.com/800x600"
+          thumb="https://picsum.photos/seed/3/960/540"
           title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae magni natus quas placeat adipisci optio libero quibusdam vitae nobis."
           href="#"
-          excerpt="Aute culpa labore ex Lorem sit excepteur elit proident qui nulla cillum incididunt. Dolore aute id dolore cillum commodo esse in commodo eiusmod cillum."
-        >
+          excerpt="Aute culpa labore ex Lorem sit excepteur elit proident qui nulla cillum incididunt. Dolore aute id dolore cillum commodo esse in commodo eiusmod cillum.">
           <div
             slot="sub-title-1"
             class="sub-title">
@@ -80,7 +77,7 @@
                 class="link-icon"
                 name="chevron-right"
                 width="10"
-                height="10"/>
+                height="10" />
             </a>
           </template>
         </CardNewsTag>
@@ -91,10 +88,14 @@
         <ButtonIcon>Read More</ButtonIcon>
       </ListItem>
       <ListItem>
-        <ButtonIcon icon="microphone">Podcast</ButtonIcon>
+        <ButtonIcon icon="microphone">
+          Podcast
+        </ButtonIcon>
       </ListItem>
       <ListItem>
-        <ButtonIcon icon="twitter">Twitter</ButtonIcon>
+        <ButtonIcon icon="twitter">
+          Twitter
+        </ButtonIcon>
       </ListItem>
     </div>
   </SectionWrap>

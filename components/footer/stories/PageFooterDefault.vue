@@ -1,5 +1,5 @@
 <template>
-  <PageFooter/>
+  <PageFooter />
 </template>
 
 <script>

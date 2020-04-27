@@ -1,31 +1,34 @@
 <template>
-  <div class="styled-select">
-    <select
-      :id="id"
-      v-model="selectedOption"
-      @change="emitEvent"
-    >
-      <option
-        selected
-        value=""
-      >Show all</option>
-      <option
-        v-for="(value, index) in values"
-        :key="index"
-        :value="value.value || value"
-      >{{ value.label || value }}</option>
-    </select>
-  </div>
+  <StyledSelect
+    :id="id"
+    v-model="selectedOption"
+    :callback="emitEvent">
+    <option
+      selected
+      value="">
+      Show all
+    </option>
+    <option
+      v-for="(item, index) in values"
+      :key="index"
+      :value="item.value || item">
+      {{ item.label || item }}
+    </option>
+  </StyledSelect>
 </template>
 
 <script>
+import StyledSelect from '../../../forms/StyledSelect.vue';
+
 export default {
+  components: { StyledSelect },
   props: {
     id: {
       type: [String, Boolean],
       default: () => false,
     },
     value: {
+      type: String,
       default: null,
     },
     values: {

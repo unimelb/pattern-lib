@@ -3,19 +3,19 @@
     :class="{
       [`ql-menu--l${level}`]: true,
       'ql-menu--pad': pad,
-      'ql-menu--condensed': condensed
+      'ql-menu--condensed': condensed,
     }"
     class="grid ql-menu">
     <div class="cell cell--desk-2of3 ql-menu__content">
-      <slot name="content"/>
+      <slot name="content" />
       <div
-        v-if="secondaryLinks && secondaryLinks.length > 0"
-        :class="{[`ql-menu__secondary--2col`]: secondaryCols === 2}"
+        v-if="secondaryLinks && secondaryLinks.length"
+        :class="{ [`ql-menu__secondary--2col`]: secondaryCols === 2 }"
         class="ql-menu__secondary">
         <QuickLinksSecondaryItem
           v-for="item in secondaryLinks"
-          :href="item.href"
           :key="item.id"
+          :href="item.href"
           :icon="item.icon"
           :title="item.title"
           class="cell" />
@@ -23,16 +23,15 @@
     </div>
     <div class="cell cell--desk-1of3">
       <nav
-        v-if="menuLinks.length > 0"
+        v-if="menuLinks.length"
         class="ql-menu__nav">
-        <slot name="menu-header"/>
+        <slot name="menu-header" />
         <QuickLinksMenuItem
           v-for="item in menuLinks"
-          :href="item.href"
           :key="item.id"
+          :href="item.href"
           :title="item.title"
-          :truncate="item.truncate"
-        />
+          :truncate="item.truncate" />
       </nav>
     </div>
   </div>
@@ -41,6 +40,7 @@
 <script>
 import QuickLinksMenuItem from './QuickLinksMenuItem.vue';
 import QuickLinksSecondaryItem from './QuickLinksSecondaryItem.vue';
+
 export default {
   components: { QuickLinksMenuItem, QuickLinksSecondaryItem },
   props: {

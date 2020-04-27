@@ -1,5 +1,5 @@
 <template>
-  <SocialList/>
+  <SocialList />
 </template>
 
 <script>

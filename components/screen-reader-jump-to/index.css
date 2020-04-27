@@ -1,0 +1,17 @@
+.screen-reader-jump-to {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(var(--col-background-primary-navy));
+
+  &__skippy {
+    display: block;
+    margin: 1rem !important;
+    color: white;
+    outline: 0;
+  }
+
+  &__skippy-text {
+    padding: .5rem;
+    outline: 5px dotted;
+  }
+}

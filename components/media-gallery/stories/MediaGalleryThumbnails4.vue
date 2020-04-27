@@ -4,8 +4,7 @@
       :items="items"
       display-caption
       columns="4"
-      show-thumbnails
-    />
+      show-thumbnails />
   </div>
 </template>
 

@@ -4,8 +4,7 @@
       :items="items"
       display-caption
       columns="3"
-      use-overlay
-    />
+      use-overlay />
   </div>
 </template>
 

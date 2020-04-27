@@ -1,5 +1,5 @@
 <template>
-  <LogoListing :data="sample"/>
+  <LogoListing :data="sample" />
 </template>
 
 <script>

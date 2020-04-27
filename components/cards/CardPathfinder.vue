@@ -13,10 +13,12 @@
       name="focus-bottom-right"
       width="54"
       height="54" />
+    <!-- eslint-disable vue/no-v-html -->
     <h3
       v-if="!compact"
       class="card__header heading-section"
-      v-html="title"/>
+      v-html="title" />
+    <!-- eslint-enable vue/no-v-html -->
     <div
       v-if="!titleonly"
       class="card__inner">
@@ -25,7 +27,7 @@
         element="span"
         icon="chevron-right"
         class="btn--inverted btn--fullwidth">{{ title }}</ButtonIcon>
-      <p><slot/></p>
+      <p><slot /></p>
     </div>
     <div
       v-if="!compact"

@@ -2,22 +2,24 @@
  * Button + Button owner
  */
 .btn {
-  display: inline-block;
-  padding: .625rem 1rem;
-  width: 100%;
-  transition: all .2s;
-  border: 2px solid color(rgb(var(--col-brand)) alpha(30%));
-  border-radius: var(--br);
-  color: rgb(var(--col-brand));
-  font-weight: var(--fw-bold);
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
+  &,
+  &:visited {
+    display: inline-block;
+    padding: .625rem 1rem;
+    width: 100%;
+    transition: all .2s;
+    border: 2px solid color(rgb(var(--col-brand)) alpha(30%));
+    border-radius: var(--br);
+    color: rgb(var(--col-brand));
+    font-weight: var(--fw-bold);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+  }
 
   &:focus,
-  &:hover,
-  &:visited {
+  &:hover {
     border-color: rgb(var(--col-brand));
     color: rgb(var(--col-brand));
   }
@@ -34,11 +36,11 @@
   }
 
   & + & {
-    margin-top: var(--vr);
+    margin-top: 1rem;
 
     @media (--bp-tablet) {
       margin-top: 0;
-      margin-left: var(--vr);
+      margin-left: 1rem;
     }
   }
 
@@ -125,13 +127,15 @@
 
   &--hard,
   &--secondary {
-    border-color: rgb(var(--col-background-primary-white));
-    background-color: rgb(var(--col-background-primary-white));
-    color: rgb(var(--col-brand));
+    &,
+    &:visited {
+      border-color: rgb(var(--col-background-primary-white));
+      background-color: rgb(var(--col-background-primary-white));
+      color: rgb(var(--col-brand));
+    }
 
     &:hover,
-    &:focus,
-    &:visited {
+    &:focus {
       border-color: rgb(var(--col-blue-light));
       background-color: rgb(var(--col-blue-light));
     }
@@ -151,13 +155,16 @@
   }
 
   &--event {
-    background-color: rgb(var(--col-green-dark-tint));
-    font-size: .875rem;
-    font-weight: var(--fw-bold);
-    color: rgb(var(--col-white));
-    border: 0;
-    border-radius: calc(var(--br) / 2);
-    transition: all .15s ease;
+    &,
+    &:visited {
+      background-color: rgb(var(--col-green-dark-tint));
+      font-size: .875rem;
+      font-weight: var(--fw-bold);
+      color: rgb(var(--col-white));
+      border: 0;
+      border-radius: calc(var(--br) / 2);
+      transition: all .15s ease;
+    }
 
     &:hover,
     &:focus {
@@ -175,6 +182,34 @@
       color: color(rgb(var(--col-background-primary-white)) alpha(50%));
       border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
       background-color: color(rgb(var(--col-black-mid-2)) alpha(70%));
+    }
+
+    &-alt {
+      &,
+      &:visited {
+        color: rgb(var(--col-white));
+        background-color: rgb(var(--col-emerald-dark));
+        border: 2px solid rgb(var(--col-emerald-mid-2));
+      }
+
+      &:hover,
+      &:focus {
+        border: 2px solid rgb(var(--col-emerald-mid-1));
+        color: rgb(var(--col-white));
+      }
+
+      &:active {
+        color: rgb(var(--col-emerald-dark));
+        background-color: rgb(var(--col-background-primary-white));
+        border: 2px solid rgb(var(--col-emerald-light));
+      }
+
+      &.btn--disabled,
+      &:disabled {
+        color: rgb(var(--col-emerald-dark));
+        background-color: rgb(var(--col-emerald-light));
+        border: 2px solid rgb(var(--col-emerald-mid-1));
+      }
     }
   }
 
@@ -210,7 +245,7 @@
     text-align: center;
 
     & + & {
-      margin-top: var(--vr);
+      margin-top: 1rem;
       margin-left: 0;
     }
   }
@@ -231,10 +266,10 @@
       content: '';
       display: inline-block;
       position: absolute;
-      top: calc(50% - (.75em / 2));
+      top: calc(50% - (.75rem / 2));
       right: 1rem;
-      width: .75em;
-      height: .75em;
+      width: .75rem;
+      height: .75rem;
       margin-top: .05rem;
       background-size: cover;
     }
@@ -363,6 +398,18 @@
         }
       }
     }
+
+    &--down {
+      &::after {
+        background-image: url('~icons/chevron-down.svg?fill=#094183');
+      }
+
+      &:active {
+        &::after {
+          background-image: url('~icons/chevron-down.svg?fill=#fff');
+        }
+      }
+    }
   }
 
   &--icon-before {
@@ -375,10 +422,10 @@
       content: '';
       display: inline-block;
       position: absolute;
-      top: calc(50% - (.75em / 2));
+      top: calc(50% - (.75rem / 2));
       left: 1rem;
-      width: .75em;
-      height: .75em;
+      width: .75rem;
+      height: .75rem;
       margin-top: .05rem;
       background-size: cover;
     }

@@ -1,31 +1,29 @@
 <template>
   <component
     :is="container"
-    :class="`toggleblock${isActive ? ' toggleblock--active': ''}`">
+    :class="`toggleblock${isActive ? ' toggleblock--active' : ''}`">
     <component
-      ref="header"
       :is="element"
-      :class="`toggleblock__default${isActive ? ' toggleblock__default--active': ''}`"
       :id="`${namespace}-header-${index + 1}`"
+      ref="header"
+      :class="`toggleblock__default${isActive ? ' toggleblock__default--active' : ''}`"
       :aria-controls="`${namespace}-panel-${index + 1}`"
       :aria-selected="isActive"
       tabindex="0"
-      @keydown="group ? group.handleKey($event) : handleKey($event)"
-    >
-      <slot/>
+      @keydown="group ? group.handleKey($event) : handleKey($event)">
+      <slot />
     </component>
     <component
-      ref="panel"
       :is="element"
-      :class="`toggleblock__hidden${isActive ? ' toggleblock__hidden--active': ''}`"
       :id="`${namespace}-panel-${index + 1}`"
+      ref="panel"
+      :class="`toggleblock__hidden${isActive ? ' toggleblock__hidden--active' : ''}`"
       :aria-labelledby="`${namespace}-header-${index + 1}`"
       :tabindex="isActive ? 0 : -1"
       :aria-expanded="isActive"
       :aria-hidden="!isActive"
-      role="region"
-    >
-      <slot name="hidden"/>
+      role="region">
+      <slot name="hidden" />
     </component>
   </component>
 </template>
@@ -33,6 +31,12 @@
 <script>
 // toggle-block-set-active
 // toggle-block-toggle
+
+import focusableElements from '../../utils/focusable-elements';
+
+import {
+  KEYCODE_TAB, KEYCODE_ENTER, KEYCODE_ESC, KEYCODE_SPACE,
+} from '../../constants/keycodes';
 
 export default {
   name: 'ToggleBlock',
@@ -62,7 +66,9 @@ export default {
     trigger() {
       let t = this.$refs.header;
       this.$slots.default.forEach((el) => {
-        if (el.context && el.context.$refs && el.context.$refs.trigger) t = el.context.$refs.trigger;
+        if (el.context && el.context.$refs && el.context.$refs.trigger) {
+          t = el.context.$refs.trigger;
+        }
       });
       return t;
     },
@@ -86,53 +92,52 @@ export default {
     }
 
     // Create array of focusable elements in context
-    const focusableSelectors = [
-      'a[href]',
-      'area[href]',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'button:not([disabled])',
-      'iframe',
-      'object',
-      'embed',
-      '[contenteditable]',
-      '[tabindex]:not([tabindex^="-"])',
-    ];
+    this.focusableElements = focusableElements(this.$refs.panel);
 
-    this.focusableElements = [].slice.call(this.$refs.panel.querySelectorAll(focusableSelectors.join()));
     this.toggleFocusableElements();
   },
   methods: {
-    header() { return this.$refs.header; },
-    panel() { return this.$refs.panel; },
-    getActive() { return this.isActive; },
+    header() {
+      return this.$refs.header;
+    },
+    panel() {
+      return this.$refs.panel;
+    },
+    getActive() {
+      return this.isActive;
+    },
     toggleFocusableElements() {
       this.focusableElements.forEach((el) => {
-        el.setAttribute('tabindex', this.isActive ? 0 : -1);
+        el.setAttribute('tabindex', this.isActive ? '0' : '-1');
       });
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) {
+        e.preventDefault();
+      }
 
       switch (e.keyCode) {
         // esc
-        case 27:
+        case KEYCODE_ESC:
           this.isActive = false;
           break;
         // enter / space
-        case 13:
-        case 32:
+        case KEYCODE_ENTER:
+        case KEYCODE_SPACE:
           this.toggle();
           break;
         default: break;
       }
     },
-    setIndex(v) { this.index = v; },
+    setIndex(v) {
+      this.index = v;
+    },
     setActive(v) {
       this.isActive = v;
       this.toggleFocusableElements();

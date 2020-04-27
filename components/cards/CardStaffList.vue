@@ -3,10 +3,9 @@
     <a
       :href="href"
       :style="{ backgroundImage: `url(${thumb})` }"
-      :title="'profile of' + name"
-      :aria-label="'Photo of' + name"
-      class="card__thumb"
-    />
+      :title="'profile of ' + name"
+      :aria-label="'Photo of ' + name"
+      class="card__thumb" />
     <div class="card__inner">
       <a
         :href="href"
@@ -18,7 +17,9 @@
       </a>
       <div
         v-if="excerpt"
-        class="card__excerpt">{{ excerpt }}</div>
+        class="card__excerpt">
+        {{ excerpt }}
+      </div>
       <div
         v-if="renderFooter"
         class="card__footer">
@@ -27,12 +28,11 @@
           :href="'tel:' + phone"
           class="card__phone"
           title="profile phone number"
-          aria-label="Phone Number"
-        >
+          aria-label="Phone Number">
           <SvgIcon
             name="phone"
             width="15px"
-            height="15px"/>
+            height="15px" />
           {{ phone }}
         </a>
         <a
@@ -40,12 +40,11 @@
           :href="'mailto:' + email"
           class="card__email"
           title="profile email"
-          aria-label="Email"
-        >
+          aria-label="Email">
           <SvgIcon
             name="envelope"
             width="15px"
-            height="15px"/>
+            height="15px" />
           {{ email }}
         </a>
       </div>
@@ -97,7 +96,9 @@ export default {
   },
   computed: {
     renderFooter() {
-      return this.cols < 4 && (this.phone || this.email);
+      const maxColumns = 4;
+
+      return this.cols < maxColumns && (this.phone || this.email);
     },
   },
 };

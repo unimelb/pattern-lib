@@ -43,16 +43,21 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="school"
             >
               <option
                 selected="selected"
                 value=""
               >
-                Show all
+                
+    Show all
+  
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
          
@@ -70,16 +75,21 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="disciplines"
             >
               <option
                 selected="selected"
                 value=""
               >
-                Show all
+                
+    Show all
+  
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
          
@@ -97,16 +107,21 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="performances"
             >
               <option
                 selected="selected"
                 value=""
               >
-                Show all
+                
+    Show all
+  
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
       </div>
@@ -123,7 +138,9 @@ exports[`CardsFilter should match snapshot 1`] = `
           aria-label="search"
           class="filter__button--icon"
           focusable="false"
+          height="0"
           role="img"
+          width="0"
         >
           <use
             xlink:href="#icon-search"
@@ -143,7 +160,9 @@ exports[`CardsFilter should match snapshot 1`] = `
       <button
         class="filter__button"
       >
+        
         Reset all
+      
       </button>
     </div>
   </div>
@@ -151,7 +170,9 @@ exports[`CardsFilter should match snapshot 1`] = `
   <p
     class="filter-results__count"
   >
-    2 results
+    
+  2 results
+
   </p>
    
   <!---->
@@ -194,32 +215,11 @@ exports[`CardsFilter should match snapshot 1`] = `
                 class="sub-title"
               >
                 <svg
-                  aria-label="info"
-                  focusable="false"
-                  role="img"
-                >
-                  <use
-                    xlink:href="#icon-info"
-                  />
-                   
-                  <title>
-                    Info
-                  </title>
-                   
-                </svg>
-                 
-                <span>
-                  Exhibition
-                </span>
-              </div>
-               
-              <div
-                class="sub-title"
-              >
-                <svg
                   aria-label="calendar"
                   focusable="false"
+                  height="0"
                   role="img"
+                  width="0"
                 >
                   <use
                     xlink:href="#icon-calendar"
@@ -235,19 +235,35 @@ exports[`CardsFilter should match snapshot 1`] = `
                   2018-12-01
                 </span>
               </div>
-               
+                
             </div>
              
             <div
               class="card__excerpt"
             >
-              Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts
+              
+      Masters Exhibition 2018 by Visual Art Postgraduates at the Victorian College of the Arts
+    
             </div>
              
             <div
               class="card__footer card__footer--column"
             >
-              <!---->
+              <div
+                class="tags card__tags"
+              >
+                <ul
+                  class="tags__list"
+                >
+                  <li
+                    class="tags__item list-reset"
+                  >
+                    <span>
+                      Exhibition
+                    </span>
+                  </li>
+                </ul>
+              </div>
                
               <div
                 class="card__links"
@@ -315,32 +331,11 @@ exports[`CardsFilter should match snapshot 1`] = `
                 class="sub-title"
               >
                 <svg
-                  aria-label="info"
-                  focusable="false"
-                  role="img"
-                >
-                  <use
-                    xlink:href="#icon-info"
-                  />
-                   
-                  <title>
-                    Info
-                  </title>
-                   
-                </svg>
-                 
-                <span>
-                  Event
-                </span>
-              </div>
-               
-              <div
-                class="sub-title"
-              >
-                <svg
                   aria-label="calendar"
                   focusable="false"
+                  height="0"
                   role="img"
+                  width="0"
                 >
                   <use
                     xlink:href="#icon-calendar"
@@ -356,19 +351,35 @@ exports[`CardsFilter should match snapshot 1`] = `
                   2018-11-29
                 </span>
               </div>
-               
+                
             </div>
              
             <div
               class="card__excerpt"
             >
-              Wilin Centre for Indigenous Arts and Culture event Wilin Jams
+              
+      Wilin Centre for Indigenous Arts and Culture event Wilin Jams
+    
             </div>
              
             <div
               class="card__footer card__footer--column"
             >
-              <!---->
+              <div
+                class="tags card__tags"
+              >
+                <ul
+                  class="tags__list"
+                >
+                  <li
+                    class="tags__item list-reset"
+                  >
+                    <span>
+                      Event
+                    </span>
+                  </li>
+                </ul>
+              </div>
                
               <div
                 class="card__links"

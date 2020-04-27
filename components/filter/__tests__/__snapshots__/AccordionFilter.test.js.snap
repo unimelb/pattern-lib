@@ -43,16 +43,21 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="locations"
             >
               <option
                 selected="selected"
                 value=""
               >
-                Show all
+                
+    Show all
+  
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
          
@@ -70,16 +75,21 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="disciplines"
             >
               <option
                 selected="selected"
                 value=""
               >
-                Show all
+                
+    Show all
+  
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
          
@@ -97,16 +107,21 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              class=""
               id="auditions"
             >
               <option
                 selected="selected"
                 value=""
               >
-                Show all
+                
+    Show all
+  
               </option>
-               
+                
             </select>
+             
+            <!---->
           </div>
         </div>
       </div>
@@ -123,7 +138,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
           aria-label="search"
           class="filter__button--icon"
           focusable="false"
+          height="0"
           role="img"
+          width="0"
         >
           <use
             xlink:href="#icon-search"
@@ -143,7 +160,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
       <button
         class="filter__button"
       >
+        
         Reset all
+      
       </button>
     </div>
   </div>
@@ -151,7 +170,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
   <p
     class="filter-results__count"
   >
-    2 results
+    
+  2 results
+
   </p>
    
   <!---->
@@ -168,24 +189,26 @@ exports[`AccordionFilter should match snapshot 1`] = `
           class="accordion toggleblock"
         >
           <div
-            aria-controls="ui-toggle-10-panel-1"
+            aria-controls="ui-toggle-13-panel-1"
             class="toggleblock__default"
-            id="ui-toggle-10-header-1"
+            id="ui-toggle-13-header-1"
             tabindex="0"
           >
             <h2
               class="toggle__trigger"
             >
-              arts
+              
+      arts
+    
             </h2>
              
           </div>
            
           <div
             aria-hidden="true"
-            aria-labelledby="ui-toggle-10-header-1"
+            aria-labelledby="ui-toggle-13-header-1"
             class="toggleblock__hidden"
-            id="ui-toggle-10-panel-1"
+            id="ui-toggle-13-panel-1"
             role="region"
             tabindex="-1"
           >
@@ -210,7 +233,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Location
+                      
+                  Location
+                
                     </th>
                      
                     <td>
@@ -222,7 +247,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Semester
+                      
+                  Semester
+                
                     </th>
                      
                     <td>
@@ -234,7 +261,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Points
+                      
+                  Points
+                
                     </th>
                      
                     <td>
@@ -246,7 +275,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Discipline
+                      
+                  Discipline
+                
                     </th>
                      
                     <td>
@@ -258,7 +289,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Audition requirement
+                      
+                  Audition requirement
+                
                     </th>
                      
                     <td>
@@ -270,7 +303,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Study Abroad
+                      
+                  Study Abroad
+                
                     </th>
                      
                     <td>
@@ -288,13 +323,15 @@ exports[`AccordionFilter should match snapshot 1`] = `
                
               <a
                 class="btn btn--xsml"
-                href="#"
+                href="www.unimelb.edu.au"
                 tabindex="-1"
               >
                 <span
                   class="push-icon"
                 >
-                  Handbook Link 
+                  
+            Handbook Link
+           
                   <svg
                     aria-hidden="true"
                     aria-label="chevron-right"
@@ -313,6 +350,8 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     </title>
                      
                   </svg>
+                   
+                  <!---->
                 </span>
                  
                 <!---->
@@ -328,24 +367,26 @@ exports[`AccordionFilter should match snapshot 1`] = `
           class="accordion toggleblock"
         >
           <div
-            aria-controls="ui-toggle-14-panel-1"
+            aria-controls="ui-toggle-17-panel-1"
             class="toggleblock__default"
-            id="ui-toggle-14-header-1"
+            id="ui-toggle-17-header-1"
             tabindex="0"
           >
             <h2
               class="toggle__trigger"
             >
-              science
+              
+      science
+    
             </h2>
              
           </div>
            
           <div
             aria-hidden="true"
-            aria-labelledby="ui-toggle-14-header-1"
+            aria-labelledby="ui-toggle-17-header-1"
             class="toggleblock__hidden"
-            id="ui-toggle-14-panel-1"
+            id="ui-toggle-17-panel-1"
             role="region"
             tabindex="-1"
           >
@@ -370,7 +411,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Location
+                      
+                  Location
+                
                     </th>
                      
                     <td>
@@ -382,7 +425,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Semester
+                      
+                  Semester
+                
                     </th>
                      
                     <td>
@@ -394,7 +439,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Points
+                      
+                  Points
+                
                     </th>
                      
                     <td>
@@ -406,7 +453,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Discipline
+                      
+                  Discipline
+                
                     </th>
                      
                     <td>
@@ -418,7 +467,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Audition requirement
+                      
+                  Audition requirement
+                
                     </th>
                      
                     <td>
@@ -430,7 +481,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     <th
                       scope="row"
                     >
-                      Study Abroad
+                      
+                  Study Abroad
+                
                     </th>
                      
                     <td>
@@ -448,13 +501,15 @@ exports[`AccordionFilter should match snapshot 1`] = `
                
               <a
                 class="btn btn--xsml"
-                href="#"
+                href="www.unimelb.edu.au"
                 tabindex="-1"
               >
                 <span
                   class="push-icon"
                 >
-                  Handbook Link 
+                  
+            Handbook Link
+           
                   <svg
                     aria-hidden="true"
                     aria-label="chevron-right"
@@ -473,6 +528,8 @@ exports[`AccordionFilter should match snapshot 1`] = `
                     </title>
                      
                   </svg>
+                   
+                  <!---->
                 </span>
                  
                 <!---->

@@ -1,6 +1,6 @@
 <template>
   <div :style="{ maxWidth: `${maxWidth}rem` }">
-    <slot/>
+    <slot />
   </div>
 </template>
 

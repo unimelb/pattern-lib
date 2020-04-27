@@ -3,6 +3,7 @@
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: var(--vr);
+    text-transform: none;
   }
 
   .card__footer {
@@ -17,12 +18,20 @@
 
   .card__thumb {
     position: relative;
-    height: 192px;
+    height: 12rem;
+
+    @media (--bp-desktop) {
+      height: 10.666rem;
+    }
 
     &-img,
     img {
       width: 100%;
-      height: 192px;
+      height: 12rem;
+
+      @media (--bp-desktop) {
+        height: 10.666rem;
+      }
     }
 
     &-img {

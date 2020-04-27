@@ -13,6 +13,8 @@ exports[`InfoPanel should match snapshot 1`] = `
       class="title--xxs info-panel__title"
     >
       
+      
+    
     </h4>
      
   </div>

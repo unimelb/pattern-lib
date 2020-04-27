@@ -2,12 +2,11 @@
   <DownloadBlock
     href=""
     header="Annual Report"
-    img="https://picsum.photos/200/300"
+    img="https://i.picsum.photos/id/1040/200/300.jpg"
     btn-text="Download the 2017 Annual Report"
     filename="annual-report.pdf"
     size="2.2 MB"
-    format="PDF"
-  />
+    format="PDF" />
 </template>
 
 <script>

@@ -4,11 +4,6 @@
   padding-top: calc(var(--vr) * 2);
   padding-bottom: calc(var(--vr) * 2);
 
-  /* fix alignment of first heading or lead paragraph */
-  &__main > :matches(h3, .heading-card, .lead):first-child {
-    margin-top: calc(0 - (1.25rem - 1rem) / 2); /* heading/lead font size - base font size */
-  }
-
   &__aside-box {
     &:not(:first-child) {
       padding-top: var(--vr);
@@ -21,7 +16,7 @@
   }
 
   &__type {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
@@ -32,7 +27,7 @@
 
   &__social-heading {
     margin-bottom: .25rem;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
@@ -40,13 +35,13 @@
   &__categories {
     &-heading {
       margin-bottom: .25rem;
-      font-size: 1.125em;
+      font-size: 1.125rem;
       font-weight: var(--fw-semibold);
     }
 
     a {
       display: block;
-      padding: .25em 0;
+      padding: .25rem 0;
     }
   }
 

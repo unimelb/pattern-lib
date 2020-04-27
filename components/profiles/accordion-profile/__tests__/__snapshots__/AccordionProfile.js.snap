@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionProfile should match snapshot 1`] = `
+<div
+  class="accordion-profile"
+>
+  <div
+    aria-label="Profile Image"
+    class="accordion-profile__thumb"
+    style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
+  />
+   
+  <div
+    class="accordion-profile__container"
+  >
+    <div
+      aria-label="Profile Image"
+      class="accordion-profile__thumb-inner"
+      style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/85159/staff-placeholder-short.png);"
+    />
+     
+    <div
+      class="accordion-profile__inner"
+    >
+      <div
+        class="accordion-profile__titles"
+      >
+        <h6
+          class="accordion-profile__title"
+        >
+          
+          
+        
+        </h6>
+         
+        <p
+          class="accordion-profile__sub-title"
+        >
+          
+          
+        
+        </p>
+      </div>
+       
+      <div>
+        <!---->
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="accordion-profile__bio accordion-profile__bio--transition"
+  >
+    <!---->
+     
+    <p
+      class="accordion-profile__bio-text"
+    >
+      
+      
+    
+    </p>
+  </div>
+</div>
+`;

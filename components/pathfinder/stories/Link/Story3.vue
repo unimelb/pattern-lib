@@ -2,20 +2,19 @@
   <SectionWrap>
     <div class="grid grid--4col grid--center">
       <ListItem>
-        <card-link
+        <CardLink
           inverted
-          title="Test 1"/>
+          title="Test 1" />
       </ListItem>
       <ListItem>
-        <card-link
+        <CardLink
           inverted
-          title="This is an even Longer title that totally goes over three lines"
-        />
+          title="This is an even Longer title that totally goes over three lines" />
       </ListItem>
       <ListItem>
-        <card-link
+        <CardLink
           inverted
-          title="This is a Longer title over two lines"/>
+          title="This is a Longer title over two lines" />
       </ListItem>
     </div>
   </SectionWrap>

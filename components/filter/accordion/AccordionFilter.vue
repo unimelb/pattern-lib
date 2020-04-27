@@ -10,8 +10,7 @@
           v-model="searchText"
           class="filter__input"
           type="search"
-          placeholder="Type to search title"
-        >
+          placeholder="Type to search title">
       </div>
 
       <div class="filter__container">
@@ -23,7 +22,7 @@
             <DropdownFilter
               id="locations"
               v-model="selectedLocation"
-              :values="filters.locations"/>
+              :values="filters.locations" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
@@ -32,7 +31,7 @@
             <DropdownFilter
               id="disciplines"
               v-model="selectedDiscipline"
-              :values="filters.disciplines"/>
+              :values="filters.disciplines" />
           </div>
           <div class="cell cell--tab-1of3">
             <label
@@ -41,7 +40,7 @@
             <DropdownFilter
               id="auditions"
               v-model="selectedAudition"
-              :values="filters.auditions"/>
+              :values="filters.auditions" />
           </div>
         </div>
       </div>
@@ -59,8 +58,9 @@
         </button>
         <button
           class="filter__button"
-          @click="resetSearch"
-        >Reset all</button>
+          @click="resetSearch">
+          Reset all
+        </button>
       </div>
     </div>
 
@@ -79,7 +79,7 @@
           v-for="(item, index) in dataFiltered"
           :key="index"
           class="accordion-list">
-          <accordion :name="item.name">
+          <Accordion :name="item.name">
             <table class="table table--striped table--tight table--is-compacted">
               <tbody>
                 <colgroup>
@@ -87,27 +87,39 @@
                   <col width="70%">
                 </colgroup>
                 <tr>
-                  <th scope="row">Location</th>
+                  <th scope="row">
+                    Location
+                  </th>
                   <td>{{ item.location.join(', ') }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Semester</th>
+                  <th scope="row">
+                    Semester
+                  </th>
                   <td>{{ item.semester.join(', ') }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Points</th>
+                  <th scope="row">
+                    Points
+                  </th>
                   <td>{{ item.points }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Discipline</th>
+                  <th scope="row">
+                    Discipline
+                  </th>
                   <td>{{ item.discipline }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Audition requirement</th>
+                  <th scope="row">
+                    Audition requirement
+                  </th>
                   <td>{{ item.audition }}</td>
                 </tr>
                 <tr>
-                  <th scope="row">Study Abroad</th>
+                  <th scope="row">
+                    Study Abroad
+                  </th>
                   <td>{{ item.abroad }}</td>
                 </tr>
               </tbody>
@@ -115,8 +127,12 @@
             <p>
               {{ item.overview }}
             </p>
-            <ButtonIcon size="xsml">{{ item.buttonText }}</ButtonIcon>
-          </accordion>
+            <ButtonIcon
+              :href="item.buttonLink"
+              size="xsml">
+              {{ item.buttonText }}
+            </ButtonIcon>
+          </Accordion>
         </div>
       </transition-group>
     </FilterResults>
@@ -124,6 +140,7 @@
 </template>
 
 <script>
+import escapeRegExp from 'lodash.escaperegexp';
 import Accordion from '../../accordion/Accordion.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
@@ -167,12 +184,31 @@ export default {
   },
   computed: {
     filteredData() {
-      return this.data.filter(
-        data => (this.selectedLocation === '' || data.location.includes(this.selectedLocation))
-          && data.discipline.match(new RegExp(this.selectedDiscipline, 'i'))
-          && data.audition.match(new RegExp(this.selectedAudition, 'i'))
-          && data.name.match(new RegExp(this.searchText, 'i'))
-      );
+      const {
+        selectedLocation,
+        selectedDiscipline,
+        selectedAudition,
+        searchText,
+      } = this;
+
+      const disciplineRegex = new RegExp(`^${escapeRegExp(selectedDiscipline)}$`, 'i');
+      const auditionRegex = new RegExp(`^${escapeRegExp(selectedAudition)}$`, 'i');
+      const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
+
+
+      return this.data.filter((data) => {
+        const {
+          location,
+          discipline,
+          audition,
+          name,
+        } = data;
+
+        return (selectedLocation === '' || location.includes(selectedLocation))
+        && (selectedDiscipline === '' || discipline.match(disciplineRegex))
+        && (selectedAudition === '' || audition.match(auditionRegex))
+        && (searchText === '' || name.match(searchTextRegex));
+      });
     },
     animationclass() {
       if (this.searchText || this.selectedDiscipline || this.selectedLocation || this.selectedAudition) {
@@ -205,18 +241,27 @@ export default {
       };
 
       this.data.forEach((element) => {
-        if (!filters.disciplines.includes(element.discipline)) {
-          filters.disciplines.push(element.discipline);
+        const { discipline, location, audition } = element;
+
+        if (!filters.disciplines.includes(discipline)) {
+          filters.disciplines.push(discipline);
         }
 
-        if (!filters.locations.includes(...element.location)) {
-          filters.locations.push(...element.location);
-        }
+        location.forEach((loc) => {
+          if (!filters.locations.includes(loc)) {
+            filters.locations.push(loc);
+          }
+        });
 
-        if (!filters.auditions.includes(element.audition)) {
-          filters.auditions.push(element.audition);
+        if (!filters.auditions.includes(audition)) {
+          filters.auditions.push(audition);
         }
       });
+
+      // Sort filters.
+      filters.disciplines.sort();
+      filters.locations.sort();
+      filters.auditions.sort();
 
       return filters;
     },

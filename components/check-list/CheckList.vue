@@ -11,16 +11,20 @@
           class="check-list__checkbox"
           type="checkbox"
           @change="toggle(index, $event)">
+        <!-- eslint-disable vue/no-v-html -->
         <label
           :for="`${namespace}-${index}`"
           class="check-list__label"
-          v-html="content[index].innerHTML"/>
+          v-html="content[index].innerHTML" />
+        <!-- eslint-enable vue/no-v-html -->
       </li>
     </ol>
     <ButtonIcon
       :href="btnHref"
       :disabled="!itemsAllChecked"
-      :icon="btnIcon">{{ btnText }}</ButtonIcon>
+      :icon="btnIcon">
+      {{ btnText }}
+    </ButtonIcon>
   </div>
 </template>
 
@@ -46,7 +50,7 @@ export default {
   },
   computed: {
     itemsAllChecked() {
-      return this.checkedItems.indexOf(false) === -1;
+      return !this.checkedItems.includes(false);
     },
     namespace() {
       return `ui-checklist-${this._uid}`;
@@ -54,12 +58,12 @@ export default {
   },
   beforeCreate() {
     const list = this.$slots.list[0];
-    this.items = list.children.filter(item => item.tag === 'li');
+    this.items = list.children.filter((item) => item.tag === 'li');
 
     this.content = [];
     this.items.forEach((item, index) => {
       this.content[index] = document.createElement('div');
-      item.children.forEach(node => this.content[index].appendChild(vnodeToElement(node)));
+      item.children.forEach((node) => this.content[index].appendChild(vnodeToElement(node)));
     });
 
     const btn = this.$slots.btn[0];

@@ -7,7 +7,7 @@
     <div
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="title"
-      class="card__thumb"/>
+      class="card__thumb" />
     <div class="card__inner">
       <h3 class="card__header">{{ meta }}</h3>
       <p class="card__meta">{{ title }}</p>

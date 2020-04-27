@@ -15,7 +15,9 @@ import './index.css';
 
 // Import components
 import 'components/index.css';
-import 'components/index.js';
+import 'components/index';
+
+const VueAxe = process.env.NODE_ENV !== 'production' ? require('vue-axe') : '';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
@@ -37,11 +39,10 @@ const stories = require.context('components', true, /stories\/index\.js$/);
 configure(loadStories, module);
 
 function loadStories() {
-  stories.keys().forEach(filename => stories(filename));
+  stories.keys().forEach((filename) => stories(filename));
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  const VueAxe = require('vue-axe');
   Vue.use(VueAxe, {
     config: {
       rules: [

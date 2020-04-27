@@ -6,10 +6,10 @@
     class="card card--image-focus">
     <h3
       v-if="titleabove === true"
-      :class="{'text-italic': hero, 'heading-section': hero}">{{ title }}</h3>
+      :class="{ 'text-italic': hero, 'heading-section': hero }">{{ title }}</h3>
     <div
       v-if="!progressive"
-      :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"
+      :class="{ 'card__thumb--full': fullImg, 'card__thumb--tall': tall }"
       class="card__thumb">
       <img
         :src="img"
@@ -21,13 +21,13 @@
       v-if="progressive"
       :src="img"
       :placeholder="progressive ? placeholder : false"
-      :class="{'card__thumb--full': fullImg, 'card__thumb--tall': tall}"
-      class="card__thumb"/>
+      :class="{ 'card__thumb--full': fullImg, 'card__thumb--tall': tall }"
+      class="card__thumb" />
     <div
-      :class="{'card__inner--tight': tight}"
+      :class="{ 'card__inner--tight': tight }"
       class="card__inner">
       <h3 v-if="titleabove === false">{{ title }}</h3>
-      <slot/>
+      <slot />
       <ButtonIcon
         v-if="element === 'a'"
         element="span"
@@ -103,7 +103,7 @@ export default {
   computed: {
     classes() {
       return {
-        [`card--image-focus--col-${this.color}`]: this.color && this.color.length > 0,
+        [`card--image-focus--col-${this.color}`]: this.color && this.color.length,
         'btn-owner': this.element && this.element === 'a',
         'card--image-no-focus': !!this.noFocus,
       };

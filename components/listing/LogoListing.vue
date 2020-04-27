@@ -10,8 +10,7 @@
           <img
             :alt="item.alt"
             :src="item.src"
-            class="logo-listing__image"
-          >
+            class="logo-listing__image">
         </a>
       </div>
     </div>

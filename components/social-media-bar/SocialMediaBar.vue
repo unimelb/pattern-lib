@@ -4,7 +4,9 @@
     class="social-media-bar">
     <div class="social-media-bar__inner">
       <div class="social-media-bar__col">
-        <h4 class="social-media-bar__title">{{ title }}</h4>
+        <h4 class="social-media-bar__title">
+          {{ title }}
+        </h4>
         <div class="social-media-bar__links">
           <a
             v-if="newsletterLink"
@@ -14,7 +16,7 @@
               name="envelope"
               width="25"
               height="25"
-              class="social-media-bar__icon"/>Sign up for e-news
+              class="social-media-bar__icon" />Sign up for e-news
           </a>
           <a
             v-if="blogLink"
@@ -24,12 +26,14 @@
               name="newspaper"
               width="25"
               height="25"
-              class="social-media-bar__icon"/>Read our blog
+              class="social-media-bar__icon" />Read our blog
           </a>
         </div>
       </div>
       <div class="social-media-bar__col">
-        <h4 class="social-media-bar__title social-media-bar__title--secondary">Follow us</h4>
+        <h4 class="social-media-bar__title social-media-bar__title--secondary">
+          Follow us
+        </h4>
         <SocialListGeneric
           :facebook-link="facebookLink"
           :twitter-link="twitterLink"
@@ -38,9 +42,7 @@
           :vimeo-link="vimeoLink"
           :youtube-link="youtubeLink"
           :icon-size="30"
-          class="social-media-bar__social-list"
-        />
-
+          class="social-media-bar__social-list" />
       </div>
     </div>
   </div>

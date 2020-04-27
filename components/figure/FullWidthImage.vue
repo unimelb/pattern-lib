@@ -3,7 +3,7 @@
     :aria-label="ariaLabel"
     :style="styleObject"
     role="img"
-    class="full-width-image"/>
+    class="full-width-image" />
 </template>
 
 <script>

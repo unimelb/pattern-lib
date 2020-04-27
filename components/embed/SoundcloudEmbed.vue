@@ -5,8 +5,7 @@
       :width="size[0]"
       :height="size[1]"
       frameborder="0"
-      allowfullscreen
-    />
+      allowfullscreen />
   </div>
 </template>
 
@@ -25,7 +24,7 @@ export default {
     mode: {
       type: String,
       default: 'classic',
-      validator: value => ['classic', 'visual'].indexOf(value) !== -1,
+      validator: (value) => ['classic', 'visual'].includes(value),
     },
   },
   computed: {
