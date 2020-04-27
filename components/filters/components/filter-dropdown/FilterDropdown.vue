@@ -65,7 +65,7 @@ import SvgIcon from 'components/icons/SvgIcon.vue';
 import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
-import getSelectedOptionLabels from '../getSelectedOptionLabels.js';
+import getSelectedOptionLabels from './getSelectedOptionLabels.js';
 
 export default {
   components: { NestedCheckbox, SvgIcon, ButtonIcon },

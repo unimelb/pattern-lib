@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import BaseCheckbox from '../../../../base/base-checkbox/BaseCheckbox.vue';
+import BaseCheckbox from 'components/base/base-checkbox/BaseCheckbox.vue';
 
 export default {
   name: 'NestedCheckboxView',

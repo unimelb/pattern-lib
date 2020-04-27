@@ -59,14 +59,14 @@ import ErrorBox from 'components/error-box/ErrorBox.vue';
 import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
 import SectionTwoCol from 'components/section/SectionTwoCol.vue';
-import FilterBox from 'components/filters/filter-box/FilterBox.vue';
-import FilteredResults from 'components/filters/filtered-results/FilteredResults.vue';
+import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
+import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
-import undergrad from '../defaultOptions/undergrad.json';
-import postgrad from '../defaultOptions/postgrad.json';
-import research from '../defaultOptions/research.json';
-import all from '../defaultOptions/all.json';
+import undergrad from './defaultOptions/undergrad.json';
+import postgrad from './defaultOptions/postgrad.json';
+import research from './defaultOptions/research.json';
+import all from './defaultOptions/all.json';
 
 const defaultLabels = {
   undergrad: 'undergraduate study',

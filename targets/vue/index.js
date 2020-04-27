@@ -329,11 +329,15 @@ export {
 export {
   default as FilterDropdown,
 }
-  from 'components/filters/filter-dropdown/FilterDropdown.vue';
+  from 'components/filters/components/filter-dropdown/FilterDropdown.vue';
 export {
   default as FilterBox,
 }
-  from 'components/filters/filter-box/FilterBox.vue';
+  from 'components/filters/components/filter-box/FilterBox.vue';
+export {
+  default as FilteredResults,
+}
+  from 'components/filters/components/filtered-results/FilteredResults.vue';
 export {
   default as Tags,
 }
