@@ -57,6 +57,7 @@
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
+    z-index: var(--z-default);
 
     &--is-opened {
       pointer-events: auto;

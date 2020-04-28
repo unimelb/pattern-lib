@@ -38,13 +38,18 @@
           :is-loading="isLoading"
           :is-spinner-visible="false">
           <FilterBox
-            :options="filterDropdownOptions"
-            filter-by="Course types"
-            :placeholder-label="{
-              plural: 'course types',
-              singular: 'course type',
-            }"
-            options-label="Course types to include:"
+            :filters="[
+              {
+                name: 'courseTypes',
+                filterBy: 'Course types',
+                options: filterDropdownOptions,
+                placeholderLabel: {
+                  plural: 'course types',
+                  singular: 'course type',
+                },
+                optionsLabel: 'Course types to include:',
+              },
+            ]"
             @change="onChange"
             @clear="onClear"
             @update="onUpdate" />
@@ -63,10 +68,7 @@ import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
 import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
-import undergrad from './defaultOptions/undergrad.json';
-import postgrad from './defaultOptions/postgrad.json';
-import research from './defaultOptions/research.json';
-import all from './defaultOptions/all.json';
+import getOptions from './getOptions.js';
 
 const defaultLabels = {
   undergrad: 'undergraduate study',
@@ -74,10 +76,23 @@ const defaultLabels = {
   research: 'research study',
 };
 
+const all = getOptions(true);
+
 const defaultOptions = {
-  undergrad,
-  postgrad,
-  research,
+  undergrad: getOptions([
+    ['all', 'undergrad', 'bachelor'],
+    ['all', 'undergrad', 'diploma'],
+    ['all', 'undergrad', 'honours'],
+  ]),
+  postgrad: getOptions([
+    ['all', 'postgrad', 'certificate'],
+    ['all', 'postgrad', 'diploma'],
+    ['all', 'postgrad', 'master'],
+  ]),
+  research: getOptions([
+    ['all', 'research', 'master'],
+    ['all', 'research', 'phd'],
+  ]),
 };
 
 export default {
@@ -209,7 +224,7 @@ export default {
       }
       this.isLoading = false;
     },
-    async onChange(changedOptions) {
+    async onChange({ changedOptions }) {
       this.isLoading = true;
       this.errors = [];
       try {

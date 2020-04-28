@@ -1,0 +1,48 @@
+const mockResults = [
+  {
+    id: '0',
+    name: 'History and Philosophy of Science',
+    city: [
+      {
+        name: 'Sydney',
+        campus: ['cbd', 'bondi'],
+      },
+      {
+        name: 'Melbourne',
+        campus: ['southbank', 'parkville'],
+      },
+    ],
+    faculty: 'Faculty of History',
+    description: 'Labore est anim consequat veniam duis nulla esse esse labore repr',
+  },
+  {
+    id: '2',
+    name: 'Screen and Cultural Studies',
+    city: [
+      {
+        name: 'Gold coast',
+        campus: ['cbd'],
+      },
+      {
+        name: 'Melbourne',
+        campus: ['southbank'],
+      },
+    ],
+    faculty: 'Faculty of Art',
+    description: 'Labore est anim consequat veniam duis nulla esse esse labore repr',
+  },
+  {
+    id: '3',
+    name: 'Sociology',
+    city: [
+      {
+        name: 'Sydney',
+        campus: ['cbd', 'mainly'],
+      },
+    ],
+    faculty: 'Faculty of Sociology',
+    description: 'Labore est anim consequat veniam duis nulla esse esse labore repr',
+  },
+];
+
+export default () => mockResults;

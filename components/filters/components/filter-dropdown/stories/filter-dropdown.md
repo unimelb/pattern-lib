@@ -1,25 +1,31 @@
-Props:
+## Props:
 ```
 options: [], // Option[], required
-placeholderLabel: 'course types', // string, required - used in the placeholder when more then 1 option selected
+placeholderLabel: PlaceholderLabel, // object, required - used in the placeholder when there are options selected
 optionsLabel: 'Course types to include:', // string - inserted in the dropdown body before checkboxes
 disabled: false, // boolean, false by default
 ```
 
-Option:
+#### PlaceholderLabel:
 ```
-label: 'Undergraduate (7)', // string, required
-    name: 'undergraduate', // string, required, must be unique
-    options: [
-        {
-            label: "Bachelor (6)"
-            name: "bachelor",
-            isChecked: true // boolean, required on last nested level
-        }
-    ], // Option[]
+plural: 'course types', // string, required
+singular: 'course type', // string, required
 ```
 
-Usage:
+#### Option:
+```
+label: 'Undergraduate (7)', // string, required
+name: 'undergraduate', // string, required, must be unique
+options: [
+    {
+        label: "Bachelor (6)"
+        name: "bachelor",
+        isChecked: true // boolean, required on last nested level
+    }
+], // Option[]
+```
+
+## Usage:
 ```vue
 <FilterDropdown
   :options="options"
@@ -29,5 +35,5 @@ Usage:
   @clear="onClear" />
 ```
 
-### Source:
+## Source:
 Can be used only as a Vue component

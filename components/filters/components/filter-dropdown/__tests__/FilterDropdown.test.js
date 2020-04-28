@@ -75,9 +75,17 @@ describe('FilterDropdown', () => {
   it('should match spapshot', () => {
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        options,
-        placeholderLabel: 'course types',
-        optionsLabel: 'Course types to include:',
+        filters: [
+          {
+            name: 'courseTypes',
+            options,
+            placeholderLabel: {
+              plural: 'course types',
+              singular: 'course type',
+            },
+            optionsLabel: 'Course types to include:',
+          },
+        ],
       },
     });
 
@@ -87,8 +95,15 @@ describe('FilterDropdown', () => {
   it('should render component without options label', () => {
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        options,
-        placeholderLabel: 'course types',
+        filters: [
+          {
+            options,
+            placeholderLabel: {
+              plural: 'course types',
+              singular: 'course type',
+            },
+          },
+        ],
       },
     });
 
@@ -98,8 +113,15 @@ describe('FilterDropdown', () => {
   it('should open the dropdown', () => {
     const wrapper = shallow(FilterDropdown, {
       propsData: {
-        options,
-        placeholderLabel: 'course types',
+        filters: [
+          {
+            options,
+            placeholderLabel: {
+              plural: 'course types',
+              singular: 'course type',
+            },
+          },
+        ],
       },
     });
 
@@ -111,8 +133,15 @@ describe('FilterDropdown', () => {
   it('should change internal state on NestedCheckbox changes', async () => {
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        options,
-        placeholderLabel: 'course types',
+        filters: [
+          {
+            options,
+            placeholderLabel: {
+              plural: 'course types',
+              singular: 'course type',
+            },
+          },
+        ],
       },
     });
 
@@ -135,8 +164,15 @@ describe('FilterDropdown', () => {
 
       const wrapper = mount(FilterDropdown, {
         propsData: {
-          options,
-          placeholderLabel: 'course types',
+          filters: [
+            {
+              options,
+              placeholderLabel: {
+                plural: 'course types',
+                singular: 'course type',
+              },
+            },
+          ],
         },
         data() {
           return {
@@ -157,10 +193,18 @@ describe('FilterDropdown', () => {
       defaultOptions[0].options[0].options[1].isChecked = false;
 
       const wrapper = mount(FilterDropdown, {
+        // TODO double check this case
         propsData: {
-          options,
-          defaultOptions,
-          placeholderLabel: 'course types',
+          filters: [
+            {
+              options,
+              defaultOptions,
+              placeholderLabel: {
+                plural: 'course types',
+                singular: 'course type',
+              },
+            },
+          ],
         },
         data() {
           return {
@@ -180,8 +224,15 @@ describe('FilterDropdown', () => {
 
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        options,
-        placeholderLabel: 'course types',
+        filters: [
+          {
+            options,
+            placeholderLabel: {
+              plural: 'course types',
+              singular: 'course type',
+            },
+          },
+        ],
       },
       data() {
         return {

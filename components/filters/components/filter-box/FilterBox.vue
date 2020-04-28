@@ -4,23 +4,27 @@
       Filter by
     </h4>
 
-    <p class="filter-box__sub-header">
-      {{ filterBy }}
-    </p>
+    <div
+      v-for="(filter, filterIndex) in filters"
+      :key="filterIndex">
+      <p class="filter-box__sub-header">
+        {{ filter.filterBy }}
+      </p>
 
-    <FilterDropdown
-      :options="options"
-      :options-label="optionsLabel"
-      :placeholder-label="placeholderLabel"
-      @change="onChange"
-      @clear="onClearFilters" />
+      <FilterDropdown
+        :options="filter.options"
+        :options-label="filter.optionsLabel"
+        :placeholder-label="filter.placeholderLabel"
+        @change="onChange(filter.name, $event)"
+        @clear="onClearFilters(filter.name)" />
+    </div>
 
     <div class="filter-box__btns-wrapper">
       <div class="filter-box__btn">
         <ButtonIcon
           no-icon
           width="fullwidth"
-          @click.native.prevent="onClearFilters">
+          @click.native.prevent="onClearFilters(null)">
           Clear filters
         </ButtonIcon>
       </div>
@@ -46,29 +50,29 @@ export default {
   name: 'FilterBox',
   components: { ButtonIcon, FilterDropdown },
   props: {
-    filterBy: {
-      type: String,
-      required: true,
-    },
-    options: {
+    filters: {
       type: Array,
       required: true,
-    },
-    placeholderLabel: {
-      type: Object,
-      required: true,
-    },
-    optionsLabel: {
-      type: String,
-      default: '',
+      validator(filtersArray) {
+        if (!filtersArray.length) {
+          return false;
+        }
+
+        return filtersArray.every(({
+          filterBy, options, placeholderLabel, name,
+        }) => (filterBy && typeof filterBy === 'string')
+          && (Array.isArray(options) && options.length)
+          && placeholderLabel
+          && name && typeof name === 'string');
+      },
     },
   },
   methods: {
-    onChange(changedOptions) {
-      this.$emit('change', changedOptions);
+    onChange(name, changedOptions) {
+      this.$emit('change', { name, changedOptions });
     },
-    onClearFilters() {
-      this.$emit('clear');
+    onClearFilters(name) {
+      this.$emit('clear', name);
     },
     onUpdateResults() {
       this.$emit('update');

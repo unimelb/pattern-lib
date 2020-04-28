@@ -7,13 +7,18 @@
     </div>
     <div slot="side">
       <FilterBox
-        :options="options"
-        filter-by="Course types"
-        :placeholder-label="{
-          plural: 'course types',
-          singular: 'course type',
-        }"
-        options-label="Course types to include:" />
+        :filters="[
+          {
+            name: 'courseTypes',
+            filterBy: 'Course types',
+            options: options,
+            placeholderLabel: {
+              plural: 'course types',
+              singular: 'course type',
+            },
+            optionsLabel: 'Course types to include:',
+          },
+        ]" />
     </div>
   </SectionTwoCol>
 </template>
