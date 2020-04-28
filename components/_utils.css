@@ -168,6 +168,7 @@
   }
 }
 
+/* exernal icon for links using target="_blank" */
 a[target='_blank'] {
   &:not(.link-icon--disable) {
     &::after {
