@@ -2,18 +2,18 @@
   <BaseStoryWrapper
     v-slot="{ fetchData }"
     :fetch-data-creator="fetchDataCreator">
-    <MajorsAndSpecialisations :fetch-data="fetchData" />
+    <Default :fetch-data="fetchData" />
   </BaseStoryWrapper>
 </template>
 
 <script>
 import BaseStoryWrapper from '../BaseStoryWrapper.vue';
-import MajorsAndSpecialisations from './MajorsAndSpecialisations.vue';
+import Default from './Default.vue';
 import fetchDataCreator from './mockResults.js';
 
 export default {
   name: 'StoryWrapper',
-  components: { BaseStoryWrapper, MajorsAndSpecialisations },
+  components: { BaseStoryWrapper, Default },
   methods: {
     fetchDataCreator,
   },

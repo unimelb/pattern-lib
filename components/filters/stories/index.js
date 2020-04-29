@@ -8,7 +8,7 @@ import FilterDropdownDefault from '../components/filter-dropdown/stories/FilterD
 import FilteredResultsNoResults from '../components/filtered-results/stories/FilteredResultsNoResults.vue';
 import FilteredResultsWithResults from '../components/filtered-results/stories/FilteredResultsWithResults.vue';
 import MajorsAndSpecialisations from './MajorsAndSpecialisations/StoryWrapper.vue';
-import Default from './Default/index.vue';
+import Default from './Default/StoryWrapper.vue';
 
 storiesOf('filters/components/Filter box', module)
   .add('Default', createStory(FilterBoxDefault))

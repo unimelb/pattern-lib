@@ -1,3 +1,4 @@
+/*
 const mockResults = [
   {
     id: '0',
@@ -44,5 +45,18 @@ const mockResults = [
     description: 'Labore est anim consequat veniam duis nulla esse esse labore repr',
   },
 ];
+*/
 
-export default () => mockResults;
+export default async (payload, throwError = false) => {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 1000);
+  });
+
+  if (throwError) {
+    throw new Error('Something went wrong');
+  }
+
+  return [];
+};
