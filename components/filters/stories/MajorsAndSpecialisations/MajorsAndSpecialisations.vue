@@ -68,6 +68,8 @@ import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
 import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
+import getSelectedNames from '../getSelectedNames.js';
+import formatErrors from '../formatErrors.js';
 import getOptions from './getOptions.js';
 
 const defaultLabels = {
@@ -147,7 +149,7 @@ export default {
         : this.messageCustomFilters;
     },
     filtersApplied() {
-      return this.getSelectedNames(this.filterDropdownOptions).length;
+      return getSelectedNames(this.filterDropdownOptions).length;
     },
   },
   mounted() {
@@ -182,23 +184,6 @@ export default {
         };
       });
     },
-    getSelectedNames(options, parentNames = []) {
-      return options.reduce((selectedNames, option) => {
-        if (option.options && option.options.length) {
-          const nestedSelectedOptions = this.getSelectedNames(
-            option.options,
-            [...parentNames, option.name]
-          );
-          return selectedNames.concat(nestedSelectedOptions);
-        }
-
-        if (option.isChecked) {
-          selectedNames.push([...parentNames, option.name]);
-        }
-
-        return selectedNames;
-      }, []);
-    },
     segmentationChange() {
       if (this.isDefaultFilterApplied) {
         // TODO
@@ -208,11 +193,8 @@ export default {
     },
     async getResults(options) {
       return this.fetchData(
-        this.getSelectedNames(options)
+        getSelectedNames(options)
       );
-    },
-    formatErrors(error) {
-      return [error.toString()];
     },
     async init() {
       this.isLoading = true;
@@ -220,7 +202,7 @@ export default {
         this.response = await this.getResults(this.filterDropdownOptions);
         this.isFetched = true;
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
@@ -232,7 +214,7 @@ export default {
         this.options = changedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
@@ -244,7 +226,7 @@ export default {
         this.options = all;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
@@ -258,7 +240,7 @@ export default {
         this.options = defaultOptionsForUserQualification;
         this.isDefaultFilterApplied = true;
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
@@ -268,7 +250,7 @@ export default {
       try {
         this.response = await this.getResults(this.filterDropdownOptions);
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },

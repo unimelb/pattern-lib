@@ -1,4 +1,3 @@
-/*
 const mockResults = [
   {
     id: '0',
@@ -45,9 +44,20 @@ const mockResults = [
     description: 'Labore est anim consequat veniam duis nulla esse esse labore repr',
   },
 ];
-*/
 
-export default async (payload, throwError = false) => {
+const facultyLabels = {
+  facultyOfHistory: 'Faculty of History',
+  facultyOfSociology: 'Faculty of Sociology',
+  facultyOfArt: 'Faculty of Art',
+};
+
+const cityLabels = {
+  sydney: 'Sydney',
+  melbourne: 'Melbourne',
+  goldCoast: 'Gold coast',
+};
+
+export default async ({ locations, faculties }, throwError = false) => {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
@@ -58,5 +68,26 @@ export default async (payload, throwError = false) => {
     throw new Error('Something went wrong');
   }
 
-  return [];
+  const selectedFacultyLabels = faculties.map(([, faculty]) => facultyLabels[faculty]);
+
+  const results = [];
+  locations.forEach(([, city, campus]) => {
+    const cityLabel = cityLabels[city];
+    const foundResults = mockResults.filter((result) => {
+      const foundCity = result.city.find((resultCity) => resultCity.name === cityLabel);
+
+      return foundCity
+        && foundCity.campus.includes(campus)
+        && selectedFacultyLabels.includes(result.faculty);
+    });
+
+    results.push(...foundResults);
+  });
+
+  return results.reduce(
+    (uniqueResults, resultToBeAdded) => (uniqueResults.some((uniqueResult) => uniqueResult.id === resultToBeAdded.id)
+      ? uniqueResults
+      : [...uniqueResults, resultToBeAdded]),
+    []
+  );
 };

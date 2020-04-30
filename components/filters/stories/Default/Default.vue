@@ -14,16 +14,20 @@
           <ErrorBox
             :messages="errors" />
 
-          <div class="grid grid--center grid--2col">
-            <ListItem
-              v-for="item in results"
-              :key="item.id">
-              <GenericCard
-                :title="item.name"
-                :excerpt="item.excerpt"
-                :cols="2" />
-            </ListItem>
-          </div>
+          <FilteredResults
+            :items="results.length"
+            :filters="filtersApplied">
+            <div class="grid grid--center grid--2col">
+              <ListItem
+                v-for="item in results"
+                :key="item.id">
+                <GenericCard
+                  :title="item.name"
+                  :excerpt="item.excerpt"
+                  :cols="2" />
+              </ListItem>
+            </div>
+          </FilteredResults>
         </LoadingOverlay>
       </div>
 
@@ -69,8 +73,12 @@ import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
 import SectionTwoCol from 'components/section/SectionTwoCol.vue';
 import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
+import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
+import getSelectedNames from '../getSelectedNames.js';
+import formatErrors from '../formatErrors.js';
+import { getLocationsOptions, getFacultiesOptions } from './getOptions.js';
 
 
 export default {
@@ -79,6 +87,7 @@ export default {
     ErrorBox,
     SectionTwoCol,
     FilterBox,
+    FilteredResults,
     ListItem,
     GenericCard,
     Loader,
@@ -93,64 +102,10 @@ export default {
   data() {
     return {
       options: {
-        locations: [
-          {
-            label: 'All',
-            name: 'all',
-            options: [
-              {
-                label: 'Sydney',
-                name: 'sydney',
-                options: [
-                  {
-                    label: 'CBD',
-                    name: 'cbd',
-                    isChecked: true,
-                  },
-                  {
-                    label: 'Bondi',
-                    name: 'bondi',
-                    isChecked: false,
-                  },
-                ],
-              },
-              {
-                label: 'Melbourne',
-                name: 'melbourne',
-                options: [
-                  {
-                    label: 'Southbank',
-                    name: 'southbank',
-                    isChecked: false,
-                  },
-                  {
-                    label: 'Parkville',
-                    name: 'parkville',
-                    isChecked: false,
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-        faculties: [
-          {
-            label: 'All',
-            name: 'all',
-            options: [
-              {
-                label: 'Faculty of History',
-                name: 'facultyOfHistory',
-                isChecked: true,
-              },
-              {
-                label: 'Faculty of Sociology',
-                name: 'facultyOfSociology',
-                isChecked: false,
-              },
-            ],
-          },
-        ],
+        locations: getLocationsOptions([
+          ['all', 'sydney', 'cbd'],
+        ]),
+        faculties: getFacultiesOptions(true),
       },
       results: [],
       isDefaultFilterApplied: true,
@@ -159,56 +114,44 @@ export default {
       isFetched: false,
     };
   },
+  computed: {
+    filtersApplied() {
+      return getSelectedNames(this.options.locations).length;
+    },
+  },
   mounted() {
     this.init();
   },
   methods: {
-    getSelectedNames(options, parentNames = []) {
-      return options.reduce((selectedNames, option) => {
-        if (option.options && option.options.length) {
-          const nestedSelectedOptions = this.getSelectedNames(
-            option.options,
-            [...parentNames, option.name]
-          );
-          return selectedNames.concat(nestedSelectedOptions);
-        }
-
-        if (option.isChecked) {
-          selectedNames.push([...parentNames, option.name]);
-        }
-
-        return selectedNames;
-      }, []);
-    },
-    async getResults(options) {
-      return this.fetchData(
-        this.getSelectedNames(options)
-      );
-    },
-    formatErrors(error) {
-      return [error.toString()];
+    async getResults({ locations, faculties }) {
+      return this.fetchData({
+        locations: getSelectedNames(locations),
+        faculties: getSelectedNames(faculties),
+      });
     },
     async init() {
       this.isLoading = true;
       try {
-        // TODO
-        this.results = await this.getResults(this.options.locations);
+        this.results = await this.getResults(this.options);
         this.isFetched = true;
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
-    async onChange({ changedOptions }) {
+    async onChange({ name, changedOptions }) {
       this.isLoading = true;
       this.errors = [];
       try {
-        // TODO
-        this.results = await this.getResults(changedOptions);
-        this.options = changedOptions;
+        const locationsFacultiesChangedOptions = {
+          ...this.options,
+          [name]: changedOptions,
+        };
+        this.results = await this.getResults(locationsFacultiesChangedOptions);
+        this.options = locationsFacultiesChangedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
@@ -216,27 +159,15 @@ export default {
       this.isLoading = true;
       this.errors = [];
       try {
-        // TODO
-        /* this.results = await this.getResults(all);
+        const all = {
+          locations: getLocationsOptions(true),
+          faculties: getFacultiesOptions(true),
+        };
+        this.results = await this.getResults(all);
         this.options = all;
-        this.isDefaultFilterApplied = false; */
+        this.isDefaultFilterApplied = false;
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
-      }
-      this.isLoading = false;
-    },
-    async onResetToDefaultQualification() {
-      this.isLoading = true;
-      this.errors = [];
-      try {
-        // TODO
-        /* const defaultOptionsForUserQualification = defaultOptions[this.userQualification];
-
-        this.results = await this.getResults(defaultOptionsForUserQualification);
-        this.options = defaultOptionsForUserQualification;
-        this.isDefaultFilterApplied = true; */
-      } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
@@ -244,10 +175,9 @@ export default {
       this.isLoading = true;
       this.errors = [];
       try {
-        // TODO
-        // this.results = await this.getResults(this.filterDropdownOptions);
+        this.results = await this.getResults(this.options);
       } catch (errors) {
-        this.errors = this.formatErrors(errors);
+        this.errors = formatErrors(errors);
       }
       this.isLoading = false;
     },
