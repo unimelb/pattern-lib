@@ -22,10 +22,14 @@
   &__label {
     font-size: 1.125rem;
     padding: .5625rem 1rem;
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-regular);
     line-height: 1.25;
     flex: 1 1;
     user-select: none;
+
+    &--strong {
+      font-weight: var(--fw-bold);
+    }
   }
 
   &__icon {

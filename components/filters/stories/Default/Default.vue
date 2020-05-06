@@ -77,8 +77,9 @@ import FilteredResults from 'components/filters/components/filtered-results/Filt
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
 import getSelectedNames from '../getSelectedNames.js';
+import getOptionsQuantity from '../getOptionsQuantity.js';
 import formatErrors from '../formatErrors.js';
-import { getLocationsOptions, getFacultiesOptions } from './getOptions.js';
+import { getFacultiesOptions, getLocationsOptions } from './getOptions.js';
 
 
 export default {
@@ -116,13 +117,27 @@ export default {
   },
   computed: {
     filtersApplied() {
-      return getSelectedNames(this.options.locations).length;
+      return this.getFiltersApplied(Object.values(this.options));
     },
   },
   mounted() {
     this.init();
   },
   methods: {
+    getFiltersApplied(optionsArray) {
+      return optionsArray.reduce(
+        (appliedFiltersQuantity, options) => (this.isFilterApplied(options)
+          ? appliedFiltersQuantity + 1
+          : appliedFiltersQuantity),
+        0
+      );
+    },
+    isFilterApplied(options) {
+      const selectedOptionsLength = getSelectedNames(options).length;
+      const optionsLength = getOptionsQuantity(options);
+
+      return optionsLength !== selectedOptionsLength;
+    },
     async getResults({ locations, faculties }) {
       return this.fetchData({
         locations: getSelectedNames(locations),

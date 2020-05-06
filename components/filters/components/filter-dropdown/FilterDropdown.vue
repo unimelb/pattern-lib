@@ -7,7 +7,7 @@
       :class="classSelect"
       data-testid="filter-dropdown-select"
       @click="onSelectClick">
-      <div class="filter-dropdown__label">
+      <div :class="classLabel">
         {{ placeholderText }}
       </div>
 
@@ -65,7 +65,7 @@ import SvgIcon from 'components/icons/SvgIcon.vue';
 import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
-import getSelectedOptionLabels from './getSelectedOptionLabels.js';
+import groupOptionLabelsByIsChecked from './groupOptionLabelsByIsChecked.js';
 
 export default {
   components: { NestedCheckbox, SvgIcon, ButtonIcon },
@@ -100,6 +100,31 @@ export default {
     };
   },
   computed: {
+    groupedOptionLabelsByIsChecked() {
+      return groupOptionLabelsByIsChecked(this.options);
+    },
+    isNoneSelected() {
+      return !this.groupedOptionLabelsByIsChecked.selected.length;
+    },
+    isAllSelected() {
+      return !this.groupedOptionLabelsByIsChecked.notSelected.length;
+    },
+    placeholderText() {
+      if (this.isNoneSelected) {
+        return 'Please select';
+      }
+
+      const { selected } = this.groupedOptionLabelsByIsChecked;
+      const placeholderLabel = selected.length === 1
+        ? this.placeholderLabel.singular
+        : this.placeholderLabel.plural;
+
+      if (this.isAllSelected) {
+        return `All ${placeholderLabel}`;
+      }
+
+      return `${selected.length} ${placeholderLabel} selected`;
+    },
     classSelect() {
       const { isOpened, isOpenUp } = this;
 
@@ -108,6 +133,16 @@ export default {
         {
           'filter-dropdown__select--is-opened': isOpened && !isOpenUp,
           'filter-dropdown__select--is-opened-up': isOpened && isOpenUp,
+        },
+      ];
+    },
+    classLabel() {
+      const { isNoneSelected, isAllSelected } = this;
+
+      return [
+        'filter-dropdown__label',
+        {
+          'filter-dropdown__label--strong': !(isNoneSelected || isAllSelected),
         },
       ];
     },
@@ -121,22 +156,6 @@ export default {
           'filter-dropdown__body--is-open-up': isOpenUp,
         },
       ];
-    },
-    selectedOptionLabels() {
-      return getSelectedOptionLabels(this.options);
-    },
-    placeholderText() {
-      const lengthSelected = this.selectedOptionLabels.length;
-
-      if (!lengthSelected) {
-        return 'Please select';
-      }
-
-      const placeholderLabel = lengthSelected === 1
-        ? this.placeholderLabel.singular
-        : this.placeholderLabel.plural;
-
-      return `${lengthSelected} ${placeholderLabel} selected`;
     },
   },
   watch: {

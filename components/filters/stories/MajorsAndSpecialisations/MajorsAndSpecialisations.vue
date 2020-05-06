@@ -69,6 +69,7 @@ import FilteredResults from 'components/filters/components/filtered-results/Filt
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
 import getSelectedNames from '../getSelectedNames.js';
+import getOptionsQuantity from '../getOptionsQuantity.js';
 import formatErrors from '../formatErrors.js';
 import getOptions from './getOptions.js';
 
@@ -149,7 +150,10 @@ export default {
         : this.messageCustomFilters;
     },
     filtersApplied() {
-      return getSelectedNames(this.filterDropdownOptions).length;
+      const selectedQuantity = getSelectedNames(this.filterDropdownOptions).length;
+      const allQuantity = getOptionsQuantity(this.filterDropdownOptions);
+
+      return allQuantity === selectedQuantity ? 0 : selectedQuantity;
     },
   },
   mounted() {
