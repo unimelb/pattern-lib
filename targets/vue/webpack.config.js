@@ -3,7 +3,7 @@ require('dotenv').config();
 const path = require('path');
 const merge = require('webpack-merge');
 const sharedConfig = require('../webpack.config.shared.js');
-const pkg = require('./../../package.json');
+const pkg = require('../../package.json');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
