@@ -61,15 +61,6 @@
     background-color: rgb(var(--col-green-mid-1));
   }
 
-  &--pathway {
-    svg {
-      position: absolute;
-      right: .75rem;
-      top: .5rem;
-      color: rgb(var(--col-emerald-mid-2));
-    }
-  }
-
   &:visited,
   &:active {
     color: rgb(var(--col-brand));

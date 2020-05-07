@@ -10,16 +10,6 @@
     <span
       class="card-course__name"
       data-test="course-name">{{ title }}</span>
-    <svg
-      v-if="type === 'Pathway'"
-      class="card-course__icon"
-      focusable="false"
-      aria-hidden="true"
-      role="presentation">
-      <use
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        xlink:href="#icon-signpost" />
-    </svg>
   </a>
 </template>
 
