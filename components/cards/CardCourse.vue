@@ -44,10 +44,6 @@ export default {
       required: true,
       default: '#',
     },
-    thumb: {
-      type: String,
-      default: 'http://via.placeholder.com/300x200',
-    },
   },
   computed: {
     formattedCategory() {

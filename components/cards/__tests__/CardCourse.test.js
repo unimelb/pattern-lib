@@ -16,7 +16,6 @@ describe('Course Card', () => {
         category: 'bachelor',
         type: 'bachelor',
         link: '/find/courses/undergraduate/bachelor-of-design',
-        thumb: 'http://via.placeholder.com/300x200',
       },
     }).element;
     expect(result).toMatchSnapshot();
@@ -29,7 +28,6 @@ describe('Course Card', () => {
         category: 'bachelor',
         type: 'bachelor',
         link: '/find/courses/undergraduate/bachelor-of-design',
-        thumb: 'http://via.placeholder.com/300x200',
       },
     });
 
@@ -45,7 +43,6 @@ describe('Course Card', () => {
         category: 'phd',
         type: 'phd',
         link: '/find/courses/specialisation/infection-and-immunity-at-doherty-institute',
-        thumb: 'http://via.placeholder.com/300x200',
       },
     });
 
