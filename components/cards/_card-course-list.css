@@ -1,0 +1,25 @@
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: var(--grid-offset);
+  margin-left: var(--grid-offset);
+
+  &__item {
+    width: 100%;
+    margin-bottom: .5rem;
+    padding-right: .75rem;
+    padding-left: .75rem;
+
+    @media (--bp-tablet) {
+      width: calc(100% / 2);
+    }
+
+    @media (--bp-desktop) {
+      width: calc(100% / 3);
+    }
+
+    @media (--bp-x-desktop) {
+      width: calc(100% / 4);
+    }
+  }
+}
