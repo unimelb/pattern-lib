@@ -356,3 +356,11 @@ export {
   default as StyledSelect,
 }
   from 'components/forms/StyledSelect.vue';
+export {
+  default as CardCourse,
+}
+  from 'components/cards/CardCourse.vue';
+export {
+  default as CardCourseList,
+}
+  from 'components/cards/CardCourseList.vue';
