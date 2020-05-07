@@ -164,10 +164,11 @@ export default {
     },
     isOpened(value) {
       if (value) {
+        document.documentElement.click(); // close other filter dropdowns
         this.checkDropdownDuration();
-        window.addEventListener('click', this.closeDropdown);
+        document.addEventListener('click', this.closeDropdown);
       } else {
-        window.removeEventListener('click', this.closeDropdown);
+        document.removeEventListener('click', this.closeDropdown);
       }
     },
   },

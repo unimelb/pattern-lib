@@ -6,7 +6,11 @@
     margin-bottom: .75rem;
   }
 
-  &__sub-header {
+  &__filter {
+    margin-bottom: 1rem;
+  }
+
+  &__filter-label {
     margin-bottom: .5rem;
   }
 

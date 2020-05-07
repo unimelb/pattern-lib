@@ -6,8 +6,9 @@
 
     <div
       v-for="(filter, filterIndex) in filters"
-      :key="filterIndex">
-      <p class="filter-box__sub-header">
+      :key="filterIndex"
+      class="filter-box__filter">
+      <p class="filter-box__filter-label">
         {{ filter.filterBy }}
       </p>
 

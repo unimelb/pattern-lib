@@ -79,8 +79,7 @@ import GenericCard from 'components/cards/GenericCard.vue';
 import getSelectedNames from '../getSelectedNames.js';
 import getOptionsQuantity from '../getOptionsQuantity.js';
 import formatErrors from '../formatErrors.js';
-import { getFacultiesOptions, getLocationsOptions } from './getOptions.js';
-
+import getOptions from './getOptions.js';
 
 export default {
   name: 'Default',
@@ -103,10 +102,10 @@ export default {
   data() {
     return {
       options: {
-        locations: getLocationsOptions([
+        locations: getOptions('locations', [
           ['all', 'sydney', 'cbd'],
         ]),
-        faculties: getFacultiesOptions(true),
+        faculties: getOptions('faculties', true),
       },
       results: [],
       isDefaultFilterApplied: true,
@@ -170,16 +169,21 @@ export default {
       }
       this.isLoading = false;
     },
-    async onClear() {
+    async onClear(nameOrNull) {
       this.isLoading = true;
       this.errors = [];
       try {
-        const all = {
-          locations: getLocationsOptions(true),
-          faculties: getFacultiesOptions(true),
-        };
-        this.results = await this.getResults(all);
-        this.options = all;
+        const updatedOptions = !nameOrNull
+          ? {
+            locations: getOptions('locations', true),
+            faculties: getOptions('faculties', true),
+          } : {
+            ...this.options,
+            [nameOrNull]: getOptions(nameOrNull, true),
+          };
+
+        this.results = await this.getResults(updatedOptions);
+        this.options = updatedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
         this.errors = formatErrors(errors);
