@@ -19,7 +19,5 @@ exports[`Course Card should match snapshot 1`] = `
   >
     Bachelor of Design
   </span>
-   
-  <!---->
 </a>
 `;
