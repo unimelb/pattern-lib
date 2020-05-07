@@ -18,7 +18,7 @@ Eg:
     title: 'Bachelor of Design',
     category: 'bachelor',
     type: 'bachelor',
-    link: '/find/courses/undergraduate/bachelor-of-design',
+    link: 'www.unimelb.edu.au',
   }
 ]
 ```
