@@ -8,3 +8,4 @@ import './StaffList';
 import './GenericCard';
 import './Events';
 import './FeaturesPanel';
+import './Course';
