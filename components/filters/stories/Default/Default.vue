@@ -15,16 +15,27 @@
             :messages="errors" />
 
           <FilteredResults
-            :items="results.length"
+            :items="response.results.length"
             :filters="filtersApplied">
             <div class="grid grid--center grid--2col">
               <ListItem
-                v-for="item in results"
+                v-for="item in response.results"
                 :key="item.id">
                 <GenericCard
                   :title="item.name"
-                  :excerpt="item.excerpt"
-                  :cols="2" />
+                  :excerpt="item.description"
+                  :cols="2">
+                  <!--<div
+                    slot="sub-title-1"
+                    class="sub-title">
+                    <span>{{ item. }}</span>
+                  </div>-->
+                  <div
+                    slot="sub-title-2"
+                    class="sub-title">
+                    <span>{{ item.faculty }}</span>
+                  </div>
+                </GenericCard>
               </ListItem>
             </div>
           </FilteredResults>
@@ -50,7 +61,7 @@
               {
                 name: 'faculties',
                 filterBy: 'Faculties',
-                options: options.faculties,
+                options: facultiesOptionsWithQuantity,
                 placeholderLabel: {
                   plural: 'faculties',
                   singular: 'faculty',
@@ -80,6 +91,7 @@ import getSelectedNames from '../getSelectedNames.js';
 import getOptionsQuantity from '../getOptionsQuantity.js';
 import formatErrors from '../formatErrors.js';
 import getOptions from './getOptions.js';
+import addQuantityToOptions from '../addQuantityToOptions';
 
 export default {
   name: 'Default',
@@ -107,7 +119,10 @@ export default {
         ]),
         faculties: getOptions('faculties', true),
       },
-      results: [],
+      response: {
+        results: [],
+        facultiesQuantity: {},
+      },
       isDefaultFilterApplied: true,
       errors: [],
       isLoading: false,
@@ -117,6 +132,11 @@ export default {
   computed: {
     filtersApplied() {
       return this.getFiltersApplied(Object.values(this.options));
+    },
+    facultiesOptionsWithQuantity() {
+      const { options: { faculties }, response: { facultiesQuantity } } = this;
+
+      return addQuantityToOptions(faculties, facultiesQuantity);
     },
   },
   mounted() {
@@ -146,7 +166,7 @@ export default {
     async init() {
       this.isLoading = true;
       try {
-        this.results = await this.getResults(this.options);
+        this.response = await this.getResults(this.options);
         this.isFetched = true;
       } catch (errors) {
         this.errors = formatErrors(errors);
@@ -161,7 +181,7 @@ export default {
           ...this.options,
           [name]: changedOptions,
         };
-        this.results = await this.getResults(locationsFacultiesChangedOptions);
+        this.response = await this.getResults(locationsFacultiesChangedOptions);
         this.options = locationsFacultiesChangedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
@@ -182,7 +202,7 @@ export default {
             [nameOrNull]: getOptions(nameOrNull, true),
           };
 
-        this.results = await this.getResults(updatedOptions);
+        this.response = await this.getResults(updatedOptions);
         this.options = updatedOptions;
         this.isDefaultFilterApplied = false;
       } catch (errors) {
@@ -194,7 +214,7 @@ export default {
       this.isLoading = true;
       this.errors = [];
       try {
-        this.results = await this.getResults(this.options);
+        this.response = await this.getResults(this.options);
       } catch (errors) {
         this.errors = formatErrors(errors);
       }

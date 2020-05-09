@@ -58,36 +58,96 @@ const cityLabels = {
 };
 
 export default async ({ locations, faculties }, throwError = false) => {
-  await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 1000);
-  });
+  await delay();
 
   if (throwError) {
     throw new Error('Something went wrong');
   }
 
-  const selectedFacultyLabels = faculties.map(([, faculty]) => facultyLabels[faculty]);
+  const resultsFilteredByLocation = filterByLocationAndCampus(mockResults, locations);
+  const results = filterByFaculty(resultsFilteredByLocation, faculties);
 
-  const results = [];
+  return {
+    results,
+    facultiesQuantity: calculateFacultiesQuantity(resultsFilteredByLocation),
+  };
+};
+
+function filterByLocationAndCampus(allResults, locations) {
+  const resultsWithDuplicates = [];
   locations.forEach(([, city, campus]) => {
     const cityLabel = cityLabels[city];
+
     const foundResults = mockResults.filter((result) => {
       const foundCity = result.city.find((resultCity) => resultCity.name === cityLabel);
 
       return foundCity
-        && foundCity.campus.includes(campus)
-        && selectedFacultyLabels.includes(result.faculty);
+        && foundCity.campus.includes(campus);
     });
 
-    results.push(...foundResults);
+    resultsWithDuplicates.push(...foundResults);
   });
 
-  return results.reduce(
+  // remove duplicates and return
+  return resultsWithDuplicates.reduce(
     (uniqueResults, resultToBeAdded) => (uniqueResults.some((uniqueResult) => uniqueResult.id === resultToBeAdded.id)
       ? uniqueResults
       : [...uniqueResults, resultToBeAdded]),
     []
   );
-};
+}
+
+function filterByFaculty(allResults, faculties) {
+  const selectedFacultyLabels = faculties.map(([, faculty]) => facultyLabels[faculty]);
+
+  return allResults.filter(
+    (result) => selectedFacultyLabels.includes(result.faculty)
+  );
+}
+
+function calculateFacultiesQuantity(resultsFilteredByLocation) {
+  const facultiesQuantity = resultsFilteredByLocation.reduce(
+    (quantity, result) => {
+      const facultyKey = getKeyByValue(facultyLabels, result.faculty);
+
+      const facultyQuantity = quantity[facultyKey].quantity;
+      quantity[facultyKey].quantity = facultyQuantity + 1;
+
+      return quantity;
+    },
+    Object
+      .entries(facultyLabels)
+      .reduce(
+        (defaultQuantity, [key]) => {
+          defaultQuantity[key] = {
+            quantity: 0,
+          };
+
+          return defaultQuantity;
+        },
+        {}
+      )
+  );
+
+  return {
+    all: {
+      ...facultiesQuantity,
+      quantity: Object.values(facultiesQuantity).reduce(
+        (quantity, faculty) => quantity + faculty.quantity,
+        0
+      ),
+    },
+  };
+}
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find((key) => object[key] === value);
+}
+
+function delay() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 1000);
+  });
+}

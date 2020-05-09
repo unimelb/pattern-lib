@@ -70,6 +70,7 @@ import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
 import getSelectedNames from '../getSelectedNames.js';
 import getOptionsQuantity from '../getOptionsQuantity.js';
+import addQuantityToOptions from '../addQuantityToOptions.js';
 import formatErrors from '../formatErrors.js';
 import getOptions from './getOptions.js';
 
@@ -134,7 +135,7 @@ export default {
     filterDropdownOptions() {
       const { options, response: { quantity } } = this;
 
-      return this.getFilterDropdownOptions(options, quantity);
+      return addQuantityToOptions(options, quantity);
     },
     messageDefaultFilters() {
       const qualificationLabel = defaultLabels[this.userQualification];
@@ -160,34 +161,6 @@ export default {
     this.init();
   },
   methods: {
-    getFilterDropdownOptions(options, quantity) {
-      return options.map((option) => {
-        const { name, label } = option;
-
-        const currentOptionQuantityConfig = quantity[name] || 0;
-
-        const currentOptionQuantity = typeof currentOptionQuantityConfig === 'number'
-          ? currentOptionQuantityConfig
-          : currentOptionQuantityConfig.quantity;
-
-        const newLabel = `${label.replace(/ \([0-9]+\)$/g, '')} (${currentOptionQuantity})`;
-
-        if (option.options && option.options.length) {
-          return {
-            ...option,
-            label: newLabel,
-            options: this.getFilterDropdownOptions(
-              option.options,
-              currentOptionQuantityConfig
-            ),
-          };
-        }
-        return {
-          ...option,
-          label: newLabel,
-        };
-      });
-    },
     segmentationChange() {
       if (this.isDefaultFilterApplied) {
         // TODO
