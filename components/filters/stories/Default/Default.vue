@@ -25,11 +25,21 @@
                   :title="item.name"
                   :excerpt="item.description"
                   :cols="2">
-                  <!--<div
+                  <div
                     slot="sub-title-1"
                     class="sub-title">
-                    <span>{{ item. }}</span>
-                  </div>-->
+                    <div>
+                      <div
+                        v-for="(location, locationIndex) in item.city"
+                        :key="locationIndex">
+                        <strong>Location city:</strong> {{ location.name }}
+                        <br>
+                        <strong>Campus:</strong> {{ location.campus.join(' / ') }}
+                        <br>
+                        <br>
+                      </div>
+                    </div>
+                  </div>
                   <div
                     slot="sub-title-2"
                     class="sub-title">
