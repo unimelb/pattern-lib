@@ -43,6 +43,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="locations"
             >
@@ -75,6 +76,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="disciplines"
             >
@@ -107,6 +109,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="auditions"
             >
