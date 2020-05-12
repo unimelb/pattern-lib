@@ -17,7 +17,6 @@
           <StyledSelect
             :label="labelText"
             aria-label="Choose an option"
-            aria-hidden="true"
             :options="selectOptions"
             :callback="selectActive" />
         </div>
