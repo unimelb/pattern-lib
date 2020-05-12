@@ -9,7 +9,8 @@ exports[`FilterDropdown should match spapshot 1`] = `
     data-testid="filter-dropdown-select"
   >
     <div
-      class="filter-dropdown__label"
+      class="filter-dropdown__label filter-dropdown__label--strong"
+      data-testid="filter-dropdown-placeholder"
     >
       
       2 course types selected
@@ -56,7 +57,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
           class="nested-checkbox nested-checkbox--is-first"
         >
           <label
-            class="base-checkbox"
+            class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
             data-name="all"
           >
             <input
@@ -93,7 +94,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="undergraduate"
               >
                 <input
@@ -130,7 +131,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="bachelor"
                   >
                     <input
@@ -169,7 +170,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="diploma"
                   >
                     <input
@@ -208,7 +209,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="honours"
                   >
                     <input
@@ -248,7 +249,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="graduate"
               >
                 <input
@@ -285,7 +286,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="certificate"
                   >
                     <input
@@ -323,7 +324,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="diploma"
                   >
                     <input
@@ -361,7 +362,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="master"
                   >
                     <input
@@ -401,7 +402,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="research"
               >
                 <input
@@ -438,7 +439,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="master"
                   >
                     <input
@@ -476,7 +477,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
                   class="nested-checkbox"
                 >
                   <label
-                    class="base-checkbox"
+                    class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                     data-name="phd"
                   >
                     <input

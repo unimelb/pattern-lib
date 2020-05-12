@@ -7,7 +7,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
       class="nested-checkbox nested-checkbox--is-first"
     >
       <label
-        class="base-checkbox"
+        class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
         data-name="all"
       >
         <input
@@ -44,7 +44,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
           class="nested-checkbox"
         >
           <label
-            class="base-checkbox"
+            class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
             data-name="undergraduate"
           >
             <input
@@ -81,7 +81,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="bachelor"
               >
                 <input
@@ -120,7 +120,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="diploma"
               >
                 <input
@@ -159,7 +159,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="honours"
               >
                 <input
@@ -199,7 +199,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
           class="nested-checkbox"
         >
           <label
-            class="base-checkbox"
+            class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
             data-name="graduate"
           >
             <input
@@ -236,7 +236,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="certificate"
               >
                 <input
@@ -274,7 +274,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="diploma"
               >
                 <input
@@ -312,7 +312,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="master"
               >
                 <input
@@ -352,7 +352,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
           class="nested-checkbox"
         >
           <label
-            class="base-checkbox"
+            class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
             data-name="research"
           >
             <input
@@ -389,7 +389,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="master"
               >
                 <input
@@ -427,7 +427,7 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
-                class="base-checkbox"
+                class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="phd"
               >
                 <input

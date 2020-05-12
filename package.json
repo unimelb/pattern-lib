@@ -134,6 +134,7 @@
     "moduleNameMapper": {
       "^\\.storybook/(.*)$": "<rootDir>/.storybook/$1",
       "^icons/(.*)$": "<rootDir>/components/icons/$1",
+      "^components(.*)$": "<rootDir>/components$1",
       "^vue$": "vue/dist/vue.js"
     },
     "snapshotSerializers": [

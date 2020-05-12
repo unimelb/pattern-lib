@@ -7,7 +7,9 @@
       :class="classSelect"
       data-testid="filter-dropdown-select"
       @click="onSelectClick">
-      <div :class="classLabel">
+      <div
+        :class="classLabel"
+        data-testid="filter-dropdown-placeholder">
         {{ placeholderText }}
       </div>
 

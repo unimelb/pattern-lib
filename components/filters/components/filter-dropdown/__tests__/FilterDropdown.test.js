@@ -1,10 +1,9 @@
 import { mount, shallow } from 'vue-test-utils';
-import cloneDeep from 'lodash.clonedeep';
 import FilterDropdown from '../FilterDropdown.vue';
 import NestedCheckbox from '../components/NestedCheckbox/index.vue';
 import ButtonIcon from '../../../../buttons/ButtonIcon.vue';
 
-const options = [
+const getOptions = () => [
   {
     label: 'All (49)',
     name: 'all',
@@ -71,21 +70,20 @@ const options = [
   },
 ];
 
+const options = getOptions();
+
+const placeholderLabel = {
+  plural: 'course types',
+  singular: 'course type',
+};
+
 describe('FilterDropdown', () => {
   it('should match spapshot', () => {
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        filters: [
-          {
-            name: 'courseTypes',
-            options,
-            placeholderLabel: {
-              plural: 'course types',
-              singular: 'course type',
-            },
-            optionsLabel: 'Course types to include:',
-          },
-        ],
+        options,
+        placeholderLabel,
+        optionsLabel: 'Course types to include:',
       },
     });
 
@@ -95,33 +93,71 @@ describe('FilterDropdown', () => {
   it('should render component without options label', () => {
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        filters: [
-          {
-            options,
-            placeholderLabel: {
-              plural: 'course types',
-              singular: 'course type',
-            },
-          },
-        ],
+        options,
+        placeholderLabel,
       },
     });
 
     expect(wrapper.find('[data-testid="filter-dropdown-options-label"]').exists()).toBe(false);
   });
 
+  describe('Placeholder text', () => {
+    it('should render "Please select" placeholder', () => {
+      const updatedOptions = getOptions();
+      updatedOptions[0].options[0].options[0].isChecked = false;
+      updatedOptions[0].options[0].options[1].isChecked = false;
+
+      const wrapper = mount(FilterDropdown, {
+        propsData: {
+          options: updatedOptions,
+          placeholderLabel,
+        },
+      });
+
+      expect(wrapper.find('[data-testid="filter-dropdown-placeholder"]').text()).toEqual('Please select');
+    });
+
+    it('should render "All course types"', () => {
+      const updatedOptions = getOptions();
+      updatedOptions[0].options[0].options[2].isChecked = true;
+
+      updatedOptions[0].options[1].options[0].isChecked = true;
+      updatedOptions[0].options[1].options[1].isChecked = true;
+      updatedOptions[0].options[1].options[2].isChecked = true;
+
+      updatedOptions[0].options[2].options[0].isChecked = true;
+      updatedOptions[0].options[2].options[1].isChecked = true;
+
+      const wrapper = mount(FilterDropdown, {
+        propsData: {
+          options: updatedOptions,
+          placeholderLabel,
+        },
+      });
+
+      expect(wrapper.find('[data-testid="filter-dropdown-placeholder"]').text()).toEqual('All course types');
+    });
+
+    it('should render "1 course type selected"', () => {
+      const updatedOptions = getOptions();
+      updatedOptions[0].options[0].options[1].isChecked = false;
+
+      const wrapper = mount(FilterDropdown, {
+        propsData: {
+          options: updatedOptions,
+          placeholderLabel,
+        },
+      });
+
+      expect(wrapper.find('[data-testid="filter-dropdown-placeholder"]').text()).toEqual('1 course type selected');
+    });
+  });
+
   it('should open the dropdown', () => {
     const wrapper = shallow(FilterDropdown, {
       propsData: {
-        filters: [
-          {
-            options,
-            placeholderLabel: {
-              plural: 'course types',
-              singular: 'course type',
-            },
-          },
-        ],
+        options,
+        placeholderLabel,
       },
     });
 
@@ -133,21 +169,14 @@ describe('FilterDropdown', () => {
   it('should change internal state on NestedCheckbox changes', async () => {
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        filters: [
-          {
-            options,
-            placeholderLabel: {
-              plural: 'course types',
-              singular: 'course type',
-            },
-          },
-        ],
+        options,
+        placeholderLabel,
       },
     });
 
     expect(wrapper.find(NestedCheckbox).props().options).toEqual(options);
 
-    const changedOptions = cloneDeep(options);
+    const changedOptions = getOptions();
     changedOptions[0].options[0].options[2].isChecked = true;
 
     wrapper.find(NestedCheckbox).vm.$emit('change', changedOptions);
@@ -157,82 +186,14 @@ describe('FilterDropdown', () => {
     expect(wrapper.find(NestedCheckbox).props().options).toEqual(changedOptions);
   });
 
-  describe('default options', () => {
-    it('should reset component state to options', async () => {
-      const changedOptions = cloneDeep(options);
-      changedOptions[0].options[0].options[2].isChecked = true;
-
-      const wrapper = mount(FilterDropdown, {
-        propsData: {
-          filters: [
-            {
-              options,
-              placeholderLabel: {
-                plural: 'course types',
-                singular: 'course type',
-              },
-            },
-          ],
-        },
-        data() {
-          return {
-            isOpened: true,
-            copiedOptions: changedOptions,
-          };
-        },
-      });
-
-      await checkBtnClick(wrapper, 'filter-dropdown-btn-clear', options);
-    });
-
-    it('should reset component state to custom default options', async () => {
-      const changedOptions = cloneDeep(options);
-      changedOptions[0].options[0].options[2].isChecked = true;
-      const defaultOptions = cloneDeep(options);
-      defaultOptions[0].options[0].options[0].isChecked = false;
-      defaultOptions[0].options[0].options[1].isChecked = false;
-
-      const wrapper = mount(FilterDropdown, {
-        // TODO double check this case
-        propsData: {
-          filters: [
-            {
-              options,
-              defaultOptions,
-              placeholderLabel: {
-                plural: 'course types',
-                singular: 'course type',
-              },
-            },
-          ],
-        },
-        data() {
-          return {
-            isOpened: true,
-            copiedOptions: changedOptions,
-          };
-        },
-      });
-
-      await checkBtnClick(wrapper, 'filter-dropdown-btn-clear', defaultOptions);
-    });
-  });
-
   it('should emit updated options', async () => {
-    const changedOptions = cloneDeep(options);
+    const changedOptions = getOptions();
     changedOptions[0].options[0].options[2].isChecked = true;
 
     const wrapper = mount(FilterDropdown, {
       propsData: {
-        filters: [
-          {
-            options,
-            placeholderLabel: {
-              plural: 'course types',
-              singular: 'course type',
-            },
-          },
-        ],
+        options,
+        placeholderLabel,
       },
       data() {
         return {

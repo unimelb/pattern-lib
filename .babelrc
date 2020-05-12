@@ -21,11 +21,7 @@
     ]
   ],
   "plugins": [
-    "transform-vue-jsx",
-    ["transform-runtime", {
-      "polyfill": false,
-      "regenerator": true
-    }]
+    "transform-vue-jsx"
   ],
   "env": {
     "test": {

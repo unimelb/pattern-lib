@@ -2,7 +2,7 @@
 
 exports[`BaseCheckbox should match snapshot 1`] = `
 <label
-  class="base-checkbox"
+  class="base-checkbox base-checkbox--inline"
   data-name="checkboxName"
 >
   <input
