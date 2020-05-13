@@ -67,6 +67,7 @@
   --col-orange-mid-0: 255, 182, 145;
   --col-grey-mid-1: 105, 109, 115;
   --col-grey-mid-2: 75, 77, 83;
+  --col-grey-mid-3: 39, 39, 39;
   --col-grey-dark: 87, 87, 87;
   --col-brand: var(--col-navy-dark);
   --col-brand-light-2: 218, 227, 237;
@@ -119,6 +120,7 @@
   --fw-bold: 700;
   --fw-light: 300;
   --fw-regular: 400;
+  --fw-normal: 500;
 
   /* Border radius */
   --br: 4px;
