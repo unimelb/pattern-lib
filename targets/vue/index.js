@@ -356,3 +356,7 @@ export {
   default as StyledSelect,
 }
   from 'components/forms/StyledSelect.vue';
+export {
+  default as ButtonTwoIcons,
+}
+  from 'components/buttons/ButtonTwoIcons.vue';
