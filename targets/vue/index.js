@@ -360,3 +360,7 @@ export {
   default as ButtonTwoIcons,
 }
   from 'components/buttons/ButtonTwoIcons.vue';
+export {
+  default as CardCampaign,
+}
+  from 'components/cards/CardCampaign.vue';
