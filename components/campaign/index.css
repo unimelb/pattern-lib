@@ -1,5 +1,3 @@
-@import '../_vars.css';
-
 .page-campaign {
   display: flex;
   background-size: cover;
@@ -69,5 +67,34 @@
 
   @media (--bp-x-wide) {
     min-height: 25rem;
+  }
+}
+
+.page-campaign-cards {
+  background: rgb(var(--col-background-tertiary-navy));
+
+  .card__excerpt {
+    display: none;
+
+    @media (--bp-desktop) {
+      display: initial;
+    }
+  }
+
+  .btn-two-icons__left-icon {
+    display: none;
+
+    @media (--bp-desktop) {
+      display: initial;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.111rem 1.5rem;
+    max-width: 63rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

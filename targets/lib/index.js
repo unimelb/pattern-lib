@@ -92,6 +92,7 @@ import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJum
 import StyledSelect from 'components/forms/StyledSelect.vue';
 import ButtonTwoIcons from 'components/buttons/ButtonTwoIcons.vue';
 import CardCampaign from 'components/cards/CardCampaign.vue';
+import PageCampaignCards from 'components/campaign/PageCampaignCards.vue';
 
 import { version } from '../../package.json';
 
@@ -192,6 +193,7 @@ Vue.component('screen-reader-jump-to', ScreenReaderJumpTo);
 Vue.component('styled-select', StyledSelect);
 Vue.component('button-two-icons', ButtonTwoIcons);
 Vue.component('card-campaign', CardCampaign);
+Vue.component('page-campaign-cards', PageCampaignCards);
 
 // Create Vue instance
 new Vue({

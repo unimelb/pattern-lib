@@ -364,3 +364,7 @@ export {
   default as CardCampaign,
 }
   from 'components/cards/CardCampaign.vue';
+export {
+  default as PageCampaignCards,
+}
+  from 'components/campaign/PageCampaignCards.vue';
