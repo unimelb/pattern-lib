@@ -205,6 +205,165 @@ describe('FilterDropdown', () => {
 
     await checkBtnClick(wrapper, 'filter-dropdown-btn-apply', changedOptions);
   });
+
+  it('should emit clear event when ', () => {
+    const wrapper = mount(FilterDropdown, {
+      propsData: {
+        options,
+        placeholderLabel,
+      },
+      data() {
+        return {
+          isOpened: true,
+        };
+      },
+    });
+
+    const foundBtn = findComponentByTestId(wrapper, ButtonIcon, 'filter-dropdown-btn-clear');
+    foundBtn.trigger('click');
+
+    checkEventEmitted(wrapper, 'clear', undefined);
+  });
+
+  describe('open/close functionality', () => {
+    [true, false].forEach((isOpened) => {
+      it('should do nothing if the dropdown is disabled', async () => {
+        const wrapper = mount(FilterDropdown, {
+          propsData: {
+            options,
+            placeholderLabel,
+            disabled: true,
+          },
+          data() {
+            return {
+              isOpened,
+            };
+          },
+        });
+
+        wrapper.find('[data-testid="filter-dropdown-select"]').trigger('click');
+
+        checkEventNotEmitted(wrapper, 'change');
+
+        await wrapper.vm.$nextTick();
+
+        checkBodyVisibility(wrapper, isOpened);
+      });
+    });
+
+    it('should close the dropdown without emitting the event if no changes applied', async () => {
+      const wrapper = mount(FilterDropdown, {
+        propsData: {
+          options,
+          placeholderLabel,
+        },
+        data() {
+          return {
+            isOpened: true,
+          };
+        },
+      });
+
+      wrapper.find('[data-testid="filter-dropdown-select"]').trigger('click');
+
+      checkEventNotEmitted(wrapper, 'change');
+
+      await wrapper.vm.$nextTick();
+
+      checkBodyVisibility(wrapper, false);
+    });
+
+    it('should close dropdown and emit changed options', async () => {
+      const wrapper = mount(FilterDropdown, {
+        propsData: {
+          options,
+          placeholderLabel,
+        },
+        data() {
+          return {
+            isOpened: true,
+          };
+        },
+      });
+
+      const changedOptions = getOptions();
+      changedOptions[0].options[0].options[2].isChecked = true;
+
+      wrapper.find(NestedCheckbox).vm.$emit('change', changedOptions);
+      await wrapper.vm.$nextTick();
+
+      wrapper.find('[data-testid="filter-dropdown-select"]').trigger('click');
+
+      checkEventEmitted(wrapper, 'change', changedOptions);
+
+      await wrapper.vm.$nextTick();
+
+      checkBodyVisibility(wrapper, false);
+    });
+
+    describe('click outside', () => {
+      const WrapperComponent = {
+        components: { FilterDropdown },
+        template: `
+          <div>
+            <FilterDropdown
+              :options="options"
+              :placeholder-label="placeholderLabel"
+            />
+
+            <div id="test-wrapper">content outside the dropdown component</div>
+          </div>
+        `,
+        data() {
+          return {
+            options,
+            placeholderLabel,
+          };
+        },
+      };
+
+      it('should close dropdown if the user clicked outside', async () => {
+        const wrapper = mount(WrapperComponent, {
+          attachToDocument: true,
+        });
+
+        wrapper.find('[data-testid="filter-dropdown-select"]').trigger('click');
+        await wrapper.vm.$nextTick();
+
+        checkBodyVisibility(wrapper, true);
+
+        wrapper.find('#test-wrapper').trigger('click');
+
+        await wrapper.vm.$nextTick();
+
+        checkBodyVisibility(wrapper, false);
+      });
+
+      it('should close dropdown and emit changes when the user clicked outside', async () => {
+        const wrapper = mount(WrapperComponent, {
+          attachToDocument: true,
+        });
+
+        wrapper.find('[data-testid="filter-dropdown-select"]').trigger('click');
+        await wrapper.vm.$nextTick();
+
+        checkBodyVisibility(wrapper, true);
+
+        const changedOptions = getOptions();
+        changedOptions[0].options[0].options[2].isChecked = true;
+
+        wrapper.find(NestedCheckbox).vm.$emit('change', changedOptions);
+        await wrapper.vm.$nextTick();
+
+        wrapper.find('#test-wrapper').trigger('click');
+
+        await wrapper.vm.$nextTick();
+
+        checkBodyVisibility(wrapper, false);
+        checkEventEmitted(wrapper.find(FilterDropdown), 'change', changedOptions);
+      });
+    });
+  });
 });
 
 function checkBodyVisibility(wrapper, expectedVisibility) {
@@ -220,15 +379,24 @@ async function checkBtnClick(wrapper, buttonTestId, expectedPayload) {
   const foundBtn = findComponentByTestId(wrapper, ButtonIcon, buttonTestId);
   foundBtn.trigger('click');
 
-  const emittedChange = wrapper.emitted('change');
-  expect(emittedChange.length).toBe(1);
-
-  const [emittedPayload] = emittedChange[0];
-  expect(emittedPayload).toEqual(expectedPayload);
+  checkEventEmitted(wrapper, 'change', expectedPayload);
 
   await wrapper.vm.$nextTick();
 
   checkBodyVisibility(wrapper, false);
+}
+
+function checkEventEmitted(wrapper, event, expectedPayload) {
+  const emitted = wrapper.emitted(event);
+  expect(emitted.length).toBe(1);
+
+  const [emittedPayload] = emitted[0];
+  expect(emittedPayload).toEqual(expectedPayload);
+}
+
+function checkEventNotEmitted(wrapper, event) {
+  const emitted = wrapper.emitted(event);
+  expect(emitted).toBeUndefined();
 }
 
 function findComponentByTestId(wrapper, Component, testId) {
