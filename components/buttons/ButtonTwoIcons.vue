@@ -6,8 +6,8 @@
     <SvgIcon
       class="btn-two-icons__left-icon"
       :name="leftIcon"
-      width="15px"
-      height="15px"
+      width="18px"
+      height="18px"
       aria-hidden="true" />
     <p class="btn-two-icons__text"> {{ text }} </p>
     <SvgIcon

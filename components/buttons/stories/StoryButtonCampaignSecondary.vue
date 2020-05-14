@@ -3,25 +3,25 @@
     <ButtonTwoIcons
       text="Button 2 icons example"
       href="www.unimelb.edu.au"
-      right-icon="chevron-left"
-      left-icon="chevron-right"
+      right-icon="arrow-right"
+      left-icon="globe-asia"
       color="teal" />
     <ButtonTwoIcons
       text="Button 2 icons example"
       href="www.unimelb.edu.au"
-      right-icon="chevron-left"
+      right-icon="arrow-right"
       left-icon="info"
       color="orange" />
     <ButtonTwoIcons
       text="Button 2 icons example"
       href="www.unimelb.edu.au"
-      right-icon="chevron-left"
+      right-icon="arrow-right"
       left-icon="location"
       color="green" />
     <ButtonTwoIcons
       href="www.google.com"
-      left-icon="chevron-right"
-      right-icon="chevron-left"
+      left-icon="heart"
+      right-icon="arrow-right"
       disabled />
   </div>
 </template>

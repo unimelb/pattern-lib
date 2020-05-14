@@ -460,15 +460,22 @@
 .btn-two-icons {
   display: flex;
   align-items: center;
-  padding: 1.111rem;
+  padding: 1.25rem;
   border-left: 7px solid;
   border-radius: 3px;
   color: rgb(var(--col-background-tertiary-navy));
   text-decoration: none;
   box-shadow: 0 0 6px rgba(var(--col-box-shadow));
+  z-index: var(--z-default);
+
+  &:visited {
+    color: rgb(var(--col-background-tertiary-navy));
+  }
 
   &:hover {
     text-decoration: underline;
+    transition: all ease-out .15s;
+    padding-right: 1rem;
   }
 
   &--color-teal {

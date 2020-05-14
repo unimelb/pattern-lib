@@ -5,8 +5,8 @@
         href="www.unimelb.edu.au"
         button-text="Button text example"
         button-color="teal"
-        left-icon="location"
-        right-icon="chevron-right"
+        left-icon="heart"
+        right-icon="arrow-right"
         excerpt="Commodo proident labore dolor occaecat. Velit laborum ea elit adipisicing incididunt sunt incididunt. Eu fugiat" />
     </ListItem>
     <ListItem cols="1of3">
@@ -15,7 +15,7 @@
         button-text="Button text example"
         button-color="orange"
         left-icon="info"
-        right-icon="chevron-right"
+        right-icon="arrow-right"
         excerpt="Officia deserunt incididunt amet Lorem mollit eiusmod eu commodo exercitation" />
     </ListItem>
     <ListItem cols="1of3">
@@ -23,8 +23,8 @@
         href="www.unimelb.edu.au"
         button-text="Button text example"
         button-color="green"
-        left-icon="location"
-        right-icon="chevron-right"
+        left-icon="globe-asia"
+        right-icon="arrow-right"
         excerpt="nim labore labore nostrud dolor ex." />
     </ListItem>
   </PageCampaignCards>

@@ -1,12 +1,13 @@
 .card--campaign {
   .card__excerpt {
     font-weight: var(--fw-normal);
-    font-size: .888rem;
-    line-height: 1.4;
+    font-size: 1rem;
+    line-height: 1.25;
     color: rgb(var(--col-grey-mid-3));
     padding: 1rem 1.111rem;
     background: rgb(var(--col-background-primary-white));
     margin: 0 .388rem;
     flex: 1 0 auto;
+    border-radius: 0 0 3px 3px;
   }
 }
