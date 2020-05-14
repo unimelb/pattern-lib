@@ -8,7 +8,7 @@
           button-text="Button text example"
           button-color="teal"
           left-icon="location"
-          right-icon="chevron-right"
+          right-icon="arrow-right"
           excerpt="Mollit magna voluptate ipsum irure ex excepteur quis irure cillum tempor cupidatat. Commodo proident labore dolor occaecat. Velit laborum ea elit adipisicing incididunt sunt incididunt. Eu fugiat" />
       </ListItem>
       <ListItem cols="1of3">
@@ -17,7 +17,7 @@
           button-text="Button text example"
           button-color="orange"
           left-icon="info"
-          right-icon="chevron-right"
+          right-icon="arrow-right"
           excerpt="Mollit magna voluptate ipsum irure ex excepteur quis irure cillum tempor cupidatat. Commodo proident labore dolor occaecat. Velit laborum ea elit adipisicing incididunt sunt incididunt. Eu fugiat eu nisi dolor irure nisi adipisicing irure excepteur mollit Lorem aliquip velit aute. Officia deserunt incididunt amet Lorem mollit eiusmod eu commodo exercitation" />
       </ListItem>
       <ListItem cols="1of3">
@@ -26,7 +26,7 @@
           button-text="Button text example"
           button-color="green"
           left-icon="location"
-          right-icon="chevron-right"
+          right-icon="arrow-right"
           excerpt="Mollit magna voluptate ipsum irure ex excepteur quis irure cillum tempor cupidatat. Commodo proident labore dolor occaecat. Velit laborum ea elit adipisicing incididunt sunt incididunt. Eu fugiat eu nisi dolor irure nisi adipisicing irure excepteur mollit Lorem aliquip velit aute. Officia deserunt incididunt amet Lorem mollit eiusmod eu commodo exercitation ad amet excepteur consectetur. Aute proident nisi quis ullamco cillum irure anim labore labore nostrud dolor ex." />
       </ListItem>
     </div>
