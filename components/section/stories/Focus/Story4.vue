@@ -44,7 +44,7 @@
       <FocusWrapper
         padded
         class="grid bg-white"
-        color="blue">
+        color="navy">
         <h2 class="text-left">
           Header
         </h2>

@@ -76,8 +76,8 @@
         name="fade"
         tag="div">
         <div
-          v-for="(item, index) in dataFiltered"
-          :key="index"
+          v-for="item in dataFiltered"
+          :key="item.name"
           class="accordion-list">
           <Accordion :name="item.name">
             <table class="table table--striped table--tight table--is-compacted">
