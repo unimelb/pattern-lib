@@ -23,7 +23,11 @@ import FilterDropdown from '../FilterDropdown.vue';
 import filterDropdown from './filter-dropdown.md';
 
 export default {
-  readme: { custom: filterDropdown, source: false, html: false },
+  readme: {
+    custom: filterDropdown,
+    source: false,
+    html: false,
+  },
   components: { FilterDropdown },
   data() {
     return {
