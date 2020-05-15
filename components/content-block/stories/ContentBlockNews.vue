@@ -7,7 +7,7 @@
         <img
           class="news-block__img"
           alt
-          src="http://cms.unimelb.edu.au/__data/assets/image/0012/2649765/respect-reflection-pool-tile.jpg">
+          src="https://picsum.photos/200/300">
         <h4 class="news-block__title">Respect. Now. Always</h4>
         <p>Access survey data, watch the VC speaking out against sexual assault and harassment on campus.</p>
       </a>
@@ -19,7 +19,7 @@
         <img
           class="news-block__img"
           alt
-          src="http://cms.unimelb.edu.au/__data/assets/image/0004/2649766/brand-tile.jpg">
+          src="https://picsum.photos/200/300">
         <h4 class="news-block__title">Talent for every possible future</h4>
         <p>Meet our Melbourne Model graduates</p>
       </a>
@@ -31,7 +31,7 @@
         <img
           class="news-block__img"
           alt
-          src="http://cms.unimelb.edu.au/__data/assets/image/0008/2649653/visitor-centre.jpg">
+          src="https://picsum.photos/200/300">
         <h4 class="news-block__title">Visitor Centre and Shop now open</h4>
         <p>Get your campus map and check out our official merchandise</p>
       </a>
