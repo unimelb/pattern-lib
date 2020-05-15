@@ -131,6 +131,7 @@
 
   /* Box shadow */
   --col-box-shadow: 0, 0, 0, .12;
+  --col-box-shadow-btn: 0, 0, 0, .25;
 
   /* Font size variable for calculation */
   --fs: 1.15;
