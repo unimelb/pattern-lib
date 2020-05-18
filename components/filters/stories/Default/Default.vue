@@ -133,7 +133,6 @@ export default {
         results: [],
         facultiesQuantity: {},
       },
-      isDefaultFilterApplied: true,
       errors: [],
       isLoading: false,
       isFetched: false,
@@ -193,7 +192,6 @@ export default {
         };
         this.response = await this.getResults(locationsFacultiesChangedOptions);
         this.options = locationsFacultiesChangedOptions;
-        this.isDefaultFilterApplied = false;
       } catch (errors) {
         this.errors = formatErrors(errors);
       }
@@ -214,7 +212,6 @@ export default {
 
         this.response = await this.getResults(updatedOptions);
         this.options = updatedOptions;
-        this.isDefaultFilterApplied = false;
       } catch (errors) {
         this.errors = formatErrors(errors);
       }
