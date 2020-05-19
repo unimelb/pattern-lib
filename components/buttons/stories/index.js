@@ -24,6 +24,8 @@ import StoryButtonEvent from './StoryButtonEvent.vue';
 import StoryButtonEventAlt from './StoryButtonEventAlt.vue';
 import StoryButtonIconLeft from './StoryButtonIconLeft.vue';
 import StoryButtonIconsLarge from './StoryButtonIconsLarge.vue';
+import StoryButtonTwoIcons from './StoryButtonTwoIcons.vue';
+import StoryButtonCampaignSecondary from './StoryButtonCampaignSecondary.vue';
 
 import ButtonDefault from './ButtonDefault.vue';
 /* ##Import story component here */
@@ -34,6 +36,7 @@ storiesOf('Buttons/Types', module)
   .add('Inverted', createStory(StoryButtonInverted))
   .add('CTA', createStory(StoryButtonCTA))
   .add('Campaign', createStory(StoryButtonCampaign))
+  .add('Campaign secondary', createStory(StoryButtonCampaignSecondary))
   .add('Event', createStory(StoryButtonEvent))
   .add('Event Alt', createStory(StoryButtonEventAlt))
   .add('<button> element', createStory(StoryButtonElement));
@@ -42,6 +45,7 @@ storiesOf('Buttons/Icons', module)
   .add('Icons', createStory(StoryButtonIcons))
   .add('No Icon', createStory(StoryButtonNoIcon))
   .add('Icon on left', createStory(StoryButtonIconLeft))
+  .add('2 Icons', createStory(StoryButtonTwoIcons))
   .add('Large Icon', createStory(StoryButtonIconsLarge));
 
 storiesOf('Buttons/Adjacent', module)

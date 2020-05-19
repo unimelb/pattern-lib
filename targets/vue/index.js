@@ -364,3 +364,15 @@ export {
   default as CardCourseList,
 }
   from 'components/cards/CardCourseList.vue';
+export {
+  default as ButtonTwoIcons,
+}
+  from 'components/buttons/ButtonTwoIcons.vue';
+export {
+  default as CardCampaign,
+}
+  from 'components/cards/CardCampaign.vue';
+export {
+  default as PageCampaignCards,
+}
+  from 'components/campaign/PageCampaignCards.vue';

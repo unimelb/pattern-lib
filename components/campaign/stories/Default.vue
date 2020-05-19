@@ -1,6 +1,6 @@
 <template>
   <PageHeaderCampaign
-    :img="BgImage"
+    img="https://picsum.photos/1033/990?grayscale"
     title="Come as you are, leave as you want to be."
     title-width="100%"
     button-text="Call to action text"
@@ -10,16 +10,10 @@
 </template>
 
 <script>
-import BgImage from 'storybook/placeholders/campaign-banner.png';
 import PageHeaderCampaign from '../PageHeaderCampaign.vue';
 
 export default {
   components: { PageHeaderCampaign },
   readme: { source: true, html: true },
-  data() {
-    return {
-      BgImage,
-    };
-  },
 };
 </script>
