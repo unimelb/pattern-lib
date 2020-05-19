@@ -1,5 +1,4 @@
-Page data:
-
+### Page data:
 ```
 {
   options: {
@@ -10,18 +9,17 @@ Page data:
     results: [], // array of results, you can find the example below
     facultiesQuantity: {}, // faculties quantity, you can find the example below
   },
-  errors: [], // BE errors, are shown instead of the content after the initial page, or above the content after the update request (you can review the template below)
+  errors: [], // BE errors, are shown instead of the content after the initial page load, or above the content after the update request (you can review the template below)
   isLoading: false, // flag for showing the preloader during the update requests
-  isFetched: false, // flag for showing the initial page preloader
+  isFetched: false, // flag for showing the initial fetching preloader
 }
 ```
 
-locationsOptions and facultiesOptions are used in the FilterDropdown component, the description of the options object structure you can find the the [FilterDropdown component readme](?selectedKind=filters%2Fcomponents%2FFilter%20Dropdown&selectedStory=Default&full=0&addons=1&stories=1&panelRight=0&addonPanel=REACT_STORYBOOK%2Freadme%2Fpanel).
+locationsOptions and facultiesOptions are used in the FilterDropdown component, the description of the options object structure you can find in the [FilterDropdown component readme](?selectedKind=filters%2Fcomponents%2FFilter%20Dropdown&selectedStory=Default&full=0&addons=1&stories=1&panelRight=0&addonPanel=REACT_STORYBOOK%2Freadme%2Fpanel).
 
 ### options that were used in current example:
 
 #### locationsOptions:
-
 ```
 [
     {
@@ -77,7 +75,6 @@ locationsOptions and facultiesOptions are used in the FilterDropdown component, 
 ```
 
 #### facultiesOptions:
-
 ```
 [
     {
@@ -107,7 +104,6 @@ locationsOptions and facultiesOptions are used in the FilterDropdown component, 
 ### BE response:
 
 #### Result object example:
-
 ```
   {
     id: '0',
@@ -128,7 +124,6 @@ locationsOptions and facultiesOptions are used in the FilterDropdown component, 
 ```
 
 #### facultiesQuantity example:
-
 ```
 {
   all: {
@@ -146,8 +141,11 @@ locationsOptions and facultiesOptions are used in the FilterDropdown component, 
 }
 ```
 
-Page template:
+### Computed options:
+`filtersApplied` - quantity of selected filters
 
+`facultiesOptionsWithQuantity` - faculty options with labels merged with quantity received from BE (`${labelFromOptionsObject} (${quantity})`)
+### Page template:
 ```html
 <Loader :is-loading="!isFetched && isLoading">
   <!-- BE errors on initial fetch -->
