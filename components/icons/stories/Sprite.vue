@@ -49,6 +49,9 @@ export default {
       'newspaper',
       'envelope',
       'info',
+      'arrow-right',
+      'globe-asia',
+      'heart',
     ],
   }),
   readme: { custom: docs },
@@ -60,6 +63,6 @@ svg {
   display: inline-block;
   width: 5rem;
   height: 5rem;
-  margin: 0.5rem;
+  margin: .5rem;
 }
 </style>

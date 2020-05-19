@@ -451,4 +451,71 @@
   @media (--bp-tablet) {
     width: auto;
   }
+
+  &__two-icons {
+    display: flex;
+  }
+}
+
+.btn-two-icons {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  border-left: 7px solid;
+  border-radius: 3px;
+  color: rgb(var(--col-background-tertiary-navy));
+  text-decoration: none;
+  box-shadow: 0 0 6px rgba(var(--col-box-shadow-btn));
+  transition: all ease-out .15s;
+  z-index: var(--z-default);
+
+  &:visited {
+    color: rgb(var(--col-background-tertiary-navy));
+  }
+
+  &:hover {
+    text-decoration: underline;
+    padding-right: 1rem;
+  }
+
+  &--color-teal {
+    background: rgb(var(--col-teal-light));
+    border-color: rgb(var(--col-teal-mid-2));
+  }
+
+  &--color-orange {
+    background: rgb(var(--col-orange-light));
+    border-color: rgb(var(--col-orange-mid-2));
+  }
+
+  &--color-green {
+    background: rgb(var(--col-green-light));
+    border-color: rgb(var(--col-green-mid-2));
+  }
+
+  &--disabled,
+  &:disabled {
+    color: color(rgb(var(--col-navy-dark)) alpha(50%));
+    border-color: color(rgb(var(--col-navy-mid-1)) alpha(50%));
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  &__left-icon {
+    margin-right: .5rem;
+  }
+
+  &__right-icon {
+    margin-left: .5rem;
+  }
+
+  &__text {
+    font-size: .9375rem;
+    flex: 1;
+    margin: 0;
+
+    @media (--bp-desktop) {
+      font-size: 1.125rem;
+    }
+  }
 }

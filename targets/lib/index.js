@@ -90,6 +90,10 @@ import LogoListing from 'components/listing/LogoListing.vue';
 import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
 import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import StyledSelect from 'components/forms/StyledSelect.vue';
+import ButtonTwoIcons from 'components/buttons/ButtonTwoIcons.vue';
+import CardCampaign from 'components/cards/CardCampaign.vue';
+import PageCampaignCards from 'components/campaign/PageCampaignCards.vue';
+
 import { version } from '../../package.json';
 
 import 'components';
@@ -187,6 +191,9 @@ Vue.component('logo-listing', LogoListing);
 Vue.component('split-section-header', SplitSectionHeader);
 Vue.component('screen-reader-jump-to', ScreenReaderJumpTo);
 Vue.component('styled-select', StyledSelect);
+Vue.component('button-two-icons', ButtonTwoIcons);
+Vue.component('card-campaign', CardCampaign);
+Vue.component('page-campaign-cards', PageCampaignCards);
 
 // Create Vue instance
 new Vue({

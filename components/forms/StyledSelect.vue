@@ -3,6 +3,7 @@
     <select
       :id="id"
       v-model="content"
+      aria-label="choose an option"
       :class="extraclasses"
       @input="handleInput"
       @change="callback">
