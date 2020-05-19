@@ -10,7 +10,11 @@ expect.extend(toHaveNoViolations);
 
 describe('PageHeaderEvent', () => {
   it('should match snapshot', () => {
-    const result = shallow(PageHeaderEvent).element;
+    const result = shallow(PageHeaderEvent, {
+      propsData: {
+        titleText: 'title text',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 });
