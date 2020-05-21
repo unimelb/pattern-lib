@@ -1,30 +1,35 @@
 <template>
-  <FilterBox
-    :filters="[
-      {
-        name: 'courseTypes',
-        filterBy: 'Course types',
-        options: filters.courseTypes,
-        placeholderLabel: {
-          plural: 'course types',
-          singular: 'course type',
+  <div>
+    <div v-if="isUpdating">
+      Updating...
+    </div>
+    <FilterBox
+      :filters="[
+        {
+          name: 'courseTypes',
+          filterBy: 'Course types',
+          options: filters.courseTypes,
+          placeholderLabel: {
+            plural: 'course types',
+            singular: 'course type',
+          },
+          optionsLabel: 'Course types to include:',
         },
-        optionsLabel: 'Course types to include:',
-      },
-      {
-        name: 'locations',
-        filterBy: 'Locations',
-        options: filters.locations,
-        placeholderLabel: {
-          plural: 'locations',
-          singular: 'location',
+        {
+          name: 'locations',
+          filterBy: 'Locations',
+          options: filters.locations,
+          placeholderLabel: {
+            plural: 'locations',
+            singular: 'location',
+          },
+          optionsLabel: 'Locations to include:',
         },
-        optionsLabel: 'Locations to include:',
-      },
-    ]"
-    @change="onChange"
-    @clear="onClear"
-    @update="onUpdate" />
+      ]"
+      @change="onChange"
+      @clear="onClear"
+      @update="onUpdate" />
+  </div>
 </template>
 
 <script>
@@ -55,7 +60,9 @@ export default {
   components: { FilterBox },
   data() {
     return {
+      isUpdating: false,
       filters: cloneDeep(defaultFilters),
+      updatingTimeoutId: undefined,
     };
   },
   methods: {
@@ -70,7 +77,11 @@ export default {
       }
     },
     onUpdate() {
-      //
+      clearTimeout(this.updatingTimeoutId);
+      this.isUpdating = true;
+      this.updatingTimeoutId = setTimeout(() => {
+        this.isUpdating = false;
+      }, 2 * 1000);
     },
   },
 };

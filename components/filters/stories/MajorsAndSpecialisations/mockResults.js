@@ -255,7 +255,6 @@ const groupedByExcerpt = {
   ),
 };
 
-// TODO calculate recursively
 const undergradQuantity = groupedByStudyOption.undergrad.length;
 const postgradQuantity = groupedByStudyOption.postgrad.length;
 const researchQuantity = groupedByStudyOption.research.length;

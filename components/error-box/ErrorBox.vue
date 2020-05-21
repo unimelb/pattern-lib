@@ -11,7 +11,6 @@
 </template>
 
 <script>
-// TODO add styling
 export default {
   name: 'ErrorBox',
   props: {
