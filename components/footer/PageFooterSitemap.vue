@@ -202,7 +202,7 @@
         <li>
           <a
             class="link-reset"
-            href="https://shop.unimelb.edu.au">Shop</a>
+            href="https://www.unimelb.edu.au/shop">Shop</a>
         </li>
       </ul>
     </div>
