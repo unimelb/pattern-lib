@@ -28,16 +28,6 @@
     padding-top: 0;
   }
 
-  .card--focus-box__cnr {
-    transition: opacity .3s;
-    opacity: .2;
-    color: rgb(var(--col-background-primary-white));
-  }
-
-  &:hover .card--focus-box__cnr {
-    opacity: .3;
-  }
-
   .section--image-mask.bg-inverted & {
     background-color: color(rgb(var(--col-brand)) alpha(-10%));
 
