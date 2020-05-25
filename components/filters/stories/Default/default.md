@@ -7,7 +7,10 @@
   },
   response: { // BE resoponse:
     results: [], // array of results, you can find the example below
-    facultiesQuantity: {}, // faculties quantity, you can find the example below
+    quantity: { // quantity, you can find the example below
+      locations: {},
+      faculties: {},
+    },
   },
   errors: [], // BE errors, are shown instead of the content after the initial page load, or above the content after the update request (you can review the template below)
   isLoading: false, // flag for showing the preloader during the update requests
@@ -123,7 +126,40 @@ locationsOptions and facultiesOptions are used in the FilterDropdown component, 
   }
 ```
 
-#### facultiesQuantity example:
+#### locations quantity example:
+```
+{
+  all: {
+    quantity: 3,
+    sydney: {
+      quantity: 2,
+      cbd: {
+        quantity: 2
+      },
+      bondi: {
+        quantity: 1
+      }
+    },
+    melbourne: {
+      quantity: 2,
+      southbank: {
+        quantity: 2
+      },
+      parkville: {
+        quantity: 1
+      }
+    },
+    goldCoast: {
+      quantity: 1,
+      cbd: {
+        quantity: 1
+      }
+    }
+  }
+}
+```
+
+#### faculties quantity example:
 ```
 {
   all: {
@@ -144,7 +180,7 @@ locationsOptions and facultiesOptions are used in the FilterDropdown component, 
 ### Computed options:
 `filtersApplied` - quantity of selected filters
 
-`facultiesOptionsWithQuantity` - faculty options with labels merged with quantity received from BE (`${labelFromOptionsObject} (${quantity})`)
+`optionsWithQuantity` - options with labels merged with quantity received from BE (`${labelFromOptionsObject} (${quantity})`)
 ### Page template:
 ```html
 <Loader :is-loading="!isFetched && isLoading">
