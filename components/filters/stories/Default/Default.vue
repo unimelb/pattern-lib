@@ -61,7 +61,7 @@
               {
                 name: 'locations',
                 filterBy: 'Locations',
-                options: options.locations,
+                options: optionsWithQuantity.locations,
                 placeholderLabel: {
                   plural: 'locations',
                   singular: 'location',
@@ -71,7 +71,7 @@
               {
                 name: 'faculties',
                 filterBy: 'Faculties',
-                options: facultiesOptionsWithQuantity,
+                options: optionsWithQuantity.faculties,
                 placeholderLabel: {
                   plural: 'faculties',
                   singular: 'faculty',
@@ -131,7 +131,10 @@ export default {
       },
       response: {
         results: [],
-        facultiesQuantity: {},
+        quantity: {
+          locations: {},
+          faculties: {},
+        },
       },
       errors: [],
       isLoading: false,
@@ -142,10 +145,18 @@ export default {
     filtersApplied() {
       return this.getFiltersApplied(Object.values(this.options));
     },
-    facultiesOptionsWithQuantity() {
-      const { options: { faculties }, response: { facultiesQuantity } } = this;
+    optionsWithQuantity() {
+      const {
+        options,
+        response: {
+          quantity,
+        },
+      } = this;
 
-      return addQuantityToOptions(faculties, facultiesQuantity);
+      return {
+        locations: addQuantityToOptions(options.locations, quantity.locations),
+        faculties: addQuantityToOptions(options.faculties, quantity.faculties),
+      };
     },
   },
   mounted() {

@@ -97,6 +97,7 @@ import AppCheckbox from 'components/app-checkbox/AppCheckbox.vue';
 import Spinner from 'components/loader/Spinner.vue';
 import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
+import ErrorBox from 'components/error-box/ErrorBox.vue';
 import { version } from '../../package.json';
 
 import 'components';
@@ -201,6 +202,7 @@ Vue.component('app-checkbox', AppCheckbox);
 Vue.component('spinner', Spinner);
 Vue.component('loader', Loader);
 Vue.component('loading-overlay', LoadingOverlay);
+Vue.component('error-box', ErrorBox);
 
 // Create Vue instance
 new Vue({

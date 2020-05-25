@@ -69,7 +69,51 @@ export default async ({ locations, faculties }, throwError = false) => {
 
   return {
     results,
-    facultiesQuantity: calculateFacultiesQuantity(resultsFilteredByLocation),
+    quantity: {
+      locations: {
+        all: {
+          quantity: 3,
+          sydney: {
+            quantity: 2,
+            cbd: {
+              quantity: 2,
+            },
+            bondi: {
+              quantity: 1,
+            },
+          },
+          melbourne: {
+            quantity: 2,
+            southbank: {
+              quantity: 2,
+            },
+            parkville: {
+              quantity: 1,
+            },
+          },
+          goldCoast: {
+            quantity: 1,
+            cbd: {
+              quantity: 1,
+            },
+          },
+        },
+      },
+      faculties: {
+        all: {
+          quantity: 3,
+          facultyOfArt: {
+            quantity: 1,
+          },
+          facultyOfHistory: {
+            quantity: 1,
+          },
+          facultyOfSociology: {
+            quantity: 1,
+          },
+        },
+      },
+    },
   };
 };
 
@@ -81,8 +125,7 @@ function filterByLocationAndCampus(allResults, locations) {
     const foundResults = mockResults.filter((result) => {
       const foundCity = result.city.find((resultCity) => resultCity.name === cityLabel);
 
-      return foundCity
-        && foundCity.campus.includes(campus);
+      return foundCity && foundCity.campus.includes(campus);
     });
 
     resultsWithDuplicates.push(...foundResults);
@@ -100,48 +143,7 @@ function filterByLocationAndCampus(allResults, locations) {
 function filterByFaculty(allResults, faculties) {
   const selectedFacultyLabels = faculties.map(([, faculty]) => facultyLabels[faculty]);
 
-  return allResults.filter(
-    (result) => selectedFacultyLabels.includes(result.faculty)
-  );
-}
-
-function calculateFacultiesQuantity(resultsFilteredByLocation) {
-  const facultiesQuantity = resultsFilteredByLocation.reduce(
-    (quantity, result) => {
-      const facultyKey = getKeyByValue(facultyLabels, result.faculty);
-
-      const facultyQuantity = quantity[facultyKey].quantity;
-      quantity[facultyKey].quantity = facultyQuantity + 1;
-
-      return quantity;
-    },
-    Object
-      .entries(facultyLabels)
-      .reduce(
-        (defaultQuantity, [key]) => {
-          defaultQuantity[key] = {
-            quantity: 0,
-          };
-
-          return defaultQuantity;
-        },
-        {}
-      )
-  );
-
-  return {
-    all: {
-      ...facultiesQuantity,
-      quantity: Object.values(facultiesQuantity).reduce(
-        (quantity, faculty) => quantity + faculty.quantity,
-        0
-      ),
-    },
-  };
-}
-
-function getKeyByValue(object, value) {
-  return Object.keys(object).find((key) => object[key] === value);
+  return allResults.filter((result) => selectedFacultyLabels.includes(result.faculty));
 }
 
 function delay() {

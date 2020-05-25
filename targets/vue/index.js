@@ -386,3 +386,7 @@ export {
   default as LoadingOverlay,
 }
   from 'components/loader/LoadingOverlay.vue';
+export {
+  default as ErrorBox,
+}
+  from 'components/error-box/ErrorBox.vue';
