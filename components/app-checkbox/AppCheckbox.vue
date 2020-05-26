@@ -1,5 +1,6 @@
 <template>
   <BaseCheckbox
+    :tabindex="tabIndex"
     :aria-label="ariaLabel"
     :is-checked="shouldBeChecked"
     :is-indeterminate="false"
@@ -34,6 +35,10 @@ export default {
     ariaLabel: {
       type: String,
       default: '',
+    },
+    tabIndex: {
+      type: Number,
+      default: 0,
     },
   },
   computed: {

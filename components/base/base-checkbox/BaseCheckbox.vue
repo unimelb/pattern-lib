@@ -2,16 +2,19 @@
   <label
     :data-name="name"
     :class="classRoot"
-    @click.prevent="onClick">
+    :tabindex="tabIndex"
+    :aria-label="ariaLabel"
+    @focus="onRootFocus"
+    @blur="onRootBlur"
+    @click.prevent="toggleHandler"
+    @keypress.space.prevent="toggleHandler">
     <input
-      :aria-checked="isInputChecked"
-      :aria-label="ariaLabel"
       :checked="isInputChecked"
       class="base-checkbox__input"
       data-testid="base-checkbox-input"
       type="checkbox">
 
-    <span class="base-checkbox__icon">
+    <span :class="classIcon">
       <span
         :class="classIconChecked"
         data-testid="base-checkbox-icon-checked" />
@@ -65,6 +68,15 @@ export default {
         return Object.values(displayProp).includes(value);
       },
     },
+    tabIndex: {
+      type: Number,
+      default: 0,
+    },
+  },
+  data() {
+    return {
+      isFocused: false,
+    };
   },
   computed: {
     isInputChecked() {
@@ -74,6 +86,14 @@ export default {
       return [
         'base-checkbox',
         `base-checkbox--${this.display}`,
+      ];
+    },
+    classIcon() {
+      return [
+        'base-checkbox__icon',
+        {
+          'base-checkbox__icon--is-focused': this.isFocused,
+        },
       ];
     },
     classIconChecked() {
@@ -94,7 +114,7 @@ export default {
     },
   },
   methods: {
-    onClick() {
+    toggleHandler() {
       const { name, isChecked, isIndeterminate } = this;
 
       // Current values emited
@@ -103,6 +123,12 @@ export default {
         isChecked,
         isIndeterminate,
       });
+    },
+    onRootFocus() {
+      this.isFocused = true;
+    },
+    onRootBlur() {
+      this.isFocused = false;
     },
   },
 };

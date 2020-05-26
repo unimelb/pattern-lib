@@ -152,6 +152,9 @@
 
   /* Transitions */
   --transition-speed-normal: 250ms;
+
+  /* Box shadow to use instead of outline in custom form elements */
+  --outline-shadow: 0 0 0 3px rgba(var(--col-navy-mid-2), .8);
 }
 
 /**
