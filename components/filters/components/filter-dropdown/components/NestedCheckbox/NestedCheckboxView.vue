@@ -8,6 +8,7 @@
         { 'nested-checkbox--is-first': isFirstNested },
       ]">
       <BaseCheckbox
+        ref="baseCheckbox"
         class="nested-checkbox__checkbox"
         :name="option.name"
         :aria-label="option.ariaLabel"

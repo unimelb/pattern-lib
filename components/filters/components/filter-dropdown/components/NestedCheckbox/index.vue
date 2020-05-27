@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import NestedCheckboxUpdateWrapper from './NestedCheckboxUpdateWrapper.vue';
 import optionsValidator from '../../nestedCheckboxOptionsValidator';
+import NestedCheckboxUpdateWrapper from './NestedCheckboxUpdateWrapper.vue';
 
 export default {
   name: 'NestedCheckbox',

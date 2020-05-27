@@ -4,8 +4,12 @@
     @click.stop>
     <div
       ref="select"
+      :tabindex="tabIndex"
+      aria-haspopup="listbox"
+      :aria-expanded="isOpened + ''"
       :class="classSelect"
       data-testid="filter-dropdown-select"
+      @keypress.enter="onSelectKeyPress"
       @click="onSelectClick">
       <div
         :class="classLabel"
@@ -23,6 +27,7 @@
     <div
       ref="body"
       data-testid="filter-dropdown-body"
+      tabindex="-1"
       :class="classBody">
       <div
         v-if="optionsLabel"
@@ -32,6 +37,7 @@
       </div>
 
       <NestedCheckbox
+        ref="nestedCheckbox"
         :options="copiedOptions"
         @change="onChange" />
 
@@ -91,6 +97,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+    tabIndex: {
+      type: Number,
+      default: 0,
     },
   },
   data() {
@@ -199,6 +209,13 @@ export default {
           this.$emit('change', this.copiedOptions);
         }
       }
+    },
+    onSelectKeyPress() {
+      this.onSelectClick();
+
+      this.$nextTick(() => {
+        // TODO
+      });
     },
     onSelectClick() {
       if (this.disabled) {
