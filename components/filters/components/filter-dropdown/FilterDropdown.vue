@@ -1,7 +1,9 @@
 <template>
   <div
     class="filter-dropdown"
-    @click.stop>
+    :data-uuid="uuid"
+    @keydown.enter="onEnter"
+    @focusout="onFocusOut">
     <div
       ref="select"
       :tabindex="tabIndex"
@@ -45,6 +47,7 @@
         <div class="filter-dropdown__action">
           <ButtonIcon
             no-icon
+            tabindex="0"
             data-testid="filter-dropdown-btn-clear"
             width="fullwidth"
             @click.native.prevent="onClearClick">
@@ -55,6 +58,7 @@
         <div class="filter-dropdown__action">
           <ButtonIcon
             no-icon
+            tabindex="0"
             data-testid="filter-dropdown-btn-apply"
             class="btn--cta"
             width="fullwidth"
@@ -71,12 +75,14 @@
 import cloneDeep from 'lodash.clonedeep';
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import ButtonIcon from 'components/buttons/ButtonIcon.vue';
+import uniqComponentIdMixin from '../../../../utils/uniqComponentIdMixin';
 import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
 import groupOptionLabelsByIsChecked from './groupOptionLabelsByIsChecked.js';
 
 export default {
   components: { NestedCheckbox, SvgIcon, ButtonIcon },
+  mixins: [uniqComponentIdMixin],
   props: {
     options: {
       type: Array,
@@ -176,11 +182,7 @@ export default {
     },
     isOpened(value) {
       if (value) {
-        document.documentElement.click(); // close other filter dropdowns
         this.checkDropdownDuration();
-        document.addEventListener('click', this.closeDropdown);
-      } else {
-        document.removeEventListener('click', this.closeDropdown);
       }
     },
   },
@@ -214,8 +216,25 @@ export default {
       this.onSelectClick();
 
       this.$nextTick(() => {
-        // TODO
+        this.$refs.nestedCheckbox.focusOnFirst();
       });
+    },
+    onEnter() {
+      this.closeDropdown();
+    },
+    onFocusOut(event) {
+      if (!event.relatedTarget) {
+        this.closeDropdown();
+        return;
+      }
+
+      const isFocusInside = !!event
+        .relatedTarget
+        .closest(`.filter-dropdown[data-uuid="${this.uuid}"]`);
+
+      if (!isFocusInside) {
+        this.closeDropdown();
+      }
     },
     onSelectClick() {
       if (this.disabled) {

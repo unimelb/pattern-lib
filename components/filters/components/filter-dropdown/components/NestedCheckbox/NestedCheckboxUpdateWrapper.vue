@@ -1,5 +1,6 @@
 <template>
   <NestedCheckboxView
+    ref="nestedCheckboxView"
     :options="options"
     :parent-names="[]"
     @change="onChange" />
@@ -21,6 +22,9 @@ export default {
     },
   },
   methods: {
+    focusOnFirst() {
+      this.$refs.nestedCheckboxView.focusOnFirst();
+    },
     onChange(event) {
       const clonedOptions = cloneDeep(this.options);
       const changedOption = this.findOption(clonedOptions, event.parentNames);

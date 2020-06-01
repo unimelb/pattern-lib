@@ -3,10 +3,7 @@
     <div
       v-for="option in options"
       :key="option.name"
-      :class="[
-        'nested-checkbox',
-        { 'nested-checkbox--is-first': isFirstNested },
-      ]">
+      :class="['nested-checkbox', { 'nested-checkbox--is-first': isFirstNested }]">
       <BaseCheckbox
         ref="baseCheckbox"
         class="nested-checkbox__checkbox"
@@ -55,6 +52,11 @@ export default {
     },
   },
   methods: {
+    focusOnFirst() {
+      const [firstBaseCheckbox] = this.$refs.baseCheckbox;
+
+      firstBaseCheckbox.$el.focus();
+    },
     onCheckboxChange({ name, isChecked, isIndeterminate }) {
       const { parentNames } = this;
 
@@ -66,5 +68,4 @@ export default {
     },
   },
 };
-
 </script>

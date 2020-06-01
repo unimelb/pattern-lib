@@ -1,6 +1,7 @@
 <template>
   <div>
     <NestedCheckboxUpdateWrapper
+      ref="updateWrapper"
       :options="optionsWithIndeterminateState"
       @change="onChange" />
   </div>
@@ -26,6 +27,9 @@ export default {
     },
   },
   methods: {
+    focusOnFirst() {
+      this.$refs.updateWrapper.focusOnFirst();
+    },
     onChange(newOptions) {
       this.$emit('change', this.getUpdatedOptions(newOptions));
     },
