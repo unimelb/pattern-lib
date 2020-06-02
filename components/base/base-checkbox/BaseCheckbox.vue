@@ -61,7 +61,7 @@ export default {
     },
     ariaLabel: {
       type: String,
-      default: '',
+      default: undefined,
     },
     display: {
       type: String,

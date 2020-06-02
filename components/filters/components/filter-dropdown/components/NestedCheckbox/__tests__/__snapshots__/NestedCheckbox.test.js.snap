@@ -7,11 +7,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
       class="nested-checkbox nested-checkbox--is-first"
     >
       <label
+        aria-checked="false"
         class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
         data-name="all"
+        role="checkbox"
+        tabindex="0"
       >
         <input
-          aria-label=""
           class="base-checkbox__input"
           data-testid="base-checkbox-input"
           type="checkbox"
@@ -44,11 +46,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
           class="nested-checkbox"
         >
           <label
+            aria-checked="false"
             class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
             data-name="undergraduate"
+            role="checkbox"
+            tabindex="0"
           >
             <input
-              aria-label=""
               class="base-checkbox__input"
               data-testid="base-checkbox-input"
               type="checkbox"
@@ -81,12 +85,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="true"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="bachelor"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-checked="true"
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"
@@ -120,12 +125,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="true"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="diploma"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-checked="true"
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"
@@ -159,11 +165,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="false"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="honours"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"
@@ -199,11 +207,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
           class="nested-checkbox"
         >
           <label
+            aria-checked="false"
             class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
             data-name="graduate"
+            role="checkbox"
+            tabindex="0"
           >
             <input
-              aria-label=""
               class="base-checkbox__input"
               data-testid="base-checkbox-input"
               type="checkbox"
@@ -236,11 +246,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="false"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="certificate"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"
@@ -274,11 +286,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="false"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="diploma"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"
@@ -312,11 +326,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="false"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="master"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"
@@ -352,11 +368,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
           class="nested-checkbox"
         >
           <label
+            aria-checked="false"
             class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
             data-name="research"
+            role="checkbox"
+            tabindex="0"
           >
             <input
-              aria-label=""
               class="base-checkbox__input"
               data-testid="base-checkbox-input"
               type="checkbox"
@@ -389,11 +407,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="false"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="master"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"
@@ -427,11 +447,13 @@ exports[`NestedCheckbox should match snapshot 1`] = `
               class="nested-checkbox"
             >
               <label
+                aria-checked="false"
                 class="nested-checkbox__checkbox base-checkbox base-checkbox--block"
                 data-name="phd"
+                role="checkbox"
+                tabindex="0"
               >
                 <input
-                  aria-label=""
                   class="base-checkbox__input"
                   data-testid="base-checkbox-input"
                   type="checkbox"

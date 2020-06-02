@@ -2,11 +2,14 @@
 
 exports[`BaseCheckbox should match snapshot 1`] = `
 <label
+  aria-checked="false"
+  aria-label="aria-label"
   class="base-checkbox base-checkbox--inline"
   data-name="checkboxName"
+  role="checkbox"
+  tabindex="0"
 >
   <input
-    aria-label="aria-label"
     class="base-checkbox__input"
     data-testid="base-checkbox-input"
     type="checkbox"
