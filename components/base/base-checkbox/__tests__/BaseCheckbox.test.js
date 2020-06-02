@@ -103,7 +103,7 @@ describe('BaseCheckbox', () => {
   describe('ariaLabel', () => {
     const cases = [
       ['should render aria-label', 'ariaLabel', 'ariaLabel'],
-      ['should not render aria-label', undefined, ''],
+      ['should not render aria-label', undefined, undefined],
     ];
 
     it.each(cases)('%s', (description, ariaLabel, expectedAriaLabel) => {
@@ -116,7 +116,6 @@ describe('BaseCheckbox', () => {
 
       expect(
         wrapper
-          .find('[data-testid="base-checkbox-input"]')
           .attributes()['aria-label']
       ).toBe(expectedAriaLabel);
     });

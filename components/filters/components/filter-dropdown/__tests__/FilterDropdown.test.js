@@ -302,29 +302,13 @@ describe('FilterDropdown', () => {
     });
 
     describe('click outside', () => {
-      const WrapperComponent = {
-        components: { FilterDropdown },
-        template: `
-          <div>
-            <FilterDropdown
-              :options="options"
-              :placeholder-label="placeholderLabel"
-            />
-
-            <div id="test-wrapper">content outside the dropdown component</div>
-          </div>
-        `,
-        data() {
-          return {
+      it('should close dropdown if the user clicked outside', async () => {
+        const wrapper = mount(FilterDropdown, {
+          attachToDocument: true,
+          propsData: {
             options,
             placeholderLabel,
-          };
-        },
-      };
-
-      it('should close dropdown if the user clicked outside', async () => {
-        const wrapper = mount(WrapperComponent, {
-          attachToDocument: true,
+          },
         });
 
         wrapper.find('[data-testid="filter-dropdown-select"]').trigger('click');
@@ -332,7 +316,7 @@ describe('FilterDropdown', () => {
 
         checkBodyVisibility(wrapper, true);
 
-        wrapper.find('#test-wrapper').trigger('click');
+        wrapper.trigger('focusout');
 
         await wrapper.vm.$nextTick();
 
@@ -340,8 +324,12 @@ describe('FilterDropdown', () => {
       });
 
       it('should close dropdown and emit changes when the user clicked outside', async () => {
-        const wrapper = mount(WrapperComponent, {
+        const wrapper = mount(FilterDropdown, {
           attachToDocument: true,
+          propsData: {
+            options,
+            placeholderLabel,
+          },
         });
 
         wrapper.find('[data-testid="filter-dropdown-select"]').trigger('click');
@@ -355,12 +343,12 @@ describe('FilterDropdown', () => {
         wrapper.find(NestedCheckbox).vm.$emit('change', changedOptions);
         await wrapper.vm.$nextTick();
 
-        wrapper.find('#test-wrapper').trigger('click');
+        wrapper.trigger('focusout');
 
         await wrapper.vm.$nextTick();
 
         checkBodyVisibility(wrapper, false);
-        checkEventEmitted(wrapper.find(FilterDropdown), 'change', changedOptions);
+        checkEventEmitted(wrapper, 'change', changedOptions);
       });
     });
   });
