@@ -24,6 +24,7 @@
       <div class="filter-box__btn">
         <ButtonIcon
           no-icon
+          element="button"
           width="fullwidth"
           @click.native.prevent="onClearFilters(null)">
           Clear filters
@@ -33,6 +34,7 @@
       <div class="filter-box__btn">
         <ButtonIcon
           no-icon
+          element="button"
           class="btn--cta"
           width="fullwidth"
           @click.native.prevent="onUpdateResults">

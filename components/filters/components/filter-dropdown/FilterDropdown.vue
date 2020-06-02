@@ -11,7 +11,7 @@
       :aria-expanded="isOpened + ''"
       :class="classSelect"
       data-testid="filter-dropdown-select"
-      @keypress.enter="onSelectKeyPress"
+      @keydown.enter.stop="onSelectKeyPress"
       @click="onSelectClick">
       <div
         :class="classLabel"
@@ -47,9 +47,11 @@
         <div class="filter-dropdown__action">
           <ButtonIcon
             no-icon
+            element="button"
             tabindex="0"
             data-testid="filter-dropdown-btn-clear"
             width="fullwidth"
+            @keydown.native.enter.stop
             @click.native.prevent="onClearClick">
             Clear filter
           </ButtonIcon>
@@ -58,10 +60,12 @@
         <div class="filter-dropdown__action">
           <ButtonIcon
             no-icon
+            element="button"
             tabindex="0"
             data-testid="filter-dropdown-btn-apply"
             class="btn--cta"
             width="fullwidth"
+            @keydown.native.enter.stop
             @click.native.prevent="onApplyClick">
             Apply filter
           </ButtonIcon>
