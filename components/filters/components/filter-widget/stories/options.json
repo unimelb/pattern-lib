@@ -1,0 +1,76 @@
+{
+  "locations": [
+    {
+      "label": "All (3)",
+      "name": "all",
+      "options": [
+        {
+          "label": "Sydney (2)",
+          "name": "sydney",
+          "options": [
+            {
+              "label": "CBD (2)",
+              "name": "cbd",
+              "isChecked": true
+            },
+            {
+              "label": "Bondi (1)",
+              "name": "bondi",
+              "isChecked": false
+            }
+          ]
+        },
+        {
+          "label": "Melbourne (2)",
+          "name": "melbourne",
+          "options": [
+            {
+              "label": "Southbank (2)",
+              "name": "southbank",
+              "isChecked": false
+            },
+            {
+              "label": "Parkville (1)",
+              "name": "parkville",
+              "isChecked": false
+            }
+          ]
+        },
+        {
+          "label": "Gold coast (1)",
+          "name": "goldCoast",
+          "options": [
+            {
+              "label": "CBD (1)",
+              "name": "cbd",
+              "isChecked": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "faculties": [
+    {
+      "label": "All (3)",
+      "name": "all",
+      "options": [
+        {
+          "label": "Faculty of History (1)",
+          "name": "facultyOfHistory",
+          "isChecked": true
+        },
+        {
+          "label": "Faculty of Sociology (1)",
+          "name": "facultyOfSociology",
+          "isChecked": true
+        },
+        {
+          "label": "Faculty of Art (1)",
+          "name": "facultyOfArt",
+          "isChecked": true
+        }
+      ]
+    }
+  ]
+}

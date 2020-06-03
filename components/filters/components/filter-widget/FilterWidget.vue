@@ -1,39 +1,14 @@
 <template>
-  <SectionTwoCol
-    direction="right">
+  <SectionTwoCol direction="right">
     <div slot="main">
       <FilteredResults
-        :items="response.results.length"
+        :items="filteredResults.length"
         :filters="filtersApplied">
         <div class="grid grid--center grid--2col">
           <ListItem
-            v-for="item in response.results"
+            v-for="item in filteredResults"
             :key="item.id">
-            <GenericCard
-              :title="item.name"
-              :excerpt="item.description"
-              :cols="2">
-              <div
-                slot="sub-title-1"
-                class="sub-title">
-                <div>
-                  <div
-                    v-for="(location, locationIndex) in item.city"
-                    :key="locationIndex">
-                    <strong>Location city:</strong> {{ location.name }}
-                    <br>
-                    <strong>Campus:</strong> {{ location.campus.join(' / ') }}
-                    <br>
-                    <br>
-                  </div>
-                </div>
-              </div>
-              <div
-                slot="sub-title-2"
-                class="sub-title">
-                <span>{{ item.faculty }}</span>
-              </div>
-            </GenericCard>
+            <slot :item="item" />
           </ListItem>
         </div>
       </FilteredResults>
@@ -41,28 +16,7 @@
 
     <div slot="side">
       <FilterBox
-        :filters="[
-          {
-            name: 'locations',
-            filterBy: 'Locations',
-            options: optionsWithQuantity.locations,
-            placeholderLabel: {
-              plural: 'locations',
-              singular: 'location',
-            },
-            optionsLabel: 'Locations to include:',
-          },
-          {
-            name: 'faculties',
-            filterBy: 'Faculties',
-            options: optionsWithQuantity.faculties,
-            placeholderLabel: {
-              plural: 'faculties',
-              singular: 'faculty',
-            },
-            optionsLabel: 'Faculties to include: ',
-          },
-        ]"
+        :filters="filterConfig"
         @change="onChange"
         @clear="onClear"
         @update="onUpdate" />
@@ -71,46 +25,105 @@
 </template>
 
 <script>
+import cloneDeep from 'lodash.clonedeep';
 import SectionTwoCol from 'components/section/SectionTwoCol.vue';
 import ListItem from 'components/listing/ListItem.vue';
-import GenericCard from 'components/cards/GenericCard.vue';
 import FilterBox from '../filter-box/FilterBox.vue';
 import FilteredResults from '../filtered-results/FilteredResults.vue';
+import getSelectedNames from '../../stories/BackEndFiltering/getSelectedNames';
+import getOptionsQuantity from '../../stories/BackEndFiltering/getOptionsQuantity';
 
 export default {
   name: 'FilterWidget',
   components: {
-    SectionTwoCol, ListItem, GenericCard, FilterBox, FilteredResults,
+    SectionTwoCol,
+    ListItem,
+    FilterBox,
+    FilteredResults,
+  },
+  props: {
+    data: {
+      type: Array,
+      required: true,
+    },
+    filterConfig: {
+      type: Array,
+      required: true,
+    },
+    filterPredicate: {
+      type: Function,
+      required: true,
+    },
   },
   data() {
     return {
-      filtersApplied: 1,
-      response: {
-        results: [],
-      },
-      optionsWithQuantity: {
-        locations: [{
-          label: 'Location 1',
-          name: 'location1',
-          isChecked: true,
-        }],
-        faculties: [{
-          label: 'Faculty 1',
-          name: 'faculty1',
-          isChecked: true,
-        }],
-      },
+      updatedFilterConfig: cloneDeep(this.filterConfig),
     };
   },
+  computed: {
+    filteredResults() {
+      const { data, filterConfig, filterPredicate } = this;
+
+      const selectedNames = filterConfig.reduce((accumulator, { name, options }) => {
+        accumulator[name] = getSelectedNames(options);
+        return accumulator;
+      }, {});
+
+      return filterPredicate(data, selectedNames);
+    },
+    filterIndexByName() {
+      return this.filterConfig.reduce((accumulator, { name }, filterIndex) => {
+        accumulator[name] = filterIndex;
+
+        return accumulator;
+      }, {});
+    },
+    options() {
+      return this.filterConfig.map(({ options }) => options);
+    },
+    filtersApplied() {
+      return this.getFiltersApplied(this.options);
+    },
+  },
+  created() {
+    console.clear(); // TODO remove this when the component is finished
+  },
   methods: {
-    onChange() {
-      return 1; // TODO
+    getFilterConfig(name) {
+      return this.updatedFilterConfig[this.filterIndexByName[name]];
     },
-    onClear() {
-      return 1; // TODO
+    onChange({ name, changedOptions }) {
+      const filterConfigToUpdate = this.getFilterConfig(name);
+      console.log('filterConfigToUpdate: ', filterConfigToUpdate);
+      filterConfigToUpdate.options = changedOptions;
     },
+    onClear(nameOrNull) {
+      /* if (nameOrNull) {
+        this.updatedFilterConfig = {
+          ...this.updatedFilterConfig,
+          [nameOrNull]: this.updateAllOptions(this.filterConfig[nameOrNull], true),
+        };
+      } else {
+
+      } */
+
+      console.log('onClear', nameOrNull);
+    },
+    /* updateAllOptions(options) {}, */
     onUpdate() {
-      return 1; // TODO
+      console.log('onUpdate'); // TODO discuss
+    },
+    getFiltersApplied(optionsArray) {
+      return optionsArray.reduce(
+        (appliedFiltersQuantity, options) => (this.isFilterApplied(options) ? appliedFiltersQuantity + 1 : appliedFiltersQuantity),
+        0
+      );
+    },
+    isFilterApplied(options) {
+      const selectedOptionsLength = getSelectedNames(options).length;
+      const optionsLength = getOptionsQuantity(options);
+
+      return optionsLength !== selectedOptionsLength;
     },
   },
 };
