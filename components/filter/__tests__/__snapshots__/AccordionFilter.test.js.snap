@@ -43,6 +43,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="locations"
             >
@@ -75,6 +76,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="disciplines"
             >
@@ -107,6 +109,7 @@ exports[`AccordionFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="auditions"
             >
@@ -138,7 +141,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
           aria-label="search"
           class="filter__button--icon"
           focusable="false"
+          height="0"
           role="img"
+          width="0"
         >
           <use
             xlink:href="#icon-search"
@@ -195,7 +200,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
             <h2
               class="toggle__trigger"
             >
-              arts
+              
+      arts
+    
             </h2>
              
           </div>
@@ -371,7 +378,9 @@ exports[`AccordionFilter should match snapshot 1`] = `
             <h2
               class="toggle__trigger"
             >
-              science
+              
+      science
+    
             </h2>
              
           </div>

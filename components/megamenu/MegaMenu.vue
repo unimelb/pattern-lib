@@ -159,7 +159,7 @@
             class="link-icon__icon svg"
             role="presentation"
             focusable="false"
-            aria-labelledby="icon-menu"
+            aria-label="icon menu"
             viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
           </svg>
@@ -185,6 +185,18 @@ import PageSearchForm from '../search/PageSearchForm.vue';
 import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 import Logo from '../logo/Logo.vue';
+import { WIDTH_900 } from '../../helpers/viewports';
+
+import {
+  KEYCODE_TAB,
+  KEYCODE_ENTER,
+  KEYCODE_ESC,
+  KEYCODE_SPACE,
+  KEYCODE_LEFT,
+  KEYCODE_UP,
+  KEYCODE_RIGHT,
+  KEYCODE_DOWN,
+} from '../../constants/keycodes';
 
 export default {
   components: {
@@ -238,7 +250,7 @@ export default {
   computed: {
     isMobile() {
       return this.$refs.headerroot
-        ? this.$refs.headerroot.offsetWidth < 900
+        ? this.$refs.headerroot.offsetWidth < WIDTH_900
         : false;
     },
     isShowTopMenu() {
@@ -251,21 +263,31 @@ export default {
   },
   methods: {
     isColColumns(rootindex) {
-      if (this.isMobileOpen) return '';
-      if (this.items[rootindex].items.length <= 5) {
+      const oneColumnMaxLength = 5;
+
+      if (this.isMobileOpen) {
+        return '';
+      }
+      if (this.items[rootindex].items.length <= oneColumnMaxLength) {
         return 'cols-1';
       }
       return 'cols-2';
     },
     rootOrChildrenActive(rootitem) {
-      if (!this.active) return false;
+      if (!this.active) {
+        return false;
+      }
 
       let displayActive = false;
 
-      if (this.active === rootitem.href) displayActive = true;
+      if (this.active === rootitem.href) {
+        displayActive = true;
+      }
       if (rootitem.items) {
         rootitem.items.forEach((item) => {
-          if (item.href === this.active) displayActive = true;
+          if (item.href === this.active) {
+            displayActive = true;
+          }
         });
       }
 
@@ -284,12 +306,7 @@ export default {
         this.lastIndex = rootindex;
       }
 
-      if (
-        rootindex !== -1
-        && this.items[rootindex].items !== undefined
-        && !this.isMobileOpen
-        && !this.isMobile
-      ) {
+      if (this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
         this.activateBlanket(this.dismissDesktopMenu.bind(this));
         this.$refs.rootitems[rootindex].classList.add('menu__item--over');
         if (this.isAnimate) {
@@ -354,14 +371,16 @@ export default {
       }
     },
     dismissMobileMenuIfBlanket(e) {
-      if (e.target !== this.$refs.blanket) return;
+      if (e.target !== this.$refs.blanket) {
+        return;
+      }
 
       this.dismissMobileMenu();
     },
     openInner(e) {
       if (
         this.$refs.headerroot
-        && this.$refs.headerroot.offsetWidth < 900
+        && this.$refs.headerroot.offsetWidth < WIDTH_900
         && e.target.nextElementSibling
       ) {
         e.preventDefault();
@@ -372,7 +391,9 @@ export default {
       e.target.parentElement.classList.remove('open');
     },
     closeMobileIfDesktop() {
-      if (this.isMobile) return;
+      if (this.isMobile) {
+        return;
+      }
       if (this.isMobileOpen) {
         this.dismissMobileMenu();
         this.$refs.panels.forEach((panel) => {
@@ -382,16 +403,22 @@ export default {
     },
     handleKey(e) {
       // Don't catch key events when ⌘ or Alt modifier is present
-      if (e.metaKey || e.altKey) return;
+      if (e.metaKey || e.altKey) {
+        return;
+      }
 
       // Return on mobile
-      if (this.isMobile) return;
+      if (this.isMobile) {
+        return;
+      }
 
       // Allow tab to pass through
-      if (e.keyCode !== 9) e.preventDefault();
+      if (e.keyCode !== KEYCODE_TAB) {
+        e.preventDefault();
+      }
 
       let cycle;
-      if (e.keyCode === 38 || e.keyCode === 40) {
+      if (e.keyCode === KEYCODE_UP || e.keyCode === KEYCODE_DOWN) {
         cycle = this.$refs.rootitems[this.current].querySelectorAll(
           '.menu__aside a,.menu__section a'
         );
@@ -399,7 +426,7 @@ export default {
 
       switch (e.keyCode) {
         // esc
-        case 27:
+        case KEYCODE_ESC:
           this.pointer = 0;
 
           // Set current menu item focus.
@@ -410,8 +437,8 @@ export default {
           // this.dismissBlanket();
           break;
         // enter / space
-        case 13:
-        case 32:
+        case KEYCODE_ENTER:
+        case KEYCODE_SPACE:
           if (e.target.classList.contains('.menu__item')) {
             e.target.querySelector('.menu__link').click();
           } else {
@@ -419,38 +446,41 @@ export default {
           }
           break;
         // left
-        case 37:
+        case KEYCODE_LEFT:
           this.prevRootItem();
           break;
         // right
-        case 39:
+        case KEYCODE_RIGHT:
           this.nextRootItem();
           break;
         // up
-        case 38:
+        case KEYCODE_UP:
           if (cycle.length > 1) {
-            this.pointer = this.pointer > 0 ? this.pointer - 1 : cycle.length - 1;
+            this.pointer = this.pointer >= 1 ? this.pointer - 1 : cycle.length - 1;
             cycle[this.pointer].focus();
           } else {
             // this.prevRootItem();
           }
           break;
         // down
-        case 40:
+        case KEYCODE_DOWN: {
+          const cycleStartIndex = 0;
+
           if (cycle.length > 1) {
-            this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : 0;
+            this.pointer = this.pointer < cycle.length - 1 ? this.pointer + 1 : cycleStartIndex;
             cycle[this.pointer].focus();
           } else {
             // this.nextRootItem();
           }
           break;
+        }
         default:
           break;
       }
     },
     prevRootItem() {
       this.pointer = 0;
-      this.current = this.current > 0 ? this.current - 1 : this.items.length - 1;
+      this.current = this.current >= 1 ? this.current - 1 : this.items.length - 1;
       this.dismissAllDesktopChildren();
       this.$refs.rootitems[this.current].focus();
       if (this.items[this.current].items) {
@@ -460,8 +490,10 @@ export default {
       }
     },
     nextRootItem() {
+      const itemsStartIndex = 0;
+
       this.pointer = 0;
-      this.current = this.current < this.items.length - 1 ? this.current + 1 : 0;
+      this.current = this.current < this.items.length - 1 ? this.current + 1 : itemsStartIndex;
       this.dismissAllDesktopChildren();
       this.$refs.rootitems[this.current].focus();
       if (this.items[this.current].items) {
@@ -469,9 +501,6 @@ export default {
       } else {
         this.dismissBlanket();
       }
-    },
-    isSelected(index) {
-      return index === this.current ? 0 : -1;
     },
   },
 };

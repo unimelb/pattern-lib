@@ -16,7 +16,7 @@
         <time :datetime="date[0]">{{ date[1] }}</time> | <span class="article-wrap__type">{{ type }}</span>
       </div>
       <div
-        v-if="categories && categories.length > 0"
+        v-if="categories && categories.length"
         class="article-wrap__aside-box article-wrap__categories">
         <p class="article-wrap__categories-heading">
           Categories
@@ -66,11 +66,11 @@ export default {
     },
     date: {
       type: Array, // e.g. ['1970-01-01', '1 Jan. 1970']
-      validator: (arr) => (
-        arr.length === 0
-        || (arr.length === 2
-        && arr.every((item) => typeof item === 'string'))
-      ),
+      validator: (arr) => {
+        const maxDates = 2;
+
+        return (!arr.length || (arr.length === maxDates && arr.every((item) => typeof item === 'string')));
+      },
       default: () => [],
     },
     type: {
@@ -83,7 +83,7 @@ export default {
     },
     categories: {
       type: Array,
-      validator: (arr) => arr.length === 0 || arr.every((item) => typeof item === 'string'),
+      validator: (arr) => !arr.length || arr.every((item) => typeof item === 'string'),
       default: () => [],
     },
   },

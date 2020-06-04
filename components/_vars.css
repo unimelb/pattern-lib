@@ -67,6 +67,7 @@
   --col-orange-mid-0: 255, 182, 145;
   --col-grey-mid-1: 105, 109, 115;
   --col-grey-mid-2: 75, 77, 83;
+  --col-grey-mid-3: 39, 39, 39;
   --col-grey-dark: 87, 87, 87;
   --col-brand: var(--col-navy-dark);
   --col-brand-light-2: 218, 227, 237;
@@ -98,6 +99,7 @@
   --vr: 1.5rem;
   --lh: 1.5;
   --lsp: calc(var(--lh) - 1);
+  --grid-offset: -.75rem;
 
   /* line spacing (i.e. leading) */
   --hlsp: calc(var(--lsp) / 2);
@@ -117,8 +119,10 @@
   --ff-lead: 'Noto Serif', 'Georgia', 'Times New Roman', serif;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-normal: 500;
   --fw-light: 300;
   --fw-regular: 400;
+  --fw-normal: 500;
 
   /* Border radius */
   --br: 4px;
@@ -130,6 +134,7 @@
 
   /* Box shadow */
   --col-box-shadow: 0, 0, 0, .12;
+  --col-box-shadow-btn: 0, 0, 0, .25;
 
   /* Font size variable for calculation */
   --fs: 1.15;

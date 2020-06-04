@@ -16,7 +16,7 @@
   }
 
   &__type {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
@@ -27,7 +27,7 @@
 
   &__social-heading {
     margin-bottom: .25rem;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
@@ -35,13 +35,13 @@
   &__categories {
     &-heading {
       margin-bottom: .25rem;
-      font-size: 1.125em;
+      font-size: 1.125rem;
       font-weight: var(--fw-semibold);
     }
 
     a {
       display: block;
-      padding: .25em 0;
+      padding: .25rem 0;
     }
   }
 

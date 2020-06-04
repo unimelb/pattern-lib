@@ -160,6 +160,8 @@ import { slider, slideritem } from 'vue-concise-slider';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ButtonIcon from '../buttons/ButtonIcon.vue';
 
+import { TIMER_1100, TIMER_200 } from '../../constants/timers';
+
 export default {
   components: {
     slider,
@@ -169,6 +171,8 @@ export default {
   },
   filters: {
     truncate(value, limit, ellipsis = '') {
+      const startFromIndex = 0;
+
       if (!value) {
         return '';
       }
@@ -177,14 +181,18 @@ export default {
         return value;
       }
 
-      return `${value.substring(0, limit)}${ellipsis}`;
+      return `${value.substring(startFromIndex, limit)}${ellipsis}`;
     },
   },
   props: {
     stories: {
       type: Array,
       default: () => [],
-      validator: (stories) => stories.length <= 3,
+      validator: (stories) => {
+        const maxStories = 3;
+
+        return stories.length <= maxStories;
+      },
       required: true,
     },
     timing: {
@@ -242,16 +250,18 @@ export default {
     },
   },
   created() {
-    this.displayImage(0);
+    const startFromPositionIndex = 0;
+
+    this.displayImageAtPosition(startFromPositionIndex);
   },
   mounted() {
     this.loadImg();
     setTimeout(() => {
       this.actionProgressBar();
-    }, 1100);
+    }, TIMER_1100);
   },
   methods: {
-    displayImage(index) {
+    displayImageAtPosition(index) {
       this.image[index] = {
         backgroundImage: `url(${this.stories[index].src})`,
         backgroundPosition: this.stories[index].imagePosition ? this.stories[index].imagePosition : 'center',
@@ -260,9 +270,9 @@ export default {
     loadImg() {
       setTimeout(() => {
         for (let i = 1; i < this.stories.length; i += 1) {
-          this.displayImage(i);
+          this.displayImageAtPosition(i);
         }
-      }, 1100);
+      }, TIMER_1100);
     },
     slide(slide) {
       if (this.stories[slide.currentPage]) {
@@ -284,13 +294,16 @@ export default {
       this.actionProgressBar();
     },
     frame() {
-      this.progressBarWidth = Math.round((this.countTime / this.autoplay) * 100) + 5;
+      const initialWidth = 5;
+      const percent = 100;
+
+      this.progressBarWidth = Math.round((this.countTime / this.autoplay) * percent) + initialWidth;
       this.countTime += 200;
     },
     actionProgressBar() {
       clearInterval(this.interval);
       this.interval = null;
-      this.interval = setInterval(() => this.frame(), 200);
+      this.interval = setInterval(() => this.frame(), TIMER_200);
     },
     clearFrame() {
       if (!this.paused) {
@@ -311,7 +324,7 @@ export default {
       this.countTime = 0;
     },
     moveToStory(storyIndex) {
-      this.displayImage(storyIndex);
+      this.displayImageAtPosition(storyIndex);
       this.selectedItem = this.stories[storyIndex];
       this.selectedIndex = storyIndex;
       this.$refs.slider.$emit('slideTo', storyIndex);

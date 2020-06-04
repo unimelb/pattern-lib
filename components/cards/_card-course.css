@@ -1,0 +1,90 @@
+.card-course {
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+  flex-direction: column;
+  padding: .5rem 1rem .5rem 1.3125rem;
+  text-decoration: none;
+  position: relative;
+  background-color: rgb(var(--col-background-primary-white));
+  color: rgb(var(--col-brand));
+  border: 1px solid rgb(var(--col-navy-mid-1));
+
+  &::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: .389rem;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(var(--col-black-light));
+  }
+
+  &--bachelor::before,
+  &--degree::before {
+    background-color: rgb(var(--col-blue-mid-2));
+  }
+  &--diploma::before {
+    background-color: rgb(var(--col-blue-mid-1));
+  }
+  &--certificate::before {
+    background-color: rgb(var(--col-teal-mid-1));
+  }
+  &--coursework::before {
+    background-color: rgb(var(--col-emerald-mid-1));
+  }
+  &--research::before {
+    background-color: rgb(var(--col-green-mid-2));
+  }
+  &--major::before {
+    background-color: rgb(var(--col-purple-mid-2));
+  }
+  &--minor::before {
+    background-color: rgb(var(--col-purple-mid-1));
+  }
+  &--phd::before {
+    background-color: rgb(var(--col-green-dark));
+  }
+  &--specialisation::before {
+    background-color: rgb(var(--col-emerald-mid-2));
+  }
+  &--interest::before {
+    background-color: rgb(var(--col-purple-dark));
+  }
+  &--pathway::before {
+    background-color: rgb(var(--col-teal-dark));
+  }
+  &--short-course::before {
+    background-color: rgb(var(--col-orange-mid-2));
+  }
+  &--honours::before {
+    background-color: rgb(var(--col-green-mid-1));
+  }
+
+  &:visited,
+  &:active {
+    color: rgb(var(--col-brand));
+  }
+
+  &__name {
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  &:hover,
+  &:focus {
+    .card-course__name {
+      text-decoration: underline;
+    }
+  }
+
+  &__type {
+    font-weight: var(--fw-normal);
+    font-size: .75rem;
+    line-height: 1.25;
+    letter-spacing: .023rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}

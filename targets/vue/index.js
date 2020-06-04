@@ -390,3 +390,23 @@ export {
   default as ErrorBox,
 }
   from 'components/error-box/ErrorBox.vue';
+export {
+  default as CardCourse,
+}
+  from 'components/cards/CardCourse.vue';
+export {
+  default as CardCourseList,
+}
+  from 'components/cards/CardCourseList.vue';
+export {
+  default as ButtonTwoIcons,
+}
+  from 'components/buttons/ButtonTwoIcons.vue';
+export {
+  default as CardCampaign,
+}
+  from 'components/cards/CardCampaign.vue';
+export {
+  default as PageCampaignCards,
+}
+  from 'components/campaign/PageCampaignCards.vue';

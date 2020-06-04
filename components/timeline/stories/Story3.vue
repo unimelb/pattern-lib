@@ -29,7 +29,7 @@
     </dt>
     <dd class="timeline__body">
       <figure class="figure figure--fill">
-        <img src="https://placeimg.com/640/480/nature">
+        <img src="https://i.picsum.photos/id/1040/640/480.jpg">
       </figure>
       <p>
         The Austrian Government uses legislation to pressure the Rothschilds into "donating" a large number of works to Austrian museums, including the Prayer Book

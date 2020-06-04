@@ -3,7 +3,7 @@
   max-width: var(--w-mid);
   margin: 0 auto;
   padding-bottom: 0;
-  font-size: 1em;
+  font-size: 1rem;
 
   &::before,
   &::after {
@@ -17,7 +17,7 @@
 
   &__header {
     width: 28%;
-    margin: -4px 0 0;
+    margin: -.2223rem 0 0;
     padding-top: .125rem;
     padding-right: 1.25rem;
     padding-bottom: 1.875rem;
@@ -30,7 +30,7 @@
   &__body {
     position: relative;
     width: 68%;
-    margin: -4px 0 0;
+    margin: -.2223rem 0 0;
     padding-bottom: 1.875rem;
     padding-left: 1.25rem;
     float: left;
@@ -45,10 +45,10 @@
       content: '';
       display: block;
       position: absolute;
-      top: 6px; /* match horizontal dimension */
-      left: -6px; /* half of width, rounded up */
-      width: 11px;
-      height: 11px; /* odd number for dot to be perfectly centred on the 1px line */
+      top: .3333rem; /* match horizontal dimension */
+      left: -.3333rem; /* half of width, rounded up */
+      width: .6112rem;
+      height: .6112rem; /* odd number for dot to be perfectly centred on the 1px line */
       transform: rotate(45deg);
       background-color: rgb(var(--col-brand-light-2));
     }

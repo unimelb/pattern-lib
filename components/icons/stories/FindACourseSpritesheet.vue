@@ -88,6 +88,7 @@
 
 <script>
 import SvgIcon from '../SvgIcon.vue';
+
 export default {
   components: {
     SvgIcon,

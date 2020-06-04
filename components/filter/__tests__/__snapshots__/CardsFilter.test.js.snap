@@ -43,6 +43,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="school"
             >
@@ -75,6 +76,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="disciplines"
             >
@@ -107,6 +109,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="styled-select"
           >
             <select
+              aria-label="choose an option"
               class=""
               id="performances"
             >
@@ -138,7 +141,9 @@ exports[`CardsFilter should match snapshot 1`] = `
           aria-label="search"
           class="filter__button--icon"
           focusable="false"
+          height="0"
           role="img"
+          width="0"
         >
           <use
             xlink:href="#icon-search"
@@ -215,7 +220,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                 <svg
                   aria-label="calendar"
                   focusable="false"
+                  height="0"
                   role="img"
+                  width="0"
                 >
                   <use
                     xlink:href="#icon-calendar"
@@ -329,7 +336,9 @@ exports[`CardsFilter should match snapshot 1`] = `
                 <svg
                   aria-label="calendar"
                   focusable="false"
+                  height="0"
                   role="img"
+                  width="0"
                 >
                   <use
                     xlink:href="#icon-calendar"

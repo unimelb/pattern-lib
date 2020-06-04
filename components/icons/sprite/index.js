@@ -30,3 +30,6 @@ import './vimeo.svg';
 import './youtube.svg';
 import './info.svg';
 import './pause.svg';
+import './arrow-right.svg';
+import './globe-asia.svg';
+import './heart.svg';

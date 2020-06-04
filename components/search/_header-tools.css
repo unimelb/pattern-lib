@@ -1,9 +1,9 @@
 .header-tools {
   position: absolute;
   z-index: calc(var(--z-navigation) + 10);
-  top: .4em;
+  top: .4rem;
   right: 0;
-  margin: .1em 1em 1em;
+  margin: .1rem 1rem 1rem;
   background-color: transparent;
 
   &__search,
@@ -15,7 +15,7 @@
   }
 
   @media (--bp-tablet) {
-    margin-top: 1em;
+    margin-top: 1rem;
   }
 }
 
@@ -122,7 +122,7 @@
       width: 1.5rem;
       height: 1.5rem;
       margin: auto;
-      padding-bottom: .4em;
+      padding-bottom: .24rem;
     }
   }
 

@@ -14,7 +14,7 @@
     background-color: rgb(var(--col-blue-light));
     border-radius: .25rem;
     font-size: .8125rem;
-    line-height: 1.0625rem;
+    line-height: 1.3077;
     color: rgb(var(--col-black-dark)) !important;
     letter-spacing: 0;
     font-weight: var(--fw-semibold);

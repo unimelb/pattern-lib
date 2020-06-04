@@ -1,7 +1,7 @@
 .title {
   margin-bottom: calc(var(--vr) / 2);
   font-size: 1.75rem;
-  line-height: 2.0125rem;
+  line-height: .7746;
 
   &--xxl {
     margin-bottom: .75rem;

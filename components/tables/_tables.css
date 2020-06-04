@@ -52,7 +52,7 @@
 
   &--tight td,
   &--tight th {
-    padding: .8em;
+    padding: .8rem;
   }
 
   &--loose td,

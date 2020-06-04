@@ -46,6 +46,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import Dropdown from '../dropdown/Dropdown.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
+import { WIDTH_481 } from '../../helpers/viewports';
 
 export default {
   components: { FocusWrapper, Dropdown, SvgIcon },
@@ -57,7 +58,7 @@ export default {
     headingLevel: {
       type: String,
       required: true,
-      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5'].indexOf(value) > -1,
+      validator: (value) => ['h1', 'h2', 'h3', 'h4', 'h5'].includes(value),
     },
     color: {
       type: String,
@@ -135,9 +136,9 @@ export default {
       const inPageNavOffset = this.$refs.inPageNavigation.getBoundingClientRect();
       const elementToChange = this.sections[0];
 
-      if (this.sections.length >= 1) {
+      if (this.sections.length) {
         return (
-          document.getElementById(elementToChange.id).getBoundingClientRect()
+          document.querySelector(`#${elementToChange.id}`).getBoundingClientRect()
             .top < Math.abs(inPageNavOffset.top)
         );
       }
@@ -154,7 +155,7 @@ export default {
     },
     scrollOnSelect(e) {
       const scrollToID = e.target.value;
-      const scrollToElem = document.getElementById(scrollToID);
+      const scrollToElem = document.querySelector(`#${scrollToID}`);
 
       this.scrollTo(scrollToElem);
     },
@@ -168,11 +169,11 @@ export default {
       let selectedItem = false;
 
       this.sections.forEach((item) => {
-        const elem = document.getElementById(item.id);
-        const offset = elem.getBoundingClientRect();
-        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height + 1; // Add one pixel so it triggers the change
+        const elem = document.querySelector(`#${item.id}`);
+        const offset = parseInt(elem.getBoundingClientRect().top, 10);
+        const scrollOffset = this.$refs.dropdown.getBoundingClientRect().height;
 
-        if (offset.top < scrollOffset) {
+        if (offset <= scrollOffset) {
           selectedItem = item;
         }
       });
@@ -181,7 +182,7 @@ export default {
     },
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
-      if (this.windowWidth < 481) {
+      if (this.windowWidth < WIDTH_481) {
         this.size = 'small';
       } else {
         this.size = 'medium';

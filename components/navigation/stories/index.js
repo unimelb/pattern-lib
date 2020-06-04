@@ -9,6 +9,6 @@ import InPageNavigationDefault from './InPageNavigationDefault.vue';
 
 /* ##Import story component here */
 
-storiesOf(' Navigation', module)
+storiesOf('Navigation', module)
   .add('In page Navigation', createStory(InPageNavigationDefault));
 /* ##Story goes here */

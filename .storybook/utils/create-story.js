@@ -36,7 +36,9 @@ function generateReadme(Story, opts) {
   const readmeArr = [];
 
   // Start with custom documentation, if provided
-  if (opts.custom) readmeArr.push(opts.custom);
+  if (opts.custom) {
+    readmeArr.push(opts.custom);
+  }
 
   // Mount story and retrieve HTML source
   const vm = mount(Story);
