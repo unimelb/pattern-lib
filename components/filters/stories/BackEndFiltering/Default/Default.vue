@@ -97,10 +97,10 @@ import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
 import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
-import getSelectedNames from '../getSelectedNames.js';
-import getOptionsQuantity from '../getOptionsQuantity.js';
-import formatErrors from '../formatErrors.js';
-import getOptions from './getOptions.js';
+import getSelectedNames from '../getSelectedNames';
+import getOptionsQuantity from '../getOptionsQuantity';
+import formatErrors from '../formatErrors';
+import getOptions from './getOptions';
 import addQuantityToOptions from '../addQuantityToOptions';
 
 export default {
@@ -164,11 +164,12 @@ export default {
   },
   methods: {
     getFiltersApplied(optionsArray) {
+      const defaultValue = 0;
       return optionsArray.reduce(
         (appliedFiltersQuantity, options) => (this.isFilterApplied(options)
           ? appliedFiltersQuantity + 1
           : appliedFiltersQuantity),
-        0
+        defaultValue
       );
     },
     isFilterApplied(options) {

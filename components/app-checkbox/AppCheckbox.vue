@@ -43,14 +43,14 @@ export default {
   },
   computed: {
     shouldBeChecked() {
-      if (this.modelValue instanceof Array) {
+      if (Array.isArray(this.modelValue)) {
         return this.modelValue.includes(this.name);
       }
       return this.modelValue;
     },
   },
   created() {
-    if (this.modelValue instanceof Array && !this.name) {
+    if (Array.isArray(this.modelValue) && !this.name) {
       throw new Error('AppCheckbox: name prop is required when array of names is used as v-model');
     }
   },
@@ -58,7 +58,7 @@ export default {
     updateInput(event) {
       const isChecked = !event.isChecked;
 
-      if (this.modelValue instanceof Array) {
+      if (Array.isArray(this.modelValue)) {
         const newValue = [...this.modelValue];
 
         if (isChecked) {

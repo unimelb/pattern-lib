@@ -82,7 +82,7 @@ import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import uniqComponentIdMixin from '../../../../utils/uniqComponentIdMixin';
 import NestedCheckbox from './components/NestedCheckbox/index.vue';
 import optionsValidator from './nestedCheckboxOptionsValidator';
-import groupOptionLabelsByIsChecked from './groupOptionLabelsByIsChecked.js';
+import groupOptionLabelsByIsChecked from './groupOptionLabelsByIsChecked';
 
 export default {
   components: { NestedCheckbox, SvgIcon, ButtonIcon },
@@ -202,8 +202,13 @@ export default {
       const bodyTopLine = selectRect.top - bodyHeight;
       const bodyBottomLine = selectRect.bottom + bodyHeight;
 
-      const partiallyInvisibleOnBottom = bodyBottomLine > window.innerHeight;
-      const partiallyInvisibleOnTop = bodyTopLine < 0;
+      const limits = {
+        top: 0,
+        bottom: window.innerHeight,
+      };
+
+      const partiallyInvisibleOnBottom = bodyBottomLine > limits.bottom;
+      const partiallyInvisibleOnTop = bodyTopLine < limits.top;
 
       this.isOpenUp = partiallyInvisibleOnBottom && !partiallyInvisibleOnTop;
     },

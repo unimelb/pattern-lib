@@ -1,3 +1,5 @@
+import delay from '../delay';
+
 const mockResults = [
   {
     id: '0',
@@ -307,11 +309,7 @@ function pick(collection, [firstKey, ...restKeys]) {
 }
 
 export default async (selectedNames, throwError = false) => {
-  await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 1000);
-  });
+  await delay();
 
   if (throwError) {
     throw new Error('Something went wrong');

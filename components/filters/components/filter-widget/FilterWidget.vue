@@ -114,9 +114,10 @@ export default {
       console.log('onUpdate'); // TODO discuss
     },
     getFiltersApplied(optionsArray) {
+      const initialFiltersApplied = 0;
       return optionsArray.reduce(
         (appliedFiltersQuantity, options) => (this.isFilterApplied(options) ? appliedFiltersQuantity + 1 : appliedFiltersQuantity),
-        0
+        initialFiltersApplied
       );
     },
     isFilterApplied(options) {

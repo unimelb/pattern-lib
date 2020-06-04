@@ -9,7 +9,7 @@
 <script>
 import BaseStoryWrapper from '../BaseStoryWrapper.vue';
 import MajorsAndSpecialisations from './MajorsAndSpecialisations.vue';
-import fetchDataCreator from './mockResults.js';
+import fetchDataCreator from './mockResults';
 import majorsAndSpecialisations from './majorsAndSpecialisations.md';
 
 export default {

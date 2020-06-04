@@ -80,7 +80,9 @@ export default {
       });
     },
     updateParentOptions(options, parentNames) {
-      const parentNamesWithoutLastOption = parentNames.slice(0, parentNames.length - 1);
+      const sliceStart = 0;
+      const sliceEnd = parentNames.length - 1;
+      const parentNamesWithoutLastOption = parentNames.slice(sliceStart, sliceEnd);
 
       if (parentNamesWithoutLastOption.length) {
         const foundParent = this.findOption(options, parentNamesWithoutLastOption);

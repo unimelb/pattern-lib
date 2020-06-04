@@ -9,7 +9,7 @@
 <script>
 import BaseStoryWrapper from '../BaseStoryWrapper.vue';
 import Default from './Default.vue';
-import fetchDataCreator from './mockResults.js';
+import fetchDataCreator from './mockResults';
 import defaultReadme from './default.md';
 
 export default {

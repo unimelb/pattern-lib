@@ -32,12 +32,12 @@ export default {
   props: {
     items: {
       type: Number,
-      default: () => 0,
+      default: 0,
       required: true,
     },
     filters: {
       type: Number,
-      default: () => 0,
+      default: 0,
       required: true,
     },
     secondaryMessage: {

@@ -1,3 +1,5 @@
+import delay from '../delay';
+
 const mockResults = [
   {
     id: '0',
@@ -144,12 +146,4 @@ function filterByFaculty(allResults, faculties) {
   const selectedFacultyLabels = faculties.map(([, faculty]) => facultyLabels[faculty]);
 
   return allResults.filter((result) => selectedFacultyLabels.includes(result.faculty));
-}
-
-function delay() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 1000);
-  });
 }

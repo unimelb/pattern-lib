@@ -3,13 +3,13 @@
     <h4
       v-if="items > -1"
       class="filtered-results__title">
-      <span
-        v-html="getMessage()" />
+      <span>
+        {{ items }} results found with <strong>{{ filters }} {{ filterPrefix }}</strong> applied.
+      </span>
       <span
         v-if="secondaryMessage"
         class="filtered-results__title-notice text-italic text-bold"
-        @click="onCallback"
-        v-html="secondaryMessage" />
+        @click="onCallback">{{ secondaryMessage }}</span>
     </h4>
   </div>
 </template>
@@ -19,12 +19,12 @@ export default {
   props: {
     items: {
       type: Number,
-      default: () => 0,
+      default: 0,
       required: true,
     },
     filters: {
       type: Number,
-      default: () => 0,
+      default: 0,
       required: true,
     },
     secondaryMessage: {
@@ -38,17 +38,18 @@ export default {
       required: false,
     },
   },
+  computed: {
+    filterPrefix() {
+      const { filters } = this;
+
+      return filters === 1 ? 'filter' : 'filters';
+    },
+  },
   methods: {
     onCallback() {
       if (typeof this.callback === 'function') {
         this.callback();
       }
-    },
-    getLabel() {
-      return this.filters === 0 || this.filters > 1 ? 's' : '';
-    },
-    getMessage() {
-      return `${this.items} results found with <strong>${this.filters} filter${this.getLabel()}</strong> applied.`;
     },
   },
 };

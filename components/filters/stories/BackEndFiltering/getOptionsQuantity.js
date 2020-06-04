@@ -1,3 +1,4 @@
+const initialOptionsQuantity = 0;
 const getOptionsQuantity = (options) => options.reduce(
   (quantity, option) => {
     if (option.options && option.options.length) {
@@ -8,7 +9,7 @@ const getOptionsQuantity = (options) => options.reduce(
 
     return quantity + 1;
   },
-  0
+  initialOptionsQuantity
 );
 
 export default getOptionsQuantity;

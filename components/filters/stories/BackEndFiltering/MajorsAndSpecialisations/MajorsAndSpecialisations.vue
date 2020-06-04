@@ -68,11 +68,11 @@ import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
 import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
-import getSelectedNames from '../getSelectedNames.js';
-import getOptionsQuantity from '../getOptionsQuantity.js';
-import addQuantityToOptions from '../addQuantityToOptions.js';
-import formatErrors from '../formatErrors.js';
-import getOptions from './getOptions.js';
+import getSelectedNames from '../getSelectedNames';
+import getOptionsQuantity from '../getOptionsQuantity';
+import addQuantityToOptions from '../addQuantityToOptions';
+import formatErrors from '../formatErrors';
+import getOptions from './getOptions';
 
 const defaultLabels = {
   undergrad: 'undergraduate study',
@@ -154,7 +154,8 @@ export default {
       const selectedQuantity = getSelectedNames(this.filterDropdownOptions).length;
       const allQuantity = getOptionsQuantity(this.filterDropdownOptions);
 
-      return allQuantity === selectedQuantity ? 0 : selectedQuantity;
+      const filtersNotAppliedQuantity = 0;
+      return allQuantity === selectedQuantity ? filtersNotAppliedQuantity : selectedQuantity;
     },
   },
   mounted() {

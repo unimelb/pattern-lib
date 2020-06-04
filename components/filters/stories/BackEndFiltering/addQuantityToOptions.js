@@ -1,7 +1,8 @@
 const addQuantityToOptions = (options, quantity) => options.map((option) => {
   const { name, label } = option;
 
-  const currentOptionQuantityConfig = quantity[name] || 0;
+  const initialQuantity = 0;
+  const currentOptionQuantityConfig = quantity[name] || initialQuantity;
 
   const currentOptionQuantity = typeof currentOptionQuantityConfig === 'number'
     ? currentOptionQuantityConfig
