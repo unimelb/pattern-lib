@@ -16,7 +16,7 @@
 
     <div slot="side">
       <FilterBox
-        :filters="filterConfig"
+        :filters="updatedFilterConfig"
         @change="onChange"
         @clear="onClear"
         @update="onUpdate" />
@@ -62,9 +62,9 @@ export default {
   },
   computed: {
     filteredResults() {
-      const { data, filterConfig, filterPredicate } = this;
+      const { data, updatedFilterConfig, filterPredicate } = this;
 
-      const selectedNames = filterConfig.reduce((accumulator, { name, options }) => {
+      const selectedNames = updatedFilterConfig.reduce((accumulator, { name, options }) => {
         accumulator[name] = getSelectedNames(options);
         return accumulator;
       }, {});
@@ -89,27 +89,37 @@ export default {
     console.clear(); // TODO remove this when the component is finished
   },
   methods: {
-    getFilterConfig(name) {
-      return this.updatedFilterConfig[this.filterIndexByName[name]];
-    },
     onChange({ name, changedOptions }) {
-      const filterConfigToUpdate = this.getFilterConfig(name);
-      console.log('filterConfigToUpdate: ', filterConfigToUpdate);
-      filterConfigToUpdate.options = changedOptions;
+      const filterIndex = this.filterIndexByName[name];
+      const filterConfigToUpdate = this.updatedFilterConfig[filterIndex];
+
+      this.$set(this.updatedFilterConfig, filterIndex, {
+        ...filterConfigToUpdate,
+        options: changedOptions,
+      });
     },
     onClear(nameOrNull) {
-      /* if (nameOrNull) {
-        this.updatedFilterConfig = {
-          ...this.updatedFilterConfig,
-          [nameOrNull]: this.updateAllOptions(this.filterConfig[nameOrNull], true),
-        };
+      if (nameOrNull) {
+        const filterIndex = this.filterIndexByName[nameOrNull];
+        const filterConfigToUpdate = this.updatedFilterConfig[filterIndex];
+
+        this.$set(this.updatedFilterConfig, filterIndex, {
+          ...filterConfigToUpdate,
+          options: this.getOptions(nameOrNull, true),
+        });
       } else {
-
-      } */
-
-      console.log('onClear', nameOrNull);
+        this.updatedFilterConfig = this.updatedFilterConfig.map((filter) => ({
+          ...filter,
+          options: this.getOptions(filter.name, true),
+        }));
+      }
     },
-    /* updateAllOptions(options) {}, */
+    getOptions(name/* , isChecked = false */) {
+      const filterIndex = this.filterIndexByName[name];
+      const { options } = this.updatedFilterConfig[filterIndex];
+
+      return options; // TODO
+    },
     onUpdate() {
       console.log('onUpdate'); // TODO discuss
     },
