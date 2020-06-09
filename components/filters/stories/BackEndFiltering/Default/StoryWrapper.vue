@@ -8,8 +8,8 @@
 
 <script>
 import BaseStoryWrapper from '../BaseStoryWrapper.vue';
+import fetchDataCreator from './helpers/mockResults';
 import Default from './Default.vue';
-import fetchDataCreator from './mockResults';
 import defaultReadme from './default.md';
 
 export default {

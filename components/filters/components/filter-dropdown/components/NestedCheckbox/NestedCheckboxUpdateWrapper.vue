@@ -8,8 +8,8 @@
 
 <script>
 import cloneDeep from 'lodash.clonedeep';
+import updateWrapperOptionsValidator from './helpers/updateWrapperOptionsValidator';
 import NestedCheckboxView from './NestedCheckboxView.vue';
-import updateWrapperOptionsValidator from './updateWrapperOptionsValidator';
 
 export default {
   name: 'NestedCheckboxUpdateWrapper',

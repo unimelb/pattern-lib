@@ -1,4 +1,4 @@
-import getOptionsCreator from '../getOptionsCreator';
+import getOptionsCreator from '../../helpers/getOptionsCreator';
 
 const getDefaultOptions = (isChecked = false) => [
   {

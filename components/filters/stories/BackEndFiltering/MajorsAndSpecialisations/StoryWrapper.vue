@@ -8,8 +8,8 @@
 
 <script>
 import BaseStoryWrapper from '../BaseStoryWrapper.vue';
+import fetchDataCreator from './helpers/mockResults';
 import MajorsAndSpecialisations from './MajorsAndSpecialisations.vue';
-import fetchDataCreator from './mockResults';
 import majorsAndSpecialisations from './majorsAndSpecialisations.md';
 
 export default {

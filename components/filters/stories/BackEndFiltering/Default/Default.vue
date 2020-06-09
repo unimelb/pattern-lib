@@ -97,11 +97,11 @@ import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
 import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
-import getSelectedNames from '../getSelectedNames';
-import getOptionsQuantity from '../getOptionsQuantity';
-import formatErrors from '../formatErrors';
-import getOptions from './getOptions';
-import addQuantityToOptions from '../addQuantityToOptions';
+import getSelectedNames from '../../../helpers/getSelectedNames';
+import getOptionsQuantity from '../../../helpers/getOptionsQuantity';
+import formatErrors from '../helpers/formatErrors';
+import addQuantityToOptions from '../helpers/addQuantityToOptions';
+import getOptions from './helpers/getOptions';
 
 export default {
   name: 'Default',

@@ -28,10 +28,11 @@
 import cloneDeep from 'lodash.clonedeep';
 import SectionTwoCol from 'components/section/SectionTwoCol.vue';
 import ListItem from 'components/listing/ListItem.vue';
+import getSelectedNames from '../../helpers/getSelectedNames';
 import FilterBox from '../filter-box/FilterBox.vue';
 import FilteredResults from '../filtered-results/FilteredResults.vue';
-import getSelectedNames from '../../stories/BackEndFiltering/getSelectedNames';
-import getOptionsQuantity from '../../stories/BackEndFiltering/getOptionsQuantity';
+import getUpdatedOptions from './helpers/getUpdatedOptions';
+import getFiltersApplied from './helpers/getFiltersApplied';
 
 export default {
   name: 'FilterWidget',
@@ -42,10 +43,6 @@ export default {
     FilteredResults,
   },
   props: {
-    data: {
-      type: Array,
-      required: true,
-    },
     filterConfig: {
       type: Array,
       required: true,
@@ -61,50 +58,41 @@ export default {
     };
   },
   computed: {
-    filteredResults() {
-      const { data, updatedFilterConfig, filterPredicate } = this;
-
-      const selectedNames = updatedFilterConfig.reduce((accumulator, { name, options }) => {
-        accumulator[name] = getSelectedNames(options);
-        return accumulator;
-      }, {});
-
-      return filterPredicate(data, selectedNames);
-    },
     filterIndexByName() {
-      return this.filterConfig.reduce((accumulator, { name }, filterIndex) => {
+      return this.updatedFilterConfig.reduce((accumulator, { name }, filterIndex) => {
         accumulator[name] = filterIndex;
 
         return accumulator;
       }, {});
     },
     options() {
-      return this.filterConfig.map(({ options }) => options);
+      return this.updatedFilterConfig.map(({ options }) => options);
+    },
+    selectedNames() {
+      return this.updatedFilterConfig.reduce((accumulator, { name, options }) => {
+        accumulator[name] = getSelectedNames(options);
+        return accumulator;
+      }, {});
+    },
+    filteredResults() {
+      const { selectedNames, filterPredicate } = this;
+
+      return filterPredicate(selectedNames);
     },
     filtersApplied() {
-      return this.getFiltersApplied(this.options);
+      return getFiltersApplied(this.options);
     },
   },
-  created() {
-    console.clear(); // TODO remove this when the component is finished
-  },
   methods: {
+    // eventHandlers
     onChange({ name, changedOptions }) {
-      const filterIndex = this.filterIndexByName[name];
-      const filterConfigToUpdate = this.updatedFilterConfig[filterIndex];
-
-      this.$set(this.updatedFilterConfig, filterIndex, {
-        ...filterConfigToUpdate,
+      this.updateConfig(name, {
         options: changedOptions,
       });
     },
     onClear(nameOrNull) {
       if (nameOrNull) {
-        const filterIndex = this.filterIndexByName[nameOrNull];
-        const filterConfigToUpdate = this.updatedFilterConfig[filterIndex];
-
-        this.$set(this.updatedFilterConfig, filterIndex, {
-          ...filterConfigToUpdate,
+        this.updateConfig(nameOrNull, {
           options: this.getOptions(nameOrNull, true),
         });
       } else {
@@ -114,27 +102,31 @@ export default {
         }));
       }
     },
-    getOptions(name/* , isChecked = false */) {
-      const filterIndex = this.filterIndexByName[name];
-      const { options } = this.updatedFilterConfig[filterIndex];
-
-      return options; // TODO
-    },
     onUpdate() {
-      console.log('onUpdate'); // TODO discuss
+      this.$emit('update', this.updatedFilterConfig);
     },
-    getFiltersApplied(optionsArray) {
-      const initialFiltersApplied = 0;
-      return optionsArray.reduce(
-        (appliedFiltersQuantity, options) => (this.isFilterApplied(options) ? appliedFiltersQuantity + 1 : appliedFiltersQuantity),
-        initialFiltersApplied
-      );
-    },
-    isFilterApplied(options) {
-      const selectedOptionsLength = getSelectedNames(options).length;
-      const optionsLength = getOptionsQuantity(options);
+    // helpers
+    updateConfig(name, partialFilterConfig) {
+      const { config, index } = this.getConfigAndIndex(name);
 
-      return optionsLength !== selectedOptionsLength;
+      this.$set(this.updatedFilterConfig, index, {
+        ...config,
+        ...partialFilterConfig,
+      });
+    },
+    getOptions(name, isChecked = false) {
+      const { config: { options } } = this.getConfigAndIndex(name);
+
+      return getUpdatedOptions(options, isChecked);
+    },
+    getConfigAndIndex(name) {
+      const index = this.filterIndexByName[name];
+      const config = this.updatedFilterConfig[index];
+
+      return {
+        config,
+        index,
+      };
     },
   },
 };

@@ -1,7 +1,6 @@
 <template>
   <FilterWidget
     v-slot="{ item }"
-    :data="results"
     :filter-config="filterConfig"
     :filter-predicate="filterPredicate">
     <GenericCard
@@ -81,8 +80,9 @@ export default {
     };
   },
   methods: {
-    filterPredicate(data, { locations, faculties }) {
-      const resultsFilteredByLocation = filterByLocationAndCampus(data, locations);
+    filterPredicate({ locations, faculties }) {
+      const { results } = this;
+      const resultsFilteredByLocation = filterByLocationAndCampus(results, locations);
       return filterByFaculty(resultsFilteredByLocation, faculties);
     },
   },
