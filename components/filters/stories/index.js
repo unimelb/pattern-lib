@@ -9,6 +9,7 @@ import FilterDropdownDefault from '../components/filter-dropdown/stories/FilterD
 import FilteredResultsNoResults from '../components/filtered-results/stories/FilteredResultsNoResults.vue';
 import FilteredResultsWithResults from '../components/filtered-results/stories/FilteredResultsWithResults.vue';
 import FilterWidgetDefault from '../components/filter-widget/stories/FilterWidgetDefault.vue';
+import FilterWidgetWithSecondaryMessage from '../components/filter-widget/stories/FilterWidgetWithSecondaryMessage.vue';
 // BE filtering stories
 import MajorsAndSpecialisations from './BackEndFiltering/MajorsAndSpecialisations/StoryWrapper.vue';
 import Default from './BackEndFiltering/Default/StoryWrapper.vue';
@@ -26,7 +27,8 @@ storiesOf('filters/components/Filtered Results', module)
   .add('With results', createStory(FilteredResultsWithResults));
 
 storiesOf('filters/components/Filter Widget', module)
-  .add('Default', createStory(FilterWidgetDefault));
+  .add('Default', createStory(FilterWidgetDefault))
+  .add('With secondary message', createStory(FilterWidgetWithSecondaryMessage));
 
 storiesOf('filters/Usage example/BE side filtering', module)
   .add('Default', createStory(Default))

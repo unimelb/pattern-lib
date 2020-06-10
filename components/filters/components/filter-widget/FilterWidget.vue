@@ -3,7 +3,9 @@
     <div slot="main">
       <FilteredResults
         :items="filteredResults.length"
-        :filters="filtersApplied">
+        :filters="filtersApplied"
+        :secondary-message="secondaryMessage"
+        :callback="secondaryMessageCallback">
         <div class="grid grid--center grid--2col">
           <ListItem
             v-for="item in filteredResults"
@@ -51,6 +53,10 @@ export default {
       type: Function,
       required: true,
     },
+    secondaryMessage: {
+      type: String,
+      default: undefined,
+    },
   },
   data() {
     return {
@@ -83,7 +89,24 @@ export default {
       return getFiltersApplied(this.options);
     },
   },
+  watch: {
+    filterConfig(value) {
+      this.updatedFilterConfig = cloneDeep(value);
+    },
+  },
   methods: {
+    // public
+    clearFilter(name) {
+      this.updateConfig(name, {
+        options: this.getOptions(name, true),
+      });
+    },
+    clearFilters() {
+      this.updatedFilterConfig = this.updatedFilterConfig.map((filter) => ({
+        ...filter,
+        options: this.getOptions(filter.name, true),
+      }));
+    },
     // eventHandlers
     onChange({ name, changedOptions }) {
       this.updateConfig(name, {
@@ -92,18 +115,16 @@ export default {
     },
     onClear(nameOrNull) {
       if (nameOrNull) {
-        this.updateConfig(nameOrNull, {
-          options: this.getOptions(nameOrNull, true),
-        });
+        this.clearFilter(nameOrNull);
       } else {
-        this.updatedFilterConfig = this.updatedFilterConfig.map((filter) => ({
-          ...filter,
-          options: this.getOptions(filter.name, true),
-        }));
+        this.clearFilters();
       }
     },
     onUpdate() {
       this.$emit('update', this.updatedFilterConfig);
+    },
+    secondaryMessageCallback() {
+      this.$emit('secondaryMessageClicked');
     },
     // helpers
     updateConfig(name, partialFilterConfig) {
