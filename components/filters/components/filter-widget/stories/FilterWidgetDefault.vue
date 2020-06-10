@@ -33,21 +33,13 @@
 
 <script>
 import GenericCard from 'components/cards/GenericCard.vue';
+import {
+  filterByFaculty,
+  filterByLocationAndCampus,
+} from '../../../helpers/locationsAndFacultiesFilterHelpers';
+import mockResults from '../../../mockData/faculties.json';
 import FilterWidget from '../FilterWidget.vue';
-import mockResults from './mockResults.json';
 import options from './options.json';
-
-const facultyLabels = {
-  facultyOfHistory: 'Faculty of History',
-  facultyOfSociology: 'Faculty of Sociology',
-  facultyOfArt: 'Faculty of Art',
-};
-
-const cityLabels = {
-  sydney: 'Sydney',
-  melbourne: 'Melbourne',
-  goldCoast: 'Gold coast',
-};
 
 export default {
   name: 'FilterWidgetDefault',
@@ -87,35 +79,4 @@ export default {
     },
   },
 };
-
-// TODO remove duplications
-function filterByLocationAndCampus(allResults, locations) {
-  const resultsWithDuplicates = [];
-  locations.forEach(([, city, campus]) => {
-    const cityLabel = cityLabels[city];
-
-    const foundResults = mockResults.filter((result) => {
-      const foundCity = result.city.find((resultCity) => resultCity.name === cityLabel);
-
-      return foundCity && foundCity.campus.includes(campus);
-    });
-
-    resultsWithDuplicates.push(...foundResults);
-  });
-
-  // remove duplicates and return
-  return resultsWithDuplicates.reduce(
-    (uniqueResults, resultToBeAdded) => (uniqueResults.some((uniqueResult) => uniqueResult.id === resultToBeAdded.id)
-      ? uniqueResults
-      : [...uniqueResults, resultToBeAdded]),
-    []
-  );
-}
-
-// TODO remove duplications
-function filterByFaculty(allResults, faculties) {
-  const selectedFacultyLabels = faculties.map(([, faculty]) => facultyLabels[faculty]);
-
-  return allResults.filter((result) => selectedFacultyLabels.includes(result.faculty));
-}
 </script>

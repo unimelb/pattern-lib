@@ -28,7 +28,9 @@ exports[`FilterDropdown should match spapshot 1`] = `
         aria-label="chevron-down"
         class="push-icon__icon"
         focusable="false"
+        height="0"
         role="img"
+        width="0"
       >
         <use
           xlink:href="#icon-chevron-down"

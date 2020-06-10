@@ -12,11 +12,13 @@ exports[`FilteredResults Should match snapshot: has results, has items, filters 
         class="filtered-results__title"
       >
         <span>
-          10 results found with 
+          
+      10 results found with 
           <strong>
             2 filters
           </strong>
            applied.
+    
         </span>
          
         <span
@@ -50,11 +52,13 @@ exports[`FilteredResults Should match snapshot: has results, has only items and 
         class="filtered-results__title"
       >
         <span>
-          10 results found with 
+          
+      10 results found with 
           <strong>
             2 filters
           </strong>
            applied.
+    
         </span>
          
         <!---->
@@ -84,11 +88,13 @@ exports[`FilteredResults Should match snapshot: no results 1`] = `
         class="filtered-results__title"
       >
         <span>
-          0 results found with 
+          
+      0 results found with 
           <strong>
             0 filters
           </strong>
            applied.
+    
         </span>
          
         <!---->
