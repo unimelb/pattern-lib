@@ -16,8 +16,10 @@ import mockResults from '../../../mockData/faculties.json';
 import FilterWidget from '../FilterWidget.vue';
 import ExampleCard from './ExampleCard.vue';
 import options from './options.json';
+import filterWidget from './filter-widget.md';
 
 export default {
+  readme: { custom: filterWidget, source: false, html: false },
   name: 'FilterWidgetWithSecondaryMessage',
   components: { FilterWidget, ExampleCard },
   data() {
