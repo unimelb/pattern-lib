@@ -14,6 +14,7 @@
 
 <script>
 import GenericCard from './GenericCard.vue';
+
 export default {
   name: 'CardEvents',
   components: { GenericCard },

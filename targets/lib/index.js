@@ -81,7 +81,9 @@ import Carousel from 'components/carousel/Carousel.vue';
 import Logo from 'components/logo/Logo.vue';
 import CardsFilter from 'components/filter/cards/CardsFilter.vue';
 import AccordionFilter from 'components/filter/accordion/AccordionFilter.vue';
-import FilterDropdown from 'components/filter-dropdown/FilterDropdown.vue';
+import FilterDropdown from 'components/filters/components/filter-dropdown/FilterDropdown.vue';
+import FilterBox from 'components/filters/components/filter-box/FilterBox.vue';
+import FilteredResults from 'components/filters/components/filtered-results/FilteredResults.vue';
 import Tags from 'components/tags/Tags.vue';
 import CardNewsTag from 'components/cards/CardNewsTag.vue';
 import PageHeaderEvent from 'components/header/PageHeaderEvent.vue';
@@ -92,6 +94,16 @@ import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
 import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import StyledSelect from 'components/forms/StyledSelect.vue';
 import AppCheckbox from 'components/app-checkbox/AppCheckbox.vue';
+import Spinner from 'components/loader/Spinner.vue';
+import Loader from 'components/loader/Loader.vue';
+import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
+import ErrorBox from 'components/error-box/ErrorBox.vue';
+import CardCourse from 'components/cards/CardCourse.vue';
+import CardCourseList from 'components/cards/CardCourseList.vue';
+import ButtonTwoIcons from 'components/buttons/ButtonTwoIcons.vue';
+import CardCampaign from 'components/cards/CardCampaign.vue';
+import PageCampaignCards from 'components/campaign/PageCampaignCards.vue';
+
 import { version } from '../../package.json';
 
 import 'components';
@@ -182,6 +194,8 @@ Vue.component('logo', Logo);
 Vue.component('cards-filter', CardsFilter);
 Vue.component('accordion-filter', AccordionFilter);
 Vue.component('filter-dropdown', FilterDropdown);
+Vue.component('filter-box', FilterBox);
+Vue.component('filtered-results', FilteredResults);
 Vue.component('tags', Tags);
 Vue.component('card-news-tag', CardNewsTag);
 Vue.component('sidebar', Sidebar);
@@ -191,6 +205,15 @@ Vue.component('split-section-header', SplitSectionHeader);
 Vue.component('screen-reader-jump-to', ScreenReaderJumpTo);
 Vue.component('styled-select', StyledSelect);
 Vue.component('app-checkbox', AppCheckbox);
+Vue.component('spinner', Spinner);
+Vue.component('loader', Loader);
+Vue.component('loading-overlay', LoadingOverlay);
+Vue.component('error-box', ErrorBox);
+Vue.component('card-course', CardCourse);
+Vue.component('card-course-list', CardCourseList);
+Vue.component('button-two-icons', ButtonTwoIcons);
+Vue.component('card-campaign', CardCampaign);
+Vue.component('page-campaign-cards', PageCampaignCards);
 
 // Create Vue instance
 new Vue({

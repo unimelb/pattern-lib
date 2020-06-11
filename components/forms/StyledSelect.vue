@@ -3,6 +3,7 @@
     <select
       :id="id"
       v-model="content"
+      aria-label="choose an option"
       :class="extraclasses"
       @input="handleInput"
       @change="callback">
@@ -101,7 +102,7 @@ export default {
     setDefaultValue() {
       const defaultSlot = this.$slots.default;
       const filterResult = (items) => items.filter((child) => child.tag === 'option');
-      const filterDefaultValue = (items) => items.map((value) => value.children[0].text).slice(0, 1);
+      const filterDefaultValue = (items) => items.map((value) => value.children[0].text);
 
       if (defaultSlot && defaultSlot.length) {
         // Only grab <option>

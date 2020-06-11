@@ -9,8 +9,12 @@
     width: 100%;
 
     @supports (object-fit: cover) {
-      height: 200px;
+      height: 12.5rem;
       object-fit: cover;
+
+      @media (--bp-desktop) {
+        height: 11.1112rem;
+      }
     }
   }
 
@@ -27,7 +31,7 @@
   }
 
   &__title {
-    min-height: 3em;
+    min-height: 3.75rem;
     margin-top: var(--vr);
     font-family: var(--ff-lead);
   }

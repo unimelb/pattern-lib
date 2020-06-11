@@ -16,7 +16,11 @@
 
   .card__thumb {
     width: auto;
-    max-height: 150px;
+    max-height: 9.375rem;
+
+    @media (--bp-desktop) {
+      max-height: 8.333rem;
+    }
 
     & + .card__inner {
       padding-top: 0;

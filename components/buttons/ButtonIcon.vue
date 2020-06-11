@@ -8,7 +8,7 @@
     <span
       v-if="!noIcon"
       class="push-icon"
-      :class="{ 'push-icon--top': top }">
+      :class="pushIconClasses">
       <slot v-if="!iconLeft" />
       <SvgIcon
         :name="icon"
@@ -49,7 +49,7 @@ export default {
     iconSize: {
       type: String,
       default: 'md',
-      validator: (value) => ['md', 'lg'].indexOf(value) !== -1,
+      validator: (value) => ['md', 'lg'].includes(value),
     },
     inverted: {
       type: Boolean,
@@ -66,7 +66,7 @@ export default {
     element: {
       type: String,
       default: 'a',
-      validator: (val) => ['a', 'button', 'div', 'span'].indexOf(val) !== -1,
+      validator: (val) => ['a', 'button', 'div', 'span'].includes(val),
     },
     disabled: {
       type: Boolean,
@@ -93,6 +93,12 @@ export default {
       return {
         'push-icon__icon--left': this.iconLeft,
         'push-icon__icon--lg': this.iconSize === 'lg',
+      };
+    },
+    pushIconClasses() {
+      return {
+        'push-icon--top': this.top,
+        'push-icon--left': this.iconLeft,
       };
     },
     isLink() {

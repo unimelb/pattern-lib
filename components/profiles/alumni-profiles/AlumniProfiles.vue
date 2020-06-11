@@ -18,9 +18,11 @@
             {{ name }}
           </h3>
           <hr class="alumni__line">
+          <!-- eslint-disable vue/no-v-html -->
           <div
             class="alumni__short-text"
             v-html="text" />
+          <!-- eslint-enable vue/no-v-html -->
         </div>
       </div>
     </FocusWrapper>
@@ -32,6 +34,7 @@
 
 import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../../utils/placeholders';
+import { WIDTH_599 } from '../../../helpers/viewports';
 
 export default {
   name: 'AlumniProfiles',
@@ -73,7 +76,7 @@ export default {
   methods: {
     getWindowWidth() {
       this.windowWidth = document.documentElement.clientWidth;
-      if (this.windowWidth < 599) {
+      if (this.windowWidth < WIDTH_599) {
         this.size = 'small';
       } else {
         this.size = 'large';

@@ -1,0 +1,36 @@
+.loading-overlay {
+  position: relative;
+  outline: 0;
+
+  &__overlay {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: opacity, transform;
+    transition-duration: var(--transition-speed-normal);
+    opacity: 0;
+    transform: translateY(-30px);
+    z-index: var(--z-default);
+
+    &--is-loading {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  &__content {
+    transition: opacity var(--transition-speed-normal);
+
+    &--is-loading {
+      opacity: .65;
+      pointer-events: none;
+    }
+  }
+}

@@ -5,7 +5,7 @@
         <a href="annualreport.pdf">
           <figure>
             <img
-              src="https://picsum.photos/300/400?gravity=center"
+              src="https://picsum.photos/seed/1/300/400"
               alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
@@ -15,7 +15,7 @@
         <a href="annualreport.pdf">
           <figure>
             <img
-              src="https://picsum.photos/300/400?gravity=center"
+              src="https://picsum.photos/seed/2/300/400"
               alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
@@ -25,7 +25,7 @@
         <a href="annualreport.pdf">
           <figure>
             <img
-              src="https://picsum.photos/300/400?gravity=center"
+              src="https://picsum.photos/seed/3/300/400"
               alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
@@ -35,7 +35,7 @@
         <a href="annualreport.pdf">
           <figure>
             <img
-              src="https://picsum.photos/300/400?gravity=center"
+              src="https://picsum.photos/seed/4/300/400"
               alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>
@@ -45,7 +45,7 @@
         <a href="annualreport.pdf">
           <figure>
             <img
-              src="https://picsum.photos/300/400?gravity=center"
+              src="https://picsum.photos/seed/5/300/400"
               alt="alt text goes here">
             <figcaption>2016 Annual Report (PDF File 6.8 MB)</figcaption>
           </figure>

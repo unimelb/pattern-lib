@@ -18,7 +18,7 @@ export default {
     size: {
       type: String,
       default: 'lg',
-      validator: (value) => ['sm', 'md', 'lg'].indexOf(value) !== -1,
+      validator: (value) => ['sm', 'md', 'lg'].includes(value),
     },
     noPadding: {
       type: Boolean,

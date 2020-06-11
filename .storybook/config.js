@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
 import { setOptions } from '@storybook/addon-options';
@@ -15,7 +16,9 @@ import './index.css';
 
 // Import components
 import 'components/index.css';
-import 'components/index.js';
+import 'components/index';
+
+const VueAxe = process.env.NODE_ENV !== 'production' ? require('vue-axe') : '';
 
 // Register shared documentation plugins and components
 Vue.use(VueProgressiveImage);
@@ -41,7 +44,6 @@ function loadStories() {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  const VueAxe = require('vue-axe');
   Vue.use(VueAxe, {
     config: {
       rules: [

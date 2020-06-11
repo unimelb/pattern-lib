@@ -13,7 +13,7 @@
 
   &__checkbox {
     flex-shrink: 0;
-    margin: .4em .5em 0 0;
+    margin: .4rem .5rem 0 0;
 
     &:checked + .check-list__label {
       text-decoration: line-through;

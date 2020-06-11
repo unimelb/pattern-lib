@@ -38,7 +38,7 @@
   }
 
   &__caption-text {
-    font-size: .9em;
+    font-size: .9rem;
     text-align: left;
   }
 
@@ -46,7 +46,11 @@
     &-img,
     img {
       width: 100%;
-      height: 300px;
+      height: 18.75rem;
+
+      @media (--bp-desktop) {
+        height: 16.667rem;
+      }
     }
 
     &-img {
@@ -64,8 +68,12 @@
       display: block;
       position: relative;
       width: 100%;
-      height: 300px;
+      height: 18.75rem;
       margin-bottom: calc(var(--vr) * 2);
+
+      @media (--bp-desktop) {
+        height: 16.667rem;
+      }
 
       &::before,
       &::after {

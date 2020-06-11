@@ -41,13 +41,13 @@
         <div class="page-footer__main__users cell cell--wide-1of4">
           <ul class="page-footer__users list-reset list-chevrons links-reset">
             <li>
-              <a href="https://students.unimelb.edu.au/">Current students</a>
+              <a href="https://students.unimelb.edu.au">Current students</a>
             </li>
             <li>
-              <a href="https://staff.unimelb.edu.au/">Staff</a>
+              <a href="https://staff.unimelb.edu.au">Staff</a>
             </li>
             <li>
-              <a href="https://www.alumni.unimelb.edu.au/">Alumni</a>
+              <a href="https://www.alumni.unimelb.edu.au">Alumni</a>
             </li>
           </ul>
         </div>
@@ -66,7 +66,7 @@
             <li>
               <a
                 class="link-icon"
-                href="https://maps.unimelb.edu.au/">
+                href="https://maps.unimelb.edu.au">
                 <SvgIcon
                   class="link-icon__icon svg"
                   name="location" />
@@ -76,7 +76,7 @@
             <li>
               <a
                 class="link-icon"
-                href="https://library.unimelb.edu.au/">
+                href="https://library.unimelb.edu.au">
                 <SvgIcon
                   class="link-icon__icon svg"
                   name="library" />
@@ -96,7 +96,7 @@
             <li>
               <a
                 class="link-icon"
-                href="https://www.unimelb.edu.au/contact/">
+                href="https://www.unimelb.edu.au/contact">
                 <SvgIcon
                   class="link-icon__icon svg"
                   name="phone" />
@@ -124,7 +124,7 @@
             class="page-footer__social"
             facebook-link="https://www.facebook.com/unimelb"
             twitter-link="https://twitter.com/unimelb"
-            linkedin-link="https://www.linkedin.com/school/university-of-melbourne/" />
+            linkedin-link="https://www.linkedin.com/school/university-of-melbourne" />
           <dl class="page-footer__contact list-def list-def--wrap">
             <dt>Phone:</dt>
             <dd>

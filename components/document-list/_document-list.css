@@ -15,11 +15,11 @@
     &::after {
       content: '';
       display: inline-block;
-      width: .875em;
-      height: .875em;
-      margin-left: .25em;
+      width: .75rem;
+      height: .75rem;
+      margin-left: .25rem;
       background-image: url('~icons/download.svg?fill=#09707E');
-      vertical-align: -.175em;
+      vertical-align: -.175rem;
     }
   }
 
@@ -41,7 +41,7 @@
     }
 
     figcaption {
-      font-size: .8em;
+      font-size: .8rem;
       text-align: center;
     }
   }

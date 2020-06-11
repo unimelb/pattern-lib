@@ -26,9 +26,9 @@ body > div[aria-hidden='true']:not(#sitemap) {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: calc(100vw - 3.75em);
-    max-height: calc(100vh - 3.75em);
-    padding: 4em 1.25em 0;
+    width: calc(100vw - 3.75rem);
+    max-height: calc(100vh - 3.75rem);
+    padding: 4rem 1.25rem 0;
     overflow: auto;
     transform: translateX(-50%) translateY(-50%);
     transition: opacity .15s ease-out;
@@ -48,7 +48,7 @@ body > div[aria-hidden='true']:not(#sitemap) {
 
     /* decorative styles */
     background-color: rgba(34, 34, 34, .8);
-    box-shadow: 0 3.75em 0 0 rgba(34, 34, 34, .8);
+    box-shadow: 0 3.75rem 0 0 rgba(34, 34, 34, .8);
 
     .modal-dialog__modal {
       opacity: 1;
@@ -56,10 +56,10 @@ body > div[aria-hidden='true']:not(#sitemap) {
   }
 }
 
-@media all and (min-width: 31.25em) {
+@media all and (min-width: 31.25rem) {
   .modal-dialog .modal-dialog__modal {
-    min-width: 25em;
-    max-width: 37.5em;
+    min-width: 25rem;
+    max-width: 37.5rem;
   }
 }
 
@@ -69,10 +69,10 @@ body > div[aria-hidden='true']:not(#sitemap) {
 
 .modal-dialog__close {
   position: absolute;
-  top: .25em;
-  right: .25em;
-  padding: .25em;
-  font-size: 2em;
+  top: .5rem;
+  right: .5rem;
+  padding: .5rem;
+  font-size: 2rem;
   line-height: 1.25;
   text-transform: uppercase;
 

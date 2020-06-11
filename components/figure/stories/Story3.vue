@@ -10,7 +10,7 @@
         left
         caption="embed test">
         <img
-          src="https://picsum.photos/600/400?random&gravity=center"
+          src="https://picsum.photos/seed/1/600/400"
           alt="alt text goes here">
       </FigureWrap>
       <p>Blanditiis exercitationem id sapiente voluptatem dolorum est sapiente. Qui explicabo voluptatem dolores perspiciatis laborum animi. Similique animi molestiae ipsam accusamus incidunt rerum. Et fugiat ut eum dolores id. Quaerat repudiandae facere voluptas fuga laboriosam quo illo adipisci. Doloremque autem cum ea voluptatem id.</p>
@@ -21,6 +21,7 @@
 
 <script>
 import FigureWrap from '../FigureWrap.vue';
+
 export default {
   components: { FigureWrap },
   readme: { source: true, html: true },

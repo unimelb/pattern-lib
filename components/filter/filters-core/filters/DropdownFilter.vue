@@ -28,6 +28,7 @@ export default {
       default: () => false,
     },
     value: {
+      type: String,
       default: null,
     },
     values: {

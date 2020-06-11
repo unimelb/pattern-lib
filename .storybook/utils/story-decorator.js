@@ -18,12 +18,13 @@ export default function storyDecorator(storyFn) {
   const Story = storyFn();
   const { decorator: Decorator, decoratorProps = {} } = Story;
 
-  if (!Decorator) return Story;
+  if (!Decorator) {
+    return Story;
+  }
 
   return {
     render() {
       return (
-        // eslint-disable-next-line react/jsx-props-no-spreading
         <Decorator {...{ props: decoratorProps }}>
           <Story />
         </Decorator>

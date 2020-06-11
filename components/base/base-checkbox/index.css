@@ -1,6 +1,21 @@
 .base-checkbox {
   cursor: pointer;
-  display: inline-flex;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  &--block {
+    display: flex;
+  }
 
   &__input {
     display: none;
@@ -15,6 +30,11 @@
     border-radius: var(--br-checkbox);
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
+
+    &--is-focused {
+      box-shadow: var(--outline-shadow);
+    }
   }
 
   &__icon-checked {

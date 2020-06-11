@@ -103,7 +103,7 @@ export default {
   computed: {
     classes() {
       return {
-        [`card--image-focus--col-${this.color}`]: this.color && this.color.length > 0,
+        [`card--image-focus--col-${this.color}`]: this.color && this.color.length,
         'btn-owner': this.element && this.element === 'a',
         'card--image-no-focus': !!this.noFocus,
       };
