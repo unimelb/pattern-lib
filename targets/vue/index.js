@@ -339,6 +339,10 @@ export {
 }
   from 'components/filters/components/filtered-results/FilteredResults.vue';
 export {
+  default as FilterWidget,
+}
+  from 'components/filters/components/filter-widget/FilterWidget.vue';
+export {
   default as Tags,
 }
   from 'components/tags/Tags.vue';

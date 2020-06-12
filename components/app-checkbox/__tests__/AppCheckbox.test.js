@@ -15,6 +15,7 @@ describe('AppCheckbox', () => {
             ariaLabel: 'ariaLabel',
           },
           {
+            tabIndex: 0,
             name: 'app-checkbox',
             label: 'App checkbox',
             isChecked: true,
@@ -28,6 +29,7 @@ describe('AppCheckbox', () => {
             modelValue: true,
           },
           {
+            tabIndex: 0,
             name: '',
             label: '',
             isChecked: true,
