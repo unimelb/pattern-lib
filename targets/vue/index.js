@@ -320,10 +320,28 @@ export {
   from 'components/logo/Logo.vue';
 export {
   default as CardsFilter,
-} from 'components/filter/cards/CardsFilter.vue';
+}
+  from 'components/filter/cards/CardsFilter.vue';
 export {
   default as AccordionFilter,
-} from 'components/filter/accordion/AccordionFilter.vue';
+}
+  from 'components/filter/accordion/AccordionFilter.vue';
+export {
+  default as FilterDropdown,
+}
+  from 'components/filters/components/filter-dropdown/FilterDropdown.vue';
+export {
+  default as FilterBox,
+}
+  from 'components/filters/components/filter-box/FilterBox.vue';
+export {
+  default as FilteredResults,
+}
+  from 'components/filters/components/filtered-results/FilteredResults.vue';
+export {
+  default as FilterWidget,
+}
+  from 'components/filters/components/filter-widget/FilterWidget.vue';
 export {
   default as Tags,
 }
@@ -356,6 +374,26 @@ export {
   default as StyledSelect,
 }
   from 'components/forms/StyledSelect.vue';
+export {
+  default as AppCheckbox,
+}
+  from 'components/app-checkbox/AppCheckbox.vue';
+export {
+  default as Spinner,
+}
+  from 'components/loader/Spinner.vue';
+export {
+  default as Loader,
+}
+  from 'components/loader/Loader.vue';
+export {
+  default as LoadingOverlay,
+}
+  from 'components/loader/LoadingOverlay.vue';
+export {
+  default as ErrorBox,
+}
+  from 'components/error-box/ErrorBox.vue';
 export {
   default as CardCourse,
 }

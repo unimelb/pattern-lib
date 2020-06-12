@@ -8,6 +8,7 @@
 
 /* Components - Alphabetically ordered */
 @import 'accordion/index.css';
+@import 'base/base-checkbox/index.css';
 @import 'profiles/alumni-profiles/index.css';
 @import 'testimonials/index.css';
 @import 'notice/index.css';
@@ -54,10 +55,15 @@
 @import 'screen-reader-jump-to/index.css';
 @import 'carousel/index.css';
 @import 'logo/index.css';
+@import 'loader/index.css';
 @import 'filter/index.css';
+@import 'filters/components/filter-dropdown/index.css';
+@import 'filters/components/filter-box/index.css';
+@import 'filters/components/filtered-results/index.css';
 @import 'tags/index.css';
 @import 'sidebar/index.css';
 @import 'profiles/accordion-profile/index.css';
+@import 'error-box/index.css';
 
 /* Third party - Alphabetically ordered */
 @import '../third-party/salesforce.css';
