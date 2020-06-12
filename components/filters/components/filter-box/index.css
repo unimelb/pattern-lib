@@ -1,0 +1,33 @@
+.filter-box {
+  padding: 1.5rem;
+
+  &__header {
+    font-weight: var(--fw-bold);
+    margin-bottom: .75rem;
+  }
+
+  &__filter {
+    margin-bottom: 1rem;
+  }
+
+  &__filter-label {
+    margin-bottom: .5rem;
+  }
+
+  &__btns-wrapper {
+    margin: 1.5rem -.5rem -.5rem -.5rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    margin-bottom: .5rem;
+    min-width: 10rem;
+    flex: 1 0 0%;
+    padding: 0 .5rem;
+
+    .btn {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "label": "All (49)",
+    "name": "all",
+    "options": [
+      {
+        "label": "Undergraduate (7)",
+        "name": "undergraduate",
+        "options": [
+          {
+            "label": "Bachelor (6)",
+            "name": "bachelor",
+            "isChecked": true
+          },
+          {
+            "label": "Diploma (1)",
+            "name": "diploma",
+            "isChecked": true
+          },
+          {
+            "label": "Honours (0)",
+            "name": "honours",
+            "isChecked": false
+          }
+        ]
+      },
+      {
+        "label": "Graduate (38)",
+        "name": "graduate",
+        "isChecked": false,
+        "options": [
+          {
+            "label": "Certificate (10)",
+            "name": "certificate",
+            "isChecked": false
+          },
+          {
+            "label": "Diploma (6)",
+            "name": "diploma",
+            "isChecked": false
+          },
+          {
+            "label": "Master (22)",
+            "name": "master",
+            "isChecked": false
+          }
+        ]
+      },
+      {
+        "label": "Research (4)",
+        "name": "research",
+        "options": [
+          {
+            "label": "Master (2)",
+            "name": "master",
+            "isChecked": false
+          },
+          {
+            "label": "PhD (2)",
+            "name": "phd",
+            "isChecked": false
+          }
+        ]
+      }
+    ]
+  }
+]

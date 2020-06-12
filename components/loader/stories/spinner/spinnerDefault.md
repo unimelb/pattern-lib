@@ -1,0 +1,4 @@
+Usage:
+```vue
+  <Spinner />
+```

@@ -126,6 +126,7 @@
 
   /* Border radius */
   --br: 4px;
+  --br-checkbox: 3px;
   --br-cards: 4px;
 
   /* Side nav width */
@@ -153,6 +154,12 @@
   --z-overlay: 500;
   --z-modal: 1000;
   --z-liveagent: 10000;
+
+  /* Transitions */
+  --transition-speed-normal: 250ms;
+
+  /* Box shadow to use instead of outline in custom form elements */
+  --outline-shadow: 0 0 0 3px rgba(var(--col-navy-mid-2), .8);
 }
 
 /**

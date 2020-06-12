@@ -132,6 +132,7 @@
   vertical-align: bottom;
 
   /* fix unwanted inline-block space */
+
   & > img {
     display: block;
   }
@@ -259,12 +260,14 @@ a[target='_blank'] {
     text-overflow: ellipsis;
 
     /* for long unbreakable words */
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 
   /* force `dd` to fall below `dt` when too long (must be combined with `clearfix`) */
+
   &--wrap > dd {
     float: left;
   }
@@ -483,5 +486,17 @@ a[target='_blank'] {
   }
   to {
     box-shadow: 0 0 18px rgb(var(--col-blue-light));
+  }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
   }
 }
