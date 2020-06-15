@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SectionTwoCol should match snapshot 1`] = `
-<sectionwrap>
-  <!---->
-   
-  <!---->
-</sectionwrap>
-`;
+exports[`SectionTwoCol should match snapshot 1`] = `<!---->`;

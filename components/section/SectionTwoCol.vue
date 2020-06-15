@@ -21,9 +21,11 @@
 
 <script>
 import ListingWrap from '../listing/ListingWrap.vue';
+import SectionWrap from './SectionWrap.vue';
+import ListItem from '../listing/ListItem.vue';
 
 export default {
-  components: { ListingWrap },
+  components: { ListingWrap, SectionWrap, ListItem },
   props: {
     direction: {
       type: String,
