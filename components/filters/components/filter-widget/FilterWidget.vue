@@ -113,7 +113,16 @@ export default {
       this.updateConfig(name, {
         options: changedOptions,
       });
-      trackAnalytics(name, 'Selection', this.selectedNames[name]);
+
+      // track filter analytics
+      const userSelection = this.selectedNames[name];
+      const userAnalytics = [];
+
+      userSelection.forEach((selection) => {
+        userAnalytics.push(selection.join('_'));
+      });
+
+      trackAnalytics(name, 'Selection', userAnalytics);
     },
     onClear(nameOrNull) {
       if (nameOrNull) {
