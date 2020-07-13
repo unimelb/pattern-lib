@@ -1,5 +1,4 @@
 export default (category, action, value) => {
-  console.log(category, action, value);
   if (window && window.utag && window.utag_data) {
     window.utag.link({
       ga_EventCategory: category,
