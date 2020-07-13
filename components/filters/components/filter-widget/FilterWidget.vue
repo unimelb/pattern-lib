@@ -121,7 +121,6 @@ export default {
       userSelection.forEach((selection) => {
         userAnalytics.push(selection.join('_'));
       });
-
       trackAnalytics(name, 'Selection', userAnalytics);
     },
     onClear(nameOrNull) {
