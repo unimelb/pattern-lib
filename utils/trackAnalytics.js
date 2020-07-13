@@ -5,6 +5,6 @@ export default (category, action, value) => {
       ga_EventCategory: category,
       ga_EventAction: action,
       ga_EventLabel: value,
-    }, null, [1]);
+    });
   }
 };
