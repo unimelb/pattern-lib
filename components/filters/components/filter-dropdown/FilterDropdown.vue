@@ -1,5 +1,6 @@
 <template>
   <div
+    role="combobox"
     class="filter-dropdown"
     :data-uuid="uuid"
     @keydown.enter="onEnter"
@@ -28,6 +29,7 @@
 
     <div
       ref="body"
+      role="listbox"
       data-testid="filter-dropdown-body"
       tabindex="-1"
       :class="classBody">
