@@ -3,7 +3,7 @@
     <button
       class="link-icon--vertical link-reset"
       @click.prevent="open"
-      @keypress.13="open">
+      @keypress.enter="open">
       <SvgIcon
         class="link-icon__icon svg"
         name="search" />

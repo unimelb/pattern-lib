@@ -48,8 +48,8 @@
 
                 @click="moveToStory(index)"
                 @focusin="stopSliding"
-                @keydown.13="moveToStory(index)"
-                @keydown.32="moveToStory(index)">
+                @keydown.enter="moveToStory(index)"
+                @keydown.space="moveToStory(index)">
                 {{ story.title | truncate(48) }}
               </a>
             </li>
@@ -61,8 +61,8 @@
               tabindex="0"
               role="button"
               @click="prevStory"
-              @keydown.13="prevStory"
-              @keydown.32="prevStory"
+              @keydown.enter="prevStory"
+              @keydown.space="prevStory"
               @focusin="stopSliding">
               <SvgIcon
                 name="chevron-left"
@@ -78,8 +78,8 @@
               role="button"
               aria-label="Stop carousel"
               @click="stopSliding"
-              @keydown.13="stopSliding"
-              @keydown.32="stopSliding">
+              @keydown.enter="stopSliding"
+              @keydown.space="stopSliding">
               <SvgIcon
                 name="pause"
                 width="16"
@@ -95,8 +95,8 @@
               aria-label="Play carousel"
               @click="startSliding"
               @focusin="stopSliding"
-              @keydown.13="startSliding"
-              @keydown.32="startSliding">
+              @keydown.enter="startSliding"
+              @keydown.space="startSliding">
               <SvgIcon
                 name="play"
                 width="16"
@@ -109,8 +109,8 @@
               tabindex="0"
               role="button"
               @click="nextStory"
-              @keydown.13="nextStory"
-              @keydown.32="nextStory"
+              @keydown.enter="nextStory"
+              @keydown.space="nextStory"
               @focusin="stopSliding">
               <SvgIcon
                 name="chevron-right"
