@@ -35,6 +35,7 @@ import FilterBox from '../filter-box/FilterBox.vue';
 import FilteredResults from '../filtered-results/FilteredResults.vue';
 import getUpdatedOptions from './helpers/getUpdatedOptions';
 import getFiltersApplied from './helpers/getFiltersApplied';
+import trackAnalytics from '../../../../utils/trackAnalytics';
 
 export default {
   name: 'FilterWidget',
@@ -112,6 +113,15 @@ export default {
       this.updateConfig(name, {
         options: changedOptions,
       });
+
+      // track filter analytics
+      const userSelection = this.selectedNames[name];
+      const userAnalytics = [];
+
+      userSelection.forEach((selection) => {
+        userAnalytics.push(selection.join('_'));
+      });
+      trackAnalytics(name, 'Selection', userAnalytics);
     },
     onClear(nameOrNull) {
       if (nameOrNull) {
