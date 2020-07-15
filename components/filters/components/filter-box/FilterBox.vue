@@ -4,7 +4,7 @@
     role="group"
     class="bg-light-blue filter-box">
     <h4
-      id="filter-by"
+      id="filter-box-heading"
       class="filter-box__header">
       Filter by
     </h4>
@@ -14,7 +14,7 @@
       :key="filterIndex"
       class="filter-box__filter">
       <p
-        aria-labelledby="filter-by"
+        aria-labelledby="filter-box-heading"
         :aria-label="filter.filterBy"
         class="filter-box__filter-label">
         {{ filter.filterBy }}
