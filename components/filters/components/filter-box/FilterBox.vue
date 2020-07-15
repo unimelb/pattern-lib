@@ -1,6 +1,11 @@
 <template>
-  <div class="bg-light-blue filter-box">
-    <h4 class="filter-box__header">
+  <div
+    aria-labelledby="filter-by "
+    role="group"
+    class="bg-light-blue filter-box">
+    <h4
+      id="filter-box-heading"
+      class="filter-box__header">
       Filter by
     </h4>
 
@@ -8,7 +13,10 @@
       v-for="(filter, filterIndex) in filters"
       :key="filterIndex"
       class="filter-box__filter">
-      <p class="filter-box__filter-label">
+      <p
+        aria-labelledby="filter-box-heading"
+        :aria-label="filter.filterBy"
+        class="filter-box__filter-label">
         {{ filter.filterBy }}
       </p>
 

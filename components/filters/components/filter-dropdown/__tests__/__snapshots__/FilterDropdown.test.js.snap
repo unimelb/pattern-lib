@@ -4,6 +4,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
 <div
   class="filter-dropdown"
   data-uuid="0"
+  role="combobox"
 >
   <div
     aria-expanded="false"
@@ -47,6 +48,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
   <div
     class="filter-dropdown__body"
     data-testid="filter-dropdown-body"
+    role="listbox"
     tabindex="-1"
   >
     <div

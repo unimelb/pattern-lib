@@ -1,8 +1,10 @@
 <template>
   <div
+    role="combobox"
     class="filter-dropdown"
     :data-uuid="uuid"
-    @keydown.enter="onEnter"
+    @keydown.esc="closeOnKeypress"
+    @keydown.enter="closeOnKeypress"
     @focusout="onFocusOut">
     <div
       ref="select"
@@ -11,6 +13,7 @@
       :aria-expanded="isOpened + ''"
       :class="classSelect"
       data-testid="filter-dropdown-select"
+      @keydown.down.stop="onSelectKeyPress"
       @keydown.enter.stop="onSelectKeyPress"
       @click="onSelectClick">
       <div
@@ -28,6 +31,7 @@
 
     <div
       ref="body"
+      role="listbox"
       data-testid="filter-dropdown-body"
       tabindex="-1"
       :class="classBody">
@@ -228,7 +232,7 @@ export default {
         this.$refs.nestedCheckbox.focusOnFirst();
       });
     },
-    onEnter() {
+    closeOnKeypress() {
       this.closeDropdown();
     },
     onFocusOut(event) {
