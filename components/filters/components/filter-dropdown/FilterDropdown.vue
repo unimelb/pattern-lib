@@ -1,6 +1,6 @@
 <template>
   <div
-    role="combobox"
+    role="region"
     class="filter-dropdown"
     :data-uuid="uuid"
     @keydown.esc="closeOnKeypress"
