@@ -1,19 +1,31 @@
 @media print {
   * {
-    color: rgb(var(--col-black-dark)) !important;
-    background: transparent !important;
+    color: rgb(0, 0, 0) !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
 
   body {
     overflow: visible;
+    background-color: transparent;
+  }
+
+  .page-header,
+  .page-footer,
+  .page-footer__bottom,
+  .section--image,
+  .card--image,
+  .section,
+  .content-block,
+  .accordion .toggleblock__hidden-inner,
+  .bg-inverted {
+    background: transparent !important;
   }
 
   @page {
     size: a4;
-    margin-top: 2cm;
-    margin-bottom: 2cm;
+    margin-top: 1.5cm;
+    margin-bottom: 1.5cm;
   }
 
   a,
@@ -34,7 +46,7 @@
   a[href]::after {
     content: ' (' attr(href) ')';
     word-break: break-all;
-    color: rgb(var(--col-black-dark));
+    color: rgb(0, 0, 0);
     background-image: none !important;
   }
 
@@ -42,6 +54,11 @@
     display: block;
     position: unset;
     width: unset;
+    margin-bottom: .5rem;
+  }
+  .logo a.logo__link[href]::after {
+    padding-top: 1rem;
+    position: absolute;
   }
 
   abbr[title]::after {
@@ -56,7 +73,7 @@
 
   pre,
   blockquote {
-    border: 1px solid rgb(var(--col-bg-primary-grey));
+    border: 1px solid rgb(247, 247, 247);
     page-break-inside: avoid;
   }
 
@@ -97,7 +114,10 @@
   .page-footer__header-search,
   .page-footer__social,
   .header-tools,
-  .page-header__img {
+  .page-header__img,
+  nav,
+  .embed,
+  iframe {
     display: none !important;
   }
 
@@ -105,10 +125,42 @@
     width: 100% !important;
   }
 
-  .page-header--l1 .page-header__heading {
-    margin: 1rem 0 !important;
+  .page-header--l1 .page-header__heading,
+  .page-header--l2 .page-header__heading {
+    margin: 2rem 0 0 !important;
   }
+
   .content-block--sml > * {
     max-width: 60rem;
+  }
+
+  .ct-newslisting a[href]::after {
+    content: '';
+  }
+
+  .ct-newslisting .card__footer .card__links {
+    display: none;
+  }
+
+  .card__thumb {
+    color-adjust: exact !important;
+  }
+
+  .toggleblock__hidden {
+    max-height: 240rem !important;
+  }
+
+  .welcome__thumb figure::before,
+  .welcome__thumb figure::after {
+    background: transparent !important;
+  }
+
+  .welcome__thumb {
+    margin: 0 !important;
+  }
+
+  .split-section__inner,
+  .contact-card__col1_3 {
+    padding: 1rem !important;
   }
 }
