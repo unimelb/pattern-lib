@@ -1,21 +1,16 @@
 <template>
-  <SectionWrap>
-    <div class="grid grid--2col">
-      <ListItem>
-        <h1>BG white</h1>
-        <ButtonCard
-          top-label="29th May"
-          label="Something to go here and here about the event"
-          link="www.unimelb.edu.au" />
-      </ListItem>
-      <ListItem>
-        <h1>BG inverted</h1>
-        <ButtonCard
-          inverted
-          label="Excepteur velit proident mollit proident excepteur."
-          link="www.unimelb.edu.au" />
-      </ListItem>
-    </div>
+  <SectionWrap bg-whte>
+    <h1>Examples</h1>
+    <h2>BG white</h2>
+    <ButtonCard
+      top-label="29th May"
+      label="Something to go here and here about the event here and here about the event"
+      link="www.unimelb.edu.au" />
+    <h2>BG inverted</h2>
+    <ButtonCard
+      inverted
+      label="Emollit proident excepteur proident excepteur."
+      link="www.unimelb.edu.au" />
   </SectionWrap>
 </template>
 

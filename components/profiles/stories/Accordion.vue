@@ -40,6 +40,29 @@
           sub-title="Study Program" />
       </ListItem>
     </div>
+
+    <div>
+      <AccordionProfile
+        thumb="https://randomuser.me/api/portraits/lego/1.jpg"
+        title="Student Name"
+        sub-title="Study Program" />
+      <AccordionProfile
+        thumb="https://randomuser.me/api/portraits/lego/1.jpg"
+        title="Student Name"
+        sub-title="Study Program" />
+      <AccordionProfile
+        thumb="https://randomuser.me/api/portraits/lego/1.jpg"
+        title="Student Name"
+        sub-title="Study Program" />
+      <AccordionProfile
+        thumb="https://randomuser.me/api/portraits/lego/1.jpg"
+        title="Student Name"
+        sub-title="Study Program" />
+      <AccordionProfile
+        thumb="https://randomuser.me/api/portraits/lego/1.jpg"
+        title="Student Name"
+        sub-title="Study Program" />
+    </div>
   </SectionWrap>
 </template>
 
