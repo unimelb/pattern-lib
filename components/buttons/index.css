@@ -527,6 +527,23 @@
   min-height: 100%;
   text-decoration: none;
 
+  & + & {
+    margin-top: 1rem;
+
+    @media (--bp-tablet) {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
+
+    @media (--bp-desktop) {
+      margin-left: 1.25rem;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
   @media (--bp-tablet) {
     height: 16.25rem;
     width: 10.625rem;
@@ -534,6 +551,11 @@
 
   &--inverted {
     background-color: rgb(var(--col-brand));
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: rgb(var(--col-white));
+    }
 
     .btn-card__top-label,
     .btn-card__label {
