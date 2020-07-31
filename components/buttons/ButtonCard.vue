@@ -13,7 +13,8 @@
         class="btn-card__icon"
         name="arrow-right"
         width="26px"
-        height="22px" />
+        height="22px"
+        aria-hidden="true" />
     </div>
   </a>
 </template>

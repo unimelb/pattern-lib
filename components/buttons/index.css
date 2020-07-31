@@ -542,6 +542,16 @@
 
   &:hover {
     text-decoration: underline;
+
+    .btn-card__icon {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    .btn-card__icon {
+      transform: scale(.9);
+    }
   }
 
   @media (--bp-tablet) {
@@ -614,5 +624,7 @@
     min-height: 3.125rem;
     border-radius: 50%;
     background-color: rgb(var(--col-background-primary-grey));
+    transition: scale .1s ease-out;
+    transform: scale(1);
   }
 }
