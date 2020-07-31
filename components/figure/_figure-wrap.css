@@ -109,4 +109,14 @@
       width: 35%;
     }
   }
+
+  &-rounded {
+    border-radius: 50%;
+    width: 8.125rem;
+    height: 8.125rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+  }
 }

@@ -1,0 +1,25 @@
+/**
+ * Two columns with rounded image
+ */
+.section-with-rounded-image {
+  &__heading {
+    font-weight: var(--fw-semibold);
+    font-size: 1.75rem;
+    line-height: 1.875;
+    letter-spacing: -.021rem;
+    color: rgb(var(--col-navy-dark));
+    margin-bottom: 1.25rem;
+  }
+
+  &__description {
+    font-size: 1.125rem;
+    line-height: 1.875;
+    letter-spacing: -.021rem;
+    color: rgb(var(--col-grey-dark));
+  }
+
+  .figure {
+    padding-top: .75rem;
+    margin-right: 0;
+  }
+}

@@ -104,6 +104,7 @@ import CardCourseList from 'components/cards/CardCourseList.vue';
 import ButtonTwoIcons from 'components/buttons/ButtonTwoIcons.vue';
 import CardCampaign from 'components/cards/CardCampaign.vue';
 import PageCampaignCards from 'components/campaign/PageCampaignCards.vue';
+import FigureRounded from 'components/figure/FigureRounded.vue';
 
 import { version } from '../../package.json';
 
@@ -216,6 +217,7 @@ Vue.component('card-course-list', CardCourseList);
 Vue.component('button-two-icons', ButtonTwoIcons);
 Vue.component('card-campaign', CardCampaign);
 Vue.component('page-campaign-cards', PageCampaignCards);
+Vue.component('figure-rounded', FigureRounded);
 
 // Create Vue instance
 new Vue({
