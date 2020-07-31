@@ -624,7 +624,7 @@
     min-height: 3.125rem;
     border-radius: 50%;
     background-color: rgb(var(--col-background-primary-grey));
-    transition: scale .1s ease-out;
+    transition: transform .1s ease-out;
     transform: scale(1);
   }
 }
