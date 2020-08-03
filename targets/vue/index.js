@@ -407,6 +407,10 @@ export {
 }
   from 'components/buttons/ButtonTwoIcons.vue';
 export {
+  default as ButtonCard,
+}
+  from 'components/buttons/ButtonCard.vue';
+export {
   default as CardCampaign,
 }
   from 'components/cards/CardCampaign.vue';
