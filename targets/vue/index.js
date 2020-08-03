@@ -418,3 +418,7 @@ export {
   default as PageCampaignCards,
 }
   from 'components/campaign/PageCampaignCards.vue';
+export {
+  default as FigureRounded,
+}
+  from 'components/figure/FigureRounded.vue';
