@@ -1,0 +1,23 @@
+/**
+ * Two columns with cta
+ */
+.two-column-header-text {
+  &__heading {
+    font-family: var(--ff-lead);
+    font-weight: var(--fw-bold);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -.025rem;
+    color: rgb(var(--col-grey-mid-3));
+    margin-bottom: .5rem;
+  }
+
+  &__description {
+    font-weight: var(--fw-normal);
+    font-size: 1.125rem;
+    line-height: 1.67;
+    letter-spacing: -.021rem;
+    color: rgb(var(--col-grey-mid-3));
+    margin-bottom: 1.875rem;
+  }
+}

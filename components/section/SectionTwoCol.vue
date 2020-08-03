@@ -16,6 +16,14 @@
         <slot name="main" />
       </ListItem>
     </ListingWrap>
+    <ListingWrap v-if="direction === 'split'">
+      <ListItem cols="1of2">
+        <slot name="left" />
+      </ListItem>
+      <ListItem cols="2of2">
+        <slot name="right" />
+      </ListItem>
+    </ListingWrap>
   </SectionWrap>
 </template>
 
