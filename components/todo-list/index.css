@@ -1,0 +1,42 @@
+.todo-list {
+  .section__inner {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-color: rgb(var(--col-grey-mid-1));
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+
+    @media (--bp-desktop) {
+      padding-top: 2.5rem;
+      padding-bottom: 3.75rem;
+    }
+  }
+
+  .figure {
+    display: none;
+
+    @media (--bp-tablet) {
+      display: initial;
+      padding-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__figure-text {
+    display: flex;
+  }
+
+  &__button-cards {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    margin: 0;
+
+    @media (--bp-tablet) {
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+  }
+}

@@ -4,17 +4,32 @@
 .section-with-rounded-image {
   &__heading {
     font-weight: var(--fw-semibold);
-    font-size: 1.75rem;
-    line-height: 1.875;
     letter-spacing: -.021rem;
     color: rgb(var(--col-navy-dark));
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
+
+    @media (--bp-tablet) {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+      line-height: 1;
+    }
+
+    @media (--bp-desktop) {
+      font-size: 1.75rem;
+      line-height: 1.15;
+    }
   }
 
   &__description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     letter-spacing: -.021rem;
     color: rgb(var(--col-grey-dark));
+    margin-bottom: 1rem;
+
+    @media (--bp-tablet) {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
   }
 
   .figure {
