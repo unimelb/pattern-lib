@@ -1,14 +1,7 @@
 <template>
-  <div
-    :href="href"
-    class="card card--features-panel card--features-panel--head">
+  <div class="card card--features-panel card--features-panel--head">
     <div class="card__thumb">
-      <FigureRounded
-        v-if="roundedThumb"
-        :background-image="thumb"
-        :aria-label="ariaLabel" />
       <div
-        v-else
         :style="`background-image: url('${thumb}')`"
         role="img"
         :aria-label="ariaLabel"
@@ -35,18 +28,10 @@
 </template>
 
 <script>
-import FigureRounded from 'components/figure/FigureRounded.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
 
 export default {
-  components: {
-    FigureRounded,
-  },
   props: {
-    roundedThumb: {
-      type: Boolean,
-      default: false,
-    },
     thumb: {
       type: String,
       default: IMAGE_PLACEHOLDER_BIG,

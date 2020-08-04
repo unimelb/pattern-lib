@@ -3,7 +3,6 @@
 exports[`CardFeaturesPanel should match snapshot 1`] = `
 <div
   class="card card--features-panel card--features-panel--head"
-  href=""
 >
   <div
     class="card__thumb"

@@ -1,7 +1,5 @@
 <template>
-  <div
-    :href="href"
-    class="card card-rounded-figure">
+  <div class="card card-rounded-figure">
     <div class="card__thumb">
       <FigureRounded
         small
