@@ -10,23 +10,36 @@
       faculty-name="Faculty of Medicine, Dentistry and Health Sciences"
       faculty-link="/faculty-link"
       faculty-width="25.5%" />
+
+    <div tabindex="-1">
+      <section-wrap bg-color="white">
+        <h2>Secondary content</h2>
+        <p
+          v-for="key in 20"
+          :key="key">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
+          quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
+          necessitatibus ut!
+        </p>
+      </section-wrap>
+    </div>
+
     <div
       id="main"
       tabindex="-1">
       <section-wrap bg-color="white">
         <h1>Main content</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo necessitatibus ut!</p>
+        <button
+          tabindex="0">
+          Button
+        </button>
+        <p
+          v-for="key in 10"
+          :key="key">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
+          quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
+          necessitatibus ut!
+        </p>
       </section-wrap>
     </div>
   </div>
@@ -53,8 +66,7 @@ export default {
           href: '/',
           feature: {
             alt: 'screen reader only',
-            text:
-              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://i.picsum.photos/id/1040/360/200.jpg',
             link: 'http://google.com',
           },
@@ -75,8 +87,7 @@ export default {
           href: '/why-melbourne',
           feature: {
             title: 'Campaign title',
-            text:
-              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://i.picsum.photos/id/1033/360/200.jpg',
             link: 'http://google.com',
           },
@@ -93,15 +104,13 @@ export default {
           href: '/admissions',
           feature: {
             title: 'Different campaign',
-            text:
-              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           },
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
             { title: 'Entry non requirements7', href: 'http://www.google.com' },
             {
-              title:
-                'Entry non requirements8 has a particularly long title for no good reason',
+              title: 'Entry non requirements8 has a particularly long title for no good reason',
               href: 'http://www.google.com',
             },
             { title: 'Entry non requirements9', href: 'http://www.google.com' },
@@ -133,8 +142,7 @@ export default {
           href: '/student-experience',
           feature: {
             alt: 'screen reader only',
-            text:
-              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://i.picsum.photos/id/1040/360/200.jpg',
             link: 'http://google.com',
           },

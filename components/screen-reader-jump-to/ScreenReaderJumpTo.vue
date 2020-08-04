@@ -1,11 +1,13 @@
 <template>
   <div class="screen-reader-jump-to">
     <ButtonIcon
-      :href="toElement"
+      element="button"
+      role="link"
+      :tabindex="0"
       no-icon
       size="xsml"
       class="screen-reader-jump-to__skippy screenreaders-only screenreaders-only-focusable btn--inverted"
-      @click.prevent>
+      @click.native.prevent="scrollTo">
       {{ text }}
     </ButtonIcon>
   </div>
@@ -26,6 +28,15 @@ export default {
     toElement: {
       type: String,
       default: '#main',
+    },
+  },
+  methods: {
+    scrollTo() {
+      const toElement = document.querySelector(this.toElement);
+      if (toElement) {
+        toElement.scrollIntoView();
+        toElement.focus();
+      }
     },
   },
 };
