@@ -16,7 +16,7 @@
     display: none;
 
     @media (--bp-tablet) {
-      display: initial;
+      display: inline-table;
       padding-top: 0;
       margin-bottom: 0;
       padding-bottom: 0;
