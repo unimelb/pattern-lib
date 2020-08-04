@@ -106,6 +106,7 @@ import ButtonCard from 'components/buttons/ButtonCard.vue';
 import CardCampaign from 'components/cards/CardCampaign.vue';
 import PageCampaignCards from 'components/campaign/PageCampaignCards.vue';
 import FigureRounded from 'components/figure/FigureRounded.vue';
+import CardRoundedFigure from 'components/cards/CardRoundedFigure.vue';
 
 import { version } from '../../package.json';
 
@@ -220,6 +221,7 @@ Vue.component('button-card', ButtonCard);
 Vue.component('card-campaign', CardCampaign);
 Vue.component('page-campaign-cards', PageCampaignCards);
 Vue.component('figure-rounded', FigureRounded);
+Vue.component('card-rounded-figure', CardRoundedFigure);
 
 // Create Vue instance
 new Vue({

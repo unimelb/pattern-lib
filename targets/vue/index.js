@@ -422,3 +422,7 @@ export {
   default as FigureRounded,
 }
   from 'components/figure/FigureRounded.vue';
+export {
+  default as CardRoundedFigure,
+}
+  from 'components/cards/CardRoundedFigure.vue';

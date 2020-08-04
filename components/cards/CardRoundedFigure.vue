@@ -1,18 +1,12 @@
 <template>
   <div
     :href="href"
-    class="card card--features-panel card--features-panel--head">
+    class="card card-rounded-figure">
     <div class="card__thumb">
       <FigureRounded
-        v-if="roundedThumb"
+        small
         :background-image="thumb"
         :aria-label="ariaLabel" />
-      <div
-        v-else
-        :style="`background-image: url('${thumb}')`"
-        role="img"
-        :aria-label="ariaLabel"
-        class="card__thumb-img" />
     </div>
     <div class="card__inner">
       <h3 class="card__title">
@@ -27,8 +21,8 @@
       class="card__footer">
       <ButtonIcon
         :href="href"
-        class="btn--wide btn--cta btn--sml">
-        Read more
+        class="btn--cta">
+        {{ buttonLabel }}
       </ButtonIcon>
     </div>
   </div>
@@ -60,6 +54,10 @@ export default {
       default: '',
     },
     text: {
+      type: String,
+      default: '',
+    },
+    buttonLabel: {
       type: String,
       default: '',
     },
