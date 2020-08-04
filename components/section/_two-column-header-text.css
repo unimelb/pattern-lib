@@ -2,6 +2,37 @@
  * Two columns with cta
  */
 .two-column-header-text {
+
+  .grid {
+    @media (--bp-tablet) {
+      flex-flow: row;
+    }
+  }
+
+  &__first-column {
+    margin: 0;
+
+    @media (--bp-tablet) {
+      padding-right: 2rem;
+    }
+
+    @media (--bp-desktop) {
+      padding-right: 4rem;
+    }
+  }
+
+  &__second-column {
+    margin: 0;
+
+    @media (--bp-tablet) {
+      padding-left: 2rem;
+    }
+
+    @media (--bp-desktop) {
+      padding-left: 4rem;
+    }
+  }
+
   &__heading {
     font-family: var(--ff-lead);
     font-weight: var(--fw-bold);
