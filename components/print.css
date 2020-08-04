@@ -117,7 +117,13 @@
   .page-header__img,
   nav,
   .embed,
-  iframe {
+  iframe,
+  .header-tools__search,
+  .megamenu__blanket,
+  .header-tools__menu,
+  .card-focus__top-left,
+  .card-focus__bottom-right,
+  .card--focus-box__cnr {
     display: none !important;
   }
 
@@ -162,5 +168,45 @@
   .split-section__inner,
   .contact-card__col1_3 {
     padding: 1rem !important;
+  }
+
+  .page-header--study .page-header__inner {
+    min-height: 8rem;
+  }
+
+  .section--image-mask::before,
+  .notice,
+  .table--striped tr.table__row--inverted {
+    background-color: transparent !important;
+  }
+
+  .card--focus-box,
+  .section__inner,
+  .card--pathfinder,
+  .notice {
+    padding: 0 !important;
+  }
+
+  .btn,
+  .btn:visited {
+    border: none !important;
+  }
+
+  .table__row--inverted {
+    border-bottom: 1px solid rgb(171, 190, 213) !important;
+    border-top: 1px solid rgb(171, 190, 213) !important;
+  }
+
+  .table th {
+    border-right: 1px solid rgb(171, 190, 213);
+  }
+
+  .table th:last-child {
+    border-right: 0;
+  }
+
+  .responsive-table::before,
+  .responsive-table::after {
+    box-shadow: none !important;
   }
 }
