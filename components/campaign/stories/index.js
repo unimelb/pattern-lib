@@ -8,7 +8,7 @@ import {
 import Default from './Default.vue';
 import DarkBg from './DarkBg.vue';
 import BannerButtons from './BannerButtons.vue';
-import CampaignBanner2021 from './CampaignBanner2021';
+import CampaignBanner2021 from './CampaignBanner2021.vue';
 
 storiesOf('Campaign', module)
   .add('Default', createStory(Default))

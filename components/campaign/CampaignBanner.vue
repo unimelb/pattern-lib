@@ -1,14 +1,14 @@
 <template>
   <section
-    class="campaign-banner"
-    :style="{}">
+    class="campaign-banner">
     <img
       :src="imgSrc"
       :alt="backgroundAltText">
     <div class="campaign-banner__container">
       <h1>redefine<br>possible</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur</p>
+      <p>{{ text }}</p>
       <ButtonIcon
+        v-if="showButton"
         class="btn--secondary"
         :href="href"
         size="sml">
@@ -35,6 +35,14 @@ export default {
     href: {
       type: String,
       default: '#',
+    },
+    text: {
+      type: String,
+      default: 'lorem ipsum',
+    },
+    showButton: {
+      type: Boolean,
+      default: false,
     },
   },
   data: () => ({
