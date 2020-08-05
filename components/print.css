@@ -1,6 +1,6 @@
 @media print {
   * {
-    color: rgb(0, 0, 0) !important;
+    color: rgb(var(--col-black-dark)) !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -46,7 +46,7 @@
   a[href]::after {
     content: ' (' attr(href) ')';
     word-break: break-all;
-    color: rgb(0, 0, 0);
+    color: rgb(var(--col-black-dark));
     background-image: none !important;
   }
 
@@ -73,7 +73,7 @@
 
   pre,
   blockquote {
-    border: 1px solid rgb(247, 247, 247);
+    border: 1px solid rgb(var(--col-background-primary-grey));
     page-break-inside: avoid;
   }
 
@@ -193,12 +193,12 @@
   }
 
   .table__row--inverted {
-    border-bottom: 1px solid rgb(171, 190, 213) !important;
-    border-top: 1px solid rgb(171, 190, 213) !important;
+    border-bottom: 1px solid rgb(var(--col-navy-mid-1)) !important;
+    border-top: 1px solid rgb(var(--col-navy-mid-1)) !important;
   }
 
   .table th {
-    border-right: 1px solid rgb(171, 190, 213);
+    border-right: 1px solid rgb(var(--col-navy-mid-1));
   }
 
   .table th:last-child {
