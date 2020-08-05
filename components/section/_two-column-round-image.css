@@ -11,12 +11,14 @@
     @media (--bp-tablet) {
       margin-bottom: 1.25rem;
       font-size: 1.125rem;
-      line-height: 1;
+      line-height: 1.5;
     }
 
     @media (--bp-desktop) {
-      font-size: 1.75rem;
+      font-size: 1.375rem;
+      font-weight: var(--fw-bold);
       line-height: 1.15;
+      letter-spacing: -.025rem;
     }
   }
 
@@ -25,6 +27,7 @@
     letter-spacing: -.021rem;
     color: rgb(var(--col-grey-dark));
     margin-bottom: 1rem;
+    line-height: 1.67;
 
     @media (--bp-tablet) {
       margin-bottom: 1.25rem;
