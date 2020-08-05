@@ -1,5 +1,11 @@
 .card-rounded-figure {
-  max-width: 10rem;
+  display: flex;
+  flex-direction: row;
+
+  @media (--bp-tablet) {
+    flex-direction: column;
+    max-width: 10rem;
+  }
 
   .card__inner {
     padding: 0;
@@ -33,11 +39,17 @@
     line-height: 1.23;
     letter-spacing: -.05rem;
     color: rgb(var(--col-grey-mid-3));
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.25rem;
+
+    @media (--bp-tablet) {
+      margin-bottom: 1.875rem;
+    }
   }
 
   .card__thumb {
     height: 100%;
+    width: auto;
     margin-bottom: 1.25rem;
+    margin-right: .375rem;
   }
 }

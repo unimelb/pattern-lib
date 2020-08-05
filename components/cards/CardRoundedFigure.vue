@@ -6,22 +6,24 @@
         :background-image="thumb"
         :aria-label="ariaLabel" />
     </div>
-    <div class="card__inner">
-      <h3 class="card__title">
-        {{ title }}
-      </h3>
-      <p class="card__meta">
-        {{ text }}
-      </p>
-    </div>
-    <div
-      v-if="href"
-      class="card__footer">
-      <ButtonIcon
-        :href="href"
-        class="btn--cta">
-        {{ buttonLabel }}
-      </ButtonIcon>
+    <div>
+      <div class="card__inner">
+        <h3 class="card__title">
+          {{ title }}
+        </h3>
+        <p class="card__meta">
+          {{ text }}
+        </p>
+      </div>
+      <div
+        v-if="href"
+        class="card__footer">
+        <ButtonIcon
+          :href="href"
+          class="btn--cta">
+          {{ buttonLabel }}
+        </ButtonIcon>
+      </div>
     </div>
   </div>
 </template>
