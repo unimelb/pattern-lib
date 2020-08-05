@@ -43,9 +43,14 @@ export default {
       wide: 768,
       narrow: 480,
     },
+    resizeListener: null,
   }),
   mounted() {
+    this.resizeListener = window.addEventListener('resize', this.resolveProperBackground);
     this.resolveProperBackground();
+  },
+  destroyed() {
+    window.removeEventListener(this.resizeListener);
   },
   methods: {
     resolveProperBackground() {
