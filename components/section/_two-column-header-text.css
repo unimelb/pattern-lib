@@ -2,9 +2,8 @@
  * Two columns with cta
  */
 .two-column-header-text {
-
   .grid {
-    @media (--bp-tablet) {
+    @media (--bp-x-tablet) {
       flex-flow: row;
     }
   }
@@ -12,7 +11,7 @@
   &__first-column {
     margin: 0;
 
-    @media (--bp-tablet) {
+    @media (--bp-x-tablet) {
       padding-right: 2rem;
     }
 
@@ -24,31 +23,43 @@
   &__second-column {
     margin: 0;
 
-    @media (--bp-tablet) {
-      padding-left: 2rem;
-    }
-
     @media (--bp-desktop) {
       padding-left: 4rem;
     }
   }
 
   &__heading {
+    font-size: 1.25rem;
+    line-height: 1.3;
     font-family: var(--ff-lead);
     font-weight: var(--fw-bold);
-    font-size: 2.5rem;
-    line-height: 1.2;
     letter-spacing: -.025rem;
     color: rgb(var(--col-grey-mid-3));
-    margin-bottom: .5rem;
+    margin-bottom: 1.25rem;
+
+    @media (--bp-x-tablet) {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    @media (--bp-desktop) {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: .5rem;
+    }
   }
 
   &__description {
+    font-size: 1rem;
+    line-height: 1.63;
     font-weight: var(--fw-normal);
-    font-size: 1.125rem;
-    line-height: 1.67;
     letter-spacing: -.021rem;
     color: rgb(var(--col-grey-mid-3));
     margin-bottom: 1.875rem;
+
+    @media (--bp-x-tablet) {
+      font-size: 1.125rem;
+      line-height: 1.67;
+    }
   }
 }
