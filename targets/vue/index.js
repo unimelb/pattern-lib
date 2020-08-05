@@ -430,3 +430,7 @@ export {
   default as TodoList,
 }
   from 'components/todo-list/TodoList.vue';
+export {
+  default as CampaignBanner,
+}
+  from 'components/campaign/CampaignBanner.vue';
