@@ -556,7 +556,6 @@
 
   @media (--bp-tablet) {
     height: 16.25rem;
-    width: 9.5rem;
   }
 
   &--inverted {

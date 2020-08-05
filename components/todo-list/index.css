@@ -51,5 +51,11 @@
     @media (--bp-desktop) {
       justify-content: flex-start;
     }
+
+    .btn-card {
+      @media (--bp-tablet) {
+        width: 9.5rem;
+      }
+    }
   }
 }
