@@ -17,7 +17,8 @@
     &--1col,
     &--2col,
     &--3col,
-    &--4col {
+    &--4col,
+    &--6col {
       flex-direction: row;
       justify-content: center;
 
@@ -37,6 +38,10 @@
 
     &--4col .cell {
       width: calc(100% / 4);
+    }
+
+    &--6col .cell {
+      width: calc(100% / 6);
     }
   }
 }

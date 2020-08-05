@@ -4,7 +4,6 @@
 
   @media (--bp-tablet) {
     flex-direction: column;
-    max-width: 10rem;
   }
 
   .card__inner {
