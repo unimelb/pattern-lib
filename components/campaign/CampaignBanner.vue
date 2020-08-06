@@ -2,11 +2,16 @@
   <section
     class="campaign-banner">
     <img
+      class="campaign-banner__image"
       :src="imgSrc"
       :alt="backgroundAltText">
     <div class="campaign-banner__container">
-      <h1>redefine<br>possible</h1>
-      <p>{{ text }}</p>
+      <h1 class="campaign-banner__heading">
+        redefine<br>possible
+      </h1>
+      <p class="campaign-banner__text">
+        {{ text }}
+      </p>
       <ButtonIcon
         v-if="showButton"
         class="btn--secondary"
@@ -27,6 +32,7 @@ export default {
     background: {
       type: Object,
       required: true,
+      validator: (value) => value.large && typeof value.large === 'string',
     },
     backgroundAltText: {
       type: String,
@@ -58,7 +64,7 @@ export default {
     this.resolveProperBackground();
   },
   destroyed() {
-    window.removeEventListener(this.resizeListener);
+    window.removeEventListener('resize', this.resizeListener);
   },
   methods: {
     resolveProperBackground() {
@@ -72,7 +78,7 @@ export default {
           this.imgSrc = this.background.medium;
           break;
         default:
-          this.imgSrc = this.background.large;
+          this.imgSrc = this.background.large || '';
       }
     },
   },
