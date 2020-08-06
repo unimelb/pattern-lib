@@ -1,10 +1,18 @@
 <template>
   <section
     class="campaign-banner">
-    <img
-      class="campaign-banner__image"
-      :src="imgSrc"
-      :alt="backgroundAltText">
+    <picture>
+      <source
+        :media="`(max-width: ${narrowBreakpoint}px)`"
+        :srcset="background.small">
+      <source
+        :media="`(max-width: ${wideBreakpoint}px)`"
+        :srcset="background.medium">
+      <img
+        class="campaign-banner__image"
+        :src="background.large"
+        :alt="backgroundAltText">
+    </picture>
     <div class="campaign-banner__container">
       <h1 class="campaign-banner__heading">
         redefine<br>possible
@@ -50,37 +58,18 @@ export default {
       type: Boolean,
       default: false,
     },
+    wideBreakpoint: {
+      type: Number,
+      default: 768,
+    },
+    narrowBreakpoint: {
+      type: Number,
+      default: 480,
+    },
   },
   data: () => ({
     imgSrc: '',
-    breakpoints: {
-      wide: 768,
-      narrow: 480,
-    },
     resizeListener: null,
   }),
-  mounted() {
-    this.resizeListener = window.addEventListener('resize', this.resolveProperBackground);
-    this.resolveProperBackground();
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.resizeListener);
-  },
-  methods: {
-    resolveProperBackground() {
-      const width = document.documentElement.clientWidth;
-
-      switch (true) {
-        case width <= this.breakpoints.narrow:
-          this.imgSrc = this.background.small;
-          break;
-        case width > this.breakpoints.narrow && width <= this.breakpoints.wide:
-          this.imgSrc = this.background.medium;
-          break;
-        default:
-          this.imgSrc = this.background.large || '';
-      }
-    },
-  },
 };
 </script>
