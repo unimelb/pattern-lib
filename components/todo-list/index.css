@@ -5,8 +5,82 @@
     }
   }
 
-  .grid {
-    margin-right: 0;
+  &__container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+
+    @media (--bp-x-desktop) {
+      padding: 0 0 0 .625rem;
+      flex-direction: row;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex: 1;
+    flex-basis: 100%;
+  }
+
+  &__figure {
+    margin-right: .75rem;
+  }
+
+  &__header-txt {
+    margin-right: .625rem;
+  }
+
+  &__fill {
+    display: none;
+
+    @media (--bp-x-tablet) {
+      display: initial;
+      max-width: 10.375rem;
+      width: 100%;
+      flex: 1 0 auto;
+    }
+
+    @media (--bp-x-desktop) {
+      display: none;
+    }
+  }
+
+  &__button-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 0;
+    margin: 0;
+
+    @media (--bp-x-tablet) {
+      flex-direction: row;
+      flex: 1;
+      flex-basis: 100%;
+    }
+
+    @media (--bp-x-desktop) {
+      justify-content: flex-start;
+      margin-left: .625rem;
+    }
+  }
+
+  .figure {
+    display: none;
+
+    @media (--bp-x-tablet) {
+      display: inline-table;
+      padding-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+    }
+  }
+
+  .btn-card {
+    @media (--bp-x-tablet) {
+      max-width: 9.456rem;
+    }
   }
 
   .section__inner {
@@ -16,46 +90,8 @@
     border-top: 1px solid;
     border-color: rgb(var(--col-black-mid-2));
 
-    @media (--bp-desktop) {
+    @media (--bp-x-desktop) {
       padding: 2.5rem 0 3.75rem 0;
-    }
-  }
-
-  .figure {
-    display: none;
-
-    @media (--bp-tablet) {
-      display: inline-table;
-      padding-top: 0;
-      margin-bottom: 0;
-      padding-bottom: 0;
-      padding-left: 0;
-    }
-  }
-
-  &__figure-text {
-    display: flex;
-  }
-
-  &__button-cards {
-    display: flex;
-    flex-direction: column;
-    padding-right: 0;
-    margin: 0;
-
-    @media (--bp-tablet) {
-      justify-content: flex-end;
-      flex-direction: row;
-    }
-
-    @media (--bp-desktop) {
-      justify-content: flex-start;
-    }
-
-    .btn-card {
-      @media (--bp-tablet) {
-        width: 9.5rem;
-      }
     }
   }
 }

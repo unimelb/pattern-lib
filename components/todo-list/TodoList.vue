@@ -1,18 +1,18 @@
 <template>
   <SectionWrap
     class="todo-list">
-    <div class="grid grid--center">
-      <ListItem
-        class="todo-list__figure-text"
-        cols="1of2">
-        <FigureWrap
-          :caption="false"
-          inset>
-          <FigureRounded
-            :background-image="img"
-            aria-label="test aria label" />
-        </FigureWrap>
-        <div>
+    <div class="todo-list__container">
+      <div class="todo-list__inner">
+        <div class="todo-list__figure">
+          <FigureWrap
+            :caption="false"
+            inset>
+            <FigureRounded
+              :background-image="img"
+              :aria-label="ariaLabel" />
+          </FigureWrap>
+        </div>
+        <div class="todo-list__header-txt">
           <h3 class="section-with-rounded-image__heading">
             {{ heading }}
           </h3>
@@ -20,10 +20,9 @@
             {{ description }}
           </p>
         </div>
-      </ListItem>
-      <ListItem
-        class="todo-list__button-cards"
-        cols="1of2">
+      </div>
+      <div class="todo-list__button-cards">
+        <div class="todo-list__fill" />
         <ButtonCard
           v-for="data in buttonCardData"
           :key="data"
@@ -31,7 +30,7 @@
           :label="data.label"
           :link="data.link"
           :inverted="data.inverted" />
-      </ListItem>
+      </div>
     </div>
   </SectionWrap>
 </template>
@@ -51,6 +50,10 @@ export default {
   },
   props: {
     img: {
+      type: String,
+      default: '',
+    },
+    ariaLabel: {
       type: String,
       default: '',
     },
