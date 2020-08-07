@@ -27,12 +27,12 @@ export default {
     },
     toElement: {
       type: String,
-      default: '#main',
+      default: 'main',
     },
   },
   methods: {
     scrollTo() {
-      const toElement = document.querySelector(this.toElement);
+      const toElement = document.querySelector(`[role="${this.toElement}"]`);
       if (toElement) {
         toElement.scrollIntoView();
         toElement.focus();

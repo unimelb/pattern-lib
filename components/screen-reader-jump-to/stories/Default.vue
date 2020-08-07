@@ -2,7 +2,7 @@
   <div>
     <ScreenReaderJumpTo
       text="Skip to main content"
-      to-element="#main" />
+      to-element="main" />
     <MegaMenu
       :items="items"
       :top-menu="topMenu"
@@ -25,7 +25,7 @@
     </div>
 
     <div
-      id="main"
+      role="main"
       tabindex="-1">
       <section-wrap bg-color="white">
         <h1>Main content</h1>
