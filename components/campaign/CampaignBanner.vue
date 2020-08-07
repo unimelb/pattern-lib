@@ -3,9 +3,11 @@
     class="campaign-banner">
     <picture>
       <source
+        v-if="background.small"
         :media="`(max-width: ${narrowBreakpoint}px)`"
         :srcset="background.small">
       <source
+        v-if="background.medium"
         :media="`(max-width: ${wideBreakpoint}px)`"
         :srcset="background.medium">
       <img
