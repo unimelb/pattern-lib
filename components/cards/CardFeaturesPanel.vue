@@ -20,7 +20,7 @@
       class="card__footer">
       <ButtonIcon
         :href="href"
-        class="btn--wide btn--cta btn--sml">
+        class="btn--fullwidth btn--cta btn--sml">
         Read more
       </ButtonIcon>
     </div>
