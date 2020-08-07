@@ -25,7 +25,7 @@
         class="btn--secondary"
         :href="href"
         size="sml">
-        LEARN MORE
+        {{ buttonText }}
       </ButtonIcon>
     </div>
   </section>
