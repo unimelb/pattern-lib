@@ -4,6 +4,12 @@
     <FigureRounded
       background-image="http://lorempixel.com/640/480/people"
       aria-label="test aria label" />
+
+    <h1>Figure Rounded Small</h1>
+    <FigureRounded
+      small
+      background-image="http://lorempixel.com/640/480/people"
+      aria-label="test aria label" />
   </div>
 </template>
 
