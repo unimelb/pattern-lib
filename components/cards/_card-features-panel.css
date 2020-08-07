@@ -1,19 +1,31 @@
 .card--features-panel {
+  color: rgb(var(--col-grey-mid-3));
+
+  .section.bg-inverted & {
+    color: rgb(var(--col-white));
+  }
+
+  .card__inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .card__title {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: var(--vr);
+    font-size: 1.3rem;
+    text-align: left;
+    margin-bottom: .5rem;
     text-transform: none;
   }
 
   .card__footer {
     display: flex;
     justify-content: center;
-    padding-top: 0;
+    padding: 0 0 1.5rem 0;
   }
 
   .card__meta {
     font-size: 1rem;
+    margin: 0;
   }
 
   .card__thumb {
