@@ -1,8 +1,8 @@
+
 <template>
   <CampaignBanner
     :background="backgroundImages"
     background-alt-text="woman diver"
-    :show-button="true"
     href="#main"
     text="Lorem ipsum dolor sit amet, consectetur" />
 </template>

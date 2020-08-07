@@ -54,6 +54,10 @@ export default {
       type: String,
       default: 'lorem ipsum',
     },
+    buttonText: {
+      type: String,
+      default: 'learn more',
+    },
     showButton: {
       type: Boolean,
       default: false,
@@ -67,9 +71,5 @@ export default {
       default: 480,
     },
   },
-  data: () => ({
-    imgSrc: '',
-    resizeListener: null,
-  }),
 };
 </script>
