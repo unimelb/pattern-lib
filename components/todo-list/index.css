@@ -1,10 +1,4 @@
 .todo-list {
-  & + & {
-    .section__inner {
-      border-top: none;
-    }
-  }
-
   &__container {
     display: flex;
     width: 100%;
@@ -86,9 +80,8 @@
   .section__inner {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
-    border-bottom: 1px solid;
     border-top: 1px solid;
-    border-color: rgb(var(--col-black-mid-2));
+    border-color: rgb(var(--col-navy-mid-1));
 
     @media (--bp-x-desktop) {
       padding: 2.5rem 0 3.75rem 0;

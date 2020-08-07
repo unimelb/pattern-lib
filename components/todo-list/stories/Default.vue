@@ -2,6 +2,7 @@
   <div>
     <h1>Todo list example</h1>
     <TodoList
+      bg-color="light-blue"
       img="http://lorempixel.com/640/480/people"
       aria-label="Duis nulla id sint exercitation sint nisi reprehenderit nulla nulla enim consequat id velit aliqua."
       heading="Pariatur cupidatat incididunt."
@@ -21,6 +22,7 @@
                             inverted: true,
                           }]" />
     <TodoList
+      bg-color="alt"
       img="http://lorempixel.com/640/480/people"
       aria-label="Duis nulla id sint exercitation sint nisi reprehenderit nulla nulla enim consequat id velit aliqua."
       heading="Pariatur cupidatat incididunt."
@@ -35,6 +37,7 @@
                             inverted: true,
                           }]" />
     <TodoList
+      bg-color="light-blue"
       img="http://lorempixel.com/640/480/people"
       aria-label="Duis nulla id sint exercitation sint nisi reprehenderit nulla nulla enim consequat id velit aliqua."
       heading="Pariatur cupidatat incididunt."

@@ -1,5 +1,6 @@
 <template>
   <SectionWrap
+    :class="`bg-${bgColor}`"
     class="todo-list">
     <div class="todo-list__container">
       <div class="todo-list__inner">
@@ -68,6 +69,11 @@ export default {
     buttonCardData: {
       type: Array,
       default: () => [{}],
+    },
+    bgColor: {
+      type: String,
+      default: 'light-blue',
+      validator: (value) => ['light-blue', 'alt'].includes(value),
     },
   },
 };

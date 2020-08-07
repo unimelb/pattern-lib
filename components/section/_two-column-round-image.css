@@ -14,7 +14,7 @@
       margin-bottom: 1.25rem;
     }
 
-    @media (--bp-x-desktop) {
+    @media (--bp-x-tablet) {
       font-size: 1.375rem;
       font-weight: var(--fw-bold);
       letter-spacing: -.025rem;
