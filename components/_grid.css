@@ -10,6 +10,19 @@
 
   @media (--bp-tablet) {
     flex-flow: row wrap;
+    justify-content: center;
+
+    &--4col .cell {
+      width: calc(100% / 2);
+    }
+
+    &--3col .cell {
+      width: calc(100% / 2);
+    }
+
+    &--6col .cell {
+      width: calc(100% / 2);
+    }
   }
 
   @media (--bp-desktop) {
