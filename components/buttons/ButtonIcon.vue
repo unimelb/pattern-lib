@@ -2,6 +2,8 @@
   <component
     :is="element"
     :class="classes"
+    :role="role"
+    :tab-index="tabIndex"
     :href="isLink && href"
     :aria-disabled="isLink && disabled ? 'true' : false"
     :disabled="!isLink && disabled">
@@ -75,6 +77,14 @@ export default {
     top: {
       type: Boolean,
       default: false,
+    },
+    role: {
+      type: String,
+      default: undefined,
+    },
+    tabIndex: {
+      type: Number,
+      default: undefined,
     },
   },
   computed: {
