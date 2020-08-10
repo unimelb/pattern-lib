@@ -11,7 +11,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
     aria-haspopup="listbox"
     class="filter-dropdown__select"
     data-testid="filter-dropdown-select"
-    tabindex="0"
+    tab-index="0"
   >
     <div
       class="filter-dropdown__label filter-dropdown__label--strong"
@@ -558,7 +558,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
         <button
           class="btn btn--fullwidth"
           data-testid="filter-dropdown-btn-clear"
-          tabindex="0"
+          tab-index="0"
         >
           <!---->
            
@@ -573,7 +573,7 @@ exports[`FilterDropdown should match spapshot 1`] = `
         <button
           class="btn--cta btn btn--fullwidth"
           data-testid="filter-dropdown-btn-apply"
-          tabindex="0"
+          tab-index="0"
         >
           <!---->
            
