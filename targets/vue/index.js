@@ -426,3 +426,7 @@ export {
   default as CardRoundedFigure,
 }
   from 'components/cards/CardRoundedFigure.vue';
+export {
+  default as TodoList,
+}
+  from 'components/todo-list/TodoList.vue';
