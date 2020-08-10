@@ -4,11 +4,11 @@
     <picture>
       <source
         v-if="background.small"
-        :media="`(max-width: ${narrowBreakpoint}px)`"
+        :media="`(max-width: ${breakpoints.low}px)`"
         :srcset="background.small">
       <source
         v-if="background.medium"
-        :media="`(max-width: ${wideBreakpoint}px)`"
+        :media="`(max-width: ${breakpoints.high}px)`"
         :srcset="background.medium">
       <img
         class="campaign-banner__image"
@@ -64,14 +64,12 @@ export default {
       type: Boolean,
       default: false,
     },
-    wideBreakpoint: {
-      type: Number,
-      default: 768,
-    },
-    narrowBreakpoint: {
-      type: Number,
-      default: 480,
-    },
   },
+  data: () => ({
+    breakpoints: {
+      low: 600,
+      high: 768,
+    },
+  }),
 };
 </script>

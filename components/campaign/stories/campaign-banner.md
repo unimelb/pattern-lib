@@ -12,10 +12,7 @@ The CampaignBanner component has a couple of props need to be described:
   }
 ```
 `large` property is required, others are optional. In absence of `medium` and `small` properties `large` will be displayed for all viewport width values;
-- `wide-breakpoint` and `narrow-breakpoint` define viewport width where background changes source.  
-They are optional and accept numeric values in CSS pixels. Default values are set to 768 and 480 accordinly.  
-Small image will be displayed below `narrow-breakpoint`, medium between `wide` and `narrow`  
-and large above `wide` (if all of these are provided in `background`);
+- to improve the a11y be sure to provide a custom `background-alt-text` property; 
 
 Usage for the rest of properties is straightforward.
 
