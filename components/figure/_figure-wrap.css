@@ -118,5 +118,10 @@
     background-size: cover;
     background-position: center;
     margin: 0;
+
+    &--sml {
+      width: 5.9375rem;
+      height: 5.9375rem;
+    }
   }
 }

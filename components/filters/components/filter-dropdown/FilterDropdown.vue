@@ -8,7 +8,7 @@
     @focusout="onFocusOut">
     <div
       ref="select"
-      :tabindex="tabIndex"
+      :tab-index="tabIndex"
       aria-haspopup="listbox"
       :aria-expanded="isOpened + ''"
       :class="classSelect"
@@ -52,7 +52,7 @@
           <ButtonIcon
             no-icon
             element="button"
-            tabindex="0"
+            :tab-index="0"
             data-testid="filter-dropdown-btn-clear"
             width="fullwidth"
             @keydown.native.enter.stop
@@ -65,7 +65,7 @@
           <ButtonIcon
             no-icon
             element="button"
-            tabindex="0"
+            :tab-index="0"
             data-testid="filter-dropdown-btn-apply"
             class="btn--cta"
             width="fullwidth"
