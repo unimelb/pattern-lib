@@ -67,7 +67,7 @@ export default {
   },
   data: () => ({
     breakpoints: {
-      low: 600,
+      low: 599,
       high: 768,
     },
   }),
