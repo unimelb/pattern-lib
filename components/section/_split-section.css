@@ -97,7 +97,7 @@
     &__inner {
       max-width: calc(var(--w-mid) / 2 + var(--vr)); /* account for either left or right padding */
       padding-top: calc(7 * var(--vr));
-      padding-bottom: calc(var(--vr));
+      padding-bottom: calc(2 * var(--vr));
     }
 
     &__side:first-child > .split-section__inner { margin-left: auto; }
