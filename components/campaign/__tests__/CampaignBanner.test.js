@@ -1,15 +1,10 @@
-
 import {
   shallow,
   mount,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+
 import CampaignBanner from '../CampaignBanner.vue';
 import ButtonIcon from '../../buttons/ButtonIcon.vue';
-
-expect.extend(toHaveNoViolations);
 
 describe('CampaignBanner', () => {
   const requiredProps = {
