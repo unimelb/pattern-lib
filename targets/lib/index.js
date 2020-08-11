@@ -108,6 +108,7 @@ import PageCampaignCards from 'components/campaign/PageCampaignCards.vue';
 import FigureRounded from 'components/figure/FigureRounded.vue';
 import CardRoundedFigure from 'components/cards/CardRoundedFigure.vue';
 import TodoList from 'components/todo-list/TodoList.vue';
+import CampaignBanner from 'components/campaign/CampaignBanner.vue';
 
 import { version } from '../../package.json';
 
@@ -224,7 +225,7 @@ Vue.component('page-campaign-cards', PageCampaignCards);
 Vue.component('figure-rounded', FigureRounded);
 Vue.component('card-rounded-figure', CardRoundedFigure);
 Vue.component('todo-list', TodoList);
-
+Vue.component('campaign-banner', CampaignBanner);
 // Create Vue instance
 new Vue({
   el: '#ui',
