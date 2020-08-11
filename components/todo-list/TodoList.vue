@@ -26,7 +26,7 @@
         <div class="todo-list__fill" />
         <ButtonCard
           v-for="data in buttonCardData"
-          :key="data"
+          :key="data.id"
           :top-label="data.topLabel"
           :label="data.label"
           :link="data.link"

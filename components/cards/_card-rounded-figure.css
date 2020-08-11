@@ -46,7 +46,7 @@
   }
 
   .card__thumb {
-    height: 100%;
+    height: auto;
     width: auto;
     margin-bottom: 1.25rem;
     margin-right: .375rem;
