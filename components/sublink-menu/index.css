@@ -37,7 +37,7 @@
   }
 
   &__item {
-    display: block;
+    display: flex;
     padding: calc(var(--vr) / 2);
     border-top: 2px solid rgb(var(--col-black-mid-2));
     color: rgb(var(--col-brand));
@@ -50,6 +50,10 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .push-icon {
+    display: flex;
   }
 
   &--pad .sublink-menu__nav .sublink-menu__item {

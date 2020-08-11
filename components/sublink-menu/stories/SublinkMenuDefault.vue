@@ -10,7 +10,8 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <h3>Our Brand Story</h3>
+            <p>Consectetur proident sint amet cillum.</p>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"

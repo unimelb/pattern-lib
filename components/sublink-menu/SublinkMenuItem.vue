@@ -4,12 +4,12 @@
     class="sublink-menu__item">
     <span class="push-icon">
       <slot />
-      <SvgIcon
-        class="push-icon__icon"
-        name="chevron-right"
-        height="16"
-        width="16" />
     </span>
+    <SvgIcon
+      class="push-icon__icon"
+      name="chevron-right"
+      height="16"
+      width="16" />
   </a>
 </template>
 
