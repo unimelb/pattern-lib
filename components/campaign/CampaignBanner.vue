@@ -45,10 +45,10 @@ export default {
       required: true,
       validator: (value) => {
         const { large, medium } = value;
+        const validateSrc = (src) => typeof src.url === 'string' && !Number.isNaN(src.pixelRatio);
         const validate = (size) => size && Array.isArray(size) && size.length
-          && size[0].url && typeof size[0].url === 'string'
-          && !Number.isNaN(size[0].devicePixelRatio);
-        return validate(large) && validate(medium);
+          && size.every(validateSrc);
+        return large && medium && Object.values(value).every(validate);
       },
     },
     backgroundAltText: {
