@@ -1,16 +1,19 @@
 <template>
   <div
+    role="region"
     class="filter-dropdown"
     :data-uuid="uuid"
-    @keydown.enter="onEnter"
+    @keydown.esc="closeOnKeypress"
+    @keydown.enter="closeOnKeypress"
     @focusout="onFocusOut">
     <div
       ref="select"
-      :tabindex="tabIndex"
+      :tab-index="tabIndex"
       aria-haspopup="listbox"
       :aria-expanded="isOpened + ''"
       :class="classSelect"
       data-testid="filter-dropdown-select"
+      @keydown.down.stop="onSelectKeyPress"
       @keydown.enter.stop="onSelectKeyPress"
       @click="onSelectClick">
       <div
@@ -28,6 +31,7 @@
 
     <div
       ref="body"
+      role="listbox"
       data-testid="filter-dropdown-body"
       tabindex="-1"
       :class="classBody">
@@ -48,7 +52,7 @@
           <ButtonIcon
             no-icon
             element="button"
-            tabindex="0"
+            :tab-index="0"
             data-testid="filter-dropdown-btn-clear"
             width="fullwidth"
             @keydown.native.enter.stop
@@ -61,7 +65,7 @@
           <ButtonIcon
             no-icon
             element="button"
-            tabindex="0"
+            :tab-index="0"
             data-testid="filter-dropdown-btn-apply"
             class="btn--cta"
             width="fullwidth"
@@ -228,7 +232,7 @@ export default {
         this.$refs.nestedCheckbox.focusOnFirst();
       });
     },
-    onEnter() {
+    closeOnKeypress() {
       this.closeDropdown();
     },
     onFocusOut(event) {

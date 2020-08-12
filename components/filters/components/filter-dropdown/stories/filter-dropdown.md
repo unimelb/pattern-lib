@@ -18,6 +18,7 @@ singular: 'course type', // string, required
 
 ```
 label: 'Undergraduate (7)', // string, required
+ariaLabel: 'Your aria label choice if differing from the label',
 name: 'undergraduate', // string, required, must be unique
 options: [
     {

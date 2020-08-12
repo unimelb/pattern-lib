@@ -28,8 +28,8 @@
         :class="[tabsControlClass, edgePrev ? 'tabs__controls--disabled' : '']"
         role="button"
         @click="prevClick"
-        @keydown.13="prevClick"
-        @keydown.32="prevClick">
+        @keydown.enter="prevClick"
+        @keydown.space="prevClick">
         <SvgIcon
           name="chevron-left"
           width="10"
@@ -64,8 +64,8 @@
         :class="[tabsControlClass, edgeNext ? 'tabs__controls--disabled' : '']"
         role="button"
         @click="nextClick"
-        @keydown.13="nextClick"
-        @keydown.32="nextClick">
+        @keydown.enter="nextClick"
+        @keydown.space="nextClick">
         <SvgIcon
           name="chevron-right"
           width="10"

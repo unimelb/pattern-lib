@@ -407,6 +407,10 @@ export {
 }
   from 'components/buttons/ButtonTwoIcons.vue';
 export {
+  default as ButtonCard,
+}
+  from 'components/buttons/ButtonCard.vue';
+export {
   default as CardCampaign,
 }
   from 'components/cards/CardCampaign.vue';
@@ -414,3 +418,19 @@ export {
   default as PageCampaignCards,
 }
   from 'components/campaign/PageCampaignCards.vue';
+export {
+  default as FigureRounded,
+}
+  from 'components/figure/FigureRounded.vue';
+export {
+  default as CardRoundedFigure,
+}
+  from 'components/cards/CardRoundedFigure.vue';
+export {
+  default as TodoList,
+}
+  from 'components/todo-list/TodoList.vue';
+export {
+  default as CampaignBanner,
+}
+  from 'components/campaign/CampaignBanner.vue';

@@ -12,7 +12,7 @@
           :class="thumbnailOpenClass"
           tabindex="0"
           @click="useOverlay && callback(index)"
-          @keydown.13="callback(index)">
+          @keydown.enter="callback(index)">
           <div
             v-if="item.type === 'image'"
             :aria-label="item.altText"

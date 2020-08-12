@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CampaignBanner should match snapshot 1`] = `
+<section
+  class="campaign-banner"
+>
+  <picture>
+    <!---->
+     
+    <!---->
+     
+    <img
+      alt="banner background"
+      class="campaign-banner__image"
+      src="/path/to/large"
+    />
+  </picture>
+   
+  <div
+    class="campaign-banner__container"
+  >
+    <h1
+      class="campaign-banner__heading"
+    >
+      
+      redefine
+      <br />
+      possible
+    
+    </h1>
+     
+    <p
+      class="campaign-banner__text"
+    >
+      
+      lorem ipsum
+    
+    </p>
+     
+    <!---->
+  </div>
+</section>
+`;
+
+exports[`CampaignBanner should match snapshot with button 1`] = `
+<section
+  class="campaign-banner"
+>
+  <picture>
+    <!---->
+     
+    <!---->
+     
+    <img
+      alt="banner background"
+      class="campaign-banner__image"
+      src="/path/to/large"
+    />
+  </picture>
+   
+  <div
+    class="campaign-banner__container"
+  >
+    <h1
+      class="campaign-banner__heading"
+    >
+      
+      redefine
+      <br />
+      possible
+    
+    </h1>
+     
+    <p
+      class="campaign-banner__text"
+    >
+      
+      lorem ipsum
+    
+    </p>
+     
+    <!---->
+  </div>
+</section>
+`;

@@ -17,7 +17,7 @@
         ref="blanket"
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
-        @keypress.27="dismissMobileMenu">
+        @keypress.esc="dismissMobileMenu">
         <MegaMenuTopNavigation
           v-if="isShowTopMenu && isMobileOpen === false"
           :items="topMenu"
@@ -154,7 +154,7 @@
           href="#sitemapmenu"
           class="link-icon--vertical link-reset"
           @click.prevent="activateMobileMenu"
-          @keydown.13="activeMobileMenu">
+          @keydown.enter="activeMobileMenu">
           <svg
             class="link-icon__icon svg"
             role="presentation"

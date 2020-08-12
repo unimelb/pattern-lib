@@ -1,0 +1,72 @@
+.campaign-banner {
+  width: 100%;
+  position: relative;
+  min-width: 20rem;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 2.333rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (--bp-max-x-mobile) {
+      left: 0;
+      right: 0;
+      top: calc(50% + 1rem);
+      justify-content: flex-start;
+      width: 9.375rem;
+      margin: auto;
+    }
+  }
+
+  &__heading {
+    font-family: var(--ff-normal);
+    color: rgb(var(--col-background-primary-white));
+    text-transform: uppercase;
+    font-size: 3.333rem;
+    line-height: .833;
+    margin-bottom: .667rem;
+
+    @media (--bp-max-x-mobile) {
+      font-size: 2.188rem;
+      line-height: .914;
+      margin-bottom: .75rem;
+    }
+  }
+
+  &__text {
+    font-family: var(--ff-normal);
+    color: rgb(var(--col-background-primary-white));
+    text-transform: uppercase;
+    font-size: .889rem;
+    line-height: 1.25;
+    width: 9.333rem;
+    margin-bottom: 1.111rem;
+
+    @media (--bp-max-x-mobile) {
+      font-size: .875rem;
+      line-height: 1;
+      width: 100%;
+    }
+  }
+
+  .btn--secondary {
+    width: 8.333rem;
+    padding: .556rem .444rem;
+    font-size: .889rem;
+    text-transform: uppercase;
+
+    @media (--bp-max-x-mobile) {
+      margin: 0 auto;
+    }
+  }
+}

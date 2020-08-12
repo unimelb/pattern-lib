@@ -2,16 +2,21 @@
  * Split section
  */
 .split-section {
+  display: flex;
+  flex-direction: column;
+
   &--fullheight {
     min-height: 47.1rem;
   }
 
   /* left and right-hand sides are interchangeable */
   &__side {
+    order: 1;
     background-position: center;
     background-size: cover;
 
     &--with-image {
+      order: 0;
       padding-top: 56.25%;
     }
   }
@@ -91,8 +96,8 @@
 
     &__inner {
       max-width: calc(var(--w-mid) / 2 + var(--vr)); /* account for either left or right padding */
-      padding-top: calc(4 * var(--vr));
-      padding-bottom: calc(4 * var(--vr));
+      padding-top: calc(7 * var(--vr));
+      padding-bottom: calc(2 * var(--vr));
     }
 
     &__side:first-child > .split-section__inner { margin-left: auto; }

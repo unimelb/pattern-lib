@@ -102,8 +102,13 @@ import ErrorBox from 'components/error-box/ErrorBox.vue';
 import CardCourse from 'components/cards/CardCourse.vue';
 import CardCourseList from 'components/cards/CardCourseList.vue';
 import ButtonTwoIcons from 'components/buttons/ButtonTwoIcons.vue';
+import ButtonCard from 'components/buttons/ButtonCard.vue';
 import CardCampaign from 'components/cards/CardCampaign.vue';
 import PageCampaignCards from 'components/campaign/PageCampaignCards.vue';
+import FigureRounded from 'components/figure/FigureRounded.vue';
+import CardRoundedFigure from 'components/cards/CardRoundedFigure.vue';
+import TodoList from 'components/todo-list/TodoList.vue';
+import CampaignBanner from 'components/campaign/CampaignBanner.vue';
 
 import { version } from '../../package.json';
 
@@ -214,9 +219,13 @@ Vue.component('error-box', ErrorBox);
 Vue.component('card-course', CardCourse);
 Vue.component('card-course-list', CardCourseList);
 Vue.component('button-two-icons', ButtonTwoIcons);
+Vue.component('button-card', ButtonCard);
 Vue.component('card-campaign', CardCampaign);
 Vue.component('page-campaign-cards', PageCampaignCards);
-
+Vue.component('figure-rounded', FigureRounded);
+Vue.component('card-rounded-figure', CardRoundedFigure);
+Vue.component('todo-list', TodoList);
+Vue.component('campaign-banner', CampaignBanner);
 // Create Vue instance
 new Vue({
   el: '#ui',

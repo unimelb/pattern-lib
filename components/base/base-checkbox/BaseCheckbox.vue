@@ -1,10 +1,10 @@
 <template>
   <label
+    role="checkbox"
     :data-name="name"
     :class="classRoot"
     :tabindex="tabIndex"
     :aria-label="ariaLabel"
-    role="checkbox"
     :aria-checked="isInputChecked + ''"
     @focus="onRootFocus"
     @blur="onRootBlur"
