@@ -1,15 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SublinkMenuItem should match snapshot 1`] = `
-<a
+<div
   class="sublink-menu__item"
-  href="#"
 >
-  <span
-    class="push-icon"
+  <a
+    class="sublink-menu__link"
+    href="#"
   >
      
     <!---->
-  </span>
-</a>
+  </a>
+   
+  <div
+    class="sublink-menu__description"
+  />
+</div>
 `;

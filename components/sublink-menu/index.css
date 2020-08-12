@@ -31,7 +31,6 @@
   }
 
   &__title {
-    margin-top: var(--vr);
     margin-bottom: 1.25rem;
     font-weight: var(--fw-bold);
     letter-spacing: -.025rem;
