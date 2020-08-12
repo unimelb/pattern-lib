@@ -4,7 +4,7 @@
     aria-label="image alt text"
     heading="Non duis et voluptate culpa anim amet."
     link-name="Register here"
-    href="www.unimelb.edu.au" />
+    href="https://www.unimelb.edu.au/" />
 </template>
 
 <script>

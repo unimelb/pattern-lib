@@ -1,4 +1,7 @@
 .card-image-listing {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
   background-color: rgb(var(--col-background-primary-white));
   border: 1px solid rgb(var(--col-black-mid-1));
 
@@ -15,9 +18,17 @@
     }
   }
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
   &__wrapper {
     display: flex;
     padding: 1rem;
+    width: 100%;
 
     @media (--bp-tablet) {
       flex-direction: column;
@@ -25,7 +36,7 @@
     }
 
     @media (--bp-desktop) {
-      padding: 1.875rem 2.625rem;
+      padding: 1.875rem;
     }
   }
 
@@ -41,7 +52,7 @@
   &__image {
     width: 4.625rem;
     height: 4.625rem;
-    padding-top: 56.25%;
+    padding-top: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -53,6 +64,7 @@
   }
 
   &__heading {
+    flex: 1 1 auto;
     font-family: var(--ff-lead);
     font-weight: var(--fw-bold);
     letter-spacing: -.025rem;
@@ -68,6 +80,9 @@
   }
 
   &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-weight: var(--fw-semibold);
     font-size: 1rem;
     line-height: 1.125;

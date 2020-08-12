@@ -10,6 +10,6 @@ import Story2 from './Story2.vue';
 
 /* News Listing Cards */
 storiesOf('Cards/Image Listing', module)
-  .add('Standlone', createStory(Story1))
+  .add('Standalone', createStory(Story1))
   .add('Grid 4 column', createStory(Story2));
 /* ##Story goes here */
