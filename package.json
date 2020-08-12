@@ -26,6 +26,7 @@
     "build:vue": "cross-env NODE_ENV=production webpack --config targets/vue/webpack.config.js",
     "clean:snapshots": "rimraf snapshots/__tests__/__image_snapshots__/__diff_output__",
     "dev": "start-storybook -p 7002 -c .storybook",
+    "dev:public": "start-storybook -p 7002 -h 0.0.0.0 -c .storybook",
     "start:lib": "webpack-dev-server --port 7003 --config targets/lib/webpack.config.js",
     "lint": "run-s lint:js lint:css",
     "lint:css": "stylelint \".storybook/**/*.css\" \"components/**/*.css\" \"targets/**/*.css\" --fix",

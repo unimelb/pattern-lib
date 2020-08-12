@@ -7,12 +7,16 @@ exports[`CampaignBanner should match snapshot 1`] = `
   <picture>
     <!---->
      
-    <!---->
+    <source
+      media="(max-width: 768px)"
+      srcset="/path/to/medium 1x"
+    />
      
     <img
       alt="banner background"
       class="campaign-banner__image"
       src="/path/to/large"
+      srcset="/path/to/large 1x"
     />
   </picture>
    
@@ -49,12 +53,16 @@ exports[`CampaignBanner should match snapshot with button 1`] = `
   <picture>
     <!---->
      
-    <!---->
+    <source
+      media="(max-width: 768px)"
+      srcset="/path/to/medium 1x"
+    />
      
     <img
       alt="banner background"
       class="campaign-banner__image"
       src="/path/to/large"
+      srcset="/path/to/large 1x"
     />
   </picture>
    

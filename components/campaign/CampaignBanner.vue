@@ -3,16 +3,17 @@
     class="campaign-banner">
     <picture>
       <source
-        v-if="background.small"
+        v-if="imgSources.small && imgSources.small.length"
         :media="`(max-width: ${breakpoints.low}px)`"
-        :srcset="background.small">
+        :srcset="composeSrcSet(imgSources.small)">
       <source
-        v-if="background.medium"
+        v-if="imgSources.medium && imgSources.medium.length"
         :media="`(max-width: ${breakpoints.high}px)`"
-        :srcset="background.medium">
+        :srcset="composeSrcSet(imgSources.medium)">
       <img
         class="campaign-banner__image"
-        :src="background.large"
+        :srcset="composeSrcSet(imgSources.large)"
+        :src="imgSources.large[0].url"
         :alt="backgroundAltText">
     </picture>
     <div class="campaign-banner__container">
@@ -39,10 +40,16 @@ import ButtonIcon from '../buttons/ButtonIcon.vue';
 export default {
   components: { ButtonIcon },
   props: {
-    background: {
+    imgSources: {
       type: Object,
       required: true,
-      validator: (value) => value.large && typeof value.large === 'string',
+      validator: (value) => {
+        const { large, medium } = value;
+        const validate = (size) => size && Array.isArray(size) && size.length
+          && size[0].url && typeof size[0].url === 'string'
+          && !Number.isNaN(size[0].devicePixelRatio);
+        return validate(large) && validate(medium);
+      },
     },
     backgroundAltText: {
       type: String,
@@ -71,5 +78,19 @@ export default {
       high: 768,
     },
   }),
+  methods: {
+    composeSrcSet(size) {
+      const srcSetArray = size.map((src) => {
+        const { url, pixelRatio: dpr } = src;
+        if (url && typeof url === 'string' && dpr && !Number.isNaN(dpr)) {
+          const dprPart = dpr ? ` ${dpr}x` : '';
+          return `${url}${dprPart}`;
+        }
+        return null;
+      });
+
+      return srcSetArray.filter((src) => src).join(', ');
+    },
+  },
 };
 </script>
