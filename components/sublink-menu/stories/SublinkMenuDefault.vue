@@ -10,23 +10,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            <h3>Our Brand Story</h3>
-            <p>Consectetur proident sint amet cillum.</p>
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story Excepteur dolore cillum est esse.
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
@@ -39,22 +58,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Pariatur consequat elit anim exercitation ullamco sit sunt sit.Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
@@ -67,17 +106,32 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
