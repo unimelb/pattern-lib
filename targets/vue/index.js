@@ -434,3 +434,7 @@ export {
   default as CampaignBanner,
 }
   from 'components/campaign/CampaignBanner.vue';
+export {
+  default as CardImageListing,
+}
+  from 'components/cards/CardImageListing.vue';
