@@ -75,6 +75,42 @@
   color: rgb(var(--col-linkedin));
 }
 
+.col-navy-dark {
+  color: rgb(var(--col-navy-dark));
+}
+
+.col-black-dark {
+  color: rgb(var(--col-black-dark));
+}
+
+.col-grey-dark {
+  color: rgb(var(--col-grey-dark));
+}
+
+.col-grey-mid-1 {
+  color: rgb(var(--col-grey-mid-1));
+}
+
+.col-link {
+  color: rgb(var(--col-link));
+}
+
+.col-link-visited {
+  color: rgb(var(--col-link-visited));
+}
+.col-link-active {
+  color: rgb(var(--col-link-active));
+}
+.col-link-on-dark {
+  color: rgb(var(--col-link-on-dark));
+}
+.col-link-visited-on-dark {
+  color: rgb(var(--col-link-visited-on-dark));
+}
+.col-link-active-on-dark {
+  color: rgb(var(--col-link-active-on-dark));
+}
+
 /**
  * Max-width wrapper
  */
