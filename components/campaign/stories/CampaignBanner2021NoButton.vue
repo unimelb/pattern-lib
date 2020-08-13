@@ -25,7 +25,7 @@ export default {
     imgSources: {
       large: [
         { url: largeBackground, pixelRatio: 1 },
-        { url: largeBackground2x, pixelRatio: 1 },
+        { url: largeBackground2x, pixelRatio: 2 },
       ],
       medium: [
         { url: mediumBackground, pixelRatio: 1 },
