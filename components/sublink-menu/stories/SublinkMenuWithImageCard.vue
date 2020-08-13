@@ -1,7 +1,7 @@
 <template>
   <SectionWrap bg-color="white">
-    <ListingWrap cols="3">
-      <ListItem>
+    <ListingWrap>
+      <ListItem cols="1of3">
         <SublinkMenu title="A consistent strategy">
           a consistent look and feel in our communications
           <SublinkMenuItem
@@ -46,7 +46,7 @@
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
-      <ListItem>
+      <ListItem cols="1of3">
         <SublinkMenu title="A consistent tone">
           a consistent look and feel in our communications
           <SublinkMenuItem
@@ -91,7 +91,12 @@
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
-      <ListItem cols="2of4">
+      <ListItem
+        cols="1of12"
+        class="cell--tab-1of12" />
+      <ListItem
+        cols="1of6"
+        class="cell--tab-1of4">
         <CardRoundedFigure
           thumb="https://randomuser.me/api/portraits/lego/3.jpg"
           aria-label="Provide aria label for the thumb"
