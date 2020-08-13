@@ -25,8 +25,8 @@
     .btn {
       font-weight: var(--fw-normal);
       font-size: 1rem;
-      line-height: 1.75;
-      padding-left: .75rem;
+      letter-spacing: -.006rem;
+      padding-left: .5rem;
       padding-right: .75rem;
     }
   }

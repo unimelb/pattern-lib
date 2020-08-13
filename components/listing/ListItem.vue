@@ -33,6 +33,8 @@ export default {
           '2of3',
           '1of4',
           '3of4',
+          '1of6',
+          '1of12',
         ].includes(this.cols),
       };
     },

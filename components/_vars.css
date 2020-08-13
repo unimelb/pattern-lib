@@ -91,9 +91,9 @@
   --col-link-active-on-dark: 255, 255, 255;
 
   /* Third-party colours */
-  --col-twitter: #55acee;
-  --col-facebook: #3b5998;
-  --col-linkedin: #0976b4;
+  --col-twitter: rgb(85, 172, 238);
+  --col-facebook: rgb(59, 89, 152);
+  --col-linkedin: rgb(9, 118, 180);
 
   /* Vertical rhythm */
   --vr: 1.5rem;
