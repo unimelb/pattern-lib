@@ -1,7 +1,7 @@
 <template>
   <SectionWrap bg-color="white">
     <ListingWrap
-      cols="3"
+      cols="2"
       center>
       <ListItem>
         <SublinkMenu

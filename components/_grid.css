@@ -9,7 +9,7 @@
   }
 
   @media (--bp-x-tablet) {
-    flex-flow: row;
+    flex-flow: row wrap;
     justify-content: center;
 
     &--4col .cell {
