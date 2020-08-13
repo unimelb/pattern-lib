@@ -20,7 +20,7 @@
         class="card__footer">
         <ButtonIcon
           :href="href"
-          class="btn--cta">
+          class="btn--cta btn--fullwidth">
           {{ buttonLabel }}
         </ButtonIcon>
       </div>

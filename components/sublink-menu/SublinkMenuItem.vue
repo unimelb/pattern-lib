@@ -1,16 +1,19 @@
 <template>
-  <a
-    :href="link"
-    class="sublink-menu__item">
-    <span class="push-icon">
-      <slot />
+  <div class="sublink-menu__item">
+    <a
+      :href="link"
+      class="sublink-menu__link">
+      <slot name="link" />
       <SvgIcon
         class="push-icon__icon"
         name="chevron-right"
-        height="16"
-        width="16" />
-    </span>
-  </a>
+        height="12"
+        width="12" />
+    </a>
+    <div class="sublink-menu__description">
+      <slot name="description" />
+    </div>
+  </div>
 </template>
 
 <script>

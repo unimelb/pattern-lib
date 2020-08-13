@@ -4,26 +4,46 @@
       cols="2"
       center>
       <ListItem>
-        <SublinkMenu class="sublink-menu--pad">
+        <SublinkMenu class="sublink-menu">
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Find an expert or supervisor
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Apply for graduate research
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Graduate research scholarships
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Information for graduate researchers
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>

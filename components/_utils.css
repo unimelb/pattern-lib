@@ -327,8 +327,12 @@ a[target='_blank'] {
     /* prevent icon from shrinking */
     width: .75rem;
     height: .75rem;
-    margin-left: 1rem;
+    margin-left: .5rem;
     vertical-align: middle;
+
+    @media (--bp-tablet) {
+      margin-left: 1rem;
+    }
 
     &--left {
       margin-right: 1rem;
