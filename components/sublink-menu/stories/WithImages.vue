@@ -11,22 +11,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
@@ -38,22 +58,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
@@ -65,22 +105,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
@@ -91,22 +151,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
@@ -117,22 +197,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>
@@ -143,22 +243,42 @@
           <SublinkMenuItem
             slot="menuitems"
             link="#">
-            Our Brand Story
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
           <SublinkMenuItem
             slot="menuitems"
             link="#something">
-            Something else
+            <div slot="link">
+              Our Brand Story
+            </div>
+            <div slot="description">
+              Consectetur proident sint amet cillum.
+            </div>
           </SublinkMenuItem>
         </SublinkMenu>
       </ListItem>

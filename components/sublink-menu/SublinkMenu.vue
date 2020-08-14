@@ -18,7 +18,7 @@
     </h3>
     <p
       v-if="$slots.default"
-      class="sublink-menu__excerpt">
+      class="sublink-menu__description">
       <slot />
     </p>
     <nav class="sublink-menu__nav">
