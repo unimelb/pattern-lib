@@ -49,14 +49,14 @@
 /* light-blue (used in side nav) */
 
 .bg-light-blue {
-  background-color: color(rgb(var(--col-brand)) tint(92%));
+  background-color: color(rgb(var(--col-black)) tint(92%));
 }
 
 /* white background */
 
 .bg-white {
   background-color: rgb(var(--col-background-primary-white));
-  color: rgb(var(--col-brand));
+  color: rgb(var(--col-black));
 }
 
 /**
