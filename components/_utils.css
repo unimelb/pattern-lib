@@ -56,7 +56,7 @@
 
 .bg-white {
   background-color: rgb(var(--col-background-primary-white));
-  color: rgb(var(--col-black));
+  color: rgb(var(--col-black-dark));
 }
 
 /**
