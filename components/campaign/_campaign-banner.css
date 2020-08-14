@@ -49,12 +49,11 @@
     text-transform: uppercase;
     font-size: .889rem;
     line-height: 1.25;
-    width: 9.333rem;
+    max-width: 15rem;
     margin-bottom: 1.111rem;
 
     @media (--bp-max-x-mobile) {
       font-size: .875rem;
-      line-height: 1;
       width: 100%;
     }
   }
