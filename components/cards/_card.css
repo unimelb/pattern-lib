@@ -7,7 +7,6 @@
   font-weight: normal;
 
   &.btn-owner {
-    color: rgb(var(--col-brand));
     text-decoration: none;
 
     &:visited {

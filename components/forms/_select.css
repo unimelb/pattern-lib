@@ -25,7 +25,6 @@
 .styled-select {
   position: relative;
   background-color: rgb(var(--col-background-primary-white));
-  color: rgb(var(--col-brand));
   border-radius: var(--br);
   border: 1px solid rgb(var(--col-blue-mid-2));
   margin-bottom: 1rem;
@@ -48,7 +47,7 @@
     width: .875rem;
     height: .875rem;
     pointer-events: none;
-    background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-blue-mid-2)));
+    background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-black-dark)));
     transform: translate(-65%, -50%);
   }
 
@@ -59,15 +58,10 @@
     border: 0;
     border-radius: 0;
     background-color: transparent;
-    color: rgb(var(--col-brand));
     font-size: 1.125rem;
     font-weight: var(--fw-bold);
     appearance: none;
     line-height: 1.278;
-
-    option {
-      color: rgb(var(--col-black-dark));
-    }
 
     &::-ms-expand {
       display: none;

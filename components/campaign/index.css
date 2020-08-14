@@ -26,6 +26,7 @@
   }
 
   &__title {
+    color: rgb(var(--col-brand));
     font-family: var(--ff-normal);
     font-size: 1.6875rem;
     font-weight: var(--fw-semibold);

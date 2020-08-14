@@ -16,7 +16,6 @@
   &__no-items {
     padding: 3.15rem;
     text-align: center;
-    color: rgb(var(--col-black-dark));
     margin: 0 auto;
   }
 }

@@ -2,14 +2,14 @@
   <SectionWrap bg-color="alt">
     <ListingWrap>
       <ListItem cols="1of3">
-        <h3 class="title--sm col-black-dark">
+        <h3 class="title--sm">
           Discover engineering at Melbourne
         </h3>
-        <p class="col-black-dark">
+        <p>
           Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate.
         </p>
         <a
-          class="link-icon col-navy-dark"
+          class="link-icon"
           href="https://www.unimelb.edu.au/">
           Register here
           <SvgIcon
@@ -20,14 +20,14 @@
         </a>
       </ListItem>
       <ListItem cols="1of3">
-        <h3 class="title--sm col-black-dark">
+        <h3 class="title--sm">
           Discover engineering at Melbourne
         </h3>
-        <p class="col-black-dark">
+        <p>
           Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate.
         </p>
         <a
-          class="link-icon col-navy-dark"
+          class="link-icon"
           href="https://www.unimelb.edu.au/">
           Register here
           <SvgIcon
