@@ -59,7 +59,6 @@
 
     &-sub-title {
       font-size: .875rem;
-      color: rgb(var(--col-black-dark));
       letter-spacing: 0;
       font-weight: var(--fw-regular);
     }
