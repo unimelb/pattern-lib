@@ -73,7 +73,6 @@ blockquote,
     width: 100%;
     margin-top: calc(var(--vr) / 2);
     float: left;
-    color: rgb(var(--col-grey-mid-2));
     font-size: 1.1rem;
     font-style: normal;
     text-align: left;

@@ -6,6 +6,7 @@
   padding-top: .75rem;
   padding-bottom: .75rem;
   list-style-type: none;
+  color: rgb(var(--col-brand));
 
   &__item {
     display: none;
