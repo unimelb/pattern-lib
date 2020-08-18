@@ -101,7 +101,7 @@
           thumb="https://randomuser.me/api/portraits/lego/3.jpg"
           aria-label="Provide aria label for the thumb"
           title="Support"
-          text="Still have question?"
+          text="Still have questions?"
           button-label="Open Day Q&A"
           href="#" />
       </ListItem>

@@ -1,6 +1,5 @@
 .card--news {
   background-color: rgb(var(--col-background-primary-white));
-  color: rgb(var(--col-brand));
 
   .card__header {
     margin-top: var(--vr);
