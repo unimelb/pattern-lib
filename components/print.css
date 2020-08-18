@@ -1,6 +1,5 @@
 @media print {
   * {
-    color: rgb(var(--col-black-dark)) !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
