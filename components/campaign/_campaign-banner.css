@@ -7,6 +7,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
   }
 
   &__container {
@@ -35,6 +36,7 @@
     font-size: 3.333rem;
     line-height: .833;
     margin-bottom: .667rem;
+    max-width: 19rem;
 
     @media (--bp-max-x-mobile) {
       font-size: 2.188rem;
@@ -50,6 +52,7 @@
     font-size: .889rem;
     line-height: 1.25;
     max-width: 15rem;
+    width: 15rem;
     margin-bottom: 1.111rem;
 
     @media (--bp-max-x-mobile) {
@@ -59,10 +62,10 @@
   }
 
   .btn--secondary {
-    width: 8.333rem;
     padding: .556rem .444rem;
     font-size: .889rem;
     text-transform: uppercase;
+    width: max-content;
 
     @media (--bp-max-x-mobile) {
       margin: 0 auto;

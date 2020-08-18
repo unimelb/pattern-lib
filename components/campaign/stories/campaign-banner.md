@@ -3,15 +3,24 @@
 
 The CampaignBanner component has a couple of props need to be described:
 
-- `background` expects to take an object like: 
+- `imgSources` expects to take an object like: 
 ```js
-  { 
-    large: '/path/to/large/image',
-    medium: '/path/to/medium/image',
-    small: '/path/to/small/image'
-  }
+{
+  large: [
+    { url: 'path/to/large', pixelRatio: 1 },
+    ...
+  ],
+  medium: [
+    { url: 'path/to/medium', pixelRatio: 1 },
+    ...
+  ],
+  small: [
+    { url: 'path/to/small', pixelRatio: 2 },
+    ...
+  ],
+},
 ```
-`large` property is required, others are optional. In absence of `medium` and `small` properties `large` will be displayed for all viewport width values;
+`large` and `medium` properties are required, small is optional. In absence of the `small` property `medium` will be displayed for `max-width: 768px`. It is possible to provide as many sources as needed, letting a browser decide which image to load in order to make it look crisp on high-resolution devices with `device-pixel-ratio` 2, 3 and higher;
 - to improve the a11y be sure to provide a custom `background-alt-text` property; 
 
 Usage for the rest of properties is straightforward.
@@ -20,10 +29,10 @@ Usage for the rest of properties is straightforward.
 
 ```html
 <campaign-banner
-    :background="backgroundObjectReference"
+    :img-sources="objectReference"
     background-alt-text="woman diver"
     href="#main"
     text="Lorem ipsum dolor sit amet, consectetur"
     button-text="learn more"
-    show-button="true"></campaign-banner>
+    :show-button="true"></campaign-banner>
 ```
