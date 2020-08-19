@@ -8,8 +8,13 @@ import ButtonIcon from '../../buttons/ButtonIcon.vue';
 
 describe('CampaignBanner', () => {
   const requiredProps = {
-    background: {
-      large: '/path/to/large',
+    imgSources: {
+      large: [
+        { url: '/path/to/large', pixelRatio: 1 },
+      ],
+      medium: [
+        { url: '/path/to/medium', pixelRatio: 1 },
+      ],
     },
   };
 
@@ -100,30 +105,34 @@ describe('CampaignBanner', () => {
     expect(imageWrapper.attributes().alt).toEqual(text);
   });
 
-  it('should not render "source" elements when no small and medium backgrounds was provided', () => {
+  it('should render one "source" element when no small background was provided', () => {
     const wrapper = mount(CampaignBanner, {
       propsData: { ...requiredProps },
     });
     const sources = wrapper.findAll('source');
-    expect(sources.exists()).toBe(false);
+    expect(sources.exists()).toBe(true);
+    expect(sources.length).toEqual(1);
   });
 
   it('should render two "source" elements with correct "srcset" attribute values', () => {
-    const small = 'small';
-    const medium = 'medium';
+    const small = [
+      { url: '/path/to/small', pixelRatio: 2 },
+      { url: '/path/to/small_3x', pixelRatio: 3 },
+    ];
+    const srcProp = requiredProps.imgSources;
     const wrapper = mount(CampaignBanner, {
       propsData: {
-        background: {
+        imgSources: {
+          large: srcProp.large,
+          medium: srcProp.medium,
           small,
-          medium,
-          large: 'large',
         },
       },
     });
     const sources = wrapper.findAll('source');
     expect(sources.exists()).toBe(true);
     expect(sources.length).toEqual(2);
-    expect(sources.at(0).attributes().srcset).toEqual(small);
-    expect(sources.at(1).attributes().srcset).toEqual(medium);
+    expect(sources.at(0).attributes().srcset).toEqual('/path/to/small 2x, /path/to/small_3x 3x');
+    expect(sources.at(1).attributes().srcset).toEqual('/path/to/medium 1x');
   });
 });
