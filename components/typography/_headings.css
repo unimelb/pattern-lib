@@ -9,73 +9,151 @@
   letter-spacing: normal;
 }
 
+/* REMOVE: .heading-page .heading-page-sub - to be replaced with title helpers */
 h1,
-.heading-page {
-  margin-bottom: calc(2 * var(--vr));
+.heading-page,
+.heading-page-sub {
   font-family: var(--ff-lead);
-  font-size: 2rem;
+  font-size: var(--h1-fs);
   line-height: 1.3;
+  margin-bottom: 2rem;
   letter-spacing: -.05rem;
   word-spacing: .05rem;
 }
 
-.heading-page-sub {
-  margin-bottom: calc(1.5 * var(--vr));
-  font-family: var(--ff-lead);
-  font-size: 2rem;
-  line-height: 1.4;
-}
-
+/* REMOVE: unsure where this is being used - can we delete? */
 .heading-lead {
   font-family: var(--ff-lead);
 }
 
+/* REMOVE: unsure where this is being used - can we delete? */
 .heading-normal {
   font-family: var(--ff-normal);
 }
 
+/* REMOVE: .heading-section - to be replaced with title helpers */
 h2,
 .heading-section {
-  margin-bottom: var(--vr);
   font-family: var(--ff-lead);
-  font-size: 1.75rem;
+  font-size: var(--h2-fs);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
   letter-spacing: -.05rem;
   word-spacing: .05rem;
 }
 
-h3,
-.heading-card,
-.lead {
-  margin-bottom: calc(var(--vr) / 2);
-  font-size: 1.25rem; /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
+h3 {
+  font-family: var(--ff-normal);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.5rem;
   letter-spacing: normal;
+  line-height: 1.3;
+  font-size: var(--h3-fs); /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
 }
 
+
+
+/* REMOVE: .heading-card .lead - to be replaced with title helpers */
+h4,
 .heading-card,
 .lead {
-  font-family: var(--ff-normal);
-  font-weight: var(--fw-semibold);
+  font-size: var(--h4-fs);
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
   letter-spacing: normal;
 }
 
 h4 {
-  margin-bottom: calc(var(--vr) / 2);
-  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+}
+
+.heading-card,
+.lead {
   font-weight: var(--fw-semibold);
-  letter-spacing: normal;
 }
 
 h5 {
-  margin-bottom: 0;
-  font-size: .875rem;
-  font-weight: bold;
+  font-size: var(--h5-fs);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: normal;
 }
 
 h6 {
-  margin-bottom: 0;
-  font-size: .875rem;
-  font-weight: bold;
+  font-size: var(--h6-fs);
+  line-height: 1.3;
+  margin-bottom: .75rem;
+  font-weight: var(--fw-bold);
   letter-spacing: normal;
+}
+
+.title {
+  margin-bottom: .75rem;
+  font-size: 1.75rem;
+  line-height: 1.3;
+
+  &--xxl {
+    margin-bottom: .75rem;
+    font-family: var(--ff-lead);
+    font-size: 2.6rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: -.0938rem;
+  }
+
+  /* h1 */
+  &--xl {
+    font-family: var(--ff-lead);
+    font-size: var(--h1-fs);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    letter-spacing: -.05rem;
+    word-spacing: .05rem;
+  }
+
+  /* h2 */
+  &--lg {
+    font-family: var(--ff-lead);
+    font-size: var(--h2-fs);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    letter-spacing: -.05rem;
+    word-spacing: .05rem;
+  }
+
+  /* h3 */
+  &--md {
+    font-size: var(--h3-fs);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    letter-spacing: normal;
+  }
+
+  /* h4 */
+  &--sm {
+    font-size: var(--h4-fs);
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: normal;
+  }
+
+  /* h5 */
+  &--xs {
+    font-size: var(--h5-fs);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: normal;
+  }
+
+  /* h6 */
+  &--xxs {
+    font-size: var(--h6-fs);
+    line-height: 1.3;
+    margin-bottom: .75rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: normal;
+  }
 }
