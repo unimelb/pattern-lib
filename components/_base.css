@@ -74,6 +74,10 @@ address {
   margin: 0 0 var(--vr);
 }
 
+p {
+  color: rgb(var(--col-grey-mid-3));
+}
+
 pre {
   overflow: scroll;
 
