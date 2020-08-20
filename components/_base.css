@@ -74,6 +74,16 @@ address {
   margin: 0 0 var(--vr);
 }
 
+p {
+  color: rgb(var(--col-grey-mid-3));
+
+  .bg-inverted &,
+  .bg-inverted-dark &,
+  .bg-inverted-darker & {
+    color: rgb(var(--col-white));
+  }
+}
+
 pre {
   overflow: scroll;
 

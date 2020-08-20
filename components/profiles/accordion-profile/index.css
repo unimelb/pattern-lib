@@ -76,6 +76,7 @@
     letter-spacing: 0;
     font-weight: var(--fw-semibold);
     margin: 0;
+    color: rgb(var(--col-white));
   }
 
   &__bio {
