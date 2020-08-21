@@ -1,9 +1,15 @@
-.card-image-listing {
+.card-image-link {
   display: flex;
   width: 100%;
   min-height: 100%;
   background-color: rgb(var(--col-background-primary-white));
   border: 1px solid rgb(var(--col-black-mid-1));
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 
   & + & {
     margin-top: 1rem;
@@ -76,20 +82,6 @@
     @media (--bp-desktop) {
       font-size: 1.25rem;
       line-height: 1.2;
-    }
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: var(--fw-semibold);
-    font-size: 1rem;
-    line-height: 1.125;
-    color: rgb(var(--col-link));
-
-    @media (--bp-tablet) {
-      line-height: 1.75;
     }
   }
 }

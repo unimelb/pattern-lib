@@ -11,4 +11,4 @@ import './Events';
 import './FeaturesPanel';
 import './Course';
 import './RoundedFigure';
-import './ImageListing';
+import './ImageLink';
