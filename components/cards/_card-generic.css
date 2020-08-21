@@ -1,7 +1,6 @@
 .card--generic {
   background-color: rgb(var(--col-background-primary-white));
-  border-radius: var(--br-cards);
-  box-shadow: rgba(0, 0, 0, .18) 0 2px 2px 0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .18);
   overflow: hidden;
 
   .card__thumb {
@@ -18,7 +17,8 @@
 
   .card__title {
     font-size: 1.25rem;
-    line-height: 1.5625;
+    display: block;
+    line-height: 1.3;
     font-weight: var(--fw-bold);
     text-decoration: none;
     color: rgb(var(--col-background-primary-navy));
