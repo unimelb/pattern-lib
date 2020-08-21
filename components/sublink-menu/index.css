@@ -78,7 +78,7 @@
 
     &:visited,
     &:active {
-      color: rgb(var(--col-black-dark));
+      color: rgb(var(--col-grey-mid-2));
     }
   }
 
