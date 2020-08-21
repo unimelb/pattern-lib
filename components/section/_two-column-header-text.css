@@ -16,7 +16,9 @@
     }
 
     @media (--bp-desktop) {
-      padding-right: 4rem;
+      /* this matches the split section component text padding */
+      padding-left: 2.25rem;
+      padding-right: 3rem;
     }
   }
 
@@ -24,7 +26,8 @@
     margin: 0;
 
     @media (--bp-desktop) {
-      padding-left: 4rem;
+      /* this matches the split section component text padding */
+      padding-left: 3rem;
     }
   }
 

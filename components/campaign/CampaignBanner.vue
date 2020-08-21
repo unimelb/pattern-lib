@@ -3,16 +3,17 @@
     class="campaign-banner">
     <picture>
       <source
-        v-if="background.small"
+        v-if="imgSources.small && imgSources.small.length"
         :media="`(max-width: ${breakpoints.low}px)`"
-        :srcset="background.small">
+        :srcset="composeSrcSet(imgSources.small)">
       <source
-        v-if="background.medium"
+        v-if="imgSources.medium && imgSources.medium.length"
         :media="`(max-width: ${breakpoints.high}px)`"
-        :srcset="background.medium">
+        :srcset="composeSrcSet(imgSources.medium)">
       <img
         class="campaign-banner__image"
-        :src="background.large"
+        :srcset="composeSrcSet(imgSources.large)"
+        :src="imgSources.large[0].url"
         :alt="backgroundAltText">
     </picture>
     <div class="campaign-banner__container">
@@ -35,14 +36,21 @@
 
 <script>
 import ButtonIcon from '../buttons/ButtonIcon.vue';
+import { WIDTH_599, WIDTH_900 } from '../../helpers/viewports';
 
 export default {
   components: { ButtonIcon },
   props: {
-    background: {
+    imgSources: {
       type: Object,
       required: true,
-      validator: (value) => value.large && typeof value.large === 'string',
+      validator: (value) => {
+        const { large, medium } = value;
+        const validateSrc = (src) => typeof src.url === 'string' && !Number.isNaN(src.pixelRatio);
+        const validate = (size) => size && Array.isArray(size) && size.length
+          && size.every(validateSrc);
+        return large && medium && Object.values(value).every(validate);
+      },
     },
     backgroundAltText: {
       type: String,
@@ -67,9 +75,23 @@ export default {
   },
   data: () => ({
     breakpoints: {
-      low: 599,
-      high: 768,
+      low: WIDTH_599,
+      high: WIDTH_900,
     },
   }),
+  methods: {
+    composeSrcSet(size) {
+      const srcSetArray = size.map((src) => {
+        const { url, pixelRatio: dpr } = src;
+        if (url && typeof url === 'string' && dpr && !Number.isNaN(dpr)) {
+          const dprPart = dpr ? ` ${dpr}x` : '';
+          return `${url}${dprPart}`;
+        }
+        return null;
+      });
+
+      return srcSetArray.filter((src) => src).join(', ');
+    },
+  },
 };
 </script>

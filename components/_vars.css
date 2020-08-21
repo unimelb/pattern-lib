@@ -82,10 +82,10 @@
   --col-6: var(--col-purple-mid-2);
   --col-7: var(--col-pink-mid-2);
 
-  /* Link colours - http://paletton.com/#uid=13o0u0kmmGKbYTnhIN2qUABwFtZ */
-  --col-link: 15, 91, 114;
-  --col-link-visited: var(--col-purple-dark);
-  --col-link-active: 2, 72, 92;
+  /* Link colours */
+  --col-link: var(--col-blue-mid-2);
+  --col-link-visited: 98, 107, 172; /* custom colour between Purple Dark and Purple Mid 2 for accessibility */
+  --col-link-active: var(--col-navy-dark);
   --col-link-on-dark: 124, 189, 205;
   --col-link-visited-on-dark: 193, 202, 230;
   --col-link-active-on-dark: 255, 255, 255;

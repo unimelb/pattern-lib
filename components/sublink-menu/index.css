@@ -53,7 +53,6 @@
     flex-direction: column;
     padding: 1rem 1rem 1rem 0;
     border-top: 1px solid rgb(var(--col-navy-mid-1));
-    color: rgb(var(--col-brand));
 
     &:last-child {
       border-bottom: 1px solid rgb(var(--col-navy-mid-1));
@@ -76,13 +75,17 @@
       font-size: 1.125rem;
       line-height: 1.33;
     }
+
+    &:visited,
+    &:active {
+      color: rgb(var(--col-grey-mid-2));
+    }
   }
 
   &__description {
     font-size: 1rem;
     line-height: 1.375;
     letter-spacing: -.021rem;
-    color: rgb(var(--col-black-dark));
 
     @media (--bp-desktop) {
       font-size: 1.125rem;

@@ -40,7 +40,6 @@
 
   &__sub-title {
     font-size: 1rem;
-    color: rgb(var(--col-black-dark));
     letter-spacing: .0938rem;
     text-align: center;
     line-height: 2.1875;
