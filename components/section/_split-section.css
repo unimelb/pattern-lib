@@ -96,8 +96,13 @@
 
     &__inner {
       max-width: calc(var(--w-mid) / 2 + var(--vr)); /* account for either left or right padding */
-      padding-top: calc(4 * var(--vr));
+      min-height: 27rem;
+      padding-top: calc(2 * var(--vr));
       padding-bottom: calc(2 * var(--vr));
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-start;
     }
 
     &__side:first-child > .split-section__inner { margin-left: auto; }

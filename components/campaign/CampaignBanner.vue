@@ -36,7 +36,7 @@
 
 <script>
 import ButtonIcon from '../buttons/ButtonIcon.vue';
-import { WIDTH_599, WIDTH_768 } from '../../helpers/viewports';
+import { WIDTH_599, WIDTH_900 } from '../../helpers/viewports';
 
 export default {
   components: { ButtonIcon },
@@ -76,7 +76,7 @@ export default {
   data: () => ({
     breakpoints: {
       low: WIDTH_599,
-      high: WIDTH_768,
+      high: WIDTH_900,
     },
   }),
   methods: {

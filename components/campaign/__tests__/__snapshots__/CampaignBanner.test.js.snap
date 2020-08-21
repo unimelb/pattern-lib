@@ -8,7 +8,7 @@ exports[`CampaignBanner should match snapshot 1`] = `
     <!---->
      
     <source
-      media="(max-width: 768px)"
+      media="(max-width: 900px)"
       srcset="/path/to/medium 1x"
     />
      
@@ -54,7 +54,7 @@ exports[`CampaignBanner should match snapshot with button 1`] = `
     <!---->
      
     <source
-      media="(max-width: 768px)"
+      media="(max-width: 900px)"
       srcset="/path/to/medium 1x"
     />
      
