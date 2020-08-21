@@ -8,9 +8,15 @@ expect.extend(toHaveNoViolations);
 
 describe('CardDivision', () => {
   it('should match snapshot', () => {
-    const result = shallow(CardDivision).element;
+    const result = shallow(CardDivision, {
+      propsData: {
+        name: 'mock test',
+        href: 'www.unimelb.edu.au',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
+
   it('Component throws no accessibility violations', (done) => {
     const html = shallow(CardDivision, {
       propsData: {

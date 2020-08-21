@@ -6,7 +6,12 @@ expect.extend(toHaveNoViolations);
 
 describe('CardEvents', () => {
   it('should match snapshot', () => {
-    const result = mount(CardEvents).element;
+    const result = mount(CardEvents, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

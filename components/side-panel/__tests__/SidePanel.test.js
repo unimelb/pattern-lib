@@ -9,7 +9,12 @@ expect.extend(toHaveNoViolations);
 
 describe('SidePanel', () => {
   it('should match snapshot', () => {
-    const result = mount(SidePanel).element;
+    const result = mount(SidePanel, {
+      propsData: {
+        title: 'mock title',
+      },
+      slots: { SidePanelNavItem },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

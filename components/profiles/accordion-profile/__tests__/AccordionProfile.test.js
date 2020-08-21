@@ -12,7 +12,11 @@ expect.extend(toHaveNoViolations);
 
 describe('AccordionProfile', () => {
   it('should match snapshot', () => {
-    const result = shallow(AccordionProfile).element;
+    const result = shallow(AccordionProfile, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

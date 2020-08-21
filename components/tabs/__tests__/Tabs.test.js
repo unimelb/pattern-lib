@@ -26,7 +26,7 @@ describe('Tabs', () => {
 
     expect(wrapper.element).toMatchSnapshot();
   });
-  
+
   it('Component throws no accessibility violations', (done) => {
     const html = mount(Tabs, {
       data: {

@@ -8,7 +8,12 @@ expect.extend(toHaveNoViolations);
 
 describe('CardImage', () => {
   it('should match snapshot', () => {
-    const result = shallow(CardImage).element;
+    const result = shallow(CardImage, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

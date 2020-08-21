@@ -13,7 +13,9 @@ exports[`Accordion should match snapshot 1`] = `
     <h2
       class="toggle__trigger"
     >
+      
       title
+    
     </h2>
      
   </div>

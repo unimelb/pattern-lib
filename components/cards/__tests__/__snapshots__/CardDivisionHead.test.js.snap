@@ -3,7 +3,7 @@
 exports[`CardDivisionHead should match snapshot 1`] = `
 <a
   class="btn-owner card card--division card--division--head card--bdr bg-white"
-  href=""
+  href="www.unimelb.edu.au"
 >
   <div
     class="card__thumb"
@@ -23,7 +23,7 @@ exports[`CardDivisionHead should match snapshot 1`] = `
       <h3
         class="card__header"
       >
-        
+        mock name
       </h3>
        
       <p

@@ -8,7 +8,12 @@ expect.extend(toHaveNoViolations);
 
 describe('CardFeaturesPanel', () => {
   it('should match snapshot', () => {
-    const result = shallow(CardFeaturesPanel).element;
+    const result = shallow(CardFeaturesPanel, {
+      propsData: {
+        title: 'mock title',
+        ariaLabel: 'test aria label',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -90,6 +95,7 @@ describe('CardFeaturesPanel', () => {
     const html = shallow(CardFeaturesPanel, {
       propsData: {
         title: 'mock title',
+        ariaLabel: 'test aria label',
       },
     }).html();
     // pass anything that outputs html to axe

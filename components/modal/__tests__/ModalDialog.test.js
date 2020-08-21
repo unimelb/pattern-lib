@@ -8,7 +8,11 @@ expect.extend(toHaveNoViolations);
 
 describe('ModalDialog', () => {
   it('should match snapshot', () => {
-    const result = shallow(ModalDialog).element;
+    const result = shallow(ModalDialog, {
+      propsData: {
+        trigger: 'mock trigger',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -21,7 +25,7 @@ describe('ModalDialog', () => {
 
     expect(wrapper.find('input').exists()).toBe(true);
   });
-  
+
   it('Component throws no accessibility violations', (done) => {
     const html = shallow(ModalDialog, {
       propsData: {

@@ -27,7 +27,7 @@ describe('StyledSelect', () => {
     expect(wrapper.find('.styled-select__label').text()).toBe('text');
     expect(wrapper.find('.styled-select__label').exists()).toBe(true);
   });
-  
+
   it('Component throws no accessibility violations', (done) => {
     const html = shallow(StyledSelect).html();
     // pass anything that outputs html to axe

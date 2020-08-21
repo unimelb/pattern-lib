@@ -8,7 +8,11 @@ expect.extend(toHaveNoViolations);
 
 describe('SplitSectionHeader', () => {
   it('should match snapshot', () => {
-    const result = shallow(SplitSectionHeader).element;
+    const result = shallow(SplitSectionHeader, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

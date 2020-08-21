@@ -2,9 +2,9 @@
 
 exports[`CardImage should match snapshot 1`] = `
 <a
-  aria-label="Test title"
+  aria-label="mock title"
   class="btn-owner card card--image card--bdr bg-inverted"
-  href=""
+  href="www.unimelb.edu.au"
 >
   <!---->
    

@@ -8,7 +8,12 @@ expect.extend(toHaveNoViolations);
 
 describe('QuickLinksSecondaryItem', () => {
   it('should match snapshot', () => {
-    const result = shallow(QuickLinksSecondaryItem).element;
+    const result = shallow(QuickLinksSecondaryItem, {
+      propsData: {
+        href: 'www.unimelb.edu.au',
+        title: 'mock title',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

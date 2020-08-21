@@ -7,7 +7,11 @@ expect.extend(toHaveNoViolations);
 
 describe('Sidebar', () => {
   it('should match snapshot', () => {
-    const result = shallow(Sidebar).element;
+    const result = shallow(Sidebar, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 

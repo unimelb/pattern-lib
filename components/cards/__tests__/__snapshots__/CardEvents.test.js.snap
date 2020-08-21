@@ -5,9 +5,9 @@ exports[`CardEvents should match snapshot 1`] = `
   class="card card--generic card--generic--full-width"
 >
   <a
-    aria-label="Image for"
+    aria-label="Image formock title"
     class="card__thumb card__thumb--full-height"
-    href=""
+    href="www.unimelb.edu.au"
     style="background-image: url(https://via.placeholder.com/400x200);"
   />
    
@@ -19,9 +19,9 @@ exports[`CardEvents should match snapshot 1`] = `
     >
       <a
         class="card__title"
-        href=""
+        href="www.unimelb.edu.au"
       >
-        
+        mock title
       </a>
     </h3>
      

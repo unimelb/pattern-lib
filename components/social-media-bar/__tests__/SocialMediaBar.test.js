@@ -6,7 +6,11 @@ expect.extend(toHaveNoViolations);
 
 describe('SocialMediaBar', () => {
   it('should match snapshot', () => {
-    const result = shallow(SocialMediaBar).element;
+    const result = shallow(SocialMediaBar, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -45,7 +49,7 @@ describe('SocialMediaBar', () => {
     const className = 'test';
     const wrapper = shallow(SocialMediaBar, {
       propsData: {
-        className,
+        className, title: 'mock title',
       },
     });
 
@@ -64,7 +68,7 @@ describe('SocialMediaBar', () => {
     const vimeoLink = 7;
     const wrapper = shallow(SocialMediaBar, {
       propsData: {
-        newsletterLink, blogLink, facebookLink, twitterLink, linkedinLink, instagramLink, vimeoLink,
+        newsletterLink, blogLink, facebookLink, twitterLink, linkedinLink, instagramLink, vimeoLink, title: 'mock title',
       },
     });
     const leftLinks = wrapper.findAll('.social-media-bar--link');

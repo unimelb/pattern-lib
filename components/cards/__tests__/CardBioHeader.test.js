@@ -8,7 +8,11 @@ expect.extend(toHaveNoViolations);
 
 describe('CardBioHeader', () => {
   it('should match snapshot', () => {
-    const result = shallow(CardBioHeader).element;
+    const result = shallow(CardBioHeader, {
+      propsData: {
+        name: 'mock name',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
