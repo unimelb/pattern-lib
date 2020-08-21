@@ -435,6 +435,6 @@ export {
 }
   from 'components/campaign/CampaignBanner.vue';
 export {
-  default as CardImageListing,
+  default as CardImageLink,
 }
-  from 'components/cards/CardImageListing.vue';
+  from 'components/cards/CardImageLink.vue';

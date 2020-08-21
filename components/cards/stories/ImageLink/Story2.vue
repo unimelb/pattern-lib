@@ -2,35 +2,31 @@
   <SectionWrap class="bg-alt">
     <div class="grid grid--4col">
       <ListItem>
-        <CardImageListing
+        <CardImageLink
           thumb="https://picsum.photos/640/400"
           aria-label="image alt text"
           heading="Non duis et."
-          link-name="Register here"
           href="https://www.unimelb.edu.au/" />
       </ListItem>
       <ListItem>
-        <CardImageListing
+        <CardImageLink
           thumb="https://picsum.photos/640/400"
           aria-label="image alt text"
           heading="Non duis et voluptate culpa anim amet."
-          link-name="Register here"
           href="https://www.unimelb.edu.au/" />
       </ListItem>
       <ListItem>
-        <CardImageListing
+        <CardImageLink
           thumb="https://picsum.photos/640/400"
           aria-label="image alt text"
           heading="Non duis et voluptate culpa anim amet. Non duis et voluptate culpa anim amet."
-          link-name="Register here"
           href="https://www.unimelb.edu.au/" />
       </ListItem>
       <ListItem>
-        <CardImageListing
+        <CardImageLink
           thumb="https://picsum.photos/640/400"
           aria-label="image alt text"
           heading="Non duis et voluptate culpa anim amet."
-          link-name="Register here"
           href="https://www.unimelb.edu.au/" />
       </ListItem>
     </div>
@@ -38,10 +34,10 @@
 </template>
 
 <script>
-import CardImageListing from '../../CardImageListing.vue';
+import CardImageLink from '../../CardImageLink.vue';
 
 export default {
-  components: { CardImageListing },
+  components: { CardImageLink },
   readme: { source: true, html: true },
 };
 </script>
