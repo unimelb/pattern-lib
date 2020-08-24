@@ -191,6 +191,7 @@ export default {
   },
   mounted() {
     this.panels = this.getTabs();
+    console.log(this.panels);
     this.showSelect = this.selectOptions.length > 1;
 
     this.throttledTabsScrollEvent = throttle(TIMER_100, this.checkControls);
