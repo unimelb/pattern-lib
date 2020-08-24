@@ -79,7 +79,8 @@ p {
 
   .bg-inverted &,
   .bg-inverted-dark &,
-  .bg-inverted-darker & {
+  .bg-inverted-darker &,
+  .bg-inverted--o95 & {
     color: rgb(var(--col-white));
   }
 }
@@ -165,7 +166,8 @@ a {
 
   .bg-inverted &,
   .bg-inverted-dark &,
-  .bg-inverted-darker & {
+  .bg-inverted-darker &,
+  .bg-inverted--o95 & {
     &:not([class]) {
       color: rgb(var(--col-link-on-dark));
 
