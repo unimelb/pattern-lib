@@ -22,6 +22,7 @@
                 v-for="item in response.results"
                 :key="item.id">
                 <GenericCard
+                  href="#"
                   :title="item.name"
                   :excerpt="item.description"
                   :cols="2">

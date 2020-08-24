@@ -19,6 +19,7 @@ Usage:
         :key="item.id">
         <GenericCard
           :title="item.name"
+          href="#"
           :excerpt="item.excerpt"
           :cols="2" />
       </ListItem>
