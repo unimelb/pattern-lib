@@ -1,3 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SectionTwoCol should match snapshot 1`] = `<!---->`;
+exports[`SectionTwoCol should match snapshot 1`] = `
+<div
+  class="section"
+>
+  <div
+    class="section__inner"
+  >
+    <div
+      class="grid"
+    >
+      <div
+        class="cell cell--desk-2of3"
+      />
+       
+      <div
+        class="cell cell--desk-1of3"
+      />
+    </div>
+     
+    <!---->
+  </div>
+</div>
+`;
