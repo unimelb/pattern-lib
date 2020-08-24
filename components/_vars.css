@@ -83,8 +83,8 @@
   --col-7: var(--col-pink-mid-2);
 
   /* Link colours */
-  --col-link: var(--col-blue-mid-2);
-  --col-link-visited: 98, 107, 172; /* custom colour between Purple Dark and Purple Mid 2 for accessibility */
+  --col-link: var(--col-blue-dark);
+  --col-link-visited: 66, 99, 138; /* custom colour - slightly desaturated and darkened Blue Dark */
   --col-link-active: var(--col-navy-dark);
   --col-link-on-dark: 124, 189, 205;
   --col-link-visited-on-dark: 193, 202, 230;
