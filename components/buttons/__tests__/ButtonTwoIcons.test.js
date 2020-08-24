@@ -1,26 +1,20 @@
 import {
-  mount,
+  shallow,
 } from 'vue-test-utils';
 import { axe, toHaveNoViolations } from 'jest-axe';
-import CardPathfinder from '../CardPathfinder.vue';
+import ButtonTwoIcons from '../ButtonTwoIcons.vue';
 
 expect.extend(toHaveNoViolations);
 
-describe('CardPathfinder', () => {
+describe('ButtonTwoIcons', () => {
   it('should match snapshot', () => {
-    const result = mount(CardPathfinder, {
-      propsData: {
-        title: 'mock title',
-        href: 'www.unimelb.edu.au',
-      },
-    }).element;
+    const result = shallow(ButtonTwoIcons).element;
     expect(result).toMatchSnapshot();
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = mount(CardPathfinder, {
+    const html = shallow(ButtonTwoIcons, {
       propsData: {
-        title: 'mock title',
         href: 'www.unimelb.edu.au',
       },
     }).html();

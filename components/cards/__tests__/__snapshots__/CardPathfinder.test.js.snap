@@ -5,13 +5,15 @@ exports[`CardPathfinder should match snapshot 1`] = `
   class="card-focus"
 >
   <a
-    aria-label=""
+    aria-label="mock title"
     class="btn-owner card bg-inverted card--pathfinder"
     href="www.unimelb.edu.au"
   >
     <h3
       class="card__header heading-section"
-    />
+    >
+      mock title
+    </h3>
      
     <div
       class="card__inner"
