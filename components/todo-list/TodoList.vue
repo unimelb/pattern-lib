@@ -53,10 +53,12 @@ export default {
     img: {
       type: String,
       default: '',
+      required: true,
     },
     ariaLabel: {
       type: String,
       default: '',
+      required: true,
     },
     heading: {
       type: String,
@@ -69,6 +71,7 @@ export default {
     buttonCardData: {
       type: Array,
       default: () => [{}],
+      required: true,
     },
     bgColor: {
       type: String,
