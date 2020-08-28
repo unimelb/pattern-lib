@@ -12,7 +12,7 @@ describe('PageHeaderEvent', () => {
   it('should match snapshot', () => {
     const result = shallow(PageHeaderEvent, {
       propsData: {
-        titleText: 'title text',
+        titleText: 'test title',
       },
     }).element;
     expect(result).toMatchSnapshot();
