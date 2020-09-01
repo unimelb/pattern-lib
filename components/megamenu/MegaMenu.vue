@@ -186,6 +186,7 @@ import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 import Logo from '../logo/Logo.vue';
 import { WIDTH_900 } from '../../helpers/viewports';
+import { TIMER_500 } from '../../constants/timers';
 
 import {
   KEYCODE_TAB,
@@ -245,6 +246,7 @@ export default {
       lastIndex: null,
       isAnimate: true,
       isActive: false,
+      timeOutID: null,
     };
   },
   computed: {
@@ -294,31 +296,34 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex) {
-      if (
-        this.lastIndex !== null
+      this.timeOutID = setTimeout(() => {
+        if (
+          this.lastIndex !== null
         && this.items[this.lastIndex].items !== undefined
         && this.items[rootindex].items !== undefined
-      ) {
-        this.isAnimate = false;
-        this.lastIndex = rootindex;
-      } else {
-        this.isAnimate = true;
-        this.lastIndex = rootindex;
-      }
-
-      if (this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
-        this.activateBlanket(this.dismissDesktopMenu.bind(this));
-        this.$refs.rootitems[rootindex].classList.add('menu__item--over');
-        if (this.isAnimate) {
-          this.$refs.rootitems[rootindex].lastChild.classList.add(
-            'inner--fade'
-          );
+        ) {
+          this.isAnimate = false;
+          this.lastIndex = rootindex;
+        } else {
+          this.isAnimate = true;
+          this.lastIndex = rootindex;
         }
-        this.isDesktopOpen = true;
-        this.$emit('mega-menu-activate-desktop-menu');
-      }
+
+        if (this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
+          this.activateBlanket(this.dismissDesktopMenu.bind(this));
+          this.$refs.rootitems[rootindex].classList.add('menu__item--over');
+          if (this.isAnimate) {
+            this.$refs.rootitems[rootindex].lastChild.classList.add(
+              'inner--fade'
+            );
+          }
+          this.isDesktopOpen = true;
+          this.$emit('mega-menu-activate-desktop-menu');
+        }
+      }, TIMER_500);
     },
     dismissDesktopMenu(props = {}) {
+      clearTimeout(this.timeOutID);
       const { force } = props;
       if (
         (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)

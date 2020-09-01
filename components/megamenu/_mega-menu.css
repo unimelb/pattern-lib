@@ -59,6 +59,7 @@
     transform: none;
     transition: var(--tr-transform);
     background-color: rgb(var(--col-brand));
+    opacity: 0;
 
     &--fade {
       animation: fadeIn .5s backwards;
@@ -469,6 +470,8 @@
       &__section .menu__item--over,
       &__section .menu__item[tabindex='0']:focus {
         .inner {
+          opacity: 1;
+          transition-delay: 1s;
           display: flex;
           box-shadow: 1px 6px 12px -3px rgba(0, 0, 0, .6);
         }
