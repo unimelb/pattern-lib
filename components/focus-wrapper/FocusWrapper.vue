@@ -5,14 +5,10 @@
     <slot />
     <SvgIcon
       :class="['card-focus__top-left', color, { 'semi-opaque': semiOpaque }]"
-      :width="normalizeSize"
-      :height="normalizeSize"
       icon="focus-top-left"
       name="focus-top-left" />
     <SvgIcon
       :class="['card-focus__bottom-right', color, { 'semi-opaque': semiOpaque }]"
-      :width="normalizeSize"
-      :height="normalizeSize"
       icon="focus-bottom-right"
       name="focus-bottom-right" />
   </div>
@@ -36,24 +32,9 @@ export default {
       type: Boolean,
       default: false,
     },
-    size: {
-      type: String,
-      default: 'medium',
-      validator: (size) => ['small', 'medium', 'large'].includes(size),
-    },
     padded: {
       type: Boolean,
       default: false,
-    },
-  },
-  computed: {
-    normalizeSize() {
-      const sizes = {
-        small: 48,
-        medium: 72,
-        large: 96,
-      };
-      return sizes[this.size] || sizes.medium;
     },
   },
 };

@@ -3,7 +3,6 @@
     :semi-opaque="semiOpaque"
     :color="color"
     :class="classes"
-    :size="size"
     padded
     class="card card--focus-box">
     <!-- eslint-disable vue/no-v-html -->
@@ -55,10 +54,6 @@ export default {
     semiOpaque: {
       type: Boolean,
       default: false,
-    },
-    size: {
-      type: String,
-      default: 'large',
     },
   },
   computed: {
