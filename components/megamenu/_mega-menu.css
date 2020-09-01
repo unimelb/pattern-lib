@@ -171,7 +171,7 @@
       }
 
       @media (--bp-x-wide) {
-        padding: .75rem 1rem .75rem;
+        padding: 0 .625rem .5rem 1rem;
       }
     }
 

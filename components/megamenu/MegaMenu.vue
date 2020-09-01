@@ -62,6 +62,10 @@
                 @click="openInner">
                 {{ rootitem.title }}
                 <SvgIcon
+                  v-if="!isMobileOpen && rootitem.items"
+                  name="chevron-down"
+                  class="icon" />
+                <SvgIcon
                   v-if="isMobileOpen"
                   name="chevron-right"
                   class="icon" />
