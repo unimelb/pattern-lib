@@ -246,7 +246,8 @@ export default {
       lastIndex: null,
       isAnimate: true,
       isActive: false,
-      timeOutID: null,
+      timeOutHoverInID: null,
+      timeOutHoverOutID: null,
     };
   },
   computed: {
@@ -296,20 +297,20 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex) {
-      this.timeOutID = setTimeout(() => {
-        if (
-          this.lastIndex !== null
+      if (
+        this.lastIndex !== null
         && this.items[this.lastIndex].items !== undefined
         && this.items[rootindex].items !== undefined
-        ) {
-          this.isAnimate = false;
-          this.lastIndex = rootindex;
-        } else {
-          this.isAnimate = true;
-          this.lastIndex = rootindex;
-        }
+      ) {
+        this.isAnimate = false;
+        this.lastIndex = rootindex;
+      } else {
+        this.isAnimate = true;
+        this.lastIndex = rootindex;
+      }
 
-        if (this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
+      if (this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
+        this.timeOutHoverInID = setTimeout(() => {
           this.activateBlanket(this.dismissDesktopMenu.bind(this));
           this.$refs.rootitems[rootindex].classList.add('menu__item--over');
           if (this.isAnimate) {
@@ -319,21 +320,24 @@ export default {
           }
           this.isDesktopOpen = true;
           this.$emit('mega-menu-activate-desktop-menu');
-        }
-      }, TIMER_500);
+        }, TIMER_500);
+      }
     },
     dismissDesktopMenu(props = {}) {
-      clearTimeout(this.timeOutID);
-      const { force } = props;
-      if (
-        (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
+      clearTimeout(this.timeOutHoverInID);
+      clearTimeout(this.timeOutHoverOutID);
+      this.timeOutHoverOutID = setTimeout(() => {
+        const { force } = props;
+        if (
+          (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
         || force
-      ) {
-        this.dismissBlanket();
-        this.dismissAllDesktopChildren();
-        this.isDesktopOpen = false;
-        this.$emit('mega-menu-dismiss-desktop-menu');
-      }
+        ) {
+          this.dismissBlanket();
+          this.dismissAllDesktopChildren();
+          this.isDesktopOpen = false;
+          this.$emit('mega-menu-dismiss-desktop-menu');
+        }
+      }, TIMER_500);
     },
     dismissMenu() {
       this.lastIndex = null;
