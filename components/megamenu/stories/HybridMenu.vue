@@ -33,7 +33,7 @@ export default {
             title: 'Campaign title',
             text:
               'This should in theory be a super short para to sell the campaign, but I know <em>someone</em> will put too much text in',
-            img: 'https://i.picsum.photos/id/1033/360/200.jpg',
+            img: 'https://picsum.photos/360/200',
             link: 'http://google.com',
           },
           items: [
@@ -49,7 +49,7 @@ export default {
           href: '/admissions',
           feature: {
             title: 'Different campaign',
-            img: 'https://i.picsum.photos/id/1040/360/200.jpg',
+            img: 'https://picsum.photos/360/200',
           },
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
@@ -88,7 +88,7 @@ export default {
           href: '/student-experience',
           feature: {
             alt: 'Screen reader only caption!',
-            img: 'https://i.picsum.photos/id/1040/360/200.jpg',
+            img: 'https://picsum.photos/360/200',
             link: 'http://google.com',
           },
           items: [
