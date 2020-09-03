@@ -3,8 +3,7 @@
     :semi-opaque="semiOpaque"
     :color="color"
     :class="classes"
-    padded
-    class="card card--focus-box">
+    padded>
     <!-- eslint-disable vue/no-v-html -->
     <svg
       v-if="icon"
