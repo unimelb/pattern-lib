@@ -1,7 +1,6 @@
 <template>
   <FocusWrapper
     :color="color"
-    :size="size"
     padded>
     <div
       ref="inPageNavigation"
@@ -46,7 +45,6 @@ import smoothscroll from 'smoothscroll-polyfill';
 import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
 import Dropdown from '../dropdown/Dropdown.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
-import { WIDTH_481 } from '../../helpers/viewports';
 
 export default {
   components: { FocusWrapper, Dropdown, SvgIcon },
@@ -71,7 +69,6 @@ export default {
       isFixed: false,
       selectedItem: false,
       autoSelect: true,
-      size: 'medium',
     };
   },
   computed: {
@@ -93,15 +90,9 @@ export default {
     this.getInPageData();
 
     window.addEventListener('scroll', this.checkNavigation);
-
-    this.$nextTick(() => {
-      window.addEventListener('resize', this.getWindowWidth);
-      this.getWindowWidth();
-    });
   },
   destroyed() {
     window.removeEventListener('scroll', this.checkNavigation);
-    window.removeEventListener('resize', this.getWindowWidth);
   },
   methods: {
     getInPageData() {
@@ -179,14 +170,6 @@ export default {
       });
 
       return selectedItem;
-    },
-    getWindowWidth() {
-      this.windowWidth = document.documentElement.clientWidth;
-      if (this.windowWidth < WIDTH_481) {
-        this.size = 'small';
-      } else {
-        this.size = 'medium';
-      }
     },
   },
 };

@@ -3,7 +3,6 @@ import { createStory } from 'storybook/utils';
 
 import Story1 from './Story1.vue';
 import Story2 from './Story2.vue';
-import Story3 from './Story3.vue';
 import Story4 from './Story4.vue';
 import Story5 from './Story5.vue';
 import Story6 from './Story6.vue';
@@ -14,7 +13,6 @@ import Story6 from './Story6.vue';
 storiesOf('Focus Wrapper', module)
   .add('Default', createStory(Story1))
   .add('Colours', createStory(Story2))
-  .add('Sizes', createStory(Story3))
   .add('Padded', createStory(Story4))
   .add('Opaque', createStory(Story5))
   .add('Nesting Components', createStory(Story6));

@@ -51,8 +51,6 @@ h3 {
   font-size: var(--h3-fs); /* https://github.com/unimelb/pattern-lib/issues/56#issuecomment-327679214 */
 }
 
-
-
 /* REMOVE: .heading-card .lead - to be replaced with title helpers */
 h4,
 .heading-card,

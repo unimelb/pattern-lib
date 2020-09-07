@@ -9,10 +9,6 @@
   &.btn-owner {
     text-decoration: none;
 
-    &:visited {
-      color: rgb(var(--col-brand));
-    }
-
     &.bg-inverted,
     &.bg-inverted--o95 {
       color: rgb(var(--col-background-primary-white));

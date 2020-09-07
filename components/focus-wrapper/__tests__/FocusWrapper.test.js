@@ -39,12 +39,10 @@ describe('FocusWrapper', () => {
     expect(wrapper.find(SvgIcon).exists()).toBe(true);
   });
 
-  it('should have default props color/semiOpaque/size/padding', () => {
+  it('should have default props color/semiOpaque/padding', () => {
     const wrapper = shallow(FocusWrapper);
     expect(wrapper.props().color).toBe('');
     expect(wrapper.props().semiOpaque).toBe(false);
-    expect(wrapper.props().size).toBe('medium');
-    expect(wrapper.vm.normalizeSize).toBe(72);
     expect(wrapper.props().padded).toBe(false);
     expect(wrapper.classes().includes('card-focus--padded')).toBe(false);
   });
@@ -68,47 +66,6 @@ describe('FocusWrapper', () => {
     });
 
     expect(wrapper.props().semiOpaque).toBe(true);
-  });
-
-  it('should accept only correct size value', () => {
-    const wrapper = shallow(FocusWrapper, {
-      propsData: {
-        size: 72,
-      },
-    });
-    const { size } = wrapper.vm.$options.props;
-    expect(size.type).toBe(String);
-    expect(size.validator && size.validator(72)).toBeFalsy();
-  });
-
-  it('should render small size', () => {
-    const wrapper = shallow(FocusWrapper, {
-      propsData: {
-        size: 'small',
-      },
-    });
-    expect(wrapper.props().size).toBe('small');
-    expect(wrapper.vm.normalizeSize).toBe(48);
-  });
-
-  it('should render medium size', () => {
-    const wrapper = shallow(FocusWrapper, {
-      propsData: {
-        size: 'medium',
-      },
-    });
-    expect(wrapper.props().size).toBe('medium');
-    expect(wrapper.vm.normalizeSize).toBe(72);
-  });
-
-  it('should render large size', () => {
-    const wrapper = shallow(FocusWrapper, {
-      propsData: {
-        size: 'large',
-      },
-    });
-    expect(wrapper.props().size).toBe('large');
-    expect(wrapper.vm.normalizeSize).toBe(96);
   });
 
   it('should render padded', () => {
