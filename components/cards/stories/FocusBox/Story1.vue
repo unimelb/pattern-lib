@@ -9,7 +9,7 @@
           vertical
           semi-opaque>
           <h3 class="title--xs">
-            Learning and teaching
+            Reaching for the stars
           </h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim accusamus d
         </CardFocusBox>
       </ListItem>

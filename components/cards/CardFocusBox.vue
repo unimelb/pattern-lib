@@ -3,9 +3,7 @@
     :semi-opaque="semiOpaque"
     :color="color"
     :class="classes"
-    :size="size"
-    padded
-    class="card card--focus-box">
+    padded>
     <!-- eslint-disable vue/no-v-html -->
     <svg
       v-if="icon"
@@ -55,10 +53,6 @@ export default {
     semiOpaque: {
       type: Boolean,
       default: false,
-    },
-    size: {
-      type: String,
-      default: 'large',
     },
   },
   computed: {

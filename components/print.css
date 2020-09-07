@@ -122,10 +122,6 @@
   .header-tools__menu,
   .card-focus__top-left,
   .card-focus__bottom-right,
-  .card--focus-box__cnr {
-    display: none !important;
-  }
-
   .page-footer__main__contacts {
     width: 100% !important;
   }
@@ -179,7 +175,6 @@
     background-color: transparent !important;
   }
 
-  .card--focus-box,
   .section__inner,
   .card--pathfinder,
   .notice {
