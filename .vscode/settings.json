@@ -3,7 +3,6 @@
   "editor.formatOnSave": false,
   "tslint.autoFixOnSave": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "eslint.autoFixOnSave": true,
   "eslint.options": {
     "extensions": [
         ".js",
@@ -11,14 +10,11 @@
     ]
   },
   "eslint.validate": [
-      "javascript",
-      {
-          "language": "vue",
-          "autoFix": true
-      },
-      {
-          "language": "html",
-          "autoFix": true
-      }
-  ],
+    "vue",
+    "html",
+    "javascript"
+],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
