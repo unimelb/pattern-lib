@@ -28,12 +28,6 @@
 .bg-inverted--o95 {
   background-color: rgba(var(--col-background-secondary-navy), .95);
   color: rgb(var(--col-background-primary-white));
-
-  .card--focus-box__cnr {
-    opacity: .85;
-
-    /* push up opacity for focus color on blue bg */
-  }
 }
 
 /* light-gray background */
@@ -56,7 +50,7 @@
 
 .bg-white {
   background-color: rgb(var(--col-background-primary-white));
-  color: rgb(var(--col-brand));
+  color: rgb(var(--col-black-dark));
 }
 
 /**
@@ -73,6 +67,42 @@
 
 .col-linkedin {
   color: rgb(var(--col-linkedin));
+}
+
+.col-navy-dark {
+  color: rgb(var(--col-navy-dark));
+}
+
+.col-black-dark {
+  color: rgb(var(--col-black-dark));
+}
+
+.col-grey-dark {
+  color: rgb(var(--col-grey-dark));
+}
+
+.col-grey-mid-1 {
+  color: rgb(var(--col-grey-mid-1));
+}
+
+.col-link {
+  color: rgb(var(--col-link));
+}
+
+.col-link-visited {
+  color: rgb(var(--col-link-visited));
+}
+.col-link-active {
+  color: rgb(var(--col-link-active));
+}
+.col-link-on-dark {
+  color: rgb(var(--col-link-on-dark));
+}
+.col-link-visited-on-dark {
+  color: rgb(var(--col-link-visited-on-dark));
+}
+.col-link-active-on-dark {
+  color: rgb(var(--col-link-active-on-dark));
 }
 
 /**
@@ -132,6 +162,7 @@
   vertical-align: bottom;
 
   /* fix unwanted inline-block space */
+
   & > img {
     display: block;
   }
@@ -259,12 +290,14 @@ a[target='_blank'] {
     text-overflow: ellipsis;
 
     /* for long unbreakable words */
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 
   /* force `dd` to fall below `dt` when too long (must be combined with `clearfix`) */
+
   &--wrap > dd {
     float: left;
   }
@@ -288,8 +321,12 @@ a[target='_blank'] {
     /* prevent icon from shrinking */
     width: .75rem;
     height: .75rem;
-    margin-left: 1rem;
+    margin-left: .5rem;
     vertical-align: middle;
+
+    @media (--bp-tablet) {
+      margin-left: 1rem;
+    }
 
     &--left {
       margin-right: 1rem;
@@ -483,5 +520,17 @@ a[target='_blank'] {
   }
   to {
     box-shadow: 0 0 18px rgb(var(--col-blue-light));
+  }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
   }
 }

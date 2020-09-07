@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import Vue from 'vue';
 import { configure, addDecorator } from '@storybook/vue';
 import { setOptions } from '@storybook/addon-options';
@@ -46,6 +47,7 @@ if (process.env.NODE_ENV !== 'production') {
   Vue.use(VueAxe, {
     config: {
       rules: [
+        { id: 'color-contrast', enabled: true },
         { id: 'heading-order', enabled: true },
         { id: 'label-title-only', enabled: true },
       ],

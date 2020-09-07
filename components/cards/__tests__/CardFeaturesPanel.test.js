@@ -72,7 +72,7 @@ describe('CardFeaturesPanel', () => {
 
     expect(typeof wrapper.props().href).toBe('string');
     expect(wrapper.props().href).toBe(href);
-    expect(wrapper.find('.btn--wide').attributes().href).toBe(href);
+    expect(wrapper.find('.btn--fullwidth').attributes().href).toBe(href);
   });
 
   it('should render thumb from prop with correct type', () => {

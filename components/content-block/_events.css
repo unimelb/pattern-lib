@@ -12,8 +12,10 @@
 
   &__title {
     margin-bottom: .5rem;
-    font-weight: bold;
+    font-weight: var(--fw-bold);
     line-height: 1.4;
+    font-size: 1.125rem;
+    letter-spacing: normal;
   }
 
   &__date,

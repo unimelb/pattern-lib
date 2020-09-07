@@ -320,10 +320,28 @@ export {
   from 'components/logo/Logo.vue';
 export {
   default as CardsFilter,
-} from 'components/filter/cards/CardsFilter.vue';
+}
+  from 'components/filter/cards/CardsFilter.vue';
 export {
   default as AccordionFilter,
-} from 'components/filter/accordion/AccordionFilter.vue';
+}
+  from 'components/filter/accordion/AccordionFilter.vue';
+export {
+  default as FilterDropdown,
+}
+  from 'components/filters/components/filter-dropdown/FilterDropdown.vue';
+export {
+  default as FilterBox,
+}
+  from 'components/filters/components/filter-box/FilterBox.vue';
+export {
+  default as FilteredResults,
+}
+  from 'components/filters/components/filtered-results/FilteredResults.vue';
+export {
+  default as FilterWidget,
+}
+  from 'components/filters/components/filter-widget/FilterWidget.vue';
 export {
   default as Tags,
 }
@@ -357,9 +375,41 @@ export {
 }
   from 'components/forms/StyledSelect.vue';
 export {
+  default as AppCheckbox,
+}
+  from 'components/app-checkbox/AppCheckbox.vue';
+export {
+  default as Spinner,
+}
+  from 'components/loader/Spinner.vue';
+export {
+  default as Loader,
+}
+  from 'components/loader/Loader.vue';
+export {
+  default as LoadingOverlay,
+}
+  from 'components/loader/LoadingOverlay.vue';
+export {
+  default as ErrorBox,
+}
+  from 'components/error-box/ErrorBox.vue';
+export {
+  default as CardCourse,
+}
+  from 'components/cards/CardCourse.vue';
+export {
+  default as CardCourseList,
+}
+  from 'components/cards/CardCourseList.vue';
+export {
   default as ButtonTwoIcons,
 }
   from 'components/buttons/ButtonTwoIcons.vue';
+export {
+  default as ButtonCard,
+}
+  from 'components/buttons/ButtonCard.vue';
 export {
   default as CardCampaign,
 }
@@ -368,3 +418,23 @@ export {
   default as PageCampaignCards,
 }
   from 'components/campaign/PageCampaignCards.vue';
+export {
+  default as FigureRounded,
+}
+  from 'components/figure/FigureRounded.vue';
+export {
+  default as CardRoundedFigure,
+}
+  from 'components/cards/CardRoundedFigure.vue';
+export {
+  default as TodoList,
+}
+  from 'components/todo-list/TodoList.vue';
+export {
+  default as CampaignBanner,
+}
+  from 'components/campaign/CampaignBanner.vue';
+export {
+  default as CardImageLink,
+}
+  from 'components/cards/CardImageLink.vue';

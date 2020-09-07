@@ -1,0 +1,21 @@
+.filtered-results {
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: var(--fw-regular);
+    &-notice {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    border-top: 1px solid rgb(var(--col-navy-mid-1));
+  }
+
+  &__no-items {
+    padding: 3.15rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

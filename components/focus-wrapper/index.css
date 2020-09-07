@@ -1,9 +1,17 @@
 .card-focus {
   display: flex;
   position: relative;
+  justify-content: flex-start;
+  align-self: center;
+  flex-direction: column;
+  min-width: 100%;
 
   &--padded {
-    padding: 3rem;
+    padding: 2rem;
+
+    @media (--bp-x-tablet) {
+      padding: 3rem;
+    }
   }
 
   &__top-left,
@@ -13,6 +21,13 @@
     top: 0;
     left: 0;
     fill: rgb(var(--col-blue-mid-2));
+    width: 4rem;
+    height: 4rem;
+
+    @media (--bp-x-tablet) {
+      width: 5rem;
+      height: 5rem;
+    }
 
     &.navy {
       fill: rgb(var(--col-navy-mid-2));

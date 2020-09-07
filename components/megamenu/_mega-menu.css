@@ -162,16 +162,16 @@
 
       @media (--bp-x-desktop) {
         padding: .75rem .5rem .75rem;
-        font-size: 1rem;
+        font-size: .9rem;
       }
 
       @media (--bp-wide) {
-        padding: .75rem .65rem .75rem;
+        padding: 1.0625rem .65rem .75rem;
         font-size: 1rem;
       }
 
       @media (--bp-x-wide) {
-        padding: .75rem 1rem .75rem;
+        padding: .8125rem .625rem .5rem 1rem;
       }
     }
 
@@ -461,7 +461,8 @@
           line-height: 1.1;
           text-align: center;
           text-decoration: none;
-          vertical-align: middle;
+          display: flex;
+          align-items: center;
           height: 100%;
         }
       }
@@ -644,11 +645,12 @@
 
 .icon {
   display: inline;
-  width: .6rem;
-  height: .6rem;
+  width: .7rem;
+  height: .7rem;
   min-width: .5rem;
   min-height: .5rem;
-  margin-left: .333rem;
+  margin-left: .4rem;
+  margin-top: .2rem;
   text-align: center;
   fill: rgb(var(--col-background-primary-white));
 }

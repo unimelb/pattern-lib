@@ -9,3 +9,6 @@ import './StaffList';
 import './GenericCard';
 import './Events';
 import './FeaturesPanel';
+import './Course';
+import './RoundedFigure';
+import './ImageLink';

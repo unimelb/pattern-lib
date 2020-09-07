@@ -16,8 +16,10 @@
   }
 
   .card__header {
-    color: rgb(var(--col-brand));
-    font-weight: bold;
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+    letter-spacing: normal;
+    font-weight: var(--fw-bold);
     text-decoration: underline;
   }
 }

@@ -13,4 +13,8 @@
 @import '_card-generic.css';
 @import '_card-stat.css';
 @import '_card-features-panel.css';
+@import '_card-course.css';
+@import '_card-course-list.css';
 @import '_card-campaign.css';
+@import '_card-rounded-figure.css';
+@import '_card-image-link.css';

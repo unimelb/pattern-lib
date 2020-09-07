@@ -1,0 +1,33 @@
+/**
+ * Two columns with cta
+ */
+.two-column-header-text {
+  .grid {
+    @media (--bp-x-tablet) {
+      flex-flow: row;
+    }
+  }
+
+  &__first-column {
+    margin: 0;
+
+    @media (--bp-x-tablet) {
+      padding-right: 2rem;
+    }
+
+    @media (--bp-desktop) {
+      /* this matches the split section component text padding */
+      padding-left: 2.25rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__second-column {
+    margin: 0;
+
+    @media (--bp-desktop) {
+      /* this matches the split section component text padding */
+      padding-left: 3rem;
+    }
+  }
+}

@@ -7,12 +7,7 @@
   font-weight: normal;
 
   &.btn-owner {
-    color: rgb(var(--col-brand));
     text-decoration: none;
-
-    &:visited {
-      color: rgb(var(--col-brand));
-    }
 
     &.bg-inverted,
     &.bg-inverted--o95 {

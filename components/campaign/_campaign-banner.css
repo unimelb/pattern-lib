@@ -1,0 +1,77 @@
+.campaign-banner {
+  width: 100%;
+  position: relative;
+  min-width: 20rem;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 2.333rem);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (--bp-max-x-mobile) {
+      left: 0;
+      right: 0;
+      top: calc(50% + 1rem);
+      justify-content: flex-start;
+      align-items: center;
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  &__heading {
+    font-family: var(--ff-normal);
+    color: rgb(var(--col-background-primary-white));
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    line-height: .9;
+    margin-bottom: .667rem;
+    max-width: 19rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, .5);
+
+    @media (--bp-max-x-mobile) {
+      font-size: 2.25rem;
+      line-height: .9;
+      margin-bottom: .75rem;
+    }
+  }
+
+  &__text {
+    font-family: var(--ff-normal);
+    color: rgb(var(--col-background-primary-white));
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    max-width: 25rem;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, .5);
+
+    @media (--bp-max-x-mobile) {
+      font-size: 1.125rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .btn--secondary {
+    padding: .556rem .444rem;
+    font-size: .889rem;
+    text-transform: uppercase;
+    width: max-content;
+
+    @media (--bp-max-x-mobile) {
+      margin: 0 auto;
+    }
+  }
+}

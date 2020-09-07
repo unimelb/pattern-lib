@@ -17,7 +17,7 @@
         ref="blanket"
         class="megamenu__blanket"
         @click="dismissMobileMenuIfBlanket"
-        @keypress.27="dismissMobileMenu">
+        @keypress.esc="dismissMobileMenu">
         <MegaMenuTopNavigation
           v-if="isShowTopMenu && isMobileOpen === false"
           :items="topMenu"
@@ -61,6 +61,10 @@
                 class="menu__link"
                 @click="openInner">
                 {{ rootitem.title }}
+                <SvgIcon
+                  v-if="!isMobileOpen && rootitem.items"
+                  name="chevron-down"
+                  class="icon" />
                 <SvgIcon
                   v-if="isMobileOpen"
                   name="chevron-right"
@@ -154,12 +158,12 @@
           href="#sitemapmenu"
           class="link-icon--vertical link-reset"
           @click.prevent="activateMobileMenu"
-          @keydown.13="activeMobileMenu">
+          @keydown.enter="activeMobileMenu">
           <svg
             class="link-icon__icon svg"
             role="presentation"
             focusable="false"
-            aria-labelledby="icon-menu"
+            aria-label="icon menu"
             viewBox="10 10 26 28">
             <path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z" />
           </svg>
@@ -186,6 +190,7 @@ import MegaMenuTitle from './MegaMenuTitle.vue';
 import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 import Logo from '../logo/Logo.vue';
 import { WIDTH_900 } from '../../helpers/viewports';
+import { TIMER_500 } from '../../constants/timers';
 
 import {
   KEYCODE_TAB,
@@ -245,6 +250,8 @@ export default {
       lastIndex: null,
       isAnimate: true,
       isActive: false,
+      timeOutHoverInID: null,
+      timeOutHoverOutID: null,
     };
   },
   computed: {
@@ -307,28 +314,34 @@ export default {
       }
 
       if (this.items[rootindex].items !== undefined && !this.isMobileOpen && !this.isMobile) {
-        this.activateBlanket(this.dismissDesktopMenu.bind(this));
-        this.$refs.rootitems[rootindex].classList.add('menu__item--over');
-        if (this.isAnimate) {
-          this.$refs.rootitems[rootindex].lastChild.classList.add(
-            'inner--fade'
-          );
-        }
-        this.isDesktopOpen = true;
-        this.$emit('mega-menu-activate-desktop-menu');
+        this.timeOutHoverInID = setTimeout(() => {
+          this.activateBlanket(this.dismissDesktopMenu.bind(this));
+          this.$refs.rootitems[rootindex].classList.add('menu__item--over');
+          if (this.isAnimate) {
+            this.$refs.rootitems[rootindex].lastChild.classList.add(
+              'inner--fade'
+            );
+          }
+          this.isDesktopOpen = true;
+          this.$emit('mega-menu-activate-desktop-menu');
+        }, TIMER_500);
       }
     },
     dismissDesktopMenu(props = {}) {
-      const { force } = props;
-      if (
-        (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
+      clearTimeout(this.timeOutHoverInID);
+      clearTimeout(this.timeOutHoverOutID);
+      this.timeOutHoverOutID = setTimeout(() => {
+        const { force } = props;
+        if (
+          (this.isDesktopOpen && !this.isMobileOpen && !this.isMobile)
         || force
-      ) {
-        this.dismissBlanket();
-        this.dismissAllDesktopChildren();
-        this.isDesktopOpen = false;
-        this.$emit('mega-menu-dismiss-desktop-menu');
-      }
+        ) {
+          this.dismissBlanket();
+          this.dismissAllDesktopChildren();
+          this.isDesktopOpen = false;
+          this.$emit('mega-menu-dismiss-desktop-menu');
+        }
+      }, TIMER_500);
     },
     dismissMenu() {
       this.lastIndex = null;

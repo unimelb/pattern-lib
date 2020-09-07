@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Course Card should match snapshot 1`] = `
+<a
+  class="card-course card-course--bachelor"
+  data-test="card-course"
+  href="/find/courses/undergraduate/bachelor-of-design"
+>
+  <span
+    class="card-course__type"
+    data-test="course-type"
+  >
+    bachelor
+  </span>
+   
+  <span
+    class="card-course__name"
+    data-test="course-name"
+  >
+    Bachelor of Design
+  </span>
+</a>
+`;

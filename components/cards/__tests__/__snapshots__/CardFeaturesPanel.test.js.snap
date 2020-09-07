@@ -3,13 +3,14 @@
 exports[`CardFeaturesPanel should match snapshot 1`] = `
 <div
   class="card card--features-panel card--features-panel--head"
-  href=""
 >
   <div
     class="card__thumb"
   >
     <div
+      aria-label=""
       class="card__thumb-img"
+      role="img"
       style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png);"
     />
   </div>

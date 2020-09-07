@@ -82,23 +82,24 @@
   --col-6: var(--col-purple-mid-2);
   --col-7: var(--col-pink-mid-2);
 
-  /* Link colours - http://paletton.com/#uid=13o0u0kmmGKbYTnhIN2qUABwFtZ */
-  --col-link: 15, 91, 114;
-  --col-link-visited: var(--col-purple-dark);
-  --col-link-active: 2, 72, 92;
+  /* Link colours */
+  --col-link: var(--col-blue-dark);
+  --col-link-visited: 66, 99, 138; /* custom colour - slightly desaturated and darkened Blue Dark */
+  --col-link-active: var(--col-navy-dark);
   --col-link-on-dark: 124, 189, 205;
   --col-link-visited-on-dark: 193, 202, 230;
   --col-link-active-on-dark: 255, 255, 255;
 
   /* Third-party colours */
-  --col-twitter: #55acee;
-  --col-facebook: #3b5998;
-  --col-linkedin: #0976b4;
+  --col-twitter: rgb(85, 172, 238);
+  --col-facebook: rgb(59, 89, 152);
+  --col-linkedin: rgb(9, 118, 180);
 
   /* Vertical rhythm */
   --vr: 1.5rem;
   --lh: 1.5;
   --lsp: calc(var(--lh) - 1);
+  --grid-offset: -.75rem;
 
   /* line spacing (i.e. leading) */
   --hlsp: calc(var(--lsp) / 2);
@@ -118,12 +119,13 @@
   --ff-lead: 'Noto Serif', 'Georgia', 'Times New Roman', serif;
   --fw-semibold: 600;
   --fw-bold: 700;
+  --fw-normal: 500;
   --fw-light: 300;
   --fw-regular: 400;
-  --fw-normal: 500;
 
   /* Border radius */
   --br: 4px;
+  --br-checkbox: 3px;
   --br-cards: 4px;
 
   /* Side nav width */
@@ -133,7 +135,7 @@
   --col-box-shadow: 0, 0, 0, .12;
   --col-box-shadow-btn: 0, 0, 0, .25;
 
-  /* Font size variable for calculation */
+  /* Font scale variable for calculation */
   --fs: 1.15;
 
   /* Font sizes */
@@ -151,6 +153,12 @@
   --z-overlay: 500;
   --z-modal: 1000;
   --z-liveagent: 10000;
+
+  /* Transitions */
+  --transition-speed-normal: 250ms;
+
+  /* Box shadow to use instead of outline in custom form elements */
+  --outline-shadow: 0 0 0 3px rgba(var(--col-navy-mid-2), .8);
 }
 
 /**

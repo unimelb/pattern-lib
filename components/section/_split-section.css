@@ -2,16 +2,21 @@
  * Split section
  */
 .split-section {
+  display: flex;
+  flex-direction: column;
+
   &--fullheight {
     min-height: 47.1rem;
   }
 
   /* left and right-hand sides are interchangeable */
   &__side {
+    order: 1;
     background-position: center;
     background-size: cover;
 
     &--with-image {
+      order: 0;
       padding-top: 56.25%;
     }
   }
@@ -26,20 +31,6 @@
     .split-section__side--with-image {
       padding: calc(var(--vr) * 10) var(--vr) calc(var(--vr) * 2) var(--vr);
       vertical-align: bottom !important;
-    }
-
-    .card--focus-box {
-      margin-right: auto;
-      margin-left: auto;
-      padding: calc(var(--vr) / 2);
-
-      .card__inner {
-        padding: var(--vr);
-      }
-
-      @media (--bp-desktop) {
-        max-width: 70%;
-      }
     }
 
     .split-section__quote {
@@ -68,11 +59,6 @@
         content: '\2014';
       }
     }
-
-    .card--focus-box__cnr {
-      width: 3rem;
-      height: 3rem;
-    }
   }
 
   @media (--bp-desktop) {
@@ -91,8 +77,13 @@
 
     &__inner {
       max-width: calc(var(--w-mid) / 2 + var(--vr)); /* account for either left or right padding */
-      padding-top: calc(4 * var(--vr));
-      padding-bottom: calc(4 * var(--vr));
+      min-height: 27rem;
+      padding-top: calc(2 * var(--vr));
+      padding-bottom: calc(2 * var(--vr));
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-start;
     }
 
     &__side:first-child > .split-section__inner { margin-left: auto; }

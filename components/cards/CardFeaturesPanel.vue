@@ -1,10 +1,10 @@
 <template>
-  <div
-    :href="href"
-    class="card card--features-panel card--features-panel--head">
+  <div class="card card--features-panel card--features-panel--head">
     <div class="card__thumb">
       <div
         :style="`background-image: url('${thumb}')`"
+        role="img"
+        :aria-label="ariaLabel"
         class="card__thumb-img" />
     </div>
     <div class="card__inner">
@@ -20,7 +20,7 @@
       class="card__footer">
       <ButtonIcon
         :href="href"
-        class="btn--wide btn--cta btn--sml">
+        class="btn--fullwidth btn--cta btn--sml">
         Read more
       </ButtonIcon>
     </div>
@@ -35,6 +35,10 @@ export default {
     thumb: {
       type: String,
       default: IMAGE_PLACEHOLDER_BIG,
+    },
+    ariaLabel: {
+      type: String,
+      default: '',
     },
     title: {
       type: String,

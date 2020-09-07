@@ -64,11 +64,13 @@
 
     &__main {
       font-weight: var(--fw-semibold);
+      color: rgb(var(--col-white));
     }
 
     &__sub {
       margin-top: .25rem;
       font-size: .875rem;
+      color: rgb(var(--col-white));
     }
 
     @media (--bp-max-x-mobile) {

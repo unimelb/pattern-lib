@@ -17,8 +17,8 @@
       class="modal-dialog"
       aria-hidden="true"
       @click="closeContainer"
-      @keypress.27="closeDialog"
-      @keypress.9="inputTrap">
+      @keypress.esc="closeDialog"
+      @keypress.tab="inputTrap">
       <div
         ref="modal"
         :aria-labelledby="`modal-dialog-title-1${_uid}`"

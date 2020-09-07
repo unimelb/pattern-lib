@@ -16,6 +16,12 @@
     font-weight: var(--fw-semibold);
   }
 
+  .card__header {
+    margin-bottom: .75rem;
+    font-size: 1.25rem;
+    letter-spacing: normal;
+  }
+
   .card__footer {
     padding: 0 var(--vr) var(--vr) var(--vr);
   }

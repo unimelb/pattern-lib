@@ -81,6 +81,14 @@
     }
   }
 
+  .card__inner {
+    h3 {
+      margin-bottom: .75rem;
+      font-size: 1.25rem;
+      letter-spacing: normal;
+    }
+  }
+
   &--col-brand {
     .card__thumb {
       &::before { background-image: url('~icons/focus-top-left.svg?fill=#074482'); }

@@ -17,8 +17,8 @@
             tabindex="0"
             title="Close (Esc)"
             @click="openStateToggle"
-            @keydown.13="openStateToggle"
-            @keydown.32="openStateToggle">
+            @keydown.enter="openStateToggle"
+            @keydown.space="openStateToggle">
             <SvgIcon
               aria-hidden="true"
               name="close"
@@ -33,8 +33,8 @@
             tabindex="0"
             title="Previous (arrow left)"
             @click="move('prev')"
-            @keydown.13="move('prev')"
-            @keydown.32="move('prev')">
+            @keydown.enter="move('prev')"
+            @keydown.space="move('prev')">
             <SvgIcon
               aria-hidden="true"
               name="chevron-left"
@@ -71,8 +71,8 @@
             role="button"
             title="Next (arrow right)"
             @click="move('next')"
-            @keydown.13="move('next')"
-            @keydown.32="move('next')">
+            @keydown.enter="move('next')"
+            @keydown.space="move('next')">
             <SvgIcon
               aria-hidden="true"
               name="chevron-right"
