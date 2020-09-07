@@ -1,7 +1,6 @@
 <template>
   <div ref="card">
     <FocusWrapper
-      :size="size"
       color="navy"
       semi-opaque>
       <div class="alumni">
@@ -34,7 +33,6 @@
 
 import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';
 import { IMAGE_PLACEHOLDER_BIG } from '../../../utils/placeholders';
-import { WIDTH_599 } from '../../../helpers/viewports';
 
 export default {
   name: 'AlumniProfiles',
@@ -57,30 +55,6 @@ export default {
       type: String,
       default: '',
       required: true,
-    },
-  },
-  data() {
-    return {
-      size: 'large',
-    };
-  },
-  mounted() {
-    this.$nextTick(() => {
-      window.addEventListener('resize', this.getWindowWidth);
-      this.getWindowWidth();
-    });
-  },
-  beforeDestroy() {
-    window.removeEventListener('resize', this.getWindowWidth);
-  },
-  methods: {
-    getWindowWidth() {
-      this.windowWidth = document.documentElement.clientWidth;
-      if (this.windowWidth < WIDTH_599) {
-        this.size = 'small';
-      } else {
-        this.size = 'large';
-      }
     },
   },
 };

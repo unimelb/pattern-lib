@@ -1,7 +1,6 @@
 <template>
   <FocusWrapper
-    :color="color"
-    size="large">
+    :color="color">
     <div :class="classes">
       <div class="card__inner">
         <h3 class="card-header__heading">
@@ -60,9 +59,8 @@ export default {
     classes() {
       return {
         'card--focus-box-vert': this.vertical,
-        [`card--focus-box--${this.color}`]: this.color && this.color.length,
-        'card--stat btn-owner card card--focus-box bg-inverted': this.inverted,
-        'card--stat btn-owner card card--focus-box bg-white': !this.inverted,
+        'card--stat btn-owner card bg-inverted': this.inverted,
+        'card--stat btn-owner card bg-white': !this.inverted,
       };
     },
   },

@@ -1,5 +1,5 @@
 <template>
-  <FocusWrapper size="large">
+  <FocusWrapper>
     <a
       :href="href"
       :aria-label="title"
