@@ -5,7 +5,6 @@
     transition: background-color .15s ease-out, color .15s ease-out;
     border-bottom: 1px solid rgb(var(--col-background-secondary-grey));
     text-decoration: none;
-    justify-content: space-around;
     cursor: pointer;
 
     h2 {
