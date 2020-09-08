@@ -40,10 +40,10 @@ exports[`CardPathfinder should match snapshot 1`] = `
     aria-label="focus-top-left"
     class="card-focus__top-left"
     focusable="false"
-    height="96"
+    height="0"
     icon="focus-top-left"
     role="img"
-    width="96"
+    width="0"
   >
     <use
       xlink:href="#icon-focus-top-left"
@@ -59,10 +59,10 @@ exports[`CardPathfinder should match snapshot 1`] = `
     aria-label="focus-bottom-right"
     class="card-focus__bottom-right"
     focusable="false"
-    height="96"
+    height="0"
     icon="focus-bottom-right"
     role="img"
-    width="96"
+    width="0"
   >
     <use
       xlink:href="#icon-focus-bottom-right"
