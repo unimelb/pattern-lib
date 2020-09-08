@@ -47,10 +47,12 @@ export default {
     name: {
       type: String,
       default: '',
+      required: true,
     },
     href: {
       type: String,
-      default: '#',
+      default: '',
+      required: true,
     },
     compact: {
       type: Boolean,

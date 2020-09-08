@@ -1,3 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CardPathfinder should match snapshot 1`] = `<!---->`;
+exports[`CardPathfinder should match snapshot 1`] = `
+<div
+  class="card-focus"
+>
+  <a
+    aria-label="mock title"
+    class="btn-owner card bg-inverted card--pathfinder"
+    href="www.unimelb.edu.au"
+  >
+    <h3
+      class="card__header heading-section"
+    >
+      mock title
+    </h3>
+     
+    <div
+      class="card__inner"
+    >
+      <!---->
+       
+      <p />
+    </div>
+     
+    <div
+      class="card__footer"
+    >
+      <buttonicon
+        class="btn--inverted btn--fullwidth"
+        element="span"
+        icon="chevron-right"
+      >
+        Find out more
+      </buttonicon>
+    </div>
+  </a>
+   
+  <svg
+    aria-label="focus-top-left"
+    class="card-focus__top-left"
+    focusable="false"
+    height="0"
+    icon="focus-top-left"
+    role="img"
+    width="0"
+  >
+    <use
+      xlink:href="#icon-focus-top-left"
+    />
+     
+    <title>
+      Focus-top-left
+    </title>
+     
+  </svg>
+   
+  <svg
+    aria-label="focus-bottom-right"
+    class="card-focus__bottom-right"
+    focusable="false"
+    height="0"
+    icon="focus-bottom-right"
+    role="img"
+    width="0"
+  >
+    <use
+      xlink:href="#icon-focus-bottom-right"
+    />
+     
+    <title>
+      Focus-bottom-right
+    </title>
+     
+  </svg>
+</div>
+`;

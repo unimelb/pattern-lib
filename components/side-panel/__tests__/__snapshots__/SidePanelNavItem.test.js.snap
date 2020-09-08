@@ -5,7 +5,7 @@ exports[`SidePanelNavItem should match snapshot 1`] = `
   class="side-panel__nav-item clearfix"
 >
   <a
-    href="#"
+    href=""
   >
     <!---->
      

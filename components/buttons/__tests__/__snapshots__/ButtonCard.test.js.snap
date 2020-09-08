@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonCard should match snapshot 1`] = `
+<a
+  class="btn-card"
+  href="www.unimelb.edu.au"
+>
+  <div
+    class="btn-card__inner bg-white"
+  >
+    <!---->
+     
+    <div
+      class="btn-card__label"
+    >
+      test label
+    </div>
+     
+    <!---->
+  </div>
+</a>
+`;

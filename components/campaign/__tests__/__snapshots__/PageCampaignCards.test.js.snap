@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageCampaignCards should match snapshot 1`] = `
+<div
+  class="page-campaign-cards"
+>
+  <div
+    class="page-campaign-cards__inner"
+  />
+</div>
+`;

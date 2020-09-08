@@ -1,5 +1,5 @@
 import { shallow, mount } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import VideoEmbed from '../VideoEmbed.vue';
 
 expect.extend(toHaveNoViolations);
@@ -132,5 +132,14 @@ describe('GenericCard', () => {
       },
     });
     expect(wrapper.classes().indexOf('embed--inset--sml')).toBeGreaterThan(0);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(VideoEmbed).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

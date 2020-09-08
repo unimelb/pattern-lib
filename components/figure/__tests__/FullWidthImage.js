@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import FullWidthImage from '../FullWidthImage.vue';
 
 expect.extend(toHaveNoViolations);
@@ -22,5 +20,14 @@ describe('FullWidthImage', () => {
 
     expect(imageUrl.type).toBe(String);
     expect(wrapper.props().imageUrl).toBe('');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(FullWidthImage).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

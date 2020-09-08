@@ -3,14 +3,14 @@
 exports[`QuickLinksSecondaryItem should match snapshot 1`] = `
 <a
   class="ql-menu__secondary-link"
-  href="#"
+  href="www.unimelb.edu.au"
 >
   <!---->
    
   <span
     class="ql-menu__secondary-text"
   >
-    
+    mock title
   </span>
 </a>
 `;

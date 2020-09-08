@@ -33,7 +33,7 @@ export default {
     },
   },
   mounted() {
-    if (this.$parent.namespace) {
+    if (this.$parent && this.$parent.namespace) {
       this.$refs.comp.namespace = this.$parent.namespace;
     }
   },

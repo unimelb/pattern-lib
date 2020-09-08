@@ -1,6 +1,7 @@
 <template>
   <div class="dropdown">
     <select
+      aria-label="Select"
       :value="selected"
       class="select"
       @change="callback">

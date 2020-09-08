@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonTwoIcons should match snapshot 1`] = `
+<a
+  class="btn-two-icons btn-two-icons--color-teal"
+  href="#"
+>
+  <!---->
+   
+  <p
+    class="btn-two-icons__text"
+  >
+     Insert button text 
+  </p>
+   
+  <!---->
+</a>
+`;

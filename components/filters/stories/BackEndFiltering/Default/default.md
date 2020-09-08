@@ -202,7 +202,7 @@ locationsOptions and facultiesOptions are used in the FilterDropdown component, 
           <div class="grid grid--center grid--2col">
             <ListItem v-for="item in response.results" :key="item.id">
               <!-- found item content -->
-              <GenericCard :title="item.name" :excerpt="item.description" :cols="2">
+              <GenericCard :title="item.name" :excerpt="item.description" :cols="2" href="#">
                 <div slot="sub-title-1" class="sub-title">
                   <div>
                     <div v-for="(location, locationIndex) in item.city" :key="locationIndex">

@@ -1,16 +1,19 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import GenericCard from '../GenericCard.vue';
 
 expect.extend(toHaveNoViolations);
 
 describe('GenericCard', () => {
   it('should match snapshot', () => {
-    const result = shallow(GenericCard).element;
+    const result = shallow(GenericCard, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -34,7 +37,7 @@ describe('GenericCard', () => {
     expect(wrapper.props().cols).toBe(3);
 
     expect(href.type).toBe(String);
-    expect(wrapper.props().href).toBe('#');
+    expect(wrapper.props().href).toBe('');
 
     expect(excerpt.type).toBe(String);
     expect(wrapper.props().excerpt).toBe('');
@@ -165,5 +168,19 @@ describe('GenericCard', () => {
       },
     });
     expect(wrapper.classes()).toContain('card--generic--full-width');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(GenericCard, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });
