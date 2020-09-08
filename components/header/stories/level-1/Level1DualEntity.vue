@@ -3,7 +3,7 @@
     title="About Us"
     entity="School of Mathematics and Statistics"
     entity-sub="Statistical Consulting Centre"
-    img="https://i.picsum.photos/id/1033/990/530.jpg" />
+    img="https://picsum.photos/id/1033/990/530.jpg" />
 </template>
 
 <script>
