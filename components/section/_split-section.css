@@ -82,7 +82,7 @@
       padding-bottom: calc(2 * var(--vr));
       display: flex;
       flex-direction: column;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: flex-start;
     }
 
