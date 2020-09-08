@@ -47,7 +47,7 @@
     width: .875rem;
     height: .875rem;
     pointer-events: none;
-    background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-black-dark)));
+    background: svg-load('chevron-down.svg', fill=rgb(var(--col-black-dark)));
     transform: translate(-65%, -50%);
   }
 
@@ -92,7 +92,7 @@
     }
 
     &::after {
-      background-image: svg-load('chevron-down.svg', fill=rgb(var(--col-background-primary-white)));
+      background: svg-load('chevron-down.svg', fill: #fff);
     }
 
     select {
