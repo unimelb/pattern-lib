@@ -177,6 +177,7 @@ options is used in the FilterDropdown component, the description of the options 
 
                 <!-- found item content -->
                 <GenericCard
+                  href="#"
                   :title="item.name"
                   :excerpt="item.excerpt"
                   :cols="2" />

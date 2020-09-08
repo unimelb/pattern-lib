@@ -2,9 +2,7 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import ResponsiveTable from '../ResponsiveTable.vue';
 import CompactedTable from '../CompactedTable.vue';
 import BootstrapCMSTables from '../BootstrapCMSTables';
@@ -133,5 +131,23 @@ describe('Compacted Table', () => {
 
     expect(wrapper.find('td').attributes().class).toBe('table__mobile-title');
     expect(wrapper.find('tr').attributes()['data-mobile-heading']).toEqual('Faculty of Architecture, Building and Planning');
+  });
+
+  it('ResponsiveTable Component throws no accessibility violations', (done) => {
+    const html = shallow(ResponsiveTable).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
+  });
+
+  it('CompactedTable Component throws no accessibility violations', (done) => {
+    const html = shallow(CompactedTable).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

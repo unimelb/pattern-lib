@@ -65,20 +65,30 @@ export default {
   computed: {
     trigger() {
       let t = this.$refs.header;
+
+      if (!this.$slots.default) {
+        return t;
+      }
+
       this.$slots.default.forEach((el) => {
         if (el.context && el.context.$refs && el.context.$refs.trigger) {
           t = el.context.$refs.trigger;
         }
       });
+
       return t;
     },
     group() {
+      if (!this.$parent) {
+        return false;
+      }
+
       return this.$parent.groupParent === undefined ? false : this.$parent.groupParent;
     },
   },
   created() {
     this.isActive = this.active;
-    if (this.$parent.namespace && this.$parent.namespace !== '') {
+    if (this.$parent && this.$parent.namespace && this.$parent.namespace !== '') {
       this.namespace = this.$parent.namespace;
     } else {
       this.namespace = `ui-toggle-${this._uid}`;

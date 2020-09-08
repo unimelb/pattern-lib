@@ -1,8 +1,7 @@
 <template>
   <section
     class="carousel"
-    aria-roledescription="carousel"
-    aria-label="Stories and events">
+    aria-label="Stories and events Carousel">
     <div
       v-if="stories.length"
       class="carousel__slider">

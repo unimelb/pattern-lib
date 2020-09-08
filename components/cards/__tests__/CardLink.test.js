@@ -1,5 +1,5 @@
 import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import CardLink from '../CardLink.vue';
 
 expect.extend(toHaveNoViolations);
@@ -112,5 +112,14 @@ describe('CardLink', () => {
     if (!inverted) {
       expect(classes).toContain('title-inverted');
     }
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(CardLink).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

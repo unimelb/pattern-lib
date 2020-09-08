@@ -33,6 +33,7 @@ export default {
     name: {
       type: String,
       default: '',
+      required: true,
     },
     meta: {
       type: String,
@@ -41,6 +42,7 @@ export default {
     href: {
       type: String,
       default: '#',
+      required: true,
     },
     excerpt: {
       type: String,

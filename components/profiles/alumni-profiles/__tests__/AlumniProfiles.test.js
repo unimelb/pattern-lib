@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import AlumniProfiles from '../AlumniProfiles.vue';
 
 expect.extend(toHaveNoViolations);
@@ -18,5 +16,14 @@ describe('AlumniProfiles', () => {
     }).element;
 
     expect(result).toMatchSnapshot();
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(AlumniProfiles).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

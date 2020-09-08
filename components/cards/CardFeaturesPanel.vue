@@ -4,7 +4,7 @@
       <div
         :style="`background-image: url('${thumb}')`"
         role="img"
-        :aria-label="ariaLabel"
+        :aria-label="ariaLabel || title"
         class="card__thumb-img" />
     </div>
     <div class="card__inner">
@@ -43,6 +43,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     text: {
       type: String,

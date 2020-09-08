@@ -1,3 +1,174 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TodoList should match snapshot 1`] = `<!---->`;
+exports[`TodoList should match snapshot 1`] = `
+<div
+  class="section todo-list bg-light-blue"
+>
+  <div
+    class="section__inner"
+  >
+    <div
+      class="todo-list__container"
+    >
+      <div
+        class="todo-list__inner"
+      >
+        <div
+          class="todo-list__figure"
+        >
+          <figure
+            class="figure figure--inset"
+          >
+            <div
+              aria-label="Duis nulla id sint exercitation sint nisi reprehenderit nulla nulla enim consequat id velit aliqua."
+              class="figure-rounded"
+              role="img"
+              style="background-image: url(http://lorempixel.com/640/480/people);"
+            />
+             
+            <!---->
+          </figure>
+        </div>
+         
+        <div
+          class="todo-list__header-txt"
+        >
+          <h3
+            class="section-with-rounded-image__heading"
+          >
+            
+          Pariatur cupidatat incididunt.
+        
+          </h3>
+           
+          <p
+            class="section-with-rounded-image__description"
+          >
+            
+          In mollit adipisicing commodo tempor proident dolore consectetur in culpa. Non esse reprehenderit et occaecat proident nisi. Do nulla elit cupidatat esse non in nulla.
+        
+          </p>
+        </div>
+      </div>
+       
+      <div
+        class="todo-list__button-cards"
+      >
+        <div
+          class="todo-list__fill"
+        />
+         
+        <a
+          class="btn-card"
+          href="https://www.unimelb.edu.au"
+        >
+          <div
+            class="btn-card__inner bg-white"
+          >
+            <div
+              class="btn-card__top-label"
+            >
+              29th May
+            </div>
+             
+            <div
+              class="btn-card__label"
+            >
+              Velit quis non anim deserunt anim aliqua enim.
+            </div>
+             
+            <svg
+              aria-hidden="true"
+              aria-label="arrow-right"
+              class="btn-card__icon"
+              focusable="false"
+              height="22px"
+              role="img"
+              width="26px"
+            >
+              <use
+                xlink:href="#icon-arrow-right"
+              />
+               
+              <title>
+                Arrow-right
+              </title>
+               
+            </svg>
+          </div>
+        </a>
+        <a
+          class="btn-card"
+          href="https://www.unimelb.edu.au"
+        >
+          <div
+            class="btn-card__inner bg-white"
+          >
+            <!---->
+             
+            <div
+              class="btn-card__label"
+            >
+              Velit quis non anim deserunt anim aliqua enim.
+            </div>
+             
+            <svg
+              aria-hidden="true"
+              aria-label="arrow-right"
+              class="btn-card__icon"
+              focusable="false"
+              height="22px"
+              role="img"
+              width="26px"
+            >
+              <use
+                xlink:href="#icon-arrow-right"
+              />
+               
+              <title>
+                Arrow-right
+              </title>
+               
+            </svg>
+          </div>
+        </a>
+        <a
+          class="btn-card"
+          href="https://www.unimelb.edu.au"
+        >
+          <div
+            class="btn-card__inner bg-white btn-card--inverted"
+          >
+            <!---->
+             
+            <div
+              class="btn-card__label"
+            >
+              Velit quis non anim deserunt anim aliqua enim.
+            </div>
+             
+            <svg
+              aria-hidden="true"
+              aria-label="arrow-right"
+              class="btn-card__icon"
+              focusable="false"
+              height="22px"
+              role="img"
+              width="26px"
+            >
+              <use
+                xlink:href="#icon-arrow-right"
+              />
+               
+              <title>
+                Arrow-right
+              </title>
+               
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

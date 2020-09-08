@@ -11,12 +11,28 @@ exports[`SidePanel should match snapshot 1`] = `
       class="side-panel__title"
     >
       
-      
+      mock title
       
       <button
+        aria-label="mock title"
         class="side-panel__trigger"
       >
-        <!---->
+        <svg
+          aria-label="close"
+          focusable="false"
+          height="10"
+          role="img"
+          width="10"
+        >
+          <use
+            xlink:href="#icon-close"
+          />
+           
+          <title>
+            Close
+          </title>
+           
+        </svg>
       </button>
     </h5>
      

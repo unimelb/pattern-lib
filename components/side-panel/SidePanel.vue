@@ -4,6 +4,7 @@
       <h5 class="side-panel__title">
         {{ title }}
         <button
+          :aria-label="title"
           class="side-panel__trigger"
           @click="toggleOpen">
           <SvgIcon
@@ -37,6 +38,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     initialOpen: {
       type: Boolean,

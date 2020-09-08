@@ -1,6 +1,9 @@
 import { mount, shallow } from 'vue-test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import CardsFilter from '../cards/CardsFilter.vue';
+
+expect.extend(toHaveNoViolations);
 
 const mockData = [{
   title: 'Masters Exhibition 2018',
@@ -192,5 +195,14 @@ describe('CardsFilter', () => {
     expect(wrapper.vm.selectedDiscipline).toBe('Indigenous Arts and Culture');
     expect(wrapper.vm.selectedPerformance).toBe('Event');
     expect(wrapper.vm.dataFiltered.length).toBe(1);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(CardsFilter).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

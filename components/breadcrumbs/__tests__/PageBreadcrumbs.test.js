@@ -1,6 +1,9 @@
-import { mount } from 'vue-test-utils';
+import { shallow, mount } from 'vue-test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import SvgIcon from '../../icons/SvgIcon.vue';
 import PageBreadcrumbs from '../PageBreadcrumbs.vue';
+
+expect.extend(toHaveNoViolations);
 
 describe('PageBreadcrumbs', () => {
   describe('`items` prop validator', () => {
@@ -70,6 +73,15 @@ describe('PageBreadcrumbs', () => {
 
     it('should match snapshot', () => {
       expect(cmp.element).toMatchSnapshot();
+    });
+
+    it('Component throws no accessibility violations', (done) => {
+      const html = shallow(PageBreadcrumbs).html();
+      // pass anything that outputs html to axe
+      return axe(html).then((response) => {
+        expect(response).toHaveNoViolations();
+        done();
+      });
     });
   });
 });

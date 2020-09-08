@@ -62,6 +62,7 @@ export default {
     trigger: {
       type: String,
       default: '',
+      required: true,
     },
   },
   data() {

@@ -6,6 +6,7 @@
           compact
           thumb="https://randomuser.me/api/portraits/lego/0.jpg"
           name="John Smith"
+          href="www.unimelb.edu.au"
           title="Vice Principal Enterprise" />
       </ListItem>
       <ListItem>
@@ -13,6 +14,7 @@
           compact
           thumb="https://randomuser.me/api/portraits/lego/1.jpg"
           name="Jane Citizen"
+          href="www.unimelb.edu.au"
           title="Vice Principal Enterprise" />
       </ListItem>
       <ListItem>
@@ -20,6 +22,7 @@
           compact
           thumb="https://randomuser.me/api/portraits/lego/2.jpg"
           name="John Smith"
+          href="www.unimelb.edu.au"
           title="Vice Principal Enterprise" />
       </ListItem>
     </div>

@@ -1,5 +1,5 @@
 import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import MegaMenuTopNavigation from '../MegaMenuTopNavigation.vue';
 
 expect.extend(toHaveNoViolations);
@@ -31,5 +31,14 @@ describe('MegaMenuTitle', () => {
     });
     expect(wrapper.props().items.length).toBe(1);
     expect(wrapper.find('.menu-top__item').text()).toBe('test');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(MegaMenuTopNavigation).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

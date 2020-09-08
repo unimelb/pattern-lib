@@ -9,6 +9,7 @@
           v-for="box in boxes.split(',')"
           :key="box">
           <CardPathfinder
+            href="www.unimelb.edu.au"
             :title="box">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus facilis libero in, ipsam quidem cupiditate! Dignissimos pariatur, repellendus dolore nemo saepe, et dolor maxime, enim rem sapiente debitis minima blanditiis.
           </CardPathfinder>

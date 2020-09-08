@@ -1,6 +1,8 @@
 <template>
   <main class="layout layout--left bg-light-blue">
-    <SidePanel class="layout__pre bg-light-blue">
+    <SidePanel
+      title="Navigation"
+      class="layout__pre bg-light-blue">
       <SidePanelNavItem target="#section1">
         Section 1
       </SidePanelNavItem>

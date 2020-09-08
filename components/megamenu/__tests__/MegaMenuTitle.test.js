@@ -1,5 +1,5 @@
 import { shallow } from 'vue-test-utils';
-import { toHaveNoViolations } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import MegaMenuTitle from '../MegaMenuTitle.vue';
 
 expect.extend(toHaveNoViolations);
@@ -75,5 +75,14 @@ describe('MegaMenuTitle', () => {
     const wrapper = shallow(MegaMenuTitle);
 
     expect(wrapper.element.style.width).toBe(defaultWidth);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(MegaMenuTitle).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });
