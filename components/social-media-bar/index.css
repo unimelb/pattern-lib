@@ -1,5 +1,5 @@
 .social-media-bar {
-  background: rgba(var(--col-background-tertiary-navy));
+  background: rgb(var(--col-background-tertiary-navy));
 
   &__inner {
     display: flex;

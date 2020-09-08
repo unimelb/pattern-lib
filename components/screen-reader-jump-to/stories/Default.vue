@@ -67,7 +67,7 @@ export default {
           feature: {
             alt: 'screen reader only',
             text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: 'https://i.picsum.photos/id/1040/360/200.jpg',
+            img: 'https://picsum.photos/id/1040/360/200.jpg',
             link: 'http://google.com',
           },
           items: [
@@ -88,7 +88,7 @@ export default {
           feature: {
             title: 'Campaign title',
             text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: 'https://i.picsum.photos/id/1033/360/200.jpg',
+            img: 'https://picsum.photos/id/1033/360/200.jpg',
             link: 'http://google.com',
           },
           items: [
@@ -143,7 +143,7 @@ export default {
           feature: {
             alt: 'screen reader only',
             text: 'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            img: 'https://i.picsum.photos/id/1040/360/200.jpg',
+            img: 'https://picsum.photos/id/1040/360/200.jpg',
             link: 'http://google.com',
           },
           items: [

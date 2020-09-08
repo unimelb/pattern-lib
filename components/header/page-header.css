@@ -323,9 +323,9 @@
         }
 
         &.btn--disabled {
-          color: color(rgb(var(--col-background-primary-white)) alpha(50%));
-          border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
-          background-color: color(rgb(var(--col-black-mid-2)) alpha(70%));
+          color: color-mod(rgb(var(--col-background-primary-white)) alpha(50%));
+          border-color: color-mod(rgb(var(--col-background-primary-white)) alpha(30%));
+          background-color: color-mod(rgb(var(--col-black-mid-2)) alpha(70%));
         }
       }
     }
@@ -349,9 +349,9 @@
         }
 
         &.btn--disabled {
-          color: color(rgb(var(--col-background-primary-white)) alpha(50%));
-          border-color: color(rgb(var(--col-background-primary-white)) alpha(30%));
-          background-color: color(rgb(var(--col-black-mid-2)) alpha(70%));
+          color: color-mod(rgb(var(--col-background-primary-white)) alpha(50%));
+          border-color: color-mod(rgb(var(--col-background-primary-white)) alpha(30%));
+          background-color: color-mod(rgb(var(--col-black-mid-2)) alpha(70%));
         }
       }
     }

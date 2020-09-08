@@ -3,7 +3,7 @@
     <PageHeader
       :level="2"
       title="Strategy and governance"
-      img="https://i.picsum.photos/id/1033/990/530.jpg" />
+      img="https://picsum.photos/id/1033/990/530.jpg" />
     <PageBreadcrumbs :items="breadcrumbsItems" />
     <slot />
     <PageFooter />
