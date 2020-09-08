@@ -8,7 +8,9 @@ exports[`ModalDialog should match snapshot 1`] = `
   >
     <span
       class="push-icon"
-    />
+    >
+      mock trigger
+    </span>
   </button>
    
 </div>

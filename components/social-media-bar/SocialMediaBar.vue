@@ -61,6 +61,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     className: {
       type: String,

@@ -21,11 +21,13 @@ export default {
   props: {
     href: {
       type: String,
-      default: '#',
+      default: '',
+      required: true,
     },
     title: {
       type: String,
       default: '',
+      required: true,
     },
     icon: {
       type: String,

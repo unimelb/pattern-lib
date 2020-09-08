@@ -3,7 +3,7 @@
 exports[`CardDivision should match snapshot 1`] = `
 <a
   class="btn-owner card card--division card--bdr bg-white"
-  href="#"
+  href="www.unimelb.edu.au"
 >
   <div
     class="card__title bg-inverted"
@@ -20,7 +20,7 @@ exports[`CardDivision should match snapshot 1`] = `
       <h3
         class="card__header"
       >
-        
+        mock test
       </h3>
        
       <p

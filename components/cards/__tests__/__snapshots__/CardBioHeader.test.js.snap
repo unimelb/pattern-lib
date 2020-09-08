@@ -19,7 +19,7 @@ exports[`CardBioHeader should match snapshot 1`] = `
         class="card__header"
       >
         
-        
+        mock name
       
       </h3>
        

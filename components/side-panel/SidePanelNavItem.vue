@@ -2,7 +2,7 @@
   <li class="side-panel__nav-item clearfix">
     <a
       v-scroll-to="target"
-      href="#">
+      :href="target">
       <span v-if="right">
         <slot />
       </span>

@@ -1,6 +1,7 @@
 <template>
   <GenericCard
     :title="item.name"
+    href="#"
     :excerpt="item.description"
     :cols="2">
     <div

@@ -1,17 +1,17 @@
-import {
-  shallow,
-  mount,
-} from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { shallow, mount } from 'vue-test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import CardEvents from '../CardEvents.vue';
 
 expect.extend(toHaveNoViolations);
 
 describe('CardEvents', () => {
   it('should match snapshot', () => {
-    const result = mount(CardEvents).element;
+    const result = mount(CardEvents, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -31,7 +31,7 @@ describe('CardEvents', () => {
     expect(wrapper.props().title).toBe('');
 
     expect(href.type).toBe(String);
-    expect(wrapper.props().href).toBe('#');
+    expect(wrapper.props().href).toBe('');
 
     expect(excerpt.type).toBe(String);
     expect(wrapper.props().excerpt).toBe('');
@@ -87,5 +87,19 @@ describe('CardEvents', () => {
     expect(typeof wrapper.props().excerpt).toBe('string');
     expect(wrapper.props().excerpt).toBe(excerpt);
     expect(wrapper.find('.card__excerpt').text()).toBe(excerpt);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = mount(CardEvents, {
+      propsData: {
+        title: 'mock title',
+        href: 'www.unimelb.edu.au',
+      },
+    }).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

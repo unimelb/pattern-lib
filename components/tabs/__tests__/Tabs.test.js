@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import Tabs from '../Tabs.vue';
 
 expect.extend(toHaveNoViolations);
@@ -27,5 +25,19 @@ describe('Tabs', () => {
     expect(wrapper.find('.tabs__tablist--yellow').exists()).toBe(true);
 
     expect(wrapper.element).toMatchSnapshot();
+  });
+
+  // TODO: fix a11y test
+  it.skip('Component throws no accessibility violations', (done) => {
+    const html = shallow(Tabs, {
+      data: {
+        panels: [],
+      },
+    }).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

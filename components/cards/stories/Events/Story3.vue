@@ -6,7 +6,7 @@
           :cols="3"
           thumb="https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png"
           title="Test 1"
-          href="#"
+          href="www.unimelb.edu.au"
           excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
@@ -41,7 +41,7 @@
           :cols="3"
           thumb="https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png"
           title="Test 1"
-          href="#"
+          href="www.unimelb.edu.au"
           excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"
@@ -74,7 +74,7 @@
           :cols="3"
           thumb="https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/82903/pattern-library-staff-placeholder.png"
           title="Test 1"
-          href="#"
+          href="www.unimelb.edu.au"
           excerpt="Lorem ipsum dolor sit amet, consectetur.">
           <div
             slot="sub-title-1"

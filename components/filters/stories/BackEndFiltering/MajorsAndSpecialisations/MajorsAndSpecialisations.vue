@@ -26,6 +26,7 @@
                 <GenericCard
                   :title="item.name"
                   :excerpt="item.excerpt"
+                  href="#"
                   :cols="2" />
               </ListItem>
             </div>

@@ -29,7 +29,7 @@ exports[`AccordionProfile should match snapshot 1`] = `
           class="accordion-profile__title"
         >
           
-          
+          mock title
         
         </h6>
          

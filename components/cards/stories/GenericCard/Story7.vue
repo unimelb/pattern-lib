@@ -4,6 +4,7 @@
       <ListItem>
         <GenericCard
           :cols="3"
+          href="www.unimelb.edu.au"
           title="Test 1">
           <template slot="links">
             <a
@@ -28,6 +29,7 @@
       <ListItem>
         <GenericCard
           :cols="3"
+          href="www.unimelb.edu.au"
           title="Test 1"
           excerpt="Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur.">
           <template slot="links">

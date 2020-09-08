@@ -1,16 +1,18 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import ModalDialog from '../ModalDialog.vue';
 
 expect.extend(toHaveNoViolations);
 
 describe('ModalDialog', () => {
   it('should match snapshot', () => {
-    const result = shallow(ModalDialog).element;
+    const result = shallow(ModalDialog, {
+      propsData: {
+        trigger: 'mock trigger',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -22,5 +24,18 @@ describe('ModalDialog', () => {
     });
 
     expect(wrapper.find('input').exists()).toBe(true);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(ModalDialog, {
+      propsData: {
+        trigger: 'mock trigger',
+      },
+    }).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

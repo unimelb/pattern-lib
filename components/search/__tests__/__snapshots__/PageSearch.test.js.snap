@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageSearch should match snapshot 1`] = `
+<div
+  class="header-tools__search"
+>
+  <button
+    class="link-icon--vertical link-reset"
+  >
+    <svg
+      aria-label="search"
+      class="link-icon__icon svg"
+      focusable="false"
+      height="0"
+      role="img"
+      width="0"
+    >
+      <use
+        xlink:href="#icon-search"
+      />
+       
+      <title>
+        Search
+      </title>
+       
+    </svg>
+     
+    <span
+      class="link-icon__text"
+    >
+      Search
+    </span>
+  </button>
+   
+  <div
+    class="page-header-search"
+  >
+    <form
+      action="https://search.unimelb.edu.au"
+      class="page-header-search__form"
+      method="get"
+    >
+      <input
+        aria-label="Search the University of Melbourne"
+        class="page-header-search__input"
+        name="q"
+        placeholder="Search the University"
+        type="search"
+      />
+      <button
+        class="page-header-search__submit"
+        type="submit"
+      >
+        <svg
+          aria-label="search"
+          class="page-header-search__icon"
+          focusable="false"
+          height="0"
+          role="img"
+          width="0"
+        >
+          <use
+            xlink:href="#icon-search"
+          />
+           
+          <title>
+            Search
+          </title>
+           
+        </svg>
+         
+        <span
+          class="screenreaders-only"
+        >
+          Go
+        </span>
+      </button>
+       
+      <a
+        class="page-header-icon link-icon--close"
+        href="#"
+        role="button"
+        tabindex="0"
+      >
+        <svg
+          aria-label="close"
+          class="page-header-search__icon--close"
+          focusable="false"
+          height="0"
+          role="img"
+          width="0"
+        >
+          <use
+            xlink:href="#icon-close"
+          />
+           
+          <title>
+            Close
+          </title>
+           
+        </svg>
+        
+        Close
+      
+      </a>
+    </form>
+  </div>
+</div>
+`;

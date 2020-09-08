@@ -1,9 +1,7 @@
 import {
   shallow,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import AccordionProfile from '../AccordionProfile.vue';
 import {
   IMAGE_PLACEHOLDER_SHORT,
@@ -14,7 +12,11 @@ expect.extend(toHaveNoViolations);
 
 describe('AccordionProfile', () => {
   it('should match snapshot', () => {
-    const result = shallow(AccordionProfile).element;
+    const result = shallow(AccordionProfile, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).element;
     expect(result).toMatchSnapshot();
   });
 
@@ -94,5 +96,18 @@ describe('AccordionProfile', () => {
     expect(typeof wrapper.props().bio).toBe('string');
     expect(wrapper.props().bio).toBe(bio);
     expect(wrapper.find('.accordion-profile__bio').text()).toBe(bio);
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const html = shallow(AccordionProfile, {
+      propsData: {
+        title: 'mock title',
+      },
+    }).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

@@ -2,9 +2,7 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
-import {
-  toHaveNoViolations,
-} from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import InPageNavigation from '../InPageNavigation.vue';
 
 expect.extend(toHaveNoViolations);
@@ -92,5 +90,19 @@ describe('InPageNavigation', () => {
 
     wrapper.setData({ isFixed: true });
     expect(wrapper.find('.in-page-navigation__collapsed').classes()).toContain('in-page-navigation__collapsed--fixed');
+  });
+
+  it('Component throws no accessibility violations', (done) => {
+    const headingLevel = 'h2';
+    const html = mount(InPageNavigation, {
+      propsData: {
+        headingLevel,
+      },
+    }).html();
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

@@ -4,7 +4,7 @@
       v-if="!showThumbnails"
       :class="classes"
       role="region"
-      aria-roledescription="Media gallery">
+      aria-label="Media gallery">
       <div :class="containerClasses">
         <div
           v-if="useOverlay"

@@ -30,6 +30,7 @@ export default {
     title: {
       type: String,
       default: '',
+      required: true,
     },
     subTitle: {
       type: String,
