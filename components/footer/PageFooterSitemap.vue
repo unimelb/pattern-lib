@@ -24,7 +24,7 @@
         <li>
           <a
             class="link-reset"
-            href="https://www.unimelb.edu.au/campustour">Campus tour</a>
+            href="https://study.unimelb.edu.au/your-experience/virtual-tour">Virtual campus tour</a>
         </li>
         <li>
           <a
