@@ -8,56 +8,79 @@
       <li>Apply online or via the hardcopy application form</li>
     </ul>
 
-    <p>Ticked list:</p>
+    <p>Ticked Item:</p>
     <ul>
       <li class="item-ticked">
         Check the degree website.
       </li>
-      <li class="item-ticked">
+    </ul>
+
+    <p>Ticked list:</p>
+    <ul class="list-ticked">
+      <li>
+        Check the degree website.
+      </li>
+      <li>
         Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item: Check the entry requirements to clarify your eligibility for application
       </li>
-      <li class="item-ticked">
+      <li>
         Ensure you meet the University's language requirements
       </li>
-      <li class="item-ticked">
+      <li>
         Apply online or via the hardcopy application form
+      </li>
+    </ul>
+
+    <p>Crossed Item:</p>
+    <ul>
+      <li class="item-crossed">
+        Check the degree website.
       </li>
     </ul>
 
     <p>Crossed list:</p>
-    <ul>
-      <li class="item-crossed">
+    <ul class="list-crossed">
+      <li>
         Check the degree website.
       </li>
-      <li class="item-crossed">
+      <li>
         Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item: Check the entry requirements to clarify your eligibility for application
       </li>
-      <li class="item-crossed">
+      <li>
         Ensure you meet the University's language requirements
       </li>
-      <li class="item-crossed">
+      <li>
         Apply online or via the hardcopy application form
       </li>
     </ul>
 
-    <p>Video list:</p>
+    <p>Video Item:</p>
     <ul>
       <li class="item-video">
         <a href="#">
           Play video 1
         </a>
       </li>
-      <li class="item-video">
+    </ul>
+
+    <p>Video List:</p>
+    <ul class="list-video">
+      <li>
+        <a href="#">
+          Play video 1
+        </a>
+      </li>
+      <li>
         <a href="#">
           Play video 2
         </a>
       </li>
-      <li class="item-video">
+      <li>
         <a href="#">
           Play video 3
         </a>
       </li>
-      <li class="item-video">
+      <li>
         <a href="#">
           Play video 4
         </a>
@@ -88,22 +111,6 @@
         <a href="#">
           Play video 4
         </a>
-      </li>
-    </ul>
-
-    <p>CTA variants:</p>
-    <ul>
-      <li class="item-ticked item-ticked--cta">
-        Check the degree website.
-      </li>
-      <li class="item-ticked item-ticked--cta">
-        Check the entry requirements to clarify your eligibility for application, duplicate instructions after to demonstrate a multiline item: Check the entry requirements to clarify your eligibility for application
-      </li>
-      <li class="item-crossed item-crossed--cta">
-        Ensure you meet the University's language requirements
-      </li>
-      <li class="item-crossed item-crossed--cta">
-        Apply online or via the hardcopy application form
       </li>
     </ul>
 
