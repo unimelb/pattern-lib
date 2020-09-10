@@ -24,6 +24,7 @@ export default {
       'download',
       'external',
       'play',
+      'video-play',
       'pause',
       'home',
       'search',

@@ -40,6 +40,30 @@
       </li>
     </ul>
 
+    <p>Video list:</p>
+    <ul>
+      <li class="item-video">
+        <a href="#">
+          Play video 1
+        </a>
+      </li>
+      <li class="item-video">
+        <a href="#">
+          Play video 2
+        </a>
+      </li>
+      <li class="item-video">
+        <a href="#">
+          Play video 3
+        </a>
+      </li>
+      <li class="item-video">
+        <a href="#">
+          Play video 4
+        </a>
+      </li>
+    </ul>
+
     <p>Mixed usage:</p>
     <ul>
       <li>Check the degree website.</li>
@@ -59,6 +83,11 @@
       </li>
       <li class="item-crossed">
         Apply online or via the hardcopy application form
+      </li>
+      <li class="item-video">
+        <a href="#">
+          Play video 4
+        </a>
       </li>
     </ul>
 

@@ -37,3 +37,23 @@
     font-weight: var(--fw-semibold);
   }
 }
+
+.item-video {
+  position: relative;
+  list-style-type: none;
+  clear: left;
+
+  &::before {
+    background-image: url('~icons/video-play.svg?fill=#000');
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    display: block;
+    float: left;
+    margin-left: -1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: .3rem;
+  }
+}
