@@ -1,3 +1,4 @@
+.list-ticked > li,
 .item-ticked {
   position: relative;
   list-style-type: none;
@@ -19,6 +20,7 @@
   }
 }
 
+.list-crossed > li,
 .item-crossed {
   position: relative;
   list-style-type: none;
@@ -38,13 +40,14 @@
   }
 }
 
+.list-video > li,
 .item-video {
   position: relative;
   list-style-type: none;
   clear: left;
 
   &::before {
-    background-image: url('~icons/video-play.svg?fill=#000');
+    background-image: url('~icons/video-play.svg');
     content: '';
     height: 1rem;
     width: 1rem;
