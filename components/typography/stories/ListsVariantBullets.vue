@@ -87,6 +87,68 @@
       </li>
     </ul>
 
+    <p>Video list svg usage example:</p>
+    <ul class="list-reset">
+      <li>
+        <svg
+          width="16"
+          height="16"
+          aria-label="video-play"
+          focusable="false"
+          role="img"
+          style="display: inline-block;">
+          <use xlink:href="#icon-video-play" />
+          <title>Video-play</title>
+        </svg>
+        <a href="#">
+          Play video 1
+        </a>
+      </li>
+      <li>
+        <svg
+          width="16"
+          height="16"
+          aria-label="video-play"
+          focusable="false"
+          role="img"
+          style="display: inline-block;">
+          <use xlink:href="#icon-video-play" />
+          <title>Video-play</title>
+        </svg>        <a href="#">
+          Play video 2
+        </a>
+      </li>
+      <li>
+        <svg
+          width="16"
+          height="16"
+          aria-label="video-play"
+          focusable="false"
+          role="img"
+          style="display: inline-block;">
+          <use xlink:href="#icon-video-play" />
+          <title>Video-play</title>
+        </svg>        <a href="#">
+          Play video 3
+        </a>
+      </li>
+      <li>
+        <svg
+          width="16"
+          height="16"
+          aria-label="video-play"
+          focusable="false"
+          role="img"
+          style="display: inline-block;">
+          <use xlink:href="#icon-video-play" />
+          <title>Video-play</title>
+        </svg>
+        <a href="#">
+          Play video 4
+        </a>
+      </li>
+    </ul>
+
     <p>Mixed usage:</p>
     <ul>
       <li>Check the degree website.</li>
