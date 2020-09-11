@@ -29,8 +29,10 @@
 
 <script>
 import { IMAGE_PLACEHOLDER_BIG } from '../../utils/placeholders';
+import ButtonIcon from '../buttons/ButtonIcon.vue';
 
 export default {
+  components: { ButtonIcon },
   props: {
     thumb: {
       type: String,
