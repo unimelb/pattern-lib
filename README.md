@@ -9,6 +9,10 @@ The contents of this repository have been produced by The University of Melbourn
 - [Development Preview](https://dev--pattern-lib-unimelb.netlify.com/) (Netlify deploy from `dev` branch)
 - [Production](https://pattern-lib-unimelb.netlify.com/) (Netlify deploy from `master` branch)
 
+## External usage
+
+- [How to use the library](docs/how-to-use.md) - how this library externally
+
 ## Getting started
 
 The design system requires:
