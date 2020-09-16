@@ -45,7 +45,7 @@
     font-size: 2.25rem;
     line-height: .9;
     margin-bottom: .667rem;
-    max-width: 19rem;
+    max-width: 21rem;
     text-shadow: 0 4px 15px rgba(0, 0, 0, .5);
 
     @media (--bp-max-x-mobile) {
