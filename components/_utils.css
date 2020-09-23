@@ -28,6 +28,12 @@
 .bg-inverted--o95 {
   background-color: rgba(var(--col-background-secondary-navy), .95);
   color: rgb(var(--col-background-primary-white));
+
+  .card--focus-box__cnr {
+    opacity: .85;
+
+    /* push up opacity for focus color on blue bg */
+  }
 }
 
 /* light-gray background */
