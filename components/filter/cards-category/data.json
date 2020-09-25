@@ -1,0 +1,591 @@
+[
+    {
+        "title": "Masters Exhibition 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
+        "type": [
+            "Exhibition"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Visual Art"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76743/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Margaret Lawrence Gallery and The Stables"
+    },
+    {
+        "title": "Master of Coin",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
+        "type": [
+            "Event"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Indigenous Arts and Culture"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76373/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Performing Arts Building"
+    },
+    {
+        "title": "Production Graduates",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-graduates",
+        "type": [
+            "Season",
+            "Other"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Production"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0033/76785/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Production"
+    },
+    {
+        "title": "Acting Company 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-company-2018",
+        "type": [
+            "Season",
+            "Other"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Theatre (Level 1)"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76370/varieties/thumb.jpg",
+        "duration": "10",
+        "location": ""
+    },
+    {
+        "title": "Production Exhibition 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-exhibition-2018",
+        "type": [
+            "Exhibition",
+            "Graduation Show"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Production"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76756/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Martyn Myer Arena, The Stables"
+    },
+    {
+        "title": "Music Theatre Company 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018",
+        "type": [
+            "Season",
+            "Other"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Music Theatre"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018/Into_the_Woods-7.jpg/thumb.jpg",
+        "duration": "10",
+        "location": ""
+    },
+    {
+        "title": "Music Theatre Showcase",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-showcase",
+        "type": [
+            "type"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Music Theatre"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0018/76131/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "Acting Showcase",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-showcase",
+        "type": [
+            "type"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Theatre"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0024/76218/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "Asia Orchestra Tour",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/asia-orchestra-tour",
+        "type": [
+            "Concert",
+            "Event"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/74801/varieties/medium.jpg",
+        "duration": "10",
+        "location": "Esplanade Concert Hall, Singapore and Shanghai Symphony Concert Hall, Shanghai"
+    },
+    {
+        "title": "The Drowsy Chaperone",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-drowsy-chaperone",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Music Theatre",
+            "Production",
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/76528/Drowsy_Chaperone-Header.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "The Skin of Our Teeth",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-skin-of-our-teeth",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Theatre",
+            "Production"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76313/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Martyn Myer Arena, The Stables"
+    },
+    {
+        "title": "Carmelites",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/carmelites",
+        "type": [
+            "type"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/74803/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Rosina Auditorium, Abbotsford Convent"
+    },
+    {
+        "title": "Jazz Ensemble",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-ensemble",
+        "type": [
+            "Concert",
+            "type"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Jazz and Improvisation"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0017/76022/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Kelvin Club, Melbourne"
+    },
+    {
+        "title": "Murdoch Travelling Fellowship 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/murdoch-travelling-fellowship-2017",
+        "type": [
+            "Exhibition",
+            "Other"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Visual Art"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0030/76494/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Margaret Lawrence Gallery"
+    },
+    {
+        "title": "Dance 40th Anniversary Party",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/dance-40th-anniversary-party",
+        "type": [
+            "Event"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Dance"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0019/76123/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Dance Building and forecourt"
+    },
+    {
+        "title": "MIFLAS An Afternoon at the Opera",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/miflas-an-afternoon-at-the-opera",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0014/76010/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melba Hall, Melbourne Conservatorium of Music"
+    },
+    {
+        "title": "Music Ensemble",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-ensemble",
+        "type": [
+            "Concert",
+            "type"
+        ],
+        "study_level": "Undergraduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/82657/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melba Hall, Melbourne Conservatorium of Music"
+    },
+    {
+        "title": "A Chorus Line",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/a-chorus-line",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music Theatre"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0025/76165/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "The Crucible",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-crucible",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Theatre",
+            "Production"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76288/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Space 28, Theatre Building"
+    },
+    {
+        "title": "Peter Pan",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/peter-pan",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Theatre",
+            "Production"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0028/76258/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Martyn Myer Arena, The Stables"
+    },
+    {
+        "title": "Wind Symphony Day",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wind-symphony-day",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76061/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melbourne Recital Centre"
+    },
+    {
+        "title": "University of Melbourne Symphony Orchestra",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0018/76032/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melbourne Recital Centre"
+    },
+    {
+        "title": "Mongrel 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2018",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music Theatre",
+            "Interactive Composition",
+            "Design and production"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0029/76088/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "Gloria",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/gloria",
+        "type": [
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0036/75996/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "St Paul's Cathedral, Melbourne"
+    },
+    {
+        "title": "On View Opening Night",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/on-view-opening-night",
+        "type": [
+            "Exhibition"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Dance"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0033/75993/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Margaret Lawrence Gallery"
+    },
+    {
+        "title": "MILFAS The Enamoured Soul",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/milfas-the-enamoured-soul",
+        "type": [
+            "Concert",
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0021/76017/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melba Hall, Melbourne Conservatorium of Music"
+    },
+    {
+        "title": "Andrew Byrne Masterclass",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/andrew-byrne-masterclass",
+        "type": [
+            "Other"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music Theatre"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0016/76102/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "Morning Melodies",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/morning-melodies",
+        "type": [
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music Theatre"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76109/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Arts Centre Melbourne"
+    },
+    {
+        "title": "Film and Television Awards 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/film-and-television-awards-2017",
+        "type": [
+            "Event",
+            "Screening"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Film and Television"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/77188/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Australian Centre for the Moving Image (ACMI)"
+    },
+    {
+        "title": "Masters Exhibition Opening 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-opening-2017",
+        "type": [
+            "Exhibition"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Visual Art"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0020/76511/Masters_exhibition-Header.jpg",
+        "duration": "10",
+        "location": "Margaret Lawrence Gallery"
+    },
+    {
+        "title": "Student Showcase Guitar",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/student-showcase-guitar",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76580/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melba Hall, Melbourne Conservatorium of Music"
+    },
+    {
+        "title": "Melbourne Symphony Orchestra Sep 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-september-2017",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76608/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Hamer Hall, The Arts Centre Melbourne"
+    },
+    {
+        "title": "Melbourne Cello Festival 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/melbourne-cello-festival-2017",
+        "type": [
+            "Concert",
+            "Season",
+            "Event"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0019/77131/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melba Hall, Melbourne Conservatorium of Music"
+    },
+    {
+        "title": "The Tale of Orpheus",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-tale-of-orpheus",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Early Music"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0032/76595/DSC_7292.jpg",
+        "duration": "10",
+        "location": "The Meat Market, North Melbourne"
+    },
+    {
+        "title": "Music Theatre Company Showcase 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-showcase-2017",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music Theatre"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0024/76560/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "Melbourne Symphony Orchestra May 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-may-2017",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music type"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0023/76622/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Melbourne Recital Centre"
+    },
+    {
+        "title": "Jazz and Improvisation Large Ensemble Showcase 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-and-improvisation-large-ensemble-showcase-2017",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Jazz and Improvisation"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0022/76414/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Lionel's Lounge and Grant Street Theatre"
+    },
+    {
+        "title": "IC: Love Remixed",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/ic-love-remixed",
+        "type": [
+            "Concert"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Interactive Composition"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0031/76396/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Lionel's Lounge and Grant Street Theatre"
+    },
+    {
+        "title": "Mongrel 2017",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2017",
+        "type": [
+            "Season",
+            "type"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music Theatre",
+            "Production",
+            "Interactive Composition"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0025/76552/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "Grant Street Theatre"
+    },
+    {
+        "title": "Music Therapy at the NGV",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-therapy-at-the-ngv",
+        "type": [
+            "Event"
+        ],
+        "study_level": "Graduate",
+        "disciplines": [
+            "Music Therapy"
+        ],
+        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76427/varieties/thumb.jpg",
+        "duration": "10",
+        "location": "National Gallery of Victoria (NGV)"
+    }
+]
