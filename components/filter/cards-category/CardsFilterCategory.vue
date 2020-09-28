@@ -149,7 +149,8 @@ export default {
 
       const studyLevelRegex = new RegExp(`^${escapeRegExp(selectedStudyLevel)}$`, 'i');
       const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
-/*  eslint-disable */
+
+      /* eslint-disable camelcase */
       return this.data.filter((data) => {
         const {
           disciplines,
@@ -163,6 +164,7 @@ export default {
         && (selectedStudyLevel === '' || study_level.match(studyLevelRegex))
         && (searchText === '' || title.match(searchTextRegex));
       });
+      /* eslint-enable camelcase */
     },
     animationclass() {
       if (this.searchText || this.selectedStudyLevel || this.selectedDiscipline || this.selectedType) {
@@ -194,6 +196,7 @@ export default {
         types: [],
       };
 
+      /* eslint-disable camelcase */
       this.data.forEach((element) => {
         const { study_level, disciplines, type } = element;
 
@@ -213,6 +216,7 @@ export default {
           }
         });
       });
+      /* eslint-enable camelcase */
 
       // Sort filters.
       filters.study_levels.sort();
