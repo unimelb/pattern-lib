@@ -64,32 +64,36 @@
       </div>
     </div>
 
-    <FilterResultsCount
-      :data="dataFiltered.length" />
-
     <FilterResults :show="showSSRCode">
       <slot />
     </FilterResults>
 
     <FilterResults :show="!showSSRCode">
-      <div class="grid grid--4col">
-        <ListItem
-          v-for="(item, index) in dataFiltered"
-          :key="index">
-          <GenericCard
-            :cols="3"
-            :thumb="item.img_url"
-            :title="item.title"
-            :href="item.link"
-            :tags="item.type">
-            <div
-              slot="sub-title-1"
-              class="sub-title">
-              <SvgIcon name="clock" />
-              <span>{{ item.duration }} minutes</span>
-            </div>
-          </GenericCard>
-        </ListItem>
+      <div
+        v-for="(item, index) in dataFilteredInCategories"
+        :key="index">
+        <h1>{{ item.category.name }}</h1>
+        <div
+          class="grid grid--4col"
+          style="justify-content: flex-start;">
+          <ListItem
+            v-for="(childItem, i) in item.category.data"
+            :key="i">
+            <GenericCard
+              :cols="3"
+              :thumb="childItem.img_url"
+              :title="childItem.title"
+              :href="childItem.link">
+              <div
+                slot="sub-title-1"
+                class="sub-title">
+                <SvgIcon name="clock" />
+                <span>{{ childItem.duration }} minutes</span>
+              </div>
+            </GenericCard>
+          </ListItem>
+        </div>
+        <button>show more</button>
       </div>
     </FilterResults>
   </div>
@@ -101,7 +105,6 @@ import ListItem from '../../listing/ListItem.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 import GenericCard from '../../cards/GenericCard.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
-import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
 
 export default {
@@ -110,7 +113,6 @@ export default {
     SvgIcon,
     GenericCard,
     DropdownFilter,
-    FilterResultsCount,
     FilterResults,
   },
   props: {
@@ -149,6 +151,7 @@ export default {
 
       const studyLevelRegex = new RegExp(`^${escapeRegExp(selectedStudyLevel)}$`, 'i');
       const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
+      const typeRegex = new RegExp(`^${escapeRegExp(selectedType)}$`, 'i');
 
       /* eslint-disable camelcase */
       return this.data.filter((data) => {
@@ -160,7 +163,7 @@ export default {
         } = data;
 
         return (selectedDiscipline === '' || disciplines.includes(selectedDiscipline))
-        && (selectedType === '' || type.includes(selectedType))
+        && (selectedType === '' || type.match(typeRegex))
         && (selectedStudyLevel === '' || study_level.match(studyLevelRegex))
         && (searchText === '' || title.match(searchTextRegex));
       });
@@ -171,6 +174,21 @@ export default {
         return 'filter__button--animated';
       }
       return '';
+    },
+    dataFilteredInCategories() {
+      const categories = [...new Set(this.dataFiltered.map((item) => item.type))];
+      const categoriesFiltered = [];
+
+      categories.forEach((category) => {
+        categoriesFiltered.push({ category: { name: category, data: this.dataFiltered.filter((item) => item.type === category) } });
+      });
+
+      console.log('filtered cat', categoriesFiltered);
+      return categoriesFiltered;
+    },
+    uniqueCategories() {
+      const categories = [...new Set(this.dataFiltered.map((item) => item.type))];
+      return categories;
     },
   },
   mounted() {
@@ -210,11 +228,9 @@ export default {
           }
         });
 
-        type.forEach((per) => {
-          if (!filters.types.includes(per)) {
-            filters.types.push(per);
-          }
-        });
+        if (!filters.types.includes(type)) {
+          filters.types.push(type);
+        }
       });
       /* eslint-enable camelcase */
 
