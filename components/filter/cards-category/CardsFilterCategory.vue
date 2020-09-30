@@ -71,12 +71,13 @@
     <FilterResults :show="!showSSRCode">
       <div
         v-for="(item, index) in dataFilteredInCategories"
-        :key="index">
+        :key="index"
+        style="display: flex; flex-direction: column;">
         <h1>{{ item.category.name }}</h1>
         <div
           class="grid grid--4col">
           <ListItem
-            v-for="(childItem, i) in item.category.data"
+            v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
             :key="i">
             <GenericCard
               :cols="3"
@@ -92,8 +93,18 @@
             </GenericCard>
           </ListItem>
         </div>
-        <button @click="showMoreButton(item.category.name)">
-          Show more
+        <button
+          v-if="!selectedType.length && item.category.data.length > 4"
+          style="align-self: center;"
+          class="btn--secondary"
+          @click="showMoreButton(item.category.name)">
+          Show all {{ item.category.data.length }}
+          <SvgIcon
+            style="display: inline;"
+            name="arrow-right"
+            width="16"
+            height="16"
+            aria-hidden="true" />
         </button>
       </div>
     </FilterResults>
@@ -102,9 +113,9 @@
 
 <script>
 import escapeRegExp from 'lodash.escaperegexp';
-import ListItem from '../../listing/ListItem.vue';
-import SvgIcon from '../../icons/SvgIcon.vue';
-import GenericCard from '../../cards/GenericCard.vue';
+import ListItem from 'components/listing/ListItem.vue';
+import SvgIcon from 'components/icons/SvgIcon.vue';
+import GenericCard from 'components/cards/GenericCard.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
 
@@ -183,6 +194,8 @@ export default {
       categories.forEach((category) => {
         categoriesFiltered.push({ category: { name: category, data: this.dataFiltered.filter((item) => item.type === category) } });
       });
+
+      console.log('selectedType', this.selectedType.length);
 
       return categoriesFiltered;
     },
