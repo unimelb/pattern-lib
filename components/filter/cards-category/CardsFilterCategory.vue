@@ -74,8 +74,7 @@
         :key="index">
         <h1>{{ item.category.name }}</h1>
         <div
-          class="grid grid--4col"
-          style="justify-content: flex-start;">
+          class="grid grid--4col">
           <ListItem
             v-for="(childItem, i) in item.category.data"
             :key="i">
@@ -93,7 +92,6 @@
             </GenericCard>
           </ListItem>
         </div>
-        <button>show more</button>
       </div>
     </FilterResults>
   </div>
@@ -183,12 +181,7 @@ export default {
         categoriesFiltered.push({ category: { name: category, data: this.dataFiltered.filter((item) => item.type === category) } });
       });
 
-      console.log('filtered cat', categoriesFiltered);
       return categoriesFiltered;
-    },
-    uniqueCategories() {
-      const categories = [...new Set(this.dataFiltered.map((item) => item.type))];
-      return categories;
     },
   },
   mounted() {
