@@ -2,7 +2,7 @@
 
 .filter {
   border-radius: var(--br);
-  background-color: rgb(var(--col-background-primary-navy));
+  background-color: rgb(var(--col-background-tertiary-navy));
   padding: 2.5rem;
 
   &__container {

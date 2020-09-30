@@ -1,6 +1,6 @@
 
 <template>
-  <section-wrap bg-color="inverted">
+  <section-wrap bg-color="inverted-darker">
     <CardsFilterCategory :data="cardsData" />
   </section-wrap>
 </template>
