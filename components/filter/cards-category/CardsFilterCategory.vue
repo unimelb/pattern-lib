@@ -92,6 +92,9 @@
             </GenericCard>
           </ListItem>
         </div>
+        <button @click="showMoreButton(item.category.name)">
+          Show more
+        </button>
       </div>
     </FilterResults>
   </div>
@@ -199,6 +202,10 @@ export default {
       this.selectedStudyLevel = '';
       this.selectedDiscipline = '';
       this.selectedType = '';
+    },
+    showMoreButton(category) {
+      this.selectedType = category;
+      this.filterDataButton();
     },
     getFilters() {
       const filters = {
