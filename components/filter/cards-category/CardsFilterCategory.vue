@@ -1,69 +1,58 @@
 <template>
   <div>
-    <div class="filter">
-      <div class="filter__container">
+    <ListingWrap cols="4">
+      <ListItem>
         <label
-          for="input-search"
-          hidden> Title </label>
+          for="studyLevel">Study level</label>
+        <div
+          v-for="level in filters.study_levels"
+          :key="level.name">
+          <BaseCheckbox
+            ref="baseCheckbox"
+            :name="level.name"
+            :aria-label="level.name"
+            :is-checked="level.isChecked"
+            :label="level.name"
+            display="block"
+            @change="onCheckboxChange" />
+        </div>
+      </ListItem>
+      <ListItem>
+        <label
+          for="disciplines">Area of Interest</label>
+        <DropdownFilter
+          id="disciplines"
+          v-model="selectedDiscipline"
+          :values="filters.disciplines" />
+      </ListItem>
+      <!-- <label
+      for="types">Webinar type</label>
+    <DropdownFilter
+      id="types"
+      v-model="selectedType"
+      :values="filters.types" /> -->
+      <ListItem>
+        <label for="input-search">Keywords</label>
         <input
           id="input-search"
           v-model="searchText"
-          class="filter__input"
           type="search"
           placeholder="Type to search title">
-      </div>
+      </ListItem>
 
-      <div class="filter__container">
-        <div class="grid">
-          <div class="cell cell--tab-1of3">
-            <label
-              class="filter__label"
-              for="studyLevel">Study level</label>
-            <DropdownFilter
-              id="studyLevel"
-              v-model="selectedStudyLevel"
-              :values="filters.study_levels" />
-          </div>
-          <div class="cell cell--tab-1of3">
-            <label
-              class="filter__label"
-              for="disciplines">Area of Interest</label>
-            <DropdownFilter
-              id="disciplines"
-              v-model="selectedDiscipline"
-              :values="filters.disciplines" />
-          </div>
-          <div class="cell cell--tab-1of3">
-            <label
-              class="filter__label"
-              for="types">Webinar type</label>
-            <DropdownFilter
-              id="types"
-              v-model="selectedType"
-              :values="filters.types" />
-          </div>
-        </div>
-      </div>
 
-      <div class="filter__container filter__container--centered">
-        <button
-          :class="animationclass"
-          class="filter__button"
-          aria-label="Search"
-          @click="filterDataButton">
-          <SvgIcon
-            class="filter__button--icon"
-            name="search" />
-          <span>Search</span>
-        </button>
-        <button
-          class="filter__button"
-          @click="resetSearch">
-          Reset all
-        </button>
-      </div>
-    </div>
-
+      <button
+        aria-label="Search"
+        @click="filterDataButton">
+        <SvgIcon
+          name="search" />
+        <span>Search</span>
+      </button>
+      <button
+        @click="resetSearch">
+        Reset all
+      </button>
+    </ListingWrap>
     <FilterResults :show="showSSRCode">
       <slot />
     </FilterResults>
@@ -71,11 +60,9 @@
     <FilterResults :show="!showSSRCode">
       <div
         v-for="(item, index) in dataFilteredInCategories"
-        :key="index"
-        style="display: flex; flex-direction: column;">
+        :key="index">
         <h1>{{ item.category.name }}</h1>
-        <div
-          class="grid grid--4col">
+        <ListingWrap cols="4">
           <ListItem
             v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
             :key="i">
@@ -83,6 +70,7 @@
               :cols="3"
               :thumb="childItem.img_url"
               :title="childItem.title"
+              :excerpt="childItem.study_level + ' - ' + childItem.disciplines"
               :href="childItem.link">
               <div
                 slot="sub-title-1"
@@ -92,15 +80,13 @@
               </div>
             </GenericCard>
           </ListItem>
-        </div>
+        </ListingWrap>
         <button
           v-if="!selectedType.length && item.category.data.length > 4"
-          style="align-self: center;"
           class="btn--secondary"
           @click="showMoreButton(item.category.name)">
           Show all {{ item.category.data.length }}
           <SvgIcon
-            style="display: inline;"
             name="arrow-right"
             width="16"
             height="16"
@@ -114,18 +100,22 @@
 <script>
 import escapeRegExp from 'lodash.escaperegexp';
 import ListItem from 'components/listing/ListItem.vue';
+import ListingWrap from 'components/listing/ListingWrap.vue';
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
+import BaseCheckbox from 'components/base/base-checkbox/BaseCheckbox.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
 
 export default {
   components: {
     ListItem,
+    ListingWrap,
     SvgIcon,
     GenericCard,
     DropdownFilter,
     FilterResults,
+    BaseCheckbox,
   },
   props: {
     data: {
@@ -140,12 +130,19 @@ export default {
   data() {
     return {
       searchText: '',
-      selectedStudyLevel: '',
       selectedDiscipline: '',
       selectedType: '',
+      selectedLevels: ['Undergraduate', 'Graduate'],
       dataFiltered: this.data,
       filters: {
-        study_levels: [],
+        study_levels: [{
+          name: 'Undergraduate',
+          isChecked: false,
+        },
+        {
+          name: 'Graduate',
+          isChecked: false,
+        }],
         disciplines: [],
         types: [],
       },
@@ -157,11 +154,9 @@ export default {
       const {
         selectedDiscipline,
         selectedType,
-        selectedStudyLevel,
         searchText,
       } = this;
 
-      const studyLevelRegex = new RegExp(`^${escapeRegExp(selectedStudyLevel)}$`, 'i');
       const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
       const typeRegex = new RegExp(`^${escapeRegExp(selectedType)}$`, 'i');
 
@@ -175,17 +170,11 @@ export default {
         } = data;
 
         return (selectedDiscipline === '' || disciplines.includes(selectedDiscipline))
+        && (this.selectedLevels.includes(study_level))
         && (selectedType === '' || type.match(typeRegex))
-        && (selectedStudyLevel === '' || study_level.match(studyLevelRegex))
         && (searchText === '' || title.match(searchTextRegex));
       });
       /* eslint-enable camelcase */
-    },
-    animationclass() {
-      if (this.searchText || this.selectedStudyLevel || this.selectedDiscipline || this.selectedType) {
-        return 'filter__button--animated';
-      }
-      return '';
     },
     dataFilteredInCategories() {
       const categories = [...new Set(this.dataFiltered.map((item) => item.type))];
@@ -194,8 +183,6 @@ export default {
       categories.forEach((category) => {
         categoriesFiltered.push({ category: { name: category, data: this.dataFiltered.filter((item) => item.type === category) } });
       });
-
-      console.log('selectedType', this.selectedType.length);
 
       return categoriesFiltered;
     },
@@ -212,9 +199,12 @@ export default {
     resetSearch() {
       this.dataFiltered = this.data;
       this.searchText = '';
-      this.selectedStudyLevel = '';
       this.selectedDiscipline = '';
       this.selectedType = '';
+      this.filters.study_levels.forEach((element) => {
+        element.isChecked = false;
+      });
+      this.selectedLevels = ['Undergraduate', 'Graduate'];
     },
     showMoreButton(category) {
       this.selectedType = category;
@@ -222,18 +212,14 @@ export default {
     },
     getFilters() {
       const filters = {
-        study_levels: [],
+        study_levels: this.filters.study_levels,
         disciplines: [],
         types: [],
       };
 
       /* eslint-disable camelcase */
       this.data.forEach((element) => {
-        const { study_level, disciplines, type } = element;
-
-        if (!filters.study_levels.includes(study_level)) {
-          filters.study_levels.push(study_level);
-        }
+        const { disciplines, type } = element;
 
         disciplines.forEach((dis) => {
           if (!filters.disciplines.includes(dis)) {
@@ -253,6 +239,25 @@ export default {
       filters.types.sort();
 
       return filters;
+    },
+    onCheckboxChange({ name }) {
+      this.selectedLevels = ['Undergraduate', 'Graduate'];
+
+      this.filters.study_levels.forEach((level) => {
+        if (level.name === name) {
+          level.isChecked = !level.isChecked;
+        }
+      });
+
+      this.selectedLevels = this.checkedStudyLevelsName();
+    },
+    checkedStudyLevelsName() {
+      return this.filters.study_levels.map((level) => {
+        if (level.isChecked === true) {
+          return level.name;
+        }
+        return null;
+      });
     },
   },
 };
