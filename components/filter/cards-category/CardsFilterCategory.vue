@@ -5,20 +5,26 @@
         <label
           class="filter-category__label"
           for="studyLevel">Study level</label>
-        <div class="filter-category__checkbox-container">
-          <div
-            v-for="level in filters.study_levels"
-            :key="level.name">
-            <BaseCheckbox
-              ref="baseCheckbox"
-              class="filter-category__checkbox"
-              :name="level.name"
-              :aria-label="level.name"
-              :is-checked="level.isChecked"
-              :label="level.name"
-              display="block"
-              @change="onCheckboxChange" />
-          </div>
+        <input
+          id="all"
+          v-model="selectedLevel"
+          checked
+          type="radio"
+          name="studyLevel"
+          value="">
+        <label for="all">All</label>
+        <div
+          v-for="level in filters.study_levels"
+          id="studyLevel"
+          :key="level"
+          class="filter-category__checkbox-container">
+          <input
+            :id="level"
+            v-model="selectedLevel"
+            type="radio"
+            name="studyLevel"
+            :value="level">
+          <label :for="level">{{ level }}</label>
         </div>
       </ListItem>
       <ListItem>
@@ -30,12 +36,6 @@
           v-model="selectedDiscipline"
           :values="filters.disciplines" />
       </ListItem>
-      <!-- <label
-      for="types">Webinar type</label>
-    <DropdownFilter
-      id="types"
-      v-model="selectedType"
-      :values="filters.types" /> -->
       <ListItem>
         <label
           class="filter-category__label"
@@ -120,7 +120,6 @@ import ListItem from 'components/listing/ListItem.vue';
 import ListingWrap from 'components/listing/ListingWrap.vue';
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
-import BaseCheckbox from 'components/base/base-checkbox/BaseCheckbox.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
 
@@ -132,7 +131,6 @@ export default {
     GenericCard,
     DropdownFilter,
     FilterResults,
-    BaseCheckbox,
   },
   props: {
     data: {
@@ -149,17 +147,10 @@ export default {
       searchText: '',
       selectedDiscipline: '',
       selectedType: '',
-      selectedLevels: ['Undergraduate', 'Graduate'],
+      selectedLevel: '',
       dataFiltered: this.data,
       filters: {
-        study_levels: [{
-          name: 'Undergraduate',
-          isChecked: true,
-        },
-        {
-          name: 'Graduate',
-          isChecked: true,
-        }],
+        study_levels: [],
         disciplines: [],
         types: [],
       },
@@ -171,6 +162,7 @@ export default {
       const {
         selectedDiscipline,
         selectedType,
+        selectedLevel,
         searchText,
       } = this;
 
@@ -187,7 +179,7 @@ export default {
         } = data;
 
         return (selectedDiscipline === '' || disciplines.includes(selectedDiscipline))
-        && (this.selectedLevels.includes(study_level))
+        && (selectedLevel === '' || study_level.match(selectedLevel))
         && (selectedType === '' || type.match(typeRegex))
         && (searchText === '' || title.match(searchTextRegex));
       });
@@ -209,6 +201,7 @@ export default {
   },
   methods: {
     filterDataButton() {
+      console.log(this.selectedLevel);
       this.dataFiltered = this.filteredData;
       this.showSSRCode = false;
     },
@@ -217,10 +210,7 @@ export default {
       this.searchText = '';
       this.selectedDiscipline = '';
       this.selectedType = '';
-      this.filters.study_levels.forEach((element) => {
-        element.isChecked = false;
-      });
-      this.selectedLevels = ['Undergraduate', 'Graduate'];
+      this.selectedLevel = '';
     },
     showMoreButton(category) {
       this.selectedType = category;
@@ -228,14 +218,18 @@ export default {
     },
     getFilters() {
       const filters = {
-        study_levels: this.filters.study_levels,
+        study_levels: [],
         disciplines: [],
         types: [],
       };
 
       /* eslint-disable camelcase */
       this.data.forEach((element) => {
-        const { disciplines, type } = element;
+        const { disciplines, study_level, type } = element;
+
+        if (!filters.study_levels.includes(study_level)) {
+          filters.study_levels.push(study_level);
+        }
 
         disciplines.forEach((dis) => {
           if (!filters.disciplines.includes(dis)) {
@@ -255,23 +249,6 @@ export default {
       filters.types.sort();
 
       return filters;
-    },
-    onCheckboxChange({ name }) {
-      this.filters.study_levels.forEach((level) => {
-        if (level.name === name) {
-          level.isChecked = !level.isChecked;
-        }
-      });
-
-      this.selectedLevels = this.checkedStudyLevelsName();
-    },
-    checkedStudyLevelsName() {
-      return this.filters.study_levels.map((level) => {
-        if (level.isChecked === true) {
-          return level.name;
-        }
-        return null;
-      });
     },
   },
 };
