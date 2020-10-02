@@ -201,7 +201,6 @@ export default {
   },
   methods: {
     filterDataButton() {
-      console.log(this.selectedLevel);
       this.dataFiltered = this.filteredData;
       this.showSSRCode = false;
     },
