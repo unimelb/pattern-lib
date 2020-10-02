@@ -68,3 +68,58 @@
     }
   }
 }
+
+.filter-category {
+  &__label {
+    font-weight: normal;
+    font-size: .875rem;
+    line-height: 1.5;
+  }
+
+  &__checkbox-container {
+    display: flex;
+  }
+
+  &__checkbox {
+    &:first-child {
+      margin-right: 1.75rem;
+    }
+
+    .base-checkbox__label {
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #fff;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__filter-btn {
+    margin-right: .9375rem;
+    padding: .75rem 1.75rem;
+    color: black;
+    background: green;
+  }
+
+  &__clear-btn {
+    display: flex;
+    text-decoration: underline;
+  }
+
+  .list-item {
+    display: inline-block;
+    margin-right: .625rem;
+  }
+  .list-enter-active,
+  .list-leave-active {
+    transition: all 1s;
+  }
+  .list-enter,
+  .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}

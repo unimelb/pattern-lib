@@ -1,24 +1,29 @@
 <template>
-  <div>
+  <div class="filter-category">
     <ListingWrap cols="4">
       <ListItem>
         <label
+          class="filter-category__label"
           for="studyLevel">Study level</label>
-        <div
-          v-for="level in filters.study_levels"
-          :key="level.name">
-          <BaseCheckbox
-            ref="baseCheckbox"
-            :name="level.name"
-            :aria-label="level.name"
-            :is-checked="level.isChecked"
-            :label="level.name"
-            display="block"
-            @change="onCheckboxChange" />
+        <div class="filter-category__checkbox-container">
+          <div
+            v-for="level in filters.study_levels"
+            :key="level.name">
+            <BaseCheckbox
+              ref="baseCheckbox"
+              class="filter-category__checkbox"
+              :name="level.name"
+              :aria-label="level.name"
+              :is-checked="level.isChecked"
+              :label="level.name"
+              display="block"
+              @change="onCheckboxChange" />
+          </div>
         </div>
       </ListItem>
       <ListItem>
         <label
+          class="filter-category__label"
           for="disciplines">Area of Interest</label>
         <DropdownFilter
           id="disciplines"
@@ -32,67 +37,79 @@
       v-model="selectedType"
       :values="filters.types" /> -->
       <ListItem>
-        <label for="input-search">Keywords</label>
+        <label
+          class="filter-category__label"
+          for="input-search">Keywords</label>
         <input
           id="input-search"
           v-model="searchText"
           type="search"
           placeholder="Type to search title">
       </ListItem>
-
-
-      <button
-        aria-label="Search"
-        @click="filterDataButton">
-        <SvgIcon
-          name="search" />
-        <span>Search</span>
-      </button>
-      <button
-        @click="resetSearch">
-        Reset all
-      </button>
+      <ListItem>
+        <div class="filter-category__buttons">
+          <button
+            class="filter-category__filter-btn"
+            aria-label="Filter"
+            @click="filterDataButton">
+            <span>Filter</span>
+          </button>
+          <button
+            class="filter-category__clear-btn"
+            @click="clearSearch">
+            <SvgIcon
+              width="15px"
+              height="15px"
+              name="close" />
+            Clear
+          </button>
+        </div>
+      </ListItem>
     </ListingWrap>
+
     <FilterResults :show="showSSRCode">
       <slot />
     </FilterResults>
 
     <FilterResults :show="!showSSRCode">
-      <div
-        v-for="(item, index) in dataFilteredInCategories"
-        :key="index">
-        <h1>{{ item.category.name }}</h1>
-        <ListingWrap cols="4">
-          <ListItem
-            v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
-            :key="i">
-            <GenericCard
-              :cols="3"
-              :thumb="childItem.img_url"
-              :title="childItem.title"
-              :excerpt="childItem.study_level + ' - ' + childItem.disciplines"
-              :href="childItem.link">
-              <div
-                slot="sub-title-1"
-                class="sub-title">
-                <SvgIcon name="clock" />
-                <span>{{ childItem.duration }} minutes</span>
-              </div>
-            </GenericCard>
-          </ListItem>
-        </ListingWrap>
-        <button
-          v-if="!selectedType.length && item.category.data.length > 4"
-          class="btn--secondary"
-          @click="showMoreButton(item.category.name)">
-          Show all {{ item.category.data.length }}
-          <SvgIcon
-            name="arrow-right"
-            width="16"
-            height="16"
-            aria-hidden="true" />
-        </button>
-      </div>
+      <transition-group
+        name="list"
+        tag="div">
+        <div
+          v-for="(item, index) in dataFilteredInCategories"
+          :key="index">
+          <h1>{{ item.category.name }}</h1>
+          <ListingWrap cols="4">
+            <ListItem
+              v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
+              :key="i">
+              <GenericCard
+                :cols="3"
+                :thumb="childItem.img_url"
+                :title="childItem.title"
+                :excerpt="childItem.study_level + ' - ' + childItem.disciplines"
+                :href="childItem.link">
+                <div
+                  slot="sub-title-1"
+                  class="sub-title">
+                  <SvgIcon name="clock" />
+                  <span>{{ childItem.duration }} minutes</span>
+                </div>
+              </GenericCard>
+            </ListItem>
+          </ListingWrap>
+          <button
+            v-if="!selectedType.length && item.category.data.length > 4"
+            @click="showMoreButton(item.category.name)">
+            Show all {{ item.category.data.length }}
+            <SvgIcon
+              name="arrow-right"
+              width="16"
+              height="16"
+              aria-hidden="true" />
+          </button>
+        </div>
+      </transition-group>
     </FilterResults>
   </div>
 </template>
@@ -137,11 +154,11 @@ export default {
       filters: {
         study_levels: [{
           name: 'Undergraduate',
-          isChecked: false,
+          isChecked: true,
         },
         {
           name: 'Graduate',
-          isChecked: false,
+          isChecked: true,
         }],
         disciplines: [],
         types: [],
@@ -193,10 +210,9 @@ export default {
   methods: {
     filterDataButton() {
       this.dataFiltered = this.filteredData;
-
       this.showSSRCode = false;
     },
-    resetSearch() {
+    clearSearch() {
       this.dataFiltered = this.data;
       this.searchText = '';
       this.selectedDiscipline = '';
@@ -241,8 +257,6 @@ export default {
       return filters;
     },
     onCheckboxChange({ name }) {
-      this.selectedLevels = ['Undergraduate', 'Graduate'];
-
       this.filters.study_levels.forEach((level) => {
         if (level.name === name) {
           level.isChecked = !level.isChecked;
