@@ -50,6 +50,7 @@ export default {
       'envelope',
       'info',
       'arrow-right',
+      'arrow-left',
       'globe-asia',
       'heart',
       'expand',

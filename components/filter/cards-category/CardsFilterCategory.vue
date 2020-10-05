@@ -93,7 +93,7 @@
           @click="clearSelectedType">
           <SvgIcon
             class="filter-category__section-btn-icon--left"
-            name="arrow-right"
+            name="arrow-left"
             width="16"
             height="16"
             aria-hidden="true" />

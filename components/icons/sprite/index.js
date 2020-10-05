@@ -31,6 +31,7 @@ import './youtube.svg';
 import './info.svg';
 import './pause.svg';
 import './arrow-right.svg';
+import './arrow-left.svg';
 import './globe-asia.svg';
 import './heart.svg';
 import './expand.svg';
