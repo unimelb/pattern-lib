@@ -52,6 +52,7 @@ export default {
       'arrow-right',
       'globe-asia',
       'heart',
+      'expand',
     ],
   }),
   readme: { custom: docs },
