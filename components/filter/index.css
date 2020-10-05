@@ -183,7 +183,7 @@
     }
   }
 
-  &__show-all-btn {
+  &__section-btn {
     display: flex;
     align-items: center;
     padding: .6875rem .875rem;
@@ -197,7 +197,13 @@
     margin-top: 1.25rem;
 
     &-icon {
-      margin-left: .5rem;
+      &--right {
+        margin-left: .5rem;
+      }
+
+      &--left {
+        margin-right: .5rem;
+      }
     }
   }
 

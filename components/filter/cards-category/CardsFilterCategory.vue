@@ -87,6 +87,18 @@
       </FilterResults>
 
       <FilterResults :show="!showSSRCode">
+        <button
+          v-if="selectedType.length"
+          class="filter-category__section-btn shim-mb1"
+          @click="clearSelectedType">
+          <SvgIcon
+            class="filter-category__section-btn-icon--left"
+            name="arrow-right"
+            width="16"
+            height="16"
+            aria-hidden="true" />
+          Show all categories
+        </button>
         <transition-group
           name="list"
           tag="div">
@@ -117,12 +129,12 @@
             </ListingWrap>
             <button
               v-if="!selectedType.length && item.category.data.length > 4"
-              class="filter-category__show-all-btn"
+              class="filter-category__section-btn"
               @click="showMoreButton(item.category.name)">
               Show all {{ item.category.data.length }}
               <SvgIcon
-                class="filter-category__show-all-btn-icon"
-                name="expand"
+                class="filter-category__section-btn-icon--right"
+                name="arrow-right"
                 width="16"
                 height="16"
                 aria-hidden="true" />
@@ -230,6 +242,11 @@ export default {
       this.selectedDiscipline = '';
       this.selectedType = '';
       this.selectedLevel = '';
+    },
+    clearSelectedType() {
+      this.dataFiltered = this.data;
+      this.selectedType = '';
+      this.filterDataButton();
     },
     showMoreButton(category) {
       this.selectedType = category;
