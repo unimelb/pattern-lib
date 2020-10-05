@@ -1,8 +1,6 @@
 
 <template>
-  <section-wrap bg-color="inverted-darker">
-    <CardsFilterCategory :data="cardsData" />
-  </section-wrap>
+  <CardsFilterCategory :data="cardsData" />
 </template>
 
 <script>

@@ -1,134 +1,136 @@
 <template>
   <div class="filter-category">
-    <div class="filter-category__container">
-      <div class="filter-category__container-inner">
-        <label
-          class="filter-category__top-label"
-          for="studyLevel">Study level</label>
-        <div class="filter-category__radio-container">
-          <div class="filter-category__radio-inner">
-            <input
-              id="all"
-              v-model="selectedLevel"
-              checked
-              type="radio"
-              name="studyLevel"
-              value="">
-            <label
-              class="filter-category__radio-label"
-              for="all">All</label>
+    <section-wrap bg-color="inverted-darker">
+      <div class="filter-category__container">
+        <div class="filter-category__container-inner">
+          <label
+            class="filter-category__top-label"
+            for="studyLevel">Study level</label>
+          <div class="filter-category__radio-container">
+            <div class="filter-category__radio-inner">
+              <input
+                id="all"
+                v-model="selectedLevel"
+                checked
+                type="radio"
+                name="studyLevel"
+                value="">
+              <label
+                class="filter-category__radio-label"
+                for="all">All</label>
+            </div>
+            <div
+              v-for="level in filters.study_levels"
+              id="studyLevel"
+              :key="level"
+              class="filter-category__radio-inner">
+              <input
+                :id="level"
+                v-model="selectedLevel"
+                type="radio"
+                name="studyLevel"
+                :value="level">
+              <label
+                class="filter-category__radio-label"
+                :for="level">{{ level }}</label>
+            </div>
           </div>
+        </div>
+        <div class="filter-category__container-inner">
+          <label
+            class="filter-category__top-label"
+            for="disciplines">Topic</label>
+          <DropdownFilter
+            id="disciplines"
+            v-model="selectedDiscipline"
+            :values="filters.disciplines" />
+        </div>
+        <div class="filter-category__container-inner">
+          <label
+            class="filter-category__top-label"
+            for="input-search">Keywords</label>
+          <input
+            id="input-search"
+            v-model="searchText"
+            class="filter-category__input"
+            type="search">
+        </div>
+        <div class="filter-category__container-inner">
+          <label
+            class="filter-category__top-label filter-category__top-label--hide"
+            for="search-buttons">Filter and Clear</label>
           <div
-            v-for="level in filters.study_levels"
-            id="studyLevel"
-            :key="level"
-            class="filter-category__radio-inner">
-            <input
-              :id="level"
-              v-model="selectedLevel"
-              type="radio"
-              name="studyLevel"
-              :value="level">
-            <label
-              class="filter-category__radio-label"
-              :for="level">{{ level }}</label>
+            id="search-buttons"
+            class="filter-category__buttons">
+            <button
+              class="filter-category__filter-btn"
+              aria-label="Filter"
+              @click="filterDataButton">
+              <span>Filter</span>
+            </button>
+            <button
+              class="filter-category__clear-btn"
+              @click="clearSearch">
+              <SvgIcon
+                class="filter-category__clear-btn-icon"
+                width="18px"
+                height="18px"
+                name="close" />
+              Clear
+            </button>
           </div>
         </div>
       </div>
-      <div class="filter-category__container-inner">
-        <label
-          class="filter-category__top-label"
-          for="disciplines">Topic</label>
-        <DropdownFilter
-          id="disciplines"
-          v-model="selectedDiscipline"
-          :values="filters.disciplines" />
-      </div>
-      <div class="filter-category__container-inner">
-        <label
-          class="filter-category__top-label"
-          for="input-search">Keywords</label>
-        <input
-          id="input-search"
-          v-model="searchText"
-          class="filter-category__input"
-          type="search">
-      </div>
-      <div class="filter-category__container-inner">
-        <label
-          class="filter-category__top-label visibility--hidden"
-          for="search-buttons">Filter and Clear</label>
-        <div
-          id="search-buttons"
-          class="filter-category__buttons">
-          <button
-            class="filter-category__filter-btn"
-            aria-label="Filter"
-            @click="filterDataButton">
-            <span>Filter</span>
-          </button>
-          <button
-            class="filter-category__clear-btn"
-            @click="clearSearch">
-            <SvgIcon
-              class="filter-category__clear-btn-icon"
-              width="18px"
-              height="18px"
-              name="close" />
-            Clear
-          </button>
-        </div>
-      </div>
-    </div>
 
-    <FilterResults :show="showSSRCode">
-      <slot />
-    </FilterResults>
+      <FilterResults :show="showSSRCode">
+        <slot />
+      </FilterResults>
 
-    <FilterResults :show="!showSSRCode">
-      <transition-group
-        name="list"
-        tag="div">
-        <div
-          v-for="(item, index) in dataFilteredInCategories"
-          :key="index"
-          class="filter-category__section">
-          <h2 class="filter-category__category-label">
-            {{ item.category.name }}
-          </h2>
-          <ListingWrap cols="4">
-            <ListItem
-              v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
-              :key="i">
-              <GenericCard
-                :cols="3"
-                :thumb="childItem.img_url"
-                :title="childItem.title"
-                :href="childItem.link">
-                <div
-                  slot="sub-title-1"
-                  class="sub-title">
-                  <SvgIcon name="clock" />
-                  <span>{{ childItem.duration }} minutes</span>
-                </div>
-              </GenericCard>
-            </ListItem>
-          </ListingWrap>
-          <button
-            v-if="!selectedType.length && item.category.data.length > 4"
-            class="filter-category__show-all-btn"
-            @click="showMoreButton(item.category.name)">
-            Show all {{ item.category.data.length }}
-            <SvgIcon
-              class="filter-category__show-all-btn-icon"
-              name="expand"
-              width="16"
-              height="16"
-              aria-hidden="true" />
-          </button>
-        </div>
-      </transition-group>
-    </FilterResults>
+      <FilterResults :show="!showSSRCode">
+        <transition-group
+          name="list"
+          tag="div">
+          <div
+            v-for="(item, index) in dataFilteredInCategories"
+            :key="index"
+            class="filter-category__section">
+            <h2 class="filter-category__category-label">
+              {{ item.category.name }}
+            </h2>
+            <ListingWrap cols="4">
+              <ListItem
+                v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
+                :key="i">
+                <GenericCard
+                  :cols="3"
+                  :thumb="childItem.img_url"
+                  :title="childItem.title"
+                  :href="childItem.link">
+                  <div
+                    slot="sub-title-1"
+                    class="sub-title">
+                    <SvgIcon name="clock" />
+                    <span>{{ childItem.duration }} minutes</span>
+                  </div>
+                </GenericCard>
+              </ListItem>
+            </ListingWrap>
+            <button
+              v-if="!selectedType.length && item.category.data.length > 4"
+              class="filter-category__show-all-btn"
+              @click="showMoreButton(item.category.name)">
+              Show all {{ item.category.data.length }}
+              <SvgIcon
+                class="filter-category__show-all-btn-icon"
+                name="expand"
+                width="16"
+                height="16"
+                aria-hidden="true" />
+            </button>
+          </div>
+        </transition-group>
+      </FilterResults>
+    </section-wrap>
   </div>
 </template>
 
