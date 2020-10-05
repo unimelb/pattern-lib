@@ -1,14 +1,13 @@
 ## Cards Filter Categories component
 
-The prop `show-ssr` can be used to show server side code from another source (ie, CMS).  This is useful for SEO purposes.  
-
-Once a user clicks on `Search` the array in the `:data` prop will be used for client-side filtering.
+Once a user clicks on `Filter` the array in the `:data` prop will be used for client-side filtering.
 
  ### Example
 
  ```javascript
 <cards-filter-category
-    :data='[    {
+    :data='[
+    {
         "title": "Masters Exhibition 2018",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
         "type": "Course overviews",
