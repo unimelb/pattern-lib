@@ -1,53 +1,66 @@
 <template>
   <div class="filter-category">
-    <ListingWrap cols="4">
-      <ListItem>
+    <div class="filter-category__container">
+      <div class="filter-category__container-inner">
         <label
-          class="filter-category__label"
+          class="filter-category__top-label"
           for="studyLevel">Study level</label>
-        <input
-          id="all"
-          v-model="selectedLevel"
-          checked
-          type="radio"
-          name="studyLevel"
-          value="">
-        <label for="all">All</label>
-        <div
-          v-for="level in filters.study_levels"
-          id="studyLevel"
-          :key="level"
-          class="filter-category__checkbox-container">
-          <input
-            :id="level"
-            v-model="selectedLevel"
-            type="radio"
-            name="studyLevel"
-            :value="level">
-          <label :for="level">{{ level }}</label>
+        <div class="filter-category__radio-container">
+          <div class="filter-category__radio-inner">
+            <input
+              id="all"
+              v-model="selectedLevel"
+              checked
+              type="radio"
+              name="studyLevel"
+              value="">
+            <label
+              class="filter-category__radio-label"
+              for="all">All</label>
+          </div>
+          <div
+            v-for="level in filters.study_levels"
+            id="studyLevel"
+            :key="level"
+            class="filter-category__radio-inner">
+            <input
+              :id="level"
+              v-model="selectedLevel"
+              type="radio"
+              name="studyLevel"
+              :value="level">
+            <label
+              class="filter-category__radio-label"
+              :for="level">{{ level }}</label>
+          </div>
         </div>
-      </ListItem>
-      <ListItem>
+      </div>
+      <div class="filter-category__container-inner">
         <label
-          class="filter-category__label"
-          for="disciplines">Area of Interest</label>
+          class="filter-category__top-label"
+          for="disciplines">Topic</label>
         <DropdownFilter
           id="disciplines"
           v-model="selectedDiscipline"
           :values="filters.disciplines" />
-      </ListItem>
-      <ListItem>
+      </div>
+      <div class="filter-category__container-inner">
         <label
-          class="filter-category__label"
+          class="filter-category__top-label"
           for="input-search">Keywords</label>
         <input
           id="input-search"
           v-model="searchText"
-          type="search"
-          placeholder="Type to search title">
-      </ListItem>
-      <ListItem>
-        <div class="filter-category__buttons">
+          class="filter-category__input"
+          type="search">
+      </div>
+      <div class="filter-category__container-inner">
+        <label
+          class="filter-category__top-label visibility--hidden"
+          for="search-buttons">Filter and Clear</label>
+        <div
+          id="search-buttons"
+          class="filter-category__buttons">
           <button
             class="filter-category__filter-btn"
             aria-label="Filter"
@@ -58,14 +71,15 @@
             class="filter-category__clear-btn"
             @click="clearSearch">
             <SvgIcon
-              width="15px"
-              height="15px"
+              class="filter-category__clear-btn-icon"
+              width="18px"
+              height="18px"
               name="close" />
             Clear
           </button>
         </div>
-      </ListItem>
-    </ListingWrap>
+      </div>
+    </div>
 
     <FilterResults :show="showSSRCode">
       <slot />
@@ -77,8 +91,11 @@
         tag="div">
         <div
           v-for="(item, index) in dataFilteredInCategories"
-          :key="index">
-          <h1>{{ item.category.name }}</h1>
+          :key="index"
+          class="filter-category__section">
+          <h2 class="filter-category__category-label">
+            {{ item.category.name }}
+          </h2>
           <ListingWrap cols="4">
             <ListItem
               v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
@@ -87,7 +104,6 @@
                 :cols="3"
                 :thumb="childItem.img_url"
                 :title="childItem.title"
-                :excerpt="childItem.study_level + ' - ' + childItem.disciplines"
                 :href="childItem.link">
                 <div
                   slot="sub-title-1"
@@ -100,10 +116,12 @@
           </ListingWrap>
           <button
             v-if="!selectedType.length && item.category.data.length > 4"
+            class="filter-category__show-all-btn"
             @click="showMoreButton(item.category.name)">
             Show all {{ item.category.data.length }}
             <SvgIcon
-              name="arrow-right"
+              class="filter-category__show-all-btn-icon"
+              name="expand"
               width="16"
               height="16"
               aria-hidden="true" />

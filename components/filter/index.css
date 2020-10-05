@@ -70,26 +70,62 @@
 }
 
 .filter-category {
-  &__label {
-    font-weight: normal;
-    font-size: .875rem;
-    line-height: 1.5;
+  .styled-select {
+    margin: 0;
   }
 
-  &__checkbox-container {
+  &__container {
     display: flex;
+    margin-bottom: 1.5rem;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
-  &__checkbox {
-    &:first-child {
-      margin-right: 1.75rem;
-    }
+  &__input {
+    padding: .5625rem 1rem;
+    border: 0;
+    border-radius: 0;
+    font-size: 1.125rem;
+    font-weight: var(--fw-bold);
+    line-height: 1.278;
+    background: rgb(var(--col-background-primary-white));
+  }
 
-    .base-checkbox__label {
-      font-weight: normal;
+  &__top-label {
+    font-weight: var(--fw-semibold);
+    font-size: 1.125rem;
+    line-height: 1.34;
+    margin-bottom: .3125rem;
+  }
+
+  &__radio {
+    &-label {
       font-size: 1rem;
       line-height: 1.5;
-      color: #fff;
+      margin-left: .25rem;
+    }
+
+    &-container {
+      display: flex;
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      margin-right: .75rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -99,14 +135,59 @@
 
   &__filter-btn {
     margin-right: .9375rem;
-    padding: .75rem 1.75rem;
-    color: black;
-    background: green;
+    padding: .6rem 1.75rem;
+    color: rgb(var(--col-black-dark));
+    background: rgb(var(--col-emerald-mid-2));
+    border: 0;
+    border-radius: 0;
+    font-weight: var(--fw-semibold);
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   &__clear-btn {
     display: flex;
     text-decoration: underline;
+    font-weight: var(--fw-semibold);
+    font-size: 1rem;
+    line-height: 1.5;
+    align-items: center;
+
+    &-icon {
+      margin-right: .25rem;
+    }
+  }
+
+  &__show-all-btn {
+    display: flex;
+    align-items: center;
+    padding: .6875rem .875rem;
+    background: rgb(var(--col-background-primary-white));
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    line-height: 1.5625;
+    color: rgb(var(--col-navy-dark));
+    border-radius: .25rem;
+    align-self: center;
+    margin-top: 1.25rem;
+
+    &-icon {
+      margin-left: .5rem;
+    }
+  }
+
+  &__category-label {
+    font-weight: var(--fw-bold);
+    font-size: 1.75rem;
+    line-height: 1;
+    letter-spacing: -.031rem;
+    margin-bottom: .5625rem;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
   }
 
   .list-item {
