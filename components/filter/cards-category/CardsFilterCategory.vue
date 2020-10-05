@@ -103,8 +103,8 @@
           name="list"
           tag="div">
           <div
-            v-for="(item, index) in dataFilteredInCategories"
-            :key="index"
+            v-for="item in dataFilteredInCategories"
+            :key="item.category.name"
             class="filter-category__section">
             <h2 class="filter-category__category-label">
               {{ item.category.name }}
