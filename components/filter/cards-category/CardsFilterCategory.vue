@@ -82,72 +82,67 @@
             </div>
           </div>
         </div>
-
-        <FilterResults v-show="!isFetching">
-          <button
-            v-if="selectedType.length"
-            class="filter-category__section-btn shim-mb1"
-            @click="clearSelectedType">
-            <SvgIcon
-              class="filter-category__section-btn-icon--left"
-              name="arrow-left"
-              width="16"
-              height="16"
-              aria-hidden="true" />
-            Show all categories
-          </button>
-          <transition-group
-            name="list"
-            tag="div">
-            <div
-              v-for="item in dataFilteredInCategories"
-              :key="item.category.name"
-              class="filter-category__section">
-              <h2 class="filter-category__category-label">
-                {{ item.category.name }}
-              </h2>
-              <ListingWrap cols="4">
-                <ListItem
-                  v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
-                  :key="i">
-                  <GenericCard
-                    :cols="3"
-                    :thumb="childItem.img_url"
-                    :title="childItem.title"
-                    :href="childItem.link">
-                    <div
-                      slot="sub-title-1"
-                      class="sub-title">
-                      <SvgIcon name="clock" />
-                      <span>{{ childItem.duration }} minutes</span>
-                    </div>
-                  </GenericCard>
-                </ListItem>
-              </ListingWrap>
-              <button
-                v-if="!selectedType.length && item.category.data.length > 4"
-                class="filter-category__section-btn"
-                @click="showMoreButton(item.category.name)">
-                Show all {{ item.category.data.length }}
-                <SvgIcon
-                  class="filter-category__section-btn-icon--right"
-                  name="arrow-right"
-                  width="16"
-                  height="16"
-                  aria-hidden="true" />
-              </button>
-            </div>
-          </transition-group>
-        </FilterResults>
+        <LoadingOverlay
+          :is-loading="isFetching"
+          spinner-text="Fetching results">
+          <FilterResults>
+            <button
+              v-if="selectedType.length"
+              class="filter-category__section-btn shim-mb1"
+              @click="clearSelectedType">
+              <SvgIcon
+                class="filter-category__section-btn-icon--left"
+                name="arrow-left"
+                width="16"
+                height="16"
+                aria-hidden="true" />
+              Show all categories
+            </button>
+            <transition-group
+              name="list"
+              tag="div">
+              <div
+                v-for="item in dataFilteredInCategories"
+                :key="item.category.name"
+                class="filter-category__section">
+                <h2 class="filter-category__category-label">
+                  {{ item.category.name }}
+                </h2>
+                <ListingWrap cols="4">
+                  <ListItem
+                    v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
+                    :key="i">
+                    <GenericCard
+                      :cols="3"
+                      :thumb="childItem.img_url"
+                      :title="childItem.title"
+                      :href="childItem.link">
+                      <div
+                        slot="sub-title-1"
+                        class="sub-title">
+                        <SvgIcon name="clock" />
+                        <span>{{ childItem.duration }} minutes</span>
+                      </div>
+                    </GenericCard>
+                  </ListItem>
+                </ListingWrap>
+                <button
+                  v-if="!selectedType.length && item.category.data.length > 4"
+                  class="filter-category__section-btn"
+                  @click="showMoreButton(item.category.name)">
+                  Show all {{ item.category.data.length }}
+                  <SvgIcon
+                    class="filter-category__section-btn-icon--right"
+                    name="arrow-right"
+                    width="16"
+                    height="16"
+                    aria-hidden="true" />
+                </button>
+              </div>
+            </transition-group>
+          </FilterResults>
+        </LoadingOverlay>
       </Loader>
-    </section-wrap>
-    <section-wrap
-      v-if="isFetching"
-      small
-      bg-color="inverted-darker">
-      <LoadingOverlay
-        :is-loading="isFetching"
-        spinner-text="Fetching results" />
     </section-wrap>
   </div>
 </template>
