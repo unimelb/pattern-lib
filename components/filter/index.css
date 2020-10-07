@@ -80,7 +80,7 @@
 
   &__container {
     display: flex;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     flex-direction: column;
 
     @media (--bp-x-desktop) {
@@ -168,6 +168,20 @@
     font-size: 1rem;
     line-height: 1.5;
     width: 100%;
+
+    &:hover,
+    &:focus {
+      background: rgb(var(--col-emerald-mid-1));
+    }
+
+    &:active {
+      background: rgb(var(--col-emerald-dark));
+      color: rgb(var(--col-white));
+    }
+
+    &:visited {
+      background: rgb(var(--col-emerald-mid-2));
+    }
   }
 
   &__clear-btn {
@@ -181,29 +195,15 @@
     &-icon {
       margin-right: .25rem;
     }
-  }
 
-  &__section-btn {
-    display: flex;
-    align-items: center;
-    padding: .6875rem .875rem;
-    background: rgb(var(--col-background-primary-white));
-    font-weight: var(--fw-bold);
-    font-size: 1rem;
-    line-height: 1.5625;
-    color: rgb(var(--col-navy-dark));
-    border-radius: .25rem;
-    align-self: center;
-    margin-top: 1.25rem;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
 
-    &-icon {
-      &--right {
-        margin-left: .5rem;
-      }
-
-      &--left {
-        margin-right: .5rem;
-      }
+    &:active {
+      text-decoration: none;
+      opacity: .7;
     }
   }
 
@@ -219,6 +219,45 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2.5rem;
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      font-weight: var(--fw-bold);
+      font-size: 1rem;
+      line-height: 1.5625;
+      text-decoration: underline;
+      color: rgb(var(--col-white));
+      align-self: flex-end;
+      margin-top: .125rem;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &:active {
+        opacity: .7;
+      }
+
+      &-icon {
+        &--right {
+          margin-left: .5rem;
+        }
+
+        &--left {
+          margin-right: .5rem;
+        }
+      }
+    }
+  }
+
+  &__results {
+    font-weight: var(--fw-normal);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgb(var(--col-navy-mid-1)) !important;
+    margin-bottom: 1.5rem;
   }
 
   .list-enter-active,
