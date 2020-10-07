@@ -228,6 +228,7 @@ export default {
       const categories = [...new Set(this.dataFiltered.map((item) => item.type))];
       const categoriesFiltered = [];
 
+      categories.sort();
       categories.forEach((category) => {
         categoriesFiltered.push({ category: { name: category, data: this.dataFiltered.filter((item) => item.type === category) } });
       });
