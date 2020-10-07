@@ -157,7 +157,7 @@ import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
-import { TIMER_2000 } from '../../../constants/timers';
+import { TIMER_500 } from '../../../constants/timers';
 
 export default {
   components: {
@@ -240,7 +240,7 @@ export default {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-    }, TIMER_2000);
+    }, TIMER_500);
   },
   methods: {
     filterDataButton() {
@@ -248,7 +248,7 @@ export default {
       this.isFetching = true;
       setTimeout(() => {
         this.isFetching = false;
-      }, TIMER_2000);
+      }, TIMER_500);
     },
     clearSearch() {
       this.dataFiltered = this.data;
