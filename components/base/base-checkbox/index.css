@@ -31,6 +31,7 @@
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
+    background: rgb(var(--col-white));
 
     &--is-focused {
       box-shadow: var(--outline-shadow);

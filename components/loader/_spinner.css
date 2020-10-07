@@ -4,6 +4,7 @@
   background-color: rgb(var(--col-background-primary-navy));
   display: inline-flex;
   align-items: center;
+  margin-top: 6rem;
 
   &__cube {
     width: 1.5rem;

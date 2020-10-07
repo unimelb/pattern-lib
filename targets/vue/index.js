@@ -438,3 +438,7 @@ export {
   default as CardImageLink,
 }
   from 'components/cards/CardImageLink.vue';
+export {
+  default as CardsFilterCategory,
+}
+  from 'components/filter/cards-category/CardsFilterCategory.vue';

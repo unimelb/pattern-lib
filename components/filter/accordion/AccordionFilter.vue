@@ -141,11 +141,11 @@
 
 <script>
 import escapeRegExp from 'lodash.escaperegexp';
-import Accordion from '../../accordion/Accordion.vue';
+import Accordion from 'components/accordion/Accordion.vue';
+import ButtonIcon from 'components/buttons/ButtonIcon.vue';
+import SvgIcon from 'components/icons/SvgIcon.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
-import ButtonIcon from '../../buttons/ButtonIcon.vue';
-import SvgIcon from '../../icons/SvgIcon.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
 
 export default {

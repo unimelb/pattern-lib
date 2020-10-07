@@ -108,9 +108,9 @@
 
 <script>
 import escapeRegExp from 'lodash.escaperegexp';
-import ListItem from '../../listing/ListItem.vue';
-import SvgIcon from '../../icons/SvgIcon.vue';
-import GenericCard from '../../cards/GenericCard.vue';
+import ListItem from 'components/listing/ListItem.vue';
+import SvgIcon from 'components/icons/SvgIcon.vue';
+import GenericCard from 'components/cards/GenericCard.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResultsCount from '../filters-core/results-count/FilterResultsCount.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
