@@ -74,8 +74,8 @@
                 @click="clearSearch">
                 <SvgIcon
                   class="filter-category__clear-btn-icon"
-                  width="18px"
-                  height="18px"
+                  width="14px"
+                  height="14px"
                   name="close" />
                 Clear
               </button>
@@ -86,6 +86,16 @@
           :is-loading="isFetching"
           spinner-text="Fetching results">
           <FilterResults>
+            <p class="filter-category__results">
+              <strong>
+                {{ countTotalFilteredResults }} results
+              </strong>
+              found with
+              <strong>
+                {{ countFiltersApplied }}
+              </strong>
+              filters applied
+            </p>
             <button
               v-if="selectedType.length"
               class="filter-category__section-btn shim-mb1"
@@ -190,6 +200,7 @@ export default {
       },
       isLoading: false,
       isFetching: false,
+      countFiltersApplied: 0,
     };
   },
   computed: {
@@ -231,6 +242,15 @@ export default {
 
       return categoriesFiltered;
     },
+    countTotalFilteredResults() {
+      let countResults = 0;
+
+      if (this.dataFilteredInCategories.length) {
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        countResults = this.dataFilteredInCategories.map((item) => item.category.data.length).reduce(reducer);
+      }
+      return countResults;
+    },
   },
   mounted() {
     this.filters = this.getFilters();
@@ -243,9 +263,29 @@ export default {
     filterDataButton() {
       this.dataFiltered = this.filteredData;
       this.isFetching = true;
+      this.countFiltersApplied = this.countFiltersAppliedCalculation();
       setTimeout(() => {
         this.isFetching = false;
       }, TIMER_500);
+    },
+    countFiltersAppliedCalculation() {
+      let filtersApplied = 0;
+      if (this.searchText.length) {
+        filtersApplied += 1;
+      }
+
+      if (this.selectedDiscipline.length) {
+        filtersApplied += 1;
+      }
+
+      if (this.selectedType.length) {
+        filtersApplied += 1;
+      }
+
+      if (this.selectedLevel.length) {
+        filtersApplied += 1;
+      }
+      return filtersApplied;
     },
     clearSearch() {
       this.dataFiltered = this.data;
@@ -253,6 +293,7 @@ export default {
       this.selectedDiscipline = '';
       this.selectedType = '';
       this.selectedLevel = '';
+      this.countFiltersApplied = 0;
     },
     clearSelectedType() {
       this.dataFiltered = this.data;
