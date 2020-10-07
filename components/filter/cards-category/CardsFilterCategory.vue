@@ -175,10 +175,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    showSsr: {
-      type: Boolean,
-      default: false,
-    },
   },
   data() {
     return {
