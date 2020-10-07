@@ -223,10 +223,23 @@
 
   .list-enter-active,
   .list-leave-active {
-    transition: all 1s;
+    transition: all .5s ease-out;
   }
+
+  .list-leave-active {
+    position: absolute;
+  }
+
   .list-enter,
-  .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  .list-leave-to {
     opacity: 0;
+  }
+  .list-leave,
+  .list-enter-to {
+    opacity: 100%;
+  }
+
+  .list-move {
+    transition: transform .5s ease-out;
   }
 }
