@@ -221,10 +221,6 @@
     margin-bottom: 2.5rem;
   }
 
-  .list-item {
-    display: inline-block;
-    margin-right: .625rem;
-  }
   .list-enter-active,
   .list-leave-active {
     transition: all 1s;
