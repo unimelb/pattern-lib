@@ -198,7 +198,7 @@
     align-items: center;
 
     &-icon {
-      margin-right: .25rem;
+      margin-right: .5rem;
     }
 
     &:hover,
@@ -214,13 +214,6 @@
       text-decoration: none;
       opacity: .7;
     }
-  }
-
-  &__category-label {
-    font-weight: var(--fw-bold);
-    font-size: 1.75rem;
-    letter-spacing: -.031rem;
-    margin-bottom: .5625rem;
   }
 
   &__section {

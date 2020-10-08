@@ -117,7 +117,7 @@
                 v-for="item in dataFilteredInCategories"
                 :key="item.category.name"
                 class="filter-category__section list-item">
-                <h2 class="filter-category__category-label">
+                <h2 class="title--lg">
                   {{ item.category.name }}
                 </h2>
                 <transition-group
