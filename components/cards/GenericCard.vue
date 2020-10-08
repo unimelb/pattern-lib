@@ -26,6 +26,7 @@
         {{ excerpt }}
       </div>
       <div
+        v-if="!hideFooter"
         :class="[cols !== 1 ? 'card__footer--column' : '']"
         class="card__footer">
         <Tags
@@ -84,6 +85,10 @@ export default {
     tags: {
       type: Array,
       default: () => [],
+    },
+    hideFooter: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
