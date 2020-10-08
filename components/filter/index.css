@@ -204,6 +204,10 @@
     &:hover,
     &:focus {
       text-decoration: none;
+
+      .filter-category__clear-btn-icon {
+        padding: .0625rem;
+      }
     }
 
     &:active {
@@ -243,7 +247,7 @@
         .filter-category__section-btn-icon {
           &--right,
           &--left {
-            padding: .125rem;
+            padding: .0625rem;
           }
         }
       }
