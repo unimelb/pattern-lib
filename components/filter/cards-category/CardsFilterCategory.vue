@@ -128,6 +128,7 @@
                     v-for="childItem in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
                     :key="childItem.title">
                     <GenericCard
+                      hide-footer
                       :cols="3"
                       :thumb="childItem.img_url"
                       :title="childItem.title"

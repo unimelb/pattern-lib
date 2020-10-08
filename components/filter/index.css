@@ -74,6 +74,10 @@
     padding: 3rem 1rem;
   }
 
+  .card__inner {
+    justify-content: space-between;
+  }
+
   .styled-select {
     margin: 0;
   }
