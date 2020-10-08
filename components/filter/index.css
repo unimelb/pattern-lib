@@ -236,6 +236,18 @@
       &:hover,
       &:focus {
         text-decoration: none;
+
+        .filter-category__section-btn-icon {
+          &--right {
+            margin-left: .75rem;
+            margin-right: 0;
+          }
+
+          &--left {
+            margin-right: .75rem;
+            margin-left: 0;
+          }
+        }
       }
 
       &:active {
