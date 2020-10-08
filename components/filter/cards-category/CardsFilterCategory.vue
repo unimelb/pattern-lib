@@ -145,7 +145,6 @@
                 </transition-group>
                 <button
                   v-if="!selectedType.length && item.category.data.length > 4"
-                  v-scroll-to="'#filter-category-results'"
                   class="filter-category__section-btn"
                   @click="showMoreButton(item.category.name)">
                   Show all {{ item.category.data.length }}
@@ -309,6 +308,7 @@ export default {
     showMoreButton(category) {
       this.selectedType = category;
       this.filterDataButton();
+      this.$scrollTo('#filter-category-results');
     },
     getFilters() {
       const filters = {
