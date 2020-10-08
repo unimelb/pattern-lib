@@ -86,7 +86,9 @@
           :is-loading="isFetching"
           spinner-text="Fetching results">
           <FilterResults>
-            <p class="filter-category__results">
+            <p
+              id="filter-category-results"
+              class="filter-category__results">
               <strong>
                 {{ countTotalFilteredResults }} results
               </strong>
@@ -141,6 +143,7 @@
                 </transition-group>
                 <button
                   v-if="!selectedType.length && item.category.data.length > 4"
+                  v-scroll-to="'#filter-category-results'"
                   class="filter-category__section-btn"
                   @click="showMoreButton(item.category.name)">
                   Show all {{ item.category.data.length }}
