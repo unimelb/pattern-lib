@@ -123,8 +123,8 @@
                   tag="div"
                   class="grid grid--4col">
                   <ListItem
-                    v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
-                    :key="i">
+                    v-for="childItem in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
+                    :key="childItem.title">
                     <GenericCard
                       :cols="3"
                       :thumb="childItem.img_url"
