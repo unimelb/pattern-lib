@@ -240,9 +240,12 @@
       &:focus {
         text-decoration: none;
 
-        /* & + button.filter-category__section-btn-icon--right {
-          margin-right: 0;
-        } */
+        .filter-category__section-btn-icon {
+          &--right,
+          &--left {
+            padding: .125rem;
+          }
+        }
       }
 
       &:active {
