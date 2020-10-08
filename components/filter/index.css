@@ -90,7 +90,7 @@
     &-inner {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       margin-bottom: 1rem;
 
       @media (--bp-x-desktop) {
@@ -139,6 +139,7 @@
 
     &-container {
       display: flex;
+      margin-top: .625rem;
     }
 
     &-inner {
