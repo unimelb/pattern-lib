@@ -1,12 +1,19 @@
 /*  eslint-disable no-new */
 import Vue from 'vue';
 
+import VueScrollTo from 'vue-scrollto';
 import * as utils from './shared/utils';
 import { version } from '../package.json';
 
+// Add VueScrollTo setup
+
 // Auto-inject SVG icon sprite with `svg-sprite-loader`
 import './icons/sprite';
-import './side-panel';
+
+Vue.use(VueScrollTo, {
+  duration: 500,
+  easing: 'ease-out',
+});
 
 // Promise polyfill
 require('es6-promise').polyfill();
