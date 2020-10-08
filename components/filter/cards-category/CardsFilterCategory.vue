@@ -116,7 +116,7 @@
               <div
                 v-for="item in dataFilteredInCategories"
                 :key="item.category.name"
-                class="filter-category__section">
+                class="filter-category__section list-item">
                 <h2 class="filter-category__category-label">
                   {{ item.category.name }}
                 </h2>
@@ -126,7 +126,8 @@
                   class="grid grid--4col">
                   <ListItem
                     v-for="childItem in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
-                    :key="childItem.title">
+                    :key="childItem.title"
+                    class="list-item">
                     <GenericCard
                       :cols="3"
                       :thumb="childItem.img_url"
