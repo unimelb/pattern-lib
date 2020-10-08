@@ -86,7 +86,9 @@
           :is-loading="isFetching"
           spinner-text="Fetching results">
           <FilterResults>
-            <p class="filter-category__results">
+            <p
+              id="filter-category-results"
+              class="filter-category__results">
               <strong>
                 {{ countTotalFilteredResults }} results
               </strong>
@@ -114,15 +116,20 @@
               <div
                 v-for="item in dataFilteredInCategories"
                 :key="item.category.name"
-                class="filter-category__section">
+                class="filter-category__section list-item">
                 <h2 class="filter-category__category-label">
                   {{ item.category.name }}
                 </h2>
-                <ListingWrap cols="4">
+                <transition-group
+                  name="list"
+                  tag="div"
+                  class="grid grid--4col">
                   <ListItem
-                    v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
-                    :key="i">
+                    v-for="childItem in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
+                    :key="childItem.title"
+                    class="list-item">
                     <GenericCard
+                      hide-footer
                       :cols="3"
                       :thumb="childItem.img_url"
                       :title="childItem.title"
@@ -135,9 +142,10 @@
                       </div>
                     </GenericCard>
                   </ListItem>
-                </ListingWrap>
+                </transition-group>
                 <button
                   v-if="!selectedType.length && item.category.data.length > 4"
+                  v-scroll-to="'#filter-category-results'"
                   class="filter-category__section-btn"
                   @click="showMoreButton(item.category.name)">
                   Show all {{ item.category.data.length }}
@@ -160,7 +168,6 @@
 <script>
 import escapeRegExp from 'lodash.escaperegexp';
 import ListItem from 'components/listing/ListItem.vue';
-import ListingWrap from 'components/listing/ListingWrap.vue';
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
 import Loader from 'components/loader/Loader.vue';
@@ -172,7 +179,6 @@ import { TIMER_500 } from '../../../constants/timers';
 export default {
   components: {
     ListItem,
-    ListingWrap,
     SvgIcon,
     GenericCard,
     DropdownFilter,
