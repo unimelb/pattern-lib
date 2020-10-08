@@ -118,7 +118,10 @@
                 <h2 class="filter-category__category-label">
                   {{ item.category.name }}
                 </h2>
-                <ListingWrap cols="4">
+                <transition-group
+                  name="list"
+                  tag="div"
+                  class="grid grid--4col">
                   <ListItem
                     v-for="(childItem, i) in selectedType.length ? item.category.data : item.category.data.slice(0, 4)"
                     :key="i">
@@ -135,7 +138,7 @@
                       </div>
                     </GenericCard>
                   </ListItem>
-                </ListingWrap>
+                </transition-group>
                 <button
                   v-if="!selectedType.length && item.category.data.length > 4"
                   class="filter-category__section-btn"
@@ -160,7 +163,6 @@
 <script>
 import escapeRegExp from 'lodash.escaperegexp';
 import ListItem from 'components/listing/ListItem.vue';
-import ListingWrap from 'components/listing/ListingWrap.vue';
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import GenericCard from 'components/cards/GenericCard.vue';
 import Loader from 'components/loader/Loader.vue';
@@ -172,7 +174,6 @@ import { TIMER_500 } from '../../../constants/timers';
 export default {
   components: {
     ListItem,
-    ListingWrap,
     SvgIcon,
     GenericCard,
     DropdownFilter,
