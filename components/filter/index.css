@@ -236,13 +236,6 @@
       &:hover,
       &:focus {
         text-decoration: none;
-
-        .filter-category__section-btn-icon {
-          &--right,
-          &--left {
-            padding: .0625rem;
-          }
-        }
       }
 
       &:active {
