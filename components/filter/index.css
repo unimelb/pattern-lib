@@ -215,7 +215,6 @@
   &__category-label {
     font-weight: var(--fw-bold);
     font-size: 1.75rem;
-    line-height: 1;
     letter-spacing: -.031rem;
     margin-bottom: .5625rem;
   }
@@ -235,10 +234,15 @@
       color: rgb(var(--col-white));
       align-self: flex-end;
       margin-top: .125rem;
+      transition: all ease-out .15s;
 
       &:hover,
       &:focus {
         text-decoration: none;
+
+        /* & + button.filter-category__section-btn-icon--right {
+          margin-right: 0;
+        } */
       }
 
       &:active {
@@ -248,10 +252,12 @@
       &-icon {
         &--right {
           margin-left: .5rem;
+          margin-right: .25rem;
         }
 
         &--left {
           margin-right: .5rem;
+          margin-left: .25rem;
         }
       }
     }
@@ -265,6 +271,10 @@
     margin-bottom: 1.5rem;
   }
 
+  .list-item {
+    display: flex;
+  }
+
   .list-enter-active,
   .list-leave-active {
     transition: all .5s ease-out;
@@ -272,7 +282,6 @@
 
   .list-leave-active {
     position: absolute;
-    width: 100%;
   }
 
   .list-enter,
