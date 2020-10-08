@@ -3,7 +3,7 @@
         "title": "Masters Exhibition 2018",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
         "type": "Course overviews",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Visual Art"
         ],
@@ -15,7 +15,7 @@
         "title": "Master of Coin",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
         "type": "Major overviews",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Indigenous Arts and Culture"
         ],
@@ -27,7 +27,7 @@
         "title": "Production Graduates",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-graduates",
         "type": "Admissions",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Production"
         ],
@@ -39,7 +39,7 @@
         "title": "Acting Company 2018",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-company-2018",
         "type": "Admissions",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Theatre (Level 1)"
         ],
@@ -51,7 +51,7 @@
         "title": "Production Exhibition 2018",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-exhibition-2018",
         "type": "Course overviews",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Production"
         ],
@@ -63,7 +63,7 @@
         "title": "Music Theatre Company 2018",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018",
         "type": "Admissions",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Music Theatre"
         ],
@@ -75,7 +75,7 @@
         "title": "Music Theatre Showcase",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-showcase",
         "type": "Study experience",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Music Theatre"
         ],
@@ -87,7 +87,7 @@
         "title": "Acting Showcase",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-showcase",
         "type": "Study experience",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Theatre"
         ],
@@ -99,7 +99,7 @@
         "title": "Asia Orchestra Tour",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/asia-orchestra-tour",
         "type": "Study experience",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Music type"
         ],
@@ -111,7 +111,7 @@
         "title": "The Drowsy Chaperone",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-drowsy-chaperone",
         "type": "Admissions",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Music Theatre",
             "Production",
@@ -125,7 +125,7 @@
         "title": "The Skin of Our Teeth",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-skin-of-our-teeth",
         "type": "Admissions",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate", "Graduate"],
         "disciplines": [
             "Theatre",
             "Production"
@@ -138,7 +138,7 @@
         "title": "Carmelites",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/carmelites",
         "type": "Study experience",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Music type"
         ],
@@ -150,7 +150,7 @@
         "title": "Jazz Ensemble",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-ensemble",
         "type": "Study experience",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Jazz and Improvisation"
         ],
@@ -162,7 +162,7 @@
         "title": "Murdoch Travelling Fellowship 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/murdoch-travelling-fellowship-2017",
         "type": "Course overviews",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate", "Graduate"],
         "disciplines": [
             "Visual Art"
         ],
@@ -174,7 +174,7 @@
         "title": "Dance 40th Anniversary Party",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/dance-40th-anniversary-party",
         "type": "Major overviews",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Dance"
         ],
@@ -186,7 +186,7 @@
         "title": "MIFLAS An Afternoon at the Opera",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/miflas-an-afternoon-at-the-opera",
         "type": "Study experience",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Music type"
         ],
@@ -198,7 +198,7 @@
         "title": "Music Ensemble",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-ensemble",
         "type": "Study experience",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Music type"
         ],
@@ -210,7 +210,7 @@
         "title": "A Chorus Line",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/a-chorus-line",
         "type": "Admissions",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music Theatre"
         ],
@@ -222,7 +222,7 @@
         "title": "The Crucible",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-crucible",
         "type": "Admissions",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate", "Undergraduate"],
         "disciplines": [
             "Theatre",
             "Production"
@@ -235,7 +235,7 @@
         "title": "Peter Pan",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/peter-pan",
         "type": "Admissions",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Theatre",
             "Production"
@@ -248,7 +248,7 @@
         "title": "Wind Symphony Day",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wind-symphony-day",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music type"
         ],
@@ -260,7 +260,7 @@
         "title": "University of Melbourne Symphony Orchestra",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music type"
         ],
@@ -272,7 +272,7 @@
         "title": "Mongrel 2018",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2018",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music Theatre",
             "Interactive Composition",
@@ -286,7 +286,7 @@
         "title": "Gloria",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/gloria",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate", "Undergraduate"],
         "disciplines": [
             "Music type"
         ],
@@ -298,7 +298,7 @@
         "title": "On View Opening Night",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/on-view-opening-night",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Dance"
         ],
@@ -310,7 +310,7 @@
         "title": "MILFAS The Enamoured Soul",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/milfas-the-enamoured-soul",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music type"
         ],
@@ -322,7 +322,7 @@
         "title": "Andrew Byrne Masterclass",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/andrew-byrne-masterclass",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music Theatre"
         ],
@@ -334,7 +334,7 @@
         "title": "Morning Melodies",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/morning-melodies",
         "type": "Study experience",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music Theatre"
         ],
@@ -346,7 +346,7 @@
         "title": "Film and Television Awards 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/film-and-television-awards-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Film and Television"
         ],
@@ -358,7 +358,7 @@
         "title": "Masters Exhibition Opening 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-opening-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Visual Art"
         ],
@@ -370,7 +370,7 @@
         "title": "Student Showcase Guitar",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/student-showcase-guitar",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music type"
         ],
@@ -382,7 +382,7 @@
         "title": "Melbourne Symphony Orchestra Sep 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-september-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music type"
         ],
@@ -394,7 +394,7 @@
         "title": "Melbourne Cello Festival 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/melbourne-cello-festival-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music type"
         ],
@@ -406,7 +406,7 @@
         "title": "The Tale of Orpheus",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/the-tale-of-orpheus",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Early Music"
         ],
@@ -418,7 +418,7 @@
         "title": "Music Theatre Company Showcase 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-showcase-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music Theatre"
         ],
@@ -430,7 +430,7 @@
         "title": "Melbourne Symphony Orchestra May 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/university-of-melbourne-symphony-orchestra-may-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music type"
         ],
@@ -442,7 +442,7 @@
         "title": "Jazz and Improvisation Large Ensemble Showcase 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/jazz-and-improvisation-large-ensemble-showcase-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Jazz and Improvisation"
         ],
@@ -454,7 +454,7 @@
         "title": "IC: Love Remixed",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/ic-love-remixed",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Interactive Composition"
         ],
@@ -466,7 +466,7 @@
         "title": "Mongrel 2017",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/mongrel-2017",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music Theatre",
             "Production",
@@ -480,7 +480,7 @@
         "title": "Music Therapy at the NGV",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-therapy-at-the-ngv",
         "type": "Major overviews",
-        "study_level": "Graduate",
+        "study_levels": ["Graduate"],
         "disciplines": [
             "Music Therapy"
         ],

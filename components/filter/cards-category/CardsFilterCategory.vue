@@ -226,12 +226,12 @@ export default {
         const {
           disciplines,
           type,
-          study_level,
+          study_levels,
           title,
         } = data;
 
         return (selectedDiscipline === '' || disciplines.includes(selectedDiscipline))
-        && (selectedLevel === '' || study_level.match(selectedLevel))
+        && (selectedLevel === '' || study_levels.includes(selectedLevel))
         && (selectedType === '' || type.match(typeRegex))
         && (searchText === '' || title.match(searchTextRegex));
       });
@@ -319,11 +319,14 @@ export default {
 
       /* eslint-disable camelcase */
       this.data.forEach((element) => {
-        const { disciplines, study_level, type } = element;
+        const { disciplines, study_levels, type } = element;
 
-        if (!filters.study_levels.includes(study_level)) {
-          filters.study_levels.push(study_level);
-        }
+
+        study_levels.forEach((studyLevel) => {
+          if (!filters.study_levels.includes(studyLevel)) {
+            filters.study_levels.push(studyLevel);
+          }
+        });
 
         disciplines.forEach((dis) => {
           if (!filters.disciplines.includes(dis)) {
