@@ -117,7 +117,7 @@
                 v-for="item in dataFilteredInCategories"
                 :key="item.category.name"
                 class="filter-category__section list-item">
-                <h2 class="filter-category__category-label">
+                <h2 class="title--lg">
                   {{ item.category.name }}
                 </h2>
                 <transition-group
@@ -145,7 +145,6 @@
                 </transition-group>
                 <button
                   v-if="!selectedType.length && item.category.data.length > 4"
-                  v-scroll-to="'#filter-category-results'"
                   class="filter-category__section-btn"
                   @click="showMoreButton(item.category.name)">
                   Show all {{ item.category.data.length }}
@@ -226,12 +225,12 @@ export default {
         const {
           disciplines,
           type,
-          study_level,
+          study_levels,
           title,
         } = data;
 
         return (selectedDiscipline === '' || disciplines.includes(selectedDiscipline))
-        && (selectedLevel === '' || study_level.match(selectedLevel))
+        && (selectedLevel === '' || study_levels.includes(selectedLevel))
         && (selectedType === '' || type.match(typeRegex))
         && (searchText === '' || title.match(searchTextRegex));
       });
@@ -309,6 +308,7 @@ export default {
     showMoreButton(category) {
       this.selectedType = category;
       this.filterDataButton();
+      this.$scrollTo('#filter-category-results');
     },
     getFilters() {
       const filters = {
@@ -319,11 +319,14 @@ export default {
 
       /* eslint-disable camelcase */
       this.data.forEach((element) => {
-        const { disciplines, study_level, type } = element;
+        const { disciplines, study_levels, type } = element;
 
-        if (!filters.study_levels.includes(study_level)) {
-          filters.study_levels.push(study_level);
-        }
+
+        study_levels.forEach((studyLevel) => {
+          if (!filters.study_levels.includes(studyLevel)) {
+            filters.study_levels.push(studyLevel);
+          }
+        });
 
         disciplines.forEach((dis) => {
           if (!filters.disciplines.includes(dis)) {

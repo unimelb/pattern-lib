@@ -160,10 +160,14 @@
   &__buttons {
     display: flex;
     width: 100%;
+    flex-direction: row-reverse;
+
+    @media (--bp-x-desktop) {
+      flex-direction: row;
+    }
   }
 
   &__filter-btn {
-    margin-right: .9375rem;
     padding: .6rem 1.75rem;
     color: rgb(var(--col-black-dark));
     background: rgb(var(--col-emerald-mid-2));
@@ -173,6 +177,11 @@
     font-size: 1rem;
     line-height: 1.5;
     width: 100%;
+    transition: all ease-out .15s;
+
+    @media (--bp-x-desktop) {
+      margin-right: .9375rem;
+    }
 
     &:hover,
     &:focus {
@@ -196,31 +205,25 @@
     font-size: 1rem;
     line-height: 1.5;
     align-items: center;
+    margin-right: .9375rem;
+
+    @media (--bp-x-desktop) {
+      margin-right: 0;
+    }
 
     &-icon {
-      margin-right: .25rem;
+      margin-right: .5rem;
     }
 
     &:hover,
     &:focus {
       text-decoration: none;
-
-      .filter-category__clear-btn-icon {
-        padding: .0625rem;
-      }
     }
 
     &:active {
       text-decoration: none;
       opacity: .7;
     }
-  }
-
-  &__category-label {
-    font-weight: var(--fw-bold);
-    font-size: 1.75rem;
-    letter-spacing: -.031rem;
-    margin-bottom: .5625rem;
   }
 
   &__section {
@@ -238,16 +241,20 @@
       color: rgb(var(--col-white));
       align-self: flex-end;
       margin-top: .125rem;
-      transition: all ease-out .15s;
 
       &:hover,
       &:focus {
         text-decoration: none;
 
         .filter-category__section-btn-icon {
-          &--right,
+          &--right {
+            margin-left: .75rem;
+            margin-right: 0;
+          }
+
           &--left {
-            padding: .0625rem;
+            margin-right: .75rem;
+            margin-left: 0;
           }
         }
       }
@@ -260,11 +267,13 @@
         &--right {
           margin-left: .5rem;
           margin-right: .25rem;
+          transition: all ease-out .15s;
         }
 
         &--left {
           margin-right: .5rem;
           margin-left: .25rem;
+          transition: all ease-out .15s;
         }
       }
     }
