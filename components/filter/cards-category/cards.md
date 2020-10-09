@@ -11,7 +11,7 @@ Once a user clicks on `Filter` the array in the `:data` prop will be used for cl
         "title": "Masters Exhibition 2018",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
         "type": "Course overviews",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate", "Graduate"],
         "disciplines": [
             "Visual Art"
         ],
@@ -23,7 +23,7 @@ Once a user clicks on `Filter` the array in the `:data` prop will be used for cl
         "title": "Master of Coin",
         "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
         "type": "Major overviews",
-        "study_level": "Undergraduate",
+        "study_levels": ["Undergraduate"],
         "disciplines": [
             "Indigenous Arts and Culture"
         ],
