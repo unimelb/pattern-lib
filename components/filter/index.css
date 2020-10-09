@@ -227,7 +227,6 @@
       color: rgb(var(--col-white));
       align-self: flex-end;
       margin-top: .125rem;
-      transition: all ease-out .15s;
 
       &:hover,
       &:focus {
@@ -254,11 +253,13 @@
         &--right {
           margin-left: .5rem;
           margin-right: .25rem;
+          transition: all ease-out .15s;
         }
 
         &--left {
           margin-right: .5rem;
           margin-left: .25rem;
+          transition: all ease-out .15s;
         }
       }
     }
