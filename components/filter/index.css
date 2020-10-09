@@ -78,6 +78,28 @@
     justify-content: space-between;
   }
 
+  .card__thumb {
+    height: 9rem;
+    position: relative;
+
+    @media (--bp-desktop) {
+      height: 8rem;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('~icons/play.svg?fill=#094183');
+      position: absolute;
+      width: 1.25rem;
+      height: 1.25rem;
+      top: 50%;
+      left: 50%;
+      margin-left: -.3125rem;
+      background-color: white;
+      border-radius: 50%;
+    }
+  }
+
   .styled-select {
     margin: 0;
   }
