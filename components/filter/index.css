@@ -74,6 +74,18 @@
     padding: 3rem 1rem;
   }
 
+  .card {
+    &--generic {
+      &:hover {
+        .card__thumb {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
   .card__inner {
     justify-content: space-between;
   }
@@ -88,7 +100,7 @@
 
     &::after {
       content: '';
-      background: url('~icons/play.svg?fill=#094183') no-repeat center;
+      background: url('~icons/play.svg?fill=#094183') no-repeat 55% 50%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -99,6 +111,7 @@
       width: 2.875rem;
       height: 2.875rem;
       background-size: 1.125rem 1.125rem;
+      transition: all ease-out .15s;
     }
   }
 
