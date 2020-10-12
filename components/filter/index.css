@@ -74,8 +74,45 @@
     padding: 3rem 1rem;
   }
 
+  .card {
+    &--generic {
+      &:hover {
+        .card__thumb {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
   .card__inner {
     justify-content: space-between;
+  }
+
+  .card__thumb {
+    height: 9rem;
+    position: relative;
+
+    @media (--bp-desktop) {
+      height: 8rem;
+    }
+
+    &::after {
+      content: '';
+      background: url('~icons/play.svg?fill=#094183') no-repeat 55% 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: rgb(var(--col-background-primary-white));
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      opacity: .8;
+      width: 2.875rem;
+      height: 2.875rem;
+      background-size: 1.125rem 1.125rem;
+      transition: all ease-out .15s;
+    }
   }
 
   .styled-select {
