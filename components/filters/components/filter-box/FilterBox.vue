@@ -1,6 +1,6 @@
 <template>
   <div
-    aria-labelledby="filter-by "
+    aria-labelledby="filter-box-heading"
     role="group"
     class="bg-light-blue filter-box">
     <h4
@@ -14,7 +14,6 @@
       :key="filterIndex"
       class="filter-box__filter">
       <p
-        aria-labelledby="filter-box-heading"
         :aria-label="filter.filterBy"
         class="filter-box__filter-label">
         {{ filter.filterBy }}
