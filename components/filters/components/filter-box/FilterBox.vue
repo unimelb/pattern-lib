@@ -1,11 +1,8 @@
 <template>
   <div
-    aria-labelledby="filter-box-heading"
     role="group"
     class="bg-light-blue filter-box">
-    <h4
-      id="filter-box-heading"
-      class="filter-box__header">
+    <h4 class="filter-box__header">
       Filter by
     </h4>
 
