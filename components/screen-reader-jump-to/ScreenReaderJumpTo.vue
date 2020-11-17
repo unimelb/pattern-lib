@@ -3,7 +3,7 @@
     <ButtonIcon
       element="button"
       role="link"
-      :tab-index="0"
+      :tabindex="0"
       no-icon
       size="xsml"
       class="screen-reader-jump-to__skippy screenreaders-only screenreaders-only-focusable btn--inverted"

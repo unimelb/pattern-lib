@@ -1,6 +1,6 @@
 <template>
   <BaseCheckbox
-    :tab-index="tabIndex"
+    :tabindex="tabIndex"
     :aria-label="ariaLabel"
     :is-checked="shouldBeChecked"
     :is-indeterminate="false"
