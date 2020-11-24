@@ -3,7 +3,7 @@
     :is="element"
     :class="classes"
     :role="role"
-    :tab-index="tabIndex"
+    :tabindex="tabIndex"
     :href="isLink && href"
     :aria-disabled="isLink && disabled ? 'true' : false"
     :disabled="!isLink && disabled">
