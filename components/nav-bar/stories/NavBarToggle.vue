@@ -8,7 +8,6 @@
       </h3>
       <svg
         focusable="false"
-        role="presentation"
         class="nav__svg">
         <use
           xmlns:xlink="http://www.w3.org/1999/xlink"
