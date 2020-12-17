@@ -16,7 +16,6 @@
               width="15px"
               height="15px"
               focusable="false"
-              role="presentation"
               class="push-icon__icon">
               <use xlink:href="#icon-chevron-right" />
             </svg>

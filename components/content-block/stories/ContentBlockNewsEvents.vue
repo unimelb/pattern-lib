@@ -12,7 +12,6 @@
               width="15px"
               height="15px"
               focusable="false"
-              role="presentation"
               class="push-icon__icon">
               <use
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -30,7 +29,6 @@
               width="15px"
               height="15px"
               focusable="false"
-              role="presentation"
               class="push-icon__icon">
               <use
                 xmlns:xlink="http://www.w3.org/1999/xlink"

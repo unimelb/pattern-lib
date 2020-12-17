@@ -39,7 +39,7 @@ const markup = codeBlock(`
 <enquiry>
   <template slot="trigger">
     <span class="btn--secondary btn">
-      <span class="push-icon">Enquire within! <svg width="15px" height="15px" focusable="false" role="presentation" class="push-icon__icon"><use xlink:href="#icon-chevron-right"></use></svg></span>
+      <span class="push-icon">Enquire within! <svg width="15px" height="15px" focusable="false" class="push-icon__icon"><use xlink:href="#icon-chevron-right"></use></svg></span>
     </span>        
   </template>
 
