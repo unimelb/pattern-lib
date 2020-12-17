@@ -15,7 +15,6 @@ exports[`PageNav should match snapshot 1`] = `
     <svg
       class="link-icon__icon svg"
       focusable="false"
-      role="presentation"
       viewBox="10 10 26 28"
     >
       <path
