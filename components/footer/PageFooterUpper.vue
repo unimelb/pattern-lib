@@ -10,7 +10,6 @@
         <div class="page-footer__header-search">
           <form
             id="search"
-            aria-hidden="true"
             action="https://search.unimelb.edu.au"
             class="page-footer-search">
             <div class="page-footer-search__field">
