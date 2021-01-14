@@ -1,0 +1,85 @@
+[
+    {
+        "title": "Masters Exhibition 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
+        "faculty": [
+            "test faculty1"
+        ],
+        "study_mode": [
+            "Visual Art"
+        ],
+        "csp": [
+            "Commonwealth Supported Place* only"
+        ]
+    },
+    {
+        "title": "Master of Coin",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
+        "csp": [
+            "Commonwealth Supported Place* only"
+        ],
+        "study_mode": [
+            "Indigenous Arts and Culture"
+        ],
+        "faculty": [
+            "test faculty1",
+            "test faculty2"
+        ]
+    },
+    {
+        "title": "Production Graduates",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-graduates",
+        "csp": [
+            "Commonwealth Supported Place* only"
+        ],
+        "study_mode": [
+            "Production"
+        ],
+        "faculty": [
+            "test faculty1",
+            "test faculty2"
+        ]
+    },
+    {
+        "title": "Acting Company 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-company-2018",
+        "csp": [
+            "Commonwealth Supported Place* only"
+        ],
+        "study_mode": [
+            "Theatre (Level 1)"
+        ],
+        "faculty": [
+            "test faculty1",
+            "test faculty2"
+        ]
+    },
+    {
+        "title": "Production Exhibition 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-exhibition-2018",
+        "csp": [
+            "Commonwealth Supported Place* only"
+        ],
+        "study_mode": [
+            "Production"
+        ],
+        "faculty": [
+            "test faculty1",
+            "test faculty2"
+        ]
+    },
+    {
+        "title": "Music Theatre Company 2018",
+        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018",
+        "csp": [
+            "Commonwealth Supported Place* only"
+        ],
+        "study_mode": [
+            "Music Theatre"
+        ],
+        "faculty": [
+            "test faculty1",
+            "test faculty2"
+        ]
+    }
+]
