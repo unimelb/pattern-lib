@@ -15,7 +15,7 @@
                   checked
                   type="radio"
                   name="csp"
-                  value="">
+                  value="all">
                 <label
                   class="filter-category__radio-label"
                   for="all">All</label>
@@ -26,7 +26,7 @@
                   v-model="selectedCsp"
                   type="radio"
                   name="csp"
-                  :value="false">
+                  :value="true">
                 <label
                   class="filter-category__radio-label"
                   for="csp">CSP</label>
@@ -139,7 +139,7 @@ export default {
     return {
       selectedStudyMode: '',
       selectedAreaOfInterest: '',
-      selectedCsp: '',
+      selectedCsp: 'all',
       dataFiltered: this.data,
       filters: {
         csp: [],
@@ -160,6 +160,8 @@ export default {
         selectedCsp,
       } = this;
 
+      console.log(selectedCsp);
+
       /* eslint-disable camelcase */
       return this.data.filter((data) => {
         const {
@@ -170,7 +172,7 @@ export default {
 
         return (selectedStudyMode === '' || delivery_modes.includes(selectedStudyMode))
         && (selectedAreaOfInterest === '' || area_of_interest === selectedAreaOfInterest)
-        && (csp !== selectedCsp);
+        && (selectedCsp === 'all' || csp === selectedCsp);
       });
       /* eslint-enable camelcase */
     },
@@ -223,7 +225,7 @@ export default {
       this.dataFiltered = this.data;
       this.selectedStudyMode = '';
       this.selectedAreaOfInterest = '';
-      this.selectedCsp = '';
+      this.selectedCsp = 'all';
       this.countFiltersApplied = 0;
     },
     getFilters() {
