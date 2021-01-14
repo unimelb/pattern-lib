@@ -1,85 +1,972 @@
 [
     {
-        "title": "Masters Exhibition 2018",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
-        "faculty": [
-            "test faculty1"
+        "title": "Graduate Certificate in Learning Intervention",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-learning-intervention",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
         ],
-        "study_mode": [
-            "Visual Art"
-        ],
-        "csp": [
-            "Commonwealth Supported Place* only"
-        ]
+        "csp": true
     },
     {
-        "title": "Master of Coin",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
-        "csp": [
-            "Commonwealth Supported Place* only"
+        "title": "Specialist Certificate in the Management of Neuro-Ophthalmic Disorders",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-the-management-of-neuro-ophthalmic-disorders",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
         ],
-        "study_mode": [
-            "Indigenous Arts and Culture"
-        ],
-        "faculty": [
-            "test faculty1",
-            "test faculty2"
-        ]
+        "csp": false
     },
     {
-        "title": "Production Graduates",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-graduates",
-        "csp": [
-            "Commonwealth Supported Place* only"
+        "title": "Graduate Certificate in Sports Medicine ",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-sports-medicine",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
         ],
-        "study_mode": [
-            "Production"
-        ],
-        "faculty": [
-            "test faculty1",
-            "test faculty2"
-        ]
+        "csp": false
     },
     {
-        "title": "Acting Company 2018",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/acting-company-2018",
-        "csp": [
-            "Commonwealth Supported Place* only"
+        "title": "Graduate Certificate in Public Administration (Advanced)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-public-administration-advanced",
+        "area_of_interest": "Law",
+        "delivery_modes": [
+            "On Campus"
         ],
-        "study_mode": [
-            "Theatre (Level 1)"
-        ],
-        "faculty": [
-            "test faculty1",
-            "test faculty2"
-        ]
+        "csp": false
     },
     {
-        "title": "Production Exhibition 2018",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/production-exhibition-2018",
-        "csp": [
-            "Commonwealth Supported Place* only"
+        "title": "Specialist Certificate in the Management of Contact Lens Patients",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-the-management-of-contact-lens-patients",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
         ],
-        "study_mode": [
-            "Production"
-        ],
-        "faculty": [
-            "test faculty1",
-            "test faculty2"
-        ]
+        "csp": false
     },
     {
-        "title": "Music Theatre Company 2018",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/music-theatre-company-2018",
-        "csp": [
-            "Commonwealth Supported Place* only"
+        "title": "Graduate Certificate in Cancer Nursing",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-cancer-nursing",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
         ],
-        "study_mode": [
-            "Music Theatre"
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Nursing Practice (Acute and Complex Care)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-nursing-practice-acute-and-complex-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
         ],
-        "faculty": [
-            "test faculty1",
-            "test faculty2"
-        ]
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Clinical Education",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-clinical-education",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Small Animal Emergency and Critical Care",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-small-animal-emergency-and-critical-care",
+        "area_of_interest": "Veterinary and Agricultural Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Arboriculture",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-arboriculture",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Agricultural Sciences",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-agricultural-sciences",
+        "area_of_interest": "Veterinary and Agricultural Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Specialist Certificate in Gerontology",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-gerontology",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Adolescent Health and Wellbeing",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-adolescent-health-and-wellbeing",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Implementation Science",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-implementation-science",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Advanced Social Work",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-advanced-social-work",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in the Management of Paediatric Patients",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-the-management-of-paediatric-patients",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Cancer Sciences",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-cancer-sciences",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Indigenous Business Leadership",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-indigenous-business-leadership",
+        "area_of_interest": "Business and Economics",
+        "delivery_modes": [
+            "Mixed Attendance Mode"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Clinical Research",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-clinical-research",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Business",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-business",
+        "area_of_interest": "Business and Economics - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Professional Skills for Scientists",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-professional-skills-for-scientists",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in English for the Global Workplace",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-english-for-the-global-workplace",
+        "area_of_interest": "Arts",
+        "delivery_modes": [
+            "On Campus",
+            "Online"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Advanced Social Work",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-advanced-social-work",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Physiotherapy (Pelvic Floor Physiotherapy)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-physiotherapy-pelvic-floor-physiotherapy",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Health and Human Services",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-health-and-human-services",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Neonatal Intensive Care",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-neonatal-intensive-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Primary Care Nursing",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-primary-care-nursing",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "Mixed Attendance Mode"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Educational Research",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-educational-research",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Health Informatics and Digital Health",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-health-informatics-and-digital-health",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "On Campus",
+            "Online"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Tertiary Education (Governance)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-tertiary-education-governance",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Research Practice for Scientists",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-research-practice-for-scientists",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "Off Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Physiotherapy (Paediatrics)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-physiotherapy-paediatrics",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Bushfire Planning and Management",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-bushfire-planning-and-management",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Critical Care Nursing (Emergency)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-critical-care-nursing-emergency",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Education (Positive Education)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-education-positive-education",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "Off Campus",
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Service Navigation",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-service-navigation",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Health and Human Services",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-health-and-human-services",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Physiotherapy (Exercise and Women's Health)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-physiotherapy-exercise-and-women-s-health",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Clinical Rehabilitation",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-clinical-rehabilitation",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Journalism (Advanced)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-journalism-advanced",
+        "area_of_interest": "Arts",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Publishing and Communications (Advanced)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-publishing-and-communications-advanced",
+        "area_of_interest": "Arts",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Instructional Leadership",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-instructional-leadership",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Sexual Health",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-sexual-health",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Specialist Certificate in the Management of Low Vision Patients",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-the-management-of-low-vision-patients",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Glaucoma and Retinal Disease",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-glaucoma-and-retinal-disease",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Cancer Sciences",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-cancer-sciences",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Gerontology",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-gerontology",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Educational Neuroscience",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-educational-neuroscience",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Education (CLIL)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-education-clil",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Positive Psychology",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-positive-psychology",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Food Science",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-food-science",
+        "area_of_interest": "Veterinary and Agricultural Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Managing Youth Self-Harm and Suicide",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-managing-youth-self-harm-and-suicide",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Nursing Practice (Acute and Complex Care)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-nursing-practice-acute-and-complex-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Palliative Care - Hume",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-palliative-care-hume",
+        "area_of_interest": "area_of_interest of Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus",
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Evaluation",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-evaluation",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Science",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-science",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Specialist Certificate in Clinical Research (Neuroscience)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-clinical-research-neuroscience",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Off Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Tertiary Education (Management)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-tertiary-education-management",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Clinical Rehabilitation",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-clinical-rehabilitation",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in TESOL",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-tesol",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Professional Certificate in Evidence-Based Teaching",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-evidence-based-teaching",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Port Engineering",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-port-engineering",
+        "area_of_interest": "Engineering and IT",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Applied Data Analytics",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-applied-data-analytics",
+        "area_of_interest": "Melbourne School of Professional and Continuing Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Critical Care Nursing (Intensive Care)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-critical-care-nursing-intensive-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Disaster and Terror Medicine and Health Management",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-disaster-and-terror-medicine-and-health-management",
+        "area_of_interest": "area_of_interest of Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus",
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Education (Specific Learning Difficulties)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-education-specific-learning-difficulties",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Computer Science",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-computer-science",
+        "area_of_interest": "Engineering and IT",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Garden Design",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-garden-design",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Environment",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-environment",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Veterinary Public Health",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-veterinary-public-health",
+        "area_of_interest": "Veterinary and Agricultural Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Criminology (Forensic Disability)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-criminology-forensic-disability",
+        "area_of_interest": "Arts - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in International Education (IB)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-international-education-ib",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Language Assessment",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-language-assessment",
+        "area_of_interest": "Arts - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Nursing Practice (Rural Critical Care)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-nursing-practice-rural-critical-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Off Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Clinical Leadership",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-clinical-leadership",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Visual Art",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-visual-art",
+        "area_of_interest": "Fine Arts and Music",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Anterior and Dry Eye Disorders",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-anterior-and-dry-eye-disorders",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Palliative Care",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-palliative-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Nursing Practice (Paediatrics)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-nursing-practice-paediatrics",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Off Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Dental Therapy (Advanced Clinical Practice)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-dental-therapy-advanced-clinical-practice",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Mixed Attendance Mode"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Nursing Practice (Paediatric Intensive Care)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-nursing-practice-paediatric-intensive-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Off Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Arts (Advanced)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-arts-advanced",
+        "area_of_interest": "Arts",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Green Infrastructure",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-green-infrastructure",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Modern Languages Education",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-modern-languages-education",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Clinical Ultrasound",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-clinical-ultrasound",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Empowering Health in Aboriginal Communities",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-empowering-health-in-aboriginal-communities",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Neonatal Care",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-neonatal-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Creativity and Health",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-creativity-and-health",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Criminology (Offender Management)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-criminology-offender-management",
+        "area_of_interest": "Arts - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Public Administration",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-public-administration",
+        "area_of_interest": "Law",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Genomics and Health",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-genomics-and-health",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Youth Mental Health",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-youth-mental-health",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Workplace Leadership",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-workplace-leadership",
+        "area_of_interest": "Business and Economics - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Law (Digital Law and Technological Innovation)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-law-digital-law-and-technological-innovation",
+        "area_of_interest": "Law",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Surgical Education",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-surgical-education",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Mixed Attendance Mode"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Education (Positive Behaviour and Learning)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-education-positive-behaviour-and-learning",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Critical Care Nursing",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-critical-care-nursing",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in University Teaching",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-university-teaching",
+        "area_of_interest": "Melbourne Graduate School of Education",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Global Competition Law",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-global-competition-law",
+        "area_of_interest": "Law - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Small Animal Ultrasound Abdominal",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-small-animal-ultrasound-abdominal",
+        "area_of_interest": "Veterinary and Agricultural Sciences - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": true
+    },
+    {
+        "title": "Graduate Certificate in Education",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-education",
+        "area_of_interest": "Melbourne School of Professional and Continuing Education - MSPACE",
+        "delivery_modes": [
+            "On Campus",
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Specialist Certificate in Palliative Care",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/specialist-certificate-in-palliative-care",
+        "area_of_interest": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Urban Horticulture",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-urban-horticulture",
+        "area_of_interest": "Science",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Professional Certificate in Applied Data Analytics",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/professional-certificate-in-applied-data-analytics",
+        "area_of_interest": "Melbourne School of Professional and Continuing Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Arts",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-arts",
+        "area_of_interest": "Arts",
+        "delivery_modes": [
+            "On Campus"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Tertiary Education (Quality Assurance)",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-tertiary-education-quality-assurance",
+        "area_of_interest": "Melbourne Graduate School of Education - MSPACE",
+        "delivery_modes": [
+            "Online"
+        ],
+        "csp": false
+    },
+    {
+        "title": "Graduate Certificate in Environmental Design",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-environmental-design",
+        "area_of_interest": "Architecture, Building and Planning",
+        "delivery_modes": [
+            "On Campus",
+            "Online"
+        ],
+        "csp": true
     }
 ]

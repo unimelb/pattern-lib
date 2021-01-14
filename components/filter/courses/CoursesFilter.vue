@@ -15,45 +15,41 @@
                   checked
                   type="radio"
                   name="csp"
-                  value="">
+                  :value="false">
                 <label
                   class="filter-category__radio-label"
                   for="all">All</label>
               </div>
-              <div
-                v-for="level in filters.csp"
-                id="csp"
-                :key="level"
-                class="filter-category__radio-inner">
+              <div class="filter-category__radio-inner">
                 <input
-                  :id="level"
+                  id="csp"
                   v-model="selectedCsp"
                   type="radio"
                   name="csp"
-                  :value="level">
+                  :value="true">
                 <label
                   class="filter-category__radio-label"
-                  :for="level">{{ level }}</label>
+                  for="csp">CSP</label>
               </div>
             </div>
           </div>
           <div class="filter-category__container-inner">
             <label
               class="filter-category__top-label"
-              for="study_mode">Study Mode</label>
+              for="delivery_modes">Study Mode</label>
             <DropdownFilter
-              id="study_mode"
+              id="delivery_modes"
               v-model="selectedStudyMode"
-              :values="filters.study_mode" />
+              :values="filters.delivery_modes" />
           </div>
           <div class="filter-category__container-inner">
             <label
               class="filter-category__top-label"
-              for="faculty">Area of Interest</label>
+              for="area_of_interest">Area of Interest</label>
             <DropdownFilter
-              id="faculty"
-              v-model="selectedFaculty"
-              :values="filters.faculty" />
+              id="area_of_interest"
+              v-model="selectedAreaOfInterest"
+              :values="filters.area_of_interest" />
           </div>
           <div class="filter-category__container-inner">
             <label
@@ -105,8 +101,8 @@
                 :key="item.title"
                 class="filter-category__section list-item">
                 <li>Course name {{ item.title }}</li>
-                <li>Study mode {{ item.study_mode }}</li>
-                <li>Area of interest {{ item.faculty }}</li>
+                <li>Study mode {{ item.delivery_modes }}</li>
+                <li>Area of interest {{ item.area_of_interest }}</li>
                 <li>CSP {{ item.csp }}</li>
               </ul>
             </transition-group>
@@ -118,6 +114,7 @@
 </template>
 
 <script>
+import escapeRegExp from 'lodash.escaperegexp';
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
@@ -142,13 +139,13 @@ export default {
   data() {
     return {
       selectedStudyMode: '',
-      selectedFaculty: '',
-      selectedCsp: '',
+      selectedAreaOfInterest: '',
+      selectedCsp: false,
       dataFiltered: this.data,
       filters: {
         csp: [],
-        study_mode: [],
-        faculty: [],
+        delivery_modes: [],
+        area_of_interest: [],
         types: [],
       },
       isLoading: false,
@@ -160,29 +157,28 @@ export default {
     filteredData() {
       const {
         selectedStudyMode,
-        selectedFaculty,
+        selectedAreaOfInterest,
         selectedCsp,
       } = this;
+
+      const selectedAreaOfInterestRegex = new RegExp(`${escapeRegExp(selectedAreaOfInterest)}`, 'i');
 
       /* eslint-disable camelcase */
       return this.data.filter((data) => {
         const {
-          study_mode,
-          faculty,
+          delivery_modes,
+          area_of_interest,
           csp,
         } = data;
 
-        return (selectedStudyMode === '' || study_mode.includes(selectedStudyMode))
-        && (selectedFaculty === '' || faculty.includes(selectedFaculty))
-        && (selectedCsp === '' || csp.includes(selectedCsp));
+        return (selectedStudyMode === '' || delivery_modes.includes(selectedStudyMode))
+        && (selectedAreaOfInterest === '' || area_of_interest.match(selectedAreaOfInterestRegex))
+        && (csp === selectedCsp);
       });
       /* eslint-enable camelcase */
     },
     dataFilteredInCategories() {
       const categoriesFiltered = this.dataFiltered;
-
-      console.log(categoriesFiltered);
-
       return categoriesFiltered;
     },
     countTotalFilteredResults() {
@@ -217,7 +213,7 @@ export default {
         filtersApplied += 1;
       }
 
-      if (this.selectedFaculty.length) {
+      if (this.selectedAreaOfInterest.length) {
         filtersApplied += 1;
       }
 
@@ -229,48 +225,44 @@ export default {
     clearSearch() {
       this.dataFiltered = this.data;
       this.selectedStudyMode = '';
-      this.selectedFaculty = '';
+      this.selectedAreaOfInterest = '';
       this.selectedCsp = '';
       this.countFiltersApplied = 0;
     },
     getFilters() {
       const filters = {
         csp: [],
-        study_mode: [],
-        faculty: [],
+        delivery_modes: [],
+        area_of_interest: [],
       };
 
       /* eslint-disable camelcase */
       this.data.forEach((element) => {
         const {
-          study_mode, faculty, csp,
+          delivery_modes, area_of_interest, csp,
         } = element;
 
 
-        csp.forEach((cspChoice) => {
-          if (!filters.csp.includes(cspChoice)) {
-            filters.csp.push(cspChoice);
+        if (!filters.csp.includes(csp)) {
+          filters.csp.push(csp);
+        }
+
+        delivery_modes.forEach((dis) => {
+          if (!filters.delivery_modes.includes(dis)) {
+            filters.delivery_modes.push(dis);
           }
         });
 
-        study_mode.forEach((dis) => {
-          if (!filters.study_mode.includes(dis)) {
-            filters.study_mode.push(dis);
-          }
-        });
-
-        faculty.forEach((dis) => {
-          if (!filters.faculty.includes(dis)) {
-            filters.faculty.push(dis);
-          }
-        });
+        if (!filters.area_of_interest.includes(area_of_interest)) {
+          filters.area_of_interest.push(area_of_interest);
+        }
       });
       /* eslint-enable camelcase */
 
       // Sort filters.
       filters.csp.sort();
-      filters.study_mode.sort();
-      filters.faculty.sort();
+      filters.delivery_modes.sort();
+      filters.area_of_interest.sort();
 
       return filters;
     },
