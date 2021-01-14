@@ -99,19 +99,40 @@
           :is-loading="isFetching"
           spinner-text="Fetching results">
           <FilterResults>
-            <transition-group
-              name="list"
-              tag="div">
-              <ul
+            <table class="filter-courses__table">
+              <tr>
+                <th class="filter-courses__table-heading">
+                  Course Name
+                </th>
+                <th class="filter-courses__table-heading">
+                  Study Mode
+                </th>
+                <th class="filter-courses__table-heading">
+                  Area of Interest
+                </th>
+                <th class="filter-courses__table-heading">
+                  CSP available 2021
+                </th>
+              </tr>
+              <tr
                 v-for="item in dataFilteredInCategories"
-                :key="item.title"
-                class="filter-courses__section list-item">
-                <li>Course name {{ item.title }}</li>
-                <li>Study mode {{ item.delivery_modes }}</li>
-                <li>Area of interest {{ item.area_of_interest }}</li>
-                <li>CSP {{ item.csp }}</li>
-              </ul>
-            </transition-group>
+                :key="item.title">
+                <td class="filter-courses__table-data">
+                  <a :href="item.url">
+                    {{ item.title }}
+                  </a>
+                </td>
+                <td class="filter-courses__table-data">
+                  {{ item.delivery_modes.join(', ') }}
+                </td>
+                <td class="filter-courses__table-data">
+                  {{ item.area_of_interest }}
+                </td>
+                <td class="filter-courses__table-data">
+                  {{ item.csp | booleanTranslation }}
+                </td>
+              </tr>
+            </table>
           </FilterResults>
         </LoadingOverlay>
       </Loader>
@@ -134,6 +155,14 @@ export default {
     FilterResults,
     Loader,
     LoadingOverlay,
+  },
+  filters: {
+    booleanTranslation(value) {
+      if (value === true) {
+        return 'Yes';
+      }
+      return 'No';
+    },
   },
   props: {
     data: {
