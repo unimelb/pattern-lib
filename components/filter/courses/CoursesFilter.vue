@@ -2,6 +2,20 @@
   <div class="filter-courses">
     <section-wrap bg-color="white">
       <Loader :is-loading="isLoading">
+        <div class="filter-courses__results-count">
+          <p
+            id="filter-courses-results"
+            class="filter-courses__results">
+            <strong>
+              {{ countTotalFilteredResults }} results
+            </strong>
+            found with
+            <strong>
+              {{ countFiltersApplied }}
+            </strong>
+            filters applied
+          </p>
+        </div>
         <div class="filter-courses__container">
           <div
             class="filter-courses__container-inner">
@@ -59,12 +73,15 @@
             <div
               id="search-buttons"
               class="filter-courses__buttons">
-              <button
-                class="filter-courses__filter-btn"
+              <!-- add the button icon component -->
+              <ButtonIcon
+                class="btn--cta"
+                no-icon
                 aria-label="Filter"
-                @click="filterDataButton">
-                <span>Filter</span>
-              </button>
+                element="button"
+                @click.native.prevent="filterDataButton">
+                Filter
+              </ButtonIcon>
               <button
                 class="filter-courses__clear-btn"
                 @click="clearSearch">
@@ -82,18 +99,6 @@
           :is-loading="isFetching"
           spinner-text="Fetching results">
           <FilterResults>
-            <p
-              id="filter-courses-results"
-              class="filter-courses__results">
-              <strong>
-                {{ countTotalFilteredResults }} results
-              </strong>
-              found with
-              <strong>
-                {{ countFiltersApplied }}
-              </strong>
-              filters applied
-            </p>
             <transition-group
               name="list"
               tag="div">
