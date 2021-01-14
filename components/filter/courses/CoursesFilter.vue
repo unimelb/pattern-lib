@@ -1,14 +1,15 @@
 <template>
-  <div class="filter-category">
-    <section-wrap bg-color="inverted-darker">
+  <div class="filter-courses">
+    <section-wrap bg-color="white">
       <Loader :is-loading="isLoading">
-        <div class="filter-category__container">
-          <div class="filter-category__container-inner">
+        <div class="filter-courses__container">
+          <div
+            class="filter-courses__container-inner">
             <label
-              class="filter-category__top-label"
+              class="filter-courses__top-label"
               for="csp">Showing</label>
-            <div class="filter-category__radio-container">
-              <div class="filter-category__radio-inner">
+            <div class="filter-courses__radio-container">
+              <div class="filter-courses__radio-inner">
                 <input
                   id="all"
                   v-model="selectedCsp"
@@ -17,10 +18,10 @@
                   name="csp"
                   value="all">
                 <label
-                  class="filter-category__radio-label"
+                  class="filter-courses__radio-label"
                   for="all">All</label>
               </div>
-              <div class="filter-category__radio-inner">
+              <div class="filter-courses__radio-inner">
                 <input
                   id="csp"
                   v-model="selectedCsp"
@@ -28,47 +29,47 @@
                   name="csp"
                   :value="true">
                 <label
-                  class="filter-category__radio-label"
-                  for="csp">CSP</label>
+                  class="filter-courses__radio-label"
+                  for="csp">Commonwealth Supported Places</label>
               </div>
             </div>
           </div>
-          <div class="filter-category__container-inner">
+          <div class="filter-courses__container-inner">
             <label
-              class="filter-category__top-label"
+              class="filter-courses__top-label"
               for="delivery_modes">Study Mode</label>
             <DropdownFilter
               id="delivery_modes"
               v-model="selectedStudyMode"
               :values="filters.delivery_modes" />
           </div>
-          <div class="filter-category__container-inner">
+          <div class="filter-courses__container-inner">
             <label
-              class="filter-category__top-label"
+              class="filter-courses__top-label"
               for="area_of_interest">Area of Interest</label>
             <DropdownFilter
               id="area_of_interest"
               v-model="selectedAreaOfInterest"
               :values="filters.area_of_interest" />
           </div>
-          <div class="filter-category__container-inner">
+          <div class="filter-courses__container-inner">
             <label
-              class="filter-category__top-label filter-category__top-label--hide"
+              class="filter-courses__top-label filter-courses__top-label--hide"
               for="search-buttons">Filter and Clear</label>
             <div
               id="search-buttons"
-              class="filter-category__buttons">
+              class="filter-courses__buttons">
               <button
-                class="filter-category__filter-btn"
+                class="filter-courses__filter-btn"
                 aria-label="Filter"
                 @click="filterDataButton">
                 <span>Filter</span>
               </button>
               <button
-                class="filter-category__clear-btn"
+                class="filter-courses__clear-btn"
                 @click="clearSearch">
                 <SvgIcon
-                  class="filter-category__clear-btn-icon"
+                  class="filter-courses__clear-btn-icon"
                   width="14px"
                   height="14px"
                   name="close" />
@@ -82,8 +83,8 @@
           spinner-text="Fetching results">
           <FilterResults>
             <p
-              id="filter-category-results"
-              class="filter-category__results">
+              id="filter-courses-results"
+              class="filter-courses__results">
               <strong>
                 {{ countTotalFilteredResults }} results
               </strong>
@@ -99,7 +100,7 @@
               <ul
                 v-for="item in dataFilteredInCategories"
                 :key="item.title"
-                class="filter-category__section list-item">
+                class="filter-courses__section list-item">
                 <li>Course name {{ item.title }}</li>
                 <li>Study mode {{ item.delivery_modes }}</li>
                 <li>Area of interest {{ item.area_of_interest }}</li>
@@ -159,8 +160,6 @@ export default {
         selectedAreaOfInterest,
         selectedCsp,
       } = this;
-
-      console.log(selectedCsp);
 
       /* eslint-disable camelcase */
       return this.data.filter((data) => {
