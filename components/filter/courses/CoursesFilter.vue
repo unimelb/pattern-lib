@@ -15,7 +15,7 @@
                   checked
                   type="radio"
                   name="csp"
-                  :value="false">
+                  value="">
                 <label
                   class="filter-category__radio-label"
                   for="all">All</label>
@@ -26,7 +26,7 @@
                   v-model="selectedCsp"
                   type="radio"
                   name="csp"
-                  :value="true">
+                  :value="false">
                 <label
                   class="filter-category__radio-label"
                   for="csp">CSP</label>
@@ -114,7 +114,6 @@
 </template>
 
 <script>
-import escapeRegExp from 'lodash.escaperegexp';
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
@@ -140,7 +139,7 @@ export default {
     return {
       selectedStudyMode: '',
       selectedAreaOfInterest: '',
-      selectedCsp: false,
+      selectedCsp: '',
       dataFiltered: this.data,
       filters: {
         csp: [],
@@ -161,8 +160,6 @@ export default {
         selectedCsp,
       } = this;
 
-      const selectedAreaOfInterestRegex = new RegExp(`${escapeRegExp(selectedAreaOfInterest)}`, 'i');
-
       /* eslint-disable camelcase */
       return this.data.filter((data) => {
         const {
@@ -172,8 +169,8 @@ export default {
         } = data;
 
         return (selectedStudyMode === '' || delivery_modes.includes(selectedStudyMode))
-        && (selectedAreaOfInterest === '' || area_of_interest.match(selectedAreaOfInterestRegex))
-        && (csp === selectedCsp);
+        && (selectedAreaOfInterest === '' || area_of_interest === selectedAreaOfInterest)
+        && (csp !== selectedCsp);
       });
       /* eslint-enable camelcase */
     },
