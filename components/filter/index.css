@@ -481,6 +481,7 @@
 
   &__table {
     border-spacing: 0;
+    width: 100%;
 
     &-heading {
       font-size: 1.125rem;
