@@ -27,7 +27,6 @@
                 <input
                   id="all"
                   v-model="selectedCsp"
-                  checked
                   type="radio"
                   name="csp"
                   value="all">
@@ -39,6 +38,7 @@
                 <input
                   id="csp"
                   v-model="selectedCsp"
+                  checked
                   type="radio"
                   name="csp"
                   :value="true">
@@ -115,7 +115,7 @@
                 </th>
               </tr>
               <tr
-                v-for="item in dataFilteredInCategories"
+                v-for="item in dataFilteredIn"
                 :key="item.title">
                 <td class="filter-courses__table-data">
                   <a :href="item.url">
@@ -174,7 +174,7 @@ export default {
     return {
       selectedStudyMode: '',
       selectedAreaOfInterest: '',
-      selectedCsp: 'all',
+      selectedCsp: true,
       dataFiltered: this.data,
       filters: {
         csp: [],
@@ -209,21 +209,22 @@ export default {
       });
       /* eslint-enable camelcase */
     },
-    dataFilteredInCategories() {
+    dataFilteredIn() {
       const categoriesFiltered = this.dataFiltered;
       return categoriesFiltered;
     },
     countTotalFilteredResults() {
       let countResults = 0;
 
-      if (this.dataFilteredInCategories.length) {
-        countResults = this.dataFilteredInCategories.length;
+      if (this.dataFilteredIn.length) {
+        countResults = this.dataFilteredIn.length;
       }
       return countResults;
     },
   },
   mounted() {
     this.filters = this.getFilters();
+    this.filterDataButton();
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
@@ -249,7 +250,7 @@ export default {
         filtersApplied += 1;
       }
 
-      if (this.selectedCsp.length) {
+      if (this.selectedCsp) {
         filtersApplied += 1;
       }
       return filtersApplied;
