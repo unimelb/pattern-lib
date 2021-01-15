@@ -1,35 +1,31 @@
-## Cards Filter Categories component
+## Courses Filter component
 
 Once a user clicks on `Filter` the array in the `:data` prop will be used for client-side filtering.
 
  ### Example
 
  ```javascript
-<cards-filter-category
+<courses-filter
     :data='[
     {
-        "title": "Masters Exhibition 2018",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018",
-        "type": "Course overviews",
-        "study_levels": ["Undergraduate", "Graduate"],
-        "disciplines": [
-            "Visual Art"
+        "title": "Graduate Certificate in Visual Art",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-visual-art",
+        "faculty": "Fine Arts and Music",
+        "area_of_interest": "Arts",
+        "delivery_modes": [
+            "On Campus"
         ],
-        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76743/varieties/thumb.jpg",
-        "duration": "10",
-        "location": "Margaret Lawrence Gallery and The Stables"
+        "csp": false
     },
     {
-        "title": "Master of Coin",
-        "link": "https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018",
-        "type": "Major overviews",
-        "study_levels": ["Undergraduate"],
-        "disciplines": [
-            "Indigenous Arts and Culture"
+        "title": "Graduate Certificate in Youth Mental Health",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/graduate-certificate-in-youth-mental-health",
+        "faculty": "Medicine, Dentistry and Health Sciences - MSPACE",
+        "area_of_interest": "Mental health, psychology and social work",
+        "delivery_modes": [
+            "Online"
         ],
-        "img_url": "https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76373/varieties/thumb.jpg",
-        "duration": "10",
-        "location": "Performing Arts Building"
+        "csp": false
     }]' >
-</cards-filter-category>
+</courses-filter>
 ```
