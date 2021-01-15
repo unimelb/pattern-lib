@@ -440,6 +440,7 @@
   &__filter-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 2.5625rem;
   }
 
