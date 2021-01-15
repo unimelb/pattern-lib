@@ -442,3 +442,7 @@ export {
   default as CardsFilterCategory,
 }
   from 'components/filter/cards-category/CardsFilterCategory.vue';
+export {
+  default as CoursesFilter,
+}
+  from 'components/filter/courses/CoursesFilter.vue';
