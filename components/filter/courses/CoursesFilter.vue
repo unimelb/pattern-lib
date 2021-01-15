@@ -153,6 +153,7 @@
 
 <script>
 import SvgIcon from 'components/icons/SvgIcon.vue';
+import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
 import ResponsiveTable from 'components/tables/ResponsiveTable.vue';
@@ -163,6 +164,7 @@ import { TIMER_500 } from '../../../constants/timers';
 export default {
   components: {
     SvgIcon,
+    ButtonIcon,
     DropdownFilter,
     FilterResults,
     Loader,
