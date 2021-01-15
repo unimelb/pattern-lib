@@ -13,7 +13,7 @@
             <strong>
               {{ countFiltersApplied }}
             </strong>
-            filters applied
+            {{ filtersAppliedLabel }}
           </p>
         </div>
         <div class="filter-courses__container">
@@ -75,7 +75,7 @@
               class="filter-courses__buttons">
               <!-- add the button icon component -->
               <ButtonIcon
-                class="btn--cta"
+                class="btn--cta filter-courses__filter-btn"
                 no-icon
                 aria-label="Filter"
                 element="button"
@@ -201,6 +201,12 @@ export default {
     };
   },
   computed: {
+    filtersAppliedLabel() {
+      if (this.countFiltersApplied === 1) {
+        return 'filter applied';
+      }
+      return 'filters applied';
+    },
     filteredData() {
       const {
         selectedStudyMode,
