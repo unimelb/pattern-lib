@@ -99,40 +99,46 @@
           :is-loading="isFetching"
           spinner-text="Fetching results">
           <FilterResults>
-            <table class="filter-courses__table">
-              <tr>
-                <th class="filter-courses__table-heading">
-                  Course Name
-                </th>
-                <th class="filter-courses__table-heading">
-                  Study Mode
-                </th>
-                <th class="filter-courses__table-heading">
-                  Area of Interest
-                </th>
-                <th class="filter-courses__table-heading">
-                  CSP available 2021
-                </th>
-              </tr>
-              <tr
-                v-for="item in dataFilteredIn"
-                :key="item.title">
-                <td class="filter-courses__table-data">
-                  <a :href="item.url">
-                    {{ item.title }}
-                  </a>
-                </td>
-                <td class="filter-courses__table-data">
-                  {{ item.delivery_modes.join(', ') }}
-                </td>
-                <td class="filter-courses__table-data">
-                  {{ item.area_of_interest }}
-                </td>
-                <td class="filter-courses__table-data">
-                  {{ item.csp | booleanTranslation }}
-                </td>
-              </tr>
-            </table>
+            <div v-if="!dataFilteredIn.length">
+              <h1>no results</h1>
+            </div>
+            <ResponsiveTable v-else>
+              <table
+                class="filter-courses__table">
+                <tr>
+                  <th class="filter-courses__table-heading">
+                    Course Name
+                  </th>
+                  <th class="filter-courses__table-heading">
+                    Study Mode
+                  </th>
+                  <th class="filter-courses__table-heading">
+                    Area of Interest
+                  </th>
+                  <th class="filter-courses__table-heading">
+                    CSP available 2021
+                  </th>
+                </tr>
+                <tr
+                  v-for="item in dataFilteredIn"
+                  :key="item.title">
+                  <td class="filter-courses__table-data">
+                    <a :href="item.url">
+                      {{ item.title }}
+                    </a>
+                  </td>
+                  <td class="filter-courses__table-data">
+                    {{ item.delivery_modes.join(', ') }}
+                  </td>
+                  <td class="filter-courses__table-data">
+                    {{ item.area_of_interest }}
+                  </td>
+                  <td class="filter-courses__table-data">
+                    {{ item.csp | booleanTranslation }}
+                  </td>
+                </tr>
+              </table>
+            </ResponsiveTable>
           </FilterResults>
         </LoadingOverlay>
       </Loader>
@@ -144,6 +150,7 @@
 import SvgIcon from 'components/icons/SvgIcon.vue';
 import Loader from 'components/loader/Loader.vue';
 import LoadingOverlay from 'components/loader/LoadingOverlay.vue';
+import ResponsiveTable from 'components/tables/ResponsiveTable.vue';
 import DropdownFilter from '../filters-core/filters/DropdownFilter.vue';
 import FilterResults from '../filters-core/results/FilterResults.vue';
 import { TIMER_500 } from '../../../constants/timers';
@@ -155,6 +162,7 @@ export default {
     FilterResults,
     Loader,
     LoadingOverlay,
+    ResponsiveTable,
   },
   filters: {
     booleanTranslation(value) {
@@ -256,11 +264,15 @@ export default {
       return filtersApplied;
     },
     clearSearch() {
+      this.isFetching = true;
       this.dataFiltered = this.data;
       this.selectedStudyMode = '';
       this.selectedAreaOfInterest = '';
       this.selectedCsp = 'all';
       this.countFiltersApplied = 0;
+      setTimeout(() => {
+        this.isFetching = false;
+      }, TIMER_500);
     },
     getFilters() {
       const filters = {
