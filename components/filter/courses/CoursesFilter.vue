@@ -99,10 +99,7 @@
           :is-loading="isFetching"
           spinner-text="Fetching results">
           <FilterResults>
-            <div v-if="!dataFilteredIn.length">
-              <h1>no results</h1>
-            </div>
-            <ResponsiveTable v-else>
+            <ResponsiveTable>
               <table
                 class="filter-courses__table">
                 <tr>
@@ -119,8 +116,16 @@
                     CSP available 2021
                   </th>
                 </tr>
+                <tr v-if="!dataFilteredIn.length">
+                  <td
+                    colspan="4"
+                    class="filter-courses__table--no-results">
+                    No results found
+                  </td>
+                </tr>
                 <tr
                   v-for="item in dataFilteredIn"
+                  v-else
                   :key="item.title">
                   <td class="filter-courses__table-data">
                     <a :href="item.url">

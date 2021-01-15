@@ -185,7 +185,7 @@
         "faculty": "Medicine, Dentistry and Health Sciences - MSPACE",
         "area_of_interest": "Health",
         "delivery_modes": [
-            "Mixed Attendance Mode"
+            "Dual Delivery"
         ],
         "csp": true
     },
@@ -339,7 +339,7 @@
         "faculty": "Business and Economics",
         "area_of_interest": "Business, management and marketing",
         "delivery_modes": [
-            "Mixed Attendance Mode"
+            "Dual Delivery"
         ],
         "csp": false
     },
@@ -499,7 +499,7 @@
         "faculty": "Medicine, Dentistry and Health Sciences",
         "area_of_interest": "Nursing",
         "delivery_modes": [
-            "Mixed Attendance Mode"
+            "Dual Delivery"
         ],
         "csp": true
     },
@@ -589,7 +589,7 @@
         "faculty": "Medicine, Dentistry and Health Sciences - MSPACE",
         "area_of_interest": "Health",
         "delivery_modes": [
-            "Mixed Attendance Mode"
+            "Dual Delivery"
         ],
         "csp": false
     },

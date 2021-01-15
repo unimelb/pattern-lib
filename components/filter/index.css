@@ -503,6 +503,18 @@
       }
     }
 
+    &--no-results {
+      font-family: var(--ff-lead);
+      font-style: italic;
+      font-weight: var(--fw-normal);
+      font-size: 1.375rem;
+      letter-spacing: -.05rem;
+      color: rgb(var(--col-grey-mid-1));
+      text-align: center;
+      padding-top: 1.5rem;
+      background-color: rgb(var(--col-background-primary-white));
+    }
+
     tr:nth-child(even) {
       background-color: rgb(var(--col-navy-light));
     }
