@@ -1,153 +1,151 @@
 <template>
   <div class="filter-courses">
-    <section-wrap bg-color="white">
-      <Loader :is-loading="isLoading">
-        <div class="filter-courses__results-count">
-          <p
-            id="filter-courses-results"
-            class="filter-courses__results">
-            <strong>
-              {{ countTotalFilteredResults }} results
-            </strong>
-            found with
-            <strong>
-              {{ countFiltersApplied }}
-            </strong>
-            {{ filtersAppliedLabel }}
-          </p>
+    <Loader :is-loading="isLoading">
+      <div class="filter-courses__results-count">
+        <p
+          id="filter-courses-results"
+          class="filter-courses__results">
+          <strong>
+            {{ countTotalFilteredResults }} results
+          </strong>
+          found with
+          <strong>
+            {{ countFiltersApplied }}
+          </strong>
+          {{ filtersAppliedLabel }}
+        </p>
+      </div>
+      <div class="filter-courses__container">
+        <div
+          class="filter-courses__container-inner">
+          <label
+            class="filter-courses__top-label"
+            for="csp">Showing</label>
+          <div class="filter-courses__radio-container">
+            <div class="filter-courses__radio-inner">
+              <input
+                id="all"
+                v-model="selectedCsp"
+                type="radio"
+                name="csp"
+                value="all">
+              <label
+                class="filter-courses__radio-label"
+                for="all">All</label>
+            </div>
+            <div class="filter-courses__radio-inner">
+              <input
+                id="csp"
+                v-model="selectedCsp"
+                checked
+                type="radio"
+                name="csp"
+                :value="true">
+              <label
+                class="filter-courses__radio-label"
+                for="csp">Commonwealth Supported Places</label>
+            </div>
+          </div>
         </div>
-        <div class="filter-courses__container">
+        <div class="filter-courses__container-inner">
+          <label
+            class="filter-courses__top-label"
+            for="delivery_modes">Study Mode</label>
+          <DropdownFilter
+            id="delivery_modes"
+            v-model="selectedStudyMode"
+            :values="filters.delivery_modes" />
+        </div>
+        <div class="filter-courses__container-inner">
+          <label
+            class="filter-courses__top-label"
+            for="area_of_interest">Area of Interest</label>
+          <DropdownFilter
+            id="area_of_interest"
+            v-model="selectedAreaOfInterest"
+            :values="filters.area_of_interest" />
+        </div>
+        <div class="filter-courses__container-inner">
+          <label
+            class="filter-courses__top-label filter-courses__top-label--hide"
+            for="search-buttons">Filter and Clear</label>
           <div
-            class="filter-courses__container-inner">
-            <label
-              class="filter-courses__top-label"
-              for="csp">Showing</label>
-            <div class="filter-courses__radio-container">
-              <div class="filter-courses__radio-inner">
-                <input
-                  id="all"
-                  v-model="selectedCsp"
-                  type="radio"
-                  name="csp"
-                  value="all">
-                <label
-                  class="filter-courses__radio-label"
-                  for="all">All</label>
-              </div>
-              <div class="filter-courses__radio-inner">
-                <input
-                  id="csp"
-                  v-model="selectedCsp"
-                  checked
-                  type="radio"
-                  name="csp"
-                  :value="true">
-                <label
-                  class="filter-courses__radio-label"
-                  for="csp">Commonwealth Supported Places</label>
-              </div>
-            </div>
-          </div>
-          <div class="filter-courses__container-inner">
-            <label
-              class="filter-courses__top-label"
-              for="delivery_modes">Study Mode</label>
-            <DropdownFilter
-              id="delivery_modes"
-              v-model="selectedStudyMode"
-              :values="filters.delivery_modes" />
-          </div>
-          <div class="filter-courses__container-inner">
-            <label
-              class="filter-courses__top-label"
-              for="area_of_interest">Area of Interest</label>
-            <DropdownFilter
-              id="area_of_interest"
-              v-model="selectedAreaOfInterest"
-              :values="filters.area_of_interest" />
-          </div>
-          <div class="filter-courses__container-inner">
-            <label
-              class="filter-courses__top-label filter-courses__top-label--hide"
-              for="search-buttons">Filter and Clear</label>
-            <div
-              id="search-buttons"
-              class="filter-courses__buttons">
-              <!-- add the button icon component -->
-              <ButtonIcon
-                class="btn--cta filter-courses__filter-btn"
-                no-icon
-                aria-label="Filter"
-                element="button"
-                @click.native.prevent="filterDataButton">
-                Filter
-              </ButtonIcon>
-              <button
-                class="filter-courses__clear-btn"
-                @click="clearSearch">
-                <SvgIcon
-                  class="filter-courses__clear-btn-icon"
-                  width="14px"
-                  height="14px"
-                  name="close" />
-                Clear
-              </button>
-            </div>
+            id="search-buttons"
+            class="filter-courses__buttons">
+            <!-- add the button icon component -->
+            <ButtonIcon
+              class="btn--cta filter-courses__filter-btn"
+              no-icon
+              aria-label="Filter"
+              element="button"
+              @click.native.prevent="filterDataButton">
+              Filter
+            </ButtonIcon>
+            <button
+              class="filter-courses__clear-btn"
+              @click="clearSearch">
+              <SvgIcon
+                class="filter-courses__clear-btn-icon"
+                width="14px"
+                height="14px"
+                name="close" />
+              Clear
+            </button>
           </div>
         </div>
-        <LoadingOverlay
-          :is-loading="isFetching"
-          spinner-text="Fetching results">
-          <FilterResults>
-            <ResponsiveTable>
-              <table
-                class="filter-courses__table">
-                <tr>
-                  <th class="filter-courses__table-heading">
-                    Course Name
-                  </th>
-                  <th class="filter-courses__table-heading">
-                    Study Mode
-                  </th>
-                  <th class="filter-courses__table-heading">
-                    Area of Interest
-                  </th>
-                  <th class="filter-courses__table-heading">
-                    CSP available 2021
-                  </th>
-                </tr>
-                <tr v-if="!dataFilteredIn.length">
-                  <td
-                    colspan="4"
-                    class="filter-courses__table--no-results">
-                    No results found
-                  </td>
-                </tr>
-                <tr
-                  v-for="item in dataFilteredIn"
-                  v-else
-                  :key="item.title">
-                  <td class="filter-courses__table-data">
-                    <a :href="item.url">
-                      {{ item.title }}
-                    </a>
-                  </td>
-                  <td class="filter-courses__table-data">
-                    {{ item.delivery_modes.join(', ') }}
-                  </td>
-                  <td class="filter-courses__table-data">
-                    {{ item.area_of_interest }}
-                  </td>
-                  <td class="filter-courses__table-data">
-                    {{ item.csp | booleanTranslation }}
-                  </td>
-                </tr>
-              </table>
-            </ResponsiveTable>
-          </FilterResults>
-        </LoadingOverlay>
-      </Loader>
-    </section-wrap>
+      </div>
+      <LoadingOverlay
+        :is-loading="isFetching"
+        spinner-text="Fetching results">
+        <FilterResults>
+          <ResponsiveTable>
+            <table
+              class="filter-courses__table">
+              <tr>
+                <th class="filter-courses__table-heading">
+                  Course Name
+                </th>
+                <th class="filter-courses__table-heading">
+                  Study Mode
+                </th>
+                <th class="filter-courses__table-heading">
+                  Area of Interest
+                </th>
+                <th class="filter-courses__table-heading">
+                  CSP available 2021
+                </th>
+              </tr>
+              <tr v-if="!dataFilteredIn.length">
+                <td
+                  colspan="4"
+                  class="filter-courses__table--no-results">
+                  No results found
+                </td>
+              </tr>
+              <tr
+                v-for="item in dataFilteredIn"
+                v-else
+                :key="item.title">
+                <td class="filter-courses__table-data">
+                  <a :href="item.url">
+                    {{ item.title }}
+                  </a>
+                </td>
+                <td class="filter-courses__table-data">
+                  {{ item.delivery_modes.join(', ') }}
+                </td>
+                <td class="filter-courses__table-data">
+                  {{ item.area_of_interest }}
+                </td>
+                <td class="filter-courses__table-data">
+                  {{ item.csp | booleanTranslation }}
+                </td>
+              </tr>
+            </table>
+          </ResponsiveTable>
+        </FilterResults>
+      </LoadingOverlay>
+    </Loader>
   </div>
 </template>
 

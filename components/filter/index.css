@@ -352,10 +352,6 @@
 }
 
 .filter-courses {
-  .section__inner {
-    padding: 3rem 1rem;
-  }
-
   .styled-select {
     margin: 0;
   }
