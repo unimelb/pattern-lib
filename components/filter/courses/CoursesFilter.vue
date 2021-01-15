@@ -269,7 +269,7 @@ export default {
         filtersApplied += 1;
       }
 
-      if (this.selectedCsp) {
+      if (this.selectedCsp === true) {
         filtersApplied += 1;
       }
       return filtersApplied;
