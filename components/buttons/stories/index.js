@@ -27,6 +27,7 @@ import StoryButtonIconsLarge from './StoryButtonIconsLarge.vue';
 import StoryButtonTwoIcons from './StoryButtonTwoIcons.vue';
 import StoryButtonCampaignSecondary from './StoryButtonCampaignSecondary.vue';
 import StoryButtonCard from './StoryButtonCard.vue';
+import StoryButtonOverlay from './StoryButtonOverlay.vue';
 
 import ButtonDefault from './ButtonDefault.vue';
 /* ##Import story component here */
@@ -41,7 +42,8 @@ storiesOf('Buttons/Types', module)
   .add('Event', createStory(StoryButtonEvent))
   .add('Event Alt', createStory(StoryButtonEventAlt))
   .add('Button Card', createStory(StoryButtonCard))
-  .add('<button> element', createStory(StoryButtonElement));
+  .add('<button> element', createStory(StoryButtonElement))
+  .add('Overlay', createStory(StoryButtonOverlay));
 
 storiesOf('Buttons/Icons', module)
   .add('Icons', createStory(StoryButtonIcons))
