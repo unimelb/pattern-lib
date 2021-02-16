@@ -2,6 +2,7 @@
   <div>
     <button
       ref="trigger"
+      :class="btnClass"
       :aria-controls="`modal-dialog-1${_uid}`"
       class="btn modal-dialog__open"
       @click="openDialog">
@@ -71,6 +72,10 @@ export default {
     isVideo: {
       type: Boolean,
       default: false,
+    },
+    btnClass: {
+      type: String,
+      default: '',
     },
   },
   data() {
