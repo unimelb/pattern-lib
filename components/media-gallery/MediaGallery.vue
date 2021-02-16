@@ -146,9 +146,9 @@ import debounce from 'lodash.debounce';
 import VideoEmbed from '../embed/VideoEmbed.vue';
 import SvgIcon from '../icons/SvgIcon.vue';
 import ThumbnailGallery from './ThumbnailGallery.vue';
-
 import { KEYCODE_ESC, KEYCODE_LEFT, KEYCODE_RIGHT } from '../../constants/keycodes';
 import { TIMER_100 } from '../../constants/timers';
+import pauseVideo from '../../helpers/pauseVideo';
 
 export default {
   components: {
@@ -248,7 +248,7 @@ export default {
         this.scrollToView(index);
 
         if (this.$refs.thumbnailContainer.childNodes[index].querySelector('iframe')) {
-          this.stopVideo();
+          pauseVideo();
         }
       }
     },
@@ -277,7 +277,7 @@ export default {
         this.scrollToView(nextIndex);
 
         if (this.$refs.thumbnailContainer.childNodes[currentIndex].querySelector('iframe')) {
-          this.stopVideo();
+          pauseVideo();
         }
       }
     },
@@ -309,15 +309,6 @@ export default {
       // Only scroll element if component is in viewport.
       if (this.isInViewport) {
         elementToScrollTo.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
-    },
-    stopVideo() {
-      const iframe = document.querySelectorAll('iframe');
-      if (iframe.length) {
-        iframe.forEach((element) => {
-          const iframeSrc = element.src;
-          element.src = iframeSrc;
-        });
       }
     },
     slide(slide) {
