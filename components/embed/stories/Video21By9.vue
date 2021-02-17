@@ -7,10 +7,11 @@
 <script>
 import VideoEmbed from '../VideoEmbed.vue';
 import ContentBlock from '../../content-block/ContentBlock.vue';
+import videoEmbedDocs from './videoEmbed.md';
 
 export default {
   components: { VideoEmbed },
-  readme: { source: true, html: true },
+  readme: { custom: videoEmbedDocs, source: true, html: true },
   decorator: ContentBlock,
 };
 </script>

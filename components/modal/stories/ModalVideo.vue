@@ -3,7 +3,9 @@
     is-video
     btn-class="btn--cta"
     trigger="Watch">
-    <VideoEmbed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
+    <VideoEmbed
+      video-api
+      src="https://www.youtube.com/embed/nlF7qp5GNPI" />
   </ModalDialog>
 </template>
 

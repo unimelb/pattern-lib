@@ -52,6 +52,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    videoApi: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     classes() {
@@ -67,7 +71,10 @@ export default {
       };
     },
     returnVideoUrlApi() {
-      return `${this.src}?enablejsapi=1&origin=https%3A%2F%2F[SUBDOMAIN].unimelb.edu.au`;
+      if (this.videoApi) {
+        return `${this.src}?enablejsapi=1&origin=https%3A%2F%2F${document.location.hostname}.unimelb.edu.au`;
+      }
+      return this.src;
     },
   },
 };
