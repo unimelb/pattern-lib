@@ -157,7 +157,7 @@
       <div class="page-footer__legal links-reset">
         <a href="https://safety.unimelb.edu.au/emergency">Emergency information</a>
         <span class="page-footer__legal__sep">|</span>
-        <a href="https://unimelb.edu.au/disclaimer">Disclaimer and copyright</a>
+        <a href="https://unimelb.edu.au/legal">Online terms and privacy</a>
         <span class="page-footer__legal__sep">|</span>
         <a href="https://www.unimelb.edu.au/accessibility">Accessibility</a>
         <span class="page-footer__legal__sep">|</span>
