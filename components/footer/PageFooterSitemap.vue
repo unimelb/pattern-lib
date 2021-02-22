@@ -118,12 +118,6 @@
             class="link-reset"
             href="https://about.unimelb.edu.au/news-resources/campus-services-and-facilities/transport-and-parking">Traffic, parking &amp; bicycles</a>
         </li>
-        <li>
-          <a
-            data-notsecure
-            class="link-reset"
-            href="http://directory.unimelb.edu.au">Find a staff member</a>
-        </li>
       </ul>
     </div>
     <div class="cell cell--tab-1of2 cell--desk-1of3 cell--desk-clear cell--wide-clear">
