@@ -141,7 +141,7 @@
     }
 
     &:active {
-      border-color: rgb(var(--col-background-tertiary-navy));
+      border-color: rgb(var(--col-background-primary-white));
       background-color: rgb(var(--col-background-tertiary-navy));
       color: rgb(var(--col-background-primary-white));
     }
