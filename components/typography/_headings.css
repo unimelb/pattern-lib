@@ -155,3 +155,37 @@ h6 {
     letter-spacing: normal;
   }
 }
+
+.display {
+  color: rgb(var(--col-grey-mid-3));
+  font-family: var(--ff-lead);
+  font-weight: var(--fw-bold);
+
+  &--xl {
+    letter-spacing: -.8889rem;
+    line-height: 1.2;
+    font-size: 2.375rem;
+
+    @media (--bp-desktop) {
+      font-size: 2.8889rem;
+    }
+  }
+
+  &--lg {
+    line-height: 1.2;
+    letter-spacing: -.8889rem;
+    font-size: 2.1111rem;
+  }
+
+  &--md {
+    letter-spacing: -.5333rem;
+    line-height: 1.2;
+    font-size: 1.3125rem;
+  }
+}
+
+.body {
+  font-size: 1rem;
+  color: rgb(var(--col-grey-mid-2));
+  font-family: var(--ff-normal);
+}

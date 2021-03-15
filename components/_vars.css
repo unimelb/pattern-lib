@@ -20,8 +20,8 @@
   /* #ABBED5 */
   --col-navy-mid-1: 171, 190, 213;
 
-  /* #F2F5F9 */
-  --col-navy-light: 242, 245, 249;
+  /* #EDF2F5 */
+  --col-navy-light: 237, 242, 245;
 
   /* Supporting palette */
   --col-black-dark: 0, 0, 0;
@@ -66,8 +66,8 @@
   /* Colours that are outside of the brand palette */
   --col-orange-mid-0: 255, 182, 145;
   --col-grey-mid-1: 105, 109, 115;
-  --col-grey-mid-2: 75, 77, 83;
-  --col-grey-mid-3: 39, 39, 39;
+  --col-grey-mid-2: 74, 74, 74;
+  --col-grey-mid-3: 29, 29, 29;
   --col-grey-dark: 87, 87, 87;
   --col-brand: var(--col-navy-dark);
   --col-brand-light-2: 218, 227, 237;
