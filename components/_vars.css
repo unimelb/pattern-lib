@@ -66,9 +66,9 @@
   /* Colours that are outside of the brand palette */
   --col-orange-mid-0: 255, 182, 145;
   --col-grey-mid-1: 105, 109, 115;
+  --col-grey-dark: 87, 87, 87;
   --col-grey-mid-2: 74, 74, 74;
   --col-grey-mid-3: 29, 29, 29;
-  --col-grey-dark: 87, 87, 87;
   --col-brand: var(--col-navy-dark);
   --col-brand-light-2: 218, 227, 237;
   --col-green-dark-tint: 47, 79, 48;
@@ -179,4 +179,4 @@
 
 @custom-media --bp-wide (min-width: 1099px);
 @custom-media --bp-x-wide (min-width: 1250px);
-@custom-media --bp-xx-wide (min-width: 85em);
+@custom-media --bp-xx-wide (min-width: 1360px);
