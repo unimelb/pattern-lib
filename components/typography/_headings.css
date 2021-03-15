@@ -157,12 +157,11 @@ h6 {
 }
 
 .display {
-  color: rgb(var(--col-grey-mid-3));
-  font-family: var(--ff-lead);
-  font-weight: var(--fw-bold);
-
   &--xl {
-    letter-spacing: -.8889rem;
+    color: rgb(var(--col-grey-mid-3));
+    font-family: var(--ff-lead);
+    font-weight: var(--fw-bold);
+    letter-spacing: -.0889rem;
     line-height: 1.2;
     font-size: 2.375rem;
 
@@ -172,20 +171,26 @@ h6 {
   }
 
   &--lg {
+    color: rgb(var(--col-grey-mid-3));
+    font-family: var(--ff-lead);
+    font-weight: var(--fw-bold);
     line-height: 1.2;
-    letter-spacing: -.8889rem;
+    letter-spacing: -.0889rem;
     font-size: 2.1111rem;
   }
 
   &--md {
-    letter-spacing: -.5333rem;
+    color: rgb(var(--col-grey-mid-3));
+    font-family: var(--ff-lead);
+    font-weight: var(--fw-bold);
+    letter-spacing: -.0533rem;
     line-height: 1.2;
     font-size: 1.3125rem;
   }
-}
 
-.body {
-  font-size: 1rem;
-  color: rgb(var(--col-grey-mid-2));
-  font-family: var(--ff-normal);
+  &--body {
+    font-size: 1rem;
+    color: rgb(var(--col-grey-mid-2));
+    font-family: var(--ff-normal);
+  }
 }

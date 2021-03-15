@@ -20,6 +20,7 @@ import ListsMixed from './ListsMixed.vue';
 import Pre from './Pre.vue';
 import Headings from './Headings.vue';
 import HeadingComponent from './HeadingComponent.vue';
+import DisplayClasses from './DisplayClasses.vue';
 
 
 storiesOf('Typography (deprecated)', module)
@@ -28,6 +29,7 @@ storiesOf('Typography (deprecated)', module)
 
 storiesOf('Typography', module)
   .add('Titles', createStory(Headings))
+  .add('Display classes', createStory(DisplayClasses))
   .add('Heading Component', createStory(HeadingComponent))
   .add('Long headings', createStory(LongHeadings))
   .add('Lead paragraph', createStory(Lead))

@@ -6,7 +6,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  color: rgb(var(--col-grey-mid-2));
+  color: rgb(var(--col-black-dark));
   font-family: var(--ff-normal);
   /* stylelint-disable */
   font-size: 16px;
