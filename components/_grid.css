@@ -9,8 +9,10 @@
   }
 
   &--pad-x2 {
-    margin-right: calc(var(--vr) / -1.125);
-    margin-left: calc(var(--vr) / -1.125);
+    @media (--bp-wide) {
+      margin-right: calc(var(--vr) / -1.125);
+      margin-left: calc(var(--vr) / -1.125);
+    }
   }
 
   @media (--bp-x-tablet) {
@@ -70,10 +72,12 @@
   padding-left: calc(var(--vr) / 2);
 
   &--pad-x2 {
-    margin-top: calc(var(--vr) / 1.125);
-    margin-bottom: calc(var(--vr) / 1.125);
-    padding-right: calc(var(--vr) / 1.125);
-    padding-left: calc(var(--vr) / 1.125);
+    @media (--bp-wide) {
+      margin-top: calc(var(--vr) / 1.125);
+      margin-bottom: calc(var(--vr) / 1.125);
+      padding-right: calc(var(--vr) / 1.125);
+      padding-left: calc(var(--vr) / 1.125);
+    }
   }
 
   &--no-padding {

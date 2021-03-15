@@ -1,3 +1,31 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title,
+.title--xl,
+.title--lg,
+.title--md,
+.title--sm,
+.title--xs,
+.title--xxs,
+.display--xl,
+.display--lg,
+.display--md,
+.display--body,
+.lead {
+  color: rgb(var(--col-grey-mid-3));
+
+  .bg-inverted &,
+  .bg-inverted-dark &,
+  .bg-inverted-darker &,
+  .bg-inverted--o95 & {
+    color: rgb(var(--col-white));
+  }
+}
+
 .heading-page,
 .heading-page-sub,
 .heading-section,

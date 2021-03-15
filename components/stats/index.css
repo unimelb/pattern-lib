@@ -49,6 +49,11 @@
     font-size: 3rem;
     font-weight: bold;
     line-height: 1;
+    color: rgb(var(--col-grey-mid-3));
+
+    .bg-inverted & {
+      color: rgb(var(--col-white));
+    }
 
     &__hash {
       margin-left: -.5ch;
