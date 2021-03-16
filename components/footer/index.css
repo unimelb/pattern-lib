@@ -298,8 +298,9 @@
     color: inherit;
     appearance: none;
 
-    &:focus {
-      border-color: rgb(var(--col-background-primary-white));
+    &:focus,
+    &:focus-visible {
+      outline: 2px solid rgb(var(--col-background-primary-white));
     }
 
     &::placeholder {
