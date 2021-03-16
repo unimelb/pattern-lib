@@ -8,6 +8,10 @@
 
   a {
     text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   /* top half with logo, search, popular links, etc. */
@@ -300,6 +304,7 @@
 
     &::placeholder {
       color: rgba(var(--col-background-primary-white), .6);
+      opacity: 1;
       font-weight: var(--fw-light);
     }
   }
