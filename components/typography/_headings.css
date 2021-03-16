@@ -17,7 +17,8 @@ h6,
   .bg-inverted &,
   .bg-inverted-dark &,
   .bg-inverted-darker &,
-  .bg-inverted--o95 & {
+  .bg-inverted--o95 &,
+  .page-header__darken--o50 & {
     color: rgb(var(--col-white));
   }
 }
