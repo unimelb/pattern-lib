@@ -20,8 +20,11 @@
   /* #ABBED5 */
   --col-navy-mid-1: 171, 190, 213;
 
+  /* #F2F5F9 */
+  --col-navy-light: 242, 245, 249;
+
   /* #EDF2F5 */
-  --col-navy-light: 237, 242, 245;
+  --col-navy-light-2: 237, 242, 245;
 
   /* Supporting palette */
   --col-black-dark: 0, 0, 0;
