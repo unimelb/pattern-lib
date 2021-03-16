@@ -6,6 +6,10 @@
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-background-primary-white));
 
+  a {
+    text-decoration: underline;
+  }
+
   /* top half with logo, search, popular links, etc. */
   &__top {
     padding: 3rem 0 2.25rem;
@@ -65,12 +69,7 @@
     display: inline-block;
     margin-bottom: .75rem;
     color: inherit;
-    text-decoration: none;
     text-transform: uppercase;
-
-    &:hover {
-      text-decoration: underline;
-    }
 
     &:visited {
       color: rgb(var(--col-background-primary-white));
@@ -265,6 +264,7 @@
   &__icon {
     position: absolute;
     top: calc(50% - .625rem);
+    margin-left: 1rem;
 
     /* vertical centring */
     left: 0;
@@ -283,23 +283,23 @@
   &__input {
     display: block;
     width: 100%;
-    padding: .5rem .5rem .75rem 1.75rem;
+    padding: .5rem .5rem .5rem 2.75rem;
+    margin-top: .25rem;
 
     /* icon width + roughly .5rem */
-    transition: border-bottom-color .3s;
-    border: none;
-    border-bottom: 2px solid rgb(var(--col-blue-mid-1));
-    border-radius: 0;
+    transition: border-color .3s;
+    border: 2px solid rgb(var(--col-blue-mid-1));
+    border-radius: 2px;
     background-color: transparent;
     color: inherit;
     appearance: none;
 
     &:focus {
-      border-bottom-color: rgb(var(--col-background-primary-white));
+      border-color: rgb(var(--col-background-primary-white));
     }
 
     &::placeholder {
-      color: rgb(var(--col-blue-mid-1));
+      color: rgba(var(--col-background-primary-white), .6);
       font-weight: var(--fw-light);
     }
   }
