@@ -75,6 +75,8 @@ address {
 }
 
 p {
+  color: rgb(var(--col-grey-mid-2));
+
   .bg-inverted &,
   .bg-inverted-dark &,
   .bg-inverted-darker &,
