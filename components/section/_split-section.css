@@ -38,6 +38,7 @@
       font-family: var(--ff-lead);
       font-size: 1.25rem;
       font-style: italic;
+      color: rgb(var(--col-grey-mid-3));
 
       &::before {
         content: open-quote;
