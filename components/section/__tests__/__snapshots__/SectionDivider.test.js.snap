@@ -3,7 +3,7 @@
 exports[`SectionDivider should match snapshot 1`] = `
 <section
   class="section section--divider bg-inverted"
-  style="background-image: url(https://cms.unimelb.edu.au/__data/assets/image/0005/2353784/UoM-soft-3.png);"
+  style="background-image: url(https://cms.unimelb.edu.au/__data/assets/image/0020/3612125/nike-logo-soft.png);"
 >
   <div
     class="section__inner--short section--divider__inner"
