@@ -38,32 +38,4 @@
       }
     }
   }
-
-  &--no-padding {
-    &-sm {
-      margin: -.375rem;
-
-      @media (--bp-desktop) {
-        margin: -.333rem;
-      }
-    }
-    &-md {
-      margin: -.375rem;
-
-      @media (--bp-desktop) {
-        margin: -.333rem;
-      }
-    }
-    &-lg {
-      margin: -.625rem;
-
-      @media (--bp-tablet) {
-        margin: -1rem;
-      }
-
-      @media (--bp-xx-wide) {
-        margin: -.888rem;
-      }
-    }
-  }
 }
