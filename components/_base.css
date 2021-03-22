@@ -234,3 +234,7 @@ abbr[title] {
     visibility: hidden !important;
   }
 }
+
+::placeholder {
+  opacity: 1;
+}
