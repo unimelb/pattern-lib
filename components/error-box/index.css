@@ -1,5 +1,5 @@
 .error-box {
-  color: rgb(var(--col-orange-dark));
+  color: rgb(var(--col-pink-dark));
   background-color: rgb(var(--col-orange-light));
   border: 1px solid rgb(var(--col-orange-mid-1));
   padding: .5rem;
