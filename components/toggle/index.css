@@ -30,6 +30,18 @@
       text-decoration: none;
       cursor: pointer;
 
+      &--light {
+        background-color: rgb(var(--col-navy-light));
+
+        > h2 {
+          color: rgb(var(--col-navy-dark)) !important;
+
+          &::after {
+            border-color: rgb(var(--col-navy-dark)) !important;
+          }
+        }
+      }
+
       > h2 {
         margin-bottom: 0;
         color: rgb(var(--col-background-primary-white));
@@ -94,6 +106,15 @@
         border: 0 solid white;
         border-top-width: 1px;
         border-left-width: 1px;
+      }
+
+      &--light {
+        background-color: rgb(var(--col-navy-light));
+        color: rgb(var(--col-navy-dark));
+
+        &::before {
+          border-color: rgb(var(--col-navy-dark));
+        }
       }
     }
 

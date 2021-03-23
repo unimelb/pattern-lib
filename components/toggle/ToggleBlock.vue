@@ -6,7 +6,8 @@
       :is="element"
       :id="toggleHeaderID"
       ref="header"
-      :class="`toggleblock__default${isActive ? ' toggleblock__default--active' : ''}`"
+      class="toggleblock__default"
+      :class="defaultClasses"
       :aria-controls="`${namespace}-panel-${index + 1}`"
       :aria-selected="isActive"
       tabindex="0"
@@ -53,6 +54,10 @@ export default {
       type: String,
       default: 'div',
     },
+    light: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -63,6 +68,14 @@ export default {
     };
   },
   computed: {
+    defaultClasses() {
+      return [
+        {
+          'toggleblock__default--active': this.isActive,
+          'toggleblock__default--light': this.light,
+        },
+      ];
+    },
     toggleHeaderID() {
       return `${this.namespace}-header-${this.index + 1}`;
     },
