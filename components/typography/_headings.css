@@ -11,7 +11,15 @@ h6,
 .title--sm,
 .title--xs,
 .title--xxs,
-.lead {
+.lead,
+.heading-lg,
+.heading-sm,
+.heading-md,
+.heading-xs,
+.heading-xxs,
+.label-md,
+.label-sm,
+.label-xxs {
   color: rgb(var(--col-grey-mid-3));
 
   .bg-inverted &,
@@ -180,4 +188,69 @@ h6 {
     font-weight: var(--fw-bold);
     letter-spacing: normal;
   }
+}
+
+.heading-lg {
+  font-family: var(--ff-lead);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  letter-spacing: -.04rem;
+
+  @media (--bp-xx-wide) {
+    font-size: 2.8889rem;
+  }
+}
+
+.heading-md {
+  font-family: var(--ff-lead);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  letter-spacing: -.03rem;
+}
+
+.heading-sm {
+  font-family: var(--ff-lead);
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  letter-spacing: -.0225rem;
+}
+
+.heading-xs {
+  font-family: var(--ff-normal);
+  font-size: 1rem;
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+}
+
+.heading-xxs {
+  font-family: var(--ff-normal);
+  font-size: .875rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+  letter-spacing: -.0085rem;
+}
+
+.label-md {
+  font-family: var(--ff-normal);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.3;
+  letter-spacing: -.01rem;
+}
+
+.label-sm {
+  font-family: var(--ff-normal);
+  font-size: .875rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.label-xs {
+  font-family: var(--ff-normal);
+  font-size: .8125rem;
+  font-weight: normal;
+  line-height: 1.3;
 }
