@@ -10,7 +10,6 @@
 
   @media (--bp-x-tablet) {
     flex-flow: row wrap;
-    justify-content: center;
 
     &--4col .cell {
       width: calc(100% / 2);
@@ -33,7 +32,6 @@
     &--4col,
     &--6col {
       flex-direction: row;
-      justify-content: center;
 
       .cell {
         display: flex;

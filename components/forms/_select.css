@@ -59,7 +59,7 @@
     border-radius: 0;
     background-color: transparent;
     font-size: 1.125rem;
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-semibold);
     appearance: none;
     line-height: 1.278;
 
@@ -83,7 +83,6 @@
   }
 
   &--blue {
-    background-color: rgb(var(--col-blue-mid-2));
     color: rgb(var(--col-background-primary-white));
     border-color: rgb(var(--col-background-primary-white));
 
@@ -97,6 +96,7 @@
 
     select {
       color: rgb(var(--col-background-primary-white));
+      background-color: rgb(var(--col-blue-mid-2));
     }
 
     option {

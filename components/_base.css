@@ -223,3 +223,14 @@ abbr[title] {
 .hidden {
   display: none !important;
 }
+
+/**
+ * Visibility hidden elements
+ * Prefer the `hidden` attribute where possible. For `svg` elements,
+ * use the `hidden` class instead, as the attribute is not allowed.
+ */
+.visibility {
+  &--hidden {
+    visibility: hidden !important;
+  }
+}

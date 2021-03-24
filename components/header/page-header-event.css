@@ -13,7 +13,7 @@
 
   &__header {
     font-size: 1rem;
-    color: #575756;
+    color: rgb(var(--col-grey-dark));
     letter-spacing: .0938rem;
     line-height: 1.75;
     font-weight: var(--fw-semibold);

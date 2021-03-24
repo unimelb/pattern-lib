@@ -110,6 +110,8 @@ import CardRoundedFigure from 'components/cards/CardRoundedFigure.vue';
 import TodoList from 'components/todo-list/TodoList.vue';
 import CampaignBanner from 'components/campaign/CampaignBanner.vue';
 import CardImageLink from 'components/cards/CardImageLink.vue';
+import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCategory.vue';
+import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
 
 import { version } from '../../package.json';
 
@@ -228,6 +230,8 @@ Vue.component('card-rounded-figure', CardRoundedFigure);
 Vue.component('todo-list', TodoList);
 Vue.component('campaign-banner', CampaignBanner);
 Vue.component('card-image-link', CardImageLink);
+Vue.component('cards-filter-category', CardsFilterCategory);
+Vue.component('courses-filter', CoursesFilter);
 
 // Create Vue instance
 new Vue({

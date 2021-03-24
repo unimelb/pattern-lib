@@ -27,13 +27,7 @@ exports[`GenericCard should match snapshot 1`] = `
      
     <!---->
      
-    <div
-      class="card__excerpt"
-    >
-      
-      
-    
-    </div>
+    <!---->
      
     <div
       class="card__footer card__footer--column"

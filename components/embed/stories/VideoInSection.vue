@@ -10,11 +10,14 @@
 <script>
 import VideoEmbed from '../VideoEmbed.vue';
 import SectionWrap from '../../section/SectionWrap.vue';
+import videoEmbedDocs from './videoEmbed.md';
 
 export default {
   components: { VideoEmbed },
   decorator: SectionWrap,
   decoratorProps: { bgColor: 'inverted', centred: true },
-  readme: { decorated: true, source: true, html: true },
+  readme: {
+    custom: videoEmbedDocs, decorated: true, source: true, html: true,
+  },
 };
 </script>

@@ -1,5 +1,5 @@
 import {
-  shallow,
+  mount,
 } from 'vue-test-utils';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import CardFeaturesPanel from '../CardFeaturesPanel.vue';
@@ -8,7 +8,7 @@ expect.extend(toHaveNoViolations);
 
 describe('CardFeaturesPanel', () => {
   it('should match snapshot', () => {
-    const result = shallow(CardFeaturesPanel, {
+    const result = mount(CardFeaturesPanel, {
       propsData: {
         title: 'mock title',
         ariaLabel: 'test aria label',
@@ -18,7 +18,7 @@ describe('CardFeaturesPanel', () => {
   });
 
   it('should have default props and correct types thumb/title/text/href', () => {
-    const wrapper = shallow(CardFeaturesPanel);
+    const wrapper = mount(CardFeaturesPanel);
     const {
       thumb,
       title,
@@ -41,7 +41,7 @@ describe('CardFeaturesPanel', () => {
 
   it('should render title from prop with correct type', () => {
     const title = 'Test title';
-    const wrapper = shallow(CardFeaturesPanel, {
+    const wrapper = mount(CardFeaturesPanel, {
       propsData: {
         title,
       },
@@ -54,7 +54,7 @@ describe('CardFeaturesPanel', () => {
 
   it('should render text from prop with correct type', () => {
     const text = 'Test text';
-    const wrapper = shallow(CardFeaturesPanel, {
+    const wrapper = mount(CardFeaturesPanel, {
       propsData: {
         text,
       },
@@ -67,7 +67,7 @@ describe('CardFeaturesPanel', () => {
 
   it('should render href from prop with correct type', () => {
     const href = '/';
-    const wrapper = shallow(CardFeaturesPanel, {
+    const wrapper = mount(CardFeaturesPanel, {
       propsData: {
         href,
       },
@@ -80,7 +80,7 @@ describe('CardFeaturesPanel', () => {
 
   it('should render thumb from prop with correct type', () => {
     const thumb = 'http://';
-    const wrapper = shallow(CardFeaturesPanel, {
+    const wrapper = mount(CardFeaturesPanel, {
       propsData: {
         thumb,
       },
@@ -92,7 +92,7 @@ describe('CardFeaturesPanel', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(CardFeaturesPanel, {
+    const html = mount(CardFeaturesPanel, {
       propsData: {
         title: 'mock title',
         ariaLabel: 'test aria label',

@@ -161,7 +161,6 @@
           @keydown.enter="activeMobileMenu">
           <svg
             class="link-icon__icon svg"
-            role="presentation"
             focusable="false"
             aria-label="icon menu"
             viewBox="10 10 26 28">

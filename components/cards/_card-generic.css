@@ -16,10 +16,11 @@
   }
 
   .card__title {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     display: block;
-    line-height: 1.3;
-    font-weight: var(--fw-bold);
+    line-height: 1.1;
+    letter-spacing: -.0125rem;
+    font-weight: var(--fw-semibold);
     text-decoration: none;
     color: rgb(var(--col-background-primary-navy));
 

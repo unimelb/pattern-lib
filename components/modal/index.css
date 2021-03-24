@@ -36,6 +36,12 @@ body > div[aria-hidden='true']:not(#sitemap) {
 
     /* decorative styles */
     background-color: rgb(var(--col-background-primary-white));
+
+    &--video {
+      background-color: transparent;
+      min-width: 50vw !important;
+      max-width: 70vw !important;
+    }
   }
 
   &[aria-hidden='true'] {
@@ -78,5 +84,9 @@ body > div[aria-hidden='true']:not(#sitemap) {
 
   &:hover {
     color: rgb(var(--col-pink-dark));
+  }
+
+  &--video {
+    color: rgb(var(--col-background-primary-white));
   }
 }

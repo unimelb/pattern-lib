@@ -20,10 +20,13 @@
         <slot name="sub-title-2" />
         <slot name="sub-title-3" />
       </div>
-      <div class="card__excerpt">
+      <div
+        v-if="excerpt"
+        class="card__excerpt">
         {{ excerpt }}
       </div>
       <div
+        v-if="!hideFooter"
         :class="[cols !== 1 ? 'card__footer--column' : '']"
         class="card__footer">
         <Tags
@@ -82,6 +85,10 @@ export default {
     tags: {
       type: Array,
       default: () => [],
+    },
+    hideFooter: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
