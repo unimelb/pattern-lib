@@ -4,9 +4,12 @@
     :class="{ 'card--division--head-compact': compact }"
     class="btn-owner card card--division card--division--head card--bdr bg-white">
     <div class="card__thumb">
-      <div
-        :style="`background-image: url('${thumb}')`"
-        class="card__thumb-img" />
+      <FocusWrapper semi-opaque>
+        <div
+          :style="`background-image: url('${thumb}')`"
+          class="card__thumb-img" />
+      </FocusWrapper>
+
     </div>
     <div class="card__inner">
       <div class="card__subheader">
@@ -30,7 +33,12 @@
 </template>
 
 <script>
+import FocusWrapper from '../focus-wrapper/FocusWrapper.vue';
+
 export default {
+  components: {
+    FocusWrapper,
+  },
   props: {
     thumb: {
       type: String,

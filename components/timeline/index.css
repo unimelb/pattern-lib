@@ -25,6 +25,7 @@
     font-size: .875rem;
     text-align: right;
     text-transform: uppercase;
+    color: rgb(var(--col-grey-mid-3));
   }
 
   &__body {

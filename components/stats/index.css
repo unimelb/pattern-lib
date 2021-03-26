@@ -16,6 +16,11 @@
   &__item {
     flex: 1;
     margin: 0 1rem var(--vr);
+    color: rgb(var(--col-grey-mid-3));
+
+    .bg-inverted & {
+      color: rgb(var(--col-white));
+    }
   }
 
   &:not(.stats-group--inverted) .stats-group__item {

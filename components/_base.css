@@ -6,7 +6,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  color: rgb(var(--col-black-dark));
+  color: rgb(var(--col-grey-mid-2));
   font-family: var(--ff-normal);
   /* stylelint-disable */
   font-size: 16px;
@@ -75,7 +75,7 @@ address {
 }
 
 p {
-  color: rgb(var(--col-grey-mid-3));
+  color: rgb(var(--col-grey-mid-2));
 
   .bg-inverted &,
   .bg-inverted-dark &,
