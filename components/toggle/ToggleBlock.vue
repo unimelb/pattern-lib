@@ -4,9 +4,10 @@
     :class="`toggleblock${isActive ? ' toggleblock--active' : ''}`">
     <component
       :is="element"
-      :id="`${namespace}-header-${index + 1}`"
+      :id="toggleHeaderID"
       ref="header"
-      :class="`toggleblock__default${isActive ? ' toggleblock__default--active' : ''}`"
+      class="toggleblock__default"
+      :class="defaultClasses"
       :aria-controls="`${namespace}-panel-${index + 1}`"
       :aria-selected="isActive"
       tabindex="0"
@@ -18,7 +19,7 @@
       :id="`${namespace}-panel-${index + 1}`"
       ref="panel"
       :class="`toggleblock__hidden${isActive ? ' toggleblock__hidden--active' : ''}`"
-      :aria-labelledby="`${namespace}-header-${index + 1}`"
+      :aria-labelledby="toggleHeaderID"
       :tabindex="isActive ? 0 : -1"
       :aria-expanded="isActive"
       :aria-hidden="!isActive"
@@ -53,6 +54,10 @@ export default {
       type: String,
       default: 'div',
     },
+    light: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -63,6 +68,17 @@ export default {
     };
   },
   computed: {
+    defaultClasses() {
+      return [
+        {
+          'toggleblock__default--active': this.isActive,
+          'toggleblock__default--light': this.light,
+        },
+      ];
+    },
+    toggleHeaderID() {
+      return `${this.namespace}-header-${this.index + 1}`;
+    },
     trigger() {
       let t = this.$refs.header;
 
@@ -157,6 +173,8 @@ export default {
       this.isActive = !this.isActive;
       this.toggleFocusableElements();
       this.$emit('toggle-block-toggle', this.isActive);
+      const toggleHeader = document.querySelector(`#${this.toggleHeaderID}`);
+      this.$scrollTo(toggleHeader);
     },
   },
 };

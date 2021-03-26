@@ -80,6 +80,7 @@
     line-height: 1.167;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+    color: rgb(var(--col-grey-mid-3));
 
     @media (--bp-desktop) {
       font-size: 1rem;

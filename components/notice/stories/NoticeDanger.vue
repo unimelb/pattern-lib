@@ -1,11 +1,9 @@
 <template>
   <Notice level="danger">
-    <p>
+    <span>
       <strong>Notice!</strong> Better check yourself before you
       <a href="#">wreck</a> yourself
-    </p>
-    <p>Dolor doloribus eos reiciendis. Mollitia tenetur quibusdam unde animi at laborum exercitationem.</p>
-    <p>Dolor doloribus eos reiciendis. Mollitia tenetur quibusdam unde animi at laborum exercitationem.</p>
+    </span>
   </Notice>
 </template>
 

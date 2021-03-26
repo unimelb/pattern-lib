@@ -62,6 +62,7 @@
     font-weight: var(--fw-semibold);
     appearance: none;
     line-height: 1.278;
+    color: rgb(var(--col-grey-mid-3));
 
     &::-ms-expand {
       display: none;

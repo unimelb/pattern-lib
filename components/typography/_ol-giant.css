@@ -21,6 +21,7 @@
       font-family: var(--ff-lead);
       font-size: 3.5rem;
       line-height: 1;
+      color: rgb(var(--col-grey-mid-3));
     }
   }
 }

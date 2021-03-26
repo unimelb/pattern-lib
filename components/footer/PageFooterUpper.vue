@@ -4,8 +4,7 @@
       <div class="page-footer__header">
         <div class="page-footer__header-logo">
           <Logo
-            size="lg"
-            no-padding />
+            size="lg" />
         </div>
         <div class="page-footer__header-search">
           <form

@@ -84,6 +84,7 @@
     max-width: calc(64rem * .4);
     padding-right: 3rem;
     z-index: var(--z-default);
+    color: inherit;
 
     @media (--bp-max-x-mobile) {
       width: 80%;

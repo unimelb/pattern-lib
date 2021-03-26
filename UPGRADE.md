@@ -27,10 +27,8 @@ Logo has been mirgrated to it's own component - https://pattern-lib-unimelb.netl
 to:
 
 ```html
-<div class="logo"><a href="https://www.unimelb.edu.au" class="logo__link"><img alt="The University of Melbourne homepage" src="/logo-with-padding.svg" class="logo__image logo__image--lg logo--no-padding-lg"></a></div>
+<div class="logo"><a href="https://www.unimelb.edu.au" class="logo__link"><img alt="The University of Melbourne homepage" src="/logo-with-padding.svg" class="logo__image logo__image--lg"></a></div>
 ```
-
-Please note:  If the logo is `sm` then no-padding will also be `sm`.  For example, `logo__image--sm logo-no-padding-sm`
 
 ## v3.5.0
 ## v3.4.0
