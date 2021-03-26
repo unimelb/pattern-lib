@@ -30,6 +30,7 @@
       font-weight: var(--fw-bold);
       margin-right: 1rem;
       margin-bottom: 2rem;
+      color: rgb(var(--col-grey-mid-3));
 
       @media (--bp-desktop) {
         align-self: center;

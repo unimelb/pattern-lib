@@ -69,6 +69,7 @@
     font-weight: var(--fw-bold);
     line-height: 1.2;
     margin-bottom: .125rem;
+    color: rgb(var(--col-white));
   }
 
   &__sub-title {
