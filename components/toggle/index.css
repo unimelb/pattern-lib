@@ -11,12 +11,15 @@
 
   &__hidden {
     max-height: 0;
+    transform: scaleY(0);
+    transform-origin: top;
     overflow: hidden;
-    transition: max-height .3s ease-out;
+    transition: transform .2s ease-out, max-height .2s ease-out;
 
     &--active {
-      max-height: 100%;
+      transform: scaleY(1);
       transition-timing-function: ease-in;
+      max-height: 100%;
     }
   }
 
