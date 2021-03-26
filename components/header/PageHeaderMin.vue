@@ -6,8 +6,7 @@
       class="page-header__shape" />
     <div class="page-header__inner max">
       <Logo
-        size="md"
-        no-padding />
+        size="md" />
     </div>
   </header>
 </template>
