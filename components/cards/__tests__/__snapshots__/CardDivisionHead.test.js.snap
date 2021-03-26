@@ -8,10 +8,7 @@ exports[`CardDivisionHead should match snapshot 1`] = `
   <div
     class="card__thumb"
   >
-    <div
-      class="card__thumb-img"
-      style="background-image: url();"
-    />
+    <!---->
   </div>
    
   <div
