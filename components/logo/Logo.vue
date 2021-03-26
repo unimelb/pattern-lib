@@ -4,7 +4,7 @@
       class="logo__link"
       href="https://www.unimelb.edu.au">
       <img
-        :class="['logo__image--' + size, noPadding ? 'logo--no-padding-' + size : '']"
+        :class="'logo__image--' + size"
         class="logo__image"
         alt="The University of Melbourne homepage"
         src="../shared/logo-with-padding.svg">
@@ -19,10 +19,6 @@ export default {
       type: String,
       default: 'lg',
       validator: (value) => ['sm', 'md', 'lg'].includes(value),
-    },
-    noPadding: {
-      type: Boolean,
-      default: false,
     },
   },
 };

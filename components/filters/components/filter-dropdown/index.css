@@ -9,6 +9,7 @@
     background-color: rgb(var(--col-background-primary-white));
     display: flex;
     align-items: stretch;
+    color: rgb(var(--col-grey-mid-3));
 
     &--is-opened {
       border-radius: var(--br) var(--br) 0 0;

@@ -4,7 +4,7 @@
     style="background-image: url('https://picsum.photos/id/1033/990/530.jpg');">
     <header class="page-header">
       <div class="page-header__inner max">
-        <Logo no-padding />
+        <Logo />
       </div>
       <div class="page-header--baseline max max--xsml shim-pb2">
         <a
