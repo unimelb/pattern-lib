@@ -407,9 +407,6 @@ export default {
       }
       if (this.isMobileOpen) {
         this.dismissMobileMenu();
-        this.$refs.panels.forEach((panel) => {
-          panel.classList.remove('open');
-        });
       }
     },
     handleKey(e) {
