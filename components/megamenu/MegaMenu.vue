@@ -56,7 +56,7 @@
               @mouseout="dismissDesktopMenu"
               @keydown="handleKey">
               <a
-                :role="rootitem.items ? 'button' : 'menuitem'"
+                role="menuitem"
                 :href="rootitem.href"
                 class="menu__link"
                 @click="openInner">
