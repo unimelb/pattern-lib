@@ -190,6 +190,7 @@ import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 import Logo from '../logo/Logo.vue';
 import { WIDTH_900 } from '../../helpers/viewports';
 import { TIMER_500 } from '../../constants/timers';
+import isMobile from '../../helpers/isMobile';
 
 import {
   KEYCODE_TAB,
@@ -255,8 +256,7 @@ export default {
   },
   computed: {
     isMobile() {
-      const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
-      return isMobileDevice;
+      return isMobile();
     },
     isShowTopMenu() {
       return this.topMenu.length;
