@@ -255,9 +255,8 @@ export default {
   },
   computed: {
     isMobile() {
-      return this.$refs.headerroot
-        ? this.$refs.headerroot.offsetWidth < WIDTH_900
-        : false;
+      const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+      return isMobileDevice;
     },
     isShowTopMenu() {
       return this.topMenu.length;
