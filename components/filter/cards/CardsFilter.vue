@@ -53,7 +53,7 @@
           @click="filterDataButton">
           <SvgIcon
             class="filter__button--icon"
-            name="search" />
+            :name="'search'" />
           <span>Search</span>
         </button>
         <button
@@ -94,7 +94,7 @@
                 View showcase
                 <SvgIcon
                   class="link-icon"
-                  name="chevron-right"
+                  :name="'chevron-right'"
                   width="10"
                   height="10" />
               </a>

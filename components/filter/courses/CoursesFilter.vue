@@ -88,7 +88,7 @@
                 class="filter-courses__clear-btn-icon"
                 width="14px"
                 height="14px"
-                name="close" />
+                :name="'close'" />
               Clear
             </button>
           </div>

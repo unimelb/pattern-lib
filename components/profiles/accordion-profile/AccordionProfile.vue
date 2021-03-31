@@ -28,7 +28,7 @@
             v-if="bio"
             :class="iconClassName"
             class="accordion-profile__icon"
-            name="chevron-up"
+            :name="'chevron-up'"
             aria-label="chevron"
             width="14px"
             height="14px" />

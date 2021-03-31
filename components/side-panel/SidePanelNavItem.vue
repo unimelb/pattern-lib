@@ -12,7 +12,7 @@
         <slot />
         <SvgIcon
           class="push-icon__icon"
-          name="chevron-right"
+          :name="'chevron-right'"
           width="10"
           height="10" />
       </span>

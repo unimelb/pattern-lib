@@ -6,7 +6,7 @@
       <slot name="link" />
       <SvgIcon
         class="push-icon__icon"
-        name="chevron-right"
+        :name="'chevron-right'"
         height="12"
         width="12" />
     </a>

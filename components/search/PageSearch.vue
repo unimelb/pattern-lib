@@ -6,7 +6,7 @@
       @keypress.enter="open">
       <SvgIcon
         class="link-icon__icon svg"
-        name="search" />
+        :name="'search'" />
       <span class="link-icon__text">Search</span>
     </button>
     <div
@@ -21,7 +21,7 @@
           @click.prevent="close">
           <SvgIcon
             class="page-header-search__icon--close"
-            name="close" />
+            :name="'close'" />
           Close
         </a>
       </PageSearchForm>

@@ -30,7 +30,7 @@
           title="profile phone number"
           aria-label="Phone Number">
           <SvgIcon
-            name="phone"
+            :name="'phone'"
             width="15px"
             height="15px" />
           {{ phone }}
@@ -42,7 +42,7 @@
           title="profile email"
           aria-label="Email">
           <SvgIcon
-            name="envelope"
+            :name="'envelope'"
             width="15px"
             height="15px" />
           {{ email }}

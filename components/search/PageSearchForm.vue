@@ -14,7 +14,7 @@
         type="submit">
         <SvgIcon
           class="page-header-search__icon"
-          name="search" />
+          :name="'search'" />
         <span class="screenreaders-only">Go</span>
       </button>
     <slot />

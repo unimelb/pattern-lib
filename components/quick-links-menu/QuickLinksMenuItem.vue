@@ -6,7 +6,7 @@
       <span :class="{ 'push-icon__text': truncate }">{{ title }}</span>
       <SvgIcon
         class="push-icon__icon"
-        name="chevron-right"
+        :name="'chevron-right'"
         height="16"
         width="16" />
     </span>

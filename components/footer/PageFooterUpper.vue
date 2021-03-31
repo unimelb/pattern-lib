@@ -29,7 +29,7 @@
                 href="#">
                 <SvgIcon
                   class="page-footer-search__icon"
-                  name="search" />
+                  :name="'search'" />
               </button>
             </div>
           </form>
@@ -57,7 +57,7 @@
                 href="https://about.unimelb.edu.au/strategy/our-structure/faculties-and-graduate-schools">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="faculty" />
+                  :name="'faculty'" />
                 <span class="link-icon__text">Faculties &amp; graduate schools</span>
               </a>
             </li>
@@ -67,7 +67,7 @@
                 href="https://maps.unimelb.edu.au">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="location" />
+                  :name="'location'" />
                 <span class="link-icon__text">Maps</span>
               </a>
             </li>
@@ -77,7 +77,7 @@
                 href="https://library.unimelb.edu.au">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="library" />
+                  :name="'library'" />
                 <span class="link-icon__text">Library</span>
               </a>
             </li>
@@ -87,7 +87,7 @@
                 href="https://www.alumni.unimelb.edu.au/give">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="campaign" />
+                  :name="'campaign'" />
                 <span class="link-icon__text">Support the campaign</span>
               </a>
             </li>
@@ -97,7 +97,7 @@
                 href="https://www.unimelb.edu.au/contact">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="phone" />
+                  :name="'phone'" />
                 <span class="link-icon__text">Contact us</span>
               </a>
             </li>
@@ -107,7 +107,7 @@
                 href="https://about.unimelb.edu.au/careers">
                 <SvgIcon
                   class="link-icon__icon svg"
-                  name="jobs" />
+                  :name="'jobs'" />
                 <span class="link-icon__text">Jobs</span>
               </a>
             </li>
