@@ -24,7 +24,7 @@
 
       <div class="filter-dropdown__icon">
         <SvgIcon
-          name="chevron-down"
+          :name="'chevron-down'"
           class="push-icon__icon" />
       </div>
     </div>

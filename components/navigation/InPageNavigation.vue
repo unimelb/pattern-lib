@@ -20,7 +20,7 @@
             @click="scrollOnClick">
             {{ data.label }}
             <SvgIcon
-              name="chevron-right"
+              :name="'chevron-right'"
               class="in-page-navigation__icon" />
           </a>
         </li>

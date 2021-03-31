@@ -23,7 +23,7 @@
             :href="blogLink"
             class="social-media-bar__link social-media-bar__link--content">
             <SvgIcon
-              name="newspaper"
+              :name="'newspaper'"
               width="25"
               height="25"
               class="social-media-bar__icon" />Read our blog
