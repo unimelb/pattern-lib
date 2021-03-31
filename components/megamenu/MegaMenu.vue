@@ -190,6 +190,7 @@ import MegaMenuTopNavigation from './MegaMenuTopNavigation.vue';
 import Logo from '../logo/Logo.vue';
 import { WIDTH_900 } from '../../helpers/viewports';
 import { TIMER_500 } from '../../constants/timers';
+import isMobile from '../../helpers/isMobile';
 
 import {
   KEYCODE_TAB,
@@ -255,9 +256,7 @@ export default {
   },
   computed: {
     isMobile() {
-      return this.$refs.headerroot
-        ? this.$refs.headerroot.offsetWidth < WIDTH_900
-        : false;
+      return isMobile();
     },
     isShowTopMenu() {
       return this.topMenu.length;
@@ -408,9 +407,6 @@ export default {
       }
       if (this.isMobileOpen) {
         this.dismissMobileMenu();
-        this.$refs.panels.forEach((panel) => {
-          panel.classList.remove('open');
-        });
       }
     },
     handleKey(e) {
