@@ -17,7 +17,7 @@
       <SvgIcon
         width="15px"
         height="15px"
-        name="chevron-right" />
+        :name="'chevron-right'" />
     </div>
   </a>
 </template>

@@ -63,11 +63,11 @@
                 {{ rootitem.title }}
                 <SvgIcon
                   v-if="!isMobileOpen && rootitem.items"
-                  name="chevron-down"
+                  :name="'chevron-down'"
                   class="icon" />
                 <SvgIcon
                   v-if="isMobileOpen"
-                  name="chevron-right"
+                  :name="'chevron-right'"
                   class="icon" />
               </a>
               <div
@@ -100,7 +100,7 @@
                         {{ menuitem.title }}
                         <SvgIcon
                           v-if="!isMobileOpen"
-                          name="chevron-right"
+                          :name="'chevron-right'"
                           class="icon" />
                       </a>
                     </li>
@@ -134,7 +134,7 @@
                         class="link">
                         View more details
                         <SvgIcon
-                          name="chevron-right"
+                          :name="'chevron-right'"
                           class="icon" />
                       </a>
                     </div>

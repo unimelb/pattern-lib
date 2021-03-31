@@ -10,7 +10,7 @@
           <SvgIcon
             width="10"
             height="10"
-            name="close" />
+            :name="'close'" />
         </button>
       </h5>
       <ul

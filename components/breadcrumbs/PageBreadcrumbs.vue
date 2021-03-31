@@ -22,7 +22,7 @@
           <SvgIcon
             v-if="index === 0"
             class="page-breadcrumbs__home"
-            name="home"
+            :name="'home'"
             width="18"
             height="18" />
           <span
@@ -31,8 +31,8 @@
           <SvgIcon
             v-if="index < items.length - 1"
             class="page-breadcrumbs__chevron"
-            name="chevron-right"
-            width="12"
+            :name="'chevron-right'"
+            width="22"
             height="12" />
         </a>
       </li>

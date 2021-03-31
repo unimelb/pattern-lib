@@ -6,11 +6,11 @@
     <SvgIcon
       :class="['card-focus__top-left', color, { 'semi-opaque': semiOpaque }]"
       icon="focus-top-left"
-      name="focus-top-left" />
+      :name="'focus-top-left'" />
     <SvgIcon
       :class="['card-focus__bottom-right', color, { 'semi-opaque': semiOpaque }]"
       icon="focus-bottom-right"
-      name="focus-bottom-right" />
+      :name="'focus-bottom-right'" />
   </div>
 </template>
 

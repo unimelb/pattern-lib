@@ -76,7 +76,7 @@
                   class="filter-category__clear-btn-icon"
                   width="14px"
                   height="14px"
-                  name="close" />
+                  :name="'close'" />
                 Clear
               </button>
             </div>
@@ -137,7 +137,7 @@
                       <div
                         slot="sub-title-1"
                         class="sub-title">
-                        <SvgIcon name="clock" />
+                        <SvgIcon :name="'clock'" />
                         <span>{{ childItem.duration }} minutes</span>
                       </div>
                     </GenericCard>
