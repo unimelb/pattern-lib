@@ -32,7 +32,7 @@
             v-if="index < items.length - 1"
             class="page-breadcrumbs__chevron"
             :name="'chevron-right'"
-            width="22"
+            width="12"
             height="12" />
         </a>
       </li>
