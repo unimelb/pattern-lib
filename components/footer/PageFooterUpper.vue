@@ -24,7 +24,7 @@
               <button
                 type="submit"
                 class="page-footer-search__submit"
-                aria-label="Submit"
+                aria-label="Search"
                 onclick="submit()"
                 href="#">
                 <SvgIcon
