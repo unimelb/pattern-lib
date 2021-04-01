@@ -37,7 +37,7 @@
           aria-hidden="true" />
       </div>
       <div
-        v-if="!useSelect"
+        v-if="!useSelect && panels.length"
         ref="tabsList"
         class="tabs__tablist"
         :class="tabsListClasses"
