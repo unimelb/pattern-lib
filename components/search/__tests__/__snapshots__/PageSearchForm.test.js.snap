@@ -13,7 +13,9 @@ exports[`PageSearchForm should match snapshot 1`] = `
     placeholder="Search the University"
     type="search"
   />
+   
   <button
+    aria-label="Search"
     class="page-header-search__submit"
     type="submit"
   >
