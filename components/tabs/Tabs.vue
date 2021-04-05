@@ -37,11 +37,10 @@
           aria-hidden="true" />
       </div>
       <div
-        v-if="!useSelect && panels.length"
+        v-if="!useSelect"
         ref="tabsList"
         class="tabs__tablist"
         :class="tabsListClasses"
-        role="tablist"
         @keyup="handleKey">
         <a
           v-for="(tab, index) in panels"
@@ -186,6 +185,7 @@ export default {
       setTimeout(() => {
         this.tabsWidth = this.calculateTabsWidth();
         this.showControls = this.hasControls();
+        this.$refs.tabsList.setAttribute('role', 'tablist');
       }, TIMER_2000);
     },
   },
