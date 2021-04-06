@@ -2,6 +2,7 @@
   <div class="header-tools__search">
     <button
       class="link-icon--vertical link-reset"
+      aria-label="Search"
       @click.prevent="open"
       @keypress.enter="open">
       <SvgIcon

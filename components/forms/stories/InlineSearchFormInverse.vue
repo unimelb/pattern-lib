@@ -23,7 +23,7 @@
           placeholder="Type to search courses">
         <button
           class="form--inline__button form--inline__button--alt"
-          aria-label="Submit">
+          aria-label="Search">
           <SvgIcon
             class="form--inline__svg"
             name="search" />
