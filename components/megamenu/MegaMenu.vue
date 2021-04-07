@@ -256,7 +256,11 @@ export default {
   },
   computed: {
     isMobile() {
-      return isMobile();
+      let functionIsMobile = false;
+      if (typeof window !== 'undefined') {
+        functionIsMobile = isMobile();
+      }
+      return functionIsMobile;
     },
     isShowTopMenu() {
       return this.topMenu.length;
