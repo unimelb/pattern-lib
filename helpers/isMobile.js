@@ -1,4 +1,7 @@
 export default () => {
-  const isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+  let isMobileDevice = false;
+  if (window && window.navigator) {
+    isMobileDevice = /Mobi/i.test(window.navigator.userAgent);
+  }
   return isMobileDevice;
 };
