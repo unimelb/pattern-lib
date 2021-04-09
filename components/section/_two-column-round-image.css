@@ -24,7 +24,6 @@
   &__description {
     font-size: 1rem;
     letter-spacing: -.021rem;
-    color: rgb(var(--col-grey-dark));
     margin-bottom: 1rem;
     line-height: 1.67;
 
