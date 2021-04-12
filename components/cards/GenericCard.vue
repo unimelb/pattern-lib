@@ -6,6 +6,7 @@
       :style="{ backgroundImage: `url(${thumb})` }"
       :aria-label="'Image for' + title"
       :class="[cols === 1 ? 'card__thumb--full-height' : '']"
+      :title="title"
       class="card__thumb" />
     <div class="card__inner">
       <h3 class="card__header">
