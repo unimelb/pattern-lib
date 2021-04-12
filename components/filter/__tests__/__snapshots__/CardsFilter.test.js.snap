@@ -195,6 +195,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="card__thumb"
             href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/masters-exhibition-2018"
             style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0027/76743/varieties/thumb.jpg);"
+            title="Masters Exhibition 2018"
           />
            
           <div
@@ -311,6 +312,7 @@ exports[`CardsFilter should match snapshot 1`] = `
             class="card__thumb"
             href="https://matrix-cms.unimelb.edu.au/ffam-dev/showcase/wilin-jams-2018"
             style="background-image: url(https://matrix-cms.unimelb.edu.au/__data/assets/image/0026/76373/varieties/thumb.jpg);"
+            title="aaaaaa"
           />
            
           <div
