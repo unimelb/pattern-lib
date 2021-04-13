@@ -183,6 +183,7 @@ export default {
   watch: {
     panels() {
       // Wait a bit before calculations.  For slower devices.
+      this.$refs.tabsList.setAttribute('role', 'tablist');
       setTimeout(() => {
         this.tabsWidth = this.calculateTabsWidth();
         this.showControls = this.hasControls();
@@ -286,7 +287,6 @@ export default {
         tab.index = index;
         tab.isActive = index === childrenActiveIndex;
       });
-
       return children;
     },
     getTabSiblings() {
