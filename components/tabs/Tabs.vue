@@ -41,6 +41,7 @@
         ref="tabsList"
         class="tabs__tablist"
         :class="tabsListClasses"
+        role="tablist"
         @keyup="handleKey">
         <a
           v-for="(tab, index) in panels"
