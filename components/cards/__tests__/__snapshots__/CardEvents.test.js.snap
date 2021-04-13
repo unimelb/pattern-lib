@@ -9,6 +9,7 @@ exports[`CardEvents should match snapshot 1`] = `
     class="card__thumb card__thumb--full-height"
     href="www.unimelb.edu.au"
     style="background-image: url(https://via.placeholder.com/400x200);"
+    title="mock title"
   />
    
   <div
