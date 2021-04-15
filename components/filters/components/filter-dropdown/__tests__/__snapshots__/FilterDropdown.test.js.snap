@@ -2,6 +2,7 @@
 
 exports[`FilterDropdown should match spapshot 1`] = `
 <div
+  aria-labelledby="filter-dropdown-0"
   class="filter-dropdown"
   data-uuid="0"
   role="region"
