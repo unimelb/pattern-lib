@@ -42,6 +42,7 @@
   }
 
   .card__sub-titles {
+    color: rgb(var(--col-grey-mid-2));
     border-top: 1px solid rgb(var(--col-black-mid-1));
     padding-top: .5rem;
     font-weight: var(--fw-semibold);
@@ -69,6 +70,7 @@
   }
 
   .card__excerpt {
+    color: rgb(var(--col-grey-mid-2));
     border-top: 1px solid rgb(var(--col-black-mid-1));
     padding-top: .75rem;
     margin: .5rem 0 1rem 0;
