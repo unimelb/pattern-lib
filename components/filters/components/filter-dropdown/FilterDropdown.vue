@@ -1,7 +1,6 @@
 <template>
   <div
     role="region"
-    :aria-labelledby="`filter-dropdown-${_uid}`"
     class="filter-dropdown"
     :data-uuid="uuid"
     @keydown.esc="closeOnKeypress"
