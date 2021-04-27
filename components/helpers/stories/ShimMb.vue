@@ -25,6 +25,18 @@
     <p class="shim-pr0">
       shim-pr0
     </p>
+    <p class="shim-mt033">
+      shim-mt033
+    </p>
+    <p class="shim-mb033">
+      shim-mb033
+    </p>
+    <p class="shim-pt033">
+      shim-pt033
+    </p>
+    <p class="shim-pb033">
+      shim-pb033
+    </p>
     <p class="shim-mt05">
       shim-mt05
     </p>
@@ -36,6 +48,18 @@
     </p>
     <p class="shim-pb05">
       shim-pb05
+    </p>
+    <p class="shim-mt067">
+      shim-mt067
+    </p>
+    <p class="shim-mb067">
+      shim-mb067
+    </p>
+    <p class="shim-pt067">
+      shim-pt067
+    </p>
+    <p class="shim-pb067">
+      shim-pb067
     </p>
     <p class="shim-mt1">
       shim-mt1
