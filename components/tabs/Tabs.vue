@@ -41,6 +41,7 @@
         ref="tabsList"
         class="tabs__tablist"
         :class="tabsListClasses"
+        role="tablist"
         @keyup="handleKey">
         <a
           v-for="(tab, index) in panels"
@@ -182,10 +183,10 @@ export default {
   watch: {
     panels() {
       // Wait a bit before calculations.  For slower devices.
+      this.$refs.tabsList.setAttribute('role', 'tablist');
       setTimeout(() => {
         this.tabsWidth = this.calculateTabsWidth();
         this.showControls = this.hasControls();
-        this.$refs.tabsList.setAttribute('role', 'tablist');
       }, TIMER_2000);
     },
   },
@@ -286,7 +287,6 @@ export default {
         tab.index = index;
         tab.isActive = index === childrenActiveIndex;
       });
-
       return children;
     },
     getTabSiblings() {
