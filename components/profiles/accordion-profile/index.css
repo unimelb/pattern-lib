@@ -97,7 +97,6 @@
 
     &-text {
       font-size: .8125rem;
-      color: rgb(var(--col-grey-dark));
       line-height: 1.25;
       font-weight: var(--fw-regular);
     }

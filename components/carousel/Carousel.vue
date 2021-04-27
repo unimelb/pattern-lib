@@ -39,12 +39,12 @@
               v-for="(story, index) in storiesData"
               :key="index"
               class="carousel__navigation-item list-reset"
-              role="menuitem">
+              role="none">
               <a
                 :class="{ 'carousel__navigation-link--active': story.isActive }"
                 class="carousel__navigation-link"
                 href="javascript: void(0);"
-
+                role="menuitem"
                 @click="moveToStory(index)"
                 @focusin="stopSliding"
                 @keydown.enter="moveToStory(index)"

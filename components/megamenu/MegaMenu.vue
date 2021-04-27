@@ -50,6 +50,7 @@
               v-for="(rootitem, rootindex) in items"
               ref="rootitems"
               :key="`rootitem-${rootindex}`"
+              role="none"
               tabindex="0"
               class="menu__item"
               @mouseover="activateDesktopMenu(rootindex)"
@@ -92,6 +93,7 @@
                     <li
                       v-for="(menuitem, menuindex) in rootitem.items"
                       :key="`menuitem-${menuindex}`"
+                      role="none"
                       class="menu__item">
                       <a
                         :href="menuitem.href"
@@ -256,7 +258,11 @@ export default {
   },
   computed: {
     isMobile() {
-      return isMobile();
+      let functionIsMobile = false;
+      if (typeof window !== 'undefined') {
+        functionIsMobile = isMobile();
+      }
+      return functionIsMobile;
     },
     isShowTopMenu() {
       return this.topMenu.length;

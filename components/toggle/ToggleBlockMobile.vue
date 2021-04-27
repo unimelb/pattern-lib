@@ -11,6 +11,8 @@
       <a
         class="toggleblock__footer"
         :class="light ? 'toggleblock__footer--light' : ''"
+        tabindex="0"
+        role="button"
         @click="toggle">Close panel</a>
     </template>
   </ToggleBlock>

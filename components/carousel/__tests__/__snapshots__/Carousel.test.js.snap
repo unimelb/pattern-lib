@@ -41,11 +41,12 @@ exports[`Carousel should match snapshot 1`] = `
         >
           <li
             class="carousel__navigation-item list-reset"
-            role="menuitem"
+            role="none"
           >
             <a
               class="carousel__navigation-link carousel__navigation-link--active"
               href="javascript: void(0);"
+              role="menuitem"
             >
               
               Story 1
@@ -54,11 +55,12 @@ exports[`Carousel should match snapshot 1`] = `
           </li>
           <li
             class="carousel__navigation-item list-reset"
-            role="menuitem"
+            role="none"
           >
             <a
               class="carousel__navigation-link"
               href="javascript: void(0);"
+              role="menuitem"
             >
               
               Story 2
