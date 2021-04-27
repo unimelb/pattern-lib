@@ -4,6 +4,8 @@ import { createStory } from 'storybook/utils';
 import StoryButtonDefault from './StoryButtonDefault.vue';
 import StoryButtonNoIcon from './StoryButtonNoIcon.vue';
 import StoryButtonIcons from './StoryButtonIcons.vue';
+import StoryButtonText from './StoryButtonText.vue';
+import StoryButtonLarge from './StoryButtonLarge.vue';
 import StoryButtonSmall from './StoryButtonSmall.vue';
 import StoryButtonExtraSmall from './StoryButtonExtraSmall.vue';
 import StoryButtonWide from './StoryButtonWide.vue';
@@ -36,6 +38,7 @@ storiesOf('Buttons/Types', module)
   .add('Secondary', createStory(StoryButtonSecondary))
   .add('Inverted', createStory(StoryButtonInverted))
   .add('CTA', createStory(StoryButtonCTA))
+  .add('Text link', createStory(StoryButtonText))
   .add('Campaign', createStory(StoryButtonCampaign))
   .add('Campaign secondary', createStory(StoryButtonCampaignSecondary))
   .add('Event', createStory(StoryButtonEvent))
@@ -64,7 +67,8 @@ storiesOf('Buttons/Width', module)
 storiesOf('Buttons/Sizes', module)
   .add('Default', createStory(ButtonDefault))
   .add('Extra Small', createStory(StoryButtonExtraSmall))
-  .add('Small', createStory(StoryButtonSmall));
+  .add('Small', createStory(StoryButtonSmall))
+  .add('Large', createStory(StoryButtonLarge));
 
 storiesOf('Buttons/CMS', module)
   .add('Default (btn--icon)', createStory(StoryButtonCMSIcons))

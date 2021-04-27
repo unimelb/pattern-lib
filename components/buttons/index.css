@@ -222,6 +222,10 @@
     padding: .375rem 1rem;
   }
 
+  &--lg {
+    padding: .75rem 1.5rem;
+  }
+
   &--wide {
     min-width: calc(var(--vr) * 10);
     max-width: 100%;
@@ -442,6 +446,32 @@
     border-color: color-mod(rgb(var(--col-navy-mid-1)) alpha(50%));
     pointer-events: none;
     cursor: not-allowed;
+  }
+
+  &--text,
+  &--text:active {
+    border: 0;
+    padding: 0;
+    font-weight: var(--fw-semibold);
+    width: auto;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    .push-icon {
+      padding-left: 0;
+
+      &__icon {
+        margin-left: .25rem;
+        width: .6rem;
+        height: .6rem;
+        position: relative;
+        top: .1rem;
+      }
+    }
   }
 
   .push-icon {
