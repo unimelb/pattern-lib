@@ -3,7 +3,7 @@
   flex: 1;
   min-height: 100%;
   flex-direction: column-reverse;
-  justify-content: flex-end;
+  justify-content: center;
   padding: .85rem 1rem .85rem 1.25rem;
   text-decoration: none;
   position: relative;
