@@ -4,6 +4,9 @@
       Find a Course
     </h2>
     <form class="form form--inline">
+      <label
+        for="search-input"
+        class="heading-card">Search careers, interests, courses or specialisations</label>
       <div class="form--inline__row form--inline__row--center">
         <span class="form--inline__select">
           <label
@@ -17,6 +20,7 @@
           </select>
         </span>
         <input
+          id="search-input"
           aria-label="Course title or keyword"
           class="form--inline__search"
           type="search"

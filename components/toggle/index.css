@@ -16,6 +16,10 @@
     overflow: hidden;
     transition: transform .2s ease-out, max-height .2s ease-out;
 
+    @media (--bp-desktop) {
+      transform: scaleY(1);
+    }
+
     &--active {
       transform: scaleY(1);
       transition-timing-function: ease-in;

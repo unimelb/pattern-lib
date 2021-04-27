@@ -42,12 +42,12 @@
   }
 
   .card__sub-titles {
+    color: rgb(var(--col-grey-mid-2));
     border-top: 1px solid rgb(var(--col-black-mid-1));
     padding-top: .5rem;
     font-weight: var(--fw-semibold);
     font-size: .9375rem;
     line-height: 1.5;
-    color: rgb(var(--col-grey-dark));
 
     svg {
       width: .8125rem;
@@ -70,13 +70,13 @@
   }
 
   .card__excerpt {
+    color: rgb(var(--col-grey-mid-2));
     border-top: 1px solid rgb(var(--col-black-mid-1));
     padding-top: .75rem;
     margin: .5rem 0 1rem 0;
     flex: 1 1 auto;
     font-size: .9375rem;
     line-height: 1.5;
-    color: rgb(var(--col-grey-dark));
   }
 
   .card__footer {

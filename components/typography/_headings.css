@@ -43,6 +43,15 @@ h6,
   font-weight: bold;
   text-transform: none;
   letter-spacing: normal;
+
+  .bg-inverted &,
+  .bg-inverted-dark &,
+  .bg-inverted-darker &,
+  .bg-inverted--o95 &,
+  .page-header__darken--o50 &,
+  .page-header__darken--o25 & {
+    color: rgb(var(--col-white));
+  }
 }
 
 /* REMOVE: .heading-page .heading-page-sub - to be replaced with title helpers */
