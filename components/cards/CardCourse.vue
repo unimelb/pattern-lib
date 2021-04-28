@@ -13,9 +13,7 @@
     <span
       class="card-course__name"
       data-test="course-name">
-      <template v-if="!searchQuery">
-        {{ title }}
-      </template>
+      <template v-if="!searchQuery">{{ title }}</template>
       <!-- eslint-disable vue/no-v-html -->
       <span
         v-else
