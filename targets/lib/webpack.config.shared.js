@@ -12,7 +12,6 @@ const pkg = require('../../package.json');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const isDev = process.env.NODE_ENV !== 'production';
 
-const emitHtml = isDev || process.env.LIB_EMIT_HTML === 'true';
 const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? pkg.version : process.env.LIB_LOAD_VERSION;
 const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
 
@@ -46,12 +45,12 @@ module.exports = merge(sharedConfig, {
     .concat(isDev ? [
       new webpack.HotModuleReplacementPlugin(),
     ] : [])
-    .concat(emitHtml ? [
+    .concat([
       new HtmlWebpackPlugin({
         template: './targets/lib/index.html',
         inject: true,
       }),
-    ] : []),
+    ]),
   devServer: {
     publicPath,
     hot: true, // enable hot module replacement
