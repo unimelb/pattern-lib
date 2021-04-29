@@ -2,22 +2,26 @@
   display: flex;
   flex: 1;
   min-height: 100%;
-  flex-direction: column;
-  padding: .5rem 1rem .5rem 1.3125rem;
+  flex-direction: column-reverse;
+  justify-content: center;
+  padding: .85rem 1rem .85rem 1.25rem;
   text-decoration: none;
   position: relative;
   background-color: rgb(var(--col-background-primary-white));
   color: rgb(var(--col-brand));
   border: 1px solid rgb(var(--col-navy-mid-1));
+  border-radius: .125rem;
 
   &::before {
     content: '';
-    top: 0;
-    left: 0;
+    top: -.0625rem;
+    left: -.0625rem;
     width: .389rem;
-    height: 100%;
+    height: calc(100% + .125rem);
     position: absolute;
     background-color: rgb(var(--col-black-light));
+    border-top-left-radius: .125rem;
+    border-bottom-left-radius: .125rem;
   }
 
   &--bachelor::before,
@@ -67,9 +71,19 @@
   }
 
   &__name {
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-semibold);
     font-size: 1rem;
     line-height: 1.25;
+
+    .card-course--search-result & {
+      font-weight: normal;
+    }
+
+    mark {
+      font-weight: var(--fw-bold);
+      background: transparent;
+      color: rgb(var(--col-grey-mid-3));
+    }
   }
 
   &:hover,
@@ -81,10 +95,12 @@
 
   &__type {
     font-weight: var(--fw-normal);
-    font-size: .75rem;
+    font-size: .875rem;
     line-height: 1.25;
     letter-spacing: .023rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-bottom: 0;
+    color: rgb(var(--col-grey-mid-2));
+    margin-top: .3rem;
   }
 }
