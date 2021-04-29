@@ -12,6 +12,8 @@ h6,
 .title--xs,
 .title--xxs,
 .lead,
+.heading-xxl,
+.heading-xl,
 .heading-lg,
 .heading-sm,
 .heading-md,
@@ -199,6 +201,37 @@ h6 {
   }
 }
 
+.heading-xxl {
+  font-size: 2.625rem;
+  line-height: 1.2;
+  font-family: var(--ff-lead);
+  font-weight: var(--fw-bold);
+
+  @media (--bp-desktop) {
+    font-size: 3rem;
+  }
+
+  @media (--bp-wide) {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+}
+
+.heading-xl {
+  font-size: 2rem;
+  line-height: 1.1;
+  font-family: var(--ff-lead);
+  font-weight: var(--fw-bold);
+
+  @media (--bp-tablet) {
+    font-size: 2.4rem;
+  }
+
+  @media (--bp-desktop) {
+    font-size: 3.1111rem;
+  }
+}
+
 .heading-lg {
   font-family: var(--ff-lead);
   font-size: 2rem;
@@ -215,16 +248,39 @@ h6 {
   font-family: var(--ff-lead);
   font-size: 1.5rem;
   font-weight: var(--fw-bold);
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: -.03rem;
+
+  @media (--bp-xx-wide) {
+    font-size: 1.7778rem;
+  }
+
+  small {
+    display: block;
+    margin-bottom: .25rem;
+  }
 }
 
 .heading-sm {
   font-family: var(--ff-lead);
   font-size: 1.125rem;
   font-weight: var(--fw-bold);
-  line-height: 1.2;
+  line-height: 1.5;
   letter-spacing: -.0225rem;
+
+  @media (--bp-xx-wide) {
+    font-size: 1.2778rem;
+  }
+
+  &--link {
+    line-height: 1.4;
+    font-size: 1.125rem;
+    color: rgb(var(--col-navy-dark));
+
+    @media (--bp-xx-wide) {
+      font-size: 1.1667rem;
+    }
+  }
 }
 
 .heading-xs {
@@ -255,6 +311,7 @@ h6 {
   font-size: .875rem;
   font-weight: normal;
   line-height: 1.3;
+  letter-spacing: normal;
 }
 
 .label-xs {
@@ -262,4 +319,27 @@ h6 {
   font-size: .8125rem;
   font-weight: normal;
   line-height: 1.3;
+  letter-spacing: normal;
+}
+
+.paragraph-lg {
+  font-family: var(--ff-normal);
+  font-size: 1.2222rem;
+  line-height: 1.5;
+  font-weight: normal;
+  letter-spacing: -.005rem;
+}
+
+.paragraph-md {
+  font-family: var(--ff-normal);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.paragraph-sm {
+  font-family: var(--ff-normal);
+  font-size: .875rem;
+  line-height: 1.5;
+  font-weight: normal;
 }
