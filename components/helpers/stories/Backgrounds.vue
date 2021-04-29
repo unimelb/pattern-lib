@@ -26,6 +26,9 @@
       <h1 class="bg-white">
         Class: bg-white
       </h1>
+      <h1 class="bg-grey-light">
+        Class: bg-grey-light
+      </h1>
     </section-wrap>
   </div>
 </template>
