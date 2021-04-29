@@ -30,6 +30,10 @@
         Colour: col-grey-mid-1
       </h2>
 
+      <h2 class="col-grey-mid-2">
+        Colour: col-grey-mid-2
+      </h2>
+
       <h1>Hiperlinks colours</h1>
       <h2 class="col-link">
         Colour: col-link
