@@ -10,10 +10,20 @@
 .shim-pl0 { padding-left: 0 !important; }
 .shim-pr0 { padding-right: 0 !important; }
 
+.shim-mt033 { margin-top: calc(var(--vr) / 3) !important; }
+.shim-mb033 { margin-bottom: calc(var(--vr) / 3) !important; }
+.shim-pt033 { padding-top: calc(var(--vr) / 3) !important; }
+.shim-pb033 { padding-bottom: calc(var(--vr) / 3) !important; }
+
 .shim-mt05 { margin-top: calc(var(--vr) / 2) !important; }
 .shim-mb05 { margin-bottom: calc(var(--vr) / 2) !important; }
 .shim-pt05 { padding-top: calc(var(--vr) / 2) !important; }
 .shim-pb05 { padding-bottom: calc(var(--vr) / 2) !important; }
+
+.shim-mt067 { margin-top: calc(var(--vr) / 3 * 2) !important; }
+.shim-mb067 { margin-bottom: calc(var(--vr) / 3 * 2) !important; }
+.shim-pt067 { padding-top: calc(var(--vr) / 3 * 2) !important; }
+.shim-pb067 { padding-bottom: calc(var(--vr) / 3 * 2) !important; }
 
 .shim-mt1 { margin-top: var(--vr) !important; }
 .shim-mb1 { margin-bottom: var(--vr) !important; }
