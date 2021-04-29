@@ -17,6 +17,7 @@ import ListsSpaced from './ListsSpaced.vue';
 import ListsVariantBullets from './ListsVariantBullets.vue';
 import ListsUnordered from './ListsUnordered.vue';
 import ListsMixed from './ListsMixed.vue';
+import ListsInline from './ListsInline.vue';
 import Pre from './Pre.vue';
 import Headings from './Headings.vue';
 import HeadingComponent from './HeadingComponent.vue';
@@ -41,4 +42,5 @@ storiesOf('Typography', module)
   .add('Lists - spaced for longer content', createStory(ListsSpaced))
   .add('Lists - variant bullets', createStory(ListsVariantBullets))
   .add('Lists - mixed', createStory(ListsMixed))
+  .add('Lists - inline', createStory(ListsInline))
   .add('Preformatted text', createStory(Pre));
