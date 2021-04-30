@@ -18,6 +18,7 @@ const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionT
 module.exports = merge(sharedConfig, {
   output: {
     path: path.resolve(__dirname, `../../.out/lib/v${pkg.version}/`),
+    filename: '[name].js',
     publicPath,
   },
   resolve: {

@@ -13,6 +13,6 @@ const Stories = requireComponent.keys().map(requireComponent);
 
 // using webpack html loader
 Stories.forEach((file) => {
-  console.log(file);
-  container.innerHTML += file;
+  console.log(JSON.parse(JSON.stringify(file.default)));
+  container.innerHTML += JSON.parse(JSON.stringify(file.default));
 });
