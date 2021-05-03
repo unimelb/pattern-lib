@@ -444,6 +444,32 @@
     cursor: not-allowed;
   }
 
+  &--text,
+  &--text:active {
+    border: 0;
+    padding: 0;
+    font-weight: var(--fw-semibold);
+    width: auto;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    .push-icon {
+      padding-left: 0;
+
+      &__icon {
+        margin-left: .25rem;
+        width: .6rem;
+        height: .6rem;
+        position: relative;
+        top: .1rem;
+      }
+    }
+  }
+
   .push-icon {
     padding-left: .25rem;
   }
