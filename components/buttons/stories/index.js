@@ -4,6 +4,7 @@ import { createStory } from 'storybook/utils';
 import StoryButtonDefault from './StoryButtonDefault.vue';
 import StoryButtonNoIcon from './StoryButtonNoIcon.vue';
 import StoryButtonIcons from './StoryButtonIcons.vue';
+import StoryButtonText from './StoryButtonText.vue';
 import StoryButtonSmall from './StoryButtonSmall.vue';
 import StoryButtonExtraSmall from './StoryButtonExtraSmall.vue';
 import StoryButtonWide from './StoryButtonWide.vue';
@@ -36,6 +37,7 @@ storiesOf('Buttons/Types', module)
   .add('Secondary', createStory(StoryButtonSecondary))
   .add('Inverted', createStory(StoryButtonInverted))
   .add('CTA', createStory(StoryButtonCTA))
+  .add('Text link', createStory(StoryButtonText))
   .add('Campaign', createStory(StoryButtonCampaign))
   .add('Campaign secondary', createStory(StoryButtonCampaignSecondary))
   .add('Event', createStory(StoryButtonEvent))
