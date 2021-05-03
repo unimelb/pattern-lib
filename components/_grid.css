@@ -8,6 +8,13 @@
     justify-content: center;
   }
 
+  &--today {
+    @media (--bp-tablet) {
+      margin-right: -1.3333rem;
+      margin-left: -1.3333rem;
+    }
+  }
+
   @media (--bp-x-tablet) {
     flex-flow: row wrap;
 
@@ -89,6 +96,16 @@
         padding-left: 0;
         padding-right: 0;
       }
+    }
+  }
+
+  &--today {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (--bp-tablet) {
+      padding-right: 1.3333rem;
+      padding-left: 1.3333rem;
     }
   }
 

@@ -1,0 +1,168 @@
+.page-footer-today {
+  position: relative;
+
+  &__top {
+    padding: 4rem 0;
+
+    &-inner {
+      @media (--bp-desktop) {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -1.333rem;
+        margin-right: -1.333rem;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 2.25rem 0;
+    @media (--bp-wide) {
+      font-size: .875rem;
+    }
+    &-inner {
+      @media (--bp-wide) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__reconciliation {
+    margin-bottom: 2rem;
+    max-width: 26rem;
+
+    @media (--bp-wide) {
+      margin-bottom: 4rem;
+    }
+
+    a {
+      font-weight: var(--fw-semibold);
+    }
+  }
+
+  &__primary-links {
+    flex: 1;
+    margin-bottom: 3rem;
+
+    @media (--bp-desktop) {
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__secondary-links {
+    li {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: rgb(var(--col-white));
+    }
+
+    @media (--bp-wide) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -.25rem -.5rem;
+
+      li {
+        margin: .25rem .5rem;
+      }
+    }
+  }
+
+  &__def-list {
+    margin-bottom: 0;
+
+    dt {
+      margin-left: 1.25rem;
+      display: inline;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+
+    dd {
+      margin-left: .1rem;
+      display: inline;
+      white-space: nowrap;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1rem;
+
+    @media (--bp-desktop) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      margin-top: 0;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(var(--col-white));
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    margin-top: 2rem;
+
+    li {
+      padding-left: .25rem;
+      padding-right: .25rem;
+    }
+
+    a {
+      display: block;
+      color: rgb(var(--col-white));
+      padding: .25rem;
+      transition: opacity .15s ease;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &::after {
+        display: none !important;
+      }
+    }
+
+    &-icon {
+      width: 1.333rem;
+      height: 1.333rem;
+    }
+  }
+
+  &__two-column {
+    @media (--bp-desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 3rem;
+
+    @media (--bp-desktop) {
+      width: 12.5rem;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      font-weight: var(--fw-semibold);
+    }
+  }
+}
