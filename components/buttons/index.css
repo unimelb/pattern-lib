@@ -222,10 +222,6 @@
     padding: .375rem 1rem;
   }
 
-  &--lg {
-    padding: .75rem 1.5rem;
-  }
-
   &--wide {
     min-width: calc(var(--vr) * 10);
     max-width: 100%;

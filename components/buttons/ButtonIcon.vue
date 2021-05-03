@@ -92,7 +92,7 @@ export default {
       return [
         'btn',
         {
-          [`btn--${this.size}`]: ['sml', 'xsml', 'lg'].includes(this.size),
+          [`btn--${this.size}`]: ['sml', 'xsml'].includes(this.size),
           [`btn--${this.width}`]: ['wide', 'xwide', 'fullwidth'].includes(this.width),
           'btn--inverted': this.inverted,
           'btn--disabled': this.disabled,

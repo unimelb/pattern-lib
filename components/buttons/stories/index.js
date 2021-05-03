@@ -5,7 +5,6 @@ import StoryButtonDefault from './StoryButtonDefault.vue';
 import StoryButtonNoIcon from './StoryButtonNoIcon.vue';
 import StoryButtonIcons from './StoryButtonIcons.vue';
 import StoryButtonText from './StoryButtonText.vue';
-import StoryButtonLarge from './StoryButtonLarge.vue';
 import StoryButtonSmall from './StoryButtonSmall.vue';
 import StoryButtonExtraSmall from './StoryButtonExtraSmall.vue';
 import StoryButtonWide from './StoryButtonWide.vue';
@@ -67,8 +66,7 @@ storiesOf('Buttons/Width', module)
 storiesOf('Buttons/Sizes', module)
   .add('Default', createStory(ButtonDefault))
   .add('Extra Small', createStory(StoryButtonExtraSmall))
-  .add('Small', createStory(StoryButtonSmall))
-  .add('Large', createStory(StoryButtonLarge));
+  .add('Small', createStory(StoryButtonSmall));
 
 storiesOf('Buttons/CMS', module)
   .add('Default (btn--icon)', createStory(StoryButtonCMSIcons))
