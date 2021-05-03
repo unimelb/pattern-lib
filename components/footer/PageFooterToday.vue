@@ -5,7 +5,7 @@
     <div class="page-footer-today__top bg-inverted">
       <div class="max">
         <div class="page-footer-today__top-inner grid grid--today">
-          <div class="page-footer-today__content cell cell--today cell--desk-1of2">
+          <div class="page-footer-today__content cell cell--today cell--desk-2of3 cell--wide-1of2">
             <h2 class="screenreaders-only">
               Site footer
             </h2>
@@ -37,7 +37,7 @@
                 <div class="page-footer-today__contact">
                   <p>Phone: 13 MELB (13 6352)</p>
                   <p>International: +61 3 9035 5511 </p>
-                  <p>Address:<br>The University of Melbourne Grattan Street, Parkville, Victoria, 3010, Australia</p>
+                  <p>Address:<br>The University of Melbourne <br>Grattan Street, Parkville, <br>Victoria, 3010, Australia</p>
                   <p>
                     <ButtonIcon
                       href="https://about.unimelb.edu.au/priorities-and-partnerships/campus-development/campus-locations"
@@ -49,7 +49,7 @@
               </div>
             </div>
           </div>
-          <div class="page-footer-today__brand cell cell--today cell--desk-1of2">
+          <div class="page-footer-today__brand cell cell--today cell--desk-1of3 cell--wide-1of2">
             <Logo size="lg" />
             <ul class="page-footer-today__social list-reset">
               <li
