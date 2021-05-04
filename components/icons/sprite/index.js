@@ -21,6 +21,7 @@ import './microphone.svg';
 import './phone.svg';
 import './play.svg';
 import './search.svg';
+import './search-alt.svg';
 import './twitter.svg';
 import './tag.svg';
 import './envelope.svg';

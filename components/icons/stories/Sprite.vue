@@ -27,6 +27,7 @@ export default {
       'pause',
       'home',
       'search',
+      'search-alt',
       'calendar',
       'clock',
       'close',
