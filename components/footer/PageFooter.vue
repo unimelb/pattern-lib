@@ -18,7 +18,7 @@
           </div>
           <div class="page-footer__main__ack cell cell--wide-1of4">
             <a
-              href="https://unimelb.edu.au/reconciliation"
+              href="https://about.unimelb.edu.au/reconciliation"
               class="page-footer__ack link-reset">We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated.</a>
           </div>
         </div>
