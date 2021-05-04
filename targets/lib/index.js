@@ -36,6 +36,8 @@ import ContactList from 'components/contact-list/ContactList.vue';
 import ContentBlock from 'components/content-block/ContentBlock.vue';
 import Dropdown from 'components/dropdown/Dropdown.vue';
 import VideoEmbed from 'components/embed/VideoEmbed.vue';
+import Video from 'components/embed/Video.vue';
+import VideoFullWidth from 'components/embed/VideoFullWidth.vue';
 import SoundcloudEmbed from 'components/embed/SoundcloudEmbed.vue';
 import FigureWrap from 'components/figure/FigureWrap.vue';
 import Notice from 'components/notice/Notice.vue';
@@ -112,7 +114,6 @@ import CampaignBanner from 'components/campaign/CampaignBanner.vue';
 import CardImageLink from 'components/cards/CardImageLink.vue';
 import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCategory.vue';
 import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
-import { Video, VideoFullWidth } from 'components/video';
 
 import { version } from '../../package.json';
 

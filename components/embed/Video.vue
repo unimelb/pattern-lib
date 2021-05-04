@@ -1,9 +1,6 @@
 <template>
   <div
-    :class="{
-      'video': true,
-      'video--portrait': orientation === 'portrait',
-    }">
+    :class="classes">
     <transition
       name="fade"
       @after-enter="afterEnter">
@@ -29,7 +26,7 @@
         <button
           class="video__btn"
           aria-label="Play video - plays embed automatically"
-          @click="$emit('autoplay'); videoPlaying = true"
+          @click="startAutoplay"
           @mouseover="$emit('autoplay')">
           <span class="video__btn-label">
             {{ label }} <template v-if="video.duration"><!--
@@ -72,7 +69,7 @@
         type="button"
         aria-label="Close video"
         class="video__close"
-        @click="videoPlaying = false">
+        @click="stopAutoplay">
         <span class="screenreaders-only">Close</span>
         <svg
           width="16"
@@ -147,10 +144,23 @@ export default {
 
       return `${this.video.url}?autoplay=1${additionalParams}`;
     },
+    classes() {
+      return {
+        video: true,
+        'video--portrait': this.orientation === 'portrait',
+      };
+    },
   },
   methods: {
     afterEnter(el) {
       el.focus();
+    },
+    startAutoplay() {
+      this.$emit('autoplay');
+      this.videoPlaying = true;
+    },
+    stopAutoplay() {
+      this.videoPlaying = false;
     },
   },
 };
