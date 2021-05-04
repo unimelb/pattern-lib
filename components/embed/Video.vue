@@ -140,7 +140,7 @@ export default {
         return '';
       }
 
-      const additionalParams = this.videoApi ? `&enablejsapi=1&origin=https%3A%2F%2F${document.location.hostname}.unimelb.edu.au` : '';
+      const additionalParams = this.videoApi ? `&enablejsapi=1&origin=https%3A%2F%2F${document.location.hostname}` : '';
 
       return `${this.video.url}?autoplay=1${additionalParams}`;
     },
