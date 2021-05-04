@@ -159,6 +159,10 @@ export {
 }
   from 'components/footer/PageFooter.vue';
 export {
+  default as PageFooterToday,
+}
+  from 'components/footer/PageFooterToday.vue';
+export {
   default as PageHeader,
 }
   from 'components/header/PageHeader.vue';

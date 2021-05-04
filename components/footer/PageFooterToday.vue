@@ -4,8 +4,8 @@
     class="page-footer-today">
     <div class="page-footer-today__top bg-inverted">
       <div class="max">
-        <div class="page-footer-today__top-inner grid grid--today">
-          <div class="page-footer-today__content cell cell--today cell--desk-2of3 cell--wide-1of2">
+        <div class="page-footer-today__top-inner grid grid--lg">
+          <div class="page-footer-today__content cell cell--lg cell--desk-2of3 cell--wide-1of2 shim-mb0 shim-mt0">
             <h2 class="screenreaders-only">
               Site footer
             </h2>
@@ -14,17 +14,18 @@
                 We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated
               </p>
               <ButtonIcon
-                href="https://unimelb.edu.au/reconciliation"
+                href="https://about.unimelb.edu.au/reconciliation"
                 class="btn--text">
                 Read about our commitment to reconciliation
               </ButtonIcon>
             </div>
-            <div class="grid grid--today">
-              <div class="cell cell--today cell--tab-1of2">
+            <div class="grid grid--lg">
+              <div class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0">
                 <ul class="list-reset page-footer-today__primary-links">
                   <li
-                    v-for="(link, index) in primaryLinks"
-                    :key="index">
+                    v-for="(link, index) in computedPrimaryLinks"
+                    :key="index"
+                    class="page-footer-today__primary-links-item">
                     <ButtonIcon
                       :href="link.href"
                       class="btn--text">
@@ -33,12 +34,18 @@
                   </li>
                 </ul>
               </div>
-              <div class="cell cell--today cell--tab-1of2">
+              <div class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0">
                 <div class="page-footer-today__contact">
-                  <p>Phone: 13 MELB (13 6352)</p>
-                  <p>International: +61 3 9035 5511 </p>
-                  <p>Address:<br>The University of Melbourne <br>Grattan Street, Parkville, <br>Victoria, 3010, Australia</p>
-                  <p>
+                  <p class="shim-mb067">
+                    Phone: 13 MELB (13 6352)
+                  </p>
+                  <p class="shim-mb067">
+                    International: +61 3 9035 5511
+                  </p>
+                  <p class="shim-mb067">
+                    Address:<br>The University of Melbourne <br>Grattan Street, Parkville, <br>Victoria, 3010, Australia
+                  </p>
+                  <p class="shim-mb067">
                     <ButtonIcon
                       href="https://about.unimelb.edu.au/priorities-and-partnerships/campus-development/campus-locations"
                       class="btn--text">
@@ -49,14 +56,15 @@
               </div>
             </div>
           </div>
-          <div class="page-footer-today__brand cell cell--today cell--desk-1of3 cell--wide-1of2">
+          <div class="page-footer-today__brand cell cell--lg cell--desk-1of3 cell--wide-1of2 shim-mb0 shim-mt0">
             <Logo size="lg" />
             <ul class="page-footer-today__social list-reset">
               <li
                 v-for="(link, i) in socialLinks"
-                :key="i">
+                :key="i"
+                class="page-footer-today__social-item">
                 <a
-                  class="link-reset"
+                  class="link-reset page-footer-today__social-link"
                   :href="link.href"
                   target="_blank">
                   <span class="screenreaders-only">
@@ -81,11 +89,12 @@
       <div class="page-footer-today__bottom-inner max">
         <ul class="list-reset page-footer-today__secondary-links">
           <li
-            v-for="(link, index) in secondaryLinks"
-            :key="index">
+            v-for="(link, index) in computedSecondaryLinks"
+            :key="index"
+            class="list-reset page-footer-today__secondary-links-item">
             <a
               :href="link.href"
-              class="col-white">
+              class="page-footer-today__secondary-links-link">
               {{ link.text }}
             </a>
           </li>
@@ -115,18 +124,34 @@ export default {
     ButtonIcon,
     Logo,
   },
+  props: {
+    primaryLinks: {
+      type: Array,
+      required: false,
+      default() {
+        return [];
+      },
+    },
+    secondaryLinks: {
+      type: Array,
+      required: false,
+      default() {
+        return [];
+      },
+    },
+  },
   data() {
     return {
-      primaryLinks: [
+      defaultPrimaryLinks: [
         { text: 'About us', href: 'https://about.unimelb.edu.au/' },
         { text: 'Careers at Melbourne', href: 'https://about.unimelb.edu.au/careers' },
         { text: 'Alumni', href: 'https://www.unimelb.edu.au/alumni' },
         { text: 'Newsroom', href: 'https://about.unimelb.edu.au/newsroom' },
         { text: 'Contact', href: 'https://www.unimelb.edu.au/contact' },
       ],
-      secondaryLinks: [
+      defaultSecondaryLinks: [
         { text: 'Emergency information', href: 'https://safety.unimelb.edu.au/emergency' },
-        { text: 'Disclaimer and copyright', href: 'https://www.unimelb.edu.au/legal' },
+        { text: 'Online terms and privacy', href: 'https://www.unimelb.edu.au/legal' },
         { text: 'Accessibility', href: 'https://www.unimelb.edu.au/accessibility' },
         { text: 'Privacy', href: 'https://about.unimelb.edu.au/strategy/governance/compliance-obligations/privacy' },
       ],
@@ -137,6 +162,14 @@ export default {
         { text: 'Instagram', icon: 'instagram', href: 'https://www.instagram.com/unimelb' },
       ],
     };
+  },
+  computed: {
+    computedPrimaryLinks() {
+      return this.primaryLinks.length ? this.primaryLinks : this.defaultPrimaryLinks;
+    },
+    computedSecondaryLinks() {
+      return this.secondaryLinks.length ? this.secondaryLinks : this.defaultSecondaryLinks;
+    },
   },
 };
 </script>
