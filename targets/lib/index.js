@@ -112,6 +112,7 @@ import CampaignBanner from 'components/campaign/CampaignBanner.vue';
 import CardImageLink from 'components/cards/CardImageLink.vue';
 import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCategory.vue';
 import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
+import { Video, VideoFullWidth } from 'components/video';
 
 import { version } from '../../package.json';
 
@@ -232,6 +233,8 @@ Vue.component('campaign-banner', CampaignBanner);
 Vue.component('card-image-link', CardImageLink);
 Vue.component('cards-filter-category', CardsFilterCategory);
 Vue.component('courses-filter', CoursesFilter);
+Vue.component('video', Video);
+Vue.component('video-full-width', VideoFullWidth);
 
 // Create Vue instance
 new Vue({
