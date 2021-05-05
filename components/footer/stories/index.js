@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/vue';
 import { createStory } from 'storybook/utils';
 
 import PageFooterDefault from './PageFooterDefault.vue';
-import PageFooterToday from './PageFooterToday.vue';
+import PageFooter2021 from './PageFooter2021.vue';
 
 storiesOf('Footer', module)
   .add('Default', createStory(PageFooterDefault))
-  .add('Today', createStory(PageFooterToday));
+  .add('2021', createStory(PageFooter2021));

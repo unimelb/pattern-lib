@@ -1,15 +1,15 @@
 <template>
   <footer
     id="page-footer"
-    class="page-footer-today">
-    <div class="page-footer-today__top bg-inverted">
+    class="page-footer-2021">
+    <div class="page-footer-2021__top bg-inverted">
       <div class="max">
-        <div class="page-footer-today__top-inner grid grid--lg">
-          <div class="page-footer-today__content cell cell--lg cell--desk-2of3 cell--wide-1of2 shim-mb0 shim-mt0">
+        <div class="page-footer-2021__top-inner grid grid--lg">
+          <div class="page-footer-2021__content cell cell--lg cell--desk-2of3 cell--wide-1of2 shim-mb0 shim-mt0">
             <h2 class="screenreaders-only">
               Site footer
             </h2>
-            <div class="page-footer-today__reconciliation">
+            <div class="page-footer-2021__reconciliation">
               <p class="heading-sm shim-mb067">
                 We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated
               </p>
@@ -21,11 +21,11 @@
             </div>
             <div class="grid grid--lg">
               <div class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0">
-                <ul class="list-reset page-footer-today__primary-links">
+                <ul class="list-reset page-footer-2021__primary-links">
                   <li
                     v-for="(link, index) in computedPrimaryLinks"
                     :key="index"
-                    class="page-footer-today__primary-links-item">
+                    class="page-footer-2021__primary-links-item">
                     <ButtonIcon
                       :href="link.href"
                       class="btn--text">
@@ -35,7 +35,7 @@
                 </ul>
               </div>
               <div class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0">
-                <div class="page-footer-today__contact">
+                <div class="page-footer-2021__contact">
                   <p class="shim-mb067">
                     Phone: 13 MELB (13 6352)
                   </p>
@@ -56,22 +56,22 @@
               </div>
             </div>
           </div>
-          <div class="page-footer-today__brand cell cell--lg cell--desk-1of3 cell--wide-1of2 shim-mb0 shim-mt0">
+          <div class="page-footer-2021__brand cell cell--lg cell--desk-1of3 cell--wide-1of2 shim-mb0 shim-mt0">
             <Logo size="lg" />
-            <ul class="page-footer-today__social list-reset">
+            <ul class="page-footer-2021__social list-reset">
               <li
                 v-for="(link, i) in socialLinks"
                 :key="i"
-                class="page-footer-today__social-item">
+                class="page-footer-2021__social-item">
                 <a
-                  class="link-reset page-footer-today__social-link"
+                  class="link-reset page-footer-2021__social-link"
                   :href="link.href"
                   target="_blank">
                   <span class="screenreaders-only">
                     {{ link.text }}
                   </span>
                   <svg
-                    class="page-footer-today__social-icon"
+                    class="page-footer-2021__social-icon"
                     focusable="false"
                     role="presentation">
                     <use
@@ -85,21 +85,21 @@
         </div>
       </div>
     </div>
-    <div class="page-footer-today__bottom bg-inverted-darker">
-      <div class="page-footer-today__bottom-inner max">
-        <ul class="list-reset page-footer-today__secondary-links">
+    <div class="page-footer-2021__bottom bg-inverted-darker">
+      <div class="page-footer-2021__bottom-inner max">
+        <ul class="list-reset page-footer-2021__secondary-links">
           <li
             v-for="(link, index) in computedSecondaryLinks"
             :key="index"
-            class="list-reset page-footer-today__secondary-links-item">
+            class="list-reset page-footer-2021__secondary-links-item">
             <a
               :href="link.href"
-              class="page-footer-today__secondary-links-link">
+              class="page-footer-2021__secondary-links-link">
               {{ link.text }}
             </a>
           </li>
         </ul>
-        <dl class="page-footer-today__def-list">
+        <dl class="page-footer-2021__def-list">
           <dt>CRICOS number:</dt>
           <dd>00116K</dd>
           <dt>ABN:</dt>

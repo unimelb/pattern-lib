@@ -1,5 +1,5 @@
 import PageFooter from './PageFooter.vue';
-import PageFooterToday from './PageFooterToday.vue';
+import PageFooter2021 from './PageFooter2021.vue';
 
-export { PageFooter, PageFooterToday };
+export { PageFooter, PageFooter2021 };
 export default PageFooter;
