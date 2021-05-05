@@ -15,7 +15,7 @@
     background-color: rgb(var(--col-grey-light));
 
     &:hover {
-      background-color: rgb(var(--col-grey-mid-0));
+      background-color: rgb(209, 214, 217);
     }
   }
 

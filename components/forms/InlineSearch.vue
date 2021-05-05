@@ -26,7 +26,7 @@
       <SvgIcon
         v-if="!withSubmit"
         class="inline-search__icon"
-        name="search-alt" />
+        name="search" />
       <button
         v-if="withSubmit"
         aria-label="Submit"
@@ -35,7 +35,7 @@
         <span class="screenreaders-only">Submit</span>
         <SvgIcon
           class="inline-search__submit-icon"
-          name="search-alt" />
+          name="search" />
       </button>
     </div>
   </form>
