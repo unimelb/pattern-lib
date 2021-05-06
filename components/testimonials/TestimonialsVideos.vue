@@ -5,10 +5,10 @@
       v-for="(testimonial, index) in testimonials"
       :key="index"
       class="cell cell--lg cell--tab-1of2">
-      <TestimonialToday
+      <TestimonialsAlt
         :title="testimonial.title"
         :name="testimonial.name"
-        :img-src="testimonial.image_url"
+        :img-src="testimonial.imgSrc"
         :video="testimonial.video"
         :autoplay="videoPlayingIndex === index"
         @autoplay="videoPlayingIndex = index" />
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import TestimonialToday from './TestimonialToday.vue';
+import TestimonialsAlt from './TestimonialsAlt.vue';
 
 export default {
   components: {
-    TestimonialToday,
+    TestimonialsAlt,
   },
   props: {
     testimonials: {

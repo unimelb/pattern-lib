@@ -2,27 +2,27 @@
   <component
     :is="video ? 'div' : 'blockquote'"
     :class="{
-      'testimonial-today': true,
-      'testimonial-today--video': video,
-      'testimonial-today--alt': alt,
+      'testimonials-alt': true,
+      'testimonials-alt--video': video,
+      'testimonials-alt--long': long,
     }">
     <component
       :is="video ? 'h3' : 'p'"
       :class="{
-        'testimonial-today__title': true,
-        'heading-sm': !alt,
-        'heading-md': alt,
+        'testimonials-alt__title': true,
+        'heading-sm': !long,
+        'heading-md': long,
       }">
       {{ title }}
     </component>
     <cite
       v-if="name"
-      class="testimonial-today__name">
+      class="testimonials-alt__name">
       {{ name }}
     </cite>
     <Video
-      v-if="video && !alt"
-      class="testimonial-today__video"
+      v-if="video && !long"
+      class="testimonials-alt__video"
       :video="video"
       :poster="{ src: imgSrc, alt: name }"
       orientation="portrait"
@@ -34,7 +34,7 @@
           :src="imgSrc"
           :aspect-ratio="1"
           :alt="name"
-          class="testimonial-today__img" />
+          class="testimonials-alt__img" />
       </client-only>
     </template>
   </component>
@@ -70,7 +70,7 @@ export default {
         return null;
       },
     },
-    alt: {
+    long: {
       type: Boolean,
       required: false,
       default: false,

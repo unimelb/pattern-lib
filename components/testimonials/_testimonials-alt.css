@@ -1,4 +1,4 @@
-.testimonial-today {
+.testimonials-alt {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,11 +9,11 @@
   min-width: 12rem;
   margin: 0;
 
-  &--alt {
+  &--long {
     max-width: 34rem;
   }
 
-  &--alt &__title {
+  &--long &__title {
     margin-bottom: 1rem;
 
     &::before {
@@ -23,11 +23,11 @@
     }
   }
 
-  &--alt &__name {
+  &--long &__name {
     order: 99;
   }
 
-  &--alt &__img {
+  &--long &__img {
     max-width: 4.5rem !important;
     margin-bottom: 1rem;
   }
