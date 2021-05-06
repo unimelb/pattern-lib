@@ -14,7 +14,7 @@
     }
   }
 
-  /* top half with logo, search, popular links, etc. */
+  /* top half with logo, popular links, etc. */
   &__top {
     padding: 3rem 0 2.25rem;
   }
@@ -162,15 +162,9 @@
       padding-top: 3rem;
     }
 
-    /* footer header with logo and search form */
+    /* footer header with logo */
     &__header {
       flex-direction: row;
-
-      &-search {
-        align-self: flex-end;
-        width: 50%;
-        padding-left: .5rem;
-      }
     }
 
     &__popular {
@@ -244,73 +238,5 @@
     &__legal {
       margin-top: 1.5rem;
     }
-  }
-}
-
-/**
- * Search form
- */
-.page-footer-search {
-  &__field {
-    position: relative;
-  }
-
-  &__label {
-    font-size: .8rem;
-    letter-spacing: .0625rem;
-    text-transform: uppercase;
-
-    @media (--bp-desktop) {
-      letter-spacing: .055rem;
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    top: calc(50% - .625rem);
-    margin-left: 1rem;
-
-    /* vertical centring */
-    left: 0;
-    width: 1.375rem;
-    height: 1.375rem;
-
-    @media (--bp-desktop) {
-      top: calc(50% - .555rem);
-    }
-  }
-
-  &__submit {
-    color: rgb(var(--col-background-primary-white));
-  }
-
-  &__input {
-    display: block;
-    width: 100%;
-    padding: .5rem .5rem .5rem 2.75rem;
-    margin-top: .25rem;
-
-    /* icon width + roughly .5rem */
-    transition: border-color .3s;
-    border: 2px solid rgb(var(--col-blue-mid-1));
-    border-radius: 2px;
-    background-color: transparent;
-    color: inherit;
-    appearance: none;
-
-    &:focus,
-    &:focus-visible {
-      outline: 2px solid rgb(var(--col-background-primary-white));
-    }
-
-    &::placeholder {
-      color: rgba(var(--col-background-primary-white), .6);
-      opacity: 1;
-      font-weight: var(--fw-light);
-    }
-  }
-
-  @media (--bp-tablet) {
-    margin-bottom: 0;
   }
 }

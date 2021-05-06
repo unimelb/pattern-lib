@@ -6,34 +6,6 @@
           <Logo
             size="lg" />
         </div>
-        <div class="page-footer__header-search">
-          <form
-            id="search"
-            action="https://search.unimelb.edu.au"
-            class="page-footer-search">
-            <div class="page-footer-search__field">
-              <label
-                class="page-footer-search__label"
-                for="f_s_q">University Search</label>
-              <input
-                id="f_s_q"
-                class="page-footer-search__input"
-                name="q"
-                placeholder="Type to search"
-                type="search">
-              <button
-                type="submit"
-                class="page-footer-search__submit"
-                aria-label="Search"
-                onclick="submit()"
-                href="#">
-                <SvgIcon
-                  class="page-footer-search__icon"
-                  :name="'search'" />
-              </button>
-            </div>
-          </form>
-        </div>
       </div>
       <div class="page-footer__main grid">
         <div class="page-footer__main__users cell cell--wide-1of4">
