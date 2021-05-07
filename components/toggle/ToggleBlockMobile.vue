@@ -9,6 +9,7 @@
     <template slot="hidden">
       <slot name="hidden" />
       <a
+        href="#"
         class="toggleblock__footer"
         :class="light ? 'toggleblock__footer--light' : ''"
         tabindex="0"
