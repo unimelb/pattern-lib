@@ -1,5 +1,5 @@
 import PageFooter from './PageFooter.vue';
-import PageFooter2021 from './PageFooter2021.vue';
+import PageFooterAlt from './PageFooterAlt.vue';
 
-export { PageFooter, PageFooter2021 };
+export { PageFooter, PageFooterAlt };
 export default PageFooter;

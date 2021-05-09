@@ -159,9 +159,9 @@ export {
 }
   from 'components/footer/PageFooter.vue';
 export {
-  default as PageFooter2021,
+  default as PageFooterAlt,
 }
-  from 'components/footer/PageFooter2021.vue';
+  from 'components/footer/PageFooterAlt.vue';
 export {
   default as PageHeader,
 }
