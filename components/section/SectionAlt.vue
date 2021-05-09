@@ -5,20 +5,20 @@
       'section-alt': true,
       [`section-alt--bg-${bgColor}`]: bgColor,
       'section-alt--bordered': bordered,
-      'section-alt--img': imgSrc,
+      'section-alt--img': img,
     }"
     tabindex="-1">
-    <client-only>
+    <client-only v-if="img">
       <progressive-img
-        v-if="imgSrc"
-        :src="imgSrc"
+        :src="img.src"
         :aspect-ratio="0.4"
+        :alt="img.alt || ''"
         class="section-alt__img" />
     </client-only>
     <div
       :class="{
         'section-alt__inner max': true,
-        'section-alt__inner--inset': imgSrc || bordered,
+        'section-alt__inner--inset': img || bordered,
       }">
       <div
         v-if="$slots.left"
@@ -47,10 +47,12 @@ export default {
       type: String,
       default: 'section',
     },
-    imgSrc: {
-      type: String,
+    img: {
+      type: Object,
       required: false,
-      default: '',
+      default() {
+        return null;
+      },
     },
     bordered: {
       type: Boolean,

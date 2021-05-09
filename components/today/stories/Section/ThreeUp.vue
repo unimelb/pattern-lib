@@ -1,6 +1,6 @@
 <template>
   <SectionAlt>
-    <h2 class="heading-md">
+    <h2 class="heading-md shim-mb2">
       Level up with Melbourne MicroCerts
     </h2>
     <div class="grid grid--lg">
@@ -51,7 +51,7 @@ import handshakeIcon from './static/handshake.svg';
 
 export default {
   components: { SectionAlt },
-  readme: { source: true, html: true },
+  readme: { source: true },
   data() {
     return {
       briefcaseIcon,
