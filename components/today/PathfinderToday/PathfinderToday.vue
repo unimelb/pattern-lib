@@ -20,7 +20,8 @@
             <span class="pathfinder-today__link-description label-s">{{ item.description }}</span>
             <span class="pathfinder-today__link-icon">
               <SvgIcon
-                name="arrow-right" />
+                name="arrow-right"
+                aria-hidden="true" />
             </span>
           </a>
         </li>
