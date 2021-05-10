@@ -13,6 +13,7 @@
           class="video__img" />
         <video
           v-if="video.preview && autoplay"
+          ref="video"
           muted
           autoplay
           playsinline
@@ -26,7 +27,8 @@
           class="video__btn"
           aria-label="Play video - plays embed automatically"
           @click="startAutoplay"
-          @mouseover="$emit('autoplay')">
+          @mouseleave="leaveVideo"
+          @mouseover="hoverVideo">
           <span class="video__btn-label">
             {{ label }} <template v-if="video.duration"><!--
               -->({{ formattedDuration }})
@@ -151,6 +153,12 @@ export default {
     },
   },
   methods: {
+    hoverVideo() {
+      this.$refs.video.play();
+    },
+    leaveVideo() {
+      this.$refs.video.pause();
+    },
     afterEnter(el) {
       el.focus();
     },
