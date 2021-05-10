@@ -27,12 +27,18 @@ pathfinderItems: [
     href: '/landing-page/',
   },
   {
-    title: 'Short&nbsp;courses&nbsp;and microcredentials',
+    title: 'Short courses and microcredentials',
     description: 'Upskill, expand your knowledge and take the next step in your career with focused courses.',
     href: '/landing-page/',
   },
 ]
 ```
+
+Rules: 
+
+- Min/Max of 4 items
+- Title (100 characters)
+- Description (200 characters)
 
 ```html
 <pathfinder-today items="pathfinderItems">

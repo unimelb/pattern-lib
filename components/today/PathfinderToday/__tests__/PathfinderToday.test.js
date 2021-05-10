@@ -23,7 +23,7 @@ const pathfinderLinks = [
     href: '/landing-page/',
   },
   {
-    title: 'Short&nbsp;courses&nbsp;and microcredentials',
+    title: 'Short courses and microcredentials',
     description: 'Upskill, expand your knowledge and take the next step in your career with focused courses.',
     href: '/landing-page/',
   },

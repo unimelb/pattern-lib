@@ -99,7 +99,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
           <span
             class="pathfinder-today__link-title heading-sm heading-sm--alt"
           >
-            Short courses and microcredentials
+            Short courses and microcredentials
           </span>
            
           <span
@@ -116,7 +116,6 @@ exports[`PathfinderToday should match snapshot 1`] = `
         </a>
       </li>
     </ul>
-     
   </div>
 </div>
 `;

@@ -15,11 +15,8 @@
             :id="item.id"
             class="pathfinder-today__link"
             :href="item.href">
-            <!-- eslint-disable vue/no-v-html -->
             <span
-              class="pathfinder-today__link-title heading-sm heading-sm--alt"
-              v-html="item.title" />
-            <!-- eslint-enable vue/no-v-html -->
+              class="pathfinder-today__link-title heading-sm heading-sm--alt">{{ item.title }}</span>
             <span class="pathfinder-today__link-description label-s">{{ item.description }}</span>
             <span class="pathfinder-today__link-icon">
               <SvgIcon
@@ -28,7 +25,6 @@
           </a>
         </li>
       </ul>
-      <slot name="after" />
     </div>
   </div>
 </template>
