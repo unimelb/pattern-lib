@@ -446,3 +446,7 @@ export {
   default as CoursesFilter,
 }
   from 'components/filter/courses/CoursesFilter.vue';
+export {
+  default as PathfinderToday,
+}
+  from 'components/today/PathfinderToday/PathfinderToday.vue';
