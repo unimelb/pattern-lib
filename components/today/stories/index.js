@@ -1,1 +1,1 @@
-import './QuickLinksMenu';
+import './QuickLinksMenu.vue';
