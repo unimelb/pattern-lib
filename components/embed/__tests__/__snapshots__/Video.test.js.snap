@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video should match snapshot 1`] = `
+<div
+  class="video"
+>
+  <div
+    name="fade"
+  >
+    <progressive-img
+      alt=""
+      class="video__img"
+      src="https://picsum.photos/seed/1/540/360"
+    />
+     
+    <!---->
+     
+    <button
+      aria-label="Play video - plays embed automatically"
+      class="video__btn"
+    >
+      <span
+        class="video__btn-label"
+      >
+        
+          Play (2m 24s)
+          
+        <svg
+          focusable="false"
+          role="presentation"
+        >
+          <use
+            xlink:href="#icon-play-circle"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          />
+        </svg>
+      </span>
+       
+      <svg
+        class="video__btn-play-icon"
+        focusable="false"
+        role="presentation"
+      >
+        <use
+          xlink:href="#icon-play-circle"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        />
+      </svg>
+    </button>
+  </div>
+   
+  <!---->
+</div>
+`;
