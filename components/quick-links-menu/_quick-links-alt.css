@@ -22,6 +22,7 @@
     padding-right: 2.5rem;
     transition: background-color .15s ease;
     position: relative;
+    cursor: pointer;
 
     .quick-links-alt--full-width & {
       padding-left: 1.5rem;
@@ -39,14 +40,17 @@
         opacity: 1;
       }
 
-      .quick-links-alt__link-title,
+      .quick-links-alt__link-title {
+        color: rgb(var(--col-background-tertiary-navy));
+      }
+
       .quick-links-alt__link-icon {
-        color: rgb(var(--col-bg-tertiary-navy));
+        background-color: rgb(var(--col-background-tertiary-navy));
       }
 
       .quick-links-alt__link-icon--btn {
-        background-color: rgb(var(--col-bg-tertiary-navy));
-        color: rgb(var(--col-white));
+        background-color: transparent;
+        color: rgb(var(--col-background-tertiary-navy));
       }
     }
 
@@ -59,7 +63,7 @@
         font-weight: normal;
         position: relative;
         font-size: .778rem;
-        color: rgb(var(--col-bg-tertiary-navy));
+        color: rgb(var(--col-background-tertiary-navy));
       }
     }
 

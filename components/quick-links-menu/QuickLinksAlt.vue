@@ -23,7 +23,7 @@
         :role="item.action ? 'button' : null"
         :data-preview="item.preview"
         @click="$evt => item.action ? handleClick($evt, item.action) : null">
-        <span class="heading-sm heading-sm--alt quick-links-alt__link-title">
+        <span class="heading-sm heading-sm--link quick-links-alt__link-title">
           <template v-if="!searchQuery">{{ item.title }}</template>
           <!-- eslint-disable vue/no-v-html -->
           <span

@@ -1,7 +1,8 @@
 <template>
   <QuickLinksAlt
     :items="items"
-    border-bottom />
+    border-bottom
+    search-query="Acc" />
 </template>
 
 <script>
