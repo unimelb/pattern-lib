@@ -12,7 +12,7 @@
           :alt="poster.alt || ''"
           class="video__img" />
         <video
-          v-if="isPrevieAutoplay"
+          v-if="isPreviewAutoplay"
           ref="video"
           muted
           autoplay
@@ -25,7 +25,7 @@
         </video>
         <button
           class="video__btn"
-          :aria-label="`Play video ${label} (${formattedDuration ? formattedDuration : ''})`"
+          :aria-label="`Play video ${label} ${formattedDuration ? formattedDuration : ''}`"
           @click="startAutoplay"
           @mouseleave="leaveVideo"
           @mouseover="hoverVideo">
@@ -151,18 +151,18 @@ export default {
         'video--portrait': this.orientation === 'portrait',
       };
     },
-    isPrevieAutoplay() {
+    isPreviewAutoplay() {
       return this.video.preview && this.autoplay;
     },
   },
   methods: {
     hoverVideo() {
-      if (this.isPrevieAutoplay) {
+      if (this.isPreviewAutoplay) {
         this.$refs.video.play();
       }
     },
     leaveVideo() {
-      if (this.isPrevieAutoplay) {
+      if (this.isPreviewAutoplay) {
         this.$refs.video.pause();
       }
     },
