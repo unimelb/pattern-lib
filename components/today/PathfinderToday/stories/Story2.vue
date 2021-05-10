@@ -1,10 +1,10 @@
 <template>
-  <SectionWrap bg-color="inverted">
+  <div class="bg-inverted">
     <PathfinderToday
       inline
       dark
       :items="pathfinderLinks" />
-  </SectionWrap>
+  </div>
 </template>
 
 <script>

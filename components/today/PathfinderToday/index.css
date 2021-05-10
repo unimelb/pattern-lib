@@ -67,11 +67,11 @@
       background-color: none;
 
       .pathfinder-today__link-title {
-        color: rgb(var(--col-bg-tertiary-navy));
+        color: rgb(var(--col-background-tertiary-navy));
       }
 
       .pathfinder-today__link-icon {
-        background-color: rgb(var(--col-bg-tertiary-navy));
+        background-color: rgb(var(--col-background-tertiary-navy));
       }
     }
 
