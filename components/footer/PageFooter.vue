@@ -7,14 +7,7 @@
       <div class="page-footer__inner max">
         <div class="grid">
           <div class="cell cell--wide-3of4">
-            <ToggleBlockMobile>
-              <template slot="default">
-                <h2>Site Map</h2>
-              </template>
-              <template slot="hidden">
-                <PageFooterSitemap />
-              </template>
-            </ToggleBlockMobile>
+            <PageFooterSitemap />
           </div>
           <div class="page-footer__main__ack cell cell--wide-1of4">
             <a
@@ -33,13 +26,11 @@
 </template>
 
 <script>
-import ToggleBlockMobile from '../toggle/ToggleBlockMobile.vue';
 import PageFooterUpper from './PageFooterUpper.vue';
 import PageFooterSitemap from './PageFooterSitemap.vue';
 
 export default {
   components: {
-    ToggleBlockMobile,
     PageFooterUpper,
     PageFooterSitemap,
   },
