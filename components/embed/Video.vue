@@ -15,7 +15,6 @@
           v-if="video.preview && autoplay"
           muted
           autoplay
-          loop
           playsinline
           webkit-playsinline
           class="video__preview">
