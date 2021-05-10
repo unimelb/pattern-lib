@@ -1,5 +1,6 @@
 <template>
   <VideoFullWidth
+    label="Video test"
     :video="{
       url: 'https://www.youtube.com/embed/sWHoKq6MSaE',
       duration: 144,

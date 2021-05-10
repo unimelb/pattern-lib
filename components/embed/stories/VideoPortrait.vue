@@ -1,5 +1,6 @@
 <template>
   <Video
+    label="Video test"
     :video="{
       url: 'https://www.youtube.com/embed/MH5pJ4jokpI',
       duration: 28,
