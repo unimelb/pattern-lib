@@ -18,66 +18,66 @@
     </div>
     <div class="grid grid--lg shim-mt2">
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
-        <img
-          role="presentation"
-          alt=""
-          :src="briefcaseIcon"
-          class="display-block shim-mb067">
+        <SvgIcon
+          name="briefcase"
+          width="40"
+          height="40"
+          class="shim-mb067" />
         <h4 class="heading-xs shim-mb033">
           Industry-aligned
         </h4>
         <p>Develop highly relevant skills and knowledge to apply in your industry immediately.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
-        <img
-          role="presentation"
-          alt=""
-          :src="briefcaseIcon"
-          class="display-block shim-mb067">
+        <SvgIcon
+          name="briefcase"
+          width="40"
+          height="40"
+          class="shim-mb067" />
         <h4 class="heading-xs shim-mb033">
           Developed by experts
         </h4>
         <p>High quality learning underpinned by cutting-edge research for solving real-world challenges.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
-        <img
-          role="presentation"
-          alt=""
-          :src="briefcaseIcon"
-          class="display-block shim-mb067">
+        <SvgIcon
+          name="briefcase"
+          width="40"
+          height="40"
+          class="shim-mb067" />
         <h4 class="heading-xs shim-mb033">
           Future-focused
         </h4>
         <p>Gain skills and capabilities to succeed in a changing world.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
-        <img
-          role="presentation"
-          alt=""
-          :src="briefcaseIcon"
-          class="display-block shim-mb067">
+        <SvgIcon
+          name="briefcase"
+          width="40"
+          height="40"
+          class="shim-mb067" />
         <h4 class="heading-xs shim-mb033">
           Accessible and flexible
         </h4>
         <p>Quick, accessible upskilling enabling you to curate your own professional development pathway.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
-        <img
-          role="presentation"
-          alt=""
-          :src="briefcaseIcon"
-          class="display-block shim-mb067">
+        <SvgIcon
+          name="briefcase"
+          width="40"
+          height="40"
+          class="shim-mb067" />
         <h4 class="heading-xs shim-mb033">
           Stackable
         </h4>
         <p>Stack toward a degree with <b>Melbourne MicroCerts</b>. Opportunity to deepen your knowledge or build up to a University of Melbourne degree over time.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
-        <img
-          role="presentation"
-          alt=""
-          :src="briefcaseIcon"
-          class="display-block shim-mb067">
+        <SvgIcon
+          name="briefcase"
+          width="40"
+          height="40"
+          class="shim-mb067" />
         <h4 class="heading-xs shim-mb033">
           Shareable
         </h4>
@@ -90,15 +90,10 @@
 <script>
 import SectionAlt from 'components/section/SectionAlt.vue';
 import ButtonIcon from 'components/buttons/ButtonIcon.vue';
-import briefcaseIcon from './static/briefcase.svg';
+import SvgIcon from 'components/icons/SvgIcon.vue';
 
 export default {
-  components: { SectionAlt, ButtonIcon },
+  components: { SectionAlt, ButtonIcon, SvgIcon },
   readme: { source: true },
-  data() {
-    return {
-      briefcaseIcon,
-    };
-  },
 };
 </script>
