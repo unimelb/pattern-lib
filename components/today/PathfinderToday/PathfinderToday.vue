@@ -25,6 +25,7 @@
           </a>
         </li>
       </ul>
+      <slot name="after" />
     </div>
   </div>
 </template>

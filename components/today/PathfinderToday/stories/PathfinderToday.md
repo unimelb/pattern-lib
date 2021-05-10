@@ -7,6 +7,10 @@
 | inline 	| boolean 	|
 | dark   	| boolean 	|
 
+| slot  	| type    	|
+|--------	|---------	|
+| after  	| html   	|
+
 **Note**: Inside of `<pathfinder-today>` component the `items` property is an array of pathfinder with `title`, `description`, and `href`:
 
 ```json
@@ -42,5 +46,6 @@ Rules:
 
 ```html
 <pathfinder-today items="pathfinderItems">
+  <slot />
 </pathfinder-today>
 ```
