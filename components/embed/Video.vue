@@ -124,7 +124,6 @@ export default {
   data() {
     return {
       videoPlaying: false,
-      videoEnded: false,
     };
   },
   computed: {
@@ -156,6 +155,11 @@ export default {
       return this.video.preview && this.autoplay;
     },
   },
+  mounted() {
+    if (this.isPreviewAutoplay) {
+      this.$refs.videoPreview.addEventListener('ended', this.resetVideoPreviewTime);
+    }
+  },
   beforeDestroy() {
     if (this.isPreviewAutoplay) {
       this.$refs.videoPreview.removeEventListener('ended');
@@ -174,9 +178,13 @@ export default {
     pauseVideoPreview() {
       this.$refs.videoPreview.pause();
     },
+    resetVideoPreviewTime() {
+      this.$refs.videoPreview.currentTime = 0;
+    },
     leaveVideo() {
       if (this.isPreviewAutoplay) {
         this.pauseVideoPreview();
+        this.resetVideoPreviewTime();
       }
     },
     afterEnter(el) {
