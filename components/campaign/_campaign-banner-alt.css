@@ -175,7 +175,7 @@
 
   &__links {
     max-width: 18rem;
-    margin-bottom: 1rem;
+    margin-bottom: -1rem;
 
     &-item {
       margin: 0;
