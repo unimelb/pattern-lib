@@ -13,7 +13,7 @@
           class="video__img" />
         <video
           v-if="isPreviewAutoplay"
-          ref="video"
+          ref="videoPreview"
           muted
           autoplay
           playsinline
@@ -124,6 +124,7 @@ export default {
   data() {
     return {
       videoPlaying: false,
+      videoEnded: false,
     };
   },
   computed: {
@@ -155,15 +156,27 @@ export default {
       return this.video.preview && this.autoplay;
     },
   },
+  beforeDestroy() {
+    if (this.isPreviewAutoplay) {
+      this.$refs.videoPreview.removeEventListener('ended');
+    }
+  },
   methods: {
     hoverVideo() {
       if (this.isPreviewAutoplay) {
-        this.$refs.video.play();
+        this.$refs.videoPreview.addEventListener('ended', this.hoverVideo);
+        this.playVideoPreview();
       }
+    },
+    playVideoPreview() {
+      this.$refs.videoPreview.play();
+    },
+    pauseVideoPreview() {
+      this.$refs.videoPreview.pause();
     },
     leaveVideo() {
       if (this.isPreviewAutoplay) {
-        this.$refs.video.pause();
+        this.pauseVideoPreview();
       }
     },
     afterEnter(el) {
