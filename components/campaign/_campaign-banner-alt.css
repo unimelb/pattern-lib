@@ -151,7 +151,7 @@
       letter-spacing: normal;
       display: table;
       margin-bottom: .5rem;
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-semibold) !important;
       text-decoration: none;
 
       &--red {
