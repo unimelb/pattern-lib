@@ -77,7 +77,7 @@
 
     &-title {
       color: rgb(var(--col-navy-dark));
-      padding-right: 2.5rem;
+      padding-right: .5rem;
       display: block;
       transition: color .15s ease;
 
