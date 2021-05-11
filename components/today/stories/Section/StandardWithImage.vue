@@ -1,10 +1,10 @@
 <template>
   <SectionAlt :img="{ src: 'https://via.placeholder.com/1200x400' }">
-    <template #left>
+    <div slot="left">
       <h2 class="heading-md">
         What you will learn
       </h2>
-    </template>
+    </div>
     <div class="content-max-width">
       <h3 class="heading-sm">
         How people process information
@@ -31,6 +31,12 @@ import SectionAlt from 'components/section/SectionAlt.vue';
 
 export default {
   components: { SectionAlt },
-  readme: { source: true },
+  readme: {
+    html: true,
+    source: true,
+    replace: {
+      '<div class="section-alt__img progressive-image" style="max-width: 100%;"><span><canvas width="1" height="1" class="progressive-image-canvas"></canvas> <div class="progressive-image-wrapper" style="padding-bottom: 40%;"><img alt="" class="progressive-image-main" style="display: none;"> </div></span></div>': '<progressive-image class="section-alt__img" aspect-ratio="0.4" src="https://via.placeholder.com/1200x400" alt=""></progressive-image>',
+    },
+  },
 };
 </script>

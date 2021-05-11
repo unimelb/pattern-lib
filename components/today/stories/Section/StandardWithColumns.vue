@@ -1,6 +1,6 @@
 <template>
   <SectionAlt>
-    <template #left>
+    <div slot="left">
       <h2 class="heading-md">
         What we offer
       </h2>
@@ -8,7 +8,7 @@
       <ButtonIcon class="btn--text">
         Learn more about how our unique curriculum makes us different
       </ButtonIcon>
-    </template>
+    </div>
     <div class="content-max-width">
       <h3 class="heading-sm">
         Take your career to the next level
@@ -94,6 +94,6 @@ import SvgIcon from 'components/icons/SvgIcon.vue';
 
 export default {
   components: { SectionAlt, ButtonIcon, SvgIcon },
-  readme: { source: true },
+  readme: { html: true, source: true },
 };
 </script>

@@ -1,10 +1,10 @@
 <template>
   <SectionAlt>
-    <template #left>
+    <div slot="left">
       <h2 class="heading-md">
         Why study at Melbourne
       </h2>
-    </template>
+    </div>
     <div class="grid">
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
         <h3 class="heading-sm shim-mb033">
@@ -39,6 +39,6 @@ import SectionAlt from 'components/section/SectionAlt.vue';
 
 export default {
   components: { SectionAlt },
-  readme: { source: true },
+  readme: { html: true, source: true },
 };
 </script>

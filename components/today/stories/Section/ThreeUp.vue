@@ -47,6 +47,6 @@ import SvgIcon from 'components/icons/SvgIcon.vue';
 
 export default {
   components: { SectionAlt, SvgIcon },
-  readme: { source: true },
+  readme: { html: true, source: true },
 };
 </script>
