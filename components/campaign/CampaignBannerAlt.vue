@@ -52,7 +52,7 @@
           </li>
         </ul>
         <ButtonIcon
-          v-if="cta"
+          v-else-if="cta"
           :href="cta.href"
           :icon="cta.icon || 'chevron-right'"
           class="btn--cta campaign-banner-alt__cta"

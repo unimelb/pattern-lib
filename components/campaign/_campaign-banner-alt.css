@@ -57,12 +57,12 @@
 
     @media (--bp-x-tablet) {
       padding-top: 3rem;
-      padding-bottom: 2rem;
+      padding-bottom: 4rem;
     }
 
     @media (--bp-desktop) {
       padding-top: 4rem;
-      padding-bottom: 3rem;
+      padding-bottom: 5rem;
       min-height: 25rem;
       display: flex;
       align-items: center;
@@ -175,6 +175,7 @@
 
   &__links {
     max-width: 18rem;
+    margin-bottom: 1rem;
 
     &-item {
       margin: 0;
