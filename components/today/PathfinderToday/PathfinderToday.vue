@@ -16,7 +16,7 @@
               :id="item.id"
               :href="item.href">
               <span
-                class="pathfinder-today__link-title heading-sm heading-sm--alt">{{ item.title }}</span>
+                class="pathfinder-today__link-title heading-sm heading-sm--link">{{ item.title }}</span>
               <span class="pathfinder-today__link-icon">
                 <SvgIcon
                   name="arrow-right"
