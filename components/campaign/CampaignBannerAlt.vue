@@ -46,7 +46,7 @@
             <ButtonIcon
               v-if="link.href"
               :href="link.href"
-              class="btn--text heading-sm campaign-banner-alt__links-link">
+              class="btn--text heading-sm heading-sm--link campaign-banner-alt__links-link">
               {{ link.text }}
             </ButtonIcon>
           </li>
