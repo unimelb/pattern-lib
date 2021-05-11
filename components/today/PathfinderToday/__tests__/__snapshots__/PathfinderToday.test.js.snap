@@ -14,106 +14,118 @@ exports[`PathfinderToday should match snapshot 1`] = `
       <li
         class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4"
       >
-        <a
+        <div
           class="pathfinder-today__link"
-          href="/landing-page/"
         >
-          <span
-            class="pathfinder-today__link-title heading-sm heading-sm--alt"
+          <a
+            href="/landing-page/"
           >
-            Undergraduate courses
-          </span>
+            <span
+              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+            >
+              Undergraduate courses
+            </span>
+             
+            <span
+              class="pathfinder-today__link-icon"
+            >
+              <!---->
+            </span>
+          </a>
            
           <span
             class="pathfinder-today__link-description label-s"
           >
             Flexible first degrees that you can tailor to your career goals, or explore new possibilities.
           </span>
-           
-          <span
-            class="pathfinder-today__link-icon"
-          >
-            <!---->
-          </span>
-        </a>
+        </div>
       </li>
       <li
         class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4"
       >
-        <a
+        <div
           class="pathfinder-today__link"
-          href="/landing-page/"
         >
-          <span
-            class="pathfinder-today__link-title heading-sm heading-sm--alt"
+          <a
+            href="/landing-page/"
           >
-            Graduate courses
-          </span>
+            <span
+              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+            >
+              Graduate courses
+            </span>
+             
+            <span
+              class="pathfinder-today__link-icon"
+            >
+              <!---->
+            </span>
+          </a>
            
           <span
             class="pathfinder-today__link-description label-s"
           >
             Study in small classes led by experts alongside others who share your interests and goals.
           </span>
-           
-          <span
-            class="pathfinder-today__link-icon"
-          >
-            <!---->
-          </span>
-        </a>
+        </div>
       </li>
       <li
         class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4"
       >
-        <a
+        <div
           class="pathfinder-today__link"
-          href="/landing-page/"
         >
-          <span
-            class="pathfinder-today__link-title heading-sm heading-sm--alt"
+          <a
+            href="/landing-page/"
           >
-            Graduate research
-          </span>
+            <span
+              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+            >
+              Graduate research
+            </span>
+             
+            <span
+              class="pathfinder-today__link-icon"
+            >
+              <!---->
+            </span>
+          </a>
            
           <span
             class="pathfinder-today__link-description label-s"
           >
             Access dedicated research centres, advanced  facilities, generous scholarships and more.
           </span>
-           
-          <span
-            class="pathfinder-today__link-icon"
-          >
-            <!---->
-          </span>
-        </a>
+        </div>
       </li>
       <li
         class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4"
       >
-        <a
+        <div
           class="pathfinder-today__link"
-          href="/landing-page/"
         >
-          <span
-            class="pathfinder-today__link-title heading-sm heading-sm--alt"
+          <a
+            href="/landing-page/"
           >
-            Short courses and microcredentials
-          </span>
+            <span
+              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+            >
+              Short courses and microcredentials
+            </span>
+             
+            <span
+              class="pathfinder-today__link-icon"
+            >
+              <!---->
+            </span>
+          </a>
            
           <span
             class="pathfinder-today__link-description label-s"
           >
             Upskill, expand your knowledge and take the next step in your career with focused courses.
           </span>
-           
-          <span
-            class="pathfinder-today__link-icon"
-          >
-            <!---->
-          </span>
-        </a>
+        </div>
       </li>
     </ul>
      
