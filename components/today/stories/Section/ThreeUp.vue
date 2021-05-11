@@ -44,9 +44,10 @@
 <script>
 import SectionAlt from 'components/section/SectionAlt.vue';
 import SvgIcon from 'components/icons/SvgIcon.vue';
+import SectionAltMd from './SectionAlt.md';
 
 export default {
   components: { SectionAlt, SvgIcon },
-  readme: { html: true, source: true },
+  readme: { custom: SectionAltMd, html: true, source: true },
 };
 </script>

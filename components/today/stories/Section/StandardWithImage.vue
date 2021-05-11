@@ -1,5 +1,5 @@
 <template>
-  <SectionAlt :img="{ src: 'https://via.placeholder.com/1200x400' }">
+  <SectionAlt :img="{ src: 'https://via.placeholder.com/1200x400', alt: 'test alt' }">
     <div slot="left">
       <h2 class="heading-md">
         What you will learn
@@ -28,10 +28,12 @@
 
 <script>
 import SectionAlt from 'components/section/SectionAlt.vue';
+import SectionAltMd from './SectionAlt.md';
 
 export default {
   components: { SectionAlt },
   readme: {
+    custom: SectionAltMd,
     html: true,
     source: true,
     replace: {

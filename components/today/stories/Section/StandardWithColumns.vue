@@ -91,9 +91,10 @@
 import SectionAlt from 'components/section/SectionAlt.vue';
 import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import SvgIcon from 'components/icons/SvgIcon.vue';
+import SectionAltMd from './SectionAlt.md';
 
 export default {
   components: { SectionAlt, ButtonIcon, SvgIcon },
-  readme: { html: true, source: true },
+  readme: { custom: SectionAltMd, html: true, source: true },
 };
 </script>

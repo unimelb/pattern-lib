@@ -36,9 +36,10 @@
 
 <script>
 import SectionAlt from 'components/section/SectionAlt.vue';
+import SectionAltMd from './SectionAlt.md';
 
 export default {
   components: { SectionAlt },
-  readme: { html: true, source: true },
+  readme: { custom: SectionAltMd, html: true, source: true },
 };
 </script>
