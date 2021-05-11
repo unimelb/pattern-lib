@@ -1,4 +1,5 @@
 @import '_campaign-banner.css';
+@import '_campaign-banner-alt.css';
 
 .page-campaign {
   display: flex;
