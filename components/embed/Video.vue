@@ -15,7 +15,6 @@
           v-if="isPreviewAutoplay"
           ref="videoPreview"
           muted
-          autoplay
           playsinline
           webkit-playsinline
           class="video__preview">
@@ -84,6 +83,9 @@
 </template>
 
 <script>
+import debounce from 'lodash.debounce';
+import { TIMER_100 } from '../../constants/timers';
+
 export default {
   props: {
     label: {
@@ -124,6 +126,7 @@ export default {
   data() {
     return {
       videoPlaying: false,
+      isInViewport: false,
     };
   },
   computed: {
@@ -155,14 +158,25 @@ export default {
       return this.video.preview && this.autoplay;
     },
   },
+  watch: {
+    isInViewport(value) {
+      if (value) {
+        this.resetVideoPreviewTime();
+        this.playVideoPreview();
+      }
+    },
+  },
   mounted() {
     if (this.isPreviewAutoplay) {
+      this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, TIMER_100);
+      window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
       this.$refs.videoPreview.addEventListener('ended', this.resetVideoPreviewTime);
     }
   },
   beforeDestroy() {
     if (this.isPreviewAutoplay) {
-      this.$refs.videoPreview.removeEventListener('ended');
+      window.removeEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
+      this.$refs.videoPreview.removeEventListener('ended', this.resetVideoPreviewTime);
     }
   },
   methods: {
@@ -196,6 +210,26 @@ export default {
     },
     stopAutoplay() {
       this.videoPlaying = false;
+    },
+    checkInViewport() {
+      const elementToCheck = this.$refs.videoPreview;
+      const isInViewport = this.isAnyPartOfElementInViewport(elementToCheck);
+
+      this.isInViewport = isInViewport;
+    },
+    isAnyPartOfElementInViewport(el) {
+      const elementRect = el.getBoundingClientRect();
+
+      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+      const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+      const offsetTop = 0;
+      const offsetLeft = 0;
+
+      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= offsetTop);
+      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= offsetLeft);
+
+      return (vertInView && horInView);
     },
   },
 };
