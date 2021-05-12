@@ -21,7 +21,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
             href="/landing-page/"
           >
             <span
-              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+              class="pathfinder-today__link-title heading-sm heading-sm--link"
             >
               Undergraduate courses
             </span>
@@ -50,7 +50,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
             href="/landing-page/"
           >
             <span
-              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+              class="pathfinder-today__link-title heading-sm heading-sm--link"
             >
               Graduate courses
             </span>
@@ -79,7 +79,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
             href="/landing-page/"
           >
             <span
-              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+              class="pathfinder-today__link-title heading-sm heading-sm--link"
             >
               Graduate research
             </span>
@@ -108,7 +108,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
             href="/landing-page/"
           >
             <span
-              class="pathfinder-today__link-title heading-sm heading-sm--alt"
+              class="pathfinder-today__link-title heading-sm heading-sm--link"
             >
               Short courses and microcredentials
             </span>
