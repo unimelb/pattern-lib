@@ -20,6 +20,7 @@ import './location.svg';
 import './microphone.svg';
 import './phone.svg';
 import './play.svg';
+import './play-circle.svg';
 import './search.svg';
 import './twitter.svg';
 import './tag.svg';

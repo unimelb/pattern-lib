@@ -27,7 +27,7 @@ exports[`PageFooter should match snapshot 1`] = `
         >
           <a
             class="page-footer__ack link-reset"
-            href="https://unimelb.edu.au/reconciliation"
+            href="https://about.unimelb.edu.au/reconciliation"
           >
             We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated.
           </a>
