@@ -4,7 +4,7 @@
       With submit button
     </h2>
     <InlineSearch
-      id="site-search"
+      id="site-search-1"
       name="query"
       label="Search the University"
       placeholder="Search the University"
@@ -20,9 +20,9 @@
       Without submit button - for search as you type results
     </h2>
     <InlineSearch
-      id="site-search"
+      id="site-search-2"
       name="query"
-      label="Search the University"
+      label="Search the University. Typing automatically updates the results below"
       placeholder="Search the University"
       class="shim-mb1" />
     <h2 class="heading-xxs">
@@ -32,7 +32,7 @@
       class="bg-inverted"
       style="padding: 3rem;">
       <InlineSearch
-        id="site-search"
+        id="site-search-3"
         name="query"
         label="Search the University"
         placeholder="Search the University"
@@ -50,8 +50,10 @@
 
 <script>
 import InlineSearch from '../InlineSearch.vue';
+import inlineSearchDocs from './inline-search.md';
 
 export default {
+  readme: { custom: inlineSearchDocs, source: true, html: true },
   components: {
     InlineSearch,
   },
