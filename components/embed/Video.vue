@@ -23,6 +23,7 @@
             type="video/mp4">
         </video>
         <button
+          ref="playVideo"
           class="video__btn"
           :aria-label="`Play video ${label} ${formattedDuration ? formattedDuration : ''}`"
           @click="startAutoplay"
@@ -210,6 +211,9 @@ export default {
     },
     stopAutoplay() {
       this.videoPlaying = false;
+      setTimeout(() => {
+        this.$refs.playVideo.focus();
+      }, TIMER_100);
     },
     checkInViewport() {
       const elementToCheck = this.$refs.videoPreview;
