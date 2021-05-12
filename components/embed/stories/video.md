@@ -18,3 +18,11 @@ It accepts props such as:
   poster="{ src: 'https://picsum.photos/seed/1/540/360', alt: '' }"
 ></video>
 ```
+
+#### Screen reader announcement (Voiceover)
+
+Play button
+- Play video [Video label 2m 24s], button
+
+Close button
+- Close video, button
