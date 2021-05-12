@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageFooterAlt should match snapshot 1`] = `
+<footer
+  class="page-footer-alt"
+  id="page-footer"
+>
+  <div
+    class="page-footer-alt__top bg-inverted"
+  >
+    <div
+      class="max"
+    >
+      <div
+        class="page-footer-alt__top-inner grid grid--lg"
+      >
+        <div
+          class="page-footer-alt__content cell cell--lg cell--desk-2of3 cell--wide-1of2 shim-mb0 shim-mt0"
+        >
+          <h2
+            class="screenreaders-only"
+          >
+            
+            Site footer
+          
+          </h2>
+           
+          <div
+            class="page-footer-alt__reconciliation"
+          >
+            <h3
+              class="heading-sm shim-mb067"
+            >
+              
+              We acknowledge and pay respect to the Traditional Owners of the lands upon which our campuses are situated
+            
+            </h3>
+             
+            <!---->
+          </div>
+           
+          <div
+            class="grid grid--lg"
+          >
+            <div
+              class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0"
+            >
+              <ul
+                class="list-reset page-footer-alt__primary-links"
+              >
+                <li
+                  class="page-footer-alt__primary-links-item"
+                >
+                  <!---->
+                </li>
+                <li
+                  class="page-footer-alt__primary-links-item"
+                >
+                  <!---->
+                </li>
+                <li
+                  class="page-footer-alt__primary-links-item"
+                >
+                  <!---->
+                </li>
+                <li
+                  class="page-footer-alt__primary-links-item"
+                >
+                  <!---->
+                </li>
+                <li
+                  class="page-footer-alt__primary-links-item"
+                >
+                  <!---->
+                </li>
+              </ul>
+            </div>
+             
+            <div
+              class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0"
+            >
+              <div
+                class="page-footer-alt__contact"
+              >
+                <p
+                  class="shim-mb067"
+                >
+                  
+                  Phone: 13 MELB (13 6352)
+                
+                </p>
+                 
+                <p
+                  class="shim-mb067"
+                >
+                  
+                  International: +61 3 9035 5511
+                
+                </p>
+                 
+                <p
+                  class="shim-mb067"
+                >
+                  
+                  Address:
+                  <br />
+                  The University of Melbourne 
+                  <br />
+                  Grattan Street, Parkville, 
+                  <br />
+                  Victoria, 3010, Australia
+                
+                </p>
+                 
+                <p
+                  class="shim-mb067"
+                >
+                  <!---->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        <div
+          class="page-footer-alt__brand cell cell--lg cell--desk-1of3 cell--wide-1of2 shim-mb0 shim-mt0"
+        >
+          <!---->
+           
+          <ul
+            class="page-footer-alt__social list-reset"
+          >
+            <li
+              class="page-footer-alt__social-item"
+            >
+              <a
+                class="link-reset page-footer-alt__social-link"
+                href="https://www.facebook.com/unimelb"
+                target="_blank"
+              >
+                <span
+                  class="screenreaders-only"
+                >
+                  
+                  Facebook
+                
+                </span>
+                 
+                <svg
+                  class="page-footer-alt__social-icon"
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-facebook"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="page-footer-alt__social-item"
+            >
+              <a
+                class="link-reset page-footer-alt__social-link"
+                href="https://twitter.com/unimelb"
+                target="_blank"
+              >
+                <span
+                  class="screenreaders-only"
+                >
+                  
+                  Twitter
+                
+                </span>
+                 
+                <svg
+                  class="page-footer-alt__social-icon"
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-twitter"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="page-footer-alt__social-item"
+            >
+              <a
+                class="link-reset page-footer-alt__social-link"
+                href="https://www.linkedin.com/school/university-of-melbourne"
+                target="_blank"
+              >
+                <span
+                  class="screenreaders-only"
+                >
+                  
+                  LinkedIn
+                
+                </span>
+                 
+                <svg
+                  class="page-footer-alt__social-icon"
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-linkedin"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li
+              class="page-footer-alt__social-item"
+            >
+              <a
+                class="link-reset page-footer-alt__social-link"
+                href="https://www.instagram.com/unimelb"
+                target="_blank"
+              >
+                <span
+                  class="screenreaders-only"
+                >
+                  
+                  Instagram
+                
+                </span>
+                 
+                <svg
+                  class="page-footer-alt__social-icon"
+                  focusable="false"
+                  role="presentation"
+                >
+                  <use
+                    xlink:href="#icon-instagram"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="page-footer-alt__bottom bg-inverted-darker"
+  >
+    <div
+      class="page-footer-alt__bottom-inner max"
+    >
+      <ul
+        class="list-reset page-footer-alt__secondary-links"
+      >
+        <li
+          class="list-reset page-footer-alt__secondary-links-item"
+        >
+          <a
+            class="page-footer-alt__secondary-links-link"
+            href="https://safety.unimelb.edu.au/emergency"
+          >
+            
+            Emergency information
+          
+          </a>
+        </li>
+        <li
+          class="list-reset page-footer-alt__secondary-links-item"
+        >
+          <a
+            class="page-footer-alt__secondary-links-link"
+            href="https://www.unimelb.edu.au/legal"
+          >
+            
+            Online terms and privacy
+          
+          </a>
+        </li>
+        <li
+          class="list-reset page-footer-alt__secondary-links-item"
+        >
+          <a
+            class="page-footer-alt__secondary-links-link"
+            href="https://www.unimelb.edu.au/accessibility"
+          >
+            
+            Accessibility
+          
+          </a>
+        </li>
+        <li
+          class="list-reset page-footer-alt__secondary-links-item"
+        >
+          <a
+            class="page-footer-alt__secondary-links-link"
+            href="https://about.unimelb.edu.au/strategy/governance/compliance-obligations/privacy"
+          >
+            
+            Privacy
+          
+          </a>
+        </li>
+      </ul>
+       
+      <dl
+        class="page-footer-alt__def-list"
+      >
+        <dt>
+          CRICOS number:
+        </dt>
+         
+        <dd>
+          00116K
+        </dd>
+         
+        <dt>
+          ABN:
+        </dt>
+         
+        <dd>
+          84 002 705 224
+        </dd>
+      </dl>
+    </div>
+  </div>
+   
+  <div
+    class="liveagent"
+    id="liveagent"
+  />
+</footer>
+`;

@@ -24,6 +24,7 @@ export default {
       'download',
       'external',
       'play',
+      'play-circle',
       'pause',
       'home',
       'search',
