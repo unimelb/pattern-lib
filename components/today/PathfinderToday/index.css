@@ -44,7 +44,6 @@
   }
 
   &__link {
-    text-decoration: none;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -52,6 +51,10 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     position: relative;
+
+    a {
+      text-decoration: none;
+    }
 
     @media (--bp-tablet) {
       padding-top: 1.5rem;
