@@ -458,7 +458,7 @@
     }
 
     .push-icon {
-      padding-left: 0;
+      padding-left: 0 !important;
 
       &__icon {
         margin-left: .25rem;
@@ -467,6 +467,13 @@
         position: relative;
         top: .1rem;
       }
+    }
+
+    .bg-inverted &,
+    .bg-inverted-dark &,
+    .bg-inverted-darker &,
+    .bg-inverted--o95 & {
+      color: rgb(var(--col-white));
     }
   }
 
