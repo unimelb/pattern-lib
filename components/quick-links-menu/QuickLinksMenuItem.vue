@@ -8,7 +8,8 @@
         class="push-icon__icon"
         :name="'chevron-right'"
         height="16"
-        width="16" />
+        width="16"
+        aria-hidden="true" />
     </span>
   </a>
 </template>
