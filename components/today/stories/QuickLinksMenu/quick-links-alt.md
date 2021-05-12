@@ -8,6 +8,7 @@ It accepts props such as:
 - `fullWidth`: Add horizontal padding to match the page gutter
 - `noInset`: Remove horizonal padding
 - `borderBottom`: Add a horizontal border to bottom
+- `buttons`: Style the link as button with chevron icon instead of arrow
 
 #### Usage with links:
 

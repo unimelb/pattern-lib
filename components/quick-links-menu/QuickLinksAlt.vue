@@ -15,7 +15,7 @@
         :id="item.id"
         :class="{
           'quick-links-alt__link': true,
-          'quick-links-alt__link--btn': item.action,
+          'quick-links-alt__link--btn': buttons,
         }"
         :href="item.href"
         :aria-controls="item.ariaControls"
@@ -34,9 +34,9 @@
         <span
           :class="{
             'quick-links-alt__link-icon': true,
-            'quick-links-alt__link-icon--btn': item.action }">
+            'quick-links-alt__link-icon--btn': buttons }">
           <SvgIcon
-            :name="item.action ? 'chevron-right' : 'arrow-right'" />
+            :name="buttons ? 'chevron-right' : 'arrow-right'" />
         </span>
       </a>
     </li>
@@ -80,6 +80,11 @@ export default {
       default: false,
     },
     borderBottom: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    buttons: {
       type: Boolean,
       required: false,
       default: false,
