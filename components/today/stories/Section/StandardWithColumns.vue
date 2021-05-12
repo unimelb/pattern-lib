@@ -22,7 +22,8 @@
           name="briefcase"
           width="40"
           height="40"
-          class="shim-mb067" />
+          class="shim-mb067"
+          aria-hidden="true" />
         <h4 class="heading-xs shim-mb033">
           Industry-aligned
         </h4>
@@ -33,7 +34,8 @@
           name="briefcase"
           width="40"
           height="40"
-          class="shim-mb067" />
+          class="shim-mb067"
+          aria-hidden="true" />
         <h4 class="heading-xs shim-mb033">
           Developed by experts
         </h4>
@@ -44,7 +46,8 @@
           name="briefcase"
           width="40"
           height="40"
-          class="shim-mb067" />
+          class="shim-mb067"
+          aria-hidden="true" />
         <h4 class="heading-xs shim-mb033">
           Future-focused
         </h4>
@@ -55,7 +58,8 @@
           name="briefcase"
           width="40"
           height="40"
-          class="shim-mb067" />
+          class="shim-mb067"
+          aria-hidden="true" />
         <h4 class="heading-xs shim-mb033">
           Accessible and flexible
         </h4>
@@ -66,22 +70,24 @@
           name="briefcase"
           width="40"
           height="40"
-          class="shim-mb067" />
+          class="shim-mb067"
+          aria-hidden="true" />
         <h4 class="heading-xs shim-mb033">
           Stackable
         </h4>
-        <p>Stack toward a degree with <b>Melbourne MicroCerts</b>. Opportunity to deepen your knowledge or build up to a University of Melbourne degree over time.</p>
+        <p>Stack toward a degree with <strong>Melbourne MicroCerts</strong>. Opportunity to deepen your knowledge or build up to a University of Melbourne degree over time.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
         <SvgIcon
           name="briefcase"
           width="40"
           height="40"
-          class="shim-mb067" />
+          class="shim-mb067"
+          aria-hidden="true" />
         <h4 class="heading-xs shim-mb033">
           Shareable
         </h4>
-        <p>With <b>Melbourne MicroCerts</b>, be awarded information-rich digital certificates you can share digitally or via social media.</p>
+        <p>With <strong>Melbourne MicroCerts</strong>, be awarded information-rich digital certificates you can share digitally or via social media.</p>
       </div>
     </div>
   </SectionAlt>
