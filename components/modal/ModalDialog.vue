@@ -84,10 +84,6 @@ export default {
     };
   },
   mounted() {
-    // Move to end
-    this.$refs.container.parentNode.removeChild(this.$refs.container);
-    document.body.appendChild(this.$refs.container);
-
     // Create array of focusable elements in context
     this.focusableElements = focusableElements(this.$refs.modal);
   },
