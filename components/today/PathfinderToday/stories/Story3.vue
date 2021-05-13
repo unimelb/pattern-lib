@@ -12,7 +12,7 @@
             <div class="form--inline__row form--inline__row--center">
               <input
                 id="search-input"
-                aria-label="Course title or keyword"
+                aria-label="Search careers, interests, courses or specialisations"
                 class="form--inline__search"
                 type="search"
                 placeholder="Type to search courses">
@@ -27,7 +27,10 @@
             </div>
           </form>
         </div>
-        <div class="col-xxs-12 col-sm-6">
+        <div
+          role="navigation"
+          aria-label="Popular searches"
+          class="col-xxs-12 col-sm-6">
           <p class="paragraph-sm shim-mb0">
             Popular searches:
           </p>
