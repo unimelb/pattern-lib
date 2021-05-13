@@ -12,7 +12,13 @@ import TestimonialsAlt from 'components/testimonials/TestimonialsAlt.vue';
 
 export default {
   components: { TestimonialsAlt },
-  readme: { source: true, html: true },
+  readme: {
+    source: true,
+    html: true,
+    replace: {
+      '<div class="testimonials-alt__img progressive-image" style="max-width: 100%;"><span><canvas width="1" height="1" class="progressive-image-canvas"></canvas> <div class="progressive-image-wrapper" style="padding-bottom: 100%;"><img alt="Simi Chopra, Business Analyst" class="progressive-image-main" style="display: none;"> </div></span></div>': '<progressive-image class="testimonials-alt__img" aspect-ratio="1" src="https://randomuser.me/api/portraits/lego/1.jpg" alt="Simi Chopra"></progressive-image>',
+    },
+  },
   decorator: MaxWidthDecorator,
 };
 </script>

@@ -18,7 +18,7 @@ import TestimonialsAlt from 'components/testimonials/TestimonialsAlt.vue';
 
 export default {
   components: { TestimonialsAlt },
-  readme: { source: true, html: true },
+  readme: { source: false, html: true },
   decorator: MaxWidthDecorator,
   data() {
     return {
