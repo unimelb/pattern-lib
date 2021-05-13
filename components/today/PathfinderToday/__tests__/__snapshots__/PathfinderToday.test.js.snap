@@ -16,6 +16,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
       >
         <div
           class="pathfinder-today__link"
+          role="navigation"
         >
           <a
             href="/landing-page/"
@@ -45,6 +46,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
       >
         <div
           class="pathfinder-today__link"
+          role="navigation"
         >
           <a
             href="/landing-page/"
@@ -74,6 +76,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
       >
         <div
           class="pathfinder-today__link"
+          role="navigation"
         >
           <a
             href="/landing-page/"
@@ -103,6 +106,7 @@ exports[`PathfinderToday should match snapshot 1`] = `
       >
         <div
           class="pathfinder-today__link"
+          role="navigation"
         >
           <a
             href="/landing-page/"
