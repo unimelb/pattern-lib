@@ -11,7 +11,9 @@
           v-for="(item, index) in items"
           :key="index"
           class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4">
-          <div class="pathfinder-today__link">
+          <div
+            role="navigation"
+            class="pathfinder-today__link">
             <a
               :id="item.id"
               :href="item.href">
