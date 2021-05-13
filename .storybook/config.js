@@ -26,6 +26,11 @@ Vue.component('SectionWrap', SectionWrap);
 Vue.component('ListItem', ListItem);
 Vue.component('ButtonIcon', ButtonIcon);
 
+// Replace all `client-only` nuxt tags with `div` tag
+Vue.component('client-only', {
+  template: '<div><slot>ClientOnly</slot></div>',
+});
+
 // Add polymorphic decorator
 addDecorator(storyDecorator);
 

@@ -13,5 +13,36 @@ exports[`ModalDialog should match snapshot 1`] = `
     </span>
   </button>
    
+  <div
+    aria-hidden="true"
+    class="modal-dialog"
+    id="modal-dialog-10"
+  >
+    <div
+      aria-labelledby="modal-dialog-title-10"
+      class="modal-dialog__modal"
+      role="dialog"
+    >
+      <div
+        role="document"
+      >
+        <h2
+          id="modal-dialog-title-10"
+        />
+          
+        <br />
+         
+        <button
+          aria-label="Close Dialog"
+          class="modal-dialog__close"
+          type="button"
+        >
+          
+          ✕
+        
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;

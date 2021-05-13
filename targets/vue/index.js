@@ -115,6 +115,14 @@ export {
 }
   from 'components/embed/VideoEmbed.vue';
 export {
+  default as Video,
+}
+  from 'components/embed/Video.vue';
+export {
+  default as VideoFullWidth,
+}
+  from 'components/embed/VideoFullWidth.vue';
+export {
   default as FocusWrapper,
 }
   from 'components/focus-wrapper/FocusWrapper.vue';
@@ -158,6 +166,10 @@ export {
   default as PageFooter,
 }
   from 'components/footer/PageFooter.vue';
+export {
+  default as PageFooterAlt,
+}
+  from 'components/footer/PageFooterAlt.vue';
 export {
   default as PageHeader,
 }
@@ -210,6 +222,10 @@ export {
   default as SectionWrap,
 }
   from 'components/section/SectionWrap.vue';
+export {
+  default as SectionAlt,
+}
+  from 'components/section/SectionAlt.vue';
 export {
   default as SplitSection,
 }
