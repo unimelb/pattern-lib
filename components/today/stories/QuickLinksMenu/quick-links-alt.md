@@ -36,7 +36,7 @@ It accepts props such as:
 #### Usage with buttons:
 
 ```html
- <quick-links-alt :items='[
+ <quick-links-alt buttons :items='[
     {
         "title": "Accounting",
         "preview": "Quick view",

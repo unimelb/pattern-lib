@@ -1,8 +1,10 @@
 <template>
-  <QuickLinksAlt
-    :items="items"
-    border-bottom
-    buttons />
+  <nav aria-label="Quick links">
+    <QuickLinksAlt
+      :items="items"
+      border-bottom
+      buttons />
+  </nav>
 </template>
 
 <script>
@@ -29,6 +31,7 @@ export default {
         action: () => console.log(item), // eslint-disable-line no-console
         title: item,
         preview: 'Quick view',
+        href: '#',
       }));
     },
   },

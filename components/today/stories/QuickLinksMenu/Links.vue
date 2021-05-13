@@ -1,5 +1,7 @@
 <template>
-  <QuickLinksAlt :items="items" />
+  <nav aria-label="Quick links">
+    <QuickLinksAlt :items="items" />
+  </nav>
 </template>
 
 <script>

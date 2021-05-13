@@ -36,7 +36,9 @@
             'quick-links-alt__link-icon': true,
             'quick-links-alt__link-icon--btn': buttons }">
           <SvgIcon
-            :name="buttons ? 'chevron-right' : 'arrow-right'" />
+            :name="buttons ? 'chevron-right' : 'arrow-right'"
+            aria-hidden="true"
+            role="presentation" />
         </span>
       </a>
     </li>
