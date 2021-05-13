@@ -188,6 +188,7 @@ export default {
       }
     },
     playVideoPreview() {
+      this.$emit('autoplay');
       this.$refs.videoPreview.play();
     },
     pauseVideoPreview() {
@@ -206,7 +207,6 @@ export default {
       el.focus();
     },
     startAutoplay() {
-      this.$emit('autoplay');
       this.videoPlaying = true;
     },
     stopAutoplay() {

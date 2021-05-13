@@ -28,15 +28,13 @@
       orientation="portrait"
       :autoplay="autoplay"
       @autoplay="$emit('autoplay')" />
-    <template v-else-if="imgSrc">
-      <client-only>
-        <progressive-img
-          :src="imgSrc"
-          :aspect-ratio="1"
-          :alt="name"
-          class="testimonials-alt__img" />
-      </client-only>
-    </template>
+    <client-only v-else-if="imgSrc">
+      <progressive-img
+        :src="imgSrc"
+        :aspect-ratio="1"
+        :alt="name"
+        class="testimonials-alt__img" />
+    </client-only>
   </component>
 </template>
 
