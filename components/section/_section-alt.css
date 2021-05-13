@@ -1,0 +1,115 @@
+.section-alt {
+  background-color: rgb(var(--col-white));
+  position: relative;
+
+  &--bg-grey-light {
+    background-color: rgb(var(--col-grey-light));
+  }
+
+  &[class='section-alt'] + [class='section-alt'] &__inner {
+    padding-top: 0;
+
+    @media (--bp-wide) {
+      padding-top: 2.5rem;
+    }
+  }
+
+  &--bordered {
+    @media (--bp-wide) {
+      padding-top: 7.5rem;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1.5rem;
+      background: rgb(var(--col-navy-dark));
+
+      @media (--bp-wide) {
+        height: 16rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__img {
+    z-index: 0;
+    display: block;
+    max-height: 28rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__inner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+
+    @media (--bp-wide) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    &--inset {
+      background-color: inherit;
+
+      @media (--bp-wide) {
+        max-width: 65rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        margin-top: -3.5rem;
+        padding-top: 3.5rem;
+      }
+    }
+  }
+
+  &__row {
+    @media (--bp-desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -2.6666rem;
+      margin-right: -2.6666rem;
+    }
+  }
+
+  &__left {
+    position: relative;
+    max-width: 28rem;
+    margin-bottom: 2rem;
+
+    @media (--bp-desktop) {
+      width: calc(4 / 12 * 100%);
+      padding-left: 2.6666rem;
+      padding-right: 2.6666rem;
+      margin-bottom: 0;
+
+      &::after {
+        content: '';
+        background-color: rgb(var(--col-grey-mid-3), .2);
+        /* stylelint-disable */
+        width: 1px;
+        /* stylelint-enable */
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__right {
+
+    @media (--bp-desktop) {
+      padding-left: 2.6666rem;
+      padding-right: 2.6666rem;
+      width: calc(8 / 12 * 100%);
+    }
+  }
+}

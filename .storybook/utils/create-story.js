@@ -12,6 +12,7 @@ const readmeDefaults = {
   source: true,
   minified: false,
   decorated: false,
+  replace: null,
 };
 
 /**
@@ -50,7 +51,13 @@ function generateReadme(Story, opts) {
 
   if (opts.source || opts.minified || opts.decorated) {
     // Retrieve full HTML source from mounted story and strip comments left by Vue's `v-if` directive
-    const source = stripHtmlComments(vm.$el.outerHTML || '');
+    let source = stripHtmlComments(vm.$el.outerHTML || '');
+
+    if (opts.replace) {
+      Object.keys(opts.replace).forEach((key) => {
+        source = source.replace(key, opts.replace[key]);
+      });
+    }
 
     if (opts.minified) {
       // Append minified source
