@@ -12,10 +12,9 @@
           :alt="poster.alt || ''"
           class="video__img" />
         <video
-          v-if="video.preview && autoplay"
+          v-if="isPreviewAutoplay"
+          ref="videoPreview"
           muted
-          autoplay
-          loop
           playsinline
           webkit-playsinline
           class="video__preview">
@@ -24,10 +23,12 @@
             type="video/mp4">
         </video>
         <button
+          ref="playVideo"
           class="video__btn"
-          aria-label="Play video - plays embed automatically"
+          :aria-label="`Play video ${label} ${formattedDuration ? formattedDuration : ''}`"
           @click="startAutoplay"
-          @mouseover="$emit('autoplay')">
+          @mouseleave="leaveVideo"
+          @mouseover="hoverVideo">
           <span class="video__btn-label">
             {{ label }} <template v-if="video.duration"><!--
               -->({{ formattedDuration }})
@@ -83,6 +84,9 @@
 </template>
 
 <script>
+import debounce from 'lodash.debounce';
+import { TIMER_100 } from '../../constants/timers';
+
 export default {
   props: {
     label: {
@@ -123,6 +127,7 @@ export default {
   data() {
     return {
       videoPlaying: false,
+      isInViewport: false,
     };
   },
   computed: {
@@ -150,8 +155,53 @@ export default {
         'video--portrait': this.orientation === 'portrait',
       };
     },
+    isPreviewAutoplay() {
+      return this.video.preview && this.autoplay;
+    },
+  },
+  watch: {
+    isInViewport(value) {
+      if (value) {
+        this.resetVideoPreviewTime();
+        this.playVideoPreview();
+      }
+    },
+  },
+  mounted() {
+    if (this.isPreviewAutoplay) {
+      this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, TIMER_100);
+      window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
+      this.$refs.videoPreview.addEventListener('ended', this.resetVideoPreviewTime);
+    }
+  },
+  beforeDestroy() {
+    if (this.isPreviewAutoplay) {
+      window.removeEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
+      this.$refs.videoPreview.removeEventListener('ended', this.resetVideoPreviewTime);
+    }
   },
   methods: {
+    hoverVideo() {
+      if (this.isPreviewAutoplay) {
+        this.$refs.videoPreview.addEventListener('ended', this.hoverVideo);
+        this.playVideoPreview();
+      }
+    },
+    playVideoPreview() {
+      this.$refs.videoPreview.play();
+    },
+    pauseVideoPreview() {
+      this.$refs.videoPreview.pause();
+    },
+    resetVideoPreviewTime() {
+      this.$refs.videoPreview.currentTime = 0;
+    },
+    leaveVideo() {
+      if (this.isPreviewAutoplay) {
+        this.pauseVideoPreview();
+        this.resetVideoPreviewTime();
+      }
+    },
     afterEnter(el) {
       el.focus();
     },
@@ -161,6 +211,29 @@ export default {
     },
     stopAutoplay() {
       this.videoPlaying = false;
+      setTimeout(() => {
+        this.$refs.playVideo.focus();
+      }, TIMER_100);
+    },
+    checkInViewport() {
+      const elementToCheck = this.$refs.videoPreview;
+      const isInViewport = this.isAnyPartOfElementInViewport(elementToCheck);
+
+      this.isInViewport = isInViewport;
+    },
+    isAnyPartOfElementInViewport(el) {
+      const elementRect = el.getBoundingClientRect();
+
+      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+      const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+      const offsetTop = 0;
+      const offsetLeft = 0;
+
+      const vertInView = (elementRect.top <= windowHeight) && ((elementRect.top + elementRect.height) >= offsetTop);
+      const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= offsetLeft);
+
+      return (vertInView && horInView);
     },
   },
 };

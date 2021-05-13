@@ -182,8 +182,6 @@ export default {
   },
   watch: {
     panels() {
-      // Wait a bit before calculations.  For slower devices.
-      this.$refs.tabsList.setAttribute('role', 'tablist');
       setTimeout(() => {
         this.tabsWidth = this.calculateTabsWidth();
         this.showControls = this.hasControls();

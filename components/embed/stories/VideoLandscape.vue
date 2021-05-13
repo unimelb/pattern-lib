@@ -1,12 +1,13 @@
 <template>
   <Video
+    label="Video label"
     :video="{
       url: 'https://www.youtube.com/embed/sWHoKq6MSaE',
       duration: 144,
     }"
     :poster="{
       src: 'https://picsum.photos/seed/1/540/360',
-      alt: '',
+      alt: 'Test alt',
     }" />
 </template>
 
