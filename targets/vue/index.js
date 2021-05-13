@@ -223,6 +223,10 @@ export {
 }
   from 'components/section/SectionWrap.vue';
 export {
+  default as SectionAlt,
+}
+  from 'components/section/SectionAlt.vue';
+export {
   default as SplitSection,
 }
   from 'components/section/SplitSection.vue';
