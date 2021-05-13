@@ -45,7 +45,7 @@
     font-style: normal;
 
     &::before {
-      content: open-quote;
+      content: '\201C';
       display: inline;
       color: rgb(var(--col-navy-dark));
       float: none;

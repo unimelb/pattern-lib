@@ -1,25 +1,31 @@
 <template>
-  <div
-    class="grid grid--scrollable grid--lg">
-    <div
-      v-for="(testimonial, index) in testimonials"
-      :key="index"
-      class="cell cell--lg cell--tab-1of2">
-      <TestimonialsAlt
-        v-bind="testimonial"
-        autoplay />
+  <SectionAlt>
+    <div slot="left">
+      <h2 class="heading-md">
+        Hear from students
+      </h2>
     </div>
-  </div>
+    <div class="grid grid--lg grid--scrollable">
+      <div
+        v-for="(testimonial, index) in testimonials"
+        :key="index"
+        class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0">
+        <TestimonialsAlt
+          v-bind="testimonial"
+          autoplay />
+      </div>
+    </div>
+  </SectionAlt>
 </template>
 
 <script>
-import MaxWidthDecorator from 'storybook/decorators/MaxWidthDecorator.vue';
+import SectionAlt from 'components/section/SectionAlt.vue';
 import TestimonialsAlt from 'components/testimonials/TestimonialsAlt.vue';
+import SectionAltMd from './SectionAlt.md';
 
 export default {
-  components: { TestimonialsAlt },
-  readme: { source: true, html: true },
-  decorator: MaxWidthDecorator,
+  components: { SectionAlt, TestimonialsAlt },
+  readme: { custom: SectionAltMd, html: true, source: true },
   data() {
     return {
       testimonials: [{
