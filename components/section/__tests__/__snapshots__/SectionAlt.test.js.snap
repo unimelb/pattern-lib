@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionAlt should match snapshot 1`] = `
+<section
+  class="section-alt"
+  tabindex="-1"
+>
+  <!---->
+   
+  <div
+    class="section-alt__inner max"
+  >
+    <div
+      class="section-alt__row"
+    >
+      <div
+        class="section-alt__left"
+      >
+        <h2
+          class="heading-md"
+        >
+          Mock heading
+        </h2>
+      </div>
+       
+      <div
+        class="section-alt__right"
+      >
+        <p>
+          Mock text
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;

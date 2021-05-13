@@ -36,3 +36,6 @@ import './arrow-left.svg';
 import './globe-asia.svg';
 import './heart.svg';
 import './expand.svg';
+import './briefcase.svg';
+import './check.svg';
+import './handshake.svg';
