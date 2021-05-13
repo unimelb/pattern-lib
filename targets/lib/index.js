@@ -20,7 +20,7 @@ import ModalDialog from 'components/modal';
 import PageNav from 'components/nav';
 import PageSearch from 'components/search';
 import PageSearchForm from 'components/search/PageSearchForm.vue';
-import PageFooter from 'components/footer';
+import { PageFooter, PageFooterAlt } from 'components/footer';
 import Tabs from 'components/tabs/Tabs.vue';
 import Tab from 'components/tabs/Tab.vue';
 import InPageNavigation from 'components/navigation/InPageNavigation.vue';
@@ -36,6 +36,8 @@ import ContactList from 'components/contact-list/ContactList.vue';
 import ContentBlock from 'components/content-block/ContentBlock.vue';
 import Dropdown from 'components/dropdown/Dropdown.vue';
 import VideoEmbed from 'components/embed/VideoEmbed.vue';
+import Video from 'components/embed/Video.vue';
+import VideoFullWidth from 'components/embed/VideoFullWidth.vue';
 import SoundcloudEmbed from 'components/embed/SoundcloudEmbed.vue';
 import FigureWrap from 'components/figure/FigureWrap.vue';
 import Notice from 'components/notice/Notice.vue';
@@ -137,6 +139,7 @@ Vue.component('mega-menu', MegaMenu);
 Vue.component('mega-menu-title', MegaMenuTitle);
 Vue.component('modal-dialog', ModalDialog);
 Vue.component('page-footer', PageFooter);
+Vue.component('page-footer-alt', PageFooterAlt);
 Vue.component('page-nav', PageNav);
 Vue.component('page-search', PageSearch);
 Vue.component('page-search-form', PageSearchForm);
@@ -232,6 +235,8 @@ Vue.component('campaign-banner', CampaignBanner);
 Vue.component('card-image-link', CardImageLink);
 Vue.component('cards-filter-category', CardsFilterCategory);
 Vue.component('courses-filter', CoursesFilter);
+Vue.component('video', Video);
+Vue.component('video-full-width', VideoFullWidth);
 
 // Create Vue instance
 new Vue({
