@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1> Top of page </h1>
-    <Video
+    <VideoPlayer
       label="Video test"
       :video="{
         url: 'https://www.youtube.com/embed/MH5pJ4jokpI',
@@ -56,7 +56,7 @@
       Velit et et proident anim. Fugiat in ex labore occaecat occaecat consequat cupidatat eiusmod id et reprehenderit ut cillum id. Ea sit culpa occaecat dolor laboris exercitation veniam pariatur quis proident quis. Commodo incididunt ullamco non minim sit. Est aliqua occaecat est reprehenderit exercitation deserunt et irure amet tempor culpa. Fugiat dolor occaecat est occaecat aute ad. Ea culpa culpa sunt labore eu laboris.
     </div>
     <h2> Bottom of page </h2>
-    <Video
+    <VideoPlayer
       label="Video test"
       :video="{
         url: 'https://www.youtube.com/embed/MH5pJ4jokpI',
@@ -74,11 +74,11 @@
 
 <script>
 import MaxWidthDecorator from 'storybook/decorators/MaxWidthDecorator.vue';
-import Video from '../Video.vue';
+import VideoPlayer from '../VideoPlayer.vue';
 import videoDocs from './video.md';
 
 export default {
-  components: { Video },
+  components: { VideoPlayer },
   readme: { custom: videoDocs, html: true },
   decorator: MaxWidthDecorator,
   decoratorProps: { maxWidth: 18 },

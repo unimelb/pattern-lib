@@ -36,7 +36,7 @@ import ContactList from 'components/contact-list/ContactList.vue';
 import ContentBlock from 'components/content-block/ContentBlock.vue';
 import Dropdown from 'components/dropdown/Dropdown.vue';
 import VideoEmbed from 'components/embed/VideoEmbed.vue';
-import Video from 'components/embed/Video.vue';
+import VideoPlayer from 'components/embed/VideoPlayer.vue';
 import VideoFullWidth from 'components/embed/VideoFullWidth.vue';
 import SoundcloudEmbed from 'components/embed/SoundcloudEmbed.vue';
 import FigureWrap from 'components/figure/FigureWrap.vue';
@@ -237,7 +237,7 @@ Vue.component('campaign-banner', CampaignBanner);
 Vue.component('card-image-link', CardImageLink);
 Vue.component('cards-filter-category', CardsFilterCategory);
 Vue.component('courses-filter', CoursesFilter);
-Vue.component('video', Video);
+Vue.component('video-player', VideoPlayer);
 Vue.component('video-full-width', VideoFullWidth);
 
 // Create Vue instance
