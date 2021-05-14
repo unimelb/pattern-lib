@@ -20,7 +20,7 @@
       class="testimonials-alt__name">
       {{ name }}
     </cite>
-    <Video
+    <VideoPlayer
       v-if="video && !long"
       class="testimonials-alt__video"
       :video="video"
@@ -39,11 +39,11 @@
 </template>
 
 <script>
-import Video from 'components/embed/Video.vue';
+import VideoPlayer from 'components/embed/VideoPlayer.vue';
 
 export default {
   components: {
-    Video,
+    VideoPlayer,
   },
   props: {
     title: {
