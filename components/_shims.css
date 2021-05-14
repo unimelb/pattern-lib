@@ -25,13 +25,45 @@
 .shim-pt067 { padding-top: calc(var(--vr) / 3 * 2) !important; }
 .shim-pb067 { padding-bottom: calc(var(--vr) / 3 * 2) !important; }
 
-.shim-mt1 { margin-top: var(--vr) !important; }
-.shim-mb1 { margin-bottom: var(--vr) !important; }
+.shim-mt1 {
+  margin-top: var(--vr) !important;
+
+  &--desk {
+    @media (--bp-desktop) {
+      margin-top: var(--vr) !important;
+    }
+  }
+}
+.shim-mb1 {
+  margin-bottom: var(--vr) !important;
+
+  &--desk {
+    @media (--bp-desktop) {
+      margin-bottom: var(--vr) !important;
+    }
+  }
+}
 .shim-pt1 { padding-top: var(--vr) !important; }
 .shim-pb1 { padding-bottom: var(--vr) !important; }
 
-.shim-mt2 { margin-top: calc(2 * var(--vr)) !important; }
-.shim-mb2 { margin-bottom: calc(2 * var(--vr)) !important; }
+.shim-mt2 {
+  margin-top: calc(2 * var(--vr)) !important;
+
+  &--desk {
+    @media (--bp-desktop) {
+      margin-top: calc(2 * var(--vr)) !important;
+    }
+  }
+}
+.shim-mb2 {
+  margin-bottom: calc(2 * var(--vr)) !important;
+
+  &--desk {
+    @media (--bp-desktop) {
+      margin-bottom: calc(2 * var(--vr)) !important;
+    }
+  }
+}
 .shim-pt2 { padding-top: calc(2 * var(--vr)) !important; }
 .shim-pb2 { padding-bottom: calc(2 * var(--vr)) !important; }
 

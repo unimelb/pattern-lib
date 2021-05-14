@@ -5,26 +5,26 @@
         Why study at Melbourne
       </h2>
     </div>
-    <div class="grid">
-      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
+    <div class="grid grid--lg">
+      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
         <h3 class="heading-sm shim-mb033">
           #1 in Australia
         </h3>
         <p>We’re ranked #1 in Australia for teaching quality. You’ll be studying alongside exceptional teachers and students.</p>
       </div>
-      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
+      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
         <h3 class="heading-sm shim-mb033">
           Globally recognised
         </h3>
         <p>We are a world-leading and globally-connected Australian university, with partnerships all around the world.</p>
       </div>
-      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
+      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
         <h3 class="heading-sm shim-mb033">
           Learn from the best
         </h3>
         <p>Our academics include community, government and business experts, as well as Nobel Laureates and Rhodes Scholars.</p>
       </div>
-      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb1">
+      <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
         <h3 class="heading-sm shim-mb033">
           Pursue your passions
         </h3>
