@@ -8,6 +8,7 @@ import Columns from './Columns.vue';
 import TestimonialsText from './TestimonialsText.vue';
 import TestimonialsTextLong from './TestimonialsTextLong.vue';
 import TestimonialsVideo from './TestimonialsVideo.vue';
+import Bordered from './Bordered.vue';
 
 storiesOf('Today/Section', module)
   .add('Standard (with columns)', createStory(StandardWithColumns))
@@ -16,4 +17,5 @@ storiesOf('Today/Section', module)
   .add('Columns', createStory(Columns))
   .add('Testimonials (text)', createStory(TestimonialsText))
   .add('Testimonials (long text)', createStory(TestimonialsTextLong))
-  .add('Testimonials (video)', createStory(TestimonialsVideo));
+  .add('Testimonials (video)', createStory(TestimonialsVideo))
+  .add('Bordered', createStory(Bordered));

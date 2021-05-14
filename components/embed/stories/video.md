@@ -1,4 +1,4 @@
-# Video component
+# Video Player component
 
 It accepts props such as:
 
@@ -12,11 +12,23 @@ It accepts props such as:
 ### Example:
 
 ```html
-<video
+<video-player
+  label="Label for the button (Default: Play)"
   video-api
-  video="{ url: 'https://www.youtube.com/embed/sWHoKq6MSaE', duration: 144 }"
-  poster="{ src: 'https://picsum.photos/seed/1/540/360', alt: '' }"
-></video>
+  :video="{ url: 'https://www.youtube.com/embed/sWHoKq6MSaE', duration: 144 }"
+  :poster="{ src: 'https://picsum.photos/seed/1/540/360', alt: '' }"
+  autoplay
+  orientation="portrait or landscape"
+></video-player>
+```
+
+```html
+<video-full-width
+  label="Label for the button (Default: Play)"
+  video-api
+  :video="{ url: 'https://www.youtube.com/embed/sWHoKq6MSaE', duration: 144 }"
+  :poster="{ src: 'https://picsum.photos/seed/1/540/360', alt: '' }"
+></video-full-width>
 ```
 
 #### Screen reader announcement (Voiceover)
