@@ -9,9 +9,12 @@
 import MaxWidthDecorator from 'storybook/decorators/MaxWidthDecorator.vue';
 import TestimonialsAlt from 'components/testimonials/TestimonialsAlt.vue';
 
+import testimonialsAltReadme from './testimonials-alt.md';
+
 export default {
   components: { TestimonialsAlt },
   readme: {
+    custom: testimonialsAltReadme,
     source: true,
     html: true,
     replace: {
