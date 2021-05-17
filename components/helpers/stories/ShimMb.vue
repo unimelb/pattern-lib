@@ -67,6 +67,9 @@
     <p class="shim-mb1">
       shim-mb1
     </p>
+    <p class="shim-mb1--desk">
+      shim-mb1--desk
+    </p>
     <p class="shim-pt1">
       shim-pt1
     </p>
@@ -76,8 +79,14 @@
     <p class="shim-mt2">
       shim-mt2
     </p>
+    <p class="shim-mt2--desk">
+      shim-mt2--desk
+    </p>
     <p class="shim-mb2">
       shim-mb2
+    </p>
+    <p class="shim-mb2--desk">
+      shim-mb2--desk
     </p>
     <p class="shim-pt2">
       shim-pt2

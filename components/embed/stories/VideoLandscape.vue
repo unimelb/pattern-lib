@@ -1,5 +1,5 @@
 <template>
-  <Video
+  <VideoPlayer
     label="Video label"
     :video="{
       url: 'https://www.youtube.com/embed/sWHoKq6MSaE',
@@ -13,11 +13,11 @@
 
 <script>
 import MaxWidthDecorator from 'storybook/decorators/MaxWidthDecorator.vue';
-import Video from '../Video.vue';
+import VideoPlayer from '../VideoPlayer.vue';
 import videoDocs from './video.md';
 
 export default {
-  components: { Video },
+  components: { VideoPlayer },
   readme: { custom: videoDocs, html: true },
   decorator: MaxWidthDecorator,
 };
