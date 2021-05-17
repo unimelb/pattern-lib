@@ -76,7 +76,7 @@
 
     &-inner {
       max-width: 100% !important;
-      position: static;
+      position: static !important;
 
       @media (--bp-desktop) {
         height: 100%;

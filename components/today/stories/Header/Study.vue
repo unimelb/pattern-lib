@@ -36,7 +36,7 @@ export default {
     PageHeaderStudy,
   },
   readme: {
-    source: true,
+    source: false,
     html: true,
     replace: {
       '<div class="page-header-study__bg progressive-image" style="max-width: 100%;"><span><canvas width="1" height="1" class="progressive-image-canvas"></canvas> <div class="progressive-image-wrapper"><img alt="" class="progressive-image-main" style="display: none;"> </div></span></div>': `<progressive-image class="page-header-alt__img-inner" no-ratio src="${studyBgImage}" alt=""></progressive-image>`,

@@ -2,9 +2,12 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import CampaignBannerAlt from '../CampaignBannerAlt.vue';
 import ButtonIcon from '../../buttons/ButtonIcon.vue';
+
+expect.extend(toHaveNoViolations);
 
 describe('CampaignBannerAlt', () => {
   const requiredProps = {
@@ -128,5 +131,19 @@ describe('CampaignBannerAlt', () => {
     });
     const imageWrapper = wrapper.find('.campaign-banner-alt__img img');
     expect(imageWrapper.attributes().alt).toEqual(text);
+  });
+
+  it('My Component throws no accessibility violations', (done) => {
+    const html = mount(CampaignBannerAlt, {
+      propsData: {
+        ...requiredProps,
+      },
+    }).html();
+
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

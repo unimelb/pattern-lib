@@ -171,6 +171,16 @@
 
   &__cta {
     width: auto;
+
+    @media (--bp-max-mobile) {
+      background-color: rgb(var(--col-white)) !important;
+      color: rgb(var(--col-navy-dark)) !important;
+      border-color: transparent !important;
+
+      &:hover {
+        background-color: rgb(var(--col-blue-light)) !important;
+      }
+    }
   }
 
   &__links {
