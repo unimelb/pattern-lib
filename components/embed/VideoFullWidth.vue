@@ -10,7 +10,7 @@
         class="video-full-width__bg-img" />
     </div>
     <div class="video-full-width__inner">
-      <Video
+      <VideoPlayer
         :label="label"
         :poster="poster"
         :video="video"
@@ -21,11 +21,11 @@
 </template>
 
 <script>
-import Video from './Video.vue';
+import VideoPlayer from './VideoPlayer.vue';
 
 export default {
   components: {
-    Video,
+    VideoPlayer,
   },
   props: {
     label: {
