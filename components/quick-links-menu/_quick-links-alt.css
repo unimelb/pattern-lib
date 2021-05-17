@@ -77,7 +77,7 @@
 
       mark {
         font-weight: bold;
-        background: transparent;
+        background: rgb(var(--col-grey-light));
         color: rgb(var(--col-grey-mid-3));
       }
     }

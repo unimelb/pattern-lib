@@ -71,3 +71,14 @@ It accepts props such as:
     },
   ]'></quick-links-alt>
 ```
+
+#### Screen reader announcement (NVDA)
+
+Links
+- Start your application link
+
+Buttons
+- Accounting Quick view button
+
+Variations
+- marked content Acc out of marked content outing link
