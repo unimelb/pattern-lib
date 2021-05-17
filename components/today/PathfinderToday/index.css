@@ -51,10 +51,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     position: relative;
-
-    a {
-      text-decoration: none;
-    }
+    text-decoration: none;
 
     @media (--bp-tablet) {
       padding-top: 1.5rem;
@@ -83,7 +80,12 @@
       padding-right: .5rem;
       display: block;
       transition: color .15s ease;
-      min-height: calc((1.125rem * 1.4) * 2);
+
+      &--two-lines {
+        @media (--bp-x-tablet) {
+          min-height: calc((1.125rem * 1.4) * 2);
+        }
+      }
 
       @media (--bp-tablet) {
         max-width: 12rem;

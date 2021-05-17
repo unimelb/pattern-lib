@@ -5,7 +5,7 @@
 
   &__title,
   &__introduction {
-    color: rgb(var(--col-white));
+    color: rgb(var(--col-white)) !important;
   }
 
   &__inner {
