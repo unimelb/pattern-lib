@@ -115,9 +115,9 @@ export {
 }
   from 'components/embed/VideoEmbed.vue';
 export {
-  default as Video,
+  default as VideoPlayer,
 }
-  from 'components/embed/Video.vue';
+  from 'components/embed/VideoPlayer.vue';
 export {
   default as VideoFullWidth,
 }
