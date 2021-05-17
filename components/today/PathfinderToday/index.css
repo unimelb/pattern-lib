@@ -1,0 +1,134 @@
+.pathfinder-today {
+  background: rgb(var(--col-grey-light));
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+
+  @media (--bp-tablet) {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  &--dark {
+    background: none;
+    color: rgb(var(--col-white));
+  }
+
+  &--dark &__link-icon {
+    background-color: rgb(var(--col-blue-mid-2));
+    color: rgb(var(--col-white));
+  }
+
+  &--dark &__link {
+    border-top: 1px solid rgb(var(--col-white), .2);
+
+    &:hover {
+      .pathfinder-today__link-title {
+        color: rgb(var(--col-white));
+      }
+    }
+  }
+
+  &--dark &__link-title,
+  &--dark &__link-description {
+    color: rgb(var(--col-white));
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+
+    &-item {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-top: 1px solid rgb(var(--col-grey-mid-3), .2);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+    a {
+      text-decoration: none;
+    }
+
+    @media (--bp-tablet) {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    @media (--bp-wide) {
+      padding-top: 1rem;
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      background-color: none;
+
+      .pathfinder-today__link-title {
+        color: rgb(var(--col-background-tertiary-navy));
+      }
+
+      .pathfinder-today__link-icon {
+        background-color: rgb(var(--col-background-tertiary-navy));
+      }
+    }
+
+    &-title {
+      color: rgb(var(--col-navy-dark));
+      padding-right: .5rem;
+      display: block;
+      transition: color .15s ease;
+      min-height: calc((1.125rem * 1.4) * 2);
+
+      @media (--bp-tablet) {
+        max-width: 12rem;
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      top: .8rem;
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(var(--col-navy-dark));
+      color: rgb(var(--col-white));
+      border-radius: 50%;
+      transition: background .15s ease;
+
+      svg {
+        width: .75rem;
+        height: .75rem;
+      }
+
+      @media (--bp-tablet) {
+        top: 1.3rem;
+      }
+
+      @media (--bp-wide) {
+        top: .8rem;
+      }
+    }
+
+    &-description {
+      color: rgb(var(--col-grey-mid-2));
+      font-weight: normal;
+      display: block;
+      margin-bottom: 0;
+      margin-top: 1rem;
+      max-width: 15rem;
+
+      @media (--bp-max-mobile) {
+        display: none;
+      }
+    }
+  }
+}

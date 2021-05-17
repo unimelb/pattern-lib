@@ -466,3 +466,7 @@ export {
   default as MegaMenuAlt,
 }
   from 'components/megamenu/MegaMenuAlt.vue';
+export {
+  default as PathfinderToday,
+}
+  from 'components/today/PathfinderToday/PathfinderToday.vue';
