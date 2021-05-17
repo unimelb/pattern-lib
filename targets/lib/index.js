@@ -115,6 +115,7 @@ import CampaignBanner from 'components/campaign/CampaignBanner.vue';
 import CardImageLink from 'components/cards/CardImageLink.vue';
 import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCategory.vue';
 import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
+import MegaMenuAlt from 'components/megamenu/MegaMenuAlt.vue';
 
 import { version } from '../../package.json';
 
@@ -239,6 +240,7 @@ Vue.component('cards-filter-category', CardsFilterCategory);
 Vue.component('courses-filter', CoursesFilter);
 Vue.component('video-player', VideoPlayer);
 Vue.component('video-full-width', VideoFullWidth);
+Vue.component('mega-menu-alt', MegaMenuAlt);
 
 // Create Vue instance
 new Vue({

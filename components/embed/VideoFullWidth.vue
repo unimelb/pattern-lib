@@ -1,13 +1,14 @@
 <template>
   <div class="video-full-width">
     <div class="video-full-width__bg">
-      <progressive-img
-        v-if="poster"
-        :src="poster.src"
-        alt=""
-        role="presentation"
-        no-ratio
-        class="video-full-width__bg-img" />
+      <client-only v-if="poster">
+        <progressive-img
+          :src="poster.src"
+          alt=""
+          role="presentation"
+          no-ratio
+          class="video-full-width__bg-img" />
+      </client-only>
     </div>
     <div class="video-full-width__inner">
       <VideoPlayer

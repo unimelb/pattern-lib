@@ -1,0 +1,19 @@
+.card-flat-list {
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+
+  @media (--bp-x-tablet) {
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+  }
+
+  &__item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    @media (--bp-x-tablet) {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -462,3 +462,7 @@ export {
   default as CoursesFilter,
 }
   from 'components/filter/courses/CoursesFilter.vue';
+export {
+  default as MegaMenuAlt,
+}
+  from 'components/megamenu/MegaMenuAlt.vue';
