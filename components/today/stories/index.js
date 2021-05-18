@@ -1,1 +1,2 @@
+import './QuickLinksMenu';
 import './Section';

@@ -67,6 +67,7 @@
 @import 'profiles/accordion-profile/index.css';
 @import 'error-box/index.css';
 @import 'todo-list/index.css';
+@import 'today/PathfinderToday/index.css';
 
 /* Third party - Alphabetically ordered */
 @import '../third-party/salesforce.css';
