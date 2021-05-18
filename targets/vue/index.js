@@ -462,3 +462,7 @@ export {
   default as CoursesFilter,
 }
   from 'components/filter/courses/CoursesFilter.vue';
+export {
+  default as QuickLinksAlt,
+}
+  from 'components/quick-links-menu/QuickLinksAlt.vue';
