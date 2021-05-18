@@ -6,13 +6,14 @@
     }">
     <div class="max">
       <slot name="before" />
-      <ul class="pathfinder-today__list grid grid--lg">
+      <ul
+        role="navigation"
+        class="pathfinder-today__list grid grid--lg">
         <li
           v-for="(item, index) in items"
           :key="index"
           class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4">
           <div
-            role="navigation"
             class="pathfinder-today__link">
             <a
               :id="item.id"
