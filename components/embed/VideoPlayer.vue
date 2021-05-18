@@ -25,7 +25,7 @@
         <button
           ref="playVideo"
           class="video__btn"
-          :aria-label="`Play video ${label !== 'Play' ? label : ''} ${formattedDuration ? formattedDuration : ''}`"
+          :aria-label="`Play ${label !== 'Play' ? label : ''} ${formattedDuration ? formattedDuration : ''} video`"
           :aria-describedby="describedby"
           @click="startAutoplay"
           @mouseleave="leaveVideo"
