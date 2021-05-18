@@ -55,11 +55,12 @@
 </template>
 
 <script>
+import SvgIcon from 'components/icons/SvgIcon.vue';
 import PathfinderToday from '../PathfinderToday.vue';
 import PathfinderTodayMd from './PathfinderToday.md';
 
 export default {
-  components: { PathfinderToday },
+  components: { PathfinderToday, SvgIcon },
   readme: { custom: PathfinderTodayMd, source: true, html: false },
   data() {
     return {

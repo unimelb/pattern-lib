@@ -391,6 +391,10 @@ export {
 }
   from 'components/forms/StyledSelect.vue';
 export {
+  default as InlineSearch,
+}
+  from 'components/forms/InlineSearch.vue';
+export {
   default as AppCheckbox,
 }
   from 'components/app-checkbox/AppCheckbox.vue';
