@@ -16,7 +16,7 @@
     margin-top: .375rem;
     margin-bottom: 1rem;
     padding: .5rem .625rem;
-    border: 1px solid color-mod(rgb(var(--col-black-light)) lightness(-5%));
+    border: 1px solid rgb(var(--col-grey-mid-1));
     border-radius: 3px;
     background-color: rgb(var(--col-background-primary-grey));
     box-shadow: inset 0 1px 3px color-mod(rgb(var(--col-black-dark)) alpha(10%));
