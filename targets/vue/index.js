@@ -466,3 +466,7 @@ export {
   default as PathfinderToday,
 }
   from 'components/today/PathfinderToday/PathfinderToday.vue';
+export {
+  default as QuickLinksAlt,
+}
+  from 'components/quick-links-menu/QuickLinksAlt.vue';
