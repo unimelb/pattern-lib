@@ -36,7 +36,7 @@ import ContactList from 'components/contact-list/ContactList.vue';
 import ContentBlock from 'components/content-block/ContentBlock.vue';
 import Dropdown from 'components/dropdown/Dropdown.vue';
 import VideoEmbed from 'components/embed/VideoEmbed.vue';
-import Video from 'components/embed/Video.vue';
+import VideoPlayer from 'components/embed/VideoPlayer.vue';
 import VideoFullWidth from 'components/embed/VideoFullWidth.vue';
 import SoundcloudEmbed from 'components/embed/SoundcloudEmbed.vue';
 import FigureWrap from 'components/figure/FigureWrap.vue';
@@ -98,6 +98,7 @@ import LogoListing from 'components/listing/LogoListing.vue';
 import SplitSectionHeader from 'components/header/SplitSectionHeader.vue';
 import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import StyledSelect from 'components/forms/StyledSelect.vue';
+import InlineSearch from 'components/forms/InlineSearch.vue';
 import AppCheckbox from 'components/app-checkbox/AppCheckbox.vue';
 import Spinner from 'components/loader/Spinner.vue';
 import Loader from 'components/loader/Loader.vue';
@@ -117,6 +118,8 @@ import CampaignBannerAlt from 'components/campaign/CampaignBannerAlt.vue';
 import CardImageLink from 'components/cards/CardImageLink.vue';
 import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCategory.vue';
 import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
+import PathfinderToday from 'components/today/PathfinderToday/PathfinderToday.vue';
+import QuickLinksAlt from 'components/quick-links-menu/QuickLinksAlt.vue';
 
 import { version } from '../../package.json';
 
@@ -222,6 +225,7 @@ Vue.component('logo-listing', LogoListing);
 Vue.component('split-section-header', SplitSectionHeader);
 Vue.component('screen-reader-jump-to', ScreenReaderJumpTo);
 Vue.component('styled-select', StyledSelect);
+Vue.component('inline-search', InlineSearch);
 Vue.component('app-checkbox', AppCheckbox);
 Vue.component('spinner', Spinner);
 Vue.component('loader', Loader);
@@ -241,7 +245,9 @@ Vue.component('campaign-banner-alt', CampaignBannerAlt);
 Vue.component('card-image-link', CardImageLink);
 Vue.component('cards-filter-category', CardsFilterCategory);
 Vue.component('courses-filter', CoursesFilter);
-Vue.component('video', Video);
+Vue.component('pathfinder-today', PathfinderToday);
+Vue.component('quick-links-alt', QuickLinksAlt);
+Vue.component('video-player', VideoPlayer);
 Vue.component('video-full-width', VideoFullWidth);
 
 // Create Vue instance

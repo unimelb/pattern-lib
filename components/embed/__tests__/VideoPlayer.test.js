@@ -1,6 +1,6 @@
 import { shallow } from 'vue-test-utils';
 import { axe, toHaveNoViolations } from 'jest-axe';
-import Video from '../Video.vue';
+import VideoPlayer from '../VideoPlayer.vue';
 
 expect.extend(toHaveNoViolations);
 
@@ -14,9 +14,9 @@ const video = {
   duration: 144,
 };
 
-describe('Video', () => {
+describe('VideoPlayer', () => {
   it('should match snapshot', () => {
-    const result = shallow(Video, {
+    const result = shallow(VideoPlayer, {
       propsData: {
         poster,
         video,
@@ -26,7 +26,7 @@ describe('Video', () => {
   });
 
   it('Component throws no accessibility violations', (done) => {
-    const html = shallow(Video, {
+    const html = shallow(VideoPlayer, {
       propsData: {
         poster,
         video,

@@ -115,9 +115,9 @@ export {
 }
   from 'components/embed/VideoEmbed.vue';
 export {
-  default as Video,
+  default as VideoPlayer,
 }
-  from 'components/embed/Video.vue';
+  from 'components/embed/VideoPlayer.vue';
 export {
   default as VideoFullWidth,
 }
@@ -395,6 +395,10 @@ export {
 }
   from 'components/forms/StyledSelect.vue';
 export {
+  default as InlineSearch,
+}
+  from 'components/forms/InlineSearch.vue';
+export {
   default as AppCheckbox,
 }
   from 'components/app-checkbox/AppCheckbox.vue';
@@ -470,3 +474,11 @@ export {
   default as CoursesFilter,
 }
   from 'components/filter/courses/CoursesFilter.vue';
+export {
+  default as PathfinderToday,
+}
+  from 'components/today/PathfinderToday/PathfinderToday.vue';
+export {
+  default as QuickLinksAlt,
+}
+  from 'components/quick-links-menu/QuickLinksAlt.vue';
