@@ -8,6 +8,7 @@
     }">
     <component
       :is="video ? 'h3' : 'p'"
+      :id="id"
       :class="{
         'testimonials-alt__title': true,
         'heading-sm': !long,
@@ -27,6 +28,7 @@
       :poster="{ src: imgSrc, alt: name }"
       orientation="portrait"
       :autoplay="autoplay"
+      :describedby="id"
       @autoplay="$emit('autoplay')" />
     <client-only v-else-if="imgSrc">
       <progressive-img
@@ -77,6 +79,11 @@ export default {
       type: Boolean,
       required: false,
       default: false,
+    },
+  },
+  computed: {
+    id() {
+      return `testimonial-${this._uid}`;
     },
   },
 };

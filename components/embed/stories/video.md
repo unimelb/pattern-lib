@@ -8,6 +8,7 @@ It accepts props such as:
 - `orientation`: Can be 'portrait' or 'landscape', default to 'landscape'
 - `autoplay`: Boolean for autoplaying the looping video if one exists, otherwise only loops on mouseover
 - `videoApi`: Boolean to add additional query params for analytics
+- `describedby`: String to pass through an id to `aria-describedby` attribute on the button
 
 ### Example:
 

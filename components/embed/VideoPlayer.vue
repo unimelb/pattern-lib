@@ -25,7 +25,8 @@
         <button
           ref="playVideo"
           class="video__btn"
-          :aria-label="`Play video ${label} ${formattedDuration ? formattedDuration : ''}`"
+          :aria-label="`Play video ${label !== 'Play' ? label : ''} ${formattedDuration ? formattedDuration : ''}`"
+          :aria-describedby="describedby"
           @click="startAutoplay"
           @mouseleave="leaveVideo"
           @mouseover="hoverVideo">
@@ -122,6 +123,11 @@ export default {
       type: Boolean,
       required: false,
       default: false,
+    },
+    describedby: {
+      type: String,
+      required: false,
+      default: null,
     },
   },
   data() {
