@@ -3,34 +3,20 @@
     :items="pathfinderLinks">
     <template
       #before>
-      <div class="row shim-mb1">
-        <div class="col-xxs-12 col-sm-6 shim-mb1">
-          <form class="form form--inline">
-            <label
-              for="search-input"
-              class="heading-card">Search careers, interests, courses or specialisations</label>
-            <div class="form--inline__row form--inline__row--center">
-              <input
-                id="search-input"
-                aria-label="Search careers, interests, courses or specialisations"
-                class="form--inline__search"
-                type="search"
-                placeholder="Type to search courses">
-              <button
-                class="form--inline__button form--inline__button--alt"
-                aria-label="Search">
-                <SvgIcon
-                  class="form--inline__svg"
-                  name="search" />
-                <span class="form--inline__button-label">Search</span>
-              </button>
-            </div>
-          </form>
+      <div class="grid grid--lg shim-mb1">
+        <div class="cell cell--lg cell--tab-1of2 shim-mt0 shim-mb1">
+          <InlineSearch
+            id="couse-search"
+            name="s"
+            label="Search for a course"
+            placeholder="Find a course"
+            action="/find/"
+            with-submit />
         </div>
         <div
           role="navigation"
           aria-label="Popular searches"
-          class="col-xxs-12 col-sm-6">
+          class="cell cell--lg cell--tab-1of2 shim-mt0 shim-mb0">
           <p class="paragraph-sm shim-mb0">
             Popular searches:
           </p>
@@ -55,12 +41,12 @@
 </template>
 
 <script>
-import SvgIcon from 'components/icons/SvgIcon.vue';
+import InlineSearch from 'components/forms/InlineSearch.vue';
 import PathfinderToday from '../PathfinderToday.vue';
 import PathfinderTodayMd from './PathfinderToday.md';
 
 export default {
-  components: { PathfinderToday, SvgIcon },
+  components: { PathfinderToday, InlineSearch },
   readme: { custom: PathfinderTodayMd, source: true, html: false },
   data() {
     return {
