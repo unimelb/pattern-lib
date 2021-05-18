@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import SvgIcon from '../../icons/SvgIcon.vue';
+import SvgIcon from 'components/icons/SvgIcon.vue';
 
 export default {
   components: {

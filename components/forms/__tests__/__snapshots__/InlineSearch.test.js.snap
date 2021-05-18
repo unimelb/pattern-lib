@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineSearch should match snapshot 1`] = `
+<form
+  class="inline-search inline-search--with-icon"
+  role="search"
+>
+   
+  <div
+    class="inline-search__row"
+  >
+    <label
+      class="screenreaders-only"
+      for="search"
+    >
+      
+      text
+    
+    </label>
+     
+    <input
+      autocomplete="off"
+      class="inline-search__input"
+      id="search"
+      name=""
+      placeholder=""
+      type="search"
+    />
+     
+    <!---->
+     
+    <!---->
+  </div>
+</form>
+`;
