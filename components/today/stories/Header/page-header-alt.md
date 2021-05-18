@@ -9,7 +9,6 @@ The component `PageHeaderAlt` acceps the following props:
 | tag      	   | Object  	|
 | introduction | String   |
 | img     	   | Object  	|
-| bgSrc     	 | String  	|
 | dark         | Boolean	|
 
 #### HTML Template

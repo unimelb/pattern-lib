@@ -31,11 +31,6 @@
           </a>
           {{ title }}
         </h1>
-        <p
-          v-if="text"
-          class="paragraph-lg campaign-banner-alt__text">
-          {{ text }}
-        </p>
         <ul
           v-if="links && links.length"
           class="campaign-banner-alt__links list-reset">
@@ -55,7 +50,7 @@
           v-else-if="cta"
           :href="cta.href"
           :icon="cta.icon || 'chevron-right'"
-          class="btn--cta campaign-banner-alt__cta"
+          class="btn--secondary campaign-banner-alt__cta"
           :aria-label="`${title} - ${cta.text}`">
           {{ cta.text }}
         </ButtonIcon>
@@ -83,11 +78,6 @@ export default {
       default() {
         return null;
       },
-    },
-    text: {
-      type: String,
-      required: false,
-      default: '',
     },
     img: {
       type: Object,

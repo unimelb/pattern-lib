@@ -60,17 +60,6 @@ describe('CampaignBannerAlt', () => {
     expect(wrapper.find('.campaign-banner-alt__title').text()).toEqual(text);
   });
 
-  it('should render the text to the paragraph', () => {
-    const text = 'We\'re here to support you make important decisions about your future.';
-    const wrapper = mount(CampaignBannerAlt, {
-      propsData: {
-        ...requiredProps,
-        text,
-      },
-    });
-    expect(wrapper.find('.campaign-banner-alt__text').text()).toEqual(text);
-  });
-
   it('should not render ButtonIcon by default', () => {
     const wrapper = mount(CampaignBannerAlt, {
       propsData: {
