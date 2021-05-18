@@ -115,6 +115,7 @@ import CampaignBanner from 'components/campaign/CampaignBanner.vue';
 import CardImageLink from 'components/cards/CardImageLink.vue';
 import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCategory.vue';
 import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
+import QuickLinksAlt from 'components/quick-links-menu/QuickLinksAlt.vue';
 
 import { version } from '../../package.json';
 
@@ -237,6 +238,7 @@ Vue.component('campaign-banner', CampaignBanner);
 Vue.component('card-image-link', CardImageLink);
 Vue.component('cards-filter-category', CardsFilterCategory);
 Vue.component('courses-filter', CoursesFilter);
+Vue.component('quick-links-alt', QuickLinksAlt);
 Vue.component('video-player', VideoPlayer);
 Vue.component('video-full-width', VideoFullWidth);
 

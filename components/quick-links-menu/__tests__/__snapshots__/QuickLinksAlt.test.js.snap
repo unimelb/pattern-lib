@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickLinks should match snapshot 1`] = `
+<ul
+  class="quick-links-alt"
+>
+  <li>
+    <a
+      class="quick-links-alt__link"
+      href="http://www.unimelb.edu.au"
+    >
+      <span
+        class="heading-sm heading-sm--link quick-links-alt__link-title"
+      >
+        mock title
+      </span>
+       
+      <span
+        class="quick-links-alt__link-icon"
+      >
+        <!---->
+      </span>
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`QuickLinks should match snapshot 2`] = `
+<ul
+  class="quick-links-alt"
+>
+  <li>
+    <a
+      class="quick-links-alt__link"
+      href="http://www.unimelb.edu.au"
+    >
+      <span
+        class="heading-sm heading-sm--link quick-links-alt__link-title"
+      >
+        mock title
+      </span>
+       
+      <span
+        class="quick-links-alt__link-icon"
+      >
+        <!---->
+      </span>
+    </a>
+  </li>
+</ul>
+`;
