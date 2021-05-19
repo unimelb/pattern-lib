@@ -544,16 +544,6 @@ a[target='_blank'] {
 }
 
 /**
- * Icon helper for section alt wrapper
- */
-.icon-width-height {
-  svg {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
-
-/**
  * Animations
  */
 

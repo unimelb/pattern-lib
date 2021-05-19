@@ -5,33 +5,33 @@
     </h2>
     <div class="grid grid--lg">
       <div class="cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0 content-max-width">
-        <SvgIcon
-          name="briefcase"
-          width="40"
-          height="40"
-          class="shim-mb067" />
+        <div class="shim-mb067">
+          <SvgIcon
+            name="briefcase"
+            class="shim-mb067" />
+        </div>
         <h3 class="heading-sm shim-mb033">
           Industry-ready skills
         </h3>
         <p>Develop your leadership communication skills aligned with current industry best practice. <a href="#">Learn more about MicroCerts</a>.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0 content-max-width">
-        <SvgIcon
-          name="handshake"
-          width="40"
-          height="40"
-          class="shim-mb067" />
+        <div class="shim-mb067">
+          <SvgIcon
+            name="handshake"
+            class="shim-mb067" />
+        </div>
         <h3 class="heading-sm shim-mb033">
           Taught by leading experts
         </h3>
         <p>Your teachers are internationally recognised professionals with years of on the ground experience within top organisations.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0 content-max-width">
-        <SvgIcon
-          name="check"
-          width="40"
-          height="40"
-          class="shim-mb067" />
+        <div class="shim-mb067">
+          <SvgIcon
+            name="check"
+            class="shim-mb067" />
+        </div>
         <h3 class="heading-sm shim-mb033">
           Get a digital certificate
         </h3>
