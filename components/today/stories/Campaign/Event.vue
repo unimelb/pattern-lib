@@ -12,12 +12,13 @@ import CampaignBannerAlt from 'components/campaign/CampaignBannerAlt.vue';
 
 import campaignHeroDesktopImage2 from './static/campaign-hero-desktop-2.png';
 import campaignHeroMobileImage2 from './static/campaign-hero-mobile-2.png';
+import campaignBannerAltReadme from './campaign-banner-alt.md';
 
 export default {
   components: {
     CampaignBannerAlt,
   },
-  readme: { source: true, html: true },
+  readme: { custom: campaignBannerAltReadme, source: true, html: false },
   data() {
     return {
       title: 'A discussion with Anthony Fauci on COVID-19',

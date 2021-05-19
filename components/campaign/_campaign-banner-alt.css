@@ -165,10 +165,6 @@
     }
   }
 
-  &__text {
-    color: rgb(var(--col-white));
-  }
-
   &__cta {
     width: auto;
   }

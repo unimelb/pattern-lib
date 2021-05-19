@@ -2,9 +2,12 @@ import {
   shallow,
   mount,
 } from 'vue-test-utils';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 import CampaignBannerAlt from '../CampaignBannerAlt.vue';
 import ButtonIcon from '../../buttons/ButtonIcon.vue';
+
+expect.extend(toHaveNoViolations);
 
 describe('CampaignBannerAlt', () => {
   const requiredProps = {
@@ -55,17 +58,6 @@ describe('CampaignBannerAlt', () => {
       },
     });
     expect(wrapper.find('.campaign-banner-alt__title').text()).toEqual(text);
-  });
-
-  it('should render the text to the paragraph', () => {
-    const text = 'We\'re here to support you make important decisions about your future.';
-    const wrapper = mount(CampaignBannerAlt, {
-      propsData: {
-        ...requiredProps,
-        text,
-      },
-    });
-    expect(wrapper.find('.campaign-banner-alt__text').text()).toEqual(text);
   });
 
   it('should not render ButtonIcon by default', () => {
@@ -128,5 +120,19 @@ describe('CampaignBannerAlt', () => {
     });
     const imageWrapper = wrapper.find('.campaign-banner-alt__img img');
     expect(imageWrapper.attributes().alt).toEqual(text);
+  });
+
+  it('My Component throws no accessibility violations', (done) => {
+    const html = mount(CampaignBannerAlt, {
+      propsData: {
+        ...requiredProps,
+      },
+    }).html();
+
+    // pass anything that outputs html to axe
+    return axe(html).then((response) => {
+      expect(response).toHaveNoViolations();
+      done();
+    });
   });
 });

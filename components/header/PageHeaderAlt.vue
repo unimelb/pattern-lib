@@ -1,13 +1,6 @@
 <template>
   <div
     :class="classes">
-    <client-only v-if="bgSrc">
-      <progressive-img
-        :src="bgSrc"
-        alt=""
-        no-ratio
-        class="page-header-alt__bg" />
-    </client-only>
     <div
       v-if="img"
       class="page-header-alt__img">
@@ -80,11 +73,6 @@ export default {
       default() {
         return null;
       },
-    },
-    bgSrc: {
-      type: String,
-      required: false,
-      default: '',
     },
     dark: {
       type: Boolean,
