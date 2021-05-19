@@ -69,9 +69,11 @@
       }
     }
 
-    svg {
-      width: 2.5rem;
-      height: 2.5rem;
+    &-svg-icon {
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
     }
   }
 
