@@ -9,6 +9,7 @@ import TestimonialsText from './TestimonialsText.vue';
 import TestimonialsTextLong from './TestimonialsTextLong.vue';
 import TestimonialsVideo from './TestimonialsVideo.vue';
 import Bordered from './Bordered.vue';
+import CourseIndex from './CourseIndex.vue';
 
 storiesOf('Today/Section', module)
   .add('Standard (with columns)', createStory(StandardWithColumns))
@@ -18,4 +19,5 @@ storiesOf('Today/Section', module)
   .add('Testimonials (text)', createStory(TestimonialsText))
   .add('Testimonials (long text)', createStory(TestimonialsTextLong))
   .add('Testimonials (video)', createStory(TestimonialsVideo))
-  .add('Bordered', createStory(Bordered));
+  .add('Bordered', createStory(Bordered))
+  .add('Course Index', createStory(CourseIndex));
