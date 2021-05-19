@@ -7,6 +7,7 @@ import ThreeUp from './ThreeUp.vue';
 import Columns from './Columns.vue';
 import Bordered from './Bordered.vue';
 import QuickLinks from './QuickLinks.vue';
+import CourseIndex from './CourseIndex.vue';
 
 storiesOf('Today/Section', module)
   .add('Standard (with columns)', createStory(StandardWithColumns))
@@ -14,4 +15,5 @@ storiesOf('Today/Section', module)
   .add('3 Up', createStory(ThreeUp))
   .add('Columns', createStory(Columns))
   .add('Bordered', createStory(Bordered))
-  .add('Quick Links', createStory(QuickLinks));
+  .add('Quick Links', createStory(QuickLinks))
+  .add('Course Index', createStory(CourseIndex));
