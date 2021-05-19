@@ -395,6 +395,10 @@ export {
 }
   from 'components/forms/StyledSelect.vue';
 export {
+  default as InlineSearch,
+}
+  from 'components/forms/InlineSearch.vue';
+export {
   default as AppCheckbox,
 }
   from 'components/app-checkbox/AppCheckbox.vue';
@@ -478,3 +482,7 @@ export {
   default as PathfinderToday,
 }
   from 'components/today/PathfinderToday/PathfinderToday.vue';
+export {
+  default as QuickLinksAlt,
+}
+  from 'components/quick-links-menu/QuickLinksAlt.vue';

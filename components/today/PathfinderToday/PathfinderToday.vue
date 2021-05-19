@@ -1,21 +1,21 @@
 <template>
   <div
-    role="navigation"
     :class="{
       'pathfinder-today': true,
       'pathfinder-today--dark': dark,
     }">
     <div class="max">
       <slot name="before" />
-      <ul class="pathfinder-today__list grid grid--lg">
-        <li
-          v-for="(item, index) in items"
-          :key="index"
-          class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4">
-          <div class="pathfinder-today__link">
+      <div role="navigation">
+        <ul class="pathfinder-today__list grid grid--lg">
+          <li
+            v-for="(item, index) in items"
+            :key="index"
+            class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4">
             <a
               :id="item.id"
-              :href="item.href">
+              :href="item.href"
+              class="pathfinder-today__link">
               <span
                 :class="{
                   'pathfinder-today__link-title': true,
@@ -32,16 +32,16 @@
             <span class="pathfinder-today__link-description label-s">{{
               item.description
             }}</span>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
       <slot name="after" />
     </div>
   </div>
 </template>
 
 <script>
-import SvgIcon from '../../icons/SvgIcon.vue';
+import SvgIcon from 'components/icons/SvgIcon.vue';
 
 export default {
   components: {
