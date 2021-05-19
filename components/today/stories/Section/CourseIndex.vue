@@ -36,7 +36,7 @@
           :key="index"
           class="shim-mb033">
           <CardCourse
-            :id="`${course.letter}-${course.slug}`"
+            :id="`${letter}-${course.slug}`"
             :title="course.title"
             :category="course.category"
             :type="course.type"
