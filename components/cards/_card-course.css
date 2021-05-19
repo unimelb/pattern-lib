@@ -97,7 +97,6 @@
     font-weight: var(--fw-normal);
     font-size: .875rem;
     line-height: 1.25;
-    letter-spacing: .023rem;
     text-transform: capitalize;
     margin-bottom: 0;
     color: rgb(var(--col-grey-mid-2));
