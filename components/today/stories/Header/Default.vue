@@ -3,7 +3,7 @@
     title="Effective Leadership Communication"
     :tag="{ text: 'Melbourne MicroCert', href: '#', color: 'red' }"
     introduction="Become an authentic, persuasive and engaging communicator to enhance your effectiveness as a leader."
-    :img="{ src: placeholder }">
+    :img="{ src: placeholder, alt: 'Business leaders at a conference' }">
     <template slot="actions">
       <a
         href="#"
