@@ -22,32 +22,32 @@ export default {
         {
           href: 'https://www.unimelb.edu.au/',
           title: 'Test title',
-          category: 'test category',
+          category: 'Test category',
         },
         {
           href: 'https://www.unimelb.edu.au/',
           title: 'Test title',
-          category: 'test category',
+          category: 'Test category',
         },
         {
           href: 'https://www.unimelb.edu.au/',
           title: 'Test title',
-          category: 'test category',
+          category: 'Test category',
         },
         {
           href: 'https://www.unimelb.edu.au/',
           title: 'Test title',
-          category: 'test category',
+          category: 'Test category',
         },
         {
           href: 'https://www.unimelb.edu.au/',
           title: 'Test title',
-          category: 'test category',
+          category: 'Test category',
         },
         {
           href: 'https://www.unimelb.edu.au/',
           title: 'Test title',
-          category: 'test category',
+          category: 'Test category',
         },
       ],
     };
