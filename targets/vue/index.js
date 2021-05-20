@@ -183,6 +183,10 @@ export {
 }
   from 'components/header/PageHeaderMin.vue';
 export {
+  default as PageHeaderAlt,
+}
+  from 'components/header/PageHeaderAlt.vue';
+export {
   default as PageNav,
 }
   from 'components/nav/PageNav.vue';
@@ -462,6 +466,10 @@ export {
   default as CampaignBanner,
 }
   from 'components/campaign/CampaignBanner.vue';
+export {
+  default as CampaignBannerAlt,
+}
+  from 'components/campaign/CampaignBannerAlt.vue';
 export {
   default as CardImageLink,
 }
