@@ -9,6 +9,7 @@ import TestimonialsText from './TestimonialsText.vue';
 import TestimonialsTextLong from './TestimonialsTextLong.vue';
 import TestimonialsVideo from './TestimonialsVideo.vue';
 import Bordered from './Bordered.vue';
+import QuickLinks from './QuickLinks.vue';
 import CourseIndex from './CourseIndex.vue';
 
 storiesOf('Today/Section', module)
@@ -20,4 +21,5 @@ storiesOf('Today/Section', module)
   .add('Testimonials (long text)', createStory(TestimonialsTextLong))
   .add('Testimonials (video)', createStory(TestimonialsVideo))
   .add('Bordered', createStory(Bordered))
+  .add('Quick Links', createStory(QuickLinks))
   .add('Course Index', createStory(CourseIndex));
