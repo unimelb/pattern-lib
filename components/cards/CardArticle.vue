@@ -2,7 +2,7 @@
   <div
     class="article-card">
     <div class="article-card__inner border-top">
-      <h3 class="article-card__title heading-sm heading-sm--link">
+      <h3 class="article-card__title heading-sm">
         <a
           class="article-card__link link-reset"
           :href="href">
