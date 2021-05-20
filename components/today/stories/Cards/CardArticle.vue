@@ -2,7 +2,7 @@
   <CardArticle
     href="https://www.unimelb.edu.au/"
     title="Test title"
-    category="test category" />
+    category="Test category" />
 </template>
 
 <script>

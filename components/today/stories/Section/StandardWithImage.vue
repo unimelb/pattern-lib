@@ -1,5 +1,5 @@
 <template>
-  <SectionAlt :img="{ src: 'https://via.placeholder.com/1200x400', alt: 'test alt' }">
+  <SectionAlt :img="{ src: 'https://via.placeholder.com/1200x400', alt: 'Image for example purposes.' }">
     <div slot="left">
       <h2 class="heading-md">
         What you will learn

@@ -13,7 +13,7 @@ describe('CardArticleLarge', () => {
         title: 'mock title',
         href: 'www.unimelb.edu.au',
         category: 'mock category',
-        img: "{ src: 'https://picsum.photos/seed/1/540/360', alt: 'test alt' }",
+        img: "{ src: 'https://picsum.photos/seed/1/540/360', alt: 'Image for example purposes.' }",
       },
     }).element;
     expect(result).toMatchSnapshot();
@@ -25,7 +25,7 @@ describe('CardArticleLarge', () => {
         title: 'mock title',
         href: 'www.unimelb.edu.au',
         category: 'mock category',
-        img: "{ src: 'https://picsum.photos/seed/1/540/360', alt: 'test alt' }",
+        img: "{ src: 'https://picsum.photos/seed/1/540/360', alt: 'Image for example purposes.' }",
       },
     }).html();
     // pass anything that outputs html to axe

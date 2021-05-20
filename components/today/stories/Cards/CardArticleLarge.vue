@@ -2,9 +2,9 @@
   <CardArticleLarge
     href="https://www.unimelb.edu.au/"
     title="Test title"
-    category="test category"
-    description="Test description"
-    :img="{ src: 'https://picsum.photos/seed/1/540/360', alt: 'test alt' }" />
+    category="Test category"
+    description="Nisi labore mollit occaecat nisi et irure esse mollit veniam in."
+    :img="{ src: 'https://picsum.photos/seed/1/540/360', alt: 'Image for example purposes.' }" />
 </template>
 
 <script>

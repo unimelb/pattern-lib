@@ -12,5 +12,5 @@ The component `SectionAlt` acceps the following props:
 Usage Example:
 
 ```html
-<SectionAlt tagName="div" :img="{ src: 'https://via.placeholder.com/1200x400', alt: 'test alt' }" bordered bgColor="grey-light"> Section Content </SectionAlt>
+<SectionAlt tagName="div" :img="{ src: 'https://via.placeholder.com/1200x400', alt: 'Image for example purposes.' }" bordered bgColor="grey-light"> Section Content </SectionAlt>
 ```
