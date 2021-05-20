@@ -7,11 +7,13 @@ exports[`VideoPlayer should match snapshot 1`] = `
   <div
     name="fade"
   >
-    <progressive-img
-      alt=""
-      class="video__img"
-      src="https://picsum.photos/seed/1/540/360"
-    />
+    <client-only>
+      <progressive-img
+        alt=""
+        class="video__img"
+        src="https://picsum.photos/seed/1/540/360"
+      />
+    </client-only>
      
     <!---->
      
