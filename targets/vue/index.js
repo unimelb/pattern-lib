@@ -227,6 +227,10 @@ export {
 }
   from 'components/section/SectionAlt.vue';
 export {
+  default as SectionImage,
+}
+  from 'components/section/SectionImage.vue';
+export {
   default as SplitSection,
 }
   from 'components/section/SplitSection.vue';
