@@ -16,7 +16,7 @@ exports[`VideoPlayer should match snapshot 1`] = `
     <!---->
      
     <button
-      aria-label="Play video Play 2m 24s"
+      aria-label="Play  2m 24s video"
       class="video__btn"
     >
       <span

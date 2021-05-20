@@ -311,6 +311,10 @@ export {
 }
   from 'components/testimonials/Testimonials.vue';
 export {
+  default as TestimonialsAlt,
+}
+  from 'components/testimonials/TestimonialsAlt.vue';
+export {
   default as SocialMediaBar,
 }
   from 'components/social-media-bar/SocialMediaBar.vue';
