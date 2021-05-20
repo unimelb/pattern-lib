@@ -474,3 +474,11 @@ export {
   default as QuickLinksAlt,
 }
   from 'components/quick-links-menu/QuickLinksAlt.vue';
+export {
+  default as CardFlat,
+}
+  from 'components/cards/CardFlat.vue';
+export {
+  default as CardFlatList,
+}
+  from 'components/cards/CardFlatList.vue';
