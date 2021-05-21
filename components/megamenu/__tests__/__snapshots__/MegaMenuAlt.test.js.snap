@@ -60,6 +60,16 @@ exports[`MegaMenuAlt should match snapshot 1`] = `
               
               </a>
             </li>
+            <li>
+              <a
+                class="link-reset"
+                href="https://www.unimelb.edu.au/alumni"
+              >
+                
+                Alumni
+              
+              </a>
+            </li>
           </ul>
         </nav>
          
@@ -163,10 +173,10 @@ exports[`MegaMenuAlt should match snapshot 1`] = `
           <li>
             <a
               class="link-reset"
-              href="https://about.unimelb.edu.au/"
+              href="https://students.unimelb.edu.au/campus-life/policy-and-conduct/respect-at-the-university"
             >
               
-              About us
+              Safety and respect
             
             </a>
           </li>
