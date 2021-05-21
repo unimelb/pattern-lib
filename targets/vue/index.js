@@ -231,6 +231,10 @@ export {
 }
   from 'components/section/SectionAlt.vue';
 export {
+  default as SectionImage,
+}
+  from 'components/section/SectionImage.vue';
+export {
   default as SplitSection,
 }
   from 'components/section/SplitSection.vue';
@@ -314,6 +318,10 @@ export {
   default as Testimonials,
 }
   from 'components/testimonials/Testimonials.vue';
+export {
+  default as TestimonialsAlt,
+}
+  from 'components/testimonials/TestimonialsAlt.vue';
 export {
   default as SocialMediaBar,
 }

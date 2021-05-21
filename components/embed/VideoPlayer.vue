@@ -26,7 +26,8 @@
         <button
           ref="playVideo"
           class="video__btn"
-          :aria-label="`Play video ${label} ${formattedDuration ? formattedDuration : ''}`"
+          :aria-label="`Play ${label !== 'Play' ? label : ''} ${formattedDuration ? formattedDuration : ''} video`"
+          :aria-describedby="describedby"
           @click="startAutoplay"
           @mouseleave="leaveVideo"
           @mouseover="hoverVideo">
@@ -124,6 +125,11 @@ export default {
       required: false,
       default: false,
     },
+    describedby: {
+      type: String,
+      required: false,
+      default: null,
+    },
   },
   data() {
     return {
@@ -189,6 +195,7 @@ export default {
       }
     },
     playVideoPreview() {
+      this.$emit('autoplay');
       this.$refs.videoPreview.play();
     },
     pauseVideoPreview() {
@@ -207,7 +214,6 @@ export default {
       el.focus();
     },
     startAutoplay() {
-      this.$emit('autoplay');
       this.videoPlaying = true;
     },
     stopAutoplay() {

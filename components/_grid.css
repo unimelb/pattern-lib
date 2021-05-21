@@ -15,6 +15,18 @@
     }
   }
 
+  &--scrollable {
+    @media (--bp-max-x-mobile) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow: auto;
+      margin-right: calc(var(--vr) * -1);
+      margin-left: calc(var(--vr) * -1);
+      padding-right: calc(var(--vr) / 2);
+      padding-left: calc(var(--vr) / 2);
+    }
+  }
+
   @media (--bp-x-tablet) {
     flex-flow: row wrap;
 

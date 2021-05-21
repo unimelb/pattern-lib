@@ -1,7 +1,7 @@
 <template>
   <PageHeaderStudy
     title="Start your life of learning"
-    :img="{ src: studySubjectImage }"
+    :img="{ src: studySubjectImage, alt: 'Smiling student with a backpack in front of the Old Arts Clock-tower' }"
     :bg-src="studyBgImage"
     :bg-color-src="studyBgColorImage">
     <InlineSearch

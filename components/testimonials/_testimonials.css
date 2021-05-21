@@ -1,0 +1,50 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.1875rem;
+  width: 100%;
+
+  &__img {
+    height: 20rem;
+    margin-top: 0;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-bottom: 133%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (--bp-desktop) {
+      width: 33%;
+      margin-bottom: 0;
+      padding-bottom: 44%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    width: 100%;
+
+    @media (--bp-desktop) {
+      width: 59%;
+    }
+  }
+
+  &__quotation {
+    display: flex;
+    justify-content: center;
+  }
+
+  .block-quotation__content {
+    @media (--bp-desktop) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media (--bp-desktop) {
+    flex-direction: row;
+    padding: 4.375rem;
+  }
+}
