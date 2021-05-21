@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionImage should match snapshot 1`] = `
+<section
+  class="section-image"
+  tabindex="-1"
+>
+  <!---->
+   
+  <div
+    class="max section-image__inner"
+  >
+    <div
+      class="section-image__content"
+    >
+      <h2
+        class="heading-md"
+      >
+        Mock heading
+      </h2>
+      <p>
+        Mock text
+      </p>
+      
+    </div>
+  </div>
+</section>
+`;

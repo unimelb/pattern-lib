@@ -145,7 +145,7 @@ export default {
       defaultPrimaryLinks: [
         { text: 'About us', href: 'https://about.unimelb.edu.au/' },
         { text: 'Careers at Melbourne', href: 'https://about.unimelb.edu.au/careers' },
-        { text: 'Alumni', href: 'https://www.unimelb.edu.au/alumni' },
+        { text: 'Safety and respect', href: 'https://students.unimelb.edu.au/campus-life/policy-and-conduct/respect-at-the-university' },
         { text: 'Newsroom', href: 'https://about.unimelb.edu.au/newsroom' },
         { text: 'Contact', href: 'https://www.unimelb.edu.au/contact' },
       ],

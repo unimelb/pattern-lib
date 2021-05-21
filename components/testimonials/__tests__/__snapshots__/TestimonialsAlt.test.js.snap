@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestimonialsAlt should match snapshot 1`] = `
+<blockquote
+  class="testimonials-alt"
+>
+  <p
+    class="testimonials-alt__title heading-sm"
+    id="testimonial-0"
+  >
+    
+    Taking this course gave me so many relevant new skills
+  
+  </p>
+   
+  <cite
+    class="testimonials-alt__name"
+  >
+    
+    Simi Chopra
+  
+  </cite>
+   
+  <client-only>
+    <progressive-img
+      alt="Simi Chopra"
+      aspect-ratio="1"
+      class="testimonials-alt__img"
+      src="https://randomuser.me/api/portraits/lego/1.jpg"
+    />
+  </client-only>
+</blockquote>
+`;
