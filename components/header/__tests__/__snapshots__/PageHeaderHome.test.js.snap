@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeaderHome should match snapshot 1`] = `
+<div
+  class="page-header-home"
+>
+  <!---->
+   
+  <!---->
+   
+  <div
+    class="max page-header-home__inner"
+  >
+    <div
+      class="page-header-home__content"
+    >
+      <div
+        class="page-header-home__content-inner"
+      >
+        <h1
+          class="heading-xxl page-header-home__title"
+        >
+          mock title
+        </h1>
+         
+        <!---->
+          
+        <!---->
+      </div>
+    </div>
+  </div>
+   
+  <!---->
+</div>
+`;
