@@ -121,6 +121,7 @@ import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCat
 import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
 import PathfinderToday from 'components/today/PathfinderToday/PathfinderToday.vue';
 import QuickLinksAlt from 'components/quick-links-menu/QuickLinksAlt.vue';
+import MegaMenuAlt from 'components/megamenu/MegaMenuAlt.vue';
 
 import { version } from '../../package.json';
 
@@ -252,6 +253,7 @@ Vue.component('pathfinder-today', PathfinderToday);
 Vue.component('quick-links-alt', QuickLinksAlt);
 Vue.component('video-player', VideoPlayer);
 Vue.component('video-full-width', VideoFullWidth);
+Vue.component('mega-menu-alt', MegaMenuAlt);
 
 // Create Vue instance
 new Vue({

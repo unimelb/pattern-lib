@@ -490,3 +490,7 @@ export {
   default as QuickLinksAlt,
 }
   from 'components/quick-links-menu/QuickLinksAlt.vue';
+export {
+  default as MegaMenuAlt,
+}
+  from 'components/megamenu/MegaMenuAlt.vue';
