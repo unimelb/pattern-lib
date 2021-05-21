@@ -1,0 +1,142 @@
+.page-header-study {
+  background-color: rgb(var(--col-navy-dark));
+  color: rgb(var(--col-white));
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &__inner {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media (--bp-tablet) {
+      padding-bottom: 4.5rem;
+    }
+
+    @media (--bp-desktop) {
+      padding-top: 4.5rem;
+      padding-bottom: 6rem;
+      min-height: 25rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__bg {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .05;
+    max-width: 100% !important;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__img {
+    width: 66.6667%;
+    position: relative;
+    height: 0;
+    padding-bottom: 75%;
+    margin-left: 33.3333%;
+    margin-bottom: -4rem;
+
+    &::after {
+      content: '';
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(0, 70, 139, 0) 0%, rgba(6, 67, 134, .8) 42.96%, #094183 83%);
+      height: 5rem;
+      position: absolute;
+      width: 133.3333%;
+      margin-left: -33.3333%;
+      z-index: 1;
+    }
+
+    @media (--bp-desktop) {
+      margin-left: 0;
+      margin-bottom: 0;
+      position: absolute;
+      height: 100%;
+      right: 0;
+      top: 0;
+      left: calc(50% + 5rem);
+      width: auto;
+      padding-bottom: 0;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    @media (--bp-wide) {
+      left: calc(50% + 12rem);
+    }
+
+    &-bg {
+      max-width: 100% !important;
+      position: static !important;
+
+      @media (--bp-desktop) {
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-subject {
+      max-width: 100% !important;
+      transform: translateX(-4.5rem);
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      position: absolute !important;
+      max-height: calc(100% - 2rem);
+      height: 100%;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    @media (--bp-desktop) {
+      width: 50%;
+    }
+
+    &-inner {
+      max-width: 31rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    color: rgb(var(--col-white)) !important;
+    max-width: 20rem;
+
+    @media (--bp-desktop) {
+      margin-bottom: 3rem;
+      max-width: 100%;
+    }
+  }
+
+  p,
+  a,
+  a:visited {
+    color: rgb(var(--col-white));
+  }
+}

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CampaignBannerAlt should match snapshot 1`] = `
+<div
+  class="campaign-banner-alt bg-inverted-darker"
+>
+  <picture
+    class="campaign-banner-alt__img"
+  >
+    <source
+      media="(max-width: 599px)"
+      srcset="/path/to/large"
+    />
+     
+    <img
+      alt="Woman typing on laptop"
+      src="/path/to/medium"
+    />
+  </picture>
+   
+  <div
+    class="max campaign-banner-alt__inner"
+  >
+    <div
+      class="campaign-banner-alt__content"
+    >
+      <h1
+        class="campaign-banner-alt__title heading-xl"
+      >
+        <!---->
+        
+        Register now for Open Days 2021
+      
+      </h1>
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CampaignBannerAlt should match snapshot with button 1`] = `
+<div
+  class="campaign-banner-alt bg-inverted-darker"
+>
+  <picture
+    class="campaign-banner-alt__img"
+  >
+    <source
+      media="(max-width: 599px)"
+      srcset="/path/to/large"
+    />
+     
+    <img
+      alt="Woman typing on laptop"
+      src="/path/to/medium"
+    />
+  </picture>
+   
+  <div
+    class="max campaign-banner-alt__inner"
+  >
+    <div
+      class="campaign-banner-alt__content"
+    >
+      <h1
+        class="campaign-banner-alt__title heading-xl"
+      >
+        <!---->
+        
+        Register now for Open Days 2021
+      
+      </h1>
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;

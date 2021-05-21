@@ -183,6 +183,10 @@ export {
 }
   from 'components/header/PageHeaderMin.vue';
 export {
+  default as PageHeaderAlt,
+}
+  from 'components/header/PageHeaderAlt.vue';
+export {
   default as PageNav,
 }
   from 'components/nav/PageNav.vue';
@@ -226,6 +230,10 @@ export {
   default as SectionAlt,
 }
   from 'components/section/SectionAlt.vue';
+export {
+  default as SectionImage,
+}
+  from 'components/section/SectionImage.vue';
 export {
   default as SplitSection,
 }
@@ -310,6 +318,10 @@ export {
   default as Testimonials,
 }
   from 'components/testimonials/Testimonials.vue';
+export {
+  default as TestimonialsAlt,
+}
+  from 'components/testimonials/TestimonialsAlt.vue';
 export {
   default as SocialMediaBar,
 }
@@ -454,6 +466,10 @@ export {
   default as CampaignBanner,
 }
   from 'components/campaign/CampaignBanner.vue';
+export {
+  default as CampaignBannerAlt,
+}
+  from 'components/campaign/CampaignBannerAlt.vue';
 export {
   default as CardImageLink,
 }
