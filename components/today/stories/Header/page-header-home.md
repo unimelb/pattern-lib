@@ -3,36 +3,35 @@
 
 ```html
 <page-header-home 
-  title="Effective Leadership Communication" 
-  introduction="Become an authentic, persuasive and engaging communicator to enhance your effectiveness as a leader." 
-  :img="{ src: 'link to the image', alt: 'Business leaders at a conference' }" 
+  title="Welcome to The University of Melbourne"
+  :img="{ src: placeholder, alt: 'Sciente people doing an experiement' }"
   bg-src="link to the image">
     <pathfinder-today
     slot="after"
     inline
     dark
     :items="[
-          {
-            title: 'Undergraduate courses',
-            description: 'Flexible first degrees that you can tailor to your career goals, or explore new possibilities.',
-            href: '/landing-page/',
-          },
-          {
-            title: 'Graduate courses',
-            description: 'Study in small classes led by experts alongside others who share your interests and goals.',
-            href: '/landing-page/',
-          },
-          {
-            title: 'Graduate research',
-            description: 'Access dedicated research centres, advanced  facilities, generous scholarships and more.',
-            href: '/landing-page/',
-          },
-          {
-            title: 'Short courses and microcredentials',
-            description: 'Upskill, expand your knowledge and take the next step in your career with focused courses.',
-            href: '/landing-page/',
-          },
-        ]">
+        {
+          title: 'Courses',
+          description: 'Find the right course and see what makes studying with us different',
+          href: '/landing-page/',
+        },
+        {
+          title: 'Research',
+          description: 'Discover world-leading research, resources, experts and facilities',
+          href: '/landing-page/',
+        },
+        {
+          title: 'Partnerships',
+          description: 'Innovate with our world-class people, technology and facilities',
+          href: '/landing-page/',
+        },
+        {
+          title: 'Events',
+          description: 'Connect with your community through virtual and in-person events',
+          href: '/landing-page/',
+        },
+      ]">
     </pathfinder-today>
 </page-header-home>
 ```
