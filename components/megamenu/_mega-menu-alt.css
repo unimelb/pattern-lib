@@ -114,10 +114,6 @@
     }
   }
 
-  &__skip-link {
-    display: inline-block;
-  }
-
   .page-header-search {
     height: 100%;
     z-index: 10;

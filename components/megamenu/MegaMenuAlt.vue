@@ -1,10 +1,8 @@
 <template>
   <header class="mega-menu-alt">
-    <a
-      href="#main"
-      class="mega-menu-alt__skip-link screen-reader-jump-to__skippy screenreaders-only screenreaders-only-focusable btn--inverted btn btn--xsml">
-      Skip to content
-    </a>
+    <ScreenReaderJumpTo
+      text="Skip to content"
+      to-element="#main" />
     <div class="mega-menu-alt__inner bg-inverted">
       <Logo size="md" />
       <div class="mega-menu-alt__menu">
@@ -109,6 +107,7 @@
 import Trap from 'vue-focus-lock';
 import PageSearchForm from 'components/search/PageSearchForm.vue';
 import Logo from 'components/logo/Logo.vue';
+import ScreenReaderJumpTo from 'components/screen-reader-jump-to/ScreenReaderJumpTo.vue';
 import MegaMenuAltMobile from './MegaMenuAltMobile.vue';
 
 export default {
@@ -117,6 +116,7 @@ export default {
     MegaMenuAltMobile,
     PageSearchForm,
     Trap,
+    ScreenReaderJumpTo,
   },
   props: {
     primaryLinks: {
