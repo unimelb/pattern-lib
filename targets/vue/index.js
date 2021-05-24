@@ -494,3 +494,23 @@ export {
   default as MegaMenuAlt,
 }
   from 'components/megamenu/MegaMenuAlt.vue';
+export {
+  default as CardFlat,
+}
+  from 'components/cards/CardFlat.vue';
+export {
+  default as CardFlatList,
+}
+  from 'components/cards/CardFlatList.vue';
+export {
+  default as CardArticle,
+}
+  from 'components/cards/CardArticle.vue';
+export {
+  default as CardArticleLarge,
+}
+  from 'components/cards/CardArticleLarge.vue';
+export {
+  default as CardArticleList,
+}
+  from 'components/cards/CardArticleList.vue';

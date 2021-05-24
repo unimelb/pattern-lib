@@ -1,0 +1,16 @@
+.article-card {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__category {
+    order: -1;
+    color: rgb(var(--col-grey-mid-1));
+    margin-bottom: .5rem;
+  }
+
+  &__link {
+    color: rgb(var(--col-navy-dark)) !important;
+  }
+}
