@@ -89,8 +89,10 @@
   }
 
   &__search {
-    @media (--bp-max-tablet) {
-      display: none;
+    display: none;
+
+    @media (--bp-desktop) {
+      display: block;
     }
   }
 
