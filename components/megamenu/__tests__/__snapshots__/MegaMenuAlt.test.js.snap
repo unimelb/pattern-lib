@@ -4,14 +4,7 @@ exports[`MegaMenuAlt should match snapshot 1`] = `
 <header
   class="mega-menu-alt"
 >
-  <a
-    class="mega-menu-alt__skip-link screen-reader-jump-to__skippy screenreaders-only screenreaders-only-focusable btn--inverted btn btn--xsml"
-    href="#main"
-  >
-    
-    Skip to content
-  
-  </a>
+  <!---->
    
   <div
     class="mega-menu-alt__inner bg-inverted"
