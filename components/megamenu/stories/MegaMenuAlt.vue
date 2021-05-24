@@ -45,7 +45,6 @@ export default {
   data() {
     return {
       primaryLinks: [
-        { text: 'Home', href: '/home-page' },
         { text: 'Study at Melbourne', href: 'https://study.unimelb.edu.au/' },
         { text: 'Research and innovation', href: 'https://research.unimelb.edu.au/' },
         { text: 'Safety and respect', href: 'https://students.unimelb.edu.au/campus-life/policy-and-conduct/respect-at-the-university' },

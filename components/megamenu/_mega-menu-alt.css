@@ -88,6 +88,12 @@
     }
   }
 
+  &__search {
+    @media (--bp-max-tablet) {
+      display: none;
+    }
+  }
+
   &__search,
   &__mobile-menu {
     button {

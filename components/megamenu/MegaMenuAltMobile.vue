@@ -18,6 +18,20 @@
           </svg>
           Close
         </button>
+        <InlineSearch
+          id="site-search-mobile"
+          class="mega-menu-alt-mobile__search shim-mb1"
+          name="query"
+          label="Search the University of Melbourne"
+          placeholder="Search the University"
+          action="https://search.unimelb.edu.au/s/search.html"
+          with-submit
+          dark>
+          <input
+            type="hidden"
+            name="collection"
+            value="gs-meta">
+        </InlineSearch>
         <nav
           v-if="primaryLinks.length"
           aria-label="Site">
@@ -55,10 +69,12 @@
 
 <script>
 import Trap from 'vue-focus-lock';
+import InlineSearch from 'components/forms/InlineSearch.vue';
 
 export default {
   components: {
     Trap,
+    InlineSearch,
   },
   props: {
     value: {
