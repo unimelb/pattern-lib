@@ -123,6 +123,9 @@ import PathfinderToday from 'components/today/PathfinderToday/PathfinderToday.vu
 import QuickLinksAlt from 'components/quick-links-menu/QuickLinksAlt.vue';
 import CardFlat from 'components/cards/CardFlat.vue';
 import CardFlatList from 'components/cards/CardFlatList.vue';
+import CardArticle from 'components/cards/CardArticle.vue';
+import CardArticleLarge from 'components/cards/CardArticleLarge.vue';
+import CardArticleList from 'components/cards/CardArticleList.vue';
 
 import { version } from '../../package.json';
 
@@ -256,6 +259,9 @@ Vue.component('video-player', VideoPlayer);
 Vue.component('video-full-width', VideoFullWidth);
 Vue.component('card-flat', CardFlat);
 Vue.component('card-flat-list', CardFlatList);
+Vue.component('card-article', CardArticle);
+Vue.component('card-article-large', CardArticleLarge);
+Vue.component('card-article-list', CardArticleList);
 
 // Create Vue instance
 new Vue({
