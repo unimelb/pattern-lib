@@ -1,8 +1,7 @@
 <template>
   <PageHeaderHome
-    title="Effective Leadership Communication"
-    introduction="Become an authentic, persuasive and engaging communicator to enhance your effectiveness as a leader."
-    :img="{ src: placeholder, alt: 'Business leaders at a conference' }"
+    title="Welcome to The University of Melbourne"
+    :img="{ src: placeholder, alt: 'Sciente people doing an experiement' }"
     :bg-src="placeholderBg">
     <PathfinderToday
       slot="after"
@@ -36,23 +35,23 @@ export default {
       placeholderBg,
       pathfinderLinks: [
         {
-          title: 'Undergraduate courses',
-          description: 'Flexible first degrees that you can tailor to your career goals, or explore new possibilities.',
+          title: 'Courses',
+          description: 'Find the right course and see what makes studying with us different',
           href: '/landing-page/',
         },
         {
-          title: 'Graduate courses',
-          description: 'Study in small classes led by experts alongside others who share your interests and goals.',
+          title: 'Research',
+          description: 'Discover world-leading research, resources, experts and facilities',
           href: '/landing-page/',
         },
         {
-          title: 'Graduate research',
-          description: 'Access dedicated research centres, advanced  facilities, generous scholarships and more.',
+          title: 'Partnerships',
+          description: 'Innovate with our world-class people, technology and facilities',
           href: '/landing-page/',
         },
         {
-          title: 'Short courses and microcredentials',
-          description: 'Upskill, expand your knowledge and take the next step in your career with focused courses.',
+          title: 'Events',
+          description: 'Connect with your community through virtual and in-person events',
           href: '/landing-page/',
         },
       ],
