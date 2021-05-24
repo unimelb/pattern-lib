@@ -1,6 +1,6 @@
 <template>
   <PageHeaderHome
-    title="Welcome to The University of Melbourne"
+    title="Welcome to The&nbsp;University of&nbsp;Melbourne"
     :img="{ src: placeholder, alt: 'Sciente people doing an experiement' }"
     :bg-src="placeholderBg">
     <PathfinderToday
@@ -37,22 +37,22 @@ export default {
         {
           title: 'Courses',
           description: 'Find the right course and see what makes studying with us different',
-          href: '/landing-page/',
+          href: 'https://study.unimelb.edu.au/',
         },
         {
           title: 'Research',
           description: 'Discover world-leading research, resources, experts and facilities',
-          href: '/landing-page/',
+          href: 'https://research.unimelb.edu.au/',
         },
         {
           title: 'Partnerships',
           description: 'Innovate with our world-class people, technology and facilities',
-          href: '/landing-page/',
+          href: 'https://research.unimelb.edu.au/work-with-us',
         },
         {
           title: 'Events',
           description: 'Connect with your community through virtual and in-person events',
-          href: '/landing-page/',
+          href: 'https://events.unimelb.edu.au',
         },
       ],
     };
