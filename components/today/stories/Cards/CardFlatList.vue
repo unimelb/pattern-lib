@@ -4,11 +4,14 @@
 
 <script>
 import CardFlatList from 'components/cards/CardFlatList.vue';
+import MaxWidthDecorator from 'storybook/decorators/MaxWidthDecorator.vue';
 import CardFlatListMd from './CardFlatList.md';
 
 export default {
+
   components: { CardFlatList },
   readme: { custom: CardFlatListMd, source: true, html: false },
+  decorator: MaxWidthDecorator,
   data() {
     return {
       items: [
