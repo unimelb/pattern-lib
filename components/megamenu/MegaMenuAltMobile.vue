@@ -105,6 +105,9 @@ export default {
           window.requestAnimationFrame(() => {
             this.$el.classList.add('is-open');
             document.body.classList.add('mobile-menu-is-open');
+
+            // Focus on close button
+            this.$el.querySelector('button').focus();
           });
         });
       } else {
