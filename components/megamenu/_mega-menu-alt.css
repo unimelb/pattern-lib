@@ -88,6 +88,14 @@
     }
   }
 
+  &__search {
+    display: none;
+
+    @media (--bp-desktop) {
+      display: block;
+    }
+  }
+
   &__search,
   &__mobile-menu {
     button {

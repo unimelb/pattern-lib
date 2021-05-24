@@ -18,6 +18,9 @@
           </svg>
           Close
         </button>
+        <PageSearchForm
+          class="mega-menu-alt-mobile__search"
+          aria-hidden="true" />
         <nav
           v-if="primaryLinks.length"
           aria-label="Site">
@@ -54,11 +57,13 @@
 </template>
 
 <script>
+import PageSearchForm from 'components/search/PageSearchForm.vue';
 import Trap from 'vue-focus-lock';
 
 export default {
   components: {
     Trap,
+    PageSearchForm,
   },
   props: {
     value: {
