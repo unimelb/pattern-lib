@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardArticle should match snapshot 1`] = `
+<div
+  class="article-card"
+>
+  <div
+    class="article-card__inner border-top"
+  >
+    <h3
+      class="article-card__title heading-sm"
+    >
+      <a
+        class="article-card__link link-reset"
+        href="www.unimelb.edu.au"
+      >
+        
+        mock title
+      
+      </a>
+    </h3>
+     
+    <p
+      class="article-card__category"
+    >
+      
+      mock category
+    
+    </p>
+  </div>
+</div>
+`;

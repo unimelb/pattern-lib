@@ -450,6 +450,7 @@
     padding: 0;
     font-weight: var(--fw-semibold);
     width: auto;
+    color: rgb(var(--col-navy-dark));
 
     &:hover,
     &:focus {

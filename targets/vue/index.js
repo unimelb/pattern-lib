@@ -490,3 +490,15 @@ export {
   default as QuickLinksAlt,
 }
   from 'components/quick-links-menu/QuickLinksAlt.vue';
+export {
+  default as CardArticle,
+}
+  from 'components/cards/CardArticle.vue';
+export {
+  default as CardArticleLarge,
+}
+  from 'components/cards/CardArticleLarge.vue';
+export {
+  default as CardArticleList,
+}
+  from 'components/cards/CardArticleList.vue';
