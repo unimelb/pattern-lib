@@ -52,10 +52,6 @@
     padding-bottom: 1rem;
     position: relative;
 
-    a {
-      text-decoration: none;
-    }
-
     @media (--bp-tablet) {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
@@ -66,15 +62,19 @@
       padding-bottom: 0;
     }
 
-    &:hover {
-      background-color: none;
+    a {
+      text-decoration: none;
 
-      .pathfinder-today__link-title {
-        color: rgb(var(--col-background-tertiary-navy));
-      }
+      &:hover {
+        background-color: none;
 
-      .pathfinder-today__link-icon {
-        background-color: rgb(var(--col-background-tertiary-navy));
+        .pathfinder-today__link-title {
+          color: rgb(var(--col-background-tertiary-navy));
+        }
+
+        .pathfinder-today__link-icon {
+          background-color: rgb(var(--col-background-tertiary-navy));
+        }
       }
     }
 
@@ -83,7 +83,12 @@
       padding-right: .5rem;
       display: block;
       transition: color .15s ease;
-      min-height: calc((1.125rem * 1.4) * 2);
+
+      &--two-lines {
+        @media (--bp-x-tablet) {
+          min-height: calc((1.125rem * 1.4) * 2);
+        }
+      }
 
       @media (--bp-tablet) {
         max-width: 12rem;

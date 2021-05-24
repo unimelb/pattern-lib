@@ -22,8 +22,6 @@ exports[`PageHeaderHome should match snapshot 1`] = `
         >
           mock title
         </h1>
-         
-        <!---->
           
         <!---->
       </div>

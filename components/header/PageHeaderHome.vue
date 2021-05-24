@@ -26,11 +26,6 @@
             class="heading-xxl page-header-home__title"
             v-html="title" />
           <!-- eslint-enable vue/no-v-html -->
-          <p
-            v-if="introduction"
-            class="paragraph-lg page-header-home__introduction">
-            {{ introduction }}
-          </p>
           <slot />
           <div
             v-if="$slots.actions"
@@ -54,11 +49,6 @@ export default {
     title: {
       type: String,
       required: true,
-      default: '',
-    },
-    introduction: {
-      type: String,
-      required: false,
       default: '',
     },
     img: {

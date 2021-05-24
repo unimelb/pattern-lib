@@ -3,11 +3,6 @@
   background-color: rgb(var(--col-brand));
   color: rgb(var(--col-white));
 
-  &__title,
-  &__introduction {
-    color: rgb(var(--col-white)) !important;
-  }
-
   &__inner {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -105,6 +100,7 @@
 
   &__title {
     margin-bottom: 1rem;
+    color: rgb(var(--col-white)) !important;
   }
 
   &__actions {
