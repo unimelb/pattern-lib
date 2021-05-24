@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardFlatList should match snapshot 1`] = `
+<div
+  class="card-flat-list grid grid--lg"
+>
+  <div
+    class="cell cell--lg cell--tab-1of2 card-flat-list__item"
+  >
+    <div
+      class="card-flat"
+    >
+      <h3
+        class="heading-sm shim-mb067"
+      >
+        
+    Test Title
+  
+      </h3>
+       
+      <p
+        class="card-flat__description"
+      >
+        
+    Consectetur culpa nostrud officia consequat ut mollit elit aliquip nisi consequat occaecat quis excepteur.
+  
+      </p>
+       
+      <div
+        class="shim-mb1"
+      >
+        <a
+          class="btn--text btn"
+          href="https://www.unimelb.edu.au/"
+        >
+          <span
+            class="push-icon"
+          >
+            
+      Cta button
+     
+            <svg
+              aria-hidden="true"
+              aria-label="chevron-right"
+              class="push-icon__icon"
+              focusable="false"
+              height="15px"
+              role="img"
+              width="15px"
+            >
+              <use
+                xlink:href="#icon-chevron-right"
+              />
+               
+              <title>
+                Chevron-right
+              </title>
+               
+            </svg>
+             
+            <!---->
+          </span>
+           
+          <!---->
+        </a>
+      </div>
+       
+      <div
+        class="card-flat__img"
+      >
+        <client-only>
+          <progressive-img
+            alt="Image for example purposes."
+            aspect-ratio="0.6"
+            class="card-flat__img-inner"
+            src="https://picsum.photos/seed/1/540/360"
+          />
+        </client-only>
+      </div>
+    </div>
+  </div>
+  <div
+    class="cell cell--lg cell--tab-1of2 card-flat-list__item"
+  >
+    <div
+      class="card-flat"
+    >
+      <h3
+        class="heading-sm shim-mb067"
+      >
+        
+    Test Title
+  
+      </h3>
+       
+      <p
+        class="card-flat__description"
+      >
+        
+    Consectetur culpa nostrud officia consequat ut mollit elit aliquip nisi consequat occaecat quis excepteur.
+  
+      </p>
+       
+      <div
+        class="shim-mb1"
+      >
+        <a
+          class="btn--text btn"
+          href="https://www.unimelb.edu.au/"
+        >
+          <span
+            class="push-icon"
+          >
+            
+      Cta button
+     
+            <svg
+              aria-hidden="true"
+              aria-label="chevron-right"
+              class="push-icon__icon"
+              focusable="false"
+              height="15px"
+              role="img"
+              width="15px"
+            >
+              <use
+                xlink:href="#icon-chevron-right"
+              />
+               
+              <title>
+                Chevron-right
+              </title>
+               
+            </svg>
+             
+            <!---->
+          </span>
+           
+          <!---->
+        </a>
+      </div>
+       
+      <div
+        class="card-flat__img"
+      >
+        <client-only>
+          <progressive-img
+            alt="Image for example purposes."
+            aspect-ratio="0.6"
+            class="card-flat__img-inner"
+            src="https://picsum.photos/seed/1/540/360"
+          />
+        </client-only>
+      </div>
+    </div>
+  </div>
+  <div
+    class="cell cell--lg cell--tab-1of2 card-flat-list__item"
+  >
+    <div
+      class="card-flat"
+    >
+      <h3
+        class="heading-sm shim-mb067"
+      >
+        
+    Test Title
+  
+      </h3>
+       
+      <p
+        class="card-flat__description"
+      >
+        
+    Consectetur culpa nostrud officia consequat ut mollit elit aliquip nisi consequat occaecat quis excepteur.
+  
+      </p>
+       
+      <div
+        class="shim-mb1"
+      >
+        <a
+          class="btn--text btn"
+          href="https://www.unimelb.edu.au/"
+        >
+          <span
+            class="push-icon"
+          >
+            
+      Cta button
+     
+            <svg
+              aria-hidden="true"
+              aria-label="chevron-right"
+              class="push-icon__icon"
+              focusable="false"
+              height="15px"
+              role="img"
+              width="15px"
+            >
+              <use
+                xlink:href="#icon-chevron-right"
+              />
+               
+              <title>
+                Chevron-right
+              </title>
+               
+            </svg>
+             
+            <!---->
+          </span>
+           
+          <!---->
+        </a>
+      </div>
+       
+      <div
+        class="card-flat__img"
+      >
+        <client-only>
+          <progressive-img
+            alt="Image for example purposes."
+            aspect-ratio="0.6"
+            class="card-flat__img-inner"
+            src="https://picsum.photos/seed/1/540/360"
+          />
+        </client-only>
+      </div>
+    </div>
+  </div>
+  <div
+    class="cell cell--lg cell--tab-1of2 card-flat-list__item"
+  >
+    <div
+      class="card-flat"
+    >
+      <h3
+        class="heading-sm shim-mb067"
+      >
+        
+    Test Title
+  
+      </h3>
+       
+      <p
+        class="card-flat__description"
+      >
+        
+    Consectetur culpa nostrud officia consequat ut mollit elit aliquip nisi consequat occaecat quis excepteur.
+  
+      </p>
+       
+      <div
+        class="shim-mb1"
+      >
+        <a
+          class="btn--text btn"
+          href="https://www.unimelb.edu.au/"
+        >
+          <span
+            class="push-icon"
+          >
+            
+      Cta button
+     
+            <svg
+              aria-hidden="true"
+              aria-label="chevron-right"
+              class="push-icon__icon"
+              focusable="false"
+              height="15px"
+              role="img"
+              width="15px"
+            >
+              <use
+                xlink:href="#icon-chevron-right"
+              />
+               
+              <title>
+                Chevron-right
+              </title>
+               
+            </svg>
+             
+            <!---->
+          </span>
+           
+          <!---->
+        </a>
+      </div>
+       
+      <div
+        class="card-flat__img"
+      >
+        <client-only>
+          <progressive-img
+            alt="Image for example purposes."
+            aspect-ratio="0.6"
+            class="card-flat__img-inner"
+            src="https://picsum.photos/seed/1/540/360"
+          />
+        </client-only>
+      </div>
+    </div>
+  </div>
+</div>
+`;
