@@ -121,6 +121,9 @@ import CardsFilterCategory from 'components/filter/cards-category/CardsFilterCat
 import CoursesFilter from 'components/filter/courses/CoursesFilter.vue';
 import PathfinderToday from 'components/today/PathfinderToday/PathfinderToday.vue';
 import QuickLinksAlt from 'components/quick-links-menu/QuickLinksAlt.vue';
+import CardArticle from 'components/cards/CardArticle.vue';
+import CardArticleLarge from 'components/cards/CardArticleLarge.vue';
+import CardArticleList from 'components/cards/CardArticleList.vue';
 
 import { version } from '../../package.json';
 
@@ -252,6 +255,9 @@ Vue.component('pathfinder-today', PathfinderToday);
 Vue.component('quick-links-alt', QuickLinksAlt);
 Vue.component('video-player', VideoPlayer);
 Vue.component('video-full-width', VideoFullWidth);
+Vue.component('card-article', CardArticle);
+Vue.component('card-article-large', CardArticleLarge);
+Vue.component('card-article-list', CardArticleList);
 
 // Create Vue instance
 new Vue({

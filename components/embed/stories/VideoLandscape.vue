@@ -7,7 +7,7 @@
     }"
     :poster="{
       src: 'https://picsum.photos/seed/1/540/360',
-      alt: 'Test alt',
+      alt: 'Image for example purposes.',
     }" />
 </template>
 
