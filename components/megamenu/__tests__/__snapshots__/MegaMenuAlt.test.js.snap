@@ -29,48 +29,7 @@ exports[`MegaMenuAlt should match snapshot 1`] = `
         >
           <ul
             class="mega-menu-alt__secondary-links list-reset"
-          >
-            <li>
-              <a
-                class="link-reset"
-                href="https://students.unimelb.edu.au/"
-              >
-                
-                Current students
-              
-              </a>
-            </li>
-            <li>
-              <a
-                class="link-reset"
-                href="https://staff.unimelb.edu.au/"
-              >
-                
-                Staff
-              
-              </a>
-            </li>
-            <li>
-              <a
-                class="link-reset"
-                href="https://library.unimelb.edu.au/"
-              >
-                
-                Library
-              
-              </a>
-            </li>
-            <li>
-              <a
-                class="link-reset"
-                href="https://www.unimelb.edu.au/alumni"
-              >
-                
-                Alumni
-              
-              </a>
-            </li>
-          </ul>
+          />
         </nav>
          
         <ul
@@ -139,58 +98,7 @@ exports[`MegaMenuAlt should match snapshot 1`] = `
       >
         <ul
           class="mega-menu-alt__primary-links list-reset"
-        >
-          <li>
-            <a
-              class="link-reset"
-              href="/home-page"
-            >
-              
-              Home
-            
-            </a>
-          </li>
-          <li>
-            <a
-              class="link-reset"
-              href="https://study.unimelb.edu.au/"
-            >
-              
-              Study at Melbourne
-            
-            </a>
-          </li>
-          <li>
-            <a
-              class="link-reset"
-              href="https://research.unimelb.edu.au/"
-            >
-              
-              Research and innovation
-            
-            </a>
-          </li>
-          <li>
-            <a
-              class="link-reset"
-              href="https://students.unimelb.edu.au/campus-life/policy-and-conduct/respect-at-the-university"
-            >
-              
-              Safety and respect
-            
-            </a>
-          </li>
-          <li>
-            <a
-              class="link-reset"
-              href="https://study.unimelb.edu.au/discover/virtual-tour"
-            >
-              
-              Virtual Campus
-            
-            </a>
-          </li>
-        </ul>
+        />
       </nav>
        
       <!---->

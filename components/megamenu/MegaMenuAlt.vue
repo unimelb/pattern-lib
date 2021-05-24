@@ -118,33 +118,27 @@ export default {
     PageSearchForm,
     Trap,
   },
+  props: {
+    primaryLinks: {
+      type: Array,
+      required: false,
+      default() {
+        return [];
+      },
+    },
+    secondaryLinks: {
+      type: Array,
+      required: false,
+      default() {
+        return [];
+      },
+    },
+  },
   data() {
     return {
       isMobileOpen: false,
       isSearchOpen: false,
-      primaryLinks: [
-        { text: 'Home', href: '/home-page' },
-        { text: 'Study at Melbourne', href: 'https://study.unimelb.edu.au/' },
-        { text: 'Research and innovation', href: 'https://research.unimelb.edu.au/' },
-        { text: 'Safety and respect', href: 'https://students.unimelb.edu.au/campus-life/policy-and-conduct/respect-at-the-university' },
-        { text: 'Virtual Campus', href: 'https://study.unimelb.edu.au/discover/virtual-tour' },
-      ],
-      secondaryLinks: [
-        { text: 'Current students', href: 'https://students.unimelb.edu.au/' },
-        { text: 'Staff', href: 'https://staff.unimelb.edu.au/' },
-        { text: 'Library', href: 'https://library.unimelb.edu.au/' },
-        { text: 'Alumni', href: 'https://www.unimelb.edu.au/alumni' },
-      ],
     };
-  },
-  computed: {
-    mobileMenuLinks() {
-      return [
-        ...this.primaryLinks,
-        ...this.secondaryLinks,
-        { text: 'Contact', href: 'https://www.unimelb.edu.au/contact' },
-      ];
-    },
   },
   methods: {
     openMobileMenu() {
