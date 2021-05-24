@@ -58,7 +58,7 @@ export default {
     },
     img: {
       type: Object,
-      required: false,
+      required: true,
       default() {
         return null;
       },
