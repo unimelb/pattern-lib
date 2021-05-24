@@ -14,14 +14,19 @@ The component `CardArticleList` acceps the following props:
     :items="[
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'test category',
+          category: 'COVID-19',
+          title: 'What we know about the vaccine rollout',
         },
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'test category',
-        }
+          category: 'Global partnership',
+          title: 'A new quantum computing lab with IBM',
+        },
+        {
+          href: 'https://www.unimelb.edu.au/',
+          category: 'Climate futures',
+          title: 'Climate conversations: Australia in 2021',
+        },
       ]" >
       </card-article-list>
 ```

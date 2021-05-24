@@ -21,33 +21,33 @@ export default {
       items: [
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'Test category',
+          category: 'COVID-19',
+          title: 'What we know about the vaccine rollout',
         },
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'Test category',
+          category: 'Global partnership',
+          title: 'A new quantum computing lab with IBM',
         },
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'Test category',
+          category: 'Climate futures',
+          title: 'Climate conversations: Australia in 2021',
         },
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'Test category',
+          category: 'COVID-19',
+          title: 'What we know about the vaccine rollout',
         },
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'Test category',
+          category: 'Global partnership',
+          title: 'A new quantum computing lab with IBM',
         },
         {
           href: 'https://www.unimelb.edu.au/',
-          title: 'Test title',
-          category: 'Test category',
+          category: 'Climate futures',
+          title: 'Climate conversations: Australia in 2021',
         },
       ],
     };

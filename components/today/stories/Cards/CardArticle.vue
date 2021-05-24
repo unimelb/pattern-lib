@@ -1,8 +1,8 @@
 <template>
   <CardArticle
     href="https://www.unimelb.edu.au/"
-    title="Test title"
-    category="Test category" />
+    title="What we know about the vaccine rollout"
+    category="COVID-19" />
 </template>
 
 <script>
