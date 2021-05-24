@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardArticleList should match snapshot 1`] = `
+<div
+  class="article-card-list grid grid--lg"
+>
+  <div
+    class="article-card article-card-list__item cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0"
+  >
+    <div
+      class="article-card__inner border-top"
+    >
+      <h3
+        class="article-card__title heading-sm"
+      >
+        <a
+          class="article-card__link link-reset"
+          href="https://www.unimelb.edu.au/"
+        >
+          
+        Test title
+      
+        </a>
+      </h3>
+       
+      <p
+        class="article-card__category"
+      >
+        
+      test category
+    
+      </p>
+    </div>
+  </div>
+  <div
+    class="article-card article-card-list__item cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0"
+  >
+    <div
+      class="article-card__inner border-top"
+    >
+      <h3
+        class="article-card__title heading-sm"
+      >
+        <a
+          class="article-card__link link-reset"
+          href="https://www.unimelb.edu.au/"
+        >
+          
+        Test title
+      
+        </a>
+      </h3>
+       
+      <p
+        class="article-card__category"
+      >
+        
+      test category
+    
+      </p>
+    </div>
+  </div>
+  <div
+    class="article-card article-card-list__item cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0"
+  >
+    <div
+      class="article-card__inner border-top"
+    >
+      <h3
+        class="article-card__title heading-sm"
+      >
+        <a
+          class="article-card__link link-reset"
+          href="https://www.unimelb.edu.au/"
+        >
+          
+        Test title
+      
+        </a>
+      </h3>
+       
+      <p
+        class="article-card__category"
+      >
+        
+      test category
+    
+      </p>
+    </div>
+  </div>
+  <div
+    class="article-card article-card-list__item cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0"
+  >
+    <div
+      class="article-card__inner border-top"
+    >
+      <h3
+        class="article-card__title heading-sm"
+      >
+        <a
+          class="article-card__link link-reset"
+          href="https://www.unimelb.edu.au/"
+        >
+          
+        Test title
+      
+        </a>
+      </h3>
+       
+      <p
+        class="article-card__category"
+      >
+        
+      test category
+    
+      </p>
+    </div>
+  </div>
+  <div
+    class="article-card article-card-list__item cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0"
+  >
+    <div
+      class="article-card__inner border-top"
+    >
+      <h3
+        class="article-card__title heading-sm"
+      >
+        <a
+          class="article-card__link link-reset"
+          href="https://www.unimelb.edu.au/"
+        >
+          
+        Test title
+      
+        </a>
+      </h3>
+       
+      <p
+        class="article-card__category"
+      >
+        
+      test category
+    
+      </p>
+    </div>
+  </div>
+  <div
+    class="article-card article-card-list__item cell cell--lg cell--tab-1of3 shim-mb0 shim-mt0"
+  >
+    <div
+      class="article-card__inner border-top"
+    >
+      <h3
+        class="article-card__title heading-sm"
+      >
+        <a
+          class="article-card__link link-reset"
+          href="https://www.unimelb.edu.au/"
+        >
+          
+        Test title
+      
+        </a>
+      </h3>
+       
+      <p
+        class="article-card__category"
+      >
+        
+      test category
+    
+      </p>
+    </div>
+  </div>
+</div>
+`;
