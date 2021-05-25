@@ -139,6 +139,7 @@
                         class="link">
                         View more details
                         <SvgIcon
+                          aria-hidden="true"
                           :name="'chevron-right'"
                           class="icon" />
                       </a>
