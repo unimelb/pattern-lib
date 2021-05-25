@@ -187,6 +187,14 @@ export {
 }
   from 'components/header/PageHeaderAlt.vue';
 export {
+  default as PageHeaderStudy,
+}
+  from 'components/header/PageHeaderStudy.vue';
+export {
+  default as PageHeaderHome,
+}
+  from 'components/header/PageHeaderHome.vue';
+export {
   default as PageNav,
 }
   from 'components/nav/PageNav.vue';
