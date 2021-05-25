@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardFlat should match snapshot 1`] = `
+<div
+  class="card-flat"
+>
+  <h3
+    class="heading-sm shim-mb067"
+  >
+    
+    mock title
+  
+  </h3>
+   
+  <!---->
+   
+  <!---->
+   
+  <!---->
+</div>
+`;
