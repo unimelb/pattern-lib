@@ -7,19 +7,22 @@
     <div class="max">
       <slot name="before" />
       <div role="navigation">
-        <ul
-          class="pathfinder-today__list grid grid--lg">
+        <ul class="pathfinder-today__list grid grid--lg">
           <li
             v-for="(item, index) in items"
             :key="index"
             class="pathfinder-today__list-item cell cell--lg cell--tab-1of2 cell--wide-1of4">
-            <div
-              class="pathfinder-today__link">
+            <div class="pathfinder-today__link">
               <a
                 :id="item.id"
                 :href="item.href">
                 <span
-                  class="pathfinder-today__link-title heading-sm heading-sm--link">{{ item.title }}</span>
+                  :class="{
+                    'pathfinder-today__link-title': true,
+                    'heading-sm': true,
+                    'heading-sm--link': true,
+                    'pathfinder-today__link-title--two-lines': titleTwoLines,
+                  }">{{ item.title }}</span>
                 <span class="pathfinder-today__link-icon">
                   <SvgIcon
                     name="arrow-right"
@@ -59,6 +62,11 @@ export default {
       default: false,
     },
     dark: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    titleTwoLines: {
       type: Boolean,
       required: false,
       default: false,
