@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MegaMenuAlt should match snapshot 1`] = `
+<header
+  class="mega-menu-alt"
+>
+  <!---->
+   
+  <div
+    class="mega-menu-alt__inner bg-inverted"
+  >
+    <!---->
+     
+    <div
+      class="mega-menu-alt__menu"
+    >
+      <div
+        class="mega-menu-alt__menu-top"
+      >
+        <nav
+          aria-label="Quick links"
+        >
+          <ul
+            class="mega-menu-alt__secondary-links list-reset"
+          />
+        </nav>
+         
+        <ul
+          class="mega-menu-alt__actions list-reset"
+        >
+          <li
+            class="mega-menu-alt__contact"
+          >
+            <a
+              class="link-reset"
+              href="https://www.unimelb.edu.au/contact"
+            >
+              
+              Contact
+            
+            </a>
+          </li>
+           
+          <li
+            class="mega-menu-alt__search"
+          >
+            <button
+              aria-expanded="false"
+              class="link-reset"
+            >
+              
+              Search
+              
+              <svg
+                focusable="false"
+                role="presentation"
+              >
+                <use
+                  xlink:href="#icon-search"
+                />
+              </svg>
+            </button>
+          </li>
+           
+          <li
+            class="mega-menu-alt__mobile-menu"
+          >
+            <button
+              aria-expanded="false"
+              class="link-reset"
+            >
+              
+              Menu
+              
+              <svg
+                aria-label="icon menu"
+                focusable="false"
+                viewBox="10 10 26 28"
+              >
+                <path
+                  d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"
+                />
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+       
+      <nav
+        aria-label="Site"
+      >
+        <ul
+          class="mega-menu-alt__primary-links list-reset"
+        />
+      </nav>
+       
+      <!---->
+       
+      <div
+        class="page-header-search"
+      >
+        <!---->
+      </div>
+    </div>
+  </div>
+</header>
+`;
