@@ -6,6 +6,7 @@
 | items  	| array   	|
 | inline 	| boolean 	|
 | dark   	| boolean 	|
+| titleTwoLines  | boolean 	|
 
 | slot  	| type    	|
 |--------	|---------	|
