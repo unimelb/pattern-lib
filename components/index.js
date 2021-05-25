@@ -2,6 +2,7 @@
 import Vue from 'vue';
 
 import VueScrollTo from 'vue-scrollto';
+import VScrollLock from 'v-scroll-lock';
 import * as utils from './shared/utils';
 import { version } from '../package.json';
 
@@ -14,6 +15,8 @@ Vue.use(VueScrollTo, {
   duration: 500,
   easing: 'ease-out',
 });
+
+Vue.use(VScrollLock);
 
 // Promise polyfill
 require('es6-promise').polyfill();

@@ -2,7 +2,7 @@
   <div>
     <ScreenReaderJumpTo
       text="Skip to main content"
-      to-element="main" />
+      to-element="#main" />
     <MegaMenu
       :items="items"
       :top-menu="topMenu"

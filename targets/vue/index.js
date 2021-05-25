@@ -491,6 +491,10 @@ export {
 }
   from 'components/quick-links-menu/QuickLinksAlt.vue';
 export {
+  default as MegaMenuAlt,
+}
+  from 'components/megamenu/MegaMenuAlt.vue';
+export {
   default as CardFlat,
 }
   from 'components/cards/CardFlat.vue';

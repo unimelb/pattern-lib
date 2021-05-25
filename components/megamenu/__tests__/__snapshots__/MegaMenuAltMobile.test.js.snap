@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MegaMenuAltMobile should match snapshot 1`] = `
+<div
+  class="mega-menu-alt-mobile"
+>
+  <div
+    class="mega-menu-alt-mobile__inner"
+  >
+    <!---->
+  </div>
+</div>
+`;
