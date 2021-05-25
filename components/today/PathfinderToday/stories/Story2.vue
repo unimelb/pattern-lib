@@ -1,6 +1,7 @@
 <template>
   <div class="bg-inverted">
     <PathfinderToday
+      title-two-lines
       inline
       dark
       :items="pathfinderLinks" />

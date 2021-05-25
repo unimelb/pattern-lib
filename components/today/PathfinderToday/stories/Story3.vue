@@ -1,5 +1,6 @@
 <template>
   <PathfinderToday
+    title-two-lines
     :items="pathfinderLinks">
     <template
       #before>

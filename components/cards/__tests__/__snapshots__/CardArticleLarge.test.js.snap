@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardArticleLarge should match snapshot 1`] = `
+<div
+  class="card-article-large"
+>
+  <div
+    class="card-article-large__inner"
+  >
+    <div
+      class="card-article-large__content"
+    >
+      <h3
+        class="heading-md"
+      >
+        
+        mock title
+      
+      </h3>
+       
+      <p
+        class="card-article-large__category"
+      >
+        
+        mock category
+      
+      </p>
+       
+      <!---->
+       
+      <div>
+        <a
+          aria-label="Read more about mock title"
+          class="btn--text btn"
+          href="www.unimelb.edu.au"
+        >
+          <span
+            class="push-icon"
+          >
+            
+          Read more
+         
+            <svg
+              aria-hidden="true"
+              aria-label="chevron-right"
+              class="push-icon__icon"
+              focusable="false"
+              height="15px"
+              role="img"
+              width="15px"
+            >
+              <use
+                xlink:href="#icon-chevron-right"
+              />
+               
+              <title>
+                Chevron-right
+              </title>
+               
+            </svg>
+             
+            <!---->
+          </span>
+           
+          <!---->
+        </a>
+      </div>
+    </div>
+     
+    <div
+      class="card-article-large__img"
+    >
+      <client-only>
+        <progressive-img
+          alt=""
+          aspect-ratio="0.675"
+        />
+      </client-only>
+    </div>
+  </div>
+</div>
+`;
