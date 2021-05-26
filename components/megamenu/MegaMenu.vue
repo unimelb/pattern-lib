@@ -65,10 +65,12 @@
                 <SvgIcon
                   v-if="!isMobileOpen && rootitem.items"
                   :name="'chevron-down'"
+                  aria-hidden="true"
                   class="icon" />
                 <SvgIcon
                   v-if="isMobileOpen"
                   :name="'chevron-right'"
+                  aria-hidden="true"
                   class="icon" />
               </a>
               <div
@@ -103,6 +105,7 @@
                         <SvgIcon
                           v-if="!isMobileOpen"
                           :name="'chevron-right'"
+                          aria-hidden="true"
                           class="icon" />
                       </a>
                     </li>
@@ -136,6 +139,7 @@
                         class="link">
                         View more details
                         <SvgIcon
+                          aria-hidden="true"
                           :name="'chevron-right'"
                           class="icon" />
                       </a>
