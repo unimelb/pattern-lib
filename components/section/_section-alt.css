@@ -6,7 +6,7 @@
     background-color: rgb(var(--col-grey-light));
   }
 
-  &[class='section-alt'] + [class='section-alt'] &__inner {
+  &[class~='section-alt'] + [class~='section-alt'] &__inner {
     padding-top: 0;
 
     @media (--bp-wide) {
