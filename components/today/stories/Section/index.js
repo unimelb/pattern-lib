@@ -12,6 +12,7 @@ import Bordered from './Bordered.vue';
 import QuickLinks from './QuickLinks.vue';
 import CourseIndex from './CourseIndex.vue';
 import FeaturedArticles from './FeaturedArticles.vue';
+import SectionWithVideo from './SectionWithVideo.vue';
 
 storiesOf('Today/Section', module)
   .add('Standard (with columns)', createStory(StandardWithColumns))
@@ -24,4 +25,5 @@ storiesOf('Today/Section', module)
   .add('Bordered', createStory(Bordered))
   .add('Featured Articles', createStory(FeaturedArticles))
   .add('Quick Links', createStory(QuickLinks))
-  .add('Course Index', createStory(CourseIndex));
+  .add('Course Index', createStory(CourseIndex))
+  .add('Section with Video', createStory(SectionWithVideo));
