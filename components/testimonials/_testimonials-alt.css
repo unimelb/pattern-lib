@@ -52,7 +52,7 @@
       position: static;
       font-size: inherit;
       /* stylelint-disable */
-      margin-right: -.2em;
+      margin-right: .05rem;
       /* stylelint-enable */
       transform: none;
     }
