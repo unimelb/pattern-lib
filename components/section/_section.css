@@ -115,6 +115,7 @@
   &__flex-items {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     p {
       flex: 1;
