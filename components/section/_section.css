@@ -111,4 +111,13 @@
       }
     }
   }
+
+  &__flex-items {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      flex: 1;
+    }
+  }
 }

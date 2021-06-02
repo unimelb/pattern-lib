@@ -1,7 +1,9 @@
 <template>
   <SectionWrap bg-color="alt">
     <ListingWrap>
-      <ListItem cols="1of3">
+      <ListItem
+        cols="1of3"
+        class="section__flex-items">
         <h3 class="title--sm">
           Discover engineering at Melbourne
         </h3>
@@ -19,12 +21,14 @@
             name="chevron-right" />
         </a>
       </ListItem>
-      <ListItem cols="1of3">
+      <ListItem
+        cols="1of3"
+        class="section__flex-items">
         <h3 class="title--sm">
           Discover engineering at Melbourne
         </h3>
         <p>
-          Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate.
+          Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate. Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate.
         </p>
         <a
           class="link-icon"
