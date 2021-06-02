@@ -70,9 +70,22 @@
     }
 
     &-svg-icon {
+      margin-bottom: .5rem;
+
       svg {
-        width: 2.5rem;
-        height: 2.5rem;
+        height: 3rem;
+        margin-left: -.9375rem;
+      }
+    }
+
+    &-flex-items {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      p {
+        flex: 1;
+        margin-bottom: .5rem;
       }
     }
   }
