@@ -6,7 +6,7 @@
     background-color: rgb(var(--col-grey-light));
   }
 
-  &[class='section-alt'] + [class='section-alt'] &__inner {
+  &[class~='section-alt'] + [class~='section-alt'] &__inner {
     padding-top: 0;
 
     @media (--bp-wide) {
@@ -70,9 +70,22 @@
     }
 
     &-svg-icon {
+      margin-bottom: .5rem;
+
       svg {
-        width: 2.5rem;
-        height: 2.5rem;
+        height: 3rem;
+        margin-left: -.9375rem;
+      }
+    }
+
+    &-flex-items {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      p {
+        flex: 1;
+        margin-bottom: .5rem;
       }
     }
   }

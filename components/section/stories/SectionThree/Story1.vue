@@ -1,41 +1,37 @@
 <template>
   <SectionWrap bg-color="alt">
     <ListingWrap>
-      <ListItem cols="1of3">
+      <ListItem
+        cols="1of3"
+        class="section__flex-items">
         <h3 class="title--sm">
           Discover engineering at Melbourne
         </h3>
         <p>
           Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate.
         </p>
-        <a
-          class="link-icon"
-          href="https://www.unimelb.edu.au/">
+        <ButtonIcon
+          href="https://www.unimelb.edu.au/"
+          class="btn--text"
+          aria-label="Register here">
           Register here
-          <SvgIcon
-            class="push-icon__icon"
-            width="15px"
-            height="15px"
-            name="chevron-right" />
-        </a>
+        </ButtonIcon>
       </ListItem>
-      <ListItem cols="1of3">
+      <ListItem
+        cols="1of3"
+        class="section__flex-items">
         <h3 class="title--sm">
           Discover engineering at Melbourne
         </h3>
         <p>
-          Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate.
+          Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate. Anim mollit ut eu amet ipsum eu incididunt voluptate commodo mollit Lorem Lorem dolor. Commodo nisi pariatur proident quis eu excepteur magna. Culpa sit ut eu labore voluptate.
         </p>
-        <a
-          class="link-icon"
-          href="https://www.unimelb.edu.au/">
+        <ButtonIcon
+          href="https://www.unimelb.edu.au/"
+          class="btn--text"
+          aria-label="Register here">
           Register here
-          <SvgIcon
-            class="push-icon__icon"
-            width="15px"
-            height="15px"
-            name="chevron-right" />
-        </a>
+        </ButtonIcon>
       </ListItem>
       <ListItem
         cols="1of12"
@@ -59,12 +55,12 @@
 import ListingWrap from 'components/listing/ListingWrap.vue';
 import ListItem from 'components/listing/ListItem.vue';
 import CardRoundedFigure from 'components/cards/CardRoundedFigure.vue';
-import SvgIcon from 'components/icons/SvgIcon.vue';
+import ButtonIcon from 'components/buttons/ButtonIcon.vue';
 import SectionWrap from '../../SectionWrap.vue';
 
 export default {
   components: {
-    SectionWrap, ListingWrap, ListItem, CardRoundedFigure, SvgIcon,
+    SectionWrap, ListingWrap, ListItem, CardRoundedFigure, ButtonIcon,
   },
   readme: { source: true, html: true },
 };

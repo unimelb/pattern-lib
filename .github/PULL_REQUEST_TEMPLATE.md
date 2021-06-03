@@ -20,7 +20,7 @@ Please delete options that are not relevant.
 - [ ] A11y tested
 - [ ] CSS utilises BEM naming convention and structure
 - [ ] Code does not mutate variables/objects/arrays but instead uses `map`, `filter` etc to return a new array/object
-- [ ] Crossbrowser testing (IE11, Safari 8+, iOS 8.4+, Android 4.4+, Firefox ESR (v52.x), iPhone (4s,6), iPad 2, Galaxy s5) 
+- [ ] Crossbrowser testing (Safari 8+, iOS 8.4+, Android 4.4+, Firefox ESR (v52.x), iPhone (4s,6), iPad 2, Galaxy s5) 
 - [ ] My changes generate no new warnings
 - [ ] I have added tests (e2e and unit) that prove my fix is effective or that my feature works
 - [ ] New and existing unit tests pass locally with my changes

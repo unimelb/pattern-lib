@@ -187,6 +187,14 @@ textarea {
   line-height: inherit;
 }
 
+/* Remove Normalize override styles for Firefox focus rings */
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring,
+button:-moz-focusring {
+  outline: revert;
+}
+
 button {
   border: none;
   background: none;
