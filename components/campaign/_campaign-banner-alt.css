@@ -1,5 +1,5 @@
 .campaign-banner-alt {
-  background-color: rgb(var(--col-bg-tertiary-navy));
+  background-color: rgb(var(--col-background-tertiary-navy));
   color: rgb(var(--col-white));
   position: relative;
   overflow: hidden;
