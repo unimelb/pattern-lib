@@ -16,6 +16,7 @@ module.exports = (storybookConfig, env, defaultConfig) => {
           loader: 'svg-sprite-loader', // https://github.com/kisenka/svg-sprite-loader
           options: {
             symbolId: 'icon-[name]',
+            spriteModule: 'icons/sprite-config',
           },
         },
         {
