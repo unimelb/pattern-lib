@@ -11,37 +11,38 @@
       faculty-link="/faculty-link"
       faculty-width="25.5%" />
 
-    <div tabindex="-1">
-      <section-wrap bg-color="white">
-        <h2>Secondary content</h2>
-        <p
-          v-for="key in 20"
-          :key="key">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
-          quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
-          necessitatibus ut!
-        </p>
-      </section-wrap>
-    </div>
+    <main role="main">
+      <div tabindex="-1">
+        <section-wrap bg-color="white">
+          <h2>Secondary content</h2>
+          <p
+            v-for="key in 20"
+            :key="key">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
+            quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
+            necessitatibus ut!
+          </p>
+        </section-wrap>
+      </div>
 
-    <div
-      role="main"
-      tabindex="-1">
-      <section-wrap bg-color="white">
-        <h1>Main content</h1>
-        <button
-          tabindex="0">
-          Button
-        </button>
-        <p
-          v-for="key in 10"
-          :key="key">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
-          quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
-          necessitatibus ut!
-        </p>
-      </section-wrap>
-    </div>
+      <div
+        tabindex="-1">
+        <section-wrap bg-color="white">
+          <h1>Main content</h1>
+          <button
+            tabindex="0">
+            Button
+          </button>
+          <p
+            v-for="key in 10"
+            :key="key">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
+            quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
+            necessitatibus ut!
+          </p>
+        </section-wrap>
+      </div>
+    </main>
   </div>
 </template>
 
