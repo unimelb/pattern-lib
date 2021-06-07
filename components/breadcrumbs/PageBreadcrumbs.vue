@@ -22,7 +22,8 @@
           <SvgIcon
             v-if="index === 0"
             class="page-breadcrumbs__home"
-            :name="'home'"
+            name="home"
+            aria-hidden="true"
             width="18"
             height="18" />
           <span
@@ -31,7 +32,9 @@
           <SvgIcon
             v-if="index < items.length - 1"
             class="page-breadcrumbs__chevron"
-            :name="'chevron-right'"
+            name="chevron-right"
+            aria-label="Chevron right"
+            aria-hidden="true"
             width="12"
             height="12" />
         </a>
