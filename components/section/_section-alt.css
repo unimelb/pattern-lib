@@ -72,9 +72,15 @@
     &-svg-icon {
       margin-bottom: .5rem;
 
-      svg {
+      &--custom {
+        width: unset !important;
         height: 3rem;
         margin-left: -.9375rem;
+      }
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
       }
     }
 
