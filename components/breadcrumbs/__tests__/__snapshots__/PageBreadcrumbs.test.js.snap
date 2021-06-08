@@ -27,7 +27,7 @@ exports[`PageBreadcrumbs with two items should match snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          aria-label="home"
+          aria-label="Home icon"
           class="page-breadcrumbs__home"
           focusable="false"
           height="18"

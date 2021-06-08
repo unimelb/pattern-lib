@@ -23,6 +23,7 @@
             v-if="index === 0"
             class="page-breadcrumbs__home"
             name="home"
+            aria-label="Home icon"
             aria-hidden="true"
             width="18"
             height="18" />
