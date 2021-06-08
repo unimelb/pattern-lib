@@ -138,7 +138,7 @@ import 'components';
 // Inject SVG sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
 const publicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${version}/` : '';
-new Ike(`${publicPath}sprite.svg`, version);
+new Ike(`${publicPath}sprite.svg`, 'latest');
 
 // Load shared SVG assets
 require.context('components/shared', false, /\.svg$/);
