@@ -11,8 +11,8 @@
       faculty-link="/faculty-link"
       faculty-width="25.5%" />
 
-    <main role="main">
-      <div tabindex="-1">
+    <main id="main">
+      <div>
         <section-wrap bg-color="white">
           <h2>Secondary content</h2>
           <p
@@ -25,8 +25,7 @@
         </section-wrap>
       </div>
 
-      <div
-        tabindex="-1">
+      <div>
         <section-wrap bg-color="white">
           <h1>Main content</h1>
           <button
