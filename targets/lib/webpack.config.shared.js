@@ -40,12 +40,7 @@ module.exports = merge(sharedConfig, {
     ],
   },
   plugins: [
-    new SpriteLoaderPlugin({
-      plainSprite: true,
-      spriteAttrs: {
-        id: 'uom-sprite-gen2',
-      },
-    }),
+    new SpriteLoaderPlugin({ plainSprite: true }),
   ]
     .concat(isDev ? [
       new webpack.HotModuleReplacementPlugin(),
