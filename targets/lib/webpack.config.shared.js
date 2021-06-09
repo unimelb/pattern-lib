@@ -14,7 +14,8 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 const emitHtml = isDev || process.env.LIB_EMIT_HTML === 'true';
 const versionToLoad = process.env.LIB_LOAD_VERSION === 'auto' ? pkg.version : process.env.LIB_LOAD_VERSION;
-const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/v${versionToLoad}/` : '';
+const versionToLoadLatest = isDev ? 'latest' : `v${versionToLoad}`;
+const publicPath = !isDev && versionToLoad ? `${process.env.CDN_URL}/${versionToLoadLatest}/` : '';
 
 module.exports = merge(sharedConfig, {
   output: {

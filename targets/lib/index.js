@@ -131,14 +131,17 @@ import CardArticle from 'components/cards/CardArticle.vue';
 import CardArticleLarge from 'components/cards/CardArticleLarge.vue';
 import CardArticleList from 'components/cards/CardArticleList.vue';
 
-// import { version } from '../../package.json';
-
+import { version } from '../../package.json';
 import 'components';
+
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+const isDev = process.env.NODE_ENV !== 'production';
+const versionPath = isDev ? 'latest' : `v${version}`;
 
 // Inject SVG sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
-const publicPath = loadExternalAssets ? `${process.env.CDN_URL}/latest/` : '';
-new Ike(`${publicPath}sprite.svg`);
+const publicPath = loadExternalAssets ? `${process.env.CDN_URL}/${versionPath}/` : '';
+new Ike(`${publicPath}sprite.svg`, versionPath);
 
 // Load shared SVG assets
 require.context('components/shared', false, /\.svg$/);
