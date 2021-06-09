@@ -131,12 +131,11 @@ import CardArticle from 'components/cards/CardArticle.vue';
 import CardArticleLarge from 'components/cards/CardArticleLarge.vue';
 import CardArticleList from 'components/cards/CardArticleList.vue';
 
-import { version } from '../../package.json';
+// import { version } from '../../package.json';
 import 'components';
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-const isDev = process.env.NODE_ENV !== 'production';
-const versionPath = isDev ? 'latest' : `v${version}`;
+// const versionPath = `v${version}`;
+const versionPath = 'latest';
 
 // Inject SVG sprite
 const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
