@@ -6713,11 +6713,6 @@ ignore@^5.0.6:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.4.tgz#84b7b3dbe64552b6ef0eca99f6743dbec6d97adf"
   integrity sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==
 
-ike.js@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/ike.js/-/ike.js-0.0.2.tgz#8fe7aa7e85da3eb4a5ef29b65cedb777ac1f153e"
-  integrity sha1-j+eqfoXaPrSl7ym2XO23d6wfFT4=
-
 image-size@^0.5.1:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.5.5.tgz#09dfd4ab9d20e29eb1c3e80b8990378df9e3cb9c"
@@ -13842,19 +13837,19 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svg-baker-runtime@^1.3.3:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/svg-baker-runtime/-/svg-baker-runtime-1.4.0.tgz#eb53a5447856b824095f8344e969663b002b4149"
-  integrity sha512-wrv8ivS2MlkKKl9CLULEevxOSLXtCkQuwZaF9stFnvSQRp/Xexh2R5MOWpMQr+px0JMOy4I1dAXm50hq75Asrg==
+svg-baker-runtime@^1.4.7:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/svg-baker-runtime/-/svg-baker-runtime-1.4.7.tgz#f4720637f5b6202eef6378d81f1fead0815f8a4e"
+  integrity sha512-Zorfwwj5+lWjk/oxwSMsRdS2sPQQdTmmsvaSpzU+i9ZWi3zugHLt6VckWfnswphQP0LmOel3nggpF5nETbt6xw==
   dependencies:
     deepmerge "1.3.2"
     mitt "1.1.2"
-    svg-baker "^1.4.0"
+    svg-baker "^1.7.0"
 
-svg-baker@^1.2.17, svg-baker@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.4.0.tgz#ace03ca59aa4fd00aa0ee8b4749de2906fcf7d87"
-  integrity sha512-VDI530erEOb1E8kbl2fMOCWBMnk9kz7RyjE0JtcvcAyhofSyqd0Oj7mL9MGvECexyZJn+rX6Isk6Hk21ApRcJg==
+svg-baker@^1.5.0, svg-baker@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.7.0.tgz#8367f78d875550c52fe4756f7303d5c5d7c2e9a7"
+  integrity sha512-nibslMbkXOIkqKVrfcncwha45f97fGuAOn1G99YwnwTj8kF9YiM6XexPcUso97NxOm6GsP0SIvYVIosBis1xLg==
   dependencies:
     bluebird "^3.5.0"
     clone "^2.1.1"
@@ -13883,18 +13878,19 @@ svg-fill-loader@^0.0.8:
     posthtml-parser "^0.2.0"
     posthtml-render "^1.0.6"
 
-svg-sprite-loader@^3.8.0:
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.9.2.tgz#9208e58855504767a4cfc66f7fec8acf10b56a37"
-  integrity sha512-tnL7qj5ArgSYjXePzx+pZpDDzz2rMhjYdzaTjiuBz6nbPPgf2uOvO8mWj8wf/0Iv6Szd406fUYMDIyT3XnwEww==
+svg-sprite-loader@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-4.3.0.tgz#a427f777fe15bba83a806e2fde01a736b19445c8"
+  integrity sha512-IkXI2e0bWr32G6VCqw0g8x8eRsMSUKkyd3axnI6D5pEZ9zv3Zi7FTVVnOUi/Io3i2D1UAofOW+35N8qwIUql4w==
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
     domready "1.0.8"
     escape-string-regexp "1.0.5"
+    html-webpack-plugin "^3.2.0"
     loader-utils "^1.1.0"
-    svg-baker "^1.2.17"
-    svg-baker-runtime "^1.3.3"
+    svg-baker "^1.5.0"
+    svg-baker-runtime "^1.4.7"
     url-slug "2.0.0"
 
 svg-tag-names@^1.1.0:
