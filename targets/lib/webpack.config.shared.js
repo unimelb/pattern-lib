@@ -36,7 +36,6 @@ module.exports = merge(sharedConfig, {
         options: {
           extract: true,
           symbolId: 'icon-[name]',
-          spriteModule: 'icons/sprite-config',
         },
       },
     ],
