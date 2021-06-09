@@ -34,6 +34,7 @@ module.exports = merge(sharedConfig, {
         issuer: /sprite\/index\.js$/,
         loader: 'svg-sprite-loader', // https://github.com/JetBrains/svg-sprite-loader
         options: {
+          extract: true,
           symbolId: 'icon-[name]',
           spriteModule: 'icons/sprite-config',
         },
