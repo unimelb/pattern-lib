@@ -298,7 +298,6 @@ export default {
           delivery_modes, area_of_interest, csp,
         } = element;
 
-
         if (!filters.csp.includes(csp)) {
           filters.csp.push(csp);
         }

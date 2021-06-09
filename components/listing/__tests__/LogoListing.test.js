@@ -4,7 +4,6 @@ import {
 import { axe, toHaveNoViolations } from 'jest-axe';
 import LogoListing from '../LogoListing.vue';
 
-
 expect.extend(toHaveNoViolations);
 
 describe('LogoListing', () => {

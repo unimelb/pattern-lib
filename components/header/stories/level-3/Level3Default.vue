@@ -9,7 +9,6 @@
 import PageHeaderMin from '../../PageHeaderMin.vue';
 import PageBreadcrumbs from '../../../breadcrumbs/PageBreadcrumbs.vue';
 
-
 export default {
   components: { PageHeaderMin, PageBreadcrumbs },
   readme: { source: true, html: true },

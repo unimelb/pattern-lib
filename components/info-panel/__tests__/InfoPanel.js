@@ -5,7 +5,6 @@ import { axe, toHaveNoViolations } from 'jest-axe';
 import InfoPanel from '../InfoPanel.vue';
 import SvgIcon from '../../icons/SvgIcon.vue';
 
-
 expect.extend(toHaveNoViolations);
 
 describe('InfoPanel', () => {

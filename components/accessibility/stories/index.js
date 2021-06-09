@@ -3,7 +3,6 @@ import { createStory } from 'storybook/utils';
 
 import HiddenPageResources from './HiddenPageResources.vue';
 
-
 /* ##Import story component here */
 
 storiesOf('Accessibility', module)

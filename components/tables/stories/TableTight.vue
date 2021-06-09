@@ -251,7 +251,6 @@
   </ResponsiveTable>
 </template>
 
-
 <script>
 import ResponsiveTable from '../ResponsiveTable.vue';
 import TableTightDoc from './table-tight.md';

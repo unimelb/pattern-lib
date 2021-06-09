@@ -11,7 +11,6 @@
       faculty-link="/faculty-link"
       faculty-width="25.5%" />
 
-
     <div>
       <section-wrap bg-color="white">
         <h2>Secondary content</h2>

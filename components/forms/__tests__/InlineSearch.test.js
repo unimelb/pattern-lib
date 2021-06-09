@@ -30,7 +30,6 @@ describe('InlineSearch', () => {
     expect(wrapper.find('label').exists()).toBe(true);
   });
 
-
   it('Component throws no accessibility violations', (done) => {
     const html = shallow(InlineSearch, {
       propsData: {

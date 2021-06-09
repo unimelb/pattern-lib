@@ -1,4 +1,3 @@
-
 <template>
   <SectionWrap>
     <div class="grid grid--3col">

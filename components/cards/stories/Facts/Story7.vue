@@ -1,4 +1,3 @@
-
 <template>
   <SectionWrap class="colour-cycle--alt">
     <div class="grid grid--center">

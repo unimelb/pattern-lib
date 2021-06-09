@@ -1,4 +1,3 @@
-
 <template>
   <CoursesFilter :data="cardsData" />
 </template>

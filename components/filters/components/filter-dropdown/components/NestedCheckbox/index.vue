@@ -100,7 +100,6 @@ export default {
           ({ isIndeterminate }) => isIndeterminate
         );
 
-
       const isChecked = checkedInnerOptions.length === options.length;
       const isIndeterminate = (!!indeterminateInnerOptions.length || !!checkedInnerOptions.length) && !isChecked;
 

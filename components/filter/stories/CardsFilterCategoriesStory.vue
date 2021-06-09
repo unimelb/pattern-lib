@@ -1,4 +1,3 @@
-
 <template>
   <CardsFilterCategory :data="cardsData" />
 </template>

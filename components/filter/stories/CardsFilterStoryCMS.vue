@@ -1,4 +1,3 @@
-
 <template>
   <section-wrap bg-color="white">
     <CardsFilter

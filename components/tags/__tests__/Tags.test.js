@@ -4,7 +4,6 @@ import Tags from '../Tags.vue';
 
 expect.extend(toHaveNoViolations);
 
-
 describe('Tags', () => {
   it('should match snapshot', () => {
     const result = shallow(Tags).element;

@@ -7,7 +7,6 @@ import {
   IMAGE_PLACEHOLDER_SHORT,
 } from '../../../../utils/placeholders';
 
-
 expect.extend(toHaveNoViolations);
 
 describe('AccordionProfile', () => {

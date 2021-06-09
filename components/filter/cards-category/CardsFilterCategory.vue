@@ -321,7 +321,6 @@ export default {
       this.data.forEach((element) => {
         const { disciplines, study_levels, type } = element;
 
-
         study_levels.forEach((studyLevel) => {
           if (!filters.study_levels.includes(studyLevel)) {
             filters.study_levels.push(studyLevel);

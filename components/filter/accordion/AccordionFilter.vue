@@ -195,7 +195,6 @@ export default {
       const auditionRegex = new RegExp(`^${escapeRegExp(selectedAudition)}$`, 'i');
       const searchTextRegex = new RegExp(`${escapeRegExp(searchText)}`, 'i');
 
-
       return this.data.filter((data) => {
         const {
           location,

@@ -4,7 +4,6 @@ import Sidebar from '../Sidebar.vue';
 
 expect.extend(toHaveNoViolations);
 
-
 describe('Sidebar', () => {
   it('should match snapshot', () => {
     const result = shallow(Sidebar, {

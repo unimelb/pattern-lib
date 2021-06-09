@@ -28,7 +28,6 @@
   </div>
 </template>
 
-
 <script>
 
 import FocusWrapper from '../../focus-wrapper/FocusWrapper.vue';

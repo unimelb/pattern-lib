@@ -69,7 +69,6 @@ const options = [
   },
 ];
 
-
 describe('NestedCheckbox', () => {
   it('should match snapshot', () => {
     const result = mount(NestedCheckbox,

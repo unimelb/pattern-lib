@@ -103,7 +103,6 @@ describe('AccordionFilter', () => {
     dropdown.setValue = 'location 1';
     wrapper.find('button').trigger('click');
 
-
     expect(wrapper.vm.selectedLocation).toBe('location 1');
     expect(wrapper.vm.dataFiltered.length).toBe(1);
   });
@@ -123,7 +122,6 @@ describe('AccordionFilter', () => {
     dropdown.setValue = 'discipline 1';
     wrapper.find('button').trigger('click');
 
-
     expect(wrapper.vm.selectedDiscipline).toBe('discipline 1');
     expect(wrapper.vm.dataFiltered.length).toBe(1);
   });
@@ -142,7 +140,6 @@ describe('AccordionFilter', () => {
     const dropdown = wrapper.find('option');
     dropdown.setValue = 'audition 1';
     wrapper.find('button').trigger('click');
-
 
     expect(wrapper.vm.selectedAudition).toBe('audition 1');
     expect(wrapper.vm.dataFiltered.length).toBe(1);

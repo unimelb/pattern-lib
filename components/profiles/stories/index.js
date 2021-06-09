@@ -5,7 +5,6 @@ import { createStory } from 'storybook/utils';
 import LightBackground from './LightBackground';
 import DarkBackground from './DarkBackground';
 
-
 // accordion
 import Accordion from './Accordion';
 

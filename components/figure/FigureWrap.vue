@@ -7,7 +7,6 @@
   </figure>
 </template>
 
-
 <script>
 export default {
   props: {

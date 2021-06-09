@@ -23,7 +23,6 @@ import Headings from './Headings.vue';
 import HeadingComponent from './HeadingComponent.vue';
 import TypeClassesToday from './TypeClassesToday.vue';
 
-
 storiesOf('Typography (deprecated)', module)
   .add('Heading elements', createStory(HeadingElements))
   .add('Heading classes', createStory(HeadingClasses));
