@@ -18,7 +18,7 @@
     </div>
     <div class="grid grid--lg shim-mt2--desk">
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
-        <div class="section-alt__inner-svg-icon shim-mb067">
+        <div class="section-alt__inner-svg-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -30,7 +30,7 @@
         <p>Develop highly relevant skills and knowledge to apply in your industry immediately.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
-        <div class="section-alt__inner-svg-icon shim-mb067">
+        <div class="section-alt__inner-svg-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -42,7 +42,7 @@
         <p>High quality learning underpinned by cutting-edge research for solving real-world challenges.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
-        <div class="section-alt__inner-svg-icon shim-mb067">
+        <div class="section-alt__inner-svg-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -54,7 +54,7 @@
         <p>Gain skills and capabilities to succeed in a changing world.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
-        <div class="section-alt__inner-svg-icon shim-mb067">
+        <div class="section-alt__inner-svg-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -66,7 +66,7 @@
         <p>Quick, accessible upskilling enabling you to curate your own professional development pathway.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
-        <div class="section-alt__inner-svg-icon shim-mb067">
+        <div class="section-alt__inner-svg-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -78,7 +78,7 @@
         <p>Stack toward a degree with <strong>Melbourne MicroCerts</strong>. Opportunity to deepen your knowledge or build up to a University of Melbourne degree over time.</p>
       </div>
       <div class="cell cell--lg cell--tab-1of2 content-max-width shim-mt0 shim-mb0 shim-mb1--desk">
-        <div class="section-alt__inner-svg-icon shim-mb067">
+        <div class="section-alt__inner-svg-icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
