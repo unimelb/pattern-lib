@@ -3,10 +3,8 @@ import 'babel-polyfill';
 
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
-import Ike from 'ike.js';
 
 import BootstrapCMSTables from 'components/tables/BootstrapCMSTables';
-
 import ToggleBlock from 'components/toggle/ToggleBlock.vue';
 import ToggleGroup from 'components/toggle/ToggleGroup.vue';
 import ToggleBlockMobile from 'components/toggle/ToggleBlockMobile.vue';
@@ -131,14 +129,7 @@ import CardArticle from 'components/cards/CardArticle.vue';
 import CardArticleLarge from 'components/cards/CardArticleLarge.vue';
 import CardArticleList from 'components/cards/CardArticleList.vue';
 
-import { version } from '../../package.json';
-
 import 'components';
-
-// Inject SVG sprite
-const loadExternalAssets = process.env.LOAD_EXTERNAL_ASSETS === 'true';
-const publicPath = loadExternalAssets ? `${process.env.CDN_URL}/v${version}/` : '';
-new Ike(`${publicPath}sprite.svg`, version);
 
 // Load shared SVG assets
 require.context('components/shared', false, /\.svg$/);

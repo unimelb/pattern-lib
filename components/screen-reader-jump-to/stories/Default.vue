@@ -11,7 +11,8 @@
       faculty-link="/faculty-link"
       faculty-width="25.5%" />
 
-    <div tabindex="-1">
+
+    <div>
       <section-wrap bg-color="white">
         <h2>Secondary content</h2>
         <p
@@ -24,24 +25,24 @@
       </section-wrap>
     </div>
 
-    <div
-      role="main"
-      tabindex="-1">
-      <section-wrap bg-color="white">
-        <h1>Main content</h1>
-        <button
-          tabindex="0">
-          Button
-        </button>
-        <p
-          v-for="key in 10"
-          :key="key">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
-          quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
-          necessitatibus ut!
-        </p>
-      </section-wrap>
-    </div>
+    <main id="main">
+      <div>
+        <section-wrap bg-color="white">
+          <h1>Main content</h1>
+          <button
+            tabindex="0">
+            Button
+          </button>
+          <p
+            v-for="key in 10"
+            :key="key">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint explicabo quibusdam commodi quidem vitae
+            quaerat cumque, ex velit facilis. Minus ipsum quidem temporibus doloremque molestias doloribus delectus, nemo
+            necessitatibus ut!
+          </p>
+        </section-wrap>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -52,7 +53,7 @@ import ScreenReaderJumpTo from '../ScreenReaderJumpTo.vue';
 import screenReaderMd from './screenReaderMd.md';
 
 export default {
-  readme: { custom: screenReaderMd, html: true, source: false },
+  readme: { custom: screenReaderMd, html: true, source: true },
   components: {
     MegaMenu,
     ScreenReaderJumpTo,

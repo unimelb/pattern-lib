@@ -1,8 +1,1 @@
 @import '../../components/index.css';
-
-/* Hide injected SVG sprite */
-body > svg:first-child {
-  position: absolute;
-  width: 0;
-  height: 0;
-}

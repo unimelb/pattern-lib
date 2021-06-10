@@ -29,12 +29,11 @@ module.exports = merge(sharedConfig, {
   module: {
     rules: [
       {
-        // Sprite icons (extract mode -- let Ike deal with injecting the extracted sprite)
+        // Sprite icons (auto-inject mode)
         test: /\.svg$/,
         issuer: /sprite\/index\.js$/,
-        loader: 'svg-sprite-loader', // https://github.com/kisenka/svg-sprite-loader
+        loader: 'svg-sprite-loader', // https://github.com/JetBrains/svg-sprite-loader
         options: {
-          extract: true,
           symbolId: 'icon-[name]',
         },
       },

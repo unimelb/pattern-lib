@@ -13,7 +13,7 @@ module.exports = (storybookConfig, env, defaultConfig) => {
           // Sprite icons (auto-inject mode)
           test: /\.svg$/,
           issuer: /sprite\/index\.js$/,
-          loader: 'svg-sprite-loader', // https://github.com/kisenka/svg-sprite-loader
+          loader: 'svg-sprite-loader', // https://github.com/JetBrains/svg-sprite-loader
           options: {
             symbolId: 'icon-[name]',
           },
