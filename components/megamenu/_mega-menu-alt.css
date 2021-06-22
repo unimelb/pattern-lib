@@ -25,9 +25,17 @@
       display: flex;
       flex-wrap: wrap;
       margin: .25rem -.5rem;
+    }
+  }
 
+  &__primary-links {
+    @media (--bp-desktop) {
       li {
-        margin: .25rem .5rem;
+        margin: .25rem .75rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -36,6 +44,17 @@
     color: rgba(var(--col-white), .8);
     font-size: .875rem;
     margin-bottom: .5rem;
+    text-transform: uppercase;
+
+    @media (--bp-desktop) {
+      li {
+        margin: .25rem .5rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
   }
 
   &__actions {
