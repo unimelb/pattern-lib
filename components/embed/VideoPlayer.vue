@@ -6,11 +6,12 @@
       @after-enter="afterEnter">
       <div
         v-if="!videoPlaying">
-        <progressive-img
-          v-if="poster"
-          :src="poster.src"
-          :alt="poster.alt || ''"
-          class="video__img" />
+        <client-only v-if="poster">
+          <progressive-img
+            :src="poster.src"
+            :alt="poster.alt || ''"
+            class="video__img" />
+        </client-only>
         <video
           v-if="isPreviewAutoplay"
           ref="videoPreview"
