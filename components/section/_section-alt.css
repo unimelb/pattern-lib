@@ -6,7 +6,7 @@
     background-color: rgb(var(--col-grey-light));
   }
 
-  &:not([class~='section-alt--bordered']):not([class~='section-alt--bg-grey-light']):not([class~='section-alt--iimg']) + &:not([class~='section-alt--bordered']):not([class~='section-alt--bg-grey-light']):not([class~='section-alt--img']) &__inner {
+  &:not([class*='section-alt--']) + &:not([class*='section-alt--']) &__inner {
     padding-top: 0;
 
     @media (--bp-wide) {
