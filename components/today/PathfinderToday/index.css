@@ -80,7 +80,7 @@
 
     &-title {
       color: rgb(var(--col-navy-dark));
-      padding-right: .5rem;
+      margin-right: 2.5rem;
       display: block;
       transition: color .15s ease;
 
