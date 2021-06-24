@@ -540,7 +540,9 @@ a[target='_blank'] {
  * Content max-width wrapper
  */
 .content-max-width {
-  max-width: 28rem;
+  @media (--bp-desktop) {
+    max-width: 28rem;
+  }
 }
 
 /**
