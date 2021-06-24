@@ -93,10 +93,6 @@
     background-color: rgb(var(--col-grey-light));
     display: block;
 
-    @media (--bp-max-mobile) {
-      max-width: 10rem !important;
-    }
-
     img {
       height: 100%;
       object-fit: cover;
