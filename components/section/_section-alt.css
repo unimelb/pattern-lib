@@ -101,7 +101,6 @@
 
   &__left {
     position: relative;
-    max-width: 28rem;
     margin-bottom: 1.5rem;
 
     @media (--bp-desktop) {
