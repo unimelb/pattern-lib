@@ -86,6 +86,12 @@ export default {
         },
         {
           title: 'Bachelor of Science (Extended)',
+          category: 'microcredential',
+          type: 'microcredential',
+          link: 'www.unimelb.edu.au',
+        },
+        {
+          title: 'Bachelor of Science (Extended)',
           category: 'honours',
           type: 'honours',
           link: 'www.unimelb.edu.au',
