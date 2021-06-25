@@ -93,7 +93,7 @@
     background-color: rgb(var(--col-grey-light));
     display: block;
 
-    @media (--bp-x-tablet) {
+    @media (--bp-max-x-mobile) {
       max-width: 10rem !important;
     }
 
