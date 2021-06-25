@@ -3,9 +3,11 @@
   padding: var(--vr);
   border-radius: 4px;
   background-color: rgb(var(--col-navy-light));
+  border-left: .375rem solid rgb(var(--col-blue-mid-2));
 
   &--warning {
     background-color: rgb(var(--col-orange-light));
+    border-left: .375rem solid rgb(var(--col-orange-dark));
     color: color-mod(rgb(var(--col-orange-mid-2)) lightness(25%));
 
     a {
@@ -15,6 +17,7 @@
 
   &--success {
     background-color: rgb(var(--col-green-light));
+    border-left: .375rem solid rgb(var(--col-green-dark));
     color: color-mod(rgb(var(--col-green-mid-2)) lightness(25%));
 
     a {
@@ -24,6 +27,7 @@
 
   &--danger {
     background-color: rgb(var(--col-orange-dark));
+    border-left: .375rem solid rgb(var(--col-pink-dark));
     color: rgb(var(--col-background-primary-white));
 
     a {
