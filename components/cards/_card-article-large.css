@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column-reverse;
 
-    @media (--bp-x-tablet) {
+    @media (--bp-desktop) {
       flex-direction: row;
       flex-wrap: wrap;
       margin-left: -1.3333rem;
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (--bp-x-tablet) {
+    @media (--bp-desktop) {
       width: calc(4 / 12 * 100%);
       padding-left: 1.3333rem;
       padding-right: 1.3333rem;
@@ -29,7 +29,7 @@
     flex: 1;
     margin-bottom: 1rem;
 
-    @media (--bp-x-tablet) {
+    @media (--bp-desktop) {
       margin-bottom: 0;
       padding-left: 1.3333rem;
       padding-right: 1.3333rem;
@@ -47,7 +47,7 @@
     color: rgb(var(--col-grey-mid-1));
     margin-bottom: .5rem;
 
-    @media (--bp-x-tablet) {
+    @media (--bp-desktop) {
       margin-bottom: 1rem;
     }
   }
