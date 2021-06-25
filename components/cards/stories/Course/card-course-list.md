@@ -27,4 +27,4 @@ Eg:
 
 The colours for each card is set by the attribute type.
 
-- type: `bachelor`, `degree`, `certificate`, `coursework`, `research`, `major`, `minor`, `phd`, `specialisation`, `interest`, `pathway`, `short-course`, `honours`.
+- type: `bachelor`, `degree`, `certificate`, `coursework`, `research`, `major`, `minor`, `phd`, `specialisation`, `interest`, `pathway`, `short-course`, `microcredential`, `honours`.
