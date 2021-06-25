@@ -5,12 +5,17 @@
   height: 100%;
   width: 100%;
   padding: 0;
-  max-width: 20rem;
   min-width: 12rem;
   margin: 0;
 
+  @media (--bp-desktop) {
+    max-width: 20rem;
+  }
+
   &--long {
-    max-width: 34rem;
+    @media (--bp-desktop) {
+      max-width: 34rem;
+    }
   }
 
   &--long &__title {
@@ -88,7 +93,7 @@
     background-color: rgb(var(--col-grey-light));
     display: block;
 
-    @media (--bp-max-mobile) {
+    @media (--bp-max-x-mobile) {
       max-width: 10rem !important;
     }
 
