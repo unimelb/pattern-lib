@@ -4,6 +4,8 @@ import 'babel-polyfill';
 import Vue from 'vue';
 import VueProgressiveImage from 'vue-progressive-image';
 
+import iframeTitles from 'utils/iframeTitles';
+
 import BootstrapCMSTables from 'components/tables/BootstrapCMSTables';
 import ToggleBlock from 'components/toggle/ToggleBlock.vue';
 import ToggleGroup from 'components/toggle/ToggleGroup.vue';
@@ -266,5 +268,6 @@ new Vue({
   el: '#ui',
   beforeCreate() {
     BootstrapCMSTables(); // Add responsive classes to CMS tables.
+    iframeTitles(); // Add title to iframes.
   },
 });
