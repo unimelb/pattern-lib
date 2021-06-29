@@ -270,4 +270,13 @@ new Vue({
     BootstrapCMSTables(); // Add responsive classes to CMS tables.
     iframeTitles(); // Add title to iframes.
   },
+  onBeforeMount() {
+    console.log('onBeforeMount');
+  },
+  onMounted() {
+    console.log('onMounted');
+  },
+  onUpdated() {
+    console.log('onUpdated');
+  },
 });
