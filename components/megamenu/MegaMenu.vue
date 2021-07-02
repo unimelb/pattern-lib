@@ -51,8 +51,8 @@
               ref="rootitems"
               :key="`rootitem-${rootindex}`"
               role="none"
-              tabindex="0"
               class="menu__item"
+              @focusin="activateDesktopMenu(rootindex, 0)"
               @mouseover="activateDesktopMenu(rootindex)"
               @mouseout="dismissDesktopMenu"
               @keydown="handleKey">
@@ -75,7 +75,8 @@
               </a>
               <div
                 v-if="rootitem.items"
-                class="inner inner--fade">
+                class="inner inner--fade"
+                @focusout="dismissDesktopMenu">
                 <div
                   role="button"
                   class="menu__back-btn"
@@ -154,7 +155,9 @@
             :items="topMenu" />
         </nav>
       </div>
-      <PageSearch />
+      <div @focusin="dismissDesktopMenu({}, 0)">
+        <PageSearch />
+      </div>
       <div class="header-tools__menu">
         <button
           id="sitemapbutton"
@@ -306,7 +309,8 @@ export default {
 
       return displayActive;
     },
-    activateDesktopMenu(rootindex) {
+    activateDesktopMenu(rootindex, delay) {
+      this.dismissDesktopMenu();
       if (
         this.lastIndex !== null
         && this.items[this.lastIndex].items !== undefined
@@ -330,7 +334,7 @@ export default {
           }
           this.isDesktopOpen = true;
           this.$emit('mega-menu-activate-desktop-menu');
-        }, TIMER_500);
+        }, delay || TIMER_500);
       }
     },
     dismissDesktopMenu(props = {}) {
