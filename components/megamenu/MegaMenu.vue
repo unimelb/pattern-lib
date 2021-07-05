@@ -76,7 +76,7 @@
               <div
                 v-if="rootitem.items"
                 class="inner inner--fade"
-                @focusout="dismissDesktopMenu">
+                @focusout="dismissDesktopMenu({}, 0)">
                 <div
                   role="button"
                   class="menu__back-btn"
@@ -310,7 +310,9 @@ export default {
       return displayActive;
     },
     activateDesktopMenu(rootindex, delay) {
-      this.dismissDesktopMenu();
+      const timer = delay === undefined ? TIMER_500 : delay;
+
+      this.dismissDesktopMenu({}, timer);
       if (
         this.lastIndex !== null
         && this.items[this.lastIndex].items !== undefined
@@ -334,10 +336,12 @@ export default {
           }
           this.isDesktopOpen = true;
           this.$emit('mega-menu-activate-desktop-menu');
-        }, delay || TIMER_500);
+        }, timer);
       }
     },
-    dismissDesktopMenu(props = {}) {
+    dismissDesktopMenu(props = {}, delay) {
+      const timer = delay === undefined ? TIMER_500 : delay;
+
       clearTimeout(this.timeOutHoverInID);
       clearTimeout(this.timeOutHoverOutID);
       this.timeOutHoverOutID = setTimeout(() => {
@@ -351,7 +355,7 @@ export default {
           this.isDesktopOpen = false;
           this.$emit('mega-menu-dismiss-desktop-menu');
         }
-      }, TIMER_500);
+      }, timer);
     },
     dismissMenu() {
       this.lastIndex = null;
