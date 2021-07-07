@@ -1,6 +1,7 @@
 <template>
   <CampaignBannerAlt
     :title="title"
+    :sub-heading="subHeading"
     :cta="cta"
     :img="img" />
 </template>
@@ -20,6 +21,7 @@ export default {
   data() {
     return {
       title: 'Register now for Open Days 2021',
+      subHeading: 'Sunday 4 July–Sunday 11 July',
       img: {
         src: campaignHeroDesktopImage,
         alt: 'Woman typing on laptop',
