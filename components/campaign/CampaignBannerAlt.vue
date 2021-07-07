@@ -79,7 +79,7 @@ export default {
     },
     subHeading: {
       type: String,
-      required: true,
+      required: false,
       default: '',
     },
     tag: {
