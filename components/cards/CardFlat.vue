@@ -18,13 +18,20 @@
       </ButtonIcon>
     </div>
     <div
+      v-if="video"
+      class="card-flat__img">
+      <VideoEmbed
+        video-api
+        :src="video.src" />
+    </div>
+    <div
       v-if="img"
       class="card-flat__img">
       <client-only>
         <progressive-img
           :src="img.src"
           :alt="img.alt || ''"
-          :aspect-ratio="0.6"
+          :aspect-ratio="0.56"
           class="card-flat__img-inner" />
       </client-only>
     </div>
@@ -33,10 +40,12 @@
 
 <script>
 import ButtonIcon from 'components/buttons/ButtonIcon.vue';
+import VideoEmbed from 'components/embed/VideoEmbed.vue';
 
 export default {
   components: {
     ButtonIcon,
+    VideoEmbed,
   },
   props: {
     title: {
@@ -56,9 +65,14 @@ export default {
         return null;
       },
     },
+    video: {
+      type: Object,
+      default() {
+        return null;
+      },
+    },
     img: {
       type: Object,
-      required: true,
       default() {
         return null;
       },
