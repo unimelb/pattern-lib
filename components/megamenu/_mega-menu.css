@@ -453,9 +453,7 @@
         }
 
         .menu__item {
-          padding-top: .1875rem;
-          padding-left: .1875rem;
-          padding-right: .1875rem;
+          padding: .25rem;
         }
 
         .menu__link {
@@ -511,7 +509,7 @@
             padding-top: .166rem;
             padding-left: 0;
             padding-right: 1rem;
-            margin: .25rem;
+            margin: .3125rem;
             font-size: 1.12rem;
           }
 
