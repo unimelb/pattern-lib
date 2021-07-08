@@ -500,7 +500,7 @@
         .menu__item {
           padding: 0 1.5rem 0 0;
           list-style-type: none;
-          margin-bottom: 1.5rem;
+          margin-bottom: .875rem;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
@@ -508,8 +508,10 @@
 
           a {
             padding-bottom: .166rem;
+            padding-top: .166rem;
             padding-left: 0;
             padding-right: 1rem;
+            margin: .25rem;
             font-size: 1.12rem;
           }
 
