@@ -3,6 +3,7 @@
     label="Video label"
     :video="{
       url: 'https://www.youtube.com/embed/sWHoKq6MSaE',
+      youkuUrl: 'https://player.youku.com/embed/XNTE1ODM2MzcxMg',
       duration: 144,
     }"
     :poster="{
