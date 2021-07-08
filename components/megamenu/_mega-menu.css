@@ -647,10 +647,8 @@
 
 .icon {
   display: inline;
-  width: .7rem;
-  height: .7rem;
-  min-width: .5rem;
-  min-height: .5rem;
+  min-width: .7rem;
+  min-height: .7rem;
   margin-left: .4rem;
   margin-top: .2rem;
   text-align: center;
