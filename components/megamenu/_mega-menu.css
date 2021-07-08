@@ -166,12 +166,12 @@
       }
 
       @media (--bp-wide) {
-        padding: 1.0625rem .65rem .75rem;
+        padding: 1.0625rem .4375rem .75rem;
         font-size: 1rem;
       }
 
       @media (--bp-x-wide) {
-        padding: .8125rem .625rem .5rem 1rem;
+        padding: .8125rem .625rem .5rem .625rem;
       }
     }
 
@@ -453,7 +453,9 @@
         }
 
         .menu__item {
-          padding-bottom: 0;
+          padding-top: .1875rem;
+          padding-left: .1875rem;
+          padding-right: .1875rem;
         }
 
         .menu__link {
