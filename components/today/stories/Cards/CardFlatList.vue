@@ -19,7 +19,7 @@ export default {
           title: 'Our campuses',
           description: 'Located a short walk from central Melbourne, our main campus anchors a network of three urban innovation precincts and six specialist campuses located throughout Victoria.',
           cta: { href: 'https://www.unimelb.edu.au/', text: 'Virtual campus tours' },
-          video: { src: 'https://player.vimeo.com/video/566879573' },
+          video: { src: 'https://player.vimeo.com/video/566879573', videoApi: false },
         },
         {
           title: 'Research facilities',

@@ -21,7 +21,7 @@
       v-if="video"
       class="card-flat__img">
       <VideoEmbed
-        video-api
+        :video-api="video.videoApi"
         :src="video.src" />
     </div>
     <div
