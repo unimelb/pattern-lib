@@ -56,7 +56,7 @@
       <iframe
         v-else-if="videoPlaying"
         ref="embed"
-        title="Youtube video"
+        :title="label"
         width="560"
         height="315"
         :src="videoSrc"

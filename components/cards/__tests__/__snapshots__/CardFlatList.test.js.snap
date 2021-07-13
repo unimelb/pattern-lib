@@ -65,13 +65,15 @@ exports[`CardFlatList should match snapshot 1`] = `
         </a>
       </div>
        
+      <!---->
+       
       <div
         class="card-flat__img"
       >
         <client-only>
           <progressive-img
             alt="Image for example purposes."
-            aspect-ratio="0.6"
+            aspect-ratio="0.56"
             class="card-flat__img-inner"
             src="https://picsum.photos/seed/1/540/360"
           />
@@ -140,13 +142,15 @@ exports[`CardFlatList should match snapshot 1`] = `
         </a>
       </div>
        
+      <!---->
+       
       <div
         class="card-flat__img"
       >
         <client-only>
           <progressive-img
             alt="Image for example purposes."
-            aspect-ratio="0.6"
+            aspect-ratio="0.56"
             class="card-flat__img-inner"
             src="https://picsum.photos/seed/1/540/360"
           />
@@ -215,13 +219,15 @@ exports[`CardFlatList should match snapshot 1`] = `
         </a>
       </div>
        
+      <!---->
+       
       <div
         class="card-flat__img"
       >
         <client-only>
           <progressive-img
             alt="Image for example purposes."
-            aspect-ratio="0.6"
+            aspect-ratio="0.56"
             class="card-flat__img-inner"
             src="https://picsum.photos/seed/1/540/360"
           />
@@ -290,13 +296,15 @@ exports[`CardFlatList should match snapshot 1`] = `
         </a>
       </div>
        
+      <!---->
+       
       <div
         class="card-flat__img"
       >
         <client-only>
           <progressive-img
             alt="Image for example purposes."
-            aspect-ratio="0.6"
+            aspect-ratio="0.56"
             class="card-flat__img-inner"
             src="https://picsum.photos/seed/1/540/360"
           />
