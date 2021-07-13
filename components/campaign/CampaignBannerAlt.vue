@@ -31,6 +31,11 @@
           </a>
           {{ title }}
         </h1>
+        <p
+          v-if="subHeading"
+          class="heading-sm">
+          {{ subHeading }}
+        </p>
         <ul
           v-if="links && links.length"
           class="campaign-banner-alt__links list-reset">
@@ -70,6 +75,11 @@ export default {
     title: {
       type: String,
       required: true,
+      default: '',
+    },
+    subHeading: {
+      type: String,
+      required: false,
       default: '',
     },
     tag: {

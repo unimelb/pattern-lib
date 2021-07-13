@@ -1,6 +1,7 @@
 <template>
   <CampaignBannerAlt
     :title="title"
+    sub-heading="Sunday 4 July–Sunday 11 July"
     :links="links"
     :img="img"
     size="lg" />

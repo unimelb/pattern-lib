@@ -6,6 +6,7 @@ The component `CampaignBannerAlt` acceps the following props:
 | props    	| type    	|
 |----------	|---------	|
 | title   	| String  	|
+| sub-heading   	| String  	|
 | tag      	| Object  	|
 | text 	    | String   	|
 | img     	| Object  	|
@@ -17,6 +18,7 @@ The component `CampaignBannerAlt` acceps the following props:
 ```html
 <campaign-banner-alt
   title="Register now for Open Days 2021"
+  sub-heading="Sunday 4 July–Sunday 11 July"
   :cta="{
     text: 'Register now',
     href: '#',
