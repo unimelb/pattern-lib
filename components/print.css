@@ -10,8 +10,6 @@
   }
 
   .page-header,
-  .page-footer,
-  .page-footer__bottom,
   .section--image,
   .card--image,
   .section,
@@ -106,12 +104,6 @@
     page-break-after: avoid;
   }
 
-  .page-footer__bottom,
-  .page-footer__legal,
-  .page-footer__main__users,
-  .page-footer__main__popular,
-  .page-footer__header-search,
-  .page-footer__social,
   .header-tools,
   .page-header__img,
   nav,
@@ -124,10 +116,6 @@
   .card-focus__bottom-right,
   .card--focus-box__cnr {
     display: none !important;
-  }
-
-  .page-footer__main__contacts {
-    width: 100% !important;
   }
 
   .page-header--l1 .page-header__heading,
