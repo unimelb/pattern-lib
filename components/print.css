@@ -108,7 +108,7 @@
   .page-footer-alt__social-icon,
   .page-footer-alt__reconciliation,
   .page-footer-alt__primary-links,
-  .page-footer-alt__bottom,
+  .page-footer-alt__secondary-links,
   .header-tools,
   .page-header__img,
   nav,
@@ -125,8 +125,8 @@
 
   .page-footer-alt__top-inner {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-items: center !important;
   }
 
   .page-footer-alt__content {
@@ -135,6 +135,18 @@
       flex-direction: column;
       align-items: center;
     }
+  }
+
+  .page-footer-alt__brand {
+    align-items: center;
+
+    @media (--bp-desktop) {
+      align-items: center !important;
+    }
+  }
+
+  .page-footer-alt__def-list {
+    text-align: center;
   }
 
   .page-header--l1 .page-header__heading,
