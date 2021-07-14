@@ -9,6 +9,7 @@
     background-color: transparent;
   }
 
+  .page-footer-alt,
   .page-header,
   .section--image,
   .card--image,
@@ -104,6 +105,10 @@
     page-break-after: avoid;
   }
 
+  .page-footer-alt__social-icon,
+  .page-footer-alt__reconciliation,
+  .page-footer-alt__primary-links,
+  .page-footer-alt__bottom,
   .header-tools,
   .page-header__img,
   nav,
