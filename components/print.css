@@ -9,9 +9,8 @@
     background-color: transparent;
   }
 
+  .page-footer-alt,
   .page-header,
-  .page-footer,
-  .page-footer__bottom,
   .section--image,
   .card--image,
   .section,
@@ -106,12 +105,10 @@
     page-break-after: avoid;
   }
 
-  .page-footer__bottom,
-  .page-footer__legal,
-  .page-footer__main__users,
-  .page-footer__main__popular,
-  .page-footer__header-search,
-  .page-footer__social,
+  .page-footer-alt__social-icon,
+  .page-footer-alt__reconciliation,
+  .page-footer-alt__primary-links,
+  .page-footer-alt__secondary-links,
   .header-tools,
   .page-header__img,
   nav,
@@ -126,8 +123,30 @@
     display: none !important;
   }
 
-  .page-footer__main__contacts {
-    width: 100% !important;
+  .page-footer-alt__top-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center !important;
+  }
+
+  .page-footer-alt__content {
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .page-footer-alt__brand {
+    align-items: center;
+
+    @media (--bp-desktop) {
+      align-items: center !important;
+    }
+  }
+
+  .page-footer-alt__def-list {
+    text-align: center;
   }
 
   .page-header--l1 .page-header__heading,
