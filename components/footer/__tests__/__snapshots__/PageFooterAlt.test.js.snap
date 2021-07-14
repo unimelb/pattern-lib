@@ -311,10 +311,10 @@ exports[`PageFooterAlt should match snapshot 1`] = `
         </li>
       </ul>
        
-      <dl
+      <div
         class="page-footer-alt__def-list"
       >
-        <div
+        <dl
           class="page-footer-alt__def-list-item"
         >
           <dt>
@@ -324,9 +324,9 @@ exports[`PageFooterAlt should match snapshot 1`] = `
           <dd>
             00116K
           </dd>
-        </div>
+        </dl>
          
-        <div
+        <dl
           class="page-footer-alt__def-list-item"
         >
           <dt>
@@ -336,8 +336,8 @@ exports[`PageFooterAlt should match snapshot 1`] = `
           <dd>
             84 002 705 224
           </dd>
-        </div>
-      </dl>
+        </dl>
+      </div>
     </div>
   </div>
 </footer>

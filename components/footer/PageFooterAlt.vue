@@ -101,16 +101,16 @@
             </a>
           </li>
         </ul>
-        <dl class="page-footer-alt__def-list">
-          <div class="page-footer-alt__def-list-item">
+        <div class="page-footer-alt__def-list">
+          <dl class="page-footer-alt__def-list-item">
             <dt>CRICOS number:</dt>
             <dd>00116K</dd>
-          </div>
-          <div class="page-footer-alt__def-list-item">
+          </dl>
+          <dl class="page-footer-alt__def-list-item">
             <dt>ABN:</dt>
             <dd>84 002 705 224</dd>
-          </div>
-        </dl>
+          </dl>
+        </div>
       </div>
     </div>
   </footer>
