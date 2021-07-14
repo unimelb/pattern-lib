@@ -25,7 +25,7 @@
                   <li
                     v-for="(link, index) in computedPrimaryLinks"
                     :key="index"
-                    class="page-footer-alt__primary-links-item">
+                    class="page-footer-alt__primary-links-item shim-mb067">
                     <ButtonIcon
                       :href="link.href"
                       class="btn--text">
@@ -57,30 +57,32 @@
             </div>
           </div>
           <div class="page-footer-alt__brand cell cell--lg cell--desk-1of3 cell--wide-1of2 shim-mb0 shim-mt0">
-            <Logo size="lg" />
-            <ul class="page-footer-alt__social list-reset">
-              <li
-                v-for="(link, i) in socialLinks"
-                :key="i"
-                class="page-footer-alt__social-item">
-                <a
-                  class="link-reset page-footer-alt__social-link"
-                  :href="link.href"
-                  target="_blank">
-                  <span class="screenreaders-only">
-                    {{ link.text }}
-                  </span>
-                  <svg
-                    class="page-footer-alt__social-icon"
-                    focusable="false"
-                    role="presentation">
-                    <use
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      :xlink:href="`#icon-${link.icon}`" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <div class="page-footer-alt__brand-items">
+              <Logo size="lg" />
+              <ul class="page-footer-alt__social list-reset">
+                <li
+                  v-for="(link, i) in socialLinks"
+                  :key="i"
+                  class="page-footer-alt__social-item">
+                  <a
+                    class="link-reset page-footer-alt__social-link"
+                    :href="link.href"
+                    target="_blank">
+                    <span class="screenreaders-only">
+                      {{ link.text }}
+                    </span>
+                    <svg
+                      class="page-footer-alt__social-icon"
+                      focusable="false"
+                      role="presentation">
+                      <use
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        :xlink:href="`#icon-${link.icon}`" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -100,10 +102,14 @@
           </li>
         </ul>
         <dl class="page-footer-alt__def-list">
-          <dt>CRICOS number:</dt>
-          <dd>00116K</dd>
-          <dt>ABN:</dt>
-          <dd>84 002 705 224</dd>
+          <div class="page-footer-alt__def-list-item">
+            <dt>CRICOS number:</dt>
+            <dd>00116K</dd>
+          </div>
+          <div class="page-footer-alt__def-list-item">
+            <dt>ABN:</dt>
+            <dd>84 002 705 224</dd>
+          </div>
         </dl>
       </div>
     </div>
