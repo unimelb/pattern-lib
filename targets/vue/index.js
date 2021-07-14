@@ -163,10 +163,6 @@ export {
 }
   from 'components/breadcrumbs/PageBreadcrumbs.vue';
 export {
-  default as PageFooter,
-}
-  from 'components/footer/PageFooter.vue';
-export {
   default as PageFooterAlt,
 }
   from 'components/footer/PageFooterAlt.vue';

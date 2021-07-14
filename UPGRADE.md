@@ -154,8 +154,8 @@ No change
 
 * Change all `<button>` inside `<a>` to `<span>` with the same classes for Pathfinders and Cards
 
-* Strongly recommend you use the `<page-footer>` component rather than a markup block - this should be placed _inside_ the `<div id="ui">` block.
+* Strongly recommend you use the `<page-footer-alt>` component rather than a markup block - this should be placed _inside_ the `<div id="ui">` block.
 
 ```html
-<page-footer></page-footer>
+<page-footer-alt></page-footer-alt>
 ```
