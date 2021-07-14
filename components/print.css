@@ -123,6 +123,20 @@
     display: none !important;
   }
 
+  .page-footer-alt__top-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-footer-alt__content {
+    .grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .page-header--l1 .page-header__heading,
   .page-header--l2 .page-header__heading {
     margin: 2rem 0 0 !important;
