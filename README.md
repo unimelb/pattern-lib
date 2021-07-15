@@ -6,6 +6,8 @@ The contents of this repository have been produced by The University of Melbourn
 
 [![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/pattern-lib)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/196744c8-ae88-41d2-8373-31b015bf50db/deploy-status)](https://app.netlify.com/sites/pattern-lib-unimelb/deploys)
+
 - [Development Preview](https://dev--pattern-lib-unimelb.netlify.com/) (Netlify deploy from `dev` branch)
 - [Production](https://pattern-lib-unimelb.netlify.com/) (Netlify deploy from `master` branch)
 
