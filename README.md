@@ -6,6 +6,8 @@ The contents of this repository have been produced by The University of Melbourn
 
 [![Build Status](https://semaphoreci.com/api/v1/projects/6a44d24e-e1db-4adc-a948-2e0a4ebb6b4c/1516302/badge.svg)](https://semaphoreci.com/unimelb/pattern-lib)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/196744c8-ae88-41d2-8373-31b015bf50db/deploy-status)](https://app.netlify.com/sites/pattern-lib-unimelb/deploys)
+
 - [Development Preview](https://dev--pattern-lib-unimelb.netlify.com/) (Netlify deploy from `dev` branch)
 - [Production](https://pattern-lib-unimelb.netlify.com/) (Netlify deploy from `master` branch)
 
@@ -92,7 +94,7 @@ In Storybook: When adding the "how to use a component" documentation, add a desc
 <my-new-component></my-new-component>
 ```
 
-> **Note**: Matrix CMS can only use the components in that way and must be in the `target/lib` folder as well. You can self-close a component when importing it in a parent component in the pattern-lib context. The rule described above applies just when the component is called in the CMS context. ie. footer component, which is used like this in CMS: `<page-footer></page-footer>` instead of `<page-footer />`.
+> **Note**: Matrix CMS can only use the components in that way and must be in the `target/lib` folder as well. You can self-close a component when importing it in a parent component in the pattern-lib context. The rule described above applies just when the component is called in the CMS context. ie. footer component, which is used like this in CMS: `<page-footer-alt></page-footer-alt>` instead of `<page-footer-alt />`.
 
 ### Targets
 

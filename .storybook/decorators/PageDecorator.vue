@@ -6,17 +6,17 @@
       img="https://picsum.photos/id/1033/990/530.jpg" />
     <PageBreadcrumbs :items="breadcrumbsItems" />
     <slot />
-    <PageFooter />
+    <PageFooterAlt />
   </div>
 </template>
 
 <script>
 import PageHeader from 'components/header/PageHeader.vue';
-import PageFooter from 'components/footer/PageFooter.vue';
+import PageFooterAlt from 'components/footer/PageFooterAlt.vue';
 import PageBreadcrumbs from 'components/breadcrumbs/PageBreadcrumbs.vue';
 
 export default {
-  components: { PageHeader, PageFooter, PageBreadcrumbs },
+  components: { PageHeader, PageFooterAlt, PageBreadcrumbs },
   data: () => ({
     breadcrumbsItems: [
       { href: '/', text: 'About us' },
