@@ -58,6 +58,7 @@
   &--pathway::before {
     background-color: rgb(var(--col-teal-dark));
   }
+  &--microcredential::before,
   &--short-course::before {
     background-color: rgb(var(--col-orange-mid-2));
   }

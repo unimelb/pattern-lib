@@ -34,6 +34,8 @@ exports[`CampaignBannerAlt should match snapshot 1`] = `
       </h1>
        
       <!---->
+       
+      <!---->
     </div>
   </div>
 </div>
@@ -71,6 +73,8 @@ exports[`CampaignBannerAlt should match snapshot with button 1`] = `
         Register now for Open Days 2021
       
       </h1>
+       
+      <!---->
        
       <!---->
     </div>

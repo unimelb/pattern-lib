@@ -28,7 +28,7 @@ The default `readme` configuration is as follows:
 Typically, use:
 
 - `html: true` for components exposed in the `lib` target, like `AccordionGroup`.
-- `minified: true` for immutable components (e.g. `PageFooter`)
+- `minified: true` for immutable components (e.g. `PageFooterAlt`)
 - `decorated: true` when the decorator is important to the story (e.g. video embed inside a section).
 
 It may also make sense to disable the HTML source with `source: false` in some rare cases, like in the progressive image story.

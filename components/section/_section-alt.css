@@ -6,7 +6,7 @@
     background-color: rgb(var(--col-grey-light));
   }
 
-  &[class~='section-alt'] + [class~='section-alt'] &__inner {
+  &:not([class*='section-alt--']) + &:not([class*='section-alt--']) &__inner {
     padding-top: 0;
 
     @media (--bp-wide) {
@@ -101,7 +101,6 @@
 
   &__left {
     position: relative;
-    max-width: 28rem;
     margin-bottom: 1.5rem;
 
     @media (--bp-desktop) {

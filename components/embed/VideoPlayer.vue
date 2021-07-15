@@ -6,11 +6,12 @@
       @after-enter="afterEnter">
       <div
         v-if="!videoPlaying">
-        <progressive-img
-          v-if="poster"
-          :src="poster.src"
-          :alt="poster.alt || ''"
-          class="video__img" />
+        <client-only v-if="poster">
+          <progressive-img
+            :src="poster.src"
+            :alt="poster.alt || ''"
+            class="video__img" />
+        </client-only>
         <video
           v-if="isPreviewAutoplay"
           ref="videoPreview"
@@ -55,7 +56,7 @@
       <iframe
         v-else-if="videoPlaying"
         ref="embed"
-        title="Youtube video"
+        :title="label"
         width="560"
         height="315"
         :src="videoSrc"
@@ -153,7 +154,7 @@ export default {
 
       const additionalParams = this.videoApi ? `&enablejsapi=1&origin=https%3A%2F%2F${document.location.hostname}` : '';
 
-      return `${this.video.url}?autoplay=1${additionalParams}`;
+      return `${this.video.url}?autoplay=1&rel=0${additionalParams}`;
     },
     classes() {
       return {
