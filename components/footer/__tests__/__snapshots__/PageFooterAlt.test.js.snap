@@ -49,27 +49,27 @@ exports[`PageFooterAlt should match snapshot 1`] = `
                 class="list-reset page-footer-alt__primary-links"
               >
                 <li
-                  class="page-footer-alt__primary-links-item shim-mb067"
+                  class="page-footer-alt__primary-links-item"
                 >
                   <!---->
                 </li>
                 <li
-                  class="page-footer-alt__primary-links-item shim-mb067"
+                  class="page-footer-alt__primary-links-item"
                 >
                   <!---->
                 </li>
                 <li
-                  class="page-footer-alt__primary-links-item shim-mb067"
+                  class="page-footer-alt__primary-links-item"
                 >
                   <!---->
                 </li>
                 <li
-                  class="page-footer-alt__primary-links-item shim-mb067"
+                  class="page-footer-alt__primary-links-item"
                 >
                   <!---->
                 </li>
                 <li
-                  class="page-footer-alt__primary-links-item shim-mb067"
+                  class="page-footer-alt__primary-links-item"
                 >
                   <!---->
                 </li>
@@ -83,23 +83,17 @@ exports[`PageFooterAlt should match snapshot 1`] = `
                 class="page-footer-alt__contact"
               >
                 <p
-                  class="shim-mb067"
+                  class="shim-mb1"
                 >
                   
                   Phone: 13 MELB (13 6352)
-                
-                </p>
-                 
-                <p
-                  class="shim-mb067"
-                >
-                  
+                  <br />
                   International: +61 3 9035 5511
                 
                 </p>
                  
                 <p
-                  class="shim-mb067"
+                  class="shim-mb1"
                 >
                   
                   Address:
@@ -112,11 +106,7 @@ exports[`PageFooterAlt should match snapshot 1`] = `
                 
                 </p>
                  
-                <p
-                  class="shim-mb067"
-                >
-                  <!---->
-                </p>
+                <!---->
               </div>
             </div>
           </div>
