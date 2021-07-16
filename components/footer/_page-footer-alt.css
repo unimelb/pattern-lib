@@ -139,7 +139,6 @@
     align-items: center;
 
     @media (--bp-desktop) {
-      flex-direction: column;
       justify-content: flex-start;
       align-items: flex-end;
       margin-top: 0;
