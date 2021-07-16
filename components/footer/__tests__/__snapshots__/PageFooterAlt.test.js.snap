@@ -328,10 +328,5 @@ exports[`PageFooterAlt should match snapshot 1`] = `
       </dl>
     </div>
   </div>
-   
-  <div
-    class="liveagent"
-    id="liveagent"
-  />
 </footer>
 `;
