@@ -25,7 +25,7 @@
                   <li
                     v-for="(link, index) in computedPrimaryLinks"
                     :key="index"
-                    class="page-footer-alt__primary-links-item shim-mb067">
+                    class="page-footer-alt__primary-links-item">
                     <ButtonIcon
                       :href="link.href"
                       class="btn--text">
@@ -36,22 +36,17 @@
               </div>
               <div class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0">
                 <div class="page-footer-alt__contact">
-                  <p class="shim-mb067">
-                    Phone: 13 MELB (13 6352)
+                  <p class="shim-mb1">
+                    Phone: 13 MELB (13 6352)<br>International: +61 3 9035 5511
                   </p>
-                  <p class="shim-mb067">
-                    International: +61 3 9035 5511
-                  </p>
-                  <p class="shim-mb067">
+                  <p class="shim-mb1">
                     Address:<br>The University of Melbourne <br>Grattan Street, Parkville, <br>Victoria, 3010, Australia
                   </p>
-                  <p class="shim-mb067">
-                    <ButtonIcon
-                      href="https://about.unimelb.edu.au/priorities-and-partnerships/campus-development/campus-locations"
-                      class="btn--text">
-                      View all Campus locations
-                    </ButtonIcon>
-                  </p>
+                  <ButtonIcon
+                    href="https://about.unimelb.edu.au/priorities-and-partnerships/campus-development/campus-locations"
+                    class="btn--text">
+                    View all Campus locations
+                  </ButtonIcon>
                 </div>
               </div>
             </div>
