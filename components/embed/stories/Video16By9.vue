@@ -1,5 +1,7 @@
 <template>
-  <VideoEmbed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
+  <VideoEmbed
+    video-api
+    src="https://www.youtube.com/embed/nlF7qp5GNPI" />
 </template>
 
 <script>
