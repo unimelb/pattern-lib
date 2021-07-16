@@ -10,12 +10,6 @@ describe('PageFooterAlt', () => {
     expect(result).toMatchSnapshot();
   });
 
-  it('should render an empty div with id named liveagent', () => {
-    const wrapper = shallow(PageFooterAlt);
-    const result = wrapper.find('[id="liveagent"]');
-    expect(result.isEmpty()).toBe(true);
-  });
-
   it('PageFooter throws no accessibillity violations', (done) => {
     const html = shallow(PageFooterAlt).html();
     // pass anything that outputs html to axe
