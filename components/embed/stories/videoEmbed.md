@@ -10,6 +10,6 @@ If `videoApi` is true, it will add query params to the `src`: `?enablejsapi=1&re
 ### Example:
 
 ```html
-<video-embed video-api src="https://www.youtube.com/embed/nlF7qp5GNPI">
+<video-embed video-api src="https://www.youtube.com/embed/sWHoKq6MSaE">
 </video-embed>
 ```

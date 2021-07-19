@@ -8,7 +8,7 @@
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit eum cum pariatur excepturi deleniti ipsum architecto possimus? Pariatur vitae, saepe magnam cupiditate earum cum, soluta mollitia repudiandae tempore, modi eos.
       </p>
       <VideoEmbed
-        src="https://www.youtube.com/embed/nlF7qp5GNPI"
+        src="https://www.youtube.com/embed/sWHoKq6MSaE"
         inset
         left
         medium />
