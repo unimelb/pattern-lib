@@ -83,23 +83,17 @@ exports[`PageFooterAlt should match snapshot 1`] = `
                 class="page-footer-alt__contact"
               >
                 <p
-                  class="shim-mb067"
+                  class="shim-mb1"
                 >
                   
                   Phone: 13 MELB (13 6352)
-                
-                </p>
-                 
-                <p
-                  class="shim-mb067"
-                >
-                  
+                  <br />
                   International: +61 3 9035 5511
                 
                 </p>
                  
                 <p
-                  class="shim-mb067"
+                  class="shim-mb1"
                 >
                   
                   Address:
@@ -112,11 +106,7 @@ exports[`PageFooterAlt should match snapshot 1`] = `
                 
                 </p>
                  
-                <p
-                  class="shim-mb067"
-                >
-                  <!---->
-                </p>
+                <!---->
               </div>
             </div>
           </div>
@@ -125,124 +115,128 @@ exports[`PageFooterAlt should match snapshot 1`] = `
         <div
           class="page-footer-alt__brand cell cell--lg cell--desk-1of3 cell--wide-1of2 shim-mb0 shim-mt0"
         >
-          <!---->
-           
-          <ul
-            class="page-footer-alt__social list-reset"
+          <div
+            class="page-footer-alt__brand-items"
           >
-            <li
-              class="page-footer-alt__social-item"
+            <!---->
+             
+            <ul
+              class="page-footer-alt__social list-reset"
             >
-              <a
-                class="link-reset page-footer-alt__social-link"
-                href="https://www.facebook.com/unimelb"
-                target="_blank"
+              <li
+                class="page-footer-alt__social-item"
               >
-                <span
-                  class="screenreaders-only"
+                <a
+                  class="link-reset page-footer-alt__social-link"
+                  href="https://www.facebook.com/unimelb"
+                  target="_blank"
                 >
+                  <span
+                    class="screenreaders-only"
+                  >
+                    
+                    Facebook
                   
-                  Facebook
-                
-                </span>
-                 
-                <svg
-                  class="page-footer-alt__social-icon"
-                  focusable="false"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="#icon-facebook"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li
-              class="page-footer-alt__social-item"
-            >
-              <a
-                class="link-reset page-footer-alt__social-link"
-                href="https://twitter.com/unimelb"
-                target="_blank"
+                  </span>
+                   
+                  <svg
+                    class="page-footer-alt__social-icon"
+                    focusable="false"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="#icon-facebook"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li
+                class="page-footer-alt__social-item"
               >
-                <span
-                  class="screenreaders-only"
+                <a
+                  class="link-reset page-footer-alt__social-link"
+                  href="https://twitter.com/unimelb"
+                  target="_blank"
                 >
+                  <span
+                    class="screenreaders-only"
+                  >
+                    
+                    Twitter
                   
-                  Twitter
-                
-                </span>
-                 
-                <svg
-                  class="page-footer-alt__social-icon"
-                  focusable="false"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="#icon-twitter"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li
-              class="page-footer-alt__social-item"
-            >
-              <a
-                class="link-reset page-footer-alt__social-link"
-                href="https://www.linkedin.com/school/university-of-melbourne"
-                target="_blank"
+                  </span>
+                   
+                  <svg
+                    class="page-footer-alt__social-icon"
+                    focusable="false"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="#icon-twitter"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li
+                class="page-footer-alt__social-item"
               >
-                <span
-                  class="screenreaders-only"
+                <a
+                  class="link-reset page-footer-alt__social-link"
+                  href="https://www.linkedin.com/school/university-of-melbourne"
+                  target="_blank"
                 >
+                  <span
+                    class="screenreaders-only"
+                  >
+                    
+                    LinkedIn
                   
-                  LinkedIn
-                
-                </span>
-                 
-                <svg
-                  class="page-footer-alt__social-icon"
-                  focusable="false"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="#icon-linkedin"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li
-              class="page-footer-alt__social-item"
-            >
-              <a
-                class="link-reset page-footer-alt__social-link"
-                href="https://www.instagram.com/unimelb"
-                target="_blank"
+                  </span>
+                   
+                  <svg
+                    class="page-footer-alt__social-icon"
+                    focusable="false"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="#icon-linkedin"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li
+                class="page-footer-alt__social-item"
               >
-                <span
-                  class="screenreaders-only"
+                <a
+                  class="link-reset page-footer-alt__social-link"
+                  href="https://www.instagram.com/unimelb"
+                  target="_blank"
                 >
+                  <span
+                    class="screenreaders-only"
+                  >
+                    
+                    Instagram
                   
-                  Instagram
-                
-                </span>
-                 
-                <svg
-                  class="page-footer-alt__social-icon"
-                  focusable="false"
-                  role="presentation"
-                >
-                  <use
-                    xlink:href="#icon-instagram"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
+                  </span>
+                   
+                  <svg
+                    class="page-footer-alt__social-icon"
+                    focusable="false"
+                    role="presentation"
+                  >
+                    <use
+                      xlink:href="#icon-instagram"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -307,31 +301,34 @@ exports[`PageFooterAlt should match snapshot 1`] = `
         </li>
       </ul>
        
-      <dl
+      <div
         class="page-footer-alt__def-list"
       >
-        <dt>
-          CRICOS number:
-        </dt>
+        <dl
+          class="page-footer-alt__def-list-item"
+        >
+          <dt>
+            CRICOS number:
+          </dt>
+           
+          <dd>
+            00116K
+          </dd>
+        </dl>
          
-        <dd>
-          00116K
-        </dd>
-         
-        <dt>
-          ABN:
-        </dt>
-         
-        <dd>
-          84 002 705 224
-        </dd>
-      </dl>
+        <dl
+          class="page-footer-alt__def-list-item"
+        >
+          <dt>
+            ABN:
+          </dt>
+           
+          <dd>
+            84 002 705 224
+          </dd>
+        </dl>
+      </div>
     </div>
   </div>
-   
-  <div
-    class="liveagent"
-    id="liveagent"
-  />
 </footer>
 `;

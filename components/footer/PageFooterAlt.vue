@@ -36,51 +36,48 @@
               </div>
               <div class="cell cell--lg cell--tab-1of2 shim-mb0 shim-mt0">
                 <div class="page-footer-alt__contact">
-                  <p class="shim-mb067">
-                    Phone: 13 MELB (13 6352)
+                  <p class="shim-mb1">
+                    Phone: 13 MELB (13 6352)<br>International: +61 3 9035 5511
                   </p>
-                  <p class="shim-mb067">
-                    International: +61 3 9035 5511
-                  </p>
-                  <p class="shim-mb067">
+                  <p class="shim-mb1">
                     Address:<br>The University of Melbourne <br>Grattan Street, Parkville, <br>Victoria, 3010, Australia
                   </p>
-                  <p class="shim-mb067">
-                    <ButtonIcon
-                      href="https://about.unimelb.edu.au/priorities-and-partnerships/campus-development/campus-locations"
-                      class="btn--text">
-                      View all Campus locations
-                    </ButtonIcon>
-                  </p>
+                  <ButtonIcon
+                    href="https://about.unimelb.edu.au/priorities-and-partnerships/campus-development/campus-locations"
+                    class="btn--text">
+                    View all Campus locations
+                  </ButtonIcon>
                 </div>
               </div>
             </div>
           </div>
           <div class="page-footer-alt__brand cell cell--lg cell--desk-1of3 cell--wide-1of2 shim-mb0 shim-mt0">
-            <Logo size="lg" />
-            <ul class="page-footer-alt__social list-reset">
-              <li
-                v-for="(link, i) in socialLinks"
-                :key="i"
-                class="page-footer-alt__social-item">
-                <a
-                  class="link-reset page-footer-alt__social-link"
-                  :href="link.href"
-                  target="_blank">
-                  <span class="screenreaders-only">
-                    {{ link.text }}
-                  </span>
-                  <svg
-                    class="page-footer-alt__social-icon"
-                    focusable="false"
-                    role="presentation">
-                    <use
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      :xlink:href="`#icon-${link.icon}`" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <div class="page-footer-alt__brand-items">
+              <Logo size="lg" />
+              <ul class="page-footer-alt__social list-reset">
+                <li
+                  v-for="(link, i) in socialLinks"
+                  :key="i"
+                  class="page-footer-alt__social-item">
+                  <a
+                    class="link-reset page-footer-alt__social-link"
+                    :href="link.href"
+                    target="_blank">
+                    <span class="screenreaders-only">
+                      {{ link.text }}
+                    </span>
+                    <svg
+                      class="page-footer-alt__social-icon"
+                      focusable="false"
+                      role="presentation">
+                      <use
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        :xlink:href="`#icon-${link.icon}`" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -99,19 +96,18 @@
             </a>
           </li>
         </ul>
-        <dl class="page-footer-alt__def-list">
-          <dt>CRICOS number:</dt>
-          <dd>00116K</dd>
-          <dt>ABN:</dt>
-          <dd>84 002 705 224</dd>
-        </dl>
+        <div class="page-footer-alt__def-list">
+          <dl class="page-footer-alt__def-list-item">
+            <dt>CRICOS number:</dt>
+            <dd>00116K</dd>
+          </dl>
+          <dl class="page-footer-alt__def-list-item">
+            <dt>ABN:</dt>
+            <dd>84 002 705 224</dd>
+          </dl>
+        </div>
       </div>
     </div>
-    <!-- START LIVEAGENT (DO NOT DELETE)-->
-    <div
-      id="liveagent"
-      class="liveagent" />
-    <!-- END LIVEAGENT (DO NOT DELETE)-->
   </footer>
 </template>
 
