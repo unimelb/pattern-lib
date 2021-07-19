@@ -95,7 +95,7 @@
   }
 
   &__type {
-    font-weight: var(--fw-normal);
+    font-weight: var(--fw-regular);
     font-size: .875rem;
     line-height: 1.25;
     text-transform: capitalize;

@@ -628,7 +628,7 @@
 
     @media (--bp-x-tablet) {
       display: initial;
-      font-weight: var(--fw-normal);
+      font-weight: var(--fw-regular);
       font-size: .75rem;
       line-height: 1.375;
     }

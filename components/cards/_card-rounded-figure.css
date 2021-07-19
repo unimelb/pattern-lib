@@ -11,7 +11,7 @@
   }
 
   .card__title {
-    font-weight: var(--fw-normal);
+    font-weight: var(--fw-regular);
     font-size: 1rem;
     line-height: 1.25;
     letter-spacing: -.025rem;
@@ -23,7 +23,7 @@
     padding: 0;
 
     .btn {
-      font-weight: var(--fw-normal);
+      font-weight: var(--fw-regular);
       font-size: 1rem;
       letter-spacing: -.006rem;
       padding-left: .5rem;
