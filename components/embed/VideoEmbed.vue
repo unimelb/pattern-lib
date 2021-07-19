@@ -72,7 +72,7 @@ export default {
     },
     returnVideoUrlApi() {
       if (this.videoApi) {
-        return `${this.src}?enablejsapi=1&rel=0&origin=https%3A%2F%2F${document.location.hostname}.unimelb.edu.au`;
+        return `${this.src}?enablejsapi=1&rel=0&cc_load_policy=1&modestbranding=1&origin=https%3A%2F%2F${document.location.hostname}.unimelb.edu.au`;
       }
       return this.src;
     },

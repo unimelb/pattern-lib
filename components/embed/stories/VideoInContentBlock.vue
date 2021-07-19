@@ -1,5 +1,5 @@
 <template>
-  <VideoEmbed src="https://www.youtube.com/embed/nlF7qp5GNPI" />
+  <VideoEmbed src="https://www.youtube.com/embed/sWHoKq6MSaE" />
 </template>
 
 <script>
