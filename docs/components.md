@@ -71,9 +71,3 @@
 - Our components CSS is based on BEM (block element modifier) naming convention.
 - Our components are responsive.
 - Our components are "done" before "perfect".
-
-## Notes for specific components:
-
-- PageFooterAlt
-  - Path: `components/footer/PageFooterAlt.vue`
-  - Notes: PageFooterAlt has an empty div named `<div id="liveagent"/>`. This div was added for injecting a chat widget dinamically by Tealium (tag management) managed by christopher (`christopher.mason@unimelb.edu.au`) from Digital Online Channels team. This div should not be removed.

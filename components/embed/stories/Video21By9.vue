@@ -1,6 +1,7 @@
 <template>
   <VideoEmbed
-    src="https://www.youtube.com/embed/nlF7qp5GNPI"
+    video-api
+    src="https://www.youtube.com/embed/sWHoKq6MSaE"
     ratio="21_9" />
 </template>
 
