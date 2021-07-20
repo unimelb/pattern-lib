@@ -118,10 +118,10 @@
   /* Typography */
   --ff-normal: 'Source Sans Pro', 'Gill Sans', 'Trebuchet MS', 'Arial', sans-serif;
   --ff-lead: 'Noto Serif', 'Georgia', 'Times New Roman', serif;
-  --fw-semibold: 600;
-  --fw-bold: 700;
   --fw-light: 300;
   --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
 
   /* Border radius */
   --br: 4px;
