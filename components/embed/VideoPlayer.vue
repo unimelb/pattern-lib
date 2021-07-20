@@ -56,10 +56,10 @@
       <iframe
         v-else-if="videoPlaying"
         ref="embed"
-        :title="label"
+        :title="label !== 'Play' ? `${label} - video` : 'Video'"
         width="560"
         height="315"
-        :src="videoSrc"
+        :src="videoSrcWithParams"
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen
@@ -135,6 +135,7 @@ export default {
     return {
       videoPlaying: false,
       isInViewport: false,
+      videoSrc: '',
     };
   },
   computed: {
@@ -147,8 +148,8 @@ export default {
 
       return (hours ? `${hours}h ` : '') + (minutes ? `${minutes}m ` : '') + (seconds ? `${seconds}s` : '');
     },
-    videoSrc() {
-      if (!this.video || !this.video.url) {
+    videoSrcWithParams() {
+      if (!this.videoSrc) {
         return '';
       }
 
@@ -174,11 +175,20 @@ export default {
       }
     },
   },
-  mounted() {
+  async mounted() {
     if (this.isPreviewAutoplay) {
       this.debouncedMediaGalleryScrollEvent = debounce(this.checkInViewport, TIMER_100);
       window.addEventListener('scroll', this.debouncedMediaGalleryScrollEvent);
       this.$refs.videoPreview.addEventListener('ended', this.resetVideoPreviewTime);
+    }
+
+    // Detect if YouTube/Vimeo and Youku URLs are present
+    if (this.video && this.video.url && this.video.youkuUrl) {
+      this.$nextTick(async () => {
+        this.videoSrc = await this.getVideoSrcFromRegion();
+      });
+    } else if (this.video && this.video.url) {
+      this.videoSrc = this.video.url;
     }
   },
   beforeDestroy() {
@@ -241,6 +251,20 @@ export default {
       const horInView = (elementRect.left <= windowWidth) && ((elementRect.left + elementRect.width) >= offsetLeft);
 
       return (vertInView && horInView);
+    },
+    getVideoSrcFromRegion() {
+      return new Promise((resolve) => {
+        const image = new Image();
+
+        image.onload = () => {
+          resolve(this.video.url);
+        };
+        image.onerror = () => {
+          resolve(this.video.youkuUrl);
+        };
+
+        image.src = 'https://youtube.com/favicon.ico';
+      });
     },
   },
 };
