@@ -2,6 +2,7 @@
 
 exports[`PageFooterAlt should match snapshot 1`] = `
 <footer
+  aria-label="University footer"
   class="page-footer-alt"
   id="page-footer"
 >
