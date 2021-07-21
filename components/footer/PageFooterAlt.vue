@@ -1,6 +1,7 @@
 <template>
   <footer
     id="page-footer"
+    aria-label="University footer"
     class="page-footer-alt">
     <div class="page-footer-alt__top bg-inverted">
       <div class="max">
