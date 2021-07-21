@@ -119,33 +119,17 @@
                     :href="rootitem.feature.link"
                     class="menu__campaign">
                     <img
-                      v-if="rootitem.feature.img"
+                      v-if="rootitem.feature.img && rootitem.feature.alt"
                       :src="rootitem.feature.img"
                       :alt="rootitem.feature.alt"
                       class="menu__campaign--img">
+                    {{ rootitem.feature.text }}
+                    <SvgIcon
+                      v-if="rootitem.feature.link && rootitem.feature.text"
+                      aria-hidden="true"
+                      :name="'chevron-right'"
+                      class="icon" />
                   </component>
-                  <div
-                    v-if="rootitem.feature"
-                    class="menu__aside-info">
-                    <p
-                      v-if="rootitem.feature.text"
-                      class="menu__aside-info__text">
-                      {{ rootitem.feature.text }}
-                    </p>
-                    <div
-                      v-if="rootitem.feature.link"
-                      class="menu__aside-info__link">
-                      <a
-                        :href="rootitem.feature.link"
-                        class="link">
-                        View more details
-                        <SvgIcon
-                          aria-hidden="true"
-                          :name="'chevron-right'"
-                          class="icon" />
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </li>

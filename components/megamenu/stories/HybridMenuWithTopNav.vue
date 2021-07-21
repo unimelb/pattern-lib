@@ -50,6 +50,7 @@ export default {
             text:
               'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             img: 'https://picsum.photos/360/200',
+            alt: 'screen reader only',
             link: 'http://google.com',
           },
           items: [
@@ -63,11 +64,6 @@ export default {
         {
           title: 'Admissions',
           href: '/admissions',
-          feature: {
-            title: 'Different campaign',
-            text:
-              'Study at the Conservatorium celebrates lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          },
           items: [
             { title: 'Entry non requirements6', href: 'http://www.google.com' },
             { title: 'Entry non requirements7', href: 'http://www.google.com' },

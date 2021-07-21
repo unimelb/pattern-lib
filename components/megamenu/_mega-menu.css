@@ -229,19 +229,6 @@
     &__aside {
       margin: 1.5rem;
 
-      &-info {
-        &__link {
-          a {
-            color: rgb(var(--col-background-primary-white));
-            font-weight: 600;
-          }
-        }
-
-        &__text {
-          color: rgb(var(--col-background-primary-white));
-        }
-      }
-
       @media (--bp-x-desktop) {
         margin: 0;
       }
@@ -249,6 +236,14 @@
 
     &__campaign {
       display: block;
+      color: rgb(var(--col-background-primary-white));
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: rgb(var(--col-background-primary-white));
+        text-decoration: underline;
+      }
 
       &-text {
         position: absolute;
@@ -358,18 +353,6 @@
     .menu {
       &__aside {
         width: 50%;
-
-        &-info {
-          width: 100%;
-
-          &__text {
-            padding: .5rem;
-          }
-
-          &__link {
-            text-align: right;
-          }
-        }
 
         @media (--bp-x-desktop) {
           width: 50%;
