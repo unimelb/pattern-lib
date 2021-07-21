@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MegaMenuTitle should match snapshot 1`] = `
-<nav>
+<nav
+  aria-label="Secondary navigation"
+>
   <ul
     class="mega-top"
   />
