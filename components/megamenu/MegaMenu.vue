@@ -1,5 +1,5 @@
 <template>
-  <div
+  <header
     ref="headerroot"
     :class="[isShowTopMenu && 'page-header__with-top-menu']"
     class="page-header page-header--l3 page-header--study">
@@ -26,7 +26,7 @@
           id="sitemapmenu"
           ref="rootmenu"
           :class="['megamenu', isShowTopMenu && 'megamenu__with-top-menu']"
-          aria-label="Site"
+          aria-label="Primary navigation"
           @mouseleave="dismissMenu">
           <div
             role="button"
@@ -179,7 +179,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>

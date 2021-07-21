@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav aria-label="Secondary navigation">
     <ul
       class="mega-top">
       <li
